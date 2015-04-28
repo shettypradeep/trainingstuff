@@ -1,0 +1,120 @@
+From users-return-137898-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Dec  1 17:01:16 2014
+Return-Path: <users-return-137898-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id ADCAD10513
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  1 Dec 2014 17:01:16 +0000 (UTC)
+Received: (qmail 18580 invoked by uid 500); 1 Dec 2014 17:01:14 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 18498 invoked by uid 500); 1 Dec 2014 17:01:14 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 18480 invoked by uid 99); 1 Dec 2014 17:01:14 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 01 Dec 2014 17:01:14 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bimargulies@gmail.com designates 209.85.218.49 as permitted sender)
+Received: from [209.85.218.49] (HELO mail-oi0-f49.google.com) (209.85.218.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 01 Dec 2014 17:01:09 +0000
+Received: by mail-oi0-f49.google.com with SMTP id i138so7627046oig.36
+        for <users@maven.apache.org>; Mon, 01 Dec 2014 08:59:19 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=PO1HHFYbwWjwT7jUKI6NXYFRAjoeD0yTN2FZOdJvblU=;
+        b=Um5LZvvPKsAL2vaWPQ59DKfbGMKdpVp6HQMI4xGJkh/GKRHuVSaekXzLRhS76Fu9FF
+         7ntH+5pFEoqLTcpnbiKgugyZqrvR01pTW9hFv4icclxPB/EpofrbZibxbw/5YQf4CV+t
+         zLbpQRmR2DTCg46Zmnl/9leAmTUmzXRpBMnte7Sa1+ijYYVtPrHfUCLk7ls+7merek2K
+         Up8mq9ohOn+hEmqvlXiDmxs+dUKZGPZ8YcAj11JOX1I/8JxfyEO0OjmRaVId4DGX2Uee
+         5JouAk6ndOxNq3cYuaK7ouuQM4tRXf/fKCgsnz8rrf8TPyZwt0D0uV36cKu22vCnPd0e
+         119g==
+MIME-Version: 1.0
+X-Received: by 10.202.210.72 with SMTP id j69mr33230407oig.87.1417453159272;
+ Mon, 01 Dec 2014 08:59:19 -0800 (PST)
+Received: by 10.202.1.70 with HTTP; Mon, 1 Dec 2014 08:59:19 -0800 (PST)
+In-Reply-To: <547C9914.2070706@artifact-software.com>
+References: <OFF462C45B.39AB2E6A-ON85257DA1.0056CEF3-85257DA1.0057DCF4@us.ibm.com>
+	<547C9914.2070706@artifact-software.com>
+Date: Mon, 1 Dec 2014 11:59:19 -0500
+Message-ID: <CALhtWkeHSpqi5G8NEW+B+mGD6qiypBw27kdiBCL924SKXrTb5A@mail.gmail.com>
+Subject: Re: Uber jar considered harmful?
+From: Benson Margulies <bimargulies@gmail.com>
+To: Maven Users List <users@maven.apache.org>, Ron Wheeler <rwheeler@artifact-software.com>
+Content-Type: multipart/alternative; boundary=001a113cea3a0b591805092a885c
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113cea3a0b591805092a885c
+Content-Type: text/plain; charset=UTF-8
+
+I don't know about 'harmful', but there are certainly some good ways to
+shoot your toes off.
+
+My convention is that I only use shaded jars as exports to the non-Maven
+world, I discourage using shaded jars as part of a larger dependency graph.
+I could detail some mishaps which motivated that convention if anyone cares.
+
+On Mon, Dec 1, 2014 at 11:36 AM, Ron Wheeler <rwheeler@artifact-software.com
+> wrote:
+
+> I wrote this in 2011
+> http://blog.artifact-software.com/tech/?p=121
+> which describe our use of aggregation jars.
+> It is, of course, focused on the wonderful advantages that these offer.
+>
+> It may have prompted the discussion that you recall so this might give you
+> a time-frame to narrow your search.
+>
+> I may be wrong but I think that Stephen Connolly and Wayne Fay raised some
+> issues with the approach. The word "anti-pattern" may have come up.:-)
+>
+> Perhaps this will jog some memories.
+>
+> Ron
+>
+>
+> On 01/12/2014 10:59 AM, Jeffrey E Care wrote:
+>
+>> I seem to recall a post in the not too distant past where is was at least
+>> implied (if not outwardly stated) that the use of uber jars was an
+>> anti-practice. Unfortunately I can't find it now and my google-fu is
+>> failing me.
+>>
+>> Am I making this up? Can anyone confirm my recollection?
+>>
+>> Is there a best-practice recommendation re. uber jars that is generally
+>> recognized in the Maven community?
+>>
+>> ------------------------------------------------------------------------
+>> *Jeffrey E. (Jeff) Care*
+>> Advisory Software Engineer | IBM Watson Implementations Release
+>> Engineering
+>> carej@us.ibm.com <mailto:carej@us.ibm.com>| External: 919-543-4907 | Tie
+>> line: 441-4907
+>>         <http://www.facebook.com/ibmwatson><https://twitter.
+>> com/@ibmwatson><http://www.youtube.com/user/IBMWatsonSolutions/videos>
+>>
+>>
+>>
+>
+> --
+> Ron Wheeler
+> President
+> Artifact Software Inc
+> email: rwheeler@artifact-software.com
+> skype: ronaldmwheeler
+> phone: 866-970-2435, ext 102
+>
+>
+
+--001a113cea3a0b591805092a885c--
+

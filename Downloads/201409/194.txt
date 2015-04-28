@@ -1,0 +1,85 @@
+From users-return-137391-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Sep 27 15:20:37 2014
+Return-Path: <users-return-137391-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B4CC117C9A
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 27 Sep 2014 15:20:37 +0000 (UTC)
+Received: (qmail 90132 invoked by uid 500); 27 Sep 2014 15:20:35 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 90046 invoked by uid 500); 27 Sep 2014 15:20:35 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 90034 invoked by uid 99); 27 Sep 2014 15:20:35 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 27 Sep 2014 15:20:35 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of osubbu@gmail.com designates 74.125.82.43 as permitted sender)
+Received: from [74.125.82.43] (HELO mail-wg0-f43.google.com) (74.125.82.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 27 Sep 2014 15:20:08 +0000
+Received: by mail-wg0-f43.google.com with SMTP id y10so11199888wgg.2
+        for <users@maven.apache.org>; Sat, 27 Sep 2014 08:20:08 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=13hNk23ImH/WBIQL2JDKMrLe/xJnJfpsYx2asTDOrCU=;
+        b=g+JyIlVwIQ5hjAM4MJ3XMJXDzkWtfRTPMwB8P5jZxvpqsQc1Xc42M+vFGK4fIoDQej
+         fTYKGjeIeadmpNAW9oavCIpJRpLRUkohpuK3eRYJ/OzQQarBP9+XHclYJ2j5keaG9FBv
+         DRWP+Mgf1BFfMh2vnD57n5dWKYzH0Bqn+09+W/Nr7OTNGLlEKMsQSTCThUx71SspsQ7O
+         2NkY56kl7dp7Mnn25qW262IXoz4ITzvJkfuEp6PIK+uuD2CdM2IOPyjCYDXhrIrBFKCV
+         I1Y5gucE3S2icr6q2yRKMkjsVsINWrj7caWtjGeAcPm/IoNuC4XYMn1Uke0URBap4Bgu
+         d9nA==
+MIME-Version: 1.0
+X-Received: by 10.194.19.133 with SMTP id f5mr11337282wje.59.1411831208382;
+ Sat, 27 Sep 2014 08:20:08 -0700 (PDT)
+Received: by 10.216.242.5 with HTTP; Sat, 27 Sep 2014 08:20:08 -0700 (PDT)
+Date: Sat, 27 Sep 2014 20:50:08 +0530
+Message-ID: <CAKQjojTyS071pCdGxWrSehWMqgNWcMKtOr_L1eA89jg+5Ptucg@mail.gmail.com>
+Subject: Re: Surefire and testing plugin issue
+From: Subramanian Olagappan <osubbu@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=047d7b5d5ec8a8987d05040d9140
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b5d5ec8a8987d05040d9140
+Content-Type: text/plain; charset=UTF-8
+
+Sending it again.... sorry for the spam
+
+On Sat, Sep 27, 2014 at 8:37 PM, Subramanian Olagappan <osubbu@gmail.com>
+wrote:
+
+> Hi,
+>
+> I am using maven-surefire-plugin version 2.17 and testng plugin version
+> 6.3.1 (jdk version is 1.7 ). Some of our tests are failing and in the
+> testng-results.xml file it is reported as fail. The issue is "maven" is
+> reporting the failed tests as "skipped" and the final build status is
+> SUCCESS.
+>
+> Has anyone faced this issue ? if so what is the soln.
+>
+> I tried with "surefire-testng" plugin instead of "testng" plugin. With
+> this change, maven is properly reporting the failed tests and the final
+> build is reported as FAIL
+>
+> What is the difference between testng and surefire-testng plugin , I don't
+> see any mention in the surefire plugin page, so I am not sure if it is
+> correct to use this plugin.
+>
+> Any help is appreciated
+>
+> Thanks,
+> Subbu
+>
+
+--047d7b5d5ec8a8987d05040d9140--
+

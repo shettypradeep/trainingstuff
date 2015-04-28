@@ -1,0 +1,144 @@
+From users-return-135879-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 20 07:31:16 2014
+Return-Path: <users-return-135879-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1319ACCFB
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 20 Mar 2014 07:31:16 +0000 (UTC)
+Received: (qmail 96231 invoked by uid 500); 20 Mar 2014 07:31:08 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 95349 invoked by uid 500); 20 Mar 2014 07:31:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 95335 invoked by uid 99); 20 Mar 2014 07:31:05 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Mar 2014 07:31:05 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.212.181] (HELO mail-wi0-f181.google.com) (209.85.212.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Mar 2014 07:30:59 +0000
+Received: by mail-wi0-f181.google.com with SMTP id hm4so387064wib.14
+        for <users@maven.apache.org>; Thu, 20 Mar 2014 00:30:38 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=pwItpUr+ZfwpH85yknrmPvpZ3YOfqlIxe50mCq25vk4=;
+        b=iwCgaVwpSf4dL2KefB/IdIwiilVOQHrOkfsMQlzcocQIbMWcSf8SQXtku4RvsT/9Je
+         WYNyLB3f4qW/pFwRRPIUL65iCMdLOoFtV4rJN4R7WUkxv6Df6Bp0ttdmfb2vMmJ3IEZp
+         ZSKZmHl/pju1IhWE4iPN/xdOKaj5Z9cRRymUecgzonJ4qOYs+4jJMv6X8IVwDJzQzAMr
+         lz1PAgr1UCAZxrX00d8je5lJwECNwEl8gRnA9Uxw8YWK4DjPzVXm6otSrgRYO9OMklDZ
+         YxbBz2LGXfRa8EXakDYNwyVU9zhM5VYcmKxBz3fasJ7Lr01jAXEyNHRGZW9Nt17bmNGa
+         iEsA==
+X-Gm-Message-State: ALoCoQkyYs6RbBr68vOgUJ7vW7dwqk8A3bXV/8k6TSM+qdsv4SskiTWv3/9w+UA8JtFPXck7364w
+MIME-Version: 1.0
+X-Received: by 10.180.102.97 with SMTP id fn1mr22987910wib.15.1395300638192;
+ Thu, 20 Mar 2014 00:30:38 -0700 (PDT)
+Received: by 10.216.235.4 with HTTP; Thu, 20 Mar 2014 00:30:38 -0700 (PDT)
+X-Originating-IP: [101.165.182.12]
+In-Reply-To: <7504509.nYQx3Vd0yE@herve-desktop>
+References: <CAEBcyzqJae+F0zRek1ug9xkyQEOu0k+OcYwTK2UPRbSWyv6hhw@mail.gmail.com>
+	<7504509.nYQx3Vd0yE@herve-desktop>
+Date: Thu, 20 Mar 2014 17:30:38 +1000
+Message-ID: <CAEBcyzqjAWo61CBY9Y6WfH2ijhgCPVTGR_K2JULUuyBRoby84A@mail.gmail.com>
+Subject: Re: maven-dependency-tree reactor resolution
+From: William Ferguson <william.ferguson@xandar.com.au>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d0444ef1de4fda104f504be6b
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d0444ef1de4fda104f504be6b
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Herve,
+
+I didn't think I was asking for any extra flexibility out of
+dependency-tree that it didn't already give. Are you saying that it doesn't
+support resolution of projects in the current reactor?
+
+William
+
+
+On Thu, Mar 20, 2014 at 5:16 PM, Herv=E9 BOUTEMY <herve.boutemy@free.fr>wro=
+te:
+
+> maven-dependency-tree offers a really simple API: that's its objective.
+> The drawback is that it is not very flexible
+> The value is that it hides Maven 2, Maven 3.0.x and Maven 3.1.x+
+> implementations, which are completely different (initial Maven 2 is made =
+of
+> listeners, Maven 3 uses Aether and Maven provider, with package changes
+> from
+> Maven 3.0 and 3.1)
+>
+> If you need more features, I think you'd better use Aether with Maven
+> Provider: you can look both at maven-dependency-tree source to start and
+> Aether examples to better understand Aether API, which is a lot more
+> flexible<-
+> >rich<->complex
+>
+> Notice that your initial code will use latest Aether, then your plugin wi=
+ll
+> require Maven 3.1.x minimum. If you want compatibility with Maven 3.0.x a=
+nd
+> 3.1.x+, you'll have to add some reflection magic which might add
+> complexity (it
+> was not so easy to do it in maven-dependency-tree)
+> If you want Maven 2 compatibility, I would personnally not really think i=
+t
+> is
+> reasonably feasible
+>
+> Regards,
+>
+> Herv=E9
+>
+> Le jeudi 20 mars 2014 09:55:31 William Ferguson a =E9crit :
+> > Hi,
+> >
+> > I have a plugin that uses the maven-dependency-tree component to resolv=
+e
+> > project dependencies in a LifeCycleParticipant. (We need early access t=
+o
+> > deps because we need to modify the compile classpath).
+> >
+> > But I'm finding that with a clean repository, in a multi-module project
+> > with modules X and Y-depends-on-X that the DependencyGraphBuilder is
+> > throwing a DependencyGraphBuilderException when trying to resolve
+> > Y-depends-on-X. It says that it cannot find X.
+> >
+> > So it appears that the maven-dependency-tree is only using information
+> from
+> > the repository and not the reactor.
+> >
+> > Is that expected?
+> > Is there anyway that I can get MDT to resolve from the reactor?
+> > Is there another approach that I should be taking to ensure that
+> resolution
+> > looks in the reactor?
+> >
+> > NB I need to support both maven 3.0 and 3.1 which is why we are using M=
+DT
+> > to provide a level of abstraction above the 2 differing Aether
+> > implementations.
+> >
+> > William
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--f46d0444ef1de4fda104f504be6b--
+

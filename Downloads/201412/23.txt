@@ -1,0 +1,104 @@
+From users-return-138022-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Dec 15 14:48:00 2014
+Return-Path: <users-return-138022-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DCF849F28
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 15 Dec 2014 14:47:59 +0000 (UTC)
+Received: (qmail 11258 invoked by uid 500); 15 Dec 2014 14:47:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 10502 invoked by uid 500); 15 Dec 2014 14:47:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 10490 invoked by uid 99); 15 Dec 2014 14:47:57 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 15 Dec 2014 14:47:57 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.214.172 as permitted sender)
+Received: from [209.85.214.172] (HELO mail-ob0-f172.google.com) (209.85.214.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 15 Dec 2014 14:47:31 +0000
+Received: by mail-ob0-f172.google.com with SMTP id va8so17903720obc.3
+        for <users@maven.apache.org>; Mon, 15 Dec 2014 06:47:30 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=3KP+KzTnZlDtHSHZ6ETDoa4Rfsp8cugnOSv/NMKnzlI=;
+        b=cYHGZjrjiuA+UNPJL+yFYtSUSkhq+3CWZ+ChcRUA2rFVnFBGexQhOT4ReiRDJ3Nnt4
+         I7diXgnStoLbjYfearZFpSWhOdvH12W5o1yUrldzkFqExL9HK0i47zWTl0n2LliZ2IDq
+         E8oae44Vl8FPlAENhbF3nLs0m+vdFapYpvKABH7anvz3SOLwOIfH4BvTeyW8/FFiNBV+
+         BCCg+deLTlN1aWeHgeI0CkMv2/gxd2UjlASx4keY+UHpG6NP8S/cuduZYowVvbu//u7r
+         N4YQ5hv2V/44rkAlLYctDzjAZE09DiSvBzIQjV2YfkN7PQQ3cXb+k5dWCnGUIopCxdCm
+         XVvA==
+MIME-Version: 1.0
+X-Received: by 10.182.102.161 with SMTP id fp1mr19213684obb.29.1418654850192;
+ Mon, 15 Dec 2014 06:47:30 -0800 (PST)
+Received: by 10.60.5.134 with HTTP; Mon, 15 Dec 2014 06:47:30 -0800 (PST)
+In-Reply-To: <548EDE5F.6070707@landrus.de>
+References: <1418648803.86231.ezmlm@maven.apache.org>
+	<548EDE5F.6070707@landrus.de>
+Date: Mon, 15 Dec 2014 14:47:30 +0000
+Message-ID: <CA+nPnMyVKcPG8KZcV-601FPZd395bm2ECb56quXzvZnMYsvRmg@mail.gmail.com>
+Subject: Re: Installing only javadocs
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0149c1ce679c38050a4252a3
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0149c1ce679c38050a4252a3
+Content-Type: text/plain; charset=UTF-8
+
+Wrong track.
+
+On 15 December 2014 at 13:13, Christian Domsch <mail@landrus.de> wrote:
+>
+> Hi,
+>
+> I have a continuous integration setup where the build is setup in two
+> steps. First all modules are built and deployed. After that a second build
+> is triggered that takes those artifacts and builds installers from that.
+>
+
+You should have separate modules that transform the artifacts into
+installers for those artifacts.
+
+Those separate moduled can even be in a separate SCM root as you may
+release the first modules multiple times but only build installers from the
+last time.
+
+
+
+>
+> Because of performance reasons and they are only needed for the
+> installers, any javadoc jars are only being built in the second step. Now I
+> want to install these jars into the local repo as well. A call to
+> javadoc:jar only creates those jars, not copy them over to the local repo.
+>
+> I do not want to run mvn install, as that would run the complete build
+> again. Now, I looked at the documentation of maven-javadoc-plugin and the
+> maven-install-plugin but I couldnt find a way to only install the javadocs.
+> (something like mvn javadoc:jar javadoc:install, if such a goal would
+> exist).
+>
+> Is there a way to achieve that or am I on the wrong track?
+>
+> Greetings,
+>
+> Christian
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--089e0149c1ce679c38050a4252a3--
+

@@ -1,0 +1,216 @@
+From users-return-136642-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jun 25 09:15:54 2014
+Return-Path: <users-return-136642-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0FA4D11875
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 25 Jun 2014 09:15:54 +0000 (UTC)
+Received: (qmail 6033 invoked by uid 500); 25 Jun 2014 09:15:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 5946 invoked by uid 500); 25 Jun 2014 09:15:52 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 5933 invoked by uid 99); 25 Jun 2014 09:15:52 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 25 Jun 2014 09:15:52 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of kashu.joshi@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 25 Jun 2014 09:15:48 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <kashu.joshi@gmail.com>)
+	id 1WzjId-0000cV-Pz
+	for users@maven.apache.org; Wed, 25 Jun 2014 02:15:27 -0700
+Date: Wed, 25 Jun 2014 02:15:27 -0700 (PDT)
+From: kashu <kashu.joshi@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1403687727795-5797477.post@n5.nabble.com>
+Subject: Maven error problem
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi All Expert,
+
+I'm trying to integrate reportNG with maven but when I add maven dependency
+and build the project, I get strange error mentioned below.
+
+ArtifactTransferException: Failure to transfer
+org.uncommons:reportng:jar:1.1.4 from http://repo.maven.apache.org/maven2
+was cached in the local repository,
+ resolution will not be reattempted until the update interval of central has
+elapsed or updates are forced. Original error: Could not transfer artifact
+ org.uncommons:reportng:jar:1.1.4 from/to central
+(http://repo.maven.apache.org/maven2): No response received after 60000
+
+my POM looks like
+
+<properties>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  <selenium.version>2.39.0</selenium.version>
+ 
+<suiteXmlFile>${project.build.testOutputDirectory}/TestNGConfig.xml</suiteXmlFile>
+ <skipTests>false</skipTests>
+<BROWSER></BROWSER>
+<TYPE></TYPE>
+ 
+ 
+  </properties>
+        <dependencies>
+        
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.8.5</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+       
+       
+        <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-server</artifactId>
+    <version>2.39.0</version>
+</dependency>
+       
+           <dependency>
+       <groupId>org.uncommons</groupId>
+    <artifactId>reportng</artifactId>
+    <version>1.1.4</version>
+        <exclusions>
+            <exclusion>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+   
+    <dependency>
+    <groupId>org.apache.velocity</groupId>
+    <artifactId>velocity</artifactId>
+    <version>1.7</version>
+</dependency>
+   
+        <dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>3.10-beta1</version>
+</dependency>
+
+        <dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-install-plugin</artifactId>
+    <version>2.3.1</version>
+</dependency>
+        <dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>2.6</version>
+</dependency>
+
+       
+        <dependency>
+    <groupId>com.google.inject</groupId>
+    <artifactId>guice</artifactId>
+    <version>3.0</version>
+    <scope>test</scope>
+</dependency>
+
+
+   
+            <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.10</version>
+      <scope>test</scope>
+    </dependency>
+       
+    </dependencies>
+ 
+ 
+ 
+<build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+       
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+ 
+ 
+ 
+ 
+ 
+  <plugin>
+ <groupId>org.apache.maven.plugins</groupId>
+ <artifactId>maven-surefire-plugin</artifactId>
+ <version>2.6</version>
+ <configuration>
+ 
+ <suiteXmlFiles>
+ <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+ </suiteXmlFiles>
+ 
+       <properties>
+                        <property>
+                        <name>listener</name>
+                        <value>org.uncommons.reportng.HTMLReporter,
+org.uncommons.reportng.JUnitXMLReporter</value>
+                    </property>
+                </properties>
+                <workingDirectory>target/</workingDirectory>
+   
+ </configuration>
+ </plugin>
+ 
+   </plugins>
+ </build>
+ 
+ 
+</project>
+-----------------------------------
+I even added following code in settings.xml file of maven
+<repositories>
+    <repository>
+        <id>java-net</id>
+        <url>https://maven.java.net/content/repositories/public</url>
+    </repository>
+   </repositories>
+
+Can any expert suggest where I'm going wrong?
+Thanks in advance..
+
+Cheers,
+K
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Maven-error-problem-tp5797477.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

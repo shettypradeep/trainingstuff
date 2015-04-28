@@ -1,0 +1,128 @@
+From users-return-137887-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Nov 30 16:44:54 2014
+Return-Path: <users-return-137887-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EAD13CBBC
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 30 Nov 2014 16:44:54 +0000 (UTC)
+Received: (qmail 92579 invoked by uid 500); 30 Nov 2014 16:44:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 92509 invoked by uid 500); 30 Nov 2014 16:44:52 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 92433 invoked by uid 99); 30 Nov 2014 16:44:52 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 30 Nov 2014 16:44:52 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of christofer.dutz@c-ware.de designates 157.55.234.111 as permitted sender)
+Received: from [157.55.234.111] (HELO emea01-db3-obe.outbound.protection.outlook.com) (157.55.234.111)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 30 Nov 2014 16:44:45 +0000
+Received: from AMSPR05MB0611.eurprd05.prod.outlook.com (10.242.15.149) by
+ AMSPR05MB0610.eurprd05.prod.outlook.com (10.242.15.148) with Microsoft SMTP
+ Server (TLS) id 15.1.26.15; Sun, 30 Nov 2014 16:44:21 +0000
+Received: from AMSPR05MB0611.eurprd05.prod.outlook.com ([10.242.15.149]) by
+ AMSPR05MB0611.eurprd05.prod.outlook.com ([10.242.15.149]) with mapi id
+ 15.01.0026.003; Sun, 30 Nov 2014 16:44:21 +0000
+From: Christofer Dutz <christofer.dutz@c-ware.de>
+To: Maven Users List <users@maven.apache.org>
+Subject: AW: Problems with the release plugin
+Thread-Topic: Problems with the release plugin
+Thread-Index: AdAKPRrNeNhgM+z+QnigxnOcqOU3bQA9YwWAAFdAj3AAAzRLAAAH1MXg
+Date: Sun, 30 Nov 2014 16:44:21 +0000
+Message-ID: <7860a71d9a894fc185a680c8c31d46f6@AMSPR05MB0611.eurprd05.prod.outlook.com>
+References: <4D781E28644D7B46878137FBCBC852F01269EB@gf0vswex001p.corp.int>
+	<op.xp1p28hrkdkhrr@robertscholte.dynamic.ziggo.nl>
+	<46b88b5354ce4ec3a8ef5307adcb4381@AMSPR05MB0611.eurprd05.prod.outlook.com>
+ <CALhtWkfwxNPgoxpHfXik-Y2H4XgH=DR5TpQA6h80eA5MqzbhZA@mail.gmail.com>
+In-Reply-To: <CALhtWkfwxNPgoxpHfXik-Y2H4XgH=DR5TpQA6h80eA5MqzbhZA@mail.gmail.com>
+Accept-Language: de-DE, en-US
+Content-Language: de-DE
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [84.150.109.236]
+x-microsoft-antispam: BCL:0;PCL:0;RULEID:;SRVR:AMSPR05MB0610;
+x-exchange-antispam-report-test: UriScan:;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:;SRVR:AMSPR05MB0610;
+x-forefront-prvs: 04111BAC64
+x-forefront-antispam-report: SFV:NSPM;SFS:(10019020)(6009001)(199003)(189002)(252514010)(101416001)(66066001)(19580395003)(19580405001)(75402003)(110136001)(62966003)(77156002)(450100001)(40100003)(20776003)(4396001)(92566001)(122556002)(108616004)(2656002)(87936001)(86362001)(64706001)(120916001)(105586002)(97736003)(21056001)(229853001)(54356999)(76176999)(74482002)(93886004)(99396003)(76576001)(95666004)(50986999)(31966008)(46102003)(107046002)(107886001)(33646002)(106356001)(74316001)(24736002);DIR:OUT;SFP:1102;SCL:1;SRVR:AMSPR05MB0610;H:AMSPR05MB0611.eurprd05.prod.outlook.com;FPR:;SPF:None;MLV:sfv;PTR:InfoNoRecords;A:1;MX:1;LANG:en;
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+X-OriginatorOrg: c-ware.de
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+VW5mb3J0dW5hdGVseSB0aGUgd29ybGQgaXNuJ3QgYXMgaWRlYWwgYXMgSSB3b3VsZCBsaWtlIGl0
+IHRvIGJlLiBUaGVyZSBhcmUgc29tZXRpbWVzIGNvbnN0cmFpbnRzIHRoYXQgbGllIG91dHNpZGUg
+b2YgdGhlIHJlYWNoIG9mIHRoZSBkZXZlbG9wZXIocykgd29ya2luZyBvbiB0aGUgcHJvamVjdHMg
+YnVpbGQuDQoNCkluIG9uZSBjYXNlIHRoZSBjb21wYW55IEkgd29ya2VkIGZvciBkZXNwZXJhdGVs
+eSBuZWVkZWQgdG8gcmVsZWFzZSBwYXJ0cyBvZiBhIG11bHRpIG1vZHVsZSBidWlsZCBzZXBhcmF0
+ZWx5LiBJIGtub3cgdGhhdCB0aGlzIGNvbWVzIHdpdGggcHJvYmxlbXMsIGJ1dCBhcyBsb25nIGFz
+IG5vIG90aGVyIG9wdGlvbiBjb21lcyB1cCB0byByZWR1Y2UgdGhlIGFtb3VudCBvZiBiaW5hcnkg
+ZGF0YSBvZiBhIG5ldyByZWxlYXNlIGhhdmluZyB0byBiZSB0cmFuc2ZlcmVkIG92ZXIgYW4gRWRn
+ZSBtb2JpbGUgY29ubmVjdGlvbiwgdGhleSB3aWxsIGhhdmUgdG8gZG8gcGFydGlhbCByZWxlYXNl
+cy4gDQoNCkluIG15IGN1cnJlbnQgY2FzZSB0aGUgZW50aXJlIGNvbXBhbnkgaXMgYmVpbmcgc3dp
+dGNoZWQgZnJvbSBBbnQgdG8gTWF2ZW4uIFN3aXRjaGluZyBldmVyeXRoaW5nIGluIG9uZSBiaWcg
+c3RlcCBpcyBjb21wbGV0ZWx5IG91dCBvZiB0aGUgcXVlc3Rpb24uIFRoZSBhbW91bnQgb2Ygc2lt
+dWx0YW5lb3VzIHRyYWluaW5nIG5lZWRlZCBmb3IgdGhpcyBpcyBzaW1wbHkgbm90IHBvc3NpYmxl
+LiBTbyB3ZSBoYXZlIHRvIGdvIGEgbWlncmF0aW9uIHBhdGggd2hpY2ggYnJpbmdzIHVzIGNsb3Nl
+ciBhbmQgY2xvc2VyIHRvIHRoZSBmaW5hbCBnb2FsIG9mIGhhdmluZyBldmVyeXRoaW5nIGluIE1h
+dmVuIGFuZCBiZSBhYmxlIHRvIHVzZSB0aGUgZGVmYXVsdCBtYXZlbi1yZWxlYXNlLXBsdWdpbi4g
+QnV0IHRpbGwgd2UgYXJlIHRoZXJlIGl0IGZlZWxzIGxpa2UgdGhlcmUgaXMgbm8gd2F5IHdpdGhv
+dXQgcGF0Y2hpbmcgdGhpcyBwbHVnaW4gaW4gb3JkZXIgdG8gaGF2ZSBhbiBlYXN5IHRyYW5zaXRp
+b24gcGF0aC4NCg0KV2hhdCBhYm91dCBzb21lICJsZWdhY3kiIG9yICJxdWlya3MiIG1vZGUgZm9y
+IHRoZSBwbHVnaW4gdGhhdCBhbGxvd3Mgc3VjaCBhIHRoaW5nIC4uLiBpdCBtaWdodCBldmVuIG91
+dHB1dCB3YXJuaW5ncyBhbmQgcGFnZXMgb2YgdGV4dCBleHBsYWluaW5nIHdoeSB0aGlzIG1vZGUg
+c3Vja3MgYW5kIHNob3VsZCBiZSBhdm9pZGVkLiBBbGwgSSBhbSBhc2tpbmcgZm9yIGlzIGEgd2F5
+IHRvIHVzZSB0aGUgcGx1Z2luIHdpdGhvdXQgaGF2aW5nIHRvIGhhY2sgaXQgd2hpY2ggYWNrbm93
+bGVkZ2luZyB0aGF0IEkga25vdyB0aGlzIGlzIG5vdCBpZGVhbCwgYnV0IEkgYW0gd2lsbGluZyB0
+byBhY2NlcHQgdGhlIGNvbnNlcXVlbmNlcy4NCg0KQ2hyaXMNCg0KLS0tLS1VcnNwcsO8bmdsaWNo
+ZSBOYWNocmljaHQtLS0tLQ0KVm9uOiBCZW5zb24gTWFyZ3VsaWVzIFttYWlsdG86YmltYXJndWxp
+ZXNAZ21haWwuY29tXSANCkdlc2VuZGV0OiBTb25udGFnLCAzMC4gTm92ZW1iZXIgMjAxNCAxMzo1
+Mg0KQW46IE1hdmVuIFVzZXJzIExpc3QNCkJldHJlZmY6IFJlOiBQcm9ibGVtcyB3aXRoIHRoZSBy
+ZWxlYXNlIHBsdWdpbg0KDQpJJ20gZ29pbmcgdG8gYXR0ZW1wdCBhIHN1bW1hcnkgaGVyZS4NCg0K
+VGhlIHJlbGVhc2UgcGx1Z2luIGhhcyBhIHJlcXVpcmVtZW50LiBJdCBtdXN0IGJlIHRydWUgdGhh
+dCB5b3UgY2FuIGdvIHRvIHRoZSBTQ00sIGNoZWNrb3V0IGEgYnJhbmQgbmV3IGNvcHkgb2YgdGhl
+IHRyZWUgcm9vdGVkIGF0IHRoZSA8c2NtLz4gZWxlbWVudCwgX2NoYW5nZSB0aGUgdmVyc2lvbnNf
+IGluIHRoZSBwb20ocyksIGFuZCBydW4gYSBidWlsZCBhcyBjb25maWd1cmVkIGJ5IHRoZSBwcm9m
+aWxlcyBhbmQgZ29hbHMuIElmIHRoYXQncyBub3QgdHJ1ZSwgdGhlIHJlbGVhc2UgcHJvY2VzcyB3
+aWxsIGZhaWwsIGFuZCBwb3NzaWJseSBsZWF2ZSB5b3Ugd2l0aCBhIG1hbnVhbCBjbGVhbnVwIGlu
+IHRoZSBTQ00uIFRoZXJlIGFyZSBtYW55IHdheXMgdG8gc2V0IHVwIGEgYnVpbGQgdGhhdCBzZWVt
+cyBqdXN0IGZpbmUgYnV0IGZhaWxzIHRoaXMgdGVzdC4NCg0KVGhlIHRvcCBvZiB0aGlzIHRocmVh
+ZCBpcyBhIHBsZWEgZm9yIGEgJ2RyeSBydW4nIHRoYXQgaXMgYSBwZXJmZWN0IHNpbXVsYXRpb24g
+b2YgdGhpcywgc28gdGhhdCB1c2VycyBjYW4gZmx1c2ggdGhpcyBvdXQgYmVmb3JlIGl0IGJpdGVz
+IHRoZW0sIGFuZCB0aGF0IGl0IHNob3VsZCBub3QgYmUgaGFyZCB0byBhc2sgZm9yIHRoaXMuDQoN
+Ckl0IHNlZW1zIHRvIG1lIHRoYXQgaXQgc2hvdWxkIG5vdCBiZSBoYXJkLCBpbiBhIHR5cGljYWwg
+YXV0b21hdGVkIGJ1aWxkIHN5c3RlbSAoSmVua2lucywgZXRjLikgdG8gc2V0IHVwIGEgYnVpbGQg
+dGhhdCBkb2VzIGV4YWN0bHkgdGhpcy4NCkNoZWNrb3V0IGEgY2xlYW4gdHJlZSwgcnVuIHRoZSBt
+YXZlbi12ZXJzaW9ucy1wbHVnaW4gdG8gc2V0IGEgZHVtbXkgdmVyc2lvbiwgYW5kIHJ1biBhIGJ1
+aWxkLCB3aXRoIHByb2ZpbGVzIGFuZCBnb2FscyB0byBtYXRjaCB0aGUgZXZlbnR1YWwgcmVsZWFz
+ZS4gRWF0IG9uZSBvZiB0aGVzZSBhcHBsZXMgZXZlcnkgZGF5LCBhbmQgeW91IHdvbid0IGJlIHZp
+c2l0aW5nIHRoZSBtYXZlbiBkb2N0b3Igc28gb2Z0ZW4uDQoNCkl0IHNlZW1zIHRvIG1lIHRoYXQg
+aXQgc2hvdWxkIGFsc28gbm90IGJlIHRlcnJpYmx5IGhhcmQgdG8gbWFrZSB0aGlzIGEgZmVhdHVy
+ZSBvZiB0aGUgbWF2ZW4tcmVsZWFzZS1wbHVnaW4uDQoNCkFzIGEgZnVydGhlciB3cmlua2xlLCB0
+aGVyZSdzIHRoZSBxdWVzdGlvbiBvZiB0YWcgbWFuYWdlbWVudCwgd2hpY2ggbWlnaHQgYmUgc2Vl
+biBhcyBpbnRlcnJlbGF0ZWQgdG8gdGhlIGxlbmd0aHkgdGhyZWFkcyBoZXJlIGFuZCBlbHNld2hl
+cmUgYWJvdXQgbmV2ZXIsIGV2ZXIsIGRlbGV0aW5nIGEgdGFnLiBJIHdvbmRlciBhYm91dCB5ZXQg
+YW5vdGhlciBtLXItcCBwYXJhbWV0ZXI6IGEgc3RhZ2luZyBTQ00gVVJMLCBkaXN0aW5jdCBmcm9t
+IHRoZSA8c2NtLz4gc3RvY2sgaWRlbnRpZmllcnMuIG0tci1wIHdvdWxkIHB1bGwgZnJvbSA8c2Nt
+Lz4gYnV0IHB1c2ggdG8gdGhpcyBvdGhlciBwbGFjZS4gVGhlbiwgYSBodW1hbiBjb3VsZCBkZWNp
+ZGUgaWYgdGhlIHJlbGVhc2UgaXMgcmVhbCwgYW5kLCBpZiBzbywgcHVzaCB0aGUgY29tbWl0cyBh
+bmQgdGFnIHRvIHRoZSByZWFsLCBpbW11dGFibGUsIHJlcG8uIEknbSBub3QgcXVhbGlmaWVyIHRv
+IGp1ZGdlIHdoZXRoZXIgdGhpcyBjYW4gd29yayBmb3IgYW55dGhpbmcgb3RoZXIgdGhhbiBnaXQs
+IGJ1dCBnaXQgc3VyZSBpcyBwb3B1bGFyLg0KDQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NClRvIHVuc3Vic2NyaWJl
+LCBlLW1haWw6IHVzZXJzLXVuc3Vic2NyaWJlQG1hdmVuLmFwYWNoZS5vcmcNCkZvciBhZGRpdGlv
+bmFsIGNvbW1hbmRzLCBlLW1haWw6IHVzZXJzLWhlbHBAbWF2ZW4uYXBhY2hlLm9yZw0KDQo=
+DQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0NClRvIHVuc3Vic2NyaWJlLCBlLW1haWw6IHVzZXJzLXVuc3Vi
+c2NyaWJlQG1hdmVuLmFwYWNoZS5vcmcNCkZvciBhZGRpdGlvbmFsIGNvbW1hbmRzLCBlLW1h
+aWw6IHVzZXJzLWhlbHBAbWF2ZW4uYXBhY2hlLm9yZw0K
+

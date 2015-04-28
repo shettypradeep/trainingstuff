@@ -1,0 +1,124 @@
+From users-return-135573-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 20 02:49:18 2014
+Return-Path: <users-return-135573-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EA68010F43
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 20 Feb 2014 02:49:18 +0000 (UTC)
+Received: (qmail 59488 invoked by uid 500); 20 Feb 2014 02:49:14 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 59029 invoked by uid 500); 20 Feb 2014 02:49:14 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 59016 invoked by uid 99); 20 Feb 2014 02:49:12 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Feb 2014 02:49:12 +0000
+X-ASF-Spam-Status: No, hits=3.2 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mgainty@hotmail.com designates 65.55.116.28 as permitted sender)
+Received: from [65.55.116.28] (HELO blu0-omc1-s17.blu0.hotmail.com) (65.55.116.28)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Feb 2014 02:49:05 +0000
+Received: from BLU172-W38 ([65.55.116.9]) by blu0-omc1-s17.blu0.hotmail.com with Microsoft SMTPSVC(6.0.3790.4675);
+	 Wed, 19 Feb 2014 18:48:45 -0800
+X-TMN: [PNsXX5PKy3rU1AjuiT9CsDcn08AB/KvX]
+X-Originating-Email: [mgainty@hotmail.com]
+Message-ID: <BLU172-W383B28FC160753F33F517CAE9A0@phx.gbl>
+Content-Type: multipart/alternative;
+	boundary="_1c68725e-6be2-4de3-8de7-b7570c9960e5_"
+From: Martin Gainty <mgainty@hotmail.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: RE: Why does Maven fail to compile my project occasionally?
+Date: Wed, 19 Feb 2014 21:48:44 -0500
+Importance: Normal
+In-Reply-To: <1392861493863-5785441.post@n5.nabble.com>
+References:
+ <CAPg65qhXj4b9VsK2eKd4VTpf3ghWMn603GWz_JFQX4C0HSPPww@mail.gmail.com>
+ <52FE29B7.20407@artifact-software.com>
+ <1392392192345-5784856.post@n5.nabble.com>
+ <52FE659D.1000809@artifact-software.com>
+ <1392437696526-5784947.post@n5.nabble.com>
+ <CA+nPnMw10XjXqb4Y7-uuG13tptPKh40mPpiWkO53GQtmFr4R8g@mail.gmail.com>
+ <CAPg65qjd50aQ7Z62Gbv7A-Q6kTT7S0H8rfSuj=dy-KVh5Fu9Jw@mail.gmail.com>
+ <CALy+7UmOyvYLxHQk-v9q9P+LQrtUcCa9BruRmk_W-bMkDuUXGQ@mail.gmail.com>,<1392861493863-5785441.post@n5.nabble.com>
+MIME-Version: 1.0
+X-OriginalArrivalTime: 20 Feb 2014 02:48:45.0221 (UTC) FILETIME=[45B45D50:01CF2DE6]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_1c68725e-6be2-4de3-8de7-b7570c9960e5_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+ =20
+
+
+> Date: Wed=2C 19 Feb 2014 17:58:13 -0800
+> From: levskiweng@gmail.com
+> To: users@maven.apache.org
+> Subject: Re: Why does Maven fail to compile my project occasionally?
+>=20
+> Wayne Fay wrote
+> > Maven calls out to your system JDK to do the compilation step. With
+> > the [ERROR] lines you provided previously=2C Maven is simply passing
+> > along the error that was reported by javac. I bet=2C if you constructed
+> > the proper javac call (which can be seen in Maven's logs if you use -X
+> > for debug mode)=2C you would see the same error produced without
+> > involving Maven (or Jenkins) at all.
+> >=20
+> > IIRC you had some "cannot find symbol" errors. What do you expect
+> > Maven to do about code defects reported by the Java compiler? Why are
+> > you blaming Maven for this?
+>=20
+> After digging into the dependency tree described in each module's pom.xml
+> for several days=2C I found that you're right. It's my fault=2C not Maven=
+'s.
+> It's because my code depends some other modules which I didn't put it int=
+o
+> pom.xml explicitly. And I'm adding them into the corresponding pom.xml.
+> Thank you for directing me back to the right track!
+>=20
+> However=2C I'm curious that I succeed to compile the project after severa=
+l
+> compilation failure. How does it happen? I've passed the parameter 'clean
+> install -Dmaven.test.skip=3Dtrue --update-snapshots --batch-mode --fail-f=
+ast
+> --debug -Dmaven.compiler.forceJavacCompilerUse=3Dtrue
+> -Dmaven.compiler.verbose=3Dtrue' to Maven=2C but it doesn't get the same =
+error
+> when I compile the project the second time.
+=20
+MG>be specific about the supposed error(s) you say you are seeing
+MG>display pom.xml
+
+MG>what is execution string first time around?
+MG>Display Results for First Iteration
+
+MG>what is execution string second time around?
+MG>Display Results for Second Iteration
+
+> =3B-)
+>=20
+> Could anyone explain the somewhat weird behavior of Maven? Thanks.
+>=20
+>=20
+>=20
+> --
+> View this message in context: http://maven.40175.n5.nabble.com/Why-does-M=
+aven-fail-to-compile-my-project-occasionally-tp5784849p5785441.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe=2C e-mail: users-unsubscribe@maven.apache.org
+> For additional commands=2C e-mail: users-help@maven.apache.org
+>=20
+ 		 	   		  =
+
+--_1c68725e-6be2-4de3-8de7-b7570c9960e5_--
+

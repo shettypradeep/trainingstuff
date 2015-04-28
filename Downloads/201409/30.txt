@@ -1,0 +1,120 @@
+From users-return-137249-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 12 05:54:15 2014
+Return-Path: <users-return-137249-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 62E5111B4D
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 12 Sep 2014 05:54:15 +0000 (UTC)
+Received: (qmail 23482 invoked by uid 500); 12 Sep 2014 05:54:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 23397 invoked by uid 500); 12 Sep 2014 05:54:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 23385 invoked by uid 99); 12 Sep 2014 05:54:12 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 05:54:12 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of baerrach@gmail.com designates 209.85.220.174 as permitted sender)
+Received: from [209.85.220.174] (HELO mail-vc0-f174.google.com) (209.85.220.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 05:54:08 +0000
+Received: by mail-vc0-f174.google.com with SMTP id hy10so224683vcb.5
+        for <users@maven.apache.org>; Thu, 11 Sep 2014 22:53:47 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=yA8LoHtr3mvzL7yBBiG5ruqO80D78ZbvOiZNqzYKlYA=;
+        b=DTFsfulJigckTQMnCLeapWU95WEv/g7shi+iT0tj/f7O610KBH7xiTDvMtbtNM1Ecn
+         9s99EhwqK10n5Y4vJdsd1Ukysjn7hDTMBZuFbLS5iLHSElKUuzYKF3PPc2+KT2c6//Hl
+         U7WvsSw9AgNpnQlrmaVnLJX+HMTcRgje9tC9VUAaSy99XZMzTkLHl92J+k1jz/9pKd6c
+         /StkpSJoNwQMBofKSQJpw9Sb8nUa2eMY7gWt/n8Ad6/k3Fz+3O06QgpejTPQvmOJ6Xgz
+         3EomHLF8vZGryNtaLS8pvPtp2Vs9jMn9sprILoiyxWyuXxaQ03rsGGx+tapyhAtJApJ0
+         e0Gw==
+MIME-Version: 1.0
+X-Received: by 10.52.139.106 with SMTP id qx10mr4059474vdb.1.1410501227535;
+ Thu, 11 Sep 2014 22:53:47 -0700 (PDT)
+Received: by 10.220.219.65 with HTTP; Thu, 11 Sep 2014 22:53:47 -0700 (PDT)
+In-Reply-To: <CAAZU44kFZ0cNGa_qOXf6Wj_LRRM18LE3v0xKMLZ0+Z44ZffpFg@mail.gmail.com>
+References: <CAAZU44kFZ0cNGa_qOXf6Wj_LRRM18LE3v0xKMLZ0+Z44ZffpFg@mail.gmail.com>
+Date: Fri, 12 Sep 2014 15:23:47 +0930
+Message-ID: <CADVp3v9kcaxe-gD+DtFgfhphNxSmN8YNrhAzuxgnFL4QyAfF_g@mail.gmail.com>
+Subject: Re: Tell maven to not have the parent pom as a dependency?
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=bcaec51b98c39f654e0502d7e8a3
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--bcaec51b98c39f654e0502d7e8a3
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On 12 September 2014 12:55, Kevin Burton <burton@spinn3r.com> wrote:
+
+> I have an OSS module in a multi-module maven project.
+>
+> I want to post this to a public repo=E2=80=A6 it=E2=80=99s open source.
+>
+> The problem is that the parent module is not OSS.
+>
+> When I setup a <dependency> it pulls in my OSS module just fine, but then
+> it tries to pull down the parent module, which isn=E2=80=99t in the repo,=
+ and
+> breaks.
+>
+> The parent pom isn=E2=80=99t really a dependency=E2=80=A6 so I=E2=80=99d =
+like it to not need it
+>
+> is this possible?
+
+
+As Dan says, make it a stand alone project.
+i.e. Dont make it a module.
+
+Being a module has a special meaning - "treat this as part of a bigger
+whole".
+It also help with syntatic sugar by allowing you to run one command at the
+top and have it propogate into all the modules.
+
+To be complete a module has nothing to do with dependencies or dependency
+management.
+
+The reason your OSS module is pulling in the parent is not because of
+dependency, but because of inheritance of the parent hierarchy.
+
+Usually all modules are released together and will share version
+identifiers.
+If they are released independently then you normally wont make them
+modules, and their version identifiers can do their own thing.
+There is a recent post "Maintaining versions in a multi-module project"
+that Stephen answers, you might also want to search the archives on this
+topic as well.
+
+A parent pom can be used in two ways; 1) to share common information i.e.
+"inheritance" 2) keep related artifacts together to make working on a bug
+that traverses artifacts easier i.e "aggregation"
+
+In your case I dont think you need to use aggregation, you just need to
+pull out the OSS artifact into its own stand alone location and then
+include it as a normal dependency in your non-OSS project.
+
+If you find that you are also fixing bugs in the OSS project at the same
+time you are working on the non-OSS one, then you might want to create an
+aggregate pom that has two modules (one OSS, the other non-OSS) so that you
+can run maven commands in one place against both projects. Stephen Connolly
+has some stuff somewhere about that I think.
+The freely availble Maven books might also go into this in more detail, but
+it tends to be a more advanced feature not well described.
+
+Cheers
+Barrie
+
+--bcaec51b98c39f654e0502d7e8a3--
+

@@ -1,0 +1,84 @@
+From users-return-137551-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Oct 13 14:12:05 2014
+Return-Path: <users-return-137551-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 37AA11744C
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 13 Oct 2014 14:12:05 +0000 (UTC)
+Received: (qmail 54935 invoked by uid 500); 13 Oct 2014 14:12:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 54844 invoked by uid 500); 13 Oct 2014 14:12:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 54830 invoked by uid 99); 13 Oct 2014 14:12:02 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 13 Oct 2014 14:12:02 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of joseph.gregory@gmail.com designates 209.85.212.180 as permitted sender)
+Received: from [209.85.212.180] (HELO mail-wi0-f180.google.com) (209.85.212.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 13 Oct 2014 14:11:36 +0000
+Received: by mail-wi0-f180.google.com with SMTP id em10so7581180wid.1
+        for <users@maven.apache.org>; Mon, 13 Oct 2014 07:11:35 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:reply-to:sender:date:message-id:subject:from:to
+         :content-type;
+        bh=l191WMtQY65kHMB6ftvv5ySfS6clsuMXf27ftj5FXWA=;
+        b=XAWkeXopPiKcKvoMwVZ8YdBI4SZzLbW613mlifOxm3eYzD1JEJsgmIrfEXShszsA/2
+         VDhZ6qEI7ec3P57CQFfq5qRI3VpcnfhKLVXEuuLP6hUi+nCTWyH1KQ6gK6/VBWAKLu4j
+         B71RxrQ/g7kS4ZIc/znHP0LPql0BJhdUjFJMbBQ3O645Xaabzqr8uJCQ1Gr1fgFZYycG
+         UGNt03eQBaIB1G9nLYioqvGN08RHyiPJIXe5e4OVJo80pWiMSzkkq0tZIziRIu/ivBPA
+         fod3Q4htqyLfRFanooIYazuKUdqriJIl0kFhrsVchX3/+nuTOBVaOAoz5EzMs+lFiL6p
+         NW4Q==
+MIME-Version: 1.0
+X-Received: by 10.180.101.200 with SMTP id fi8mr965694wib.77.1413209495345;
+ Mon, 13 Oct 2014 07:11:35 -0700 (PDT)
+Reply-To: greg.jos@gmail.com
+Sender: joseph.gregory@gmail.com
+Received: by 10.194.184.110 with HTTP; Mon, 13 Oct 2014 07:11:35 -0700 (PDT)
+Date: Mon, 13 Oct 2014 16:11:35 +0200
+X-Google-Sender-Auth: -zjm9sJvxBNfd2yLG1vg9_GjTpY
+Message-ID: <CACxOcRr_+bhGECYXHVwkBb5WJfTf7K8z+nLpieL+HCy4Om7urw@mail.gmail.com>
+Subject: Parent pom not resolved in current reactor ?
+From: =?UTF-8?Q?Gr=C3=A9gory_Joseph?= <greg.jos@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hey there,
+
+In the documentation for "relativePath" in
+http://maven.apache.org/xsd/maven-4.0.0.xsd, I read that "Maven looks
+for the parent pom first in the reactor of currently building
+projects, then <...>". Oddly enough, even though the reference docs
+_seem_ to be generated off of the same source, this bit is absent from
+http://maven.apache.org/ref/3.2.3/maven-model/maven.html#class_parent
+
+Empirically, it would appear the online doc is correct and the xsd doc
+is wrong, but I'd like a confirmation this is indeed the intended
+behavior. I'm currently working on a project that has a reactor, but
+where some of the modules have a different lifecycle than others; for
+those, it is inconvenient to have to have <relativePath> (because that
+paths points to a current snapshot, where as the rest of the <parent>
+tag point to a release version of the same artifact, making it unclear
+which one is actually used)
+
+Thanks for any hint or tip,
+
+Cheers,
+
+-greg
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

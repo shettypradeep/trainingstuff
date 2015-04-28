@@ -1,0 +1,93 @@
+From users-return-138074-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Dec 23 21:12:21 2014
+Return-Path: <users-return-138074-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 788A89797
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 23 Dec 2014 21:12:21 +0000 (UTC)
+Received: (qmail 17520 invoked by uid 500); 23 Dec 2014 21:12:19 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 17438 invoked by uid 500); 23 Dec 2014 21:12:19 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 17426 invoked by uid 99); 23 Dec 2014 21:12:17 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 23 Dec 2014 21:12:17 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dhoffer6@gmail.com designates 209.85.218.45 as permitted sender)
+Received: from [209.85.218.45] (HELO mail-oi0-f45.google.com) (209.85.218.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 23 Dec 2014 21:12:12 +0000
+Received: by mail-oi0-f45.google.com with SMTP id x69so15287605oia.4
+        for <users@maven.apache.org>; Tue, 23 Dec 2014 13:11:52 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=OzW/iCpCwu6c6nunkQ9ClK8WFL5ZkkMG1EiPmQ0XRo4=;
+        b=kZEB73vT5Ws4CCBjD/CHePqdvNBviND4S7hgMdNP3sIkyOWSAjdrzfNhDupzhQowS0
+         UkkkzsNH++BHc8qJxaDmO8UnZGONeg9GCVZYiJ/Wiyl8QWBupo54qC1B+HJ0unfL2T/B
+         ve3SF13nsOtFtONTcywIlyMwEBqTxqzZNVg67UMIGuxrrgqoQitfzKeDnYY3wVDJf/na
+         nU2/w390ruSXYdoq/VY7jmGav8A4Rr2M7UgzIyCKZtkn6h5lqiOkit2zlROjdAQWeWMc
+         toKUoTLLiz7h5DOcHVcvNS0vSSlfAcVzit+4tQFlJb2td8ZLK3wjKApxEmkGyzwUYS+2
+         mGLg==
+MIME-Version: 1.0
+X-Received: by 10.60.92.193 with SMTP id co1mr17552685oeb.5.1419369111884;
+ Tue, 23 Dec 2014 13:11:51 -0800 (PST)
+Received: by 10.76.74.130 with HTTP; Tue, 23 Dec 2014 13:11:51 -0800 (PST)
+Date: Tue, 23 Dec 2014 14:11:51 -0700
+Message-ID: <CAA8BW8H4RStyMZSqJybCWSJtyc7WbNHD-ULRYFhyQsNB2+kzdA@mail.gmail.com>
+Subject: Duplicate plugin declaration warning
+From: David Hoffer <dhoffer6@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b33d3d2b81deb050ae89f5e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b33d3d2b81deb050ae89f5e
+Content-Type: text/plain; charset=UTF-8
+
+I have some questions regarding the duplicate plugin declaration warning,
+e.g.
+
+[artifact:mvn] [WARNING] 'build.plugins.plugin.(groupId:artifactId)' must
+be unique but found duplicate declaration of plugin
+org.apache.maven.plugins:maven-xxx-plugin
+
+First is this a benign warning that can be ignored or is it really
+something that is not supported (multiple declarations of the same plugin)
+and that I really need to remove?
+
+If it's the later case this really limits the flexibility of plugins, let
+me explain with an example.
+
+If my current build does the following in order:
+
+Plugin A - Phase: generate-resources
+Plugin B - Phase: process-resources
+Plugin A - Phase: process-resources
+
+By defining plugin A twice I'm able to use the most appropriate phase for
+each instance of the plugin (btw, each instance has several executions).
+The key to the above is that plugin B has be be done between each of the
+two instances of plugin A.
+
+If I had to only have one plugin A I'd have to set the phase in the later
+case to something later than process-resources (or I'd have to adjust the
+first one to something earlier).  Not only does it make it harder to follow
+the flow (later in the pom is more clear) but it sometimes forces the use
+of poor phases as I have many other plugins in this pom after/before these
+that are tied to phases as well so it limits what can be chosen here to
+satisfy a no duplicate plugin rule.
+
+What's really the rule here regarding duplicate plugins?
+
+-Dave
+
+--047d7b33d3d2b81deb050ae89f5e--
+

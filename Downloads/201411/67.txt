@@ -1,0 +1,124 @@
+From users-return-137772-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Nov 19 23:15:09 2014
+Return-Path: <users-return-137772-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 04DF410580
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 19 Nov 2014 23:15:09 +0000 (UTC)
+Received: (qmail 53884 invoked by uid 500); 19 Nov 2014 23:15:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 53788 invoked by uid 500); 19 Nov 2014 23:15:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 53773 invoked by uid 99); 19 Nov 2014 23:15:07 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Nov 2014 23:15:07 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [66.185.162.182] (HELO relay01.goldenhour.net) (66.185.162.182)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Nov 2014 23:15:00 +0000
+Received: from localhost (localhost [127.0.0.1])
+	by relay01.goldenhour.net (Postfix) with ESMTP id 8AFB0236F8B
+	for <users@maven.apache.org>; Wed, 19 Nov 2014 15:14:37 -0800 (PST)
+X-Virus-Scanned: amavisd-new at goldenhourdata.net
+Received: from relay01.goldenhour.net ([127.0.0.1])
+	by localhost (amavis01.goldenhour.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id krYlvmRe0UkK for <users@maven.apache.org>;
+	Wed, 19 Nov 2014 15:14:37 -0800 (PST)
+Received: from HQ-SMG01 (unknown [192.168.104.30])
+	by relay01.goldenhour.net (Postfix) with ESMTP id 62072236F80
+	for <users@maven.apache.org>; Wed, 19 Nov 2014 23:14:37 +0000 (UTC)
+Received: from ghex01.hq.ghds.net [192.168.101.20] by HQ-SMG01;Wed, 19 Nov 2014 15:14:33 -0800
+Received: from ghex01.hq.ghds.net ([192.168.101.20]) by ghex01.hq.ghds.net
+ ([192.168.101.20]) with mapi; Wed, 19 Nov 2014 15:14:35 -0800
+From: Scott Klein <Scott.Klein@goldenhour.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Date: Wed, 19 Nov 2014 15:14:34 -0800
+Subject: Producing and building against separate branches
+Thread-Topic: Producing and building against separate branches
+Thread-Index: AdAETEkEjqS76xbjQGauP45p8D1d5g==
+Message-ID: <7FB4F0EC1916C84CBA95F6E5A360E40A013E123AAC85@ghex01.hq.ghds.net>
+Accept-Language: en-US
+acceptlanguage: en-US
+MIME-Version: 1.0
+Content-Language: en-US
+Content-Type: multipart/alternative;
+	boundary="_000_7FB4F0EC1916C84CBA95F6E5A360E40A013E123AAC85ghex01hqghd_"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_000_7FB4F0EC1916C84CBA95F6E5A360E40A013E123AAC85ghex01hqghd_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Here is our scenario:
+
+We have our SCM trunk and a "release candidate" branch. We merge code into =
+the "RC" branch when we want it to go into the next release.
+
+In the past everyone built against the RC branch artifacts. However, now we=
+ have two release cycles going at the same time and some people want to bui=
+ld against the RC branch and others want to build against the trunk. We als=
+o need to setup servers, etc with the proper artifacts.
+
+So, I think I need to produce two artifacts for each project: "project-vers=
+ion.jar" and "project-version-trunk.jar". This, I think is simple, I just s=
+et the <finalName> in the trunk profile.
+
+Now, how do I use these so that a user building under the "trunk" profile w=
+ill only use artifacts with the new classifier?
+
+We have a parent POM, used everywhere, that defines all of our dependency m=
+anagement to insure everyone stays "on version" for all of our dependencies=
+. Could I create a property in the "trunk" profile and then use that in our=
+ dependency  management? For example:
+
+<profile>
+                <id>trunk</id>
+                <build>
+                                <finalname>${project.artifactId}-${project.=
+version}-head<finalName>
+                </build>
+                <properties>
+                                <our.classifier>head</our.classifier> <-- p=
+roperty to use in dependencies
+                </properties>
+                ...
+</profile>
+
+<dependencyManagement>
+                <dependencies>
+                                <dependency>
+                                                <groupId>com.ours</groupId>=
+
+                                                <artifactId>project1</artif=
+actId>
+                                                <version>${project.version}=
+</version>
+                                                <classifier>${our.classifie=
+r}</classifier> <-- use of the property (if the property DNE, or is blank, =
+is that OK?
+                                </dependency>
+                                ...
+                </dependencies>
+</dependencyManagement>
+
+
+
+This is just me using my limited understanding trying to figure out the sol=
+ution - if there is a more appropriate way to do this please let me know
+
+
+Thanks
+scott
+
+
+--_000_7FB4F0EC1916C84CBA95F6E5A360E40A013E123AAC85ghex01hqghd_--
+

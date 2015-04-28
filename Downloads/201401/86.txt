@@ -1,0 +1,93 @@
+From users-return-135124-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 14 12:27:12 2014
+Return-Path: <users-return-135124-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2105A10748
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 14 Jan 2014 12:27:12 +0000 (UTC)
+Received: (qmail 16668 invoked by uid 500); 14 Jan 2014 12:27:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 16574 invoked by uid 500); 14 Jan 2014 12:27:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 16565 invoked by uid 99); 14 Jan 2014 12:27:06 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 12:27:06 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mgainty@hotmail.com designates 65.55.116.14 as permitted sender)
+Received: from [65.55.116.14] (HELO blu0-omc1-s3.blu0.hotmail.com) (65.55.116.14)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 12:27:01 +0000
+Received: from BLU172-W48 ([65.55.116.7]) by blu0-omc1-s3.blu0.hotmail.com with Microsoft SMTPSVC(6.0.3790.4675);
+	 Tue, 14 Jan 2014 04:26:40 -0800
+X-TMN: [Zjz3BEo3vz65KZ+WXRctSN4L4r7aj1Wf]
+X-Originating-Email: [mgainty@hotmail.com]
+Message-ID: <BLU172-W48D048E6778CF722B380F8AEBF0@phx.gbl>
+Content-Type: multipart/alternative;
+	boundary="_0075206e-fb19-4709-802c-169d007b5b2a_"
+From: Martin Gainty <mgainty@hotmail.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: RE: How to include @inheritDoc from a dependent jar
+Date: Tue, 14 Jan 2014 07:26:39 -0500
+Importance: Normal
+In-Reply-To: <F9336B99542D204B8167E81E41261BE111DF9F@ESESSMB109.ericsson.se>
+References: <F9336B99542D204B8167E81E41261BE111DF9F@ESESSMB109.ericsson.se>
+MIME-Version: 1.0
+X-OriginalArrivalTime: 14 Jan 2014 12:26:40.0971 (UTC) FILETIME=[E0C729B0:01CF1123]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_0075206e-fb19-4709-802c-169d007b5b2a_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+ =20
+
+
+> From: mikael.petterson@ericsson.com
+> To: users@maven.apache.org
+> Subject: How to include @inheritDoc from a dependent jar
+> Date: Tue=2C 14 Jan 2014 12:14:21 +0000
+>=20
+> Hi=2C
+>=20
+> We are building a maven site that will contain javadoc for our AppX api (=
+ jar file).
+> AppX depends on a few other jar files ( that we have built using maven) .=
+ One dependency jar contain an interface with javadoc and we have a class i=
+mplementing it=2C in AppX.
+> AppX has @inheritDoc in in the javadoc so we don't have to rewrite it.
+>=20
+> When I use the following under <report>
+>=20
+> <plugin>
+> <groupId>org.apache.maven.plugins</groupId>
+> <artifactId>maven-javadoc-plugin</artifactId>
+> <version>2.8.1</version>
+> </plugin>
+>=20
+> But when I open up the javadoc for my Appx and look at the class implemen=
+ting the interface there is no javadoc. What am I missing?
+
+MG>@Inheritdoc pulls Javadoc comments @comment @author @param @throws @retu=
+rn from Implemented interface
+MG>If you have none of the Javadoc tags in the corresponding base method of=
+ implemented interface=20
+MG>then AppX class will not be able to 'inherit' those Javadoc attributes
+=20
+> Br=2C
+>=20
+> //mike
+"The longest journey is the the journey inwards..Of him who has chosen his =
+dentiny..Who has started upon his quest for the source of his being".... Da=
+g Hammarskjold
+ 		 	   		  =
+
+--_0075206e-fb19-4709-802c-169d007b5b2a_--
+

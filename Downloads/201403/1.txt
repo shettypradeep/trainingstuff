@@ -1,0 +1,71 @@
+From users-return-135954-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 26 23:30:16 2014
+Return-Path: <users-return-135954-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 849AB10661
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Mar 2014 23:30:16 +0000 (UTC)
+Received: (qmail 62530 invoked by uid 500); 26 Mar 2014 23:30:12 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 62358 invoked by uid 500); 26 Mar 2014 23:30:12 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 62350 invoked by uid 99); 26 Mar 2014 23:30:12 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Mar 2014 23:30:12 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.220.48 as permitted sender)
+Received: from [209.85.220.48] (HELO mail-pa0-f48.google.com) (209.85.220.48)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Mar 2014 23:30:06 +0000
+Received: by mail-pa0-f48.google.com with SMTP id hz1so2621339pad.35
+        for <users@maven.apache.org>; Wed, 26 Mar 2014 16:29:44 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=MZ609hPtfxo6LWPYCtLhxNJbA2l3yobm/8XWRpcx/2g=;
+        b=ifKimwxHfLE2Zhbo8MXHVpsOyiLFa6TKnBJ+Y8oG0cEhSLVUeGBHTGDlKGc6qyITXj
+         zbdzJX3Fg2RZ0Kzsu8QrcLrkgEvBSkguSscGG9g4/I3wsLI8l7JmINcXRJd5oxVz9gwS
+         Ur0P0PVXLY+GlYL26NAV/GIRVXmKqDXsHAmzkfeyrg8CbJ6g5eJ/avsEqfUjyzjBFYma
+         mQCRfGbk4b60XLYZ1wTI86YtdcoWLcHzMEtuvCjZytfVg0TPtb56uBRn931DXSbqeE1m
+         kJ97akKHl5reWP7AOmQnIl9mgB7rDkfQB+IdJzPioD+f/jFMg1jFOnFbnE4adBBVeQib
+         24dg==
+X-Received: by 10.66.218.234 with SMTP id pj10mr7681009pac.156.1395876584804;
+ Wed, 26 Mar 2014 16:29:44 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Wed, 26 Mar 2014 16:29:24 -0700 (PDT)
+In-Reply-To: <CAHm9iQ_U2x+u-oJbPxomV_Jof-JDVb6Ko7Yz4pyLszseHQscXw@mail.gmail.com>
+References: <CAHm9iQ_U2x+u-oJbPxomV_Jof-JDVb6Ko7Yz4pyLszseHQscXw@mail.gmail.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Wed, 26 Mar 2014 18:29:24 -0500
+Message-ID: <CALy+7U=VcNi0KJOLZuZ3HqxB9uLqhbFQDtd1frK37nwCgm8b2g@mail.gmail.com>
+Subject: Re: Incremental Build ?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> Is there any way to implement incremental build with required dependency
+> compilation using Maven?
+
+If you search the mail list archive, Jason van Zyl posted some
+information about Incremental Builds just a few days ago.
+
+From: Jason van Zyl <jason@...>
+Subject: Incremental build API
+Date: Tue, 25 Mar 2014 10:43:57 -0700
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

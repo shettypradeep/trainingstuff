@@ -1,0 +1,103 @@
+From users-return-137386-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Sep 27 00:41:37 2014
+Return-Path: <users-return-137386-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 326F117DC2
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 27 Sep 2014 00:41:37 +0000 (UTC)
+Received: (qmail 39550 invoked by uid 500); 27 Sep 2014 00:41:34 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 39461 invoked by uid 500); 27 Sep 2014 00:41:34 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 39449 invoked by uid 99); 27 Sep 2014 00:41:34 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 27 Sep 2014 00:41:34 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [209.85.192.54] (HELO mail-qg0-f54.google.com) (209.85.192.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 27 Sep 2014 00:41:09 +0000
+Received: by mail-qg0-f54.google.com with SMTP id a108so9818084qge.27
+        for <users@maven.apache.org>; Fri, 26 Sep 2014 17:41:07 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=8mJXlFqoERNx3LZTpmjXERIJs4idDJkMgV7HhM3F8ig=;
+        b=PG55vS4mNk0/tr1Pz/GeMuG8eNak9Y5KdJsjXd4vTOsimV69f6zUCA4J1bPoPfNjcv
+         yeT1l1KMhVetXAjL+MTDTypk19AwlzW9AMEaJRYqEHdnqCZMGhc/+UQylmj0YBZs4WFh
+         RzGjgbHCvRPAv/tto6UiRkL3insHgIm0Im1jJXL4cP6hd6C6efnj38x76mKpa14k1b6b
+         MzFVqsipc2hmCQhnQ2Xx3nBlnDY8I/nCoLsG6ETHErhXf/mp98DoaaKno4QWXnV2YNQ0
+         l49kWx8FWaTPbHbMsG7Wi215bh/mp8sNhMAGEXp87xcQVLQeLNzDw/99caVT0+fL1xiN
+         We1w==
+X-Gm-Message-State: ALoCoQnAlL6IuybG7QhyIi2jQPHH6+Faj21TC5+1j9lnXPouNOOsVKqabwKZDiAxWU98JtuEzHGC
+MIME-Version: 1.0
+X-Received: by 10.224.60.129 with SMTP id p1mr33744547qah.99.1411778467710;
+ Fri, 26 Sep 2014 17:41:07 -0700 (PDT)
+Received: by 10.229.217.82 with HTTP; Fri, 26 Sep 2014 17:41:07 -0700 (PDT)
+Received: by 10.229.217.82 with HTTP; Fri, 26 Sep 2014 17:41:07 -0700 (PDT)
+In-Reply-To: <CAAZU44kc8QXRDuC_DJQsGd3q_+fOcMGyT_MLWOtG+zehS4n5Aw@mail.gmail.com>
+References: <CAAZU44kc8QXRDuC_DJQsGd3q_+fOcMGyT_MLWOtG+zehS4n5Aw@mail.gmail.com>
+Date: Sat, 27 Sep 2014 02:41:07 +0200
+Message-ID: <CABOR3+z=tgkTO3j2utc2G50me6+_jfkCx4Ss2SByJ-rZ+H7J4A@mail.gmail.com>
+Subject: Re: Maven site:deploy hosting providers??
+From: Bernd <ecki@zusammenkunft.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c3d8d411ecb40504014a80
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c3d8d411ecb40504014a80
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Have a look at bintray
+
+https://bintray.com/docs/uploads/uploads_uploads.html
+
+Greetings
+Bernd
+Am 26.09.2014 21:39 schrieb "Kevin Burton" <burton@spinn3r.com>:
+
+> I don=E2=80=99t want to necessarily host our own repositories.
+>
+> They=E2=80=99re just static file repositories.
+>
+> Are there any hosting providers out there that support dav, SCP or HTTP P=
+UT
+> that would work with wagon?
+>
+> Required features are:
+>
+> - SSL
+>
+> - redundant copies on multiple servers (CDN)
+>
+> - dav/scp/ftp/ upload.. anything supported by wagon.
+>
+> - HTTP auth
+>
+> - domain masking
+>
+> =E2=80=A6 I just want something easy to setup and then never worry about =
+it again.
+>
+> --
+>
+> Founder/CEO Spinn3r.com
+> Location: *San Francisco, CA*
+> blog: http://burtonator.wordpress.com
+> =E2=80=A6 or check out my Google+ profile
+> <https://plus.google.com/102718274791889610666/posts>
+> <http://spinn3r.com>
+>
+
+--001a11c3d8d411ecb40504014a80--
+

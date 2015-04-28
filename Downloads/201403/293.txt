@@ -1,0 +1,144 @@
+From users-return-135868-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 19 23:33:21 2014
+Return-Path: <users-return-135868-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 36EEB10EE7
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 19 Mar 2014 23:33:21 +0000 (UTC)
+Received: (qmail 60914 invoked by uid 500); 19 Mar 2014 23:33:17 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 60792 invoked by uid 500); 19 Mar 2014 23:33:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 60784 invoked by uid 99); 19 Mar 2014 23:33:17 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Mar 2014 23:33:17 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.160.42 as permitted sender)
+Received: from [209.85.160.42] (HELO mail-pb0-f42.google.com) (209.85.160.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Mar 2014 23:33:12 +0000
+Received: by mail-pb0-f42.google.com with SMTP id rr13so55735pbb.29
+        for <users@maven.apache.org>; Wed, 19 Mar 2014 16:32:52 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject
+         :content-type:content-transfer-encoding;
+        bh=GvxiMBMiapIOw5CYSSyq41tUPrtQATgQPOkZyPlpV3E=;
+        b=vJkVNTcL79QqrYvIhDPuywvjB1ZI8nep6JHxNnBzs4mzQnpq/ybqqnN3CjK77/PcdS
+         j5MVjOknEybwJ4+xs8d9Yas4U64W+H2nBd2LgsofdbuBVsoOV3wjwHtO3CX3/FmPiO86
+         AsyVLXtZWV/w2MIRKfu2ukDgfPvdTTNRIMtHDGob5yTRc9HyE7qQ8ZPjINU6WqhnUbSc
+         SfXhNN+NrPblmnGnkcn/D2ML6J0FDFFDt10DQH9QcEEbVCec+tqB/yFZ+gCffTgY8MSz
+         Y/qLrl3jJXegKYWmMg8DgnyirZxxO/H7Kmu0LXZ2hEO9Ov8lIXDNhivGOWu7nT6m1ypx
+         Fx4g==
+X-Received: by 10.68.113.68 with SMTP id iw4mr42238356pbb.119.1395271971972;
+        Wed, 19 Mar 2014 16:32:51 -0700 (PDT)
+Received: from [192.168.0.17] (S0106602ad07f9cfa.vc.shawcable.net. [24.85.131.20])
+        by mx.google.com with ESMTPSA id nc1sm101767pbc.32.2014.03.19.16.32.49
+        for <multiple recipients>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 19 Mar 2014 16:32:50 -0700 (PDT)
+Message-ID: <532A2922.70605@gmail.com>
+Date: Wed, 19 Mar 2014 16:32:50 -0700
+From: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: maven users <users@maven.apache.org>, git-users@googlegroups.com
+Subject: Problems with com.github.github:site-maven-plugin:0.9:site
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I configured things according to https://github.com/github/maven-plugins
+
+But when I try to run 'mvn site' I get the following errors.
+
+Does the gh-pages branch need to be created manually first, or should 
+the plug-in do that automatically? Or am I chasing some other type of error.
+
+Cheers, Eric
+
+[ERROR] Failed to execute goal 
+com.github.github:site-maven-plugin:0.9:site (default) on project 
+java-file-utilities: Error creating blob: Not Found (404) -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to 
+execute goal com.github.github:site-maven-plugin:0.9:site (default) on 
+project java-file-utilities: Error creating blob: Not Found (404)
+         at 
+org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:216)
+         at 
+org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+         at 
+org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+         at 
+org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+         at 
+org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+         at 
+org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+         at 
+org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+         at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:317)
+         at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:152)
+         at org.apache.maven.cli.MavenCli.execute(MavenCli.java:555)
+         at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:214)
+         at org.apache.maven.cli.MavenCli.main(MavenCli.java:158)
+         at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+         at 
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+         at 
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+         at java.lang.reflect.Method.invoke(Method.java:606)
+         at 
+org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+         at 
+org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+         at 
+org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+         at 
+org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: org.apache.maven.plugin.MojoExecutionException: Error 
+creating blob: Not Found (404)
+         at 
+com.github.maven.plugins.site.SiteMojo.createBlob(SiteMojo.java:289)
+         at 
+com.github.maven.plugins.site.SiteMojo.execute(SiteMojo.java:352)
+         at 
+org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:106)
+         at 
+org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+         ... 19 more
+Caused by: org.eclipse.egit.github.core.client.RequestException: Not 
+Found (404)
+         at 
+org.eclipse.egit.github.core.client.GitHubClient.createException(GitHubClient.java:552)
+         at 
+org.eclipse.egit.github.core.client.GitHubClient.sendJson(GitHubClient.java:643)
+         at 
+org.eclipse.egit.github.core.client.GitHubClient.post(GitHubClient.java:757)
+         at 
+org.eclipse.egit.github.core.service.DataService.createBlob(DataService.java:115)
+         at 
+com.github.maven.plugins.site.SiteMojo.createBlob(SiteMojo.java:285)
+         ... 22 more
+[ERROR]
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, 
+please read the following articles:
+[ERROR] [Help 1] 
+http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+D:\Users\Eric\Software\Project\Repositories\java-file-utilities>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

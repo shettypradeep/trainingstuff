@@ -1,0 +1,69 @@
+From users-return-136184-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr 18 10:11:13 2014
+Return-Path: <users-return-136184-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 04A11109C5
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 18 Apr 2014 10:11:13 +0000 (UTC)
+Received: (qmail 37210 invoked by uid 500); 18 Apr 2014 10:11:08 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 36641 invoked by uid 500); 18 Apr 2014 10:11:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 36633 invoked by uid 99); 18 Apr 2014 10:11:05 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Apr 2014 10:11:05 +0000
+X-ASF-Spam-Status: No, hits=0.1 required=5.0
+	tests=MISSING_MID,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [50.22.11.58] (HELO bs3-dallas.accountservergroup.com) (50.22.11.58)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Apr 2014 10:10:59 +0000
+Received: from dsl78-143-200-163.in-addr.fast.co.uk ([78.143.200.163]:57982 helo=viper.int.arc7.info)
+	by bs3-dallas.accountservergroup.com with esmtpsa (TLSv1:AES128-SHA:128)
+	(Exim 4.82)
+	(envelope-from <org.apache.maven.user@io7m.com>)
+	id 1Wb5kj-000FCm-VX
+	for users@maven.apache.org; Fri, 18 Apr 2014 05:10:38 -0500
+Date: Fri, 18 Apr 2014 10:10:35 +0000
+From: <org.apache.maven.user@io7m.com>
+To: users@maven.apache.org
+Subject: Unpacking a zip file from the source tree
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - bs3-dallas.accountservergroup.com
+X-AntiAbuse: Original Domain - maven.apache.org
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - io7m.com
+X-Get-Message-Sender-Via: bs3-dallas.accountservergroup.com: authenticated_id: org.apache.maven.user+io7m.com/only user confirmed/virtual account not confirmed
+X-Virus-Checked: Checked by ClamAV on apache.org
+Message-Id: <20140418101105.6185B698@athena.apache.org>
+
+Hello.
+
+I have a zip file in the src directory of a project. I want to unpack
+this zip file and insert the contents into the generated site directory
+during the site phase.
+
+What is the correct way to do this?
+
+There's the "dependency:unpack" goal, but that only seems capable of
+working with dependencies (which this zip file isn't). There's the
+TrueZip plugin, but quite frankly, it seems defective (it silently
+fails to do anything, and the documentation is no help at all).
+
+M
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

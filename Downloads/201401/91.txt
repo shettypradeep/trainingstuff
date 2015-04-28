@@ -1,0 +1,124 @@
+From users-return-135037-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan  9 07:48:29 2014
+Return-Path: <users-return-135037-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C85E61077F
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  9 Jan 2014 07:48:29 +0000 (UTC)
+Received: (qmail 26789 invoked by uid 500); 9 Jan 2014 07:47:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 26212 invoked by uid 500); 9 Jan 2014 07:47:36 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 26102 invoked by uid 99); 9 Jan 2014 07:47:33 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Jan 2014 07:47:33 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of anders.g.hammar@gmail.com designates 209.85.212.173 as permitted sender)
+Received: from [209.85.212.173] (HELO mail-wi0-f173.google.com) (209.85.212.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Jan 2014 07:47:26 +0000
+Received: by mail-wi0-f173.google.com with SMTP id hn9so6562263wib.0
+        for <users@maven.apache.org>; Wed, 08 Jan 2014 23:47:06 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=9Zy1kWON4GFRrZA4rtYCO9dp8g+LU3vdaUEDzOV8VXs=;
+        b=neb50AtaLpA80uyuXqUQ/4yK6sjEs85CLYPamaoFCoO94i1XgQnLP/M7JQLtauHEFI
+         j1JzeUoMPBbveNjB69yLFg5843P7aawjloD27dSL6UtzsfIqbJtx4eiHxmnV7dJjWn9f
+         qqJEX9uM3g2pQiMgaUOBFqNY8fB+xtyghZXwzYLXF7IEklrO3NFcQv/gj4yJaW/NCyTT
+         +dyb3lWqwAfpY6ofFpTYSqc9jC9m311kNTNCWypICPOvT4aDBttQ2sEjDLDHMPK5DPCF
+         CEUn7hOBxPnL1skYIh5wPvWsQSmDsq8896w3xozWEn7MMDpiMaxd8AniwYDfR99k6IVd
+         Uqjw==
+MIME-Version: 1.0
+X-Received: by 10.180.160.212 with SMTP id xm20mr24528289wib.33.1389253626139;
+ Wed, 08 Jan 2014 23:47:06 -0800 (PST)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.137.38 with HTTP; Wed, 8 Jan 2014 23:47:06 -0800 (PST)
+In-Reply-To: <CAG54imaRda46pY4=aeuWPtcPCqP5jK_KumH=JbSR7GVzHPtDvA@mail.gmail.com>
+References: <CAG54imaRda46pY4=aeuWPtcPCqP5jK_KumH=JbSR7GVzHPtDvA@mail.gmail.com>
+Date: Thu, 9 Jan 2014 08:47:06 +0100
+X-Google-Sender-Auth: FCQvtqm9AG5IvhIhnQHi2n2ApHs
+Message-ID: <CAKDUN1veL0TUkhXBVRxkquXZ4QX+qHgXQx=vCrkCHbHN4XfwJA@mail.gmail.com>
+Subject: Re: Need advice automating a Java test suite.
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b624d34e39af204ef84d00d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b624d34e39af204ef84d00d
+Content-Type: text/plain; charset=ISO-8859-1
+
+It's little bit hard understanding all of the magic with your profiles and
+why you can''t combine them. But if I assume that you want to test your
+application with different configuration (different db, different
+configuration/properties, etc.) I suggest that you create a separate
+multi-module project for your testing. Each of the modules there would test
+ONE specific setup/config for the applicatation. You would bind the setup
+of the environment to the pre-integration-test phase and the tear down of
+the same to the post-integration-test phase. And then you use the
+maven-failsafe-plugin to execute all tests (for that app config) in the
+integration-test phase.
+
+If you have the same set of JUnit test classes to be used in all modules,
+you have these in a separate module which would create a test artifact that
+you re-use in the other modules. If you have a lot of the same pom config
+magics in the modules this can be moved to the pluginManagement section of
+the parent (more advanced Maven usage, do that last when everything already
+works).
+
+This will make it possible to build all modules for a complete test suite
+("mvn verify"). If you just want to test one setup/config you only build
+that module ("mvn verify").
+
+/Anders
+
+
+On Wed, Jan 8, 2014 at 11:08 PM, Todd Chapman <todd@chaka.net> wrote:
+
+> Hello,
+>
+> We have a java multi-module project that has a somewhat painful to run test
+> suite that I would like to get under control using Maven.
+>
+> Currently it takes 5 separate Maven commands to setup, run, and teardown
+> all the tests and test databases. I'd like to get this down to one command.
+> Also I would like this structured so that individual parts of the process
+> can be run separately to aid in debugging problems.
+>
+> The pom has 1 profile for each part of the task, all bound to the "test"
+> goal:
+>
+> mvn clean test -P test-setup-1,local-enterprise-test-db  (exec:java plugin
+> to setup up a database)
+> mvn test -P test-setup-2,local-enterprise-test-db           (exec:java
+> plugin to setup up a 2nd database)
+> mvn test -P test-design,local-enterprise-test-db            (surefire
+> plugin to run a subset of the tests with maven properties set)
+> mvn test -P test-transactional,local-enterprise-test-db   (surefire plugin
+> to run a different subset of the tests with different maven properties set)
+> mvn test -P test-tear-down,local-enterprise-test-db        (exec:java
+> plugin to teardown the databases)
+>
+>
+> The problem I am running into is how to get this organized so that it all
+> happens with 1 command. It seems nearly unpossible.
+>
+> Can anyone offer any advice on how to accomplish this? Pointer to relevant
+> articles, blog posts, stackoverflow questions would be most appreciated.
+>
+> Thanks!
+>
+> -Todd
+>
+
+--047d7b624d34e39af204ef84d00d--
+

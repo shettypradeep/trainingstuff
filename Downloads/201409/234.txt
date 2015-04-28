@@ -1,0 +1,135 @@
+From users-return-137259-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 12 14:59:15 2014
+Return-Path: <users-return-137259-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6BEE011AFF
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 12 Sep 2014 14:59:15 +0000 (UTC)
+Received: (qmail 67066 invoked by uid 500); 12 Sep 2014 14:59:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 66979 invoked by uid 500); 12 Sep 2014 14:59:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 66968 invoked by uid 99); 12 Sep 2014 14:59:13 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 14:59:13 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of christofer.dutz@c-ware.de designates 157.55.234.107 as permitted sender)
+Received: from [157.55.234.107] (HELO emea01-db3-obe.outbound.protection.outlook.com) (157.55.234.107)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 14:59:08 +0000
+Received: from DBXPR05MB237.eurprd05.prod.outlook.com (10.242.143.147) by
+ DBXPR05MB240.eurprd05.prod.outlook.com (10.242.143.154) with Microsoft SMTP
+ Server (TLS) id 15.0.1024.12; Fri, 12 Sep 2014 14:58:46 +0000
+Received: from DBXPR05MB237.eurprd05.prod.outlook.com ([169.254.14.160]) by
+ DBXPR05MB237.eurprd05.prod.outlook.com ([169.254.14.160]) with mapi id
+ 15.00.1024.012; Fri, 12 Sep 2014 14:58:46 +0000
+From: Christofer Dutz <christofer.dutz@c-ware.de>
+To: Maven Users List <users@maven.apache.org>, "info@soebes.de"
+	<info@soebes.de>
+Subject: AW: AW: Releasing Maven Plugins
+Thread-Topic: AW: Releasing Maven Plugins
+Thread-Index: AQHPzoWSiQb6D6m/t0qorC/0t04sYJv9ciQAgAAA1qiAAAfqgIAAG5tK
+Date: Fri, 12 Sep 2014 14:58:46 +0000
+Message-ID: <1410533922809.26943@c-ware.de>
+References: <1410525516105.34402@c-ware.de>,<5412EB2E.8030904@gmx.de>
+ <1410526268449.86024@c-ware.de>,<5412F285.9030709@gmx.de>
+In-Reply-To: <5412F285.9030709@gmx.de>
+Accept-Language: de-DE, en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-ms-exchange-transport-fromentityheader: Hosted
+x-originating-ip: [217.110.228.68]
+x-microsoft-antispam: BCL:0;PCL:0;RULEID:;UriScan:;
+x-forefront-prvs: 0332AACBC3
+x-forefront-antispam-report: SFV:NSPM;SFS:(10019020)(6009001)(252514010)(199003)(189002)(71364002)(51704005)(81342001)(99396002)(81542001)(4396001)(87936001)(2656002)(83072002)(85852003)(229853001)(74482001)(77982001)(107046002)(2501002)(107886001)(77096002)(50986999)(76176999)(15975445006)(97736003)(21056001)(54356999)(66066001)(75402002)(20776003)(64706001)(36756003)(90102001)(79102001)(86362001)(92726001)(92566001)(95666004)(83322001)(46102001)(19580405001)(19580395003)(106116001)(106356001)(101416001)(31966008)(74662001)(117636001)(105586002)(93886004)(85306004);DIR:OUT;SFP:1102;SCL:1;SRVR:DBXPR05MB240;H:DBXPR05MB237.eurprd05.prod.outlook.com;FPR:;MLV:sfv;PTR:InfoNoRecords;A:1;MX:1;LANG:en;
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-OriginatorOrg: c-ware.de
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+No I can't build with an empty local repo. I have to build the plugin first=
+ using the "minimal" profile.=0A=
+As i said in the other post, Maven gives up before starting to build.=0A=
+=0A=
+You can have a look ... the project is publicly available. Unfortunately I =
+didn't create it ... I took over development 2 Years ago. https://github.co=
+m/chrisdutz/flexmojos=0A=
+=0A=
+Chris=0A=
+=0A=
+________________________________________=0A=
+Von: Karl Heinz Marbaise <khmarbaise@gmx.de>=0A=
+Gesendet: Freitag, 12. September 2014 15:17=0A=
+An: Maven Users List=0A=
+Betreff: Re: AW: Releasing Maven Plugins=0A=
+=0A=
+Hi Chris,=0A=
+=0A=
+=0A=
+ > But if I create a plugin using the official maven-plugin archetype=0A=
+the setup is almost the same so it can't be that off-track.=0A=
+=0A=
+Which exactly have you used to do the setup...=0A=
+=0A=
+Furhtermore i would separate build tools for the build itself from using=0A=
+them...=0A=
+=0A=
+Apart from that what Anders is saying it is working but on the other=0A=
+hand you seemed to be having some problems so there must be problems in=0A=
+your build...=0A=
+=0A=
+Can you build on command line with a cleaned local repository without an=0A=
+issue just by using:=0A=
+=0A=
+mvn clean package ?=0A=
+=0A=
+=0A=
+=0A=
+>=0A=
+> Chris=0A=
+>=0A=
+> ________________________________________=0A=
+> Von: Karl Heinz Marbaise <khmarbaise@gmx.de>=0A=
+> Gesendet: Freitag, 12. September 2014 14:46=0A=
+> An: Maven Users List=0A=
+> Betreff: Re: Releasing Maven Plugins=0A=
+>=0A=
+> HI,=0A=
+>=0A=
+>   >=0A=
+>> I'm currently releasing a new version of Flexmojos. While I sort of foun=
+d a procedure for releasing=0A=
+>   > that maven plugin, it's still sort of a PITA.=0A=
+>>=0A=
+>>=0A=
+>> The main problem is that the project contains the plugin as=0A=
+>   >well as some modules that use the plugin.=0A=
+>=0A=
+> This is the basic mistake in this scenario. If you build a maven-plugin=
+=0A=
+> make a separate project from it and do the release etc. only from the=0A=
+> maven-plugin and afterwards you have the release available and can=0A=
+> continue with the rest which uses the release...=0A=
+>=0A=
+>=0A=
+> Kind regards=0A=
+=0A=
+---------------------------------------------------------------------=0A=
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org=0A=
+For additional commands, e-mail: users-help@maven.apache.org=0A=
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

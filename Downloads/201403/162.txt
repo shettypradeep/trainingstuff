@@ -1,0 +1,90 @@
+From users-return-135709-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar  6 02:51:20 2014
+Return-Path: <users-return-135709-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D28D510E66
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  6 Mar 2014 02:51:20 +0000 (UTC)
+Received: (qmail 85125 invoked by uid 500); 6 Mar 2014 02:51:17 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 84718 invoked by uid 500); 6 Mar 2014 02:51:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 84710 invoked by uid 99); 6 Mar 2014 02:51:13 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 02:51:13 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.220.46 as permitted sender)
+Received: from [209.85.220.46] (HELO mail-pa0-f46.google.com) (209.85.220.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 02:51:07 +0000
+Received: by mail-pa0-f46.google.com with SMTP id kp14so1975109pab.5
+        for <users@maven.apache.org>; Wed, 05 Mar 2014 18:50:46 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=4sXN/+DCJ7ANcqPzXMF/apV3KBe32eaeqfcX+pRDBfk=;
+        b=Y6LcEn+kajF1mH1eufzJtTirYnc37vopDgWWUZkV0H7prYN+noOrfUlXt6XHCF6iiT
+         B5klf4ABvFU8QBxgCltRn//MZT29Og+Ti+sLQCqF7HUFt+Z9r5AXo1VFeqhYTms3VbUf
+         0jOVwKN3Ww4vn10EfTbFH8Q9GG+JbCovYyn4wrN4E7TuQklN7+FmHr1Jwx3uBuxcg09S
+         NRJmW4tEB5/57xjN+rGec717PMQppFV0BoMzaflTxwYSFNjdfY8lyCBKvseh1Mjx07HK
+         DwqCtPwhaEGeqKTEKNHX30o0FwJxxOByyCYPHcaGiQ+HLUgdnElFKT7ZNcXfuYZIvhg+
+         tpCA==
+X-Received: by 10.66.241.73 with SMTP id wg9mr11356162pac.69.1394074246086;
+ Wed, 05 Mar 2014 18:50:46 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Wed, 5 Mar 2014 18:50:25 -0800 (PST)
+In-Reply-To: <OF82317C94.88F6358A-ONC1257C92.0051B437-C1257C92.0055AA17@commcity.ch>
+References: <OF82317C94.88F6358A-ONC1257C92.0051B437-C1257C92.0055AA17@commcity.ch>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Wed, 5 Mar 2014 20:50:25 -0600
+Message-ID: <CALy+7U=8KfryL9nBjEsV2nOA8hVpEUFNC=uN0yrr594uU1urZA@mail.gmail.com>
+Subject: Re: Could not create staless EJB whith maven 3.2.1 but working fine
+ with version 3.0.5
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> With maven version 3.2.1, in fact same issue since version 3.1.1, I get
+> the exception SCHWERWIEGEND: EJB5070: Exception creating stateless session
+> bean : [RequirementBeanSL]
+> when building the concerned  module with tests. Changing back to run the
+> same tests with maven version 3.0.5, all tests run fine and pass.
+
+Most likely there are plugin and/or jdk changes that are influencing
+the change in results. And not just a change in the Maven version
+itself.
+
+
+> I would very much appreciate any hint on how to work around this problem.
+> Of course, I could simple stick to maven version 3.0.5 as this works. But
+> in the long run I would prefer to keep pace with the newer versions.
+
+Do the following:
+Go to command line.
+Go to your project directory/folder.
+Set path to be Maven 3.0.5 and run "mvn -X package > mvn305_out.txt".
+Set path to be Maven 3.2.1 and run "mvn -X package > mvn321_out.txt".
+Run "diff" or a similar command to compare the output.
+
+Specifically, look at the plugins listed and try to narrow down what
+is different which might cause this. You can "lock down" your plugin
+versions with <version>[1.2.3]</version> and perhaps try using a
+plugin that shows up when running 3.0.5 in 3.2.1 and vice-versa to
+narrow it down.
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

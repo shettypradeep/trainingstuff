@@ -1,0 +1,84 @@
+From users-return-137350-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Sep 23 01:24:05 2014
+Return-Path: <users-return-137350-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6654E11AED
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 23 Sep 2014 01:24:05 +0000 (UTC)
+Received: (qmail 79832 invoked by uid 500); 23 Sep 2014 01:24:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 79751 invoked by uid 500); 23 Sep 2014 01:24:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 79730 invoked by uid 99); 23 Sep 2014 01:24:03 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 23 Sep 2014 01:24:03 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ctrueden.wisc@gmail.com designates 209.85.213.177 as permitted sender)
+Received: from [209.85.213.177] (HELO mail-ig0-f177.google.com) (209.85.213.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 23 Sep 2014 01:23:36 +0000
+Received: by mail-ig0-f177.google.com with SMTP id h3so3790594igd.4
+        for <users@maven.apache.org>; Mon, 22 Sep 2014 18:23:35 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=H75hltTlGTCzFL9IX6FVonhj2/IoURp8gepsaqd4u+I=;
+        b=CHwZJdqL/22kmBnZX6Dg3s6hbkYnG7mqjUqEytG5aJpwC3wu9IgFd+ZYtWI4NQchyj
+         4wTEYyxkENhlmwuZpKzmgO7Wedw5Z+ZA/YXiBG4zn3cSDq/o6lTpHdmCvA9UZIDhHCOL
+         mEKiejigP6EuJQWHknPh+ZuL0EULlQomPzVcsuz2oQNASP4hv1gGH255yIHQzUyrnki8
+         7UC9F/e6t1HhSBc53JRi8aXWGNgShc8zP3LGj7Gq2Nrv6pLQDXQNDCrptM0otUpgk2wK
+         YR+xL1Ej9QkGzaGKaocGoF0cUXnF6ZfjtW6E1+te6sCMbwFej2unYQwp0gT9AGTptdoA
+         Dr9A==
+MIME-Version: 1.0
+X-Received: by 10.42.47.137 with SMTP id o9mr10057552icf.58.1411435415353;
+ Mon, 22 Sep 2014 18:23:35 -0700 (PDT)
+Sender: ctrueden.wisc@gmail.com
+Received: by 10.107.43.7 with HTTP; Mon, 22 Sep 2014 18:23:35 -0700 (PDT)
+Received: by 10.107.43.7 with HTTP; Mon, 22 Sep 2014 18:23:35 -0700 (PDT)
+In-Reply-To: <CAKuK4uH7S5Z54van32ExnPu+_d8bP9BA-Vz-4BTK2QQ5My_KHQ@mail.gmail.com>
+References: <CAKuK4uH7S5Z54van32ExnPu+_d8bP9BA-Vz-4BTK2QQ5My_KHQ@mail.gmail.com>
+Date: Mon, 22 Sep 2014 20:23:35 -0500
+X-Google-Sender-Auth: fl4x0N7Tvc7Ee4XXdQde7Vrz3Bo
+Message-ID: <CADN69y=zCBy+XJs9V338GTr1FP9y30NVbfOU09SUKcjM6Masxg@mail.gmail.com>
+Subject: Re: usage with Jenkins
+From: Curtis Rueden <ctrueden@wisc.edu>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=90e6ba614fec8e3fcc0503b16afe
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--90e6ba614fec8e3fcc0503b16afe
+Content-Type: text/plain; charset=UTF-8
+
+Hi Grover,
+
+> CI build/packages successfully but not
+> artifacts are listed on the jobs page
+
+For Jenkins to publish artifacts (for any build, not just Maven-based ones)
+you must use the "publish artifacts" option and specify the file path
+patterns to publish.
+
+Also, stay away from the Jenkins "Maven" style job. Freestyle is more
+flexible and less buggy.
+
+Regards,
+Curtis
+On Sep 22, 2014 4:21 PM, "Grover Blue" <grover.blue@gmail.com> wrote:
+
+> Is there anything special that needs to be added to a pom in order to work
+> with Jenkins?  For some reason, by CI build/packages successfully but not
+> artifacts are listed on the jobs page (they are hidden on the file-system
+> in a "default/*" directory).
+>
+
+--90e6ba614fec8e3fcc0503b16afe--
+

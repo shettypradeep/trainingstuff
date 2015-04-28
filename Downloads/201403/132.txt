@@ -1,0 +1,72 @@
+From users-return-136005-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Mar 28 18:21:09 2014
+Return-Path: <users-return-136005-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E2120114CE
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 28 Mar 2014 18:21:08 +0000 (UTC)
+Received: (qmail 22310 invoked by uid 500); 28 Mar 2014 18:21:05 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 21803 invoked by uid 500); 28 Mar 2014 18:21:04 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 21790 invoked by uid 99); 28 Mar 2014 18:21:02 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 18:21:02 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.192.175 as permitted sender)
+Received: from [209.85.192.175] (HELO mail-pd0-f175.google.com) (209.85.192.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 18:20:57 +0000
+Received: by mail-pd0-f175.google.com with SMTP id x10so5194352pdj.20
+        for <users@maven.apache.org>; Fri, 28 Mar 2014 11:20:35 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=8Pv0v6XcDC1BM6s1GTCtx1cqxdEkSk3qhPDPA1SeqD8=;
+        b=AyIkZ9paJ/37XcYSfUOQmytIuHMeH7Scai8770ESMwr9a8ER0Ppou6yu4q5bejy/IE
+         SpZC0ErfFB4nuCz/LFUQE5ltHki02DM5cR0Q6CdJxn+sRU8YPXm0L+cIjG3MqhJlgvgK
+         N6VgBhv2gMSPVzOzdS7agylVLpPkuSlQO7j/ue/vuYw9/7e9+04MfDkq9hdRGyOBbWc8
+         8JSsEND3wpPHyaJIWWRsoapfqxTxDIhyGycZHZH6S8BQI6jlePU85vnmBpT1bOWA93WS
+         71XFPhk0drHRhzZQmcvgm7naLbUdReYmg7UtG4IZmp0h98zbct6xjGiJjAcP7z8wvn01
+         6fhA==
+X-Received: by 10.66.218.234 with SMTP id pj10mr10144656pac.156.1396030835037;
+ Fri, 28 Mar 2014 11:20:35 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Fri, 28 Mar 2014 11:20:14 -0700 (PDT)
+In-Reply-To: <op.xdfsc72ikdkhrr@robertscholte>
+References: <1396000799217-5789837.post@n5.nabble.com> <CANWgJS6WiA1b4mew9Y5sHFy0Vpp9iWMidkTaitwKF52vfyo2Pw@mail.gmail.com>
+ <1396005159305-5789843.post@n5.nabble.com> <CA+nPnMxJvqyWcnsWADF00zr+emGdw-kA4fZeSY9duCOj3zs96A@mail.gmail.com>
+ <1396009391638-5789868.post@n5.nabble.com> <CA+nPnMxp6vhW6BaDQ22b5P2pHVVZTAkwpd7NW1PVgfxuzw9gTw@mail.gmail.com>
+ <1396012680124-5789892.post@n5.nabble.com> <CA+nPnMze-q4vuU7o3B2y7_MCS5cUnWaTMHZ=Dku8GyK3UMK08w@mail.gmail.com>
+ <1396015974365-5789916.post@n5.nabble.com> <op.xdfsc72ikdkhrr@robertscholte>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Fri, 28 Mar 2014 13:20:14 -0500
+Message-ID: <CALy+7UnTXD1kKoqy0T+cUvSYSuAQueMYg_eGQKFbPfEsBa0T5Q@mail.gmail.com>
+Subject: Re: maven release-plugin 2.5 bug - releasing snapshots...
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> Let me join this thread, because that "someone" is me. As said by Stephen:
+> the version handling prior to 2.4 contained several issues, so you were
+> relying on a bug.
+
+Reminds me of this classic XKCD... :)
+https://xkcd.com/1172/
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

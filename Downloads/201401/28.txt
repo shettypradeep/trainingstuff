@@ -1,0 +1,131 @@
+From users-return-135136-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 14 15:21:09 2014
+Return-Path: <users-return-135136-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 66A0B100B7
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 14 Jan 2014 15:21:09 +0000 (UTC)
+Received: (qmail 28448 invoked by uid 500); 14 Jan 2014 15:21:05 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 28341 invoked by uid 500); 14 Jan 2014 15:21:04 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 28332 invoked by uid 99); 14 Jan 2014 15:21:04 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 15:21:04 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ctrueden.wisc@gmail.com designates 209.85.220.181 as permitted sender)
+Received: from [209.85.220.181] (HELO mail-vc0-f181.google.com) (209.85.220.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 15:21:00 +0000
+Received: by mail-vc0-f181.google.com with SMTP id ie18so323153vcb.12
+        for <users@maven.apache.org>; Tue, 14 Jan 2014 07:20:39 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=kBr7VwVi+BPjA5ijTkRx0H8WVkCbHxMYFwNHKNwD9qM=;
+        b=tOYKr5wel6X0FDuZxkd38LL+7A0ftyviEtftTD5+nudO+RDG7pBMFvGKcoSm29DYZN
+         YTnBS34OWlcFleqihChoryzWKS2uiNBUFJT6voQsPMoocLr5xEXfKJ1LOQbCpypN5sLt
+         LDppVM/hIco/m9dk8f2BMZ23ziC9l5ke6bdVnWbzmkryV5TtWPwVHM5i8NHHYI6Nlxwg
+         okwyRmefqyAqqrEKQaBAunZTP7oNvLrAM6njH87wSTtDZEuGeA4+xY1ElROIvCtP6sCd
+         FCTgGBIlO5bzBcaxtB/+0NqKqXtAiX/gJX60KErqqSeJO4Bv+y8T6N1GINlXUwvmJH97
+         HOSA==
+X-Received: by 10.52.236.132 with SMTP id uu4mr844798vdc.47.1389712839833;
+ Tue, 14 Jan 2014 07:20:39 -0800 (PST)
+MIME-Version: 1.0
+Sender: ctrueden.wisc@gmail.com
+Received: by 10.58.34.198 with HTTP; Tue, 14 Jan 2014 07:20:09 -0800 (PST)
+In-Reply-To: <B8D164BED956C5439875951895CB4B2218828942@WABOTH9MSGUSR8C.ITServices.sbc.com>
+References: <B8D164BED956C5439875951895CB4B221882805C@WABOTH9MSGUSR8C.ITServices.sbc.com>
+ <CADVp3v9QAzHx3qZabYLoECy+v0tJx38zywMVJkVvEB=woocPYg@mail.gmail.com> <B8D164BED956C5439875951895CB4B2218828942@WABOTH9MSGUSR8C.ITServices.sbc.com>
+From: Curtis Rueden <ctrueden@wisc.edu>
+Date: Tue, 14 Jan 2014 09:20:09 -0600
+X-Google-Sender-Auth: 1ZxcgrB2ChNdD8XAXdWDC9zQirM
+Message-ID: <CADN69yn6PTShXiV0URyyTSMztJ7yhWWrVnC3rzLuZBy1nmd18g@mail.gmail.com>
+Subject: Re: Is it possible to deliberately have two dependencies with the
+ same groupid, artifactid, and packaging, but different version?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e01183eb4287c2104efefbca7
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01183eb4287c2104efefbca7
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi David,
+
+> Again, I didn't want to debate whether this is "convenient", I just
+> wanted to know if Maven dependency resolution and things like the EAR
+> plugin will have any trouble incorporating multiple dependencies with
+> the same G:A, but different version.
+
+I haven't tried it, but personally I would be shocked if Maven allowed this
+at all. Did you try it? Does it work?
+
+IMO, the major reason for versions is so that Maven (and humans) knows to
+select one from a set. If you need more than one at the same time, change
+the value of A.
+
+Including multiple versions of the same artifact violates Maven's current
+assumptions rather severely.
+
+Regards,
+Curtis
+
+
+On Tue, Jan 14, 2014 at 9:10 AM, KARR, DAVID <dk068x@att.com> wrote:
+
+> > -----Original Message-----
+> > From: Barrie Treloar [mailto:baerrach@gmail.com]
+> > Sent: Monday, January 13, 2014 4:48 PM
+> > To: Maven Users List
+> > Subject: Re: Is it possible to deliberately have two dependencies with
+> the
+> > same groupid, artifactid, and packaging, but different version?
+> >
+> > On 14 January 2014 10:54, KARR, DAVID <dk068x@att.com> wrote:
+> > > I have a situation where it would be convenient for my pom to have two
+> > dependencies that are almost identical, only being different by the
+> version.
+> > The makeup of the artifact is such that it would be safe (and intended)
+> to
+> > use both of them.  The Java package used in each is similar, but
+> different.
+> > The package will vary along with the version number.
+> > >
+> > > Will dependency resolution and the EAR plugin (and any other mechanism
+> that
+> > lists dependencies) have any trouble with this?
+> >
+> > Can you describe why you think this would be convenient?
+> > Have you looked at classifiers?
+> > http://stackoverflow.com/questions/8040964/how-to-use-or-abuse-artifact-
+> > classifiers-in-maven
+>
+> A new version of this artifact is produced perhaps once a month.  Perhaps
+> 2-3 versions of this artifact will be referenced in the client code base at
+> one time.  More versions than that are supported in the server code base,
+> throughout all environments.  The only difference in the reported name of
+> this artifact from one version to the next is the version number.
+>
+> Again, I didn't want to debate whether this is "convenient", I just wanted
+> to know if Maven dependency resolution and things like the EAR plugin will
+> have any trouble incorporating multiple dependencies with the same G:A, but
+> different version.
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--089e01183eb4287c2104efefbca7--
+

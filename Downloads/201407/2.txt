@@ -1,0 +1,112 @@
+From users-return-136792-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 17 16:25:14 2014
+Return-Path: <users-return-136792-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C953211453
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 17 Jul 2014 16:25:14 +0000 (UTC)
+Received: (qmail 60290 invoked by uid 500); 17 Jul 2014 16:25:12 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 60209 invoked by uid 500); 17 Jul 2014 16:25:12 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 60197 invoked by uid 99); 17 Jul 2014 16:25:12 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 17 Jul 2014 16:25:12 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_HELO_PASS,SPF_PASS,UNPARSEABLE_RELAY
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of john.zerbe@bnymellon.com designates 216.82.243.194 as permitted sender)
+Received: from [216.82.243.194] (HELO mail1.bemta8.messagelabs.com) (216.82.243.194)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 17 Jul 2014 16:25:08 +0000
+Received: from [216.82.241.83:30153] by server-2.bemta-8.messagelabs.com id 8D/F5-03867-BC8F7C35; Thu, 17 Jul 2014 16:24:43 +0000
+X-Env-Sender: john.zerbe@bnymellon.com
+X-Msg-Ref: server-13.tower-37.messagelabs.com!1405614270!13804975!5
+X-Originating-IP: [167.222.180.41]
+X-StarScan-Received:
+X-StarScan-Version: 6.11.3; banners=bnymellon.com,-,-
+X-VirusChecked: Checked
+Received: (qmail 21939 invoked from network); 17 Jul 2014 16:24:42 -0000
+Received: from unknown (HELO Wnpcpapgtw04.bnymellon.com) (167.222.180.41)
+  by server-13.tower-37.messagelabs.com with DHE-RSA-AES256-SHA encrypted SMTP; 17 Jul 2014 16:24:42 -0000
+X-AuditID: a7de3e8c-b7b57ae000006b73-dc-53c7f8c936b6
+Received: from wtpcphtmem06.ams.bnymellon.net (Unknown_Domain [160.254.211.242])
+	(using TLS with cipher AES128-SHA (AES128-SHA/128 bits))
+	(Client did not present a certificate)
+	by Wnpcpapgtw04.bnymellon.com (Symantec Maill Gateway) with SMTP id 25.5B.27507.AC8F7C35; Thu, 17 Jul 2014 12:24:42 -0400 (EDT)
+Received: from WTPCPMBMEM02.ams.bnymellon.net ([169.254.6.19]) by
+ wtpcphtmem06.ams.bnymellon.net ([160.254.249.199]) with mapi id
+ 14.03.0174.001; Thu, 17 Jul 2014 12:24:41 -0400
+From: "Zerbe, John W" <john.zerbe@bnymellon.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: How might I "enforce" the use of snapshot versions for non-release
+ plugin builds?
+Thread-Topic: How might I "enforce" the use of snapshot versions for
+ non-release plugin builds?
+Thread-Index: Ac+h25eDRyS4H+mpSGaJQtJwWrPUzw==
+Date: Thu, 17 Jul 2014 16:24:40 +0000
+Message-ID: <B81B9B5A9410764CB2E96E822A0A409F45DC2144@WTPCPMBMEM02.ams.bnymellon.net>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [160.254.211.241]
+Content-Type: multipart/alternative;
+	boundary="_000_B81B9B5A9410764CB2E96E822A0A409F45DC2144WTPCPMBMEM02ams_"
+MIME-Version: 1.0
+X-CFilter-Loop: Reflected NPC4
+X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFmpmkeLIzCtJLcpLzFFi42JZfs9uvu6pH8eDDWb/ULF4tPU6owOjR/tT
+	oQDGKC6blNSczLLUIn27BK6Mo8fnsBS8kq9ofLiVuYFxnXQXIyeHhICJxPdHMxghbDGJC/fW
+	s3UxcnEICWxjkrgy7yIrhLOVUWLq0ofMIFVsAgYSX9Y/ZAOxRQRMJX7c/gVmCwvESLQd+MoM
+	EU+UmLtuHSOErSfxZU4LO4jNIqAqcWIdhM0rECqxct4ysHpGoM3fT61hArGZBcQlbj2ZzwRx
+	kYDEkj3nmSFsUYmXj/+xQtjKEt9PvmeDqM+XmHh0JjPETEGJkzOfsEDUyEmcv3mCZQKj8Cwk
+	Y2chaZmFpAUiriOxYPcnNghbW2LZwtfMMPaZA4+ZkMUXMLKvYpQKzytILkgsSC8pNzDRS8qr
+	zE3NycnP00vOz93ECImanh2MW84bHGIU4GBU4uFl+Hw8WIg1say4MvcQowQHs5IIb/Z9oBBv
+	SmJlVWpRfnxRaU5q8SFGaQ4WJXHek4oHg4UE0hNLUrNTUwtSi2CyTBycUg2M8isEF3TYa5Wf
+	nvPiqxDD5ca2SbUHfrY2KEddVjxzbgZ/htrlW1MqZyv7WF9ex/xq9sYta9TNuN0lj5xcum3X
+	+rNPiox8LM7dbJCKFS09J/so703Bsb0iYcasShuZeWYI3F2xaIPlRYWy/MnTz5zb42WVV1Nb
+	Xrhup/ifLYZxBkKvU77nr+kTUmIpzkg01GIuKk4EAL/aqgKWAgAA
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_000_B81B9B5A9410764CB2E96E822A0A409F45DC2144WTPCPMBMEM02ams_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+I would like to use the Maven Enforcer plugin to fail builds on our Jenkin=
+s server that do not have a -SNAPSHOT version and are not a maven release =
+build.
+I've had issues where either through lack of knowledge or as fallout from =
+a failed release attempt where a developer tries to build what should be a=
+ snapshot deploy build but is really a release build. The build may fail b=
+ecause the artifact already exists in the release repository giving a rath=
+er cryptic "operation not allowed" error from our Nexus OSS server or it "=
+works once".  I want to be able to use enforcer in our top level "parent" =
+pom to enforce the use of release:prepare release:perform via Jenkins mave=
+n release plugin while also using it to do as many sanity checks as possib=
+le prior to an actual "release" build.
+
+Thoughts?
+
+Thank you,
+John
+
+The information contained in this e-mail, and any attachment, is confident=
+ial and is intended solely for the use of the intended recipient. Access, =
+copying or re-use of the e-mail or any attachment, or any information cont=
+ained therein, by any other person is not authorized. If you are not the i=
+ntended recipient please return the e-mail to the sender and delete it fro=
+m your computer. Although we attempt to sweep e-mail and attachments for v=
+iruses, we do not guarantee that either are virus-free and accept no liabi=
+lity for any damage sustained as a result of viruses.=20
+
+Please refer to http://disclaimer.bnymellon.com/eu.htm for certain disclos=
+ures relating to European legal entities.
+--_000_B81B9B5A9410764CB2E96E822A0A409F45DC2144WTPCPMBMEM02ams_--
+

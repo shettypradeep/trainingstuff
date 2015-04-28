@@ -1,0 +1,157 @@
+From users-return-136157-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 15 21:23:33 2014
+Return-Path: <users-return-136157-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 70E6911D82
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 15 Apr 2014 21:23:33 +0000 (UTC)
+Received: (qmail 36876 invoked by uid 500); 15 Apr 2014 21:23:28 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 36795 invoked by uid 500); 15 Apr 2014 21:23:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99608 invoked by uid 99); 15 Apr 2014 13:50:56 -0000
+X-ASF-Spam-Status: No, hits=-0.1 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_MED,SPF_PASS,WEIRD_PORT
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of plynch@sonatype.com designates 64.18.2.26 as permitted sender)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:cc:content-type;
+        bh=Uw5iywluWxa2AMOJIpmNSegxO+QFCpmWHFuVRaW7bNo=;
+        b=RUnVWVVcS28PiV9Euhfq/b7qDi/xVNcPVUbt7VvcF2tRxa69rCfqftxrfMuwFb3XkN
+         Bri6UHuCMIhTNrSchv9c92WOeX9bl9/9jberym8ok+1kaeqwwC/aqstS2W7Gjb+R1w14
+         ERktJ2QbVQaM2p/csJQJoBxkglRgbUuUCPtfaJ+zvAYV05fcJQLpSzzGpp1Q82flXah8
+         LVRNTOJPsQXBhFoBQPSAp5WyjLWBI30m9Kkx3vuVZGV6GceYNxeAPsGdd4s89jFWHM6U
+         IP+d1vov5tdrwvMjksh++RPjtNAbNCDJyCKHzH2hQJ/V2N8gnQJz5SAGGQGCgpV4H0cq
+         BK5A==
+X-Gm-Message-State: ALoCoQlhn+ZR1d1RvYbWQYnMD+Q64NcghlNLshlP0f4NoRhco91NXL3kxjgpq97nrvFbkeySR4k40SefHuZ4gucsNUkv6ocVjiMWBKPUXDcMf7tWrkHejbZ+aZ/yaBQRLjPiV4tSWljF
+X-Received: by 10.224.36.194 with SMTP id u2mr2591286qad.73.1397569826586;
+        Tue, 15 Apr 2014 06:50:26 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.224.36.194 with SMTP id u2mr2591278qad.73.1397569826518;
+ Tue, 15 Apr 2014 06:50:26 -0700 (PDT)
+In-Reply-To: <534CA422.1080408@gmail.com>
+References: <534CA422.1080408@gmail.com>
+Date: Tue, 15 Apr 2014 10:50:26 -0300
+Message-ID: <CAC16qPjeBNVKWj5q8fPKpXLv+j0KQsvgSNBsct3vUGq4UB9y7Q@mail.gmail.com>
+Subject: Re: [nexus-user] Why are alternate repositories so hard to configure
+From: Peter Lynch <plynch@sonatype.com>
+To: nexus-user@sonatype.org
+Cc: maven users <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c2a2400f092304f7151500
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c2a2400f092304f7151500
+Content-Type: text/plain; charset=UTF-8
+
+Hello,
+
+On Tue, Apr 15, 2014 at 12:14 AM, Eric Kolotyluk
+<eric.kolotyluk@gmail.com>wrote:
+
+>  I have the following
+>
+>       <repositories>
+>         <repository>
+>             <id>sonatype</id>
+>             <name>Sonatype Maven OSS Repository</name>
+>             <releases>
+>                 <enabled>true</enabled>
+>             </releases>
+>             <snapshots>
+>                 <enabled>true</enabled>
+>             </snapshots>
+>             <url>https://oss.sonatype.org/content/groups/public</url>
+>         </repository>
+>       </repositories>
+>
+> But when I run maven I get
+>
+> [ERROR] Failed to execute goal
+> org.apache.maven.plugins:maven-site-plugin:3.3:site (default-site) on
+> project csharp-windows-elevate: Execution default-site of goal
+> org.apache.maven.plugins:maven-site-plugin:3.3:site failed: Plugin
+> org.apache.maven.plugins:maven-site-plugin:3.3 or one of its dependencies
+> could not be resolved: Could not find artifact
+> net.trajano.wagon:wagon-git:jar:1.0.1-SNAPSHOT in apache.snapshots (
+> http://repository.apache.org/snapshots) -> [Help 1]
+>
+> *Why in the world is it looking in http://repository.apache.org/snapshots
+> <http://repository.apache.org/snapshots> ???*
+>
+
+This repository is defined in a pom.xml of a dependency.
+
+
+>
+>
+> So, then I configure nexus to mirror
+> https://oss.sonatype.org/content/groups/public and I add to my
+> settings.xml
+>
+>   <mirrors>
+>     <mirror>
+>       <id>nexus</id>
+>       <mirrorOf>*</mirrorOf>
+>       <url>http://localhost:8081/nexus/content/groups/public</url>
+>     </mirror>
+>   </mirrors>
+>
+>
+Good idea.
+
+
+> and then I get
+>
+> [ERROR] Failed to execute goal
+> org.apache.maven.plugins:maven-site-plugin:3.3:site (default-site) on
+> project csharp-windows-elevate: Execution default-site of goal
+> org.apache.maven.plugins:maven-site-plugin:3.3:site failed: Plugin
+> org.apache.maven.plugins:maven-site-plugin:3.3 or one of its dependencies
+> could not be resolved: Could not find artifact
+> net.trajano.wagon:wagon-git:jar:1.0.1-SNAPSHOT in nexus (
+> http://localhost:8081/nexus/content/groups/public) -> [Help 1]
+>
+
+apache-snapshots is not in the public group by default, although it is in
+Nexus as a repository. You can edit the public group members and add
+apache-snapshots as a member.
+
+
+
+
+>
+> I know this to be a lie because when I go through the nexus UI I can
+> clearly see the artifact in question in both the nexus index and storage.
+> However, for some reason, the artifact pom.xml is neither in the index nor
+> storage. When I go to
+> https://oss.sonatype.org/content/groups/public/net/trajano/wagon/wagon-git/1.0.1-SNAPSHOT/I can clearly see the pom.xml with the other files that nexus has
+> downloaded. *Why is nexus refusing to download the pom.xml?*
+>
+
+Search indexes have nothing to do with an artifact being able to be
+downloaded.
+
+In cases like this, these article may help you diagnose:
+
+https://support.sonatype.com/entries/21437881-Troubleshooting-Artifact-Download-Failures
+
+
+>
+>
+> Cheers, Eric
+>
+>
+>
+>
+
+--001a11c2a2400f092304f7151500--
+

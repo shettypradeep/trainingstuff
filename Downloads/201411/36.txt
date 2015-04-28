@@ -1,0 +1,134 @@
+From users-return-137814-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Nov 25 09:23:17 2014
+Return-Path: <users-return-137814-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CD0DD10749
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 25 Nov 2014 09:23:17 +0000 (UTC)
+Received: (qmail 80843 invoked by uid 500); 25 Nov 2014 09:23:16 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 80752 invoked by uid 500); 25 Nov 2014 09:23:16 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 80736 invoked by uid 99); 25 Nov 2014 09:23:15 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Nov 2014 09:23:15 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [209.85.223.171] (HELO mail-ie0-f171.google.com) (209.85.223.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Nov 2014 09:22:50 +0000
+Received: by mail-ie0-f171.google.com with SMTP id rl12so146493iec.30
+        for <users@maven.apache.org>; Tue, 25 Nov 2014 01:22:49 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type:content-transfer-encoding;
+        bh=hVAK/FiY9GToeGDQ78w/fcH1giL0WA7eNs069fNiOEc=;
+        b=FADPWKV6t8OuvGMeR6IZP081taTgcrtOpocPaPxk4XBBECD0TbdD8aJfcMP2wMF840
+         ryg8zCdQ4iZxhdWfb41E9mbop9a2XRKe9oGKBvDfSXq5+aOrdOcULNopdMwggN/kjjja
+         5ETkDFPwf+GAv5WIqWRNr9a4ADnyj+OchhurAd6s4ltcMDaDyD1yTjjFuZc8HqqI3cED
+         tejLX/15Bt3F+X2qN1GV5p86FrctjvuTwWHsYUI3xxYtyS5UvM/1mgQBAeAyVyOs/Qif
+         +plvYz7rdTlWe/1T56/URM4CUiPJEHGF2j+5T5jlYslD8+P+7MEzDowIu33q8rlnN7qv
+         Nh1w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:sender:in-reply-to:references:date
+         :message-id:subject:from:to:content-type:content-transfer-encoding;
+        bh=hVAK/FiY9GToeGDQ78w/fcH1giL0WA7eNs069fNiOEc=;
+        b=KImhESrHH/cVIECbP8nWTcuM1cgrgfxi2T6MpmFTosPgNdL4Ue3vroF8WAXtTN7jhO
+         bCmKiJh2E5rLNHWVasYrKnKPkbeycWMPNf9VizQE8KDn5BrmGtrC3fJ+tPjnqa2vpyhl
+         i0uz3hWe5e4zEKCjmAg/94jgUyQItsZgQsArqSYOIex6gKFA05N56hETpVaQrbLxwtUe
+         OgFOMnSOSFdhrhpTDFooFKcdONfwsvjKyKIVD7oohLU2uhQlersILZOoTAk0kOfF7dOQ
+         o3LRuf5xCPUQ1RdE5h7A4/1/vLKPL78DwzVd7lIDFHfHXrzdFfNzP+AmznQrpZ+5IeQJ
+         wGsw==
+X-Gm-Message-State: ALoCoQlQo3mCroV0fIr5LCqGETAyqZOiEmHOEv/xcWVX3WISStaz717+yo/BLw5kpad+qD3bZULL
+MIME-Version: 1.0
+X-Received: by 10.50.23.11 with SMTP id i11mr15977785igf.18.1416907368966;
+ Tue, 25 Nov 2014 01:22:48 -0800 (PST)
+Sender: kristian.rosenvold@zenior.no
+Received: by 10.50.232.180 with HTTP; Tue, 25 Nov 2014 01:22:48 -0800 (PST)
+In-Reply-To: <20141125083904.D3D5411C074C@dd12814.kasserver.com>
+References: <5473F127.8010201@gmail.com>
+	<20141125083904.D3D5411C074C@dd12814.kasserver.com>
+Date: Tue, 25 Nov 2014 10:22:48 +0100
+X-Google-Sender-Auth: 0oSqD2JQyIz5XeJRrr3OGoiKLTU
+Message-ID: <CAJZRQKyo-yHL7ZW9qoVOag+tomrbmUcdBSgphrYcZJwO59+D7Q@mail.gmail.com>
+Subject: Re: Enforcing annotations
+From: Kristian Rosenvold <kristian.rosenvold@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I wrote an analyzer that specifically identifies troublesome spring
+scope mixtures. It has typically been run as a
+Unit/integration test within a project, since it inspects the running
+context for problems.
+
+It probably needs a little tweaking for the latest generations of
+spring, but the source is here:
+
+https://github.com/krosenvold/spring-context-analyzer.git
+
+Kristian
+
+p.s. a number of people have reported this tool as "saving their bacon"
+
+2014-11-25 9:39 GMT+01:00 Alexander Kriegisch <alexander@kriegisch.name>:
+> FYI, Maven users: I have just added an answer [1] to the StackOverflow qu=
+estion in order not to bloat the list here. My solution uses AspectJ. Maybe=
+ there are better ways to do that, but for me it works. I use AspectJ anywa=
+y and find it convenient to also do some rule enforcement during compilatio=
+n via "declare error" or "declare warning".
+>
+> [1] http://stackoverflow.com/a/27121947/1082681
+> --
+> Alexander Kriegisch
+> http://scrum-master.de
+>
+>
+> Niranjan Rao schrieb am 25.11.2014 04:01:
+>
+>> Since this was not a maven question directly, I tried posting this at
+>> stackoverflow first at
+>> https://stackoverflow.com/questions/27068654/how-to-enforce-verify-sprin=
+g-scope-annotation-on-spring-beans.
+>>
+>> Did not get much traction.
+>>
+>> We do use spring and its dependency injection mechanism using
+>> annotations only. No XML files for spring.  However the trouble starts
+>> when developers start mixing beans of different scopes - most of the
+>> time by accident. Many developers forget that beans are singleton in
+>> scope by default and end up creating beans (or services) that has state.
+>> They are happy because if it works on their machine but creates
+>> interesting mix/match of data when more than one user logs in to the
+>> application.
+>>
+>> Right now, I am thinking of simple solution - enforce that every spring
+>> component needs to have scope annotation also. Thought behind this is it
+>> will force developer to think about the scope by explicitly declaring
+>> the value.
+>>
+>> Are there any plugins that can do this? If not, can I extend maven
+>> enforcer plugin or findbugs in anyway to do this? Open to any other
+>> suggestions also.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

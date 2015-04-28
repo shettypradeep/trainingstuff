@@ -1,0 +1,110 @@
+From users-return-134939-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Jan  4 21:56:33 2014
+Return-Path: <users-return-134939-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id ADC4410119
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  4 Jan 2014 21:56:33 +0000 (UTC)
+Received: (qmail 82177 invoked by uid 500); 4 Jan 2014 21:56:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 82112 invoked by uid 500); 4 Jan 2014 21:56:31 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 82104 invoked by uid 99); 4 Jan 2014 21:56:31 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 04 Jan 2014 21:56:31 +0000
+Received: from localhost (HELO robertscholte) (127.0.0.1)
+  (smtp-auth username rfscholte, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Sat, 04 Jan 2014 21:56:31 +0000
+Content-Type: text/plain; charset=iso-8859-15; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: How to copy unversioned test resources during   release:perform?
+References: <1769350.PT5TEdQ6WR@laerz> <op.w856f3t4kdkhrr@robertscholte>
+ <cee206169e7d39f4a9a5e5e73b6b6b05@malkusch.de>
+ <op.w858mrqkkdkhrr@robertscholte>
+ <c2dd7667d61680f7ad18cc95f62eef17@malkusch.de>
+Date: Sat, 04 Jan 2014 22:56:25 +0100
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.w86m8bc6kdkhrr@robertscholte>
+In-Reply-To: <c2dd7667d61680f7ad18cc95f62eef17@malkusch.de>
+User-Agent: Opera Mail/12.16 (Win32)
+
+Op Sat, 04 Jan 2014 21:29:02 +0100 schreef Markus Malkusch  
+<markus@malkusch.de>:
+
+> Robert Scholte:
+>
+>> In short: release:perform is the same as
+>> cd target/checkout
+>> mvn deploy (apart from some release specific arguments/configuration,
+>> if  these are there)
+>
+> I thought release:perform is doing a checkout from the last vcs tag which
+> was created by release:prepare.
+
+http://maven.apache.org/maven-release/maven-release-plugin/examples/perform-release.html
+Sure, checking out is the first step, but the next step is less magic then  
+most users think.
+
+>
+> Anyways, something is doing a checkout of the latest tag. My test  
+> resources
+> are not included in the vcs (as they have credentials). But that's all  
+> fine
+> and the way I want it.
+>
+> I just need a way to copy those unversioned files from
+> src/test/resources/ to target/checkout/target/test-classes/ before
+> mvn:release is running test.
+>
+>> For that reason: how are these test-resources retrieved during a normal  
+>>  build?
+>
+> They're in src/test/resources/ and everything works as usual. I guess  
+> those
+> resources are somewhere in maven's super pom defined.
+>
+
+Ok, so they are placed there manual, not really the Maven way.
+This means that a co-worker cannot check out the sources and run the tests  
+without getting the test-resources from...?
+Depending on your requirements I would suggest putting the test-sources  
+under a common folder like ${user.home}/myproject/test-resources and copy  
+them during process-test-resources[1] or use filtering[2].
+
+I'm just not a fan of a different build during release. There are too much  
+things that can go wrong.
+
+Robert
+
+[1]  
+http://maven.apache.org/plugins/maven-resources-plugin/testResources-mojo.html
+[2]  
+http://maven.apache.org/plugins/maven-resources-plugin/examples/filter.html
+
+or go for the quick solution of Stephen
+
+>> Stephens answer should work as well
+>
+> I'll try that. I forgot that I already posted here and didn't subscribe
+> so I read today the first time about it.
+>
+> Markus
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

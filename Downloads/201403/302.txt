@@ -1,0 +1,136 @@
+From users-return-136003-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Mar 28 16:46:03 2014
+Return-Path: <users-return-136003-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E74E711132
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 28 Mar 2014 16:46:03 +0000 (UTC)
+Received: (qmail 38005 invoked by uid 500); 28 Mar 2014 16:46:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 37653 invoked by uid 500); 28 Mar 2014 16:45:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 37634 invoked by uid 99); 28 Mar 2014 16:45:57 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 16:45:57 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bmathus@gmail.com designates 74.125.83.41 as permitted sender)
+Received: from [74.125.83.41] (HELO mail-ee0-f41.google.com) (74.125.83.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 16:45:53 +0000
+Received: by mail-ee0-f41.google.com with SMTP id t10so4361345eei.28
+        for <users@maven.apache.org>; Fri, 28 Mar 2014 09:45:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=zfmgLVtTVsoWtJt/P6kVa3fFYQ0J/gx0PJuB2tIERwc=;
+        b=g0DHwaHJJMbIioxKrjoVUAAToJvoWy87ztzJ9J+W13IO2V2vx965N8Zhw1JhVmO2pS
+         2BeDZOT1V52SmjWMHgfZOOEuDS9lsxi/FFtVu2AcqlyErq7f3+cJ/UEVggDaMbRG8bUN
+         aKx6lpvc+fVInNLVR3WOlDJu0B4H4BHwHOawuDzwdFaZOEs+AGUZkyQElUeDvEBNISND
+         uYQyLzX21VbCp76b1J8kQLVcvEownwVc+BTfIDL6cBXUwCBiBU+Ej75rRmM7s1P++Cxl
+         4N9WbDxbSamDXO8leGgZ/ymCOY/JFjp2yCDGj/+r6MPN3QSL2IzfWguTgmRUHPP1hdFM
+         5qlg==
+MIME-Version: 1.0
+X-Received: by 10.15.45.130 with SMTP id b2mr10504853eew.28.1396025132317;
+ Fri, 28 Mar 2014 09:45:32 -0700 (PDT)
+Sender: bmathus@gmail.com
+Received: by 10.14.225.65 with HTTP; Fri, 28 Mar 2014 09:45:32 -0700 (PDT)
+Received: by 10.14.225.65 with HTTP; Fri, 28 Mar 2014 09:45:32 -0700 (PDT)
+In-Reply-To: <CAK8jvqxy+wdkOwz89T=p7oMVUn-q1WhNt7GRTqU0ZZ=Z1nqp7w@mail.gmail.com>
+References: <53358021.6010103@Kriegisch.name>
+	<CAK8jvqxy+wdkOwz89T=p7oMVUn-q1WhNt7GRTqU0ZZ=Z1nqp7w@mail.gmail.com>
+Date: Fri, 28 Mar 2014 17:45:32 +0100
+X-Google-Sender-Auth: 0rY_Zte6jMKaPECA-zfjcQZdfs4
+Message-ID: <CANWgJS4GjG5UqVxDM+k4ayLgN05er0CxX1mw8QcNzfKT=NgE9Q@mail.gmail.com>
+Subject: Re: Overriding dependency scope
+From: Baptiste Mathus <bmathus@batmat.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0163535a1c04f104f5ad6ecc
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0163535a1c04f104f5ad6ecc
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+IIUC, you have a unique parent pom (likely a "corporate pom"), let's can
+him P. P says scope is test for groovy-all.
+
+You have modules m1, m2... who all inherits P.
+
+In some module mN, you need groovy-all with scope compile.
+
+But m1 actually depends on mN and will crash since the dependency onto
+groovy-all isn't retrieved?
+
+If so, then this is expected. Dependency mgmt overrides the dependencies
+scope. One possible solution to centralize many redefinitions is to create
+an intermediate parent for those modules where you need groovy-all with
+scope compile.
+I think that's what Mirko was proposing.
+
+Does that help?
+Le 28 mars 2014 15:08, "Mirko Friedenhagen" <mfriedenhagen@gmail.com> a
+=C3=A9crit :
+
+> Alexander,
+>
+> AFAIK you may override the scope in the inheriting poms. If I remember
+> correctly I did this with junit as I needed it for an selenium test
+> project, where I had put base tests beneath src/main (to recite Brecht: o=
+h,
+> don't ask why).
+>
+> Regards
+> Mirko
+> --
+> Sent from my mobile
+> On Mar 28, 2014 2:59 PM, "Alexander Kriegisch" <Alexander@kriegisch.name>
+> wrote:
+>
+> > I have a situation as follows:
+> >
+> >   - Multi-module project (~30 modules)
+> >
+> >   - Certain test dependencies (e.g. groovy-all) needed by nearly all
+> >     sub-modules are declared directly with test scope in the parent POM
+> >     (not just dependencyManagement, but also dependency). I know this i=
+s
+> >     considered to be bad practice but it saves a lot of redundant
+> >     dependency duplication.
+> >
+> >   - One new sub-module now actually also needs groovy-all, but with a
+> >     compile scope. So my wish (although seemingly unsupported by Maven)
+> >     is to override the default scope for this sub-module so as for the
+> >     dependency to be actually available during runtime.
+> >
+> > How can I do this or work around the need to duplicate my test
+> > dependencies in 30 modules just so as to be able to define the scope fo=
+r
+> > the new module? AFAIK a POM can only inherit from one POM. But can I
+> > somehow use an "included POM" in my 30 modules in order to be able to
+> > centrally manage the test dependencies? Sorry if I am explaining this
+> > wrong or using incorrect erms, but I am by no means a Maven pro.
+> > Hopefully I was at least able to make my intent clear. I am looking for
+> > good advice beyond lecturing about how I should really, really declare
+> > everything 30 times in order to do it the Maven way. I am looking for
+> > alternatives, am willing to learn and hoping to get constructive answer=
+s.
+> >
+> > Thanks you all in advance
+> > --
+> > Alexander Kriegisch
+> >
+> >
+> >
+>
+
+--089e0163535a1c04f104f5ad6ecc--
+

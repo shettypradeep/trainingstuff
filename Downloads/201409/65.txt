@@ -1,0 +1,72 @@
+From users-return-137309-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Sep 17 19:48:05 2014
+Return-Path: <users-return-137309-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F188811783
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 17 Sep 2014 19:48:05 +0000 (UTC)
+Received: (qmail 21745 invoked by uid 500); 17 Sep 2014 19:48:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 21663 invoked by uid 500); 17 Sep 2014 19:48:04 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 48809 invoked by uid 99); 17 Sep 2014 18:26:40 -0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bargenson@gmail.com designates 209.85.192.49 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:from:date:message-id:subject:to:content-type;
+        bh=GYGDF9yvXJCAl4lisBKPqTlv7r4+A9xlfPwjdHyGlNg=;
+        b=DCjI4dHJE9YfAcxDv7aC/RpEupVIVg2B9FfP5xNyib/odHWSwtxEtxVFbd5fS0LXzA
+         kTOXqY2lQfyIYSn8h7dPY46hn/dw3NU4GQ3HNPnQsYIXQ/erkCAwOhVj3Kh+mOe22piU
+         p3HKMX31gpelmfzz3Xiky3+hz1gbqD0twPbHYTnYQTpUrWlS0087z6ghqv3ZqU8OPjq+
+         MNN3a6QfOt7+8vRQnjOoz4AY8ikJwKCANgZnXzPSnthVaYVLi24OUzS8ojXN/5P7aBN9
+         GOqFflHftsVqBY2+GWQ061EHHWjDriimiRqMYexJgqkJRpVpMBkw9VRMAfL+8ji+MUTQ
+         3N4Q==
+X-Received: by 10.236.96.232 with SMTP id r68mr12451810yhf.56.1410978373141;
+ Wed, 17 Sep 2014 11:26:13 -0700 (PDT)
+MIME-Version: 1.0
+From: Brice Argenson <bargenson@gmail.com>
+Date: Wed, 17 Sep 2014 14:25:53 -0400
+Message-ID: <CANUX=ST_L+HMBwjDxEMfs2cLbS_YM=NBmHpqhH5MTWQ+XJVy7A@mail.gmail.com>
+Subject: lineEnding parameter makes assembly ignore empty directories
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a11c1b9d0b78d6705034700eb
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c1b9d0b78d6705034700eb
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+
+I'm in front of a bug with the Assembly plugin. When I use the lineEndings
+property inside an assembly, the plugin start to ignore empty folders. If I
+remove the lineEnding property, then the plugin include empty folders again.
+
+I found that Jira about that bug:
+https://jira.codehaus.org/browse/MASSEMBLY-578. It seems to be an old
+ticket (2011) that was created for the version 2.2 of the plugin. I still
+have this bug with the version 2.4.
+
+Is there someone with a workaround for that bug? May it possible to have
+that bug resolved soon?
+
+
+Thanks :-)
+
+--
+Brice Argenson
+Skype: brice.argenson
+Twitter: @bargenson
+
+--001a11c1b9d0b78d6705034700eb--
+

@@ -1,0 +1,129 @@
+From users-return-136875-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 24 15:40:09 2014
+Return-Path: <users-return-136875-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 91FA2116E0
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 24 Jul 2014 15:40:08 +0000 (UTC)
+Received: (qmail 41442 invoked by uid 500); 24 Jul 2014 15:40:06 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 41362 invoked by uid 500); 24 Jul 2014 15:40:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 41349 invoked by uid 99); 24 Jul 2014 15:40:06 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 15:40:06 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ctrueden.wisc@gmail.com designates 209.85.220.180 as permitted sender)
+Received: from [209.85.220.180] (HELO mail-vc0-f180.google.com) (209.85.220.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 15:40:02 +0000
+Received: by mail-vc0-f180.google.com with SMTP id ij19so5062081vcb.25
+        for <users@maven.apache.org>; Thu, 24 Jul 2014 08:39:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=saZVHV78kwK6lsBXtXZAR6Qduteo9HgeS4tcdpUHGOE=;
+        b=vG2nNb9oxOfc9WFLvaZDo+9Q/VCHryxP7GpubRLBjA8psmsvt/DU5SpQ1d17WOLLvM
+         XJM8yO0GFRiFqJe8VqOCiFNSmXvfxR+NK7sKnpNVY8vsoQ1tIKRDAM9f5wrLQ/WHcEHC
+         wG8kTY+mZfsc60ihQdDPb86bdslM6lfCym0sCls+5lBr8Xj+Er47NCdodYa5yhHIAKKR
+         1PKcONgJ+Ou1O4K1z87ybQbmFWbHawyDwfKKB1r7c4lx0y0xXlqOjnfmUsixOwz98huo
+         IhnUxAqrofqnA0TBlaQZkt+CTLDsOAz3/ata0ZEEGdxTDc7WrDwcJCOsP/4FqG8+N1g/
+         UriQ==
+X-Received: by 10.220.114.140 with SMTP id e12mr13373210vcq.37.1406216380317;
+ Thu, 24 Jul 2014 08:39:40 -0700 (PDT)
+MIME-Version: 1.0
+Sender: ctrueden.wisc@gmail.com
+Received: by 10.58.114.101 with HTTP; Thu, 24 Jul 2014 08:39:10 -0700 (PDT)
+In-Reply-To: <1406206674710-5800925.post@n5.nabble.com>
+References: <5F274ED30832C44A8778291D0DD82A7A36F7D2@ev002.EVANS6.local> <1406206674710-5800925.post@n5.nabble.com>
+From: Curtis Rueden <ctrueden@wisc.edu>
+Date: Thu, 24 Jul 2014 10:39:10 -0500
+X-Google-Sender-Auth: xap2Vsx6gLzJDAfXM3rgHbVCrQk
+Message-ID: <CADN69ynP6UuUtMJo2QWqtGmeG=1S9Yk_YYFPvnfMZ=cnPLnGiQ@mail.gmail.com>
+Subject: Re: Upload 3rd party jars retaining original names
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b342eacd3858704fef243b0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b342eacd3858704fef243b0
+Content-Type: text/plain; charset=UTF-8
+
+Hi David,
+
+> * I'll carry on with the libraries in my [Perforce] SCM.
+>
+> * I can map them to a project folder as I do now
+> (similar to sources, resources, etc).
+
+See Stephen Connelly's blog post on dealing with "non-Maven JARs":
+http://developer-blog.cloudbees.com/2013/03/playing-trade-offs-with-maven.html
+
+Hopefully that will give you some ideas of good (and bad) ways of handling
+your needs here.
+
+-Curtis
+
+
+On Thu, Jul 24, 2014 at 7:57 AM, David Evans <david@evans6.me.uk> wrote:
+
+> Thanks all.  It seems that what I want to do doesn't fit naturally into the
+> Maven way of things.
+>
+> Using the "copy" plugin I can see how I might possibly unpack elements and
+> modify my Eclipse classpath in flight but part of the problem with my
+> existing Ant deployment is that I've extended it to do the "possible", not
+> necessarily considering the "sensible", so I'll not go down that route.
+> Yet.
+>
+> It's a shame that I can't store the external jars in the Maven repository
+> and treat them ) as  "versioned foreign artifacts" because having Maven
+> manage them in this way would be brilliant.
+>
+> Here's what I'm going to try instead:
+>
+> * I'll carry on with the libraries in my [Perforce] SCM.
+>
+> * I can map them to a project folder as I do now (similar to sources,
+> resources, etc).
+>
+> * if I understand this part of Maven dependepencies correctly, I can create
+> a parent dependendency that depends on an individual system-scope
+> dependency
+> for each of the libraries. This will hopefully get them all onto my Maven
+> project classpath without too much fuss.
+>
+> * use "assembly" to include the jars in my final deployment.
+>
+> Does this seem the natural and sensible way to manage external jars with
+> Maven?
+>
+> Thanks
+>
+> David
+>
+>
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/Upload-3rd-party-jars-retaining-original-names-tp5800921p5800925.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7b342eacd3858704fef243b0--
+

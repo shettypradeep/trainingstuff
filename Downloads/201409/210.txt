@@ -1,0 +1,84 @@
+From users-return-137346-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Sep 22 19:32:41 2014
+Return-Path: <users-return-137346-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E19D511C57
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 22 Sep 2014 19:32:41 +0000 (UTC)
+Received: (qmail 52868 invoked by uid 500); 22 Sep 2014 19:32:38 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 52488 invoked by uid 500); 22 Sep 2014 19:32:38 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 52457 invoked by uid 99); 22 Sep 2014 19:32:38 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 22 Sep 2014 19:32:38 +0000
+Received: from localhost (HELO mail-oa0-f47.google.com) (127.0.0.1)
+  (smtp-auth username bimargulies, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Mon, 22 Sep 2014 19:32:37 +0000
+Received: by mail-oa0-f47.google.com with SMTP id g18so4289430oah.20
+        for <multiple recipients>; Mon, 22 Sep 2014 12:32:37 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.182.3.100 with SMTP id b4mr4682847obb.79.1411414357059; Mon,
+ 22 Sep 2014 12:32:37 -0700 (PDT)
+Received: by 10.202.1.19 with HTTP; Mon, 22 Sep 2014 12:32:37 -0700 (PDT)
+Date: Mon, 22 Sep 2014 15:32:37 -0400
+Message-ID: <CALhtWkfSQPYTYc_3Qiih0giAub0aik62hPZJYT4hPzT40bGW2A@mail.gmail.com>
+Subject: [ANN] Apache Maven Release 2.5.1 Released
+From: Benson Margulies <bimargulies@apache.org>
+To: announce@maven.apache.org, Maven Users List <users@maven.apache.org>
+Cc: Maven Developers List <dev@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+
+The Apache Maven team is pleased to announce the release of the Apache
+Maven Release component, version 2.5.1
+
+maven-release provides technology for automating releases, including
+the maven-release-plugin.
+
+http://maven.apache.org/plugins/maven-release-plugin/
+
+You should specify the version in your project's plugin configuration:
+
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-release-plugin</artifactId>
+  <version>2.5.1</version>
+</plugin>
+
+Release Notes - Maven Release Plugin - Version 2.5.1
+
+
+Release Notes - Maven Release Plugin - Version 2.5.1
+
+
+
+** Bug
+    * [MRELEASE-875] - release:prepare does not commit pom.xml if not
+in the git root
+    * [MRELEASE-877] - release:branch commit msg faulty
+    * [MRELEASE-885] - When the base pom is a subdirectory, tagging fails in GIT
+    * [MRELEASE-888] - Update to SCM version 1.9.2
+
+
+
+** Improvement
+    * [MRELEASE-883] - Upgrade SCM to 1.9.1
+
+
+
+Enjoy,
+
+-The Apache Maven team
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

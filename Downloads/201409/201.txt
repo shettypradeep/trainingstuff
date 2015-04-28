@@ -1,0 +1,199 @@
+From users-return-137280-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Sep 13 13:00:39 2014
+Return-Path: <users-return-137280-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A9EBC11AED
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 13 Sep 2014 13:00:39 +0000 (UTC)
+Received: (qmail 63000 invoked by uid 500); 13 Sep 2014 13:00:37 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 62905 invoked by uid 500); 13 Sep 2014 13:00:37 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 62893 invoked by uid 99); 13 Sep 2014 13:00:36 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 13 Sep 2014 13:00:36 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of saurav.sarkar1@gmail.com designates 209.85.216.169 as permitted sender)
+Received: from [209.85.216.169] (HELO mail-qc0-f169.google.com) (209.85.216.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 13 Sep 2014 13:00:31 +0000
+Received: by mail-qc0-f169.google.com with SMTP id r5so2154401qcx.14
+        for <users@maven.apache.org>; Sat, 13 Sep 2014 06:00:10 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=voTbNPYzNHxatU1su/RgWZj8ZOYDIonlmMWqaOlzRas=;
+        b=KLZQIFuzbYFqCApXRiQgYRoFLubRRsP3Dd/eyx/d68Q14bSWcaK/gez10+xiOXraB1
+         3opaH9WgZuJ3HBKh+WG4Zi6sNi9ngaQu1DUHCuuGvYtLquqxWrn36hvMhSGoI5pQ4Mdl
+         E4/6xMVj/3Be5zBFewlFUNzsNdR47cIi7qK5gjyJKSdwbDF/wOSYmsomrz65fP0LdGQQ
+         fMDvQT/i1siH8/bM3X7zNhrjye2y4NWK7XOXOWnGaah9P8ijYCgVTrETMeSgL6hYrggB
+         nzJOD1F8baLZJGEMYyegHtcnAAZCBqPPi7KHUIg+gc5oaACO4jj3ixBZ6bN3MpTo0vwC
+         XN5w==
+MIME-Version: 1.0
+X-Received: by 10.140.104.168 with SMTP id a37mr2099254qgf.104.1410613210331;
+ Sat, 13 Sep 2014 06:00:10 -0700 (PDT)
+Received: by 10.96.246.69 with HTTP; Sat, 13 Sep 2014 06:00:10 -0700 (PDT)
+In-Reply-To: <BLU172-W373B61E1CDC4EF793A2183AECA0@phx.gbl>
+References: <CAP+kwAVcLAWu9HTFiVdG1BOjg_0zOc5Ac=-Jjxwa2Md7Ln_3BQ@mail.gmail.com>
+	<BLU172-W373B61E1CDC4EF793A2183AECA0@phx.gbl>
+Date: Sat, 13 Sep 2014 18:30:10 +0530
+Message-ID: <CAP+kwAUo-UDGu3gd1vpJ8-RKqzrhT-eKPD+d+pYPVdfcv7=ECg@mail.gmail.com>
+Subject: Re: Maven clean plugin not deleting file
+From: Saurav Sarkar <saurav.sarkar1@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1134f7625183510502f1fb41
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1134f7625183510502f1fb41
+Content-Type: text/plain; charset=UTF-8
+
+Hi Martin,
+
+Thanks for the reply.
+directory is properly mentioned because a.so is getting deleted.
+
+Please note a.b.so has been downloaded a dependency and has been put to
+libs directory.
+
+Best Regards,
+Saurav
+
+On Sat, Sep 13, 2014 at 6:06 PM, Martin Gainty <mgainty@hotmail.com> wrote:
+
+> I need to takeoff soon so unfortunately I cannot put any time into
+> investigating until maybe tonite
+> but Here is the CleanMojo code:
+>
+> execute()
+> {
+> </snip>
+>      try
+>         {
+>             File[] directories = getDirectories();
+>             for ( int i = 0; i < directories.length; i++ )
+>             {
+>                 File directory = directories[i];
+>                 if ( directory != null )
+>                 {
+>                     cleaner.delete( directory, null, followSymLinks,
+> failOnError, retryOnError );
+> //can we assume the directory remains intact?
+>                 }
+>             }
+>
+>             if ( filesets != null )
+>             {
+>                 for ( int i = 0; i < filesets.length; i++ )
+>                 {
+>                     Fileset fileset = filesets[i];
+>                     if ( fileset.getDirectory() == null )
+>                     {
+>                         throw new MojoExecutionException( "Missing base
+> directory for " + fileset );
+>                     }
+>                     GlobSelector selector =
+>                         new GlobSelector( fileset.getIncludes(),
+> fileset.getExcludes(), fileset.isUseDefaultExcludes() );
+>                     cleaner.delete( fileset.getDirectory(), selector,
+> fileset.isFollowSymlinks(), failOnError,
+>                                     retryOnError );
+>                 }
+>             }
+>         }
+>         catch ( IOException e )
+>         {
+>             throw new MojoExecutionException( "Failed to clean project: "
+> + e.getMessage(), e );
+>         }
+>
+> Fileset.java
+> public class Fileset
+> {
+>
+>     private File directory;
+>     public File getDirectory()
+>     {
+>         return directory;
+>     }
+>
+> at first blush maybe you didnt specify directory?
+>
+> are there any other messages?
+>
+> Martin
+>
+>
+>
+> > Date: Sat, 13 Sep 2014 17:22:04 +0530
+> > Subject: Maven clean plugin not deleting file
+> > From: saurav.sarkar1@gmail.com
+> > To: users@maven.apache.org
+> >
+> > Hi All,
+> >
+> > I have two files in my directory like this:
+> >
+> >    - a.b.so
+> >    - a.so
+> >
+> > I want to delete only a.b.so.
+> >
+> > So here is my Maven clean plugin entry in my pom.xml file:
+> >
+> > <plugin>
+> > <artifactId>maven-clean-plugin</artifactId>
+> > <executions>
+> >   <execution>
+> >     <id>auto-clean</id>
+> >     <phase>prepare-package</phase>
+> >     <goals>
+> >       <goal>clean</goal>
+> >     </goals>
+> >     <configuration>
+> >     <excludeDefaultDirectories>true</excludeDefaultDirectories>
+> >      <filesets>
+> >         <fileset>
+> >       <directory>${project.build.directory}/libs/x86</directory>
+> >       <includes>
+> >         <include>*.so</include>
+> >       </includes>
+> >       <excludes>
+> >        <exclude>a.so</exclude>
+> >       <excludes>
+> >        <followSymlinks>false</followSymlinks>
+> >     </fileset>
+> >       </filesets>
+> >       <verbose>true</verbose>
+> >     </configuration>
+> >   </execution>
+> > </executions>
+> >
+> > Just for some backgorund of this, file a.b.so gets downloaded as a
+> > dependency then it gets renamed into a.so just before i execute the above
+> > entry. I copy file using maven depedency plugin. I don't know whether
+> this
+> > affects the not deletion of a.b.so later on or not.
+> >
+> > In turn it always delete a.so. Even I tried including **/*, but it
+> deletes
+> > a.so every time.
+> >
+> > It never deletes a.b.so.
+> >
+> > cheers,
+> >
+> > Saurav
+>
+>
+
+--001a1134f7625183510502f1fb41--
+

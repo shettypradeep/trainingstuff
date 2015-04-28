@@ -1,0 +1,84 @@
+From users-return-137284-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Sep 14 06:31:57 2014
+Return-Path: <users-return-137284-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BE52E119A0
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 14 Sep 2014 06:31:57 +0000 (UTC)
+Received: (qmail 78845 invoked by uid 500); 14 Sep 2014 06:31:56 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 78770 invoked by uid 500); 14 Sep 2014 06:31:56 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 78753 invoked by uid 99); 14 Sep 2014 06:31:55 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 14 Sep 2014 06:31:55 +0000
+X-ASF-Spam-Status: No, hits=3.9 required=5.0
+	tests=HTML_IMAGE_ONLY_08,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.220.46] (HELO mail-pa0-f46.google.com) (209.85.220.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 14 Sep 2014 06:31:50 +0000
+Received: by mail-pa0-f46.google.com with SMTP id kq14so4237265pab.33
+        for <users@maven.apache.org>; Sat, 13 Sep 2014 23:31:29 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:to:subject:date:message-id:in-reply-to
+         :references:mime-version:content-type:content-transfer-encoding;
+        bh=/AZ7OH/VccykVP4MFaDlo57MjoovzrGnJIyHgQ7PDkY=;
+        b=iqxiggvXMBaK+DR2vLSyt5ayCy7rInhOSuOrno19MStG6A244qtF1UAuZQchQa23cj
+         LUqtFXcg8UKzVEc21rEGOwdwqMITa7IA6SK4SG/4/DUJeDcBNdUMCaQ2ACqT2x1ts0Hy
+         xOVgSTMUFAAXA+UIBoxNskKwXGpsFJ5A+ZGH7FE+vNsWZd4awhsnXnHNRQv7BUMs+JC0
+         ozBmSM3FNCx5QtiZJB5XDN4PCg07ERWhkiqhU55d8Mpjh3wYDg9I1KTAkS/eYWuuk2iF
+         xu8Nto710EWIF1BKnWASM3ZdwRC3GuoOm6f2vAsVwnqqVJCQxVXe1nyTltFPOdOQxzi9
+         f+Qg==
+X-Gm-Message-State: ALoCoQlHyGDswGX1+UiCbg4MZ3t7SwVXcKvd0h5UfGTog8aVZ3O2Xwbl5muNvewzHjNh3EmyGsfo
+X-Received: by 10.66.231.38 with SMTP id td6mr109035pac.156.1410676289112;
+        Sat, 13 Sep 2014 23:31:29 -0700 (PDT)
+Received: from [10.0.62.6] (ip-118-90-125-186.xdsl.xnet.co.nz. [118.90.125.186])
+        by mx.google.com with ESMTPSA id ol8sm7994409pdb.82.2014.09.13.23.31.24
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Sat, 13 Sep 2014 23:31:26 -0700 (PDT)
+From: "Mark Derricutt" <mark@talios.com>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Tell maven to not have the parent pom as a dependency?
+Date: Sun, 14 Sep 2014 18:31:11 +1200
+Message-ID: <77EBD515-8FF8-4ABC-8E97-FEA59F2650A4@talios.com>
+In-Reply-To: <CAAZU44kAZu=j9aWe_a+vGR_QuyX9QevDBsZw4mpqzkHJ8eJMCw@mail.gmail.com>
+References: <CAAZU44kFZ0cNGa_qOXf6Wj_LRRM18LE3v0xKMLZ0+Z44ZffpFg@mail.gmail.com>
+ <CADVp3v9kcaxe-gD+DtFgfhphNxSmN8YNrhAzuxgnFL4QyAfF_g@mail.gmail.com>
+ <CAAZU44kAZu=j9aWe_a+vGR_QuyX9QevDBsZw4mpqzkHJ8eJMCw@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_MailMate_F3ADFACC-A79B-4E55-953E-FE611F673351_="
+Content-Transfer-Encoding: 8bit
+X-Mailer: MailMate (1.8r4489)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--=_MailMate_F3ADFACC-A79B-4E55-953E-FE611F673351_=
+Content-Type: text/plain; charset=utf-8; format=flowed; markup=markdown
+Content-Transfer-Encoding: 8bit
+
+You don't need N windows, I just add the pom in the maven projects tool 
+window, and have open in my generated IDEA project my core project, plus 
+any F/OSS project I may be forking/working on in the process.
+
+Find Anywhere then works across all projects.
+
+![Cloud Email Hosting & Security](http://smxemail.com/images/smxsig.png)
+On 13 Sep 2014, at 3:58, Kevin Burton wrote:
+
+> Now I have two projects to maintain.  And the number is increasing… 
+> From an
+> IDE perspective, I have to have N windows and switch between them, and
+> remember which file is in which project.
+
+--=_MailMate_F3ADFACC-A79B-4E55-953E-FE611F673351_=--
+

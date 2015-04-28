@@ -1,0 +1,81 @@
+From users-return-137749-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Nov 15 00:55:57 2014
+Return-Path: <users-return-137749-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C66B51028A
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 15 Nov 2014 00:55:57 +0000 (UTC)
+Received: (qmail 77633 invoked by uid 500); 15 Nov 2014 00:55:51 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 77289 invoked by uid 500); 15 Nov 2014 00:55:50 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 77258 invoked by uid 99); 15 Nov 2014 00:55:50 -0000
+Received: from mail-relay.apache.org (HELO mail-relay.apache.org) (140.211.11.15)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 15 Nov 2014 00:55:50 +0000
+Received: from herve-desktop.localnet (static-176-183-252-218.ncc.abo.bbox.fr [176.183.252.218])
+	by mail-relay.apache.org (ASF Mail Server at mail-relay.apache.org) with ESMTPSA id 4124A1A01AD;
+	Sat, 15 Nov 2014 00:54:49 +0000 (UTC)
+From: =?ISO-8859-1?Q?Herv=E9?= Boutemy <hboutemy@apache.org>
+To: announce@maven.apache.org, users@maven.apache.org
+Cc: dev@maven.apache.org
+Subject: [ANN] Apache Maven Toolchains Plugin 1.1 Released
+Date: Sat, 15 Nov 2014 01:55:38 +0100
+Message-ID: <4205010.JGaGqWnJVL@herve-desktop>
+User-Agent: KMail/4.13.3 (Linux/3.13.0-39-generic; KDE/4.13.3; x86_64; ; )
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7Bit
+Content-Type: text/plain; charset="us-ascii"
+
+The Maven team is pleased to announce the release of the Apache Maven 
+Toolchains Plugin, version 1.1
+
+The Toolchains Plugins allows to share configuration across plugins. For 
+example to make sure the plugins like compiler, surefire, javadoc, webstart 
+etc. all use the same JDK for execution.
+
+http://maven.apache.org/plugins/maven-toolchains-plugin/
+
+You should specify the version in your project's plugin configuration:
+
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-toolchains-plugin</artifactId>
+  <version>1.1</version>
+</plugin>
+
+
+Release Notes - Apache Maven Toolchains Plugin - Version 1.1
+
+Bug
+* [MTOOLCHAINS-6] Cannot create custom toolchain type
+
+Improvement
+* [MTOOLCHAINS-11] Double check toolchain type to protect against core bug 
+MNG-5716
+* [MTOOLCHAINS-10] Improve plugin output
+* [MTOOLCHAINS-1] Document how to create new toolchains
+
+Task
+* [MTOOLCHAINS-9] Upgrade to Maven 2.2.1 compatiblity
+* [MTOOLCHAINS-8] improve code and javadoc
+* [MTOOLCHAINS-7] add an IT to check that the plugin works as expected
+* [MTOOLCHAINS-4] use maven-plugin-tools' java 5 annotations
+
+
+Enjoy,
+
+-The Maven team
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

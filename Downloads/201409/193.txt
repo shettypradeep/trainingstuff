@@ -1,0 +1,121 @@
+From users-return-137380-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 26 04:14:18 2014
+Return-Path: <users-return-137380-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7FD1B175E8
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 26 Sep 2014 04:14:18 +0000 (UTC)
+Received: (qmail 60851 invoked by uid 500); 26 Sep 2014 04:14:16 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 60762 invoked by uid 500); 26 Sep 2014 04:14:16 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 60750 invoked by uid 99); 26 Sep 2014 04:14:15 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 26 Sep 2014 04:14:15 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.192.172] (HELO mail-pd0-f172.google.com) (209.85.192.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 26 Sep 2014 04:14:10 +0000
+Received: by mail-pd0-f172.google.com with SMTP id g10so170061pdj.17
+        for <users@maven.apache.org>; Thu, 25 Sep 2014 21:13:49 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:to:subject:date:message-id:in-reply-to
+         :references:mime-version:content-type:content-transfer-encoding;
+        bh=KHazNzImqfCJ3PINsCkrOgAx7rdGuL8PWKTcKZsSQgI=;
+        b=gvzI4pJhw00hYhY+GxL+YK54RVGMdVGkhqcAzxbJMfjXBMIb6KA+COd5cdm9IEEom7
+         +oP10y1DV5x3RvxpVWwhqSHU6e5ZnIj0hxYv2NdnPaSMihK0GySIuMW46IBZO40hi4tX
+         tvG+Pj53TxmiVCdLZ++YDojSBx0uBnI9QahvCmzQ5x3e2K2QN2kL+Q7T2hkk4jf+COvQ
+         7Np/5TiIKVTKOO6AVrgUZadznpuT4qCN977Hmq8U+7f+SqaylQvLp/UEDAxjXlv6lbIf
+         Wr0y4mM9w/Cc49YJzEFZHMMZ0O+ZQVt2hnl9ufnOE3zJmf06LOMPLfFIRVwrkMX4vqSU
+         djZg==
+X-Gm-Message-State: ALoCoQn1twdTroOi+49ex4WKAUF/9nTca9Fmm1TYWmtmkV2MROy/sUFRiYL2kv4u0BEo/JTt0tYX
+X-Received: by 10.68.117.238 with SMTP id kh14mr26558403pbb.55.1411704829471;
+        Thu, 25 Sep 2014 21:13:49 -0700 (PDT)
+Received: from [10.0.0.142] (akl.smx.co.nz. [203.84.135.120])
+        by mx.google.com with ESMTPSA id kw10sm3608136pab.0.2014.09.25.21.13.46
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Thu, 25 Sep 2014 21:13:48 -0700 (PDT)
+From: "Mark Derricutt" <mark@talios.com>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Release fails with maven-javadoc-plugin 2.10
+Date: Fri, 26 Sep 2014 16:13:31 +1200
+Message-ID: <B1B985B4-6A8A-4223-8C42-A5DEE9705A4D@talios.com>
+In-Reply-To: <1411626995271-5806511.post@n5.nabble.com>
+References: <1411626995271-5806511.post@n5.nabble.com>
+MIME-Version: 1.0
+Content-Type: text/plain; format=flowed
+Content-Transfer-Encoding: quoted-printable
+X-Mailer: MailMate (1.8r4520)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+You've updated to the 2.10 javadoc plugin, which is - sadly, showing a =
+
+lot of problems ( exactly what you're seeing ).  I'd roll back to 2.9.1 =
+
+like most people are.
+
+Mark
+
+
+On 25 Sep 2014, at 18:36, Antti O. wrote:
+
+> Hi all, I've started seeing failures when doing a release during this =
+
+> week.
+> The projects released just fine previously.
+> The release fails at the "perform" stage when it's doing =
+
+> "attach-javadocs".
+> Usually the error is something like this, the javadoc plugin fails =
+
+> with
+> dependencies:
+> [INFO] [ERROR] Failed to execute goal
+> org.apache.maven.plugins:maven-javadoc-plugin:2.10:jar =
+
+> (attach-javadocs) on
+> project MyProj: MavenReportException: Error while creating archive:  =
+
+> [INFO]
+> [ERROR] Exit code: 1 -
+> E:\jenkins-work\release_MyProj-1.2\workspace\target\checkout\src\main\j=
+ava\...\MyController.java:3:
+> package javax.portlet does not exist  [INFO] [ERROR] import
+> javax.portlet.RenderRequest;  [INFO] [ERROR] ^  [INFO] [ERROR]
+> E:\jenkins-work\release_aulis-Portlets-1.2\workspace\target\checkout\sr=
+c\main\java\...\MyController.java:4:
+> package javax.portlet does not exist
+> A workaround is to skip the javadoc generation but it has to be =
+
+> configured
+> for each project. There are quite a number of those in my =
+
+> environment.. But
+> why does javadoc generation even need the dependencies?
+> Anyone else having the same problem?
+>
+>
+>
+> --
+> View this message in context: =
+
+> http://maven.40175.n5.nabble.com/Release-fails-with-maven-javadoc-plugi=
+n-2-10-tp5806511.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,63 @@
+From users-return-135544-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb 17 08:43:22 2014
+Return-Path: <users-return-135544-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BC1A81075B
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 17 Feb 2014 08:43:22 +0000 (UTC)
+Received: (qmail 40502 invoked by uid 500); 17 Feb 2014 08:43:19 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 39664 invoked by uid 500); 17 Feb 2014 08:43:18 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 39651 invoked by uid 99); 17 Feb 2014 08:43:15 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 17 Feb 2014 08:43:15 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 17 Feb 2014 08:43:10 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <bltomov@abv.bg>)
+	id 1WFJmq-0005Cg-Re
+	for users@maven.apache.org; Mon, 17 Feb 2014 00:42:48 -0800
+Date: Mon, 17 Feb 2014 00:42:48 -0800 (PST)
+From: DenisDasKind <bltomov@abv.bg>
+To: users@maven.apache.org
+Message-ID: <1392626568837-5785132.post@n5.nabble.com>
+In-Reply-To: <CALy+7U=5QmGECwtdSN2p5cx5H0daN3wQTZ7tmUKcTLfKUwbR5g@mail.gmail.com>
+References: <1392386564045-5784848.post@n5.nabble.com> <CALy+7U=5QmGECwtdSN2p5cx5H0daN3wQTZ7tmUKcTLfKUwbR5g@mail.gmail.com>
+Subject: Re: Prevent installing archives to local repository
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I have take a look, and found that each file, created with the maven assembly
+plugin was installed to the local repository under the project name. In my
+case the maven assembly plugin creates a file abc.zip that is part of the
+distribution, and maven install plugin installed the abs.zip to the local
+repository as projectName.zip and the distribution file.
+My idea is to skip the installation of abc.zip to the repository because it
+is only temporary needed, and is part of the distribution zip file.
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Prevent-installing-archives-to-local-repository-tp5784848p5785132.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

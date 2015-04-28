@@ -1,0 +1,87 @@
+From users-return-137538-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Oct 12 13:32:16 2014
+Return-Path: <users-return-137538-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C4987174E0
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 12 Oct 2014 13:32:16 +0000 (UTC)
+Received: (qmail 21089 invoked by uid 500); 12 Oct 2014 13:32:12 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 20857 invoked by uid 500); 12 Oct 2014 13:32:12 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 20824 invoked by uid 99); 12 Oct 2014 13:32:11 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 12 Oct 2014 13:32:11 +0000
+Received: by minotaur.apache.org (Postfix, from userid 6004)
+	id A731D174D6; Sun, 12 Oct 2014 13:32:11 +0000 (UTC)
+To: announce@maven.apache.org
+Subject: [ANN] Apache Maven WAR Plugin Version 2.5 Released
+Cc: users@maven.apache.org,dev@maven.apache.org
+Message-Id: <20141012133211.A731D174D6@minotaur.apache.org>
+Date: Sun, 12 Oct 2014 13:32:10 +0000 (UTC)
+From: khmarbaise@apache.org (Karl Heinz Marbaise)
+
+The Apache Maven team is pleased to announce the release of the 
+Apache Maven WAR Plugin, version 2.5
+
+The WAR Plugin is responsible for collecting all artifact dependencies, classes
+and resources of the web application and packaging them into a web application
+archive.
+
+http://maven.apache.org/plugins/maven-war-plugin/
+
+You should specify the version in your project's plugin configuration:
+
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-war-plugin</artifactId>
+  <version>2.5</version>
+</plugin>
+
+Release Notes - Maven WAR Plugin - Version 2.5
+
+http://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=11150&version=19421
+
+Bugs:
+
+ * [MWAR-305] - Filtering doesn't work as expected after switching from maven-filtering:1.0-beta-2 to 
+                maven-filtering:1.1
+ * [MWAR-306] - [regression] Filtering doesn't work if a lone @ is found in a line to interpolate
+ * [MWAR-311] - Filtering of resources broken in version 2.4
+ * [MWAR-312] - Document about Skinny War might need update
+
+Improvements:
+
+ * [MWAR-313] - Upgrade maven-filtering to 1.2
+ * [MWAR-316] - MavenProject/MavenSession Injection as a paremeter instead as a component.
+ * [MWAR-317] - Upgrade to Maven 2.2.1 compatiblity
+ * [MWAR-319] - Fix RAT Report
+ * [MWAR-320] - Update version of plexus-archiver to 2.6.1
+ * [MWAR-321] - Upgrade plexus archiver to 2.6.3
+ * [MWAR-322] - Removed dependency plexus-container-default:1.0-alpha-9-stable-1
+ * [MWAR-323] - Upgrade xstream version to 1.4.4
+ * [MWAR-324] - Upgrade plexus-io to 2.1.3
+ * [MWAR-325] - Fixed CPD / Checkstyle WARNINGS
+
+Task:
+
+* [MWAR-302] - Use the maven-mapping shared component
+
+Enjoy,
+
+-The Apache Maven team
+
+Karl Heinz Marbaise
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

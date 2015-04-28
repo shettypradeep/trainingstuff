@@ -1,0 +1,99 @@
+From users-return-137564-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Oct 14 10:05:34 2014
+Return-Path: <users-return-137564-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1112C17E10
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 14 Oct 2014 10:05:34 +0000 (UTC)
+Received: (qmail 51154 invoked by uid 500); 14 Oct 2014 10:05:32 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 51063 invoked by uid 500); 14 Oct 2014 10:05:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 51052 invoked by uid 99); 14 Oct 2014 10:05:32 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Oct 2014 10:05:32 +0000
+X-ASF-Spam-Status: No, hits=-5.0 required=5.0
+	tests=RCVD_IN_DNSWL_HI,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of jens.rabe@iwes.fraunhofer.de designates 153.97.7.23 as permitted sender)
+Received: from [153.97.7.23] (HELO mail-edgeS23.fraunhofer.de) (153.97.7.23)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Oct 2014 10:05:06 +0000
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: Ag4FAKP0PFSZYAEa/2dsb2JhbABbgw5TWATMK4dLAoEVFgF9hAIBAQEDATpECwIBCBEEAQELFBAhER0IAQEEEwiIIgMJBwENv0YNhi4BAQEBBgEBAQEBARyOE4IBOIMtgR4FkXmEQoR+AYlyLocuhlSDd2wBgUeBAgEBAQ
+X-IPAS-Result: Ag4FAKP0PFSZYAEa/2dsb2JhbABbgw5TWATMK4dLAoEVFgF9hAIBAQEDATpECwIBCBEEAQELFBAhER0IAQEEEwiIIgMJBwENv0YNhi4BAQEBBgEBAQEBARyOE4IBOIMtgR4FkXmEQoR+AYlyLocuhlSDd2wBgUeBAgEBAQ
+X-IronPort-AV: E=Sophos;i="5.04,716,1406584800"; 
+   d="scan'208";a="28157833"
+Received: from mail-mtaka26.fraunhofer.de ([153.96.1.26])
+  by mail-edgeS23.fraunhofer.de with ESMTP/TLS/RC4-SHA; 14 Oct 2014 12:05:05 +0200
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: AmEEAOj0PFTAWGEQgWdsb2JhbABbg2FYBMwrh0sCgRUWAQEQAQEWJi6EAgEBAQECATpECwIBCA0EBAEBCxQQIREdCAEBBBMIiCIDCQgNv0gNhi4BAQEBBgEBAQEejhOCATiDLYEeBZF5hEKEfgGJci6HLopLPS8BgUeBAgEBAQ
+X-IPAS-Result: AmEEAOj0PFTAWGEQgWdsb2JhbABbg2FYBMwrh0sCgRUWAQEQAQEWJi6EAgEBAQECATpECwIBCA0EBAEBCxQQIREdCAEBBBMIiCIDCQgNv0gNhi4BAQEBBgEBAQEejhOCATiDLYEeBZF5hEKEfgGJci6HLopLPS8BgUeBAgEBAQ
+X-IronPort-AV: E=Sophos;i="5.04,716,1406584800"; 
+   d="scan'208";a="99266384"
+Received: from unknown (HELO FGDEMUCIMP11EXC.ads.fraunhofer.de) ([192.88.97.16])
+  by mail-mtaka26.fraunhofer.de with ESMTP/TLS/AES128-SHA; 14 Oct 2014 12:04:52 +0200
+Received: from FGDEMUCIMP01EXC.ads.fraunhofer.de ([10.80.232.40]) by
+ FGDEMUCIMP11EXC.ads.fraunhofer.de ([10.80.232.42]) with mapi id
+ 14.03.0169.001; Tue, 14 Oct 2014 12:04:52 +0200
+From: "Rabe, Jens" <jens.rabe@iwes.fraunhofer.de>
+To: Maven Users List <users@maven.apache.org>
+Subject: RE: Use third-party jar with natives in Maven
+Thread-Topic: Use third-party jar with natives in Maven
+Thread-Index: Ac/njT3W4g7RIGIDQhCKZwne/3jDIP//4z4AgAAuo9g=
+Date: Tue, 14 Oct 2014 10:04:51 +0000
+Message-ID: <C84C4FB966D26947A3768912D36DE02A2C0F2740@fgdemucimp01exc.ads.fraunhofer.de>
+References: <C84C4FB966D26947A3768912D36DE02A2C0F24BB@fgdemucimp01exc.ads.fraunhofer.de>,<CA+nPnMwJu5K2e2MnxwZYADL3d8VZ4pf4gvh649aH6M-Raci5_w@mail.gmail.com>
+In-Reply-To: <CA+nPnMwJu5K2e2MnxwZYADL3d8VZ4pf4gvh649aH6M-Raci5_w@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [10.80.233.51]
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello Stephen,=0A=
+=0A=
+thank you for the link. Unfortunately I was not able to find it myself.=0A=
+=0A=
+Regards,=0A=
+Jens=0A=
+=0A=
+________________________________________=0A=
+From: Stephen Connolly [stephen.alan.connolly@gmail.com]=0A=
+Sent: Tuesday, October 14, 2014 11:17 AM=0A=
+To: Maven Users List=0A=
+Subject: Re: Use third-party jar with natives in Maven=0A=
+=0A=
+http://developer-blog.cloudbees.com/2013/03/playing-trade-offs-with-maven.h=
+tml=0A=
+=0A=
+On 14 October 2014 10:01, Rabe, Jens <jens.rabe@iwes.fraunhofer.de> wrote:=
+=0A=
+=0A=
+> Hello,=0A=
+>=0A=
+> I have a third-party Java library which is a binary-only jar (not=0A=
+> open-source) and has separate native libraries. Is there a way to wrap th=
+is=0A=
+> up and use it with Maven? Can anyone point out how it is done, if possibl=
+e?=0A=
+>=0A=
+> Thanks in advance,=0A=
+> Jens=0A=
+>=0A=
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

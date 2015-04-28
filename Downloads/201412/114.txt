@@ -1,0 +1,75 @@
+From users-return-137891-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Dec  1 07:40:31 2014
+Return-Path: <users-return-137891-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F219410005
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  1 Dec 2014 07:40:30 +0000 (UTC)
+Received: (qmail 72031 invoked by uid 500); 1 Dec 2014 07:40:29 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 71953 invoked by uid 500); 1 Dec 2014 07:40:29 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 71941 invoked by uid 99); 1 Dec 2014 07:40:28 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 01 Dec 2014 07:40:28 +0000
+X-ASF-Spam-Status: No, hits=-2.3 required=5.0
+	tests=RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [141.35.1.28] (HELO mailout0.rz.uni-jena.de) (141.35.1.28)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 01 Dec 2014 07:40:23 +0000
+Received: from mailsmtp2.rz.uni-jena.de (smtp.uni-jena.de [141.35.1.21])
+	by mailout0.rz.uni-jena.de (8.14.4/8.14.4) with ESMTP id sB17a00x000596
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+	for <users@maven.apache.org>; Mon, 1 Dec 2014 08:36:00 +0100
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=uni-jena.de;
+	s=dkim-2013; t=1417419361;
+	bh=GxDvBt6NKRBRnzj3mQKxq7NwgVF9apuexF9a1JpsZ60=;
+	h=Message-ID:Date:From:MIME-Version:To:Subject:Content-Type:
+	 Content-Transfer-Encoding;
+	b=I3Z7oBm5jIf8VZrMsniyqHytuqhewdvNmp/vEcKf/EwKOPLYAVk3VVMs71SE+OwnO
+	 S9iI+MOa/K/220B7cq1d6rwM0uMWbL99DTTQAGBoL5rbkJtzAu/eWEzSOnnQQmXKyj
+	 HttaTS7Xe7AePSOoNTnVhSjPo0vry02rDPDnGETJSOMf6/ud6JUsCBxJJlkyJkFwBi
+	 /w2Ul6+Rb+ne1WNFyELuxqAbL3R18vC4WlDkPXyVuhbu2BEpFiNsmi7ajcKwqQRHze
+	 nmV37vXLLDl4LUTRE8TAEbmEJPF7ctoTqvX7QUys5LMjvBh6FBMKJyTgnhutF/eoFL
+	 CpX72EKNZp0tQ==
+Received: from ulbp2731.ulb.uni-jena.de (ulbp2731.ulb.uni-jena.de [141.35.23.95])
+	(authenticated id=m8scth bits=0)
+	by mailsmtp2.rz.uni-jena.de (8.14.4/8.14.4) with ESMTP id sB17a0kO025689
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES128-SHA bits=128 verify=NO)
+	for <users@maven.apache.org>; Mon, 1 Dec 2014 08:36:00 +0100
+Message-ID: <547C1A5F.7070709@uni-jena.de>
+Date: Mon, 01 Dec 2014 08:35:59 +0100
+From: Thomas Scheffler <thomas.scheffler@uni-jena.de>
+Organization: =?UTF-8?B?RnJpZWRyaWNoLVNjaGlsbGVyLVVuaXZlcnNpdMOkdCBKZW5h?=
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:31.0) Gecko/20100101 Thunderbird/31.2.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Maven Plugin Refelction
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi there,
+
+I try to write a simple plugin. I want to have access to the version of 
+this plugin. As maven already knows it, I wondered, if I can get access 
+to this version string somehow without hardcoding it in properties or 
+java code.
+
+kind regards,
+
+Thomas
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

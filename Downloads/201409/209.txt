@@ -1,0 +1,51 @@
+From users-return-137317-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Sep 18 12:28:38 2014
+Return-Path: <users-return-137317-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BE7A811664
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 18 Sep 2014 12:28:38 +0000 (UTC)
+Received: (qmail 56831 invoked by uid 500); 18 Sep 2014 12:28:32 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 56749 invoked by uid 500); 18 Sep 2014 12:28:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 39131 invoked by uid 99); 18 Sep 2014 12:12:26 -0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of yaroslavTir@gmail.com does not designate 216.139.236.26 as permitted sender)
+Date: Thu, 18 Sep 2014 05:12:01 -0700 (PDT)
+From: yaroslavTir <yaroslavTir@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1411042321376-5805605.post@n5.nabble.com>
+In-Reply-To: <75F3A2D98EDE2545BDC06B5B6C1CEC516DF84192@ESGSCMB101.ericsson.se>
+References: <75F3A2D98EDE2545BDC06B5B6C1CEC516DF84192@ESGSCMB101.ericsson.se>
+Subject: Re: Maven sure fire plugin npe problem.
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi all,
+I have the same problem. I also revert surefire plugin to the 2.12 version
+and everything begin to work. Does you found what was wrong? Do I need to
+send my "non working" example?
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Maven-sure-fire-plugin-npe-problem-tp5791902p5805605.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

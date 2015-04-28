@@ -1,0 +1,90 @@
+From users-return-136374-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri May 16 17:35:55 2014
+Return-Path: <users-return-136374-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DAB841115B
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 16 May 2014 17:35:54 +0000 (UTC)
+Received: (qmail 15377 invoked by uid 500); 16 May 2014 11:52:33 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 26104 invoked by uid 500); 16 May 2014 11:43:53 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 56678 invoked by uid 99); 16 May 2014 11:17:54 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 16 May 2014 11:17:54 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of baerrach@gmail.com designates 209.85.128.175 as permitted sender)
+Received: from [209.85.128.175] (HELO mail-ve0-f175.google.com) (209.85.128.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 15 May 2014 23:51:12 +0000
+Received: by mail-ve0-f175.google.com with SMTP id jw12so2231118veb.34
+        for <users@maven.apache.org>; Thu, 15 May 2014 16:50:51 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=faxEVCaVW65big4LUz/v2oR9pH8re1Q5LlvoJE0HNvE=;
+        b=HZ/5EmgqlvW0Hc54l7RL9GIhNOJcEaFC+S18kkDEYDxXTHM48YRCUTW3anRnczpehl
+         imBTILNeyRMNhknXqcaSHNN2B6j3YmYP6KZaLTEpri9zaK4fAZDtuSTosGLw/jB6cVYV
+         B0YDD+lMdaepYDNKmU09kFQgYeR4BbqOUGIA+lYXDXI5pSXTTOe//2BPqtLbWYsipCCJ
+         t5LXNoBapZAxsMQLYQhW5gnmH554faEKk5bVXrn1z16Z/PaBwukdvM9h6fGKbgWe/VV1
+         g147WjrFmwGEf1FCmldZWPrn8mXMJK7YJnBPPXgobAox+3YrNU9hWgEYsyp/AxHArVlJ
+         e8EQ==
+MIME-Version: 1.0
+X-Received: by 10.220.191.134 with SMTP id dm6mr11136737vcb.16.1400197851484;
+ Thu, 15 May 2014 16:50:51 -0700 (PDT)
+Received: by 10.58.197.98 with HTTP; Thu, 15 May 2014 16:50:51 -0700 (PDT)
+In-Reply-To: <CAEayHEN_du-V3D97v-ybWH68vZ9kRm1SqsoBxUrRsT8sQacfnw@mail.gmail.com>
+References: <CAEayHEN_du-V3D97v-ybWH68vZ9kRm1SqsoBxUrRsT8sQacfnw@mail.gmail.com>
+Date: Fri, 16 May 2014 09:20:51 +0930
+Message-ID: <CADVp3v9SwQ4_v1aEruhcD-8FBi9eor6Tc_85rG=r=hZPd7htHA@mail.gmail.com>
+Subject: Re: M2Eclipse vs. maven-eclipse-plugin: which is preferred?
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0158a82a8d967504f978f796
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0158a82a8d967504f978f796
+Content-Type: text/plain; charset=UTF-8
+
+On 9 May 2014 18:49, Thomas Broyer <t.broyer@gmail.com> wrote:
+
+> Hi all,
+>
+> Does the Apache Maven Project/Community has an official stance about
+> whether M2Eclipse or maven-eclipse-plugin is preferred way of importing
+> Maven projects into Eclipse?
+>
+> I thought M2Eclipse was the blessed way, but I cannot find anything
+> "official" online.
+> Only that the maven-eclipse-plugin hasn't been updated for a while, but
+> that could also be a sign that it has no issue and Eclipse offers backwards
+> compatibility.
+>
+> Note: this is not a poll about what you as a developer prefers, I'm looking
+> for whether there's an official position and which one it is.
+> Background: I'm in a argument in a code review for an archetype about
+> whether to include maven-eclipse-plugin configuration within the POM or
+> not; and any "official" choice would help us avoid "bikeshedding".
+>
+
+There isn't anything really official.
+
+The maven-eclipse-plugin doesn't get much love any more these days, but
+still works fine for some people.
+
+However you will probably find the m2eclipse experience better.
+
+Other alternatives to consider are other editors.
+I've never used NetBeans or IntelliJ but others report good experiences.
+
+--089e0158a82a8d967504f978f796--
+

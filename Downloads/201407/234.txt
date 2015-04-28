@@ -1,0 +1,90 @@
+From users-return-136902-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jul 25 17:35:46 2014
+Return-Path: <users-return-136902-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F242910637
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 25 Jul 2014 17:35:45 +0000 (UTC)
+Received: (qmail 75328 invoked by uid 500); 25 Jul 2014 17:35:44 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 75244 invoked by uid 500); 25 Jul 2014 17:35:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 75231 invoked by uid 99); 25 Jul 2014 17:35:43 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 25 Jul 2014 17:35:43 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of garvin.leclaire@gmail.com designates 209.85.212.178 as permitted sender)
+Received: from [209.85.212.178] (HELO mail-wi0-f178.google.com) (209.85.212.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 25 Jul 2014 17:35:38 +0000
+Received: by mail-wi0-f178.google.com with SMTP id hi2so1378787wib.11
+        for <users@maven.apache.org>; Fri, 25 Jul 2014 10:35:17 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=mPAWV6NKTuLuxHZH4gMFhVlM+3w1URrcyUh1ceNghZc=;
+        b=ImbmnSA1Re0lO7zMwfHVaCc5IyBBFq2nSFeEZJw5TopQJJXr+ZEuhPwjxVOd/hITiC
+         aWXVZTkzsfyUP26Kmm0TRC50gCUq/t8n/xBKAiYjWFIwcpOf88OHVuM0PPlGVWhoimDg
+         owLEghDs3yERM04aR+eQ4mWFJDyIkIMtLRgXZjfqedCBkg0yllAGGE8HX6FW1NlSyi2g
+         t/kgfJwXmwr7ALahJttERwLvzjVU7LfAULjRcvxTo5VAeiIzN0FSsomW1qfAwI+nyXNj
+         gGhKZYbjFNKEDtEFQdl0Z4Eftl5tjWSIt5VtywBiVzDuUfM8Nh33iWrI5Hw1hJEgA4RE
+         Lxlg==
+MIME-Version: 1.0
+X-Received: by 10.194.9.1 with SMTP id v1mr5823920wja.128.1406309717175; Fri,
+ 25 Jul 2014 10:35:17 -0700 (PDT)
+Received: by 10.217.151.195 with HTTP; Fri, 25 Jul 2014 10:35:17 -0700 (PDT)
+Date: Fri, 25 Jul 2014 13:35:17 -0400
+Message-ID: <CAMKsNU+zqi8inCG_ooqrS0VJJg7=SvtKfEV8R7pFT93Xx1Yrag@mail.gmail.com>
+Subject: [ANN] FindBugs Maven Plugin version 3.0.0 Released
+From: Garvin LeClaire <garvin.leclaire@gmail.com>
+To: announce@mojo.codehaus.org, 
+	"dev@mojo.codehaus.org" <dev@mojo.codehaus.org>, user@mojo.codehaus.org, 
+	maven users <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b5d9c6322f46e04ff07ff47
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b5d9c6322f46e04ff07ff47
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+The Mojo team is pleased to announce the release of the FindBugs Maven
+Plugin version 3.0.0
+FindBugs uses static analysis to inspect Java bytecode for occurrences
+of bug patterns.
+
+To get this update, simply specify the version in your project's
+plugin configuration:
+
+<plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <version>3.0.0</version>
+</plugin>
+
+We solved the following issues:
+
+Release Notes - Mojo's FindBugs Maven Plugin - Version 3.0.0
+
+
+** New Feature
+    * [MFINDBUGS-199] - Upgrade to Findbugs 3.0.0
+
+
+
+
+Enjoy,
+
+
+Garvin LeClaire
+garvin.leclaire@gmail.com
+
+--047d7b5d9c6322f46e04ff07ff47--
+

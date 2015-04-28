@@ -1,0 +1,103 @@
+From users-return-135349-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb  5 07:55:51 2014
+Return-Path: <users-return-135349-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A8310105F5
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  5 Feb 2014 07:55:51 +0000 (UTC)
+Received: (qmail 97014 invoked by uid 500); 5 Feb 2014 07:55:46 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 96905 invoked by uid 500); 5 Feb 2014 07:55:33 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 96895 invoked by uid 99); 5 Feb 2014 07:55:31 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Feb 2014 07:55:31 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of gcjtmu-turbine-maven-user-846@m.gmane.org designates 80.91.229.3 as permitted sender)
+Received: from [80.91.229.3] (HELO plane.gmane.org) (80.91.229.3)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Feb 2014 07:55:23 +0000
+Received: from list by plane.gmane.org with local (Exim 4.69)
+	(envelope-from <gcjtmu-turbine-maven-user-846@m.gmane.org>)
+	id 1WAxK2-0004MY-PG
+	for users@maven.apache.org; Wed, 05 Feb 2014 08:55:02 +0100
+Received: from mail.scalaris.com ([62.154.225.82])
+        by main.gmane.org with esmtp (Gmexim 0.1 (Debian))
+        id 1AlnuQ-0007hv-00
+        for <users@maven.apache.org>; Wed, 05 Feb 2014 08:55:02 +0100
+Received: from joerg.schaible by mail.scalaris.com with local (Gmexim 0.1 (Debian))
+        id 1AlnuQ-0007hv-00
+        for <users@maven.apache.org>; Wed, 05 Feb 2014 08:55:02 +0100
+X-Injected-Via-Gmane: http://gmane.org/
+To: users@maven.apache.org
+From: =?UTF-8?B?SsO2cmc=?= Schaible <joerg.schaible@swisspost.com>
+Subject: Re: dependency management across projects
+Date: Wed, 05 Feb 2014 08:54:49 +0100
+Organization: Swiss Post Solutions
+Lines: 41
+Message-ID: <lcsqnt$u6r$1@ger.gmane.org>
+References: <CAOonohfsbrJ-7pxsEYFhLJvzb9KS+V6tnM0Je46Ep3m8YLFWSg@mail.gmail.com> <CAKDUN1vjCWVKV8BQZkjAW4Xb96z_41mhRmP=TNzLHxaX=YdCGg@mail.gmail.com> <CAOonohc6YwtXH-LtEHv3PGnv57cQ0YjWUvcTp9VZ1+Bj8DN7sQ@mail.gmail.com> <CAKDUN1v-0t+DhVnYi3CXFa_0UBs+KXXnR3jeDWqaETFQOO8r=Q@mail.gmail.com> <CAOonoheiu4EWX6p_g=FJHkRHqmBaG+PJoFbeS=7M9nh+DQhA5g@mail.gmail.com> <CAKDUN1swy7w7bjj12f7kffY=d-fD=eOThpz-tLgMg7dfBjaC_g@mail.gmail.com> <CADN69y=Z8psWea1bgSozguQZJtLW+-Wd0eJqVsTC9SfRM42ifw@mail.gmail.com> <lcqfv3$ftq$1@ger.gmane.org> <CADN69y=oO1XA9FwKAhGKZuoZN-xQA4uDR4t-Tdj+PsfmgSwk+g@mail.gmail.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8Bit
+X-Complaints-To: usenet@ger.gmane.org
+X-Gmane-NNTP-Posting-Host: mail.scalaris.com
+User-Agent: KNode/4.11.2
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Curtis,
+
+Curtis Rueden wrote:
+
+> Hi Jörg,
+> 
+>> We use simply "x-SNAPSHOT" for the parent version. That way no
+>> unreleased project has to be touched, it simply uses the "lastest"
+>> SNAPSHOT of the parent. No script required.
+> 
+> Yeah, that is very convenient, if you are willing to accept the two-edged
+> sword of irreproducible builds.
+
+What do you mean with "irreproducible builds"? Definitely, if you project 
+relies on a SNAPSHOT parent, it does not matter if you call it 1-SNAPSHOT or 
+x-SNAPSHOT.
+
+> A breaking change in the parent will break
+> all builds that consume it... but can be fixed just as easily too without
+> touching the downstream projects.
+
+Well, somebody obviously made the choice for the SNAPSHOT parent ... with 
+all consequences.
+
+> Of course, it's a decision every project has to make for themselves. My
+> projects opted for build reproducibility by using only release linkages
+> (for parent POMs, dependencies and plugins). This has many advantages:
+> e.g., "git bisect" fully works as one might hope, allowing you to
+> resurrect the state of the code even from years prior and still build
+> successfully. The downside is that you must make releases in order to be
+> able to pin to them.
+
+Once a project is released, you also have a released parent. No surprises 
+anymore. And the project can then make its own decision if it creates also a 
+branch for the parent and rely on e.g. 254.x-SNAPSHOT either for maintenance 
+releases or further development.
+
+This scheme works well for us now for several years.
+
+Cheers,
+Jörg
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

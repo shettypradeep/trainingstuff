@@ -1,0 +1,166 @@
+From users-return-135355-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb  5 17:14:50 2014
+Return-Path: <users-return-135355-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 76217109F4
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  5 Feb 2014 17:14:50 +0000 (UTC)
+Received: (qmail 7096 invoked by uid 500); 5 Feb 2014 17:14:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 6987 invoked by uid 500); 5 Feb 2014 17:14:45 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 6979 invoked by uid 99); 5 Feb 2014 17:14:44 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Feb 2014 17:14:44 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of martijn.dashorst@gmail.com designates 209.85.192.170 as permitted sender)
+Received: from [209.85.192.170] (HELO mail-pd0-f170.google.com) (209.85.192.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Feb 2014 17:14:39 +0000
+Received: by mail-pd0-f170.google.com with SMTP id p10so607116pdj.1
+        for <users@maven.apache.org>; Wed, 05 Feb 2014 09:14:18 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=A17DyJpcG2m2zbslXUwmTBfTYvN6wFXTsgjN2EBDfq4=;
+        b=Pc+Q7tdHl3u2x9KUVOAExPEL5nPKmbhUFlCJBffQdykzGgkkQqmtpTSWrV07nLVh9M
+         eobI6yNpoRiG5gwLKpbeto3DE/agQFyRD6rot8900luvaBi+NIirf27oNvZXFJ5bpbMz
+         r03IzV5FL451IWP2h0hA+JpHWTeF7zdFRIzGmjHcxQSBYSdwtvX6wHSWlJepfUmuLX9x
+         4gxHnNzebuLI5wr1m2qdYfqgZisVsNH7DNu3W/aZ3eo0pby8aNuFUQQx7t/n1MEvLHXV
+         QjUsF94n2ftVVCrcwD+LRkZDEUSQyRQCzuwL9BNZpciWtYT/M1EYpp9HCgu8lvqXLone
+         PdHg==
+X-Received: by 10.68.17.7 with SMTP id k7mr3337377pbd.119.1391620457843; Wed,
+ 05 Feb 2014 09:14:17 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.252.72 with HTTP; Wed, 5 Feb 2014 09:13:57 -0800 (PST)
+In-Reply-To: <CAB63Y-d-gL6xeuEw9DSxeAdV=DS39yTb6Y4fpgjSPds6qiG3qA@mail.gmail.com>
+References: <CAB63Y-diz8qOPHjW3-M0Tx=XW2CRF+LZ1FCwXtAG3NQS5zf_MQ@mail.gmail.com>
+ <A07C4A2B-B8D4-420D-901D-133D592B68D1@talios.com> <op.w8o9l9k4kdkhrr@robertscholte>
+ <3B0FF2B4-41D5-4BDB-BB3B-D11AC8F9A364@talios.com> <CA+mcLN5DZdCrCm7MKvuzCK=MfNLa4DgHTiKj8gGsCQMqzKk47A@mail.gmail.com>
+ <op.w8s6a4o0kdkhrr@robertscholte> <CAB63Y-d-gL6xeuEw9DSxeAdV=DS39yTb6Y4fpgjSPds6qiG3qA@mail.gmail.com>
+From: Martijn Dashorst <martijn.dashorst@gmail.com>
+Date: Wed, 5 Feb 2014 18:13:57 +0100
+Message-ID: <CAB63Y-d1WJK+i6L-QA6OUW4qQKLmeNTr0GwOuc10L9MOH5YyOA@mail.gmail.com>
+Subject: Re: Unable to use the maven-release-plugin to release
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=bcaec52160710d556304f1abe329
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--bcaec52160710d556304f1abe329
+Content-Type: text/plain; charset=ISO-8859-1
+
+To fix this I had to add
+
+<dependencies>
+<dependency>
+    <groupId>org.apache.maven.scm</groupId>
+    <artifactId>maven-scm-provider-gitexe</artifactId>
+    <version>1.9</version>
+</dependency>
+</dependencies>
+
+to the plugin definition of the m-r-p (version 2.4.1).
+
+Martijn
+
+
+
+On Wed, Feb 5, 2014 at 5:44 PM, Martijn Dashorst <martijn.dashorst@gmail.com
+> wrote:
+
+> This is still an issue. Can someone please fix the maven-release-plugin to
+> work with a decent version of git?
+>
+> Martijn
+>
+>
+> On Sat, Dec 28, 2013 at 4:22 PM, Robert Scholte <rfscholte@apache.org>wrote:
+>
+>> Hi,
+>>
+>> it depends on the type of problem you're facing.
+>>
+>> as said before, these are probably the best options:
+>>
+>> - try maven-release-plugin 2.4
+>> - use an older version of GIT with English locale.
+>>
+>> For details see https://jira.codehaus.org/browse/MRELEASE-812
+>>
+>> Robert
+>>
+>> Op Sat, 28 Dec 2013 15:34:26 +0100 schreef Julien Nicoulaud <
+>> julien.nicoulaud@gmail.com>:
+>>
+>>
+>>  Hi,
+>>>
+>>> I tried the workaround (release plugin 2.4.2 + maven-scm-provider-gitexe
+>>> 1.8.1) without success, still messing up releases with snapshot versions.
+>>> I'm on git 1.8.5.2.
+>>>
+>>> Am I missing something else ?
+>>> Here is my parent pom with the release profile I use if this can help:
+>>> https://gitorious.org/net-ju-n-parent-pom/net-ju-n-parent-pom
+>>>
+>>> Cheers
+>>>
+>>>
+>>> 2013/12/26 Mark Derricutt <mark@talios.com>
+>>>
+>>>  You're correct - 1.8.1 is not related to Git 1.8, however it is the
+>>>> latest
+>>>> release - and a fix that SUPPORTS Git 1.8 was actually released back in
+>>>> something like scm-provider 1.5 earlier in the year - only the Maven
+>>>> Release Plugin DOES NOT USE IT.
+>>>>
+>>>> We should really have a new release of m-r-p that forces the use of
+>>>> current scm-providers cause I can see this problem only increasing as
+>>>> more
+>>>> people a) upgrade git or b) move to git and get pissed off with
+>>>> maven+git
+>>>>
+>>>> This work around works, but really - goes against convention over
+>>>> configuration.
+>>>>
+>>>>
+>>>> On 27 Dec 2013, at 1:43, Robert Scholte wrote:
+>>>>
+>>>> > I don't think this will fix the issue.
+>>>> >
+>>>> > SCM 1.8.1[1] is not related to GIT 1.8.x
+>>>> >
+>>>> > It's a coincidence that the most recent version of SVN, GIT and SCM
+>>>> are
+>>>> all 1.8.x
+>>>> >
+>>>> > Robert
+>>>>
+>>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+>
+>
+> --
+> Become a Wicket expert, learn from the best: http://wicketinaction.com
+>
+
+
+
+-- 
+Become a Wicket expert, learn from the best: http://wicketinaction.com
+
+--bcaec52160710d556304f1abe329--
+

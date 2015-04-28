@@ -1,0 +1,127 @@
+From users-return-135925-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Mar 25 07:26:30 2014
+Return-Path: <users-return-135925-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 655B010D83
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 25 Mar 2014 07:26:30 +0000 (UTC)
+Received: (qmail 87549 invoked by uid 500); 25 Mar 2014 07:26:26 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 86257 invoked by uid 500); 25 Mar 2014 07:26:21 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 86244 invoked by uid 99); 25 Mar 2014 07:26:16 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Mar 2014 07:26:16 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [212.227.126.130] (HELO moutng.kundenserver.de) (212.227.126.130)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Mar 2014 07:26:09 +0000
+Received: from coriander.fritz.box (e178006117.adsl.alicedsl.de [85.178.6.117])
+	by mrelayeu.kundenserver.de (node=mreue006) with ESMTP (Nemesis)
+	id 0LavVd-1Wulb03LQX-00kkIp; Tue, 25 Mar 2014 08:25:48 +0100
+From: Christian Schlichtherle <christian@schlichtherle.de>
+Content-Type: multipart/signed; boundary="Apple-Mail=_5A45444B-F514-42A6-BDC1-2E3ACE02F905"; protocol="application/pgp-signature"; micalg=pgp-sha1
+Message-Id: <93509E3A-4FEA-4B14-8D7D-7D0EA1E284DF@schlichtherle.de>
+Mime-Version: 1.0 (Mac OS X Mail 7.2 \(1874\))
+Subject: Re: [ANN] Apache Maven Shared Jarsigner 1.3.2 Released
+Date: Tue, 25 Mar 2014 08:25:47 +0100
+References: <20140324084517.57be3238@tc.codelutin.home>
+To: users@maven.apache.org
+In-Reply-To: <20140324084517.57be3238@tc.codelutin.home>
+X-Mailer: Apple Mail (2.1874)
+X-Provags-ID: V02:K0:NrJdqZ4UWMhYnIzBkbydvIbGb6Gj7LHFjbFmhNgGkYr
+ TCrMt1Z6wgkY1PWtWF56Fdool4/mJgSEI1/PtAd9Wfno9g22zP
+ jZJGfFC3UnL6Xd3s2WFStUJAGuw+JplndliSCG9+SXCJ6FHO7T
+ cuJdqVrZiWjjBy7Vu6MQ7nzP/5I+eDZWflgoPxR2YlQnG1c75x
+ s7R4d871+rdoWHPnSKeQIOOlMfJJKv33Hcxsu3NN4pkRuEYeK6
+ kZg6gQrJBSdHCF5V3j/SCuQJH4GqGmS+RNr5WSWB9L3LyZGWvW
+ 8M9hdI3/YgPpn0B979aUM/fpa3YSgQ09mwmFsI6qHyTfqcvXy0
+ sKrnnLUGtVw2+0fRe3h1f8W+82WEbXCbpG1wbeQnoabs+0+sWr
+ Pyv8UnwDHfOGowmCxSITGvSpu38SV4Z3epwFGbVG/uj0K3G48R
+ cYA7j
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_5A45444B-F514-42A6-BDC1-2E3ACE02F905
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+Hi all,
+
+I believe the groupId should be org.apache.maven.plugins, not =
+org.apache.maven.shared.
+
+Regards,
+Christian Schlichtherle
+
+Am 24.03.2014 um 08:45 schrieb Tony Chemit <tchemit@apache.org>:
+
+> The Maven team is pleased to announce the release of the Apache Maven =
+Jarsigner, =20
+> version 1.3.2
+>=20
+> This component provides some utilities to sign/verify jars/files in =
+your Mojos.
+>=20
+> http://maven.apache.org/shared/maven-jarsigner/
+>=20
+> To use the Maven Jarsigner, add the following dependency to your =
+project:
+>=20
+>   <dependency>
+>     <groupId>org.apache.maven.shared</groupId>
+>     <artifactId>maven-jarsigner</artifactId>
+>     <version>1.3.2</version>
+>   </dependency>
+>=20
+> Release Notes - Maven Shared Components - Version =
+maven-jarsigner-1.3.2
+>=20
+> ** Bug
+>    * [MSHARED-316] - Can not pass storetype nor storepass to a verify =
+request
+>=20
+> ** Improvement
+>    * [MSHARED-321] - Mask passwords in logs
+>=20
+> ** Task
+>    * [MSHARED-322] - Use maven-shared-utils 0.6
+>=20
+> Enjoy,
+>=20
+> -The Maven team
+>=20
+> tony.
+
+
+--Apple-Mail=_5A45444B-F514-42A6-BDC1-2E3ACE02F905
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+	filename=signature.asc
+Content-Type: application/pgp-signature;
+	name=signature.asc
+Content-Description: Message signed with OpenPGP using GPGMail
+
+-----BEGIN PGP SIGNATURE-----
+Comment: GPGTools - http://gpgtools.org
+
+iQEcBAEBAgAGBQJTMS97AAoJEJQnh/3pQ6UwA+oH/0SrcRVfHXWjdA19OXR0I7wJ
+DATuIoEa6/vTG17IKAdAZpit8xcnweuVQVpuT6uJIZZQDvqBTlMa8dmKc/hIV3qK
+IkrMKPzmB2Pq1ODnATzwRFZz9tCoswaKaqr0l3+ayMgp7zSC6WY8Bt0At3WNKF66
+x4AT/Qq93czjBR3tpqhX67K53rB37tPWM63H1/Njl0Uq9KROrh1DZUOS2ep++Yg2
+Y+v8qp44/ENIE4XaqauFDk0VrBIlOTyoBm7HYrbhF1mxssNfUO57ghZO8luKy2gJ
+z18XSIiKpIRONT8GPnFYzUGrgCxs5LBFzwrxY0Bm7ao88ENQXJNPwVTFO5hTiDI=
+=qM/0
+-----END PGP SIGNATURE-----
+
+--Apple-Mail=_5A45444B-F514-42A6-BDC1-2E3ACE02F905--
+

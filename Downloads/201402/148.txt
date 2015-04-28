@@ -1,0 +1,210 @@
+From users-return-135471-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb 14 03:13:52 2014
+Return-Path: <users-return-135471-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 33A74106B0
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 14 Feb 2014 03:13:52 +0000 (UTC)
+Received: (qmail 31665 invoked by uid 500); 14 Feb 2014 03:13:47 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 31184 invoked by uid 500); 14 Feb 2014 03:13:45 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 31175 invoked by uid 99); 14 Feb 2014 03:13:42 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 03:13:42 +0000
+X-ASF-Spam-Status: No, hits=3.4 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (nike.apache.org: transitioning domain of vijayd1508@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 03:13:36 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <vijayd1508@gmail.com>)
+	id 1WE9DH-0007GK-28
+	for users@maven.apache.org; Thu, 13 Feb 2014 19:13:15 -0800
+Date: Thu, 13 Feb 2014 19:13:15 -0800 (PST)
+From: doddalas <vijayd1508@gmail.com>
+To: users@maven.apache.org
+Message-ID: <CANqvVc9=OHfQWMonPHX6h+=oPkkt8LrbrA1ny2b=e9JObRKgGQ@mail.gmail.com>
+In-Reply-To: <CANWgJS6aFHVbwC-9ZfEW-BC=4tAP9_pMuypzC5PDJfPLRAvFOw@mail.gmail.com>
+References: <gqgtm1$spk$1@ger.gmane.org> <9948cb690903261514s6433fef8l5470cee3776d855b@mail.gmail.com> <FC6346DCAC897F4E9673C4418E6448C801B51427@ukex07.UK.NDS.COM> <1392268929654-5784375.post@n5.nabble.com> <CANWgJS6aFHVbwC-9ZfEW-BC=4tAP9_pMuypzC5PDJfPLRAvFOw@mail.gmail.com>
+Subject: Re: SCM requires that command line svn be used?
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_613093_16890259.1392347595059"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+------=_Part_613093_16890259.1392347595059
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+Yes I have provided credentials in Maven settings.xml and also while
+running the job, as parameters like -Dusername, -Dpassword. Even then I am
+getting above error.
+
+Vijay
+
+
+On Thu, Feb 13, 2014 at 11:45 PM, Baptiste MATHUS-2 [via Maven] <
+ml-node+s40175n5784666h1@n5.nabble.com> wrote:
+
+> It says authentication required. Did you provide/configure the necessary
+> credentials?
+> Le 13 f=C3=A9vr. 2014 12:21, "doddalas" <[hidden email]<http://user/SendE=
+mail.jtp?type=3Dnode&node=3D5784666&i=3D0>>
+> a =C3=A9crit :
+>
+> > Hi,
+> >
+> > I am getting the same error. Can you please help me if you have fixed
+> this
+> > issue. Do we need to configure anything specifically for https svn URLs=
+?
+> I
+> > have given credentials in maven settings and svn configuration in pom
+> > files.
+> > Any my release plugin is as follows:
+> >
+> >                 <plugin>
+> >                         <groupId>org.apache.maven.plugins</groupId>
+> >                         <artifactId>maven-release-plugin</artifactId>
+> >                         <version>2.4.2</version>
+> >                         <dependencies>
+> >                             <dependency>
+> >
+> > <groupId>com.google.code.maven-scm-provider-svnjava</groupId>
+> >
+> > <artifactId>maven-scm-provider-svnjava</artifactId>
+> >                                 <version>1.6</version>
+> >                             </dependency>
+> >                         </dependencies>
+> >                         <configuration>
+> >                                 <providerImplementations>
+> >                                         <svn>javasvn</svn>
+> >                                 </providerImplementations>
+> >                                 <tagBase>
+> > https://mydomain.com/svn/New_FW/CI_POC/tags</tagBase>
+> >
+> > <mavenExecutorId>forked-path</mavenExecutorId>
+> >                         </configuration>
+> >                 </plugin>
+> > PFB the error that I am getting:
+> >
+> > [INFO] Building Service 1.0.0-SNAPSHOT
+> > [INFO]
+> > -----------------------------------------------------------------------=
+-
+> > [INFO]
+> > [INFO] --- maven-release-plugin:2.4.2:prepare (default-cli) @ Service
+> ---
+> > [INFO] Change the default 'svn' provider implementation to 'javasvn'.
+> > [INFO] Verifying that there are no local modifications...
+> > [INFO]   ignoring changes on: **\release.properties, **\pom.xml.next,
+> > **\pom.xml.releaseBackup, **\pom.xml.backup, **\pom.xml.branch,
+> > **\pom.xml.tag
+> > [INFO] SVN status directory:
+> > D:\Softwares\jenkins\jobs\Perform_Release\workspace
+> > [INFO]
+> > -----------------------------------------------------------------------=
+-
+> > [INFO] Reactor Summary:
+> > [INFO]
+> > [INFO] Service ........................................... FAILURE
+> > [14.743s]
+> > [INFO] ServiceEJB ........................................ SKIPPED
+> > [INFO] SpringMVC323REST .................................. SKIPPED
+> > [INFO]
+> > -----------------------------------------------------------------------=
+-
+> > [INFO] BUILD FAILURE
+> > [INFO]
+> > -----------------------------------------------------------------------=
+-
+> > [INFO] Total time: 17.859s
+> > [INFO] Finished at: Thu Feb 13 10:37:59 IST 2014
+> > [INFO] Final Memory: 9M/55M
+> > [INFO]
+> > -----------------------------------------------------------------------=
+-
+> > [ERROR] Failed to execute goal
+> > org.apache.maven.plugins:maven-release-plugin:2.4.2:prepare
+> (default-cli)
+> > on
+> > project Service: Unable to check for local modifications
+> > [ERROR] Provider message:
+> > [ERROR] SVN status failed.
+> > [ERROR] Command output:
+> > [ERROR] svn: Authentication required for '<https://mydomain.com:443>'
+> > [ERROR] -> [Help 1]
+> > org.apache.maven.lifecycle.LifecycleExecutionException: Failed to
+> execute
+> > goal org.apache.maven.plugins:maven-release-plugin:2.4.2:prepare
+> > (default-cli) on project Service: Unable to check for local
+> modifications
+> > Provider message:
+> > SVN status failed.
+> > Command output:
+> > svn: Authentication required for '<https://mydomain.com:443>'
+> >         at
+> >
+> >
+> org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.jav=
+a:212)
+>
+> >
+> >
+> >
+> > --
+> > View this message in context:
+> >
+> http://maven.40175.n5.nabble.com/SCM-requires-that-command-line-svn-be-us=
+ed-tp119251p5784375.html
+> > Sent from the Maven - Users mailing list archive at Nabble.com.
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: [hidden email]<http://user/SendEmail.jtp?type=
+=3Dnode&node=3D5784666&i=3D1>
+> > For additional commands, e-mail: [hidden email]<http://user/SendEmail.j=
+tp?type=3Dnode&node=3D5784666&i=3D2>
+> >
+> >
+>
+>
+> ------------------------------
+>  If you reply to this email, your message will be added to the discussion
+> below:
+>
+> http://maven.40175.n5.nabble.com/SCM-requires-that-command-line-svn-be-us=
+ed-tp119251p5784666.html
+>  To unsubscribe from SCM requires that command line svn be used?, click
+> here<http://maven.40175.n5.nabble.com/template/NamlServlet.jtp?macro=3Dun=
+subscribe_by_code&node=3D119251&code=3DdmlqYXlkMTUwOEBnbWFpbC5jb218MTE5MjUx=
+fDE2ODEzNzQzMTQ=3D>
+> .
+> NAML<http://maven.40175.n5.nabble.com/template/NamlServlet.jtp?macro=3Dma=
+cro_viewer&id=3Dinstant_html%21nabble%3Aemail.naml&base=3Dnabble.naml.names=
+paces.BasicNamespace-nabble.view.web.template.NabbleNamespace-nabble.view.w=
+eb.template.NodeNamespace&breadcrumbs=3Dnotify_subscribers%21nabble%3Aemail=
+.naml-instant_emails%21nabble%3Aemail.naml-send_instant_email%21nabble%3Aem=
+ail.naml>
+>
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/SCM-requires=
+-that-command-line-svn-be-used-tp119251p5784713.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+------=_Part_613093_16890259.1392347595059--
+

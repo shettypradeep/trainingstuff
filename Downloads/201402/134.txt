@@ -1,0 +1,133 @@
+From users-return-135558-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Feb 18 10:17:21 2014
+Return-Path: <users-return-135558-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 15550109EE
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 18 Feb 2014 10:17:21 +0000 (UTC)
+Received: (qmail 62228 invoked by uid 500); 18 Feb 2014 10:17:17 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 61713 invoked by uid 500); 18 Feb 2014 10:17:14 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 61705 invoked by uid 99); 18 Feb 2014 10:17:13 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 18 Feb 2014 10:17:13 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [81.169.146.163] (HELO mo4-p00-ob.smtp.rzone.de) (81.169.146.163)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 18 Feb 2014 10:17:06 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1392718606; l=2277;
+	s=domk; d=apconsult.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=I/AR1WmTO48QNohVuTPH14q60UM=;
+	b=T/T+3ma8WqtJK3bLbS5SFQ5ETqMGA53JE5u0htY7NPYS5FrlzoWTn0RwhPxEzFbwnFZ
+	fieFHiuN2owrcVR8xzbwaXOMPdldGD9P7R0MUy4NeiGFD+f1I8cKe6Rm4SRTpaaRiMozt
+	zVkJoqX2dmCnUbRxf4GImwcdZpGDnARSpCg=
+X-RZG-AUTH: :KG0SfETmd/55bSarYSJgwI+Iuho+dmriAESeqkyNCY6u2StSfNt+8Kuz4Sjl/na+zZ6M0Q==
+X-RZG-CLASS-ID: mo00
+Received: from [192.168.179.52] (pD9E032AA.dip0.t-ipconnect.de [217.224.50.170])
+	by smtp.strato.de (RZmta 32.26 DYNA|AUTH)
+	with ESMTPSA id e01fc6q1IAGjWWJ
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(Client did not present a certificate);
+	Tue, 18 Feb 2014 11:16:45 +0100 (CET)
+Message-ID: <53033313.8090308@apconsult.de>
+Date: Tue, 18 Feb 2014 11:16:51 +0100
+From: David Law <m2eclipse@apconsult.de>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Looking for org.apache.poi 3.10-FINAL
+References: <5301ADBC.3080909@apconsult.de> <5301B253.70603@apconsult.de> <CANWgJS5H0vnAC1Tq8gDu4qLGspTNGRPxi1PoBMefTYy3gKaZig@mail.gmail.com>,<53021C78.6040702@artifact-software.com> <BLU172-W51DC05F49200205A2CECE0AE980@phx.gbl>
+In-Reply-To: <BLU172-W51DC05F49200205A2CECE0AE980@phx.gbl>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Martin,
+
+thanks for that.  Unfortunately its no help if you don't use Nexus.
+
+All the best,
+DaveLaw
+
+On 18.02.2014 02:28, Martin Gainty wrote:
+> MG> ...I had a chance to read the FINE manual today and when including remote repositories:
+>   
+> Option=Download Remote Indexes
+> This field controls the downloading of the remote indexes. If enabled, Nexus will download
+> the index, if it exists, and use that for its searches as well as serve that up to any clients which
+> ask for the index (like m2eclipse). The default for new proxy repositories is enabled, but all
+> of the default repositories included in Nexus have this option disabled. To change this setting
+> for one of the proxy repositories that ship with Nexus, change the option, save the repository,
+>
+>    
+On 16.02.2014 09:43, David Law wrote:
+> Hi,
+>
+> I'm new to maven & thought I'd try it out on the recently checked-in:
+> org.apache.poi    3.10-FINAL
+>
+> I'm using m2eclipse standard config with Eclipse Kepler.  Repo 
+> defaults to:
+> http://repo.maven.apache.org/maven2
+>
+> The Problem:
+> m2eclipse does not know the  org.apache.poi  3.10-FINAL  artifact.
+>
+> Now, I guess the problem could be any combination of:
+> a) me  b) POI  c) maven  d) m2eclipse  e) eclipse?
+>
+> QUESTION) Can anyone help to localise it?
+>
+> Here's what I've found out so far:
+>
+> 0) repo is: http://repo.maven.apache.org/maven2
+>
+> 1) org.apache.poi  3.10-FINAL was committed @ 09-Feb-2014 11:50
+>
+> 2) as of now repo Timestamp is: 09-Feb-2014 13:50
+> (nexus.index.timestamp=20140209134945.568 +0000)
+> (found in
+> http://repo.maven.apache.org/maven2/.index/nexus-maven-repository-index.properties) 
+>
+>
+> 3) -> so repo has been reindexed since org.apache.poi 3.10-FINAL commit
+> (6 days ago).
+>
+> 4) exit eclipse
+>
+> 5) deleted the index
+> C:\...\Eclipse\workspace\.metadata\.plugins\org.eclipse.m2e.core\nexus
+>
+> 6) start eclipse -> "updating index"
+>
+> 7) org.apache.poi  3.10-FINAL is still not there (that is: "here") in my
+> list of artifacts
+>
+> All the best,
+> DaveLaw
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

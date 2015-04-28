@@ -1,0 +1,120 @@
+From users-return-137697-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Nov  4 05:06:39 2014
+Return-Path: <users-return-137697-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9AEBE1762D
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  4 Nov 2014 05:06:39 +0000 (UTC)
+Received: (qmail 58976 invoked by uid 500); 4 Nov 2014 05:06:38 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 58898 invoked by uid 500); 4 Nov 2014 05:06:38 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 58886 invoked by uid 99); 4 Nov 2014 05:06:37 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 04 Nov 2014 05:06:37 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of irfu.sayed@gmail.com designates 209.85.212.177 as permitted sender)
+Received: from [209.85.212.177] (HELO mail-wi0-f177.google.com) (209.85.212.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 04 Nov 2014 05:06:11 +0000
+Received: by mail-wi0-f177.google.com with SMTP id ex7so8229169wid.10
+        for <users@maven.apache.org>; Mon, 03 Nov 2014 21:06:10 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=bg/02PNtgB1yTYp/9GgMQ+eDsTe7aeRd9G09RZOrUrk=;
+        b=tUSfw/RcemNV0mviHQ6ygEI0GrfC2cIzFuZq96o9EfVn49blp/WjhLfLMRh65xfHTz
+         fS0NIbsDa0OSGEVA7y9Z3DbCnpt4NZ9Vor8a5iLp//TjLX9ou+h7YjzsQazAZikrUdhb
+         TfIWKSwNNUiV56BBD68Hi9pyjZkorFB5LSRlTTCcH5b4Z7Jz0FKnM91h5O7DFF0t24VP
+         xzRXGX3feuiMV/5o86agatl9zJGKx8ke/wHJFcu1qipv3X2BblapEruSvoNN+WXrfZig
+         2ulCLn0q7ITt9K4MIxsEuk6Lxt28pDIKM4hfv61ZHzWpkknRlrN0xHxIsC7hwuO0WmU0
+         Et3g==
+MIME-Version: 1.0
+X-Received: by 10.180.39.65 with SMTP id n1mr21261633wik.13.1415077570879;
+ Mon, 03 Nov 2014 21:06:10 -0800 (PST)
+Received: by 10.216.114.72 with HTTP; Mon, 3 Nov 2014 21:06:10 -0800 (PST)
+In-Reply-To: <54585B18.9050504@artifact-software.com>
+References: <CACGLCJY7QXLj8BU08uSAYQfaejsNoO-1YNUJnh6=ANv98fdZYA@mail.gmail.com>
+	<54585B18.9050504@artifact-software.com>
+Date: Tue, 4 Nov 2014 10:36:10 +0530
+Message-ID: <CACGLCJaiOy3JyWe5T=ZqkoHrWCk=gPa_4AtJGEyh=ziDwqqUag@mail.gmail.com>
+Subject: Re: explicit dependencies in maven
+From: Irfan Sayed <irfu.sayed@gmail.com>
+To: Maven Users List <users@maven.apache.org>, rwheeler@artifact-software.com
+Content-Type: multipart/alternative; boundary=001a11360196f127b70507016b87
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11360196f127b70507016b87
+Content-Type: text/plain; charset=UTF-8
+
+so, lets say if i am using x dependency with version 1.1 and if the
+developer changes the code of that dependency, keeping the same version as
+1.1
+then nexus will not download the latest code changes for that dependency
+because the version still refers to 1.1 ???
+if that is the case, this is really nice
+
+regards
+
+
+On Tue, Nov 4, 2014 at 10:20 AM, Ron Wheeler <rwheeler@artifact-software.com
+> wrote:
+
+> Have you scanned the Maven books referenced on the Maven web site? Best
+> starting place.
+>
+> With a repository (Nexus), people are prevented from deploying the same
+> version twice so you are guaranteed that if you build with version 2.3.15
+> of ourNiceUtility, you will always get the same code. The repo will simply
+> not allow them to overwrite version 2.3.15 once it is deployed into the
+> wild(public).
+>
+> Beats firing developers but stops them from doing silly things.
+>
+>
+>
+> On 03/11/2014 11:33 PM, Irfan Sayed wrote:
+>
+>> hello,
+>>
+>> is there any good doc/blog which describes the handling of explicit
+>> declaration of dependencies.
+>> when we build the code, we use certain dependencies , how we can make sure
+>> that when we reproduce the same build after the gap of 6 months , same and
+>> exact dependencies will be used. ???
+>> i know we can have artifactory/nexus , but that does not guarantee the
+>> exact version of dependency when developer changes the code and make it
+>> public keeping the version same
+>>
+>> please suggest
+>>
+>> regards
+>>
+>>
+>
+> --
+> Ron Wheeler
+> President
+> Artifact Software Inc
+> email: rwheeler@artifact-software.com
+> skype: ronaldmwheeler
+> phone: 866-970-2435, ext 102
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a11360196f127b70507016b87--
+

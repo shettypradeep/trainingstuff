@@ -1,0 +1,106 @@
+From users-return-137319-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Sep 18 15:47:14 2014
+Return-Path: <users-return-137319-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7BAB411D1E
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 18 Sep 2014 15:47:14 +0000 (UTC)
+Received: (qmail 57091 invoked by uid 500); 18 Sep 2014 15:47:12 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 57000 invoked by uid 500); 18 Sep 2014 15:47:11 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 56977 invoked by uid 99); 18 Sep 2014 15:47:11 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 18 Sep 2014 15:47:11 +0000
+X-ASF-Spam-Status: No, hits=2.5 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of andreas.gudian@gmail.com designates 209.85.192.45 as permitted sender)
+Received: from [209.85.192.45] (HELO mail-qg0-f45.google.com) (209.85.192.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 18 Sep 2014 15:46:45 +0000
+Received: by mail-qg0-f45.google.com with SMTP id j107so1326313qga.18
+        for <users@maven.apache.org>; Thu, 18 Sep 2014 08:46:44 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=o7/jrJv9FmlrsJkwJEqZu2vMkRg9mmUTRsRh71KJUa0=;
+        b=zZqA5Mr7PaASejJk86WP59YQA4JZEv4Pajtx6ZbLC3MiJ8PJxx89MKg+uWecDJfUBq
+         so47CSKgOxvrIcOnJ5m4L5v/1DQkOaZG/Jp7X3prs1dxyxjXZO0I8oG8TE5sI0KyZl+K
+         y+DOexSC1JsZXfBU/JLMjq8wPawl3pXABt8JJ4j+3CTz/jQC/9r7YwxE/eIMwDZ+Liee
+         OknUFyGcXwqQuF8FJvv4nLPZ4P5E6Sv74gvXVGQyG1EohUEJrp5ureLWrdwRd4BNGvsJ
+         kp0oqxHNYFo7SPSdyag4CSujS62/iEFZkJzD7Yk8vJ7UFaiAqKon7mZC3YbbmC+j7w8E
+         QFRg==
+MIME-Version: 1.0
+X-Received: by 10.229.212.138 with SMTP id gs10mr929252qcb.7.1411055204238;
+ Thu, 18 Sep 2014 08:46:44 -0700 (PDT)
+Received: by 10.96.166.66 with HTTP; Thu, 18 Sep 2014 08:46:44 -0700 (PDT)
+In-Reply-To: <BLU172-W1137CD6139786562FDE49BAEB70@phx.gbl>
+References: <75F3A2D98EDE2545BDC06B5B6C1CEC516DF84192@ESGSCMB101.ericsson.se>
+	<1411042321376-5805605.post@n5.nabble.com>
+	<BLU172-W1137CD6139786562FDE49BAEB70@phx.gbl>
+Date: Thu, 18 Sep 2014 17:46:44 +0200
+Message-ID: <CAK2FUK2OZW84644iqq9AVkwReFFbM=B9axNrT3HOZ-Z-NxnAdQ@mail.gmail.com>
+Subject: Re: Maven sure fire plugin npe problem.
+From: Andreas Gudian <andreas.gudian@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11336d5c350bec050358e446
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11336d5c350bec050358e446
+Content-Type: text/plain; charset=UTF-8
+
+There is an issue filed for it already:
+https://jira.codehaus.org/browse/SUREFIRE-1077
+
+The fix should be quite simple, I just didn't get to it, yet. But we should
+aim for wrapping up Surefire 2.18 within the next (very) weeks, which would
+include this issue.
+
+
+
+Am Donnerstag, 18. September 2014 schrieb Martin Gainty :
+
+>
+>
+> > Date: Thu, 18 Sep 2014 05:12:01 -0700
+> > From: yaroslavTir@gmail.com <javascript:;>
+> > To: users@maven.apache.org <javascript:;>
+> > Subject: Re: Maven sure fire plugin npe problem.
+> >
+> > Hi all,
+> > I have the same problem. I also revert surefire plugin to the 2.12
+> version
+> > and everything begin to work. Does you found what was wrong? Do I need to
+> > send my "non working" example?
+>
+> MG>please file a JIRA and attach a zip including all files from base
+> folder out
+> MG>be mindful that errors from package phase and or TESTS run in
+> /target/surefire-reports must not have ClassNotFoundException
+> MG>thanks
+> >
+> >
+> >
+> > --
+> > View this message in context:
+> http://maven.40175.n5.nabble.com/Maven-sure-fire-plugin-npe-problem-tp5791902p5805605.html
+> > Sent from the Maven - Users mailing list archive at Nabble.com.
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> <javascript:;>
+> > For additional commands, e-mail: users-help@maven.apache.org
+> <javascript:;>
+> >
+>
+
+--001a11336d5c350bec050358e446--
+

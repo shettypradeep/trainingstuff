@@ -1,0 +1,58 @@
+From users-return-135953-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 26 23:22:02 2014
+Return-Path: <users-return-135953-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B108810612
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Mar 2014 23:22:02 +0000 (UTC)
+Received: (qmail 40982 invoked by uid 500); 26 Mar 2014 23:21:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 40866 invoked by uid 500); 26 Mar 2014 23:21:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 29876 invoked by uid 99); 26 Mar 2014 15:13:38 -0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of raghu.r.gurunathan@gmail.com designates 209.85.217.174 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:date:message-id:subject:from:to:content-type;
+        bh=v5mCHetaAf3VSaANJ1ojRCzCsbpTk9qN1nq/OWmU3r0=;
+        b=e3RqvcwsLDxdw0mmrdsUKOvuJISB4xIOnuPmXrYrj1IZbopteQsAzzWEQuWSBPyuEv
+         kBltcdAsOCvVce4dh6gLSL7djAhAT5aZIKGB2bloCwcTdtkZ//AOtDcrFva+Gc5htYXu
+         cGN55SD82ern3vYs4DBL05Y+La86qAIzRdHfkXlZH8oV+SIbQXQlvCtaSaBMPFAnVo8E
+         nA4xsOynlQZB81LRw+/qMp9wHKUjxhdio7uV5OtEuOYcsUhtCfLpHVWzwHOvQxYbey7/
+         TX2NT8ygxawYmDTB4AR8JxuhzUIGF1xKJosc2Iz+HCtyt9huwIRZPfSAOts3iep+80B2
+         5Rbg==
+MIME-Version: 1.0
+X-Received: by 10.152.87.197 with SMTP id ba5mr20584lab.87.1395846792355; Wed,
+ 26 Mar 2014 08:13:12 -0700 (PDT)
+Sender: raghu.r.gurunathan@gmail.com
+Date: Wed, 26 Mar 2014 10:13:12 -0500
+X-Google-Sender-Auth: fj2uVs3PnH_Et-q7C_rxHCNh0lc
+Message-ID: <CAHm9iQ_U2x+u-oJbPxomV_Jof-JDVb6Ko7Yz4pyLszseHQscXw@mail.gmail.com>
+Subject: Incremental Build ?
+From: Raghu Refer <Raghu.Refer@Gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a11c3677c38216e04f583e8d0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c3677c38216e04f583e8d0
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi All,
+
+Is there any way to implement incremental build with required dependency
+compilation using Maven?
+
+Thanks
+
+--001a11c3677c38216e04f583e8d0--
+

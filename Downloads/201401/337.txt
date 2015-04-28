@@ -1,0 +1,88 @@
+From users-return-135306-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan 30 13:07:22 2014
+Return-Path: <users-return-135306-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B3A4B1054A
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 30 Jan 2014 13:07:22 +0000 (UTC)
+Received: (qmail 61556 invoked by uid 500); 30 Jan 2014 13:07:18 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 61085 invoked by uid 500); 30 Jan 2014 13:07:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 61076 invoked by uid 99); 30 Jan 2014 13:07:16 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 30 Jan 2014 13:07:16 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mfriedenhagen@gmail.com designates 209.85.219.42 as permitted sender)
+Received: from [209.85.219.42] (HELO mail-oa0-f42.google.com) (209.85.219.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 30 Jan 2014 13:07:09 +0000
+Received: by mail-oa0-f42.google.com with SMTP id i7so3568611oag.15
+        for <users@maven.apache.org>; Thu, 30 Jan 2014 05:06:48 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=KOsPxxe1jBTohbaHOQOGTAOHeqCCJy7wM1DmUCctvvQ=;
+        b=ekIuIpT4dx0Dh2s7uKs8vMCqSe3NShzqm++1/uq7iUuPXhKM5SeGav7k8vJQ6Ap+lP
+         jruJ3RQuzruT4l2I6YB3WB2VsiNjXPAgLWe2WZEJ9IjFtMyi6v4Vrv6hgd6sE7L+EJxv
+         NcTq0I0tiZDRAKnsFauwzeskVwTK8DyThxEY/xpiaDDZtwGLghEVh5V/4IKw7X4h9tJR
+         qBxDKzH+BTX81LFIdYv0bxMLvhVaBkqys9iFzMcNTGqTMHE9PJs9GFO192+7lWklrVLd
+         mMzJVrt6cOfJKMucn+oSbxtFPlv74teSarGlFwOe/P1z6U70Gk6GAE5d6xRRVBTxWx0D
+         30kQ==
+MIME-Version: 1.0
+X-Received: by 10.182.213.104 with SMTP id nr8mr21047obc.81.1391087208383;
+ Thu, 30 Jan 2014 05:06:48 -0800 (PST)
+Received: by 10.182.24.227 with HTTP; Thu, 30 Jan 2014 05:06:48 -0800 (PST)
+Received: by 10.182.24.227 with HTTP; Thu, 30 Jan 2014 05:06:48 -0800 (PST)
+In-Reply-To: <CAOonoheT-YOJB=_-V-DAYfksJisO=Dj_ahNzj5Wb8m7_vfyKLQ@mail.gmail.com>
+References: <CAOonoheT-YOJB=_-V-DAYfksJisO=Dj_ahNzj5Wb8m7_vfyKLQ@mail.gmail.com>
+Date: Thu, 30 Jan 2014 14:06:48 +0100
+Message-ID: <CAK8jvqy1YAp7Zs7MqCyXv=DmREB-Nim2Rn0eYpQTP1xbXWsEgA@mail.gmail.com>
+Subject: Re: Maven process stuck on MacOS with Java8
+From: Mirko Friedenhagen <mfriedenhagen@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c32c36e8496004f12fba52
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c32c36e8496004f12fba52
+Content-Type: text/plain; charset=UTF-8
+
+Hello,
+
+Maven in general works for me,  only thing I remember are problems with
+javadoc being checked more strictly now.
+
+Regards
+Mirko
+-- 
+Sent from my mobile
+On Jan 30, 2014 12:14 PM, "Stephane Nicoll" <stephane.nicoll@gmail.com>
+wrote:
+
+> Hi,
+>
+> Has anybody else noticed an issue with Java8 running Maven?
+>
+> I am using 1.8.0-ea-b124 and a maven command does not complete properly. It
+> does not matter which plugin or phase is invoked, the process is stuck at
+> the end and I have to ctrl-Z to go back to the shell.
+>
+> Switching back to Java 1.7 fixes the problem for me.
+>
+> Any idea?
+>
+> Thanks,
+> S.
+>
+
+--001a11c32c36e8496004f12fba52--
+

@@ -1,0 +1,150 @@
+From users-return-135608-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 26 11:49:23 2014
+Return-Path: <users-return-135608-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 866B310E76
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Feb 2014 11:49:23 +0000 (UTC)
+Received: (qmail 38083 invoked by uid 500); 26 Feb 2014 11:49:18 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 38016 invoked by uid 500); 26 Feb 2014 11:49:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 38007 invoked by uid 99); 26 Feb 2014 11:49:16 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Feb 2014 11:49:16 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of anders.g.hammar@gmail.com designates 74.125.82.171 as permitted sender)
+Received: from [74.125.82.171] (HELO mail-we0-f171.google.com) (74.125.82.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Feb 2014 11:49:11 +0000
+Received: by mail-we0-f171.google.com with SMTP id u56so1521596wes.2
+        for <users@maven.apache.org>; Wed, 26 Feb 2014 03:48:50 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=mpktkuBzVicXIJwPk20OtHJx9t1GY6dVZqIXR5YpAFk=;
+        b=IadR6mCYQ5FfAjqcuucJHekPpNMImwVqdykU6OkM8RRYn22p+7prkD8ufjXCqo7PIz
+         e1OA8dLearrZ159W2F+gXklXfhc4vRsRn0gjn+dX910pUFmW331E/4Fp4uygIU0+vYXC
+         QkvS6W95y+zK36CV+gJs1sPao4xN1eUSq1tIZ9bHNgwvldWI1MNcFiewWrslxWGh2kZX
+         cf4MEfEIwM8FZrTfszi35nsq6EcHog6kCwmKwwHGSEx3buyefpCNbHM+a9K1q2c+JRwU
+         GNIWHwQed80liWVKd3+gAHFSIvlQgSn/BpvDuc3baJh1RPnJ/oCrySnDUADhMUL+bO+L
+         7hmg==
+MIME-Version: 1.0
+X-Received: by 10.194.89.33 with SMTP id bl1mr1450049wjb.64.1393415330705;
+ Wed, 26 Feb 2014 03:48:50 -0800 (PST)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.137.100 with HTTP; Wed, 26 Feb 2014 03:48:50 -0800 (PST)
+In-Reply-To: <530CCAED020000E30005E4F7@gwia.im.jku.at>
+References: <530CCAED020000E30005E4F7@gwia.im.jku.at>
+Date: Wed, 26 Feb 2014 12:48:50 +0100
+X-Google-Sender-Auth: qivearulKU_LDF525hG4bI2Rpms
+Message-ID: <CAKDUN1vOFLkEHCSpObDig3ynpPeuKA3yX1LBvaNDA-VNr1P7Zg@mail.gmail.com>
+Subject: Re: How to separately configure each Mojo of a plugin executed from
+ command line?
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0102f1eccfb5db04f34dc91c
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0102f1eccfb5db04f34dc91c
+Content-Type: text/plain; charset=ISO-8859-1
+
+Don't think it's possible. I guess the idea is that if you have the same
+parameter in multiple goals, they would have the same configuration.
+
+If the parameter is configurable from command-line (thourgh a property),
+you could do it that way instead. Maybe not what you want, but it would
+work.
+
+/Anders
+
+
+On Tue, Feb 25, 2014 at 4:55 PM, Juergen Hartl <Juergen.Hartl@jku.at> wrote:
+
+> Hi,
+>
+> with regards to the info given at:
+> https://maven.apache.org/guides/mini/guide-default-execution-ids.html
+>
+> How can I configure separately each Mojo of a plugin, if these mojos are
+> executed from command line?
+>
+> e.g.
+> mvn release:clean //SomeProperty == X
+> mvn release:prepare //SomeProperty == A
+> mvn release:perform //SomeProperty == B
+>
+> both goals are executed from command line. how can I configure
+> release:prepare in my pom differently from release:perform?
+>
+> Basically I would need execution Ids like "default-prepare-cli",
+> "default-perform-cli" etc.
+>
+> Grateful for ideas, thanks, Juergen
+>
+> ad: pom.xml
+>
+> <plugin>
+>  <groupId>org.apache.maven.plugins</groupId>
+>  <artifactId>maven-release-plugin</artifactId>
+>  <version>2.4.2</version>
+>  <configuration>
+>   <SomeProperty>X</SomeProperty><!-- shared globally-->
+>  </configuration>
+>  <executions>
+>   <execution>
+>    <id>default-cli</id>
+>    <configuration>
+>     <SomeProperty>A</SomeProperty>
+> <!--DOES NOT WORK shared by release:perform, release:prepare,
+> release:clean both if executed from command line-->
+>    </configuration>
+>   </execution>
+>   <id>default-prepare</id>
+>    <configuration>
+>     <SomeProperty>A</SomeProperty>
+> <!--DOES NOT WORK not used if executed from command line-->
+>     </configuration>
+>   </execution>
+>   <execution>
+>   <id>default-perform</id>
+>    <configuration>
+>     <SomeProperty>B</SomeProperty>
+> <!--DOES NOT WORK release:perform not bound to lifecycle, but it invokes
+> deploy. Also not used if executed from command line-->
+>     </configuration>
+>   </execution>
+>   <execution>
+>   <execution>
+>   <id>default</id>
+>    <phase>deploy</phase>
+>    <goals>
+>      <goal>prepare</goal>
+>    </goals>
+>    <configuration>
+>     <SomeProperty>A</SomeProperty>
+> <!--DOES NOT WORK not used if executed from command line-->
+>     </configuration>
+>   </execution>
+> </executions>
+> </plugin>
+>
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--089e0102f1eccfb5db04f34dc91c--
+

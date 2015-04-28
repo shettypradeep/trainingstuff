@@ -1,0 +1,147 @@
+From users-return-135989-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Mar 28 13:07:52 2014
+Return-Path: <users-return-135989-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6385C104F1
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 28 Mar 2014 13:07:52 +0000 (UTC)
+Received: (qmail 17567 invoked by uid 500); 28 Mar 2014 13:07:48 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 17232 invoked by uid 500); 28 Mar 2014 13:07:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 17223 invoked by uid 99); 28 Mar 2014 13:07:43 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 13:07:43 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 13:07:39 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 2A06B6A6564
+	for <users@maven.apache.org>; Fri, 28 Mar 2014 09:07:17 -0400 (EDT)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id SOEZkM3Vci5W for <users@maven.apache.org>;
+	Fri, 28 Mar 2014 09:07:15 -0400 (EDT)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 903526A6562
+	for <users@maven.apache.org>; Fri, 28 Mar 2014 09:07:15 -0400 (EDT)
+Message-ID: <533573FB.2050901@artifact-software.com>
+Date: Fri, 28 Mar 2014 09:07:07 -0400
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: Maven Users List <users@maven.apache.org>
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: OutOfMemoryError with maven-javadoc-plugin
+References: <20140328103657.63a66f1e@linux-du93.site>	<CANWgJS5gA-7vKFKKppwyWcn=iZanw0qrRMn0hxyXSyMu4wuq5A@mail.gmail.com> <20140328122426.3493fa7e@linux-du93.site>
+In-Reply-To: <20140328122426.3493fa7e@linux-du93.site>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Have you tried increasing the JVM memory past
+
+MAVEN_OPTS="-Xmx1536m -Xms512m -XX:MaxPermSize=512m"
+MAVEN_OPTS="-Xmx1280m -Xms256m -XX:MaxPermSize=768m"
+
+You could try something extreme (-Xmx8g ) and see if that changes anything.
+
+-Xms512m is not very useful in this case and you can omit it or make it the same as -XMXnnn.
+Make sure that you allow enough(???) space after you allocate MaxPermSize.
+
+MAVEN_OPTS="-Xmx8g -XX:MaxPermSize=768m"
+
+
+Did you notice that it took longer to run out  of memory with the higher 
+settings?
+If not, then I may be barking up the wrong tree and you might have to 
+change JAVA_OPTS to affect the memory allocation.
+If it did, then you are heading in the right direction but have not gone 
+far enough yet.
+
+Ron
+
+
+On 28/03/2014 7:24 AM, Martin Hoeller wrote:
+> Hi Baptiste!
+>
+> I tried it but it didn't change anything. Still OutOfMemoryError :(
+>
+> -martin
+>
+> On 28 Mär 2014, Baptiste Mathus wrote:
+>
+>> Sorry, I haven't used javadoc for years now, but as javadoc is an external
+>> tool, I guess you should specify additionalJOption?
+>> http://maven.apache.org/plugins/maven-javadoc-plugin/javadoc-mojo.html#additionalJOption
+>>
+>> Cheers
+>>
+>>
+>> 2014-03-28 10:36 GMT+01:00 Martin Hoeller <martin@xss.co.at>:
+>>
+>>> Hi!
+>>>
+>>> I have a quite large multimodule project with >150 modules. When
+>>> executing "mvn site" the maven-javadoc-plugin is executed with default
+>>> configuration. After some time of execution it fails in "aggregate" goal
+>>> and I get a
+>>>
+>>>    Exception in thread "main" java.lang.OutOfMemoryError: GC overhead limit
+>>> exceeded"
+>>>
+>>> I know, I can adjust MAVEN_OPTS to give it more memory and I tried it with
+>>> MAVEN_OPTS="-Xmx1536m -Xms512m -XX:MaxPermSize=512m" and with
+>>> MAVEN_OPTS="-Xmx1280m -Xms256m -XX:MaxPermSize=768m". Both just leading
+>>> to another OutOfMemoryError (but no GC overhead limit exceeded).
+>>>
+>>> I'm currently using maven 3.1.1 and tested with m-javadoc-p 2.8 and 2.9.1
+>>> (no difference).
+>>>
+>>> So my question is: does any body have some idea how to tweak parameters
+>>> to solve this issue?
+>>>
+>>> My current workaround is to disable aggregation in <reporting> section as
+>>> described here [0]. But this is really just a workaround, no solution :(
+>>>
+>>> thx for your help,
+>>> - martin
+>>>
+>>> [0]
+>>> https://maven.apache.org/plugins/maven-javadoc-plugin/examples/selective-javadocs-report.html
+>>>
+>>
+>>
+>> -- 
+>> Baptiste <Batmat> MATHUS - http://batmat.net
+>> Sauvez un arbre,
+>> Mangez un castor !
+>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

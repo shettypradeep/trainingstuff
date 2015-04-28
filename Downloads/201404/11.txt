@@ -1,0 +1,91 @@
+From users-return-136229-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 22 16:16:39 2014
+Return-Path: <users-return-136229-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DEB6411B16
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 22 Apr 2014 16:16:38 +0000 (UTC)
+Received: (qmail 2557 invoked by uid 500); 22 Apr 2014 16:16:34 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 2469 invoked by uid 500); 22 Apr 2014 16:16:34 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 2461 invoked by uid 99); 22 Apr 2014 16:16:34 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Apr 2014 16:16:34 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.215.44 as permitted sender)
+Received: from [209.85.215.44] (HELO mail-la0-f44.google.com) (209.85.215.44)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Apr 2014 16:16:29 +0000
+Received: by mail-la0-f44.google.com with SMTP id b8so959841lan.31
+        for <users@maven.apache.org>; Tue, 22 Apr 2014 09:16:07 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=k/5VQwshdvKGNxIPAeIFq11rGWm2vLsIJX2h4GPZjgg=;
+        b=LGZDwa2QHZuhABWSfe6Ppn7YruPG75z6oE+8h+ViSUrkKx1Zu+pkv7IMuR8u57MVBy
+         g2TQC220SVvTu6XM8WS1g5LV7pMDuuu9UaTE3dQRJwWmtVhLgktNGhFa/9ymVGcwBd0v
+         LyIH5Tvyq7AflGzImx3EdXlAwZdjMwTthOy3Cedq9w5VJz7g1PRB3eMhrJ7Sw38ieQ4o
+         4dn/RqlAZgJg64DK45ANTAd1e74ScRdmijqnQEy4HAZKQ+O6MVo/Cm0B7/gqr2Q+fYd8
+         3q2flTKNRVFwoo3JPNh3NLU7+Ii1y9VA5mDjC7RxDqi86+VehQQb0xJ8SfFTptCzEmRF
+         0ZSw==
+MIME-Version: 1.0
+X-Received: by 10.152.2.131 with SMTP id 3mr31779213lau.20.1398183367202; Tue,
+ 22 Apr 2014 09:16:07 -0700 (PDT)
+Received: by 10.114.48.6 with HTTP; Tue, 22 Apr 2014 09:16:07 -0700 (PDT)
+In-Reply-To: <CAPCjjnEoRh_OeHp8jqrRQnMEy+fDo6ghZU+jRxsBC_RHN70uKg@mail.gmail.com>
+References: <CAPCjjnEoRh_OeHp8jqrRQnMEy+fDo6ghZU+jRxsBC_RHN70uKg@mail.gmail.com>
+Date: Tue, 22 Apr 2014 09:16:07 -0700
+Message-ID: <CAPCjjnENv9nG-Xovb00_n_sUxpQQ_T54Ce3nLv3bvGgqYabhAw@mail.gmail.com>
+Subject: Re: Perforce Maven Integration ??
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>, brian@jaxzin.com
+Content-Type: multipart/alternative; boundary=089e013c674ceee10f04f7a3eed4
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e013c674ceee10f04f7a3eed4
+Content-Type: text/plain; charset=UTF-8
+
+and It solves my issue [1]
+
+Thanks
+
+-D
+
+[1] http://forums.perforce.com/index.php?/topic/3222-p4maven-supports-ssl/
+
+
+
+On Tue, Apr 15, 2014 at 7:33 PM, Dan Tran <dantran@gmail.com> wrote:
+
+>
+> Hello,
+>
+> I am currently not able to get Perforce with SSL connection working.  My
+> guess here is both currently built-in perforce provider at maven scm, and
+>  the one from Perforce ( p4maven) are not support this new feature yet
+> which is available around 2012.  ( also the last p4maven release is around
+> 2011 )
+>
+> is Perforce well supported and used with Maven?
+>
+> are there any Maven shops with Perforce which actively using maven release
+> plugin?
+>
+> Thanks
+>
+> -Dan
+>
+>
+
+--089e013c674ceee10f04f7a3eed4--
+

@@ -1,0 +1,144 @@
+From users-return-137013-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Aug 13 14:25:59 2014
+Return-Path: <users-return-137013-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5A7E111F8E
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 13 Aug 2014 14:25:59 +0000 (UTC)
+Received: (qmail 54967 invoked by uid 500); 13 Aug 2014 14:25:51 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 54884 invoked by uid 500); 13 Aug 2014 14:25:51 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 54866 invoked by uid 99); 13 Aug 2014 14:25:51 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 13 Aug 2014 14:25:51 +0000
+X-ASF-Spam-Status: No, hits=-5.0 required=5.0
+	tests=RCVD_IN_DNSWL_HI,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of cody.a.fyler@wellsfargo.com designates 151.151.26.137 as permitted sender)
+Received: from [151.151.26.137] (HELO mxdcmv01i.wellsfargo.com) (151.151.26.137)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 13 Aug 2014 14:25:25 +0000
+Received: from mxicmi01.wellsfargo.com (mxicmi01.wellsfargo.com [170.13.76.132])
+	by mxdcmv01i.wellsfargo.com (Sentrion-MTA-4.3.1/Sentrion-MTA-4.3.1) with ESMTP id s7DEPMVU014580
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=FAIL)
+	for <users@maven.apache.org>; Wed, 13 Aug 2014 14:25:23 GMT
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=wellsfargo.com;
+	s=2011-05-wfb; t=1407939923;
+	bh=gkZQZlma1KrQavwlTR3TCyvpinpz1vu7CSbaXe/Qjqg=;
+	h=From:To:Subject:Date:Message-ID:References:In-Reply-To:
+	 Content-Type:Content-Transfer-Encoding:MIME-Version;
+	b=ih7r7VPVwi2reXWIvCQ4c6+2UtQKMJh7LVF3/1+OdasMOpNYdnN++zRnvfcpciyYc
+	 YVJGwsYJpCgVH6gShUYd+DqKqD1M3eTQcTFj3mHbk29ShCQoFMHkyITMGjzBdamabI
+	 lfkqf7Qa1X0N3dzj27XaFDeXgwcaOEbI8iAdcFtU=
+Received: from MSGEXSV27111.ent.wfb.bank.corp (msgexsv27111.wellsfargo.com [162.101.142.119])
+	by mxicmi01.wellsfargo.com (Sentrion-MTA-4.3.1/Sentrion-MTA-4.3.1) with ESMTP id s7DEPM7C008714
+	for <users@maven.apache.org>; Wed, 13 Aug 2014 14:25:22 GMT
+Received: from MSGEXSV24108.ent.wfb.bank.corp (162.101.230.49) by
+ MSGEXSV27111.ent.wfb.bank.corp (162.101.142.119) with Microsoft SMTP Server
+ (TLS) id 14.3.174.1; Wed, 13 Aug 2014 09:25:21 -0500
+Received: from MSGEXSV21111.ent.wfb.bank.corp ([169.254.3.100]) by
+ MSGEXSV24108.ent.wfb.bank.corp ([162.101.230.49]) with mapi id
+ 14.03.0174.001; Wed, 13 Aug 2014 09:25:21 -0500
+From: <cody.a.fyler@wellsfargo.com>
+To: <users@maven.apache.org>
+Subject: RE: Testing Maven 3.2.3
+Thread-Topic: Testing Maven 3.2.3
+Thread-Index: AQHPtriIdeqnDJUyeki2GvgP/gHbVpvOlKEQgABU44D//62soA==
+Date: Wed, 13 Aug 2014 14:25:21 +0000
+Message-ID: <55BBB074DE5248439192BCB13699A45651E26FCF@MSGEXSV21111.ent.wfb.bank.corp>
+References: <6BF365F5-3D65-4592-B407-2DFE1D5D1436@takari.io>
+	<A81A759E-1608-4CD3-BC0C-34A86B72C48B@maven.org>
+	<55BBB074DE5248439192BCB13699A45651E26B7D@MSGEXSV21111.ent.wfb.bank.corp>
+ <CAG9vi9UxT3GZs+z0PP4tOw1_rTqSy=XkKM7EWC4U898=YWYhdA@mail.gmail.com>
+In-Reply-To: <CAG9vi9UxT3GZs+z0PP4tOw1_rTqSy=XkKM7EWC4U898=YWYhdA@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [10.91.43.137]
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+QW55IGNoYW5jZSB3ZSBjYW4gdXNlIHNzbCBvbmx5IGZvciB0aGUgaGFzaGVzIGFuZCB0aHJvdyBh
+biBlcnJvciB3aGVuIHZhbGlkYXRpb24gZmFpbHM/IChhcyBhIGZ1dHVyZSBvcHRpb24pDQoNCkNv
+ZHkgRnlsZXINCkxlbmRpbmcgR3JpZCBCdWlsZCBUZWFtDQpHPUxlbmRpbmcgR3JpZCBCdWlsZHMN
+Cig1MTUpIOKAkyA0NDEgLSAwODE0DQoNCg0KLS0tLS1PcmlnaW5hbCBNZXNzYWdlLS0tLS0NCkZy
+b206IEhpbHRvbiBXaWNod3NraSBTaWx2YSBbbWFpbHRvOmh3czY4OUBnbWFpbC5jb21dIA0KU2Vu
+dDogV2VkbmVzZGF5LCBBdWd1c3QgMTMsIDIwMTQgOToxOSBBTQ0KVG86IE1hdmVuIFVzZXJzIExp
+c3QNClN1YmplY3Q6IFJlOiBUZXN0aW5nIE1hdmVuIDMuMi4zDQoNCkV4YW1wbGU6DQpodHRwOi8v
+YmxvZy5vbnRvaWxsb2dpY2FsLmNvbS9ibG9nLzIwMTQvMDcvMjgvaG93LXRvLXRha2Utb3Zlci1h
+bnktamF2YS1kZXZlbG9wZXIvDQoNCg0KMjAxNC0wOC0xMyAxMToxNiBHTVQtMDM6MDAgPGNvZHku
+YS5meWxlckB3ZWxsc2ZhcmdvLmNvbT46DQoNCj4gSnVzdCBvdXQgb2YgY3VyaW9zaXR5LCB3aHkg
+dXNlIGh0dHBzIHRvIGRvd25sb2FkIGFydGlmYWN0cz8NCj4NCj4gVGhpcyBkb2VzIG5vdCBzZWVt
+IGxpa2Ugc2Vuc2l0aXZlIGRhdGEgdGhhdCByZXF1aXJlcyBhbiBlbmNyeXB0ZWQgDQo+IGNvbm5l
+Y3Rpb24uDQo+DQo+IENvZHkgRnlsZXINCj4gTGVuZGluZyBHcmlkIEJ1aWxkIFRlYW0NCj4gRz1M
+ZW5kaW5nIEdyaWQgQnVpbGRzDQo+ICg1MTUpIC0gNDQxIC0gMDgxNA0KPg0KPiAtLS0tLU9yaWdp
+bmFsIE1lc3NhZ2UtLS0tLQ0KPiBGcm9tOiBKYXNvbiB2YW4gWnlsIFttYWlsdG86amFzb25AdGFr
+YXJpLmlvXQ0KPiBTZW50OiBXZWRuZXNkYXksIEF1Z3VzdCAxMywgMjAxNCAxMjozNiBBTQ0KPiBU
+bzogTWF2ZW4gVXNlcnMgTGlzdA0KPiBTdWJqZWN0OiBUZXN0aW5nIE1hdmVuIDMuMi4zDQo+DQo+
+IEhpLA0KPg0KPiBXZSBoYXZlIHN0YWdlZCBNYXZlbiAzLjIuMyBhbmQgSSdkIGFzayB0aGF0IHVz
+ZXJzIHRyeSBhbmQgdGVzdCB0aGlzIA0KPiB2ZXJzaW9uIGJlY2F1c2Ugd2UgaGF2ZSBjaGFuZ2Vk
+IHRvIHVzaW5nIHRoZSBIVFRQUyBjb25uZWN0aW9uIHRvIE1hdmVuIA0KPiBDZW50cmFsIGJ5IGRl
+ZmF1bHQuIFRoZSBpbmZvcm1hdGlvbiBmb3IgdGhlIHJlbGVhc2UgY2FuIGJlIGZvdW5kIA0KPiBi
+ZWxvdy4gSSBlbmNvdXJhZ2UgdXNlcnMgdG8gZ2l2ZSB0aGlzIHJlbGVhc2UgYSBzcGluIGJlZm9y
+ZSB3ZSANCj4gYWN0dWFsbHkgcmVsZWFzZSBpdCB0byBlbnN1cmUgdGhlIEhUVFBTIGNvbm5lY3Rp
+b24gaXMgd29ya2luZyBmb3IgZXZlcnlvbmUuDQo+DQo+IEJlZ2luIGZvcndhcmRlZCBtZXNzYWdl
+Og0KPg0KPiA+IEZyb206IEphc29uIHZhbiBaeWwgPGphc29uQHRha2FyaS5pbz4NCj4gPiBTdWJq
+ZWN0OiBbVk9URV0gTWF2ZW4gMy4yLjMgUmVsZWFzZQ0KPiA+IERhdGU6IEF1Z3VzdCAxMSwgMjAx
+NCBhdCAyOjE5OjM0IFBNIFBEVA0KPiA+IFRvOiBNYXZlbiBEZXZlbG9wZXJzIExpc3QgPGRldkBt
+YXZlbi5hcGFjaGUub3JnPg0KPiA+IFJlcGx5LVRvOiAiTWF2ZW4gRGV2ZWxvcGVycyBMaXN0IiA8
+ZGV2QG1hdmVuLmFwYWNoZS5vcmc+DQo+ID4NCj4gPiBIaSwNCj4gPg0KPiA+IFRpbWUgdG8gcmVs
+ZWFzZSBNYXZlbiAzLjIuMyENCj4gPg0KPiA+IFRoaXMgcmVsZWFzZSBjb250YWlucyB0aGUgaW1w
+b3J0YW50IGNoYW5nZSBvZiBzd2l0Y2hpbmcgdG8gSFRUUFMNCj4gdHJhbnNwb3J0IGJ5IGRlZmF1
+bHQhIFBsZWFzZSB0ZXN0IHRoaXMgcmVsZWFzZSB3aXRoIHlvdXIgYnVpbGRzIQ0KPiA+DQo+ID4g
+SGVyZSBpcyBhIGxpbmsgdG8gSmlyYSB3aXRoIDkgaXNzdWVzIHJlc29sdmVkOg0KPiA+IGh0dHBz
+Oi8vamlyYS5jb2RlaGF1cy5vcmcvc2VjdXJlL1JlbGVhc2VOb3RlLmpzcGE/cHJvamVjdElkPTEw
+NTAwJnZlDQo+ID4gcnMNCj4gPiBpb249MjA0NDMNCj4gPg0KPiA+IFN0YWdpbmcgcmVwbzoNCj4g
+PiBodHRwczovL3JlcG9zaXRvcnkuYXBhY2hlLm9yZy9jb250ZW50L3JlcG9zaXRvcmllcy9tYXZl
+bi0xMDQ2Lw0KPiA+DQo+ID4gVGhlIGRpc3RyaWJ1dGFibGUgYmluYXJpZXMgYW5kIHNvdXJjZXMg
+Zm9yIHRlc3RpbmcgY2FuIGJlIGZvdW5kIGhlcmU6DQo+ID4gaHR0cHM6Ly9yZXBvc2l0b3J5LmFw
+YWNoZS5vcmcvY29udGVudC9yZXBvc2l0b3JpZXMvbWF2ZW4tMTA0Ni9vcmcvYXANCj4gPiBhYw0K
+PiA+IGhlL21hdmVuL2FwYWNoZS1tYXZlbi8zLjIuMy8NCj4gPg0KPiA+IFNwZWNpZmljYWxseSB0
+aGUgemlwLCB0YXJiYWxsLCBhbmQgc291cmNlIGFyY2hpdmVzIGNhbiBiZSBmb3VuZCBoZXJlOg0K
+PiA+IGh0dHBzOi8vcmVwb3NpdG9yeS5hcGFjaGUub3JnL2NvbnRlbnQvcmVwb3NpdG9yaWVzL21h
+dmVuLTEwNDYvb3JnL2FwDQo+ID4gYWMgaGUvbWF2ZW4vYXBhY2hlLW1hdmVuLzMuMi4zL2FwYWNo
+ZS1tYXZlbi0zLjIuMy1iaW4uemlwDQo+ID4gaHR0cHM6Ly9yZXBvc2l0b3J5LmFwYWNoZS5vcmcv
+Y29udGVudC9yZXBvc2l0b3JpZXMvbWF2ZW4tMTA0Ni9vcmcvYXANCj4gPiBhYyBoZS9tYXZlbi9h
+cGFjaGUtbWF2ZW4vMy4yLjMvYXBhY2hlLW1hdmVuLTMuMi4zLWJpbi50YXIuZ3oNCj4gPiBodHRw
+czovL3JlcG9zaXRvcnkuYXBhY2hlLm9yZy9jb250ZW50L3JlcG9zaXRvcmllcy9tYXZlbi0xMDQ2
+L29yZy9hcA0KPiA+IGFjIGhlL21hdmVuL2FwYWNoZS1tYXZlbi8zLjIuMy9hcGFjaGUtbWF2ZW4t
+My4yLjMtc3JjLnppcA0KPiA+IGh0dHBzOi8vcmVwb3NpdG9yeS5hcGFjaGUub3JnL2NvbnRlbnQv
+cmVwb3NpdG9yaWVzL21hdmVuLTEwNDYvb3JnL2FwDQo+ID4gYWMgaGUvbWF2ZW4vYXBhY2hlLW1h
+dmVuLzMuMi4zL2FwYWNoZS1tYXZlbi0zLjIuMy1zcmMudGFyLmd6DQo+ID4NCj4gPiBTb3VyY2Ug
+cmVsZWFzZSBjaGVja3N1bShzKToNCj4gPiBhcGFjaGUtbWF2ZW4tMy4yLjMtc3JjLnppcCBzaGEx
+Og0KPiA+IDg2MDdiOTkyMmQyMTA3ODEzM2YzMWVkODUyM2ViYWU5MGE4NzFkMWYNCj4gPg0KPiA+
+IFN0YWdpbmcgc2l0ZToNCj4gPiBodHRwOi8vcGVvcGxlLmFwYWNoZS5vcmcvfmp2YW56eWwvbWF2
+ZW4tMy4yLjMvDQo+ID4NCj4gPiBWb3RlIG9wZW4gZm9yIDcyIGhvdXJzLg0KPiA+DQo+ID4gWyBd
+ICsxDQo+ID4gWyBdICswDQo+ID4gWyBdIC0xDQo+ID4NCj4gPiBUaGFua3MsDQo+ID4NCj4gPiBU
+aGUgTWF2ZW4gVGVhbQ0KPiA+DQo+ID4NCj4gPg0KPiA+DQo+ID4NCj4gPg0KPiA+DQo+ID4NCj4N
+Cj4gVGhhbmtzLA0KPg0KPiBKYXNvbg0KPg0KPiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQo+IEphc29uIHZhbiBaeWwNCj4gRm91bmRl
+ciwgIEFwYWNoZSBNYXZlbg0KPiBodHRwOi8vdHdpdHRlci5jb20vanZhbnp5bA0KPiBodHRwOi8v
+dHdpdHRlci5jb20vdGFrYXJpX2lvDQo+IC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0KPg0KPiBJbiBzaG9ydCwgbWFuIGNyZWF0ZXMgZm9y
+IGhpbXNlbGYgYSBuZXcgcmVsaWdpb24gb2YgYSByYXRpb25hbCBhbmQgDQo+IHRlY2huaWNhbCBv
+cmRlciB0byBqdXN0aWZ5IGhpcyB3b3JrIGFuZCB0byBiZSBqdXN0aWZpZWQgaW4gaXQuDQo+DQo+
+ICAgLS0gSmFjcXVlcyBFbGx1bCwgVGhlIFRlY2hub2xvZ2ljYWwgU29jaWV0eQ0KPg0KPg0KPg0K
+PiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0NCj4gVG8gdW5zdWJzY3JpYmUsIGUtbWFpbDogdXNlcnMtdW5zdWJzY3Jp
+YmVAbWF2ZW4uYXBhY2hlLm9yZw0KPiBGb3IgYWRkaXRpb25hbCBjb21tYW5kcywgZS1tYWlsOiB1
+c2Vycy1oZWxwQG1hdmVuLmFwYWNoZS5vcmcNCj4NCj4NCg==
+DQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0NClRvIHVuc3Vic2NyaWJlLCBlLW1haWw6IHVzZXJzLXVuc3Vi
+c2NyaWJlQG1hdmVuLmFwYWNoZS5vcmcNCkZvciBhZGRpdGlvbmFsIGNvbW1hbmRzLCBlLW1h
+aWw6IHVzZXJzLWhlbHBAbWF2ZW4uYXBhY2hlLm9yZw0K
+

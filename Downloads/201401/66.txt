@@ -1,0 +1,230 @@
+From users-return-135319-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jan 31 14:49:33 2014
+Return-Path: <users-return-135319-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 38B7E1082F
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 31 Jan 2014 14:49:33 +0000 (UTC)
+Received: (qmail 96961 invoked by uid 500); 31 Jan 2014 14:49:28 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 96901 invoked by uid 500); 31 Jan 2014 14:49:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 96893 invoked by uid 99); 31 Jan 2014 14:49:27 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 31 Jan 2014 14:49:27 +0000
+X-ASF-Spam-Status: No, hits=0.2 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of matthias.1.0@gmx.de designates 212.227.17.21 as permitted sender)
+Received: from [212.227.17.21] (HELO mout.gmx.net) (212.227.17.21)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 31 Jan 2014 14:49:21 +0000
+Received: from 3capp-gmx-bs25.server.lan ([172.19.170.77]) by
+ mrigmx.server.lan (mrigmx002) with ESMTP (Nemesis) id
+ 0MTdbK-1VispQ3yts-00QOrK for <users@maven.apache.org>; Fri, 31 Jan 2014
+ 15:49:00 +0100
+Received: from [212.227.35.93] by 3capp-gmx-bs25.server.lan with HTTP; Fri
+ Jan 31 15:49:00 CET 2014
+MIME-Version: 1.0
+Message-ID: <trinity-f212e93c-ed67-4bd3-bc1a-1e8fed1bac77-1391179740806@3capp-gmx-bs25>
+From: "Matthias Mayer" <matthias.1.0@gmx.de>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Aw: Re: maven-enforcer-plugin problems with test dependency in
+ multi module project
+Content-Type: text/plain; charset=UTF-8
+Date: Fri, 31 Jan 2014 15:49:00 +0100 (CET)
+Importance: normal
+Sensitivity: Normal
+In-Reply-To: <52EA7A34.4040904@gmx.de>
+References: <trinity-0b389549-c055-4c46-bc14-f0fd4de6c290-1391071763589@3capp-gmx-bs09>,
+ <52EA7A34.4040904@gmx.de>
+Content-Transfer-Encoding: quoted-printable
+X-UI-Message-Type: mail
+X-Priority: 3
+X-Provags-ID: V03:K0:7gmRWr0HqqmFa4LL7oei/RUliGcG7CPG0x2YPIOkE3H
+ jnMEMRvVbN6wLdBu1N+EFH29oA1om+GTaS5Agl4bo7QeKqTuVy
+ rRROXPV59xr7PtSegMg+6ACvK/g9GzTqupUd91INAsberK4UjF
+ qIxAc/q9QICTZYckh9SXwc2DCev9joQNN7CbxWLIjGFiTjgLWi
+ xibALaHpw7PHNjQa83HkBJXo9+xw2NAQV1Vq3pkFDjjcorn3zk
+ l9aLnDY+Yd14chhc4y1bu+zuZjIrA9kp5e6iKYraI58PzvgOKJ nnQ7sM=
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Without the maven enforce rule =E2=80=9CrequireReleaseDeps=E2=80=9D and wit=
+hout the <type>test-jar</type> in the pom.xml of the test-child =E2=80=9Cmv=
+n clean package=E2=80=9D failed as predicted.
+
+Without the maven enforce rule =E2=80=9CrequireReleaseDeps=E2=80=9D and wi=
+th the <type>test-jar</type> =E2=80=9Cmvn clean package=E2=80=9D and =E2=80=
+=9Cmvn clean compile=E2=80=9D succeeded.
+
+With the maven enforce rule =E2=80=9CrequireReleaseDeps=E2=80=9D and with =
+the <type>test-jar</type> in the pom.xml of the test-child =E2=80=9Cmvn cle=
+an package=E2=80=9D succeeded but =E2=80=9Cmvn clean compile=E2=80=9D faile=
+d because of the missing test:test-parent:jar:tests. But since the scope is=
+ set <scope>test</scope> this shouldn't matter, should it?
+
+Best regards
+
+Matthias
+
+> Gesendet: Donnerstag, 30. Januar 2014 um 17:13 Uhr
+> Von: "Karl Heinz Marbaise" <khmarbaise@gmx.de>
+> An: users@maven.apache.org
+> Betreff: Re: maven-enforcer-plugin problems with test dependency in mult=
+i module project
+>
+> Hi,
+>=20
+> based on the error message you have a dependency on your test-jar=20
+> project but you defined the dependency a little bit wrong:
+>=20
+> test:test-child:jar:1.0.0: Failure to find test:test-parent:jar:tests:1.=
+0.0
+>=20
+> This shows that you have defined a dependency in the test-parent but=20
+> like this:
+>=20
+>   <dependencies>
+>      <dependency>
+>        <groupId>test</groupId>
+>        <artifactId>test-parent</artifactId>
+>        <version>1.0-SNAPSHOT</version>
+>       <scope>test</scope>
+>      </dependency>
+>   </dependencies>
+>=20
+> BUT you have to give the type in this case like this:
+>=20
+>   <dependencies>
+>      <dependency>
+>        <groupId>test</groupId>
+>        <artifactId>test-parent</artifactId>
+>        <version>1.0-SNAPSHOT</version>
+>       <type>test-jar</type>
+>       <scope>test</scope>
+>      </dependency>
+>   </dependencies>
+>=20
+> Best test is to comment out the maven-enforcer-rule and try to build=20
+> your project just from the parent via
+>=20
+>=20
+> mvn clean package
+>=20
+> I assume in your case without the above fix your project will not build.
+> If it will you need to clean out your local repository first and retry i=
+t...
+>=20
+>=20
+> Kind regards
+> Karl Heinz Marbaise
+>=20
+>  > Hi,
+> >
+> > I have a multi-module-project with one module that implements classes =
+for testing (test-parent) and another module (test-child) that uses theses =
+classes. There is a dependency in test scope from the test-child to the tes=
+t-parent.
+> > (See article http://stackoverflow.com/questions/1725476/maven-test-dep=
+endency-in-multi-module-project and http://maven.apache.org/guides/mini/gui=
+de-attached-tests.html[http://maven.apache.org/guides/mini/guide-attached-t=
+ests.html])
+> > The pom of the depending test-child contains the following code:
+> >
+> > <dependencies>
+> >    <dependency>
+> >      <groupId>test</groupId>
+> >      <artifactId>test-parent</artifactId>
+> >      <version>1.0-SNAPSHOT</version>
+> >      <type>test-jar</type>
+> >      <scope>test</scope>
+> >    </dependency>
+> > </dependencies>
+> >
+> > The test-parent module that contains the derived classes contains the =
+following code:
+> >
+> > <plugins>
+> >    <plugin>
+> >      <artifactId>maven-jar-plugin</artifactId>
+> >      <version>2.2</version>
+> >      <executions>
+> >        <execution>
+> >          <goals>
+> >            <goal>test-jar</goal>
+> >          </goals>
+> >          <phase>test-compile</phase>
+> >        </execution>
+> >      </executions>
+> >    </plugin>
+> > </plugins>
+> >
+> > In a parent pom the maven-enforcer-plugin is included and the RequireR=
+eleaseDeps rule is added to the list of rules. While running the Maven goal=
+ =E2=80=9Ccompile=E2=80=9D  the project compilation of the test-child fails=
+ with the following message:
+> > [ERROR] Failed to execute goal org.apache.maven.plugins:maven-enforcer=
+-plugin:1.3.1:enforce (default) on project test-child: Execution default of=
+ goal org.apache.maven.plugins:maven-enforcer-plugin:1.3.1:enforce failed: =
+org.apache.maven.shared.dependency.graph.DependencyGraphBuilderException: C=
+ould not resolve dependencies for project test:test-child:jar:1.0.0: Failur=
+e to find test:test-parent:jar:tests:1.0.0
+> > It seems that Maven checks the dependencies of type and scope =E2=80=
+=9Ctest=E2=80=9D in the compile phase. In the case the test-jar is build in=
+ the test-compile and is not present yet. This leads to the error.
+> > If I remove the RequireReleaseDeps from the rules it works fine.
+> > Here is the simplified config of the maven-enforcer-plugin:
+> >
+> > <pluginManagement>
+> >    <plugins>
+> >      <plugin>
+> >        <groupId>org.apache.maven.plugins</groupId>
+> >        <artifactId>maven-enforcer-plugin</artifactId>
+> >        <version>${maven-enforcer-plugin.version}</version>
+> >        <inherited>true</inherited>
+> >        <executions>
+> >          <execution>
+> >            <goals><goal>enforce</goal></goals>
+> >          </execution>
+> >        </executions>
+> >        <configuration>
+> >          <!-- <skip/> -->
+> >          <rules>
+> >            <requireReleaseDeps>
+> >              <onlyWhenRelease>false</onlyWhenRelease>
+> >            </requireReleaseDeps>
+> >            <requireMavenVersion>
+> >              <version>[3.0.4,]</version>
+> >            </requireMavenVersion>
+> >          </rules>
+> >          <fail>${maven-enforcer-plugin.fail}</fail>
+> >        </configuration>
+> >      </plugin>
+> >    </plugins>
+> > </pluginManagement>
+> >    <plugins>
+> >      <plugin>
+> >         <groupId>org.apache.maven.plugins</groupId>
+> >        <artifactId>maven-enforcer-plugin</artifactId>
+> >      </plugin>
+> >    </plugins>
+> > </build>
+> >
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>=20
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

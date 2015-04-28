@@ -1,0 +1,117 @@
+From users-return-136248-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr 23 15:57:03 2014
+Return-Path: <users-return-136248-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 113E011A7F
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 23 Apr 2014 15:57:03 +0000 (UTC)
+Received: (qmail 44814 invoked by uid 500); 23 Apr 2014 15:56:56 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 44466 invoked by uid 500); 23 Apr 2014 15:56:56 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 44288 invoked by uid 99); 23 Apr 2014 15:56:55 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 23 Apr 2014 15:56:54 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of rkkreddy@gmail.com designates 209.85.219.46 as permitted sender)
+Received: from [209.85.219.46] (HELO mail-oa0-f46.google.com) (209.85.219.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 23 Apr 2014 15:56:49 +0000
+Received: by mail-oa0-f46.google.com with SMTP id m1so1223357oag.19
+        for <users@maven.apache.org>; Wed, 23 Apr 2014 08:56:29 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=wymkg5POxIxtJqVP2jKKhuZKnCNTPUIGKMtlL9OpPdI=;
+        b=K/qapjZZtQrk/ZYISLP83e0dUjzKrrenezyJaFS/IGr1slkRUgZ7TKdA9UPoCsC8PB
+         frGmqgjQRtm4riN+46WgVMm7HN+zxjT6GYqhpVyh/5uiTUmhYiozULJUYfBFo+011Eyy
+         lQmNWSfWyT1qnyVx4zXeXHAl7KXj/EI7Q+23o8YxzeQ0PBg5sBgO7P7IM6FtNkcS+UEk
+         SvU+JTikneQQ+fxTQJxaWbG71EHBfRGRv7s/tsNH/ypEr7qZLtXuYIpHd87um1nCDTGt
+         dwrthqqs1kaU8E2Re3aeirt+L9CkS0WXlJB8yf+g/Oj+mcZYmTmlEI9yqpfDPDBgZUdf
+         gGEA==
+MIME-Version: 1.0
+X-Received: by 10.60.16.103 with SMTP id f7mr43190385oed.8.1398268589047; Wed,
+ 23 Apr 2014 08:56:29 -0700 (PDT)
+Received: by 10.182.200.231 with HTTP; Wed, 23 Apr 2014 08:56:29 -0700 (PDT)
+Date: Wed, 23 Apr 2014 11:56:29 -0400
+Message-ID: <CACxbV9Q6h_LvKGVMH=C3_gaa60-hctwfKzFgNxC2zLzPjuryUw@mail.gmail.com>
+Subject: RSyntaxTextArea 2.5.1 and 2.5.2 to Maven Repo
+From: KIRAN <rkkreddy@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=089e0149c04e8d073704f7b7c606
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0149c04e8d073704f7b7c606
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+Below is the POM xml I am using:
+
+==============================================================
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="
+http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example</groupId>
+  <artifactId>jmeter-demo</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>jmeter-demo</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+<dependency>
+<groupId>*org.apache.jmeter*</groupId>
+<artifactId>*ApacheJMeter*</artifactId>
+<version>*2.11*</version>
+</dependency>
+  <dependency>
+<groupId>*kg.apc*</groupId>
+<artifactId>*jmeter-plugins-webdrive*r</artifactId>
+<version>*1.1.3*</version>
+</dependency>
+  </dependencies>
+  <build>
+  <plugins>
+<plugin>
+<groupId>*com.lazerycode.jmeter*</groupId>
+<artifactId>*jmeter-maven-plugin*</artifactId>
+<version>*1.9.0*</version>
+<executions>
+<execution>
+<id>jmeter-tests</id>
+<phase>verify</phase>
+<goals>
+<goal>jmeter</goal>
+</goals>
+   </execution>
+</executions>
+</plugin>
+</plugins>
+</build>
+</project>
+==============================================================
+
+When I run mvn install, I am getting the below error:
+
+[ERROR] Failed to execute goal on project jmeter-demo: Could not resolve
+dependencies for project com.example:jmeter-demo:jar:1.0-SNAPSHOT: Could
+not find artifact com.fifesoft:rsyntaxtextarea:jar:2.5.1 in central
+http://repo.maven.apache.org/maven2) -> [Help 1]
+
+Please help me in getting this issue resolved.
+-- 
+Regards,
+Kirna
+
+--089e0149c04e8d073704f7b7c606--
+

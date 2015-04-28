@@ -1,0 +1,80 @@
+From users-return-134928-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jan  3 22:16:23 2014
+Return-Path: <users-return-134928-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 871A310934
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  3 Jan 2014 22:16:23 +0000 (UTC)
+Received: (qmail 92296 invoked by uid 500); 3 Jan 2014 22:16:21 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 92181 invoked by uid 500); 3 Jan 2014 22:16:21 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 92173 invoked by uid 99); 3 Jan 2014 22:16:21 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Jan 2014 22:16:21 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ljnelson@gmail.com designates 209.85.216.49 as permitted sender)
+Received: from [209.85.216.49] (HELO mail-qa0-f49.google.com) (209.85.216.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Jan 2014 22:16:16 +0000
+Received: by mail-qa0-f49.google.com with SMTP id ii20so964485qab.8
+        for <users@maven.apache.org>; Fri, 03 Jan 2014 14:15:55 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=Fr2uYdpHkgnhvsnVMZVKlVbqmkgHLDK/wm0MFcJooHI=;
+        b=xLJ21vh6Tw2eXkWs4pMTQIaznrqzzA0+JIvGp0siBHmzqTDcowWeiEAcOrDLruK8US
+         OuyXwPOAc4KjIXKMk132S1q00gi1VUumhvMRo4mdMBDfNLUtGtG9VazTruJWlRxMlQl4
+         MaXgCWn9EkgiLL7g0/A4gZH4/wiJpyhRGXMpk0tNuZoNV5w4pZzGwXxUyuHrcYmrF49n
+         GcyUWCC8x1ZudTGSls5hj4Dg5uI1tLP0RW6fOCMuK7acmkLRH2Yyb/1FxsMN69/3YYxO
+         C7x2U7kbHJspBeeDm07SJqtiapodSWyFa6StWFYcTQQn6a3jXim1/n5IFZmqmBeYlNxk
+         dxwg==
+MIME-Version: 1.0
+X-Received: by 10.229.65.130 with SMTP id j2mr150794852qci.6.1388787355316;
+ Fri, 03 Jan 2014 14:15:55 -0800 (PST)
+Received: by 10.96.169.200 with HTTP; Fri, 3 Jan 2014 14:15:55 -0800 (PST)
+In-Reply-To: <CAHNdxunwRmqstW5tL6D-G4ga0ASdGAnMWpGOyoE=db8-1_vpqQ@mail.gmail.com>
+References: <CAHNdxunwRmqstW5tL6D-G4ga0ASdGAnMWpGOyoE=db8-1_vpqQ@mail.gmail.com>
+Date: Fri, 3 Jan 2014 14:15:55 -0800
+Message-ID: <CAHNdxu=bmVX8+0g_4UUGjOtneOsAKuAKzaEKZtNvcDW_5WrAjw@mail.gmail.com>
+Subject: Re: Topologically sorted list of Artifacts for use by a plugin?
+From: Laird Nelson <ljnelson@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113397cefb76d204ef1840ef
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113397cefb76d204ef1840ef
+Content-Type: text/plain; charset=UTF-8
+
+On Fri, Jan 3, 2014 at 2:03 PM, Laird Nelson <ljnelson@gmail.com> wrote:
+
+> Hello; in Maven 3.0.5 and 3.1.x, what is the preferred way, given a
+> MavenProject representing the current pom.xml/project, to obtain a list of
+> its resolved dependency Artifacts in test scope that has been topologically
+> sorted such that the Artifact at the head of the list has the fewest
+> dependencies and the artifact at the tail of the list has the most?
+>
+
+As an aside, I found
+http://maven.40175.n5.nabble.com/Sort-dependencies-topologically-tp4971787p5036212.html,
+but am not clear if that follows the same rules that Maven does (regarding
+things like dependency management, pom inheritance, settings.xmls etc.).
+
+Thanks,
+Best,
+Laird
+
+-- 
+http://about.me/lairdnelson
+
+--001a113397cefb76d204ef1840ef--
+

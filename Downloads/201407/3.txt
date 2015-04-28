@@ -1,0 +1,201 @@
+From users-return-136905-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jul 25 18:06:11 2014
+Return-Path: <users-return-136905-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 497B61078C
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 25 Jul 2014 18:06:11 +0000 (UTC)
+Received: (qmail 74409 invoked by uid 500); 25 Jul 2014 18:06:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 74325 invoked by uid 500); 25 Jul 2014 18:06:09 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74314 invoked by uid 99); 25 Jul 2014 18:06:09 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 25 Jul 2014 18:06:09 +0000
+X-ASF-Spam-Status: No, hits=0.7 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [173.201.192.104] (HELO p3plsmtpa06-03.prod.phx3.secureserver.net) (173.201.192.104)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 25 Jul 2014 18:06:07 +0000
+Received: from [192.168.1.6] ([67.173.10.68])
+	by p3plsmtpa06-03.prod.phx3.secureserver.net with 
+	id Wi5f1o00l1U4xL301i5gDp; Fri, 25 Jul 2014 11:05:40 -0700
+Message-ID: <53D29C73.4080906@javactivity.org>
+Date: Fri, 25 Jul 2014 13:05:39 -0500
+From: Steve Cohen <scohen@javactivity.org>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.5.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Best way to use closed-source jars with maven repository
+References: <53D280A5.6050704@javactivity.org> <CAA5t8VpVnwZTkXSxfF6H_3FKip00BEMrgEq0Q9HxuH-TRSxMww@mail.gmail.com> <53D28AF1.3070205@javactivity.org> <53D28EC1.7010700@javactivity.org> <CADN69y=K-uPh6oTp7Qvg_SU_skQYNMb-HMb+LpHjdWSSPHkpxg@mail.gmail.com> <53D2978A.9080605@javactivity.org>
+In-Reply-To: <53D2978A.9080605@javactivity.org>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Yecch.  I'm already using the assembly plugin.  But it appears that with 
+that approach instead of using the lovely dependency set, I must use 
+<file>s (handle each jar individually) because this is the highest level 
+that allows renaming of the files.
+
+Ugh.
+
+On 07/25/2014 12:44 PM, Steve Cohen wrote:
+> Ok, thanks, Curtis.  I will have to address it on the packaging side, I
+> suppose.  It will force me to get tricky and not just use a dependency
+> set (which was lovely and simple).
+>
+> IBM's requirement is ironclad.  They won't even talk to me in spite of
+> having a support contract if we repackage the jars.
+>
+>
+> On 07/25/2014 12:22 PM, Curtis Rueden wrote:
+>> Hi Steve,
+>>
+>>> The easiest way to accomplish this would be if k could get these jars
+>>> into the nexus repository named as IBM named them.
+>>
+>> Overriding the default naming scheme of JARs in a Maven repository has
+>> been
+>> requested on this list many times, and the answer is always that the
+>> naming
+>> scheme cannot be overridden. It is a requirement of the Maven repository
+>> that the name be "artifactId-version.extension" (or
+>> "artifactId-version-classifier.extension" if there is a classifier).
+>> Remember that the main purpose of Maven repositories is to provide
+>> dependencies for consumption by downstream code in a standard form -- not
+>> to cater to application-specific deployment needs.
+>>
+>> But you can address the issue on the packaging side, when you build your
+>> application archive. As suggested by others, the maven-assembly-plugin
+>> can
+>> do this sort of thing. And you can also override the JAR manifests'
+>> Class-Path entries according to your needs by configuring the
+>> maven-jar-plugin: see e.g. http://stackoverflow.com/a/5893391.
+>>
+>> Alternately, if you can somehow override or work around how the IBM trace
+>> feature works, that would avoid the issue too. Is it just that the JARs
+>> have to be on the classpath at runtime? Because there are many ways of
+>> addressing that. Subclassing one or more offending classes to fix their
+>> behavior? Or use a custom ClassLoader? Or, worst-case scenario, bytecode
+>> manipulation (e.g., http://www.javassist.org/) to "fix" IBM's limited
+>> logic?
+>>
+>> Regards,
+>> Curtis
+>>
+>>
+>> On Fri, Jul 25, 2014 at 12:07 PM, Steve Cohen <scohen@javactivity.org>
+>> wrote:
+>>
+>>> To elaborate further on what I'd like to do, I think I need to create a
+>>> POM file that simply lists all these jars and supply that to the Nexus
+>>> archive uploader.  But I have no idea what must be included in such a
+>>> POM.
+>>>   The GUI archive uploader does not allow me to override default
+>>> naming of
+>>> these files.
+>>>
+>>>
+>>> On 07/25/2014 11:50 AM, Steve Cohen wrote:
+>>>
+>>>> Container?  Guess I need to supply more details.
+>>>> This is a standalone J2SE app.  The server side is legacy.  There is no
+>>>> container.  it isn't a web app.
+>>>>
+>>>> Instead it's run as a jar with the classpath generated from maven's
+>>>> dependency set and listed in the jar's manifest.  Maven generates the
+>>>> manifest.  The easiest way to accomplish this would be if I could get
+>>>> these jars into the nexus repository named as IBM named them.  Then I
+>>>> can get them to a single directory so that the IBM trace facility can
+>>>> find them.
+>>>>
+>>>>
+>>>> On 07/25/2014 11:39 AM, David Karr wrote:
+>>>>
+>>>>> It's conceivable you don't have to mess with any sort of repackaging.
+>>>>>
+>>>>> The problem is that the MQ classes that your container loads have to
+>>>>> be in
+>>>>> a specific location, with a specific name.  Simply deploy your
+>>>>> unmodified
+>>>>> application into a container with an altered classpath, where those
+>>>>> "special" jars are in front of everything else on the classpath.
+>>>>>
+>>>>>
+>>>>> On Fri, Jul 25, 2014 at 9:07 AM, Steve Cohen <scohen@javactivity.org>
+>>>>> wrote:
+>>>>>
+>>>>>   I have a client application that was developed with Websphere
+>>>>> MQ.  Our
+>>>>>> company has a Maven nexus repository.  In this repository, we have a
+>>>>>> place
+>>>>>> to store third party jars.  In here I stored the MQ jars.  Since the
+>>>>>> repository demanded a version number I provided one (7.0.1.8,
+>>>>>> 7.0.1.9, etc)
+>>>>>> and in each case these version numbers were appended to the jar
+>>>>>> name.  This
+>>>>>> led to a clean build and deploy process and everyone was happy.
+>>>>>>
+>>>>>> Now we have need of turning on MQ traces.  It turns out that IBM
+>>>>>> offers no
+>>>>>> way of doing this unless the jar files are in a single directory
+>>>>>> named
+>>>>>> exactly as IBM named them in their release.  So we have to
+>>>>>> repackage the
+>>>>>> application so as to accomplish this.
+>>>>>>
+>>>>>> Before I jump into hacking this mess into place, is there a
+>>>>>> recommended
+>>>>>> way of handling this so that the maven repository, maven, and ibm are
+>>>>>> all
+>>>>>> happy?
+>>>>>>
+>>>>>> Thanks,
+>>>>>> Steve Cohen
+>>>>>>
+>>>>>> ---------------------------------------------------------------------
+>>>>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>>>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>>>>
+>>>>>>
+>>>>>>
+>>>>>
+>>>>
+>>>> ---------------------------------------------------------------------
+>>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>>
+>>>>
+>>>>
+>>>>
+>>>
+>>> ---------------------------------------------------------------------
+>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>
+>>>
+>>
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

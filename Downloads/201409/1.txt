@@ -1,0 +1,114 @@
+From users-return-137281-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Sep 13 18:10:27 2014
+Return-Path: <users-return-137281-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 19E7E1102F
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 13 Sep 2014 18:10:27 +0000 (UTC)
+Received: (qmail 66446 invoked by uid 500); 13 Sep 2014 18:10:24 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 66362 invoked by uid 500); 13 Sep 2014 18:10:24 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 66350 invoked by uid 99); 13 Sep 2014 18:10:23 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 13 Sep 2014 18:10:23 +0000
+X-ASF-Spam-Status: No, hits=2.5 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_IMAGE_ONLY_28,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of burtonator2011@gmail.com designates 209.85.217.179 as permitted sender)
+Received: from [209.85.217.179] (HELO mail-lb0-f179.google.com) (209.85.217.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 13 Sep 2014 18:09:58 +0000
+Received: by mail-lb0-f179.google.com with SMTP id p9so2439534lbv.24
+        for <users@maven.apache.org>; Sat, 13 Sep 2014 11:09:57 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=LNRCZVPvnZwkm+8fNMtGqKd21FVNyzVkrdgl6oHOjv0=;
+        b=S5tKYD0roIXGUMtto1fxILYUjzAGJwkkMNWVbBZv8H6zcFgHB4dG5U+loPGl3nHgTf
+         ZSp1VQuL8sZSaE3mlzjMRok6IKO67GMSoLzCyWWWrUUmj07b9xVgaV5A+eX8zPQXOzuP
+         4A+FpU/1B1/T1T0Thjyr1O4+8fkv8kN+vZ/0CLS6Add4Zfli2Wzjwsje0om1tJCvKqja
+         nE3hK4rtW0XgF02dT6+6DOrw3f7hocwCZu6LF/3UuRk/hGHfmpy2Gx46JFwEyQIXVZdB
+         Ifk6JSzxl2VEG13KLqHPIwFNs09Q/6w9BYwpP++C8O5wYP/TLU9gF1eJ5RPEDQyG7GBB
+         +7Gw==
+X-Received: by 10.152.23.69 with SMTP id k5mr17634550laf.70.1410631797234;
+ Sat, 13 Sep 2014 11:09:57 -0700 (PDT)
+MIME-Version: 1.0
+Sender: burtonator2011@gmail.com
+Received: by 10.112.210.137 with HTTP; Sat, 13 Sep 2014 11:09:36 -0700 (PDT)
+In-Reply-To: <CADVp3v9-q8ZkH7tKQG8XgjbfEFCxBjVsmXzYwEJkNk0pR3SkWQ@mail.gmail.com>
+References: <CAAZU44kFZ0cNGa_qOXf6Wj_LRRM18LE3v0xKMLZ0+Z44ZffpFg@mail.gmail.com>
+ <CADN69ynJnF10Lofgw6cPRTNz-OyWXHPH0oqTDyzf5xyXP_RKXA@mail.gmail.com>
+ <CAAZU44njJwOz7hbKAeUyE3fY6ygCDJiA5Qa0FeNOT58fJTS=tA@mail.gmail.com>
+ <CAAZU44m6VFKf4nDiitwc9WLHZcczhjBYtm4RaGo-pf_buf-7bw@mail.gmail.com> <CADVp3v9-q8ZkH7tKQG8XgjbfEFCxBjVsmXzYwEJkNk0pR3SkWQ@mail.gmail.com>
+From: Kevin Burton <burton@spinn3r.com>
+Date: Sat, 13 Sep 2014 11:09:36 -0700
+X-Google-Sender-Auth: PErs384VtytHfhHncGqdbR_XHk0
+Message-ID: <CAAZU44mmQWR3ExwZthK_N==YOeibVY=4mR4uPvmSOifmVahQCg@mail.gmail.com>
+Subject: Re: Tell maven to not have the parent pom as a dependency?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0160bf982ede740502f64fb3
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0160bf982ede740502f64fb3
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I think I could probably migrate it down =E2=80=A6  Maybe cut my dependenci=
+es in
+1/2 .. However, the version idea is probably the right way to go here :)
+
+Thanks for the recommendation!
+
+Kevin
+
+On Fri, Sep 12, 2014 at 6:31 PM, Barrie Treloar <baerrach@gmail.com> wrote:
+
+> On 13 September 2014 02:46, Kevin Burton <burton@spinn3r.com> wrote:
+>
+> > OK=E2=80=A6 so this definitely works and the aggregation model compiles=
+ my
+> module.
+> >
+> > But I need a way to bump the version number because I have complex
+> > dependencies and updating 10 places every time I change the project
+> version
+> > isn=E2=80=99t going to be fun.
+> >
+>
+> If you have 10 places where the dependencies need changing you are doing =
+it
+> wrong.
+>
+> You should have zero <version> definitions in your modules.
+> All version definitions are in the topmost parent pom in the
+> dependencyManagement section.
+> If you have a bunch of things that share versions, you can also create a
+> property and then use something like ${mygroup.version} so that you only
+> need to update the property section once.
+>
+> Have you read the freely available Maven books?
+> It's been long while since I've read them but I think this advice is in
+> there.
+>
+
+
+
+--=20
+
+Founder/CEO Spinn3r.com
+Location: *San Francisco, CA*
+blog: http://burtonator.wordpress.com
+=E2=80=A6 or check out my Google+ profile
+<https://plus.google.com/102718274791889610666/posts>
+<http://spinn3r.com>
+
+--089e0160bf982ede740502f64fb3--
+

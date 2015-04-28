@@ -1,0 +1,87 @@
+From users-return-135819-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 13 20:31:38 2014
+Return-Path: <users-return-135819-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9D4EF103FE
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 13 Mar 2014 20:31:38 +0000 (UTC)
+Received: (qmail 94821 invoked by uid 500); 13 Mar 2014 20:31:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 94675 invoked by uid 500); 13 Mar 2014 20:31:22 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 94653 invoked by uid 99); 13 Mar 2014 20:31:22 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Mar 2014 20:31:22 +0000
+X-ASF-Spam-Status: No, hits=-0.3 required=5.0
+	tests=INVALID_DATE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [83.219.192.166] (HELO smtp.bredband2.com) (83.219.192.166)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Mar 2014 20:31:15 +0000
+Received: from Dennis-Dator (c-83-233-111-38.cust.bredband2.com [83.233.111.38])
+	(Authenticated sender: ed5133)
+	by smtp.bredband2.com (Postfix) with ESMTPA id 7ADB65A3BF
+	for <users@maven.apache.org>; Thu, 13 Mar 2014 21:30:54 +0100 (CET)
+Date: Thu, 13 Mar 14 21:30:44 +0100
+From: Dennis Lundberg <dennisl@apache.org>
+To: announce@maven.apache.org
+To: users@maven.apache.org
+Cc: dev@maven.apache.org
+Message-ID: <1862131792.01394742644273.JavaMail.Dennis@Dennis-Dator>
+Subject: [ANN] Apache Maven Checkstyle Plugin 2.12 Released
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+The Maven team is pleased to announce the release of the Apache Maven Checkstyle Plugin, version 2.12
+
+Generates a report on violations of code style and optionally fails the build if violations are detected.
+
+http://maven.apache.org/plugins/maven-checkstyle-plugin/
+
+You should specify the version in your project's plugin configuration:
+
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-checkstyle-plugin</artifactId>
+  <version>2.12</version>
+</plugin>
+
+
+Release Notes - Apache Maven Checkstyle Plugin - Version 2.12
+
+Task
+* [MCHECKSTYLE-222] Resource-only project is not checked
+* [MCHECKSTYLE-221] ResourceIncludes default value is wrong
+* [MCHECKSTYLE-219] When no license is specified, ALv2 from maven-checkstyle-plugin is used
+* [MCHECKSTYLE-218] Put file anchor directly on the h2 tag
+* [MCHECKSTYLE-213] Upgrade Doxia dependencies
+* [MCHECKSTYLE-212] Upgrade to Checkstyle 5.7
+* [MCHECKSTYLE-211] allow inline configuration for checkstyle plugin
+* [MCHECKSTYLE-210] Resource bundles have wrong file encoding
+* [MCHECKSTYLE-209] Correct grammar, make icons and text consistent in the report
+* [MCHECKSTYLE-208] Plugin generates reports incompatible with the 'maven-jxr-plugin' version 2.4
+* [MCHECKSTYLE-207] file handle leak - leading to failed builds
+* [MCHECKSTYLE-205] NPE in CheckstyleReportGenerator.doFilesSummary:654 version 2.11 regression
+* [MCHECKSTYLE-190] Add user property for checkstyle:consoleOutput
+* [MCHECKSTYLE-182] Use Maven log levels when logging to console
+* [MCHECKSTYLE-169] Suppressions property is incorrectly set if suppressions file is on classpath
+
+
+Enjoy,
+
+-The Maven team
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,106 @@
+From users-return-137051-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Aug 18 02:01:45 2014
+Return-Path: <users-return-137051-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 750B411C20
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 18 Aug 2014 02:01:45 +0000 (UTC)
+Received: (qmail 49956 invoked by uid 500); 18 Aug 2014 02:01:43 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 49861 invoked by uid 500); 18 Aug 2014 02:01:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 49850 invoked by uid 99); 18 Aug 2014 02:01:43 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 18 Aug 2014 02:01:43 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [184.105.206.26] (HELO smtpbg303.qq.com) (184.105.206.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 18 Aug 2014 02:01:36 +0000
+X-QQ-mid: bizesmtp8t1408327271t011t236
+Received: from [192.168.0.102] (unknown [182.18.15.192])
+	by esmtp4.qq.com (ESMTP) with SMTP id 0
+	for <users@maven.apache.org>; Mon, 18 Aug 2014 10:01:10 +0800 (CST)
+X-QQ-SSF: 00400000002000F0FGF2B00A0000000
+X-QQ-FEAT: xEH/YRYr+waImBvamw1uUNiLN25BmoXKaO9dwFViziuSRAhIu4LkcRNpzqOPn
+	feDy7hXK4xLsmz7MPP3UxomcKkuyNApKUaVJfCSx6bfjy0SkiCr6Du5QLSwPaVAR12ZU8DF
+	a10HV/lTsXi7WztvzPfhUK7RxU8Dv3XC+d2NJGZN5bck3pwioktsb6/fTEyQ
+X-QQ-GoodBg: 2
+Message-ID: <53F15E6C.7050709@embracesource.com>
+Date: Mon, 18 Aug 2014 10:01:16 +0800
+From: TOM <tom.wang@embracesource.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Thunderbird/31.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: hi, I just want to get help about maven archetype,please help
+ me
+References: <53E9D74D.2040809@embracesource.com> <3595701.NGLvAqTNur@herve-desktop>
+In-Reply-To: <3595701.NGLvAqTNur@herve-desktop>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
+X-QQ-SENDSIZE: 520
+X-QQ-FName: 7398C8475F0C4142A44A8857BB6C962E
+X-QQ-LocalIP: 58.250.132.20
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+thank you ,but my descriptor already is packaged= true
+<fileSet filtered="true" packaged="true" encoding="UTF-8">
+       <directory>src/main/java</directory>
+       <includes>
+         <include>**/*.java</include>
+       </includes>
+     </fileSet>
+
+
+在 2014-08-18 0:10, Hervé BOUTEMY 写�?�:
+> use packaged="true" [1]
+>
+> Regards,
+>
+> Hervé
+>
+> [1] http://maven.apache.org/archetype/archetype-models/archetype-descriptor/archetype-descriptor.html
+>
+> Le mardi 12 août 2014 16:58:53 TOM a écrit :
+>> I use mvn archetype:create-from-project to generate a archetype project.
+>> and use it to generate a project
+>>
+>> the content of archetype file UserDTO(generaged by
+>> archetype:create-from-project)
+>> package ${package}.${artifactId}.dto;
+>>
+>> then i mvn archetype:generate -DarchetypeArtifactId=myapp -DgroupId=test
+>> -DartifactId=good
+>>
+>> then the generated UserDTO with correct package(package test.good.dto),
+>> but it is in src/main/java/test/dto , not expected
+>> src/main/java/test/good/dto
+>>
+>> please help me and thank a lot
+>>
+>>
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

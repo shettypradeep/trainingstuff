@@ -1,0 +1,229 @@
+From users-return-135130-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 14 12:52:46 2014
+Return-Path: <users-return-135130-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 192BF107DE
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 14 Jan 2014 12:52:46 +0000 (UTC)
+Received: (qmail 63727 invoked by uid 500); 14 Jan 2014 12:52:35 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 63585 invoked by uid 500); 14 Jan 2014 12:52:35 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 63569 invoked by uid 99); 14 Jan 2014 12:52:35 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 12:52:35 +0000
+X-ASF-Spam-Status: No, hits=2.5 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.160.47 as permitted sender)
+Received: from [209.85.160.47] (HELO mail-pb0-f47.google.com) (209.85.160.47)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 12:52:31 +0000
+Received: by mail-pb0-f47.google.com with SMTP id um1so8654877pbc.20
+        for <multiple recipients>; Tue, 14 Jan 2014 04:52:11 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :cc:content-type;
+        bh=7ychM6nsN6gU0Jlx5/3xHKGs8+taspCW+8dzYVH01DA=;
+        b=sz1gPXQtzF5iPmXlOebI3POMLXcZVRtTkp+fFbaANLM6K48QMBTqpLKhIWc4aSPFDC
+         WHFExY212Epf4dDMy7FKeNqUc7LYzIZ3qKZkUwySIuQXlCnjZTnlsR6rtZP9XMDexnY+
+         bxTuKY+Zb2djS942u37UEI3IwKpUjfjl2/ujilkDPpClzcF1AcUHXpgBheC0Ma6IWuhO
+         HYWT7Wq+C7Zp7lx3Zrp6eOlQhKcuMNKr0Wqk2kXjQSc8J07sqN7X+MxPxlqFrcNU150R
+         33rc2oXUmFQI4LWCmObodU3RlH/LlNlxwHxTRLmLZ9bXG4iy1tJUXIbDrhH8xXWtu+0m
+         yYKg==
+MIME-Version: 1.0
+X-Received: by 10.68.233.33 with SMTP id tt1mr1604425pbc.64.1389703931315;
+ Tue, 14 Jan 2014 04:52:11 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Tue, 14 Jan 2014 04:52:11 -0800 (PST)
+In-Reply-To: <CA+nPnMwPoTKDyebXcpePHG+77UvfUDeARQcbAUbGDm5iTeerEA@mail.gmail.com>
+References: <CA+nPnMzkumu_925CV+u+D5_wkHjwLCVSRmwMS6JuHvq16zp3Mg@mail.gmail.com>
+	<23db4a359ac8b220e15f373269ebc967.squirrel@www.mosabuam.com>
+	<CA+nPnMy32UXkeOz7-L8SdYymvuOtcVUGgqLca4UGg4MDade1Qg@mail.gmail.com>
+	<03B56DD5-E957-438E-A30E-439C2785032D@apache.org>
+	<781949f830750555c03856e45275c78b.squirrel@www.mosabuam.com>
+	<CA+nPnMw+yPfmovGb-DCxvgvqjUkboddWzBuHEyHZmauYPkiENw@mail.gmail.com>
+	<CA+nPnMzWqgsVuCMaK6FP0QfXDXSLadyUsP+dMeRy9cW73jdarA@mail.gmail.com>
+	<CA+nPnMyY0ST8OV4hfd1=-0vgEuTff8B8ym4iXwjWF16nW=ESHg@mail.gmail.com>
+	<20140109151225.GC14330@IUPUI.Edu>
+	<CADN69ymEmQ7KaZfnOvKLD_A7Pi_GR+DOnA8e=z8J-_hQUF1CPA@mail.gmail.com>
+	<20140109155136.GE14330@IUPUI.Edu>
+	<CAPLpRQKXkm3NEw=GZK7ECpzi4fF0ZN8iMtCBLhVOBWXoY_nWow@mail.gmail.com>
+	<CA+nPnMwgL9gbS6aq+rip1s25h-XcJe1fN2UBgmMKo3ym-vT5cQ@mail.gmail.com>
+	<CAJZRQKxC7RauiuekekfkWzTDA5vzMMvhqEGt2EP0pgEbiOtemQ@mail.gmail.com>
+	<58EAA08AF8232344ADDB2E31D4996BFD4BC1250F@SMAPEXCHIDAG3.prod.ad.merc.chicago.cme.com>
+	<CA+nPnMzbUuvthMz4vpUkDo4BwYnh-7G-k=bUOdQshWu0gv3cyA@mail.gmail.com>
+	<CA+nPnMxGwVH0A9LXftGRL8-kEOTc=7NNnu0rNsY5UV79WEVpoQ@mail.gmail.com>
+	<CA+nPnMzWaACii+Oa_j+HnvCPJyQFc5ePLobZpcSJh6KXMXgAog@mail.gmail.com>
+	<CA+nPnMwPoTKDyebXcpePHG+77UvfUDeARQcbAUbGDm5iTeerEA@mail.gmail.com>
+Date: Tue, 14 Jan 2014 12:52:11 +0000
+Message-ID: <CA+nPnMzBZjQQQV1U-h3uXwXXqXxST=LVWxeMYUA30cqdebkXpg@mail.gmail.com>
+Subject: Re: New logo?
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Cc: Maven Developers List <dev@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b33c9dc2b4e0e04efeda9dd
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b33c9dc2b4e0e04efeda9dd
+Content-Type: text/plain; charset=ISO-8859-1
+
+maven-21 in context:
+http://people.apache.org/~stephenc/maven-logo-contest/maven-21-in-context.png
+
+
+On 14 January 2014 12:18, Stephen Connolly
+<stephen.alan.connolly@gmail.com>wrote:
+
+> I thought a hand-drawn font using straight lines only might look good with
+> the teepee
+>
+> maven-21:
+> https://cwiki.apache.org/confluence/download/attachments/38569278/maven-21.png?version=1&modificationDate=1389701827196&api=v2
+>
+>
+> On 14 January 2014 12:08, Stephen Connolly <
+> stephen.alan.connolly@gmail.com> wrote:
+>
+>> Putting maven-20 in context, you get:
+>>
+>>
+>> http://people.apache.org/~stephenc/maven-logo-contest/maven-20-in-context.png
+>>
+>>
+>> On 14 January 2014 10:37, Stephen Connolly <
+>> stephen.alan.connolly@gmail.com> wrote:
+>>
+>>> My wife had a suggestion... why not make the M in maven out of two tee
+>>> pees... linking in with the Apache theme...
+>>>
+>>> So I present
+>>>
+>>> maven-19:
+>>> https://cwiki.apache.org/confluence/download/attachments/38569278/maven-19.png?version=1&modificationDate=1389695638903&api=v2
+>>>
+>>> and finding a use for the feather
+>>>
+>>> maven-20:
+>>> https://cwiki.apache.org/confluence/download/attachments/38569278/maven-20.png?version=1&modificationDate=1389695654233&api=v2
+>>>
+>>>
+>>> On 14 January 2014 10:35, Stephen Connolly <
+>>> stephen.alan.connolly@gmail.com> wrote:
+>>>
+>>>> As a homage to Roy's wife, may I present
+>>>>
+>>>> maven-18:
+>>>> https://cwiki.apache.org/confluence/download/attachments/38569278/maven-18.png?version=1&modificationDate=1389695623134&api=v2
+>>>>
+>>>>
+>>>> On 13 January 2014 15:36, Lyons, Roy <Roy.Lyons@cmegroup.com> wrote:
+>>>>
+>>>>> I asked my wife on the drive to the train today what animal she thinks
+>>>>> fits Maven.  Her response made me chuckle.
+>>>>>
+>>>>> Without hesitation, she said "Honey Badger"
+>>>>>
+>>>>> When I asked why, she said that Honey Badgers are part of nature and
+>>>>> generally do their thing nicely -- but if you piss it off, things will
+>>>>> get
+>>>>> really really bad...  She said she had the same experience with Maven.
+>>>>>  It
+>>>>> works nicely, but if you try to do something really non-standard, you
+>>>>> will
+>>>>> feel its wrath :)
+>>>>>
+>>>>> Heh.
+>>>>>
+>>>>> Anyhow, I thought it was funny enough to share - not really a serious
+>>>>> consideration to make a Honey Badger our mascot.
+>>>>>
+>>>>> On 1/10/14 1:20 AM, "Kristian Rosenvold" <kristian.rosenvold@gmail.com
+>>>>> >
+>>>>> wrote:
+>>>>>
+>>>>> >I think the association-work around what maven /is/ is a great way to
+>>>>> >approach a logo contest elsewhere. I have worked with some great
+>>>>> graphic
+>>>>> >designers in my time, and the kind input the good ones want are
+>>>>> typically
+>>>>> >related around your thoughts/feelings around the product rather than
+>>>>> which
+>>>>> >particular animal you prefer, which is a bit of a secondary kind of
+>>>>> input
+>>>>> >along with all different kinds of other constraints/ideas (the boss
+>>>>> >prefers
+>>>>> >blue).
+>>>>> >
+>>>>> >When I first encountered maven I had come to the realization that all
+>>>>> my
+>>>>> >ant projects were basically the same, and that there was no reason for
+>>>>> >customizing
+>>>>> >what was basically a standard process. So maven gives me associations
+>>>>> to a
+>>>>> >mass-production line at a factory, rather than a tailor making
+>>>>> individual
+>>>>> >processes. Furthermore, the lifecycle amplifies the idea of a
+>>>>> >conveyor-belt
+>>>>> >mass-production line; all parts move through the same conveyor belt
+>>>>> >process, stopping at
+>>>>> >individual stages to get work done. I would almost be willing to
+>>>>> think of
+>>>>> >a
+>>>>> >waterfall (Uh-oh...)
+>>>>> >
+>>>>> >So it would appear to me that I'm not thinking of an animal at all !
+>>>>> >
+>>>>> >Kristian
+>>>>> >
+>>>>> >
+>>>>> >
+>>>>> >
+>>>>> >
+>>>>> >
+>>>>> >
+>>>>> >2014/1/9 Mark H. Wood <mwood@iupui.edu>
+>>>>> >
+>>>>> >> On Thu, Jan 09, 2014 at 09:32:54AM -0600, Curtis Rueden wrote:
+>>>>> >> > All of the logos are OK, but none of them really symbolize
+>>>>> anything in
+>>>>> >> > particular about Maven. IMO the best logos encapsulate the
+>>>>> purpose of
+>>>>> >>the
+>>>>> >> > project somehow, either overtly, covertly or both.
+>>>>> >>
+>>>>> >> Good point.  I was associating with the name "Maven", looking for a
+>>>>> >> symbol of in-depth understanding of a specialized field.
+>>>>> >>
+>>>>> >> http://en.wiktionary.org/wiki/maven
+>>>>> >>
+>>>>> >> So, what does Maven do?  It passes unique source and object code
+>>>>> >> inputs through a standardized process, guided by an expression of
+>>>>> the
+>>>>> >> relationships among those inputs, to assemble a well-specified
+>>>>> >> configuration of runnable code.  What does that look like?
+>>>>> >>
+>>>>> >> --
+>>>>> >> Mark H. Wood, Lead System Programmer   mwood@IUPUI.Edu
+>>>>> >> Machines should not be friendly.  Machines should be obedient.
+>>>>> >>
+>>>>>
+>>>>>
+>>>>> ---------------------------------------------------------------------
+>>>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>>>
+>>>>>
+>>>>
+>>>
+>>
+>
+
+--047d7b33c9dc2b4e0e04efeda9dd--
+

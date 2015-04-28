@@ -1,0 +1,80 @@
+From users-return-136786-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jul 16 20:01:17 2014
+Return-Path: <users-return-136786-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5AA8710B97
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 16 Jul 2014 20:01:17 +0000 (UTC)
+Received: (qmail 50500 invoked by uid 500); 16 Jul 2014 20:01:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 50413 invoked by uid 500); 16 Jul 2014 20:01:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 75224 invoked by uid 99); 16 Jul 2014 10:22:11 -0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of hyesu4255@hanmail.net does not designate 216.139.236.26 as permitted sender)
+Date: Wed, 16 Jul 2014 03:21:45 -0700 (PDT)
+From: Grace <hyesu4255@hanmail.net>
+To: users@maven.apache.org
+Message-ID: <1405506105800-5800235.post@n5.nabble.com>
+Subject: Problem about failing maven intall
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello.
+I was faced with some problem when I was executing maven install goal.
+I added one dependency in pom.xml and then executed mvn install command.
+Some error came up during build.
+
+
+Using connector WagonRepositoryConnector with priority 0.0 for
+http://repo.maven.apache.org/maven2 via [my proxy server port:port]
+Downloading:
+http://repo.maven.apache.org/maven2/org/webjars/jquery-ui/1.10.4/jquery-ui-1.10.4.pom
+
+
+As a reslut, jquery-ui-1.10.4.pom.lastUpdated remained at
+[.m2/repository/org/webjars/jquery-ui/1.10.4/] folder.
+Personally I thought the reason was proxy setting for the first time.
+But I checked there was no problem in proxy setting.
+both setting.xml of maven installed folder and setting.xml of
+{user.home}/.m2
+I executed wget command a url to download .pom file from maven cental
+repository.
+(wget
+http://repo.maven.apache.org/maven2/org/webjars/jquery-ui/1.10.4/jquery-ui-1.10.4.pom)
+and it worked well.
+Please refer below logs and answer how I solve this error.
+(I'm using apache-maven-3.2.1, jdk1.7.0_51)
+
+
+[ERROR] Failed to execute goal on project doc-api: Could not resolve
+dependencies for project com.coolots:doc-api:war:0.0.1: Failed to collect
+dependencies at org.webjars:jquery:jar:2.1.1: Failed to read artifact
+descriptor for org.webjars:jquery:jar:2.1.1: Could not transfer artifact
+org.webjars:jquery:pom:2.1.1 from/to central
+(http://repo.maven.apache.org/maven2): TransferFailedException:
+ClientProtocolException: The server failed to respond with a valid HTTP
+response -> [Help 1]
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Problem-about-failing-maven-intall-tp5800235.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

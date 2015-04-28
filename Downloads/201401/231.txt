@@ -1,0 +1,103 @@
+From users-return-135229-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 21 11:54:37 2014
+Return-Path: <users-return-135229-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DDE2710D42
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 21 Jan 2014 11:54:37 +0000 (UTC)
+Received: (qmail 159 invoked by uid 500); 21 Jan 2014 11:54:34 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99810 invoked by uid 500); 21 Jan 2014 11:54:33 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99802 invoked by uid 99); 21 Jan 2014 11:54:33 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 21 Jan 2014 11:54:33 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.220.46 as permitted sender)
+Received: from [209.85.220.46] (HELO mail-pa0-f46.google.com) (209.85.220.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 21 Jan 2014 11:54:27 +0000
+Received: by mail-pa0-f46.google.com with SMTP id rd3so8225960pab.5
+        for <users@maven.apache.org>; Tue, 21 Jan 2014 03:54:05 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=IPAFIUcXZ1998Z70XdGIehC1J1D/swA+0GUiaQiNx8Y=;
+        b=BF/ky0KHVIBTF51Ymu7qrRBnmfnheVgEcq1jnlZj/RhD5r+5HY8OixwRt8+X2tOwP2
+         E/tSQm27ALc5TsgaF2l0/YVDl7wDRT46ap9iUcg2elbkSZEpSMdrWj0lSe6xAWzdPUCC
+         we/cQ/HbQlvDta4V/JQWU0YMGNiMhRH6GQiKHAWHUbOGqldeRq/t6o0WgLZn+/1g7ikc
+         FGUfWWOgot/QDK+9hDzEvYjyTX/MVybSzgb/1v+5SUWCof8a4oOAkbJWqiTPi8kzcqai
+         1AmFxK7eobKR9bbrVOhdOV1Y3kpTwN6pVFSoJxv5RDLxd2CoDA9LJvks6J2gbFKOEM6a
+         KmNw==
+MIME-Version: 1.0
+X-Received: by 10.66.154.169 with SMTP id vp9mr23929891pab.39.1390305245663;
+ Tue, 21 Jan 2014 03:54:05 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Tue, 21 Jan 2014 03:54:05 -0800 (PST)
+In-Reply-To: <5629A6219DB3E544AB84388D901497873EB5D220@xmb-aln-x03.cisco.com>
+References: <OF32F0CB51.FB5A4FA2-ON85257C66.005B8339-85257C66.005D4B8C@belden.com>
+	<CA+nPnMz4afCMHpDL_dW2w7KW_F2ozV0=FG+UK2Op0QrzaLJ-7Q@mail.gmail.com>
+	<OF3C618DF9.E418F54A-ON85257C66.0064E4F4-85257C66.006600FF@belden.com>
+	<CA+nPnMzUpoNuR89F1B49tF_3THdMKHuZttyVRYE9jtJpPXNsUA@mail.gmail.com>
+	<OFBB509497.B89B2788-ON85257C66.00679F9D-85257C66.0068978D@belden.com>
+	<CA+nPnMyvOWHVyZWTZY_PZsEHSVSc1fGRVEz3b15d6GU7eitXww@mail.gmail.com>
+	<5629A6219DB3E544AB84388D901497873EB5D13B@xmb-aln-x03.cisco.com>
+	<CA+nPnMyyZWnJ7ZvAQx7YqHDQ1vNABBEV7K=2EiB8CYg0k4zGzA@mail.gmail.com>
+	<5629A6219DB3E544AB84388D901497873EB5D220@xmb-aln-x03.cisco.com>
+Date: Tue, 21 Jan 2014 11:54:05 +0000
+Message-ID: <CA+nPnMypXGjOGMatdAGs4dF50gFfos6pwBOcCXyM6KtHkMPj8g@mail.gmail.com>
+Subject: Re: versions maven plugin
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b6dd0084c178e04f079aab3
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b6dd0084c178e04f079aab3
+Content-Type: text/plain; charset=ISO-8859-1
+
+It sounded like a single reactor release of everything to me... in which
+case staging is fine
+
+
+On 21 January 2014 11:07, James Nord (jnord) <jnord@cisco.com> wrote:
+
+>
+> > > Or to put a contrived (yet realistic) example on this - Consider a
+> > > shared library Y.  You have no auto testing of it so its only tested
+> > > inside products (otherwise you know its good to go - and wouldn't
+> > > release RCs).
+> > > Library Y is in a stage at version 1.2.3 This library is picked up
+> > > from the stage and placed into a product Z (inside say an RPM)
+> > >
+> >
+> > If you are doing this then you are using staging wrong IMHO. A stage
+> should
+> > *only* be used for either testing the staged release *or* for where
+> there is
+> > a synchronized deliverable that must be built from a different machine,
+> e.g.
+> > the windows .DLL and the linux .so's
+>
+> But it did not sound like that was the original authors request as he was
+> using RCs of dependencies (libraries).
+> So I felt like the solution of staging here would leave to a somewhat
+> similar example to that above.
+>
+> /James
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7b6dd0084c178e04f079aab3--
+

@@ -1,0 +1,145 @@
+From users-return-135829-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Mar 14 21:12:09 2014
+Return-Path: <users-return-135829-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F1187106B8
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 14 Mar 2014 21:12:09 +0000 (UTC)
+Received: (qmail 82619 invoked by uid 500); 14 Mar 2014 21:12:02 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 81955 invoked by uid 500); 14 Mar 2014 21:11:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 80348 invoked by uid 99); 14 Mar 2014 21:11:56 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Mar 2014 21:11:56 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mfriedenhagen@gmail.com designates 209.85.214.176 as permitted sender)
+Received: from [209.85.214.176] (HELO mail-ob0-f176.google.com) (209.85.214.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Mar 2014 21:11:52 +0000
+Received: by mail-ob0-f176.google.com with SMTP id wp18so3105969obc.7
+        for <users@maven.apache.org>; Fri, 14 Mar 2014 14:11:31 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=INoHg7kGgrCGOB3963KQ/0Gdy9dISoCAK3lUhY0VBZY=;
+        b=GEuPRvNainlGs3G5yfNpYpJR37OYVEuGCbKsSFiEazrRyGE8GfW5lcN7BfwG8ZdmGg
+         OJxo0a7a2vzIjtuMALHCGnTLuKQlnYqxQ0xogyTNYyoxqpMw5EOKqZh83RV3QnVmnkVU
+         W29uI/qajoGIWqQNVxe4HPmAVPv15LpxfoR3KRmwwVi9aYc3ucBAMkTdphlZSQAB83PK
+         ZFCRvWyPg4ayIjrf3CKhIgQL6o6wp41I8oKCtTiKFm3tvMmLpWRqRLn6f8aqFN7pm8b3
+         Bwcp4jkcI3K+lIMdBvO0/Eqd1Jp90BEvFVceySqBZPbQQAaVkMaAQKvrz5/0c4gYBs4d
+         UV1g==
+X-Received: by 10.182.33.35 with SMTP id o3mr8820108obi.15.1394831491808; Fri,
+ 14 Mar 2014 14:11:31 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.182.193.9 with HTTP; Fri, 14 Mar 2014 14:10:51 -0700 (PDT)
+In-Reply-To: <CALhtWkeO_vxCG8fRhOih8KhwYUDXkH6qSUygU93MMTrB8dsj5g@mail.gmail.com>
+References: <CAAN+VP5wT8zAd68yR520tMhAFb4kqy0F4FGVjbXqAzyShqfpBg@mail.gmail.com>
+ <CALhtWkeO_vxCG8fRhOih8KhwYUDXkH6qSUygU93MMTrB8dsj5g@mail.gmail.com>
+From: Mirko Friedenhagen <mfriedenhagen@gmail.com>
+Date: Fri, 14 Mar 2014 22:10:51 +0100
+Message-ID: <CAK8jvqxgb_F9q_477FzNFoDKxuLC2K=Vhz4cgj7R4c1bRy9QbQ@mail.gmail.com>
+Subject: Re: Need Help
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello,
+
+I had the same questions :-).
+
+Vishai, you could invoke "mvn compile", switch to the target/classes
+directory and execute "time jar cvf ../foo.jar ." to see how long the
+original jar command takes and compare this to the time needed by the
+maven-jar-plugin.
+
+Regards Mirko
+--
+http://illegalstateexception.blogspot.com/
+https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+https://bitbucket.org/mfriedenhagen/
+
+
+On Fri, Mar 14, 2014 at 12:23 AM, Benson Margulies
+<bimargulies@gmail.com> wrote:
+> How long is too long? How big is the jar?
+>
+> On Thu, Mar 13, 2014 at 2:31 PM, Vishal Kumar Gupta <groupsvkg@gmail.com> wrote:
+>> Hi Team,
+>>
+>> OS- Ubuntu 12.04 TLS
+>> Maven version - 3.2.1
+>>
+>> maven-jar-plugin:2.4:jar is taking too long to generate jar.
+>>
+>> pom.xml for plugin
+>>
+>> <plugin>
+>>   <groupId>org.apache.maven.plugins</groupId>
+>>   <artifactId>maven-jar-plugin</artifactId>
+>>   <version>2.4</version>
+>>   <configuration>
+>>    <forceCreation>true</forceCreation>
+>>    <archive>
+>>             <manifest>
+>>               <addClasspath>true</addClasspath>
+>>               </manifest>
+>>             </archive>
+>>   </configuration>
+>> </plugin>
+>>
+>>
+>> DEBUG log:-
+>>
+>> [DEBUG] Configuring mojo org.apache.maven.plugins:maven-jar-plugin:2.4:jar
+>> from plugin realm
+>> ClassRealm[plugin>org.apache.maven.plugins:maven-jar-plugin:2.4, parent:
+>> sun.misc.Launcher$AppClassLoader@262505b7]
+>> [DEBUG] Configuring mojo
+>> 'org.apache.maven.plugins:maven-jar-plugin:2.4:jar' with basic configurator
+>> -->
+>> [DEBUG]   (s) addClasspath = true
+>> [DEBUG]   (s) manifest =
+>> org.apache.maven.archiver.ManifestConfiguration@7be2e01
+>> [DEBUG]   (f) archive =
+>> org.apache.maven.archiver.MavenArchiveConfiguration@56be479f
+>> [DEBUG]   (f) classesDirectory = /Test/target/classes
+>> [DEBUG]   (f) defaultManifestFile =
+>> /Test/target/classes/META-INF/MANIFEST.MF
+>> [DEBUG]   (f) finalName = Test-0.0.1-SNAPSHOT
+>> [DEBUG]   (f) forceCreation = true
+>> [DEBUG]   (f) outputDirectory = /Test/target
+>> [DEBUG]   (f) project = MavenProject:
+>> com.ericsson.esip:cw-ws-server:0.0.1-SNAPSHOT @ /Test/pom.xml
+>> [DEBUG]   (f) session = org.apache.maven.execution.MavenSession@ed1bb57
+>> [DEBUG]   (f) skipIfEmpty = false
+>> [DEBUG]   (f) useDefaultManifestFile = false
+>> [DEBUG] -- end configuration --
+>>
+>>
+>>
+>> Need help
+>> Thanks in advance.
+>>
+>> Regards,
+>> vishal
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,61 @@
+From users-return-137049-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Aug 17 23:58:29 2014
+Return-Path: <users-return-137049-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1005C11A67
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 17 Aug 2014 23:58:29 +0000 (UTC)
+Received: (qmail 48650 invoked by uid 500); 17 Aug 2014 23:58:27 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 48563 invoked by uid 500); 17 Aug 2014 23:58:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 3253 invoked by uid 99); 16 Aug 2014 14:39:36 -0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to
+         :content-type;
+        bh=ITXKUeC2rwksjFgomjXs+itEfRGbfuLrSm6ZhDLK4i0=;
+        b=N8tICHp+mVvt+31e2a6xD91fCpyKlwV/vsu2bE6ilpeaFWx9iLMdFSuR604v6zGmGp
+         fmM8S2gWoOSxeKITGA2s8G891y4OYHIh3iyw3ssha88RTMbZ1lA0zk05wpYw61FIY0QE
+         GUhy1AU7q3NWjpJwEvaBt8GeqT7CF02z4mkTOYsoIGHJbjIRWihTTO1Nj3tK/b6g6bN1
+         vrRzvalHeQ3aYC0LhAv4slH6gE6lPIJExxhZr5m7NNU+jDZa2A4dviPF34YaSNhtTJup
+         NluzzNdz3neKqSRPnHfLAmUQDMTUMqRNXjEEkKrv4t6UWycUaxOTo9aha8kbD7MJoGY0
+         CcQg==
+X-Gm-Message-State: ALoCoQnwX7y95H6EFw5xsXZ6oK4ZxbHFY/2S3Hp0CFfHZuduc0c/9Xqe4u3GevmXp2iaDMCF7BG8
+X-Received: by 10.60.134.76 with SMTP id pi12mr26720710oeb.0.1408199949956;
+ Sat, 16 Aug 2014 07:39:09 -0700 (PDT)
+MIME-Version: 1.0
+From: Ron Pressler <ron@paralleluniverse.co>
+Date: Sat, 16 Aug 2014 17:38:49 +0300
+Message-ID: <CAAsnhpDOE5Rd0EOgizLasqd+cnzVv-z+Q87TQCuT45nmM02Tug@mail.gmail.com>
+Subject: SSLException with new Maven https
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=047d7b472012ca512f0500c019f7
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b472012ca512f0500c019f7
+Content-Type: text/plain; charset=UTF-8
+
+Hi.
+When accessing maven central using Aether, I get the following exception
+when I use the https://repo1.maven.apache.org/maven2/ URL:
+
+ javax.net.ssl.SSLException: hostname in certificate didn't match: <
+repo1.maven.apache.org> != <repo.maven.apache.org> OR <repo.maven.apache.org
+>
+
+When using https://repo.maven.apache.org/maven2/ it all works fine.
+
+--047d7b472012ca512f0500c019f7--
+

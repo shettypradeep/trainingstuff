@@ -1,0 +1,144 @@
+From users-return-136371-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri May 16 17:35:51 2014
+Return-Path: <users-return-136371-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C140C110DC
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 16 May 2014 17:35:51 +0000 (UTC)
+Received: (qmail 93155 invoked by uid 500); 16 May 2014 11:39:43 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 55924 invoked by uid 500); 16 May 2014 11:31:10 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 87792 invoked by uid 99); 16 May 2014 11:21:17 -0000
+Received: from Unknown (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 16 May 2014 11:21:17 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.192.51] (HELO mail-qg0-f51.google.com) (209.85.192.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 15 May 2014 17:43:43 +0000
+Received: by mail-qg0-f51.google.com with SMTP id q107so2346449qgd.10
+        for <users@maven.apache.org>; Thu, 15 May 2014 10:43:20 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:cc:subject:message-id:in-reply-to
+         :references:mime-version:content-type:content-transfer-encoding;
+        bh=+ZhsrH/zx+dnwZjAYjRRu8yZnu5HJiRHlEeDvGo0rIo=;
+        b=WriM7yaTEcQPBZA82264raLvl202YpC8SNTaDTS6wklDN9LwLNCaJQ+XLH5RA7q+bD
+         wv270UtdqOzv3xarzOqETT0KFdhavyanhJJAI69V8zs/hExt6CrO+nVuvpa12+qLk+rF
+         4uUVKeFkIAswtuWg6wuUdEuU3NCzmavr32NFOcP2SzV6XzPhWY5rc29DHH4/5r2gb8Hb
+         S6gCc2zMhROBROBat/giCfm1K8u2XDy08nK2bV6fI8sEFhNXGaABmvOad1MDYx1JzVd5
+         2BOfnKSEMpzsPtIya4YSadyeO8T4w2qjTeGBSUHnubm9Y6IJiTT7CLjFX35VrvpdewsV
+         tLTw==
+X-Gm-Message-State: ALoCoQmykJ/NuZFeOf079ZU0RJn+ujOKdJyou3uW7JyYHSWRWJLN5JcdbswNcezy2teKHsyGvTAB
+X-Received: by 10.140.48.1 with SMTP id n1mr16859431qga.107.1400175800101;
+        Thu, 15 May 2014 10:43:20 -0700 (PDT)
+Received: from localhost (HSI-KBW-37-209-111-144.hsi15.kabel-badenwuerttemberg.de. [37.209.111.144])
+        by mx.google.com with ESMTPSA id r15sm3550269qgr.15.2014.05.15.10.43.19
+        for <multiple recipients>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 15 May 2014 10:43:20 -0700 (PDT)
+Date: Thu, 15 May 2014 19:43:11 +0200
+From: Bernd Eckenfels <ecki@zusammenkunft.net>
+To: DenisDasKind <bltomov@abv.bg>
+Cc: users@maven.apache.org
+Subject: Re: Version in Mojo
+Message-ID: <20140515194311.00004e0e.ecki@zusammenkunft.net>
+In-Reply-To: <1400078487964-5793054.post@n5.nabble.com>
+References: <1400078487964-5793054.post@n5.nabble.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello,
+
+this is not really Mojo specific.
+
+If you build a JAR with maven you can
+include the build number or version with filtered resources, filtering
+the source code, as a expanded Variable in the Manifest header or by
+copy of META-INF/maven/pom.properties. To any of those information you
+can then reference to print it out.
+
+This is an example I use (you need to use a class of your project and
+add maven group and artifactID):
+
+    /** Read program version from Manifest or maven properties. */
+    private static String getVersion()
+    {
+        Class me = MyClass.class;
+        Package jarPackage = me.getPackage();
+        if (jarPackage != null)
+        {
+            String version = jarPackage.getImplementationVersion();
+            if (version != null)
+            {
+                return version;
+            }
+        }
+        InputStream in =
+        me.getClassLoader().getResourceAsStream("META-INF/maven/groupID/artifactID/pom.properties");
+        if (in == null) { return "UNKNOWN";}
+        try
+        {
+            Properties p = new Properties();
+            p.load(in);
+            return p.getProperty("version", "UNKNOWN");
+        }
+        catch (Exception ignored)
+        {
+            return "UNKNOWN";
+        }
+        finally
+        {
+            try { in.close(); } catch (Exception ignored) { /* ignored
+    */ } }
+    }
+
+Greetings
+Bernd
+
+
+ Am Wed, 14 May 2014 07:41:27 -0700
+(PDT) schrieb DenisDasKind <bltomov@abv.bg>:
+
+> Hi,
+> 
+> i'm new to maven, and now i have the following problem. I have a
+> custom Mojo, and the Mojo should print the own version stored in the
+> pom.xml of this mojo. And now i have trouble to get this version. I
+> have tried the project.version, but this is always the version of the
+> pom, that calls my Mojo. A easy way, will be when the version is
+> hardcoded, but this is not the best way, becausae each time when the
+> version is changed (release) i must change it manually.
+> Is there a better way to get this version?
+> 
+> Thank you in advance!
+> 
+> 
+> 
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/Version-in-Mojo-tp5793054.html Sent
+> from the Maven - Users mailing list archive at Nabble.com.
+> 
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+> 
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,157 @@
+From users-return-135221-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan 20 21:01:47 2014
+Return-Path: <users-return-135221-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8FDF110125
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 20 Jan 2014 21:01:47 +0000 (UTC)
+Received: (qmail 23532 invoked by uid 500); 20 Jan 2014 21:01:43 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 23459 invoked by uid 500); 20 Jan 2014 21:01:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 23451 invoked by uid 99); 20 Jan 2014 21:01:43 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Jan 2014 21:01:43 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of jirong.hu@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Jan 2014 21:01:39 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <jirong.hu@gmail.com>)
+	id 1W5LyA-0004ZK-ID
+	for users@maven.apache.org; Mon, 20 Jan 2014 13:01:18 -0800
+Date: Mon, 20 Jan 2014 13:01:18 -0800 (PST)
+From: hujirong <jirong.hu@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1390251678487-5781962.post@n5.nabble.com>
+Subject: Deploy to Nexus OSS failed with error: ReasonPhrase:Forbidden
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+This is a brand new setup with both Maven and Nexus OSS in my local PC,
+everything new and there is nothing in Nexus yet. All settings are default
+and I haven't changed anything in Nexus. The user "deployment" should have
+full access to all repositories.
+
+I was running "mvn deploy" and expect the result show in Nexus OSS. Is it
+trying to downloading as the message show or uploading?
+
+
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ my-app ---
+[INFO] Building jar: C:\my-app\target\my-app-1.0-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ my-app ---
+[INFO] Installing C:\my-app\target\my-app-1.0-SNAPSHOT.jar to C:\Documents
+and
+Settings\jhu06\.m2\repository\com\mycompany\app\my-app\1.0-SNAPSHOT\my-app-1.0-SNAPSHOT.jar
+[INFO] Installing C:\my-app\pom.xml to C:\Documents and
+Settings\jhu06\.m2\repository\com\mycompany\app\my-app\1.0-SNAPSHOT\my-app-1.0-SNAPSHOT.pom
+[INFO]
+[INFO] --- maven-deploy-plugin:2.7:deploy (default-deploy) @ my-app ---
+*Downloading:
+http://localhost:8081/nexus/content/repositories/snapshots/com/mycompany/app/my-app/1.0-SNAPSHOT/maven-metadata.xml
+*[WARNING] Could not transfer metadata
+com.mycompany.app:my-app:1.0-SNAPSHOT/maven-metadata.xml from/to snapshots
+(http:/
+/localhost:8081/nexus/content/repositories/snapshots): Access denied to:
+http://localhost:8081/nexus/content/repositorie
+s/snapshots/com/mycompany/app/my-app/1.0-SNAPSHOT/maven-metadata.xml ,
+ReasonPhrase:Forbidden.
+[INFO]
+------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO]
+------------------------------------------------------------------------
+[INFO] Total time: 2.312s
+[INFO] Finished at: Mon Jan 20 15:54:15 EST 2014
+[INFO] Final Memory: 11M/29M
+[INFO]
+------------------------------------------------------------------------
+[ERROR] Failed to execute goal
+org.apache.maven.plugins:maven-deploy-plugin:2.7:deploy (default-deploy) on
+project my-ap
+p: Failed to retrieve remote metadata
+com.mycompany.app:my-app:1.0-SNAPSHOT/maven-metadata.xml: Could not transfer
+metad
+ata com.mycompany.app:my-app:1.0-SNAPSHOT/maven-metadata.xml from/to
+snapshots (http://localhost:8081/nexus/content/repo
+sitories/snapshots): Access denied to:
+http://localhost:8081/nexus/content/repositories/snapshots/com/mycompany/app/my-a
+pp/1.0-SNAPSHOT/maven-metadata.xml , ReasonPhrase:Forbidden. -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e
+switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please
+read the following articles:
+[ERROR] [Help 1]
+http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+C:\my-app>
+
+
+*I have this in the default settings.xml:*
+
+    </server>
+    -->
+	
+        <server>
+            <id>snapshots</id>
+            <username>deployment</username>
+            <password>deployment123</password>
+        </server>
+        <server>
+            <id>releases</id>
+            <username>deployment</username>
+            <password>deployment123</password>
+        </server>
+        <server>
+            <id>thirdparty</id>
+            <username>deployment</username>
+            <password>deployment123</password>
+        </server>
+    </servers>
+</settings>
+
+*and this in the project pom.xml:*
+
+  <distributionManagement>
+    <repository>
+        <id>releases</id>
+		<name>Internal Releases</name>
+        <url>http://localhost:8081/nexus/content/repositories/releases</url>
+    </repository>
+ 
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>Internal Snapshots</name>
+       
+<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+</distributionManagement>
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Deploy-to-Nexus-OSS-failed-with-error-ReasonPhrase-Forbidden-tp5781962.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

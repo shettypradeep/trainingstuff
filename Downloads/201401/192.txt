@@ -1,0 +1,173 @@
+From users-return-134940-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Jan  5 00:11:29 2014
+Return-Path: <users-return-134940-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4898E10473
+	for <apmail-maven-users-archive@www.apache.org>; Sun,  5 Jan 2014 00:11:29 +0000 (UTC)
+Received: (qmail 58469 invoked by uid 500); 5 Jan 2014 00:11:27 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 58423 invoked by uid 500); 5 Jan 2014 00:11:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 58415 invoked by uid 99); 5 Jan 2014 00:11:27 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 05 Jan 2014 00:11:27 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ljnelson@gmail.com designates 209.85.128.54 as permitted sender)
+Received: from [209.85.128.54] (HELO mail-qe0-f54.google.com) (209.85.128.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 05 Jan 2014 00:11:23 +0000
+Received: by mail-qe0-f54.google.com with SMTP id cy11so17187319qeb.13
+        for <users@maven.apache.org>; Sat, 04 Jan 2014 16:11:02 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=w8ql2dpa6CCkInHOUQ8XUZet0VEljYWcyDB6VNJpADI=;
+        b=stx+ZKlIigZDjyrYi3bajGzEM2gDojpwcEmqDmMVrPYFtkotiOJpbYsq4vJ1FGX646
+         S7+Y1WsqUszKp86HxJ9P5ux4lz6wscI4rKtAsFsrOvKUTORvaXdFCVC6y3t4ch6JwIQO
+         9lA6xHAaBzhdbQdNvt71Z8wNi78DGS1oK7PgD4s5rYAeZC34yua2IZcYpP7RBmDHAOL2
+         wxzKI7pS5xE1li3HrftExtGMxMPBtVZJrEmb1aPypBa0oerae/CjORR4DXYO2Shia1eB
+         J15qAd5ZLRoU7c2RVttJ0QchDW1EBGN4JDiVta/lp87PcfELLwis/BHAZ8KbwmEWGZOp
+         txiw==
+MIME-Version: 1.0
+X-Received: by 10.49.17.232 with SMTP id r8mr168788165qed.74.1388880662297;
+ Sat, 04 Jan 2014 16:11:02 -0800 (PST)
+Received: by 10.96.169.200 with HTTP; Sat, 4 Jan 2014 16:11:02 -0800 (PST)
+In-Reply-To: <BLU172-W13ADAF341051B8EC9DB896AEB50@phx.gbl>
+References: <CAHNdxunwRmqstW5tL6D-G4ga0ASdGAnMWpGOyoE=db8-1_vpqQ@mail.gmail.com>
+	<BLU172-W13ADAF341051B8EC9DB896AEB50@phx.gbl>
+Date: Sat, 4 Jan 2014 16:11:02 -0800
+Message-ID: <CAHNdxu=wYnrOwyAoWgEwdeUpfQvXoTqu7dZsNeBV8ONSC7u0Pw@mail.gmail.com>
+Subject: Re: Topologically sorted list of Artifacts for use by a plugin?
+From: Laird Nelson <ljnelson@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bea3be483005904ef2dfa32
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bea3be483005904ef2dfa32
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Fri, Jan 3, 2014 at 6:17 PM, Martin Gainty <mgainty@hotmail.com> wrote:
+
+> MG>so I would say you are definitely on the right track
+>
+
+Thanks; I'm not sure I am.
+
+
+> MG>any reason for topological sorting of dependencies?
+>
+
+In my original post, I wrote:
+
+(As background: I am working with Liquibase (http://www.liquibase.org/).
+>  Each of my .jar projects has a META-INF/liquibase/changelog.xml file in
+> it.  Various of these .jar projects already depend on each other--for uni=
+t
+> and integration testing, I'd like to use this dependency order, harvest t=
+he
+> changelog.xml resources in each .jar file, and then combine them to creat=
+e
+> only the database tables actually needed for the test.  If a.jar has A's
+> tables, and b.jar has B's tables and b.jar depends on a.jar, then I'd lik=
+e
+> to run a.jar!/META-INF/liquibase/changelog.xml first, then
+> b.jar!/META-INF/liquibase/changelog.xml next, and I'd like to not have to
+> specify this in any place in my pom.xmls, since the dependency order is
+> already captured there.)
+
+
+So the fact that I'm using
+ProjectSorter<http://maven.apache.org/ref/3.0.5/maven-core/apidocs/org/apac=
+he/maven/project/ProjectSorter.html>strikes
+me as wrong=E2=80=94worse than wrong: an awful hack, in fact=E2=80=94becaus=
+e I am
+basically using the reactor to sort MavenProjects that I've roped in from
+elsewhere.  Yucko.
+
+Various people have noted tersely that the maven-dependency-plugin is what
+I want.  Of course, its *goals* are completely useless for this task=E2=80=
+=94but
+buried in an obscure StackOverflow comment tangentially related to the
+maven-dependency-plugin I found a reference to this class:
+http://maven.apache.org/shared/maven-dependency-tree/apidocs/index.html?org=
+/apache/maven/shared/dependency/graph/DependencyGraphBuilder.html
+If I understand it right, then code like the following should do the
+trick
+(untested, but you get the general idea):
+
+public class Artifacts {
+
+  private final DependencyGraphBuilder dependencyGraphBuilder;
+
+  public Artifacts(final DependencyGraphBuilder dependencyGraphBuilder) {
+    super();
+    this.dependencyGraphBuilder =3D dependencyGraphBuilder;
+  }
+
+  public Collection<? extends Artifact>
+getDependencyArtifactsInTopologicalOrder(final MavenProject project) throws
+DependencyGraphBuilderException {
+    List<Artifact> returnValue =3D null;
+    final DependencyNode projectNode =3D
+this.dependencyGraphBuilder.buildDependencyGraph(project, null /* no
+ArtifactFilter; prob. need one */);
+    assert projectNode !=3D null;
+    final CollectingDependencyNodeVisitor visitor =3D new
+CollectingDependencyNodeVisitor();
+    projectNode.accept(visitor);
+    final Collection<? extends DependencyNode> nodes =3D visitor.getNodes()=
+;
+    if (nodes !=3D null && !nodes.isEmpty()) {
+      returnValue =3D new ArrayList<Artifact>();
+      for (final DependencyNode node : nodes) {
+        if (node !=3D null) {
+          final Artifact artifact =3D node.getArtifact();
+          if (artifact !=3D null) {
+            returnValue.add(artifact);
+          }
+        }
+      }
+      if (!returnValue.isEmpty()) {
+        Collections.reverse(returnValue);
+      }
+    }
+    return returnValue;
+  }
+
+}
+
+
+I think that might be the right way to do it.  It's unclear to me how
+Maven's internals themselves make use of this class, but it is probably
+used somewhere, and it clearly hides and mediates between the Sonatype
+Aether and Eclipse Aether kerfuffle that occurred between 3.0.5 and 3.1.x,
+so this also seems like something that isn't going to be deprecated any
+time soon.
+
+IWBNI there were a quick primer in the documentation somewhere about how
+Maven loads its own guts.  I know that fundamentally Maven is just a bundle
+of components that get instantiated and wired together by Plexus but it
+sure is confusing to try to figure out how and where something is called=E2=
+=80=94as
+a result when there are problems you have to go digging through, well,
+obscure StackOverflow questions.  :-)
+
+Best,
+Laird
+
+--=20
+http://about.me/lairdnelson
+
+--047d7bea3be483005904ef2dfa32--
+

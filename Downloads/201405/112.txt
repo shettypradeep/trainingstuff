@@ -1,0 +1,116 @@
+From users-return-136446-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun May 25 22:05:34 2014
+Return-Path: <users-return-136446-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B583EC3BC
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 25 May 2014 22:05:34 +0000 (UTC)
+Received: (qmail 18037 invoked by uid 500); 25 May 2014 22:05:33 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 17943 invoked by uid 500); 25 May 2014 22:05:33 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 17933 invoked by uid 99); 25 May 2014 22:05:33 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 25 May 2014 22:05:33 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.212.169] (HELO mail-wi0-f169.google.com) (209.85.212.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 25 May 2014 22:05:28 +0000
+Received: by mail-wi0-f169.google.com with SMTP id hi2so3484909wib.4
+        for <users@maven.apache.org>; Sun, 25 May 2014 15:05:07 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=otKgsYJn6NlJERtG262rsXXfxnjs4NkWYHfy8ZoMWI8=;
+        b=hJsZyJckIf91B4uTO5VmeAS2TCiYbFlZZpZaFUnXdklOf0XlBT7IyeOiedI1WuDxJO
+         AF6RniZI6UEMXT6dC5pv3o4FbrHKcUfWQ++gwUbpknFxPTyDXErfEicgM7vgZii/zEO4
+         xMBICjEDh9zUfVMEy3SKqV8NAlSLWY72FBmb/9k//8B4kok14UHl+S1jYAia2aJKcvtN
+         A4qqQZVAHwVZ+is9DFJsJn5QpfKN3bmlVsPCbFKaohXarpw5Rfk4yotILUcffXZY8a20
+         abKke53yov69+Hl3gI46qMW/t/4o4JRlmhOSwJyg1QBBlbj8d+etnQpD9X8JL9YngZRw
+         uj7Q==
+X-Gm-Message-State: ALoCoQlybQkjfTENo7bJrV1VSZ51UBCOsW66RxN8TNkHMbaFDEaAtXUiAPJgNL7WcmoqjMFUe2aE
+MIME-Version: 1.0
+X-Received: by 10.180.210.238 with SMTP id mx14mr21656223wic.61.1401055507535;
+ Sun, 25 May 2014 15:05:07 -0700 (PDT)
+Received: by 10.216.235.4 with HTTP; Sun, 25 May 2014 15:05:07 -0700 (PDT)
+X-Originating-IP: [192.48.8.20]
+In-Reply-To: <BLU172-W20404713403A8FEC8DCA0AAE380@phx.gbl>
+References: <CAEBcyzoPWoOY4nfOO2sBkK7LOUfAYgy6L0ejbuvQgvwQERebnQ@mail.gmail.com>
+	<668F5C69-080F-4D8D-ADEC-D140F577A8EE@apache.org>
+	<BLU172-W20404713403A8FEC8DCA0AAE380@phx.gbl>
+Date: Mon, 26 May 2014 08:05:07 +1000
+Message-ID: <CAEBcyzrJ6G01fyY=BES7xkk-ii0hBv6VxvDewyJ8pVq_AeAmmQ@mail.gmail.com>
+Subject: Re: Replacement for ArtifactResolver in Maven-3?
+From: William Ferguson <william.ferguson@xandar.com.au>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c26a42d679de04fa40a7d5
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c26a42d679de04fa40a7d5
+Content-Type: text/plain; charset=UTF-8
+
+Thanks. Much appreciated.
+
+
+On Mon, May 26, 2014 at 5:08 AM, Martin Gainty <mgainty@hotmail.com> wrote:
+
+>
+>
+>
+> > Subject: Re: Replacement for ArtifactResolver in Maven-3?
+> > From: dkulp@apache.org
+> > Date: Sun, 25 May 2014 08:18:31 -0400
+> > To: users@maven.apache.org
+> >
+> >
+> > On May 25, 2014, at 4:20 AM, William Ferguson <
+> william.ferguson@xandar.com.au> wrote:
+> >
+> > > ArtifactResolver has been deprecated but it doesn't provide guidance
+> on an
+> > > appropriate replacement.
+> > > http://maven.apache.org/ref/3.2.1/maven-compat/apidocs/index.html
+> > >
+> > > In the spirit of trying to move in the right direction what should I
+> use
+> > > instead?
+> >
+> >
+> > I looked into this twice last week and ended up using
+>  org.apache.maven.repository.RepositorySystem
+> >
+> > See:
+> >
+> https://svn.apache.org/repos/asf/aries/trunk/versioning/versioning-plugin/src/main/java/org/apache/aries/versioning/mojo/VersionCheckerMojo.java
+> >
+> MG>make sure you update your components.xml <role> and <implementation>
+> definitions:MG>
+> http://svn.apache.org/repos/asf/maven/sandbox/branches/maven-2.0.9/maven-artifact-manager/src/main/resources/META-INF/plexus/components.xmlMG>otherwise your injector will inject the wrong implementor for MG>legacy
+> ArtifactResolver interface
+> >
+> >
+> > --
+> > Daniel Kulp
+> > dkulp@apache.org - http://dankulp.com/blog
+> > Talend Community Coder - http://coders.talend.com
+> >
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+>
+>
+
+--001a11c26a42d679de04fa40a7d5--
+

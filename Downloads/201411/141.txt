@@ -1,0 +1,54 @@
+From users-return-137719-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Nov  6 22:23:11 2014
+Return-Path: <users-return-137719-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A66A017444
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  6 Nov 2014 22:23:11 +0000 (UTC)
+Received: (qmail 20788 invoked by uid 500); 6 Nov 2014 22:23:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 20702 invoked by uid 500); 6 Nov 2014 22:23:09 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 20691 invoked by uid 99); 6 Nov 2014 22:23:09 -0000
+Received: from mail-relay.apache.org (HELO mail-relay.apache.org) (140.211.11.15)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Nov 2014 22:23:09 +0000
+Received: from mail-wg0-f49.google.com (mail-wg0-f49.google.com [74.125.82.49])
+	by mail-relay.apache.org (ASF Mail Server at mail-relay.apache.org) with ESMTPSA id 6F2421A02B8
+	for <users@maven.apache.org>; Thu,  6 Nov 2014 22:22:21 +0000 (UTC)
+Received: by mail-wg0-f49.google.com with SMTP id x13so2321205wgg.8
+        for <users@maven.apache.org>; Thu, 06 Nov 2014 14:23:07 -0800 (PST)
+MIME-Version: 1.0
+X-Received: by 10.180.36.205 with SMTP id s13mr44022161wij.11.1415312587648;
+ Thu, 06 Nov 2014 14:23:07 -0800 (PST)
+Received: by 10.27.171.21 with HTTP; Thu, 6 Nov 2014 14:23:07 -0800 (PST)
+Date: Thu, 6 Nov 2014 23:23:07 +0100
+Message-ID: <CALHFn6MV89gU5xQUh8bW5sdYMqTzyJBkTKgP9jRupAQYgYxOmw@mail.gmail.com>
+Subject: Official Docker image with Maven
+From: Carlos Sanchez <carlos@apache.org>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=e89a8f642b580878b10507382469
+
+--e89a8f642b580878b10507382469
+Content-Type: text/plain; charset=UTF-8
+
+I have created a Docker official Maven image running on jdk 6, 7, and 8.
+Allows trying Maven in sandboxed environments and run auto builds.
+
+There are probably a number of other interesting use cases too, so feel
+free to let me know about any improvements.
+
+https://registry.hub.docker.com/_/maven/
+
+https://github.com/carlossg/docker-maven
+
+Cheers
+
+--e89a8f642b580878b10507382469--
+

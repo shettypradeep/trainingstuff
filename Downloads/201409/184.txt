@@ -1,0 +1,130 @@
+From users-return-137323-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 19 10:13:09 2014
+Return-Path: <users-return-137323-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 25363113F2
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 19 Sep 2014 10:13:09 +0000 (UTC)
+Received: (qmail 77668 invoked by uid 500); 19 Sep 2014 10:13:06 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 77580 invoked by uid 500); 19 Sep 2014 10:13:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 77563 invoked by uid 99); 19 Sep 2014 10:13:06 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 19 Sep 2014 10:13:06 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mcculls@gmail.com designates 74.125.82.169 as permitted sender)
+Received: from [74.125.82.169] (HELO mail-we0-f169.google.com) (74.125.82.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 19 Sep 2014 10:13:01 +0000
+Received: by mail-we0-f169.google.com with SMTP id w61so2242059wes.14
+        for <users@maven.apache.org>; Fri, 19 Sep 2014 03:12:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=hWim2gngyXIx5x+vqlpdP18yn9QsakjWcwvya4OTgrw=;
+        b=dK83a0Il/+dGMY8AGajuy0kMRufoYxmZMmHCMFodQVqzLNYEUnWA+okQaAh104KZlN
+         2Sgg6oDuhyMUBT9/dqmAZr6BsD6DfDEkjsPc+hZmB0X9Rn7+ONCydFMWNIX9fXJBykQX
+         SCUAJBCkYl0DJ+V8b1C2YDjPue+OLmEoegTacpB82cZS8k8cXt/Rg6beP3Dx5ReHKaSR
+         tAKJ26Rg2HwYgbEhhYAGMK/+pQ2u9kN9VOmEqV1gG636aXBJxoqDpMPcEQUFVQ8nmLNL
+         5B79UUw5TncaL4g0U6b4qt3bOY6zguqOhJHOUZJLdqCQzzaS+ysPQbK8bLUVcDWHnH+B
+         CDCw==
+MIME-Version: 1.0
+X-Received: by 10.180.211.197 with SMTP id ne5mr5241655wic.29.1411121559962;
+ Fri, 19 Sep 2014 03:12:39 -0700 (PDT)
+Received: by 10.216.24.205 with HTTP; Fri, 19 Sep 2014 03:12:39 -0700 (PDT)
+Received: by 10.216.24.205 with HTTP; Fri, 19 Sep 2014 03:12:39 -0700 (PDT)
+In-Reply-To: <541BE48C.8070709@in-telegence.net>
+References: <541BE48C.8070709@in-telegence.net>
+Date: Fri, 19 Sep 2014 11:12:39 +0100
+Message-ID: <CAMr6Z4=ACCoP3kXisZYdtdubhUzq7a=rm0Hc7qyK3bxtjLr7tQ@mail.gmail.com>
+Subject: Re: systemPropertyVariables
+From: Stuart McCulloch <mcculls@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c266a4510bca0503685703
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c266a4510bca0503685703
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On 19 Sep 2014 09:09, "Edmond chouaff=C3=A9" <ec@in-telegence.net> wrote:
+>
+> Hi guys.
+>
+> I have been struggling to get systemPropertyVariables from the
+maven-surefire-plugin working.
+> I am running an ubunto machine where I have defined the JBOSS_HOME
+variable as such in the .profile file: export JBOSS_HOME=3Dtest.
+> However i can't override that value with systemPropertyVariables:
+
+Since JBOSS_HOME is an environment variable, I would try using the
+environmentVariables option to override it (available in surefire 2.13 and
+above)
+
+>
+> <systemPropertyVariables>
+>
+<jboss.home>${project.basedir}/target/wildfly-8.1.0.Final</jboss.home>
+>
+<JBOSS_HOME>${project.basedir}/target/wildfly-8.1.0.Final</JBOSS_HOME>
+>
+<jbossHome>${project.basedir}/target/wildfly-8.1.0.Final</jbossHome>
+> </systemPropertyVariables>
+>
+> As you can notice, I've tried numerous alternatives, but none of them
+does work.
+>
+> --
+> Regards
+> Edmond Chouaff=C3=A9
+> Master of Science
+> Softwareentwickler
+> ________________________________
+> IN-telegence GmbH
+> Oskar-J=C3=A4ger-Str. 125
+> D-50825 K=C3=B6ln
+>   Tel:
+>   +49 (0)221 - 260 15 84
+>
+>   Fax:
+>   +49 (0)221 - 260 15 09
+>
+>   E-mail:
+>   ec@in-telegence.net
+>
+>   Home:
+>   www.in-telegence.net
+>
+>
+> Registergericht AG K=C3=B6ln - HRB 34038 | USt-ID Nr. DE 210 882 245 |
+Gesch=C3=A4ftsf=C3=BChrende Gesellschafter: Christian Pl=C3=A4tke und Holge=
+r Jansen
+> ________________________________
+> ACHTUNG:
+> Diese Nachricht sowie eventuelle Anh=C3=A4nge k=C3=B6nnen gesch=C3=BCtzte=
+ oder
+vertrauliche Information enthalten und ist ausschlie=C3=9Flich f=C3=BCr den
+bezeichneten Adressaten bestimmt. Andere Personen d=C3=BCrfen den Inhalt di=
+eser
+Nachricht weder offenbaren noch kopieren oder verteilen. Die weitere
+Nutzung, Verbreitung oder Vervielf=C3=A4ltigung dieser E-Mail ist nicht erl=
+aubt
+und gegebenenfalls gesetzeswidrig. Sollten Sie diese E-Mail irrt=C3=BCmlich
+erhalten haben oder nicht der autorisierte Empf=C3=A4nger sein, so l=C3=B6s=
+chen Sie
+diese Nachricht sowie deren Anh=C3=A4nge bitte unverz=C3=BCglich und inform=
+ieren Sie
+den Absender.
+
+--001a11c266a4510bca0503685703--
+

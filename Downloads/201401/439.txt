@@ -1,0 +1,93 @@
+From users-return-135029-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan  8 22:09:23 2014
+Return-Path: <users-return-135029-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DC4E810631
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  8 Jan 2014 22:09:22 +0000 (UTC)
+Received: (qmail 59455 invoked by uid 500); 8 Jan 2014 22:09:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 59385 invoked by uid 500); 8 Jan 2014 22:09:20 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 59377 invoked by uid 99); 8 Jan 2014 22:09:20 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 22:09:20 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [74.125.82.42] (HELO mail-wg0-f42.google.com) (74.125.82.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 22:09:15 +0000
+Received: by mail-wg0-f42.google.com with SMTP id l18so988100wgh.5
+        for <users@maven.apache.org>; Wed, 08 Jan 2014 14:08:53 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to
+         :content-type;
+        bh=zIqi+D1v5rJfRykJ2ciRVev9O+mChBjgJPI1KihZkM8=;
+        b=BGi3rh+qTvSOm0L+pKTGOuoXEzKLLkJ444BN2kHub2F7nODOiakHcztr+xNuYcSvHv
+         rEec47Y+HAIpWEuorkQ1JQYk3KMQDVU/QvyFzGDYZZM0V7UnTRc9l0Pc9zdTix9fJwXq
+         ch99gpNvx6VtM4RDAwM12VnJ+ASlYroOs7kS2sO5HY8+9pdcRT0Qz5Ww+d0CsDclab1J
+         RPmzSKPMsRl8i4YQMCKNQNOwgQMMlD98XPt0pXqIVcdg76sAxkS3wURRhPnFrsnnVbfM
+         6QMOSl8qjcAYbHxX4xx9ANhgZpLQ5FuDJwuvGmYFuXZt9Tz6JTIHzZSgSTC6XKss9KsI
+         VVKg==
+X-Gm-Message-State: ALoCoQmxPGs+WdP4n+GscEU72XNchv6YsAvgh2ZVo+nTqegHrQ9rEurGsfcReWQ95PUitUSY+7RR
+MIME-Version: 1.0
+X-Received: by 10.194.178.135 with SMTP id cy7mr29517691wjc.21.1389218933635;
+ Wed, 08 Jan 2014 14:08:53 -0800 (PST)
+Received: by 10.180.7.106 with HTTP; Wed, 8 Jan 2014 14:08:53 -0800 (PST)
+Date: Wed, 8 Jan 2014 17:08:53 -0500
+Message-ID: <CAG54imaRda46pY4=aeuWPtcPCqP5jK_KumH=JbSR7GVzHPtDvA@mail.gmail.com>
+Subject: Need advice automating a Java test suite.
+From: Todd Chapman <todd@chaka.net>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=089e013d1dd40e02b104ef7cbd1a
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e013d1dd40e02b104ef7cbd1a
+Content-Type: text/plain; charset=UTF-8
+
+Hello,
+
+We have a java multi-module project that has a somewhat painful to run test
+suite that I would like to get under control using Maven.
+
+Currently it takes 5 separate Maven commands to setup, run, and teardown
+all the tests and test databases. I'd like to get this down to one command.
+Also I would like this structured so that individual parts of the process
+can be run separately to aid in debugging problems.
+
+The pom has 1 profile for each part of the task, all bound to the "test"
+goal:
+
+mvn clean test -P test-setup-1,local-enterprise-test-db  (exec:java plugin
+to setup up a database)
+mvn test -P test-setup-2,local-enterprise-test-db           (exec:java
+plugin to setup up a 2nd database)
+mvn test -P test-design,local-enterprise-test-db            (surefire
+plugin to run a subset of the tests with maven properties set)
+mvn test -P test-transactional,local-enterprise-test-db   (surefire plugin
+to run a different subset of the tests with different maven properties set)
+mvn test -P test-tear-down,local-enterprise-test-db        (exec:java
+plugin to teardown the databases)
+
+
+The problem I am running into is how to get this organized so that it all
+happens with 1 command. It seems nearly unpossible.
+
+Can anyone offer any advice on how to accomplish this? Pointer to relevant
+articles, blog posts, stackoverflow questions would be most appreciated.
+
+Thanks!
+
+-Todd
+
+--089e013d1dd40e02b104ef7cbd1a--
+

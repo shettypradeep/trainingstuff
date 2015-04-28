@@ -1,0 +1,254 @@
+From users-return-137900-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Dec  1 19:00:21 2014
+Return-Path: <users-return-137900-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3ACCD10C14
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  1 Dec 2014 19:00:21 +0000 (UTC)
+Received: (qmail 9501 invoked by uid 500); 1 Dec 2014 19:00:18 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 9422 invoked by uid 500); 1 Dec 2014 19:00:18 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9411 invoked by uid 99); 1 Dec 2014 19:00:18 -0000
+Received: from mail-relay.apache.org (HELO mail-relay.apache.org) (140.211.11.15)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 01 Dec 2014 19:00:18 +0000
+Received: from robertscholte (5248749D.cm-4-1b.dynamic.ziggo.nl [82.72.116.157])
+	by mail-relay.apache.org (ASF Mail Server at mail-relay.apache.org) with ESMTPSA id 51AFB1A0019
+	for <users@maven.apache.org>; Mon,  1 Dec 2014 18:59:57 +0000 (UTC)
+Content-Type: text/plain; charset=iso-8859-15; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: AW: Problems with the release plugin
+References: <4D781E28644D7B46878137FBCBC852F01269EB@gf0vswex001p.corp.int>
+ <op.xp1p28hrkdkhrr@robertscholte.dynamic.ziggo.nl>
+ <46b88b5354ce4ec3a8ef5307adcb4381@AMSPR05MB0611.eurprd05.prod.outlook.com>
+ <CALhtWkfwxNPgoxpHfXik-Y2H4XgH=DR5TpQA6h80eA5MqzbhZA@mail.gmail.com>
+ <7860a71d9a894fc185a680c8c31d46f6@AMSPR05MB0611.eurprd05.prod.outlook.com>
+ <CALhtWkfCfVA9DD3ZTRZRQ3Z5-gb5ZqPT=x+ihn_2s1DN8dgLBQ@mail.gmail.com>
+ <329166177e5c4758a84f4281a8fbbd22@AMSPR05MB0611.eurprd05.prod.outlook.com>
+Date: Mon, 01 Dec 2014 20:00:10 +0100
+MIME-Version: 1.0
+Content-Transfer-Encoding: Quoted-Printable
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.xp7dqkjckdkhrr@robertscholte>
+In-Reply-To: <329166177e5c4758a84f4281a8fbbd22@AMSPR05MB0611.eurprd05.prod.outlook.com>
+User-Agent: Opera Mail/12.17 (Win32)
+
+Just to be sure that we are on the same page:
+Your request is if the maven-release-plugin could be changed, so you can=
+  =
+
+specify versions for external (i.e. non reactor/multimodule) dependencie=
+s.
+I won't allow this unless it can be automated, hence the introduction of=
+  =
+
+the VersionPolicy. This is a first step towards a solution as asked by t=
+he  =
+
+community, which asked for a better way to predict the next version(s).
+
+Robert
+
+Op Mon, 01 Dec 2014 00:11:46 +0100 schreef Christofer Dutz  =
+
+<christofer.dutz@c-ware.de>:
+
+> Oh well ... I give up ... so yet another plugin it will be.
+>
+> I wasn't talking about changing anything at the workflow, just to have=
+  =
+
+> one enforced constraint loosended a little if required, but I guess th=
+is  =
+
+> will never happen.
+>
+> Chris
+>
+>
+>
+> -----Urspr=FCngliche Nachricht-----
+> Von: Benson Margulies [mailto:bimargulies@gmail.com]
+> Gesendet: Sonntag, 30. November 2014 22:22
+> An: Maven Users List
+> Betreff: Re: Problems with the release plugin
+>
+> The release plugin is a tool that does a specified set of steps. It's =
+ =
+
+> built out of reusable components. Turning it into MS Word with
+> 10,000,000 options is not, in my view, a good plan.
+>
+> If you can write down a clear spec for an alternative workflow, you ca=
+n  =
+
+> study the source and make a plugin. That's what the owners of the  =
+
+> gitflow-maven-plugin did. It's an alternative release plugin with a  =
+
+> different workflow.
+>
+>
+> On Sun, Nov 30, 2014 at 11:44 AM, Christofer Dutz  =
+
+> <christofer.dutz@c-ware.de> wrote:
+>> Unfortunately the world isn't as ideal as I would like it to be. Ther=
+e  =
+
+>> are sometimes constraints that lie outside of the reach of the  =
+
+>> developer(s) working on the projects build.
+>>
+>> In one case the company I worked for desperately needed to release  =
+
+>> parts of a multi module build separately. I know that this comes with=
+  =
+
+>> problems, but as long as no other option comes up to reduce the amoun=
+t  =
+
+>> of binary data of a new release having to be transfered over an Edge =
+ =
+
+>> mobile connection, they will have to do partial releases.
+>>
+>> In my current case the entire company is being switched from Ant to  =
+
+>> Maven. Switching everything in one big step is completely out of the =
+ =
+
+>> question. The amount of simultaneous training needed for this is simp=
+ly  =
+
+>> not possible. So we have to go a migration path which brings us close=
+r  =
+
+>> and closer to the final goal of having everything in Maven and be abl=
+e  =
+
+>> to use the default maven-release-plugin. But till we are there it fee=
+ls  =
+
+>> like there is no way without patching this plugin in order to have an=
+  =
+
+>> easy transition path.
+>>
+>> What about some "legacy" or "quirks" mode for the plugin that allows =
+ =
+
+>> such a thing ... it might even output warnings and pages of text  =
+
+>> explaining why this mode sucks and should be avoided. All I am asking=
+  =
+
+>> for is a way to use the plugin without having to hack it which  =
+
+>> acknowledging that I know this is not ideal, but I am willing to acce=
+pt  =
+
+>> the consequences.
+>>
+>> Chris
+>>
+>> -----Urspr=FCngliche Nachricht-----
+>> Von: Benson Margulies [mailto:bimargulies@gmail.com]
+>> Gesendet: Sonntag, 30. November 2014 13:52
+>> An: Maven Users List
+>> Betreff: Re: Problems with the release plugin
+>>
+>> I'm going to attempt a summary here.
+>>
+>> The release plugin has a requirement. It must be true that you can go=
+  =
+
+>> to the SCM, checkout a brand new copy of the tree rooted at the <scm/=
+>  =
+
+>> element, _change the versions_ in the pom(s), and run a build as  =
+
+>> configured by the profiles and goals. If that's not true, the release=
+  =
+
+>> process will fail, and possibly leave you with a manual cleanup in th=
+e  =
+
+>> SCM. There are many ways to set up a build that seems just fine but  =
+
+>> fails this test.
+>>
+>> The top of this thread is a plea for a 'dry run' that is a perfect  =
+
+>> simulation of this, so that users can flush this out before it bites =
+ =
+
+>> them, and that it should not be hard to ask for this.
+>>
+>> It seems to me that it should not be hard, in a typical automated bui=
+ld  =
+
+>> system (Jenkins, etc.) to set up a build that does exactly this.
+>> Checkout a clean tree, run the maven-versions-plugin to set a dummy  =
+
+>> version, and run a build, with profiles and goals to match the eventu=
+al  =
+
+>> release. Eat one of these apples every day, and you won't be visiting=
+  =
+
+>> the maven doctor so often.
+>>
+>> It seems to me that it should also not be terribly hard to make this =
+a  =
+
+>> feature of the maven-release-plugin.
+>>
+>> As a further wrinkle, there's the question of tag management, which  =
+
+>> might be seen as interrelated to the lengthy threads here and elsewhe=
+re  =
+
+>> about never, ever, deleting a tag. I wonder about yet another m-r-p  =
+
+>> parameter: a staging SCM URL, distinct from the <scm/> stock  =
+
+>> identifiers. m-r-p would pull from <scm/> but push to this other plac=
+e.  =
+
+>> Then, a human could decide if the release is real, and, if so, push t=
+he  =
+
+>> commits and tag to the real, immutable, repo. I'm not qualifier to  =
+
+>> judge whether this can work for anything other than git, but git sure=
+  =
+
+>> is popular.
+>>
+>> ---------------------------------------------------------------------=
+
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

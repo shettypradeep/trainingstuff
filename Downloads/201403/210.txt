@@ -1,0 +1,97 @@
+From users-return-135917-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Mar 24 18:52:55 2014
+Return-Path: <users-return-135917-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 240DE11EB1
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 24 Mar 2014 18:52:55 +0000 (UTC)
+Received: (qmail 81501 invoked by uid 500); 24 Mar 2014 18:52:40 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 81219 invoked by uid 500); 24 Mar 2014 18:52:38 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 81210 invoked by uid 99); 24 Mar 2014 18:52:36 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Mar 2014 18:52:36 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bimargulies@gmail.com designates 209.85.216.54 as permitted sender)
+Received: from [209.85.216.54] (HELO mail-qa0-f54.google.com) (209.85.216.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Mar 2014 18:52:32 +0000
+Received: by mail-qa0-f54.google.com with SMTP id w8so5872305qac.13
+        for <users@maven.apache.org>; Mon, 24 Mar 2014 11:52:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=okU74vjyJKne45mb7B7hF6IhNSqs1chb4lvVPSuDrwQ=;
+        b=X3t/qhLM0tFybxHJ66k3ccYAkostOf9s3/hVSUgjW0YGK+/S+hkDFSjHg895cFx/Bv
+         RDZ7hxh/J2ItNU0hxoVSSigdAR+GoQNoSt+IcHqv8X19iTLcPfSiR4+LeRTXnTO3N6L+
+         rRrRvXCZajxQ1dZ/02f2iw52+1GMVY11/vJw0+tXOmEBzUameTnKpbHrv++tSeh6WXDx
+         mU2nZ2z/T3GDv7eINYJrBGhfAg5vQxcfkUje5eWI1SqPblu0FwRd6/JODQfRNb+8/64a
+         LqbtmRynbw7jRluXjdH1S0g80bpzTQqgRqA1bL78KUFYhuOmr69OS3WrvUK/FyWaXd3e
+         y0eA==
+MIME-Version: 1.0
+X-Received: by 10.140.34.168 with SMTP id l37mr4663166qgl.85.1395687132178;
+ Mon, 24 Mar 2014 11:52:12 -0700 (PDT)
+Received: by 10.140.84.138 with HTTP; Mon, 24 Mar 2014 11:52:12 -0700 (PDT)
+In-Reply-To: <1395668984525-5789409.post@n5.nabble.com>
+References: <1395650439461-5789365.post@n5.nabble.com>
+	<53301485.7060803@gmx.de>
+	<1395668984525-5789409.post@n5.nabble.com>
+Date: Mon, 24 Mar 2014 14:52:12 -0400
+Message-ID: <CALhtWkdJgdPurMTYYL=R-i14qpXdvVU6Hdxnyf-K5=JL0FwEaA@mail.gmail.com>
+Subject: Re: multi-module phases sequence
+From: Benson Margulies <bimargulies@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I use the dependency plugin this way constantly. I also have to tell
+people to give on 'mvn test', at least in 3.0.4, and stick to 'mvn
+install'.
+
+Maven builds do many more things than put java classes into jar files.
+Frequently, they bundle up archives of various other things, and then
+unbundle them.
+
+I wish that Maven generalized the concept of 'target/classes' versus
+'target/foo.jar' to other things except jar files of class files.
+
+
+On Mon, Mar 24, 2014 at 9:49 AM, mkarg <karg@quipsy.de> wrote:
+> The multi-module project is for a PowerBuilder project.
+> Module 1 is building a ZIP file containing lots of resources (GIFs etc.)
+> taken from "somewhere" (e. g. from a CIFS drive, a Maven repo, whatever
+> place the designers store them) which are used by other modules (sibling
+> modules but also stand alone modules in other projects).
+> Module 2...n are building EXE files. The EXE linker wants to pack some of
+> the GIFs from the ZIP into the EXE. For that it must unzip the ZIP to a
+> place where the linker is aware of -- hence, the dependency "unpack".
+>
+> I do not see what is "strange" or a "misunderstanding"? How shall this work
+> without pack and unpack?
+>
+>
+>
+> --
+> View this message in context: http://maven.40175.n5.nabble.com/multi-module-phases-sequence-tp5789365p5789409.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

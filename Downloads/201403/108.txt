@@ -1,0 +1,125 @@
+From users-return-136021-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Mar 30 04:25:09 2014
+Return-Path: <users-return-136021-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5F87710A1C
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 30 Mar 2014 04:25:09 +0000 (UTC)
+Received: (qmail 11716 invoked by uid 500); 30 Mar 2014 04:25:05 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 11044 invoked by uid 500); 30 Mar 2014 04:25:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 80507 invoked by uid 99); 29 Mar 2014 20:58:14 -0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of marek.romanowski@gmail.com designates 209.85.219.49 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=ZrBwbKAfml5NkscqKtnY7MGBiwPbuawhVG3/tFBd86w=;
+        b=MPEKVApol+kORXNpcHNf82t1FyMG2Fhyz7WQn609MHSOqoqlEFrlSQKCpfAO+Z+bfH
+         UTIb06CtyH43xcBdpKh0+XThf2iOI+7kArADlX6YI/HXjK86wlQELmnt19SSZP8rxUJQ
+         xiRfCBj4TcKSi9XLg+pXuujZ5cULib+alc8HZjgaVLKSN8qyFyP+mAImde2OxktQ09Dd
+         HwVG5LC+u42HLLTuQ2q0VHWxO1aEM6v0IxHeJxW6og7NbCd7jadTVynuRzmi0eyOEp+c
+         tdgfbA8hKeYHSEznyEmdM6pNVFwBDBRcjFF39cDzdCk+AFQ8LzhhJRD1qdRubsda/uRt
+         N7qQ==
+MIME-Version: 1.0
+X-Received: by 10.60.37.99 with SMTP id x3mr13711527oej.2.1396126664922; Sat,
+ 29 Mar 2014 13:57:44 -0700 (PDT)
+Date: Sat, 29 Mar 2014 21:57:44 +0100
+Message-ID: <CAOncARkpX_jDETH9h2-M3-2QK+7sFJWyWdtzZ-BTc4HFf8px6Q@mail.gmail.com>
+Subject: maven-javadoc-plugin - Javadoc generation problem
+From: Marek Romanowski <marek.romanowski@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=089e01176279ec9f0e04f5c511b7
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01176279ec9f0e04f5c511b7
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi,
+while building project I've found this kind of error:
+
+[INFO]
+------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO]
+------------------------------------------------------------------------
+[INFO] Total time: 02:06 min (Wall Clock)
+[INFO] Finished at: 2014-03-29T21:42:40+01:00
+[INFO] Final Memory: 27M/140M
+[INFO]
+------------------------------------------------------------------------
+[ERROR] Failed to execute goal
+org.apache.maven.plugins:maven-javadoc-plugin:2.9.1:jar (attach-javadocs)
+on project web: MavenReportException: Error while creating archive:
+[ERROR] Exit code: 1 - javadoc: error -
+com.sun.tools.doclets.internal.toolkit.util.DocletAbortException:
+com.sun.tools.javac.code.Symbol$CompletionFailure: class file for
+javax.interceptor.InterceptorBinding not found
+[ERROR]
+[ERROR] Command line was: /usr/lib/jvm/java-8-oracle/jre/../bin/javadoc
+@options @packages
+[ERROR]
+[ERROR] Refer to the generated Javadoc files in
+'/home/marek/w/idea/clinic/web/target/apidocs' dir.
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e
+switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions,
+please read the following articles:
+[ERROR] [Help 1]
+http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[ERROR]
+[ERROR] After correcting the problems, you can resume the build with the
+command
+[ERROR]   mvn <goals> -rf :web
+
+I tried to google, but nothing helpful found.
+
+I did not change any dependencies (project or maven) from last successful
+build. I made changes in code, but none of them refer to InterceptorBinding
+directly. Could someone help me how to track what could be cause of this
+problem? I will post more data if it will help, but I'm not sure what
+should I post.
+
+I'm not sure is it related to this plugin - please correct me if I should
+post it on another mailing list.
+
+Build environment:
+
+Ubuntu 13.10
+
+marek@tuna-mobile:~/w/idea/clinic$ java -version
+java version "1.8.0"
+Java(TM) SE Runtime Environment (build 1.8.0-b132)
+Java HotSpot(TM) 64-Bit Server VM (build 25.0-b70, mixed mode)
+
+marek@tuna-mobile:~/w/idea/clinic$ mvn -version
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option
+MaxPermSize=512m; support was removed in 8.0
+Apache Maven 3.2.1 (ea8b2b07643dbb1b84b6d16e1f08391b666bc1e9;
+2014-02-14T18:37:52+01:00)
+Maven home: /home/marek/opt/maven
+Java version: 1.8.0, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-oracle/jre
+Default locale: pl_PL, platform encoding: UTF-8
+OS name: "linux", version: "3.11.0-11-generic", arch: "amd64", family:
+"unix"
+
+Thanks in advance!
+Marek.
+
+--089e01176279ec9f0e04f5c511b7--
+

@@ -1,0 +1,124 @@
+From users-return-137412-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Sep 30 09:39:17 2014
+Return-Path: <users-return-137412-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 53D7217E20
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 30 Sep 2014 09:39:17 +0000 (UTC)
+Received: (qmail 72518 invoked by uid 500); 30 Sep 2014 09:39:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 72428 invoked by uid 500); 30 Sep 2014 09:39:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 72416 invoked by uid 99); 30 Sep 2014 09:39:15 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 30 Sep 2014 09:39:15 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.218.48 as permitted sender)
+Received: from [209.85.218.48] (HELO mail-oi0-f48.google.com) (209.85.218.48)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 30 Sep 2014 09:39:11 +0000
+Received: by mail-oi0-f48.google.com with SMTP id g201so5668616oib.21
+        for <users@maven.apache.org>; Tue, 30 Sep 2014 02:38:50 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=FldmUUzvqJiyZ755Q8dgB+4SATgG3vLDmpxASRfKK14=;
+        b=SzzANsc6P9ab0LtW2H9RoPs+rtUmGw5QxGLkaJmyOwkn0vtSAv4tJ/ORrd/yvf07xM
+         ynTNgjRTnqn0HRjg+uEvqZK7vVWok50d+636JORv0i/xctweTd3eFU/jM/6vtcaL/XAJ
+         zArSviWMrgMoQiFk9ad21Rn0oy5RK4EJOJNAy0tifKwToR+fQF0W1beB1K3L09SAoHmR
+         gfVP3WPegqcaiPa2/bazvcimZYI7ULmStika9iLL/lJMRBEN5ALOZ/TXZd0eE1jT2hmb
+         9oafl8DAy4ZgdcEx57j2Y0YCUpRwSomzyiuZLlSZsxAzEqJ2hBvrUOe+ISrGg1ediclP
+         IJKw==
+MIME-Version: 1.0
+X-Received: by 10.202.226.82 with SMTP id z79mr421352oig.27.1412069930341;
+ Tue, 30 Sep 2014 02:38:50 -0700 (PDT)
+Received: by 10.60.52.9 with HTTP; Tue, 30 Sep 2014 02:38:50 -0700 (PDT)
+In-Reply-To: <CAKDUN1vd7anOeV1H=hcAC_oA1y+GZ4rrb-p=aZA5jqsJ_yFZXQ@mail.gmail.com>
+References: <CA+Awg+J-ogQKF-D+TWQTVrAq5ib8hhFxAPk-+mOF062Hpr8J0A@mail.gmail.com>
+	<CAKDUN1vd7anOeV1H=hcAC_oA1y+GZ4rrb-p=aZA5jqsJ_yFZXQ@mail.gmail.com>
+Date: Tue, 30 Sep 2014 10:38:50 +0100
+Message-ID: <CA+nPnMyLL1mhP-Xpw+SjkrDqe0W=fPCZZeEw31O7fXPqkD81eA@mail.gmail.com>
+Subject: Re: Can I alter packaging with Maven?
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1140887e989bd7050445261d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1140887e989bd7050445261d
+Content-Type: text/plain; charset=UTF-8
+
+In general, if you are building different things, you should have multiple
+modules.
+
+Do not fear having more than one module.
+
+The common code goes in a common module
+
+Then the other two modules build the desktop app and the web app with a
+dependency on the common module.
+
+To paraphrase a movie title:
+
+> Dr. Mavenlove or: How I Learned to Stop Worrying and Love the Modules
+
+modules are your friend
+
+On 30 September 2014 10:33, Anders Hammar <anders@hammar.net> wrote:
+
+> It is possible.
+> One way is to use a generic packaging plugin like the
+> maven-assembly-plugin. If that doesn't fit your desires, or you want a
+> "nicer solution", writting your own plugin is a different way. For example,
+> have a look at the Android Maven Plugin which creates android archives.
+>
+> That being said, the web app you're talking about should be a standard war
+> projekt (which uses the maven-war-plugin to produce the war archive). The
+> desktop app could possibly be a standard jar project. So I don't think you
+> need any special packaging plugins, but your question is rather how to
+> handle these two flavors of your application. Something that you should try
+> to solve, as it will significantly simplify things, is to have only one
+> package/archive. Have a look at how, for example, the Jenkins projekt has
+> solved this. They produce a war file that is possible to deploy to a web
+> container (web app) as well as start from command line (application). When
+> looking at that topic you're in pure Java land and shouldn't worry about
+> Maven.
+> If you need different config files it could be tricky to solve this way
+> though.
+>
+> /Anders
+>
+> On Mon, Sep 29, 2014 at 7:17 PM, Les Hartzman <lhartzman@gmail.com> wrote:
+>
+> > Hi,
+> >
+> > I'm a fairly basic maven user and would like to know if it is possible to
+> > have maven support multiple type of packaging or if I need to look at a
+> > different mechanism.
+> >
+> > What I want to do is to build a JavaFX application that depending on how
+> it
+> > is packaged is either a desktop app or a web app.
+> >
+> > There would potentially be some different configuration files that would
+> > pertain to the different packaging options.
+> >
+> > Can I use maven in this way or does someone know of another means of
+> > accomplishing the same thing?
+> >
+> > Thanks.
+> >
+> > Les
+> >
+>
+
+--001a1140887e989bd7050445261d--
+

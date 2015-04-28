@@ -1,0 +1,73 @@
+From users-return-136293-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr 30 20:36:35 2014
+Return-Path: <users-return-136293-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id ECBA710140
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 30 Apr 2014 20:36:34 +0000 (UTC)
+Received: (qmail 78013 invoked by uid 500); 30 Apr 2014 20:36:26 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 77963 invoked by uid 500); 30 Apr 2014 20:36:21 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 77831 invoked by uid 99); 30 Apr 2014 20:36:11 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 30 Apr 2014 20:36:11 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of glahiru@gmail.com designates 74.125.82.47 as permitted sender)
+Received: from [74.125.82.47] (HELO mail-wg0-f47.google.com) (74.125.82.47)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 30 Apr 2014 20:36:06 +0000
+Received: by mail-wg0-f47.google.com with SMTP id x12so1387587wgg.6
+        for <users@maven.apache.org>; Wed, 30 Apr 2014 13:35:45 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=bysPqa0UUECTGJ3CtCJUUg1zHAvE/aUsecAV62i0Y10=;
+        b=oQ2iHRN3tdMazOALmNeQniEdCPjSenG7JKniqO/ntNDUdPS7aKyNHmdIlyJkkap7kN
+         VHaBIBMAjoxTa2iBDloZDTt6hch62SYoLCXcIMgLFvj/6olslP0kTqNQfTYE5q8TLEbV
+         r6q3QbzNSvzJjDQ8VICWbbXeQmSMSflrqK1d1kEGb/G3WaKgD3VFddvC2jUxzsRUl5sv
+         VkwbfOqd9pQUxNEV8ox4vgQWNbLs7Tg02oM/1+HbfShWx1EVyU9fqbWa+KcFQLV+GTHT
+         08vuW6E8EGpS/urzTWjftypgXjsxrd76MNmlYgdlKun2t3/cE4g4U6Z2cVIWt9mOLCmE
+         wR3Q==
+MIME-Version: 1.0
+X-Received: by 10.180.96.225 with SMTP id dv1mr5339747wib.37.1398890145371;
+ Wed, 30 Apr 2014 13:35:45 -0700 (PDT)
+Received: by 10.216.191.136 with HTTP; Wed, 30 Apr 2014 13:35:45 -0700 (PDT)
+Date: Wed, 30 Apr 2014 16:35:45 -0400
+Message-ID: <CAKq9_6J3RpRLymWrKRE-Jva=U2OCqqgsb+Vs6GmWDTuOMUMj3A@mail.gmail.com>
+Subject: Finding unused dependencies
+From: Lahiru Gunathilake <glahiru@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d04428a6c31de9e04f8487ec7
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d04428a6c31de9e04f8487ec7
+Content-Type: text/plain; charset=UTF-8
+
+Hi Users,
+
+I wonder whether there's an easy way to find unused dependencies for a
+module.I have a module which has bunch of dependencies, I have removed most
+of them but I wonder whether there's an easy way rather manually doing it.
+
+I there a way to get a warning about unused dependency in a pom file for a
+given module.
+
+Thanks
+Lahiru
+
+-- 
+System Analyst Programmer
+PTI Lab
+Indiana University
+
+--f46d04428a6c31de9e04f8487ec7--
+

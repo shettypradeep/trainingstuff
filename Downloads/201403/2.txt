@@ -1,0 +1,184 @@
+From users-return-135870-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 19 23:40:04 2014
+Return-Path: <users-return-135870-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 219C610F29
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 19 Mar 2014 23:40:04 +0000 (UTC)
+Received: (qmail 74677 invoked by uid 500); 19 Mar 2014 23:39:57 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 74594 invoked by uid 500); 19 Mar 2014 23:39:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74554 invoked by uid 99); 19 Mar 2014 23:39:52 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Mar 2014 23:39:52 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.160.46 as permitted sender)
+Received: from [209.85.160.46] (HELO mail-pb0-f46.google.com) (209.85.160.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Mar 2014 23:39:47 +0000
+Received: by mail-pb0-f46.google.com with SMTP id rq2so63850pbb.19
+        for <users@maven.apache.org>; Wed, 19 Mar 2014 16:39:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=m05rY7ZSO96bp6GbLgEmhZZQ7+wHN1uG5whrYIsCkZM=;
+        b=d02syynHBL83LrfNl4zwhXvb+JoTOyI4YPIQ3X6R4mFtOV+C0yPeAAfwaha9WIYRuR
+         f1oOJpTaweByzNYaIboS9p2thkEKuRAnfCgJ21xUv0uKgOFsYkMOj4ghmei6F5mF0Kh4
+         cfP/5tOY29JmXZxGDS956/nNOpG1HjUkT5TLEpYi9JCc24CvHzHFAFZLfHElB3j7jDFO
+         /bOXrrc1d6QK4wn14amouLKd9wyyCRUDag/fQIM3QIeuodwEZEsdPsvWXqeicKVneJBR
+         g4UAiD0Kt9QiHIWkCCjUMNtmXzxHrx5uwdkmeF8hhIdsmL8SVwnpv6Af9G7NxJfGP535
+         oSew==
+MIME-Version: 1.0
+X-Received: by 10.68.197.99 with SMTP id it3mr43278448pbc.37.1395272365196;
+ Wed, 19 Mar 2014 16:39:25 -0700 (PDT)
+Received: by 10.68.201.167 with HTTP; Wed, 19 Mar 2014 16:39:25 -0700 (PDT)
+In-Reply-To: <5329F490.2090404@gmail.com>
+References: <5329E8F1.5000801@gmail.com>
+	<33515199-3180-4535-A263-C38F07D8532F@gold-family.us>
+	<5329EF94.7050707@gmail.com>
+	<CA+nPnMxB5dGorB+euZBcWuq_wfbTuCsn6pjp3c9XnyeCXJ-ZHg@mail.gmail.com>
+	<5329F490.2090404@gmail.com>
+Date: Wed, 19 Mar 2014 23:39:25 +0000
+Message-ID: <CA+nPnMxEOdRq0OUGKQW2tu=KjxzhExvZa-hUYSitmkZDG7e5CQ@mail.gmail.com>
+Subject: Re: Configuring SCM for github
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=e89a8ff1cb18b1527c04f4fe2999
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--e89a8ff1cb18b1527c04f4fe2999
+Content-Type: text/plain; charset=ISO-8859-1
+
+I favour using my ssh key to deploy and keeping my password out of a file.
+With my password I can de-authorise any ssh key... So if the machine I am
+releasing from becomes compromised I can retain control of my GitHub
+account
+
+You may view otherwise if you choose
+
+On Wednesday, 19 March 2014, Eric Kolotyluk <eric.kolotyluk@gmail.com>
+wrote:
+
+> Ok, adding
+>
+>     <server>
+>       <id>github.com</id>
+>       <username>kolotyluk</username>
+>       <password>/secret/</password>
+>     </server>
+>
+> to settings.xml did the trick. Many thanks Stephen, and Russell.
+>
+> Russell, this would be a good step to add to Video6_3.mp4
+>
+> Why is ssh better than https?
+>
+> Cheers, Eric
+>
+>
+> On 3/19/2014 12:30 PM, Stephen Connolly wrote:
+>
+> On Wednesday, 19 March 2014, Eric Kolotyluk <eric.kolotyluk@gmail.com>
+> wrote:
+>
+>  Now I have
+>
+>    <scm>
+> <url>https://github.com/kolotyluk/java-file-utilities.git</url>
+> <connection>scm:git:https://github.com/kolotyluk/java-file-utilities.git</
+> connection>
+> <developerConnection>scm:git:https://github.com/kolotyluk/
+> java-file-utilities.git</developerConnection>
+>
+>
+> I favour the ssh variant of the GitHub URL
+>
+>
+>     </scm>
+>
+> But it still hangs...
+>
+>    [INFO] Checking in modified POMs...
+>    [INFO] Executing: cmd.exe /X /C "git add -- pom.xml"
+>    [INFO] Working directory: D:\Users\Eric\Software\
+> Project\Repositories\java-file-utilities
+>    [INFO] Executing: cmd.exe /X /C "git status"
+>    [INFO] Working directory: D:\Users\Eric\Software\
+> Project\Repositories\java-file-utilities
+>    [INFO] Executing: cmd.exe /X /C "git commit --verbose -F
+> C:\Users\Eric\AppData\Local\Temp\maven-scm-1007803688.commit pom.xml"
+>    [INFO] Working directory: D:\Users\Eric\Software\
+> Project\Repositories\java-file-utilities
+>    [INFO] Executing: cmd.exe /X /C "git symbolic-ref HEAD"
+>    [INFO] Working directory: D:\Users\Eric\Software\
+> Project\Repositories\java-file-utilities
+>    [INFO] Executing: cmd.exe /X /C "git push https://github.com/kolotyluk/
+> java-file-utilities.git master:master"
+>    [INFO] Working directory: D:\Users\Eric\Software\
+> Project\Repositories\java-file-utilities
+>
+> In my experience, getting release to work is the hardest thing I have ever
+> done in Maven. I struggled for weeks to get it working with Perforce
+> correctly. This is my first time with Git.
+>
+> Do I need to set up a <server> in my settings.xml file for github?
+>
+>
+> Yes
+>
+>
+>  Cheers, Eric
+>
+> On 3/19/2014 12:06 PM, Russell Gold wrote:
+>
+>  HI Eric, I think you are missing the ".git" extensions in your urls.
+> Here's the ones I use.
+>
+>       <scm>
+>           <url>https://github.com/meterware/simplestub.git</url>
+>           <developerConnection>scm:git:https://github.com/meterware/
+> simplestub.git</developerConnection>
+>           <connection>scm:git:https://github.com/meterware/simplestub.git
+> </connection>
+>       </scm>
+>
+> On Mar 19, 2014, at 2:58 PM, Eric Kolotyluk <eric.kolotyluk@gmail.com>
+> wrote:
+>
+>   I am having trouble getting mvn release:prepare to work with github
+>
+>    <scm>
+> <connection>scm:git:http://github.com/kolotyluk/java-file-utilities
+> </connection>
+> <url>scm:git:http://github.com/kolotyluk/java-file-utilities</url>
+> <developerConnection>scm:git:https://github.com/kolotyluk/
+> java-file-utilities</developerConnection>
+>      <tag>java-file-utilities-0.0.1</tag>
+>    </scm>
+>
+> When I try to prepare the release I get
+>
+>    [INFO] Checking in modified POMs...
+>    [INFO] Executing: cmd.exe /X /C "git add -- pom.xml"
+>    [INFO] Working directory: D:\Users\Eric\Software\
+> Project\Repositories\java-file-utilities
+>    [INFO] Executing: cmd.exe /X /C "git status"
+>
+>
+>
+
+-- 
+Sent from my phone
+
+--e89a8ff1cb18b1527c04f4fe2999--
+

@@ -1,0 +1,98 @@
+From users-return-137351-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Sep 23 06:22:58 2014
+Return-Path: <users-return-137351-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1B70C111C2
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 23 Sep 2014 06:22:58 +0000 (UTC)
+Received: (qmail 83087 invoked by uid 500); 23 Sep 2014 06:22:55 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 83001 invoked by uid 500); 23 Sep 2014 06:22:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 82990 invoked by uid 99); 23 Sep 2014 06:22:55 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 23 Sep 2014 06:22:55 +0000
+X-ASF-Spam-Status: No, hits=-0.1 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [15.193.200.67] (HELO g6t1524.atlanta.hp.com) (15.193.200.67)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 23 Sep 2014 06:22:26 +0000
+Received: from G6W4001.americas.hpqcorp.net (g6w4001.atlanta.hp.com [16.205.80.210])
+	(using TLSv1 with cipher AES128-SHA (128/128 bits))
+	(No client certificate requested)
+	by g6t1524.atlanta.hp.com (Postfix) with ESMTPS id 6AC277E
+	for <users@maven.apache.org>; Tue, 23 Sep 2014 06:22:24 +0000 (UTC)
+Received: from G5W5501.americas.hpqcorp.net (16.201.144.181) by
+ G6W4001.americas.hpqcorp.net (16.205.80.210) with Microsoft SMTP Server (TLS)
+ id 14.3.169.1; Tue, 23 Sep 2014 06:21:24 +0000
+Received: from G5W2721.americas.hpqcorp.net ([169.254.12.175]) by
+ G5W5501.americas.hpqcorp.net ([16.201.144.181]) with mapi id 14.03.0169.001;
+ Tue, 23 Sep 2014 06:21:25 +0000
+From: "Pisarev, Vitaliy" <vitaliy.pisarev@hp.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: How to detect dependency convergence violations between
+ *independent* projects using maven enforcer plugin
+Thread-Topic: How to detect dependency convergence violations between
+ *independent* projects using maven enforcer plugin
+Thread-Index: Ac/W9piVG118aUMRRq+J1XN0VkOSgg==
+Date: Tue, 23 Sep 2014 06:21:24 +0000
+Message-ID: <EB4EABF4A3D1BC46A084B56EE880B2471C9BD5F1@G5W2721.americas.hpqcorp.net>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [16.205.83.30]
+Content-Type: multipart/alternative;
+	boundary="_000_EB4EABF4A3D1BC46A084B56EE880B2471C9BD5F1G5W2721americas_"
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_000_EB4EABF4A3D1BC46A084B56EE880B2471C9BD5F1G5W2721americas_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+When running dependency convergence with the maven enforcer plugin<http://m=
+aven.apache.org/enforcer/enforcer-rules/dependencyConvergence.html>, we can=
+ easily detect that a certain project transitively depends on 2 different v=
+ersions of the same artifact.
+
+But consider a large group that is writing plugins for the same system. And=
+ consider 2 teams in this group.
+
+One team is developing plugin A and has the following dependency chain: A -=
+> B -> C (v 1.1)
+
+the other team develops plugin X and has the following dependency chain: X =
+-> Y -> C (v 2.0)
+
+Projects A and X are completely independent but in in production, both plug=
+ins are deployed and there is a collision. Although both teams share CI, th=
+e enforcer plugin does not detect this collision since collisions are detec=
+ted only if they share a common ancestor.
+
+(for example, if A also had: A -> D -> C (v 1.4), this would have been dete=
+cted).
+
+It seems that the solution is to define a 3rd 'super module' that will aggr=
+egate A and X and feed it to the enforcer plugin. I am having trouble with =
+this:
+
+I defined such a module. Added A and X as dependencies (of type 'pom') but =
+when I execute the enforcer, it does not detect the collisions! It is as if=
+ the super pom fails to 'absorb' the transitive dependencies.
+
+What am I missing here?
+
+I am using maven 3.0.4.
+
+
+--_000_EB4EABF4A3D1BC46A084B56EE880B2471C9BD5F1G5W2721americas_--
+

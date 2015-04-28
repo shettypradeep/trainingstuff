@@ -1,0 +1,103 @@
+From users-return-135891-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 20 20:43:33 2014
+Return-Path: <users-return-135891-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id ED29810B4F
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 20 Mar 2014 20:43:32 +0000 (UTC)
+Received: (qmail 6696 invoked by uid 500); 20 Mar 2014 20:43:29 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 6615 invoked by uid 500); 20 Mar 2014 20:43:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 6607 invoked by uid 99); 20 Mar 2014 20:43:28 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Mar 2014 20:43:28 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bmathus@gmail.com designates 74.125.83.41 as permitted sender)
+Received: from [74.125.83.41] (HELO mail-ee0-f41.google.com) (74.125.83.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Mar 2014 20:43:23 +0000
+Received: by mail-ee0-f41.google.com with SMTP id t10so1120574eei.28
+        for <users@maven.apache.org>; Thu, 20 Mar 2014 13:43:02 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=i5SmBtswsot081umge24bCOF1n40ZMDd6gQmiZLqwMM=;
+        b=FPR08ebbCiKZ6At45XJiFYgm2Rq7fHdq9Yg2xx5QYag+btQP29jifhB18jhPFN/UtO
+         +eZUMB9ta3QnjkPa3jx7sDH9Co3rdhMxtFJemoH/Mo7LcaLanHxXaUToidWRYEn/SvL3
+         svdzr5W3qgg7S8JwThk1/7nSB118jsLIIjH4vSOrfdroYNZkvWqQn4aR9H5yjMULIFb/
+         mO7htFYzDhzs+tE45WPq8B4zoWMVe0tTrxMWycx95e8PpZgYMbyW52xbnaF0FIklyJ3W
+         ruNOCIAln7p/SKOpm62brOwRUuWwOZrzL9JZBxuI84IV3WxtibDPOoSYxNjTqhUhAbTH
+         s1hw==
+X-Received: by 10.15.45.130 with SMTP id b2mr43767191eew.28.1395348182395;
+ Thu, 20 Mar 2014 13:43:02 -0700 (PDT)
+MIME-Version: 1.0
+Sender: bmathus@gmail.com
+Received: by 10.14.225.65 with HTTP; Thu, 20 Mar 2014 13:42:42 -0700 (PDT)
+In-Reply-To: <1395322237570-5788937.post@n5.nabble.com>
+References: <1395322237570-5788937.post@n5.nabble.com>
+From: Baptiste Mathus <bmathus@batmat.net>
+Date: Thu, 20 Mar 2014 21:42:42 +0100
+X-Google-Sender-Auth: 3PQvPBOryyGQR1F4IpRU6dJpi4s
+Message-ID: <CANWgJS6BiJFPep4iWE_UVTnZA_6M0w+VXB0kpvh_ih-UTJ_xSg@mail.gmail.com>
+Subject: Re: The par packaging not working
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0163535abff23a04f50fd048
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0163535abff23a04f50fd048
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+Out of curiosity, what's a par packaging? The only links I found on the Web
+talks about perl, are they perl archive or so?
+
+Just had a quick at https://maven.apache.org/plugins/ and didn't find
+anything related to par. I've personnally never heard of it. Can you
+provide us with more details?
+
+Cheers
+
+
+2014-03-20 14:30 GMT+01:00 lilyevsky <leonidilyevsky@yahoo.com>:
+
+>
+> The "par" packaging is not working. It is dependent on the
+> org.apache.maven.plugins:maven-par-plugin, but this plugin does not exist.
+> Is it deprecated?
+> I am using the latest maven 3.2.1.
+> How should I make the par package these days? I know this thing is
+> relatively simple: just a collection of jars plus manifest with a few
+> special entries. But I don't want to re-invent the wheel.
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/The-par-packaging-not-working-tp5788937.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Baptiste <Batmat> MATHUS - http://batmat.net
+Sauvez un arbre,
+Mangez un castor !
+
+--089e0163535abff23a04f50fd048--
+

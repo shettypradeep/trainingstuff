@@ -1,0 +1,68 @@
+From users-return-136129-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr 11 20:58:04 2014
+Return-Path: <users-return-136129-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A8EF210FCE
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 11 Apr 2014 20:58:04 +0000 (UTC)
+Received: (qmail 31748 invoked by uid 500); 11 Apr 2014 20:57:59 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 31629 invoked by uid 500); 11 Apr 2014 20:57:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 31577 invoked by uid 99); 11 Apr 2014 20:57:54 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 11 Apr 2014 20:57:54 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of waynefay@gmail.com designates 209.85.160.53 as permitted sender)
+Received: from [209.85.160.53] (HELO mail-pb0-f53.google.com) (209.85.160.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 11 Apr 2014 20:57:48 +0000
+Received: by mail-pb0-f53.google.com with SMTP id rp16so5807870pbb.26
+        for <users@maven.apache.org>; Fri, 11 Apr 2014 13:57:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=Dy5OxcvG+1CwC29wBZPCV2fqo51Zk0HJELfywVP+zZQ=;
+        b=McKU07/0+d4ke/O2KFim/YknQDP/CvRJ3J2ZlU3MLOWkX16BoOhwSVLyB070nLh2Xp
+         87Homz6sTBE5mXAXO0Z6YAVDOlX3a3erS7ndsBQ7wANYw3pk/i5CaeE3a1Z6kcscTGL2
+         1vHYxeLW0Qg5y2OrZV2pLAQ1rLE1u/8v/EpifzsPAVUCvgG4lSzFdg1P4pSJcY5pmXXj
+         wRNajee5433l55fBaBYN1JZ+IdFbTlwoNR5C4ng/0FXnGj7s1OAct5qvFF1jaPvjJBQc
+         P9VRxV9R7uMfLi5QvHWtiABYnemoeeUL0XSkFuQmM5DkrszpDvV9MsAwIJ2Qmw1dZjG1
+         LKXA==
+X-Received: by 10.68.213.97 with SMTP id nr1mr29874156pbc.52.1397249848593;
+ Fri, 11 Apr 2014 13:57:28 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.66.148.35 with HTTP; Fri, 11 Apr 2014 13:57:08 -0700 (PDT)
+In-Reply-To: <1397248361973-5790942.post@n5.nabble.com>
+References: <1397248361973-5790942.post@n5.nabble.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Fri, 11 Apr 2014 15:57:08 -0500
+Message-ID: <CALy+7UnT3ttLNEyXrNYjMPKHYzHRPiZMwoW=VdDeTpKLR77NhQ@mail.gmail.com>
+Subject: Re: Better way to capture output from a Maven job
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> While this works okay, I would have hoped for a better way to return a value
+> from Maven. Is there a return/result parameter of some sort such that I
+> don't have to pick the result out of the entire text output of the Maven job
+> execution?
+
+The versions-maven-plugin from Codehaus may be helpful - but no guarantee.
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

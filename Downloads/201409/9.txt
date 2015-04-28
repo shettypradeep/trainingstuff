@@ -1,0 +1,288 @@
+From users-return-137175-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Sep  1 10:22:10 2014
+Return-Path: <users-return-137175-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1CBF5118D9
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  1 Sep 2014 10:22:10 +0000 (UTC)
+Received: (qmail 71723 invoked by uid 500); 1 Sep 2014 10:22:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 71646 invoked by uid 500); 1 Sep 2014 10:22:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 71633 invoked by uid 99); 1 Sep 2014 10:22:07 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 01 Sep 2014 10:22:07 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [207.46.163.210] (HELO na01-bl2-obe.outbound.protection.outlook.com) (207.46.163.210)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 01 Sep 2014 10:21:41 +0000
+Received: from BY1PR0401MB1158.namprd04.prod.outlook.com (25.160.193.155) by
+ BY1PR0401MB1160.namprd04.prod.outlook.com (25.160.193.16) with Microsoft SMTP
+ Server (TLS) id 15.0.1015.19; Mon, 1 Sep 2014 10:21:15 +0000
+Received: from BY1PR0401MB1158.namprd04.prod.outlook.com ([25.160.193.155]) by
+ BY1PR0401MB1158.namprd04.prod.outlook.com ([25.160.193.155]) with mapi id
+ 15.00.1015.018; Mon, 1 Sep 2014 10:21:16 +0000
+From: Mark Gibson <mark.gibson@deltaonesolutions.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: RE: Maven Release Plugin - release:branch: branch versions not set as
+ expected
+Thread-Topic: Maven Release Plugin - release:branch: branch versions not set
+ as expected
+Thread-Index: Ac/Dl33UXIq2wVrYR/iMH5X2Etz1AAAEemmAAIk5tpA=
+Date: Mon, 1 Sep 2014 10:21:15 +0000
+Message-ID: <b65156fa715c48c5bc35ac5b807b6a5f@BY1PR0401MB1158.namprd04.prod.outlook.com>
+References: <7601b980809d48fd8af59d86841fadc2@BY1PR0401MB1158.namprd04.prod.outlook.com>
+ <op.xlc428j7kdkhrr@robertscholte.dynamic.ziggo.nl>
+In-Reply-To: <op.xlc428j7kdkhrr@robertscholte.dynamic.ziggo.nl>
+Accept-Language: en-GB, en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-ms-exchange-transport-fromentityheader: Hosted
+x-originating-ip: [77.67.62.178]
+x-microsoft-antispam: BCL:0;PCL:0;RULEID:;UriScan:;
+x-forefront-prvs: 03218BFD9F
+x-forefront-antispam-report: SFV:NSPM;SFS:(6009001)(189002)(252514010)(51704005)(199003)(13464003)(15975445006)(101416001)(74502001)(90102001)(20776003)(54356999)(86362001)(31966008)(76482001)(76176999)(50986999)(108616004)(15202345003)(2656002)(85306004)(79102001)(95666004)(33646002)(99286002)(80022001)(81542001)(77982001)(77096002)(83072002)(106356001)(85852003)(81342001)(4396001)(21056001)(19580395003)(74316001)(107046002)(99396002)(19580405001)(74662001)(64706001)(66066001)(110136001)(76576001)(87936001)(46102001)(83322001)(105586002)(92566001)(107886001)(24736002)(19627235001);DIR:OUT;SFP:;SCL:1;SRVR:BY1PR0401MB1160;H:BY1PR0401MB1158.namprd04.prod.outlook.com;FPR:;MLV:sfv;PTR:InfoNoRecords;MX:1;A:1;LANG:en;
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-OriginatorOrg: deltaonesolutions.com
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Ok, thanks Robert.
+
+Sadly this doesn't fit my expectations or needs.  I'll look to do something=
+ a little more manual.
+
+Mark
+
+-----Original Message-----
+From: Robert Scholte [mailto:rfscholte@apache.org]=20
+Sent: 29 August 2014 17:51
+To: Maven Users List
+Subject: Re: Maven Release Plugin - release:branch: branch versions not set=
+ as expected
+
+Hi,
+
+IMO branches are mutable, so it makes sense that this will always result in=
+ a -SNAPSHOT Only tags are considered immutable, so that will get a NON Sna=
+pshot.
+IIRC only the versions of one of the poms will be updated, either the one s=
+taying on the trunk or the one moved to the branch.
+
+thanks,
+Robert
+
+Op Fri, 29 Aug 2014 17:08:14 +0200 schreef Mark Gibson
+<mark.gibson@deltaonesolutions.com>:
+
+> (please see bottom of email for environment/version information)
+>
+> I am trying to use the "release:branch" goal to create a branch, setting =
+=20
+> the version in the POMs in both the new branch and the working copies.  =
+=20
+> No matter what properties I define on the command line, the release=20
+> plugin is overriding the branch version information to what it thinks=20
+> (incorrectly in my opinion) it should be.  It looks like the release=20
+> version is being set either by calculation from current project=20
+> version, or supplied development version.
+>
+> I.e.  when calling Maven with the following (snippet)
+>
+> -DreleaseVersion=3D1.0.0
+> -DdevelopmentVersion=3D1.0.1-SNAPSHOT
+> -DupdateVersionsToSnapshot=3Dfalse
+> -DdryRun=3Dtrue
+>
+> The version in all the pom.xml.next files is as expected=20
+> (1.0.1-SNAPSHOT), but the version in all the pom.xml.branch files is=20
+> not as expected (1.0.1-SNAPSHOT when I would expect 1.0.0).
+>
+> Am I missing something that would explain why the above is correct? =20
+> Or am I missing something obvious in how to configure the plugin to=20
+> work as expected?
+>
+> (I've included a very simple repro in the grey breakout box below )
+>
+> Thanks
+> Mark
+>
+>
+>
+> Very simple setup to demonstrate:
+>
+> Project structure
+>
+> |   pom.xml
+> |
+> +---child-one
+> |       pom.xml
+> |
+> \---child-two
+>         pom.xml
+>
+> Root pom.xml
+>
+> <project xmlns=3D"http://maven.apache.org/POM/4.0.0" =20
+> xmlns:xsi=3D"http://www.w3.org/2001/XMLSchema-instance" =20
+> xsi:schemaLocation=3D"http://maven.apache.org/POM/4.0.0
+> http://maven.apache.org/xsd/maven-4.0.0.xsd">
+>
+>   <modelVersion>4.0.0</modelVersion>
+>
+>   <groupId>org.gibbo</groupId>
+>   <artifactId>gibbo-pom</artifactId>
+>   <version>1.0-SNAPSHOT</version>
+>   <packaging>pom</packaging>
+>   <name>Gibbo Parent POM</name>
+>
+>
+>   <modules>
+>     <module>child-one</module>
+>     <module>child-two</module>
+>   </modules>
+>
+>
+>   <properties>
+>     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+>   </properties>
+>
+>
+>   <scm>
+>     <connection>
+>       scm:git:ssh://git@bitbucket.org/mwgibson/gibbo.git
+>     </connection>
+>     <developerConnection>
+>       scm:git:ssh://git@bitbucket.org/mwgibson/gibbo.git
+>     </developerConnection>
+>     <url>
+>       https://bitbucket.org/mwgibson/gibbo
+>     </url>
+>   </scm>
+>
+>
+>   <build>
+>     <plugins>
+>
+>       <plugin>
+>         <groupId>org.apache.maven.plugins</groupId>
+>         <artifactId>maven-scm-plugin</artifactId>
+>         <version>1.9.1</version>
+>       </plugin>
+>
+>       <plugin>
+>         <groupId>org.apache.maven.plugins</groupId>
+>         <artifactId>maven-release-plugin</artifactId>
+>         <version>2.5</version>
+>       </plugin>
+>
+>     </plugins>
+>   </build>
+>
+> </project>
+>
+> child-one pom.xml
+>
+> <project xmlns=3D"http://maven.apache.org/POM/4.0.0" =20
+> xmlns:xsi=3D"http://www.w3.org/2001/XMLSchema-instance" =20
+> xsi:schemaLocation=3D"http://maven.apache.org/POM/4.0.0
+> http://maven.apache.org/xsd/maven-4.0.0.xsd">
+>
+>   <modelVersion>4.0.0</modelVersion>
+>
+>   <parent>
+>     <groupId>org.gibbo</groupId>
+>     <artifactId>gibbo-pom</artifactId>
+>     <version>1.0-SNAPSHOT</version>
+>     <relativePath>../pom.xml</relativePath>
+>   </parent>
+>
+>   <artifactId>child-one</artifactId>
+>   <packaging>pom</packaging>
+>   <name>Gibbo Child One POM</name>
+>
+> </project>
+>
+> child-two pom.xml
+>
+> <project xmlns=3D"http://maven.apache.org/POM/4.0.0" =20
+> xmlns:xsi=3D"http://www.w3.org/2001/XMLSchema-instance" =20
+> xsi:schemaLocation=3D"http://maven.apache.org/POM/4.0.0
+> http://maven.apache.org/xsd/maven-4.0.0.xsd">
+>
+>   <modelVersion>4.0.0</modelVersion>
+>
+>   <parent>
+>    <groupId>org.gibbo</groupId>
+>     <artifactId>gibbo-pom</artifactId>
+>     <version>1.0-SNAPSHOT</version>
+>     <relativePath>../pom.xml</relativePath>
+>   </parent>
+>
+>   <artifactId>child-two</artifactId>
+>   <packaging>pom</packaging>
+>   <name>Gibbo Child Two POM</name>
+>
+> </project>
+>
+> Command Line
+>
+> mvn --batch-mode ^
+>     release:branch ^
+>     -DautoVersionSubmodules=3Dtrue ^
+>     -DupdateBranchVersions=3Dtrue ^
+>     -DupdateWorkingCopyVersions=3Dtrue ^
+>     -DupdateDependencies=3Dtrue ^
+>     -DupdateVersionsToSnapshot=3Dfalse ^
+>     -DpushChanges=3Dfalse ^
+>     -DremoteTagging=3Dfalse ^
+>     -DsuppressCommitBeforeBranch=3Dfalse ^
+>     -DbranchName=3DRELEASE-%1 ^
+>     -DreleaseVersion=3D%1 ^
+>     -DdevelopmentVersion=3D%2-SNAPSHOT ^
+>     -DdryRun=3Dtrue
+>
+> I've tried specifying all modules independently (with the=20
+> -Dproject.rel.org.gibbo:child-one etc pattern), but the release=20
+> versions in the branch are still overridden incorrectly.
+>
+>
+>
+>
+> mvn --version
+> Apache Maven 3.2.2 (45f7c06d68e745d05611f7fd14efb6594181933e; =20
+> 2014-06-17T14:51:42+01:00)
+> Maven home: C:\MyProgramFiles\apache-maven-3.2.2\bin\..
+> Java version: 1.7.0_60, vendor: Oracle Corporation
+> Java home: C:\Program Files\Java\jdk1.7.0_60\jre
+> Default locale: en_GB, platform encoding: Cp1252
+> OS name: "windows 8", version: "6.2", arch: "amd64", family: "windows"
+>
+> git --version
+> git version 1.9.4.msysgit.1
+>
+> Maven-release-plugin 2.5
+> Maven-scm-plugin 1.9.1
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

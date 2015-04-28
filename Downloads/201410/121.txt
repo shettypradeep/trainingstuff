@@ -1,0 +1,75 @@
+From users-return-137438-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Oct  2 08:42:55 2014
+Return-Path: <users-return-137438-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8725D17723
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  2 Oct 2014 08:42:55 +0000 (UTC)
+Received: (qmail 36687 invoked by uid 500); 2 Oct 2014 08:42:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 36311 invoked by uid 500); 2 Oct 2014 08:42:52 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 36280 invoked by uid 99); 2 Oct 2014 08:42:52 -0000
+Received: from mail-relay.apache.org (HELO mail-relay.apache.org) (140.211.11.15)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Oct 2014 08:42:52 +0000
+Received: from [192.168.1.6] (p5DDB7ABA.dip0.t-ipconnect.de [93.219.122.186])
+	by mail-relay.apache.org (ASF Mail Server at mail-relay.apache.org) with ESMTPSA id 2007D1A0042;
+	Thu,  2 Oct 2014 08:42:41 +0000 (UTC)
+Message-ID: <542D1009.2030505@apache.org>
+Date: Thu, 02 Oct 2014 10:42:49 +0200
+From: Michael Osipov <michaelo@apache.org>
+User-Agent: Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Thunderbird/31.1.2
+MIME-Version: 1.0
+To: announce@maven.apache.org, users@maven.apache.org
+CC: Maven Developers List <dev@maven.apache.org>
+Subject: [ANN] Maven Javadoc Plugin 2.10.1 released
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+
+The Apache Maven team is pleased to announce the release of the Maven 
+Javadoc Plugin, version 2.10.1.
+
+This module generates browsable HTML pages from Java source code.
+
+http://maven.apache.org/plugins/maven-javadoc-plugin/
+
+You should specify the version in your project's plugin configuration:
+
+<plugin>
+   <groupId>org.apache.maven.plugins</groupId>
+   <artifactId>maven-javadoc-plugin</artifactId>
+   <version>2.10.1</version>
+</plugin>
+
+Release Notes - Maven Javadoc Plugin - Version 2.10.1
+
+
+
+** Bug
+     * [MJAVADOC-406] - Regression: MJAVADOC-398 commit changed wrong line
+     * [MJAVADOC-407] - Cannot parse annotations when generating javadoc
+     * [MJAVADOC-416] - java.lang.ClassCastException: 
+com.sun.tools.javadoc.ClassDocImpl cannot be cast to 
+com.sun.javadoc.AnnotationTypeDoc
+
+
+
+** Improvement
+     * [MJAVADOC-412] - Update version of plexus-archiver to 2.5
+
+Enjoy,
+
+-The Apache Maven team
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

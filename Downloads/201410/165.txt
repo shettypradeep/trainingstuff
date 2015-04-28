@@ -1,0 +1,95 @@
+From users-return-137451-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Oct  3 19:02:13 2014
+Return-Path: <users-return-137451-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 40BB617B88
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  3 Oct 2014 19:02:13 +0000 (UTC)
+Received: (qmail 91153 invoked by uid 500); 3 Oct 2014 19:02:11 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 91067 invoked by uid 500); 3 Oct 2014 19:02:11 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 91054 invoked by uid 99); 3 Oct 2014 19:02:11 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Oct 2014 19:02:11 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [85.13.151.183] (HELO dd34514.kasserver.com) (85.13.151.183)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Oct 2014 19:01:44 +0000
+Received: from dd34514.kasserver.com (dd0800.kasserver.com [85.13.143.204])
+	by dd34514.kasserver.com (Postfix) with ESMTPSA id 06B33434329E
+	for <users@maven.apache.org>; Fri,  3 Oct 2014 21:01:44 +0200 (CEST)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-SenderIP: 24.68.152.10
+User-Agent: ALL-INKL Webmail 2.11
+In-Reply-To: <CABLGb9w807+wb2rhN=vLfwZzO+W8h20wzO=+++D_CX2APVptWw@mail.gmail.com>
+References: <CABLGb9xhKb3CpAa3HiByD+QLrpzh-qoEvyEtbb4N4eGe+6L93Q@mail.gmail.com> <22D448DD-2765-4B3C-951A-75CFE9E657DE@kathrynhuxtable.org> <CAJmbs8gpA+S2j0nHxRtNueOGk9ktqdvSm8gfVX49sFwwde6=MQ@mail.gmail.com><CABLGb9w807+wb2rhN=vLfwZzO+W8h20wzO=+++D_CX2APVptWw@mail.gmail.com>
+Subject: Re: Don't want to repeat plugin version for both build and reporting
+From: "Manfred Moser" <manfred@mosabuam.com>
+To: users@maven.apache.org
+Message-Id: <20141003190144.06B33434329E@dd34514.kasserver.com>
+Date: Fri,  3 Oct 2014 21:01:44 +0200 (CEST)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+This has been fixed and should work. But properties might still be the better approach.. 
+
+Paul Benedict wrote on 03.10.2014 10:46:
+
+> <pluginManagement> only affects <plugins> -- it does not affect <reporting>:
+> https://jira.codehaus.org/browse/MNG-3385
+> 
+> Cheers,
+> Paul
+> 
+> On Thu, Oct 2, 2014 at 9:06 PM, Maxim Solodovnik <solomax666@gmail.com>
+> wrote:
+> 
+>> we using <pluginManagement> for this
+>>
+>> On 3 October 2014 07:24, Kathryn Huxtable <kathryn@kathrynhuxtable.org>
+>> wrote:
+>>
+>> > I’ve always used <properties>, but would it work to use
+>> > <buildDependencies>? -K
+>> >
+>> > On Oct 2, 2014, at 7:02 PM, Paul Benedict <pbenedict@apache.org> wrote:
+>> >
+>> > > I use the maven-javadoc-plugin in both <build> and <reporting>. I don't
+>> > > want to fall back to <properties> to share the plugin version. Is
+>> there a
+>> > > better way than using <properties>?
+>> > >
+>> > > Cheers,
+>> > > Paul
+>> >
+>> >
+>> > ---------------------------------------------------------------------
+>> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> > For additional commands, e-mail: users-help@maven.apache.org
+>> >
+>> >
+>>
+>>
+>> --
+>> WBR
+>> Maxim aka solomax
+>>
+> 
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

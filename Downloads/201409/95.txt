@@ -1,0 +1,94 @@
+From users-return-137254-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 12 13:08:16 2014
+Return-Path: <users-return-137254-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 26A621177C
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 12 Sep 2014 13:08:16 +0000 (UTC)
+Received: (qmail 96247 invoked by uid 500); 12 Sep 2014 13:08:14 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 96165 invoked by uid 500); 12 Sep 2014 13:08:14 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 96153 invoked by uid 99); 12 Sep 2014 13:08:13 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 13:08:13 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of anders.g.hammar@gmail.com designates 74.125.82.172 as permitted sender)
+Received: from [74.125.82.172] (HELO mail-we0-f172.google.com) (74.125.82.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 13:08:08 +0000
+Received: by mail-we0-f172.google.com with SMTP id k48so704432wev.17
+        for <users@maven.apache.org>; Fri, 12 Sep 2014 06:07:41 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=TSvn/rfNbLEvuhFU7Puxx8/Km4aDCzAJx6cC+II/gEI=;
+        b=Ss2MmXB+QktSdfun04yZSMOkaymiDomL6L7AqeM/JeAC252BRqgjbPV4PUXD+4md/h
+         m47zWdSf8c+uvdUnhOkR9AZRFZBuDu0nLEMQYxtRR9lVeVFBlqBKwBoGDzZBlGkraeyP
+         8a0lpKfJR3jNrnFBxvYrOCrW3FaLuhmplRZ8gEr7AhiN0mmwSjbrNG9FTBOebQGX3Te+
+         zf8FVjPXPeP3/8MG0BA8PfoP9ZjT61zuTKkrblh3h2dQx0crZgX+2YwbT1AuA+zazSK/
+         L2LEx11MFMgdpvX4UKLo3i65I7Q5cvTbO+Boq+bF/UjT98dj+vqk80UDnBzeTvZA1yba
+         X+PA==
+MIME-Version: 1.0
+X-Received: by 10.180.90.6 with SMTP id bs6mr2191090wib.47.1410527259748; Fri,
+ 12 Sep 2014 06:07:39 -0700 (PDT)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.133.162 with HTTP; Fri, 12 Sep 2014 06:07:39 -0700 (PDT)
+In-Reply-To: <5412EB2E.8030904@gmx.de>
+References: <1410525516105.34402@c-ware.de>
+	<5412EB2E.8030904@gmx.de>
+Date: Fri, 12 Sep 2014 15:07:39 +0200
+X-Google-Sender-Auth: 53Jf3ED-dhPAyzYnk7WotMriECE
+Message-ID: <CAKDUN1uEN=9S8Ad+w4z=KZ=TABaqzwshdp1QJXgDw=LYnJWScQ@mail.gmail.com>
+Subject: Re: Releasing Maven Plugins
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d043be19843716e0502ddf85e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d043be19843716e0502ddf85e
+Content-Type: text/plain; charset=UTF-8
+
+>
+> The main problem is that the project contains the plugin as
+>>
+> >well as some modules that use the plugin.
+>
+This is the basic mistake in this scenario. If you build a maven-plugin
+> make a separate project from it and do the release etc. only from the
+> maven-plugin and afterwards you have the release available and can continue
+> with the rest which uses the release...
+
+
+Although I haven't tried it myself, my understanding is that it should be
+possible to use a plugin built within a multi-module project in some of the
+other modules when using Maven 3.x. This is not possible with Maven 2.x
+though. However, it requires the plugin to be built before the modules that
+uses it (which the reactor should be able to calculate, unless there are
+some circular module dependencies).
+
+/Anders
+
+
+>
+>
+> Kind regards
+> Karl-Heinz Marbaise
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--f46d043be19843716e0502ddf85e--
+

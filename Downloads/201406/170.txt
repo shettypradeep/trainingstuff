@@ -1,0 +1,129 @@
+From users-return-136486-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jun  2 22:54:58 2014
+Return-Path: <users-return-136486-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A284210A88
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  2 Jun 2014 22:54:58 +0000 (UTC)
+Received: (qmail 9660 invoked by uid 500); 2 Jun 2014 22:54:57 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 9569 invoked by uid 500); 2 Jun 2014 22:54:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9559 invoked by uid 99); 2 Jun 2014 22:54:57 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 02 Jun 2014 22:54:57 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.213.171] (HELO mail-ig0-f171.google.com) (209.85.213.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 02 Jun 2014 22:54:52 +0000
+Received: by mail-ig0-f171.google.com with SMTP id c1so4002118igq.10
+        for <users@maven.apache.org>; Mon, 02 Jun 2014 15:54:25 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:content-type:message-id:mime-version
+         :subject:date:references:to:in-reply-to;
+        bh=YZIiScbmHkZMHHX+bN5c6HCCwukqsaYf/WqeA4kfWP0=;
+        b=E0lSqtLupvxuwWlApBQ6pyhgconU8puPztr51A9wGwTqPsEctiLEyNWC8RdwuSaJFV
+         4NWBItOglZ41VFaGkIU74+c/xhP/8UC+/lD+Pz6mK8iCZjdV+IoxALwLg1lNcumeGCxz
+         Efx1bq+3zBsc/mIA4ilZIrm5gcpz7aw2Ne7WapUP2EIie468d4tj/kbxIsR0VRKdVExw
+         0fbcPqAuLDPGhvJ/OBrWsf2WnPPVeGaj+W+MZvtz8Qkav2xhytBKyGfcLqyUnqObeprG
+         CxXfyOCb+3K2lXBCI3LkZw5Jki80qBnrgK4yV+jC3ktOHTbEshbEqlLXcSPvYdIF+tkB
+         TmSQ==
+X-Gm-Message-State: ALoCoQnPbn9VskbSAnFKjIL4A2sqU/MYTHGYS/3Ys+aM5sDMasR6CnwwwqrbTMQHDshE40HWXA9H
+X-Received: by 10.42.22.9 with SMTP id m9mr34856972icb.43.1401749665755;
+        Mon, 02 Jun 2014 15:54:25 -0700 (PDT)
+Received: from [10.0.1.11] (192-0-154-177.cpe.teksavvy.com. [192.0.154.177])
+        by mx.google.com with ESMTPSA id p12sm32067336igx.18.2014.06.02.15.54.24
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Mon, 02 Jun 2014 15:54:25 -0700 (PDT)
+From: Jason van Zyl <jason@takari.io>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_7F6ED057-E578-4A6A-9B25-59E55CA51EBF"
+Message-Id: <1F86962E-C3DD-4DD5-9380-4AA41903E4CA@takari.io>
+Mime-Version: 1.0 (Mac OS X Mail 7.2 \(1874\))
+Subject: Re: Nexus / Maven repository artifact handling 
+Date: Mon, 2 Jun 2014 18:54:13 -0400
+References: <538cf55e.08578c0a.5a7d.fffff32f@mx.google.com>
+To: Maven Users List <users@maven.apache.org>
+In-Reply-To: <538cf55e.08578c0a.5a7d.fffff32f@mx.google.com>
+X-Mailer: Apple Mail (2.1874)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_7F6ED057-E578-4A6A-9B25-59E55CA51EBF
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+Are you deploying different artifacts with the same version? Release =
+versions are expected to be immutable and Maven will not try to download =
+a released artifact again because it's not expected to change. If you =
+are deploying different artifacts using the same version you are using =
+Maven incorrectly.
+
+On Jun 2, 2014, at 6:06 PM, mehul.sanghvi@gmail.com wrote:
+
+>=20
+> We have a Nexus server to which various projects upload artifacts.=20
+> The artifacts are uploaded to a release repository, not a snapshot =
+repository.=20
+>=20
+> One project is just a consumer of the artifacts.  It does not upload =
+anything.=20
+>=20
+> Even though we have an updated artifact available, the consuming =
+project does not download the artifacts from nexus until we clear out =
+the local repo in ~/.m2. =20
+>=20
+> How does Nexus / Maven determine that a new artifact needs to be =
+downloaded from the remote repo?  The timestamp reflects the time of =
+upload of the artifact.  So what am I missing ?=20
+>=20
+> The GAV is of the form:
+>=20
+>     group:artifact.id:group.artifact.id-11.1.0.jar
+>=20
+> When a new group.artifact.id-11.1.0.jar is uploaded, it won't get =
+downloaded by the consuming project.=20
+>=20
+>=20
+> cheers,  =20
+>=20
+>         mehul=20
+>=20
+> --
+> Sent from my "smart" phone
+>=20
+>=20
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+http://twitter.com/takari_io
+---------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+--Apple-Mail=_7F6ED057-E578-4A6A-9B25-59E55CA51EBF--
+

@@ -1,0 +1,58 @@
+From users-return-136392-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun May 18 06:15:36 2014
+Return-Path: <users-return-136392-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 670E51127C
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 18 May 2014 06:15:36 +0000 (UTC)
+Received: (qmail 38902 invoked by uid 500); 18 May 2014 06:15:32 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 15061 invoked by uid 500); 18 May 2014 05:50:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 96371 invoked by uid 99); 17 May 2014 12:45:17 -0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of guidrouet@gmail.com does not designate 216.139.236.26 as permitted sender)
+Date: Sat, 17 May 2014 05:44:45 -0700 (PDT)
+From: gdrouet <guidrouet@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1400330684696-5793267.post@n5.nabble.com>
+Subject: Custom plugin: how to process filtered resources
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+I wrote a custom plugin that processes some resources inside my project.
+Some of them are filtered before my plugin get executed. However, I don't
+know how my plugin can process the filtered resource. Currently, it could
+only read the raw resource.
+
+I would like to know how my custom plugin can get the filtered version of
+any resource.
+
+Can you help me ?
+
+Thanks !
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Custom-plugin-how-to-process-filtered-resources-tp5793267.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

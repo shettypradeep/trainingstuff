@@ -1,0 +1,71 @@
+From users-return-136972-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Aug  6 02:31:17 2014
+Return-Path: <users-return-136972-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 82C10110B0
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  6 Aug 2014 02:31:17 +0000 (UTC)
+Received: (qmail 858 invoked by uid 500); 6 Aug 2014 02:31:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 773 invoked by uid 500); 6 Aug 2014 02:31:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 759 invoked by uid 99); 6 Aug 2014 02:31:15 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 06 Aug 2014 02:31:15 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.217.179 as permitted sender)
+Received: from [209.85.217.179] (HELO mail-lb0-f179.google.com) (209.85.217.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 06 Aug 2014 02:31:10 +0000
+Received: by mail-lb0-f179.google.com with SMTP id v6so1392137lbi.38
+        for <users@maven.apache.org>; Tue, 05 Aug 2014 19:30:48 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=2aR4CRV+tFw9yyJP8sLZcSRvhgXaVBCZbm7rI7LjBUU=;
+        b=wziXfrulkAG6ULvcgAPanGMJLXO2QcVxMVYtZZETmsbzp1roeiVoHvoE1RsvZAWLMh
+         X2lhSFyo2cqsIQG9r6Ok8XowQ64yCbz5R8DUVgk1bN6/eDUABHC1jGh591ideF3j3AHc
+         g6hmvefkUAGI1MWjyu6ZnXxvpQgl9B0iQnW5sPAjg3+liZHVQOfrMb587B2/KNYBc3qc
+         6fplB/BqIXg/XMtImuZAYNWzaHMrqeCZNWNTtGe9+ggF3RtEz39Ppq8xGsdY6RpXoIzC
+         sWL5+5nYD6WaCvCdWQx8+0npcCZsBHDKeO7R17cENdCnYbgTxWsmWdsol7HGn0ItvZVW
+         8OXA==
+MIME-Version: 1.0
+X-Received: by 10.152.20.168 with SMTP id o8mr7596290lae.4.1407292248602; Tue,
+ 05 Aug 2014 19:30:48 -0700 (PDT)
+Received: by 10.114.20.231 with HTTP; Tue, 5 Aug 2014 19:30:48 -0700 (PDT)
+Date: Tue, 5 Aug 2014 19:30:48 -0700
+Message-ID: <CAPCjjnF9UtAg-wa6mrUuaYHVeSQpfC6yYnGuv+RY8M+83vz4Zg@mail.gmail.com>
+Subject: Jococo report using Jenkins without the need to configure
+ jacoco-maven-plugin? possible?
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e014932c092be9f04ffecc273
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e014932c092be9f04ffecc273
+Content-Type: text/plain; charset=UTF-8
+
+Hello,
+
+I have an impression that I dont need bring in jacoco-maven-plugin to my
+poms, and just have Jenkins to run it at post build and magic will happen
+at Jenkins page.
+
+So far, I have no luck with that
+
+Any got this working?
+
+Thanks
+
+-Dan
+
+--089e014932c092be9f04ffecc273--
+

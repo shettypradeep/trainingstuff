@@ -1,0 +1,123 @@
+From users-return-136966-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Aug  5 12:21:53 2014
+Return-Path: <users-return-136966-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 79CF01129A
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  5 Aug 2014 12:21:53 +0000 (UTC)
+Received: (qmail 64831 invoked by uid 500); 5 Aug 2014 12:21:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 64760 invoked by uid 500); 5 Aug 2014 12:21:51 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 64749 invoked by uid 99); 5 Aug 2014 12:21:51 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 05 Aug 2014 12:21:51 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of jsdump@gmx.de designates 212.227.15.15 as permitted sender)
+Received: from [212.227.15.15] (HELO mout.gmx.net) (212.227.15.15)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 05 Aug 2014 12:21:48 +0000
+Received: from [95.91.205.112] by 3capp-gmx-bs28.server.lan (via HTTP); Tue,
+ 5 Aug 2014 14:21:24 +0200
+MIME-Version: 1.0
+Message-ID: <trinity-53817949-9a46-4b36-9107-bdf21e5202dc-1407241283937@3capp-gmx-bs28>
+From: "Johannes Schneider" <jsdump@gmx.de>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Maven 3 Plugin Development with Repository Queries
+Content-Type: text/plain; charset=UTF-8
+Date: Tue, 5 Aug 2014 14:21:24 +0200
+Importance: normal
+Sensitivity: Normal
+In-Reply-To: <CAPCjjnHppc+BhFe3-bGEY93bJQesNHdMc2DmWfcK1yXM4njzCw@mail.gmail.com>
+References: <trinity-5b4a7fca-9d5e-47c7-a03d-3c385b7ab153-1406535124149@3capp-gmx-bs18>,
+ <CAPCjjnHppc+BhFe3-bGEY93bJQesNHdMc2DmWfcK1yXM4njzCw@mail.gmail.com>
+X-UI-Message-Type: mail
+X-Priority: 3
+X-Provags-ID: V03:K0:6DxbqLIKC3qGtuKI/n8iuELUbmQC/UaCpOjxkaQdoB+
+ Wv6DeJjkeOD0nHu+/myKFdExZsstjN1/SimSL3O4Yoq08W6OTJ
+ iYvpazyJt1h2JZj2ia2qPxbRiNrwtOSghvTXXhzNz+ja/BCC3u
+ 6ROOgDVrWhybvXO1OAKdhIPwn3BPVipUXKk0SFDwPNeboUJvbO
+ oNlvM8LT2bxgLtn+bus/dPgSb4nHldGHVaL7qDh76A+TmXwoeT
+ 1T5PfrmtfV3Z5qJN9+lMJpdHNF2+mXH9sWECyZP6znOCVdWvun NB1FfA=
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi!
+
+The plugins you are mentioning are still based on Maven 2. Neither have I found any plugin using aether and the Maven 3 api, nor seems any deeper documentation to be available. Maven 3 has been released years ago. I thought it would be worth trying its new API rather than sticking to the old compatibility layer...
+
+Anyway, I've been able to find out what the problem with my plugin is: Maven 3.2.2 seems to use another version of aether, namely the one with groupId org.eclipse.aether, not org.sonatype.aether as it was with Maven 3.0.5. That's "great": Now I have a plugin that either works with Maven 3.0.5 or with Maven 3.2.2. Fortunately, we can all use the same version in our dev team. So once we decide to upgrade to Maven 3.2.2, we do not need Maven 3.0.5 support anymore.
+
+Kind regards,
+Johannes
+
+
+
+> Gesendet: Montag, 28. Juli 2014 um 20:49 Uhr
+> Von: "Dan Tran" <dantran@gmail.com>
+> An: "Maven Users List" <users@maven.apache.org>
+> Betreff: Re: Maven 3 Plugin Development with Repository Queries
+>
+> I am interested on the query capability. However, I ended up to  use
+> maven-dependency-tree and maven-compat to resolve artifacts. Take a look at
+> maven-dependency-plugin, maven-report-info-plugin, license-maven-plugin for
+> various sample code.  However, those are not directly deal with aether
+> 
+> -D
+> 
+> 
+> On Mon, Jul 28, 2014 at 1:12 AM, Johannes Schneider <jsdump@gmx.de> wrote:
+> 
+> > Hi,
+> >
+> > I am developing a plugin that needs to query the repositories. I'm using
+> > the Aether API because I thought that's the Maven 3 way to do it (cf.
+> > http://blog.sonatype.com/2011/01/how-to-use-aether-in-maven-plugins/) and
+> > because many of the Maven 2 methods are marked as deprecated. With Maven
+> > 3.0.5, everything works fine. But now, trying Maven 3.2.1 and 3.2.2, I get
+> > an exception:
+> > ------
+> > Error injecting: com.dialogika.infport.plugins.helper.CheckParentMojo
+> > java.lang.NoClassDefFoundError: org/sonatype/aether/artifact/Artifact
+> > ------
+> >
+> > It is the injection of org.sonatype.aether.RepositorySystem that does not
+> > work anymore:
+> > ------
+> > @Component
+> > private RepositorySystem repoSystem;
+> > ------
+> >
+> > First of all, I am of course interested in how to fix this problem, but,
+> > asking more generally: Is the Aether API still the way of how to resolve
+> > artifacts? Or should I better stick to the Maven 2 API (as most of the
+> > plugins out there still are, as I saw)?
+> >
+> > And, in addition to this: Are there any good, up-to-date resources on how
+> > to write maven plugins? Some plugins I could use as a a reference? Many of
+> > the tutorials and examples seem to be quite out-dated and not going very
+> > deep into details.
+> >
+> > Thanks in advance for your help!
+> >
+> > Johannes
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+> 
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

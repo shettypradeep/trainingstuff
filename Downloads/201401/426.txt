@@ -1,0 +1,67 @@
+From users-return-134931-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Jan  4 15:23:01 2014
+Return-Path: <users-return-134931-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 70CA7109CF
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  4 Jan 2014 15:23:01 +0000 (UTC)
+Received: (qmail 84424 invoked by uid 500); 4 Jan 2014 15:22:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 84339 invoked by uid 500); 4 Jan 2014 15:22:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 84331 invoked by uid 99); 4 Jan 2014 15:22:44 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 04 Jan 2014 15:22:44 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of markus@malkusch.de designates 95.142.67.55 as permitted sender)
+Received: from [95.142.67.55] (HELO malkusch.de) (95.142.67.55)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 04 Jan 2014 15:22:37 +0000
+Received: from ppp-58-9-107-105.revip2.asianet.co.th ([58.9.107.105] helo=malkusch.de)
+	by malkusch.de with esmtpsa (TLS1.0:DHE_RSA_AES_256_CBC_SHA1:256)
+	(Exim 4.80.1)
+	(envelope-from <markus@malkusch.de>)
+	id 1VzT3I-0005Qf-CO
+	for users@maven.apache.org; Sat, 04 Jan 2014 16:22:16 +0100
+From: Markus Malkusch <markus@malkusch.de>
+To: users@maven.apache.org
+Subject: How to copy unversioned test resources during release:perform?
+Date: Sat, 04 Jan 2014 22:22:10 +0700
+Message-ID: <1769350.PT5TEdQ6WR@laerz>
+X-Face: L]ysRB@fzNk6qkK4ZAv:`;XNHsDCn=u0yWT&<_W5&QR,BABX[.eEQA}67D_fm(~U;YgaIm ordzS.~(CoDV+\i4n*[@aCEE(bi=HaM}',/)B/w,IeQ_"[(*1@,]_0!ge.2<?$+
+User-Agent: KMail/4.11.2 (Linux/3.12.6-gentoo; KDE/4.11.2; x86_64; ; )
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7Bit
+Content-Type: text/plain; charset="us-ascii"
+X-Spam-Score: -1.0
+X-Spam-Score-Int: -9
+X-Spam-Level: -
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi
+
+I have a question about the release plugin.
+
+I have test resources which are not under version control. As testing is part 
+of release:perform that fails without those resources.
+
+How can I tell Maven to copy those unversioned test resources into 
+target/checkout/target/test-classes/. I really would prefer not to skip 
+testing. Those test resource won't come into the public vcs as they have 
+credentials for a webservice.
+
+Markus
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,131 @@
+From users-return-136367-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri May 16 19:25:17 2014
+Return-Path: <users-return-136367-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8ACA511C34
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 16 May 2014 19:25:17 +0000 (UTC)
+Received: (qmail 58388 invoked by uid 500); 16 May 2014 11:31:27 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 5251 invoked by uid 500); 16 May 2014 11:23:21 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 48185 invoked by uid 99); 16 May 2014 11:14:54 -0000
+Received: from Unknown (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 16 May 2014 11:14:54 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.220.50] (HELO mail-pa0-f50.google.com) (209.85.220.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 15 May 2014 17:59:01 +0000
+Received: by mail-pa0-f50.google.com with SMTP id fb1so1383087pad.9
+        for <users@maven.apache.org>; Thu, 15 May 2014 10:58:37 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:content-type:message-id:mime-version
+         :subject:date:references:to:in-reply-to;
+        bh=hlMP9c3pRD6NZAvKNSwll8kgoimPoFoBG8Q3SFkoNrc=;
+        b=S8/oZIw93hAIjCM9JRo8FTxicI5RqY/cMyiIhEEqOvSY0gzjulKx9gp8e+S/tLhA7d
+         HyC0Tu/fNdAqMl9nXgBGAKYDhVI3cIsGyVRonA1ctH2apmL9zVnNyuMYelMXpTlykxH0
+         n0PxrAYwrTfGOVvV6IsXceaoY6SVFjRRMGmh2f0t1dU0DV7DFIxUhuZ8CvMxpnl+AY7T
+         bhbY9OEGmWxJNomdWdzAf1jZt3ob0Z2B9wQRMkHJk9XoaRPj89E2k0YjWiKWPq8kSkAJ
+         emKl4ceza2i2haS1/qYRmqiDC0fFYNnIJVp+nwSjhkX38a+w00naHvWeP7v2PHFFBWzv
+         XaLA==
+X-Gm-Message-State: ALoCoQmUGpxBjnS0G++vNx0qIOVefyGGkKL0UoIg+BSJSKz+XsdVfhz9ISaV7pLcj3Bq4KY6Y+v2
+X-Received: by 10.68.202.8 with SMTP id ke8mr14362943pbc.86.1400176717229;
+        Thu, 15 May 2014 10:58:37 -0700 (PDT)
+Received: from [172.31.237.3] ([216.9.110.2])
+        by mx.google.com with ESMTPSA id id10sm10219134pbc.35.2014.05.15.10.58.36
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Thu, 15 May 2014 10:58:36 -0700 (PDT)
+From: Jason van Zyl <jason@takari.io>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_A2FD3C75-98F6-4143-95B3-CA2CE17558B8"
+Message-Id: <C04DE5A1-16CC-4118-AB41-8551017B7D0C@takari.io>
+Mime-Version: 1.0 (Mac OS X Mail 7.2 \(1874\))
+Subject: Re: M2Eclipse vs. maven-eclipse-plugin: which is preferred?
+Date: Thu, 15 May 2014 10:58:34 -0700
+References: <CAEayHEN_du-V3D97v-ybWH68vZ9kRm1SqsoBxUrRsT8sQacfnw@mail.gmail.com>
+To: Maven Users List <users@maven.apache.org>
+In-Reply-To: <CAEayHEN_du-V3D97v-ybWH68vZ9kRm1SqsoBxUrRsT8sQacfnw@mail.gmail.com>
+X-Mailer: Apple Mail (2.1874)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_A2FD3C75-98F6-4143-95B3-CA2CE17558B8
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+There is nothing official from the Maven itself. There used to be =
+competing Maven Eclipse integration from different people here, and =
+there has always been the command line generation vs IDE integration. So =
+there is no officially blessed integration from the Maven project =
+proper.
+
+Also note that M2Eclipse and the maven-eclipse-plugin are not =
+compatible. In M2E it specifically looks for project files created with =
+the maven-eclipse-plugin and disables them.
+
+On May 9, 2014, at 2:19 AM, Thomas Broyer <t.broyer@gmail.com> wrote:
+
+> Hi all,
+>=20
+> Does the Apache Maven Project/Community has an official stance about
+> whether M2Eclipse or maven-eclipse-plugin is preferred way of =
+importing
+> Maven projects into Eclipse?
+>=20
+> I thought M2Eclipse was the blessed way, but I cannot find anything
+> "official" online.
+> Only that the maven-eclipse-plugin hasn't been updated for a while, =
+but
+> that could also be a sign that it has no issue and Eclipse offers =
+backwards
+> compatibility.
+>=20
+> Note: this is not a poll about what you as a developer prefers, I'm =
+looking
+> for whether there's an official position and which one it is.
+> Background: I'm in a argument in a code review for an archetype about
+> whether to include maven-eclipse-plugin configuration within the POM =
+or
+> not; and any "official" choice would help us avoid "bikeshedding".
+>=20
+>=20
+> --=20
+> Thomas Broyer
+> /t=C9=94.ma.b=CA=81wa.je/ <http://xn--nna.ma.xn--bwa-xxb.je/>
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+http://twitter.com/takari_io
+---------------------------------------------------------
+
+We all have problems. How we deal with them is a measure of our worth.
+
+ -- Unknown
+
+
+
+
+
+
+
+
+
+
+--Apple-Mail=_A2FD3C75-98F6-4143-95B3-CA2CE17558B8--
+

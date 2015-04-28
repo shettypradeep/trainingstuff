@@ -1,0 +1,82 @@
+From users-return-137582-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Oct 18 17:23:38 2014
+Return-Path: <users-return-137582-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3E0261759B
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 18 Oct 2014 17:23:38 +0000 (UTC)
+Received: (qmail 14100 invoked by uid 500); 18 Oct 2014 17:23:36 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 14010 invoked by uid 500); 18 Oct 2014 17:23:35 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 13998 invoked by uid 99); 18 Oct 2014 17:23:35 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 18 Oct 2014 17:23:35 +0000
+X-ASF-Spam-Status: No, hits=3.1 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_IMAGE_ONLY_16,HTML_MESSAGE,HTML_SHORT_LINK_IMG_2,RCVD_IN_DNSWL_LOW,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of burtonator2011@gmail.com designates 209.85.215.42 as permitted sender)
+Received: from [209.85.215.42] (HELO mail-la0-f42.google.com) (209.85.215.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 18 Oct 2014 17:23:10 +0000
+Received: by mail-la0-f42.google.com with SMTP id gf13so2344197lab.29
+        for <users@maven.apache.org>; Sat, 18 Oct 2014 10:23:09 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:from:date:message-id:subject:to:content-type;
+        bh=CBQNaat2R5g++Y/rTyPC0+4nJhUGEYCfc3C+LlYPaWk=;
+        b=fBJWwuiCrKTYcSaIodhuRUY8c3SxDD3Ii5CT0rzqZ6hzOzBJHd4mFqcnSbFYmqOxtD
+         GNTO+ZT6ClgEnlTV2mXkjwAtxUmzEOkPpIAmwrXxzexEs2la07ZH7ID9j+SnJ0j4zQ3k
+         ZWClfebbtd5X/vxvXQinSS2Ilco2cXSHc9Iyp4wnXMMLuJ5/aNoMkPx5X15SwkPLL7bV
+         MG+5oDkGZQwX9TA+JiVccDpezpQeSkzneBWt4PbcqK9WREH85Sa8yM6bOPtJxlHlhrlU
+         KkNA6Z0eso65a3XwSaGJ856IK7nNjKnHG8GoiLOkcAZBhHXZwm3vpXHb/VpVrj9jidjv
+         1FMg==
+X-Received: by 10.112.47.37 with SMTP id a5mr16220813lbn.31.1413652989115;
+ Sat, 18 Oct 2014 10:23:09 -0700 (PDT)
+MIME-Version: 1.0
+Sender: burtonator2011@gmail.com
+Received: by 10.112.210.101 with HTTP; Sat, 18 Oct 2014 10:22:48 -0700 (PDT)
+From: Kevin Burton <burton@spinn3r.com>
+Date: Sat, 18 Oct 2014 10:22:48 -0700
+X-Google-Sender-Auth: rJe2Co9hITNVkeU7p4zl4gXPz1o
+Message-ID: <CAAZU44nprwUVbFGFZojiEcvg63QD45vAVKAm+0O60Wy1Wo69Vw@mail.gmail.com>
+Subject: computing rank on the top maven modules by using the pom.xml files in
+ maven central?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11339ee440850e0505b5bce9
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11339ee440850e0505b5bce9
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I had a though today that it might be valuable to compute a rank (either
+pagerank or just raw in degree) on the top modules in maven central.
+
+But perhaps someone has already done this?  I=E2=80=99m lazy. :)
+
+The goal here , for me at least, is to fine the top libraries that everyone
+is using based on rank.  If the community is adopting a certain module I=E2=
+=80=99d
+like to yield to wisdom of the crowds and assume it=E2=80=99s decent and ma=
+ybe
+something I should also consider using.
+
+
+--=20
+
+Founder/CEO Spinn3r.com
+Location: *San Francisco, CA*
+blog: http://burtonator.wordpress.com
+=E2=80=A6 or check out my Google+ profile
+<https://plus.google.com/102718274791889610666/posts>
+<http://spinn3r.com>
+
+--001a11339ee440850e0505b5bce9--
+

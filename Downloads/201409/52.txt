@@ -1,0 +1,241 @@
+From users-return-137371-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Sep 25 08:14:48 2014
+Return-Path: <users-return-137371-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BAC7A11E70
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 25 Sep 2014 08:14:48 +0000 (UTC)
+Received: (qmail 50624 invoked by uid 500); 25 Sep 2014 08:14:46 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 50533 invoked by uid 500); 25 Sep 2014 08:14:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 50521 invoked by uid 99); 25 Sep 2014 08:14:46 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 25 Sep 2014 08:14:46 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [217.26.49.175] (HELO mxout015.mail.hostpoint.ch) (217.26.49.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 25 Sep 2014 08:14:41 +0000
+Received: from [10.0.2.46] (helo=asmtp013.mail.hostpoint.ch)
+	by mxout015.mail.hostpoint.ch with esmtp (Exim 4.82 (FreeBSD))
+	(envelope-from <domi@fortysix.ch>)
+	id 1XX4Bv-000E8j-I3
+	for users@maven.apache.org; Thu, 25 Sep 2014 10:14:19 +0200
+Received: from [31.24.12.193] (helo=[192.168.1.30])
+	by asmtp013.mail.hostpoint.ch with esmtpsa (TLSv1:AES128-SHA:128)
+	(Exim 4.82 (FreeBSD))
+	(envelope-from <domi@fortysix.ch>)
+	id 1XX4Bv-000DXg-GC
+	for users@maven.apache.org; Thu, 25 Sep 2014 10:14:19 +0200
+X-Authenticated-Sender-Id: domi@fortysix.ch
+Content-Type: text/plain; charset=windows-1252
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.6\))
+Subject: Re: usage with Jenkins
+From: domi <domi@fortysix.ch>
+In-Reply-To: <5629A6219DB3E544AB84388D90149787482B883F@xmb-aln-x03.cisco.com>
+Date: Thu, 25 Sep 2014 10:14:18 +0200
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <DC4CBC7D-BEEB-4CB6-B744-A7F70B7201D1@fortysix.ch>
+References: <CAKuK4uH7S5Z54van32ExnPu+_d8bP9BA-Vz-4BTK2QQ5My_KHQ@mail.gmail.com> <CADN69y=zCBy+XJs9V338GTr1FP9y30NVbfOU09SUKcjM6Masxg@mail.gmail.com> <CAMH6+axK==g5Gk26muHO1FKaKiRxdS=Ut70jP60sSda-8brRsg@mail.gmail.com> <CA+nPnMzYQmLcMz08GvYgFf4EDA9Ab_9w+veBokjUn-uiXnGZsw@mail.gmail.com> <CADN69y=FBRcT9y5NmGkJ1e0sTw5r8SmYgfAf70ZRBE+mQ8Acrg@mail.gmail.com> <CAMH6+awnfFY6P+iKABaxo+tsqCT3Ju6Xm-m31N8vc5nzNJ5YhQ@mail.gmail.com> <CADN69ynbp-Bn62ZOjVNn3Q0hYqyCQc9FCLF5dPu+9phGUNK4PQ@mail.gmail.com> <CA+nPnMyg+doZuQBZmD+mVNGSPfCeNeg7dqvdwsh1ODT3dXXm+g@mail.gmail.com> <5629A6219DB3E544AB84388D90149787482B883F@xmb-aln-x03.cisco.com>
+To: Maven Users List <users@maven.apache.org>
+X-Mailer: Apple Mail (2.1878.6)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I fully agree with James, I never used the module reporting and I the =
+action to remove undefined Modules does not add any added value either.
+The less configuration required the better and thats where this type =
+really shines.=20
+Also its integration with the m2release plugin is what cuts down the =
+number of required Jobs a lot.
+Domi
+
+On 25.09.2014, at 09:53, James Nord (jnord) <jnord@cisco.com> wrote:
+
+> Hi Stephen,
+>=20
+> I'm not sure why you think that per module reporting is the killer =
+feature.
+>=20
+> For me I couldn=92t give a hoot if I saw all reports from maven =
+modules munged in a single report or spread across 100 different pages =
+(in fact I generally use the top level aggregate anyway).
+>=20
+> What's the killer feature is=20
+> 1) automatic (zero conf) finding of artifacts / test reports / =
+findbugs report pickup etc etc...
+>=20
+> And also being able to lock down what the CI system will run to =
+deploy...  That is if some devs have control of their own builds when an =
+enforcer rule fails (your build is not repeatable) they will look up =
+enforcer and add -Denforcer.skip =20
+> Yes they could add <phase>none</phase> to the enforcer config - but =
+the ones that are intelligent enough to do that know better and fix the =
+issue rather than hide it!
+> Neither of the above are possible with the literate job type.
+>=20
+> /James
+>=20
+>=20
+>> -----Original Message-----
+>> From: Stephen Connolly [mailto:stephen.alan.connolly@gmail.com]
+>> Sent: 23 September 2014 19:44
+>> To: Maven Users List
+>> Subject: Re: usage with Jenkins
+>>=20
+>> FYI my aim is to supersede the evil job type with some enhanced =
+reporting in
+>> what is currently called the literate job type.
+>>=20
+>> That would mean you'd get the per-module reporting.
+>>=20
+>> The current evil job type's other "killer" feature is automatic =
+downstream job
+>> triggering... Which is actually broken as it does not take into =
+account the local
+>> repo that the -SNAPSHOTs may or may not have been deployed into and
+>> assumes that `package` is the same as `deploy` as far as triggering =
+is
+>> concerned as well as ignoring that deployment might be to a staging =
+repo, so
+>> the artifacts may not be available downstream... However, despite =
+being
+>> fundamentally broken at every level, you would be surprised how many
+>> people feel locked into the evil job type because of this...
+>>=20
+>> In short, there is so many issues with it that I cannot recommend its =
+use...
+>> The only semi useful feature from my PoV is per module reporting.
+>>=20
+>> (Sadly my day job has me having to support the evil job type from =
+time to
+>> time... Though usually those tickets get picked up by Kohsuke if I =
+start
+>> another "evil job type" tirade ;-) )
+>>=20
+>> On Tuesday, 23 September 2014, Curtis Rueden <ctrueden@wisc.edu>
+>> wrote:
+>>=20
+>>> Hi James,
+>>>=20
+>>>> I can no longer see "Deploy artifacts to Maven repository"
+>>>> as a post-build action.
+>>>=20
+>>> Just add a build step that does "mvn deploy" or similar.
+>>>=20
+>>>> Dare I ask what I'm missing having chosen the full-fat option..?
+>>>=20
+>>> If you're asking what you cannot do with freeform jobs: I don't know
+>>> of anything. I think the Maven-style job is just a convenience to =
+get
+>>> very basic CI set up as quickly as possible, for people without much
+>>> technical know-how.
+>>>=20
+>>> If you're asking for more details on limitations of the Maven-style =
+job:
+>>> it's been awhile, but IIRC my group had several problems. One such =
+was
+>>> that the Jenkins Git plugin did not fire Maven-style jobs upon
+>>> receiving the push notification from GitHub. Another really serious
+>>> problem is that you can't add arbitrary shell script as a post-build
+>>> step. And needing to do this is, in my experience, extremely common.
+>>>=20
+>>> It wouldn't be that big of an issue if there were an easy way to =
+later
+>>> "convert" a Maven-style job to a freestyle job should the need =
+arise.
+>>> But try a web search on that topic and you'll see what I mean about =
+it
+>>> being a highly non-trivial problem.
+>>>=20
+>>> Regards,
+>>> Curtis
+>>>=20
+>>> On Tue, Sep 23, 2014 at 8:56 AM, James Green
+>> <james.mk.green@gmail.com
+>>> <javascript:;>>
+>>> wrote:
+>>>=20
+>>>> News to me. Ironically I'm just setting up a new Jenkins job so
+>>>> tried the freeform style - I can no longer see "Deploy artifacts to
+>>>> Maven
+>>> repository"
+>>>> as a post-build action.
+>>>>=20
+>>>> Dare I ask what I'm missing having chosen the full-fat option..?
+>>>>=20
+>>>> On 23 September 2014 14:02, Curtis Rueden <ctrueden@wisc.edu
+>>> <javascript:;>> wrote:
+>>>>=20
+>>>>> The Maven style build will also lock you in to a small subset of
+>>>> Jenkins's
+>>>>> usual features. And when you eventually need a feature not
+>>>>> available
+>>>> with a
+>>>>> Maven-style build, there is no conversion path from Maven-style to
+>>>>> Freestyle -- you have to recreate the job (losing the build
+>>>>> history
+>>>> etc.).
+>>>>>=20
+>>>>> -Curtis
+>>>>> On Sep 23, 2014 7:33 AM, "Stephen Connolly" <
+>>>>> stephen.alan.connolly@gmail.com <javascript:;>>
+>>>>> wrote:
+>>>>>=20
+>>>>>> Freestyle does not mess with your build and change it from
+>>>>>> building
+>>> the
+>>>>> way
+>>>>>> maven intends. Google "stephen's java adventures Jenkins maven
+>>>> considered
+>>>>>> evil" for a more detailed discussion
+>>>>>>=20
+>>>>>> On Tuesday, 23 September 2014, James Green
+>>>>>> <james.mk.green@gmail.com
+>>> <javascript:;>>
+>>>>>> wrote:
+>>>>>>=20
+>>>>>>> On 23 September 2014 02:23, Curtis Rueden <ctrueden@wisc.edu
+>>> <javascript:;>
+>>>>>>> <javascript:;>> wrote:
+>>>>>>>>=20
+>>>>>>>>=20
+>>>>>>>> Also, stay away from the Jenkins "Maven" style job.
+>>>>>>>> Freestyle is
+>>>> more
+>>>>>>>> flexible and less buggy.
+>>>>>>>>=20
+>>>>>>>=20
+>>>>>>> Based on ..?
+>>>>>>>=20
+>>>>>>=20
+>>>>>>=20
+>>>>>> --
+>>>>>> Sent from my phone
+>>>>>>=20
+>>>>>=20
+>>>>=20
+>>>=20
+>>=20
+>>=20
+>> --
+>> Sent from my phone
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,170 @@
+From users-return-135317-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jan 31 12:16:46 2014
+Return-Path: <users-return-135317-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0B4CB10432
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 31 Jan 2014 12:16:46 +0000 (UTC)
+Received: (qmail 55664 invoked by uid 500); 31 Jan 2014 12:16:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 55598 invoked by uid 500); 31 Jan 2014 12:16:40 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 55590 invoked by uid 99); 31 Jan 2014 12:16:40 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 31 Jan 2014 12:16:40 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of anders.g.hammar@gmail.com designates 74.125.82.52 as permitted sender)
+Received: from [74.125.82.52] (HELO mail-wg0-f52.google.com) (74.125.82.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 31 Jan 2014 12:16:35 +0000
+Received: by mail-wg0-f52.google.com with SMTP id b13so8702432wgh.19
+        for <users@maven.apache.org>; Fri, 31 Jan 2014 04:16:13 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=h2UNUtrywqe01EsLpCONSj9AImBWszsGjVYEhJiQ+qc=;
+        b=wnKNA3dkM7CR3fDezOFzWkV3qztZxWs/FZFhZlWzCSYsW6DV1OmaKeDndeJlcYXRF9
+         axj+G5wYVqdkiU/uaoGMXDLsBTWGof1TM51iJBtLF2SmEGXp5GqrVxswjKzIY+VgCjDm
+         m4C/ObVwnYia+av1HQMzwyOkswAhJwQNHqCFyGddMXlDO1XakPYp64ZOPRll1Qms75OC
+         XY0MDkBIHgxDgETT1G/0zxkK+iy4EWQgKESkiS8je6QZU5MrZlgYLQ3o432RJm2VmBxW
+         AD7ilRCwBBdTLyLwcR9l9aL4dPaNdhRfnsCAhm6ESgZ21BoxCiXNnjVpEPfOCbX/QD5c
+         Dxlg==
+MIME-Version: 1.0
+X-Received: by 10.180.12.43 with SMTP id v11mr19596566wib.33.1391170573599;
+ Fri, 31 Jan 2014 04:16:13 -0800 (PST)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.137.100 with HTTP; Fri, 31 Jan 2014 04:16:13 -0800 (PST)
+In-Reply-To: <CAOonohc6YwtXH-LtEHv3PGnv57cQ0YjWUvcTp9VZ1+Bj8DN7sQ@mail.gmail.com>
+References: <CAOonohfsbrJ-7pxsEYFhLJvzb9KS+V6tnM0Je46Ep3m8YLFWSg@mail.gmail.com>
+	<CAKDUN1vjCWVKV8BQZkjAW4Xb96z_41mhRmP=TNzLHxaX=YdCGg@mail.gmail.com>
+	<CAOonohc6YwtXH-LtEHv3PGnv57cQ0YjWUvcTp9VZ1+Bj8DN7sQ@mail.gmail.com>
+Date: Fri, 31 Jan 2014 13:16:13 +0100
+X-Google-Sender-Auth: dA48nm_p21fihMRDU7GVZZnUPyI
+Message-ID: <CAKDUN1v-0t+DhVnYi3CXFa_0UBs+KXXnR3jeDWqaETFQOO8r=Q@mail.gmail.com>
+Subject: Re: dependency management across projects
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c22590dc8a7b04f14323dc
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c22590dc8a7b04f14323dc
+Content-Type: text/plain; charset=ISO-8859-1
+
+> Some confusion here. You're talking about depMgmt and then say that the
+> > required deps should be pulled in autoamtically. That will not happen.
+> You
+> > still need to specify the deps you have.
+>
+> Yes, but not the versions. The users will have to add the dependency they
+> want to use, yes. The point here is that they don't have to care about the
+> versions (but I do, which is why I need some tooling)
+
+
+> > In any case, this is ok if you want to stay on the "Maven way". This
+> > depMgmt could be handled/provided in a separate pom which is then
+> included
+> > in those projects that want to use the platform/product. Sometimes this
+> is
+> > called a BOM (Bill of Material). JBoss provides such a BOM for their app
+> > server for example. A quick Google gave this page talking about that:
+> > http://www.mastertheboss.com/jboss-maven/maven-and-jboss-how-to-use-boms
+>
+> BOM is exactly what I want to do, yes. What may not be clear in my original
+> post is that I am looking at this problem as the "release manager" of P who
+> wants to release P 1.0.0 with SP1 1.2.3, SP2 1.4.3, SP3 4.3.0, etc. I want
+> to have an overview of where the different sub-projects stands with regards
+> to the target for P.
+>
+> Assume that each sub-project has its own release cycle (and is released as
+> a project on its own actually) and at some point those different projects
+> have to be released as a single coherent unit.
+>
+
+The release of the BOM would be that release of "a single coherent unit"
+then. It would specify the (marketing) version of the "platform" P.
+For example, P v1.0.0 will include v1.2.3 of SP1 (sub-product 1), v1.4.3 of
+SP2, etc.
+
+Creating the BOM would be a manual work I think, as you want to make sure
+that exactly the correct versions are included (might not be the latest
+releases).
+
+/Anders
+
+
+>
+>
+> >
+> >
+> > There is also the possibility of creating a "grouping pom", which lists
+> all
+> > artifacts as dependencies. You would then declare a dependency to that
+> > grouping pom and get all deps magically sucked in. However, this is not
+> > really the "Maven way" in my opinion as you wouldn't specify your direct
+> > deps bu sort of relly on transitive deps. There are some fans of this
+> > approach though here on this list.
+> >
+> >
+> > > 2. Build configs that *force* each sub-project to run with the list of
+> > > dependencies for the project (to ensure all tests pass, etc). This is
+> to
+> > be
+> > > used alongside the regular build job for validation purpose
+> > >
+> >
+> > Maybe some enforcer rule?
+> >
+>
+> Like I said, this is to be used alongside the regular build job. So my SP4
+> 1.2.0-SNAPSHOT is building with a set of dependencies on its own and I want
+> to validate that with the dependencies of the target release for P, it is
+> also working just fine. It may just be the same ideally or slightly
+> different (or not slightly at all which requires an explicit validation).
+>
+> So I need to be able to swap those versions for validation purposes and run
+> the build with that.
+>
+> S.
+>
+>
+>
+> >
+> > /Anders
+> >
+> >
+> > >
+> > > I started to look at this and my first trial was to generate a report
+> > with
+> > > all the dependencies of each project and build a consolidated report
+> > that I
+> > > can match against the candidates. This would help manage the first goal
+> > as
+> > > if a dependency gets added, removed or updated, the global
+> > > dependencyManagement has to be impacted manually (do we upgrade or not,
+> > > etc).
+> > >
+> > > For the second part, it's not easy to force a dependency change in
+> Maven,
+> > > especially if the version has been specified at the project level.
+> > >
+> > > Thanks for reading that far. If you have any idea or know any
+> > organisation
+> > > that tried to implement that, I'd be interested
+> > >
+> > > Thanks!
+> > > S.
+> > >
+> >
+>
+
+--001a11c22590dc8a7b04f14323dc--
+

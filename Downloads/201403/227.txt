@@ -1,0 +1,141 @@
+From users-return-135861-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 19 20:19:30 2014
+Return-Path: <users-return-135861-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2F43010604
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 19 Mar 2014 20:19:30 +0000 (UTC)
+Received: (qmail 94030 invoked by uid 500); 19 Mar 2014 20:19:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 93949 invoked by uid 500); 19 Mar 2014 20:19:25 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 52980 invoked by uid 99); 19 Mar 2014 20:03:00 -0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,NORMAL_HTTP_TO_IP,RCVD_IN_DNSWL_LOW,SPF_PASS,WEIRD_PORT
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of hwpstorage@gmail.com designates 209.85.220.193 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=66lBR54buKhCo5LYQi3rDCjvCGiDqwOvaU5mOZwResY=;
+        b=aA3N63BP67lLbRrkF+CpnNmPX/8OuIiqwjKqQHCchDQ0qVkg0maaBNm213vGTNpuyh
+         EoeVQLVTSNXfJi5HP9nukFp74Iwh7Rq30XmElbLLVqBGopUZbP0O6UuYV9S4rzJHH005
+         0i4eZ44TiVtfhgdtmzPD7AuODiRBzAYR3wg34lvjB1vHgs2K43KgKTL5nfVUV4rQ934d
+         I+Gu6Nbp0KcHEfUgj3xhQr1+Af4A7YmAMu8dD1cTfQMHNGcPRfmUueJoXYU6p0MaixWr
+         1Q02OTsGuaibWlw8q6PJ7hspWIkkoljkmcVeYrPG6X2+VRelqvXFZU/NKPnSTRGBmnsO
+         GsOw==
+MIME-Version: 1.0
+X-Received: by 10.52.171.68 with SMTP id as4mr26972367vdc.0.1395259355893;
+ Wed, 19 Mar 2014 13:02:35 -0700 (PDT)
+Date: Wed, 19 Mar 2014 16:02:35 -0400
+Message-ID: <CABspWz9xoPjzm5i2tvwF6wgoaopRGs8Bv3RoNQtcq=1sJHDG9Q@mail.gmail.com>
+Subject: Maven Ant Plugin question
+From: hwpstorage <hwpstorage@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=047d7b6dbd9a47137804f4fb2204
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b6dbd9a47137804f4fb2204
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hello,
+
+I tried to use maven to genterate build.xml for ant.
+Use command
+ mvn ant:ant
+will generate build.xml and maven-build.xml, which can be used by Ant.
+my problem is
+everytime runs ant compile
+it will download everything from every repository.
+
+for example, for this jar file parquet-format-1.0.0.jar
+I got error, it tries every repository.
+      [get] Getting:
+http://192.168.2.124:8081/nexus/content/groups/public//com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+      [get] To:
+/home/usera/.m2/repository/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+      [get] Getting:
+https://repository.cloudera.com/artifactory/cloudera-repos//com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+      [get] To:
+/home/usera/.m2/repository/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+      [get] Error opening connection java.io.FileNotFoundException:
+https://repository.cloudera.com/artifactory/cloudera-repos//com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+      [get] Error opening connection java.io.FileNotFoundException:
+https://repository.cloudera.com/artifactory/cloudera-repos//com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+      [get] Error opening connection java.io.FileNotFoundException:
+https://repository.cloudera.com/artifactory/cloudera-repos//com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+      [get] Can't get
+https://repository.cloudera.com/artifactory/cloudera-repos//com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jarto
+/home/usera/.m2/repository/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+      [get] Getting:
+http://maven.twttr.com/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+      [get] To:
+/home/usera/.m2/repository/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+      [get] Error opening connection java.io.FileNotFoundException:
+http://maven.twttr.com/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+      [get] Error opening connection java.io.FileNotFoundException:
+http://maven.twttr.com/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+      [get] Error opening connection java.io.FileNotFoundException:
+http://maven.twttr.com/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+      [get] Can't get
+http://maven.twttr.com/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jarto
+/home/usera/.m2/repository/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+      [get] Getting:
+http://repo.maven.apache.org/maven2/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+      [get] To:
+/home/usera/.m2/repository/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+
+in File  maven-build.xml, this is generated via commmand mvn ant:ant
+
+    <mkdir dir="${maven.repo.local}/com/twitter/parquet-format/1.0.0"/>
+    <get src="
+http://192.168.2.124:8081/nexus/content/groups/public//com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+"
+
+dest="${maven.repo.local}/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar"
+         usetimestamp="false"
+         ignoreerrors="true"/>
+    <get src="
+https://repository.cloudera.com/artifactory/cloudera-repos//com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+"
+
+dest="${maven.repo.local}/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar"
+         usetimestamp="false"
+         ignoreerrors="true"/>
+    <get src="
+http://maven.twttr.com/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+"
+
+dest="${maven.repo.local}/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar"
+         usetimestamp="false"
+         ignoreerrors="true"/>
+    <get src="
+http://repo.maven.apache.org/maven2/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar
+"
+
+dest="${maven.repo.local}/com/twitter/parquet-format/1.0.0/parquet-format-1.0.0.jar"
+         usetimestamp="false"
+         ignoreerrors="true"/>
+
+In the orginal maven pom.xml file
+                <dependency>
+                        <groupId>com.twitter</groupId>
+                        <artifactId>parquet-format</artifactId>
+                        <version>1.0.0</version>
+                </dependency>
+
+Is there any way to change the generate file maven-build.xml in maven?
+is it possible to skip the jar download if the maven.repo.local local
+repository already has the jar file?
+
+Thanks a lot
+
+--047d7b6dbd9a47137804f4fb2204--
+

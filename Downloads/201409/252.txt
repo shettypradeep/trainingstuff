@@ -1,0 +1,179 @@
+From users-return-137277-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Sep 13 09:56:54 2014
+Return-Path: <users-return-137277-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 20C4F118B8
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 13 Sep 2014 09:56:54 +0000 (UTC)
+Received: (qmail 34797 invoked by uid 500); 13 Sep 2014 09:56:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 34716 invoked by uid 500); 13 Sep 2014 09:56:51 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 34704 invoked by uid 99); 13 Sep 2014 09:56:51 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 13 Sep 2014 09:56:51 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.219.42 as permitted sender)
+Received: from [209.85.219.42] (HELO mail-oa0-f42.google.com) (209.85.219.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 13 Sep 2014 09:56:24 +0000
+Received: by mail-oa0-f42.google.com with SMTP id g18so1281189oah.29
+        for <users@maven.apache.org>; Sat, 13 Sep 2014 02:56:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=iGzanAVCob9FBfMbtvRDbAdmCrfDxCyiu/8vLa2iIhk=;
+        b=Ozw0BYnN8ODvooBrIMphpuf4Sw6L+hA+b9j71L5jJhrSbEggewK8E8WwGZy4WlC6rx
+         hRy/FgI7fBTVbr9hetGi5OSx+zsJfFViB8Cn6H7qFuAmMwMawn2PGn3CtR1Q8qwHFBru
+         BpDTP8FlXxKAVuk+APGZoT85dMjHrF0thheXNxo7yJSWBAqiwdILyU1KALpCI/arXza9
+         NNdxV6elepylXx+2ARVZU3zJeNQJYd8WQraCnXQj98xtlDct3MB0UBGB4I+7Nk3mcM8j
+         zoTfU0HsWZcdsXRzHGg6y/anJfyYD+pz2EsHlIPgIb5OPkFhKlhwZ1pPGoj+mGNef3iz
+         o+Tw==
+MIME-Version: 1.0
+X-Received: by 10.60.174.3 with SMTP id bo3mr14263951oec.31.1410602183577;
+ Sat, 13 Sep 2014 02:56:23 -0700 (PDT)
+Received: by 10.60.226.200 with HTTP; Sat, 13 Sep 2014 02:56:23 -0700 (PDT)
+In-Reply-To: <1410535758124.76283@c-ware.de>
+References: <1410525516105.34402@c-ware.de>
+	<5412EB2E.8030904@gmx.de>
+	<CAKDUN1uEN=9S8Ad+w4z=KZ=TABaqzwshdp1QJXgDw=LYnJWScQ@mail.gmail.com>
+	<1410533761479.68076@c-ware.de>
+	<op.xl2xnshhkdkhrr@robertscholte.dynamic.ziggo.nl>
+	<1410535758124.76283@c-ware.de>
+Date: Sat, 13 Sep 2014 10:56:23 +0100
+Message-ID: <CA+nPnMzSSwqutmLOFk++QCd+CfS3tED-qkpKgHBH1BXUvF9_rA@mail.gmail.com>
+Subject: Re: Releasing Maven Plugins
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e011844ce1254ad0502ef6a9d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e011844ce1254ad0502ef6a9d
+Content-Type: text/plain; charset=UTF-8
+
+The root reason is because the "unbuilt" plugin *may* have a custom
+lifecycle that affects the reactor build plan in "ways unknown", and that
+could end up invalidating the build plan that is being constructed.
+
+Now the custom lifecycles only come in if a plugin is marked as
+<extension>true</extension> so as long as you are not using a plugin built
+in your reactor as an extension we can know that the plugin does not affect
+the build plan! and thus we can continue...
+
+However, IIUC, flexmojos defines custom lifecycles and/or packaging and
+thus needs <extension>true</extension>, and therein is your problem.
+
+You'll need to split the release process so that the plugin is released
+independently
+
+On Friday, 12 September 2014, Christofer Dutz <christofer.dutz@c-ware.de>
+wrote:
+
+> Unfortunately I've tried that :-( I can't start the build at all if the
+> plugin is not already in the repo as soon as a module intending on using
+> the plugin is in reactor.
+>
+> Chris
+>
+>
+>
+> ________________________________________
+> Von: Robert Scholte <rfscholte@apache.org <javascript:;>>
+> Gesendet: Freitag, 12. September 2014 17:08
+> An: Maven Users List
+> Betreff: Re: AW: Releasing Maven Plugins
+>
+> Are you sure it's not pulled from the local repository?
+> To check, remove that SNAPSHOT and run 'mvn verify' and NEVER 'mvn
+> install'.
+>
+> Robert
+>
+> Op Fri, 12 Sep 2014 16:56:05 +0200 schreef Christofer Dutz
+> <christofer.dutz@c-ware.de <javascript:;>>:
+>
+> > Unfortunately not. To me it seems as if the reactor checks if everything
+> > is available and if it's missing the build fails. The strange thing is
+> > that it only checks if something is there ... during the build the
+> > freshly built version of the plugin is used ... it's just that maven
+> > gives up before even starting :-|
+> >
+> > Chris
+> > ________________________________________
+> > Von: anders.g.hammar@gmail.com <javascript:;> <anders.g.hammar@gmail.com
+> <javascript:;>> im Auftrag
+> > von Anders Hammar <anders@hammar.net <javascript:;>>
+> > Gesendet: Freitag, 12. September 2014 15:07
+> > An: Maven Users List
+> > Betreff: Re: Releasing Maven Plugins
+> >
+> >>
+> >> The main problem is that the project contains the plugin as
+> >>>
+> >> >well as some modules that use the plugin.
+> >>
+> > This is the basic mistake in this scenario. If you build a maven-plugin
+> >> make a separate project from it and do the release etc. only from the
+> >> maven-plugin and afterwards you have the release available and can
+> >> continue
+> >> with the rest which uses the release...
+> >
+> >
+> > Although I haven't tried it myself, my understanding is that it should be
+> > possible to use a plugin built within a multi-module project in some of
+> > the
+> > other modules when using Maven 3.x. This is not possible with Maven 2.x
+> > though. However, it requires the plugin to be built before the modules
+> > that
+> > uses it (which the reactor should be able to calculate, unless there are
+> > some circular module dependencies).
+> >
+> > /Anders
+> >
+> >
+> >>
+> >>
+> >> Kind regards
+> >> Karl-Heinz Marbaise
+> >>
+> >> ---------------------------------------------------------------------
+> >> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> <javascript:;>
+> >> For additional commands, e-mail: users-help@maven.apache.org
+> <javascript:;>
+> >>
+> >>
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> <javascript:;>
+> > For additional commands, e-mail: users-help@maven.apache.org
+> <javascript:;>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org <javascript:;>
+> For additional commands, e-mail: users-help@maven.apache.org
+> <javascript:;>
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org <javascript:;>
+> For additional commands, e-mail: users-help@maven.apache.org
+> <javascript:;>
+>
+>
+
+-- 
+Sent from my phone
+
+--089e011844ce1254ad0502ef6a9d--
+

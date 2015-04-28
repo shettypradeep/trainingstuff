@@ -1,0 +1,105 @@
+From users-return-137260-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 12 15:08:13 2014
+Return-Path: <users-return-137260-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B9B8911B68
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 12 Sep 2014 15:08:13 +0000 (UTC)
+Received: (qmail 94418 invoked by uid 500); 12 Sep 2014 15:08:12 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 94334 invoked by uid 500); 12 Sep 2014 15:08:12 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 94323 invoked by uid 99); 12 Sep 2014 15:08:12 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 15:08:12 +0000
+Received: from localhost (HELO robertscholte.dynamic.ziggo.nl) (127.0.0.1)
+  (smtp-auth username rfscholte, mechanism login)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 15:08:11 +0000
+Content-Type: text/plain; charset=iso-8859-15; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: AW: Releasing Maven Plugins
+References: <1410525516105.34402@c-ware.de> <5412EB2E.8030904@gmx.de>
+ <CAKDUN1uEN=9S8Ad+w4z=KZ=TABaqzwshdp1QJXgDw=LYnJWScQ@mail.gmail.com>
+ <1410533761479.68076@c-ware.de>
+Date: Fri, 12 Sep 2014 17:08:06 +0200
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.xl2xnshhkdkhrr@robertscholte.dynamic.ziggo.nl>
+In-Reply-To: <1410533761479.68076@c-ware.de>
+User-Agent: Opera Mail/12.17 (Win32)
+
+Are you sure it's not pulled from the local repository?
+To check, remove that SNAPSHOT and run 'mvn verify' and NEVER 'mvn  
+install'.
+
+Robert
+
+Op Fri, 12 Sep 2014 16:56:05 +0200 schreef Christofer Dutz  
+<christofer.dutz@c-ware.de>:
+
+> Unfortunately not. To me it seems as if the reactor checks if everything  
+> is available and if it's missing the build fails. The strange thing is  
+> that it only checks if something is there ... during the build the  
+> freshly built version of the plugin is used ... it's just that maven  
+> gives up before even starting :-|
+>
+> Chris
+> ________________________________________
+> Von: anders.g.hammar@gmail.com <anders.g.hammar@gmail.com> im Auftrag  
+> von Anders Hammar <anders@hammar.net>
+> Gesendet: Freitag, 12. September 2014 15:07
+> An: Maven Users List
+> Betreff: Re: Releasing Maven Plugins
+>
+>>
+>> The main problem is that the project contains the plugin as
+>>>
+>> >well as some modules that use the plugin.
+>>
+> This is the basic mistake in this scenario. If you build a maven-plugin
+>> make a separate project from it and do the release etc. only from the
+>> maven-plugin and afterwards you have the release available and can  
+>> continue
+>> with the rest which uses the release...
+>
+>
+> Although I haven't tried it myself, my understanding is that it should be
+> possible to use a plugin built within a multi-module project in some of  
+> the
+> other modules when using Maven 3.x. This is not possible with Maven 2.x
+> though. However, it requires the plugin to be built before the modules  
+> that
+> uses it (which the reactor should be able to calculate, unless there are
+> some circular module dependencies).
+>
+> /Anders
+>
+>
+>>
+>>
+>> Kind regards
+>> Karl-Heinz Marbaise
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

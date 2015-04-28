@@ -1,0 +1,95 @@
+From users-return-135406-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Feb 11 21:11:44 2014
+Return-Path: <users-return-135406-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 472ED10D60
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 11 Feb 2014 21:11:44 +0000 (UTC)
+Received: (qmail 18377 invoked by uid 500); 11 Feb 2014 21:11:40 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 18301 invoked by uid 500); 11 Feb 2014 21:11:39 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 18285 invoked by uid 99); 11 Feb 2014 21:11:38 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 11 Feb 2014 21:11:38 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of laredotornado@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 11 Feb 2014 21:11:29 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <laredotornado@gmail.com>)
+	id 1WDKbi-0003LM-Nt
+	for users@maven.apache.org; Tue, 11 Feb 2014 13:11:06 -0800
+Date: Tue, 11 Feb 2014 13:11:06 -0800 (PST)
+From: laredotornado-3 <laredotornado@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1392153066705-5784108.post@n5.nabble.com>
+Subject: Why is dependency:analyze lying to me?
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+I=E2=80=99m using Maven 3.1.1 on Mac 10.9.1.  When I ran =E2=80=9Cmvn depen=
+dency:analyze=E2=80=9D on
+my project, I got results that included:
+
+=09[WARNING] Unused declared dependencies found:
+=09=E2=80=A6
+=09[WARNING]    junit:junit:jar:4.11:test
+
+So I commented out the above junit dependency in my pom (declared like so):
+
+                <dependency>
+                        <groupId>junit</groupId>
+                        <artifactId>junit</artifactId>
+                        <version>${version.junit}</version>
+                        <scope>test</scope>
+                </dependency>
+
+However, when I ran =E2=80=9Cmvm clean install=E2=80=9D on my project, I go=
+t errors like
+
+=09initializationError0(org.mainco.subco.core.SerializableTest)  Time elaps=
+ed:
+0 sec  <<< ERROR!
+=09java.lang.NoSuchFieldError: NULL
+=09=09at org.junit.runners.ParentRunner.<init>(ParentRunner.java:48)
+=09=09at
+org.junit.runners.BlockJUnit4ClassRunner.<init>(BlockJUnit4ClassRunner.java=
+:58)
+=09=09at
+org.springframework.test.context.junit4.SpringJUnit4ClassRunner.<init>(Spri=
+ngJUnit4ClassRunner.java:104)
+
+This isn=E2=80=99t the only dependency that the analyze goal lists that wre=
+aks havoc
+when I comment it out.  Is there another way to detect what dependencies ar=
+e
+truly not needed by my project?
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Why-is-depen=
+dency-analyze-lying-to-me-tp5784108.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

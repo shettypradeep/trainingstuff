@@ -1,0 +1,160 @@
+From users-return-135856-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 19 19:28:02 2014
+Return-Path: <users-return-135856-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 76629102F1
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 19 Mar 2014 19:28:02 +0000 (UTC)
+Received: (qmail 48855 invoked by uid 500); 19 Mar 2014 19:27:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 48651 invoked by uid 500); 19 Mar 2014 19:27:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 48627 invoked by uid 99); 19 Mar 2014 19:27:43 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Mar 2014 19:27:43 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.220.48 as permitted sender)
+Received: from [209.85.220.48] (HELO mail-pa0-f48.google.com) (209.85.220.48)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Mar 2014 19:27:38 +0000
+Received: by mail-pa0-f48.google.com with SMTP id hz1so9378931pad.7
+        for <users@maven.apache.org>; Wed, 19 Mar 2014 12:27:18 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:cc:subject
+         :references:in-reply-to:content-type:content-transfer-encoding;
+        bh=pfL+VmkF/VKoSp3T6shnWDcvGwzRNc82bNviroqGcH0=;
+        b=Yhn3CF/5vTLoe2DZDyXD6sF+H7jmw8hd4BjzTenyR44YSiNMLDo6f0VaJKdJ6ALfAG
+         Ukc/cuwq/vzETzFe1OU4vbg36ZTXOnqWf1US7OkGK1uOHwJdeHz92UP2e8BRh1j8aXHZ
+         UVoB1GLXEzQxbF84ov3r/hEKglNbDem21ec/pO0UAVVuU7AtriR/tO8RTFFr/EdV8NGE
+         259UL8cjTNwkVgkrhiBp9GI229yC2LEPE9YxprVkfItzyfBNPu12rJg2TpSW2pwGAThJ
+         KkSDJgrKS48fFvAFKBvNVF1EZv6pTRgCOUUXZEfgyP5tn9OZd03R06+Oh7gb3RipCXCu
+         00RQ==
+X-Received: by 10.66.151.205 with SMTP id us13mr41713809pab.93.1395257238690;
+        Wed, 19 Mar 2014 12:27:18 -0700 (PDT)
+Received: from [192.168.0.17] (S0106602ad07f9cfa.vc.shawcable.net. [24.85.131.20])
+        by mx.google.com with ESMTPSA id eb5sm108023175pad.22.2014.03.19.12.27.16
+        for <multiple recipients>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 19 Mar 2014 12:27:17 -0700 (PDT)
+Message-ID: <5329EF94.7050707@gmail.com>
+Date: Wed, 19 Mar 2014 12:27:16 -0700
+From: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+CC: git-users@googlegroups.com
+Subject: Re: Configuring SCM for github
+References: <5329E8F1.5000801@gmail.com> <33515199-3180-4535-A263-C38F07D8532F@gold-family.us>
+In-Reply-To: <33515199-3180-4535-A263-C38F07D8532F@gold-family.us>
+Content-Type: text/plain; charset=windows-1252; format=flowed
+Content-Transfer-Encoding: 8bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Now I have
+
+   <scm>
+<url>https://github.com/kolotyluk/java-file-utilities.git</url>
+<connection>scm:git:https://github.com/kolotyluk/java-file-utilities.git</connection>
+<developerConnection>scm:git:https://github.com/kolotyluk/java-file-utilities.git</developerConnection>
+   </scm>
+
+But it still hangs...
+
+   [INFO] Checking in modified POMs...
+   [INFO] Executing: cmd.exe /X /C "git add -- pom.xml"
+   [INFO] Working directory: 
+D:\Users\Eric\Software\Project\Repositories\java-file-utilities
+   [INFO] Executing: cmd.exe /X /C "git status"
+   [INFO] Working directory: 
+D:\Users\Eric\Software\Project\Repositories\java-file-utilities
+   [INFO] Executing: cmd.exe /X /C "git commit --verbose -F 
+C:\Users\Eric\AppData\Local\Temp\maven-scm-1007803688.commit pom.xml"
+   [INFO] Working directory: 
+D:\Users\Eric\Software\Project\Repositories\java-file-utilities
+   [INFO] Executing: cmd.exe /X /C "git symbolic-ref HEAD"
+   [INFO] Working directory: 
+D:\Users\Eric\Software\Project\Repositories\java-file-utilities
+   [INFO] Executing: cmd.exe /X /C "git push 
+https://github.com/kolotyluk/java-file-utilities.git master:master"
+   [INFO] Working directory: 
+D:\Users\Eric\Software\Project\Repositories\java-file-utilities
+
+In my experience, getting release to work is the hardest thing I have 
+ever done in Maven. I struggled for weeks to get it working with 
+Perforce correctly. This is my first time with Git.
+
+Do I need to set up a <server> in my settings.xml file for github?
+
+Cheers, Eric
+
+On 3/19/2014 12:06 PM, Russell Gold wrote:
+> HI Eric, I think you are missing the “.git” extensions in your urls. Here’s the ones I use.
+>
+>      <scm>
+>          <url>https://github.com/meterware/simplestub.git</url>
+>          <developerConnection>scm:git:https://github.com/meterware/simplestub.git</developerConnection>
+>          <connection>scm:git:https://github.com/meterware/simplestub.git</connection>
+>      </scm>
+>
+> On Mar 19, 2014, at 2:58 PM, Eric Kolotyluk <eric.kolotyluk@gmail.com> wrote:
+>
+>> I am having trouble getting mvn release:prepare to work with github
+>>
+>>   <scm>
+>> <connection>scm:git:http://github.com/kolotyluk/java-file-utilities</connection>
+>> <url>scm:git:http://github.com/kolotyluk/java-file-utilities</url>
+>> <developerConnection>scm:git:https://github.com/kolotyluk/java-file-utilities</developerConnection>
+>>     <tag>java-file-utilities-0.0.1</tag>
+>>   </scm>
+>>
+>> When I try to prepare the release I get
+>>
+>>   [INFO] Checking in modified POMs...
+>>   [INFO] Executing: cmd.exe /X /C "git add -- pom.xml"
+>>   [INFO] Working directory: D:\Users\Eric\Software\Project\Repositories\java-file-utilities
+>>   [INFO] Executing: cmd.exe /X /C "git status"
+>>   [INFO] Working directory: D:\Users\Eric\Software\Project\Repositories\java-file-utilities
+>>   [INFO] Executing: cmd.exe /X /C "git commit --verbose -F C:\Users\Eric\AppData\Local\Temp\maven-scm-559613294.commit pom.xml"
+>>   [INFO] Working directory: D:\Users\Eric\Software\Project\Repositories\java-file-utilities
+>>   [INFO] Executing: cmd.exe /X /C "git symbolic-ref HEAD"
+>>   [INFO] Working directory: D:\Users\Eric\Software\Project\Repositories\java-file-utilities
+>>   [INFO] Executing: cmd.exe /X /C "git push https://github.com/kolotyluk/java-file-utilities master:master"
+>>   [INFO] Working directory: D:\Users\Eric\Software\Project\Repositories\java-file-utilities
+>>
+>> and mvn just hangs forever at that point. Is this a credentials problem or something else?
+>>
+>> Cheers, Eric
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+> -----------------
+> Author, Getting Started with Apache Maven <http://www.packtpub.com/getting-started-with-apache-maven/video>
+>
+> Come read my webnovel, Take a Lemon <http://www.takealemon.com>,
+> and listen to the Misfile radio play <http://www.fuzzyfacetheater.com/misfile/>!
+>
+>
+>
+>
+>
+>
+>
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

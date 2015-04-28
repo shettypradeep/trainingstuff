@@ -1,0 +1,95 @@
+From users-return-135620-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 27 09:11:26 2014
+Return-Path: <users-return-135620-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3451E104F5
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 27 Feb 2014 09:11:26 +0000 (UTC)
+Received: (qmail 75662 invoked by uid 500); 27 Feb 2014 09:11:22 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 75047 invoked by uid 500); 27 Feb 2014 09:11:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 75032 invoked by uid 99); 27 Feb 2014 09:11:15 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Feb 2014 09:11:15 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of raphael.andre.bauer@gmail.com designates 209.85.216.44 as permitted sender)
+Received: from [209.85.216.44] (HELO mail-qa0-f44.google.com) (209.85.216.44)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Feb 2014 09:11:09 +0000
+Received: by mail-qa0-f44.google.com with SMTP id f11so3663659qae.31
+        for <users@maven.apache.org>; Thu, 27 Feb 2014 01:10:48 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:from:date:message-id:subject:to:content-type;
+        bh=YV8KnstulszykEJ/mNcXmKjz1po2DPd/HmvwrVSndDQ=;
+        b=jbEYljRQ8M5aMHNZ5e7orPaBVuqWxQPNHE7pC5jq7ZGZckHcwPGjDnPM2z9fkOIwoy
+         PTXhVTyTOgveD327T+I3pNqMr4kC7ACNhi+Q8rtNLpHZ3zDifDgRLLyspj870n/c88+4
+         UlN86VrN0ToeELBgkJaMRghD5zUHc3SAyTav8bqj7hj24GfOuSG2bxfX14EaiRpSNpHk
+         Hihd6VExAtWurDXFI4NvSzBeXt2WVIWB8g/o6kspHbJEN4QAaw5EgNn0lIrjc6BdmKLY
+         AtwDoVd61bWNkxhVz+7o0IMHz+ZEzY23IBSI/ErHiR7f8NiMDS+K/SEqSNQTTkVw0aDA
+         Fr8Q==
+X-Received: by 10.224.151.147 with SMTP id c19mr14689051qaw.86.1393492248848;
+ Thu, 27 Feb 2014 01:10:48 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.224.123.68 with HTTP; Thu, 27 Feb 2014 01:10:18 -0800 (PST)
+From: =?UTF-8?Q?Raphael_Andr=C3=A9_Bauer?= <raphael.andre.bauer@gmail.com>
+Date: Thu, 27 Feb 2014 10:10:18 +0100
+Message-ID: <CACRkZ6KQOCyb+k-NY5VyH6ipwKWVnj3x0vw2=q-J6j=_tiHo6A@mail.gmail.com>
+Subject: doxia-module-markdown 1.5 mixing html and markdown in one file
+To: users@maven.apache.org
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+
+for a project we are using mvn site and the
+
+<dependency>
+<groupId>net.ju-n.maven.doxia</groupId>
+<artifactId>doxia-module-markdown</artifactId>
+<version>1.0.0</version>
+</dependency>
+
+markdown plugin.
+
+The problem is that it does not properly generate the titles for the
+final html files.
+
+No problem - there's the official and more current
+doxia-module-markdown 1.5 available anyway.
+
+But the official doxia-module-markdown 1.5 does completely ignore any
+html content
+inside my markdown files. Whereas net.ju-n.maven.doxia's markdown module
+allows to mix html and markdown commands.
+
+Our project is open source, so we are talking about a page like that
+one: https://github.com/ninjaframework/ninja/blob/develop/ninja-core/src/site/markdown/index.md
+
+index.md is a mix of bootstrap html and markdown.
+
+
+Is there a way to tell doxia-module-markdown 1.5 to allow mixing html
+and markdown - or is it just not possible?
+
+
+Thanks!
+
+
+Raphael
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

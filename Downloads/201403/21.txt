@@ -1,0 +1,280 @@
+From users-return-135714-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar  6 09:47:17 2014
+Return-Path: <users-return-135714-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 011CF10A10
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  6 Mar 2014 09:47:17 +0000 (UTC)
+Received: (qmail 9620 invoked by uid 500); 6 Mar 2014 09:47:12 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 9345 invoked by uid 500); 6 Mar 2014 09:47:10 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9324 invoked by uid 99); 6 Mar 2014 09:47:08 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 09:47:08 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.223.176] (HELO mail-ie0-f176.google.com) (209.85.223.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 09:46:59 +0000
+Received: by mail-ie0-f176.google.com with SMTP id rd18so2440416iec.35
+        for <users@maven.apache.org>; Thu, 06 Mar 2014 01:46:37 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:message-id:in-reply-to:references
+         :subject:mime-version:content-type;
+        bh=hTO3b27n7hm2ieyAkG+wHXXLxxXVWZn5j+Hj5NzuSCc=;
+        b=XmUvl63CLmkZe3w2vMUBi5gibunI+JeKeTM6r+U4tXjlK8g8i16bZJgqffCFUnWT5c
+         qo6dexbBNAqxFkgIJ8+VmHtneqIp8cdRZ1y/09Xwm6WGPwjylDrEVgP1X+fPLLKKjWSb
+         FBhMtasPfM3kS41KRXrE/HzpI04ImtxhoJC3108Mb0IV3kwrSKr8Z97p4ZmgDo4DXNRR
+         WUesanf6fp6Nx4KOFPOKxktvRzjyLi384EiQ4HNl0Ee33wzBUQFEQT262ux/FlGei2pG
+         VodugnXRRohjJj+WCdpZqlD/Xa/aZMHdPrXCohDMEChHGB168D3kiKtqGyDUu/05JXSB
+         Tu6Q==
+X-Gm-Message-State: ALoCoQl5wiV7xNwCfScARt56R08a2/MUAS5SsJXT01+PetGFXSjefh8TdcAjO6wl9abYh/KGbYxp
+X-Received: by 10.50.253.194 with SMTP id ac2mr14432068igd.41.1394099197723;
+        Thu, 06 Mar 2014 01:46:37 -0800 (PST)
+Received: from Jordans-MacBook-Pro.local ([190.219.168.142])
+        by mx.google.com with ESMTPSA id pn6sm22784238igb.4.2014.03.06.01.46.36
+        for <users@maven.apache.org>
+        (version=TLSv1.2 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Thu, 06 Mar 2014 01:46:37 -0800 (PST)
+Date: Thu, 6 Mar 2014 04:46:20 -0500
+From: Jordan Zimmerman <jordan@jordanzimmerman.com>
+To: Maven Users List <users@maven.apache.org>
+Message-ID: <etPan.531843fb.6b8b4567.193@Jordans-MacBook-Pro.local>
+In-Reply-To: <7459095.LZzBjmdzke@herve-desktop>
+References: <etPan.53172b97.6a2342ec.9c7@Jordans-MacBook-Pro.local>
+ <7459095.LZzBjmdzke@herve-desktop>
+Subject: Re: Deploying archetypes
+X-Mailer: Airmail (231)
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="531843fb_327b23c6_193"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--531843fb_327b23c6_193
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+The archetype is packaging already. The only problem is the deploy. Maint=
+aining the generated archetype by hand is out of the question and defeats=
+ the purpose of the archetype. This is a sample/base application that is =
+in constant development. The archetype needs to be up-to-date with any ch=
+anges.=C2=A0
+
+The maddening thing is that I=E2=80=99m able to install the archetype jus=
+t fine via:
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <plugin>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <artifactId>maven=
+-install-plugin</artifactId>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <executions>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <ex=
+ecution>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 <phase>install</phase>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 <goals>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 <goal>install-file</goal>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 </goals>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 <configuration>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 <file>=24=7Bproject.build.directory=7D/generated=
+-sources/archetype/target/platform-sample-app-archetype-=24=7Bproject.ver=
+sion=7D.jar</file>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 <pom=46ile>=24=7Bproject.build.directory=7D/gene=
+rated-sources/archetype/pom.xml</pom=46ile>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 </configuration>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 </e=
+xecution>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 </executions>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 </plugin>
+
+However, doing this same thing with deploy generates an NPE exception:
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <plugin>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <artifactId>maven=
+-deploy-plugin</artifactId>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <executions>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <ex=
+ecution>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 <phase>deploy</phase>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 <goals>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 <goal>deploy-file</goal>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 </goals>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 <configuration>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 <file>=24=7Bproject.build.directory=7D/generated=
+-sources/archetype/target/platform-sample-app-archetype-=24=7Bproject.ver=
+sion=7D.jar</file>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 <pom=46ile>=24=7Bproject.build.directory=7D/gene=
+rated-sources/archetype/pom.xml</pom=46ile>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 </configuration>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 </e=
+xecution>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 </executions>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 </plugin>
+
+=5BERROR=5D =46ailed to execute goal org.apache.maven.plugins:maven-deplo=
+y-plugin:2.8.1:deploy-file (default) on project platform-sample-app: Exec=
+ution default of goal org.apache.maven.plugins:maven-deploy-plugin:2.8.1:=
+deploy-file failed. NullPointerException -> =5BHelp 1=5D
+org.apache.maven.lifecycle.LifecycleExecutionException: =46ailed to execu=
+te goal org.apache.maven.plugins:maven-deploy-plugin:2.8.1:deploy-file (d=
+efault) on project platform-sample-app: Execution default of goal org.apa=
+che.maven.plugins:maven-deploy-plugin:2.8.1:deploy-file failed.
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor=
+.java:224)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor=
+.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor=
+.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProje=
+ct(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProje=
+ct(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBu=
+ild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(Lifecycl=
+eStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:317)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:152)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:555)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:214)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.=
+java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAcces=
+sorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Laun=
+cher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.jav=
+a:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(La=
+uncher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:=
+356)
+Caused by: org.apache.maven.plugin.PluginExecutionException: Execution de=
+fault of goal org.apache.maven.plugins:maven-deploy-plugin:2.8.1:deploy-f=
+ile failed.
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(Default=
+BuildPluginManager.java:115)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor=
+.java:208)
+	... 19 more
+Caused by: java.lang.NullPointerException
+	at org.apache.maven.artifact.repository.MavenArtifactRepository.protocol=
+(MavenArtifactRepository.java:218)
+	at org.apache.maven.artifact.repository.MavenArtifactRepository.<init>(M=
+avenArtifactRepository.java:79)
+	at org.apache.maven.repository.legacy.repository.DefaultArtifactReposito=
+ry=46actory.createArtifactRepository(DefaultArtifactRepository=46actory.j=
+ava:129)
+	at org.apache.maven.repository.legacy.repository.DefaultArtifactReposito=
+ry=46actory.createDeploymentArtifactRepository(DefaultArtifactRepository=46=
+actory.java:78)
+	at org.apache.maven.artifact.repository.DefaultArtifactRepository=46acto=
+ry.createDeploymentArtifactRepository(DefaultArtifactRepository=46actory.=
+java:67)
+	at org.apache.maven.plugin.deploy.Deploy=46ileMojo.execute(Deploy=46ileM=
+ojo.java:233)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(Default=
+BuildPluginManager.java:106)
+	... 20 more
+
+
+=46rom:=C2=A0Herv=C3=A9 BOUTEMY herve.boutemy=40free.fr
+Reply:=C2=A0Maven Users List users=40maven.apache.org
+Date:=C2=A0March 6, 2014 at 2:20:03 AM
+To:=C2=A0Maven Users List users=40maven.apache.org
+Subject:=C2=A0 Re: Deploying archetypes =20
+
+befaore deploying, you'll have to package, which usually attaches the art=
+ifact =20
+for later automatic deployment by deploy plugin =20
+see http://maven.apache.org/archetype/maven-archetype-plugin/ =20
+and the maven-archetype packaging automating it =20
+http://maven.apache.org/archetype/archetype-packaging/ =20
+
+
+but IMHO, trying to both generate an archetype, package it and deploy it =
+from =20
+the example project is a risky process, because your (example project) po=
+m =20
+will mix configuration for archetype generation/deployment with the valua=
+ble =20
+configuration you intend to have in the archetype =20
+
+you really should use create-from-project once then maintain the generate=
+d =20
+archetype project (and in fact the generic example project in =20
+src/main/resources) =20
+
+Regards, =20
+
+Herv=C3=A9 =20
+
+Le mercredi 5 mars 2014 08:50:00 Jordan Zimmerman a =C3=A9crit : =20
+> Hello, =20
+> =20
+> I=E2=80=99d like to configure my project to auto-deploy my generated ar=
+chetype as =20
+> part of the deploy execution. Is there a way to do this=3F So, to creat=
+e the =20
+> archetype, I have this: =20
+> =20
+> <plugin> =20
+> <artifactId>maven-archetype-plugin</artifactId> =20
+> <configuration> =20
+> <property=46ile>archetype.properties</property=46ile> =20
+> </configuration> =20
+> <executions> =20
+> <execution> =20
+> <phase>package</phase> =20
+> <goals> =20
+> <goal>create-from-project</goal> =20
+> </goals> =20
+> </execution> =20
+> </executions> =20
+> </plugin> =20
+> =20
+> Is there a way to configure the deploy plugin (or some other plugin) to=
+ run =20
+> a =E2=80=9Cdeploy=E2=80=9D goal on the generated archetype =20
+> (in target/generated-sources/archetype/target)=3F =20
+> =20
+> Thanks=21 =20
+> =20
+> -Jordan =20
+
+
+--------------------------------------------------------------------- =20
+To unsubscribe, e-mail: users-unsubscribe=40maven.apache.org =20
+=46or additional commands, e-mail: users-help=40maven.apache.org =20
+
+
+--531843fb_327b23c6_193--
+
+

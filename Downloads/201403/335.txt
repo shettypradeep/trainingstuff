@@ -1,0 +1,117 @@
+From users-return-136008-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Mar 28 21:30:14 2014
+Return-Path: <users-return-136008-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1F44E11A4B
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 28 Mar 2014 21:30:14 +0000 (UTC)
+Received: (qmail 91899 invoked by uid 500); 28 Mar 2014 21:30:10 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 91616 invoked by uid 500); 28 Mar 2014 21:30:09 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 91608 invoked by uid 99); 28 Mar 2014 21:30:09 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 21:30:09 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [88.116.248.50] (HELO sartre.xss.co.at) (88.116.248.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 21:30:04 +0000
+Received: from goethe.intern.xss.co.at (goethe.intern.xss.co.at [192.168.162.10])
+	by sartre.xss.co.at (8.14.3/8.14.3) with ESMTP id s2SLTgLk007727
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK)
+	for <users@maven.apache.org>; Fri, 28 Mar 2014 22:29:42 +0100
+Received: from linux-du93.site ([10.168.162.10])
+	by goethe.intern.xss.co.at (8.13.8/8.13.8) with ESMTP id s2SLTffv020709
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES128-SHA bits=128 verify=NO)
+	for <users@maven.apache.org>; Fri, 28 Mar 2014 22:29:42 +0100
+Date: Fri, 28 Mar 2014 22:29:34 +0100
+From: Martin Hoeller <martin@xss.co.at>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: OutOfMemoryError with maven-javadoc-plugin
+Message-ID: <20140328222934.7fe9867a@linux-du93.site>
+In-Reply-To: <533573FB.2050901@artifact-software.com>
+References: <20140328103657.63a66f1e@linux-du93.site>
+	<CANWgJS5gA-7vKFKKppwyWcn=iZanw0qrRMn0hxyXSyMu4wuq5A@mail.gmail.com>
+	<20140328122426.3493fa7e@linux-du93.site>
+	<533573FB.2050901@artifact-software.com>
+X-Mailer: Claws Mail 3.7.10 (GTK+ 2.24.7; x86_64-suse-linux-gnu)
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=PGP-SHA1;
+ boundary="Sig_/sNBAVzibiNW=h4BeM7aJSy4"; protocol="application/pgp-signature"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Sig_/sNBAVzibiNW=h4BeM7aJSy4
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi Ron!
+
+On 28 M=C3=A4r 2014, Ron Wheeler wrote:
+
+> Have you tried increasing the JVM memory past
+>=20
+> MAVEN_OPTS=3D"-Xmx1536m -Xms512m -XX:MaxPermSize=3D512m"
+> MAVEN_OPTS=3D"-Xmx1280m -Xms256m -XX:MaxPermSize=3D768m"
+>=20
+> You could try something extreme (-Xmx8g ) and see if that changes anythin=
+g.
+
+Well, I should have added, that it was working fine with "-Xmx1024m
+-Xms256m -XX:MaxPermSize=3D512m" recently. Since then I did a minor
+restructure of the project and updated maven from 2.2.1 to 3.1.1. So I
+thought the required memory wouldn't be much more.
+
+> -Xms512m is not very useful in this case and you can omit it or make it t=
+he same as -XMXnnn.
+> Make sure that you allow enough(???) space after you allocate MaxPermSize.
+>=20
+> MAVEN_OPTS=3D"-Xmx8g -XX:MaxPermSize=3D768m"
+>=20
+>=20
+> Did you notice that it took longer to run out  of memory with the higher=
+=20
+> settings?
+> If not, then I may be barking up the wrong tree and you might have to=20
+> change JAVA_OPTS to affect the memory allocation.
+> If it did, then you are heading in the right direction but have not gone=
+=20
+> far enough yet.
+
+I tried with 8GB and now it was running for more that 4 hours. Than I
+canceld it because the machine was only swapping and progress was very
+low. (There were only 8GB physical RAM available on the system.)
+
+With 4GB I got the usual OOM error. Can't say if it ran longer. If it
+did, it wasn't that much longer. About 15min or so.
+
+The point is: with maven 2.2.1, m-javadoc-p 2.8 and only minor changes in
+the project layout it was running fine with 1GB. Now it needs at least
+more than 4GB. There must be something wrong.
+
+Any more ideas?
+
+- martin
+
+--Sig_/sNBAVzibiNW=h4BeM7aJSy4
+Content-Type: application/pgp-signature; name=signature.asc
+Content-Disposition: attachment; filename=signature.asc
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.18 (GNU/Linux)
+
+iEYEARECAAYFAlM16cMACgkQYJf22JPx7tmXkQCg3gd2ZSuOYngT64NS6TsdYjJF
+7uwAoNGsNXQEyIJb+kw6AB8CvSOQoWR/
+=I3Dh
+-----END PGP SIGNATURE-----
+
+--Sig_/sNBAVzibiNW=h4BeM7aJSy4--
+

@@ -1,0 +1,221 @@
+From users-return-137610-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Oct 21 01:03:45 2014
+Return-Path: <users-return-137610-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EAE6117DB2
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 21 Oct 2014 01:03:45 +0000 (UTC)
+Received: (qmail 89818 invoked by uid 500); 21 Oct 2014 01:03:43 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 89731 invoked by uid 500); 21 Oct 2014 01:03:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 89719 invoked by uid 99); 21 Oct 2014 01:03:43 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 21 Oct 2014 01:03:43 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dhoffer6@gmail.com designates 209.85.213.46 as permitted sender)
+Received: from [209.85.213.46] (HELO mail-yh0-f46.google.com) (209.85.213.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 21 Oct 2014 01:03:39 +0000
+Received: by mail-yh0-f46.google.com with SMTP id f73so306622yha.5
+        for <users@maven.apache.org>; Mon, 20 Oct 2014 18:03:18 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=neisxo2jQtZ3J1tlsWAYY0f5ynpEhB0DTnDbHmWgemU=;
+        b=GH+zp7ApA9XEICOr6Lgh2Q4wtydcWcvCR+xQGTqRtmAWPVWJ7bHpKx/vx0kl3K6EkC
+         Nrv5AYEti+9isiCDMjX/5oKtbnQ+3/VPJw9TgS8PcR1X+EAfTg5QMfXhqx0iHh9OoMg5
+         MTxEMqGuhmM2IZ4xYUdyaaQ6pr0jiprLZEiuyNPKNNjnk57U2lzuy100oQjcCLA3C274
+         g28yxPlx0Os1H0IDXMoK3ijwBuAjKc6LIlRlGCTQp114z03HV/j11vuxx2dPFUaKwvB4
+         KkVax6v9WwWlA6xiXQ/cJvVVO8kTBC7rHrdcbPqX4xnkl/gddXKPHJzdcX9CgYIHq/Cl
+         l68w==
+MIME-Version: 1.0
+X-Received: by 10.220.169.141 with SMTP id z13mr5154869vcy.20.1413853398701;
+ Mon, 20 Oct 2014 18:03:18 -0700 (PDT)
+Received: by 10.220.218.130 with HTTP; Mon, 20 Oct 2014 18:03:18 -0700 (PDT)
+In-Reply-To: <20141021024656.00000d09.ecki@zusammenkunft.net>
+References: <CAA8BW8FmFePd6+9qT4twu-BGMCzQqDOAFOJOikuV64Ae8Sa1Vg@mail.gmail.com>
+	<20141021020311.00000978.ecki@zusammenkunft.net>
+	<CAA8BW8Gtaoxoi24jwg1sbKp1uHOMsk2hzR-K4HBX2KpnBLqKBA@mail.gmail.com>
+	<20141021024656.00000d09.ecki@zusammenkunft.net>
+Date: Mon, 20 Oct 2014 19:03:18 -0600
+Message-ID: <CAA8BW8FBDBATEoxHhXvevRSY02Yo6z_0Yq9BR0g5Zo3KuX8KKQ@mail.gmail.com>
+Subject: Re: How to create ISO image that supports long file names?
+From: David Hoffer <dhoffer6@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c28028981ef10505e46598
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c28028981ef10505e46598
+Content-Type: text/plain; charset=UTF-8
+
+Hi Bernd,
+
+Thanks I'll take a look at the Windows approach.  Just curious, did you try
+using Stephen's maven plugin?  Just wondering if that might work for your
+use case.
+
+A little background on my use case might be in order.  I just got handed
+this task today.  For years this has been building with a Maven build that
+runs an ant task to do all the work.  It's using a couple of jars that are
+really old to create the iso.  The problem is that the file names we get
+from Red Hat and others keep getting longer...now the code can't handle it.
+
+I tried updating the jars to the latest version with no luck.  Then I found
+Stephen's plugin which is much...much nicer to use...but it has the same
+problem.  I think Stephen forked the same code that's in the jars we are
+using but not certain of that.
+
+I don't know that much about iso format and all the extensions.  I'd like
+to know if someone thinks it's feasible to update Stephen's plugin...as
+that makes the build much simpler and I don't have to worry about
+platform/exec issues.
+
+-Dave
+
+On Mon, Oct 20, 2014 at 6:46 PM, Bernd Eckenfels <ecki@zusammenkunft.net>
+wrote:
+
+> Hello David,
+>
+> you can replace the ISO in local builds with a a ZIP file for most
+> cases - but there is also a Windows/cygwin binary available.
+>
+> Or you use the original mkisofs which offers a win32 executable.
+> (http://www.student.tugraz.at/thomas.plank/index_en.html)
+>
+> BTW: for unpacking the ISO in integration test we use loopy, but not
+> sure if it is easy to use for creating.
+>
+> Stephen, does the maven plugin indirectly use loopy as well?
+>
+> Gruss
+> Bernd
+>
+> Am Mon, 20 Oct 2014 18:26:35 -0600
+> schrieb David Hoffer <dhoffer6@gmail.com>:
+>
+> > Hi Bernd,
+> >
+> > Tanks for the suggestion, that's an interesting approach.  However I
+> > suspect that's Linux only and that might be deal breaker.  We have
+> > some CI build agents that are Linux but most developers use Windows
+> > and I suspect they will want to run this too.
+> >
+> > Thanks,
+> > -Dave
+> >
+> > On Mon, Oct 20, 2014 at 6:03 PM, Bernd Eckenfels
+> > <ecki@zusammenkunft.net> wrote:
+> >
+> > > Hello David,
+> > >
+> > > we are using an external executable to do this.
+> > >
+> > > It is genisoimage from crdkit.org (debian fork of cdrtools). It can
+> > > produce for example Joilet extensions (which are used for long
+> > > filenames AFAIK). There are still filename limitations for ISO names
+> > > (but the joilet names seen on linux/windows are less restrictive). I
+> > > think the tools prints them:
+> > >
+> > > http://linux.die.net/man/1/genisoimage
+> > >
+> > >             <plugin>
+> > >                 <!-- ISO generation. -->
+> > >                 <groupId>org.codehaus.mojo</groupId>
+> > >                 <artifactId>exec-maven-plugin</artifactId>
+> > >                 <version>1.2.1</version>
+> > >                 <executions>
+> > >                     <execution>
+> > >                         <goals>
+> > >                             <goal>exec</goal>
+> > >                         </goals>
+> > >                         <phase>verify</phase>
+> > >                     </execution>
+> > >                 </executions>
+> > >                 <configuration>
+> > >                     <executable>genisoimage</executable>
+> > >                     <arguments>
+> > >                         <argument>-V</argument>
+> > >                         <argument>${iso.name}</argument>
+> > >                         <argument>-m</argument>
+> > >                         <argument>*.iso</argument>
+> > >                         <argument>-dir-mode</argument>
+> > >                         <argument>0555</argument>
+> > >                         <argument>-file-mode</argument>
+> > >                         <argument>0555</argument>
+> > >                         <argument>-gid</argument>
+> > >                         <argument>0</argument>
+> > >                         <argument>-uid</argument>
+> > >                         <argument>0</argument>
+> > >                         <argument>-iso-level</argument>
+> > >                         <argument>2</argument>
+> > >                         <argument>-J</argument>
+> > >                         <argument>-joliet-long</argument>
+> > >                         <argument>-r</argument>
+> > >                         <argument>-o</argument>
+> > >                         <argument>${project.build.directory}/${
+> iso.name
+> > > }</argument>
+> > >                         <argument>${iso.preparation.dir}</argument>
+> > >                     </arguments>
+> > >                 </configuration>
+> > >             </plugin>
+> > >
+> > > The above tries to be rather compatible (not using level 3 or
+> > > version 2 or enforcing Rock Ridge or UDF).
+> > >
+> > > Gruss
+> > > Bernd
+> > >
+> > > Mon, 20 Oct 2014 15:42:42 -0600 schrieb David Hoffer
+> > > <dhoffer6@gmail.com>:
+> > >
+> > > > I'm trying to use iso9660-maven-plugin to generate an iso image
+> > > > and I'm getting string index out of range errors.  My input has
+> > > > long file names, e.g.
+> > > >
+> > >
+> 7b0a8ad702ee0be0b971a082023550bd71bd33d3cbb4fa17f1de6af66f1871d4-comps-Server.x86_64.xml.gz
+> > > > and I suspect this is causing the problem.
+> > > >
+> > > > How can I resolve this?  I don't technically need/want an 9660
+> > > > image as I'm creating DVD images (actually these will be used by
+> > > > vSphere and I think it's quite tolerant of ISO format).  Is there
+> > > > a way to configure iso9660-maven-plugin to allow long file names
+> > > > or is there a different goal/plugin that I should be using that
+> > > > supports this? Currently I'm running the 'iso' goal on
+> > > > iso9660-maven-plugin.
+> > > >
+> > > > Example error:
+> > > > Execution generate-iso of goal
+> > > > com.github.stephenc.java-iso-tools:iso9660-maven-plugin:2.0.0:iso
+> > > > failed: String index out of range: -2
+> > > >
+> > > > -Dave
+> > > >
+> > >
+> > > ---------------------------------------------------------------------
+> > > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > > For additional commands, e-mail: users-help@maven.apache.org
+> > >
+> > >
+> >
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a11c28028981ef10505e46598--
+

@@ -1,0 +1,93 @@
+From users-return-135591-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb 24 20:32:17 2014
+Return-Path: <users-return-135591-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 81D9310457
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 24 Feb 2014 20:32:17 +0000 (UTC)
+Received: (qmail 36073 invoked by uid 500); 24 Feb 2014 20:32:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 36000 invoked by uid 500); 24 Feb 2014 20:32:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 35992 invoked by uid 99); 24 Feb 2014 20:32:13 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Feb 2014 20:32:13 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.215.43 as permitted sender)
+Received: from [209.85.215.43] (HELO mail-la0-f43.google.com) (209.85.215.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Feb 2014 20:32:09 +0000
+Received: by mail-la0-f43.google.com with SMTP id pv20so6450911lab.16
+        for <users@maven.apache.org>; Mon, 24 Feb 2014 12:31:47 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=lAu8qOlHZvReZltt+BDSfN/9zJHBbAleQx9w/w9a8oQ=;
+        b=weylEohYl1H8/btzqlQ1lbxyHzhWvhSMEqL0Mgn2Rw2mveHk+JSHpsj+nwasKo7YZ7
+         ZFW80x/9sslZrPLSL4EBSvDBt3DFs74qEU8iL9UynY8K0Ne1TU25ut5wjrKXUKOy1T7W
+         CbBnWAJqzis8o4TON22jLsZc4qDF0u9B0Yvvx6z+Rv/oH4BTnVu1fF5tZH/KMdQS6k0q
+         VAqqMgVVOV7/ECbrvF4afnQKlUcShQFCtn1BvRJt1tOs5o2IeyLNPfDb6VQ6dbgObHH7
+         e9wzdDcTKyN709m3srXp0gT9k3z0s3Cb69zU7umdK+mMIj4d5e/yhYnDURYP9o59doYM
+         r1zw==
+MIME-Version: 1.0
+X-Received: by 10.153.5.136 with SMTP id cm8mr443096lad.82.1393273907530; Mon,
+ 24 Feb 2014 12:31:47 -0800 (PST)
+Received: by 10.114.26.104 with HTTP; Mon, 24 Feb 2014 12:31:47 -0800 (PST)
+In-Reply-To: <530BAA4C.3070303@gmx.de>
+References: <CAPCjjnGHMv1eaTL9vzJqOB2P+_sWbK+XO0nH8Q-BiTuCBCHYfA@mail.gmail.com>
+	<530BAA4C.3070303@gmx.de>
+Date: Mon, 24 Feb 2014 12:31:47 -0800
+Message-ID: <CAPCjjnETe-8zHk9GQgmq-QxPH1kstS5cUAz4tOCAXhh5iP0oMA@mail.gmail.com>
+Subject: Re: about https://jira.codehaus.org/browse/MNG-5576 (Allow continuous
+ delivery friendly versions)
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>, info@soebes.de
+Content-Type: multipart/alternative; boundary=001a1136d4605552b904f32cdcdb
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1136d4605552b904f32cdcdb
+Content-Type: text/plain; charset=UTF-8
+
+Thanks, that helps
+
+-D
+
+
+On Mon, Feb 24, 2014 at 12:23 PM, Karl Heinz Marbaise <khmarbaise@gmx.de>wrote:
+
+> Hi Dan,
+>
+> now you can write on your GAV definition a thing like:
+>
+> <groupId>...</groupId>
+> <artifactId>...</artifactId>
+> <version>1.0-${revision}-SNAPSHOT</version>
+>
+> and via command line you can now do the following:
+>
+> mvn -Drevision=3456 clean test
+>
+> If you done that via Maven 3.1.1 you get a warning with Maven 3.2.1 you
+> don't.
+>
+> Kind regard
+> Karl-Heinz Marbaise
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a1136d4605552b904f32cdcdb--
+

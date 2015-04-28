@@ -1,0 +1,166 @@
+From users-return-135399-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb 10 18:56:04 2014
+Return-Path: <users-return-135399-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D6FD610BDF
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 10 Feb 2014 18:56:04 +0000 (UTC)
+Received: (qmail 99632 invoked by uid 500); 10 Feb 2014 18:56:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99538 invoked by uid 500); 10 Feb 2014 18:55:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99528 invoked by uid 99); 10 Feb 2014 18:55:59 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 10 Feb 2014 18:55:59 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of martijnverburg@gmail.com designates 209.85.216.171 as permitted sender)
+Received: from [209.85.216.171] (HELO mail-qc0-f171.google.com) (209.85.216.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 10 Feb 2014 18:55:52 +0000
+Received: by mail-qc0-f171.google.com with SMTP id n7so11233420qcx.2
+        for <users@maven.apache.org>; Mon, 10 Feb 2014 10:55:31 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=/WFQwpGEYSeZhFyPVpFnEHzEpl3CLLgfbc+x19kExgQ=;
+        b=wcMEB7ChXK5B+gXVPeDE++QJeLCsSzFs2Iyi3xftLMRveei5D6KiKGVsb/dDqBlmZy
+         kXAQ9tC7vmL5bJnBKpNqr8D+bNzm2qFLjUKoW6T6oZi7sS8rY8YHDXLKDeQQAaozvPjJ
+         QcgyKwHOTnSiyPTFWOymx1TJxF1AFJU/hGwKgwCtDU8yKX1/dY7uJpWbNIjSocKV55fh
+         Zjm6xEp40PAoFxtzcKpiOuvqGwwQ2650Xq+dBMqveb2picGb6/NYCvlUfi6pLkLCTOny
+         iY2jUha2UbSNhLApV6Rs+E96wzEI+/6PuU9mx2k3BwF3zUo6l74Z6liEp2oOtfmIQU34
+         XaZA==
+MIME-Version: 1.0
+X-Received: by 10.140.94.74 with SMTP id f68mr47752801qge.64.1392058531520;
+ Mon, 10 Feb 2014 10:55:31 -0800 (PST)
+Received: by 10.229.46.10 with HTTP; Mon, 10 Feb 2014 10:55:31 -0800 (PST)
+In-Reply-To: <CAOonoheS7OBk3KAyAGmbSYrxuR6=Adet=zV4orzTY84aSJRh9w@mail.gmail.com>
+References: <CAOonoheT-YOJB=_-V-DAYfksJisO=Dj_ahNzj5Wb8m7_vfyKLQ@mail.gmail.com>
+	<D6720A04-811C-4495-B307-FD88FF03AF4F@talios.com>
+	<CAOonohcTGT-4r97jQgLCY2qGYRwv2NXKHz1eDYW+oOwbPcb=uw@mail.gmail.com>
+	<BD8A35E1-2835-4D2E-AB83-623ECBA38DA9@talios.com>
+	<CAOonohdipPJMtSaeXe30B5-1C-Xnc06KKWuSw8A+6We=6w7qBA@mail.gmail.com>
+	<F06D8E44-68B1-46F7-89B6-8BAFCC772A2E@talios.com>
+	<CAOonoheS7OBk3KAyAGmbSYrxuR6=Adet=zV4orzTY84aSJRh9w@mail.gmail.com>
+Date: Mon, 10 Feb 2014 18:55:31 +0000
+Message-ID: <CAP7YuATFxmetMnuXOJQ-zYW+2v82dvLSmFb5RpzMdxPxBBN=Bg@mail.gmail.com>
+Subject: Re: Maven process stuck on MacOS with Java8
+From: Martijn Verburg <martijnverburg@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113a332a47288f04f211e241
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113a332a47288f04f211e241
+Content-Type: text/plain; charset=UTF-8
+
+Annoyingly, I can't reproduce this issue :-(, could be a difference in a
+MacPorts native lib I have or just about anything...
+
+Cheers,
+Martijn
+
+
+On 2 February 2014 08:58, Stephane Nicoll <stephane.nicoll@gmail.com> wrote:
+
+> On Fri, Jan 31, 2014 at 8:45 PM, Mark Derricutt
+> <mark@talios.com<javascript:_e(%7B%7D,'cvml','mark@talios.com');>
+> > wrote:
+>
+> > That's the terminal, not the shell ( bash, zsh, fish, csh etc. ).
+> >
+>
+> Yes, right. I am just using the default (bash). I also invoked the same
+> command from the plain Terminal application and I have the same issue.
+>
+> Martijn, I've just tried with 127, same issue.
+>
+> The problem is that I can't generate a thread dump
+>
+> jstack 47707
+>
+> 47707: Unable to open socket file: target process not responding or HotSpot
+> VM not loaded
+>
+> The -F option can be used when the target process is not responding
+>
+> Using -F does not really help either.
+>
+> S.
+>
+>
+> > I was also using iTerm when I had my issue, and now I think about it -
+> > since the last beta update/release I've not seen the issue again, but I
+> > also changed laptops so can't recall if its only on the new install I've
+> > not had the issue.
+> >
+> > I suspect they're not the same issue tho...  maybe.
+> >
+> >
+> > On 1 Feb 2014, at 0:05, Stephane Nicoll wrote:
+> >
+> >  Mark,
+> >>
+> >> I am using iTerm2 (1.0.0.20130622)
+> >>
+> >> S.
+> >>
+> >>
+> >> On Fri, Jan 31, 2014 at 11:56 AM, Mark Derricutt <mark@talios.com
+> <javascript:_e(%7B%7D,'cvml','mark@talios.com');>>
+> >> wrote:
+> >>
+> >>  You're not by any chance using "fish" as your shell are you?
+> >>>
+> >>> For awhile some strange bug in fish ( at least on my old machine, along
+> >>> with a combination of prompt settings ) would "hang" on the termination
+> >>> of
+> >>> processes, more often than not maven but also others.  Something about
+> it
+> >>> being stuck reading a char from stdin or something - only it wasn't
+> time
+> >>> related, sometimes resizes/splitting the terminal would kick it back
+> into
+> >>> gear.
+> >>>
+> >>>
+> >>> On 31 Jan 2014, at 23:12, Stephane Nicoll wrote:
+> >>>
+> >>> I am definitely impatient because looking at that closer, the shell is
+> >>> not
+> >>>
+> >>>> stuck but it takes several seconds to give back hand. Sometimes it's
+> ok,
+> >>>> sometimes is 5 sec or so.
+> >>>>
+> >>>>
+> >>> ---------------------------------------------------------------------
+> >>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> <javascript:_e(%7B%7D,'cvml','users-unsubscribe@maven.apache.org');>
+> >>> For additional commands, e-mail: users-help@maven.apache.org
+> <javascript:_e(%7B%7D,'cvml','users-help@maven.apache.org');>
+> >>>
+> >>>
+> >>>
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> <javascript:_e(%7B%7D,'cvml','users-unsubscribe@maven.apache.org');>
+> > For additional commands, e-mail: users-help@maven.apache.org
+> <javascript:_e(%7B%7D,'cvml','users-help@maven.apache.org');>
+> >
+> >
+>
+>
+> --
+> Sent from my phone
+>
+
+--001a113a332a47288f04f211e241--
+

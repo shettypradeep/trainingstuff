@@ -1,0 +1,158 @@
+From users-return-134903-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan  2 22:25:09 2014
+Return-Path: <users-return-134903-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E4E7810885
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  2 Jan 2014 22:25:09 +0000 (UTC)
+Received: (qmail 9378 invoked by uid 500); 2 Jan 2014 22:25:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 9307 invoked by uid 500); 2 Jan 2014 22:25:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9299 invoked by uid 99); 2 Jan 2014 22:25:07 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Jan 2014 22:25:07 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Jan 2014 22:25:03 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 9FB1E6A7A68
+	for <users@maven.apache.org>; Thu,  2 Jan 2014 17:24:39 -0500 (EST)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id p1Cp4OjYLV7B for <users@maven.apache.org>;
+	Thu,  2 Jan 2014 17:24:28 -0500 (EST)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id A3B836A7916
+	for <users@maven.apache.org>; Thu,  2 Jan 2014 17:24:28 -0500 (EST)
+Message-ID: <52C5E71B.6030501@artifact-software.com>
+Date: Thu, 02 Jan 2014 17:24:27 -0500
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: rwheeler@artifact-software.com
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.2.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: assembly plugin jar-with-dependencies - how to refer to artifact
+ name later?
+References: <0C723FEB5B4E5642B25B451BA57E273041FEEAD9@S1P5DAG3C.EXCHPROD.USA.NET>
+In-Reply-To: <0C723FEB5B4E5642B25B451BA57E273041FEEAD9@S1P5DAG3C.EXCHPROD.USA.NET>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Why does the name change?
+What is the variable portion?
+
+Ron
+On 02/01/2014 3:05 PM, Jim Garrison wrote:
+> I build a jar-with-dependencies in one execution of the assembly plugin.
+>
+> In a second execution I use the assembly plugin to package a distributable zip, and need to substitute the name of the jar-with-dependencies output artifact into a script file that launches the program.
+>
+> Does the assembly plugin put the output artifact name into the environment so it can be substituted later? If so, what is the variable name? If not, is there another way to accomplish this?
+>
+> Assembly plugin configuration:
+>
+>        <plugin>
+>          <artifactId>maven-assembly-plugin</artifactId>
+>          <version>2.4</version>
+>          <executions>
+>            <execution>
+>              <id>make-jwd</id> <!-- this is used for inheritance merges -->
+>              <phase>package</phase> <!-- bind to the packaging phase -->
+>              <configuration>
+>                <descriptorRefs>
+>                  <descriptorRef>jar-with-dependencies</descriptorRef>
+>                </descriptorRefs>
+>                <archive>
+>                  <manifest>
+>                    <mainClass>org.nwea.jhg.dbextract.Driver</mainClass>
+>                  </manifest>
+>                </archive>
+>              </configuration>
+>              <goals>
+>                <goal>single</goal>
+>              </goals>
+>            </execution>
+>            <execution>
+>              <id>make-zip</id> <!-- this is used for inheritance merges -->
+>              <phase>package</phase> <!-- bind to the packaging phase -->
+>              <configuration>
+>                <descriptors>
+>                  <descriptor>src/main/assembly/zip.xml</descriptor>
+>                </descriptors>
+>              </configuration>
+>              <goals>
+>                <goal>single</goal>
+>              </goals>
+>            </execution>
+>          </executions>
+>        </plugin>
+>
+> Assembly descriptor:
+>
+> <assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>    xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+>    <id>zip</id>
+>    <formats>
+>      <format>zip</format>
+>    </formats>
+>    <fileSets>
+>      <fileSet>
+>        <directory>${project.basedir}/src/main/scripts</directory>
+>        <outputDirectory>/</outputDirectory>
+>        <filtered>true</filtered>
+>      </fileSet>
+>      <fileSet>
+>        <directory>${project.basedir}/config</directory>
+>        <outputDirectory>/</outputDirectory>
+>      </fileSet>
+>      <fileSet>
+>        <directory>${project.build.directory}</directory>
+>        <outputDirectory>/</outputDirectory>
+>        <includes>
+>          <include>*-jar-with-dependencies.jar</include>
+>        </includes>
+>      </fileSet>
+>    </fileSets>
+> </assembly>
+>
+> File into which I wish to substitute the name of the jar-with-dependencies artifact:
+>
+> #!/bin/bash
+> export DBEX_CMD=dbex
+> java -jar ${what-do-i-put-here} $*
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

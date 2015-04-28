@@ -1,0 +1,121 @@
+From users-return-137056-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Aug 18 09:10:59 2014
+Return-Path: <users-return-137056-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6A004116C0
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 18 Aug 2014 09:10:59 +0000 (UTC)
+Received: (qmail 63610 invoked by uid 500); 18 Aug 2014 09:10:51 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 63532 invoked by uid 500); 18 Aug 2014 09:10:50 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 63520 invoked by uid 99); 18 Aug 2014 09:10:50 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 18 Aug 2014 09:10:50 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of adrien.rivard@gmail.com designates 209.85.220.174 as permitted sender)
+Received: from [209.85.220.174] (HELO mail-vc0-f174.google.com) (209.85.220.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 18 Aug 2014 09:10:24 +0000
+Received: by mail-vc0-f174.google.com with SMTP id la4so5423257vcb.19
+        for <users@maven.apache.org>; Mon, 18 Aug 2014 02:10:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=qtXeL1UagWuDQY84y4/12TblzrfjUhs9oRRN+OqlMzU=;
+        b=QJfI31j1hDTYj/mCrUHCpRVyqpOLy6lbIaqeMk7EC/0uxA72Gh6gSD7dD+6oeNunZa
+         qYOeth+wzLez2APxc18OZdOLjS5tOo1Y4VpkIm48oqeK2L5oMAFTThanEgqOGryUAyNJ
+         hYeZcPcJWFwy2hhee2pPMzHDrUG6jvj7rT0t+GuR9d6uEN7J0MQpsnWKNhSpdA0rxx/8
+         G4WBypk6Z9eKB9uLW8/GI9Buj/iwn6vLNUIjac725Hmd3OXRrqcDJLo8n6yK7oP2gC0X
+         Ryu8bLFXdIN+HmFSH15AzPmJFKn50XHG+pAQM0U4VXzuGzDNocRHKRAnoOcjaqgdx8UW
+         9jyA==
+MIME-Version: 1.0
+X-Received: by 10.52.162.74 with SMTP id xy10mr16266vdb.51.1408353023108; Mon,
+ 18 Aug 2014 02:10:23 -0700 (PDT)
+Received: by 10.220.15.200 with HTTP; Mon, 18 Aug 2014 02:10:23 -0700 (PDT)
+In-Reply-To: <CAPCjjnFpu8wZnGq42sEaR3vv-TwRSAecoDKA9JObWQoas8yJvw@mail.gmail.com>
+References: <CAPCjjnGKp2A-iDS+vBvjHTF_FX7RL4DeOMhRadMOCoO5pDMHdQ@mail.gmail.com>
+	<53F04794.6000406@artifact-software.com>
+	<CAPCjjnFpu8wZnGq42sEaR3vv-TwRSAecoDKA9JObWQoas8yJvw@mail.gmail.com>
+Date: Mon, 18 Aug 2014 11:10:23 +0200
+Message-ID: <CAPCUOdFgo-RuYjdH5Xym5UVb_viD2LoPXa0NGw3A+jKAZdXCJw@mail.gmail.com>
+Subject: Re: Remove old snapshots under local repository
+From: Adrien Rivard <adrien.rivard@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e01538648a92f680500e3bd68
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01538648a92f680500e3bd68
+Content-Type: text/plain; charset=UTF-8
+
+Or delete all directories that end with -SNAPSHOT
+
+
+
+On Sun, Aug 17, 2014 at 8:18 AM, Dan Tran <dantran@gmail.com> wrote:
+
+> sounds like a good option.
+>
+> Thanks
+>
+> -D
+>
+>
+> On Sat, Aug 16, 2014 at 11:11 PM, Ron Wheeler <
+> rwheeler@artifact-software.com> wrote:
+>
+> > On 17/08/2014 1:50 AM, Dan Tran wrote:
+> >
+> >> Hi I need to find a way to walk into local repository and remove all old
+> >> snapshots.
+> >>
+> >> This is very helpful for developer to clean up his/her local rep.
+> >>
+> >> how safe it is by blindly remove any file with timestamp format ( ie
+> >> xxx-1.0.0-20140816.071953-49.jar)?
+> >>
+> >> Thanks
+> >>
+> >> -D
+> >>
+> >>  Easiest thing to do is to delete the entire organization or project
+> > branch (com.mycompany.project.*) from the local repo.
+> >
+> > This will not likely delete anything of great value or anything that can
+> > not be easily retrieved from your company repo.
+> >
+> >
+> > Ron
+> >
+> > --
+> > Ron Wheeler
+> > President
+> > Artifact Software Inc
+> > email: rwheeler@artifact-software.com
+> > skype: ronaldmwheeler
+> > phone: 866-970-2435, ext 102
+> >
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+>
+
+
+
+-- 
+Adrien Rivard
+
+--089e01538648a92f680500e3bd68--
+

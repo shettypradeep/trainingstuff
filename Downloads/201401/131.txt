@@ -1,0 +1,212 @@
+From users-return-135271-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 28 18:27:02 2014
+Return-Path: <users-return-135271-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 160D310DC0
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 28 Jan 2014 18:27:02 +0000 (UTC)
+Received: (qmail 92742 invoked by uid 500); 28 Jan 2014 18:26:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 92646 invoked by uid 500); 28 Jan 2014 18:26:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 92638 invoked by uid 99); 28 Jan 2014 18:26:57 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 18:26:57 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ljnelson@gmail.com designates 209.85.216.53 as permitted sender)
+Received: from [209.85.216.53] (HELO mail-qa0-f53.google.com) (209.85.216.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 18:26:52 +0000
+Received: by mail-qa0-f53.google.com with SMTP id cm18so978325qab.26
+        for <users@maven.apache.org>; Tue, 28 Jan 2014 10:26:31 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=b3rbbgwlWyLmf73WoAI/Fc6maoLQw8B3P6M+fkGHoiM=;
+        b=S4Zdzf9FbmB46bt9AqI72GGgg1sfZAvneJ88aJbaD2pQcOqtNgrC3E7CACyBlegCha
+         HKeIIBqLwU6l7BRNq+Qnf69N+5/IvfXgglQa9WR7jB+/1i9e7ssbJ3ShobHZkMnjtSc7
+         vC9O7lgYwsavkgY/y1IzKcfvI1/XBaTMV+4iDgqw60zvP1CgOINr4rbFOe9Wvoc7/diW
+         vXWKITKhW7bAeSqbm4fGslcVXfem8zYaF8DlgWaUAw/9qh+DqTBz4zCSrWKHNu04qdGP
+         VB45Fk9c24eiGhglnShmoMEH7WlTrqOwP2k1r/Cfs5xT5g1tKUWJMvpFM94cWGSFGSRd
+         5cIg==
+MIME-Version: 1.0
+X-Received: by 10.140.39.20 with SMTP id u20mr4557580qgu.73.1390933591048;
+ Tue, 28 Jan 2014 10:26:31 -0800 (PST)
+Received: by 10.96.169.200 with HTTP; Tue, 28 Jan 2014 10:26:30 -0800 (PST)
+In-Reply-To: <1B8FF9BB83FDCE44AB581D7E394AB90D2A3DB0D2@USSTLDAGBE1.corp.amdocs.com>
+References: <1B8FF9BB83FDCE44AB581D7E394AB90D2A3D9AB5@USSTLDAGBE1.corp.amdocs.com>
+	<1B8FF9BB83FDCE44AB581D7E394AB90D2A3D9B3A@USSTLDAGBE1.corp.amdocs.com>
+	<CA+nPnMxQwbYrBEk_WuikwTMTnyO6jKOuBmn3KKqE+K7PM8c=gQ@mail.gmail.com>
+	<1B8FF9BB83FDCE44AB581D7E394AB90D2A3DB067@USSTLDAGBE1.corp.amdocs.com>
+	<1B8FF9BB83FDCE44AB581D7E394AB90D2A3DB0D2@USSTLDAGBE1.corp.amdocs.com>
+Date: Tue, 28 Jan 2014 10:26:30 -0800
+Message-ID: <CAHNdxumH73y96Ayhi1CgYYdAQVCXdjMqkxWfCdVUkUyUFkn-XQ@mail.gmail.com>
+Subject: Re: surefire plugin output changes
+From: Laird Nelson <ljnelson@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c123b699c8e704f10bf60a
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c123b699c8e704f10bf60a
+Content-Type: text/plain; charset=UTF-8
+
+No, that's the latest version of maven-surefire-plugin.
+
+Run mvn help:effective-pom from a pom.xml in your project and look for the
+stanza that concerns the maven-surefire-plugin and that will tell you for
+sure.
+
+Best,
+Laird
+
+
+On Tue, Jan 28, 2014 at 10:06 AM, John Dix <John.Dix@amdocs.com> wrote:
+
+> I got it... 2.16
+>
+> -----Original Message-----
+> From: John Dix
+> Sent: Tuesday, January 28, 2014 9:45 AM
+> To: Maven Users List
+> Subject: RE: surefire plugin output changes
+>
+> Do you know which version Maven 2.1.0 had?
+>
+>
+> -----Original Message-----
+> From: Stephen Connolly [mailto:stephen.alan.connolly@gmail.com]
+> Sent: Tuesday, January 28, 2014 12:56 AM
+> To: Maven Users List
+> Subject: Re: surefire plugin output changes
+>
+> 3.0.3 defaulted to surefire 2.7.2 if you did not specify a version
+>
+> 3.0.4 and 3.0.5 default to surefire 2.10
+>
+> 3.1.1 defaults surefire to 2.12.4
+>
+> HTH
+>
+>
+> On 28 January 2014 00:52, John Dix <John.Dix@amdocs.com> wrote:
+>
+> > I should point out that I have run 3.0.3 against the build in question
+> > and I still received the same non-verbose output they are complaining
+> > about. At a loss at what to tell them other than a shoulder shrug and
+> > "idunno" I thought I would ask here to see if there was a change
+> > somewhere that could account for this.
+> >
+> > -----Original Message-----
+> > From: John Dix
+> > Sent: Monday, January 27, 2014 4:35 PM
+> > To: Maven Users List
+> > Subject: surefire plugin output changes
+> >
+> > Hello all,
+> >
+> > We have migrated our maven from version 3.0.3 to 3.0.5 and our
+> > developers are claiming now that they're not seeing the verbosity in
+> > the test outputs like they did before.
+> >
+> > The only see a synopsis and summary of the number of tests run,
+> > failed, and which ones failed. Servers are run in a CentOS 5.3 linux
+> > environment within Jenkins.
+> >
+> > I am being told that before this upgrade they had an extremely chatty
+> > output like below. What they haven't been able to confirm for me is
+> > whether this change happened after we moved from 2.1.0 to 3.0.3 or not
+> > as that was before my time.
+> >
+> > Can anyone please confirm if this output was/is handled by surefire
+> > and maybe a commandline switch in maven got lost, or from somewhere
+> > else? The output as from an old archived log the developer gave me.
+> >
+> >
+> > [INFO ]: com.qpass.payment.multinodeCloud.DeployTest:
+> >          Connected to Mission Control Server on ::  myWar from
+> > getWarUrl = mobilePaymentsApp-amp_i-SNAPSHOT.war
+> > objname = ampait/
+> > ampait-control-1.opsdevna3.amdocsdc.net/5666/com.qpass:Type=Environmen
+> > t [INFO ]: com.qpass.payment.multinodeCloud.DeployTest:
+> >          Test: deployAppWartoSelectedsEnv Result={0}:
+> > {<machine-name>=Successfull Deployment of WAR file: app} [INFO ]:
+> > com.qpass.payment.multinodeCloud.DeployTest:
+> >          Test:deployAppWar: Time Spent 2 min 24 secs 324 ms myWar from
+> > getWarUrl = mobilePaymentExtractsApp-amp_i-SNAPSHOT.war
+> > [INFO ]: com.qpass.payment.multinodeCloud.DeployTest:
+> >          Test: deployExtractsWar Result={0}:
+> > {ampait-back-1.opsdevna3.amdocsdc.net:8999=Successfull Deployment of
+> > WAR
+> > file: extractsApp} [INFO ]: com.qpass.payment.multinodeCloud.DeployTest:
+> >          Test:deployExtractsWar: Time Spent 1 min 23 secs 14 ms myWar
+> > from getWarUrl = nxtcomSampleApp-amp_i-SNAPSHOT.war
+> > [INFO ]: com.qpass.payment.multinodeCloud.DeployTest:
+> >          Test: deployNxtSampleWar Result={0}:
+> > {ampait-back-1.opsdevna3.amdocsdc.net:8999=Successfull Deployment of
+> > WAR
+> > file: nxtcomServices} [INFO ]:
+> com.qpass.payment.multinodeCloud.DeployTest:
+> >          Test:deployNxtSampleWar: Time Spent 47 secs 410 ms myWar from
+> > getWarUrl = zmobileSampleApp-amp_i-SNAPSHOT.war
+> > [INFO ]: com.qpass.payment.multinodeCloud.DeployTest:
+> >          Test: deployZmobileSampleWar Result={0}:
+> > {ampait-back-1.opsdevna3.amdocsdc.net:8999=Successfull Deployment of
+> > WAR
+> > file: zmobileServices} [INFO ]:
+> com.qpass.payment.multinodeCloud.DeployTest:
+> >          Test:deployZmobileSampleWar: Time Spent 31 secs 400 ms myWar
+> > from getWarUrl = mobilePaymentsWebServiceApp-amp_i-SNAPSHOT.war
+> > [INFO ]: com.qpass.payment.multinodeCloud.DeployTest:
+> >          Test: deployWebServiceApp Result={0}:
+> > {ampait-front-1.opsdevna3.amdocsdc.net:8999=Successfull Deployment of
+> > WAR
+> > file: ROOT} [INFO ]: com.qpass.payment.multinodeCloud.DeployTest:
+> >          Test:deployBackWarToSelectedEnv: Time Spent 1 min 33 secs 791
+> > ms myWar from getWarUrl =
+> > paymentsReportingUiApplication-amp_i-SNAPSHOT.war
+> >
+> > This message and the information contained herein is proprietary and
+> > confidential and subject to the Amdocs policy statement, you may
+> > review at http://www.amdocs.com/email_disclaimer.asp
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+>
+> This message and the information contained herein is proprietary and
+> confidential and subject to the Amdocs policy statement, you may review at
+> http://www.amdocs.com/email_disclaimer.asp
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+http://about.me/lairdnelson
+
+--001a11c123b699c8e704f10bf60a--
+

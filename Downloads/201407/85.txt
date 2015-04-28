@@ -1,0 +1,95 @@
+From users-return-136894-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jul 25 15:35:18 2014
+Return-Path: <users-return-136894-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5F30D11EB3
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 25 Jul 2014 15:35:18 +0000 (UTC)
+Received: (qmail 39474 invoked by uid 500); 25 Jul 2014 15:35:16 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 39398 invoked by uid 500); 25 Jul 2014 15:35:16 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 39379 invoked by uid 99); 25 Jul 2014 15:35:16 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 25 Jul 2014 15:35:16 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of garvin.leclaire@gmail.com designates 209.85.212.179 as permitted sender)
+Received: from [209.85.212.179] (HELO mail-wi0-f179.google.com) (209.85.212.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 25 Jul 2014 15:35:10 +0000
+Received: by mail-wi0-f179.google.com with SMTP id f8so1212857wiw.12
+        for <users@maven.apache.org>; Fri, 25 Jul 2014 08:34:49 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=+dEg4VhQdXV3GgXaUkmp97OxCJM/PbZFIqwidAaEf6c=;
+        b=NeVj9RbUNyo2eYZR/3zJbl4DGIUvWrf+patYIWXmhWQIUvo2hgrfGR8lLq8l/yIHYW
+         31j2Wbnts+EqBpPyv2TI3snJ9a0YWIy2PkyZo09DrQbcMSOOPGtfnJhcnRJgvwvUfoQ0
+         BwN/rBuEyjHZBK8NYHHNlW4h0bdSGalrZK1lAWztv5XCMMLootVSWcIy+eQd3lk4cKeS
+         x3AWBtSin+54G1RYf8hp2rwffT2Ue3RXMdXORS1cdCeMwoNmhCDg3t1oy/sZqolkv0+x
+         uSijOGGVdsBHBYAd60R2f3LWvBWPitgQeaTrYYD7FM+waRjaPmZbmsrL2PyjtM5n/QPo
+         JcUQ==
+MIME-Version: 1.0
+X-Received: by 10.194.9.1 with SMTP id v1mr4863045wja.128.1406302489428; Fri,
+ 25 Jul 2014 08:34:49 -0700 (PDT)
+Received: by 10.217.151.195 with HTTP; Fri, 25 Jul 2014 08:34:49 -0700 (PDT)
+Date: Fri, 25 Jul 2014 11:34:49 -0400
+Message-ID: <CAMKsNUJy4NQMDZcOAdoWZwEs1nPWzFY587upCr8UZ6DHTQz6kg@mail.gmail.com>
+Subject: [ANN] FindBugs Maven Plugin version 2.5.5 Released
+From: Garvin LeClaire <garvin.leclaire@gmail.com>
+To: announce@mojo.codehaus.org, 
+	"dev@mojo.codehaus.org" <dev@mojo.codehaus.org>, maven users <users@maven.apache.org>, user@mojo.codehaus.org
+Content-Type: multipart/alternative; boundary=047d7b5d9c63544a9c04ff0650d9
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b5d9c63544a9c04ff0650d9
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+The Mojo team is pleased to announce the release of the FindBugs Maven
+Plugin version 2.5.5.
+FindBugs uses static analysis to inspect Java bytecode for occurrences
+of bug patterns.
+
+To get this update, simply specify the version in your project's
+plugin configuration:
+
+<plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <version>2.5.5</version>
+</plugin>
+
+We solved the following issues:
+
+Release Notes - Mojo's FindBugs Maven Plugin - Version 2.5.5
+
+
+
+** Bug
+    * [MFINDBUGS-198] - Add maxRank to the check goal to allow eclipse
+m2e findbugs plugin to pick up this configuration
+
+
+
+** Improvement
+    * [MFINDBUGS-197] - Remove redundant "Report" word on report name labels
+
+
+
+Enjoy,,
+
+
+Garvin LeClaire
+garvin.leclaire@gmail.com
+
+--047d7b5d9c63544a9c04ff0650d9--
+

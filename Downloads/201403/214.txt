@@ -1,0 +1,71 @@
+From users-return-135964-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 27 14:40:45 2014
+Return-Path: <users-return-135964-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E7AF111F34
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 27 Mar 2014 14:40:44 +0000 (UTC)
+Received: (qmail 49498 invoked by uid 500); 27 Mar 2014 14:40:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 48682 invoked by uid 500); 27 Mar 2014 14:40:38 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 48674 invoked by uid 99); 27 Mar 2014 14:40:35 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Mar 2014 14:40:35 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of waynefay@gmail.com designates 209.85.220.53 as permitted sender)
+Received: from [209.85.220.53] (HELO mail-pa0-f53.google.com) (209.85.220.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Mar 2014 14:40:30 +0000
+Received: by mail-pa0-f53.google.com with SMTP id ld10so3563132pab.40
+        for <users@maven.apache.org>; Thu, 27 Mar 2014 07:40:10 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=YGSP683YBM+hb3s8KmjUL7wF59i08djIQeVHh7i/fVw=;
+        b=mPHOpOwQ9PkfTwAF/P1l4YdL+y4r9BQlN4B+YyFfzkQLNW7WfAC2QH7OfbRDDsqGbv
+         YmzpdyAKQt0cK0dSLgRZigRVrttQLHhBw4zC92jFjUXLr0LIm5DW76xqo7nB/JGdIKOd
+         HL+31hGUuE3elJAGJSBS77O15AVGcMfSilZ89bGMsqIpBrFykAW9ZrlVOrUEHR0DS7tj
+         HBiFX5uflzjQWunVLNXwjqeRoAqbu1F1cfMDPNeFvDcqnNIintfrChyT38pZEfmHUyxw
+         cqW11rMGiGypBZ/9kgOpZtOZteq7SvMcXYDSJHF5QvkoeWJhmPkP6rjRmZ2LAlAiFWa+
+         Rp6w==
+X-Received: by 10.66.137.109 with SMTP id qh13mr2199453pab.39.1395931209943;
+ Thu, 27 Mar 2014 07:40:09 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Thu, 27 Mar 2014 07:39:49 -0700 (PDT)
+In-Reply-To: <CAGSyEuAkJtsN2UoQZVBS1QFHOgA7R5uXXEmDhEmTsUoy_mAAmA@mail.gmail.com>
+References: <CAGSyEuAkJtsN2UoQZVBS1QFHOgA7R5uXXEmDhEmTsUoy_mAAmA@mail.gmail.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Thu, 27 Mar 2014 09:39:49 -0500
+Message-ID: <CALy+7UmG40qZqaAK1A6G1Gj7bwsYM2tGceuWG3SJgOBixXu=-A@mail.gmail.com>
+Subject: Re: Why is "mvn archetype:generate" so low?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> [INFO] Generating project in Batch mode.
+> *It hangs here for hours! *
+>
+> what's going on here? why it hangs?
+
+Hopefully the silence is deafening for you on this one. Your
+experience is not typical. Please describe your environment - are you
+on a network at work where there are Internet proxies? If so, did you
+configure settings.xml properly?
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

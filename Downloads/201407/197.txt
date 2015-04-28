@@ -1,0 +1,98 @@
+From users-return-136781-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jul 16 18:18:30 2014
+Return-Path: <users-return-136781-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 183D81059C
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 16 Jul 2014 18:18:30 +0000 (UTC)
+Received: (qmail 9943 invoked by uid 500); 16 Jul 2014 18:18:28 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 9852 invoked by uid 500); 16 Jul 2014 18:18:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9837 invoked by uid 99); 16 Jul 2014 18:18:27 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 16 Jul 2014 18:18:27 +0000
+X-ASF-Spam-Status: No, hits=-0.1 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [12.161.118.91] (HELO mx2.belden.com) (12.161.118.91)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 16 Jul 2014 18:18:22 +0000
+X-AuditID: 0a01015b-b7f348e0000078f1-53-53c6c1d821db
+Received: from bdcnotes1.belden.com ( [10.1.1.71])
+	by mx2.belden.com (Service Ready) with SMTP id 95.1C.30961.8D1C6C35; Wed, 16 Jul 2014 14:18:00 -0400 (EDT)
+To: users@maven.apache.org
+MIME-Version: 1.0
+Subject: move data from pom to class or class to pom
+X-KeepSent: 1F05DF42:E00CE028-85257D17:0063A305;
+ type=4; name=$KeepSent
+X-Mailer: Lotus Notes Release 8.5.3FP2 SHF99 September 04, 2012
+From: Alejandro.Endo@miranda.com
+Message-ID: <OF1F05DF42.E00CE028-ON85257D17.0063A305-85257D17.00648730@belden.com>
+Date: Wed, 16 Jul 2014 14:18:01 -0400
+X-MIMETrack: Serialize by Router on BDCNotes1/BeldenCDT(Release 9.0 HF625|September 19, 2013) at
+ 07/16/2014 02:18:00 PM,
+	Serialize complete at 07/16/2014 02:18:00 PM
+Content-Type: multipart/alternative; boundary="=_alternative 006486D185257D17_="
+X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFrrKIsWRmVeSWpSXmKPExsXCxcjornvj4LFgg0tLFCwebb3O6MDo0f5U
+	KIAxqoHRJimxpCw4Mz1P384mMS8vvySxJFUhJbU42VbJKTUnJTVPwSWzODknMTM3tUjXM9hf
+	18LC1FJJITPFVslISaEgJzE5NTc1r8RWKbGgIDUvRcmOSwED2ACVZeYppOYl56dk5qXbKoWG
+	uOlaKNm5eAY7J7SyZqx6u4u94LVExdc3qxkbGDeIdDFyckgImEh8Of2SGcIWk7hwbz1bFyMX
+	h5DAfEaJ01/mM4EkRASkJH6+us4IYvMKCEqcnPmEBcQWBmr+tnE2G0Szp8SBbUtYIGx7ie+P
+	PoDZbAIKEnOvbGKD6A2SmNh9C2wZi4CqxJ/Nk8GWSQisZJTYfPYQO0iCWSBA4v2MqewTGHln
+	Idk3C0kKwtaROLHqGDOErS2x6MpP9gWMLKsY+XIrjPSSwGGql5yfu4kREjXROxiP/VA9xCjA
+	wajEw/t37rFgIdbEsuLK3EOMEhzMSiK802YBhXhTEiurUovy44tKc1KLDzEGAd05kVmKOzkf
+	GNF5JfHGBgZEcpTEeb9+qgkWEkgHxnR2ampBahHMUCYOTpClXFIixcCoTC1KLC3JiAelj/hi
+	YAKRamBsC3PbvEG4Wsj7gIiAHeMdxtvud+u32zTbxObW6kdMult50cQ+aLWmW/BcRecWues3
+	Imys7njeeyUv8amhI4r15JrTsu+CNTfqbuQxZrDtNXiRnr/jE0vzSsez/9cu4TCamP/vGMfP
+	x+veLSqwUTyXbaK0ILAy4Fb3A6M/DrztAlIvSgrXHVJiKc5INNRiLipOBADH5WW56AIAAA==
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--=_alternative 006486D185257D17_=
+Content-Type: text/plain; charset="US-ASCII"
+
+I have a java class that has a constant in it (static final String). This 
+string is a version number, e.g. "1.3.2-test". I need to have this same 
+value in a maven plugin configuration (the jaxb plugin) so I am wondering, 
+is it better to keep the actual declaration in the code and somehow tell 
+maven to take it from the code, or is it better to declare it in the pom 
+and tell java to take the literal value to define the constant from the 
+pom??
+
+I don't know how to do either so I would also like to hear some ideas. I 
+am hoping i don't have to use resource filtering since having a source 
+file as a resource is kind of problematic to me. It has to be ONLY that 
+file that gets filtered, it would need to be in a non-standard location 
+not src/main/java (maybe this is not true), and in general, it seems to me 
+that treating source code as resource is counter-intuitive
+
+Has anyone else solved this issue with the DRY principle across behaviour 
+and build system?
+
+The short background is that maven generates an XML schema via jaxb and 
+this schema file is then made available at runtime via a service
+
+Thank you,
+
+Alejandro Endo | Software Designer/Concepteur de logiciels 
+
+
+DISCLAIMER:
+Privileged and/or Confidential information may be contained in this
+message. If you are not the addressee of this message, you may not
+copy, use or deliver this message to anyone. In such event, you
+should destroy the message and kindly notify the sender by reply
+e-mail. It is understood that opinions or conclusions that do not
+relate to the official business of the company are neither given
+nor endorsed by the company.
+Thank You.
+
+--=_alternative 006486D185257D17_=--
+

@@ -1,0 +1,109 @@
+From users-return-137023-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Aug 14 23:57:36 2014
+Return-Path: <users-return-137023-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CFC6E117AD
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 14 Aug 2014 23:57:36 +0000 (UTC)
+Received: (qmail 34480 invoked by uid 500); 14 Aug 2014 23:57:35 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 34395 invoked by uid 500); 14 Aug 2014 23:57:35 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 34376 invoked by uid 99); 14 Aug 2014 23:57:34 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 14 Aug 2014 23:57:34 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of miladyartemis@gmail.com designates 209.85.214.177 as permitted sender)
+Received: from [209.85.214.177] (HELO mail-ob0-f177.google.com) (209.85.214.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 14 Aug 2014 23:57:30 +0000
+Received: by mail-ob0-f177.google.com with SMTP id wp18so1484306obc.8
+        for <users@maven.apache.org>; Thu, 14 Aug 2014 16:57:09 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=l9+zsqUlVGJFsnTRnhDW8VwusqI5riqRRBZ8yOSohV8=;
+        b=yFKCt/3ewblQKy2igGxeszA1SxTAPBaXVDoqwaRsxaK9RLU/EB7O66pE2mzNQbRmwT
+         3SilGVXN37iVKL/o5X8xQSGzsb1TmnmklTiSsiemK+GBxJOVqqf9NiIIRc4YeSyyDBzk
+         DYZXoPqv7+3PPm3DQ6Mum7J1o4SeT5Nv0EwU9HK3c/lW/Wr3/w0PHlchjrVhJWLEz2In
+         D/ltlgGgIlxmITH2k2ojAZIMSi3RrDWZC0e7ARjRgm9jDcn0gImBeVG8CDdStQDgKseO
+         oEDTo5QPU9gi2oQfrJ/3w/r0z/8qKYAggHTyqRStmcpD3fZqqA8/qtpSCkaonVX0iLdp
+         2Qkg==
+X-Received: by 10.182.94.204 with SMTP id de12mr15793561obb.66.1408060629698;
+ Thu, 14 Aug 2014 16:57:09 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.202.97.87 with HTTP; Thu, 14 Aug 2014 16:56:49 -0700 (PDT)
+In-Reply-To: <61044E62-0A7C-488B-9EE3-5CD4ED2B4EB7@mac.com>
+References: <61044E62-0A7C-488B-9EE3-5CD4ED2B4EB7@mac.com>
+From: Cintia Del Rio <miladyartemis@gmail.com>
+Date: Fri, 15 Aug 2014 09:56:49 +1000
+Message-ID: <CAOSOc=v3Y+spZnQrsHQucDzihe_WnPNHLPWA4Q-RAaZU3DYLqg@mail.gmail.com>
+Subject: Re: Trouble Installing Maven - not sure of /java location mac os x mavericks
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=e89a8f83964fa7d01305009fa937
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--e89a8f83964fa7d01305009fa937
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hey,
+
+I have mavericks as well, and works exactly as described in
+http://stackoverflow.com/questions/6588390/where-is-java-home-on-osx-lion-1=
+0-7-mountain-lion-10-8-or-mavericks-10-9
+
+
+
+On 15 August 2014 05:09, kcanfield <kcanfield@mac.com> wrote:
+
+> Hello,
+>
+> I am having trouble installing Maven on my Mac. I have the necessary
+> requirements and I followed the instructions carefully. One of the
+> instructions on the download/installation page is to specify where my JDK
+> is installed,(
+>         =E2=80=A2 Make sure that JAVA_HOME is set to the location of your=
+ JDK,
+> e.g. export JAVA_HOME=3D/usr/java/jdk1.7.0_51 and that $JAVA_HOME/bin is =
+in
+> your PATH environment variable.
+>
+> ) but I don=E2=80=99t know where that is. ON the Java installer, there is=
+ no way
+> that I can specify where to install Java. I already had both the JDK and
+> JRE installed, but tried to install the JDK again so I could get the
+> destination but the installer does not let me choose. I tried doing a
+> spotlight search for the java folder but it did not appear. I have been
+> developing in Java on this machine for more than a few months, so I know
+> that Java is installed and working properly.
+>
+> Thank you for any help you can provide.
+>
+> ~ Kramer
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+--=20
+-------
+Sent from TARDIS. Typos might be a timey whyney thingy.
+Enviado da TARDIS, podem existir erros devido =C3=A0 diferen=C3=A7as de esp=
+a=C3=A7o-tempo.
+
+Cintia Del Rio
+
+--e89a8f83964fa7d01305009fa937--
+

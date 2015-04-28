@@ -1,0 +1,110 @@
+From users-return-136191-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr 18 15:02:50 2014
+Return-Path: <users-return-136191-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 802541119E
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 18 Apr 2014 15:02:50 +0000 (UTC)
+Received: (qmail 79079 invoked by uid 500); 18 Apr 2014 15:02:44 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 78993 invoked by uid 500); 18 Apr 2014 15:02:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 78981 invoked by uid 99); 18 Apr 2014 15:02:44 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Apr 2014 15:02:44 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [85.13.134.252] (HELO dd12814.kasserver.com) (85.13.134.252)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Apr 2014 15:02:40 +0000
+Received: from [192.168.178.45] (p54A28060.dip0.t-ipconnect.de [84.162.128.96])
+	by dd12814.kasserver.com (Postfix) with ESMTPSA id 26C5D11C1001;
+	Fri, 18 Apr 2014 17:02:17 +0200 (CEST)
+References: <CAChPNbexJ3vix-HdFNiKSEQrOYMW+vjxHknCn7-fPp0LsKxLBw@mail.gmail.com>
+In-Reply-To: <CAChPNbexJ3vix-HdFNiKSEQrOYMW+vjxHknCn7-fPp0LsKxLBw@mail.gmail.com>
+Mime-Version: 1.0 (1.0)
+Content-Type: text/plain;
+	charset=us-ascii
+Message-Id: <049FB31A-977B-459E-B7D8-CCC2F3C84478@Kriegisch.name>
+Content-Transfer-Encoding: quoted-printable
+X-Mailer: iPad Mail (11D167)
+From: Alexander Kriegisch <Alexander@Kriegisch.name>
+Subject: Re: Struggling to release:perform with git and deployer key
+Date: Fri, 18 Apr 2014 17:02:16 +0200
+To: Maven Users List <users@maven.apache.org>
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Have you checked this list of possible problems?
+https://help.github.com/articles/error-permission-denied-publickey
+--=20
+Alexander Kriegisch
+https://scrum-master.de
+
+
+> Am 18.04.2014 um 15:45 schrieb Maven User <maven.2.user@gmail.com>:
+>=20
+> Hi all -
+>=20
+> I'm really struggling with this.
+>=20
+> My git push portion of the maven release process just is quitting with thi=
+s:
+>=20
+> 00:01:29.803 Provider message:
+> 00:01:29.803 The git-push command failed.
+> 00:01:29.803 Command output:
+> 00:01:29.803 Permission denied (publickey).
+> 00:01:29.803 fatal: The remote end hung up unexpectedly
+> 00:01:29.803
+> 00:01:29.803 cause : Unable to commit files
+> 00:01:29.803 Provider message:
+> 00:01:29.803 The git-push command failed.
+> 00:01:29.803 Command output:
+> 00:01:29.803 Permission denied (publickey).
+> 00:01:29.803 fatal: The remote end hung up unexpectedly
+>=20
+> I have the key stored in Jenkins as a "managed file" (as part of that
+> plugin).  So the build has an early step where that key is written to
+> disk.
+>=20
+> Then I've used the settings.xml to specify which key to use (pointing
+> at that location just above).
+>=20
+> <server>
+>      <id>github.com</id>
+>      <username>someusername</username>
+>      <privateKey>/srv/jenkins/.ssh/somekeyname</privateKey>
+>      <filePermissions>664</filePermissions>
+>      <directoryPermissions>775</directoryPermissions>
+>      <configuration></configuration>
+>    </server>
+>=20
+>  <scm>
+>      <connection>scm:git:git@github.com:${companyid}/${project.artifactId}=
+.git</connection>
+>      <url>scm:git:git@github.com:${companyid}/${project.artifactId}.git</u=
+rl>
+>      <developerConnection>scm:git:git@github.com:${companyid}/${project.ar=
+tifactId}.git</developerConnection>
+>      <tag>HEAD</tag>
+>   </scm>
+>=20
+> What am I doing wrong?
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

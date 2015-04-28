@@ -1,0 +1,122 @@
+From users-return-136245-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr 23 07:00:27 2014
+Return-Path: <users-return-136245-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 55E28108FA
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 23 Apr 2014 07:00:27 +0000 (UTC)
+Received: (qmail 57992 invoked by uid 500); 23 Apr 2014 07:00:21 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 57391 invoked by uid 500); 23 Apr 2014 07:00:20 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 57383 invoked by uid 99); 23 Apr 2014 07:00:18 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 23 Apr 2014 07:00:18 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [217.151.195.247] (HELO smtp02.365-24.se) (217.151.195.247)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 23 Apr 2014 07:00:12 +0000
+Received: from webmail.hiq.se (unknown [10.30.1.40])
+	by smtp02.365-24.se (Postfix) with ESMTP id A56639A60
+	for <users@maven.apache.org>; Wed, 23 Apr 2014 08:59:49 +0200 (CEST)
+Received: from HIQQBEXC101.sto.hiq.se ([::1]) by HIQQBEXC101.sto.hiq.se
+ ([::1]) with mapi id 14.03.0123.003; Wed, 23 Apr 2014 08:59:49 +0200
+From: Lars Carlsson <Lars.Carlsson@hiq.se>
+To: Maven Users List <users@maven.apache.org>
+Subject: SV: can't download jar is my server blacklisted
+Thread-Topic: can't download jar is my server blacklisted
+Thread-Index: AQHPXgZSfaUC1yUcEE+SxjACJY3j8ZsdnxmAgAEmhqo=
+Date: Wed, 23 Apr 2014 06:59:48 +0000
+Message-ID: <5A294BB7FFF6F4439E14E7E7509A5B65028ADE05@HIQQBEXC101.sto.hiq.se>
+References: <5A294BB7FFF6F4439E14E7E7509A5B65028ADCE0@HIQQBEXC101.sto.hiq.se>,<CAPCjjnGz8=tYfasm6ShHZoV9sb0eX+cV1JLoW8cMPGu_PNGYDg@mail.gmail.com>
+In-Reply-To: <CAPCjjnGz8=tYfasm6ShHZoV9sb0eX+cV1JLoW8cMPGu_PNGYDg@mail.gmail.com>
+Accept-Language: sv-SE, en-US
+Content-Language: sv-SE
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [213.115.42.21]
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi=0A=
+Weird today everything works fine.=0A=
+=0A=
+ wget http://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-re=
+sources-plugin/2.6/maven- =0A=
+=0A=
+100%[=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D>] 29,519      --.-K/s   in 0.=
+04s=0A=
+=0A=
+=0A=
+________________________________________=0A=
+Fr=E5n: Dan Tran [dantran@gmail.com]=0A=
+Skickat: den 22 april 2014 17:20=0A=
+Till: Maven Users List=0A=
+=C4mne: Re: can't download jar is my server blacklisted=0A=
+=0A=
+I am seeing the same error.=0A=
+=0A=
+I also encounter  similar issue, could you check if you see the same thing=
+=0A=
+and add your into the mentioned Jira=0A=
+=0A=
+http://maven.40175.n5.nabble.com/Strange-maven-central-response-do-you-see-=
+the-same-thing-td5791549.html=0A=
+=0A=
+Thanks=0A=
+=0A=
+-Dan=0A=
+=0A=
+=0A=
+On Tue, Apr 22, 2014 at 1:39 AM, Lars Carlsson <Lars.Carlsson@hiq.se> wrote=
+:=0A=
+=0A=
+> Hi=0A=
+> Is my new vps blocked from the maven repo i have tried different mirrors=
+=0A=
+> same problem=0A=
+>=0A=
+>=0A=
+> 94.247.169.236 server:=0A=
+>=0A=
+> ping  repo.maven.apache.org=0A=
+> (185.31.17.192)=0A=
+>=0A=
+> wget=0A=
+> http://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resour=
+ces-plugin/2.6/maven-resources-plugin-2.6.jar=0A=
+>=0A=
+> 2014-04-22 11:24:37 ERROR 404: Not Found.=0A=
+>=0A=
+>=0A=
+> Amazon ec2:=0A=
+> ping  repo.maven.apache.org=0A=
+> (185.31.17.192)=0A=
+> wget=0A=
+> http://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resour=
+ces-plugin/2.6/maven-resources-plugin-2.6.jar=0A=
+>=0A=
+>=0A=
+> 2014-04-22 07:18:01 (1.79 MB/s) - =91maven-resources-plugin-2.6.jar.1=92 =
+saved=0A=
+> [29519/29519]=0A=
+>=0A=
+>=0A=
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

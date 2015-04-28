@@ -1,0 +1,62 @@
+From users-return-136973-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Aug  6 07:29:15 2014
+Return-Path: <users-return-136973-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2D47E117FA
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  6 Aug 2014 07:29:15 +0000 (UTC)
+Received: (qmail 33501 invoked by uid 500); 6 Aug 2014 07:29:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 33422 invoked by uid 500); 6 Aug 2014 07:29:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 33403 invoked by uid 99); 6 Aug 2014 07:29:12 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 06 Aug 2014 07:29:12 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of francois.marot@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 06 Aug 2014 07:29:08 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <francois.marot@gmail.com>)
+	id 1XEveS-0001gL-1E
+	for users@maven.apache.org; Wed, 06 Aug 2014 00:28:48 -0700
+Date: Wed, 6 Aug 2014 00:28:47 -0700 (PDT)
+From: Francois MAROT <francois.marot@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1407310127494-5801741.post@n5.nabble.com>
+In-Reply-To: <F84CA094-FAE6-4FF7-8AD7-6070504DBE02@sharp.fm>
+References: <1406811333126-5801435.post@n5.nabble.com> <F84CA094-FAE6-4FF7-8AD7-6070504DBE02@sharp.fm>
+Subject: Re: How to avoid unzip of large test data on each "mvn test"
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Thanks Graham, this makes a lot of sense and I totally agree this would be
+the best. But as I also have to convince colleagues and to make compromises
+I hope maybe someone knew a magical plugin ;)
+
+and no, the data I work with is large and a whole and people do not want to
+work with a small subset :/
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/How-to-avoid-unzip-of-large-test-data-on-each-mvn-test-tp5801435p5801741.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

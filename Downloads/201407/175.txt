@@ -1,0 +1,78 @@
+From users-return-136789-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 17 15:19:09 2014
+Return-Path: <users-return-136789-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4178E111C1
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 17 Jul 2014 15:19:09 +0000 (UTC)
+Received: (qmail 57398 invoked by uid 500); 17 Jul 2014 15:19:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 57311 invoked by uid 500); 17 Jul 2014 15:19:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 57298 invoked by uid 99); 17 Jul 2014 15:19:06 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 17 Jul 2014 15:19:06 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of khmarbaise@gmx.de designates 212.227.17.22 as permitted sender)
+Received: from [212.227.17.22] (HELO mout.gmx.net) (212.227.17.22)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 17 Jul 2014 15:19:01 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([91.35.61.219]) by mail.gmx.com
+ (mrgmx102) with ESMTPSA (Nemesis) id 0Lpxdr-1WaxXk3HIF-00ffoC for
+ <users@maven.apache.org>; Thu, 17 Jul 2014 17:18:39 +0200
+Message-ID: <53C7E94E.1010302@gmx.de>
+Date: Thu, 17 Jul 2014 17:18:38 +0200
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: move data from pom to class or class to pom
+References: <OF1F05DF42.E00CE028-ON85257D17.0063A305-85257D17.00648730@belden.com> <CADN69ymG8f7j19xuCtUqdXx8yJoLYgaNGuHiyrQcUApdhcUJxA@mail.gmail.com> <OFB1EFD901.4439AF23-ON85257D17.00661468-85257D17.0066DE86@belden.com> <lq83h1$9or$1@ger.gmane.org>
+In-Reply-To: <lq83h1$9or$1@ger.gmane.org>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:ZMcD6VeLLgs8A1XJgr3yAO/vkcV8cRAw1/sJsRXTx3Q7YbN4jJl
+ FgXLpKaHjMz1j+kyjxYpgI4MouHzRWAL4pbo8sZ43uwn6B2qKkD/xKt3iz1OiPoDJSNnwu1
+ 9PjCKiNSEPRL6YTRTi+6Iuxoh/VXRQ6OYF+spHGY97VquqNV2VAJoxybaMHy49p8qZ1XA+b
+ LjX+Kj5JS49sgyZtwdJKQ==
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+ > Move the Java code that should contain the version into an own directory
+> tree (e.g. src/main/java-templates). Replace the version string with an
+> expression (e.g. "${project.version}") and use the copy-resources goal of
+> the resources plugin to filter the file into a target driectory tree (e.g.
+> target/generated-sources). Bind the goal to the generate-sources phase. Then
+> use additionally the build-helper plugin to add target/generated-sources as
+> additional source directory and you're done.
+
+Best solution was already mentoined by Robert Scholte by using the 
+templating-maven-plugin which exactly supports that scenario without 
+supplemental addition of target/generated-sources folder by 
+build-helpr-maven-plugin etc.
+
+Just simply create the template files in src/main/java-templates/ use 
+the expressions etc. no need for supplemental configuration of 
+maven-resources-plugin etc.
+
+Best and simple solution...which i wrote longer time a go a blog about
+http://blog.soebes.de/blog/2014/01/02/version-information-into-your-appas-with-maven/
+
+Kind regards
+Karl-Heinz Marbaise
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

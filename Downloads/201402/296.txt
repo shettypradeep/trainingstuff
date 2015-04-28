@@ -1,0 +1,65 @@
+From users-return-135342-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb  3 22:11:22 2014
+Return-Path: <users-return-135342-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 436F410F95
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  3 Feb 2014 22:11:22 +0000 (UTC)
+Received: (qmail 95168 invoked by uid 500); 3 Feb 2014 22:11:12 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 95090 invoked by uid 500); 3 Feb 2014 22:11:11 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 66029 invoked by uid 99); 3 Feb 2014 21:07:51 -0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of yamil.smc@gmail.com designates 209.85.160.50 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:from:date:message-id:subject:to:content-type;
+        bh=halSu90jE0hG0GVHgXc6Xgr3zOrr+0uCihunyBCise0=;
+        b=QFxq1aksgE1nD7sFHDVa18uQBtHzGpMMGX/Cusap+mVBx2cUFrSixugJgyGVMva8dZ
+         LnY2qfVkJfin1riF3nFROImQiCowF1LEUIDAGMLtnHj8pZV46Cyy1gErkD+wo+kc8pwK
+         +eG5bWv7uYbyMCD/KOWCwwoipsmXu0SQG6dz3oMlPwwtAb18WTvNYsD3yIYenIbpdttN
+         UQkkD5cU2D/obszB0Xnf3hxGe/byHURecmU1N9XWJlv2OUbX+VZ+OLDL7Ek7hXqVwyvb
+         +LR5xy9UDe3IgecYgXWgcCfb5cVnyIhy7RQvt5eUud5zTgcUDkcbkqP0cG9Xg0dseuKo
+         83Tg==
+X-Received: by 10.67.12.200 with SMTP id es8mr39175622pad.3.1391461645538;
+ Mon, 03 Feb 2014 13:07:25 -0800 (PST)
+MIME-Version: 1.0
+From: Yamil Medina <yamil.smc@gmail.com>
+Date: Mon, 3 Feb 2014 18:07:05 -0300
+Message-ID: <CAM=FskkAogkO2_N8gCpH6q+W6wHNgk-5K4yRA9yP1Zexj-aX=g@mail.gmail.com>
+Subject: Maven antrun: pass maven properties to ant
+To: users <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1133271819df6304f186e92f
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1133271819df6304f186e92f
+Content-Type: text/plain; charset=ISO-8859-1
+
+I have a doubt about these 2 plugins, specifically with
+<outputDirectory/>(maven-war-plugin) and <copy
+file="origin" todir="destination"/> (maven-antrun-plugin)
+
+I want to generate the war for the project and then copy that file to a hot
+deploy directory. Strictly in this sequence, So the question is:
+
+   - outputDirectory, indicates where the generation happens? or the war is
+   generated in project.build.directory and then copied to the indicated
+   directory.
+
+Basically I want to determine which of the 2, suits best my requirements.
+
+
+Regards.
+
+--001a1133271819df6304f186e92f--
+

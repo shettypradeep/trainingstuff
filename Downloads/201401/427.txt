@@ -1,0 +1,82 @@
+From users-return-134902-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan  2 22:07:49 2014
+Return-Path: <users-return-134902-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DDB26107AD
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  2 Jan 2014 22:07:48 +0000 (UTC)
+Received: (qmail 70030 invoked by uid 500); 2 Jan 2014 22:07:46 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 69876 invoked by uid 500); 2 Jan 2014 22:07:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 69863 invoked by uid 99); 2 Jan 2014 22:07:46 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Jan 2014 22:07:46 +0000
+Received: from localhost (HELO mail-bk0-f43.google.com) (127.0.0.1)
+  (smtp-auth username bimargulies, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Jan 2014 22:07:46 +0000
+Received: by mail-bk0-f43.google.com with SMTP id mz12so4669607bkb.2
+        for <multiple recipients>; Thu, 02 Jan 2014 14:07:44 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=mime-version:date:message-id:subject:from:to:cc:content-type;
+        bh=T+1gHrnRYtlNO4nzFPqUP+Nob1CdRcP20UhN//V5YzE=;
+        b=agw0MaclFsuAIqZa/5fJtRafPLyI7XCb8gk6g/P2e0kfQBnwwoojOWh+bBTohnxXxf
+         HTO9Q9BgPNFaroxYr6/r8vn29N9O6F99AuAgFKRA463mOPIcJ/0vVPdsZ+9IsZ/6SLBR
+         A4Xgw0eQgPkNubHLL9eQcvHoPvUWpDhizBonWymc7G7aUDKc5rJcpS3CIhyOQy57iEMG
+         lmNFxmTQlQp69ePjE4WwIqcz3U36dGo+Bino6t8+5vLSmDt1/yjekDaU2QchKC+cL9fI
+         e3K17UmgWwBK8rOalcOIGQnVNsyxMc5wk5g5mlSMYKiwsqsSRL8Wu54RtkjMVUaBB5/M
+         +eyw==
+MIME-Version: 1.0
+X-Received: by 10.204.100.199 with SMTP id z7mr78657bkn.62.1388700464241; Thu,
+ 02 Jan 2014 14:07:44 -0800 (PST)
+Received: by 10.204.62.6 with HTTP; Thu, 2 Jan 2014 14:07:44 -0800 (PST)
+Date: Thu, 2 Jan 2014 17:07:44 -0500
+Message-ID: <CALhtWkfdVSzCmzcfY5WvRujkpo=cDVB=T-mpWLvP9bT3Zwo+7Q@mail.gmail.com>
+Subject: [ANN] Maven Wagon 2.6 Released
+From: Benson Margulies <bimargulies@apache.org>
+To: announce@maven.apache.org, Maven Users List <users@maven.apache.org>
+Cc: ev@maven.apache.org
+Content-Type: text/plain; charset=UTF-8
+
+The Apache Maven team is pleased to announce the release of the Apache
+Maven Wagon, version 2.6.
+
+The Wagon component provides communications between Maven and repositories.
+
+Typically, to use a particular version of Wagon, you would add an
+'extension' to your POM, such as:
+
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh</artifactId>
+                <version>2.6</version>
+            </extension>
+        </extensions>
+
+Here are the issues addressed in version 2.6:
+
+** Improvement
+    * [WAGON-401] - Access Denied due to missing User-Agent
+    * [WAGON-402] - Upgrade Apache HttpClient based wagon provider to
+HttpClient 4.3
+    * [WAGON-403] - SSH agent support for wagon-ssh
+
+
+Enjoy,
+
+-The Apache Maven team
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

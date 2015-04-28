@@ -1,0 +1,64 @@
+From users-return-135173-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan 16 01:49:04 2014
+Return-Path: <users-return-135173-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8648610D97
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 16 Jan 2014 01:49:04 +0000 (UTC)
+Received: (qmail 56237 invoked by uid 500); 16 Jan 2014 01:49:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 56049 invoked by uid 500); 16 Jan 2014 01:49:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 97669 invoked by uid 99); 15 Jan 2014 16:07:29 -0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Message-ID: <52D6B23C.5000701@web.de>
+Date: Wed, 15 Jan 2014 17:07:24 +0100
+From: Christian Pontesegger <christian.pontesegger@web.de>
+User-Agent: Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.1.1
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: javadoc:aggregate project filter
+Content-Type: text/plain; charset=ISO-8859-15; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:D1sxeI7H2ASky1jo7qOv2Q7mtSDWGbzIdDA2bfQL+yxtdrcDmDc
+ AfmvpUGhQihoHVX6g/T3tTY/o5u9B7wrMPxR7qdpCYrvtJ57iNR+PMdnrOnxYVn0AUJyidz
+ Rly9ZYZlHpeRYNCJUexBbytDJzru044+BnRj0CmwMimbfqPCBDSwGulXx7AiRck11yFqi71
+ v/FWhcUz/nMowMOj4dUug==
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+I'd like to create API documentation for an eclipse RCP project. 
+Therefore I use the javadoc:aggregate goal which nicely builds 
+documentation for all my projects.
+
+Now I want to filter some of them. When building with tycho junit tests 
+are typically kept in a separate project. Still the package names for a 
+test class ae the same as for the main class. This seems to be the best 
+practice approach right now.
+
+Currently API documentation for test classes is built too. Is there a 
+way to filter a whole project from the aggregation step?
+
+The only other approach I found was to use the javadoc:javadoc goal and 
+to manually add paths using the sourcepath parameter. For a big project 
+this is an error prone task which I would like to avoid.
+
+regards
+Christian
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

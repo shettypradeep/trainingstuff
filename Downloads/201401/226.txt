@@ -1,0 +1,126 @@
+From users-return-135205-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Jan 19 23:57:19 2014
+Return-Path: <users-return-135205-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 44A4710C1F
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 19 Jan 2014 23:57:19 +0000 (UTC)
+Received: (qmail 37897 invoked by uid 500); 19 Jan 2014 23:57:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 37739 invoked by uid 500); 19 Jan 2014 23:57:14 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 37731 invoked by uid 99); 19 Jan 2014 23:57:14 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 19 Jan 2014 23:57:14 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 19 Jan 2014 23:57:09 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 314B16A7916
+	for <users@maven.apache.org>; Sun, 19 Jan 2014 18:56:48 -0500 (EST)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 85oA9kwd9muj for <users@maven.apache.org>;
+	Sun, 19 Jan 2014 18:56:36 -0500 (EST)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 465326A76F1
+	for <users@maven.apache.org>; Sun, 19 Jan 2014 18:56:36 -0500 (EST)
+Message-ID: <52DC6631.5010003@artifact-software.com>
+Date: Sun, 19 Jan 2014 18:56:33 -0500
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: rwheeler@artifact-software.com
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.2.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Adding a classpath element within a Mojo
+References: <CAEBcyzrdQ7qki5FHFb+OsQSpbXU-WUp81rOT1AiPC=nYZzyYDg@mail.gmail.com>	<CAKDUN1vbcUmpZo_pCF=3drhF2MdYS0vAAe0hZHviNDf4J138Vw@mail.gmail.com> <CAEBcyzp247mBC-n+C+3kvO4H5rB+4UfbQwRQ=FGQUK--2AMh6Q@mail.gmail.com>
+In-Reply-To: <CAEBcyzp247mBC-n+C+3kvO4H5rB+4UfbQwRQ=FGQUK--2AMh6Q@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I don't do any Android development but since no one had responded, I 
+thought that I wight try to get you started (or unblocked).
+
+Perhaps some of these references will help.
+http://www.vandalsoftware.com/post/52468430435/publishing-an-android-library-aar-to-a-maven
+http://stackoverflow.com/questions/15173923/external-android-library-projects-with-gradle
+http://blog.glassdiary.com/post/67134169807/how-to-share-android-archive-library-aar-across
+
+You might want to do some Googling to find exactly what you need.
+
+Ron
+
+On 19/01/2014 4:47 PM, William Ferguson wrote:
+> OK, let me clarify.
+>
+> Project has dependencies on artifacts of type AAR (Android archive - an
+> archive that contains several sub-artifacts including a classes jar).
+>
+> My Mojo unpacks the AAR artifacts and makes the sub-artifacts available to
+> other build components.
+>
+> One of those build components is the maven-compiler-plugin. We want to add
+> the classes contained in the AAR dependencies to the compile classpath so
+> that the maven-compiler-plugin can compile our classes against the classes
+> from the AARs.
+>
+> How do we do that?
+>
+> William
+>
+>
+>
+> On Mon, Jan 20, 2014 at 1:14 AM, Anders Hammar <anders@hammar.net> wrote:
+>
+>> Do you want to change the classpath of the project or of other mojos?
+>>
+>> Don't think either is possible. And if it was, I don't think it's wise. The
+>> dependencies of the project should be declared and not magically added.
+>>
+>> /Anders
+>>
+>>
+>>
+>> On Sun, Jan 19, 2014 at 1:18 PM, William Ferguson <
+>> william.ferguson@xandar.com.au> wrote:
+>>
+>>> I have a Mojo which needs to add an element to the compile time classpath
+>>> for future Mojos.
+>>>
+>>> I'm struggling to find any doco that points in the right direction.
+>>>
+>>> Is it possible?
+>>> If so, how should I go about it?
+>>>
+>>>
+>>> William
+>>>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

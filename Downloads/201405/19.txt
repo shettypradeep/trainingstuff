@@ -1,0 +1,143 @@
+From users-return-136420-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed May 21 19:21:03 2014
+Return-Path: <users-return-136420-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CCC3C1153E
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 21 May 2014 19:21:03 +0000 (UTC)
+Received: (qmail 24429 invoked by uid 500); 21 May 2014 19:21:02 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 24349 invoked by uid 500); 21 May 2014 19:21:02 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 24341 invoked by uid 99); 21 May 2014 19:21:02 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 21 May 2014 19:21:02 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ndimiduk@gmail.com designates 209.85.128.177 as permitted sender)
+Received: from [209.85.128.177] (HELO mail-ve0-f177.google.com) (209.85.128.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 21 May 2014 19:20:58 +0000
+Received: by mail-ve0-f177.google.com with SMTP id db11so3090218veb.36
+        for <users@maven.apache.org>; Wed, 21 May 2014 12:20:34 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=bpPc+TMFtspKEzyZTnujAoFMACYXAXuuxPiq7z5Atzc=;
+        b=d+DE18kROUSo1uWitCt5tCP0xg02ck+YuOr/yUj5kTkYniEFdMnRyKCZhfe7u7K4r4
+         VO0jtRdTzziI4fQixY0gZrMcWki1l4DRjKHgEjs+k92yh0MSqc36prVUONYD3idt9zSK
+         FUx5I3JoN/I1EG+DMWT7156jelRQM0sRm2Mzw+7CYvWRZcemd95hJHLrBKoSZXS6Tkhs
+         TpixhXH/DeS0wOtsuEMS9kQAIHZQYr2m9/H4fAlgyU+6xFtFfuzJ2bEmmtC3YA/GNYsH
+         cVMzGlQD/Cugjye8/FKJQjogUL3S/KgWkLwoQXM7i9Meyau81N5+JQTq028iuxn5xBpy
+         VDWQ==
+X-Received: by 10.52.164.237 with SMTP id yt13mr9733091vdb.18.1400700034224;
+ Wed, 21 May 2014 12:20:34 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.58.227.162 with HTTP; Wed, 21 May 2014 12:20:14 -0700 (PDT)
+In-Reply-To: <BLU172-W4418B93E61747865167B20AE3C0@phx.gbl>
+References: <CANZa=GsRaWf9t-QpBi4tA4jMjUtHGLJEMQM_idBNSU1RdPLYyg@mail.gmail.com>
+ <CANZa=Gt0_Ta6jdvEz=tXknGFJRbkzFhAityXWMYr6B=L=G99Zw@mail.gmail.com> <BLU172-W4418B93E61747865167B20AE3C0@phx.gbl>
+From: Nick Dimiduk <ndimiduk@gmail.com>
+Date: Wed, 21 May 2014 12:20:14 -0700
+Message-ID: <CANZa=Gu1S+dKK+No4LuUDjo2=7JpmSp6G+ho09qJnkwfB20Zvw@mail.gmail.com>
+Subject: Re: Shading all modules in a project
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a11c2c1d2fa154204f9ede3d5
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c2c1d2fa154204f9ede3d5
+Content-Type: text/plain; charset=UTF-8
+
+In general, I agree with you regarding the perils of this "fat jar"
+approach. However, due to legacy reasons, this is a feature that we must
+support. Give this context, is there any advice regarding how to use the
+shade plugin to rewrite all references to the moved class in dependent
+submodules? Is this a feature the share plugin supports? Assuming this is a
+reasonable use of the shade plugin, we have a willingness to contribute a
+patch.
+
+Thank you for the replies.
+Nick
+
+On Wed, May 21, 2014 at 10:44 AM, Martin Gainty <mgainty@hotmail.com> wrote:
+
+>
+>
+>
+> > From: ndimiduk@gmail.com
+> > Date: Wed, 21 May 2014 09:15:51 -0700
+> > Subject: Re: Shading all modules in a project
+> > To: users@maven.apache.org
+>
+> >
+> > Ping. Any advice on this?
+> >
+> >
+> > On Mon, May 12, 2014 at 9:01 AM, Nick Dimiduk <ndimiduk@gmail.com>
+> wrote:
+> >
+> > > Hello,
+> > >
+> > > Over in Apache HBase, we have an interesting problem that I'm hoping
+> the
+> > > shade plugin can help us solve. It all started with a performance
+> > > enhancement to reduce garbage by creating a subclass of a protobuf type
+> > > [0]. It works fine for us most of the time. However, when using this
+> code
+> > > from a Hadoop mapreduce job, things get strange. Due to the
+> permissions on
+> > > the parent object and the way Hadoop uses "fat" jars
+> MG>Uberjar or KitchenSinkJar or FatJar or SealedJar forces the situation of
+> MG>whenever any of the dependencies in fatjar change that you are packing
+> into fatjar you will need to trigger a repackage of FatJar
+>
+>
+> > >we now have
+> > > classloader troubles [1]. We were able to work around the issue by
+> > > documenting the required classpath constructions. However, this is not
+> > > possible for all users. This is where the shade plugin comes in.
+> > >
+> > > I gave shade a shot [2], though I admit I'm not terribly familiar with
+> it,
+> > > nor the inner workings of maven. As far as I can tell, the trouble is
+> the
+> > > plugin invocation is limited to the single module in our multi-module
+> > > project. I think what's happening is shade is doing what I want for the
+> > > hbase-protocol module
+> MG>yes but every time the original (non-shaded) project you are shading is
+> updated
+> MG>then you will need a mechanism to trigger that update to your shaded
+> jar (to grab those deltas)
+>
+>
+> > >but I also need it to do bytecode rewriting
+> > >for the
+> > > modules that consume this module as well. Luckily, this detail is not
+> part
+> > > of our public API so it should be transparent to our users.
+> > >
+> > > My patch is posted on [2]. Any pointers/advice is greatly appreciated.
+> MG>break the fat jars into discrete individual maven artifacts is what i
+> would suggest
+> MG>
+>
+> > >
+> > > Thanks in advance,
+> > > Nick
+> > >
+> > > [0]: https://issues.apache.org/jira/browse/HBASE-9867
+> > > [1]: https://issues.apache.org/jira/browse/HBASE-10304
+> > > [2]: https://issues.apache.org/jira/browse/HBASE-11118
+> > >
+>
+
+--001a11c2c1d2fa154204f9ede3d5--
+

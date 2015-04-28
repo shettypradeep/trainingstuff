@@ -1,0 +1,93 @@
+From users-return-137733-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Nov  9 12:01:27 2014
+Return-Path: <users-return-137733-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1CEB9102F8
+	for <apmail-maven-users-archive@www.apache.org>; Sun,  9 Nov 2014 12:01:27 +0000 (UTC)
+Received: (qmail 7582 invoked by uid 500); 9 Nov 2014 12:01:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 7508 invoked by uid 500); 9 Nov 2014 12:01:24 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 7496 invoked by uid 99); 9 Nov 2014 12:01:24 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 09 Nov 2014 12:01:24 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mcculls@gmail.com designates 209.85.212.181 as permitted sender)
+Received: from [209.85.212.181] (HELO mail-wi0-f181.google.com) (209.85.212.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 09 Nov 2014 12:00:59 +0000
+Received: by mail-wi0-f181.google.com with SMTP id n3so8132393wiv.2
+        for <users@maven.apache.org>; Sun, 09 Nov 2014 04:00:58 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=61AnOJAzCeyeE/U2Dpr/MJgZS0S+w+fgJ44oDGcida0=;
+        b=LyNZkQG8Gpe6+Acpm/dsXncwzSQS0oS4shekg2XJXyNJA68mg+7AvLz14tXvTMS3I+
+         XjZtIuEs0foEq/2Ro81vlhASfLQtIj527V3bgm5DuPBNr8iFEpFN4ta6apmIUoIYeNGv
+         tAUSGgjSMNriweu70wcMNSp5AFjVCRd0Z5zo3RUy08bO2mFWW0uTQa7KGna9PlJq/PM0
+         9m8AOJWA57XNwjdmls4hEo5ocID11Xc1o5EPbYUx73N8fgsUMV7XDuJoKLpI1JsZ3vwR
+         9i52IQ/+SRglkmxdySCKiyqMGZbZXFTDrfC2vC293/+K23ChjKitgK4tF7FKXsAqpbml
+         99Xg==
+MIME-Version: 1.0
+X-Received: by 10.180.99.1 with SMTP id em1mr21729396wib.29.1415534458527;
+ Sun, 09 Nov 2014 04:00:58 -0800 (PST)
+Received: by 10.216.54.195 with HTTP; Sun, 9 Nov 2014 04:00:58 -0800 (PST)
+Received: by 10.216.54.195 with HTTP; Sun, 9 Nov 2014 04:00:58 -0800 (PST)
+In-Reply-To: <545F5514.6080100@gmail.com>
+References: <545F5514.6080100@gmail.com>
+Date: Sun, 9 Nov 2014 12:00:58 +0000
+Message-ID: <CAMr6Z4=BAXDhSQqMtyM9WvyxrbZcK-qqjMyw6DFEHzqSSoFk9g@mail.gmail.com>
+Subject: Re: Sign and deploy a pom-only artifact to maven central
+From: Stuart McCulloch <mcculls@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d0418258a91664d05076bccb7
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d0418258a91664d05076bccb7
+Content-Type: text/plain; charset=UTF-8
+
+Does your pom have a release profile that executes gpg signing? ie. like in
+https://github.com/sonatype/oss-parents/blob/master/forge-parent/pom.xml
+On 9 Nov 2014 11:51, "Simon Taddiken" <simon.taddiken@gmail.com> wrote:
+
+> Hi,
+>
+> I'm trying to introduce a common parent pom for my projects. So I have
+> created a maven artifact which only consists of that pom.xml and no further
+> sources, resources or whatsoever. On a "normal" project, upon deploying, a
+> "artifactId-version.pom" and corresponding .asc is created within the
+> target folder.
+>
+> However, on my pom-only project, there is no signed output for the pom
+> file and thus deploying to maven central fails (staging actually works, but
+> the staging repo can not be closed because the central sync requirement
+> "Signature Validation" fails).
+>
+> I'm basically following the guide here:
+> http://central.sonatype.org/pages/apache-maven.html
+> for deploying to maven central.
+>
+> How can I force a signed output for the pom file?
+>
+> --
+> Regards
+> Simon
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--f46d0418258a91664d05076bccb7--
+

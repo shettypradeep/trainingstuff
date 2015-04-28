@@ -1,0 +1,218 @@
+From users-return-137702-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Nov  4 08:44:29 2014
+Return-Path: <users-return-137702-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DCB6E17B48
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  4 Nov 2014 08:44:29 +0000 (UTC)
+Received: (qmail 55679 invoked by uid 500); 4 Nov 2014 08:44:28 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 55613 invoked by uid 500); 4 Nov 2014 08:44:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 55601 invoked by uid 99); 4 Nov 2014 08:44:27 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 04 Nov 2014 08:44:27 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of irfu.sayed@gmail.com designates 74.125.82.41 as permitted sender)
+Received: from [74.125.82.41] (HELO mail-wg0-f41.google.com) (74.125.82.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 04 Nov 2014 08:44:23 +0000
+Received: by mail-wg0-f41.google.com with SMTP id k14so12925839wgh.28
+        for <users@maven.apache.org>; Tue, 04 Nov 2014 00:42:32 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=VjnO+siUq3RYJeje9ceuyyEyOub6puDuE9u0iJIWaKc=;
+        b=FxbRf4CwAoMvx7bRUnocq4TwCQFWfupm0xVA0+zM4Np9WJ7T2yS5pCPS0j9gDNkd5i
+         9LZ3D+hzFc7AYsIHVJZkJ4AEkXmTJRWErZS0cnhXsoc5XJ2S5oaj4D5Q3bVhe6qUWcZl
+         5c2mDzcIImdXskTt5Xp2md2D5EFgfHs+T31RzTCTEMPJmgHgIKEduD0m2hy4CNa15Vyi
+         n5P7pYTH8NM9mcaoEavMfvCBoFnuaFQonxLGvBrSYYxWnDG8am3CMMqA/KI5VidvZ9it
+         /E8SVSxUN2MlWuqaiDqf56fMAMwYLfwpAQ2oMmIugBfhyX82pCpc1ap4Hahpyo6soUWt
+         wnxQ==
+MIME-Version: 1.0
+X-Received: by 10.180.39.65 with SMTP id n1mr22410090wik.13.1415090552377;
+ Tue, 04 Nov 2014 00:42:32 -0800 (PST)
+Received: by 10.216.114.72 with HTTP; Tue, 4 Nov 2014 00:42:32 -0800 (PST)
+In-Reply-To: <6E698047-BD65-480A-B6E5-795B89545748@fortysix.ch>
+References: <CACGLCJak6BzD1qnd3WWQmDYHjxcxpFrVL+jCqnim2TYZ5=jciw@mail.gmail.com>
+	<20141019181952.0000769c.ecki@zusammenkunft.net>
+	<CACGLCJYLsVKLNLwGZxeXmdNg_04FDvux8LGjcLKDL5MR+=FAZw@mail.gmail.com>
+	<20141019191150.0000284c.ecki@zusammenkunft.net>
+	<20141020022557.00007108.ecki@zusammenkunft.net>
+	<CACGLCJbUx3fpT8StD47u1QXP7aNkc4pK9B_X67b__4341=x29g@mail.gmail.com>
+	<6E698047-BD65-480A-B6E5-795B89545748@fortysix.ch>
+Date: Tue, 4 Nov 2014 14:12:32 +0530
+Message-ID: <CACGLCJZOJVRE7QA6yL+NL8mC1hiDwsJ-7v-8ApR5OEg68i1aZw@mail.gmail.com>
+Subject: Re: generate maven dependency difference between two Jenkins builds
+From: Irfan Sayed <irfu.sayed@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11360196b3156505070471d6
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11360196b3156505070471d6
+Content-Type: text/plain; charset=UTF-8
+
+thanks. i am thinking of writing Jenkins plugin which reports the deltas of
+maven dependencies between two builds
+i searched , but did not find anyone
+do you have any idea if such plugin exist OR how we can achieve this ?
+
+regards,
+
+On Tue, Nov 4, 2014 at 1:06 PM, domi <domi@fortysix.ch> wrote:
+
+> Please be aware, changing the code of a released library (not SNAPSHOT) is
+> not allowed and maven can not take any responsibility for any errors this
+> will cause.
+> Thats why nexus/artifactory do not allow to change the artifact of a
+> released version once its uploaded.
+> Only SNAPSHOT versions are allowed to be changed.
+> Domi
+>
+> On 04.11.2014, at 08:10, Irfan Sayed <irfu.sayed@gmail.com> wrote:
+>
+> > thanks.
+> > what i figured out is , nexus / artifactory will not download the
+> > dependency unless there is change in the version.
+> > if dependency x  refers version 1.1 , then maven will see if
+> > nexus/artifactory has this version along with local maben repo of build
+> > machine
+> > if it does both, maven will not download the dependency even if developer
+> > changes the code keeping the version same
+> >
+> > regards
+> >
+> >
+> > On Mon, Oct 20, 2014 at 5:55 AM, Bernd Eckenfels <ecki@zusammenkunft.net
+> >
+> > wrote:
+> >
+> >> Hello,
+> >>
+> >> I was looking a bit deeper into making the dependency plugin to print
+> >> out the resolved timestamps. I noticed there is already an option
+> >> -DoutputAbsoluteArtifactFilename=true which would give me the path of
+> >> the files in the local directory. This is all good for released
+> >> versions, but it still points to the non-unique snapshot version files.
+> >>
+> >> I am not wondering, is there a way to configure the maven
+> >> resolver/dependency management to actually not do that. When I look at
+> >> the build output, it does download the meta data and a specific
+> >> timestamped version:
+> >>
+> >> Downloaded: https://.../2.1-SNAPSHOT/maven-metadata.xml (2 KB at 0.6
+> >> KB/sec)
+> >> Downloaded:
+> >> https://.../2.1-SNAPSHOT/commons-vfs2-2.1-20141016.153538-385.pom (12
+> KB
+> >> at 22.1 KB/sec)
+> >> Downloading:
+> >> https://.../2.1-SNAPSHOT/commons-vfs2-2.1-20141016.153538-385.jar
+> >> Downloaded:
+> >> https://.../2.1-SNAPSHOT/commons-vfs2-2.1-20141016.153538-385.jar
+> >> (423 KB at 209.7 KB/sec)
+> >>
+> >> But it still creates a copy of that version without timestamp.
+> >>
+> >> I can imagine this is not really the best situation, why does it not
+> >> stick to the uniquely named file?
+> >>
+> >> BTW: whats the best API way to get the snapshot timestamp from a
+> >> Artifact object after it was resolved? I tried getDownloadURL(), but it
+> >> is null for the Artifacts which are present in the list of
+> >>
+> >>
+> >>
+> org.apache.maven.plugin.dependency.utils.DependencyStatusSets.buildArtifactListOutput(Set<Artifact>,
+> >> boolean, boolean, boolean)
+> >>
+> >> Gruss
+> >> Bernd
+> >>
+> >> Am Sun, 19 Oct 2014 19:11:50 +0200
+> >> schrieb Bernd Eckenfels <ecki@zusammenkunft.net>:
+> >>
+> >>> Ah another thing, I always wished there is an option to archive the
+> >>> effective POM instead of the tear downed POM with the
+> >>> maven-archiver (addMavenDesciptor).
+> >>>
+> >>> Especially when the effective pom also contains the resolved snapshot
+> >>> timestamps (which it currently not does).
+> >>>
+> >>> Speaking of effective pom, you can create and archive it, then you
+> >>> have at least all expressions and profiles locked down.
+> >>>
+> >>> Gruss
+> >>> Bernd
+> >>>
+> >>> Am Sun, 19 Oct 2014 22:17:45 +0530
+> >>> schrieb Irfan Sayed <irfu.sayed@gmail.com>:
+> >>>
+> >>>> thanks bernd.
+> >>>> anyone has any other suggestions please?
+> >>>>
+> >>>> regards
+> >>>>
+> >>>>
+> >>>> On Sun, Oct 19, 2014 at 9:49 PM, Bernd Eckenfels
+> >>>> <ecki@zusammenkunft.net> wrote:
+> >>>>
+> >>>>> Hello,
+> >>>>>
+> >>>>> I dont have a good method for that (especially not if all
+> >>>>> dependencies arent fully version-specified. You can use and add
+> >>>>> dependencies:list as a target to the maven build, then the
+> >>>>> resolved list will be printed in the build log. This list can
+> >>>>> change depending on what is available at build time.
+> >>>>>
+> >>>>> Gruss
+> >>>>> Bernd
+> >>>>>
+> >>>>>  Am Sun, 19 Oct 2014 20:57:29 +0530
+> >>>>> schrieb Irfan Sayed <irfu.sayed@gmail.com>:
+> >>>>>
+> >>>>>> hello,
+> >>>>>>
+> >>>>>> we have java project and using maven to build the same. we are
+> >>>>>> using Jenkins. in Jenkins ,  we can generate the delta of source
+> >>>>>> code changes between two builds.
+> >>>>>> in the same way, do we have any way wherein , we can generate
+> >>>>>> the delta of maven dependencies changed between two builds.
+> >>>>>>
+> >>>>>> please suggest
+> >>>>>>
+> >>>>>> regards
+> >>>>>>
+> >>>>>
+> >>>>> ---------------------------------------------------------------------
+> >>>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> >>>>> For additional commands, e-mail: users-help@maven.apache.org
+> >>>>>
+> >>>>>
+> >>>>
+> >>
+> >>
+> >> ---------------------------------------------------------------------
+> >> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> >> For additional commands, e-mail: users-help@maven.apache.org
+> >>
+> >>
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a11360196b3156505070471d6--
+

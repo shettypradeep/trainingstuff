@@ -1,0 +1,117 @@
+From users-return-136778-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jul 14 19:37:00 2014
+Return-Path: <users-return-136778-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6AD4511158
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 14 Jul 2014 19:37:00 +0000 (UTC)
+Received: (qmail 8332 invoked by uid 500); 14 Jul 2014 19:36:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 8244 invoked by uid 500); 14 Jul 2014 19:36:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 8233 invoked by uid 99); 14 Jul 2014 19:36:57 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 14 Jul 2014 19:36:57 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of khmarbaise@gmx.de designates 212.227.17.21 as permitted sender)
+Received: from [212.227.17.21] (HELO mout.gmx.net) (212.227.17.21)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 14 Jul 2014 19:36:55 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([91.35.14.84]) by mail.gmx.com
+ (mrgmx101) with ESMTPSA (Nemesis) id 0MGnPx-1XKCAY00sT-00DX4n; Mon, 14 Jul
+ 2014 21:36:31 +0200
+Message-ID: <53C43133.8000102@gmx.de>
+Date: Mon, 14 Jul 2014 21:36:19 +0200
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>, info@soebes.de
+Subject: Re: maven shade/artifact naming help
+References: <CAG0AUg1p76NL4WPPCkBg-U+wXf_TDxotXrzprGp29F-C0_J_Fg@mail.gmail.com>	<53C425FF.8020407@gmx.de> <CAG0AUg2yqHDazKwmrLoFQWH5d43YdNQCWPeM1ipkZ8JvHgjHKA@mail.gmail.com>
+In-Reply-To: <CAG0AUg2yqHDazKwmrLoFQWH5d43YdNQCWPeM1ipkZ8JvHgjHKA@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:D2y6KX5/H+lwEWMzQXvUT1moNfO0A6Or0gtW6DZqfmilYgoQbsW
+ W1L9d0ZDDoigEPtyC3w2xr8xpfSqAwt6DoODx6Tal41cxmPSWuUSZ3ZjUmoQF2cuPVh6qxh
+ 48YyOEdTqVoQhnf2yvL0IMrTqkGEVVZrEsWjsJU7zc2dCtqlHUjZxW2awiiHePsynFAgX0G
+ HuXzMj08ojm+KsPc2612A==
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Eugene,
+
+
+First i don't see the need to continue the wrong way...So you should 
+change it...
+
+If you really need to go the wrong way i would suggest to use the 
+maven-jar-plugin with a special configuration to create the other jar...
+
+But i can't recommend to continue the wrong way...
+
+By using the maven-shade-plugin you can't change that wrong way which 
+you have decided to go a time a go...
+
+If the way you have already gone is not acceptable......
+
+Kind regards
+Karl-Heinz Marbaise
+
+On 7/14/14 8:55 PM, Eugene Koifman wrote:
+> Thank you for the reply but it doesn't answer my question.
+>
+> "The shade plug in config doesn't
+> retain the original (slim) jar so the only artifact produced/published from
+> this module is A.jar which is the uber jar."  - this is a statement about
+> the current pom in the project, not the capabilities of the shade plug in.
+>
+> Adding "shadedArtifactAttached" will create the slim jar called A.jar and
+> an uber jar called A-shaded.jar.  Unfortunately, what is needed is an uber
+> jar called A.jar and a slim jar called anything.
+>
+>
+> On Mon, Jul 14, 2014 at 11:48 AM, Karl Heinz Marbaise <khmarbaise@gmx.de>
+> wrote:
+>
+>> Hi Eugene,
+>>
+>>
+>>> Hi,
+>>
+>>> I have an existing multi-module project.  A module A (i.e. artifactId=A)
+>>> uses shade plugin to create an uber jar.  The shade plug in config doesn't
+>>> retain the original (slim) jar so the only artifact produced/published
+>>> from
+>>> this module is A.jar which is the uber jar.
+>>>
+>>
+>> Which is not true, cause you can configure the maven-shade-plugin to
+>> produce both artifacts via:
+>>
+>> <shadedArtifactAttached>true</shadedArtifactAttached>
+>>
+>> http://maven.apache.org/plugins/maven-shade-plugin/shade-mojo.html
+>>
+>>
+>>
+>>> Now I need to produce a 'slim' jar (lets call it A-core.jar) which only
+>>> has
+>>> the classes from module A.   Since this was set up several releases ago I
+>>> have to keep A.jar as a fat jar to preserve backwards compatibility.
+>>>
+>>> (I can easily make shade produce A.jar as the thin jar and A-uber.jar (or
+>>> any other name) as the fat jar, but this is not acceptable.)
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

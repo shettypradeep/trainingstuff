@@ -1,0 +1,95 @@
+From users-return-135585-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb 24 14:08:55 2014
+Return-Path: <users-return-135585-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B3D931020D
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 24 Feb 2014 14:08:55 +0000 (UTC)
+Received: (qmail 86068 invoked by uid 500); 24 Feb 2014 14:08:51 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 85730 invoked by uid 500); 24 Feb 2014 14:08:49 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 85059 invoked by uid 99); 24 Feb 2014 14:08:44 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Feb 2014 14:08:44 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.160.43] (HELO mail-pb0-f43.google.com) (209.85.160.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Feb 2014 14:08:38 +0000
+Received: by mail-pb0-f43.google.com with SMTP id ma3so3931763pbc.16
+        for <users@maven.apache.org>; Mon, 24 Feb 2014 06:08:17 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:content-type:subject:message-id:date:to
+         :mime-version;
+        bh=Ng7EysJk8VbCxFzVhUBrALFbi7gDgR/KJoUIMJqrZuU=;
+        b=GDbKS3ptuKTpJUMwOWvgydSS3d2BQuLY74wDzon2yZZsu+oFosoj/GioNG5Lipp5KD
+         UYJJWEIDsC72R1hoY+cDUvtOPB4HxZhFHhStUUGn5zio24B8lLhDn7pa5Lm4IuaVeyds
+         qA6CCWtYJ+tM/oN1Unh4J85YrRl/6pRJPbt+jZtnVyOYT8NN6N4VVRs/MAzKz+WLMczz
+         X0N1mczYpkE1krdOk2bQVWQkr+UZR0s5bO8ghGSnzfE6wd3kw7fJkasB/iKwuRrCmR8g
+         Y4PbzPHi6YvDjQxlwn8liSBw3H1XYkkP/cxqJqUcbjXDPbJ/+WoKCVwFoXPv1kwdgi/v
+         2jGw==
+X-Gm-Message-State: ALoCoQmtvONBfNUx5krNYEYnTMsxroU3b+EM0UzwuMAHGKJAsDaI/hG+M3TE+sHsqh+Q8qBaxWPY
+X-Received: by 10.66.151.205 with SMTP id us13mr25179355pab.93.1393250897262;
+        Mon, 24 Feb 2014 06:08:17 -0800 (PST)
+Received: from ?IPv6:2602:306:ce9f:cb70:bd02:39af:b2cf:edc5? ([2602:306:ce9f:cb70:bd02:39af:b2cf:edc5])
+        by mx.google.com with ESMTPSA id sy2sm333409pbc.28.2014.02.24.06.08.15
+        for <multiple recipients>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Mon, 24 Feb 2014 06:08:16 -0800 (PST)
+From: Jason van Zyl <jason@takari.io>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_291F20B2-321C-44D1-A3AA-476E8EC7ADF8"
+Subject: [ANN] Maven 3.2.1 Release
+Message-Id: <2828F75B-F636-478A-A958-404672FFA1C7@takari.io>
+Date: Mon, 24 Feb 2014 06:08:15 -0800
+To: Maven Developers List <dev@maven.apache.org>,
+ Maven Users List <users@maven.apache.org>,
+ announce@maven.apache.org,
+ announce@apache.org
+Mime-Version: 1.0 (Mac OS X Mail 7.1 \(1827\))
+X-Mailer: Apple Mail (2.1827)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_291F20B2-321C-44D1-A3AA-476E8EC7ADF8
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+Hi!
+
+The Apache Maven Team is pleased to announce the release of 3.2.1
+
+The release notes can be found here:
+http://maven.apache.org/docs/3.2.1/release-notes.html
+
+The release can be downloaded from:
+http://maven.apache.org/download.cgi
+
+Full list of changes can be viewed in JIRA:
+=
+https://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=3D10500&versio=
+n=3D20041
+
+Thanks,
+
+The Maven Team
+
+
+
+
+
+
+
+
+
+--Apple-Mail=_291F20B2-321C-44D1-A3AA-476E8EC7ADF8--
+

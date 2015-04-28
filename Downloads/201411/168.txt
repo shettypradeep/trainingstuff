@@ -1,0 +1,79 @@
+From users-return-137711-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Nov  6 11:45:57 2014
+Return-Path: <users-return-137711-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 083F517419
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  6 Nov 2014 11:45:57 +0000 (UTC)
+Received: (qmail 80703 invoked by uid 500); 6 Nov 2014 11:45:55 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 80601 invoked by uid 500); 6 Nov 2014 11:45:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 80590 invoked by uid 99); 6 Nov 2014 11:45:55 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Nov 2014 11:45:55 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of khmarbaise@gmx.de designates 212.227.17.20 as permitted sender)
+Received: from [212.227.17.20] (HELO mout.gmx.net) (212.227.17.20)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Nov 2014 11:45:29 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([217.247.63.229]) by
+ mail.gmx.com (mrgmx102) with ESMTPSA (Nemesis) id 0M82zV-1XzJx12G6j-00vcaV;
+ Thu, 06 Nov 2014 12:45:18 +0100
+Message-ID: <545B5F4D.70007@gmx.de>
+Date: Thu, 06 Nov 2014 12:45:17 +0100
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:31.0) Gecko/20100101 Thunderbird/31.2.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>, info@soebes.de
+Subject: Re: explicit dependencies in maven
+References: <CACGLCJY7QXLj8BU08uSAYQfaejsNoO-1YNUJnh6=ANv98fdZYA@mail.gmail.com>	<54585B18.9050504@artifact-software.com>	<CACGLCJaiOy3JyWe5T=ZqkoHrWCk=gPa_4AtJGEyh=ziDwqqUag@mail.gmail.com>	<545A755C.7000903@gmx.de> <CADVp3v9ARSFfOk2wivSiehTCUSHUUMJwYWMgiprh+cY-hVjozg@mail.gmail.com>
+In-Reply-To: <CADVp3v9ARSFfOk2wivSiehTCUSHUUMJwYWMgiprh+cY-hVjozg@mail.gmail.com>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:ptkCrXstLj33wPtZw5hhot9t5QIL1RYtII/paLLhqVdtitDd7sU
+ qXcXYKme5tPC7yZCodaAW7/FGSlLyle0smXZWvDg3UDLc/u2kuip7/oUxbgtgkQEsvyi8kO
+ JIWNVmupgT0LL1jP9SWzToWEHvLM0sAJBU835aLZwFHmU1ACBLfoNOt5aZdisaE0HDDQG8u
+ T4PAmqxRdPC3lvytS5eXQ==
+X-UI-Out-Filterresults: notjunk:1;
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+On 11/5/14 11:14 PM, Barrie Treloar wrote:
+> On 6 November 2014 05:37, Karl Heinz Marbaise <khmarbaise@gmx.de> wrote:
+>
+>> Hi,
+>>
+>> to be clear on that point you should never change released versions.
+>>
+>> The idea of releases is that they are immutable.
+>>
+>> The scenario you have described should never be done which means:
+>>
+>> If you change code than make simply a new version like 1.2 or may be
+>> better things like 1.1.1 to show it's a bug fix release of 1.1 etc.
+>>
+>> You should prevent of doing developers such a thing...
+>
+>
+> Read http://semver.org/
+
+Should that change something ? Or do i misunderstand something ?
+
+Kind regards
+Karl Heinz Marbaise
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

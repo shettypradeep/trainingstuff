@@ -1,0 +1,95 @@
+From users-return-136425-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu May 22 06:45:49 2014
+Return-Path: <users-return-136425-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 05190118A6
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 22 May 2014 06:45:49 +0000 (UTC)
+Received: (qmail 76337 invoked by uid 500); 22 May 2014 06:45:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 76250 invoked by uid 500); 22 May 2014 06:45:45 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 76242 invoked by uid 99); 22 May 2014 06:45:45 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 22 May 2014 06:45:45 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (nike.apache.org: transitioning domain of stefan.siegl@iwes.fraunhofer.de does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 22 May 2014 06:45:43 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <stefan.siegl@iwes.fraunhofer.de>)
+	id 1WnMkh-0005M9-EH
+	for users@maven.apache.org; Wed, 21 May 2014 23:45:19 -0700
+Date: Wed, 21 May 2014 23:45:19 -0700 (PDT)
+From: ssiegl <stefan.siegl@iwes.fraunhofer.de>
+To: users@maven.apache.org
+Message-ID: <1400741119048-5793735.post@n5.nabble.com>
+Subject: Maven custom archetype replace property
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello,
+
+i want to create a custom archetype. One property (groupid) should be
+manipulated during the creation. I want that the entered groupId for the new
+project in the from xxx.yyy.zzz be changed to xxx-yyy-zzz an added in the
+resulting pom.
+
+I someone enter following command:
+
+mvn archetype:generate -DarchetypeGroupId=Darchetype.GroupId 
+-DarchetypeArtifactId=archetype.ArtifactId  
+-DarchetypeVersion=0.0.1-SNAPSHOT -DgroupId=xxx.yyy.zzz 
+-DartifactId=aaa-bbb
+
+The resulting pom should look like (as normal)
+...
+	<groupId>${groupId}</groupId>
+	<artifactId>${artifactId}</artifactId>
+	<version>${version}</version>
+...
+	<scm>
+	
+<developerConnection>scm:svn:http://myserver.com/${groupIdManipulated}/trunk${artifactId}</developerConnection>
+	</scm>
+
+Is this possible? I have tried the gmaven-plugin, but this only manipulated
+the groupId of the archtype. But i want to manipulate the groupId for the
+new project when using this archetype.
+
+<execution>
+  <phase>initialize</phase>
+  <goals>
+    <goal>execute</goal>
+  </goals>
+  <configuration>
+   <source>
+    project.properties["groupIdManipulated"] =
+"${project.groupId}".replace('.', '-')
+   </source>
+  </configuration>
+</execution>
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Maven-custom-archetype-replace-property-tp5793735.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

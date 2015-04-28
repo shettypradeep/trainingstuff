@@ -1,0 +1,77 @@
+From users-return-136505-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jun  3 16:56:16 2014
+Return-Path: <users-return-136505-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 99DEA10B05
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  3 Jun 2014 16:56:16 +0000 (UTC)
+Received: (qmail 29706 invoked by uid 500); 3 Jun 2014 16:56:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 29623 invoked by uid 500); 3 Jun 2014 16:56:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 29612 invoked by uid 99); 3 Jun 2014 16:56:15 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 03 Jun 2014 16:56:15 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mehul.sanghvi@gmail.com designates 74.125.82.181 as permitted sender)
+Received: from [74.125.82.181] (HELO mail-we0-f181.google.com) (74.125.82.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 03 Jun 2014 16:56:11 +0000
+Received: by mail-we0-f181.google.com with SMTP id w61so7230015wes.12
+        for <users@maven.apache.org>; Tue, 03 Jun 2014 09:55:48 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=o3ZGLoufdEkPnLX80AygQtHqexmq3ZjUlEpr9L8W4Kw=;
+        b=e/i1+n9j3bxgg1SL3F81ACIokqn4FfRu+cwbDU1arDQf18VIbLA774f1YCAczew4ta
+         sdQ0c7QmTgZOxqzNIPXEbmN0DpYSQhtUWSrHE/4dYfS7x3WFs2qBZds8slCNDWQWq+Om
+         f/+MTkQAJOgLyuiQ8XDRnTgYOdovmPKMnl4nzNT+yFBjgte99IZywb/UaxJ8aZCMdjMY
+         La2u/oh1PUV3MODxfwhidZvmfxyaec0PgfigxR1FPNkuYvyrerTgmTuMhQq30FVCJtxX
+         MMc6p3tqHLQ4hybKLAMJP4AJQYph0Jo6nZsteuBkffIEkyCRJ52hHAixcPCwqPNmB583
+         NOXg==
+MIME-Version: 1.0
+X-Received: by 10.194.184.179 with SMTP id ev19mr18109026wjc.85.1401814548181;
+ Tue, 03 Jun 2014 09:55:48 -0700 (PDT)
+Received: by 10.217.40.136 with HTTP; Tue, 3 Jun 2014 09:55:48 -0700 (PDT)
+Date: Tue, 3 Jun 2014 12:55:48 -0400
+Message-ID: <CAPo9-A8n50JK4W0fwivPAd-of4s_cZ58FHBAWSud+Gw8R-dHgg@mail.gmail.com>
+Subject: Maven repository management systems
+From: Mehul Sanghvi <mehul.sanghvi@gmail.com>
+To: ML Maven Users <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b87371e2f7b0204faf162ad
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b87371e2f7b0204faf162ad
+Content-Type: text/plain; charset=UTF-8
+
+Currently we are using Nexus OSS version.  I am leaning toward Archiva, but
+there is also
+Artifactory.
+
+
+What is involved if we were to migrate from Nexus to one of the others ?
+ Do the repository URLs
+change ?   Or the layout ?
+
+What do people recommend ?  Why ?
+
+
+cheers,
+
+      mehul
+
+
+-- 
+Mehul N. Sanghvi
+email: mehul.sanghvi@gmail.com
+
+--047d7b87371e2f7b0204faf162ad--
+

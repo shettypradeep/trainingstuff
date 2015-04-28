@@ -1,0 +1,172 @@
+From users-return-135933-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Mar 25 22:18:54 2014
+Return-Path: <users-return-135933-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 630DD107A0
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 25 Mar 2014 22:18:54 +0000 (UTC)
+Received: (qmail 99976 invoked by uid 500); 25 Mar 2014 22:18:47 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99902 invoked by uid 500); 25 Mar 2014 22:18:47 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99894 invoked by uid 99); 25 Mar 2014 22:18:47 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Mar 2014 22:18:47 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.160.43] (HELO mail-pb0-f43.google.com) (209.85.160.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Mar 2014 22:18:43 +0000
+Received: by mail-pb0-f43.google.com with SMTP id um1so1055559pbc.16
+        for <users@maven.apache.org>; Tue, 25 Mar 2014 15:18:22 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:content-type:message-id:mime-version
+         :subject:date:references:to:in-reply-to;
+        bh=GhVP+8o0yb1iTKutSni4vWgYQA443CyXjFoMdSFhXt0=;
+        b=C26ywQ13IcB71vu4TSNxouSRZxfe47X1XPZkFnSgBWYeg9atQ5m8NirJawZ36HRGuS
+         7L774I88dUoeCQl4xjKPaaG5yCfWaf5d6/w2LjCqwZsbTXfuDex5qaPuXVJFRlKo6TvV
+         lus7LFPfJbJ+JwDgaKYbb7rTbisDLQep4/rHsWUcdeZVSntsavkTwJDBONxYO7SKVsDC
+         9tXVpXXe813WY7KiCkrokCUdQKTgnGjmYuk7WNLI9PXXumxxeMI1FgDWlQm36Y9syON+
+         woXRPUMwqpc7MlesG713Ic3YTpfUzJps2R+GS7qSe0jB1oW6ajIWjK8FwlfkG/mfXwMw
+         jjYw==
+X-Gm-Message-State: ALoCoQnx7LKCgxCFa4hciJxCBPrFyt/n6ArXC4cKSxifDDl5Wg8zRClRrCGOJKOtv5TNPecl5DGC
+X-Received: by 10.68.89.162 with SMTP id bp2mr14037400pbb.151.1395785902322;
+        Tue, 25 Mar 2014 15:18:22 -0700 (PDT)
+Received: from [172.16.24.127] ([4.53.140.129])
+        by mx.google.com with ESMTPSA id iu10sm49384124pbd.71.2014.03.25.15.18.21
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Tue, 25 Mar 2014 15:18:21 -0700 (PDT)
+From: Jason van Zyl <jason@takari.io>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_F73CD069-1984-4E80-AF68-A337158B551E"
+Message-Id: <96D42AF5-2A3A-4393-B07E-7F95653B585A@takari.io>
+Mime-Version: 1.0 (Mac OS X Mail 7.2 \(1874\))
+Subject: Re: Incremental build API
+Date: Tue, 25 Mar 2014 15:18:19 -0700
+References: <E9DAAECA-C429-40FC-9B89-18D819971EC6@takari.io> <CF574330.16C0%richard.mauri@sap.com>
+To: Maven Users List <users@maven.apache.org>
+In-Reply-To: <CF574330.16C0%richard.mauri@sap.com>
+X-Mailer: Apple Mail (2.1874)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_F73CD069-1984-4E80-AF68-A337158B551E
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=windows-1252
+
+
+On Mar 25, 2014, at 2:36 PM, Mauri, Richard <richard.mauri@sap.com> =
+wrote:
+
+> Thanks, I=92ll take a look
+> One of these days I was going to attempt a port of an incremental =
+build system we developed to Maven.
+> Some concepts include a post compile artifact byte code analyzer and =
+comparator that classifies the nature of change to help optimize away =
+(in some cases) the dependent transient rebuilds
+> Of course using mvn clean would defeat this, we have a smarter clean =
+that executes its goal only if the scm system has detected deletes=85
+
+Yes, clean becomes unnecessary unless we detect state changes we can't =
+account for (configuration changes or the plugins change from the =
+previous run). We handle the case of detecting stale outputs as well, =
+where you need to delete the outputs of inputs that have been deleted. =
+We also have a more fine-grained model underneath that allows us to =
+model compilation units which is what we use in our incremental =
+compilers (JDT and Javac implementations).
+
+> Anyway, I=92ll use your announcement to try to engage.
+> Thanks!
+>=20
+> From: Jason van Zyl <jason@takari.io<mailto:jason@takari.io>>
+> Reply-To: Maven Users List =
+<users@maven.apache.org<mailto:users@maven.apache.org>>
+> Date: Tuesday, March 25, 2014 at 10:44 AM
+> To: Maven Users List =
+<users@maven.apache.org<mailto:users@maven.apache.org>>
+> Subject: Incremental build API
+>=20
+> Hi,
+>=20
+> For those who are interested in incremental builds we, at Takari, have =
+released a general purpose incremental build API with an initial focus =
+on Maven. We've created a short, high-level description of the =
+framework[1] and we've opened up our Git repository with the code[2]. We =
+also have a some demos that people can look at[3]. We are, and have =
+been, running this code in production for a few months but it is still a =
+work in progress. We have implemented a Maven lifecycle that integrates =
+this API but we've just started using it ourselves. We will open this =
+lifecycle up shortly for people to try but for now, if you're interested =
+in incremental builds take a look and let us know what you think!
+>=20
+> A note to those interested that the use of the API in Maven requires =
+3.2.1+.
+>=20
+> [1]: http://takari.io/2014/03/25/incremental-build.html
+> [2]: https://github.com/takari/io.takari.incrementalbuild
+> [3]: =
+https://github.com/takari/io.takari.incrementalbuild/tree/master/increment=
+albuild/src/test/java/io/takari/incremental/demo
+>=20
+> Thanks,
+>=20
+> Jason
+>=20
+> ----------------------------------------------------------
+> Jason van Zyl
+> Founder,  Apache Maven
+> http://twitter.com/jvanzyl
+> http://twitter.com/takari_io
+> ---------------------------------------------------------
+>=20
+> I never make the mistake of arguing with people for whose opinions I =
+have no respect.
+>=20
+> -- Edward Gibbon
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+http://twitter.com/takari_io
+---------------------------------------------------------
+
+There's no sense in being precise when you don't even know what you're =
+talking about.
+
+ -- John von Neumann
+
+
+
+
+
+
+
+
+
+
+--Apple-Mail=_F73CD069-1984-4E80-AF68-A337158B551E--
+

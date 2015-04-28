@@ -1,0 +1,120 @@
+From users-return-135621-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 27 10:04:49 2014
+Return-Path: <users-return-135621-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D37EF106C7
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 27 Feb 2014 10:04:49 +0000 (UTC)
+Received: (qmail 2112 invoked by uid 500); 27 Feb 2014 10:04:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 1567 invoked by uid 500); 27 Feb 2014 10:04:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 1022 invoked by uid 99); 27 Feb 2014 10:04:22 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Feb 2014 10:04:22 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.220.53 as permitted sender)
+Received: from [209.85.220.53] (HELO mail-pa0-f53.google.com) (209.85.220.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Feb 2014 10:04:17 +0000
+Received: by mail-pa0-f53.google.com with SMTP id ld10so2099070pab.40
+        for <users@maven.apache.org>; Thu, 27 Feb 2014 02:03:55 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=GNmHd6wOoX3Y+FyPqrRyS23i+pzOah1hL0F//NNpDug=;
+        b=ETjFGmQf9vamqfv15k2yxozAppW550CVqdy8qFXpOUjFw4/gWaNgWrbF11oLCd/1aS
+         xmzbeUNeAabTR9fYNFDHBzbndHcaG/+e9H8B/vEvc9WbYDZ50KLBQgi0Kd1pMPcXXjR6
+         uCKmWqWzOLV9ibzGFBgbmc4kXKAN/ProftnG815R0SYyZneEq7l16//ZYS2AZP5HtdtX
+         n5Djl/q25p+ypqrqaJb6e2v1fSFP+KaHhpxEF6z/+Xm5Xm72Uw+kZNezprajGhWuWxv1
+         F/FvhFe5SJ3Vc6ysuRMrKDxX/OuiGxnL2NQ3XlkGZhwlDuk+o+UHBxk4NOITIxACmNZH
+         dFoQ==
+MIME-Version: 1.0
+X-Received: by 10.68.143.100 with SMTP id sd4mr12682944pbb.0.1393495435744;
+ Thu, 27 Feb 2014 02:03:55 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Thu, 27 Feb 2014 02:03:55 -0800 (PST)
+In-Reply-To: <CACRkZ6KQOCyb+k-NY5VyH6ipwKWVnj3x0vw2=q-J6j=_tiHo6A@mail.gmail.com>
+References: <CACRkZ6KQOCyb+k-NY5VyH6ipwKWVnj3x0vw2=q-J6j=_tiHo6A@mail.gmail.com>
+Date: Thu, 27 Feb 2014 10:03:55 +0000
+Message-ID: <CA+nPnMyFBcJeAZZsJEApnz48YW=eZ7j3eNpj85KOPwsRyOk2mQ@mail.gmail.com>
+Subject: Re: doxia-module-markdown 1.5 mixing html and markdown in one file
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b2e3f34719de604f36070c4
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b2e3f34719de604f36070c4
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+On 27 February 2014 09:10, Raphael Andr=E9 Bauer <
+raphael.andre.bauer@gmail.com> wrote:
+
+> Hi,
+>
+>
+> for a project we are using mvn site and the
+>
+> <dependency>
+> <groupId>net.ju-n.maven.doxia</groupId>
+> <artifactId>doxia-module-markdown</artifactId>
+> <version>1.0.0</version>
+> </dependency>
+>
+> markdown plugin.
+>
+> The problem is that it does not properly generate the titles for the
+> final html files.
+>
+> No problem - there's the official and more current
+> doxia-module-markdown 1.5 available anyway.
+>
+> But the official doxia-module-markdown 1.5 does completely ignore any
+> html content
+> inside my markdown files. Whereas net.ju-n.maven.doxia's markdown module
+> allows to mix html and markdown commands.
+>
+> Our project is open source, so we are talking about a page like that
+> one:
+> https://github.com/ninjaframework/ninja/blob/develop/ninja-core/src/site/=
+markdown/index.md
+
+
+Given that the page you cite is almost entirely html, you'd probably be
+better served by using xdoc for those heavyweight pages, e.g. see
+https://github.com/stephenc/junit/blob/generate-site/src/site/xdoc/index.xm=
+lwhich
+the site then renders to
+http://stephenc.github.io/junit/
+
+
+>
+> index.md is a mix of bootstrap html and markdown.
+>
+>
+> Is there a way to tell doxia-module-markdown 1.5 to allow mixing html
+> and markdown - or is it just not possible?
+>
+>
+> Thanks!
+>
+>
+> Raphael
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7b2e3f34719de604f36070c4--
+

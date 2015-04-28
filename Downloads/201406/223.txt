@@ -1,0 +1,66 @@
+From users-return-136483-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jun  2 22:36:46 2014
+Return-Path: <users-return-136483-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E2254109AD
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  2 Jun 2014 22:36:46 +0000 (UTC)
+Received: (qmail 62960 invoked by uid 500); 2 Jun 2014 22:36:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 62874 invoked by uid 500); 2 Jun 2014 22:36:45 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 62863 invoked by uid 99); 2 Jun 2014 22:36:45 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 02 Jun 2014 22:36:45 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.212.179 as permitted sender)
+Received: from [209.85.212.179] (HELO mail-wi0-f179.google.com) (209.85.212.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 02 Jun 2014 22:36:41 +0000
+Received: by mail-wi0-f179.google.com with SMTP id bs8so5462383wib.0
+        for <users@maven.apache.org>; Mon, 02 Jun 2014 15:36:18 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=a9dBHcetFofqn3kWiNwnSWbHEkTQstUGVvgR6jK2rbU=;
+        b=nWn7aYtPtJ8p1IAEd5DBAxytlGd92CkqNXO1z0EdR1z2MAGMTP6DkmrbEDW4/sGUZR
+         DQTCT+e9RXfu5mSMGuZFtnnpZtJJhUef9l8TbSwoYm+beISVMdeu+uGjBi5NnV8qHp2J
+         cZHuSbdqe+3pNqc3ZTHM65I93VGT2JoLczpT06SEeQYgLjPjJ158/Ev5t/gmc6ishGDs
+         n+XniwMmuQqQBH0dqdAkxj8moLMBrrW2TH8CKvLaNkZiv341gp+YF0YzFeDOcDim+izI
+         ucQzR1Sokoq9RmCJ7NNDS3lLkXLFgIlBA8S3A5a4D+eVBYT/FWNP46xjoxCyYSgGl348
+         UFWQ==
+MIME-Version: 1.0
+X-Received: by 10.194.8.170 with SMTP id s10mr52913398wja.6.1401748578239;
+ Mon, 02 Jun 2014 15:36:18 -0700 (PDT)
+Received: by 10.194.137.12 with HTTP; Mon, 2 Jun 2014 15:36:18 -0700 (PDT)
+Date: Mon, 2 Jun 2014 15:36:18 -0700
+Message-ID: <CAPCjjnEO9A_STBkPsLhgHa38ao=9T8wd8mo3mw6+UyqaXuvSvg@mail.gmail.com>
+Subject: Use native tar to unpack? good/bad idea?
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b5d5b9e120b1c04fae20682
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b5d5b9e120b1c04fae20682
+Content-Type: text/plain; charset=UTF-8
+
+I am think of enhancing maven-dependency-plugin by adding option  to unpack
+'tar' like artifact using native tar since it is faster and reserve soft
+links (?)
+
+Thoughts? would it be a maintaining night mare??
+
+Thanks
+
+-Dan
+
+--047d7b5d5b9e120b1c04fae20682--
+

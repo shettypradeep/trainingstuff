@@ -1,0 +1,135 @@
+From users-return-136285-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr 30 11:56:14 2014
+Return-Path: <users-return-136285-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1D53210E20
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 30 Apr 2014 11:56:14 +0000 (UTC)
+Received: (qmail 8112 invoked by uid 500); 30 Apr 2014 11:56:10 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 8052 invoked by uid 500); 30 Apr 2014 11:56:09 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 8043 invoked by uid 99); 30 Apr 2014 11:56:09 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 30 Apr 2014 11:56:09 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mcculls@gmail.com designates 209.85.216.175 as permitted sender)
+Received: from [209.85.216.175] (HELO mail-qc0-f175.google.com) (209.85.216.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 30 Apr 2014 11:56:03 +0000
+Received: by mail-qc0-f175.google.com with SMTP id w7so160010qcr.6
+        for <users@maven.apache.org>; Wed, 30 Apr 2014 04:55:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=content-type:mime-version:subject:from:in-reply-to:date
+         :content-transfer-encoding:message-id:references:to;
+        bh=UaG/7ROnD+dN72s911PiQTemZ0RlTdlhcOylCacFLjw=;
+        b=xDc0MJxUxPfR5MKPMcD5zLk3/9aN8+kEPp40V0qaEwdH537+Jp2qrU/gl+wlix+JCt
+         8bF4QeioxUEi5uWdmMD6O5/z4vGdFQ9Jhq8pd1DfniusRwL0XqHmu41ooS7P6jDxuLNd
+         ADZ2VlA8C14zXnW/1nPYiwRNCE8mTTKlqTrq7Nx6EXCTqHg5P1lOPZ4lpDQyFXSeiFfo
+         E9UuoNJCB2UJqUoC9/0Balac0OtcKWOu2ea//PDIxRKdkw3SaL8TRNkouWDIQ8h5j+Ak
+         ax/a5asmGqFmisQRBSsykMhvPpJvsFpzGueM8G7HDahs1M4KzxSJSzuAQOoxH7fPgB+n
+         lLZg==
+X-Received: by 10.224.166.129 with SMTP id m1mr4485778qay.58.1398858940241;
+        Wed, 30 Apr 2014 04:55:40 -0700 (PDT)
+Received: from [192.168.1.64] (host86-146-97-218.range86-146.btcentralplus.com. [86.146.97.218])
+        by mx.google.com with ESMTPSA id w2sm45541225qar.21.2014.04.30.04.55.37
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 30 Apr 2014 04:55:39 -0700 (PDT)
+Content-Type: text/plain; charset=windows-1252
+Mime-Version: 1.0 (Mac OS X Mail 7.2 \(1874\))
+Subject: Re: Log4J - "cannot find symbol - method trace(String)"
+From: Stuart McCulloch <mcculls@gmail.com>
+In-Reply-To: <CAA9S6i6g=VvOEM_+zFFsOu9NGnYJuU3s0_-DG1b4SF=QY-mg8g@mail.gmail.com>
+Date: Wed, 30 Apr 2014 12:55:34 +0100
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <1569E694-FA3A-40E1-99E0-34C0BDBA42A7@gmail.com>
+References: <CAFdPtEh8Vr9nAPcBdrf7xxgTV+JEqVPQFh5vf5mOGH-eUwhC4g@mail.gmail.com> <CAA9S6i6g=VvOEM_+zFFsOu9NGnYJuU3s0_-DG1b4SF=QY-mg8g@mail.gmail.com>
+To: Maven Users List <users@maven.apache.org>
+X-Mailer: Apple Mail (2.1874)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Also check your java imports, just in case you=92ve imported a different =
+Logger by mistake (such as java.util.logging.Logger)=20
+
+On 30 Apr 2014, at 12:48, Nick Stolwijk <nick.stolwijk@gmail.com> wrote:
+
+> You can use the dependency:tree[1] goal to view a tree of your
+> dependencies to see if the correct version of Log4J is being included
+> in the compiler classpath.
+>=20
+> [1] =
+https://maven.apache.org/plugins/maven-dependency-plugin/tree-mojo.html
+>=20
+> Hth,
+>=20
+> Nick Stolwijk
+>=20
+> ~~~ Try to leave this world a little better than you found it and,
+> when your turn comes to die, you can die happy in feeling that at any
+> rate you have not wasted your time but have done your best ~~~
+>=20
+> Lord Baden-Powell
+>=20
+>=20
+> On Wed, Apr 30, 2014 at 1:41 PM, Du=9Aan Rychnovsk=FD
+> <geraltzrivie@gmail.com> wrote:
+>> Hi everyone,
+>>=20
+>> I have the following dependency in my project's POM:
+>>=20
+>> ...
+>> <dependency>
+>>    <groupId>log4j</groupId>
+>>    <artifactId>log4j</artifactId>
+>>    <version>1.2.17</version>
+>> </dependency>
+>> ...
+>>=20
+>> The artifact is downloaded to my local repository, but, during the =
+compile
+>> phase, the following error is emitted and the build process is =
+aborted:
+>>=20
+>> [ERROR] Failed to execute goal
+>> org.apache.maven.plugins:maven-compiler-plugin:2.5.1:compile
+>> (default-compile) on project dbtoixattrdt: Compilation failure: =
+Compilation
+>> failure:
+>> [ERROR]
+>> =
+d:\prace\dbtoixattrdt\DBToIXATTRDT-TRUNK\src\main\java\dbtoixattrdt\TraceL=
+ogAspect.java:[19,8]
+>> error: cannot find symbol
+>> [ERROR] symbol:   method trace(String)
+>> [ERROR] location: variable logger of type Logger
+>>=20
+>> This error message does not make much sense, as the trace method =
+should be
+>> available on the Logger class in Log4J version 1.2.17.
+>>=20
+>> What can be wrong?
+>>=20
+>> Thanks in advance,
+>> Du=9Aan
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>=20
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

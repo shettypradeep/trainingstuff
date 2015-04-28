@@ -1,0 +1,89 @@
+From users-return-136881-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 24 17:25:22 2014
+Return-Path: <users-return-136881-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 975D311ABA
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 24 Jul 2014 17:25:22 +0000 (UTC)
+Received: (qmail 41087 invoked by uid 500); 24 Jul 2014 17:25:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 41025 invoked by uid 500); 24 Jul 2014 17:25:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 40947 invoked by uid 99); 24 Jul 2014 17:25:07 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 17:25:07 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 17:25:03 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 4DF4A6A657D
+	for <users@maven.apache.org>; Thu, 24 Jul 2014 13:24:39 -0400 (EDT)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 8xVxTJX6Sf-n for <users@maven.apache.org>;
+	Thu, 24 Jul 2014 13:24:39 -0400 (EDT)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 105B06A6563
+	for <users@maven.apache.org>; Thu, 24 Jul 2014 13:24:39 -0400 (EDT)
+Message-ID: <53D14156.2050206@artifact-software.com>
+Date: Thu, 24 Jul 2014 13:24:38 -0400
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: rwheeler@artifact-software.com
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: AW: Conditionally executing a script in profile
+References: <1406221337839-5800947.post@n5.nabble.com> <53d13deb.ca07e00a.61de.ffffd144@mx.google.com>
+In-Reply-To: <53d13deb.ca07e00a.61de.ffffd144@mx.google.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+http://books.sonatype.com/mvnref-book/reference/profiles-sect-activation.html#profiles-sect-activation-config
+suggests that you might be able to split your task into 2 sections.
+
+Put the first 2 sql scripts  in a profile that is always activated and 
+put the 3rd one into a profile that is only activated when the condition 
+that you specify is true.
+
+The hyperlink provides some way to indicate that you want the second 
+profile to be active.
+
+Ron
+
+On 24/07/2014 1:10 PM, Bernd Eckenfels wrote:
+> There are two typical things done - you either use two profiles or you use a plugin which supports a skip property.
+>
+>   other ways are hard to understand (like adding a property to the include pattern to make it not find the resource) and should be avoided.
+>
+> i dont know if your particular mentioned DB Plugin supports more configuration.
+>
+> Bernd
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,95 @@
+From users-return-135203-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Jan 19 21:20:23 2014
+Return-Path: <users-return-135203-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C556210979
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 19 Jan 2014 21:20:23 +0000 (UTC)
+Received: (qmail 29800 invoked by uid 500); 19 Jan 2014 21:20:19 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 29731 invoked by uid 500); 19 Jan 2014 21:20:19 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 29722 invoked by uid 99); 19 Jan 2014 21:20:18 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 19 Jan 2014 21:20:18 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.215.41 as permitted sender)
+Received: from [209.85.215.41] (HELO mail-la0-f41.google.com) (209.85.215.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 19 Jan 2014 21:20:14 +0000
+Received: by mail-la0-f41.google.com with SMTP id mc6so4983734lab.14
+        for <users@maven.apache.org>; Sun, 19 Jan 2014 13:19:53 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=qhiRayL8L34ZwwOJQBdNKhoGuyBS8SFX6TkblWABzWU=;
+        b=b7DrXXpA/hgCllzJvcY2j8HX+7qsgpU4MkF8+HkEQnfQKmrbLfYfHvGgYzCN9bqWDj
+         TU8wwUpB2F7A3Lu5ZE63WvKAYOZOZBq5hTHrtcXd4uOo6Snr5f1E6zpq1tgy0JT+Q0z0
+         3+cUkEqDc7+j/TxFhMA3pvejKOD/CoLKJbFSOpcL4/RWa1nEab5nfueYCW8GJQmKkbZP
+         28MKCJ9UUlw6zzHrrZQSaCP5FtADfOgcuzsPWcQpi8Pboa2NLdIj/REASZ430CrN4heU
+         rZxRbexl6VhkIezqj79XbFL5fDUww9C2YJVJ9h8y9VL5CN2FV3Z1GcUnz2+Ef2Nw8hpk
+         miQA==
+MIME-Version: 1.0
+X-Received: by 10.112.11.170 with SMTP id r10mr8835702lbb.23.1390166393181;
+ Sun, 19 Jan 2014 13:19:53 -0800 (PST)
+Received: by 10.114.96.161 with HTTP; Sun, 19 Jan 2014 13:19:53 -0800 (PST)
+In-Reply-To: <566B2F0C-4C4F-485A-8701-FD79D8D4DE8D@sharp.fm>
+References: <95BFD26B-850F-4C59-BDF6-1F65E2C11ED9@sharp.fm>
+	<CAKDUN1vZy-xEiznhofJAwxR0KZg2uHYdZmcdgO4ddeEZ3YqGvQ@mail.gmail.com>
+	<4EF87FBF-C360-42AC-87E1-7A5BDAE0336E@sharp.fm>
+	<CAKDUN1t-ism44GmiyJbSLGgbRo-KbYzvCczL5VkdV64v0_aiZA@mail.gmail.com>
+	<566B2F0C-4C4F-485A-8701-FD79D8D4DE8D@sharp.fm>
+Date: Sun, 19 Jan 2014 13:19:53 -0800
+Message-ID: <CAPCjjnFtU5kLv5U4fyntFYtbXeja0O1DODyp6N9m6V=iNCsaJA@mail.gmail.com>
+Subject: Re: Property that indicates a snapshot or release build?
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c3be5e0b5a0904f0595697
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c3be5e0b5a0904f0595697
+Content-Type: text/plain; charset=UTF-8
+
+Sounds like a candidate enhancement for build-helper-maven-plugin
+
+-D
+
+
+On Sunday, January 19, 2014, Graham Leggett <minfrin@sharp.fm> wrote:
+
+> On 19 Jan 2014, at 6:20 PM, Anders Hammar <anders@hammar.net<javascript:;>>
+> wrote:
+>
+> > Don't understand. You need to, through code, get hold of the artifact
+> > objects.
+>
+> I am trying to get access to this from a property.
+>
+> What I need is a property that I can embed in a path inside the pom. If
+> the artefact is a release, the property is one value, while if the artefact
+> is a snapshot, the property is another. The project.version property comes
+> achingly close, but won't work for me because it will change on every
+> release.
+>
+> Regards,
+> Graham
+> --
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org <javascript:;>
+> For additional commands, e-mail: users-help@maven.apache.org<javascript:;>
+>
+>
+
+--001a11c3be5e0b5a0904f0595697--
+

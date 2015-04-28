@@ -1,0 +1,91 @@
+From users-return-137646-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Oct 29 09:20:26 2014
+Return-Path: <users-return-137646-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 84BEF17FB8
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 29 Oct 2014 09:20:26 +0000 (UTC)
+Received: (qmail 44017 invoked by uid 500); 29 Oct 2014 09:20:24 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 43936 invoked by uid 500); 29 Oct 2014 09:20:24 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 43924 invoked by uid 99); 29 Oct 2014 09:20:24 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Oct 2014 09:20:24 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of baerrach@gmail.com designates 209.85.220.170 as permitted sender)
+Received: from [209.85.220.170] (HELO mail-vc0-f170.google.com) (209.85.220.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Oct 2014 09:19:57 +0000
+Received: by mail-vc0-f170.google.com with SMTP id la4so410760vcb.15
+        for <users@maven.apache.org>; Wed, 29 Oct 2014 02:19:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=dJbmqjeQ4HiS9N2cQhn6SrvJaLqCiTIMmuO6Rp5HNIk=;
+        b=xVWk6GB4Y1xZ9kqpfFstVaSuP4iUW9bAzDjhE9R3BBz1CjQxet9hn9smullU8dyFkA
+         kvR8FiwXCmHt1qiHrYwLkbZdZIICu/M/Yyiz8grpPFhEUOwnOv2lOX5l8wjceqCVPIjW
+         VCgdTvbKSxhTdwORxqAq/ZExJos9ru/lPwsdDu6ePFBk//6qXyADFff4PL5VlYkc7AKw
+         vIL3YuRDcsysqhZjDNqiZrSq94w6WGFk+san4kmS2he7VIU1Ncjuyxge5cO+MH0zE2+v
+         v4Fa7lW7wH4e5S293u2ZthvEmjLRxNUZM/4ayPx/4f2+rRUtI53vLqTZE4UJ+kCMlQFu
+         +Hqg==
+MIME-Version: 1.0
+X-Received: by 10.52.78.162 with SMTP id c2mr5329763vdx.3.1414574350981; Wed,
+ 29 Oct 2014 02:19:10 -0700 (PDT)
+Received: by 10.220.90.76 with HTTP; Wed, 29 Oct 2014 02:19:10 -0700 (PDT)
+In-Reply-To: <CAE8kHEy7hsUUZx9webzFgELY1HsdZrVYvbr_j34BxB1kn-boHg@mail.gmail.com>
+References: <CAE8kHEwi-wqWygidE88k+SkM9zvoRyTro2GFEFmsW-ypkpSSiw@mail.gmail.com>
+	<CADVp3v9Y+HTn-JPuYz_jAd3yoayW+xN0YyZZ5Gwof5=_fd9bEQ@mail.gmail.com>
+	<CAE8kHEy7hsUUZx9webzFgELY1HsdZrVYvbr_j34BxB1kn-boHg@mail.gmail.com>
+Date: Wed, 29 Oct 2014 19:49:10 +1030
+Message-ID: <CADVp3v8LXi6V8VC4RtDyhV4bvwOmRNzqHGxhR-L_uenoPiz=YQ@mail.gmail.com>
+Subject: Re: [pre-verify over deploy]
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11365dceb2e12105068c4132
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11365dceb2e12105068c4132
+Content-Type: text/plain; charset=UTF-8
+
+On 29 October 2014 18:48, Fay Wong <philip584521@gmail.com> wrote:
+
+> Many thanks to Barrie.
+>
+> I think what you have clarified is the normal flow of maven practice.
+>
+> The "deploy" in the context of my previous post means: our developer invoke
+> a "mvn deploy" command to share the output(bytecode) through the repository
+> so as to shorten the build time of whole project(as its code base is too
+> large). Our goal is modular compiling and packaging.
+>
+> Currently my pain is our developer would deploy broken bytecode to our dev
+> repository and broken others work. Could i define a intermediate
+> repository, everytime they deploy, jenkins will verify it. if pass, then
+> depoy it into dev repository, otherwise, revert the intermediate repository
+> to keep sync with dev repository.
+>
+> Is there a easier way to achieve this?
+>
+
+There is the stick, or the carrot.
+
+The paid version of Nexus (a Maven Repository Manager) has staging
+repositories, I dont use them, you may be able to get them to do what you
+want.
+
+Either way its a process issue.
+Teach your developers to stop breaking the build.
+Or use one of the options I've suggested.
+
+--001a11365dceb2e12105068c4132--
+

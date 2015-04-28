@@ -1,0 +1,186 @@
+From users-return-136785-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jul 16 18:47:50 2014
+Return-Path: <users-return-136785-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7DB701075F
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 16 Jul 2014 18:47:50 +0000 (UTC)
+Received: (qmail 7704 invoked by uid 500); 16 Jul 2014 18:47:48 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 7611 invoked by uid 500); 16 Jul 2014 18:47:48 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 7598 invoked by uid 99); 16 Jul 2014 18:47:48 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 16 Jul 2014 18:47:48 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ctrueden.wisc@gmail.com designates 209.85.220.169 as permitted sender)
+Received: from [209.85.220.169] (HELO mail-vc0-f169.google.com) (209.85.220.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 16 Jul 2014 18:47:46 +0000
+Received: by mail-vc0-f169.google.com with SMTP id hu12so2582525vcb.0
+        for <users@maven.apache.org>; Wed, 16 Jul 2014 11:47:21 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=8SMyDhwA5aY1fapUG+Ifo4g5z7/rSmc5CsBBRrSam24=;
+        b=eyqqt0Xvp8FhYsf+UK0Yd+tLPMC/zPHRYRCzZzHm+EZMbP2Wg7efKBG9d3Akt7zdqh
+         WAnmjvk/Unzm+oCmrQa5WFGgB/DnDZ/7cJ9Ic6XguB71XJAjgJhKPHTlO+OibYS0cJo5
+         BmC1KVHzbZ6xZcfDlYC1SN+7RuNkW6KWMZ+9IwKyDRNy1uFPvB4dQUPShnL9Q4IxfXcO
+         mH5uePBp1wIZHMPAPuMlmuSX8dyVPZAzVIFFl94n1Y7PgjHm9iCq818tpgfnwabYSxS2
+         f25murEuJlLBGIp6gn2yQOlqb8J+WrXgK4xEJkOHSICb2XTsTTtdDfOhVONXZKUyv7t0
+         KLBQ==
+X-Received: by 10.220.200.71 with SMTP id ev7mr18867228vcb.24.1405536440721;
+ Wed, 16 Jul 2014 11:47:20 -0700 (PDT)
+MIME-Version: 1.0
+Sender: ctrueden.wisc@gmail.com
+Received: by 10.58.114.101 with HTTP; Wed, 16 Jul 2014 11:46:50 -0700 (PDT)
+In-Reply-To: <OFB1EFD901.4439AF23-ON85257D17.00661468-85257D17.0066DE86@belden.com>
+References: <OF1F05DF42.E00CE028-ON85257D17.0063A305-85257D17.00648730@belden.com>
+ <CADN69ymG8f7j19xuCtUqdXx8yJoLYgaNGuHiyrQcUApdhcUJxA@mail.gmail.com> <OFB1EFD901.4439AF23-ON85257D17.00661468-85257D17.0066DE86@belden.com>
+From: Curtis Rueden <ctrueden@wisc.edu>
+Date: Wed, 16 Jul 2014 13:46:50 -0500
+X-Google-Sender-Auth: J1CckbZHT8597w8MJ4DMigMiMiM
+Message-ID: <CADN69ynce6c6_sLbJYSnhdLuG+8eVndb1QqkDoxQJ+8GH5T-jQ@mail.gmail.com>
+Subject: Re: move data from pom to class or class to pom
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e011845ea44ab1904fe53f430
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e011845ea44ab1904fe53f430
+Content-Type: text/plain; charset=UTF-8
+
+Hi Alejandro,
+
+> In my case the constant is package protected (it would be private
+> if it wasn't because i need it in unit tests)
+
+Right, so the only (hopefully unlikely) problem would be a class in the
+same package but in a different JAR relying on the value. If it is a
+serious concern you can write the constant as "new String(...)" to avoid
+the inlining.
+
+-Curtis
+
+
+On Wed, Jul 16, 2014 at 1:43 PM, <Alejandro.Endo@miranda.com> wrote:
+
+> Hi Curtis,
+>
+> I *think* i see you point, but wouldn't that happen ONLY if the constant
+> is public and referenced in a separate jar?? where it would be inlined in
+> the referring class (right?). In my case the constant is package protected
+> (it would be private if it wasn't because i need it in unit tests)
+>
+> The problem with defining it in the manifest is that I use this constant
+> in the property of an annotation of the class
+>
+> @StaticServiceProperty(mandatory = true, type = "java.lang.String", name =
+> "schemaVersion", value = SchemaProviderServiceImpl.SCHEMA_VERSION,
+> immutable = true)
+> public class SchemaProviderServiceImpl
+>
+> so I can't grab it from the manifest at runtime. I guess the way I phrased
+> it in the original email implied the opposite, sorry about that
+>
+> Alejandro Endo | Software Designer/Concepteur de logiciels
+>
+>
+>
+>
+>
+> From:   Curtis Rueden <ctrueden@wisc.edu>
+> To:     Maven Users List <users@maven.apache.org>,
+> Date:   2014-07-16 14:27
+> Subject:        Re: move data from pom to class or class to pom
+> Sent by:        ctrueden.wisc@gmail.com
+>
+>
+>
+> Hi Alejandro,
+>
+> > I have a java class that has a constant in it (static final String).
+> > This string is a version number, e.g. "1.3.2-test".
+>
+> Beware: the Java compiler often inlines constants, _including String
+> constants_, into classes that reference the value. So if you compile a
+> class "Foo" against version 1 of library "bar", then run with version 2 of
+> "bar" in the classpath, Foo will still see the constant value as 1 instead
+> of 2.
+>
+> http://javasplitter.blogspot.com/2011/10/static-final-inline-trap.html
+>
+> Much, much better to embed the version number into the JAR manifest,
+> and/or
+> read it out of the Maven POM which the maven-jar-plugin embeds in the JAR
+> file.
+>
+> Regards,
+> Curtis
+>
+>
+> On Wed, Jul 16, 2014 at 1:18 PM, <Alejandro.Endo@miranda.com> wrote:
+>
+> > I have a java class that has a constant in it (static final String).
+> This
+> > string is a version number, e.g. "1.3.2-test". I need to have this same
+> > value in a maven plugin configuration (the jaxb plugin) so I am
+> wondering,
+> > is it better to keep the actual declaration in the code and somehow tell
+> > maven to take it from the code, or is it better to declare it in the pom
+> > and tell java to take the literal value to define the constant from the
+> > pom??
+> >
+> > I don't know how to do either so I would also like to hear some ideas. I
+> > am hoping i don't have to use resource filtering since having a source
+> > file as a resource is kind of problematic to me. It has to be ONLY that
+> > file that gets filtered, it would need to be in a non-standard location
+> > not src/main/java (maybe this is not true), and in general, it seems to
+> me
+> > that treating source code as resource is counter-intuitive
+> >
+> > Has anyone else solved this issue with the DRY principle across
+> behaviour
+> > and build system?
+> >
+> > The short background is that maven generates an XML schema via jaxb and
+> > this schema file is then made available at runtime via a service
+> >
+> > Thank you,
+> >
+> > Alejandro Endo | Software Designer/Concepteur de logiciels
+> >
+> >
+> > DISCLAIMER:
+> > Privileged and/or Confidential information may be contained in this
+> > message. If you are not the addressee of this message, you may not
+> > copy, use or deliver this message to anyone. In such event, you
+> > should destroy the message and kindly notify the sender by reply
+> > e-mail. It is understood that opinions or conclusions that do not
+> > relate to the official business of the company are neither given
+> > nor endorsed by the company.
+> > Thank You.
+> >
+>
+>
+> DISCLAIMER:
+> Privileged and/or Confidential information may be contained in this
+> message. If you are not the addressee of this message, you may not
+> copy, use or deliver this message to anyone. In such event, you
+> should destroy the message and kindly notify the sender by reply
+> e-mail. It is understood that opinions or conclusions that do not
+> relate to the official business of the company are neither given
+> nor endorsed by the company.
+> Thank You.
+>
+
+--089e011845ea44ab1904fe53f430--
+

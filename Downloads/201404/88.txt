@@ -1,0 +1,115 @@
+From users-return-136185-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr 18 10:55:30 2014
+Return-Path: <users-return-136185-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 96D7510AC3
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 18 Apr 2014 10:55:30 +0000 (UTC)
+Received: (qmail 95209 invoked by uid 500); 18 Apr 2014 10:55:26 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 94613 invoked by uid 500); 18 Apr 2014 10:55:25 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 94598 invoked by uid 99); 18 Apr 2014 10:55:24 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Apr 2014 10:55:24 +0000
+X-ASF-Spam-Status: No, hits=0.1 required=5.0
+	tests=MISSING_MID,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [50.22.11.58] (HELO bs3-dallas.accountservergroup.com) (50.22.11.58)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Apr 2014 10:55:19 +0000
+Received: from dsl78-143-200-163.in-addr.fast.co.uk ([78.143.200.163]:51425 helo=viper.int.arc7.info)
+	by bs3-dallas.accountservergroup.com with esmtpsa (TLSv1:AES128-SHA:128)
+	(Exim 4.82)
+	(envelope-from <org.apache.maven.user@io7m.com>)
+	id 1Wb6Re-0006ce-RC
+	for users@maven.apache.org; Fri, 18 Apr 2014 05:54:59 -0500
+Date: Fri, 18 Apr 2014 10:54:56 +0000
+From: <org.apache.maven.user@io7m.com>
+To: users@maven.apache.org
+Subject: Re: Unpacking a zip file from the source tree
+In-Reply-To: <20140418101105.6185B698@athena.apache.org>
+References: <20140418101105.6185B698@athena.apache.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - bs3-dallas.accountservergroup.com
+X-AntiAbuse: Original Domain - maven.apache.org
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - io7m.com
+X-Get-Message-Sender-Via: bs3-dallas.accountservergroup.com: authenticated_id: org.apache.maven.user+io7m.com/only user confirmed/virtual account not confirmed
+X-Virus-Checked: Checked by ClamAV on apache.org
+Message-Id: <20140418105524.7F26F81E@athena.apache.org>
+
+On Fri, 18 Apr 2014 10:10:35 +0000
+<org.apache.maven.user@io7m.com> wrote:
+> There's the TrueZip plugin, but quite frankly, it seems defective (it silently
+> fails to do anything, and the documentation is no help at all).
+
+Pro tip:
+
+This will work:
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>truezip-maven-plugin</artifactId>
+        <version>1.2</version>
+        <inherited>false</inherited>
+        <executions>
+          <execution>
+            <id>copy-out-files</id>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <phase>pre-site</phase>
+            <configuration>
+              <verbose>true</verbose>
+              <fileset>
+                <directory>src/main/data/file.zip/</directory>
+                <outputDirectory>${project.build.directory}/site/file</outputDirectory>
+              </fileset>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+This will silently fail:
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>truezip-maven-plugin</artifactId>
+        <version>1.2</version>
+        <inherited>false</inherited>
+        <executions>
+          <execution>
+            <id>copy-out-files</id>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <phase>pre-site</phase>
+            <configuration>
+              <verbose>true</verbose>
+              <fileset>
+                <directory>src/main/data/file.zip/</directory>
+              </fileset>
+              <outputDirectory>${project.build.directory}/site/file</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+M
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

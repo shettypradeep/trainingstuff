@@ -1,0 +1,68 @@
+From users-return-136067-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Apr  3 09:25:17 2014
+Return-Path: <users-return-136067-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B69571050D
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  3 Apr 2014 09:25:17 +0000 (UTC)
+Received: (qmail 7319 invoked by uid 500); 3 Apr 2014 09:25:14 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 6507 invoked by uid 500); 3 Apr 2014 09:25:12 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 6497 invoked by uid 99); 3 Apr 2014 09:25:08 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 03 Apr 2014 09:25:08 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of fancyerii@gmail.com designates 209.85.215.42 as permitted sender)
+Received: from [209.85.215.42] (HELO mail-la0-f42.google.com) (209.85.215.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 03 Apr 2014 09:25:02 +0000
+Received: by mail-la0-f42.google.com with SMTP id ec20so1127666lab.1
+        for <users@maven.apache.org>; Thu, 03 Apr 2014 02:24:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=5gaSnmAikiL7TaDfrkpQH3ASDtqPL20k2A0/kWB89ZY=;
+        b=lDx7rrn7bEZQRjiJAXVa+UJoLi47y6z7vIpw6eKQEK4oJXItFlTP//sNMQRGPwXOVV
+         3Fcm2ARJgSPTjYB13Vw+BglZ6FHf2mgmF9RL6N9OynO2BL9Q6JODVcPiwAt2i2uHXPTw
+         0brIbBJIQj/Z8nMGeFkWROq1eXkXa+fiGEM6azqBI94d3TuHYifIIOVH8LSUd74xfEPd
+         YRhOBQGyEch0HIRva6Hnu9WoRwTOXEbVC6ddZWiep1eKmXXUgrkGk+N862xCuyYOpEZP
+         rRPCZsXAva7ALnQ1qymw7jvT9hOzVhBXUGbe1v3jBnYlprk4D2YeMOx0VvUHVRc0EdgE
+         QK9Q==
+MIME-Version: 1.0
+X-Received: by 10.152.3.72 with SMTP id a8mr1482842laa.33.1396517080760; Thu,
+ 03 Apr 2014 02:24:40 -0700 (PDT)
+Received: by 10.112.148.41 with HTTP; Thu, 3 Apr 2014 02:24:40 -0700 (PDT)
+Date: Thu, 3 Apr 2014 17:24:40 +0800
+Message-ID: <CAFAd71UhYjQ=EVWGBfRpsZBWKVRuYPy-EwTOtiHQQ_b8DjRzPw@mail.gmail.com>
+Subject: how to exclude log4j.properties when mvn assembly:single?
+From: Li Li <fancyerii@gmail.com>
+To: users@maven.apache.org
+Content-Type: text/plain; charset=ISO-8859-1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I want to jar my program with all the dependencies. I have a
+dependency of hadoop. the log4j.properties is included in my
+application.
+how to exclude it?
+I have tried this but no luck
+
+<artifactId>maven-assembly-plugin</artifactId>
+   <configuration>
+     <excludes>
+     <exclude>**/log4j.properties</exclude>
+     </excludes>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,72 @@
+From users-return-135361-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb  5 22:17:00 2014
+Return-Path: <users-return-135361-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2164E10BFF
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  5 Feb 2014 22:17:00 +0000 (UTC)
+Received: (qmail 30460 invoked by uid 500); 5 Feb 2014 22:16:54 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 30383 invoked by uid 500); 5 Feb 2014 22:16:54 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 30373 invoked by uid 99); 5 Feb 2014 22:16:54 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Feb 2014 22:16:54 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of waynefay@gmail.com designates 209.85.220.47 as permitted sender)
+Received: from [209.85.220.47] (HELO mail-pa0-f47.google.com) (209.85.220.47)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Feb 2014 22:16:48 +0000
+Received: by mail-pa0-f47.google.com with SMTP id kp14so893412pab.6
+        for <users@maven.apache.org>; Wed, 05 Feb 2014 14:16:28 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=QE6s+wPGdGyqWFiY36q2QQWAKaRVyySSbJ5u9zo/RIs=;
+        b=UI7JK+AWoeJgf7I1mlaO1gMMp2xmYEMKvKedIRFEi45G4igW2sT8GW870geqqmTIvY
+         bGzF3231Wbuq89e9hQ/0SGEzla6nq+6rSf5BSM6ulM5YfxoZtBUdfpWpY9s1d5U9/OCx
+         w3lI44jAMhytJU71eXOtuoW8wwc0YAEA2Cl7XCHheZ+8XPNqeIRQ7rhccdImyHXKuri2
+         CZ5SQ85Ouif4sSAHzGzonDsWrfwoM2MD3L9nE3xQKPFjS9n8tq5Zf8C93taTNw1AF3Wa
+         /qjAREnZz1M4h9MlpaZuwmMd04H/h1afNpGeTNzpqAxnstUD9qGcLU8dlrNC0b+3vIQ/
+         F16w==
+X-Received: by 10.68.190.169 with SMTP id gr9mr5988415pbc.30.1391638588381;
+ Wed, 05 Feb 2014 14:16:28 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Wed, 5 Feb 2014 14:16:08 -0800 (PST)
+In-Reply-To: <CALDR_3c9BHW88+OqpeTgxhD7jXt+6if1o=RhBgUC69Fv4q8cCw@mail.gmail.com>
+References: <1391622778030-5783294.post@n5.nabble.com> <52F28A38.4090909@yahoo.com>
+ <CALDR_3c9BHW88+OqpeTgxhD7jXt+6if1o=RhBgUC69Fv4q8cCw@mail.gmail.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Wed, 5 Feb 2014 16:16:08 -0600
+Message-ID: <CALy+7U=tEBmO-z7_H01PbzPSw5O=J58kaF0C4nh9wtS2sch0ww@mail.gmail.com>
+Subject: Re: Build is successful but can't run?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> *Failed to load Main-Class manifest attribute from target/myApp.jar*
+>
+> I opened the manifest and the *Main-Class* attribute was entered as
+> *mainClass.* So I changed it to the former and that got rid of that error.
+> But now  I *still *get the original error.
+
+You should specify the fully qualified main class eg:
+com.mycompany.app.App
+in the mainClass field/parameter to the plugin.
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

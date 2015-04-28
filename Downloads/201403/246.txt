@@ -1,0 +1,96 @@
+From users-return-135974-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 27 21:01:50 2014
+Return-Path: <users-return-135974-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 39590105F2
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 27 Mar 2014 21:01:50 +0000 (UTC)
+Received: (qmail 91314 invoked by uid 500); 27 Mar 2014 21:01:46 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 91139 invoked by uid 500); 27 Mar 2014 21:01:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 91130 invoked by uid 99); 27 Mar 2014 21:01:45 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Mar 2014 21:01:45 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mfriedenhagen@gmail.com designates 209.85.219.46 as permitted sender)
+Received: from [209.85.219.46] (HELO mail-oa0-f46.google.com) (209.85.219.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Mar 2014 21:01:42 +0000
+Received: by mail-oa0-f46.google.com with SMTP id i7so5007659oag.19
+        for <users@maven.apache.org>; Thu, 27 Mar 2014 14:01:21 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=IIjeS+uKC3GI+Y3E2L7FkKuvMmiETicildA2SM/brp4=;
+        b=EC4PHMjObvoIfgv5bjJEAxjog5od/yqhTmHde00IziArxKVARrxsH/ve8uIeb0xmvo
+         PftA2/umoEBPiZJQxJGl8LzcS6mLG7wCFMEK5p3bNlaD5wjjklas3/RsV8VJfPinBHAQ
+         HxYwM1qb0RtdygPRiirCgFHSsnnMBCNGfVhCWNOpFFCnraTgy2yt4P/bR5LUDnGDSMIm
+         XAMp3K9pDTxfcdWA2M2SbaJM37PUEe7TIQ6HMLXXPU1Z53UC18703aymkTG75OreEAga
+         du6qz2rdeLh359ANU8z1zsY56Qcrh5l1rqdVLU0ZTGxZrsiYhoMq50dhrWEPl/KoSNX4
+         WtRg==
+X-Received: by 10.182.247.68 with SMTP id yc4mr2642018obc.67.1395954081696;
+ Thu, 27 Mar 2014 14:01:21 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.182.193.9 with HTTP; Thu, 27 Mar 2014 14:00:41 -0700 (PDT)
+In-Reply-To: <1395953410953-5789750.post@n5.nabble.com>
+References: <CADq_mb-9uEnhfGNo=Gq+V6LnVx4+dGNwAvf2FVJubHEjMNub7w@mail.gmail.com>
+ <CAPK0icgm=hPXzcgaUN8EujubaD7sb4+aOy4y0+XXZbQeT4SnWA@mail.gmail.com> <1395953410953-5789750.post@n5.nabble.com>
+From: Mirko Friedenhagen <mfriedenhagen@gmail.com>
+Date: Thu, 27 Mar 2014 22:00:41 +0100
+Message-ID: <CAK8jvqzM4aT51dKrOTLpPmRs6NZZENh9hfsTM73oX354zpwGnQ@mail.gmail.com>
+Subject: Re: how to push .zip from assembly to repo?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Jvsrvcs,
+
+how do you run assembly? As stated on plugin-info[0] you only should
+use goal single.
+The mojo documentation for single[1] states, that the assembly should
+be attached (and therefore deployed) as of version 2.2 of the plugin.
+
+[0] https://maven.apache.org/plugins/maven-assembly-plugin/plugin-info.html
+[1] https://maven.apache.org/plugins/maven-assembly-plugin/single-mojo.html#attach
+Regards Mirko
+--
+http://illegalstateexception.blogspot.com/
+https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+https://bitbucket.org/mfriedenhagen/
+
+
+On Thu, Mar 27, 2014 at 9:50 PM, Jvsrvcs <jvsrvcs@gmail.com> wrote:
+> I do not see anything in the assembly .xml or the release plugin that would
+> push the zip created to a local maven repo.  There must be something
+> missing.
+>
+> I looked at the release plugin options and it appears to be related to SCM,
+> but not a maven repo.  If you have more information, it would be greatly
+> appreciated.
+>
+>
+>
+> --
+> View this message in context: http://maven.40175.n5.nabble.com/how-to-push-zip-from-assembly-to-repo-tp5789728p5789750.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

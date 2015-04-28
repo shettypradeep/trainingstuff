@@ -1,0 +1,103 @@
+From users-return-137550-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Oct 13 13:43:05 2014
+Return-Path: <users-return-137550-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 77F6C17350
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 13 Oct 2014 13:43:05 +0000 (UTC)
+Received: (qmail 81669 invoked by uid 500); 13 Oct 2014 13:43:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 81579 invoked by uid 500); 13 Oct 2014 13:43:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 81567 invoked by uid 99); 13 Oct 2014 13:43:03 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 13 Oct 2014 13:43:03 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of cregganna@gmail.com designates 209.85.220.172 as permitted sender)
+Received: from [209.85.220.172] (HELO mail-vc0-f172.google.com) (209.85.220.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 13 Oct 2014 13:42:38 +0000
+Received: by mail-vc0-f172.google.com with SMTP id lf12so5756909vcb.31
+        for <users@maven.apache.org>; Mon, 13 Oct 2014 06:42:36 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=nf//VOoIY3LAhI06WeFW5t4CHH9UaD3tpttLM1+jPi4=;
+        b=qnM5MgvA2rPe6MvksyE4Ku+zBSO0lAfM8uHzgHTBD5ersMWk20YiJsc9DVIB+jVyQZ
+         uSKDnldGlMSnC1u9+OOKc7G6lBmVLYdr+U47re2ri/L8I8pjMTo8VHuR+UhAfrryQ2bK
+         /zU3q4gJ+x4kN6m9X0RJa7wdZtEaZWh40MhyFfkNtXU1PscsiaoCUCe9aoiO9NcXXwy3
+         cUQl/UcVkhl4Ge4M1TKOARiTK38j0gZngylBYFs7uF5gpUaJxI9DJl9EvlV4nmB/aDyq
+         L3Fn5Tge6S1Vcg96KoQ9ULNP/x68SuZxIy33zgZEQqW2itjSjG3ALdtG0RM+z/Wrl0q/
+         jHYA==
+MIME-Version: 1.0
+X-Received: by 10.52.61.226 with SMTP id t2mr625506vdr.85.1413207756758; Mon,
+ 13 Oct 2014 06:42:36 -0700 (PDT)
+Sender: cregganna@gmail.com
+Received: by 10.31.3.6 with HTTP; Mon, 13 Oct 2014 06:42:36 -0700 (PDT)
+Received: by 10.31.3.6 with HTTP; Mon, 13 Oct 2014 06:42:36 -0700 (PDT)
+In-Reply-To: <543BAD8D.208@gmx.de>
+References: <CAPdv7QxNAERSQmNBnjSDiSG_i5kzvzfzAH+HhGCTWnn5a7rnbg@mail.gmail.com>
+	<543B6DDF.9000506@gmx.de>
+	<CAPdv7Qwi3UuVzL3DNQ4Qc+CJpdB0OOHGeNukAQer=rchLGD__g@mail.gmail.com>
+	<543BAD8D.208@gmx.de>
+Date: Mon, 13 Oct 2014 14:42:36 +0100
+X-Google-Sender-Auth: yRePOJyJtFmFBC7W0TtM5GnqUEk
+Message-ID: <CAPdv7QywQWYUnz_AGPoM0mVeeoKtA2wuX8QWyg+XB+62TkMUKg@mail.gmail.com>
+Subject: Re: Request for functionality in maven-assembly-plugin - ignoreProjectBuildFilters
+From: Tony Jewell <tony.jewell@cregganna.com>
+To: Maven Users List <users@maven.apache.org>, info@soebes.de
+Content-Type: multipart/alternative; boundary=001a1136696455e4b005054e1243
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1136696455e4b005054e1243
+Content-Type: text/plain; charset=UTF-8
+
+Karl,
+
+That would be superb.
+
+Thanks for all your efforts on this.
+
+Regards,
+Tony Jewell
+On 13 Oct 2014 11:47, "Karl Heinz Marbaise" <khmarbaise@gmx.de> wrote:
+
+> Hi Tony,
+>
+> On 10/13/14 8:38 AM, Tony Jewell wrote:
+>
+>> Thanks Karl,
+>>
+>> Two things:
+>>
+>>  1. I couldn't get access to the JIRA to submit a ticket myself - is
+>>     this something I am allowed to request?
+>>  2. Of course I'm going to ask: when is maven-assembly-plugin:2.4.2
+>>     likely to be released?
+>>
+>
+> It's likely that this week a release will be done which is called 2.5
+> ...if nothing really hard will happen...
+>
+> we will see...
+>
+> Kind regards
+> Karl Heinz Marbaise
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a1136696455e4b005054e1243--
+

@@ -1,0 +1,73 @@
+From users-return-135179-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan 16 10:29:35 2014
+Return-Path: <users-return-135179-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CD232109A5
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 16 Jan 2014 10:29:35 +0000 (UTC)
+Received: (qmail 2046 invoked by uid 500); 16 Jan 2014 10:29:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 1618 invoked by uid 500); 16 Jan 2014 10:29:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 325 invoked by uid 99); 16 Jan 2014 10:29:27 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 16 Jan 2014 10:29:27 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.220.54 as permitted sender)
+Received: from [209.85.220.54] (HELO mail-pa0-f54.google.com) (209.85.220.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 16 Jan 2014 10:29:21 +0000
+Received: by mail-pa0-f54.google.com with SMTP id fa1so2489859pad.13
+        for <users@maven.apache.org>; Thu, 16 Jan 2014 02:29:00 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=sNm9DEp4CwHrfhUW5ZTcIZLFhTkcN+DG23iWBaGVTyk=;
+        b=jkytj+xqpPMdcs7Tyzeb5gBVIVnT1EGn8YskrlNMYIFdksxYgFk3pfOwd28ItF6fGX
+         zezxjH3Ay6I/BhKD/6ja/sAC0w58Fk6SahbtTlQnmIprDTCiXv4svsMakv9zw+u//7Q7
+         PkpZr0/bO6wC7RizMP4TAFZIMiXOeQNW3UudczpzP8PM7PWry9SqVR6MnBJs8IMbQE95
+         aRas0N4/nEc0s/6qxFbJv0Y+hweMVOXZ+A92Ih62D7/ZB7rjenR9v45vwg2GwvqjLnjU
+         7yzbdHGgZuLazNxc/XeEE2+6y0DIDgZLe3MuPtsCB+/6c9Mgy/7cOBm+mXZ4yDLUmTuu
+         gT9A==
+MIME-Version: 1.0
+X-Received: by 10.66.221.199 with SMTP id qg7mr9091967pac.13.1389868139897;
+ Thu, 16 Jan 2014 02:28:59 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Thu, 16 Jan 2014 02:28:59 -0800 (PST)
+Date: Thu, 16 Jan 2014 10:28:59 +0000
+Message-ID: <CA+nPnMwnsUyvNV-v0YQqeknm7L3-zzvVnDjng0q3Brxc2GqdmA@mail.gmail.com>
+Subject: How to bake secrets into your release artifacts without checking them
+ into source control
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b5da649c3684104f013e427
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b5da649c3684104f013e427
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+For when I cannot do things the =93right way=99=94 I created the Release Fr=
+om My
+Machine maven plugin...
+
+http://developer-blog.cloudbees.com/2014/01/maven-keeping-secrets-out-of-so=
+urce.html
+
+Perhaps some people will find it useful...
+
+P.S. the integration tests for this plugin are quite fun if you want to
+take a look at the source code
+
+P.P.S. the 1.0 release of the plugin has not synced to central yet so give
+it a couple of hours
+
+--047d7b5da649c3684104f013e427--
+

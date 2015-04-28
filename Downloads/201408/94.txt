@@ -1,0 +1,66 @@
+From users-return-137164-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Aug 29 20:40:01 2014
+Return-Path: <users-return-137164-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8EFF111CE1
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 29 Aug 2014 20:40:01 +0000 (UTC)
+Received: (qmail 74276 invoked by uid 500); 29 Aug 2014 20:40:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 74190 invoked by uid 500); 29 Aug 2014 20:40:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74179 invoked by uid 99); 29 Aug 2014 20:39:59 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 29 Aug 2014 20:39:59 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=FROM_LOCAL_NOVOWEL,SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of kvnsmnsn@hotmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 29 Aug 2014 20:39:55 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <kvnsmnsn@hotmail.com>)
+	id 1XNSxK-0006vs-UW
+	for users@maven.apache.org; Fri, 29 Aug 2014 13:39:34 -0700
+Date: Fri, 29 Aug 2014 13:39:34 -0700 (PDT)
+From: kvnsmnsn <kvnsmnsn@hotmail.com>
+To: users@maven.apache.org
+Message-ID: <1409344774906-5803369.post@n5.nabble.com>
+In-Reply-To: <c38ad92d1001181027g5ecc9f5btc93846530f86404d@mail.gmail.com>
+References: <c38ad92d1001171528l4af2a77ay44b7a7bdad8d93eb@mail.gmail.com> <c8d0ecff1001171552j5b7bcfcamacd769741ec213c5@mail.gmail.com> <c38ad92d1001171556j689d5507n1f8371103141a8d7@mail.gmail.com> <c2f30a41001172106r5022479aoeb06b6147aa89ffa@mail.gmail.com> <c38ad92d1001172121l4bf9fc5ct7efb27b5e9f8777c@mail.gmail.com> <88c1b41001172253m20befc8ci95dfa5e730caf334@mail.gmail.com> <c38ad92d1001180917s7a2c7710m912d626256a13e43@mail.gmail.com> <52bab8691001181004q3ff7aceg5396f95e6450cca7@mail.gmail.com> <c38ad92d1001181027g5ecc9f5btc93846530f86404d@mail.gmail.com>
+Subject: Re: compile:compile failure on sun proprietary implementation API
+  usage
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Right now the code that's messing me up is:
+
+byte[] bytesTimestampUtf8Encrypted =
+cipher.doFinal(bytesTimestampUtf8Unencrypted);
+String secret = (new
+BASE64Encoder()).encodeBuffer(bytesTimestampUtf8Encrypted);
+
+How would I implement this with the Apache Commons Codec?
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/compile-compile-failure-on-sun-proprietary-implementation-API-usage-tp115960p5803369.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

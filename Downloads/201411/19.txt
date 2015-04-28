@@ -1,0 +1,133 @@
+From users-return-137688-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Nov  3 11:17:32 2014
+Return-Path: <users-return-137688-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DECBF177FA
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  3 Nov 2014 11:17:32 +0000 (UTC)
+Received: (qmail 44435 invoked by uid 500); 3 Nov 2014 11:17:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 44355 invoked by uid 500); 3 Nov 2014 11:17:31 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 44342 invoked by uid 99); 3 Nov 2014 11:17:30 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 03 Nov 2014 11:17:30 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [209.85.216.177] (HELO mail-qc0-f177.google.com) (209.85.216.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 03 Nov 2014 11:17:05 +0000
+Received: by mail-qc0-f177.google.com with SMTP id l6so8744490qcy.22
+        for <users@maven.apache.org>; Mon, 03 Nov 2014 03:17:04 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=G4nQ/1VkT2Gf+o1XMuV/pNywFhR53VcVuA1bJuaKjJo=;
+        b=QkYHE7UkqZxePvbZVE3E2rQZYOPUz+bMpZr9TNO9L9c5v9EIuwLVRVEzSHAdrD+prD
+         3rwNu304FCr29zOertmLY3ulnF0/5wWzncSgKnMvuwpxuwjr2OafGMGhk1eOyYzr3Css
+         kqsJHO5DzYRrzJvBzsVHsmIzTPBldJgByiq1+gAxe5KuYWeOyMP1VBuR3UiYoVmLHDW5
+         vOO/jbhYu0Z9ObXrPGDLa8+p/ZzvD5iigN3jhVnMmCPCPIEGc99zrzZI1IN7I8cVJso8
+         TMDMtTCK1NSDlYHCOZ6tEvg23bRifPbFPKanx+/xZqp3CpP+n2uIsqOu+AFvJzbT2Vww
+         BrWg==
+X-Gm-Message-State: ALoCoQkvdTSJb6UwDDv21WZ0MuK2YI0yu52YY5UN5hnPEWFdAF/OTxHBmASXNee+BUgwPtCh/Jfi
+MIME-Version: 1.0
+X-Received: by 10.224.172.131 with SMTP id l3mr58082815qaz.32.1415013423947;
+ Mon, 03 Nov 2014 03:17:03 -0800 (PST)
+Received: by 10.229.54.4 with HTTP; Mon, 3 Nov 2014 03:17:03 -0800 (PST)
+Received: by 10.229.54.4 with HTTP; Mon, 3 Nov 2014 03:17:03 -0800 (PST)
+In-Reply-To: <CA+nPnMy9msfBJ_1yGJLY9V1CvL2dFaXU-sMDEbV4dWoRFBr39Q@mail.gmail.com>
+References: <CAE8kHEwi-wqWygidE88k+SkM9zvoRyTro2GFEFmsW-ypkpSSiw@mail.gmail.com>
+	<CADVp3v9Y+HTn-JPuYz_jAd3yoayW+xN0YyZZ5Gwof5=_fd9bEQ@mail.gmail.com>
+	<CAE8kHEy7hsUUZx9webzFgELY1HsdZrVYvbr_j34BxB1kn-boHg@mail.gmail.com>
+	<CA+nPnMy89DvHGM0yV6kKTjxpOnbbKoO+bOHELx0GE9T6x4fzmQ@mail.gmail.com>
+	<CADVp3v9Bi3H5LLiLkrzUzKHND+QNvN77Y5dwvJJrckmKQWU4UA@mail.gmail.com>
+	<CA+nPnMy9msfBJ_1yGJLY9V1CvL2dFaXU-sMDEbV4dWoRFBr39Q@mail.gmail.com>
+Date: Mon, 3 Nov 2014 12:17:03 +0100
+Message-ID: <CABOR3+yuw4GH9E1W0U=MFbbTvnJA=9yY7c+fxgSdr8m=aKHkBA@mail.gmail.com>
+Subject: Re: [pre-verify over deploy]
+From: Bernd <ecki@zusammenkunft.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b673fb67cbb460506f27cca
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b673fb67cbb460506f27cca
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+Thanks Stephen for that writeup. It is a good read. For my taste it
+over-emphasises the moving ground problem. I mean when cooperating with
+larger projects and lots of developers you get all kinds of problems, but
+beeing affected by breaking changes of updating snapshots - I cant remember
+to ever experience that. In fact when SNAPSHOTs change in a severe way it
+is most likely that I have waited for it, I manually refreshed the
+dependencies and I am actually happy to see the changes as early as
+possible (before integrating into a system which isnt working since days
+and only my old snapshots hide this from me).
+
+But having said that, I also do enjoy an environment with releasing often.
+This allows each team to decide when to pull in which (released) changes,
+and this indeed lowers the frequency of broken builds (however it also
+encourages developers to wait too long with the integration, if you dont
+nudge them with deoendency upgrade reports).
+
+Gruss
+Bernd
+Am 03.11.2014 10:39 schrieb "Stephen Connolly" <
+stephen.alan.connolly@gmail.com>:
+
+> Well I knew I'd written something on that topic... but re-reading I am
+> surprised at how much information I managed to cram in there without it
+> feeling over dense (for me)
+>
+> BTW I am of the *never deploy -SNAPSHOTs* camp but I recognise that there
+> are other people out there... and I have to interact with them some times
+> and that post is helpful to explain things to them!
+>
+> On 3 November 2014 01:57, Barrie Treloar <baerrach@gmail.com> wrote:
+>
+> > On 29 October 2014 20:18, Stephen Connolly <
+> > stephen.alan.connolly@gmail.com>
+> > wrote:
+> >
+> > >
+> > >
+> >
+> http://developer-blog.cloudbees.com/2012/12/should-you-deploy-snapshots.h=
+tml
+> >
+> >
+> > Thanks for writing that up!
+> > I'll remember to point people there instead of having to remember
+> > half-baked stuff and type :)
+> >
+> > This is a useful piece of advice
+> > "especially in conjunction with the Versions Maven Plugin
+> > <http://mojo.codehaus.org/versions-maven-plugin/lock-snapshots-mojo.htm=
+l
+> >
+> > which
+> > has goals for =E2=80=9Clocking=E2=80=9D and =E2=80=9Cunlocking=E2=80=9D=
+ your -SNAPSHOT dependencies to
+> the
+> > current timestamp version, thereby removing uncertainty. "
+> > It will allow you to live dangerously on shifting sands and then when y=
+ou
+> > get sucked under to go back and lock to a working version.
+> > But I still think you are better off avoiding that problem in the first
+> > place.
+> >
+>
+
+--047d7b673fb67cbb460506f27cca--
+

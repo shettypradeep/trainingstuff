@@ -1,0 +1,84 @@
+From users-return-135569-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 19 21:02:42 2014
+Return-Path: <users-return-135569-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EC63E10009
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 19 Feb 2014 21:02:41 +0000 (UTC)
+Received: (qmail 34553 invoked by uid 500); 19 Feb 2014 21:02:37 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 34465 invoked by uid 500); 19 Feb 2014 21:02:37 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 54891 invoked by uid 99); 19 Feb 2014 11:55:39 -0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of pahomov.egor@gmail.com designates 209.85.216.173 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=xjsPcZ9a+edEEmdxtYwehD4Q9eNOhOMdSUy37r/+8+Y=;
+        b=gKsE2nbT/GCENc6MUu9zZs+8d2YNRMQeGRp+qnCUv3Bzjyw7mxgFccLelE1WRV8Dqj
+         rTpTHoEgXDAtN6P9EL7mJxyZ4VmvUmqLWHzF2MhqnYss2o1MDIlE+cPnKONfSUyVb+UL
+         gyQkGfxMN4vEAWnSOCId393TLzyAX0xsk1nv1s5QcdAb7PMxJD0O1WUUyENw588Y468a
+         ZToJjsvhAIctmkZqBQruSZlvLrrdzYIm1gMelUzRterXiTzWSyqM8X6FQuc5El6gkgum
+         0TnSbaKyoyjEnk9YjEMl7FFDfK/oULaT+efvpEaA8lxMrc3aMfTLTpnPXkCgTGngEEM/
+         8o4A==
+MIME-Version: 1.0
+X-Received: by 10.224.53.198 with SMTP id n6mr49478909qag.41.1392810911775;
+ Wed, 19 Feb 2014 03:55:11 -0800 (PST)
+Date: Wed, 19 Feb 2014 15:55:11 +0400
+Message-ID: <CAMrx5DxqhShDEsWMS2nRRVVn78XhC5dZGNYD-FG=7MAkSg-FMw@mail.gmail.com>
+Subject: Solution for handeling many conflicts in maven dependencies.
+From: Egor Pahomov <pahomov.egor@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a1132f03ca2c17204f2c10f86
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1132f03ca2c17204f2c10f86
+Content-Type: text/plain; charset=ISO-8859-1
+
+Problem: I need to combine using of many artifacts in my maven project:
+hbase, hadoop-client, akka, spray, netflix-curator, spark. All these
+artifacts depend on different versions of other artifacts: zookeper-client,
+protobuf, jetty, etc. I've spent 3 days just to write all excludes
+correctly to archive version compatibility. So now I've got pretty
+consistent configuration. I want to create a framework to help my
+colleagues, who work on a similar stack, to use results of my work and
+don't spend 3 days on writing excludes.
+
+    I'm aware of maven-enforcer-plugin, which doesn't allow you to use the
+same artifacts with a different version. It helps, but it's not enough.
+
+I would love to hear about solutions you might suggest. Here's my vision: I
+create a parent pom with dependency management only. In this dependency
+management I write all the excludes and make the artifacts compatible. Then
+someone can use this pom as a parent and just write dependencies. But there
+is a problem. We excluded zookeeper from netflix-curator and hadoop, but
+not from hbase. So when we use all 3 artifacts we receive zookeeper from
+hbase, but when use only netflix-curator and hadoop we can lost needed
+artifacts. And we would recognize it only when in Runtime we receive
+"ClassNotFoundException". That's why I want to write an additional plugin
+for this case. This plugin would check: if you have dependency on some
+artifact, you should depend on artifacts, which were excluded from that
+artifact. If you lost some artifact, you need to add it or configure an
+exception.
+
+What do you think about such solution?
+
+
+-- 
+
+
+
+*Sincerely yoursEgor PakhomovScala Developer, Yandex*
+
+--001a1132f03ca2c17204f2c10f86--
+

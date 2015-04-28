@@ -1,0 +1,133 @@
+From users-return-135182-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan 16 18:13:34 2014
+Return-Path: <users-return-135182-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CDB2C109F6
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 16 Jan 2014 18:13:34 +0000 (UTC)
+Received: (qmail 35814 invoked by uid 500); 16 Jan 2014 18:13:29 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 35721 invoked by uid 500); 16 Jan 2014 18:13:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 35502 invoked by uid 99); 16 Jan 2014 18:13:28 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 16 Jan 2014 18:13:28 +0000
+X-ASF-Spam-Status: No, hits=2.5 required=5.0
+	tests=HTML_MESSAGE,PLING_QUERY,RCVD_IN_DNSWL_NONE,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [208.42.184.242] (HELO g2host.com) (208.42.184.242)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 16 Jan 2014 18:13:22 +0000
+Received: from mail-vb0-f50.google.com (account jeffjensen@visi.com [209.85.212.50] verified)
+  by mailfront4.g2host.com (CommuniGate Pro SMTP 5.3.11)
+  with ESMTPSA id 139144172 for users@maven.apache.org; Thu, 16 Jan 2014 12:13:00 -0600
+Received: by mail-vb0-f50.google.com with SMTP id w8so1115012vbj.37
+        for <users@maven.apache.org>; Thu, 16 Jan 2014 10:12:59 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=F/ZsmRfKA/NEaMFV4+a4UPYqkBj1D7cSlhldMiYWeSc=;
+        b=PBIefY3x7RxJ+ckLhZmXPDm1/PZh3L/MhJMVvvtl0+ZFr0NLGjpEFM98pTQzPm3eba
+         eMxtkf5yhB+67MNBibnNMvCGRHqN4ih5FqGOyGGmANd2SUgZcViZIRQOdnLphot6oV+6
+         bbQy9wCAICe+OImGMoBolVz9HirEvqbzAG6DJN2Nh6Sd6xYq3M7k8x2qM08IRdqcj8le
+         Bnj8yuYGlnou/2BG2ku4MNxTVQ9ZZZCW2iB8RwOxKgyFUt6GtrzGbV2d//yTgHkO04WR
+         tLL40NqRcuIAMEp3nw8bkeM9j/WsKBmBW7g8BRv1t+q8EXbmZi61Jh+8mAxVNOO7ivp0
+         z8Dg==
+X-Received: by 10.52.89.173 with SMTP id bp13mr6352287vdb.5.1389895979337;
+ Thu, 16 Jan 2014 10:12:59 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.58.173.67 with HTTP; Thu, 16 Jan 2014 10:12:29 -0800 (PST)
+In-Reply-To: <43D77B63-90CF-411D-AEE9-76ED116AD133@tesla.io>
+References: <43D77B63-90CF-411D-AEE9-76ED116AD133@tesla.io>
+From: Jeff Jensen <jeffjensen@upstairstechnology.com>
+Date: Thu, 16 Jan 2014 12:12:29 -0600
+Message-ID: <CAKumxBzZCc+5r3e9Rnw=r03HPH9+vDUqr2Y6-9pBUL8p7-XFhQ@mail.gmail.com>
+Subject: Re: Maven just won't die! -- WTF is Takari?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=bcaec5015f571f8f9304f01a6037
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--bcaec5015f571f8f9304f01a6037
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Looking forward to it, particularly faster builds and improvements helping
+CD!
+
+
+
+On Wed, Jan 15, 2014 at 12:26 PM, Jason van Zyl <jason@tesla.io> wrote:
+
+> Hi,
+>
+> As some may know, a lot of work has been done at tesla.io on various
+> advanced features in Maven but, unfortunately, not enough work for these
+> features to see the light of day. It wouldn't be surprising if Maven user=
+s
+> have no idea what these features are because I've not done a great job at
+> communicating about the work. Some of the work is mine, some of other maj=
+or
+> contributors, and more recently from key customers.
+>
+> To make a long story short there's a lot of cool stuff to talk about, and
+> the work as a new venue at takari.io! I'll be giving a webinar next week
+> and here are some of the features I'd like to talk about:
+>
+> - Polyglot support: Ruby, Groovy, and Scala DSLs. These have all been
+> actively worked on in the recent past, especially the Ruby and Scala DSLs=
+.
+> - Full incremental support: the complete Maven lifecycle including an
+> incremental command line compiler based on JDT, all with m2e integration
+> - Aggressive parallelization: a new parallelization mode that also
+> optimizes scheduling based on critical path analysis
+> - Generations: a new form of continuous delivery for Maven -- Smart delta
+> protocol and no more SNAPHOTs!
+> - Shell: long-lived CLI process for Maven
+>
+> Much of this work is functional, and the new parallelization mode and
+> generations support are actively being used in production. We are still
+> iterating on these specific features but they show a lot of promise. Wher=
+e
+> all of this code eventually lands is a question for the Maven development
+> community. All of this work was developed outside of Apache, and how easy
+> it is to integrate back into the Maven project remains to be seen. At the
+> very least there is a lot of very interesting work and I wanted to start
+> the dialog because Maven just isn't going to die :-)
+>
+> So please join us for a webinar, Tuesday, January 21 at 11:30AM EST (UTC
+> -5 hours) to learn more about what we're working on and what we're trying
+> to accomplish.
+>
+> All registrants will receive access to the recording, so if you can=92t m=
+ake
+> it =97 you won=92t have to miss out.
+>
+> Register here: http://goo.gl/vqSvL7
+>
+> Hope you can make it,
+>
+> Jason van Zyl
+> ----------------------------------------------------------
+> Jason van Zyl
+> Founder,  Apache Maven
+> http://twitter.com/jvanzyl
+> ---------------------------------------------------------
+>
+>
+>
+>
+>
+>
+>
+>
+
+--bcaec5015f571f8f9304f01a6037--
+

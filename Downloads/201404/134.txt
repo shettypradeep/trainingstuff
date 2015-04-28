@@ -1,0 +1,193 @@
+From users-return-136176-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr 18 08:09:14 2014
+Return-Path: <users-return-136176-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8DE7A101EE
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 18 Apr 2014 08:09:14 +0000 (UTC)
+Received: (qmail 29256 invoked by uid 500); 18 Apr 2014 07:41:12 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 28926 invoked by uid 500); 18 Apr 2014 07:41:11 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 28916 invoked by uid 99); 18 Apr 2014 07:41:09 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Apr 2014 07:41:09 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.215.54 as permitted sender)
+Received: from [209.85.215.54] (HELO mail-la0-f54.google.com) (209.85.215.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Apr 2014 07:41:05 +0000
+Received: by mail-la0-f54.google.com with SMTP id mc6so1130464lab.41
+        for <users@maven.apache.org>; Fri, 18 Apr 2014 00:40:43 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=zfdbodH6vyCnqFkF8opl+SzTYYdk+KJE9qDCy7Qou7Q=;
+        b=GiqSbh4jrINXxrv1SejWVFsasfYyVbqNpJqczXfL72s/SDYl/OlDzXrGRdaOI1vmsA
+         KF671rkFhfUhPsv7ZG69nKYffigrmdem/kZdc/ooERAbJgBRNrosHmJEQETcVQ+lNsRp
+         K1cvMfuFRarMFSskWcVwGS8CYrmc/qGcpMVVF4SNxKPc9XtaMI+KvTGrH4oCFkitYe4d
+         J/m/ZyzYBkhOs1+5zrymLEW42yAoqlc1yKev68Behj0bLCroG1J8sUM2Fpj2sPyWZxwZ
+         V76fEi1cX9152jZTrYCYEkNjfQ4F8uoFieKqgeDN/k5kt/8D/ZHJQG6ZgyihajCMNKoB
+         cPqg==
+MIME-Version: 1.0
+X-Received: by 10.152.42.164 with SMTP id p4mr13061505lal.5.1397806843474;
+ Fri, 18 Apr 2014 00:40:43 -0700 (PDT)
+Received: by 10.114.48.6 with HTTP; Fri, 18 Apr 2014 00:40:43 -0700 (PDT)
+In-Reply-To: <CAPCjjnHMmNENgJwOCfF_5h2sKBgjZRT_9yBn7a5R1meygiMo7A@mail.gmail.com>
+References: <CAPCjjnEGcgdBq_woPYpfd_UHtRe5g=qsnQ77gjkCpKdG5V90pA@mail.gmail.com>
+	<CAK8jvqyYhQaZLduEaGddtnb=o7Gs80S=wBg17hYaopQCk+gLeg@mail.gmail.com>
+	<CAPCjjnHMmNENgJwOCfF_5h2sKBgjZRT_9yBn7a5R1meygiMo7A@mail.gmail.com>
+Date: Fri, 18 Apr 2014 00:40:43 -0700
+Message-ID: <CAPCjjnFR7UbARj+4Qoq_CPBvaA4deVam=_xdCwF66zRT4AJCUg@mail.gmail.com>
+Subject: Re: Strange maven central response - do you see the same thing??
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c33f985eb94a04f74c4498
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c33f985eb94a04f74c4498
+Content-Type: text/plain; charset=UTF-8
+
+Please disregard my last analysis.  I think i found the issue
+
+http://repo.maven.apache.org/maven2/org/apache/maven/scm/maven-scm-provider-cvsexe
+
+is not available
+
+Could you try?
+
+Thanks
+
+-D
+
+
+On Fri, Apr 18, 2014 at 12:31 AM, Dan Tran <dantran@gmail.com> wrote:
+
+> My error is come from a quick command to do check out a perforce OSS
+> source tree   mvn scm:checkout
+> -DconnectionUrl=scm:perforce:workshop.perforce.com:1666://guest/perforce_software/p4maven
+> -Dproject.base=. -Dusername=xxxx -Dpassword=yyyyy
+>
+> it fails with and without my nexus.  The strange thing I pickup the full
+> url  from the error log and use curl to see if I see the error.
+>
+> now, this is getting stranger.  I browse to the artifact using my browser
+> and copy the link.  My curl works.
+>
+> I place the 2 curl  urls into my text editor and It looks exactly the
+> same.  Then I copy those links back to my comand line, one works and the
+> other fails.
+>
+> there must be hidden chars in bad one.
+>
+> Thoughts?
+>
+> -D
+>
+> my maven is 3.0.5 on windows, and vary the hostnames dont matter
+>
+>
+>
+>
+> On Thu, Apr 17, 2014 at 11:08 PM, Mirko Friedenhagen <
+> mfriedenhagen@gmail.com> wrote:
+>
+>> Dan,
+>>
+>> I always use http://repo1.maven.org/maven2/.. e.g.
+>> http://repo1.maven.org/maven2/org/apache/maven/
+>>
+>> Two possible explanations:
+>>
+>> Browsers by default follow http redirects, with curl you need -L as an
+>> Option.
+>>
+>> You have different proxy settings for the CLI and your browser :-)
+>>
+>> Regards
+>> Mirko
+>> --
+>> Sent from my mobile
+>> On Apr 18, 2014 6:56 AM, "Dan Tran" <dantran@gmail.com> wrote:
+>>
+>> > Hello Maven friends
+>> >
+>> > my maven build fails with this
+>> >
+>> > [INFO]
+>> > [INFO] --- maven-scm-plugin:1.9:checkout (default-cli) @ standalone-pom
+>> ---
+>> > Downloading:
+>> >
+>> >
+>> http://repo.maven.apache.org/maven2/org/apache/maven/scm/maven-scm-provider-cvsexe/1.9/maven-scm-provider-cvsexe-1.9.pom
+>> > Apr 17, 2014 9:50:21 PM
+>> >
+>> >
+>> org.apache.maven.wagon.providers.http.httpclient.impl.client.DefaultRequestDirector
+>> > tryExecute
+>> > INFO: I/O exception
+>> >
+>> (org.apache.maven.wagon.providers.http.httpclient.NoHttpResponseException)
+>> > caught when processing request: The target server failed to respond
+>> > Apr 17, 2014 9:50:21 PM
+>> >
+>> >
+>> org.apache.maven.wagon.providers.http.httpclient.impl.client.DefaultRequestDirector
+>> > tryExecute
+>> > INFO: Retrying request
+>> > Apr 17, 2014 9:50:31 PM
+>> >
+>> >
+>> org.apache.maven.wagon.providers.http.httpclient.impl.client.DefaultRequestDirector
+>> > tryExecute
+>> > INFO: I/O exception
+>> >
+>> (org.apache.maven.wagon.providers.http.httpclient.NoHttpResponseException)
+>> > caught when processing request: The target server failed to respond
+>> > Apr 17, 2014 9:50:31 PM
+>> >
+>> >
+>> org.apache.maven.wagon.providers.http.httpclient.impl.client.DefaultRequestDirector
+>> > tryExecute
+>> > INFO: Retrying request
+>> >
+>> >
+>> > I can't even curl
+>> >
+>> >
+>> http://repo.maven.apache.org/maven2/org/apache/maven/scm/maven-scm-provider-cvsexe/1.9/maven-scm-provider-cvsexe-1.9.pom
+>> >
+>> > C:\Users\dantran>curl
+>> >
+>> >
+>> http://central.maven.org/maven2/org/apache/maven/scm/maven-scm-provider-cvsexe/1.9/maven-scm-provider-cvsexe-1.9.pom
+>> > curl: (52) Empty reply from server
+>> >
+>> > note central.maven.org and repo.maven.apache.org  are the same host
+>> >
+>> > But browser can see that file.
+>> >
+>> > do you see the same thing
+>> >
+>> > Thanks
+>> >
+>> > -Dan
+>> >
+>> > -D
+>> >
+>>
+>
+>
+
+--001a11c33f985eb94a04f74c4498--
+

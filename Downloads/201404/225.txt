@@ -1,0 +1,298 @@
+From users-return-136070-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Apr  3 23:46:26 2014
+Return-Path: <users-return-136070-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A599411974
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  3 Apr 2014 23:46:26 +0000 (UTC)
+Received: (qmail 14603 invoked by uid 500); 3 Apr 2014 23:46:22 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 14518 invoked by uid 500); 3 Apr 2014 23:46:22 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 14510 invoked by uid 99); 3 Apr 2014 23:46:22 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 03 Apr 2014 23:46:22 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=FORGED_YAHOO_RCVD,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of its_toasted@yahoo.com designates 98.138.91.144 as permitted sender)
+Received: from [98.138.91.144] (HELO nm14-vm3.bullet.mail.ne1.yahoo.com) (98.138.91.144)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 03 Apr 2014 23:46:15 +0000
+Received: from [98.138.226.178] by nm14.bullet.mail.ne1.yahoo.com with NNFMP; 03 Apr 2014 23:45:53 -0000
+Received: from [98.138.226.63] by tm13.bullet.mail.ne1.yahoo.com with NNFMP; 03 Apr 2014 23:45:53 -0000
+Received: from [127.0.0.1] by smtp214.mail.ne1.yahoo.com with NNFMP; 03 Apr 2014 23:45:53 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s1024; t=1396568753; bh=A3mHUf3HbRxQX5osAFyhNHtSGeFaDm5M4JpAuJV4Rng=; h=X-Yahoo-Newman-Id:X-Yahoo-Newman-Property:X-YMail-OSG:X-Yahoo-SMTP:X-Rocket-Received:Message-ID:Date:From:User-Agent:MIME-Version:To:Subject:References:In-Reply-To:Content-Type:Content-Transfer-Encoding:X-Antivirus:X-Antivirus-Status; b=uR7M0lqJiCcieaIVjSRZ30qkMGkLfZPsOeJNL45kIARW0k99l5zGzjOVZJu33fBL+sWpw0YwDPkqxScx5D/MRzjmcGL2AMtCbfrKa0PtYfJ0lc2OUpwuTmYG+Hzz0grny19ma6+pHF6VHXLx1L6Hhu2o+Rc/Pa2KpSEyZ74XjHg=
+X-Yahoo-Newman-Id: 178569.77721.bm@smtp214.mail.ne1.yahoo.com
+X-Yahoo-Newman-Property: ymail-3
+X-YMail-OSG: 21hZHMMVM1n84WEaR9OfAvzSMFd0RzvLIg91XCyUdRAdJRP
+ u03w2c9hXg4i3PS.uvKbLGhh6GDUwmB7G.XBLatPpFBZOZHe4Tn9iZuf4l07
+ g1ZwzQlcj432ActIO9fSD9PYbGJh9.YwF83gEFmNr7ctw8vDncvnJh.fyon5
+ j0rj0mN9K.pCClr4S5ngKa5ZNeqgaJW_qqnxLXS7aq.rcDDJkirjRDmpYqbg
+ oPienbhEinfH5QOr21wHQg6Kgb9oQSdNyBCx9s2W5V5aQbWnaSmVprMboeYE
+ thfnvx8wpmIloK6tuZjDPt5ubOX4PZBETg8aGbckUjx0957jkR6m4XsVt2j_
+ Z34zU0T9GKKMALYfLztXzbKt6quwTxNjuS8kAxALM2Ok3RjbOS0MhNOa8cgZ
+ xGFRgrm6VU0hpFSSipFJwu27lRDG_CqKm6D9nBb1qd7uls.rHv61Rtgo3y.Y
+ 6Q.WevlJlywSRLitDYdwoH1Jo2JO_..b3JLK1misR.FMaKZ2YRWhX21gqsDs
+ UiRc5y796S1rJ.4tgUZQ3IjrcWA_q0wv7v3BkrVYDfWEYzkjm.aGu0TnzORm
+ svWU2Pm2zWo1qoYUPkP6AmpETO4bgGRz_dXjke9VCLk_gv9dzShRnog--
+X-Yahoo-SMTP: PKuT8k2swBCeFOHzkGy5rTOUTa2hBxlR
+X-Rocket-Received: from [127.0.0.1] (its_toasted@108.13.36.11 with plain [63.250.193.228])
+        by smtp214.mail.ne1.yahoo.com with SMTP; 03 Apr 2014 16:45:53 -0700 PDT
+Message-ID: <533DF26B.7000108@yahoo.com>
+Date: Thu, 03 Apr 2014 16:44:43 -0700
+From: Mark Eggers <its_toasted@yahoo.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Enforcer plugin
+References: <533CAA8F.3030807@yahoo.com> <533CC5E1.8090205@yahoo.com> <CANWgJS73VKV2dqsvLSKs6kY9xgHfqU9hmTGpnaRbiPAJXfJjTA@mail.gmail.com>
+In-Reply-To: <CANWgJS73VKV2dqsvLSKs6kY9xgHfqU9hmTGpnaRbiPAJXfJjTA@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Antivirus: avast! (VPS 140403-1, 04/03/2014), Outbound message
+X-Antivirus-Status: Clean
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 4/3/2014 1:08 PM, Baptiste Mathus wrote:
+> Not sure I understand: did you use a standard rule or did you finally write
+> & use your own one? If the latter, seing the code somewhere may help. If
+> using a standard one, then creating a testcase project is definitely the
+> best way to get answers and then the potential fix.
+>
+> Cheers
+>
+
+I'll try to generate a sample project. Hopefully I can simulate this 
+with a multi-module project.
+
+However, the following snippets of my pom.xml may be enough . . .
+
+Standard rule:
+
+This does not work as expected in 1.3.1 of maven-enforcer-plugin:
+
+<plugin>
+   <groupId>org.apache.maven.plugins</groupId>
+   <artifactId>maven-enforcer-plugin</artifactId>
+   <version>1.3.1</version>
+   <executions>
+     <execution>
+       <id>ban-debug</id>
+       <goals>
+         <goal>enforce</goal>
+       </goals>
+       <configuration>
+         <rules>
+           <bannedDependencies>
+             <excludes>
+               <exclude>org.mdeggers:*:*:*:*:DEBUG</exclude>
+             </excludes>
+           </bannedDependencies>
+         </rules>
+       </configuration>
+     </execution>
+   </executions>
+</plugin>
+
+with a dependency of:
+
+<dependency>
+   <groupId>org.mdeggers</groupId>
+   <artifactId>SampleBuild</artifactId>
+   <version>1.5</version>
+   <type>war</type>
+   <classifier>DEBUG</classifier.
+</dependency>
+
+the build for the above dependency as expected.
+
+However it also fails the build for the following dependency.
+
+<dependency>
+   <groupId>org.mdeggers</groupId>
+   <artifactId>SampleBuild</artifactId>
+   <version>1.5</version>
+   <type>war</type>
+</dependency>
+
+Found Banned Dependency: org.mdeggers:SampleBuild:war:1.5
+
+Even though the tickets listed below show the issues closed.
+
+http://jira.codehaus.org/browse/MENFORCER-74
+http://jira.codehaus.org/browse/MENFORCER-75
+http://jira.codehaus.org/browse/MENFORCER-72
+
+This works in 2.0-SNAPSHOT
+
+<plugin>
+   <groupId>org.apache.maven.plugins</groupId>
+   <artifactId>maven-enforcer-plugin</artifactId>
+   <version>2.0-SNAPSHOT</version>
+   <executions>
+     <execution>
+       <id>ban-debug</id>
+       <goals>
+         <goal>enforce</goal>
+       </goals>
+       <configuration>
+         <rules>
+           <bannedDependencies>
+             <excludes>
+               <exclude>org.mdeggers:*:*:*:*:DEBUG</exclude>
+             </excludes>
+           </bannedDependencies>
+         </rules>
+       </configuration>
+     </execution>
+   </executions>
+</plugin>
+
+with a dependency of:
+
+<dependency>
+   <groupId>org.mdeggers</groupId>
+   <artifactId>SampleBuild</artifactId>
+   <version>1.5</version>
+   <type>war</type>
+   <classifier>DEBUG</classifier.
+</dependency>
+
+This works as expected - fails the build for this dependency.
+
+Including the following dependency allows the build to pass.
+
+<dependency>
+   <groupId>org.mdeggers</groupId>
+   <artifactId>SampleBuild</artifactId>
+   <version>1.5</version>
+   <type>war</type>
+</dependency>
+
+Since I want to use this in a profile that gets triggered during 
+release, I can't have a SNAPSHOT dependency in pom.xml (nor would I want 
+to).
+
+I've built the plugin locally, and I'm now looking at adding it to my 
+local Nexus repository under third party artifacts. I'll generate a 
+versionId based on the date and update the poms when 2.0 is officially 
+released.
+
+Welcome to fragile build-land. :-(
+
+Thanks for the response.
+
+Mark
+/mde/
+
+>
+> 2014-04-03 4:22 GMT+02:00 Mark Eggers <its_toasted@yahoo.com>:
+>
+>>
+>> On 4/2/2014 5:25 PM, Mark Eggers wrote:
+>>
+>>> Folks,
+>>>
+>>> I've gotten my classifier artifact to build and install in our local
+>>> repository. Specifying the classifier gets the appropriate artifact, and
+>>> removing the classifier gets the [other] appropriate artifact.
+>>>
+>>> Now I'm a bit paranoid that the artifact with the classifier will leak
+>>> out into other releases, so I thought I would write an enforcer rule.
+>>>
+>>> I thought that the following would work:
+>>>
+>>> <bannedDependencies>
+>>>       <excludes>
+>>>           <exclude>org.mdeggers:*:*:*:*:DEBUG</exclude>
+>>>       </excludes>
+>>> </bannedDependencies>
+>>>
+>>> based on:
+>>>
+>>> http://maven.apache.org/enforcer/enforcer-rules/bannedDependencies.html
+>>>
+>>> While this certainly blocked the following dependency:
+>>>
+>>> <dependency>
+>>>       <groupId>org.mdeggers</groupId>
+>>>       <artifactId>SampleBuild</artifactId>
+>>>       <version>1.5</version>
+>>>       <type>war</type>
+>>>       <classifier>DEBUG</classifier>
+>>> </dependency>
+>>>
+>>> with the message:
+>>> Found Banned Dependency: org.mdeggers:SampleBuild:war:DEBUG:1.5
+>>>
+>>> It also blocked the following dependency:
+>>>
+>>> <dependency>
+>>>       <groupId>org.mdeggers</groupId>
+>>>       <artifactId>SampleBuild</artifactId>
+>>>       <version>1.5</version>
+>>>       <type>war</type>
+>>> </dependency>
+>>>
+>>> with the message:
+>>> Found Banned Dependency: org.mdeggers:SampleBuild:war:1.5
+>>>
+>>> This I did not expect. The messages are also a bit suspect in that they
+>>> don't match the pattern given in the documentation.
+>>>
+>>> I looked on JIRA and found the following (based on another thread):
+>>>
+>>> http://jira.codehaus.org/browse/MENFORCER-74
+>>> http://jira.codehaus.org/browse/MENFORCER-75
+>>> http://jira.codehaus.org/browse/MENFORCER-72
+>>>
+>>> These are all closed with a 'fixed' designation for release 1.3.
+>>>
+>>> I'm using version 1.3.1
+>>>
+>>> However, I briefly looked at the code here:
+>>>
+>>> http://svn.apache.org/viewvc/maven/enforcer/tags/enforcer-
+>>> 1.3.1/enforcer-rules/src/main/java/org/apache/maven/plugins/
+>>> enforcer/BannedDependencies.java?revision=1502671&view=markup
+>>>
+>>>
+>>> and classifier does not seem to have made it in.
+>>>
+>>> Have I walked through this correctly? If so, is there a fix (other than
+>>> not using classifiers, or just hoping that a DEBUG classifier doesn't
+>>> make it into a release)?
+>>>
+>>> Thanks,
+>>> Mark
+>>>
+>>> /mde/
+>>>
+>>
+>> Works with 2.0-SNAPSHOT of the maven enforcer plugin.
+>>
+>>
+>> /mde/
+>>
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+>
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,130 @@
+From users-return-134979-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan  6 18:34:58 2014
+Return-Path: <users-return-134979-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CB3A910AA3
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  6 Jan 2014 18:34:58 +0000 (UTC)
+Received: (qmail 55496 invoked by uid 500); 6 Jan 2014 18:33:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 55256 invoked by uid 500); 6 Jan 2014 18:33:34 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 55032 invoked by uid 99); 6 Jan 2014 18:33:25 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 18:33:25 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of rsand@idfconnect.com designates 209.85.212.45 as permitted sender)
+Received: from [209.85.212.45] (HELO mail-vb0-f45.google.com) (209.85.212.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 18:33:21 +0000
+Received: by mail-vb0-f45.google.com with SMTP id i12so9194302vbh.18
+        for <users@maven.apache.org>; Mon, 06 Jan 2014 10:33:00 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:references:in-reply-to:mime-version
+         :thread-index:date:message-id:subject:to:content-type;
+        bh=XxZz3GILbx9g16P12tycJeSV8VMvXttvQhAn/Zqtghg=;
+        b=C1VB8JVpCxVwvWnGhW/M1NoQZrWJs1+qrRS/mdoFkyYAMIKLCRc5SAqbQttotvIT4e
+         trHiZUFQ9yVBEifv3G1t1+wGgplLKaZLVcRxEVzL+VvtpUhaoFlzouiKGMTKyKXc/nxJ
+         MpqN5+bjR1ji5CEY7euQl1MRrCX9pqpuq1+56QPGj2FNzXHOxrjQnh/iN2xficBM13V3
+         9wlE0cYdx8MYrzlLCOtvdMkn2kD3o40PAClLeFlAcJk8AKgOIP+Vto9wkRkQ1gPplgl1
+         hh7PQ2+EH4veBLmp7QdeyYBR1TYNizluMZ+3HLsyuZ0LsNVJgmxnLMHIBTPlw2eZ5WuW
+         KooA==
+X-Gm-Message-State: ALoCoQnXZRb4FRSb/ts6T5kdexF4gqmJJnmNdK2JXRTxGlkf9qO+pBckKudddJxU6xTmle3RFLmy
+X-Received: by 10.58.146.5 with SMTP id sy5mr4019483veb.43.1389033180210; Mon,
+ 06 Jan 2014 10:33:00 -0800 (PST)
+From: Richard Sand <rsand@idfconnect.com>
+References: <58EAA08AF8232344ADDB2E31D4996BFD4BBCC877@SMAPEXCHIDAG3.prod.ad.merc.chicago.cme.com>
+ <6FA7B10B-1AB5-4594-B211-FAFEAF1FADD3@oracle.com>
+In-Reply-To: <6FA7B10B-1AB5-4594-B211-FAFEAF1FADD3@oracle.com>
+MIME-Version: 1.0
+X-Mailer: Microsoft Outlook 14.0
+Thread-Index: AQH9r3cRUpwRZnApWIWp7UPy2QdKYAL3h+CQmgL/5cA=
+Date: Mon, 6 Jan 2014 13:33:08 -0500
+Message-ID: <625f2daf574098851a4d2aec287a8962@mail.gmail.com>
+Subject: RE: short and snappy description of what Maven is
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=ISO-8859-1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+When people ask me what Maven is, I tell them it's a build and library
+management tool. If I take it a  step further I explain it manages library
+and dependency versions akin to how SCM systems manage source code. It's
+not a perfect analogy but I find it works for a lay description.
+
+Richard Sand | CEO
+IDF Connect, Inc.
+2207 Concord Ave, #359
+Wilmington | Delaware 19803 | USA
+Office: +1 888 765 1611 | Fax: +1 866 765 7284
+Mobile: +1 267 984 3651
+
+
+-----Original Message-----
+From: Russell Gold [mailto:russell.gold@oracle.com]
+Sent: Monday, January 06, 2014 12:57 PM
+To: Maven Users List
+Subject: Re: short and snappy description of what Maven is
+
+Of course, you could say that about Gradle, too. And ant now does have the
+ability to use those dependency features.
+
+I went through this when creating my video course (not in the sig because
+this is work email). It's not clear to me that you can make a one sentence
+description that will provide sufficiently useful information unless
+something like:
+
+"Maven is a build tool which consumes and produces artifacts managed in a
+repository."
+
+But that is not going to help people coming new to the project.
+
+I think I am missing the motivation here.Is the target for this
+description people deciding whether to try Maven? People trying to learn
+how to use it?
+
+On Jan 6, 2014, at 12:43 PM, Lyons, Roy <Roy.Lyons@cmegroup.com> wrote:
+
+> on https://cwiki.apache.org/confluence/display/MAVEN/New+Main+Site it
+says:
+>
+> We need a short and snappy description of what Maven is:
+>
+> "Apache Maven is a software project management and comprehension tool."
+>
+> Is just not an easy to understand description of what Maven is.
+>
+>
+>
+>
+> I would like to submit my short description for review.
+>
+> "Apache Maven is a convention-over-configuration build tool which has
+great dependency management features."
+>
+> I know that it does more than that - but I feel that at its core, this
+is what it really is.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

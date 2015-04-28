@@ -1,0 +1,173 @@
+From users-return-138059-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Dec 19 03:03:32 2014
+Return-Path: <users-return-138059-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C8FB9C49C
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 19 Dec 2014 03:03:32 +0000 (UTC)
+Received: (qmail 89048 invoked by uid 500); 19 Dec 2014 03:03:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 88970 invoked by uid 500); 19 Dec 2014 03:03:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 88958 invoked by uid 99); 19 Dec 2014 03:03:29 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 19 Dec 2014 03:03:29 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mgainty@hotmail.com designates 65.55.116.49 as permitted sender)
+Received: from [65.55.116.49] (HELO BLU004-OMC1S38.hotmail.com) (65.55.116.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 19 Dec 2014 03:03:03 +0000
+Received: from BLU172-W43 ([65.55.116.7]) by BLU004-OMC1S38.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.22751);
+	 Thu, 18 Dec 2014 19:03:02 -0800
+X-TMN: [6A7QvUeAcJQE1W0G83RYuBLo19SP235g]
+X-Originating-Email: [mgainty@hotmail.com]
+Message-ID: <BLU172-W4377D8AA723437A6412FCFAE6B0@phx.gbl>
+Content-Type: multipart/alternative;
+	boundary="_38850645-0178-41dd-9479-be11c5a05e9f_"
+From: Martin Gainty <mgainty@hotmail.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: RE: Error while creating hadoop package 2.6.0 with Maven 3.2.3
+Date: Thu, 18 Dec 2014 22:03:00 -0500
+Importance: Normal
+In-Reply-To:
+ <CAErxogH_AArRaJF9mYR_fuKgVB_4z-w8f3Mp8KCb2gfT9=PxZQ@mail.gmail.com>
+References:
+ <CAErxogF+o-MGAwUDheUjq-PD30d8eXS3zgbAkZhsi5cbsE+CPQ@mail.gmail.com>,<CAErxogEhv3gbdv7ppi99=9ByybjqHki5KtH8ra5oQWTOWqVP4g@mail.gmail.com>,<op.xq2r54v1kdkhrr@robertscholte.dynamic.ziggo.nl>,<CAErxogHHgPo5mFhjuk8Ag__2CuWO-ypVQmU-9T=b3mJAAiPBdA@mail.gmail.com>,<CAErxogH_AArRaJF9mYR_fuKgVB_4z-w8f3Mp8KCb2gfT9=PxZQ@mail.gmail.com>
+MIME-Version: 1.0
+X-OriginalArrivalTime: 19 Dec 2014 03:03:02.0139 (UTC) FILETIME=[4D382CB0:01D01B38]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_38850645-0178-41dd-9479-be11c5a05e9f_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+take a look at :
+/**
+     * Method getExcludePackageNames.
+     *=20
+     * @return List
+     */
+    public java.util.List<String> getExcludePackageNames()
+
+//if i change=20
+//@return List to=20
+//@return List<String>=20
+//i get the same error you get
+
+please file enhancement request at
+https://jira.codehaus.org/browse/MJAVADOC
+
+thanks=2C
+M-
+
+
+
+
+Date: Fri=2C 19 Dec 2014 07:50:15 +0530
+Subject: Fwd: Fwd: Error while creating hadoop package 2.6.0 with Maven 3.2=
+.3
+From: venkat.architect@gmail.com
+To: users@maven.apache.org
+
+Thanks Robert.
+I did a -e and also a -X=2C -X option shows error messagesthat are specific=
+ally related to 'Unknown tag' for String andFile. Looks like something rela=
+ted to 'Mojo' declaration=2C butnot sure. I am not a full time developer.
+Anything related to Maven with PATH variable?
+Logs attached.
+Thanks=2CVenkat.
+On Thu=2C Dec 18=2C 2014 at 11:27 PM=2C Robert Scholte <rfscholte@apache.or=
+g> wrote:Hi=2C
+=0A=
+
+=0A=
+I guess you should be able to resolve the warnings=2C but that's a differen=
+t issue.
+=0A=
+
+=0A=
+When the build of the Apache Hadoop Maven Plugins 2.6.0 starts=2C I only se=
+e "Downloading...."
+=0A=
+Normally this should be followed by "Downloaded..."=2C which means that the=
+ download attempt actually succeeded.
+=0A=
+For some reason something goes wrong here.
+=0A=
+
+=0A=
+You might want to add -e to get a stacktrace=2C which could give you an ext=
+ra hint (or worst case=2C add -X for debug logging)
+=0A=
+
+=0A=
+thanks=2C
+=0A=
+Robert
+=0A=
+
+=0A=
+Op Thu=2C 18 Dec 2014 18:18:51 +0100 schreef Venkat Ramakrishnan <venkat.ar=
+chitect@gmail.com>:
+=0A=
+
+=0A=
+=0A=
+Hi=2C
+=0A=
+
+=0A=
+I am getting an error related to an issue with Maven plugins while
+=0A=
+generating Hadoop 2.6.0 package with Maven 3.2.3.
+=0A=
+
+=0A=
+I did check Maven plugin page to see if I can resolve the issue=2C but=2C
+=0A=
+could not figure out the exact course of action.
+=0A=
+
+=0A=
+Any help to move forward with the hadoop installation would be
+=0A=
+much appreciated.
+=0A=
+
+=0A=
+The logs are attached.
+=0A=
+
+=0A=
+Thanks & Best Regards=2C
+=0A=
+Venkat Ramakrishnan.
+=0A=
+=0A=
+
+=0A=
+---------------------------------------------------------------------
+=0A=
+To unsubscribe=2C e-mail: users-unsubscribe@maven.apache.org
+=0A=
+For additional commands=2C e-mail: users-help@maven.apache.org
+=0A=
+
+=0A=
+=0A=
+=0A=
+
+---------------------------------------------------------------------=0A=
+To unsubscribe=2C e-mail: users-unsubscribe@maven.apache.org=0A=
+For additional commands=2C e-mail: users-help@maven.apache.org 		 	   		  =
+
+--_38850645-0178-41dd-9479-be11c5a05e9f_--
+

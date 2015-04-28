@@ -1,0 +1,154 @@
+From users-return-135894-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 20 21:01:22 2014
+Return-Path: <users-return-135894-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5348410C13
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 20 Mar 2014 21:01:22 +0000 (UTC)
+Received: (qmail 62065 invoked by uid 500); 20 Mar 2014 21:01:17 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 61967 invoked by uid 500); 20 Mar 2014 21:01:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 61959 invoked by uid 99); 20 Mar 2014 21:01:17 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Mar 2014 21:01:17 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.216.176] (HELO mail-qc0-f176.google.com) (209.85.216.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Mar 2014 21:01:13 +0000
+Received: by mail-qc0-f176.google.com with SMTP id m20so1774427qcx.7
+        for <users@maven.apache.org>; Thu, 20 Mar 2014 14:00:52 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:message-id:date:from:user-agent:mime-version:to
+         :subject:references:in-reply-to:content-type
+         :content-transfer-encoding;
+        bh=tA90yqJxyr3ycVvohkp77CvTIk7s+niGUH1cOS8AJR4=;
+        b=Ripma5wYLfM8VhieCrin2emprCKbOjv44vG7YJ1AV0ROpt/0M8qds+Gxjz8j531dRt
+         6fHo8fnc6K/5X7Ng0orZr62+UX3/pWOmrZxbfXcvUHZ3hQJmYTNWaStMAqsu4y1fbhCg
+         b2INKfJE0i9XwLIJdyWMA37nf2DuWWprppd3r4gmNd3gOhHQ7fyhVQ6tymOWrp+y+MO+
+         6KubWONlO/IfkDrqnL1YHv+KXetHPPFd6Z+c37/l7yI6k3TUvXSAYRZI7aOFk+IT0No9
+         mDPIZDDobgQl/FuwrhydlgYFFb3FPDzXgK/hnKE+AiBAWPFiohVK/HGh+uq/W1dr1t1C
+         f1kw==
+X-Gm-Message-State: ALoCoQm4/8DmswPqOTQ7rcx120M+YiEJ+86UJ81iJKvQ4jf2eNnbhWQqov5uB905ovlUfn2fpGuJ
+X-Received: by 10.224.114.130 with SMTP id e2mr52804359qaq.53.1395349252453;
+        Thu, 20 Mar 2014 14:00:52 -0700 (PDT)
+Received: from [192.168.43.26] (wsip-98-175-26-151.dc.dc.cox.net. [98.175.26.151])
+        by mx.google.com with ESMTPSA id e69sm3788231qgf.17.2014.03.20.14.00.51
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Thu, 20 Mar 2014 14:00:51 -0700 (PDT)
+Message-ID: <532B5703.50109@t-sciences.com>
+Date: Thu, 20 Mar 2014 17:00:51 -0400
+From: Robert Kuropkat <rkuropkat@t-sciences.com>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Site Repository Property was: Open Source Best Practices with
+ Maven - distributionManagement
+References: <5329FCAC.2050705@gmail.com> <CAAUywg-0poAG=fjBD9FeeteMKz7Y9yEkO=gHr6rUqcPX_BBbdA@mail.gmail.com> <CAK8jvqw4AOqhoyB0yvpK6BdRN8vLNFr=967z-bSuCQ139TRWoQ@mail.gmail.com> <532B4185.7030004@t-sciences.com> <CAK8jvqxkNxVKO7v2pDAhCAgaSg93G9ozkk21kcqk83g3z3HjjQ@mail.gmail.com>
+In-Reply-To: <CAK8jvqxkNxVKO7v2pDAhCAgaSg93G9ozkk21kcqk83g3z3HjjQ@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+
+Yep, that is one of the many pages I had looked at also.  I was also 
+considering the stage-deploy target as I think that actually does have a 
+property for URL, but was not sure what other side affects it would have 
+since it might be deemed a mis-use of that feature.  I need to 
+understand it a little better and its original intent and how that maps 
+to our local process.
+
+I also tried setting just a named property in settings.xml and 
+referencing that property in the <site><url> tag but since the URL tag 
+behavior is to append in a parent-child pom setup, it gets confused.  
+Disappointingly, when I look at the effective POM in Eclipse, it looks 
+exactly they way I want.  When it actually runs though, it fails.
+
+Robert Kuropkat
+
+P.S.  I am currently using the jackrabbit webdav wagon, but that's just 
+because it was the first one I got to work.
+
+
+On 03/20/2014 04:42 PM, Mirko Friedenhagen wrote:
+> Hello Robert,
+>
+> reading the information at
+> https://maven.apache.org/plugins/maven-site-plugin/deploy-mojo.html I
+> do not think there is an easy way to do this and probably never will
+> be.
+>
+> 1) AFAIK there is no (central) server available which hosts sites by default.
+> 2) As stated on above page, there are a lot of different means to
+> deploy the site via wagon (ftp, http, ssh)
+> 3) As a workaround you might think about using the site:stage-deploy
+> goal instead for your "local" builds.
+>
+> Regards
+> Mirko
+>
+> Regards Mirko
+> --
+> http://illegalstateexception.blogspot.com/
+> https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+> https://bitbucket.org/mfriedenhagen/
+>
+>
+> On Thu, Mar 20, 2014 at 8:29 PM, Robert Kuropkat
+> <rkuropkat@t-sciences.com> wrote:
+>> So is there an equivalent to altReleaseDeploymentRepository and
+>> altSnapshotDeploymentRepository for the Site Deployment information also?
+>> Since all three are in the Distribution Management directive, I was hoping I
+>> could define this last one in the settings.xml also.
+>>
+>> Robert Kuropkat
+>>
+>>
+>> On 03/19/2014 05:15 PM, Mirko Friedenhagen wrote:
+>>> Hello Eric,
+>>>
+>>> as outlined in
+>>> https://maven.apache.org/plugins/maven-deploy-plugin/deploy-mojo.html
+>>> in your settings.xml you might define properties
+>>> altReleaseDeploymentRepository and altSnapshotDeploymentRepository in
+>>> a profile internal-repository which is activated by default while you
+>>> do not define any repository at all in your pom.
+>>> Now while developing you just invoke mvn deploy and everything should
+>>> go to your local Nexus.
+>>> When invoking mvn -P!internal-repository everything should go to central.
+>>> Regards Mirko
+>>> --
+>>> http://illegalstateexception.blogspot.com/
+>>> https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+>>> https://bitbucket.org/mfriedenhagen/
+>>>
+>>>
+>>>
+>> <snip>
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

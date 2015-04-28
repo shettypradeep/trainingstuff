@@ -1,0 +1,140 @@
+From users-return-137679-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Nov  2 18:54:24 2014
+Return-Path: <users-return-137679-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2FD3617C8C
+	for <apmail-maven-users-archive@www.apache.org>; Sun,  2 Nov 2014 18:54:24 +0000 (UTC)
+Received: (qmail 91290 invoked by uid 500); 2 Nov 2014 18:54:22 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 91203 invoked by uid 500); 2 Nov 2014 18:54:22 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 91192 invoked by uid 99); 2 Nov 2014 18:54:22 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 02 Nov 2014 18:54:22 +0000
+X-ASF-Spam-Status: No, hits=0.3 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of jeroen@lable.org does not designate 209.85.216.53 as permitted sender)
+Received: from [209.85.216.53] (HELO mail-qa0-f53.google.com) (209.85.216.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 02 Nov 2014 18:54:17 +0000
+Received: by mail-qa0-f53.google.com with SMTP id n8so7310079qaq.26
+        for <users@maven.apache.org>; Sun, 02 Nov 2014 10:53:55 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type:content-transfer-encoding;
+        bh=AbvfvYx980zYrDkiUWDJazii4Hl6TZ7WYYhlm4/hKRo=;
+        b=N0WIs4gwKhg2zZOs5hIplsHqaAux5PkzPC0sEWr3rLzamAeyxtI4dB33IGsC7KxJA/
+         IH/9zN2GAQn1Ahxw7lGGpnO3RY+y2mZCoMtZ+erye/jACouLHIWfe9rdGIRkarQ/pZl/
+         Z2hSUjFvhlaxtrdltYcnpLXNbghfzdJBuA53EqpM8N15qETiQYP5Tra3t1yHMarHvpRR
+         vkdaWANFPriNHImJHE6VTf5jt+vXgsS+dmp/GPi698gtVOqTK1qH1ZmZQMo/5hy0axDF
+         XTcOkxZ4P/CnU6EKLnceBLjDXPMO2Uv7gxLQIa38xirI3VYXDurMErgTUiGLO4x4cKzH
+         BbDA==
+X-Gm-Message-State: ALoCoQkTTFpMMmohyX583kXn+ErfeYQi09WmsqiL7C/V3DdRkj/O8zmAkPA5iQcxuCVnVl+wnmNO
+MIME-Version: 1.0
+X-Received: by 10.140.38.38 with SMTP id s35mr56545888qgs.8.1414954434903;
+ Sun, 02 Nov 2014 10:53:54 -0800 (PST)
+Received: by 10.140.22.6 with HTTP; Sun, 2 Nov 2014 10:53:54 -0800 (PST)
+X-Originating-IP: [85.151.160.140]
+In-Reply-To: <CAPJcxA-xz9LnOvJiBXQE_-3p7O1DOTjNFLzLRjE6pJguG71=NQ@mail.gmail.com>
+References: <CAPJcxA-xz9LnOvJiBXQE_-3p7O1DOTjNFLzLRjE6pJguG71=NQ@mail.gmail.com>
+Date: Sun, 2 Nov 2014 19:53:54 +0100
+Message-ID: <CAPJcxA93+c7U+FAuAk8mg6dQCysorxZF4NzzB46zuQ9=HXwQbA@mail.gmail.com>
+Subject: Re: Client-side SSL certifcates and Maven
+From: Jeroen Hoek <jeroen@lable.org>
+To: users@maven.apache.org
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Some further research on my part shows that a simple connection test
+using HttpComponents httpclient 4.3.5 does work, but that the version
+of httpclient used in Wagon 2.6 (httpclient 4.3.1) fails. Apparently
+the newer version of httpclient fixes the problem I ran into, although
+I do not know what the problem is exactly.
+
+For completeness sake: the simple connection test with httpclient 4.3.5 I u=
+sed:
+https://gist.github.com/jdhoek/192a965fc63f459b2bee
+
+As it turns out, Wagon 2.7 already uses httpclient 4.3.5. A custom
+build of Maven 3.2.3 with the Wagon dependency set to 2.7 works!
+
+When will a version of Maven 3.2.x built with Wagon 2.7 be released?
+
+Is something blocking Maven from depending on Wagon 2.7?
+
+2014-10-29 16:14 GMT+01:00 Jeroen Hoek <jeroen@lable.org>:
+> Hello,
+>
+> I am trying to get Maven (3.2.2) to work with an instance of Archiva
+> hosted behind a webserver secured with client-side SSL certificates.
+>
+> I have followed the guide at
+> https://maven.apache.org/guides/mini/guide-repository-ssl.html, and
+> imported the server-side SSL certificate into a Java .jks file. The
+> client-side certificate is a PKCS12 file, which works correctly in
+> Firefox and Chromium.
+>
+> I have a simple project that depends on an artifact hosted on my
+> Archiva server. When client-side SSL verification is disabled on the
+> server, `mvn clean install` works as expected, and the dependency is
+> downloaded.
+>
+> But it doesn't work when I activate client-side SSL verification, and
+> try the following command:
+>
+> mvn clean install -Djavax.net.debug=3Dssl
+> -Djavax.net.ssl.trustStore=3DPATH_TO_TRUSTDB.jks
+> -Djavax.net.ssl.trustStorePassword=3D****************
+> -Djavax.net.ssl.keyStore=3DPATH_TO_MY_CERT.p12
+> -Djavax.net.ssl.keyStoreType=3Dpkcs12
+> -Djavax.net.ssl.keyStorePassword=3D****************
+>
+> From what I can see in the output, my .p12 file is read by Maven at
+> the start, as is the trust-store, but it fails to complete requests to
+> the Archiva server, although TLS handshaking appears to work, so the
+> server-side certificate is trusted and accepted. The server throws the
+> "400: No required SSL certificate was sent" error message you get when
+> trying to talk to it without a client-side SSL certificate installed.
+> In the server log I am indeed seeing HTTP GET requests from Maven
+> without any client-side SSL certificate, whereas GETs by a browser do
+> show access with the valid certificate there.
+>
+> Any idea why Maven isn't using the client-side SSL certificate passed
+> via -Djavax.net.ssl.keyStoreType? Is there some configuration option I
+> am overlooking?
+>
+> Kind regards,
+>
+> Jeroen Hoek
+> Lable
+
+
+
+--=20
+Vriendelijke groeten,
+
+Jeroen Hoek
+
+Lable
+=E2=9C=89 jeroen@lable.org
+=E2=84=A1 088 44 20 202
+
+http://lable.org
+KvK =E2=84=96 55984037
+BTW =E2=84=96 NL8519.32.411.B.01
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,121 @@
+From users-return-137834-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Nov 25 19:31:32 2014
+Return-Path: <users-return-137834-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 96F3710CE7
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 25 Nov 2014 19:31:32 +0000 (UTC)
+Received: (qmail 34638 invoked by uid 500); 25 Nov 2014 19:31:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 34553 invoked by uid 500); 25 Nov 2014 19:31:25 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 34542 invoked by uid 99); 25 Nov 2014 19:31:25 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Nov 2014 19:31:25 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of pgribnau@informatica.com designates 65.55.169.138 as permitted sender)
+Received: from [65.55.169.138] (HELO na01-bl2-obe.outbound.protection.outlook.com) (65.55.169.138)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Nov 2014 19:30:58 +0000
+Received: from BN3PR0301MB0836.namprd03.prod.outlook.com (25.160.154.146) by
+ BN3PR0301MB0836.namprd03.prod.outlook.com (25.160.154.146) with Microsoft
+ SMTP Server (TLS) id 15.1.26.15; Tue, 25 Nov 2014 19:29:52 +0000
+Received: from BN3PR0301MB0836.namprd03.prod.outlook.com ([25.160.154.146]) by
+ BN3PR0301MB0836.namprd03.prod.outlook.com ([25.160.154.146]) with mapi id
+ 15.01.0026.003; Tue, 25 Nov 2014 19:29:52 +0000
+From: "Gribnau, Phillip" <pgribnau@informatica.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: RE: Linux Command Line System Property Issue
+Thread-Topic: Linux Command Line System Property Issue
+Thread-Index: AdAIS5UPpy9SuGUkQymYA+TCJXwhhwARzOwAABS/8IA=
+Date: Tue, 25 Nov 2014 19:29:51 +0000
+Message-ID: <BN3PR0301MB08366AC9F00A43E270118726CE730@BN3PR0301MB0836.namprd03.prod.outlook.com>
+References: <BN3PR0301MB083682B7D7D2057D2FC9D7FACE730@BN3PR0301MB0836.namprd03.prod.outlook.com>
+ <CAPCUOdEaR5v4BZwidq3ogUKTyhPiBmq0aXmg+rfHtCcAq5iQ1w@mail.gmail.com>
+In-Reply-To: <CAPCUOdEaR5v4BZwidq3ogUKTyhPiBmq0aXmg+rfHtCcAq5iQ1w@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [4.31.199.226]
+x-microsoft-antispam: BCL:0;PCL:0;RULEID:;SRVR:BN3PR0301MB0836;
+x-exchange-antispam-report-test: UriScan:;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:;SRVR:BN3PR0301MB0836;
+x-forefront-prvs: 040655413E
+x-forefront-antispam-report: SFV:NSPM;SFS:(10019020)(6009001)(51914003)(24454002)(199003)(164054003)(189002)(13464003)(377454003)(51704005)(53754006)(107046002)(105586002)(107886001)(77096003)(62966003)(101416001)(86362001)(450100001)(50986999)(76176999)(76576001)(106356001)(99286002)(95666004)(92566001)(110136001)(120916001)(21056001)(46102003)(2656002)(19580405001)(99396003)(19580395003)(122556002)(74316001)(40100003)(4396001)(33656002)(87936001)(92726001)(54606007)(77156002)(97736003)(31966008)(20776003)(54356999)(64706001)(54206007)(66066001);DIR:OUT;SFP:1102;SCL:1;SRVR:BN3PR0301MB0836;H:BN3PR0301MB0836.namprd03.prod.outlook.com;FPR:;SPF:None;MLV:sfv;PTR:InfoNoRecords;A:1;MX:1;LANG:en;
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+X-OriginatorOrg: informatica.com
+X-MS-Exchange-CrossPremises-AuthAs: Internal
+X-MS-Exchange-CrossPremises-AuthMechanism: 03
+X-MS-Exchange-CrossPremises-AuthSource: BN3PR0301MB0836.namprd03.prod.outlook.com
+X-MS-Exchange-CrossPremises-SCL: 1
+X-MS-Exchange-CrossPremises-messagesource: StoreDriver
+X-MS-Exchange-CrossPremises-BCC:
+X-MS-Exchange-CrossPremises-originalclientipaddress: 4.31.199.226
+X-MS-Exchange-CrossPremises-avstamp-service: 1.0
+X-MS-Exchange-CrossPremises-antispam-scancontext: DIR:Originating;SFV:NSPM;SKIP:0;
+X-MS-Exchange-CrossPremises-journaled-to-recipients: Automated-365-00cb7d@journalloma.liveoffice.com+journal@transparentsecurity.com+local-informaticaOffice365@journalloma.liveoffice.com
+X-MS-Exchange-CrossPremises-processed-by-journaling: Journal Agent
+X-OrganizationHeadersPreserved: BN3PR0301MB0836.namprd03.prod.outlook.com
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+SGksDQoNClRoYW5rcyBmb3IgdGhlIHN1Z2dlc3Rpb24uIEkgdHJpZWQgaXQgYnV0IGl0IGRvZXNu
+J3Qgd29yay4gRm9yIHNvbWUgcmVhc29uIG9uIGxpbnV4IGl0IHRyaWVzIHRvIHByb2Nlc3MgdGhl
+IHNlY29uZCBhcmd1bWVudCBhcyBhIGxpZmVjeWNsZSBwaGFzZS4gSSBhbSB1c2luZyB2My4yLjEg
+YnR3Lg0KDQptdm4gY2xlYW4gaW5zdGFsbCAiLURtYXZlbkFyZ0xpbmU9YXJnMSBhcmcyIiAtZSAy
+PiYxDQoNCltFUlJPUl0gVW5rbm93biBsaWZlY3ljbGUgcGhhc2UgImFyZzIiLiBZb3UgbXVzdCBz
+cGVjaWZ5IGEgdmFsaWQgbGlmZWN5Y2xlIHBoYXNlIG9yIGEgZ29hbCBpbiB0aGUgZm9ybWF0IDxw
+bHVnaW4tcHJlZml4Pjo8Z29hbD4gb3IgPHBsdWdpbi1ncm91cC1pZD46PHBsdWdpbi1hcnRpZmFj
+dC1pZD5bOjxwbHVnaW4tdmVyc2lvbj5dOjxnb2FsPi4gQXZhaWxhYmxlIGxpZmVjeWNsZSBwaGFz
+ZXMgYXJlOiB2YWxpZGF0ZSwgaW5pdGlhbGl6ZSwgZ2VuZXJhdGUtc291cmNlcywgcHJvY2Vzcy1z
+b3VyY2VzLCBnZW5lcmF0ZS1yZXNvdXJjZXMsIHByb2Nlc3MtcmVzb3VyY2VzLCBjb21waWxlLCBw
+cm9jZXNzLWNsYXNzZXMsIGdlbmVyYXRlLXRlc3Qtc291cmNlcywgcHJvY2Vzcy10ZXN0LXNvdXJj
+ZXMsIGdlbmVyYXRlLXRlc3QtcmVzb3VyY2VzLCBwcm9jZXNzLXRlc3QtcmVzb3VyY2VzLCB0ZXN0
+LWNvbXBpbGUsIHByb2Nlc3MtdGVzdC1jbGFzc2VzLCB0ZXN0LCBwcmVwYXJlLXBhY2thZ2UsIHBh
+Y2thZ2UsIHByZS1pbnRlZ3JhdGlvbi10ZXN0LCBpbnRlZ3JhdGlvbi10ZXN0LCBwb3N0LWludGVn
+cmF0aW9uLXRlc3QsIHZlcmlmeSwgaW5zdGFsbCwgZGVwbG95LCBwcmUtc2l0ZSwgc2l0ZSwgcG9z
+dC1zaXRlLCBzaXRlLWRlcGxveSwgcHJlLWNsZWFuLCBjbGVhbiwgcG9zdC1jbGVhbi4gLT4gW0hl
+bHAgMV0NCg0KLS0tLS1PcmlnaW5hbCBNZXNzYWdlLS0tLS0NCkZyb206IEFkcmllbiBSaXZhcmQg
+W21haWx0bzphZHJpZW4ucml2YXJkQGdtYWlsLmNvbV0gDQpTZW50OiBUdWVzZGF5LCBOb3ZlbWJl
+ciAyNSwgMjAxNCAxOjMzIEFNDQpUbzogTWF2ZW4gVXNlcnMgTGlzdA0KU3ViamVjdDogUmU6IExp
+bnV4IENvbW1hbmQgTGluZSBTeXN0ZW0gUHJvcGVydHkgSXNzdWUNCg0KSGksDQoNCk1heWJlIHRy
+eSAiLURtYXZlbkFyZ0xpbmU9YXJnMSBhcmcyIg0KSXQgd29ya3Mgb24gcGxhaW4gamF2YSBidXQg
+Y2FuJyd0IHRoaW5rIG9mIGEgd2F5IHRvIHRlc3QgaXQgcXVpY2tseSB3aXRoIG1hdmVuLg0KDQoN
+Ck9uIFR1ZSwgTm92IDI1LCAyMDE0IGF0IDI6MjEgQU0sIEdyaWJuYXUsIFBoaWxsaXAgPHBncmli
+bmF1QGluZm9ybWF0aWNhLmNvbT4NCndyb3RlOg0KDQo+IEhpIEV2ZXJ5b25lLA0KPg0KPiBJIGFt
+IGhhdmluZyB0cm91YmxlIHBhc3NpbmcgaW4gYSB2YWx1ZSB2aWEgdGhlIGNvbW1hbmQgbGluZSBv
+biBiYXNoIGluIA0KPiBsaW51eCwgYnV0IEkgaGF2ZSBpdCB3b3JraW5nIGNvcnJlY3RseSBvbiB3
+aW5kb3dzLg0KPg0KPiBPbiB0aGUgY29tbWFuZCBsaW5lLCBpZiBJIHBhc3MgaW4gdGhlIGZvbGxv
+d2luZzoNCj4gLURtYXZlbkFyZ0xpbmU9ImFyZzEgYXJnMiINCj4NCj4gVGhlIGVycm9yIG9uIGxp
+bnV4IGlzOiBVbmtub3duIGxpZmVjeWNsZSBwaGFzZSAiYXJnMiINCj4gV2luZG93cyBpcyBhYmxl
+IHRvIGludGVycHJldCB0aGlzIGNvcnJlY3RseSBhbmQgc2hvdyAiYXJnMSBhcmcyIiBpbiANCj4g
+dGhlIG91dHB1dCwgdmVyaWZpZWQgYnkgdXNpbmcgdGhlIGZvbGxvd2luZyBwbHVnaW46DQo+DQo+
+IDxwbHVnaW4+DQo+ICAgICAgICAgPGFydGlmYWN0SWQ+bWF2ZW4tYW50cnVuLXBsdWdpbjwvYXJ0
+aWZhY3RJZD4NCj4gICAgICAgICA8dmVyc2lvbj4xLjc8L3ZlcnNpb24+DQo+ICAgICAgICAgPGV4
+ZWN1dGlvbnM+DQo+ICAgICAgICAgICA8ZXhlY3V0aW9uPg0KPiAgICAgICAgICAgICA8cGhhc2U+
+Z2VuZXJhdGUtc291cmNlczwvcGhhc2U+DQo+ICAgICAgICAgICAgIDxjb25maWd1cmF0aW9uPg0K
+PiAgICAgICAgICAgICAgIDx0YXNrcz4NCj4gICAgICAgICAgICAgICAgIDxlY2hvPiR7bWF2ZW5B
+cmdMaW5lfTwvZWNobz4NCj4gICAgICAgICAgICAgICA8L3Rhc2tzPg0KPiAgICAgICAgICAgICA8
+L2NvbmZpZ3VyYXRpb24+DQo+ICAgICAgICAgICAgIDxnb2Fscz4NCj4gICAgICAgICAgICAgICA8
+Z29hbD5ydW48L2dvYWw+DQo+ICAgICAgICAgICAgIDwvZ29hbHM+DQo+ICAgICAgICAgICA8L2V4
+ZWN1dGlvbj4NCj4gICAgICAgICA8L2V4ZWN1dGlvbnM+DQo+ICAgICAgIDwvcGx1Z2luPg0KPg0K
+Pg0KPiBNeSBuZWVkIGlzIHRoYXQgdGhlIHZhbHVlIG9mIG1hdmVuQXJnTGluZSBoYXMgdG8gYmUg
+Z2l2ZW4gZnJvbSB0aGUgDQo+IGNvbW1hbmQgbGluZSBhcyB0aGUgdmFsdWUgY2FuIGRpZmZlciBm
+cm9tIGRpZmZlcmVudCBlbnZpcm9ubWVudHMuIElzIA0KPiB0aGVyZSBhIHdheSB0byBwYXNzIGlu
+IHRoZSB2YWx1ZSBvZiBtYXZlbkFyZ0xpbmUgaW4gbGludXggd2l0aCBzcGFjZXM/DQo+DQo+DQo+
+IFRoYW5rcywNCj4gUGhpbGxpcA0KPg0KPg0KDQoNCi0tDQpBZHJpZW4gUml2YXJkDQo=
+DQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0NClRvIHVuc3Vic2NyaWJlLCBlLW1haWw6IHVzZXJzLXVuc3Vi
+c2NyaWJlQG1hdmVuLmFwYWNoZS5vcmcNCkZvciBhZGRpdGlvbmFsIGNvbW1hbmRzLCBlLW1h
+aWw6IHVzZXJzLWhlbHBAbWF2ZW4uYXBhY2hlLm9yZw0K
+

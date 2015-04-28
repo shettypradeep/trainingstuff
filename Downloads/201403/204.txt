@@ -1,0 +1,525 @@
+From users-return-135719-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar  6 14:18:12 2014
+Return-Path: <users-return-135719-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6E3F310510
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  6 Mar 2014 14:18:12 +0000 (UTC)
+Received: (qmail 64642 invoked by uid 500); 6 Mar 2014 14:18:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 64580 invoked by uid 500); 6 Mar 2014 14:18:05 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 64156 invoked by uid 99); 6 Mar 2014 14:18:01 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 14:18:01 +0000
+X-ASF-Spam-Status: No, hits=2.4 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of vijayd1508@gmail.com designates 209.85.192.63 as permitted sender)
+Received: from [209.85.192.63] (HELO mail-qg0-f63.google.com) (209.85.192.63)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 14:17:53 +0000
+Received: by mail-qg0-f63.google.com with SMTP id a108so563484qge.8
+        for <users@maven.apache.org>; Thu, 06 Mar 2014 06:17:32 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:content-type;
+        bh=V/mw5KfOqXmzXbH31HoWDYHwm+7Cv5lKps8QP12kl5g=;
+        b=piHgIim2p+R0vIsEO+Fy6zIRmI2CJN9g36UjQyxeGAx01GeNU+jEnLWeIrer2MMR8Y
+         rvIth0KIEZisEj3h9xm4SWX4xiH9xr/7D/G0khPyMnffUbIzxYCyPXnh60pwSBXkjY1w
+         f+LZf9geX7g6EfAfPvkhTp3aMeBDOxMU2xaov/4LTaqxdXin41qgC3e0aQhvmpMToYqj
+         wmd5Ycg7+Sxq5b3xCDqbH1MKkhWNfRdjmzO2l5v7ytTFn4nKMQI1xx4KuCskVJDMW/TR
+         a01STiN4Oa5memQ/bnurTdWH3P4czWN+bierY6+MfyRFVYFZBTQm6GD06bfk+aQHI5F5
+         DiHw==
+X-Received: by 10.50.47.74 with SMTP id b10mr604086ign.1.1394115452718;
+        Thu, 06 Mar 2014 06:17:32 -0800 (PST)
+X-Google-Doc-Id: 424f84e1ba07de10
+X-Google-Web-Client: true
+Date: Thu, 6 Mar 2014 06:17:31 -0800 (PST)
+From: D Vijay <vijayd1508@gmail.com>
+To: maven-users@googlegroups.com
+Message-Id: <75a9f35a-20a5-4279-bf41-e435a8504617@googlegroups.com>
+Subject: Maven Release Plugin throws svn : '' is not a working copy
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_218_14418886.1394115451815"
+X-Google-IP: 27.251.146.66
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+------=_Part_218_14418886.1394115451815
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_219_8118927.1394115451815"
+
+------=_Part_219_8118927.1394115451815
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Dear All,
+
+
+
+
+
+
+
+
+
+
+
+I have a mavenized project and when I try to do a mvn release:prepare from 
+command prompt, I get the below error. Is it because of https communication 
+this is happening? I have downloaded the client certificate from the 
+browser, do I need to use this for communication? How can I use this 
+certificate on my desktop(windows) and later move on to linux(where my 
+jenkins server is present) and kick start the job from jenkins.
+
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-release-plugin:2.4
+.2:prepare (default-cli) on project SimpleWeb: Unable to check for local modific
+ations
+[ERROR] Provider message:
+[ERROR] SVN status failed.
+[ERROR] Command output:
+[ERROR] svn: '' is not a working copy
+
+I have the below questions:
+
+   1. How is the scm configuration is given in POM file
+   2. If the communication to scm should happen through https, how can we 
+   configure the certificate on the client side
+   3. The release should happen from branch or trunk
+
+My scm configuration is as follows:
+
+<scm>
+        <connection>scm:svn:https://domain.com/svn/New_FW/CI_POC/SimpleWeb/trunk</connection>
+        <developerConnection>scm:svn:https://domain.com/svn/New_FW/CI_POC/SimpleWeb/trunk</developerConnection>
+        <url>https://domain.com/svn/New_FW/CI_POC/SimpleWeb/trunk</url>
+    </scm>
+
+My maven release plugin configuration is as follows:
+
+<plugin>
+                          <groupId>org.apache.maven.plugins</groupId>
+                          <artifactId>maven-scm-plugin</artifactId>
+                          <version>1.3</version>
+                          <configuration>
+                            <providerImplementations>
+                              <svn>javasvn</svn>
+                            </providerImplementations>
+                            <username>${scm.username}</username>                            
+                            <password>${scm.password}</password>
+                          </configuration>
+                          <dependencies>
+                            <dependency>
+                              <groupId>com.google.code.maven-scm-provider-svnjava</groupId>
+                              <artifactId>maven-scm-provider-svnjava</artifactId>
+                              <version>1.14</version>
+                            </dependency>
+                          </dependencies>
+                    </plugin>           
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-release-plugin</artifactId>
+                        <version>2.4.2</version>
+                        <dependencies>
+                            <dependency>    
+                            <groupId>com.google.code.maven-scm-provider-svnjava</groupId>
+                            <artifactId>maven-scm-provider-svnjava</artifactId>
+                            <version>1.6</version>
+                            </dependency>
+                        </dependencies>
+                        <configuration>
+                            <providerImplementations>
+                                <svn>javasvn</svn>
+                            </providerImplementations>
+                            <tagBase>https://domain-inc.com/svn/New_FW/CI_POC/SimpleWeb/tags</tagBase>
+                            <mavenExecutorId>forked-path</mavenExecutorId>
+                        </configuration>
+                    </plugin>
+
+I am struck here and cant move ahead. Please help/guide me in resolving the 
+issue. When I run the same by configuring the Maven Release Plugin in 
+Jenkins I get a different error as: "svn: Authentication required". Why is 
+this difference.
+
+
+Thank You,
+Vijay
+
+------=_Part_219_8118927.1394115451815
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Dear All,<br><br><table style=3D"margin: 0px; padding: 0px=
+; border: 0px; font-size: 13px; vertical-align: baseline; background-color:=
+ rgb(255, 255, 255); border-collapse: collapse; border-spacing: 0px; color:=
+ rgb(0, 0, 0); font-family: Arial, 'Liberation Sans', 'DejaVu Sans', sans-s=
+erif; font-style: normal; font-variant: normal; font-weight: normal; letter=
+-spacing: normal; line-height: 12.800000190734863px; orphans: auto; text-al=
+ign: left; text-indent: 0px; text-transform: none; white-space: normal; wid=
+ows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-po=
+sition: initial initial; background-repeat: initial initial;"><tbody style=
+=3D"margin: 0px; padding: 0px; border: 0px; font-size: 13px; vertical-align=
+: baseline; background-color: transparent; background-position: initial ini=
+tial; background-repeat: initial initial;"><tr style=3D"margin: 0px; paddin=
+g: 0px; border: 0px; font-size: 13px; vertical-align: baseline; background-=
+color: transparent; background-position: initial initial; background-repeat=
+: initial initial;"><td class=3D"votecell" style=3D"margin: 0px; padding: 0=
+px; border: 0px; font-size: 13px; vertical-align: top; background-color: tr=
+ansparent; width: 60px; background-position: initial initial; background-re=
+peat: initial initial;"><div class=3D"vote" style=3D"margin: 0px; padding: =
+0px; border: 0px; font-size: 13px; vertical-align: baseline; background-col=
+or: transparent; text-align: center; background-position: initial initial; =
+background-repeat: initial initial;"><span class=3D"vote-count-post " style=
+=3D"margin: 0px; padding: 2px 0px 0px; border: 0px; font-size: 24px; vertic=
+al-align: baseline; background-color: transparent; display: block; color: r=
+gb(85, 85, 85); font-weight: normal; background-position: initial initial; =
+background-repeat: initial initial;"><br><br><br><br><br><br></span></div><=
+br><br><br><br></td><td class=3D"postcell" style=3D"margin: 0px; padding: 0=
+px; border: 0px; font-size: 13px; vertical-align: baseline; background-colo=
+r: transparent; background-position: initial initial; background-repeat: in=
+itial initial;"><div style=3D"margin: 0px; padding: 0px; border: 0px; font-=
+size: 13px; vertical-align: baseline; background-color: transparent; backgr=
+ound-position: initial initial; background-repeat: initial initial;"><div c=
+lass=3D"post-text" itemprop=3D"description" style=3D"margin: 0px 5px 5px 0p=
+x; padding: 0px; border: 0px; font-size: 14px; vertical-align: baseline; ba=
+ckground-color: transparent; word-wrap: break-word; width: 660px; line-heig=
+ht: 17.804800033569336px; background-position: initial initial; background-=
+repeat: initial initial;"><p style=3D"margin: 0px 0px 1em; padding: 0px; bo=
+rder: 0px; font-size: 14px; vertical-align: baseline; background-color: tra=
+nsparent; clear: both; background-position: initial initial; background-rep=
+eat: initial initial;">I have a mavenized project and when I try to do a mv=
+n release:prepare from command prompt, I get the below error. Is it because=
+ of https communication this is happening? I have=20
+downloaded the client certificate from the browser, do I need to use=20
+this for communication? How can I use this certificate on my desktop(window=
+s) and later move on to linux(where my jenkins server is present) and kick =
+start the job from jenkins.<br></p><pre style=3D"margin: 0px 0px 10px; padd=
+ing: 5px; border: 0px; font-size: 14px; vertical-align: baseline; backgroun=
+d-color: rgb(238, 238, 238); font-family: Consolas, Menlo, Monaco, 'Lucida =
+Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono'=
+, 'Courier New', monospace, serif; overflow: auto; width: auto; max-height:=
+ 600px; word-wrap: normal; background-position: initial initial; background=
+-repeat: initial initial;"><code style=3D"margin: 0px; padding: 0px; border=
+: 0px; font-size: 14px; vertical-align: baseline; background-color: rgb(238=
+, 238, 238); font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liber=
+ation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New',=
+ monospace, serif; white-space: inherit; background-position: initial initi=
+al; background-repeat: initial initial;">[ERROR] Failed to execute goal org=
+.apache.maven.plugins:maven-release-plugin:2.4
+.2:prepare (default-cli) on project SimpleWeb: Unable to check for local mo=
+dific
+ations
+[ERROR] Provider message:
+[ERROR] SVN status failed.
+[ERROR] Command output:
+[ERROR] svn: '' is not a working copy
+</code></pre><p style=3D"margin: 0px 0px 1em; padding: 0px; border: 0px; fo=
+nt-size: 14px; vertical-align: baseline; background-color: transparent; cle=
+ar: both; background-position: initial initial; background-repeat: initial =
+initial;">I have the below questions:</p><ol style=3D"margin: 0px 0px 1em 3=
+0px; padding: 0px; border: 0px; font-size: 14px; vertical-align: baseline; =
+background-color: transparent; list-style: decimal; background-position: in=
+itial initial; background-repeat: initial initial;"><li style=3D"margin: 0p=
+x; padding: 0px; border: 0px; font-size: 14px; vertical-align: baseline; ba=
+ckground-color: transparent; background-position: initial initial; backgrou=
+nd-repeat: initial initial;">How is the scm configuration is given in POM f=
+ile</li><li style=3D"margin: 0px; padding: 0px; border: 0px; font-size: 14p=
+x; vertical-align: baseline; background-color: transparent; background-posi=
+tion: initial initial; background-repeat: initial initial;">If the communic=
+ation to scm should happen through https, how can we configure the certific=
+ate on the client side</li><li style=3D"margin: 0px; padding: 0px; border: =
+0px; font-size: 14px; vertical-align: baseline; background-color: transpare=
+nt; background-position: initial initial; background-repeat: initial initia=
+l;">The release should happen from branch or trunk</li></ol><p style=3D"mar=
+gin: 0px 0px 1em; padding: 0px; border: 0px; font-size: 14px; vertical-alig=
+n: baseline; background-color: transparent; clear: both; background-positio=
+n: initial initial; background-repeat: initial initial;">My scm configurati=
+on is as follows:</p><pre style=3D"margin: 0px 0px 10px; padding: 5px; bord=
+er: 0px; font-size: 14px; vertical-align: baseline; background-color: rgb(2=
+38, 238, 238); font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Lib=
+eration Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New=
+', monospace, serif; overflow: auto; width: auto; max-height: 600px; word-w=
+rap: normal; background-position: initial initial; background-repeat: initi=
+al initial;"><code style=3D"margin: 0px; padding: 0px; border: 0px; font-si=
+ze: 14px; vertical-align: baseline; background-color: rgb(238, 238, 238); f=
+ont-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', '=
+DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, se=
+rif; white-space: inherit; background-position: initial initial; background=
+-repeat: initial initial;">&lt;scm&gt;
+        &lt;connection&gt;scm:svn:https://domain.com/svn/New_FW/CI_POC/Simp=
+leWeb/trunk&lt;/connection&gt;
+        &lt;developerConnection&gt;scm:svn:https://domain.com/svn/New_FW/CI=
+_POC/SimpleWeb/trunk&lt;/developerConnection&gt;
+        &lt;url&gt;https://domain.com/svn/New_FW/CI_POC/SimpleWeb/trunk&lt;=
+/url&gt;
+    &lt;/scm&gt;
+</code></pre><p style=3D"margin: 0px 0px 1em; padding: 0px; border: 0px; fo=
+nt-size: 14px; vertical-align: baseline; background-color: transparent; cle=
+ar: both; background-position: initial initial; background-repeat: initial =
+initial;">My maven release plugin configuration is as follows:</p><pre styl=
+e=3D"margin: 0px 0px 10px; padding: 5px; border: 0px; font-size: 14px; vert=
+ical-align: baseline; background-color: rgb(238, 238, 238); font-family: Co=
+nsolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mo=
+no', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif; overflow:=
+ auto; width: auto; max-height: 600px; word-wrap: normal; background-positi=
+on: initial initial; background-repeat: initial initial;"><code style=3D"ma=
+rgin: 0px; padding: 0px; border: 0px; font-size: 14px; vertical-align: base=
+line; background-color: rgb(238, 238, 238); font-family: Consolas, Menlo, M=
+onaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream =
+Vera Sans Mono', 'Courier New', monospace, serif; white-space: inherit; bac=
+kground-position: initial initial; background-repeat: initial initial;">&lt=
+;plugin&gt;
+                          &lt;groupId&gt;org.apache.maven.plugins&lt;/group=
+Id&gt;
+                          &lt;artifactId&gt;maven-scm-plugin&lt;/artifactId=
+&gt;
+                          &lt;version&gt;1.3&lt;/version&gt;
+                          &lt;configuration&gt;
+                            &lt;providerImplementations&gt;
+                              &lt;svn&gt;javasvn&lt;/svn&gt;
+                            &lt;/providerImplementations&gt;
+                            &lt;username&gt;${scm.username}&lt;/username&gt=
+;                           =20
+                            &lt;password&gt;${scm.password}&lt;/password&gt=
+;
+                          &lt;/configuration&gt;
+                          &lt;dependencies&gt;
+                            &lt;dependency&gt;
+                              &lt;groupId&gt;com.google.code.maven-scm-prov=
+ider-svnjava&lt;/groupId&gt;
+                              &lt;artifactId&gt;maven-scm-provider-svnjava&=
+lt;/artifactId&gt;
+                              &lt;version&gt;1.14&lt;/version&gt;
+                            &lt;/dependency&gt;
+                          &lt;/dependencies&gt;
+                    &lt;/plugin&gt;          =20
+                    &lt;plugin&gt;
+                        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId=
+&gt;
+                        &lt;artifactId&gt;maven-release-plugin&lt;/artifact=
+Id&gt;
+                        &lt;version&gt;2.4.2&lt;/version&gt;
+                        &lt;dependencies&gt;
+                            &lt;dependency&gt;   =20
+                            &lt;groupId&gt;com.google.code.maven-scm-provid=
+er-svnjava&lt;/groupId&gt;
+                            &lt;artifactId&gt;maven-scm-provider-svnjava&lt=
+;/artifactId&gt;
+                            &lt;version&gt;1.6&lt;/version&gt;
+                            &lt;/dependency&gt;
+                        &lt;/dependencies&gt;
+                        &lt;configuration&gt;
+                            &lt;providerImplementations&gt;
+                                &lt;svn&gt;javasvn&lt;/svn&gt;
+                            &lt;/providerImplementations&gt;
+                            &lt;tagBase&gt;https://domain-inc.com/svn/New_F=
+W/CI_POC/SimpleWeb/tags&lt;/tagBase&gt;
+                            &lt;mavenExecutorId&gt;forked-path&lt;/mavenExe=
+cutorId&gt;
+                        &lt;/configuration&gt;
+                    &lt;/plugin&gt;
+</code></pre><p style=3D"margin: 0px 0px 1em; padding: 0px; border: 0px; fo=
+nt-size: 14px; vertical-align: baseline; background-color: transparent; cle=
+ar: both; background-position: initial initial; background-repeat: initial =
+initial;">I
+ am struck here and cant move ahead. Please help/guide me in resolving=20
+the issue. When I run the same by configuring the Maven Release Plugin=20
+in Jenkins I get a different error as: "svn: Authentication required".=20
+Why is this difference.</p></div></div></td></tr></tbody></table><br><br>Th=
+ank You,<br>Vijay<br></div>
+------=_Part_219_8118927.1394115451815--
+
+------=_Part_218_14418886.1394115451815
+Content-Type: application/zip; name=maven-release-plugin.zip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename=maven-release-plugin.zip
+X-Attachment-Id: 21399660-2df4-4c46-a493-d663ca48128f
+Content-ID: <21399660-2df4-4c46-a493-d663ca48128f>
+
+UEsDBBQAAAAAAMWcZkQAAAAAAAAAAAAAAAAVAAAAbWF2ZW4tcmVsZWFzZS1wbHVnaW4vUEsDBBQA
+AAAIAMWcZkRji+OXYAUAAIgRAAAjAAAAbWF2ZW4tcmVsZWFzZS1wbHVnaW4vbXZuIG91dHB1dC50
+eHTlV9tu00AQfbfkfxieCog4FwoISyDatIVINKA0BSRcoY09Sba1d63dddL8PbO24wuQqgUqHshT
+vJeZMzNnLnvkB5/4JdsEY1x/O1EswbVUV8Fw9O3jh2FwxpM0xs84C4zKxNXrZCWgc6SveDpFbfQr
+WkUIY2QCuNCGxbHrQOcQFNKaRj9VmDKFdCdSm0km8guu83U0PvlwAWchE4KLBcylglTJSwyN9jxv
+e6A62PlLv0rgYcbjyGquDIRTtkIB9I+lKfS9ntfrnI0PPp69+zC9NxxNwZBYAJ3cmZ00zhZc+APv
+mV9492GEc5bFpth/BG8ayJuGHZHjjTXsTnENDFMLNDfAUqhlpkLUNbTnfrVYw6uWWhBdp8D4+WAy
+Ho3fXsC5thjTmBkKfQIoQpmH4+Ew7Q+eDYCFJiMybR6BkRDKdANzHhtUGEGl4YnrcA89mNlYAte1
+uAhTFBEK86CyZEgyrIJedf+mGMgk5TGqRhi8vl+u1raWC78IRtPUEzpSG7hkGoQ0MEMim0bzBLId
+rig88QQKG13ndlZaRPZ2Hworrd+QnHhHPrhOwYggjJnWqO/KDEPVYfIzO6rlmiGus/Xcv6aIrWoU
+GwF4zbXNoUrOEVdUmaTa3M6LrlP5UaswsEYHFaQ7085eH/5IvXqxph+p/bEajKVZkiG5h0oRHSCn
+QRlWsLU5S+1+xMxNKaEzhXNyQ42tP/D2c3BtVLtLk+0Yucbc0ylG3g361qzhhoFPn7Ua+tit5SML
+r9jCGr3OS3m1cUAGJ7O43oGvlYQL6l7w9VbBtcWsVTTrjYsahJIUap3rYlVraxWjGkdN11tDKAEQ
+mYhfCeMiKERVCLZ9jBVGY5Qb+PIFJBpDfdHugyVM/3bsttp/Nt91aMMjKTWC48MO/bPIvOskJtop
+ZNEGWBRh9KTgAGm+gQPlRFHzYN8vl2oulAu7+TAqDvxuS2yG3ZpnU2XoB+calQ4iGUUsZqvASwaU
+4anU3FaJgHItSDaRzCOjcwEN8a3ZwnWm9VanPXZYfX9uRyoT6/8KuOv8Jegt4K7Thk5a/+cprpx/
+G9T1BtthuDnL8d3EHS6ZWFDrXiKU52FPr8SerSYrHqGC/FpCPYwZLoUN8N4lWzF7yKvEULvNEuuj
+EhLMlUwgXdJfkhcmnXCJ4VUnoeY652EuSe9Vtz+h4nNbqwgHMxYM4bc2CAmxDFkMzYvN2R0A+EJI
+Ze+GuSkapPDh8eOgROKRISkqw6lP0/KWqJ7Aa9NcIGqVNw6ptmdp6/DsF0uKiXDZWjJsUT86Po1B
+k8syDdG2r9+x9N0bk+DwfPT+CE4ORu/PJ8f3p2YqDYXO8AR96Pe8QW+gq70TLrheUsdgxofpMqOU
+UtB7Dv2X/tNn/n4fRmdTGPT6+80bJO0UE/KklXfaHeyf3gf448nkw4T0MU4dzfIdrzHMDMJCEgCp
+Fh5LGfHZy5PQK5JP+ztSkgzYmZRSbJt2nZ0+nAs2K6bpPGnss7WdBa5T5EGN9eM2WROaB9gC/e1W
+i4jz3CJvu5cP8gkTEcjMpJlpXNIryqG9O7F1D3jx5mBgT+UJKV0n3dRSO6/h6zuMqWJeVIv17lTS
+S6WoRPMsji1oMt4oRs8LOc/XUSmpKI1pQCSVZRVec7PMdzs08tGH64TLho2TxtniFVQc/pIfDpd5
+gK3HS7URzrIF+Xthp7taToMXFA7iINKsY2f8oiqyGfmwgRGsW6ndaW4Faxln9hhBT4vySEOK60SF
+sTKO5driYlSl6OGt60BU/oKlManf7YZrfsW3/CMqdkMp5nFGzxbsRlzTw2PTPT34dDzunspLaSlM
+E/XxNVEGU4vgO1BLAwQUAAAAAABHnGZEAAAAAAAAAAAAAAAAKwAAAG1hdmVuLXJlbGVhc2UtcGx1
+Z2luL3N2biBwcm9qZWN0IHN0cnVjdHVyZS9QSwMEFAAAAAAAPJxmRAAAAAAAAAAAAAAAADUAAABt
+YXZlbi1yZWxlYXNlLXBsdWdpbi9zdm4gcHJvamVjdCBzdHJ1Y3R1cmUvU2ltcGxlV2ViL1BLAwQU
+AAAAAAAhnGZEAAAAAAAAAAAAAAAAPgAAAG1hdmVuLXJlbGVhc2UtcGx1Z2luL3N2biBwcm9qZWN0
+IHN0cnVjdHVyZS9TaW1wbGVXZWIvYnJhbmNoZXMvUEsDBBQAAAAAACScZkQAAAAAAAAAAAAAAAA6
+AAAAbWF2ZW4tcmVsZWFzZS1wbHVnaW4vc3ZuIHByb2plY3Qgc3RydWN0dXJlL1NpbXBsZVdlYi90
+YWdzL1BLAwQUAAAAAABXnGZEAAAAAAAAAAAAAAAAOwAAAG1hdmVuLXJlbGVhc2UtcGx1Z2luL3N2
+biBwcm9qZWN0IHN0cnVjdHVyZS9TaW1wbGVXZWIvdHJ1bmsvUEsDBBQAAAAIAEaKZkQIEyKyaQMA
+AMgLAABCAAAAbWF2ZW4tcmVsZWFzZS1wbHVnaW4vc3ZuIHByb2plY3Qgc3RydWN0dXJlL1NpbXBs
+ZVdlYi90cnVuay9wb20ueG1srVbJbtswED0rX2EEvUq0syEwWANt2qIBsqEJkt4MWqJlJhIpkJTs
+oui/d0gtlGzLcdPoInHmzXDeLBRxJsUzDfVglSZcfTxcaJ2NEUpJQXlAMhIuaCBkjO5ur9FJMAyG
+hyVyvFKsQS+Xy2B5bHFHw+EI/by+ugfDlPiMK014SA8PPDAYKyu9EiHRTPA9dhv0IEqBX5xMh9Nh
+sFLR4eTAw6mIaPJIpQLnE2uPUVtmMLEUeXYZTUKRBiFXLFAszRKKUaUwGCI1m5NQw+reap/oDKNa
+WmIglBcSMx5PlkRi1CyNrqi2G5kQ/PubT3f3328fMCpcGJyk1DkfXBs6A/giWYaRURpQLpNJTwIw
+MkoPQCpMAevhUHAOhTT+QTRWBR8bWwXG4Sm4LSxfqEgYAHcEenRDl9NvT+jicnp3e4GaaJCWOX/B
+yHm0G0S0oInIqLx4952c6+6WhuN/ugYXJpXIpsmQyCiPKA8ZVbBuCX6ZpeuP55wz3e4Kz/WFU9eS
+EuEqfxycB6N2wT1TKGA40VSBnf22+yMXwO54SEFWgaKySOiOuCqATzLWH91RcLo1NjgLChbRqDe+
+eukSiGc5SyKLnDNOkptOX2PUCC0kS3KYETWBLc22jQSU9hkMGr7Q43W7l71f2TbUnU2bf3kuQLH9
+Eu+S0LFwE3rcZMKpzSzNWZxLojty0FQpkpeGYUq5thDlMBYFfWkLBm/IZdF1gfbwgXMopD0GPvwG
+MkG9/INRoymx7umESZRaChlV5vUSzOvPFlvUQ3d9WJx71xNd4p3TNRYiTijMaUQDV5aavA9pMSna
+rCc83ZruMq5hG/auwqOTusRrddjGYq3Bqy5FZTP19u2/d+0mP0kTShTt69vu/J4ERxuk9ipXq1G8
+96iW9/ZCtf+TZ3uXaGuBvO0T6+0Y1+rpHVXv1Tn1sCbxZyjZ239RJIbOqLw4tzaNX1c0zLWQkK+5
+kC808jOiFxitKWurtSFeb9wD963sMV4f2zhiSks2y43VNeEktkytgaSZUAy2qX5FLJp8EVFEEvJ4
+9fB0fgZzxWwA5XVmTVk3tGruM17nRhOV6CLRS0C3czY+H56P6oYx26OEzVTjz0/g/pjYP3vJqxsn
+VpxkaiH0j9fC92uk2kXEwd6NSe1wg8m20EHcVyOMyts7fP4FUEsDBBQAAAAIAGKcZkRNe1ZoPwEA
+AOoBAABNAAAAbWF2ZW4tcmVsZWFzZS1wbHVnaW4vc3ZuIHByb2plY3Qgc3RydWN0dXJlL1NpbXBs
+ZVdlYi90cnVuay9yZWxlYXNlLnByb3BlcnRpZXOdkEtrwkAUhfeB/IcBt02i0heBQK1gcVEbquCi
+Frmd3EymzouZiQ+K/72Tauu+qwv3cb5zbs+iQHBIqFY1Z60Fz7WKo96iackzWNK/JYP7fHiTD+7I
+dL4gw/7gOo4clakHNgOJE20l+OLhy1j9idSnYD2vgfppdUwu3S1aF5SPcWRa14wbUAxd4W2LJ7XW
+iiLUVe62apU33hu3yrNMHiotgauUapmFUTbD3XqyzMbTdfkyzuZcGoFL/MiCktoEcYsGTiGeNAhX
+0BBPkUDn9SGOLErtcQGMccUu9E5dovKlxZrvizcJW1TJ+TWJEW1Yfyd/sR9Dt/iHRWAujnCPNIWq
+4p1HECPL2g7tiqQkv6/T9nAVWKXVNRd4vnEKjGu0fz3ZKn9cjYTQO6yKOmQNi1R3MI9V2XQeaYN0
+kxgtA/cbUEsDBBQAAAAAACqcZkQAAAAAAAAAAAAAAAA/AAAAbWF2ZW4tcmVsZWFzZS1wbHVnaW4v
+c3ZuIHByb2plY3Qgc3RydWN0dXJlL1NpbXBsZVdlYi90cnVuay9zcmMvUEsDBBQAAAAAACqcZkQA
+AAAAAAAAAAAAAABEAAAAbWF2ZW4tcmVsZWFzZS1wbHVnaW4vc3ZuIHByb2plY3Qgc3RydWN0dXJl
+L1NpbXBsZVdlYi90cnVuay9zcmMvbWFpbi9QSwMEFAAAAAAAKpxmRAAAAAAAAAAAAAAAAEkAAABt
+YXZlbi1yZWxlYXNlLXBsdWdpbi9zdm4gcHJvamVjdCBzdHJ1Y3R1cmUvU2ltcGxlV2ViL3RydW5r
+L3NyYy9tYWluL2phdmEvUEsDBBQAAAAAACqcZkQAAAAAAAAAAAAAAABNAAAAbWF2ZW4tcmVsZWFz
+ZS1wbHVnaW4vc3ZuIHByb2plY3Qgc3RydWN0dXJlL1NpbXBsZVdlYi90cnVuay9zcmMvbWFpbi9q
+YXZhL2NvbS9QSwMEFAAAAAAAKpxmRAAAAAAAAAAAAAAAAFIAAABtYXZlbi1yZWxlYXNlLXBsdWdp
+bi9zdm4gcHJvamVjdCBzdHJ1Y3R1cmUvU2ltcGxlV2ViL3RydW5rL3NyYy9tYWluL2phdmEvY29t
+L2Nuc2kvUEsDBBQAAAAAACqcZkQAAAAAAAAAAAAAAABZAAAAbWF2ZW4tcmVsZWFzZS1wbHVnaW4v
+c3ZuIHByb2plY3Qgc3RydWN0dXJlL1NpbXBsZVdlYi90cnVuay9zcmMvbWFpbi9qYXZhL2NvbS9j
+bnNpL3NpbXBsZS9QSwMEFAAAAAAAKpxmRAAAAAAAAAAAAAAAAGEAAABtYXZlbi1yZWxlYXNlLXBs
+dWdpbi9zdm4gcHJvamVjdCBzdHJ1Y3R1cmUvU2ltcGxlV2ViL3RydW5rL3NyYy9tYWluL2phdmEv
+Y29tL2Nuc2kvc2ltcGxlL3NlcnZsZXQvUEsDBBQAAAAIAPKWZUShhVks4QIAAEUNAABzAAAAbWF2
+ZW4tcmVsZWFzZS1wbHVnaW4vc3ZuIHByb2plY3Qgc3RydWN0dXJlL1NpbXBsZVdlYi90cnVuay9z
+cmMvbWFpbi9qYXZhL2NvbS9jbnNpL3NpbXBsZS9zZXJ2bGV0L1NpbXBsZVNlcnZsZXQuamF2Yc1W
+32/aMBB+Bon/4cSkKbCSqG/TKGg/uq5I3agG3Z6NcwWvJs5sQ1tt/d93TgKkpBAm2qp+cCz7u7vv
+vpwviRm/YmMErqY+j4zwjZjGEn2Dei7RtmvVWpV2lLbwi82ZL5Tf63++4RhboaJ24fBci8j+1MKi
+Xre9WTj1B5nz7cefVHQpxiWgJZVNuIm1sX9KU2awK+47/p6h+Q+4iVVkMEk6aDZrVWhCdgaJpFOM
+LHNMgUtmDAyS3Qzi4EGtGs9GUvCHAIA3FqPQQC4m/KlVK7EWc2YRDDkn00sRMQlSRWMgqoLJH6gN
+Bb3oHUMHDs/aFCkd6SKlSoPovjeIef+vcmuvsYAF6SKlmpFcghwlyIaZxai9Rnu1EwQw7B/34cPM
+qtYYI9TEPAROwlk941ZpSmM2Sg3unJKVhF9lQW5BTETCevfKpJGgApozYnMlQijiKFgCBzvR6trA
+ehklmlY2EJ2inagw41i5T7CoXqi+kCTFkgKdPg/ggfqhw3SRS0gri5zipznt6XZT4gfQ6z+NCufK
+7MF3kwz7+n1sHRw/jsZkLLwFi1XEdqpWpZhL3nSfnJKLs3Ni2aVcmvsmuSSW+tTwNkavbqnnBBM7
+lW0+YZpOOxfDk9bbev5K5/o9qJmFzsrdGJODtR5g9W0SfDWcnR87PzLy6kcuYJdibMUgC8swVliJ
+3UWrHJJ62fooSI6cPcA2D8EuYUYqvC1igmCN8GH3I7LI2cakUh3eAP826DlGguOZ4oyany+iubqi
+Zmpcx/YaBHIkDh/ZvTMbb/M+sA4BU+Lhfg06UD9FKVV9DVag8DU1eOfiL6yXUcreFhtJLAVNuk03
+TqS6BnUJrlq1kskevdVJqb0uRYTdVZWUvvtgB4fliLD79zmDtVqtrC7ghHEW4nMGfx2NTNwuzs+q
+wCYSOWWyK/MSWL1oycqlfCSWwU4NInDduBRU/MLcpf/Nkj5ND3wRuFQGvXv43C8qTf8AUEsDBBQA
+AAAAAMKRZUQAAAAAAAAAAAAAAABOAAAAbWF2ZW4tcmVsZWFzZS1wbHVnaW4vc3ZuIHByb2plY3Qg
+c3RydWN0dXJlL1NpbXBsZVdlYi90cnVuay9zcmMvbWFpbi9yZXNvdXJjZXMvUEsDBBQAAAAAACqc
+ZkQAAAAAAAAAAAAAAABLAAAAbWF2ZW4tcmVsZWFzZS1wbHVnaW4vc3ZuIHByb2plY3Qgc3RydWN0
+dXJlL1NpbXBsZVdlYi90cnVuay9zcmMvbWFpbi93ZWJhcHAvUEsDBAoAAAAAAMKRZUS8HWYiNAAA
+ADQAAABUAAAAbWF2ZW4tcmVsZWFzZS1wbHVnaW4vc3ZuIHByb2plY3Qgc3RydWN0dXJlL1NpbXBs
+ZVdlYi90cnVuay9zcmMvbWFpbi93ZWJhcHAvaW5kZXguanNwPGh0bWw+Cjxib2R5Pgo8aDI+SGVs
+bG8gV29ybGQhPC9oMj4KPC9ib2R5Pgo8L2h0bWw+ClBLAwQUAAAAAAAqnGZEAAAAAAAAAAAAAAAA
+UwAAAG1hdmVuLXJlbGVhc2UtcGx1Z2luL3N2biBwcm9qZWN0IHN0cnVjdHVyZS9TaW1wbGVXZWIv
+dHJ1bmsvc3JjL21haW4vd2ViYXBwL1dFQi1JTkYvUEsDBBQAAAAIABuXZUQI+8I76wAAAAgCAABa
+AAAAbWF2ZW4tcmVsZWFzZS1wbHVnaW4vc3ZuIHByb2plY3Qgc3RydWN0dXJlL1NpbXBsZVdlYi90
+cnVuay9zcmMvbWFpbi93ZWJhcHAvV0VCLUlORi93ZWIueG1snZDNasMwEITvfoqtz7UWklsRgjbO
+IdCfgFNKT0GRRasiycIrp+TtKyeuE+qcetyZ+Xa04jfly2Lzvl7Ct94VMgRYvz48rhYZ5AVi1Xl4
+Mqpt6EBRO7qFlVcMsdyU8KZ3cB+CNUpG03iYsTni8jlP5GeM4Q7xS+4lo84z1TisY41DxXa2nbM0
+5yCyjA+iyAB4bShYeSi8dFpUxgWrUw3HS70P9lnS7d7q2I/XyeoUmNJn+Gp89KZxZSWRSOcw5ckw
+OoJscNl0zxnqF43Scfi1XTre+I//PaxrbRFkjLr1Av/EL7xT+6SR4/j5P1BLAwQUAAAAAAAqnGZE
+AAAAAAAAAAAAAAAARAAAAG1hdmVuLXJlbGVhc2UtcGx1Z2luL3N2biBwcm9qZWN0IHN0cnVjdHVy
+ZS9TaW1wbGVXZWIvdHJ1bmsvc3JjL3Rlc3QvUEsDBBQAAAAAALaTZUQAAAAAAAAAAAAAAABJAAAA
+bWF2ZW4tcmVsZWFzZS1wbHVnaW4vc3ZuIHByb2plY3Qgc3RydWN0dXJlL1NpbXBsZVdlYi90cnVu
+ay9zcmMvdGVzdC9qYXZhL1BLAQI/ABQAAAAAAMWcZkQAAAAAAAAAAAAAAAAVACQAAAAAAAAAEAAA
+AAAAAABtYXZlbi1yZWxlYXNlLXBsdWdpbi8KACAAAAAAAAEAGABc7fOARTnPAVzt84BFOc8B7SIY
+uEQ5zwFQSwECPwAUAAAACADFnGZEY4vjl2AFAACIEQAAIwAkAAAAAAAAACAAAAAzAAAAbWF2ZW4t
+cmVsZWFzZS1wbHVnaW4vbXZuIG91dHB1dC50eHQKACAAAAAAAAEAGAB6O/SARTnPAVzt84BFOc8B
+4E7OgEU5zwFQSwECPwAUAAAAAABHnGZEAAAAAAAAAAAAAAAAKwAkAAAAAAAAABAAAADUBQAAbWF2
+ZW4tcmVsZWFzZS1wbHVnaW4vc3ZuIHByb2plY3Qgc3RydWN0dXJlLwoAIAAAAAAAAQAYAN5EivNE
+Oc8B3kSK80Q5zwFPlBHrRDnPAVBLAQI/ABQAAAAAADycZkQAAAAAAAAAAAAAAAA1ACQAAAAAAAAA
+EAAAAB0GAABtYXZlbi1yZWxlYXNlLXBsdWdpbi9zdm4gcHJvamVjdCBzdHJ1Y3R1cmUvU2ltcGxl
+V2ViLwoAIAAAAAAAAQAYAECsIelEOc8BQKwh6UQ5zwES3RPURDnPAVBLAQI/ABQAAAAAACGcZkQA
+AAAAAAAAAAAAAAA+ACQAAAAAAAAAEAAAAHAGAABtYXZlbi1yZWxlYXNlLXBsdWdpbi9zdm4gcHJv
+amVjdCBzdHJ1Y3R1cmUvU2ltcGxlV2ViL2JyYW5jaGVzLwoAIAAAAAAAAQAYAJFZ7chEOc8BkVnt
+yEQ5zwGRWe3IRDnPAVBLAQI/ABQAAAAAACScZkQAAAAAAAAAAAAAAAA6ACQAAAAAAAAAEAAAAMwG
+AABtYXZlbi1yZWxlYXNlLXBsdWdpbi9zdm4gcHJvamVjdCBzdHJ1Y3R1cmUvU2ltcGxlV2ViL3Rh
+Z3MvCgAgAAAAAAABABgAlWOrzEQ5zwGVY6vMRDnPAZVjq8xEOc8BUEsBAj8AFAAAAAAAV5xmRAAA
+AAAAAAAAAAAAADsAJAAAAAAAAAAQAAAAJAcAAG1hdmVuLXJlbGVhc2UtcGx1Z2luL3N2biBwcm9q
+ZWN0IHN0cnVjdHVyZS9TaW1wbGVXZWIvdHJ1bmsvCgAgAAAAAAABABgAOalqBkU5zwE5qWoGRTnP
+AbWZvc5EOc8BUEsBAj8AFAAAAAgARopmRAgTIrJpAwAAyAsAAEIAJAAAAAAAAAAgAAAAfQcAAG1h
+dmVuLXJlbGVhc2UtcGx1Z2luL3N2biBwcm9qZWN0IHN0cnVjdHVyZS9TaW1wbGVXZWIvdHJ1bmsv
+cG9tLnhtbAoAIAAAAAAAAQAYAL454fIxOc8BsOAV1EQ5zwGw4BXURDnPAVBLAQI/ABQAAAAIAGKc
+ZkRNe1ZoPwEAAOoBAABNACQAAAAAAAAAIAAAAEYLAABtYXZlbi1yZWxlYXNlLXBsdWdpbi9zdm4g
+cHJvamVjdCBzdHJ1Y3R1cmUvU2ltcGxlV2ViL3RydW5rL3JlbGVhc2UucHJvcGVydGllcwoAIAAA
+AAAAAQAYAE/M2hFFOc8BOalqBkU5zwE5qWoGRTnPAVBLAQI/ABQAAAAAACqcZkQAAAAAAAAAAAAA
+AAA/ACQAAAAAAAAAEAAAAPAMAABtYXZlbi1yZWxlYXNlLXBsdWdpbi9zdm4gcHJvamVjdCBzdHJ1
+Y3R1cmUvU2ltcGxlV2ViL3RydW5rL3NyYy8KACAAAAAAAAEAGABr4CXURDnPAWvgJdREOc8B/3UW
+1EQ5zwFQSwECPwAUAAAAAAAqnGZEAAAAAAAAAAAAAAAARAAkAAAAAAAAABAAAABNDQAAbWF2ZW4t
+cmVsZWFzZS1wbHVnaW4vc3ZuIHByb2plY3Qgc3RydWN0dXJlL1NpbXBsZVdlYi90cnVuay9zcmMv
+bWFpbi8KACAAAAAAAAEAGAAESCPURDnPAQRII9REOc8BShIX1EQ5zwFQSwECPwAUAAAAAAAqnGZE
+AAAAAAAAAAAAAAAASQAkAAAAAAAAABAAAACvDQAAbWF2ZW4tcmVsZWFzZS1wbHVnaW4vc3ZuIHBy
+b2plY3Qgc3RydWN0dXJlL1NpbXBsZVdlYi90cnVuay9zcmMvbWFpbi9qYXZhLwoAIAAAAAAAAQAY
+AK+DGdREOc8Br4MZ1EQ5zwGd1RfURDnPAVBLAQI/ABQAAAAAACqcZkQAAAAAAAAAAAAAAABNACQA
+AAAAAAAAEAAAABYOAABtYXZlbi1yZWxlYXNlLXBsdWdpbi9zdm4gcHJvamVjdCBzdHJ1Y3R1cmUv
+U2ltcGxlV2ViL3RydW5rL3NyYy9tYWluL2phdmEvY29tLwoAIAAAAAAAAQAYADBHGtREOc8BMEca
+1EQ5zwGvgxnURDnPAVBLAQI/ABQAAAAAACqcZkQAAAAAAAAAAAAAAABSACQAAAAAAAAAEAAAAIEO
+AABtYXZlbi1yZWxlYXNlLXBsdWdpbi9zdm4gcHJvamVjdCBzdHJ1Y3R1cmUvU2ltcGxlV2ViL3Ry
+dW5rL3NyYy9tYWluL2phdmEvY29tL2Nuc2kvCgAgAAAAAAABABgAxTEb1EQ5zwHFMRvURDnPATBH
+GtREOc8BUEsBAj8AFAAAAAAAKpxmRAAAAAAAAAAAAAAAAFkAJAAAAAAAAAAQAAAA8Q4AAG1hdmVu
+LXJlbGVhc2UtcGx1Z2luL3N2biBwcm9qZWN0IHN0cnVjdHVyZS9TaW1wbGVXZWIvdHJ1bmsvc3Jj
+L21haW4vamF2YS9jb20vY25zaS9zaW1wbGUvCgAgAAAAAAABABgASRwc1EQ5zwFJHBzURDnPAcUx
+G9REOc8BUEsBAj8AFAAAAAAAKpxmRAAAAAAAAAAAAAAAAGEAJAAAAAAAAAAQAAAAaA8AAG1hdmVu
+LXJlbGVhc2UtcGx1Z2luL3N2biBwcm9qZWN0IHN0cnVjdHVyZS9TaW1wbGVXZWIvdHJ1bmsvc3Jj
+L21haW4vamF2YS9jb20vY25zaS9zaW1wbGUvc2VydmxldC8KACAAAAAAAAEAGAD0xB/URDnPAfTE
+H9REOc8BSRwc1EQ5zwFQSwECPwAUAAAACADylmVEoYVZLOECAABFDQAAcwAkAAAAAAAAACAAAADn
+DwAAbWF2ZW4tcmVsZWFzZS1wbHVnaW4vc3ZuIHByb2plY3Qgc3RydWN0dXJlL1NpbXBsZVdlYi90
+cnVuay9zcmMvbWFpbi9qYXZhL2NvbS9jbnNpL3NpbXBsZS9zZXJ2bGV0L1NpbXBsZVNlcnZsZXQu
+amF2YQoAIAAAAAAAAQAYAGU3X2N2OM8B9MQf1EQ5zwH0xB/URDnPAVBLAQI/ABQAAAAAAMKRZUQA
+AAAAAAAAAAAAAABOACQAAAAAAAAAEAAAAFkTAABtYXZlbi1yZWxlYXNlLXBsdWdpbi9zdm4gcHJv
+amVjdCBzdHJ1Y3R1cmUvU2ltcGxlV2ViL3RydW5rL3NyYy9tYWluL3Jlc291cmNlcy8KACAAAAAA
+AAEAGAA4WzKWcDjPAUYPItREOc8BRg8i1EQ5zwFQSwECPwAUAAAAAAAqnGZEAAAAAAAAAAAAAAAA
+SwAkAAAAAAAAABAAAADFEwAAbWF2ZW4tcmVsZWFzZS1wbHVnaW4vc3ZuIHByb2plY3Qgc3RydWN0
+dXJlL1NpbXBsZVdlYi90cnVuay9zcmMvbWFpbi93ZWJhcHAvCgAgAAAAAAABABgAmoAk1EQ5zwGa
+gCTURDnPAQRII9REOc8BUEsBAj8ACgAAAAAAwpFlRLwdZiI0AAAANAAAAFQAJAAAAAAAAAAgAAAA
+LhQAAG1hdmVuLXJlbGVhc2UtcGx1Z2luL3N2biBwcm9qZWN0IHN0cnVjdHVyZS9TaW1wbGVXZWIv
+dHJ1bmsvc3JjL21haW4vd2ViYXBwL2luZGV4LmpzcAoAIAAAAAAAAQAYAPoyd5ZwOM8BQgsk1EQ5
+zwFCCyTURDnPAVBLAQI/ABQAAAAAACqcZkQAAAAAAAAAAAAAAABTACQAAAAAAAAAEAAAANQUAABt
+YXZlbi1yZWxlYXNlLXBsdWdpbi9zdm4gcHJvamVjdCBzdHJ1Y3R1cmUvU2ltcGxlV2ViL3RydW5r
+L3NyYy9tYWluL3dlYmFwcC9XRUItSU5GLwoAIAAAAAAAAQAYAN4cJdREOc8B3hwl1EQ5zwGagCTU
+RDnPAVBLAQI/ABQAAAAIABuXZUQI+8I76wAAAAgCAABaACQAAAAAAAAAIAAAAEUVAABtYXZlbi1y
+ZWxlYXNlLXBsdWdpbi9zdm4gcHJvamVjdCBzdHJ1Y3R1cmUvU2ltcGxlV2ViL3RydW5rL3NyYy9t
+YWluL3dlYmFwcC9XRUItSU5GL3dlYi54bWwKACAAAAAAAAEAGABv4/iRdjjPAd4cJdREOc8B3hwl
+1EQ5zwFQSwECPwAUAAAAAAAqnGZEAAAAAAAAAAAAAAAARAAkAAAAAAAAABAAAACoFgAAbWF2ZW4t
+cmVsZWFzZS1wbHVnaW4vc3ZuIHByb2plY3Qgc3RydWN0dXJlL1NpbXBsZVdlYi90cnVuay9zcmMv
+dGVzdC8KACAAAAAAAAEAGADZoybURDnPAdmjJtREOc8Ba+Al1EQ5zwFQSwECPwAUAAAAAAC2k2VE
+AAAAAAAAAAAAAAAASQAkAAAAAAAAABAAAAAKFwAAbWF2ZW4tcmVsZWFzZS1wbHVnaW4vc3ZuIHBy
+b2plY3Qgc3RydWN0dXJlL1NpbXBsZVdlYi90cnVuay9zcmMvdGVzdC9qYXZhLwoAIAAAAAAAAQAY
+AArOxMZyOM8B2aMm1EQ5zwHZoybURDnPAVBLBQYAAAAAGAAYAEkOAABxFwAAAAA=
+
+------=_Part_218_14418886.1394115451815
+Content-Type: text/plain; charset=us-ascii
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+------=_Part_218_14418886.1394115451815--
+

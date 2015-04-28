@@ -1,0 +1,176 @@
+From users-return-137012-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Aug 13 14:20:04 2014
+Return-Path: <users-return-137012-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 17B7511F58
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 13 Aug 2014 14:20:04 +0000 (UTC)
+Received: (qmail 30288 invoked by uid 500); 13 Aug 2014 14:19:46 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 30198 invoked by uid 500); 13 Aug 2014 14:19:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 30178 invoked by uid 99); 13 Aug 2014 14:19:46 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 13 Aug 2014 14:19:46 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of hws689@gmail.com designates 209.85.219.49 as permitted sender)
+Received: from [209.85.219.49] (HELO mail-oa0-f49.google.com) (209.85.219.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 13 Aug 2014 14:19:20 +0000
+Received: by mail-oa0-f49.google.com with SMTP id eb12so8313382oac.8
+        for <users@maven.apache.org>; Wed, 13 Aug 2014 07:19:19 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=kqE8mgffXETTktBbKKk1uewYt+GJO0aMrTSTx3Wy/8s=;
+        b=tKsj5kOO+ECUlwKr0cHn7VhA1X49nVUqn3dkW+eHgkuj0DbcXqnWRX1efYOLQbdMAA
+         nNfVq8K1chELEQZ3yD5n7gTOqfkTgbObwJi85Jrk3nhEQ5IcCUhwSKVzN/+7Eg8z17c2
+         q/u/uAg/BG+2vZCyacBHYVGPrzbyCoBQv6Yp3FLCPdookvxsx5/SmKOJHUtrR+kncc3w
+         dxEOQyQ7ppJdFXomEeVzDQAKWiILlGejzoQwQsHcBL2ssJrpC+oaKFED9WugLe9BOM1M
+         TBHuNoBEuEHvtt229eMqzLCdR5RYdak6vzlfQwlNXEvBXf3cwWcJgY35c74eGX+JkRW3
+         5xYg==
+MIME-Version: 1.0
+X-Received: by 10.60.41.134 with SMTP id f6mr5079976oel.49.1407939559386; Wed,
+ 13 Aug 2014 07:19:19 -0700 (PDT)
+Received: by 10.202.217.131 with HTTP; Wed, 13 Aug 2014 07:19:19 -0700 (PDT)
+In-Reply-To: <55BBB074DE5248439192BCB13699A45651E26B7D@MSGEXSV21111.ent.wfb.bank.corp>
+References: <6BF365F5-3D65-4592-B407-2DFE1D5D1436@takari.io>
+	<A81A759E-1608-4CD3-BC0C-34A86B72C48B@maven.org>
+	<55BBB074DE5248439192BCB13699A45651E26B7D@MSGEXSV21111.ent.wfb.bank.corp>
+Date: Wed, 13 Aug 2014 11:19:19 -0300
+Message-ID: <CAG9vi9UxT3GZs+z0PP4tOw1_rTqSy=XkKM7EWC4U898=YWYhdA@mail.gmail.com>
+Subject: Re: Testing Maven 3.2.3
+From: Hilton Wichwski Silva <hws689@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0149c0b04d7439050083799d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0149c0b04d7439050083799d
+Content-Type: text/plain; charset=UTF-8
+
+Example:
+http://blog.ontoillogical.com/blog/2014/07/28/how-to-take-over-any-java-developer/
+
+
+2014-08-13 11:16 GMT-03:00 <cody.a.fyler@wellsfargo.com>:
+
+> Just out of curiosity, why use https to download artifacts?
+>
+> This does not seem like sensitive data that requires an encrypted
+> connection.
+>
+> Cody Fyler
+> Lending Grid Build Team
+> G=Lending Grid Builds
+> (515) - 441 - 0814
+>
+> -----Original Message-----
+> From: Jason van Zyl [mailto:jason@takari.io]
+> Sent: Wednesday, August 13, 2014 12:36 AM
+> To: Maven Users List
+> Subject: Testing Maven 3.2.3
+>
+> Hi,
+>
+> We have staged Maven 3.2.3 and I'd ask that users try and test this
+> version because we have changed to using the HTTPS connection to Maven
+> Central by default. The information for the release can be found below. I
+> encourage users to give this release a spin before we actually release it
+> to ensure the HTTPS connection is working for everyone.
+>
+> Begin forwarded message:
+>
+> > From: Jason van Zyl <jason@takari.io>
+> > Subject: [VOTE] Maven 3.2.3 Release
+> > Date: August 11, 2014 at 2:19:34 PM PDT
+> > To: Maven Developers List <dev@maven.apache.org>
+> > Reply-To: "Maven Developers List" <dev@maven.apache.org>
+> >
+> > Hi,
+> >
+> > Time to release Maven 3.2.3!
+> >
+> > This release contains the important change of switching to HTTPS
+> transport by default! Please test this release with your builds!
+> >
+> > Here is a link to Jira with 9 issues resolved:
+> > https://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=10500&vers
+> > ion=20443
+> >
+> > Staging repo:
+> > https://repository.apache.org/content/repositories/maven-1046/
+> >
+> > The distributable binaries and sources for testing can be found here:
+> > https://repository.apache.org/content/repositories/maven-1046/org/apac
+> > he/maven/apache-maven/3.2.3/
+> >
+> > Specifically the zip, tarball, and source archives can be found here:
+> > https://repository.apache.org/content/repositories/maven-1046/org/apac
+> > he/maven/apache-maven/3.2.3/apache-maven-3.2.3-bin.zip
+> > https://repository.apache.org/content/repositories/maven-1046/org/apac
+> > he/maven/apache-maven/3.2.3/apache-maven-3.2.3-bin.tar.gz
+> > https://repository.apache.org/content/repositories/maven-1046/org/apac
+> > he/maven/apache-maven/3.2.3/apache-maven-3.2.3-src.zip
+> > https://repository.apache.org/content/repositories/maven-1046/org/apac
+> > he/maven/apache-maven/3.2.3/apache-maven-3.2.3-src.tar.gz
+> >
+> > Source release checksum(s):
+> > apache-maven-3.2.3-src.zip sha1:
+> > 8607b9922d21078133f31ed8523ebae90a871d1f
+> >
+> > Staging site:
+> > http://people.apache.org/~jvanzyl/maven-3.2.3/
+> >
+> > Vote open for 72 hours.
+> >
+> > [ ] +1
+> > [ ] +0
+> > [ ] -1
+> >
+> > Thanks,
+> >
+> > The Maven Team
+> >
+> >
+> >
+> >
+> >
+> >
+> >
+> >
+>
+> Thanks,
+>
+> Jason
+>
+> ----------------------------------------------------------
+> Jason van Zyl
+> Founder,  Apache Maven
+> http://twitter.com/jvanzyl
+> http://twitter.com/takari_io
+> ---------------------------------------------------------
+>
+> In short, man creates for himself a new religion of a rational and
+> technical order to justify his work and to be justified in it.
+>
+>   -- Jacques Ellul, The Technological Society
+>
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--089e0149c0b04d7439050083799d--
+

@@ -1,0 +1,98 @@
+From users-return-136147-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 15 08:13:24 2014
+Return-Path: <users-return-136147-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D97231116E
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 15 Apr 2014 08:13:24 +0000 (UTC)
+Received: (qmail 4413 invoked by uid 500); 15 Apr 2014 08:13:21 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 3497 invoked by uid 500); 15 Apr 2014 08:13:19 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 3091 invoked by uid 99); 15 Apr 2014 08:13:18 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Apr 2014 08:13:18 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,WEIRD_PORT
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.212.176 as permitted sender)
+Received: from [209.85.212.176] (HELO mail-wi0-f176.google.com) (209.85.212.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Apr 2014 08:13:13 +0000
+Received: by mail-wi0-f176.google.com with SMTP id r20so5243035wiv.3
+        for <users@maven.apache.org>; Tue, 15 Apr 2014 01:12:52 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=oYevGyEWEuxL6Z4Lj5fQserbynFnTIhqAiOBI8WcJHQ=;
+        b=Apzp+gg2ydiMgwdvN70w+3KkmGHrNbIExiUmsbF2G2C8I+gjGXXhzMiTbEnd+GYXCp
+         yGQk5j7CaQTJPuHh0cQqugs2yuegIGcGzXpySH/swkWDx4GjJJLEwcWnkCY2FzOPrUKe
+         FeumUo+3GRh+nmHdrvphWnQ/4ljtIwPX+slCVzAjp7u4aJFh6t2IC/e73JJDM2rwSsBF
+         85jdJtMeT1gLTikkGI2aaLXMurtS3ozurO3cbaYiQiZ8Ima9tdPOC4Yit+0G5UoBAx27
+         yuVeA5hbhAupoR9D17xq6jGHi0yMHM0nf8ZaSTyPxfSs7zBENAiIg2vdgTirH2gVYIIM
+         7GwQ==
+MIME-Version: 1.0
+X-Received: by 10.194.71.164 with SMTP id w4mr468473wju.0.1397549572557; Tue,
+ 15 Apr 2014 01:12:52 -0700 (PDT)
+Received: by 10.194.205.233 with HTTP; Tue, 15 Apr 2014 01:12:52 -0700 (PDT)
+In-Reply-To: <534C8512.5030705@kolotyluk.net>
+References: <534C8512.5030705@kolotyluk.net>
+Date: Tue, 15 Apr 2014 09:12:52 +0100
+Message-ID: <CA+nPnMyVZSWhmO9nyFaCYw5hyoi8yAhzKTiSfcqN2SjLj7GEcA@mail.gmail.com>
+Subject: Re: Why Is Maven Ignoring My Local Repo?
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bf0dac6d412e304f7105d5c
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bf0dac6d412e304f7105d5c
+Content-Type: text/plain; charset=UTF-8
+
+It's not a local repository. It is a local repository cache.
+
+There are files there that record where the artifacts were cached *from*.
+
+If the artifact is there but the cache file is not or indicates a different
+source from the allowed sources for your build, then Maven will ignore the
+artifact in your cache and check the remote sources.
+
+
+On 15 April 2014 02:02, Eric Kolotyluk <eric@kolotyluk.net> wrote:
+
+> I seem to keep running into this problem regularly for things not in Maven
+> Central
+>
+> [ERROR] Failed to execute goal org.apache.maven.plugins:maven-site-plugin:3.3:site
+> (default-site) on project csharp-windows-elevate: Execution default-site of
+> goal org.apache.maven.plugins:maven-site-plugin:3.3:site failed: Plugin
+> org.apache.maven.plugins:maven-site-plugin:3.3 or one of its dependencies
+> could not be resolved: Could not find artifact net.trajano.wagon:wagon-git:jar:1.0.1-SNAPSHOT
+> in local-nexus (http://localhost:8081/nexus/content/groups/public) ->
+> [Help 1]
+>
+> I can see the artifact in my local repo, but maven somehow feels, because
+> it cannot find it in my nexus repository, then it does not exist.
+>
+> The side problem is, even though nexus can see the artifact in its index,
+> it refuses to download it.
+>
+> Why do maven and nexus work so hard at ignoring artifacts?
+>
+> Cheers, Eric
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7bf0dac6d412e304f7105d5c--
+

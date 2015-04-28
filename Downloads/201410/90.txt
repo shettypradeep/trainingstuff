@@ -1,0 +1,81 @@
+From users-return-137497-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Oct  9 02:54:09 2014
+Return-Path: <users-return-137497-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E8F1417912
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  9 Oct 2014 02:54:08 +0000 (UTC)
+Received: (qmail 4824 invoked by uid 500); 9 Oct 2014 02:54:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 4744 invoked by uid 500); 9 Oct 2014 02:54:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 4731 invoked by uid 99); 9 Oct 2014 02:54:06 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Oct 2014 02:54:06 +0000
+X-ASF-Spam-Status: No, hits=3.1 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_IMAGE_ONLY_16,HTML_MESSAGE,HTML_SHORT_LINK_IMG_2,RCVD_IN_DNSWL_LOW,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of burtonator2011@gmail.com designates 209.85.215.49 as permitted sender)
+Received: from [209.85.215.49] (HELO mail-la0-f49.google.com) (209.85.215.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Oct 2014 02:54:02 +0000
+Received: by mail-la0-f49.google.com with SMTP id q1so305985lam.36
+        for <users@maven.apache.org>; Wed, 08 Oct 2014 19:53:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:from:date:message-id:subject:to:content-type;
+        bh=UzZBDlGlBc6H+1IKPYz8vVv7VpPnwVG3LFMRKP6S5Uc=;
+        b=hHGXbc6g8jRxHSUrMzl2xS8DlnEEVurNjE6OrtYlMiR2Hx+kuhGyqpDoBCNZc1i1Mh
+         tjmiUglAcCHEByyOln1SFBb1chlk2e6c3cXGW2tTDH7jWhUkcU7UMI9PmrYSTUtv10ls
+         9fOi+I+2wfYrEYMA8ODiKFzd9rSgUkn5qz/p/MPzBMnd5rgMHvTZFPHcovkEfL0ZuFFr
+         H4gA+sVGQ1Pz06mkDxewKb7+HLcUpSEj2ID3ZgwCphBsBLZnRsoq6CknD0jV4GVu/0Ph
+         tYPwXpTOrJ62xwhNWUiXRHrhhLjOSqms5bAd3ZQwR6Mli86DM8qYDgbWYkFM84msA63I
+         NTrQ==
+X-Received: by 10.152.23.69 with SMTP id k5mr15481847laf.70.1412823220684;
+ Wed, 08 Oct 2014 19:53:40 -0700 (PDT)
+MIME-Version: 1.0
+Sender: burtonator2011@gmail.com
+Received: by 10.112.210.101 with HTTP; Wed, 8 Oct 2014 19:53:20 -0700 (PDT)
+From: Kevin Burton <burton@spinn3r.com>
+Date: Wed, 8 Oct 2014 19:53:20 -0700
+X-Google-Sender-Auth: YU960tKS0hoJ_AV15rhDYoWGRVQ
+Message-ID: <CAAZU44nahcOK1uv+4qQEf18ehv8adkoF46YimcgwP8tugw1yUQ@mail.gmail.com>
+Subject: How do I test client and server since they form circular dependencies?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0160bf98330c3b0504f48a38
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0160bf98330c3b0504f48a38
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I have a client and server in a multi-module.
+
+How do I test them ? I=E2=80=99d like to start the server in a test, then r=
+un the
+client against it.
+
+Then I=E2=80=99d like to run the client in a test, and have to test a serve=
+r=E2=80=A6
+
+maybe one idea is to build a meta-module like foo-client-server-test which
+as a dependency on foo-client and foo-server.  then they could each test
+each other?  Seems a bit of a hack but it should work ..
+
+--=20
+
+Founder/CEO Spinn3r.com
+Location: *San Francisco, CA*
+blog: http://burtonator.wordpress.com
+=E2=80=A6 or check out my Google+ profile
+<https://plus.google.com/102718274791889610666/posts>
+<http://spinn3r.com>
+
+--089e0160bf98330c3b0504f48a38--
+

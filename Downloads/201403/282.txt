@@ -1,0 +1,67 @@
+From users-return-135725-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Mar  7 02:41:37 2014
+Return-Path: <users-return-135725-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7CF5B1060D
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  7 Mar 2014 02:41:37 +0000 (UTC)
+Received: (qmail 19102 invoked by uid 500); 7 Mar 2014 02:41:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 18900 invoked by uid 500); 7 Mar 2014 02:41:19 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 18454 invoked by uid 99); 7 Mar 2014 02:41:03 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 07 Mar 2014 02:41:03 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of waynefay@gmail.com designates 209.85.192.181 as permitted sender)
+Received: from [209.85.192.181] (HELO mail-pd0-f181.google.com) (209.85.192.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 07 Mar 2014 02:40:57 +0000
+Received: by mail-pd0-f181.google.com with SMTP id p10so3384717pdj.40
+        for <users@maven.apache.org>; Thu, 06 Mar 2014 18:40:37 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=wYBtwHKnCGqGPMrIQBo3P+0oqF9kPPBAOYbKF4Wiob8=;
+        b=xoqnEYXVrqc4vU+s363UvLNkbXmILF4+j/1kA6aiY7HPw89GGAs6yNcOLhOhQ7RJ8N
+         EOVtQINZfeuFiX3rhMJ77JLBTtXUEg9y2FbR38ZHQy/H/tSrMXGjcQ9vrjFBScTVn5dX
+         2mYwVn3y+9ms6vQzNqUwq6BUUDLe99yQA0bTiC/gV/bc0CqsuzoJHxISFRdsI8ceid8A
+         IHCXIi6q8Q1VGSosL56LmgltLdfXKHbAlQ+Z6SojFfgX3WGcG0d3E3tQuyfzLFQAAeX6
+         LBN1WJRPnKVzR63cka8JqCeZj+Zdgn2Hy1al24UQobC7/OJcNBKjYJTIIFy1GOdpJ6yp
+         qJ/g==
+X-Received: by 10.68.229.106 with SMTP id sp10mr18795083pbc.23.1394160037333;
+ Thu, 06 Mar 2014 18:40:37 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Thu, 6 Mar 2014 18:40:17 -0800 (PST)
+In-Reply-To: <CAM0K-0CzKNaJ89zXuHAiEF1a3QYtybyXUjg0HPQrNVRWz-a9jQ@mail.gmail.com>
+References: <CAM0K-0CzKNaJ89zXuHAiEF1a3QYtybyXUjg0HPQrNVRWz-a9jQ@mail.gmail.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Thu, 6 Mar 2014 20:40:17 -0600
+Message-ID: <CALy+7Uk5usRFLhxLhWyCDAOMpGvWSUBVVOg72XNh1ovbc640OA@mail.gmail.com>
+Subject: Re: Netbeans 7.4 maven POM for com.oracle:ojdbc6:jar:11.2.0.1 is invalid
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> "The POM for com.oracle:ojdbc6:jar:11.2.0.1 is invalid, transitive
+> dependencies (if any) will not be available, enable debug logging for more
+> details"
+
+Did you enable debug logging with -X to see more details? What does it say?
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

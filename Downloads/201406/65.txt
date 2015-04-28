@@ -1,0 +1,154 @@
+From users-return-136603-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jun 17 18:28:36 2014
+Return-Path: <users-return-136603-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DC7B61105E
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 17 Jun 2014 18:28:36 +0000 (UTC)
+Received: (qmail 82202 invoked by uid 500); 17 Jun 2014 18:28:35 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 82124 invoked by uid 500); 17 Jun 2014 18:28:35 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 82112 invoked by uid 99); 17 Jun 2014 18:28:35 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 17 Jun 2014 18:28:35 +0000
+Received: from localhost (HELO robertscholte) (127.0.0.1)
+  (smtp-auth username rfscholte, mechanism login)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Tue, 17 Jun 2014 18:28:34 +0000
+Content-Type: text/plain; charset=utf-8; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: newbie problem with deploy:deploy-file
+References: <BF890391-BE73-4B0D-A26A-B17C71D63BFD@apple.com>
+Date: Tue, 17 Jun 2014 20:28:31 +0200
+MIME-Version: 1.0
+Content-Transfer-Encoding: Quoted-Printable
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.xhl2xti0kdkhrr@robertscholte>
+In-Reply-To: <BF890391-BE73-4B0D-A26A-B17C71D63BFD@apple.com>
+User-Agent: Opera Mail/12.17 (Win32)
+
+Hi Andy,
+
+First of all: welcome in the world of Apache Maven!
+I won't go into detail too much right now, I'd suggest to do some  =
+
+getting-started tutorials[2] to understand the basics.
+
+Let's start with:
+With Maven you can call 2 things: a phase of a lifecycle[1] or a goal fr=
+om  =
+
+a specific plugin.
+if you're running 'mvn deploy:deploy-file' you're only executing 1 goal.=
+
+And 'mvn deploy' means you're executing all phases up to deploy,  =
+
+representing a chain of goals.
+
+Since you're using an execution-block I assume you just want to call 'mv=
+n  =
+
+deploy'.
+
+thanks,
+Robert
+
+[1]  =
+
+http://maven.apache.org/guides/introduction/introduction-to-the-lifecycl=
+e.html
+[2] http://maven.apache.org/guides/index.html
+
+Op Tue, 17 Jun 2014 00:51:21 +0200 schreef Andrew Davidson  =
+
+<adavidson2@apple.com>:
+
+> Hi
+>
+> I recently joined an existing project that uses the maven ant plug int=
+o  =
+
+> to build artifacts that we need to distribute. I am trying to add   =
+
+> support for deploy-file
+>
+> $ mvn  deploy:deploy-file -DskipTests 2>&1 | tee mvn.deploy-file.out
+> [ERROR] Failed to execute goal  =
+
+> org.apache.maven.plugins:maven-deploy-plugin:2.8:deploy-file  =
+
+> (default-cli) on project mary-aide-dist: The parameters 'file' for goa=
+l  =
+
+> org.apache.maven.plugins:maven-deploy-plugin:2.8:deploy-file are missi=
+ng  =
+
+> or invalid -> [Help 1]
+> [ERROR]
+>
+> I have tried using -X and -e how ever I can still can not figure out  =
+
+> what the problem is.
+>
+> any idea what I am doing wrong? 				=
+
+>
+> thanks
+>
+> Andy
+>
+>
+> <distributionManagement> =E2=80=A6 </>
+>
+> <properties>
+> 	<mary-aide-proxy.tar>mary-aide-proxy-${project.version}</mary-aide-pr=
+oxy.tar>
+>
+> 	<release.repositoryId>libs-release</release.repositoryId>
+> 	<release.url>http://maryx01-c.bogco.com:8081/artifactory/libs-release=
+-local/
+> 	</release.url>
+>
+> 	<snapshot.repositoryId>libs-snapshot</snapshot.repositoryId>
+> 	<snapshot.url>http://maryx01-c.bigco.com:8081/artifactory/libs-snapsh=
+ot-local/
+> 	</snapshot.url>
+>
+> </properties>
+>
+> <plugin>
+> 	<groupId>org.apache.maven.plugins</groupId>
+> 	<artifactId>maven-deploy-plugin</artifactId>
+> 	<executions>
+>
+> 		<execution>
+> 			<id>mary-aide-proxy</id>
+> 			<phase>deploy</phase>
+> 			<goals>
+> 				<goal>deploy-file</goal>
+> 			</goals>
+> 			<configuration>
+> 				<file>target/${mary-aide-proxy.tar}.tar.gz</file>
+> 				<repositoryId>${release.repositoryId}</repositoryId>
+> 				<url>${release.url}</url>
+> 				<groupId>${project.parent.groupId}</groupId>
+> 				<artifactId>${project.parent.artifactId}</artifactId>
+> 				<version>${project.parent.version}</version>
+> 				<generatePom>false</generatePom>
+> 				<packaging>tar.gz</packaging>
+> 			</configuration>
+> 		</execution>
+> 	</executions>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

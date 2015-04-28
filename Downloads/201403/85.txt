@@ -1,0 +1,128 @@
+From users-return-135717-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar  6 13:20:34 2014
+Return-Path: <users-return-135717-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7F338101F8
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  6 Mar 2014 13:20:34 +0000 (UTC)
+Received: (qmail 32909 invoked by uid 500); 6 Mar 2014 13:20:32 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 32074 invoked by uid 500); 6 Mar 2014 13:20:29 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 31736 invoked by uid 99); 6 Mar 2014 13:20:25 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 13:20:25 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 13:20:20 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 969656A76F2
+	for <users@maven.apache.org>; Thu,  6 Mar 2014 08:19:58 -0500 (EST)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id He_NkQcpVUAU for <users@maven.apache.org>;
+	Thu,  6 Mar 2014 08:19:47 -0500 (EST)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 4DD4E6A76F1
+	for <users@maven.apache.org>; Thu,  6 Mar 2014 08:19:47 -0500 (EST)
+Message-ID: <531875F0.4040107@artifact-software.com>
+Date: Thu, 06 Mar 2014 08:19:44 -0500
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: rwheeler@artifact-software.com
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Invalid signature file digest for Manifest main attributes
+References: <c0538b90-2db8-4a95-ba8c-6a8f53697a04@default> <BLU172-W501D963B1EF8FEF6E74A08AE880@phx.gbl>
+In-Reply-To: <BLU172-W501D963B1EF8FEF6E74A08AE880@phx.gbl>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Look in the jar that the assembly created to see if the excludes 
+actually worked.
+
+Ron
+
+On 06/03/2014 8:09 AM, Martin Gainty wrote:
+> Hi Suresh
+>
+>   
+>
+> Your best solution will come from  Oracle Support India
+> They are supposed to know this information and will be able to assist you with your problem
+> Oracle India Support Line number is +91.22.66796200
+> If  Oracle India is unable to assist you ..we can find a resource on this side of the planet to help you
+>
+>
+> Warm Regards
+>
+>    
+>
+>
+>
+>> Date: Wed, 5 Mar 2014 19:19:44 -0800
+>> From: suresh.pamidipati@oracle.com
+>> To: users@maven.apache.org
+>> Subject: Invalid signature file digest for Manifest main attributes
+>>
+>> Hi,
+>>
+>> I am trying to build our project using maven. I have included multiple dependency jars in pom.xml and I am trying to build distribution jar using assembly:assembly goal. The command "mvn assembly:assembly" resulted in the below error.
+>>
+>> [ERROR] Failed to execute goal org.apache.maven.plugins:maven-assembly-plugin:2.4:assembly (default-cli) on project my-plugin: Execution default-cli of goal org.apache.maven.plugins:maven-assembly-plugin:2.4:assembly failed: Invalid signature file digest for Manifest main attributes -> [Help 1]
+>>
+>> Two of the dependency jars when present together was causing this issue. I tried commenting one of them and mvn assembly:assembly command worked fine. To make it work with both the jars present together, I tried by adding excludes in dependency, assembly and even shade plugin configuration in pom.xml to exclude MANIFEST files of one of those two jars as shown below, but still the same error exists.
+>>
+>> <configuration>
+>> <filters>
+>> <filter>
+>> <artifact>MyJar1:MyJar1</artifact>
+>> <excludes>
+>> <exclude>META-INF/*.SF</exclude>
+>> <exclude>META-INF/*.DSA</exclude>
+>> <exclude>META-INF/*.RSA</exclude>
+>> </excludes>
+>> </filter>
+>> </filters>
+>> </configuration>
+>>
+>> Please let me know how to resolve this error. I am not sure if the exclude statements were being ignored or I am missing some thing here. Any information on this will be really helpful.
+>>
+>> Thanks & Regards,
+>> Suresh
+>>
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>   		 	   		
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,127 @@
+From users-return-136016-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Mar 29 16:48:42 2014
+Return-Path: <users-return-136016-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 40ED710EF2
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 29 Mar 2014 16:48:42 +0000 (UTC)
+Received: (qmail 63265 invoked by uid 500); 29 Mar 2014 16:48:38 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 62765 invoked by uid 500); 29 Mar 2014 16:48:36 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 62754 invoked by uid 99); 29 Mar 2014 16:48:34 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 29 Mar 2014 16:48:34 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 29 Mar 2014 16:48:29 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 979C86A6564
+	for <users@maven.apache.org>; Sat, 29 Mar 2014 12:47:58 -0400 (EDT)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id j5H7ygqWfcKo for <users@maven.apache.org>;
+	Sat, 29 Mar 2014 12:47:57 -0400 (EDT)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 5BF816A6562
+	for <users@maven.apache.org>; Sat, 29 Mar 2014 12:47:57 -0400 (EDT)
+Message-ID: <5336F934.2090705@artifact-software.com>
+Date: Sat, 29 Mar 2014 12:47:48 -0400
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: Maven Users List <users@maven.apache.org>
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: OutOfMemoryError with maven-javadoc-plugin
+References: <20140328103657.63a66f1e@linux-du93.site>	<CANWgJS5gA-7vKFKKppwyWcn=iZanw0qrRMn0hxyXSyMu4wuq5A@mail.gmail.com>	<20140328122426.3493fa7e@linux-du93.site>	<533573FB.2050901@artifact-software.com> <20140328222934.7fe9867a@linux-du93.site>
+In-Reply-To: <20140328222934.7fe9867a@linux-du93.site>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 28/03/2014 5:29 PM, Martin Hoeller wrote:
+> Hi Ron!
+>
+> On 28 Mär 2014, Ron Wheeler wrote:
+>
+>> Have you tried increasing the JVM memory past
+>>
+>> MAVEN_OPTS="-Xmx1536m -Xms512m -XX:MaxPermSize=512m"
+>> MAVEN_OPTS="-Xmx1280m -Xms256m -XX:MaxPermSize=768m"
+>>
+>> You could try something extreme (-Xmx8g ) and see if that changes anything.
+> Well, I should have added, that it was working fine with "-Xmx1024m
+> -Xms256m -XX:MaxPermSize=512m" recently. Since then I did a minor
+> restructure of the project and updated maven from 2.2.1 to 3.1.1. So I
+> thought the required memory wouldn't be much more.
+
+
+Try with Maven 2.1.1 and see if it works.
+If it does then the focus shifts to Maven changes.
+If it does not then the problem is in what you changed in the project.
+
+
+"Ron's Basic principle of debugging: Cut problems in half until the 
+answer falls out."
+
+At least now we know that the problem is caused by a memory leak and 
+likely caused by something that makes Maven loop which creates objects 
+that can't be garbage collected.
+
+
+
+>
+>> -Xms512m is not very useful in this case and you can omit it or make it the same as -XMXnnn.
+>> Make sure that you allow enough(???) space after you allocate MaxPermSize.
+>>
+>> MAVEN_OPTS="-Xmx8g -XX:MaxPermSize=768m"
+>>
+>>
+>> Did you notice that it took longer to run out  of memory with the higher
+>> settings?
+>> If not, then I may be barking up the wrong tree and you might have to
+>> change JAVA_OPTS to affect the memory allocation.
+>> If it did, then you are heading in the right direction but have not gone
+>> far enough yet.
+> I tried with 8GB and now it was running for more that 4 hours. Than I
+> canceld it because the machine was only swapping and progress was very
+> low. (There were only 8GB physical RAM available on the system.)
+>
+> With 4GB I got the usual OOM error. Can't say if it ran longer. If it
+> did, it wasn't that much longer. About 15min or so.
+>
+> The point is: with maven 2.2.1, m-javadoc-p 2.8 and only minor changes in
+> the project layout it was running fine with 1GB. Now it needs at least
+> more than 4GB. There must be something wrong.
+>
+> Any more ideas?
+>
+> - martin
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

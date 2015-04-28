@@ -1,0 +1,112 @@
+From users-return-135287-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 28 22:56:08 2014
+Return-Path: <users-return-135287-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BC17B10D47
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 28 Jan 2014 22:56:08 +0000 (UTC)
+Received: (qmail 84139 invoked by uid 500); 28 Jan 2014 22:56:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 84057 invoked by uid 500); 28 Jan 2014 22:56:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 84049 invoked by uid 99); 28 Jan 2014 22:56:03 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 22:56:03 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [164.109.139.151] (HELO hygiene1b.cmegroup.com) (164.109.139.151)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 22:55:57 +0000
+X-SBRS-none: None
+X-IronPort-AV: E=Sophos;i="4.95,739,1384322400"; 
+   d="scan'208";a="23175272"
+Received: from unknown (HELO SMAPEXCHIDAG1.prod.ad.merc.chicago.cme.com) ([172.27.34.67])
+  by Hygiene1b.cmegroup.com with ESMTP; 28 Jan 2014 16:55:09 -0600
+Received: from SMAPEXCHIDAG3.prod.ad.merc.chicago.cme.com
+ ([fe80::add5:2830:4a67:ccf8]) by SMAPEXCHIDAG1.prod.ad.merc.chicago.cme.com
+ ([169.254.1.53]) with mapi id 14.02.0309.002; Tue, 28 Jan 2014 16:55:36 -0600
+From: "Lyons, Roy" <Roy.Lyons@cmegroup.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: dependency plugin strangeness
+Thread-Topic: dependency plugin strangeness
+Thread-Index: AQHPHHwOrwhoFZdZ8Ee55xKe7Xj8Ow==
+Date: Tue, 28 Jan 2014 22:55:36 +0000
+Message-ID: <58EAA08AF8232344ADDB2E31D4996BFD5483CDFA@SMAPEXCHIDAG3.prod.ad.merc.chicago.cme.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+user-agent: Microsoft-MacOutlook/14.3.9.131030
+x-originating-ip: [172.27.34.93]
+Content-Type: text/plain; charset="us-ascii"
+Content-ID: <F3D61EDB7292604B9775EFAF55D1D83A@cme.com>
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-CFilter-Loop: Reflected
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+So, I tried my google-fu first - and in general my google-fu is very very s=
+trong...
+
+I've been fighting with this multi-module plan for some time now with the d=
+eveloper who is reporting the issue to me.  The issue manifested itself as =
+part of a Sonar failure...  the funny thing is, that the failure was on a d=
+ependenct tree resolution that Sonar was doing - so I had him try the depen=
+dency plugin and perform a dependency:tree
+
+dependency tree failed us...  well, it probably isn't dependency plugin's f=
+ault but I am at a loss as to what it is really dying on or why.
+
+I would absolutely love it if someone saw this and said "Oh yeah, I know th=
+at issue.  Its a real pain.  They have XXX defined incorrectly in their mul=
+timodule build so the dependency plugin is in a circular dependency loop" (=
+or something like that).  I have no idea if its a dependency loop, was just=
+ an example.
+
+I can't share the poms because its all proprietary closed source stuff (and=
+ I have to be careful about what is shared).  If this means that I dont hav=
+e enough info to help, I can live with that - and will continue to plow for=
+wards...  I just wanted to see if theres someone on the list who knows exac=
+tly what I should be looking for to help shorten my investigation time.
+
+Here's an example of what dependency:tree is complaining about.
+
+
+ mvn dependency:tree -Dverbose=3Dtrue -DoutputFile=3Ddependencies.txt -e -X
+
+urls[38] =3D file:/C:/Users/thisguysuserid/.m2/repository/commons-collectio=
+ns/commons-collections/3.2.1/commons-collections-3.2.1.jar
+Number of foreign imports: 1
+import: Entry[import  from realm ClassRealm[maven.api, parent: null]]
+-----------------------------------------------------
+
+        at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(De=
+faultBuildPluginManager.java:139)
+        at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExe=
+cutor.java:209)
+        ... 19 more
+Caused by: org.apache.maven.plugin.PluginContainerException: An API incompa=
+tibility was encountered while executing org.apache.maven.plugins:maven-dep=
+endency-plugin:2.8:tree: java.lang.AbstractMethodError: org.apache.maven.sh=
+ared.dependency.tree.DependencyTreeResolutionListener.manageArtifactSystemP=
+ath(Lorg/apache/maven/artifact/Artifact;Lorg/apache/maven/artifact/Artifact=
+;)V
+
+
+
+
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

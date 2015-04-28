@@ -1,0 +1,113 @@
+From users-return-135373-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb  7 01:16:25 2014
+Return-Path: <users-return-135373-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BB27110F39
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  7 Feb 2014 01:16:25 +0000 (UTC)
+Received: (qmail 99860 invoked by uid 500); 7 Feb 2014 01:16:21 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99761 invoked by uid 500); 7 Feb 2014 01:16:21 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99752 invoked by uid 99); 7 Feb 2014 01:16:21 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 07 Feb 2014 01:16:21 +0000
+Received: from localhost (HELO mail-ob0-f172.google.com) (127.0.0.1)
+  (smtp-auth username olamy, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Fri, 07 Feb 2014 01:16:21 +0000
+Received: by mail-ob0-f172.google.com with SMTP id vb8so3270877obc.31
+        for <users@maven.apache.org>; Thu, 06 Feb 2014 17:16:20 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type:content-transfer-encoding;
+        bh=jpHYW1KEo0H+EBTUsYBhi+5beqwc4WpJH31xVXaa0+A=;
+        b=Mfc9Z06jzX0HI4o+jXiBXmdPPM/u/KXP72mq7kHy8VFh/5OOlBykJH7o6hP5KdZ5Rq
+         cTO6Jmolf/wtq6pkRWsyN7n2r0ywNqXDZ+H2Voh3b/k8S1LltY0V2/fnoroYa+wQX8hO
+         wrWVLeIJIYfLTElsfa6OosOzG5YEAbJuMHG9xa8usL7UMtML8/Xqs3ldmQgj9mWL8j0N
+         ehf/xwjZs+T2nQZfva+FNrgOgJfiqQr9tPTVZucBARRgiptu2HoYyzFKE2moOVVDEa6l
+         wyuQ40g8t+Z0EmYbkQ3xYT+5ASR2gQ2VcOW6yyy/iDwxBYBfGNL7PALPjZptnwuVTruN
+         /tjg==
+X-Received: by 10.60.97.193 with SMTP id ec1mr10161927oeb.20.1391735780307;
+ Thu, 06 Feb 2014 17:16:20 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.69.101 with HTTP; Thu, 6 Feb 2014 17:16:00 -0800 (PST)
+In-Reply-To: <1B8FF9BB83FDCE44AB581D7E394AB90D2A3EB3D5@USSTLDAGBE1.corp.amdocs.com>
+References: <1B8FF9BB83FDCE44AB581D7E394AB90D2A3EB3D5@USSTLDAGBE1.corp.amdocs.com>
+From: Olivier Lamy <olamy@apache.org>
+Date: Fri, 7 Feb 2014 12:16:00 +1100
+Message-ID: <CAPoyBqS72kj1Oee2jaM1Zo5YOiP4R8MSOP4xPWvkXbAOsEWOFQ@mail.gmail.com>
+Subject: Re: Accessing Nexus with Java JAX-WS
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Here it's an Apache Maven users list.
+So for nexus related questions you must ask nexus mailing lists.
+
+Cheers,
+Olivier
+
+On 7 February 2014 09:34, John Dix <John.Dix@amdocs.com> wrote:
+> Hey Guys,
+>
+> I need to access the nexus repo in Java via the RESTful API provided but =
+I cannot seem to find a URL that works for us. Is there a standard path int=
+o it I access? I want to download a list of artifcats in a specific path li=
+ke this:
+>
+> myrepo:8081/nexus/content/repositories/thirdparty
+>
+> I am pretty new at RESTful API.
+>
+> My code looks like this for opening a connection..
+>
+> URL wsdlLocation =3D new URL(<my url here>);
+> HttpURLConnection conn =3D (HttpURLConnection) wdslLocation.openConnectio=
+n();
+> ...
+>
+> Thanks!
+>
+> John "Caolan" Dix
+> Programming Sr. SME, Digital Commerce
+> Amdocs Mobile Financial Services Division
+> o: 206-288-0308 m: 425.351.7340
+> AMDOCS | EMBRACE CHALLENGE EXPERIENCE SUCCESS
+>
+> Did you know...?
+> A global consumer survey by Analysys Mason and Amdocs reveals that cash i=
+s past its prime. Download the new white paper, "Mobile Financial Services:=
+ The Evolution of Payment" here<http://amdocs.com/mfs-wp>.
+>
+> Read the latest on Amdocs.com<http://www.amdocs.com/> and the Amdocs blog=
+ network<http://blogs.amdocs.com/> - and follow us on Facebook<https://www.=
+facebook.com/AmdocsMobilePayments>, Twitter<https://twitter.com/amdocsmpaym=
+ents>, LinkedIn<http://www.linkedin.com/company/amdocs>, YouTube<http://www=
+.youtube.com/amdocs> and Google+<https://plus.google.com/+amdocs#+amdocs/po=
+sts>
+>
+>
+> This message and the information contained herein is proprietary and conf=
+idential and subject to the Amdocs policy statement,
+> you may review at http://www.amdocs.com/email_disclaimer.asp
+
+
+
+--=20
+Olivier Lamy
+Ecetera: http://ecetera.com.au
+http://twitter.com/olamy | http://linkedin.com/in/olamy
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

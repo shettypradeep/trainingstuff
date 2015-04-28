@@ -1,0 +1,218 @@
+From users-return-134919-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jan  3 16:27:50 2014
+Return-Path: <users-return-134919-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E152E10A43
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  3 Jan 2014 16:27:50 +0000 (UTC)
+Received: (qmail 62989 invoked by uid 500); 3 Jan 2014 16:27:43 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 62945 invoked by uid 500); 3 Jan 2014 16:27:41 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 62491 invoked by uid 99); 3 Jan 2014 16:27:39 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Jan 2014 16:27:39 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Jan 2014 16:27:35 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 8221A6A7916
+	for <users@maven.apache.org>; Fri,  3 Jan 2014 11:27:13 -0500 (EST)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 26uionQt5rKm for <users@maven.apache.org>;
+	Fri,  3 Jan 2014 11:27:01 -0500 (EST)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 0D6B16A76F2
+	for <users@maven.apache.org>; Fri,  3 Jan 2014 11:27:01 -0500 (EST)
+Message-ID: <52C6E4D4.1040707@artifact-software.com>
+Date: Fri, 03 Jan 2014 11:27:00 -0500
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: rwheeler@artifact-software.com
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.2.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: New site content
+References: <CA+nPnMzmK+YXL1q=XWd=LZEzR7hoyqtO00wJvO85XyynJ+SmDA@mail.gmail.com> <CA+nPnMz80i1=TFRmqOAgeGViXNrsfFwxZ8SWaHyxLNm+A7mAOw@mail.gmail.com> <op.w83934u7kdkhrr@robertscholte> <CA+nPnMxQ5J_s908SRUzckgfrHHFMRduu5kBBAryv9bQLWsj1gA@mail.gmail.com> <op.w84chhqkkdkhrr@robertscholte>
+In-Reply-To: <op.w84chhqkkdkhrr@robertscholte>
+Content-Type: text/plain; charset=ISO-8859-15; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I agree with Robert's comment.
+There is a danger that the page will become architecturally elegant and 
+will correctly describe all of the possible uses of Maven but will be 
+too obscure to be useful as a starting point for a new person.
+
+It is sufficiently difficult to understand the basic concepts in using 
+Maven to create a simple jar with a single POM.
+You are introducing a lot of new concepts:
+-Lifecycle
+-Dependencies
+-Plug-ins
+- Project model
+that a person coming from make or Ant has to grasp.
+
+Defining these and the relationships among them in a simple way is 
+sufficiently challenging without trying to abstract a sufficiently 
+general model to handle all of the edge cases.
+
+The "Maven way" needs to be explained very simply rather than 
+conceptually complete.
+
+Ron
+
+
+On 03/01/2014 11:09 AM, Robert Scholte wrote:
+> Op Fri, 03 Jan 2014 16:46:33 +0100 schreef Stephen Connolly 
+> <stephen.alan.connolly@gmail.com>:
+>
+>> On 3 January 2014 15:17, Robert Scholte <rfscholte@apache.org> wrote:
+>>
+>>> Hi,
+>>>
+>>> I like the idea of images, however I would avoid a graph to make 
+>>> something
+>>> clear for new Maven users.
+>>> Instead I'd prefer a linear model.
+>>>
+>>
+>> My first draft did not have the graph at the top... perhaps it would be
+>> better suited at the bottom ;-)
+>>
+>>
+>>>
+>>> I think you should split the current model into pieces:
+>>>
+>>> A project model contains:
+>>> - dependencies
+>>> - a build plan
+>>> - other project models ( you can call this the Droste effect[1] )
+>>>
+>>
+>> I like to think of the project model as not just the root pom.xml but 
+>> all
+>> the pom.xml files, so there is only one project model, this should make
+>> understanding how -pl, -am and -amd switches have their effects
+>>
+>>
+>
+> IMO these switches are way too detailed for a 60 sec tutorial. I even 
+> think that a large group of the average Maven users don't know these 
+> switches or use them.
+>
+>>> - ...
+>>>
+>>> There are several build-plans, namely: a build-plan for jar, war, 
+>>> ear, etc.
+>>> Every build plan has a set of predefined plugins,  which you can adjust
+>>> (with switches?)
+>>>
+>>
+>> No there is one and only one build plan. We would have to redefine build
+>> plan everywhere else to be able to use it like that. There is a 
+>> lifecycle
+>> binding for each packaging
+>>
+>>
+>
+> Then buildplan is too abstract. With a real world example: the 
+> buildplan for a house and a bike are completely different. Unless you 
+> say: you have a design, some goods, you mix those goods and you have 
+> your product.
+> Not a useful plan IMO.
+> At least keep the audience in mind: do they need to know the actual 
+> implementation or do they first need to understand the overall 
+> process. I think the latter is more important, even if this conflicts 
+> a bit with the idiom used by experienced Maven users.
+> What if we call it "build instructions" (per packaging type) ?
+>
+>>>
+>>> Now, what does Maven do?
+>>>
+>>> Maven reads the build plan and executes it. Some steps of the build 
+>>> plan
+>>> deliver products ( compiled classes, test results, a package)
+>>>
+>>> I think the reactor might be confusing at this level.
+>>>
+>>
+>> I want the 60sec tutorial to be the grand overview, the next tutorial 
+>> is a
+>> 5 minute one on how a .jar file gets built
+>>
+>> Then you have a multi-module webapp tutorial at 10-15min
+>>
+>> I want to reference all the core concepts from the 60 second overview 
+>> even
+>> if only briefly, that way people can come back to the short page and say
+>> "ahh yes that is where that fits in again"
+>>
+>>
+>>>
+>>> my 2 cents,
+>>>
+>>> Robert
+>>>
+>>> [1] http://en.wikipedia.org/wiki/Droste_effect
+>>>
+>>>
+>>> Op Fri, 03 Jan 2014 15:41:15 +0100 schreef Stephen Connolly <
+>>> stephen.alan.connolly@gmail.com>:
+>>>
+>>>
+>>>  Just in case it wasn't clear... I'm looking for comments and feedback
+>>>>
+>>>>
+>>>> On 3 January 2014 14:35, Stephen Connolly
+>>>> <stephen.alan.connolly@gmail.com>wrote:
+>>>>
+>>>>  OK, so to start working on new content I created some pages on the 
+>>>> wiki:
+>>>>>
+>>>>> The first page is a 60 seconds overview of Maven's build process
+>>>>>
+>>>>>
+>>>>> https://cwiki.apache.org/confluence/display/MAVEN/
+>>>>> Tutorial:+Maven+in+60+seconds
+>>>>>
+>>>>> I am using icons because I want to have subsequent pages give more 
+>>>>> detail
+>>>>> and use the iconography to enable people to see what is being 
+>>>>> discussed
+>>>>> more easily
+>>>>>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

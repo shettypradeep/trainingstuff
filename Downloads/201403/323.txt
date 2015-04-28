@@ -1,0 +1,61 @@
+From users-return-135883-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 20 13:31:14 2014
+Return-Path: <users-return-135883-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5EFDC10787
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 20 Mar 2014 13:31:14 +0000 (UTC)
+Received: (qmail 71129 invoked by uid 500); 20 Mar 2014 13:31:10 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 70451 invoked by uid 500); 20 Mar 2014 13:31:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 70417 invoked by uid 99); 20 Mar 2014 13:31:03 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Mar 2014 13:31:03 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=FORGED_YAHOO_RCVD,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Mar 2014 13:30:58 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <leonidilyevsky@yahoo.com>)
+	id 1WQd3N-0000ZG-Iq
+	for users@maven.apache.org; Thu, 20 Mar 2014 06:30:37 -0700
+Date: Thu, 20 Mar 2014 06:30:37 -0700 (PDT)
+From: lilyevsky <leonidilyevsky@yahoo.com>
+To: users@maven.apache.org
+Message-ID: <1395322237570-5788937.post@n5.nabble.com>
+Subject: The par packaging not working
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+The "par" packaging is not working. It is dependent on the
+org.apache.maven.plugins:maven-par-plugin, but this plugin does not exist.
+Is it deprecated?
+I am using the latest maven 3.2.1.
+How should I make the par package these days? I know this thing is
+relatively simple: just a collection of jars plus manifest with a few
+special entries. But I don't want to re-invent the wheel. 
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/The-par-packaging-not-working-tp5788937.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

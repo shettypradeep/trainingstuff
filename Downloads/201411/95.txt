@@ -1,0 +1,114 @@
+From users-return-137815-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Nov 25 09:34:06 2014
+Return-Path: <users-return-137815-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EC656107B7
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 25 Nov 2014 09:34:05 +0000 (UTC)
+Received: (qmail 11713 invoked by uid 500); 25 Nov 2014 09:34:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 11622 invoked by uid 500); 25 Nov 2014 09:34:04 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 11610 invoked by uid 99); 25 Nov 2014 09:34:03 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Nov 2014 09:34:03 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of adrien.rivard@gmail.com designates 209.85.223.177 as permitted sender)
+Received: from [209.85.223.177] (HELO mail-ie0-f177.google.com) (209.85.223.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Nov 2014 09:33:38 +0000
+Received: by mail-ie0-f177.google.com with SMTP id rd18so161276iec.22
+        for <users@maven.apache.org>; Tue, 25 Nov 2014 01:32:52 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=vDgyJH/C+eXqQKKd58+C4gFIMT47RCDB4gJiS53iqvA=;
+        b=qairp/D7ATQZZKZUgi4XPnofHl8ItPzulR5u3MEwNscJpyKoJx0GWn2fXrWagDvekI
+         epGFUWQbwz5cGMeiGumD2HiB2BSYpdY3WF5DWqB1hvo4YzuQ/HbYIWQK54qN54g+XEQQ
+         pJ4XbMkrgsRSqVoO5hadA9fDa/5y1mhyqXUcD95c7K1uLfOb/A1ysRdqO6On2tOzTMZJ
+         Ncf6cRSTQhBO/lJeCfqS2q3d0kcD+Rw+0LD/CtNrQRCdF3AKC+M21aodH1h7cNwYIor1
+         ib7Z75W5P/NfduxXAuQMbYefQqWf2MXqoYT+r+89+6EUL+G/ZDf1o0czCh6HcqtK/8OP
+         I3zw==
+MIME-Version: 1.0
+X-Received: by 10.50.66.179 with SMTP id g19mr16593544igt.40.1416907972158;
+ Tue, 25 Nov 2014 01:32:52 -0800 (PST)
+Received: by 10.42.98.204 with HTTP; Tue, 25 Nov 2014 01:32:52 -0800 (PST)
+In-Reply-To: <BN3PR0301MB083682B7D7D2057D2FC9D7FACE730@BN3PR0301MB0836.namprd03.prod.outlook.com>
+References: <BN3PR0301MB083682B7D7D2057D2FC9D7FACE730@BN3PR0301MB0836.namprd03.prod.outlook.com>
+Date: Tue, 25 Nov 2014 10:32:52 +0100
+Message-ID: <CAPCUOdEaR5v4BZwidq3ogUKTyhPiBmq0aXmg+rfHtCcAq5iQ1w@mail.gmail.com>
+Subject: Re: Linux Command Line System Property Issue
+From: Adrien Rivard <adrien.rivard@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bdc15b25c38c30508ab988d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bdc15b25c38c30508ab988d
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+Maybe try "-DmavenArgLine=arg1 arg2"
+It works on plain java but can''t think of a way to test it quickly with
+maven.
+
+
+On Tue, Nov 25, 2014 at 2:21 AM, Gribnau, Phillip <pgribnau@informatica.com>
+wrote:
+
+> Hi Everyone,
+>
+> I am having trouble passing in a value via the command line on bash in
+> linux, but I have it working correctly on windows.
+>
+> On the command line, if I pass in the following:
+> -DmavenArgLine="arg1 arg2"
+>
+> The error on linux is: Unknown lifecycle phase "arg2"
+> Windows is able to interpret this correctly and show "arg1 arg2" in the
+> output, verified by using the following plugin:
+>
+> <plugin>
+>         <artifactId>maven-antrun-plugin</artifactId>
+>         <version>1.7</version>
+>         <executions>
+>           <execution>
+>             <phase>generate-sources</phase>
+>             <configuration>
+>               <tasks>
+>                 <echo>${mavenArgLine}</echo>
+>               </tasks>
+>             </configuration>
+>             <goals>
+>               <goal>run</goal>
+>             </goals>
+>           </execution>
+>         </executions>
+>       </plugin>
+>
+>
+> My need is that the value of mavenArgLine has to be given from the command
+> line as the value can differ from different environments. Is there a way to
+> pass in the value of mavenArgLine in linux with spaces?
+>
+>
+> Thanks,
+> Phillip
+>
+>
+
+
+-- 
+Adrien Rivard
+
+--047d7bdc15b25c38c30508ab988d--
+

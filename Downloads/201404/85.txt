@@ -1,0 +1,127 @@
+From users-return-136093-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Apr  5 15:09:02 2014
+Return-Path: <users-return-136093-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 651CC11901
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  5 Apr 2014 15:09:02 +0000 (UTC)
+Received: (qmail 86620 invoked by uid 500); 5 Apr 2014 15:08:59 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 85693 invoked by uid 500); 5 Apr 2014 15:08:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 85685 invoked by uid 99); 5 Apr 2014 15:08:56 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 05 Apr 2014 15:08:56 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.192.175 as permitted sender)
+Received: from [209.85.192.175] (HELO mail-pd0-f175.google.com) (209.85.192.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 05 Apr 2014 15:08:50 +0000
+Received: by mail-pd0-f175.google.com with SMTP id x10so4603549pdj.34
+        for <users@maven.apache.org>; Sat, 05 Apr 2014 08:08:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type;
+        bh=fL/UUYxqBYfl5dbpUROT2P2OQa34fw6BIDB3P1TJZms=;
+        b=GY/Ir+/3BFJmnLlMYoQCurkfJERpy7BcW2KmjYy5pR2eUyxz7wOt1I0CFYByIni9p6
+         /C6mqgb51Kzb6afzyIZ+fXSOEMAzUH+wmqkzn4YVUewbExyn2PKfj4gKTIeKJUGr2Dul
+         uqBtIUI0v3p5JGiJ2+/Q0rvpJXAF06agJaLb53FI/Zkx22Powj320/xDsa6rFu/grsXF
+         ZQee45twXKX6o8satQbnSDpVNvQeDLS8f7Mf3itcUxAQqQC+8cbciRe24a90my8a0uhR
+         xGblkNUHEetTKTXW+mdEA0Wha+VXADyDo3xXgqKIEATUPx4FjpeIvnbkx4kY6IRgAigt
+         XDKw==
+X-Received: by 10.67.13.134 with SMTP id ey6mr21049098pad.44.1396710508260;
+        Sat, 05 Apr 2014 08:08:28 -0700 (PDT)
+Received: from [192.168.0.17] (S0106602ad07f9cfa.vc.shawcable.net. [24.85.131.20])
+        by mx.google.com with ESMTPSA id qh2sm57252159pab.13.2014.04.05.08.08.25
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Sat, 05 Apr 2014 08:08:26 -0700 (PDT)
+Message-ID: <53401C69.5010801@gmail.com>
+Date: Sat, 05 Apr 2014 08:08:25 -0700
+From: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Maven Filtering
+References: <533F4A90.90000@kolotyluk.net> <BLU172-W375374EC31866C357C78B9AE6E0@phx.gbl>
+In-Reply-To: <BLU172-W375374EC31866C357C78B9AE6E0@phx.gbl>
+Content-Type: multipart/alternative;
+ boundary="------------040403050804070409050102"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------040403050804070409050102
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Excellent point Martin. I just hate ending a Friday with unsolved 
+problems, I find it easier to have fun when I have satisfied my goals 
+for the week.
+
+The problem was I did not realize I had to define the escape character 
+too...
+
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-resources-plugin</artifactId>
+<version>2.6</version>
+<configuration>
+<escapeString>\</escapeString>
+</configuration>
+</plugin>
+
+Cheers, Eric
+
+On 4/4/2014 6:09 PM, Martin Gainty wrote:
+> Eric-
+>
+> Its friday nite most "normal people" are now engaging in insane activity called 'having fun'
+>
+> i dont know what you have setup in environment variables so:
+>
+> change
+> <projectBuildDirectory>\${project.build.directory}</projectBuildDirectory>
+>
+> to
+> <project.build.directory>BaseFolderForYourProject</project.build.directory>
+>
+> HTH
+> Martin-
+>
+>> Date: Fri, 4 Apr 2014 17:13:04 -0700
+>> From: eric@kolotyluk.net
+>> To: users@maven.apache.org
+>> Subject: Maven Filtering
+>>
+>> According to http://maven.apache.org/shared/maven-filtering/ I can define
+>>
+>> <properties>
+>> <projectBuildDirectory>\${project.build.directory}</projectBuildDirectory>
+>> </properties>
+>>
+>> and I should expect to see
+>>
+>> ${project.build.directory}
+>>
+>> when the property projectBuildDirectory is used, but instead I get
+>>
+>> \D:\Users\Eric\Software\Project\Repositories\csharp-windows-elevate\target
+>>
+>> Am I going insane, is this a bug in Maven, or is the documentation wrong?
+>>
+>> Is there some other way to escape the filtering?
+>>
+>> Cheers, Eric
+>   		 	   		
+
+
+--------------040403050804070409050102--
+

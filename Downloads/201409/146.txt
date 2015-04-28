@@ -1,0 +1,82 @@
+From users-return-137353-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Sep 23 12:33:11 2014
+Return-Path: <users-return-137353-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0F48411C9E
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 23 Sep 2014 12:33:11 +0000 (UTC)
+Received: (qmail 67326 invoked by uid 500); 23 Sep 2014 12:33:08 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 67246 invoked by uid 500); 23 Sep 2014 12:33:08 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 67234 invoked by uid 99); 23 Sep 2014 12:33:08 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 23 Sep 2014 12:33:08 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.214.169 as permitted sender)
+Received: from [209.85.214.169] (HELO mail-ob0-f169.google.com) (209.85.214.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 23 Sep 2014 12:32:43 +0000
+Received: by mail-ob0-f169.google.com with SMTP id uy5so2150940obc.0
+        for <users@maven.apache.org>; Tue, 23 Sep 2014 05:32:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=gR3EvjnuifJnXpX4/J4XD9L0jZynL1yvaztTii8GdCo=;
+        b=kZbwvG5jHhixbZBzAMTiKB9m0fQ7I7VvFBsYQ/AhnKXNF3SevLzlqNd+4JLMmogwH5
+         rGn1sMxFAh9Jcmn7hBXDRwY84pZF/e8Z/GJoBZz0e/oJZb+tFgpWgb1dsPDXUU9NuSh5
+         M4jIeVkIBlzgoyE6LjDaabCUy9NSSUMq985uUZCbRxE8lSUqVO9TcAelTpXNgg0CP2NM
+         hapbyx2RFImrPP4HQur0U77uWP+LulQfojAi8NgvSDUoOHQdyuiKvcn2PjWMPfB0qPJr
+         ZiTrnRpzhnBJrws/+deTJ+QryNGz+G09WI1s4WWzYTYJHKWrH/3RRvTHXalmjfalB0Pj
+         8I0Q==
+MIME-Version: 1.0
+X-Received: by 10.60.174.3 with SMTP id bo3mr26128826oec.31.1411475561936;
+ Tue, 23 Sep 2014 05:32:41 -0700 (PDT)
+Received: by 10.60.226.200 with HTTP; Tue, 23 Sep 2014 05:32:41 -0700 (PDT)
+In-Reply-To: <CAMH6+axK==g5Gk26muHO1FKaKiRxdS=Ut70jP60sSda-8brRsg@mail.gmail.com>
+References: <CAKuK4uH7S5Z54van32ExnPu+_d8bP9BA-Vz-4BTK2QQ5My_KHQ@mail.gmail.com>
+	<CADN69y=zCBy+XJs9V338GTr1FP9y30NVbfOU09SUKcjM6Masxg@mail.gmail.com>
+	<CAMH6+axK==g5Gk26muHO1FKaKiRxdS=Ut70jP60sSda-8brRsg@mail.gmail.com>
+Date: Tue, 23 Sep 2014 13:32:41 +0100
+Message-ID: <CA+nPnMzYQmLcMz08GvYgFf4EDA9Ab_9w+veBokjUn-uiXnGZsw@mail.gmail.com>
+Subject: Re: usage with Jenkins
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e011844ce7a7ec00503bac336
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e011844ce7a7ec00503bac336
+Content-Type: text/plain; charset=UTF-8
+
+Freestyle does not mess with your build and change it from building the way
+maven intends. Google "stephen's java adventures Jenkins maven considered
+evil" for a more detailed discussion
+
+On Tuesday, 23 September 2014, James Green <james.mk.green@gmail.com> wrote:
+
+> On 23 September 2014 02:23, Curtis Rueden <ctrueden@wisc.edu
+> <javascript:;>> wrote:
+> >
+> >
+> > Also, stay away from the Jenkins "Maven" style job. Freestyle is more
+> > flexible and less buggy.
+> >
+>
+> Based on ..?
+>
+
+
+-- 
+Sent from my phone
+
+--089e011844ce7a7ec00503bac336--
+

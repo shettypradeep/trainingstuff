@@ -1,0 +1,78 @@
+From users-return-137171-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Aug 31 22:23:12 2014
+Return-Path: <users-return-137171-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 52AE1119E5
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 31 Aug 2014 22:23:12 +0000 (UTC)
+Received: (qmail 75105 invoked by uid 500); 31 Aug 2014 22:23:10 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 75007 invoked by uid 500); 31 Aug 2014 22:23:10 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74988 invoked by uid 99); 31 Aug 2014 22:23:10 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 31 Aug 2014 22:23:10 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.192.169] (HELO mail-pd0-f169.google.com) (209.85.192.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 31 Aug 2014 22:23:03 +0000
+Received: by mail-pd0-f169.google.com with SMTP id g10so4644008pdj.28
+        for <users@maven.apache.org>; Sun, 31 Aug 2014 15:22:42 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:to:subject:date:message-id:in-reply-to
+         :references:mime-version:content-type;
+        bh=758nUKAzaMVphrBf+jKo8FuZJ6ZE3VBsO5WU42PyNl4=;
+        b=j34L7i2EEP9uPx9TYW/VM2uNq6G+kzdBisFE2yOdeqpCeXstEk9JaNhhJWZDYZNOPj
+         jBRwg22+ZN7I/ic29r2ojxp3/mqfQmMOyxyTZsvgLZWbu26mHU5Linq7SPDK9A6aCJbr
+         y+SYmzZb1znJix7rPgOrWb5sR1jRZTneuwZ+/7ya7q/2rTpG38yhEO8agw417bQDFAqS
+         hLuvGCjtz+YRmk6D1Qq5A+GBsssmpf6gFjm/k/EHmchpjnko7V2F1Bx+Bc4gi0r744Ih
+         lDfXDZ4/cOZ33Orc79E6i+8vB4XUu/meqgzl0U85+Y4SH/Fbx2X+XSIlxpPhcao7lLj6
+         Qbcw==
+X-Gm-Message-State: ALoCoQlU4CBKoqNFRKZIx0weQ43xpZRDPlCYe5U802d5rTgObXglyYRlspQcv9l5WhZG/0Kuj3XY
+X-Received: by 10.66.122.3 with SMTP id lo3mr34149915pab.7.1409523762688;
+        Sun, 31 Aug 2014 15:22:42 -0700 (PDT)
+Received: from [10.0.0.142] (akl.smx.co.nz. [203.84.135.120])
+        by mx.google.com with ESMTPSA id pd7sm9201992pdb.78.2014.08.31.15.22.40
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Sun, 31 Aug 2014 15:22:41 -0700 (PDT)
+From: "Mark Derricutt" <mark@talios.com>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: CD, version numbers, IDE integration
+Date: Mon, 01 Sep 2014 10:22:28 +1200
+Message-ID: <A4C2C57D-8A4A-463D-8F15-A6D236D0C2D6@talios.com>
+In-Reply-To: <CALhtWkfE4BLd_qTzo40LGhZkH8xRuRTWz+2myCgVrP8YpVTEpQ@mail.gmail.com>
+References: <CALhtWkfE4BLd_qTzo40LGhZkH8xRuRTWz+2myCgVrP8YpVTEpQ@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; format=flowed
+X-Mailer: MailMate (1.8r4458)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Currently IntelliJ embeds 3.0.5 and gets perplexed over anything 3.2.x 
+specific ( it really doesn't like the tiles plugin ).
+
+I have a fork of Idea where I've bumped the embedded version of Maven 
+but as yet, it dies horribly with RMI Classloader issues :(
+
+On 1 Sep 2014, at 4:57, Benson Margulies wrote:
+
+> sure that IntelliJ would be most perplexed by
+> <version>${our-version}</version> at the top of a project hierarchy. I
+> gave up on Eclipse some time ago, but I'd be nearly as surprised if
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

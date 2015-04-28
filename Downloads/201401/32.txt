@@ -1,0 +1,93 @@
+From users-return-134912-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jan  3 15:19:04 2014
+Return-Path: <users-return-134912-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0390F107F0
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  3 Jan 2014 15:19:04 +0000 (UTC)
+Received: (qmail 35846 invoked by uid 500); 3 Jan 2014 15:18:05 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 35781 invoked by uid 500); 3 Jan 2014 15:18:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 35739 invoked by uid 99); 3 Jan 2014 15:17:59 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Jan 2014 15:17:59 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of adam.retter@googlemail.com designates 209.85.220.173 as permitted sender)
+Received: from [209.85.220.173] (HELO mail-vc0-f173.google.com) (209.85.220.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Jan 2014 15:17:54 +0000
+Received: by mail-vc0-f173.google.com with SMTP id ht17so7893393vcb.32
+        for <multiple recipients>; Fri, 03 Jan 2014 07:17:33 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlemail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :cc:content-type;
+        bh=BWtCVMuPMskm9BEL7Va9lBIdWouoD9oMERrgH+3A3mY=;
+        b=ZixRNjqWQn33Rc2XX8+wRo/SfE05e9xnXSIe5JVZ4L/k2vdhPWeqWAiDEFsBAA+XdP
+         yMMrIP+A8Ttdu50/BlCTdthwj4P659AgZ2vVYOshw3mS5eE6hd84DpFEXNlTHrLQGG2o
+         ulwYUfIj58l61OXjPriDvF0jvAXOqUtfTJ/boZMmqk5ir1nasCZWswkplK7h5LA/66bw
+         1WLfGV2nVPviP7tAI+W21bFLw0Gh2jtoCqAuiLzqkl6Rz3qvWq2z1bMo/YKgfvxBKwX3
+         sQwNI4ydEFrWaXEyPl6X7Ro9OQWyiW4JXZdNZUjChnQTyF3PUIqUhRLqgcQigIl6V22r
+         cC+Q==
+MIME-Version: 1.0
+X-Received: by 10.52.98.163 with SMTP id ej3mr758415vdb.97.1388762253142; Fri,
+ 03 Jan 2014 07:17:33 -0800 (PST)
+Received: by 10.58.171.37 with HTTP; Fri, 3 Jan 2014 07:17:33 -0800 (PST)
+In-Reply-To: <CA+nPnMz80i1=TFRmqOAgeGViXNrsfFwxZ8SWaHyxLNm+A7mAOw@mail.gmail.com>
+References: <CA+nPnMzmK+YXL1q=XWd=LZEzR7hoyqtO00wJvO85XyynJ+SmDA@mail.gmail.com>
+	<CA+nPnMz80i1=TFRmqOAgeGViXNrsfFwxZ8SWaHyxLNm+A7mAOw@mail.gmail.com>
+Date: Fri, 3 Jan 2014 15:17:33 +0000
+Message-ID: <CAPK0icim+C9_DSiF8mTYP0jWKYXo3Gvo_f-DeA1oxHrtOWUHDw@mail.gmail.com>
+Subject: Re: New site content
+From: Adam Retter <adam.retter@googlemail.com>
+To: Maven Users List <users@maven.apache.org>
+Cc: Maven Developers List <dev@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+It might be clearer to annotate the diagram, rather than have a
+separate key table.
+
+On 3 January 2014 14:41, Stephen Connolly
+<stephen.alan.connolly@gmail.com> wrote:
+> Just in case it wasn't clear... I'm looking for comments and feedback
+>
+>
+> On 3 January 2014 14:35, Stephen Connolly
+> <stephen.alan.connolly@gmail.com>wrote:
+>
+>> OK, so to start working on new content I created some pages on the wiki:
+>>
+>> The first page is a 60 seconds overview of Maven's build process
+>>
+>>
+>> https://cwiki.apache.org/confluence/display/MAVEN/Tutorial:+Maven+in+60+seconds
+>>
+>> I am using icons because I want to have subsequent pages give more detail
+>> and use the iconography to enable people to see what is being discussed
+>> more easily
+>>
+
+
+
+-- 
+Adam Retter
+
+skype: adam.retter
+tweet: adamretter
+http://www.adamretter.org.uk
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

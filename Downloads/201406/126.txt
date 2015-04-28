@@ -1,0 +1,110 @@
+From users-return-136621-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jun 20 14:23:13 2014
+Return-Path: <users-return-136621-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6099C11640
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 20 Jun 2014 14:23:13 +0000 (UTC)
+Received: (qmail 39589 invoked by uid 500); 20 Jun 2014 14:23:11 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 39505 invoked by uid 500); 20 Jun 2014 14:23:11 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 39492 invoked by uid 99); 20 Jun 2014 14:23:11 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 20 Jun 2014 14:23:11 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 20 Jun 2014 14:23:09 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 6BE196A657E
+	for <users@maven.apache.org>; Fri, 20 Jun 2014 10:22:44 -0400 (EDT)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id RegpCnEfACWm for <users@maven.apache.org>;
+	Fri, 20 Jun 2014 10:22:44 -0400 (EDT)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 3368D6A657D
+	for <users@maven.apache.org>; Fri, 20 Jun 2014 10:22:44 -0400 (EDT)
+Message-ID: <53A443B2.7080806@artifact-software.com>
+Date: Fri, 20 Jun 2014 10:22:42 -0400
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: "users@maven.apache.org >> Maven Users List" <users@maven.apache.org>
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Maven plugin which displays the parents of a given project recursively
+References: <CAK8jvqyWA1V5OQAUi0bFA=72bR_jiXy2smzqh+4n_QR1T8gqOQ@mail.gmail.com>
+In-Reply-To: <CAK8jvqyWA1V5OQAUi0bFA=72bR_jiXy2smzqh+4n_QR1T8gqOQ@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Good description of the use case that helps.
+You are not very explicit about how you identify the projects to be 
+checked or where (SCM, staging folder) you want to find them.
+
+Just a thought:
+Couldn't this be accomplished with a batch job that used XSLT or a 
+simple Java program with an XML parser to check POMs for outdated 
+references?
+POMs are just XML with a pretty simple structure.
+They always have the same name so finding them in the project is not hard.
+You are always looking down the same XPATH(s?) for the version and you 
+know which one is right.
+
+Is there some magic that Maven includes that is needed here?
+
+Ron
+
+On 20/06/2014 8:09 AM, Mirko Friedenhagen wrote:
+> Hello,
+>
+> does anybody know of a plugin which shows the GAV coordinates of the
+> parents of a given project recursively? Or is there any feasible
+> plugin where I could contribute with a goal?
+>
+> My team of 3 is consulting approx. 200 developers in regards of build
+> engineering with ca. 1000 Jenkins jobs and we often see they are using
+> outdated versions of our department POM. Having this information in
+> the console of a Jenkins job would allow to see this without checking
+> the POM.
+>
+> Regards Mirko
+> --
+> http://illegalstateexception.blogspot.com/
+> https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+> https://bitbucket.org/mfriedenhagen/
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

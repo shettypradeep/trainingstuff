@@ -1,0 +1,91 @@
+From users-return-135784-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 12 10:34:17 2014
+Return-Path: <users-return-135784-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4A84B102D4
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 12 Mar 2014 10:34:17 +0000 (UTC)
+Received: (qmail 23825 invoked by uid 500); 12 Mar 2014 10:34:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 22919 invoked by uid 500); 12 Mar 2014 10:34:12 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 22908 invoked by uid 99); 12 Mar 2014 10:34:10 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Mar 2014 10:34:10 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [62.13.150.126] (HELO outmail01446.authsmtp.com) (62.13.150.126)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Mar 2014 10:34:02 +0000
+Received: from punt15.authsmtp.com (punt15.authsmtp.com [62.13.128.229])
+	by punt18.authsmtp.com (8.14.2/8.14.2/) with ESMTP id s2CAXfY6020464
+	for <users@maven.apache.org>; Wed, 12 Mar 2014 10:33:41 GMT
+Received: from mail-c235.authsmtp.com (mail-c235.authsmtp.com [62.13.128.235])
+	by punt15.authsmtp.com (8.14.2/8.14.2/) with ESMTP id s2CAXfIc099683
+	for <users@maven.apache.org>; Wed, 12 Mar 2014 10:33:41 GMT
+Received: from Gaia.hannover.rmcon.de (s-linux-252.rmcon.de [145.253.210.14])
+	(authenticated bits=0)
+	by mail.authsmtp.com (8.14.2/8.14.2/) with ESMTP id s2CAXbmM049745
+	(version=TLSv1/SSLv3 cipher=AES128-SHA bits=128 verify=FAIL)
+	for <users@maven.apache.org>; Wed, 12 Mar 2014 10:33:37 GMT
+Received: from Gaia.hannover.rmcon.de ([::1]) by Gaia.hannover.rmcon.de
+ ([::1]) with mapi; Wed, 12 Mar 2014 11:33:35 +0100
+From: Martin Egge <martin.egge@rmcon.de>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Date: Wed, 12 Mar 2014 11:33:32 +0100
+Subject: Broken links in surefire-report
+Thread-Topic: Broken links in surefire-report
+Thread-Index: Ac892+geRfGszqp/RkubnK4JhezB1g==
+Message-ID: <DF3AA5068A925940AA6A19E71564B5B102D7C6BB176C@Gaia.hannover.rmcon.de>
+Accept-Language: de-DE
+Content-Language: de-DE
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+acceptlanguage: de-DE
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-Server-Quench: c58767e9-a9d1-11e3-b802-002590a15da7
+X-AuthReport-Spam: If SPAM / abuse - report it at: http://www.authsmtp.com/abuse
+X-AuthRoute: OCd2YQ4XBVZQRR4G CyVCASBPRC0/IxZL B1kPIB1HO1cTTixU O1hXKBxaKFQXRVwf XCRcFVVWTyAgG3x3 awtVfQRdaElNVQZt HklNR0xQEQZ2Ax0B GB8aTRt3aAQIO3wD FC4wAw1bWE19cUMz QUxVFyNVYG9nbmdK WV0JfldVbQJLKxxY OFh/Vm4NYWcCb3ox RlI/Nm8nFy9YKylT CgUMK1EJCUcNViUh XR0MHC8iWFcIXyIp M3QA
+X-Authentic-SMTP: 61633531363236.1023:706
+X-AuthFastPath: 0 (Was 255)
+X-AuthVirus-Status: No virus detected - but ensure you scan with your own anti-virus system.
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+I'm using the Maven Surefire Report Plugin to view my jasmine test results =
+(generated with Jasmine Maven Plugin) as HTML. The generated HTML-Pages loo=
+k quite good in different browsers but the links on failed tests don't work=
+ at all.
+
+The XML containing the jasmine results has whitespace and special chars in =
+the names of the testcases. Theses names are not allowed for HTML-Ids, so t=
+he names have to be modified before using them as ids/targets for anchors/l=
+inks in the generated HTML.
+
+This is only done halfway. The anchors have a modified id. Because the Sure=
+fireReportGenerator.java uses sink.anchor() to generate the anchor tags. Th=
+at function uses DoxiaUtils.encodeId() to encode any illegal character. But=
+ the link targets are wrong. SurefireReportGenerator.java uses it's own fun=
+ction toHtmlId() which does not implement the same logic as DoxiaUtils.enco=
+deId().
+
+
+Regards,
+Martin
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

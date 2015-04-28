@@ -1,0 +1,87 @@
+From users-return-135589-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb 24 20:22:03 2014
+Return-Path: <users-return-135589-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 865C91038F
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 24 Feb 2014 20:22:03 +0000 (UTC)
+Received: (qmail 12883 invoked by uid 500); 24 Feb 2014 20:21:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 12816 invoked by uid 500); 24 Feb 2014 20:21:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 12806 invoked by uid 99); 24 Feb 2014 20:21:57 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Feb 2014 20:21:57 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of tim.t.wu@ericsson.com designates 193.180.251.56 as permitted sender)
+Received: from [193.180.251.56] (HELO sesbmg20.ericsson.net) (193.180.251.56)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Feb 2014 20:21:48 +0000
+X-AuditID: c1b4fb38-b7f418e000001099-2e-530ba9c698f4
+Received: from ESGSCHC006.ericsson.se (Unknown_Domain [153.88.253.124])
+	by sesbmg20.ericsson.net (Symantec Mail Security) with SMTP id 64.7A.04249.7C9AB035; Mon, 24 Feb 2014 21:21:28 +0100 (CET)
+Received: from ESGSCMB101.ericsson.se ([169.254.1.55]) by
+ ESGSCHC006.ericsson.se ([146.11.116.83]) with mapi id 14.02.0387.000; Tue, 25
+ Feb 2014 04:21:26 +0800
+From: Tim Wu T <tim.t.wu@ericsson.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: Rule for maven plugin inheritance
+Thread-Topic: Rule for maven plugin inheritance
+Thread-Index: Ac8xnaLCGMhNbrjKRHSNsF90J19P/g==
+Date: Mon, 24 Feb 2014 20:21:25 +0000
+Message-ID: <75F3A2D98EDE2545BDC06B5B6C1CEC516DF1E827@ESGSCMB101.ericsson.se>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [146.11.116.9]
+Content-Type: multipart/alternative;
+	boundary="_000_75F3A2D98EDE2545BDC06B5B6C1CEC516DF1E827ESGSCMB101erics_"
+MIME-Version: 1.0
+X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFtrILMWRmVeSWpSXmKPExsUyM+Jvje6JldzBBjdeS1g82nqd0YHRo/2p
+	UABjFJdNSmpOZllqkb5dAlfGvGbxgv/yFQ1zjjM2MJ6R7mLk5JAQMJE4e2gzO4QtJnHh3no2
+	EFtI4AijxPzXUV2MXED2YkaJxf8OsYAk2ATUJD5e2cgKYosImEr8uP0LqIGDQ1hAS2L6o2CI
+	sL7Ew2kX2UHCIgJ6EnNXeYOEWQRUJX496QEbzyvgK7F3+y+wiYxAa7+fWsMEYjMLiEvcejKf
+	CeIcAYkle84zQ9iiEi8f/2OFsBUkln97CzaeWSBfYu9rS4iRghInZz5hmcAoNAvJpFkIVbOQ
+	VEGU6Egs2P2JDcLWlli28DUzjH3mwGMmZPEFjOyrGDmKU4uTctONDDYxAoP94JbfFjsYL/+1
+	OcQozcGiJM778a1zkJBAemJJanZqakFqUXxRaU5q8SFGJg5OqQbGvimqZQybftv33a1u9pf8
+	wT2h5f4JBgFDd/bE068Yzi68tXiSOIPgY+0qk7Lri9LcOU897hCvsLXKOl7xaO7uPbvTzWtL
+	o7Q+p70M/vziPce7Z8tddu3x+XTU4ZTSz73bNbLKznTOivxrZr7x1ErHvVXTtU/s7Jgw79Cd
+	9P9nVnRN8WJYZvgzSYmlOCPRUIu5qDgRAN3u/N9EAgAA
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_000_75F3A2D98EDE2545BDC06B5B6C1CEC516DF1E827ESGSCMB101erics_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Hi there,
+
+Met an interesting question recently about plugin inheritance and hope you =
+could give me some feedback :)
+
+At first, I define two maven java doc plugin inside the reporting tag and u=
+sed to generate different type of javadoc, one for standard javadoc and for=
+ customize one.
+
+Later, I want to move those two javadoc plug in into the parent pom, I don'=
+t use the pluginElement, just want all of our sub project could use it dire=
+ctly.
+
+However, I find only one of them will works, not both like I did them in su=
+b projects.
+
+Is there any special rule about this?
+
+Br,
+Tim
+
+--_000_75F3A2D98EDE2545BDC06B5B6C1CEC516DF1E827ESGSCMB101erics_--
+

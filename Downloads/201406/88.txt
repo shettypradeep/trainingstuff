@@ -1,0 +1,65 @@
+From users-return-136667-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jun 27 03:16:12 2014
+Return-Path: <users-return-136667-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D5D1411D98
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 27 Jun 2014 03:16:12 +0000 (UTC)
+Received: (qmail 8520 invoked by uid 500); 27 Jun 2014 03:16:10 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 8434 invoked by uid 500); 27 Jun 2014 03:16:10 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 8422 invoked by uid 99); 27 Jun 2014 03:16:10 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 27 Jun 2014 03:16:10 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.215.49 as permitted sender)
+Received: from [209.85.215.49] (HELO mail-la0-f49.google.com) (209.85.215.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 27 Jun 2014 03:16:07 +0000
+Received: by mail-la0-f49.google.com with SMTP id gf5so2486223lab.22
+        for <users@maven.apache.org>; Thu, 26 Jun 2014 20:15:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=0hxRxUFE+MwfWb8gPIngxbEmTCB/fj6S21u1uRykU5s=;
+        b=WBXPuQzpJpgWD3hYMBegc3/7wOVyBL0ZDjxyAh950FMVYkmQWrocyedJi3CDik9aeL
+         HKwD6RmGXsKTXYYOVSPTpZ0JyWHqucAEbFQPJAnNcvPnukK5WyzbNhuJTeOe7WLNsFB1
+         Wm1kD05btToxhB/DFOiP8/uMzHoQ9CuAL6TNRcDx+x0bzjUN2czcrAt/nvXF8cLCw0II
+         xFf/JNwdTSkfCPpPKGq0ckdIusZr8Gx+NZxWNWD5vfJhqA+0qeMzblELiGlXQ4mxEOKA
+         hbyp3BDF1AftJnbxn2GlkKMcccFqhfcqtfgYUjIPcb+xx2tPY0ol0WtSJE1gfXqiubfH
+         ierQ==
+MIME-Version: 1.0
+X-Received: by 10.152.180.195 with SMTP id dq3mr14437088lac.26.1403838942608;
+ Thu, 26 Jun 2014 20:15:42 -0700 (PDT)
+Received: by 10.114.194.100 with HTTP; Thu, 26 Jun 2014 20:15:42 -0700 (PDT)
+Date: Thu, 26 Jun 2014 20:15:42 -0700
+Message-ID: <CAPCjjnF2sBjXVNfVTGorFZzE6Qp8JJan2nm8ZbSWR2ZQJOg-iw@mail.gmail.com>
+Subject: M2E and Eclipse Luna ?
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1135eb6e7f00ed04fcc8b969
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1135eb6e7f00ed04fcc8b969
+Content-Type: text/plain; charset=UTF-8
+
+I just try the latest eclipse and try to build exec-mojo-plugin at MOJO,
+looks like m2e does not recognize maven-plugin-plugin
+
+Any one else seeing this?
+
+Thanks
+
+-D
+
+--001a1135eb6e7f00ed04fcc8b969--
+

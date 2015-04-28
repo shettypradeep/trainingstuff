@@ -1,0 +1,111 @@
+From users-return-136955-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Aug  1 13:57:35 2014
+Return-Path: <users-return-136955-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BA103119D1
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  1 Aug 2014 13:57:35 +0000 (UTC)
+Received: (qmail 25174 invoked by uid 500); 1 Aug 2014 13:57:34 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 25092 invoked by uid 500); 1 Aug 2014 13:57:34 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 25080 invoked by uid 99); 1 Aug 2014 13:57:33 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 01 Aug 2014 13:57:33 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dennisl.apache@gmail.com designates 209.85.220.54 as permitted sender)
+Received: from [209.85.220.54] (HELO mail-pa0-f54.google.com) (209.85.220.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 01 Aug 2014 13:57:29 +0000
+Received: by mail-pa0-f54.google.com with SMTP id fa1so5802286pad.41
+        for <users@maven.apache.org>; Fri, 01 Aug 2014 06:57:08 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=RhygMsalyC8rN8uith0GExHJ+uKV9AqqpE9H7MRwc3c=;
+        b=lDze5f2vWCeRpvnQ1LTs1tUCfz2x1UnCklj/Eq4VFVOcx9nx0VHM1rIKZ7w4qQIw8X
+         uejn3YHyB9QIU+icQHz7V+WKFZ+4ee+swicp43YGxbhelNabWfKpUwkHxQyquS2lsWRx
+         7oP9dTPHJaByzrpKujixpyZDgamaBetCaxQmt07MVWC/nFNl9lZwKuZc17no211iYHEE
+         o8jKc6KbJWsk9ZjL3NK131axahnlgE9JIRwejlXOztawKzkpeu/T7UAEBIec1h1ZEjhY
+         kmVEc7tK48qnWh7ytYSeGEmiBhpKkBvPHY/cjjcp5nL1gLzAj0pddCVJ/NHO+Ypdhv71
+         D7MQ==
+MIME-Version: 1.0
+X-Received: by 10.66.66.135 with SMTP id f7mr6315872pat.32.1406901428635; Fri,
+ 01 Aug 2014 06:57:08 -0700 (PDT)
+Sender: dennisl.apache@gmail.com
+Received: by 10.70.61.101 with HTTP; Fri, 1 Aug 2014 06:57:08 -0700 (PDT)
+In-Reply-To: <1406614289030-5801306.post@n5.nabble.com>
+References: <1406614289030-5801306.post@n5.nabble.com>
+Date: Fri, 1 Aug 2014 15:57:08 +0200
+X-Google-Sender-Auth: YYEvrEl2mXIfTMqidGx3kDsQcoU
+Message-ID: <CA+BhkyPM867hD0g36nGdXEKKYMVj2ccT9TsJaKC7N0SOFBKYWA@mail.gmail.com>
+Subject: Re: cannot initialize module TreeWalker - Unable to instantiate SuppressWarningsHolder
+From: Dennis Lundberg <dennisl@apache.org>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+That feature was added in Checkstyle 5.7, so you need
+maven-checkstyle-plugin 2.12 or newer.
+
+On Tue, Jul 29, 2014 at 8:11 AM, ecthelion <taneralkaya@yahoo.com> wrote:
+> I have maven-checkstyle-plugin(v2.5) and maven-eclipse-plugin(v2.8)
+> configured.
+>
+> Everything worked as expected but as soon as I introduced,
+>
+> <module name="SuppressWarningsHolder"/> *AND/OR* <module
+> name="SuppressWarningsFilter"/> to my checkstyle-config.xml, I started to
+> have problems building the project.
+>
+> Here is what I get:
+>
+>  [ERROR] BUILD ERROR
+> 1>  [INFO]
+> ------------------------------------------------------------------------
+> 1>  [INFO] Failed during checkstyle configuration
+> 1>
+> 1>EXEC : Embedded error : cannot initialize module TreeWalker - Unable to
+> instantiate SuppressWarningsHolder
+> 1>  Unable to instantiate SuppressWarningsHolderCheck
+>
+>
+> If I remove SuppressWarningsHolderCheck, I get the same error for
+> SuppressWarningsFilter.
+>
+> Any ideas?
+>
+> Thanks
+>
+>
+>
+> --
+> View this message in context: http://maven.40175.n5.nabble.com/cannot-initialize-module-TreeWalker-Unable-to-instantiate-SuppressWarningsHolder-tp5801306.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+
+
+-- 
+Dennis Lundberg
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

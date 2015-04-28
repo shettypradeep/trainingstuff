@@ -1,0 +1,82 @@
+From users-return-136938-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jul 29 06:12:13 2014
+Return-Path: <users-return-136938-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 675C011EF0
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 29 Jul 2014 06:12:13 +0000 (UTC)
+Received: (qmail 4816 invoked by uid 500); 29 Jul 2014 06:12:11 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 4735 invoked by uid 500); 29 Jul 2014 06:12:11 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 4722 invoked by uid 99); 29 Jul 2014 06:12:10 -0000
+Received: from Unknown (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 29 Jul 2014 06:12:10 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FORGED_YAHOO_RCVD,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: 216.139.236.26 is neither permitted nor denied by domain of taneralkaya@yahoo.com)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 29 Jul 2014 06:11:54 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <taneralkaya@yahoo.com>)
+	id 1XC0dF-0005jV-1G
+	for users@maven.apache.org; Mon, 28 Jul 2014 23:11:29 -0700
+Date: Mon, 28 Jul 2014 23:11:29 -0700 (PDT)
+From: ecthelion <taneralkaya@yahoo.com>
+To: users@maven.apache.org
+Message-ID: <1406614289030-5801306.post@n5.nabble.com>
+Subject: cannot initialize module TreeWalker - Unable to instantiate
+ SuppressWarningsHolder
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I have maven-checkstyle-plugin(v2.5) and maven-eclipse-plugin(v2.8)
+configured.
+
+Everything worked as expected but as soon as I introduced,
+
+<module name="SuppressWarningsHolder"/> *AND/OR* <module
+name="SuppressWarningsFilter"/> to my checkstyle-config.xml, I started to
+have problems building the project.
+
+Here is what I get:
+
+ [ERROR] BUILD ERROR
+1>  [INFO]
+------------------------------------------------------------------------
+1>  [INFO] Failed during checkstyle configuration
+1>  
+1>EXEC : Embedded error : cannot initialize module TreeWalker - Unable to
+instantiate SuppressWarningsHolder
+1>  Unable to instantiate SuppressWarningsHolderCheck
+
+
+If I remove SuppressWarningsHolderCheck, I get the same error for
+SuppressWarningsFilter.
+
+Any ideas?
+
+Thanks
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/cannot-initialize-module-TreeWalker-Unable-to-instantiate-SuppressWarningsHolder-tp5801306.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

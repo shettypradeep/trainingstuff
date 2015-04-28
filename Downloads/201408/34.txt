@@ -1,0 +1,91 @@
+From users-return-137065-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Aug 18 18:49:37 2014
+Return-Path: <users-return-137065-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BF9BE11B2B
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 18 Aug 2014 18:49:37 +0000 (UTC)
+Received: (qmail 26675 invoked by uid 500); 18 Aug 2014 18:49:34 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 26575 invoked by uid 500); 18 Aug 2014 18:49:34 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 26564 invoked by uid 99); 18 Aug 2014 18:49:33 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 18 Aug 2014 18:49:33 +0000
+X-ASF-Spam-Status: No, hits=3.2 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mgainty@hotmail.com designates 65.55.116.37 as permitted sender)
+Received: from [65.55.116.37] (HELO BLU004-OMC1S26.hotmail.com) (65.55.116.37)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 18 Aug 2014 18:49:29 +0000
+Received: from BLU172-W23 ([65.55.116.7]) by BLU004-OMC1S26.hotmail.com with Microsoft SMTPSVC(7.5.7601.22712);
+	 Mon, 18 Aug 2014 11:49:07 -0700
+X-TMN: [1bWar7f8X4902usi2F1lYYa/scX4icaa]
+X-Originating-Email: [mgainty@hotmail.com]
+Message-ID: <BLU172-W23256B40249B181D8D98D8AED40@phx.gbl>
+Content-Type: multipart/alternative;
+	boundary="_f882e9e7-68a5-4b4f-847a-4145ac78d6ea_"
+From: Martin Gainty <mgainty@hotmail.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: RE: Java SSL dependency issue
+Date: Mon, 18 Aug 2014 14:49:07 -0400
+Importance: Normal
+In-Reply-To: <E5A9ABAB-C7D9-40E6-9E46-972A72D48E4C@gmail.com>
+References: <E5A9ABAB-C7D9-40E6-9E46-972A72D48E4C@gmail.com>
+MIME-Version: 1.0
+X-OriginalArrivalTime: 18 Aug 2014 18:49:07.0737 (UTC) FILETIME=[1757C890:01CFBB15]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_f882e9e7-68a5-4b4f-847a-4145ac78d6ea_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+You should be able to locate the https://www.bouncycastle.org/latest_releas=
+es.html security jars you need from
+http://openjdk.java.net/groups/security
+
+what provider are you using?
+I recommend BouncyCastle
+https://www.bouncycastle.org/latest_releases.html
+
+Sounds like an interesting app..would like to hear more when you get a chan=
+ce
+
+Martin Gainty=20
+_______________________
+
+
+> From: joshualbailey@gmail.com
+> Subject: Java SSL dependency issue
+> Date: Thu=2C 7 Aug 2014 13:02:00 -0500
+> To: users@maven.apache.org
+>=20
+> I have two branches of code. One compiles without a hitch=2C the other co=
+mplains about this:
+>=20
+> Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:2.3=
+.2:compile (default-compile) on project thebookgrove-catalog: Compilation f=
+ailure: Compilation failure:
+> [ERROR] /Users/joshua/Desktop/Data/TheBookGrove/Platform/thebookgrove-cat=
+alog/src/main/java/com/thebookgrove/catalog/InternetConnectionAgent.java:[4=
+0=2C23] package sun.security.ssl does not exist
+> [ERROR] /Users/joshua/Desktop/Data/TheBookGrove/Platform/thebookgrove-cat=
+alog/src/main/java/com/thebookgrove/catalog/InternetConnectionAgent.java:[1=
+47=2C29] cannot find symbol
+>=20
+> I couldn't find any help with Google=2C so you are my last resort :(
+> ---------------------------------------------------------------------
+> To unsubscribe=2C e-mail: users-unsubscribe@maven.apache.org
+> For additional commands=2C e-mail: users-help@maven.apache.org
+>=20
+ 		 	   		  =
+
+--_f882e9e7-68a5-4b4f-847a-4145ac78d6ea_--
+

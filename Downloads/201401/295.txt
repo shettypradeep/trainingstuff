@@ -1,0 +1,129 @@
+From users-return-134943-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Jan  5 14:32:12 2014
+Return-Path: <users-return-134943-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 616E810E2D
+	for <apmail-maven-users-archive@www.apache.org>; Sun,  5 Jan 2014 14:32:12 +0000 (UTC)
+Received: (qmail 74761 invoked by uid 500); 5 Jan 2014 14:32:08 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 74677 invoked by uid 500); 5 Jan 2014 14:32:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74669 invoked by uid 99); 5 Jan 2014 14:31:56 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 05 Jan 2014 14:31:56 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of adam.retter@googlemail.com designates 209.85.128.180 as permitted sender)
+Received: from [209.85.128.180] (HELO mail-ve0-f180.google.com) (209.85.128.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 05 Jan 2014 14:31:51 +0000
+Received: by mail-ve0-f180.google.com with SMTP id jz11so8658453veb.39
+        for <users@maven.apache.org>; Sun, 05 Jan 2014 06:31:30 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlemail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type:content-transfer-encoding;
+        bh=9Uv1YQ9Bc3nJ68W1PED5HiaN+ODkY5MW+esTuxz2Y1c=;
+        b=M7Sn9SOY9cPc5T7x5L0oId8k+afo+Zw95/6p0pV9/njamfqHbJj3I12tTrCxxlqOgu
+         Om1/jsIk7Q8Q6MXW7UR3fBvl1OCSc1SsPbtBKvxSzjYyqb/SXf3f+MB5U6MvM1hz5/AV
+         V/srPr2ZV97U9WiLt1YRq8btCD9jt7uKFWhLgReVq6PApVHWahV9kJtAuNOzmUkV1QW/
+         I0Cqo8TG0EQ39ji2aJ4Ruc3Ly1lAeWCt1qVqfgEdNbXQhLP052Z5z6XLxYcC6LQhHM6j
+         5LZqx95Z6c/NgVFwBpim/G+n4fQd9SAz9WFvSR02oFrP4uU3iV0htGS0HK/4pKQ4M5Um
+         a8Sg==
+MIME-Version: 1.0
+X-Received: by 10.53.8.1 with SMTP id dg1mr64801vdd.52.1388932290115; Sun, 05
+ Jan 2014 06:31:30 -0800 (PST)
+Received: by 10.58.171.37 with HTTP; Sun, 5 Jan 2014 06:31:30 -0800 (PST)
+In-Reply-To: <80577B10-8927-4E40-9E41-5B69DBC66977@natusoft.se>
+References: <80577B10-8927-4E40-9E41-5B69DBC66977@natusoft.se>
+Date: Sun, 5 Jan 2014 14:31:30 +0000
+Message-ID: <CAPK0icieaJ=sjq3_xE=6LsYOgJ3Tnb2Bxmf4SrfjF-dbGKmbuw@mail.gmail.com>
+Subject: Re: Maven Central Opinion
+From: Adam Retter <adam.retter@googlemail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On the flip side - I would argue that the process is not too
+difficult. It is well documented and easy to understand, it can also
+be automated if you wish.
+
+You need not necessarily inherit the Sonatype pom, and if you do you
+can override whatever you like anyway.
+
+I think the current process means that artifacts that are released are
+well thought about and that their pom's provided a minimum of useful
+information.
+
+If you want to release something and you care about it, then I will
+assume that it is of good quality, then I would ask the question "Why
+should you care less about a high quality release than the code?"
+
+On 5 January 2014 13:15, Tommy Svensson <tommy@natusoft.se> wrote:
+> I was asked to submit one of my opensource tools at github to maven centr=
+al. This turned out to be a rather complex procedure.
+>
+> Sonatype puts the following requirements on anyone wanting to submit to m=
+aven central:
+>
+> - You are forced to set a Sonatype pom as parent of your project and thus=
+ inherit things you have no control over.
+> - You are forced to have a SNAPSHOT version even if you have no use for s=
+uch.
+> - You are forced at submission time to select a new version for your soft=
+ware even if you have no idea if it will be a minor, bugfix or new function=
+ality at this point in time.
+> - Your public repository (github, etc) which you are forced to point out =
+in your pom are no longer yours to decide over. It will be updated during t=
+he submission process.
+> - After running 3 different mvn commands you also need to login to Sonaty=
+pes nexus server and =E2=80=9Drelease=E2=80=9D the artifacts before the bec=
+ome available.
+>
+> The idea of the maven repository that has grown larger than maven itself =
+is a completely brilliant idea. It takes open source to a new level where a=
+nyone can just depend on other open source code and automatically download =
+it on build. This is really good for the open source world (well, at least =
+the Java/JVM part of it) . The fact that the release process to this centra=
+l repository is far too complex, I see as a really great problem, inhibitin=
+g the easy sharing of open source work. I have often found open source tool=
+s and frameworks that are not available in maven central, and that is becau=
+se not everyone is willing to put up with this, which now also includes mys=
+elf. As I see it, either this procedure needs to be changed to provide a tr=
+ivial release of binary artifacts without affecting your poms, or there nee=
+d to be an alternative open repository providing ease of release, where it =
+is trivial for anyone to share their binaries for easy access by others. I=
+=E2=80=99m wondering if I=E2=80=99m alone in this view or if there are othe=
+rs who agree with me ?
+>
+> Tommy Svensson
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+
+
+--=20
+Adam Retter
+
+skype: adam.retter
+tweet: adamretter
+http://www.adamretter.org.uk
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

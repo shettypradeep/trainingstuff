@@ -1,0 +1,372 @@
+From users-return-135447-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 13 10:37:23 2014
+Return-Path: <users-return-135447-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7002610D69
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 13 Feb 2014 10:37:23 +0000 (UTC)
+Received: (qmail 30191 invoked by uid 500); 13 Feb 2014 10:37:18 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 30117 invoked by uid 500); 13 Feb 2014 10:37:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 30109 invoked by uid 99); 13 Feb 2014 10:37:17 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 10:37:17 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of skriver79@gmail.com designates 209.85.216.174 as permitted sender)
+Received: from [209.85.216.174] (HELO mail-qc0-f174.google.com) (209.85.216.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 10:37:09 +0000
+Received: by mail-qc0-f174.google.com with SMTP id x13so17188050qcv.19
+        for <users@maven.apache.org>; Thu, 13 Feb 2014 02:36:49 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=60BcfwPuXBw1StKhWVM17LX1wwCwM1RlcAykw4rV0Xo=;
+        b=qeXF3YQvqYPGAuAwn0jQQDDG+Ye896CKHJGm28a9NyIqSR1eYu2jpntvxgsMjvLoU8
+         LTij44ir39mWVuq0YHz7m2bGA+e8TjEXkFE9Ktk4zZyY8R3oSb1h9ZziqtTbL4VZ+X8x
+         LvkbaJFoO6Q5ou0Z0TedwSUPEsgeC1EtULfow5bbKVfMQFOELpNHo3LY240Jz3WL+RDL
+         alHh2wK3ixjMypGTp79SsUcctJCuIttNY2kSD81Jm6rTHPn3Ef2MuOuEWHprgesbSFlB
+         EKaJfOSY5WU6nFuYnv1pVKaL43o6suPr0C3HWZeEpQ7b1eAAFGSHfVrrm0U8qsRnzcU9
+         HQbQ==
+MIME-Version: 1.0
+X-Received: by 10.224.87.193 with SMTP id x1mr1135782qal.70.1392287808913;
+ Thu, 13 Feb 2014 02:36:48 -0800 (PST)
+Received: by 10.96.28.72 with HTTP; Thu, 13 Feb 2014 02:36:48 -0800 (PST)
+In-Reply-To: <CAKDUN1v39-sf_dq=8A-1dF2cQyi8v+k_dVqsRJzwHwNsnhUHgQ@mail.gmail.com>
+References: <CAARODrivJ_wMZ9dxxsPWTxskHTnEL0O0O=wtNmJDV42aE1TptQ@mail.gmail.com>
+	<CAARODriPrUAm6KTf6ppK1xstyVaO9bZ8xkY8swRwF7KcEp+kJw@mail.gmail.com>
+	<CAKDUN1v39-sf_dq=8A-1dF2cQyi8v+k_dVqsRJzwHwNsnhUHgQ@mail.gmail.com>
+Date: Thu, 13 Feb 2014 14:36:48 +0400
+Message-ID: <CAARODrhvS5yH8pUyz+7SWFA4pQ5DkcFEmggwnBHnSA1MFJC3-Q@mail.gmail.com>
+Subject: Re: Maven deploy plugin 2.8.1 - deploy-file goal - unable to avoid
+ attachedArtifacts from being deployed in execute
+From: Henrik Skriver Rasmussen <skriver79@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c3e24646873604f24744dc
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c3e24646873604f24744dc
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi Anders
+
+I have a multi-module project with this structure:
+
+ A (root and parent pom project)
+ - module 1 - builds a jar as artifact
+ - module 2  - uses module 1 jar artifact in assembly tries to deploy the
+assembled zip file to artifactory.
+
+This is the module 2 pom file with YYYY inserted to replace project
+specific names.
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+<modelVersion>4.0.0</modelVersion>
+
+<parent>
+
+ <groupId>YYYY</groupId>
+
+ <artifactId>YYYY</artifactId>
+
+ <version>1.1-SNAPSHOT</version>
+
+</parent>
+
+ <artifactId>scripts</artifactId>
+
+<packaging>pom</packaging>
+
+<name>scripts</name>
+
+<description>YYYY</description>
+
+ <properties>
+
+ <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+ <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+ <main.basedir>${project.parent.basedir}</main.basedir>
+
+</properties>
+
+  <build>
+
+ <plugins>
+
+ <plugin>
+
+  <groupId>org.apache.maven.plugins</groupId>
+
+  <artifactId>maven-install-plugin</artifactId>
+
+  <version>2.5.1</version>
+
+  <configuration>
+
+  <skip>true</skip>
+
+  </configuration>
+
+ </plugin>
+
+ <plugin>
+
+  <groupId>org.apache.maven.plugins</groupId>
+
+  <artifactId>maven-assembly-plugin</artifactId>
+
+  <version>2.4</version>
+
+  <configuration>
+
+  <skip>true</skip>
+
+  </configuration>
+
+ </plugin>
+
+ <plugin>
+
+  <groupId>org.apache.maven.plugins</groupId>
+
+  <artifactId>maven-deploy-plugin</artifactId>
+
+  <version>2.8.1</version>
+
+  <configuration>
+
+  <skip>true</skip>
+
+  </configuration>
+
+ </plugin>
+
+   </plugins>
+
+</build>
+
+ <profiles>
+
+ <profile>
+
+<id>deployprofile</id>
+
+ <build>
+
+  <plugins>
+
+  <plugin>
+
+   <groupId>org.codehaus.mojo</groupId>
+
+   <artifactId>exec-maven-plugin</artifactId>
+
+   <version>1.2.1</version>
+
+   <executions>
+
+   <execution>
+
+    <id>Copy  into target folder and copy service jar into files/default
+</id>
+
+    <phase>package</phase>
+
+    <goals>
+
+    <goal>exec</goal>
+
+    </goals>
+
+    <configuration>
+
+    <executable>${project.basedir}/build_cookbook.sh</executable>
+
+    <arguments>
+
+     <argument>${project.parent.artifactId}</argument>
+
+     <argument>${project.parent.version}</argument>
+
+    </arguments>
+
+    </configuration>
+
+   </execution>
+
+   </executions>
+
+  </plugin>
+
+  <plugin>
+
+   <groupId>org.apache.maven.plugins</groupId>
+
+   <artifactId>maven-assembly-plugin</artifactId>
+
+   <version>2.4</version>
+
+      <executions>
+
+   <execution>
+
+    <id>deployprofile</id>
+
+    <phase>package</phase>
+
+    <goals>
+
+    <goal>single</goal>
+
+    </goals>
+
+    <configuration>
+
+    <finalName>${project.parent.artifactId}-${project.parent.version}
+</finalName>
+
+    <outputDirectory>${project.build.directory}/</outputDirectory>
+
+    <filtering>true</filtering>
+
+    <descriptors>
+
+     <descriptor>assembly/dist.xml</descriptor>
+
+    </descriptors>
+
+    </configuration>
+
+   </execution>
+
+   </executions>
+
+  </plugin>
+
+  <plugin>
+
+   <groupId>org.apache.maven.plugins</groupId>
+
+   <artifactId>maven-deploy-plugin</artifactId>
+
+   <executions>
+
+   <execution>
+
+    <id>cookbook</id>
+
+    <phase>deploy</phase>
+
+    <goals>
+
+    <goal>deploy-file</goal>
+
+    </goals>
+
+    <configuration>
+
+                      <primaryArtifact>false</primaryArtifact>
+
+    <repositoryId>artifactory</repositoryId>
+
+    <packaging>zip</packaging>
+
+    <url>${project.distributionManagement.snapshotRepository.url}</url>
+
+    <generatePom>false</generatePom>
+
+    <artifactId>${project.parent.artifactId}</artifactId>
+
+    <groupId>${project.parent.groupId}</groupId>
+
+    <version>${project.parent.version}</version>
+
+    <classifier>deploymentfile</classifier>
+
+    <file>
+
+
+${project.build.directory}/${project.parent.artifactId}-${project.parent.version}-deploymentfile.zip
+
+    </file>
+
+    </configuration>
+
+   </execution>
+
+   </executions>
+
+  </plugin>
+
+  </plugins>
+
+ </build>
+
+ </profile>
+
+</profiles>
+
+</project>
+
+
+Med venlig hilsen
+Henrik Skriver Rasmussen
+
+
+On Thu, Feb 13, 2014 at 2:15 PM, Anders Hammar <anders@hammar.net> wrote:
+
+> You need to provide more info on what you're doing! Is the
+> deploy:deploy-file bound to the build lifecycle of a project? How?
+>
+> /Anders
+>
+>
+> On Thu, Feb 13, 2014 at 11:06 AM, Henrik Skriver Rasmussen <
+> skriver79@gmail.com> wrote:
+>
+> > Hi
+> >
+> > I have a question about the expected behaviour of the deploy:deploy-file
+> > goal in the maven deploy plugin 2.8.1 which I am currently using to
+> deploy
+> > one file.
+> >
+> > It surprised me that no matter what I did I kept getting more artifacts
+> > deployed that I asked for and the reason is in the
+> > org.apache.maven.plugin.deploy.DeployFileMojo.execute line 376 where the
+> > attached artifacts are also deployed.
+> >
+> > Is this intended behaviour and if so how can I avoid this from happening?
+> >
+> > The goal name deploy-file indicates that one artifact (possible incl.
+> > pom/metadata) is to be deployed and not also a throng of other artifacts.
+> >
+> > I will be happy to provide a patch where this is aspect is removed.
+> >
+> > Thank you in advance
+> >
+> > regards
+> > Henrik Skriver Rasmussen
+> >
+>
+
+--001a11c3e24646873604f24744dc--
+

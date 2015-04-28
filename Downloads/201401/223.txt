@@ -1,0 +1,104 @@
+From users-return-134945-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Jan  5 14:39:45 2014
+Return-Path: <users-return-134945-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9743610E45
+	for <apmail-maven-users-archive@www.apache.org>; Sun,  5 Jan 2014 14:39:45 +0000 (UTC)
+Received: (qmail 82461 invoked by uid 500); 5 Jan 2014 14:39:36 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 81981 invoked by uid 500); 5 Jan 2014 14:39:34 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 81973 invoked by uid 99); 5 Jan 2014 14:39:32 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 05 Jan 2014 14:39:32 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of apache@malkusch.de designates 95.142.67.55 as permitted sender)
+Received: from [95.142.67.55] (HELO malkusch.de) (95.142.67.55)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 05 Jan 2014 14:39:28 +0000
+Received: from apache by malkusch.de with local (Exim 4.80.1)
+	(envelope-from <apache@malkusch.de>)
+	id 1Vzor5-0005MG-Pf
+	for users@maven.apache.org; Sun, 05 Jan 2014 15:39:07 +0100
+To: users@maven.apache.org
+Subject: Re: Maven Central Opinion
+X-PHP-Originating-Script: 1000:rcmail.php
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8;
+ format=flowed
+Content-Transfer-Encoding: 8bit
+Date: Sun, 05 Jan 2014 21:39:07 +0700
+From: Markus Malkusch <markus@malkusch.de>
+In-Reply-To: <80577B10-8927-4E40-9E41-5B69DBC66977@natusoft.se>
+References: <80577B10-8927-4E40-9E41-5B69DBC66977@natusoft.se>
+Message-ID: <f5e55456eca01de7814816bf066e56cf@malkusch.de>
+X-Sender: markus@malkusch.de
+User-Agent: Roundcube Webmail/0.9.4
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Tommy Svensson:
+
+> I was asked to submit one of my opensource tools at github to maven
+> central. This turned out to be a rather complex procedure.
+
+That was my first impression as well. But after reading the excellent
+documentation and setting everything properly up, I'm impressed how
+smooth releasing is.
+
+> - You are forced to set a Sonatype pom as parent of your project and
+> thus inherit things you have no control over.
+
+I don't think that's a requirement. I think it's more a help to make
+releasing more easy for you.
+
+> - You are forced at submission time to select a new version for your
+> software even if you have no idea if it will be a minor, bugfix or new
+> functionality at this point in time.
+
+I always go the proposed minor version change. If I later decide to make 
+a
+major change nobody prevents me to change the version at any time.
+
+> - Your public repository (github, etc) which you are forced to point
+> out in your pom are no longer yours to decide over. It will be updated
+> during the submission process.
+
+Yeah and that's really great. Without the release plugin I had to tag it
+myself. But AFAIK that's not a requirement for submitting a release to
+Maven Central.
+
+> - After running 3 different mvn commands you also need to login to
+> Sonatypes nexus server and â€?releaseâ€? the artifacts before the become
+> available.
+
+You can configure the nexus-staging-maven-plugin to do that for you.
+autoReleaseAfterClose does that trick.
+
+My projects use a common parent pom (which itself uses the sonatype 
+parent)
+where a typical release is done with two mvn commands and nothing more:
+mvn release:prepare and mvn release:perform. This releases to sonatype,
+tags a new version in vcs and makes a site-deploy to github. I'm really
+impressed how smooth things are.
+
+I understand that the process might look very complicated as first
+impression. But if you don't want to go it, you might ask the guy who
+opened the ticket to put your project into Maven Central:
+https://docs.sonatype.org/display/Repository/Uploading+3rd-party+Artifacts+to+The+Central+Repository
+
+Markus
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

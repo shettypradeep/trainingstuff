@@ -1,0 +1,67 @@
+From users-return-137991-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Dec 11 23:43:57 2014
+Return-Path: <users-return-137991-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5E571C659
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 11 Dec 2014 23:43:57 +0000 (UTC)
+Received: (qmail 38546 invoked by uid 500); 11 Dec 2014 23:43:55 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 38456 invoked by uid 500); 11 Dec 2014 23:43:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 38444 invoked by uid 99); 11 Dec 2014 23:43:54 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 11 Dec 2014 23:43:54 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.215.41 as permitted sender)
+Received: from [209.85.215.41] (HELO mail-la0-f41.google.com) (209.85.215.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 11 Dec 2014 23:43:48 +0000
+Received: by mail-la0-f41.google.com with SMTP id hv19so5150149lab.14
+        for <users@maven.apache.org>; Thu, 11 Dec 2014 15:42:42 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=/mgEf5mcxmzBr2/uCtRfrsSI+HR3YzDxE9OpK/S/6SU=;
+        b=RegA5AVSW5KgGcZrJPg4mwj9uUrR6Jk+bgZcycuNBheGEsjX5H2rN7ru53xM6wCqVe
+         hWec+eNjJCVYSC5s98QC6eUHpTMvwOhAJG3SPxBDy0w72GjhCToEWoxPiZqwGBi/h1tU
+         qGntsSCaqZUDiOJgltflKKz+M1b3maKQt5HjcgQ3HY0E0FwZ/XWpOhjROLePor8+AGiS
+         n+YfMwoFATQ/13boePry2B222k4poh924faFZEQSNlTQ1aAiczxNe6C7wSu4pP8ebmxl
+         M8snZ1SueOeaQRrYJ6/G64yb6GlsLcjkc9SMis5Hrg7w/g1YO92EYchCrDA1n/QmWAra
+         4JJQ==
+MIME-Version: 1.0
+X-Received: by 10.112.148.73 with SMTP id tq9mr12482668lbb.37.1418341362518;
+ Thu, 11 Dec 2014 15:42:42 -0800 (PST)
+Received: by 10.114.63.161 with HTTP; Thu, 11 Dec 2014 15:42:42 -0800 (PST)
+Date: Thu, 11 Dec 2014 15:42:42 -0800
+Message-ID: <CAPCjjnHgtcXTV2wrvj6b=ZAeMoFEScDCctnYdDSBwiJOKLgtxg@mail.gmail.com>
+Subject: Maven Repositories settings best practice
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bf0f65e154fbc0509f9559f
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bf0f65e154fbc0509f9559f
+Content-Type: text/plain; charset=UTF-8
+
+I do believe using maven mirror under setting.xml is best practice rather
+define them in pom.xml.
+
+However I am not able to locate some blogs I used to read before.
+
+Do you have any reference to this best practice?
+
+Very much appreciated
+
+-D
+
+--047d7bf0f65e154fbc0509f9559f--
+

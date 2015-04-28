@@ -1,0 +1,134 @@
+From users-return-135920-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Mar 24 20:57:43 2014
+Return-Path: <users-return-135920-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 950E410685
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 24 Mar 2014 20:57:43 +0000 (UTC)
+Received: (qmail 82573 invoked by uid 500); 24 Mar 2014 20:57:34 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 82334 invoked by uid 500); 24 Mar 2014 20:57:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 81904 invoked by uid 99); 24 Mar 2014 20:57:16 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Mar 2014 20:57:16 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of t.broyer@gmail.com designates 209.85.216.171 as permitted sender)
+Received: from [209.85.216.171] (HELO mail-qc0-f171.google.com) (209.85.216.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Mar 2014 20:57:12 +0000
+Received: by mail-qc0-f171.google.com with SMTP id c9so6707434qcz.2
+        for <users@maven.apache.org>; Mon, 24 Mar 2014 13:56:51 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=ITb46MwvaOJ3sNOjbBgHw9oNI/OqLceGSdxizme6OIA=;
+        b=JLop/7kHlzSbMvohnyOFsGvk3791hPpV38oHsIymEJi5jzOuTn3IkTYJA9eu5AjSLF
+         7cbk65JTFzpcsK4RXMX9afP9I0sxpKRvRTUELtUp/w1zD4YjO2tM1YMD/xFP7NjhhdVe
+         yQj7SBGou/V7Dw7zRZlUZrrKjQQa0KfFW6T4NOGjITp0F+FMlaNqNRhp850Fis/E0All
+         4y6JkEx2toRLQTLYymJuEfxhOU8whc0zfLaiFE9P0yG5EIsQJWCOcaRGs4Igwe2DdhjH
+         ZSdCyuxOb+GkG1+OIK/mHXNjOz/fvjQUxOj1c/rKJtxH6xT0a6JwTmf8wFrPEGHDRQ7H
+         Jn7Q==
+MIME-Version: 1.0
+X-Received: by 10.224.36.18 with SMTP id r18mr10780183qad.74.1395694611441;
+ Mon, 24 Mar 2014 13:56:51 -0700 (PDT)
+Received: by 10.140.95.194 with HTTP; Mon, 24 Mar 2014 13:56:51 -0700 (PDT)
+Received: by 10.140.95.194 with HTTP; Mon, 24 Mar 2014 13:56:51 -0700 (PDT)
+In-Reply-To: <53301485.7060803@gmx.de>
+References: <1395650439461-5789365.post@n5.nabble.com>
+	<53301485.7060803@gmx.de>
+Date: Mon, 24 Mar 2014 21:56:51 +0100
+Message-ID: <CAEayHEPTrnj_opjf5ToukM6CH7-vV+cwde6Ec6Yf8GFSutb5kA@mail.gmail.com>
+Subject: Re: multi-module phases sequence
+From: Thomas Broyer <t.broyer@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e01294b0087af4404f5607940
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01294b0087af4404f5607940
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Le 24 mars 2014 12:19, "Karl Heinz Marbaise" <khmarbaise@gmx.de> a =C3=A9cr=
+it :
+>
+> Hi,
+>
+>
+>
+> >
+>>
+>> There is one multi-module project where module 1 is dependend on module
+2.
+>> Module 1 uses assembly plugin in the package phase to produce the final
+>> artifact (zip file). Modul 2 uses dependency plugin in the
+generate-source
+>> phase to unpack that artifact (zip file).
+>
+>
+> Using dependency plugin to unpack...sounds strange...
+>
+>
+>>
+>> When we execute module 1 only (maven install) and after that module 2
+(maven
+>> compile) all works well.
+>>
+>> When we execute the multi-module parent (maven compile) then it fails,
+>> because the zip will not get bundled then obviously, so module 2 cannot
+find
+>> it.
+>
+>
+> These are indicators that your build is not ok. I assume missing
+inter-module dependencies or wrong deps...
+>
+> A multi module build must work with a clean local repository
+($HOME/.m2/repository/) just by using:
+>
+>
+> mvn clean package
+>
+> without any issue...if you have issues your build is wrong...
+
+With package yes, but if you stop anywhere before (e.g. compile, as the OP
+asked for, or test), then things are a lot more fragile.
+Same when building from within Eclipse, with workspace resolution.
+
+>>
+>> So how to tell maven that in a multi-module project, we want module 1 to
+run
+>> up to install but module 2 to run up to compile only? Or is it wanted by
+>> desing that in a multi-module project we always must run to install
+phase to
+>> be sure that module 1 is done before module 2 starts?
+>
+>
+> You misunderstand Maven as well as multi module build.
+>
+> The question is why do you need such behaviour ...
+>
+> If you compile something than you are creating an artifact? Or are we
+talking about a testing ?
+>
+>
+> Kind regards
+> Karl-Heinz Marbaise
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+--089e01294b0087af4404f5607940--
+

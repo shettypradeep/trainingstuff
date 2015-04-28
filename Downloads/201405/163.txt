@@ -1,0 +1,89 @@
+From users-return-136337-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon May 12 00:35:13 2014
+Return-Path: <users-return-136337-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id ECF6B11BDF
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 12 May 2014 00:35:12 +0000 (UTC)
+Received: (qmail 78952 invoked by uid 500); 12 May 2014 00:07:11 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 78867 invoked by uid 500); 12 May 2014 00:07:11 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 77595 invoked by uid 99); 10 May 2014 23:09:38 -0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of Neil.Hunt@fcc.gov designates 192.104.54.97 as permitted sender)
+Message-ID: <50C340EE894D274CA932537972C07B0F01052C51@fcc.gov>
+From: Neil Hunt <Neil.Hunt@fcc.gov>
+To: "'users@maven.apache.org'" <users@maven.apache.org>
+Subject: Truncating SCM/Git URL for tagging only
+Thread-Topic: Truncating SCM/Git URL for tagging only
+Thread-Index: Ac9qs7mgLUJMxFPmSnufS6XM4Jnbkg==
+Date: Thu, 8 May 2014 11:59:05 +0000
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+Content-Type: multipart/alternative;
+	boundary="_000_50C340EE894D274CA932537972C07B0F01052C51p2pxmb12fccnetw_"
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_000_50C340EE894D274CA932537972C07B0F01052C51p2pxmb12fccnetw_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+For some reason, when running maven release, it is giving me an invalid URL=
+ just for the tagging part of the push. For the pom.xml commit/push, it wor=
+ks fine and goes to appropriate URL. See below:
+
+
+
+[INFO] Working directory: /opt/jenkins-home/jobs/Section 4362/workspace/sec=
+tion4362-parent
+
+[INFO] Executing: /bin/sh -c cd "/opt/jenkins-home/jobs/Section 4362/worksp=
+ace/section4362-parent" && git commit --verbose -F /tmp/maven-scm-217365030=
+.commit '/opt/jenkins-home/jobs/Section 4362/workspace/section4362-services=
+/pom.xml' '/opt/jenkins-home/jobs/Section 4362/workspace/section4362-webapp=
+/pom.xml' '/opt/jenkins-home/jobs/Section 4362/workspace/section4362-static=
+/pom.xml' pom.xml
+
+[INFO] Working directory: /opt/jenkins-home/jobs/Section 4362/workspace/sec=
+tion4362-parent
+[INFO] Executing: /bin/sh -c cd "/opt/jenkins-home/jobs/Section 4362/worksp=
+ace/section4362-parent" && git symbolic-ref HEAD
+[INFO] Working directory: /opt/jenkins-home/jobs/Section 4362/workspace/sec=
+tion4362-parent
+[INFO] Executing: /bin/sh -c cd "/opt/jenkins-home/jobs/Section 4362/worksp=
+ace/section4362-parent" && git push ssh://git@github.com/{org}/Section4362.=
+git maven-release-test:maven-release-test
+[INFO] Working directory: /opt/jenkins-home/jobs/Section 4362/workspace/sec=
+tion4362-parent
+[INFO] Tagging release with the label section4362-parent-0.3...
+[INFO] Executing: /bin/sh -c cd "/opt/jenkins-home/jobs/Section 4362/worksp=
+ace" && git tag -F /tmp/maven-scm-882610155.commit section4362-parent-0.3
+[INFO] Working directory: /opt/jenkins-home/jobs/Section 4362/workspace
+[INFO] Executing: /bin/sh -c cd "/opt/jenkins-home/jobs/Section 4362/worksp=
+ace" && git push ssh://git@github.com/{org} section4362-parent-0.3
+[INFO] Working directory: /opt/jenkins-home/jobs/Section 4362/workspace
+
+You can see that for the push after the commit, it pushes to ssh://git@gith=
+ub.com/{org}/Section4362.git ({org} scrubbed by me), whereas for the push a=
+fter the tag, it goes to ssh://git@github.com/{org} - URL should include /S=
+ection4362.git at the end. All my pom files specify the correct: scm:git:ss=
+h://git@github.com/{org}/Section4362.git
+
+How would URL be changing for tag push and where would it get it from? Buil=
+d is obviously failing at that step saying unable to connect to repo.
+
+--_000_50C340EE894D274CA932537972C07B0F01052C51p2pxmb12fccnetw_--
+

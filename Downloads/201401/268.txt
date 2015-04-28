@@ -1,0 +1,258 @@
+From users-return-134880-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan  2 15:12:56 2014
+Return-Path: <users-return-134880-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2489B10E4B
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  2 Jan 2014 15:12:56 +0000 (UTC)
+Received: (qmail 39928 invoked by uid 500); 2 Jan 2014 15:12:02 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 39727 invoked by uid 500); 2 Jan 2014 15:11:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 39711 invoked by uid 99); 2 Jan 2014 15:11:55 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Jan 2014 15:11:55 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.160.41 as permitted sender)
+Received: from [209.85.160.41] (HELO mail-pb0-f41.google.com) (209.85.160.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Jan 2014 15:11:51 +0000
+Received: by mail-pb0-f41.google.com with SMTP id jt11so14522980pbb.14
+        for <multiple recipients>; Thu, 02 Jan 2014 07:11:30 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=5yKOTuG5wOBZJMTXGlzfrTD+riGCrCzFJEKUGiE7FW4=;
+        b=nAqc9f+JhvxRTWPyGeR9Sd+cqowL765/M0vm22FVUJ95eFYoBz039IG8AYqOyra8Jt
+         m4EKe6wb+Assf6bRkZypfePOSOx2D6MmPYcrw+XWUAKlMfdlkBAJBYVyt8XVP2XUGXXx
+         Cu1St2CQMFbpyxLhWE8+3TQddRuqexfimkJ6YCirZewYHLpx3AaxZsR/y43MdtkeKqwX
+         6LPb1FXsOY40nyySPqGP5xi4ZBqYyDvj4xwTIIP5+mzZTxo4AlUalG6gnKebg6L0pJ+e
+         GLFawIhwf1pHXBD7BgemNYXxvsN80eu6yPGm9rszgp53VikiUamNdF4UeV/zF5DynK2M
+         VU0g==
+MIME-Version: 1.0
+X-Received: by 10.67.1.70 with SMTP id be6mr89603959pad.9.1388675489919; Thu,
+ 02 Jan 2014 07:11:29 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Thu, 2 Jan 2014 07:11:29 -0800 (PST)
+In-Reply-To: <58EAA08AF8232344ADDB2E31D4996BFD4BBC326B@SMAPEXCHIDAG3.prod.ad.merc.chicago.cme.com>
+References: <CA+nPnMwq2-s+HU=C_gjBehb92KDOePMOd2y9M-gUzmiu6UAnRQ@mail.gmail.com>
+	<CA+nPnMwDQSR7VbdJ82kT_zgnwm_suv-5ecN9XWpbZr2BhHRLTw@mail.gmail.com>
+	<CALhtWkf8NVEF82v_qScYCWQgixUBHM9PbowC_Zuf7bTwtvpMCQ@mail.gmail.com>
+	<37043D9F-E440-4BFE-A62B-A3951168F907@tesla.io>
+	<CA+nPnMxjzbpKyGrbPMughKvLx1bU4_n-EAzoxaekTx2_mq5vEg@mail.gmail.com>
+	<CABLGb9zz=gab_F9UnZh9_0Rai5M2FGf=jNQHJ43HsCYt7Wmp3g@mail.gmail.com>
+	<CA+nPnMxc8hL09_sgVhk_jWKXFVn8_C3f7wxfQ5_NCbrUAKBsLg@mail.gmail.com>
+	<CAArU9iY_K1FmkFX1cx3ebQr13JVKCJYkr9HG3ifjVRnVU38D+Q@mail.gmail.com>
+	<520234cfeea2a93ffe5524c84bb1435a.squirrel@www.mosabuam.com>
+	<CABLGb9w0QWFtHTkz7xWhUgj8T4TXUJjxJFs8Q-BYe0qG88RnRg@mail.gmail.com>
+	<CA+nPnMzkumu_925CV+u+D5_wkHjwLCVSRmwMS6JuHvq16zp3Mg@mail.gmail.com>
+	<23db4a359ac8b220e15f373269ebc967.squirrel@www.mosabuam.com>
+	<CA+nPnMy32UXkeOz7-L8SdYymvuOtcVUGgqLca4UGg4MDade1Qg@mail.gmail.com>
+	<03B56DD5-E957-438E-A30E-439C2785032D@apache.org>
+	<781949f830750555c03856e45275c78b.squirrel@www.mosabuam.com>
+	<CA+nPnMw+yPfmovGb-DCxvgvqjUkboddWzBuHEyHZmauYPkiENw@mail.gmail.com>
+	<CA+nPnMzWqgsVuCMaK6FP0QfXDXSLadyUsP+dMeRy9cW73jdarA@mail.gmail.com>
+	<CA+nPnMyY0ST8OV4hfd1=-0vgEuTff8B8ym4iXwjWF16nW=ESHg@mail.gmail.com>
+	<CA+nPnMwwTCbHO64+axugaBXbttarKr86iembz57RNM_iAr_b7w@mail.gmail.com>
+	<58EAA08AF8232344ADDB2E31D4996BFD4BBC326B@SMAPEXCHIDAG3.prod.ad.merc.chicago.cme.com>
+Date: Thu, 2 Jan 2014 15:11:29 +0000
+Message-ID: <CA+nPnMwAYirzveY3GjHMH_+-DcxfxxYquTBzU2XTmDGFDLmuwg@mail.gmail.com>
+Subject: Re: New logo?
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: "Lyons, Roy" <Roy.Lyons@cmegroup.com>, Maven Developers List <dev@maven.apache.org>, 
+	Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b15aefb48f7f204eefe3559
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b15aefb48f7f204eefe3559
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+http://people.apache.org/~stephenc/maven-logo-contest/maven-15.png
+
+
+On 2 January 2014 14:52, Lyons, Roy <Roy.Lyons@cmegroup.com> wrote:
+
+> I was wondering if you might be able to try this with the bird flying
+> upwards and to the right.  Its a "moving up and to the future" instead of
+> "diving down into the past" kind of feeling.  If it looks good, perhaps i=
+t
+> can be a #15...
+>
+> On 1/2/14 7:18 AM, "Stephen Connolly" <stephen.alan.connolly@gmail.com>
+> wrote:
+>
+> >As 9 is particularly problematic I have sketched -14 which is not a dire=
+ct
+> >copy of a silhouette. This still has the issue w.r.t. other marks called
+> >maven using a silhouetted raven...
+> >
+> >http://people.apache.org/~stephenc/maven-logo-contest/maven-14.png (in
+> >context:
+> >http://people.apache.org/~stephenc/maven-logo-contest/screenshot-14.png =
+)
+> >
+> >
+> >On 2 January 2014 12:47, Stephen Connolly
+> ><stephen.alan.connolly@gmail.com>wrote:
+> >
+> >> two more that I drew over the holidays:
+> >>
+> >> http://people.apache.org/~stephenc/maven-logo-contest/maven-12.png (in
+> >> context:
+> >> http://people.apache.org/~stephenc/maven-logo-contest/screenshot-12.pn=
+g
+> )
+> >>
+> >> http://people.apache.org/~stephenc/maven-logo-contest/maven-13.png (in
+> >> context:
+> >> http://people.apache.org/~stephenc/maven-logo-contest/screenshot-13.pn=
+g
+> )
+> >>
+> >> I really would like some contributions from the community rather than
+> >>just
+> >> things that I have sketched...
+> >>
+> >> At present, to my mind, the ones worth consideration are:
+> >>
+> >> http://people.apache.org/~stephenc/maven-logo-contest/maven-3a.png
+> >> http://people.apache.org/~stephenc/maven-logo-contest/maven-5.png
+> >> http://people.apache.org/~stephenc/maven-logo-contest/maven-7b.png
+> >> http://people.apache.org/~stephenc/maven-logo-contest/maven-9.png (not=
+e
+> >> would need to check if we can use this one)
+> >> http://people.apache.org/~stephenc/maven-logo-contest/maven-12.png
+> >> http://people.apache.org/~stephenc/maven-logo-contest/maven-13.png
+> >>
+> >> In terms of image rights, these are all sketched by me, in some cases =
+I
+> >> was using images or photos that I took myself (3a , 5 and 13). In othe=
+r
+> >> cases I traced photos from the web. -9 is the most problematic, both
+> >>from
+> >> the point of an all black silhouette being used as a logo for another
+> >> company using the Maven mark (but not in our context... we'd need to a=
+sk
+> >> permission) but also being a direct trace of an image on the web... if
+> >> people really like -9 then we would need to seek permission for that
+> >>type
+> >> of image and perhaps try and commission somebody to draw a similar
+> >> silhouette rather than my direct trace. -12 is a composition including=
+ a
+> >> direct trace of the outline of a photo of the totem carving of the
+> >>raven,
+> >> but the inner detail I drew myself as a study of the original... so
+> >> slightly more complex origin... again, if this type of look is popular
+> >>we
+> >> can look into getting the approval to use the image.
+> >>
+> >> If we can get a few community contributions then I will start a vote
+> >> run-off... I don't want to have a run-off with only my contributions a=
+s
+> >>I
+> >> just don't think that is the spirit of the community that we are (but
+> >>hey
+> >> if nobody else is willing to try their hand, perhaps we will be reduce=
+d
+> >>to
+> >> a run-off of my creations)
+> >>
+> >>
+> >>
+> >> On 21 December 2013 12:25, Stephen Connolly <
+> >> stephen.alan.connolly@gmail.com> wrote:
+> >>
+> >>> Having thought about it overnight... if people really want to go with=
+ a
+> >>> non-stylised raven we can always ask for permission:
+> >>>
+> >>> http://people.apache.org/~stephenc/maven-logo-contest/maven-9.png
+> >>>
+> >>> OTOH here is a different stylised version
+> >>>
+> >>> http://people.apache.org/~stephenc/maven-logo-contest/maven-10.png
+> >>>
+> >>> Finally, here is a raven totem
+> >>>
+> >>> http://people.apache.org/~stephenc/maven-logo-contest/maven-11.png
+> >>>
+> >>> I think this last one could be put in a forest with sky background...
+> >>> just haven't had time to do it
+> >>>
+> >>>
+> >>> On 20 December 2013 22:26, Stephen Connolly <
+> >>> stephen.alan.connolly@gmail.com> wrote:
+> >>>
+> >>>> I think we can't go with the raven....
+> >>>>
+> >>>> http://www.prweb.com/releases/2012/3/prweb9334175.htm
+> >>>>
+> >>>> Given that a different non-competing user of the name is using a rav=
+en
+> >>>> in their logo
+> >>>>
+> >>>> On Friday, 20 December 2013, Manfred Moser wrote:
+> >>>>
+> >>>>> >
+> >>>>> > On Dec 20, 2013, at 1:01 PM, Manfred Moser
+> >>>>><manfred@simpligility.com>
+> >>>>> > wrote:
+> >>>>> >
+> >>>>> >> I would move the Raven closer to the word Maven but otherwise th=
+is
+> >>>>> looks
+> >>>>> >> good imho. Of course I am not sure if everyone would recognize i=
+t
+> >>>>>as
+> >>>>> a
+> >>>>> >> raven ..
+> >>>>> >
+> >>>>> > That=C2=B9s my problem=C5=A0.  doesn=C2=B9t look like a raven to =
+me at all.
+> >>>>> >
+> >>>>> > When I first looked at it, I guess the =C2=B3mouth + tough=C2=B2 =
+part seemed
+> >>>>>to
+> >>>>> look
+> >>>>> > more like the Seattle SeaHawks logo stuck on a boot with a weird
+> >>>>> swirly
+> >>>>> > thing at the ankle.
+> >>>>> >
+> >>>>> > In other words, a little to =C2=B3abstract=C2=B2 for me.   :-)
+> >>>>>
+> >>>>> Fair enough. I guess living in the pacific northwest I am exposed t=
+o
+> >>>>> these
+> >>>>> depictions a lot so I can tell. But globally we might have to make
+> >>>>>it a
+> >>>>> bit clearer. Good input ;-)
+> >>>>>
+> >>>>> manfred
+> >>>>>
+> >>>>> -------------------------------------------------------------------=
+--
+> >>>>> To unsubscribe, e-mail: dev-unsubscribe@maven.apache.org
+> >>>>> For additional commands, e-mail: dev-help@maven.apache.org
+> >>>>>
+> >>>>>
+> >>>>
+> >>>> --
+> >>>> Sent from my phone
+> >>>>
+> >>>
+> >>>
+> >>
+>
+>
+
+--047d7b15aefb48f7f204eefe3559--
+

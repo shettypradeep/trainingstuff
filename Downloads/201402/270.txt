@@ -1,0 +1,205 @@
+From users-return-135344-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Feb  4 09:55:04 2014
+Return-Path: <users-return-135344-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 65D5F1037A
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  4 Feb 2014 09:55:04 +0000 (UTC)
+Received: (qmail 64859 invoked by uid 500); 4 Feb 2014 09:55:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 64085 invoked by uid 500); 4 Feb 2014 09:54:53 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 64073 invoked by uid 99); 4 Feb 2014 09:54:50 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 04 Feb 2014 09:54:50 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephane.nicoll@gmail.com designates 209.85.216.172 as permitted sender)
+Received: from [209.85.216.172] (HELO mail-qc0-f172.google.com) (209.85.216.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 04 Feb 2014 09:54:46 +0000
+Received: by mail-qc0-f172.google.com with SMTP id c9so13211524qcz.3
+        for <users@maven.apache.org>; Tue, 04 Feb 2014 01:54:25 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=irXOUPuVHCgqs3TSZYyUhxlmD3o6CdxwbfwoKce9icU=;
+        b=YkW9vLrxkUwbP4k6Vx1VSQJadpebc7/g+s6PShvzO8c7k329JqZnGlTsvpvuQiV3OW
+         e+mlOE4SB5PKnA1bWuXL3iDKz3v7+uk5rym4K1bpCFpxTewZS7kyrIEAQ24r7CFnXK1B
+         L4EcE+WZlPturU0RgX0pozEGs2g0Uca4qF1NOcGOCtdiiCddzUuWv7RPJMLr47an9UN+
+         68BCZm0Vad7FXy6ItkzUrRzijUOnI5ewxIPVp2lg1Anz283imd7bwet9kPCzCbdN0/VX
+         w7yLX56/Z+gGrdCtqsc5ZBaCvOdwVtF0A/282XfV6G3u7qs8gHqRo3v2Wy3uTtRdLVdb
+         BaEA==
+MIME-Version: 1.0
+X-Received: by 10.140.29.139 with SMTP id b11mr60718248qgb.48.1391507665205;
+ Tue, 04 Feb 2014 01:54:25 -0800 (PST)
+Received: by 10.140.22.163 with HTTP; Tue, 4 Feb 2014 01:54:25 -0800 (PST)
+In-Reply-To: <CAKDUN1swy7w7bjj12f7kffY=d-fD=eOThpz-tLgMg7dfBjaC_g@mail.gmail.com>
+References: <CAOonohfsbrJ-7pxsEYFhLJvzb9KS+V6tnM0Je46Ep3m8YLFWSg@mail.gmail.com>
+	<CAKDUN1vjCWVKV8BQZkjAW4Xb96z_41mhRmP=TNzLHxaX=YdCGg@mail.gmail.com>
+	<CAOonohc6YwtXH-LtEHv3PGnv57cQ0YjWUvcTp9VZ1+Bj8DN7sQ@mail.gmail.com>
+	<CAKDUN1v-0t+DhVnYi3CXFa_0UBs+KXXnR3jeDWqaETFQOO8r=Q@mail.gmail.com>
+	<CAOonoheiu4EWX6p_g=FJHkRHqmBaG+PJoFbeS=7M9nh+DQhA5g@mail.gmail.com>
+	<CAKDUN1swy7w7bjj12f7kffY=d-fD=eOThpz-tLgMg7dfBjaC_g@mail.gmail.com>
+Date: Tue, 4 Feb 2014 10:54:25 +0100
+Message-ID: <CAOonohdaKQu45B9VtWVUnzbPy_hZD+kzH=4j8WxszsFHrKKiJw@mail.gmail.com>
+Subject: Re: dependency management across projects
+From: Stephane Nicoll <stephane.nicoll@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113a76ca1641ae04f191a04f
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113a76ca1641ae04f191a04f
+Content-Type: text/plain; charset=ISO-8859-1
+
+On Mon, Feb 3, 2014 at 8:21 AM, Anders Hammar <anders@hammar.net> wrote:
+
+> I believe so, yes. The key thing in my "solution" is the BOM. And the BOM
+> will keep the appropriate version of the the sub-products together.
+>
+
+Right!
+
+>
+> There is no automatic solution for this that I know of. I suppose that
+> tolls could be created, but keep in mind that in the end, "for backward
+> compatibility reason SP2 has to use 1.8.0" is normally a human decision.
+>
+
+It is. The tool I aim to create is more report-based. Something that would
+gather the dependencies on each sub-projects and report inconsistencies: a
+dependency unknown to the product has been added or removed, etc.
+
+Thanks for brainstorming this with me. It feels that we're indeed lacking
+for a standard solution for this in the Maven land. Will look into that and
+report here my progress
+
+S.
+
+
+>
+> /Anders
+>
+>
+> >
+> > Creating manually the first BOM for P v1.0.0 isn't a problem: i've
+> created
+> > a set of tools that I am happy to share once they are fully ready. But
+> > maintaining that BOM in the long run is more of a challenge (because we
+> > can't force the sub-projects to use those versions so we have to monitor
+> > what happens in each sub-project to take the appropriate version at the
+> > product level).
+> >
+> > Thanks again for the feedback!
+> >
+> > S.
+> >
+> >
+> > >
+> > > /Anders
+> > >
+> > >
+> > > >
+> > > >
+> > > > >
+> > > > >
+> > > > > There is also the possibility of creating a "grouping pom", which
+> > lists
+> > > > all
+> > > > > artifacts as dependencies. You would then declare a dependency to
+> > that
+> > > > > grouping pom and get all deps magically sucked in. However, this is
+> > not
+> > > > > really the "Maven way" in my opinion as you wouldn't specify your
+> > > direct
+> > > > > deps bu sort of relly on transitive deps. There are some fans of
+> this
+> > > > > approach though here on this list.
+> > > > >
+> > > > >
+> > > > > > 2. Build configs that *force* each sub-project to run with the
+> list
+> > > of
+> > > > > > dependencies for the project (to ensure all tests pass, etc).
+> This
+> > is
+> > > > to
+> > > > > be
+> > > > > > used alongside the regular build job for validation purpose
+> > > > > >
+> > > > >
+> > > > > Maybe some enforcer rule?
+> > > > >
+> > > >
+> > > > Like I said, this is to be used alongside the regular build job. So
+> my
+> > > SP4
+> > > > 1.2.0-SNAPSHOT is building with a set of dependencies on its own and
+> I
+> > > want
+> > > > to validate that with the dependencies of the target release for P,
+> it
+> > is
+> > > > also working just fine. It may just be the same ideally or slightly
+> > > > different (or not slightly at all which requires an explicit
+> > validation).
+> > > >
+> > > > So I need to be able to swap those versions for validation purposes
+> and
+> > > run
+> > > > the build with that.
+> > > >
+> > > > S.
+> > > >
+> > > >
+> > > >
+> > > > >
+> > > > > /Anders
+> > > > >
+> > > > >
+> > > > > >
+> > > > > > I started to look at this and my first trial was to generate a
+> > report
+> > > > > with
+> > > > > > all the dependencies of each project and build a consolidated
+> > report
+> > > > > that I
+> > > > > > can match against the candidates. This would help manage the
+> first
+> > > goal
+> > > > > as
+> > > > > > if a dependency gets added, removed or updated, the global
+> > > > > > dependencyManagement has to be impacted manually (do we upgrade
+> or
+> > > not,
+> > > > > > etc).
+> > > > > >
+> > > > > > For the second part, it's not easy to force a dependency change
+> in
+> > > > Maven,
+> > > > > > especially if the version has been specified at the project
+> level.
+> > > > > >
+> > > > > > Thanks for reading that far. If you have any idea or know any
+> > > > > organisation
+> > > > > > that tried to implement that, I'd be interested
+> > > > > >
+> > > > > > Thanks!
+> > > > > > S.
+> > > > > >
+> > > > >
+> > > >
+> > >
+> >
+>
+
+--001a113a76ca1641ae04f191a04f--
+

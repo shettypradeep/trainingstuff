@@ -1,0 +1,91 @@
+From users-return-136283-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr 30 11:41:56 2014
+Return-Path: <users-return-136283-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E1CE610DC9
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 30 Apr 2014 11:41:55 +0000 (UTC)
+Received: (qmail 75049 invoked by uid 500); 30 Apr 2014 11:41:50 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 74409 invoked by uid 500); 30 Apr 2014 11:41:40 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74401 invoked by uid 99); 30 Apr 2014 11:41:38 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 30 Apr 2014 11:41:38 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of geraltzrivie@gmail.com designates 209.85.128.169 as permitted sender)
+Received: from [209.85.128.169] (HELO mail-ve0-f169.google.com) (209.85.128.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 30 Apr 2014 11:41:33 +0000
+Received: by mail-ve0-f169.google.com with SMTP id jx11so2019630veb.28
+        for <users@maven.apache.org>; Wed, 30 Apr 2014 04:41:10 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=3fZKCZ8zF+vjoWwMFwzc9DhWyZMNRCy488Ktd+Li2mw=;
+        b=fxJ4KF67b1LSUoapduzclFT6kzTkwAL1KCDC7RSSuZ5nt6S7P7+EcXcTZEzuh/9Dp5
+         KyYXOoCeePGVC8kdRXEzVkRqW+dN4doYTX4TfQL1OeS6MXag8AiN6XgKvekhZli2J1NH
+         n9yvKn9cymV5RV0y2GNkQtkJtICmJ5RGIbBNNHD3WU2+aqPuQrC6HnHWRyRQcYI1pu3N
+         s01QEy74uO7LAR52HPIXy3Bunxl916HIVbl6VsX7OngIJgWvzQh2UVvhrBekAK6wNRyS
+         F4xSWUcDXJGdtsDpfAw3mkjqE+9QWEkte+YN1eXzvatjcTTCa6AeW31Ab/ErSts6Dfly
+         R0PA==
+MIME-Version: 1.0
+X-Received: by 10.220.163.3 with SMTP id y3mr3561022vcx.7.1398858070608; Wed,
+ 30 Apr 2014 04:41:10 -0700 (PDT)
+Received: by 10.58.133.50 with HTTP; Wed, 30 Apr 2014 04:41:10 -0700 (PDT)
+Date: Wed, 30 Apr 2014 13:41:10 +0200
+Message-ID: <CAFdPtEh8Vr9nAPcBdrf7xxgTV+JEqVPQFh5vf5mOGH-eUwhC4g@mail.gmail.com>
+Subject: Log4J - "cannot find symbol - method trace(String)"
+From: =?UTF-8?B?RHXFoWFuIFJ5Y2hub3Zza8O9?= <geraltzrivie@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a1133da6663d25b04f8410615
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1133da6663d25b04f8410615
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi everyone,
+
+I have the following dependency in my project's POM:
+
+...
+<dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17</version>
+</dependency>
+...
+
+The artifact is downloaded to my local repository, but, during the compile
+phase, the following error is emitted and the build process is aborted:
+
+[ERROR] Failed to execute goal
+org.apache.maven.plugins:maven-compiler-plugin:2.5.1:compile
+(default-compile) on project dbtoixattrdt: Compilation failure: Compilation
+failure:
+[ERROR]
+d:\prace\dbtoixattrdt\DBToIXATTRDT-TRUNK\src\main\java\dbtoixattrdt\TraceLo=
+gAspect.java:[19,8]
+error: cannot find symbol
+[ERROR] symbol:   method trace(String)
+[ERROR] location: variable logger of type Logger
+
+This error message does not make much sense, as the trace method should be
+available on the Logger class in Log4J version 1.2.17.
+
+What can be wrong?
+
+Thanks in advance,
+Du=C5=A1an
+
+--001a1133da6663d25b04f8410615--
+

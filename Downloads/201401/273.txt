@@ -1,0 +1,97 @@
+From users-return-135041-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan  9 09:31:03 2014
+Return-Path: <users-return-135041-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 04F41109E9
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  9 Jan 2014 09:31:03 +0000 (UTC)
+Received: (qmail 50254 invoked by uid 500); 9 Jan 2014 09:30:59 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 50170 invoked by uid 500); 9 Jan 2014 09:30:52 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 50153 invoked by uid 99); 9 Jan 2014 09:30:48 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Jan 2014 09:30:48 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [62.206.215.40] (HELO mail1.gavi.de) (62.206.215.40)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Jan 2014 09:30:43 +0000
+Received: from localhost (localhost [127.0.0.1])
+	by mail1.gavi.de (Postfix) with ESMTP id CBCD8723DF
+	for <users@maven.apache.org>; Thu,  9 Jan 2014 10:30:20 +0100 (CET)
+X-Virus-Scanned: amavisd-new at gavi.de
+Received: from mail1.gavi.de ([127.0.0.1])
+	by localhost (lxmta03p.gavi-intra.de [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id hWPYdWeuoqck for <users@maven.apache.org>;
+	Thu,  9 Jan 2014 10:30:20 +0100 (CET)
+Received: from apcry02p.gavi.de (unknown [10.135.7.75])
+	by mail1.gavi.de (Postfix) with ESMTP id ACD1D7217C
+	for <users@maven.apache.org>; Thu,  9 Jan 2014 10:30:20 +0100 (CET)
+Received: from apcry02p.gavi-intra.de (localhost [127.0.0.1])
+	by apcry02p.gavi.de (Postfix) with ESMTP id 544973FEA0D0
+	for <users@maven.apache.org>; Thu,  9 Jan 2014 10:24:48 +0100 (CET)
+Received: from apmai02p.gavi-intra.de (unknown [10.135.7.77])
+	by apcry02p.gavi.de (Postfix) with ESMTP id E3BD23FEA0A9
+	for <users@maven.apache.org>; Thu,  9 Jan 2014 10:24:47 +0100 (CET)
+Received: from lnadmin03.gavi-intra.de (MSDOM010P.gaviads.de [10.128.1.23])
+	by apmai02p.gavi-intra.de (8.14.5/8.14.5) with ESMTP id s099Rolo011684
+	for <users@maven.apache.org>; Thu, 9 Jan 2014 10:29:23 +0100
+Received: from axmai40p.gavi-intra.de ([10.128.3.20])
+          by LNAdmin01.gavi.loc (Lotus Domino Release 8.5.3FP3)
+          with ESMTP id 2014010910222638-398720 ;
+          Thu, 9 Jan 2014 10:22:26 +0100 
+In-Reply-To: <E3C9E09003717140B10778119BF500D0654DB1B6@DE-BER-VEX001.eu.pxl.int>
+References: <E3C9E09003717140B10778119BF500D0654DB1B6@DE-BER-VEX001.eu.pxl.int>
+To: "Maven Users List" <users@maven.apache.org>
+MIME-Version: 1.0
+Subject: Re: release-plugin non-interactive release and system properties
+X-KeepSent: E4EE2CD6:4239F39A-C1257C5B:0033562F;
+ type=4; flags=0; name=$KeepSent
+X-Mailer: IBM Notes Release 9.0 March 08, 2013
+Message-ID: <OFE4EE2CD6.4239F39A-ONC1257C5B.0033562F-C1257C5B.00339813@vkb.de>
+From: thorsten.heit@vkb.de
+Date: Thu, 9 Jan 2014 10:22:29 +0100
+X-MIMETrack: Serialize by Router on lnvkbm01a/Server/VKB(Release 8.5.3FP1|March 07, 2012) at
+ 01/09/2014 10:22:25,
+	Serialize complete at 01/09/2014 10:22:25,
+	Itemize by SMTP Server on LNAdmin01/Server/Admin(Release 8.5.3FP3|November
+ 15, 2012) at 09.01.2014 10:22:26,
+	Serialize by Router on LNAdmin03/Server/Admin(Release 8.5.3FP3 HF167|January
+ 29, 2013) at 09.01.2014 10:29:23,
+	Serialize complete at 09.01.2014 10:29:23
+X-TNEFEvaluated: 1
+Content-Type: multipart/alternative; boundary="=_alternative 00339810C1257C5B_="
+X-TBoneOriginalTo: "Maven Users List" <users@maven.apache.org>
+X-TBoneOriginalFrom: thorsten.heit@vkb.de
+X-TBoneDomainSigned: false
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--=_alternative 00339810C1257C5B_=
+Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="UTF-8"
+
+SGkgU3RldmUsDQoNCj4gSeKAmW0gY29uZnVzZWQgYXMgdG8gaG93IHRoZSB2ZXJzaW9uIG51bWJl
+ciBpbiBhIHBvbSBmaWxlIGFuZCB0aGUgDQo+IHN5c3RlbSBwcm9wZXJ0aWVzIGxpa2UgLURkZXZl
+bG9wbWVudFZlcnNpb249Mi4wLVNOQVBTSE9UIGFuZCAtDQo+IERyZWxlYXNlVmVyc2lvbj0xLjIN
+Cj4gaW50ZXJhY3QuDQo+IFdoZW4gSSBydW4gYSBtdm4g4oCTQiByZWxlYXNlOnByZXBhcmUg4oCT
+RGRyeVJ1bj10cnVlIOKAk0R0YWc9MS4yIC0NCj4gRGRldmVsb3BtZW50VmVyc2lvbj0yLjAtU05B
+UFNIT1QgLURyZWxlYXNlVmVyc2lvbj0xLjIgZm9yIGEgcG9tLnhtbCANCj4gd2hlcmUgPHZlcnNp
+b24+MS4wPC92ZXJzaW9uPiBhbmQgPHBhY2thZ2luZz5qYXI8L3BhY2thZ2luZz4gdGhlIA0KPiBy
+ZXN1bHRpbmcgamFyIGZpbGUgdXNlcyB0aGUgcG9tIHZlcnNpb24gbnVtYmVyIG5vdCB0aGUgY29t
+bWFuZCBsaW5lIA0KPiB2ZXJzaW9uLCBpLmUgeHh4LTEuMC5qYXIgLiBJcyB0aGlzIGV4cGVjdGVk
+IGJlaGF2aW91ciBhbmQgaWYgc28gd2hhdA0KPiBpcyB0aGUgcG9pbnQgb2Ygc3BlY2lmeWluZyB0
+aGUgdmVyc2lvbnMgb24gdGhlIGNvbW1hbmQgbGluZSA/DQoNCkFGQUlLIHRoaXMgd2lsbCBvbmx5
+IHdvcmsgd2hlbiB5b3UgaGF2ZSBhIHNuYXBzaG90IHZlcnNpb24gaW4geW91ciBwb20sIA0KaS5l
+LiA8dmVyc2lvbj4xLjAtU05BUFNIT1Q8L3ZlcnNpb24+Lg0KDQoNClJlZ2FyZHMNCg0KVGhvcnN0
+ZW4NCg==
+--=_alternative 00339810C1257C5B_=--
+

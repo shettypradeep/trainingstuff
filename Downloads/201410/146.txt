@@ -1,0 +1,1070 @@
+From users-return-137671-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Oct 31 19:27:45 2014
+Return-Path: <users-return-137671-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4F07F174EE
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 31 Oct 2014 19:27:45 +0000 (UTC)
+Received: (qmail 12025 invoked by uid 500); 31 Oct 2014 19:27:43 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 11940 invoked by uid 500); 31 Oct 2014 19:27:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 11928 invoked by uid 99); 31 Oct 2014 19:27:43 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 31 Oct 2014 19:27:43 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dhoffer6@gmail.com designates 209.85.220.177 as permitted sender)
+Received: from [209.85.220.177] (HELO mail-vc0-f177.google.com) (209.85.220.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 31 Oct 2014 19:27:37 +0000
+Received: by mail-vc0-f177.google.com with SMTP id hq12so537785vcb.22
+        for <users@maven.apache.org>; Fri, 31 Oct 2014 12:25:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=TvqsoNFHfSgudB+twvqXqFShXGCu7P1gIIhpk2ojEnU=;
+        b=vVTFLY/K4q78MewVPctT+VlqZ3nCSz8+v/ea2JHeOe5KRLTFPxPsjksmUTdyoLT+j0
+         IohOOKam9i9AVBruNeoEWQXZMU3Ok1TZglNqjXv+Q1UNoiNGcrdjWa94vLUbvkaunJ+q
+         RNJvftWz7fBGIhG//rWRi8sb5wCCs11D4Ki2+HVXzIL1qNRvKEluuLXgTcEIopyGaRwl
+         5bySKsQIr1dW1JnNe3JI0CPOu3Zig1Gp1PVDmxLC6LL7aWYy2LiBK1Ft7y/lK4hpilCV
+         DO9mwCrJ62Dt2LJlUivnMXvCz8BXF/PQqWvQmlTmGICVTSXfavLkLAWkPnK0lkc9tnM8
+         x1wQ==
+MIME-Version: 1.0
+X-Received: by 10.52.99.229 with SMTP id et5mr2798415vdb.42.1414783501007;
+ Fri, 31 Oct 2014 12:25:01 -0700 (PDT)
+Received: by 10.220.218.130 with HTTP; Fri, 31 Oct 2014 12:25:00 -0700 (PDT)
+In-Reply-To: <CAA8BW8Gbp3Q=APuFpruAAZgi8QXuXHfO=RpDg7a7GBoj+=_BRg@mail.gmail.com>
+References: <CAA8BW8Gbp3Q=APuFpruAAZgi8QXuXHfO=RpDg7a7GBoj+=_BRg@mail.gmail.com>
+Date: Fri, 31 Oct 2014 13:25:00 -0600
+Message-ID: <CAA8BW8HKW4Bq072PMqG7EPex21CQ4S0d8kQJu3yXjf=bV79B9Q@mail.gmail.com>
+Subject: Re: Maven site fails with PluginContainerException
+From: David Hoffer <dhoffer6@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=bcaec501c59e0303db0506bcf441
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--bcaec501c59e0303db0506bcf441
+Content-Type: text/plain; charset=UTF-8
+
+I think I found the cause of this.  I had an older version of
+maven-surefire-report-plugin that had the old groupId & artifactId, with
+that changed the build is getting further now.
+
+-Dave
+
+On Fri, Oct 31, 2014 at 1:07 PM, David Hoffer <dhoffer6@gmail.com> wrote:
+
+> I'm trying to create a site report for an existing project and I get
+> a PluginContainerException.  My command line is package site-deploy
+>
+> Here is the error in debug:
+>
+>
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] BUILD FAILURE
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] Total time: 18.490s
+> [INFO] Finished at: Fri Oct 31 12:56:51 MDT 2014
+> [INFO] Final Memory: 90M/1237M
+> [INFO]
+> ------------------------------------------------------------------------
+> [ERROR] Failed to execute goal
+> org.apache.maven.plugins:maven-site-plugin:3.4:site (default-site) on
+>  project jms-parent: Execution default-site of goal
+> org.apache.maven.plugins:maven-site-plugin:3.4:s
+> ite failed: An API incompatibility was encountered while executing
+> org.apache.maven.plugins:maven-si
+> te-plugin:3.4:site: java.lang.AbstractMethodError: null
+> [ERROR] -----------------------------------------------------
+> [ERROR] realm =    plugin>org.apache.maven.plugins:maven-site-plugin:3.4
+> [ERROR] strategy =
+> org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy
+> [ERROR] urls[0] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/plugins/maven-site-plu
+> gin/3.4/maven-site-plugin-3.4.jar
+> [ERROR] urls[1] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/wagon/wagon-webdav-jac
+> krabbit/1.0/wagon-webdav-jackrabbit-1.0.jar
+> [ERROR] urls[2] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/wagon/wagon-http-share
+> d/1.0/wagon-http-shared-1.0.jar
+> [ERROR] urls[3] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-httpclient/commons-httpclient/3
+> .1/commons-httpclient-3.1.jar
+> [ERROR] urls[4] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-logging/commons-logging/1.1.1/c
+> ommons-logging-1.1.1.jar
+> [ERROR] urls[5] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/jsoup/jsoup/1.6.1/jsoup-1.6.1.jar
+> [ERROR] urls[6] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/jackrabbit/jackrabbit-webdav
+> /1.5.0/jackrabbit-webdav-1.5.0.jar
+> [ERROR] urls[7] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/jackrabbit/jackrabbit-jcr-co
+> mmons/1.5.0/jackrabbit-jcr-commons-1.5.0.jar
+> [ERROR] urls[8] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/slf4j/slf4j-api/1.5.3/slf4j-api-1.5
+> .3.jar
+> [ERROR] urls[9] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/slf4j/slf4j-nop/1.5.3/slf4j-nop-1.5
+> .3.jar
+> [ERROR] urls[10] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/reporting/maven-repor
+> ting-exec/1.2/maven-reporting-exec-1.2.jar
+> [ERROR] urls[11] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/reporting/maven-repor
+> ting-api/3.0/maven-reporting-api-3.0.jar
+> [ERROR] urls[12] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/shared/maven-shared-u
+> tils/0.3/maven-shared-utils-0.3.jar
+> [ERROR] urls[13] =
+> file:/C:/Users/david.hoffer/.m2/repository/com/google/code/findbugs/jsr305/2.0.1/
+> jsr305-2.0.1.jar
+> [ERROR] urls[14] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/aether/aether-util/1.7/ae
+> ther-util-1.7.jar
+> [ERROR] urls[15] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/eclipse/aether/aether-util/0.9.0.M
+> 2/aether-util-0.9.0.M2.jar
+> [ERROR] urls[16] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/sisu/sisu-inject-bean/1.4
+> .2/sisu-inject-bean-1.4.2.jar
+> [ERROR] urls[17] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/sisu/sisu-guice/2.1.7/sis
+> u-guice-2.1.7-noaop.jar
+> [ERROR] urls[18] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-interpolati
+> on/1.14/plexus-interpolation-1.14.jar
+> [ERROR] urls[19] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-component-a
+> nnotations/1.5.5/plexus-component-annotations-1.5.5.jar
+> [ERROR] urls[20] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/plexus/plexus-sec-dispatc
+> her/1.3/plexus-sec-dispatcher-1.3.jar
+> [ERROR] urls[21] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/plexus/plexus-cipher/1.4/
+> plexus-cipher-1.4.jar
+> [ERROR] urls[22] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/maven-archiver/2.4.2/
+> maven-archiver-2.4.2.jar
+> [ERROR] urls[23] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-sink-api/
+> 1.6/doxia-sink-api-1.6.jar
+> [ERROR] urls[24] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-logging-a
+> pi/1.6/doxia-logging-api-1.6.jar
+> [ERROR] urls[25] =
+> file:/C:/Users/david.hoffer/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar
+> [ERROR] urls[26] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-core/1.6/
+> doxia-core-1.6.jar
+> [ERROR] urls[27] =
+> file:/C:/Users/david.hoffer/.m2/repository/xerces/xercesImpl/2.9.1/xercesImpl-2.9
+> .1.jar
+> [ERROR] urls[28] =
+> file:/C:/Users/david.hoffer/.m2/repository/xml-apis/xml-apis/1.3.04/xml-apis-1.3.
+> 04.jar
+> [ERROR] urls[29] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/httpcomponents/httpclient/4
+> .0.2/httpclient-4.0.2.jar
+> [ERROR] urls[30] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-codec/commons-codec/1.3/common
+> s-codec-1.3.jar
+> [ERROR] urls[31] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/httpcomponents/httpcore/4.0
+> .1/httpcore-4.0.1.jar
+> [ERROR] urls[32] =
+> file:/C:/Users/david.hoffer/.m2/repository/xmlunit/xmlunit/1.5/xmlunit-1.5.jar
+> [ERROR] urls[33] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-xh
+> tml/1.6/doxia-module-xhtml-1.6.jar
+> [ERROR] urls[34] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-ap
+> t/1.6/doxia-module-apt-1.6.jar
+> [ERROR] urls[35] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-xd
+> oc/1.6/doxia-module-xdoc-1.6.jar
+> [ERROR] urls[36] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-fm
+> l/1.6/doxia-module-fml-1.6.jar
+> [ERROR] urls[37] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-ma
+> rkdown/1.6/doxia-module-markdown-1.6.jar
+> [ERROR] urls[38] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/pegdown/pegdown/1.2.1/pegdown-1.2.
+> 1.jar
+> [ERROR] urls[39] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/parboiled/parboiled-java/1.1.4/par
+> boiled-java-1.1.4.jar
+> [ERROR] urls[40] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/parboiled/parboiled-core/1.1.4/par
+> boiled-core-1.1.4.jar
+> [ERROR] urls[41] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/ow2/asm/asm/4.1/asm-4.1.jar
+> [ERROR] urls[42] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/ow2/asm/asm-tree/4.1/asm-tree-4.1.
+> jar
+> [ERROR] urls[43] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/ow2/asm/asm-analysis/4.1/asm-analy
+> sis-4.1.jar
+> [ERROR] urls[44] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/ow2/asm/asm-util/4.1/asm-util-4.1.
+> jar
+> [ERROR] urls[45] =
+> file:/C:/Users/david.hoffer/.m2/repository/javax/servlet/servlet-api/2.5/servlet-
+> api-2.5.jar
+> [ERROR] urls[46] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-decoratio
+> n-model/1.6/doxia-decoration-model-1.6.jar
+> [ERROR] urls[47] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-site-rend
+> erer/1.6/doxia-site-renderer-1.6.jar
+> [ERROR] urls[48] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/velocity/velocity-tools/2.0
+> /velocity-tools-2.0.jar
+> [ERROR] urls[49] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-beanutils/commons-beanutils/1.
+> 7.0/commons-beanutils-1.7.0.jar
+> [ERROR] urls[50] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-digester/commons-digester/1.8/
+> commons-digester-1.8.jar
+> [ERROR] urls[51] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-chain/commons-chain/1.1/common
+> s-chain-1.1.jar
+> [ERROR] urls[52] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-validator/commons-validator/1.
+> 3.1/commons-validator-1.3.1.jar
+> [ERROR] urls[53] =
+> file:/C:/Users/david.hoffer/.m2/repository/dom4j/dom4j/1.1/dom4j-1.1.jar
+> [ERROR] urls[54] =
+> file:/C:/Users/david.hoffer/.m2/repository/sslext/sslext/1.2-0/sslext-1.2-0.jar
+> [ERROR] urls[55] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/struts/struts-core/1.3.8/st
+> ruts-core-1.3.8.jar
+> [ERROR] urls[56] =
+> file:/C:/Users/david.hoffer/.m2/repository/antlr/antlr/2.7.2/antlr-2.7.2.jar
+> [ERROR] urls[57] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/struts/struts-taglib/1.3.8/
+> struts-taglib-1.3.8.jar
+> [ERROR] urls[58] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/struts/struts-tiles/1.3.8/s
+> truts-tiles-1.3.8.jar
+> [ERROR] urls[59] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-collections/commons-collection
+> s/3.2.1/commons-collections-3.2.1.jar
+> [ERROR] urls[60] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-integrati
+> on-tools/1.6/doxia-integration-tools-1.6.jar
+> [ERROR] urls[61] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-archiver/2.
+> 4.3/plexus-archiver-2.4.3.jar
+> [ERROR] urls[62] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-io/2.0.8/pl
+> exus-io-2.0.8.jar
+> [ERROR] urls[63] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/commons/commons-compress/1.
+> 5/commons-compress-1.5.jar
+> [ERROR] urls[64] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/tukaani/xz/1.2/xz-1.2.jar
+> [ERROR] urls[65] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-i18n/1.0-be
+> ta-7/plexus-i18n-1.0-beta-7.jar
+> [ERROR] urls[66] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/velocity/velocity/1.5/veloc
+> ity-1.5.jar
+> [ERROR] urls[67] =
+> file:/C:/Users/david.hoffer/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar
+> [ERROR] urls[68] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-velocity/1.
+> 1.8/plexus-velocity-1.1.8.jar
+> [ERROR] urls[69] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-utils/3.0.1
+> 5/plexus-utils-3.0.15.jar
+> [ERROR] urls[70] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/mortbay/jetty/jetty/6.1.25/jetty-6
+> .1.25.jar
+> [ERROR] urls[71] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/mortbay/jetty/servlet-api/2.5-2008
+> 1211/servlet-api-2.5-20081211.jar
+> [ERROR] urls[72] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/mortbay/jetty/jetty-util/6.1.25/je
+> tty-util-6.1.25.jar
+> [ERROR] urls[73] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-lang/commons-lang/2.5/commons-
+> lang-2.5.jar
+> [ERROR] urls[74] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-io/commons-io/1.4/commons-io-1
+> .4.jar
+> [ERROR] Number of foreign imports: 1
+> [ERROR] import: Entry[import  from realm
+> ClassRealm[project>com.issinc.jms:jms-parent:9.x-SNAPSHOT,
+> parent: ClassRealm[maven.api, parent: null]]]
+> [ERROR]
+> [ERROR] -----------------------------------------------------
+> [ERROR] -> [Help 1]
+> org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute
+> goal org.apache.maven.plug
+> ins:maven-site-plugin:3.4:site (default-site) on project jms-parent:
+> Execution default-site of goal
+> org.apache.maven.plugins:maven-site-plugin:3.4:site failed: An API
+> incompatibility was encountered w
+> hile executing org.apache.maven.plugins:maven-site-plugin:3.4:site:
+> java.lang.AbstractMethodError: n
+> ull
+> -----------------------------------------------------
+> realm =    plugin>org.apache.maven.plugins:maven-site-plugin:3.4
+> strategy = org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy
+> urls[0] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/plugins/maven-site-plugin/3.4/
+> maven-site-plugin-3.4.jar
+> urls[1] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/wagon/wagon-webdav-jackrabbit/
+> 1.0/wagon-webdav-jackrabbit-1.0.jar
+> urls[2] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/wagon/wagon-http-shared/1.0/wa
+> gon-http-shared-1.0.jar
+> urls[3] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-httpclient/commons-httpclient/3.1/commo
+> ns-httpclient-3.1.jar
+> urls[4] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-logging/commons-logging/1.1.1/commons-l
+> ogging-1.1.1.jar
+> urls[5] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/jsoup/jsoup/1.6.1/jsoup-1.6.1.jar
+> urls[6] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/jackrabbit/jackrabbit-webdav/1.5.0/j
+> ackrabbit-webdav-1.5.0.jar
+> urls[7] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/jackrabbit/jackrabbit-jcr-commons/1.
+> 5.0/jackrabbit-jcr-commons-1.5.0.jar
+> urls[8] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/slf4j/slf4j-api/1.5.3/slf4j-api-1.5.3.jar
+> urls[9] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/slf4j/slf4j-nop/1.5.3/slf4j-nop-1.5.3.jar
+> urls[10] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/reporting/maven-reporting-exe
+> c/1.2/maven-reporting-exec-1.2.jar
+> urls[11] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/reporting/maven-reporting-api
+> /3.0/maven-reporting-api-3.0.jar
+> urls[12] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/shared/maven-shared-utils/0.3
+> /maven-shared-utils-0.3.jar
+> urls[13] =
+> file:/C:/Users/david.hoffer/.m2/repository/com/google/code/findbugs/jsr305/2.0.1/jsr305-2
+> .0.1.jar
+> urls[14] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/aether/aether-util/1.7/aether-uti
+> l-1.7.jar
+> urls[15] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/eclipse/aether/aether-util/0.9.0.M2/aether
+> -util-0.9.0.M2.jar
+> urls[16] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-
+> inject-bean-1.4.2.jar
+> urls[17] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-
+> 2.1.7-noaop.jar
+> urls[18] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.14/
+> plexus-interpolation-1.14.jar
+> urls[19] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-component-annotatio
+> ns/1.5.5/plexus-component-annotations-1.5.5.jar
+> urls[20] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/plexus/plexus-sec-dispatcher/1.3/
+> plexus-sec-dispatcher-1.3.jar
+> urls[21] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/plexus/plexus-cipher/1.4/plexus-c
+> ipher-1.4.jar
+> urls[22] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/maven-archiver/2.4.2/maven-ar
+> chiver-2.4.2.jar
+> urls[23] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-sink-api/1.6/doxi
+> a-sink-api-1.6.jar
+> urls[24] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-logging-api/1.6/d
+> oxia-logging-api-1.6.jar
+> urls[25] =
+> file:/C:/Users/david.hoffer/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar
+> urls[26] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-core/1.6/doxia-co
+> re-1.6.jar
+> urls[27] =
+> file:/C:/Users/david.hoffer/.m2/repository/xerces/xercesImpl/2.9.1/xercesImpl-2.9.1.jar
+> urls[28] =
+> file:/C:/Users/david.hoffer/.m2/repository/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar
+> urls[29] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/httpcomponents/httpclient/4.0.2/htt
+> pclient-4.0.2.jar
+> urls[30] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-codec/commons-codec/1.3/commons-codec-
+> 1.3.jar
+> urls[31] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/httpcomponents/httpcore/4.0.1/httpc
+> ore-4.0.1.jar
+> urls[32] =
+> file:/C:/Users/david.hoffer/.m2/repository/xmlunit/xmlunit/1.5/xmlunit-1.5.jar
+> urls[33] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-xhtml/1.6/
+> doxia-module-xhtml-1.6.jar
+> urls[34] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-apt/1.6/do
+> xia-module-apt-1.6.jar
+> urls[35] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-xdoc/1.6/d
+> oxia-module-xdoc-1.6.jar
+> urls[36] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-fml/1.6/do
+> xia-module-fml-1.6.jar
+> urls[37] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-markdown/1
+> .6/doxia-module-markdown-1.6.jar
+> urls[38] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/pegdown/pegdown/1.2.1/pegdown-1.2.1.jar
+> urls[39] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/parboiled/parboiled-java/1.1.4/parboiled-j
+> ava-1.1.4.jar
+> urls[40] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/parboiled/parboiled-core/1.1.4/parboiled-c
+> ore-1.1.4.jar
+> urls[41] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/ow2/asm/asm/4.1/asm-4.1.jar
+> urls[42] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/ow2/asm/asm-tree/4.1/asm-tree-4.1.jar
+> urls[43] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/ow2/asm/asm-analysis/4.1/asm-analysis-4.1.
+> jar
+> urls[44] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/ow2/asm/asm-util/4.1/asm-util-4.1.jar
+> urls[45] =
+> file:/C:/Users/david.hoffer/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.
+> jar
+> urls[46] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-decoration-model/
+> 1.6/doxia-decoration-model-1.6.jar
+> urls[47] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-site-renderer/1.6
+> /doxia-site-renderer-1.6.jar
+> urls[48] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/velocity/velocity-tools/2.0/velocit
+> y-tools-2.0.jar
+> urls[49] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-beanutils/commons-beanutils/1.7.0/comm
+> ons-beanutils-1.7.0.jar
+> urls[50] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-digester/commons-digester/1.8/commons-
+> digester-1.8.jar
+> urls[51] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-chain/commons-chain/1.1/commons-chain-
+> 1.1.jar
+> urls[52] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-validator/commons-validator/1.3.1/comm
+> ons-validator-1.3.1.jar
+> urls[53] =
+> file:/C:/Users/david.hoffer/.m2/repository/dom4j/dom4j/1.1/dom4j-1.1.jar
+> urls[54] =
+> file:/C:/Users/david.hoffer/.m2/repository/sslext/sslext/1.2-0/sslext-1.2-0.jar
+> urls[55] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/struts/struts-core/1.3.8/struts-cor
+> e-1.3.8.jar
+> urls[56] =
+> file:/C:/Users/david.hoffer/.m2/repository/antlr/antlr/2.7.2/antlr-2.7.2.jar
+> urls[57] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/struts/struts-taglib/1.3.8/struts-t
+> aglib-1.3.8.jar
+> urls[58] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/struts/struts-tiles/1.3.8/struts-ti
+> les-1.3.8.jar
+> urls[59] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-collections/commons-collections/3.2.1/
+> commons-collections-3.2.1.jar
+> urls[60] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-integration-tools
+> /1.6/doxia-integration-tools-1.6.jar
+> urls[61] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-archiver/2.4.3/plex
+> us-archiver-2.4.3.jar
+> urls[62] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-io/2.0.8/plexus-io-
+> 2.0.8.jar
+> urls[63] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/commons/commons-compress/1.5/common
+> s-compress-1.5.jar
+> urls[64] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/tukaani/xz/1.2/xz-1.2.jar
+> urls[65] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-i18n/1.0-beta-7/ple
+> xus-i18n-1.0-beta-7.jar
+> urls[66] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/velocity/velocity/1.5/velocity-1.5.
+> jar
+> urls[67] =
+> file:/C:/Users/david.hoffer/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar
+> urls[68] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-velocity/1.1.8/plex
+> us-velocity-1.1.8.jar
+> urls[69] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-utils/3.0.15/plexus
+> -utils-3.0.15.jar
+> urls[70] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/mortbay/jetty/jetty/6.1.25/jetty-6.1.25.ja
+> r
+> urls[71] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/mortbay/jetty/servlet-api/2.5-20081211/ser
+> vlet-api-2.5-20081211.jar
+> urls[72] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/mortbay/jetty/jetty-util/6.1.25/jetty-util
+> -6.1.25.jar
+> urls[73] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-lang/commons-lang/2.5/commons-lang-2.5
+> .jar
+> urls[74] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-io/commons-io/1.4/commons-io-1.4.jar
+> Number of foreign imports: 1
+> import: Entry[import  from realm
+> ClassRealm[project>com.issinc.jms:jms-parent:9.x-SNAPSHOT, parent:
+> ClassRealm[maven.api, parent: null]]]
+>
+> -----------------------------------------------------
+>
+>         at
+> org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:225)
+>         at
+> org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+>         at
+> org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+>         at
+> org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBu
+> ilder.java:84)
+>         at
+> org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBu
+> ilder.java:59)
+>         at
+> org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter
+> .java:183)
+>         at
+> org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+>         at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+>         at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+>         at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+>         at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+>         at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+>         at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+>         at
+> sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+>         at
+> sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+>         at java.lang.reflect.Method.invoke(Method.java:606)
+>         at
+> org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+>         at
+> org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+>         at
+> org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+>         at
+> org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+> Caused by: org.apache.maven.plugin.PluginExecutionException: Execution
+> default-site of goal org.apac
+> he.maven.plugins:maven-site-plugin:3.4:site failed: An API incompatibility
+> was encountered while exe
+> cuting org.apache.maven.plugins:maven-site-plugin:3.4:site:
+> java.lang.AbstractMethodError: null
+> -----------------------------------------------------
+> realm =    plugin>org.apache.maven.plugins:maven-site-plugin:3.4
+> strategy = org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy
+> urls[0] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/plugins/maven-site-plugin/3.4/
+> maven-site-plugin-3.4.jar
+> urls[1] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/wagon/wagon-webdav-jackrabbit/
+> 1.0/wagon-webdav-jackrabbit-1.0.jar
+> urls[2] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/wagon/wagon-http-shared/1.0/wa
+> gon-http-shared-1.0.jar
+> urls[3] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-httpclient/commons-httpclient/3.1/commo
+> ns-httpclient-3.1.jar
+> urls[4] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-logging/commons-logging/1.1.1/commons-l
+> ogging-1.1.1.jar
+> urls[5] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/jsoup/jsoup/1.6.1/jsoup-1.6.1.jar
+> urls[6] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/jackrabbit/jackrabbit-webdav/1.5.0/j
+> ackrabbit-webdav-1.5.0.jar
+> urls[7] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/jackrabbit/jackrabbit-jcr-commons/1.
+> 5.0/jackrabbit-jcr-commons-1.5.0.jar
+> urls[8] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/slf4j/slf4j-api/1.5.3/slf4j-api-1.5.3.jar
+> urls[9] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/slf4j/slf4j-nop/1.5.3/slf4j-nop-1.5.3.jar
+> urls[10] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/reporting/maven-reporting-exe
+> c/1.2/maven-reporting-exec-1.2.jar
+> urls[11] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/reporting/maven-reporting-api
+> /3.0/maven-reporting-api-3.0.jar
+> urls[12] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/shared/maven-shared-utils/0.3
+> /maven-shared-utils-0.3.jar
+> urls[13] =
+> file:/C:/Users/david.hoffer/.m2/repository/com/google/code/findbugs/jsr305/2.0.1/jsr305-2
+> .0.1.jar
+> urls[14] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/aether/aether-util/1.7/aether-uti
+> l-1.7.jar
+> urls[15] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/eclipse/aether/aether-util/0.9.0.M2/aether
+> -util-0.9.0.M2.jar
+> urls[16] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-
+> inject-bean-1.4.2.jar
+> urls[17] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-
+> 2.1.7-noaop.jar
+> urls[18] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.14/
+> plexus-interpolation-1.14.jar
+> urls[19] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-component-annotatio
+> ns/1.5.5/plexus-component-annotations-1.5.5.jar
+> urls[20] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/plexus/plexus-sec-dispatcher/1.3/
+> plexus-sec-dispatcher-1.3.jar
+> urls[21] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/plexus/plexus-cipher/1.4/plexus-c
+> ipher-1.4.jar
+> urls[22] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/maven-archiver/2.4.2/maven-ar
+> chiver-2.4.2.jar
+> urls[23] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-sink-api/1.6/doxi
+> a-sink-api-1.6.jar
+> urls[24] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-logging-api/1.6/d
+> oxia-logging-api-1.6.jar
+> urls[25] =
+> file:/C:/Users/david.hoffer/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar
+> urls[26] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-core/1.6/doxia-co
+> re-1.6.jar
+> urls[27] =
+> file:/C:/Users/david.hoffer/.m2/repository/xerces/xercesImpl/2.9.1/xercesImpl-2.9.1.jar
+> urls[28] =
+> file:/C:/Users/david.hoffer/.m2/repository/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar
+> urls[29] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/httpcomponents/httpclient/4.0.2/htt
+> pclient-4.0.2.jar
+> urls[30] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-codec/commons-codec/1.3/commons-codec-
+> 1.3.jar
+> urls[31] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/httpcomponents/httpcore/4.0.1/httpc
+> ore-4.0.1.jar
+> urls[32] =
+> file:/C:/Users/david.hoffer/.m2/repository/xmlunit/xmlunit/1.5/xmlunit-1.5.jar
+> urls[33] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-xhtml/1.6/
+> doxia-module-xhtml-1.6.jar
+> urls[34] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-apt/1.6/do
+> xia-module-apt-1.6.jar
+> urls[35] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-xdoc/1.6/d
+> oxia-module-xdoc-1.6.jar
+> urls[36] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-fml/1.6/do
+> xia-module-fml-1.6.jar
+> urls[37] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-markdown/1
+> .6/doxia-module-markdown-1.6.jar
+> urls[38] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/pegdown/pegdown/1.2.1/pegdown-1.2.1.jar
+> urls[39] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/parboiled/parboiled-java/1.1.4/parboiled-j
+> ava-1.1.4.jar
+> urls[40] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/parboiled/parboiled-core/1.1.4/parboiled-c
+> ore-1.1.4.jar
+> urls[41] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/ow2/asm/asm/4.1/asm-4.1.jar
+> urls[42] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/ow2/asm/asm-tree/4.1/asm-tree-4.1.jar
+> urls[43] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/ow2/asm/asm-analysis/4.1/asm-analysis-4.1.
+> jar
+> urls[44] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/ow2/asm/asm-util/4.1/asm-util-4.1.jar
+> urls[45] =
+> file:/C:/Users/david.hoffer/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.
+> jar
+> urls[46] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-decoration-model/
+> 1.6/doxia-decoration-model-1.6.jar
+> urls[47] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-site-renderer/1.6
+> /doxia-site-renderer-1.6.jar
+> urls[48] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/velocity/velocity-tools/2.0/velocit
+> y-tools-2.0.jar
+> urls[49] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-beanutils/commons-beanutils/1.7.0/comm
+> ons-beanutils-1.7.0.jar
+> urls[50] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-digester/commons-digester/1.8/commons-
+> digester-1.8.jar
+> urls[51] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-chain/commons-chain/1.1/commons-chain-
+> 1.1.jar
+> urls[52] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-validator/commons-validator/1.3.1/comm
+> ons-validator-1.3.1.jar
+> urls[53] =
+> file:/C:/Users/david.hoffer/.m2/repository/dom4j/dom4j/1.1/dom4j-1.1.jar
+> urls[54] =
+> file:/C:/Users/david.hoffer/.m2/repository/sslext/sslext/1.2-0/sslext-1.2-0.jar
+> urls[55] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/struts/struts-core/1.3.8/struts-cor
+> e-1.3.8.jar
+> urls[56] =
+> file:/C:/Users/david.hoffer/.m2/repository/antlr/antlr/2.7.2/antlr-2.7.2.jar
+> urls[57] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/struts/struts-taglib/1.3.8/struts-t
+> aglib-1.3.8.jar
+> urls[58] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/struts/struts-tiles/1.3.8/struts-ti
+> les-1.3.8.jar
+> urls[59] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-collections/commons-collections/3.2.1/
+> commons-collections-3.2.1.jar
+> urls[60] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-integration-tools
+> /1.6/doxia-integration-tools-1.6.jar
+> urls[61] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-archiver/2.4.3/plex
+> us-archiver-2.4.3.jar
+> urls[62] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-io/2.0.8/plexus-io-
+> 2.0.8.jar
+> urls[63] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/commons/commons-compress/1.5/common
+> s-compress-1.5.jar
+> urls[64] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/tukaani/xz/1.2/xz-1.2.jar
+> urls[65] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-i18n/1.0-beta-7/ple
+> xus-i18n-1.0-beta-7.jar
+> urls[66] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/velocity/velocity/1.5/velocity-1.5.
+> jar
+> urls[67] =
+> file:/C:/Users/david.hoffer/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar
+> urls[68] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-velocity/1.1.8/plex
+> us-velocity-1.1.8.jar
+> urls[69] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-utils/3.0.15/plexus
+> -utils-3.0.15.jar
+> urls[70] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/mortbay/jetty/jetty/6.1.25/jetty-6.1.25.ja
+> r
+> urls[71] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/mortbay/jetty/servlet-api/2.5-20081211/ser
+> vlet-api-2.5-20081211.jar
+> urls[72] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/mortbay/jetty/jetty-util/6.1.25/jetty-util
+> -6.1.25.jar
+> urls[73] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-lang/commons-lang/2.5/commons-lang-2.5
+> .jar
+> urls[74] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-io/commons-io/1.4/commons-io-1.4.jar
+> Number of foreign imports: 1
+> import: Entry[import  from realm
+> ClassRealm[project>com.issinc.jms:jms-parent:9.x-SNAPSHOT, parent:
+> ClassRealm[maven.api, parent: null]]]
+>
+> -----------------------------------------------------
+>
+>         at
+> org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.j
+> ava:139)
+>         at
+> org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+>         ... 19 more
+> Caused by: org.apache.maven.plugin.PluginContainerException: An API
+> incompatibility was encountered
+> while executing org.apache.maven.plugins:maven-site-plugin:3.4:site:
+> java.lang.AbstractMethodError:
+> null
+> -----------------------------------------------------
+> realm =    plugin>org.apache.maven.plugins:maven-site-plugin:3.4
+> strategy = org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy
+> urls[0] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/plugins/maven-site-plugin/3.4/
+> maven-site-plugin-3.4.jar
+> urls[1] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/wagon/wagon-webdav-jackrabbit/
+> 1.0/wagon-webdav-jackrabbit-1.0.jar
+> urls[2] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/wagon/wagon-http-shared/1.0/wa
+> gon-http-shared-1.0.jar
+> urls[3] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-httpclient/commons-httpclient/3.1/commo
+> ns-httpclient-3.1.jar
+> urls[4] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-logging/commons-logging/1.1.1/commons-l
+> ogging-1.1.1.jar
+> urls[5] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/jsoup/jsoup/1.6.1/jsoup-1.6.1.jar
+> urls[6] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/jackrabbit/jackrabbit-webdav/1.5.0/j
+> ackrabbit-webdav-1.5.0.jar
+> urls[7] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/jackrabbit/jackrabbit-jcr-commons/1.
+> 5.0/jackrabbit-jcr-commons-1.5.0.jar
+> urls[8] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/slf4j/slf4j-api/1.5.3/slf4j-api-1.5.3.jar
+> urls[9] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/slf4j/slf4j-nop/1.5.3/slf4j-nop-1.5.3.jar
+> urls[10] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/reporting/maven-reporting-exe
+> c/1.2/maven-reporting-exec-1.2.jar
+> urls[11] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/reporting/maven-reporting-api
+> /3.0/maven-reporting-api-3.0.jar
+> urls[12] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/shared/maven-shared-utils/0.3
+> /maven-shared-utils-0.3.jar
+> urls[13] =
+> file:/C:/Users/david.hoffer/.m2/repository/com/google/code/findbugs/jsr305/2.0.1/jsr305-2
+> .0.1.jar
+> urls[14] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/aether/aether-util/1.7/aether-uti
+> l-1.7.jar
+> urls[15] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/eclipse/aether/aether-util/0.9.0.M2/aether
+> -util-0.9.0.M2.jar
+> urls[16] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-
+> inject-bean-1.4.2.jar
+> urls[17] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-
+> 2.1.7-noaop.jar
+> urls[18] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.14/
+> plexus-interpolation-1.14.jar
+> urls[19] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-component-annotatio
+> ns/1.5.5/plexus-component-annotations-1.5.5.jar
+> urls[20] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/plexus/plexus-sec-dispatcher/1.3/
+> plexus-sec-dispatcher-1.3.jar
+> urls[21] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/sonatype/plexus/plexus-cipher/1.4/plexus-c
+> ipher-1.4.jar
+> urls[22] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/maven-archiver/2.4.2/maven-ar
+> chiver-2.4.2.jar
+> urls[23] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-sink-api/1.6/doxi
+> a-sink-api-1.6.jar
+> urls[24] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-logging-api/1.6/d
+> oxia-logging-api-1.6.jar
+> urls[25] =
+> file:/C:/Users/david.hoffer/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar
+> urls[26] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-core/1.6/doxia-co
+> re-1.6.jar
+> urls[27] =
+> file:/C:/Users/david.hoffer/.m2/repository/xerces/xercesImpl/2.9.1/xercesImpl-2.9.1.jar
+> urls[28] =
+> file:/C:/Users/david.hoffer/.m2/repository/xml-apis/xml-apis/1.3.04/xml-apis-1.3.04.jar
+> urls[29] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/httpcomponents/httpclient/4.0.2/htt
+> pclient-4.0.2.jar
+> urls[30] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-codec/commons-codec/1.3/commons-codec-
+> 1.3.jar
+> urls[31] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/httpcomponents/httpcore/4.0.1/httpc
+> ore-4.0.1.jar
+> urls[32] =
+> file:/C:/Users/david.hoffer/.m2/repository/xmlunit/xmlunit/1.5/xmlunit-1.5.jar
+> urls[33] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-xhtml/1.6/
+> doxia-module-xhtml-1.6.jar
+> urls[34] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-apt/1.6/do
+> xia-module-apt-1.6.jar
+> urls[35] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-xdoc/1.6/d
+> oxia-module-xdoc-1.6.jar
+> urls[36] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-fml/1.6/do
+> xia-module-fml-1.6.jar
+> urls[37] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-module-markdown/1
+> .6/doxia-module-markdown-1.6.jar
+> urls[38] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/pegdown/pegdown/1.2.1/pegdown-1.2.1.jar
+> urls[39] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/parboiled/parboiled-java/1.1.4/parboiled-j
+> ava-1.1.4.jar
+> urls[40] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/parboiled/parboiled-core/1.1.4/parboiled-c
+> ore-1.1.4.jar
+> urls[41] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/ow2/asm/asm/4.1/asm-4.1.jar
+> urls[42] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/ow2/asm/asm-tree/4.1/asm-tree-4.1.jar
+> urls[43] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/ow2/asm/asm-analysis/4.1/asm-analysis-4.1.
+> jar
+> urls[44] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/ow2/asm/asm-util/4.1/asm-util-4.1.jar
+> urls[45] =
+> file:/C:/Users/david.hoffer/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.
+> jar
+> urls[46] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-decoration-model/
+> 1.6/doxia-decoration-model-1.6.jar
+> urls[47] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-site-renderer/1.6
+> /doxia-site-renderer-1.6.jar
+> urls[48] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/velocity/velocity-tools/2.0/velocit
+> y-tools-2.0.jar
+> urls[49] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-beanutils/commons-beanutils/1.7.0/comm
+> ons-beanutils-1.7.0.jar
+> urls[50] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-digester/commons-digester/1.8/commons-
+> digester-1.8.jar
+> urls[51] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-chain/commons-chain/1.1/commons-chain-
+> 1.1.jar
+> urls[52] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-validator/commons-validator/1.3.1/comm
+> ons-validator-1.3.1.jar
+> urls[53] =
+> file:/C:/Users/david.hoffer/.m2/repository/dom4j/dom4j/1.1/dom4j-1.1.jar
+> urls[54] =
+> file:/C:/Users/david.hoffer/.m2/repository/sslext/sslext/1.2-0/sslext-1.2-0.jar
+> urls[55] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/struts/struts-core/1.3.8/struts-cor
+> e-1.3.8.jar
+> urls[56] =
+> file:/C:/Users/david.hoffer/.m2/repository/antlr/antlr/2.7.2/antlr-2.7.2.jar
+> urls[57] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/struts/struts-taglib/1.3.8/struts-t
+> aglib-1.3.8.jar
+> urls[58] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/struts/struts-tiles/1.3.8/struts-ti
+> les-1.3.8.jar
+> urls[59] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-collections/commons-collections/3.2.1/
+> commons-collections-3.2.1.jar
+> urls[60] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/maven/doxia/doxia-integration-tools
+> /1.6/doxia-integration-tools-1.6.jar
+> urls[61] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-archiver/2.4.3/plex
+> us-archiver-2.4.3.jar
+> urls[62] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-io/2.0.8/plexus-io-
+> 2.0.8.jar
+> urls[63] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/commons/commons-compress/1.5/common
+> s-compress-1.5.jar
+> urls[64] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/tukaani/xz/1.2/xz-1.2.jar
+> urls[65] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-i18n/1.0-beta-7/ple
+> xus-i18n-1.0-beta-7.jar
+> urls[66] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/apache/velocity/velocity/1.5/velocity-1.5.
+> jar
+> urls[67] =
+> file:/C:/Users/david.hoffer/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar
+> urls[68] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-velocity/1.1.8/plex
+> us-velocity-1.1.8.jar
+> urls[69] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/codehaus/plexus/plexus-utils/3.0.15/plexus
+> -utils-3.0.15.jar
+> urls[70] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/mortbay/jetty/jetty/6.1.25/jetty-6.1.25.ja
+> r
+> urls[71] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/mortbay/jetty/servlet-api/2.5-20081211/ser
+> vlet-api-2.5-20081211.jar
+> urls[72] =
+> file:/C:/Users/david.hoffer/.m2/repository/org/mortbay/jetty/jetty-util/6.1.25/jetty-util
+> -6.1.25.jar
+> urls[73] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-lang/commons-lang/2.5/commons-lang-2.5
+> .jar
+> urls[74] =
+> file:/C:/Users/david.hoffer/.m2/repository/commons-io/commons-io/1.4/commons-io-1.4.jar
+> Number of foreign imports: 1
+> import: Entry[import  from realm
+> ClassRealm[project>com.issinc.jms:jms-parent:9.x-SNAPSHOT, parent:
+> ClassRealm[maven.api, parent: null]]]
+>
+> -----------------------------------------------------
+>
+>         at
+> org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.j
+> ava:137)
+>         ... 20 more
+> Caused by: java.lang.AbstractMethodError
+>         at
+> org.apache.maven.reporting.exec.MavenReportExecution.canGenerateReport(MavenReportExecuti
+> on.java:89)
+>         at
+> org.apache.maven.plugins.site.render.AbstractSiteRenderingMojo.getReports(AbstractSiteRen
+> deringMojo.java:255)
+>         at
+> org.apache.maven.plugins.site.render.SiteMojo.execute(SiteMojo.java:124)
+>         at
+> org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.j
+> ava:101)
+>         ... 20 more
+> [ERROR]
+> [ERROR]
+> [ERROR] For more information about the errors and possible solutions,
+> please read the following arti
+> cles:
+> [ERROR] [Help 1]
+> http://cwiki.apache.org/confluence/display/MAVEN/PluginContainerException
+>
+>
+> What might be causing this?  I'm not clear if it's failing on commons-io
+> or the one after that.  Regarding commons-io, I don't use version 1.4 in my
+> project so that must be coming from a plugin dependency.
+>
+> I'm using maven-site-plugin v3.4
+>
+> -Dave
+>
+>
+>
+
+--bcaec501c59e0303db0506bcf441--
+

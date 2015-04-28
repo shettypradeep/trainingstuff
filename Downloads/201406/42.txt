@@ -1,0 +1,125 @@
+From users-return-136672-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jun 27 11:25:38 2014
+Return-Path: <users-return-136672-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4C28C11802
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 27 Jun 2014 11:25:38 +0000 (UTC)
+Received: (qmail 13494 invoked by uid 500); 27 Jun 2014 11:25:36 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 13395 invoked by uid 500); 27 Jun 2014 11:25:36 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 13383 invoked by uid 99); 27 Jun 2014 11:25:35 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 27 Jun 2014 11:25:35 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.213.178] (HELO mail-ig0-f178.google.com) (209.85.213.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 27 Jun 2014 11:25:30 +0000
+Received: by mail-ig0-f178.google.com with SMTP id hn18so1822671igb.11
+        for <users@maven.apache.org>; Fri, 27 Jun 2014 04:25:10 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:content-type:message-id:mime-version
+         :subject:date:references:to:in-reply-to;
+        bh=45k1LaSulneri7qUUsSHto1nLYhj7Wcgn+2bJ807sRA=;
+        b=h25rZUIWwfEMaAlqhKPtrKSC8fNXIT8EzPD7Y0Af6vrRMraCccFJesNgGrWS0kXzHp
+         +Grkqj1VhlPzE1deqnTScOGLmoShYCLjr9YW43xmnhZRf07HoXaNW0qkj0jNH/wPjqzg
+         I8dnOxdqhAxlQ0kK7C3/X/3JwzXfkJZ6Hfo+MxRNYEKVzp5DfuCXAF0BEWFJmRuD7i5a
+         z3/q3fWhYD0vQqIMhe0ufRm/YwVrpkdr5cn67jbkwNkOb6QWDqngzbr8TFCaCOfW37rK
+         joWcjETDpQJIWdBzFlqiqteiyqxg8R4J+WTErg82siEJPo3iEvjFbJtFBC2tMHriO59z
+         go9g==
+X-Gm-Message-State: ALoCoQkhy7yjy3vRibPCJvir9hZWWPjaJViqL+3+chpFh3dI6TWRDgtLSnxuotSuBpf8wXksAkDy
+X-Received: by 10.50.20.33 with SMTP id k1mr11531345ige.26.1403868310196;
+        Fri, 27 Jun 2014 04:25:10 -0700 (PDT)
+Received: from [10.0.1.11] (192-0-154-177.cpe.teksavvy.com. [192.0.154.177])
+        by mx.google.com with ESMTPSA id y15sm12902184igy.2.2014.06.27.04.25.09
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 27 Jun 2014 04:25:09 -0700 (PDT)
+From: Jason van Zyl <jason@takari.io>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_2D18830A-FE57-47C9-9E09-45A212A1720F"
+Message-Id: <AE14F028-B1F7-424C-8450-42FFA6439DD6@takari.io>
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.2\))
+Subject: Re: Corrupted download mirror?
+Date: Fri, 27 Jun 2014 07:25:08 -0400
+References: <CAP+_B-hXEQAN5JrjgUZzVNkQQyBPDqT=8dWw+8+uep2=5A5ZNw@mail.gmail.com>
+To: Maven Users List <users@maven.apache.org>
+In-Reply-To: <CAP+_B-hXEQAN5JrjgUZzVNkQQyBPDqT=8dWw+8+uep2=5A5ZNw@mail.gmail.com>
+X-Mailer: Apple Mail (2.1878.2)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_2D18830A-FE57-47C9-9E09-45A212A1720F
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+I've never seen those mirrors before. The Apache Maven PMC is a aware of =
+and collaborate with Sonatype on the canonical Maven Central and =
+collectively we would assert the content is valid. Anything else and =
+you're on your own. I honestly wouldn't use those mirrors. Maven Central =
+is currently served using a CDN which generally has edges not too far =
+away from you.
+
+On Jun 25, 2014, at 7:04 AM, Kristiyan Marinov <kristiyanm@gmail.com> =
+wrote:
+
+> Hi all,
+>=20
+> I had to download a few different Maven versions today and noticed =
+that
+> each time I downloaded a binary distribution from the
+> http://apache.igor.onlinedirect.bg/ mirror Google Chrome rejected it =
+as a
+> malicious file. Switching the mirror to http://apache.cbox.biz/ =
+produced no
+> such complaints from Chrome.
+>=20
+> Has anyone else noticed such issues? Could there be something wrong =
+with
+> the mirror?
+>=20
+>=20
+> Cheers,
+> Kristiyan
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+http://twitter.com/takari_io
+---------------------------------------------------------
+
+Our achievements speak for themselves. What we have to keep track
+of are our failures, discouragements and doubts. We tend to forget
+the past difficulties, the many false starts, and the painful
+groping. We see our past achievements as the end result of a
+clean forward thrust, and our present difficulties as
+signs of decline and decay.
+
+ -- Eric Hoffer, Reflections on the Human Condition
+
+
+
+
+
+
+
+
+
+
+--Apple-Mail=_2D18830A-FE57-47C9-9E09-45A212A1720F--
+

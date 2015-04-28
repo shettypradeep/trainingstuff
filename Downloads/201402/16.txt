@@ -1,0 +1,94 @@
+From users-return-135452-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 13 13:00:16 2014
+Return-Path: <users-return-135452-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C147F1028B
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 13 Feb 2014 13:00:16 +0000 (UTC)
+Received: (qmail 94449 invoked by uid 500); 13 Feb 2014 13:00:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 93829 invoked by uid 500); 13 Feb 2014 13:00:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 93785 invoked by uid 99); 13 Feb 2014 13:00:06 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 13:00:06 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 13:00:00 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id B59776A76F2
+	for <users@maven.apache.org>; Thu, 13 Feb 2014 07:59:39 -0500 (EST)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id N7ZTSbrTuEM3 for <users@maven.apache.org>;
+	Thu, 13 Feb 2014 07:59:30 -0500 (EST)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id F1AAC6A76F1
+	for <users@maven.apache.org>; Thu, 13 Feb 2014 07:59:29 -0500 (EST)
+Message-ID: <52FCC1A6.8020001@artifact-software.com>
+Date: Thu, 13 Feb 2014 07:59:18 -0500
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: Maven Users List <users@maven.apache.org>
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Multiple assemblies in a pom
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I am trying to create 3 tar files in a single project.
+I have 3 invocations of the  maven-assembly-plugin in the pom.
+It works but gives the warnings shown below.
+
+How likely is it that these dire threats of future problems will come about?
+
+What is the Best Practice to fix this?
+
+Ron
+
+
+[WARNING] Some problems were encountered while building the effective 
+model for com.artifact_software.taw:taw-webapps-assembler:jar:1.0.2
+[WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but 
+found duplicate declaration of plugin 
+org.apache.maven.plugins:maven-assembly
+-plugin @ line 77, column 12
+[WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but 
+found duplicate declaration of plugin 
+org.apache.maven.plugins:maven-assembly
+-plugin @ line 89, column 12
+[WARNING]
+[WARNING] It is highly recommended to fix these problems because they 
+threaten the stability of your build.
+[WARNING]
+[WARNING] For this reason, future Maven versions might no longer support 
+building such malformed projects.
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

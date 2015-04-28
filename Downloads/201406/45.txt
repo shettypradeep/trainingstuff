@@ -1,0 +1,262 @@
+From users-return-136575-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jun 13 08:42:24 2014
+Return-Path: <users-return-136575-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 84EED10D2A
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 13 Jun 2014 08:42:24 +0000 (UTC)
+Received: (qmail 94114 invoked by uid 500); 13 Jun 2014 08:42:22 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 94038 invoked by uid 500); 13 Jun 2014 08:42:22 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 94028 invoked by uid 99); 13 Jun 2014 08:42:22 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 13 Jun 2014 08:42:22 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [80.150.205.170] (HELO mail.aurenz.de) (80.150.205.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 13 Jun 2014 08:42:17 +0000
+X-MimeOLE: Produced By Microsoft Exchange V6.5
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Subject: AW: Complex Maven projects - Tutorials? Books?
+Date: Fri, 13 Jun 2014 10:41:53 +0200
+Message-ID: <3B7A7BDFFD286F49A19A5B35D26E08FB0140EA83@srvmail2.aurenz.local>
+In-Reply-To: <539A628F.1050808@rapicault.net>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: Complex Maven projects - Tutorials? Books?
+Thread-Index: Ac+Gr7DWsRjXZ2f2R5qLL1oXuEoZxwAJPDNg
+References: <3B7A7BDFFD286F49A19A5B35D26E08FB0140EA5E@srvmail2.aurenz.local> <539A628F.1050808@rapicault.net>
+From: "Hohl, Gerrit" <g.hohl@aurenz.de>
+To: "Maven Users List" <users@maven.apache.org>
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello everyone, :)
+
+wow, I got a lot of useful responses. Thanks a lot, Michael, Ron, Barrie =
+and Pascal.
+And sorry for the double mail. Seems the mailing list got it twice.
+
+We already have a Nexus running here (v2.6.2-01 - I know: There is =
+v2.8.1-01 available) and use it as a mirror / proxy as well as for =
+uploading some JAR and POM files which are not available in the public =
+repositories.
+
+Instead of the Maven Versions Plugin we came across the Maven Release =
+Plugin. This way you can check in all the time, but only once the build =
+process creates a stable release by modifying the pom.xml files, =
+building, checking in this version of the pom.xml into the SCM, tagging =
+or branching this version in the SCM, modifying the pom.xml again (back =
+to snaphots) and checking it in again.
+But we asked ourselves if this is really the best solution as it seemed =
+a little bit complex and if there isn't a more simple solution for doing =
+that.
+I have to admit that a colleague was working on that issue and not me. I =
+will discuss it with him again.
+
+Another colleague and I said the same like Ron wrote. That internal =
+libraries should be handled like external ones.
+Our problem at the moment is that the libraries as well as the =
+application change every day. We don't have separated teams for =
+applications and libraries - we are too small for that. On the other =
+side other developers of the team have to rely on changes which are =
+made. So we have to publish them to the SCM. Here we face the problem =
+that we also have to deploy them to Nexus as the other party maybe only =
+works on one project, but doesn't have the library checked out from the =
+SCM at the same time. So if project A is checked in you also have to =
+deploy library B. Otherwise the other developer which checks out project =
+A won't be able to start it, maybe even to compile it, because project A =
+in the SCM depends on a newer library B version than the developer has =
+in his local repository.
+My argument in the discussion back then was that this should be solved =
+by snapshots. Especially if you have a build server which is triggered =
+by changes in the SCM you would be able to have the newest version of =
+the library always available in your Nexus repository.
+
+We read many articles on the Internet so far. And we read the following =
+books:
+
+Maven 2 - Eine Einf=FChrung, aktuell zur Version 2.0.9 (Maven 2 - An =
+introduction)
+Author: Kai Uwe Bachmann
+Publisher: Addision-Wesley
+ISBN: 978-3-8273-2835-9
+It is a really only an introduction and many things are not mentioned or =
+discusses in that book. Kai talks only about very simply examples. He =
+doesn't write about more complex problems you will face for sure if you =
+work a little bit longer and maybe on bigger projects using Maven.
+
+Jenkins - kurz & gut
+Author: Mario Behrendt
+Publisher: O'Reilly
+ISBN: 978-3-86899-127-7
+This books is not directly related to Maven, but also mentions it. It is =
+a short overview of CI using Jenkins. I guess you won't get Jenkins =
+running if you only read this book. But maybe it is a good help for =
+making a decision if you want to use Jenkins or not.
+
+Jenkins - The Definitive Guide
+Author: John Ferguson Smart
+Publisher: O'Reilly
+ISBN: 978-1-449-30535-2
+Also not directly related to Maven, but explain how to use Jenkins and =
+Maven together.
+
+I also bought recently:
+Continuous Delivery: Reliable Software Releases Through Build, Test, and =
+Deployment Automation
+Authors: Jez Humble, David Farley
+Publisher: Addision-Wesley
+ISBN: 978-0321601919
+I haven't read it yet. But I hope to get a deeper understanding of the =
+whole process. But I'm not sure if it will help me solving our problems.
+
+I had a look on the books on the Maven site. Most look like they are =
+already old and dealing with Maven 2 (like the book we have - =
+unfortunately - also does). And the newest one got some poor reviews =
+(okay, they are subjective, so maybe the book isn't that bad). Maybe one =
+of you can give a recommendation for a book which is not dedicated to =
+beginners, but instead handles some issues of developers who are already =
+on the next level (but not on the highest level yet).
+
+Of course we are also reading the online documentation. But I have to =
+admit that it sometimes lacks the one or another information which you =
+find in some blogs or articles after some search. And some of the 3rd =
+party plugins are explained really poorly (okay, that is not a problem =
+of the Maven project). That doesn't make it easier as Maven offers some =
+many possibilities and therefore *can* get complex.
+
+We also found a presentation on the Internet which described a solution =
+like Pascal mentioned in his mail. But doesn't that mean that you will =
+have hundreds and hundreds of releases in your repository? And doesn't =
+it mean you have to update the pom.xml files of your projects which are =
+developed simultaneously all the time? Somehow I prefer the idea - like =
+Ron - of handling internal libraries not different from external =
+libraries. But I also see the points of people who argument for the CD =
+way-of-life.
+Nevertheless the links Pascal provided are very interesting. And I found =
+even a few posts of Jez Humble, the author of that CD book I haven't =
+read yet. :D I will definitely read the forum discussion and also have a =
+look at the YouTube video.
+
+Again I want to thank all to all the people who responded to my mail. =
+Now I have some material to read through and discuss it with my =
+colleagues. I hope you're not getting mad if I come back for more =
+questions. :)
+
+Regards,
+Gerrit
+
+
+-----Urspr=FCngliche Nachricht-----
+Von: Pascal Rapicault [mailto:pascal@rapicault.net]=20
+Gesendet: Freitag, 13. Juni 2014 04:32
+An: Maven Users List
+Betreff: Re: Complex Maven projects - Tutorials? Books?
+
+If you are really aiming at doing continuous delivery (any potential =
+build can be pushed to prod), then SNAPSHOT is not a great way to deal =
+with dependencies since you will not be able to exactly know what you =
+ship. To avoid this, one practice is to use the build number in the =
+artifact version (1.0.0-b1 or 1.0.1).
+This has of course had the drawback that now you have to update the =
+pom.xml of components using a specific artifact (move from build 1 to 2) =
+but this also gives you greater control on the rate at which you consume =
+libraries.
+You may be interested in these articles:
+-
+http://maven.40175.n5.nabble.com/Continuous-Delivery-and-Maven-td3245370.=
+html
+-
+http://stackoverflow.com/questions/18456111/what-is-the-maven-way-for-pro=
+ject-versions-when-doing-continuous-delivery
+
+That said, if you add Artifactory to the mix, you can leverage its =
+capabilities of obtaining specific versions of a SNAPSHOT through matrix =
+parameters
+(https://www.jfrog.com/confluence/display/RTF/Using+Properties+in+Deploym=
+ent+and+Resolution)
+quite handy. One example where this comes handy is when you split your =
+build process over multiple jenkins jobs and you want to make sure that =
+you use the same artifact throughout the process and this w/o blocking =
+the whole "pipeline" for the whole duration of the process.
+
+HTH
+
+Pascal
+On 12/06/2014 10:46 AM, Hohl, Gerrit wrote:
+> Hello everyone, :)
+>
+>  =20
+>
+> I have a question which is not about a specific problem with Maven,=20
+> but more a general question.
+>
+> I hope it is okay to ask this question here.
+>
+>  =20
+>
+> We use Maven and Jenkins for about 1.5 years now, I guess. Until now=20
+> the Maven projects have been very simple and - let's say - very =
+monolithic.
+>
+> But recently we identify more and more internal libraries in our=20
+> products. Of course we don't want to share this libraries by=20
+> copy-n-paste between the products - especially as we have Maven.
+>
+> So we started to read books, tutorials on the Internet and so on. But=20
+> most of them only deal with simple projects. They don't cover e.g.
+> versioning the build process (especially if your build process=20
+> consists of more than just one step). They also don't cover the=20
+> problems of developing the libraries while your developing the=20
+> products which depend on them. Especially at the beginning your=20
+> libraries will go through a lot of changes. A few name snapshots as a=20
+> solution, but don't explain how you can work using them, how you can=20
+> use them in your pom.xml and how you deal with them if you finally=20
+> switch your product and/or your library from the snapshot state to the =
+
+> release state. A few also say that you shouldn't use snapshots at all=20
+> because it will result in many problems (e.g. having -SNAPSHOT entries =
+
+> in your pom.xml). Nightly builds or build triggered by the SCM are =
+also an issue here.
+>
+>  =20
+>
+> Does someone know a good book or tutorial which handles all of these=20
+> issues around Maven and CI/CD in more depth?
+>
+>  =20
+>
+>  =20
+>
+> Regards,
+>
+> Gerrit
+>
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

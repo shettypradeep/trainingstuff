@@ -1,0 +1,80 @@
+From users-return-137499-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Oct  9 04:20:10 2014
+Return-Path: <users-return-137499-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A1AAA17AE1
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  9 Oct 2014 04:20:10 +0000 (UTC)
+Received: (qmail 8542 invoked by uid 500); 9 Oct 2014 04:20:08 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 8455 invoked by uid 500); 9 Oct 2014 04:20:08 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 8441 invoked by uid 99); 9 Oct 2014 04:20:08 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Oct 2014 04:20:08 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of baerrach@gmail.com designates 209.85.220.180 as permitted sender)
+Received: from [209.85.220.180] (HELO mail-vc0-f180.google.com) (209.85.220.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Oct 2014 04:19:42 +0000
+Received: by mail-vc0-f180.google.com with SMTP id le20so360451vcb.11
+        for <users@maven.apache.org>; Wed, 08 Oct 2014 21:19:41 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=C/aBMCHhv2UDnFlFieq3lV0Pa7wDWrwUuO7i0nwLjsI=;
+        b=RstdwHDv761gSrqEcKpWY4MCkNuVVpfT65V9xx7POD9dYNyllURv9Uz5t0fCMHWcSh
+         bDWbjQANaA8NC1k7ZkitSZKp0FotE/DY5BuT1iVm03NN8p8v8JrhG8xK+LBOaOCgbFRf
+         CcQKnNCpEzherF127v9Nghcdsd31mvw6DgWGUw5BGy1fVWdWq3IpgKcQQJHSMFULHwKW
+         kiL9+sfX/R3ivyIVoBdS/KBrMcBTrmHYQ9/RTtWsrDuEuMQwRu5x/k0CqqH15fSAAexe
+         RKhGc0PUrsw74PbGb8K6Vrf4PMGVW9UU/e7y4PS9FSa4qX2CVDjN6367X/H2np64WnG/
+         q+JA==
+MIME-Version: 1.0
+X-Received: by 10.220.92.198 with SMTP id s6mr15578498vcm.38.1412828380925;
+ Wed, 08 Oct 2014 21:19:40 -0700 (PDT)
+Received: by 10.220.90.76 with HTTP; Wed, 8 Oct 2014 21:19:40 -0700 (PDT)
+In-Reply-To: <20141009051946.00000fdf.ecki@zusammenkunft.net>
+References: <CAAZU44nahcOK1uv+4qQEf18ehv8adkoF46YimcgwP8tugw1yUQ@mail.gmail.com>
+	<20141009051946.00000fdf.ecki@zusammenkunft.net>
+Date: Thu, 9 Oct 2014 14:49:40 +1030
+Message-ID: <CADVp3v8TnQcSV=Zd0hvvU4ZmfNdK32e3MGrsibTMzieKfc6Dyg@mail.gmail.com>
+Subject: Re: How do I test client and server since they form circular dependencies?
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e01538458c614c10504f5bdee
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01538458c614c10504f5bdee
+Content-Type: text/plain; charset=UTF-8
+
+On 9 October 2014 13:49, Bernd Eckenfels <ecki@zusammenkunft.net> wrote:
+
+> Am Wed, 8 Oct 2014 19:53:20 -0700
+> schrieb Kevin Burton <burton@spinn3r.com>:
+>
+> > maybe one idea is to build a meta-module like foo-client-server-test
+> > which as a dependency on foo-client and foo-server.  then they could
+> > each test each other?  Seems a bit of a hack but it should work ..
+>
+> Yes, have an integration test module in your reactor which depends on
+> both. Thats not a hack, is a good way to do that.
+
+
+A circular dependency is normally a sign that you haven't got your
+separations right.
+
+In order to run your test you need to use both the server and client, that
+sounds like a dependency to me!
+And so you need a new module to express that dependency in.
+
+--089e01538458c614c10504f5bdee--
+

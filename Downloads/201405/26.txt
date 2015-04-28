@@ -1,0 +1,95 @@
+From users-return-136427-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu May 22 16:45:57 2014
+Return-Path: <users-return-136427-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 04A1811C9E
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 22 May 2014 16:45:57 +0000 (UTC)
+Received: (qmail 77758 invoked by uid 500); 22 May 2014 16:45:55 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 77679 invoked by uid 500); 22 May 2014 16:45:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 77671 invoked by uid 99); 22 May 2014 16:45:55 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 22 May 2014 16:45:55 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of garvin.leclaire@gmail.com designates 74.125.82.52 as permitted sender)
+Received: from [74.125.82.52] (HELO mail-wg0-f52.google.com) (74.125.82.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 22 May 2014 16:45:50 +0000
+Received: by mail-wg0-f52.google.com with SMTP id l18so3703463wgh.35
+        for <users@maven.apache.org>; Thu, 22 May 2014 09:45:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=KYnH/MUebF6uYlM3/egNLjWJHXme4dh5uehO5kw7Hak=;
+        b=QJ+gjc3VfE7cS+k4EAq8JFuE3OtGBh3WMsu5boqCvU45nZo8MaVSNtoHyHNJvFNaba
+         u+e73DeOVOw31rT0yO49qYkigHL3XfPsdpOq115Q3AgPdYVl2ApB7MlFNbx4EdJeJWcI
+         2sgxQh/UOn0RO0+gC6WofAb2gJWsDwDEfSRaBhlVHI2dbie6MCyoRvr9vcYlSG4hx4zu
+         rDOqUj76o/iSPEQ2m1T7ZbUt5mqhGNghJlNcqrApZ6XOIjINTnkIVWpf5aykKk11l9AK
+         5m27rP2eS09eOfCupNal4TzUERaSjIUTcByTMrxFfwtAjdWgLE9nOsVod5Tt2GU1LDUE
+         0REQ==
+MIME-Version: 1.0
+X-Received: by 10.194.81.164 with SMTP id b4mr51399509wjy.2.1400777128877;
+ Thu, 22 May 2014 09:45:28 -0700 (PDT)
+Received: by 10.216.234.133 with HTTP; Thu, 22 May 2014 09:45:28 -0700 (PDT)
+Date: Thu, 22 May 2014 12:45:28 -0400
+Message-ID: <CAMKsNUJkYzBEzXUPXSA7RHXZ6KZnEANy6ZzpF1AgDUD_rJQqPQ@mail.gmail.com>
+Subject: [ANN] FindBugs Maven Plugin version 2.5.4 Released
+From: Garvin LeClaire <garvin.leclaire@gmail.com>
+To: announce@mojo.codehaus.org, 
+	"dev@mojo.codehaus.org" <dev@mojo.codehaus.org>, user@mojo.codehaus.org, 
+	maven users <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bf0ca002d282104f9ffd796
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bf0ca002d282104f9ffd796
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+The Mojo team is pleased to announce the release of the FindBugs Maven
+Plugin version 2.5.4.
+FindBugs uses static analysis to inspect Java bytecode for occurrences
+of bug patterns.
+
+To get this update, simply specify the version in your project's
+plugin configuration:
+
+<plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <version>2.5.4</version>
+</plugin>
+
+We solved the following issues:
+
+Release Notes - Mojo's FindBugs Maven Plugin - Version 2.5.4
+
+
+
+** Bug
+    * [MFINDBUGS-189] - The plugin generates reports incompatible with
+the 'maven-jxr-plugin' version 2.4.
+
+
+
+** Improvement
+    * [MFINDBUGS-195] - Update to Findbugs 2.0.3
+
+
+Enjoy,
+
+
+Garvin LeClaire
+garvin.leclaire@gmail.com
+
+--047d7bf0ca002d282104f9ffd796--
+

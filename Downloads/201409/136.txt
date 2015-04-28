@@ -1,0 +1,128 @@
+From users-return-137230-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Sep 10 15:25:26 2014
+Return-Path: <users-return-137230-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 275E011462
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 10 Sep 2014 15:25:26 +0000 (UTC)
+Received: (qmail 70991 invoked by uid 500); 10 Sep 2014 15:25:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 70912 invoked by uid 500); 10 Sep 2014 15:25:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 70900 invoked by uid 99); 10 Sep 2014 15:25:23 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 10 Sep 2014 15:25:23 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of adrien.rivard@gmail.com designates 209.85.220.178 as permitted sender)
+Received: from [209.85.220.178] (HELO mail-vc0-f178.google.com) (209.85.220.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 10 Sep 2014 15:24:57 +0000
+Received: by mail-vc0-f178.google.com with SMTP id hy4so4071863vcb.37
+        for <users@maven.apache.org>; Wed, 10 Sep 2014 08:24:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=4J489Y4OJzMSo/mAB9b3AH4r8m642Verf2mf4bXQtE4=;
+        b=AOqxl+paNRUiuI+7tHOqxBQ3jHWPzhfwmmWv4uykqM8K7bwz9eEogpCdjyu0Un9Ran
+         wBSzisqWxMS44ik94acM14hzi/U8wEDavqQnzjz826WJqgHrTdMW4hq6NF5ylO/xe/yy
+         9dYCV1st2hR1HtMJ9tZnYtUgJiS9T9qpbJor3gZogX+fbUw3XcDcftT7NBY7BObuvsCD
+         uvWAf7muo570I7Sjx1Dche3dDDZcVE+FYz+als+oY7zMEHBFlkIZk8Fg9QM+2kkEney9
+         eDG3089HD2CJ7zZLeTAkLGqrSWwNMBYYcnxGjVvwUeFibnTERgCs4wZAYMEGMypfV9rH
+         midw==
+MIME-Version: 1.0
+X-Received: by 10.220.114.5 with SMTP id c5mr21620123vcq.28.1410362695804;
+ Wed, 10 Sep 2014 08:24:55 -0700 (PDT)
+Received: by 10.220.240.139 with HTTP; Wed, 10 Sep 2014 08:24:55 -0700 (PDT)
+In-Reply-To: <CAEkwH4ODwNizMyvDbeEUbkrK3DjVNY9jPugMJdqUDv_87ozuaA@mail.gmail.com>
+References: <CAEkwH4OH7-TNjR_nptJS=UJR3E7MVzVoGmBcdfPor3WALbu5kg@mail.gmail.com>
+	<0DF8ABE9-F263-4131-A9FC-CA3D17344307@sharp.fm>
+	<CAEkwH4ODwNizMyvDbeEUbkrK3DjVNY9jPugMJdqUDv_87ozuaA@mail.gmail.com>
+Date: Wed, 10 Sep 2014 17:24:55 +0200
+Message-ID: <CAPCUOdEjD66ZSLra3B_rm868-QmNZuVemBvzjqo_bgto5TadSw@mail.gmail.com>
+Subject: Re: Build once, deploy everywhere
+From: Adrien Rivard <adrien.rivard@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0122a71e7ced790502b7a729
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0122a71e7ced790502b7a729
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+
+You can always run mvn deploy:deploy, but the main point of deploy is not
+to deploy applications but to deploy binaries into a Maven repository
+manager (Nexus ..)
+
+Deploying applications is traditionnally done via others specifics tools,
+though a few maven plugins do that as well.
+
+
+
+On Wed, Sep 10, 2014 at 5:07 PM, Jan <raghurefer@gmail.com> wrote:
+
+> Thanks All.
+>
+> My package is not environment specific, and currently i compile and package
+> using Maven, and run deployment using Ant, coz when i tried to run maven
+> deploy it was using the full life cycle goals again, instead of this is
+> there any way to execute just deploy and skip all other goals?
+>
+>
+> On Wed, Sep 10, 2014 at 9:26 AM, Graham Leggett <minfrin@sharp.fm> wrote:
+>
+> > On 10 Sep 2014, at 10:03, Jan <raghurefer@gmail.com> wrote:
+> >
+> > > Does anyone using Maven as Build Once and deploy Everywhere method?
+> Like
+> > > lets say i don't want to recompile my source code everytime for
+> different
+> > > environment DEV,SIT,UAT & PROD. I want to do my compile and package
+> only
+> > at
+> > > DEV then deploy the artifact to all mentioned environment. Is this
+> > possible
+> > > using Maven, is there any reference any one could share with me Please.
+> >
+> > We do this extensively with maven, using the maven release plugin.
+> >
+> > Our artifacts are in turn installable packages (rpms in our case, but
+> > could be deb, whatever) which get published into a yum repository.
+> >
+> > The code is "promoted" from dev to test to higher environments by hard
+> > linking the packages into distinct yum repos, a yum repo for each
+> > environment.
+> >
+> > The release created by the release plugin is built just once and
+> promoted.
+> > The rpms are created using the rpm-maven-plugin.
+> >
+> > Regards,
+> > Graham
+> > --
+> >
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+>
+
+
+
+-- 
+Adrien Rivard
+
+--089e0122a71e7ced790502b7a729--
+

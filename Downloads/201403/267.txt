@@ -1,0 +1,210 @@
+From users-return-135916-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Mar 24 15:37:58 2014
+Return-Path: <users-return-135916-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0331F11303
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 24 Mar 2014 15:37:58 +0000 (UTC)
+Received: (qmail 11592 invoked by uid 500); 24 Mar 2014 15:37:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 11053 invoked by uid 500); 24 Mar 2014 15:37:51 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 11041 invoked by uid 99); 24 Mar 2014 15:37:48 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Mar 2014 15:37:48 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ctrueden.wisc@gmail.com designates 209.85.128.174 as permitted sender)
+Received: from [209.85.128.174] (HELO mail-ve0-f174.google.com) (209.85.128.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Mar 2014 15:37:43 +0000
+Received: by mail-ve0-f174.google.com with SMTP id oz11so5868322veb.33
+        for <users@maven.apache.org>; Mon, 24 Mar 2014 08:37:21 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=/MfaR2ebEHZ3cj65I5/9LQhSk8Bc1/B5YiOFDq3p+To=;
+        b=ciBJJWYLi3Ybg4q/IdBdNHl9+DGtmlKGg0RvDT3pa6/zLRuszREvtR2kQM1YYppof0
+         OtcXdl7ckB/+ZNVKrgj7Y7FhcfS7tgLHMS8zabHmDffNyttc/EBq62th8y7zj4u4/bE5
+         cho68zgZbli4kdplmmblHSKMiGu6rwtIqaVhwHMwDWLJeO+UNlemc+58GJ30EtxcWr6D
+         +Ns/EZEqVxKSXWejXLNv8yyaPrT26B0QdLoNNj1Z+bjPwlZFfd6NFbWb97kpH+7DKga0
+         ZSOqlHKE/fheG2fNyq6EdgYwByH8hbGDaY223arpCRlIuHaLDsZ4SQRMny1C80wJCZVM
+         W2xA==
+MIME-Version: 1.0
+X-Received: by 10.52.241.106 with SMTP id wh10mr43470923vdc.16.1395675441831;
+ Mon, 24 Mar 2014 08:37:21 -0700 (PDT)
+Sender: ctrueden.wisc@gmail.com
+Received: by 10.58.34.198 with HTTP; Mon, 24 Mar 2014 08:37:21 -0700 (PDT)
+Received: by 10.58.34.198 with HTTP; Mon, 24 Mar 2014 08:37:21 -0700 (PDT)
+In-Reply-To: <CAMLk=nP2-5=Na+nHweV9wjPDS-NUFOij=vKMtgrc9fHzxGPqPQ@mail.gmail.com>
+References: <CAMLk=nP5TeMTAp5yNP8PGZSYSc-LAqLn3UTu3Npz+18L03aN1A@mail.gmail.com>
+	<CANWgJS75c4JPWRStq9p+J21xVyWxgZq1q9fcqdkxLgv+UnwaVg@mail.gmail.com>
+	<CAMLk=nP2-5=Na+nHweV9wjPDS-NUFOij=vKMtgrc9fHzxGPqPQ@mail.gmail.com>
+Date: Mon, 24 Mar 2014 10:37:21 -0500
+X-Google-Sender-Auth: 93ZLYuISmT6ep6nkqaHqKYdXAc0
+Message-ID: <CADN69ykDKMAMSMXUPvC6yXeEZwoqu+2cQYcMEO0tw7-KUsg6CA@mail.gmail.com>
+Subject: Re: properties that are not being resolved
+From: Curtis Rueden <ctrueden@wisc.edu>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1133eb38eea31504f55c02c6
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1133eb38eea31504f55c02c6
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hi Henrik,
+
+FYI, my projects use buildnumber-maven-plugin with git and it works great.
+Probably the docs are just out of date.
+
+Regards,
+Curtis
+On Mar 24, 2014 3:05 AM, "Henrik =D8sterlund Gram" <henrik.gram@gmail.com>
+wrote:
+
+> The one at
+> http://mojo.codehaus.org/buildnumber-maven-plugin/create-mojo.html ?  It
+> states in the first couple of lines that it only works with subversion an=
+d
+> I'm using git.
+>
+> Aside from that, I can't really see why it would make a difference; how
+> many ways are there to set properties?  I did establish that the properti=
+es
+> are indeed set as I can print them via the ant-run plugin and via the a
+> modified ear-plugin.
+>
+>
+>
+> On Mon, Mar 24, 2014 at 8:28 AM, Baptiste Mathus <bmathus@batmat.net>
+> wrote:
+>
+> > Hi,
+> > Out of curiosity, why don't you use the seemingly equivalent mojo
+> > buildnumber maven plugin? May not be your issue, but may be the plugin
+> > you're using doesn't create properties in the right way (no offense, ju=
+st
+> > trying to guess)?
+> > My 2 cents
+> > Le 23 mars 2014 22:37, "Henrik =D8sterlund Gram" <henrik.gram@gmail.com=
+> a
+> > =E9crit :
+> >
+> > > I stumbled over some rather strange behaviour regarding properties.  =
+It
+> > > seems properties generated by one plugin are not always resolved for
+> > other
+> > > plugins and I can't figure out why.
+> > >
+> > > I use a plugin to make info about the git branch available in the
+> > > properties so it can be passed to other plugins.  The particular plug=
+in
+> > > does not seem important, but I've included it here for sake of
+> > > completeness:
+> > >
+> > > <plugin>
+> > > <groupId>com.code54.mojo</groupId>
+> > > <artifactId>buildversion-plugin</artifactId>
+> > >  <version>1.0.3</version>
+> > > <configuration>
+> > > <tstamp_format>yyyy.MM.dd HH:mm</tstamp_format>
+> > >  </configuration>
+> > > <executions>
+> > > <execution>
+> > >  <goals>
+> > > <goal>set-properties</goal>
+> > > </goals>
+> > >  </execution>
+> > > </executions>
+> > > </plugin>
+> > >
+> > > But when I referenced the properties set by the plugin in an env entr=
+y
+> > for
+> > > the maven ear plugin, the properties were not resolved at all:
+> > >
+> > > <envEntries>
+> > > <env-entry>
+> > > <description>Middleware build information</description>
+> > >  <env-entry-name>java:app/env/sw-version</env-entry-name>
+> > > <env-entry-type>java.lang.String</env-entry-type>
+> > >  <env-entry-value>${build-commit} @ ${build-tstamp} built on
+> > > ${maven.build.timestamp}</env-entry-value>
+> > > </env-entry>
+> > > </envEntries>
+> > >
+> > > Just to be sure, I used the latest maven and tried both version 2.9 o=
+f
+> > the
+> > > plugin and the latest from the repo with the same result.
+> > >
+> > > The only way I managed to fix this was to patch the maven-ear-plugin
+> > > itself, adding the following code in
+> > GenerateApplicationXmlMojo.execute():
+> > >
+> > > // Fix env variable substitutions
+> > > Properties props =3D project.getProperties();
+> > > PlexusConfiguration[] entries =3D envEntries.getChildren();
+> > > if (entries !=3D null) {
+> > >     for (PlexusConfiguration entry : entries) {
+> > >         if ("env-entry".equals(entry.getName())) {
+> > >             PlexusConfiguration[] envEntryChildren =3D
+> entry.getChildren();
+> > >             if (envEntryChildren !=3D null) {
+> > >                 for (PlexusConfiguration envEntryChild :
+> > envEntryChildren)
+> > > {
+> > >
+> > > envEntryChild.setValue(StrSubstitutor.replace(envEntryChild.getValue(=
+),
+> > > props));
+> > >                 }
+> > >             }
+> > >         }
+> > >     }
+> > > }
+> > >
+> > > Then it worked just fine, but I don't understand why this is necessar=
+y.
+> >  I
+> > > thought whatever called the plugin was supposed to have done the
+> variable
+> > > substitution already.  So clearly the properties were present at the
+> time
+> > > of executing the plugin, but they werent being automaticly substitute=
+d.
+> > >
+> > > To add to the confusion, using ${project.version} in the
+> env-entry-value
+> > > was resolved just fine, but just not the properties coming from anoth=
+er
+> > > plugin despite the plugins being run in the correct order.
+> > >
+> > > To further add to the confusion, I then used maven ant-run plugin,
+> > echoing
+> > > the values of properties which worked just fine (!)
+> > >
+> > > While I solved the problem for me by making a locally patched version
+> of
+> > > the ear plugin, it's not really a solution I favour, so I hope someon=
+e
+> > can
+> > > provide a better and more permanent fix.
+> > >
+> > > Regards,
+> > > Henrik Gram
+> > >
+> >
+>
+
+--001a1133eb38eea31504f55c02c6--
+

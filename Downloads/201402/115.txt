@@ -1,0 +1,127 @@
+From users-return-135428-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 12 20:36:59 2014
+Return-Path: <users-return-135428-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 247F3102D0
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 12 Feb 2014 20:36:59 +0000 (UTC)
+Received: (qmail 388 invoked by uid 500); 12 Feb 2014 20:36:55 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 288 invoked by uid 500); 12 Feb 2014 20:36:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 280 invoked by uid 99); 12 Feb 2014 20:36:55 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Feb 2014 20:36:55 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of paulus.benedictus@gmail.com designates 209.85.213.172 as permitted sender)
+Received: from [209.85.213.172] (HELO mail-ig0-f172.google.com) (209.85.213.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Feb 2014 20:36:48 +0000
+Received: by mail-ig0-f172.google.com with SMTP id k19so11702487igc.5
+        for <users@maven.apache.org>; Wed, 12 Feb 2014 12:36:28 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=MzFB3Nn6i8z5vXdbCW1bFPmbpehvPoJlJepOhBSbMLg=;
+        b=cTgWO6qH+OrrXJRepWnEHqV4GdCGq4BT6lQESD/eH75PF3Moj51rYYvSh+0PZuRhPx
+         cpHrc/IuzILk3GUKReKkxq3DSNaoxRprpC8oP858o8w4fZSkt4EXmw+7dx/pw2sNxBzJ
+         JR4RofP4RU2N2+YHfdcOI9jsag+Gn50hZ8xusr1TGcWQUx1sgI8p2ys9R8BaB4zjRIby
+         zeBGei5OWtVJ8b2NV+z26ztWuWvP4E2SQeVYiIMEKfrB87aZF2Q8gkb7X5XObBv0Pk21
+         5dsnpOoEW/ZTUJaYRmlQa+Q1sMnBGrcZrJPAfGqqu8DoueAm56zOUcfVcawaR2Ul3pX1
+         c+0Q==
+MIME-Version: 1.0
+X-Received: by 10.50.50.241 with SMTP id f17mr109606igo.23.1392237387929; Wed,
+ 12 Feb 2014 12:36:27 -0800 (PST)
+Sender: paulus.benedictus@gmail.com
+Received: by 10.43.54.73 with HTTP; Wed, 12 Feb 2014 12:36:27 -0800 (PST)
+In-Reply-To: <9e5201cf2831$52f17c60$f8d47520$@berthonneau.com>
+References: <9e5201cf2831$52f17c60$f8d47520$@berthonneau.com>
+Date: Wed, 12 Feb 2014 14:36:27 -0600
+X-Google-Sender-Auth: wSbJxdVvQoZ2T3tmksNcOWNJ1RQ
+Message-ID: <CABLGb9yyWxO8om2YE2Y-3v0RwLgB4RmY6cG9UK330DY4UVGHpQ@mail.gmail.com>
+Subject: Re: Code coverage with debug logs: 100% branch coverage not possible?...
+From: Paul Benedict <pbenedict@apache.org>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bd6bdfcf3669404f23b865d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bd6bdfcf3669404f23b865d
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+IIRC, there should be an option in Emma/Cobertura that allows you to
+exclude coverage on certain classes. So if you can exclude your log4j
+classes (you don't really want to test your logging, do you?), then you
+should be able to raise your percentage.
+
+
+On Wed, Feb 12, 2014 at 2:30 PM, Beno=EEt Berthonneau
+<benoit@berthonneau.com>wrote:
+
+> Hi all,
+>
+>
+>
+> I need your opinion/way to tackle the following problem:
+>
+> In many projects we use a Logger (doesn't matter which implementation). I=
+t
+> is often recommend to test if the debug level is activated before logging=
+ a
+> debug trace like the following:
+>
+> if (logger.isDebugEnabled()) {
+>
+>     logger.debug("blah " + i + " in the loop that contains " + max);
+>
+> }
+>
+>
+>
+> Now when you run unit tests on this kind of code you need to make a choic=
+e:
+> run tests with INFO level or run tests with ALL traces activated. I choos=
+e
+> the second option in order to:
+>
+> *         Check that debug traces doesn't throw unwanted exception (like
+> NPE)
+>
+> *         Have a better code coverage in term of covered lines
+>
+>
+>
+> But in term of branches coverage we could never have a 100% :(
+>
+>
+>
+> To me the only way to cover this is to run the tests suite 2 times: one
+> with
+> INFO traces configured, and another one with ALL traces activated.
+>
+> Did you face this issue and how did you solve it ?
+>
+>
+>
+> Thanks,
+>
+> Beno=EEt.
+>
+>
+
+
+--=20
+Cheers,
+Paul
+
+--047d7bd6bdfcf3669404f23b865d--
+

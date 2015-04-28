@@ -1,0 +1,113 @@
+From users-return-135934-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Mar 25 22:20:45 2014
+Return-Path: <users-return-135934-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 51A1F107B6
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 25 Mar 2014 22:20:45 +0000 (UTC)
+Received: (qmail 5988 invoked by uid 500); 25 Mar 2014 22:20:40 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 5908 invoked by uid 500); 25 Mar 2014 22:20:40 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 5900 invoked by uid 99); 25 Mar 2014 22:20:40 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Mar 2014 22:20:40 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.192.175] (HELO mail-pd0-f175.google.com) (209.85.192.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Mar 2014 22:20:35 +0000
+Received: by mail-pd0-f175.google.com with SMTP id x10so1023112pdj.6
+        for <users@maven.apache.org>; Tue, 25 Mar 2014 15:20:15 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:content-type:message-id:mime-version
+         :subject:date:references:to:in-reply-to;
+        bh=jGBI4IQeJ7kqGGLPrYHK1TfB71R1z8HhsTvrOvBYBZs=;
+        b=hvWOCHQyl82R1xv7LBq9VPBwUO4GBM+xXBxZazoYCRmTXtHy6Nr9nsqSGu3ItQ+Erd
+         qzD3lry+i5UGAjYjI1mLfI5I4Wkg1d1BjuPc0czAGrEZrBvdmf37eI4EA6Aeq7BB2em9
+         sTyswhZ1+fR6MX+Tdw0FfpUnFNQ4rUWX9RqauMXq9IwB2OD5sHcojwQTmqrlmexUW1sc
+         eYl7ausWSXCpGluXLwwKN8ahsaeP58gSahOXS4HIB/n3g7RpxkWs9ijtWs9HuzSLdL36
+         wMlhpr+5n511itUCVuG4P8baQIkEakwq6nRMJ4cC8pJ91tmbK+Fo3lVD7PwOnYYeHQSL
+         d9mw==
+X-Gm-Message-State: ALoCoQlPb2nTMP7h24VhpC6ZajoUCEmt5gNlcZ6x/vjDGY4NRTxoqwqyhZMdk22sJh5I9Xbvdv9k
+X-Received: by 10.66.226.145 with SMTP id rs17mr248480pac.144.1395786014929;
+        Tue, 25 Mar 2014 15:20:14 -0700 (PDT)
+Received: from [172.16.24.127] ([4.53.140.129])
+        by mx.google.com with ESMTPSA id ha2sm49420778pbb.8.2014.03.25.15.20.13
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Tue, 25 Mar 2014 15:20:14 -0700 (PDT)
+From: Jason van Zyl <jason@takari.io>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_8D8FFE29-B0A9-4ADC-8662-3A8E2DE9AF6C"
+Message-Id: <B1E980FC-A142-459E-968F-7B37353BC0E4@takari.io>
+Mime-Version: 1.0 (Mac OS X Mail 7.2 \(1874\))
+Subject: Re: Incremental build API
+Date: Tue, 25 Mar 2014 15:20:12 -0700
+References: <E9DAAECA-C429-40FC-9B89-18D819971EC6@takari.io> <52B091BA-2472-4A2F-9544-972DC91F7FFB@talios.com>
+To: Maven Users List <users@maven.apache.org>
+In-Reply-To: <52B091BA-2472-4A2F-9544-972DC91F7FFB@talios.com>
+X-Mailer: Apple Mail (2.1874)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_8D8FFE29-B0A9-4ADC-8662-3A8E2DE9AF6C
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+Should work for any kind of plugins. We have integrated this into 20 or =
+so mojos thus far ranging from source generation, resource processing, =
+resource generation, compilation and class file processing. It's =
+intended to be general purpose but we're looking for feedback to help =
+flesh out the APIs and make them more friendly where/if they are not.
+
+On Mar 25, 2014, at 3:09 PM, Mark Derricutt <mark@talios.com> wrote:
+
+> Looking interesting - will definitely take a look at this for my =
+various language plugins ( coffee script, clojure, frege ).
+>=20
+> On 26 Mar 2014, at 6:44, Jason van Zyl wrote:
+>=20
+>> A note to those interested that the use of the API in Maven requires =
+3.2.1+.
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>=20
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+http://twitter.com/takari_io
+---------------------------------------------------------
+
+To think is easy. To act is hard. But the hardest thing in the world is =
+to act in accordance with your thinking.
+
+ -- Johann von Goethe
+
+
+
+
+
+
+
+
+
+
+--Apple-Mail=_8D8FFE29-B0A9-4ADC-8662-3A8E2DE9AF6C--
+

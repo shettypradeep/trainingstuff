@@ -1,0 +1,88 @@
+From users-return-137276-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Sep 13 01:31:46 2014
+Return-Path: <users-return-137276-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B1FE911187
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 13 Sep 2014 01:31:46 +0000 (UTC)
+Received: (qmail 74741 invoked by uid 500); 13 Sep 2014 01:31:44 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 74661 invoked by uid 500); 13 Sep 2014 01:31:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74638 invoked by uid 99); 13 Sep 2014 01:31:44 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 13 Sep 2014 01:31:44 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of baerrach@gmail.com designates 209.85.220.173 as permitted sender)
+Received: from [209.85.220.173] (HELO mail-vc0-f173.google.com) (209.85.220.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 13 Sep 2014 01:31:17 +0000
+Received: by mail-vc0-f173.google.com with SMTP id le20so1487352vcb.32
+        for <users@maven.apache.org>; Fri, 12 Sep 2014 18:31:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=/C/OPvWgfm2d2bz9xFZa/qjV67wBePfWCGqKUN9iYC4=;
+        b=ZO5D3x64kmEMPM8lOpLn/tiStQAKph+OE9HG18+r4c3IAhLOQS//DGYC7ZLew8CWh1
+         UK31QNzcaKfc1DrJJqhHUezBvUm0mAPkM6XFDErwzod/gzuNAszZFN4LTPmY4lMbbsUp
+         i0VdYq+ArO+eMwIAWLQasby/ksTvEL0I4jx8vOwGY9eRz6VV733y5lsNNeyBrJfrOu5W
+         UGu5bBCb3vH8BuDBbliUoQgvVfBATs0lt+abyOQktWeTKdeXBREBWknkbqEX3ogSDmE6
+         UEArWAscxjwgj+URwcrk1fX0UNO1qePqqRgPavhaAhKTQckyc67w30shk0V28XGow9Ra
+         2amw==
+MIME-Version: 1.0
+X-Received: by 10.52.111.232 with SMTP id il8mr8405569vdb.22.1410571876434;
+ Fri, 12 Sep 2014 18:31:16 -0700 (PDT)
+Received: by 10.220.219.65 with HTTP; Fri, 12 Sep 2014 18:31:16 -0700 (PDT)
+In-Reply-To: <CAAZU44m6VFKf4nDiitwc9WLHZcczhjBYtm4RaGo-pf_buf-7bw@mail.gmail.com>
+References: <CAAZU44kFZ0cNGa_qOXf6Wj_LRRM18LE3v0xKMLZ0+Z44ZffpFg@mail.gmail.com>
+	<CADN69ynJnF10Lofgw6cPRTNz-OyWXHPH0oqTDyzf5xyXP_RKXA@mail.gmail.com>
+	<CAAZU44njJwOz7hbKAeUyE3fY6ygCDJiA5Qa0FeNOT58fJTS=tA@mail.gmail.com>
+	<CAAZU44m6VFKf4nDiitwc9WLHZcczhjBYtm4RaGo-pf_buf-7bw@mail.gmail.com>
+Date: Sat, 13 Sep 2014 11:01:16 +0930
+Message-ID: <CADVp3v9-q8ZkH7tKQG8XgjbfEFCxBjVsmXzYwEJkNk0pR3SkWQ@mail.gmail.com>
+Subject: Re: Tell maven to not have the parent pom as a dependency?
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=bcaec54860d4a009900502e85b8d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--bcaec54860d4a009900502e85b8d
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On 13 September 2014 02:46, Kevin Burton <burton@spinn3r.com> wrote:
+
+> OK=E2=80=A6 so this definitely works and the aggregation model compiles m=
+y module.
+>
+> But I need a way to bump the version number because I have complex
+> dependencies and updating 10 places every time I change the project versi=
+on
+> isn=E2=80=99t going to be fun.
+>
+
+If you have 10 places where the dependencies need changing you are doing it
+wrong.
+
+You should have zero <version> definitions in your modules.
+All version definitions are in the topmost parent pom in the
+dependencyManagement section.
+If you have a bunch of things that share versions, you can also create a
+property and then use something like ${mygroup.version} so that you only
+need to update the property section once.
+
+Have you read the freely available Maven books?
+It's been long while since I've read them but I think this advice is in
+there.
+
+--bcaec54860d4a009900502e85b8d--
+

@@ -1,0 +1,81 @@
+From users-return-137436-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Oct  2 05:17:53 2014
+Return-Path: <users-return-137436-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BE445171E4
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  2 Oct 2014 05:17:53 +0000 (UTC)
+Received: (qmail 53106 invoked by uid 500); 2 Oct 2014 05:17:51 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 53023 invoked by uid 500); 2 Oct 2014 05:17:51 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 53012 invoked by uid 99); 2 Oct 2014 05:17:51 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Oct 2014 05:17:51 +0000
+Received: from localhost (HELO mail-la0-f48.google.com) (127.0.0.1)
+  (smtp-auth username olamy, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Oct 2014 05:17:51 +0000
+Received: by mail-la0-f48.google.com with SMTP id gi9so1708217lab.35
+        for <users@maven.apache.org>; Wed, 01 Oct 2014 22:17:49 -0700 (PDT)
+X-Received: by 10.152.5.40 with SMTP id p8mr60937016lap.32.1412227069538; Wed,
+ 01 Oct 2014 22:17:49 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.25.22.195 with HTTP; Wed, 1 Oct 2014 22:17:29 -0700 (PDT)
+In-Reply-To: <CAKMfhWXMVkqCwL6g8Tqj1zm-J5dmK1uB-uK-C4eTZPUb702KWg@mail.gmail.com>
+References: <CAKMfhWXMVkqCwL6g8Tqj1zm-J5dmK1uB-uK-C4eTZPUb702KWg@mail.gmail.com>
+From: Olivier Lamy <olamy@apache.org>
+Date: Thu, 2 Oct 2014 15:17:29 +1000
+Message-ID: <CAPoyBqTLjh-X882aRbPtV9neLMwqKP1tAXji5y=2kJKciDM0Mw@mail.gmail.com>
+Subject: Re: Need help regarding apache maven
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+No idea what is your setup or your Maven distribution but you use a
+wagon implementation which is not supported here:
+com.ning.http.client.providers.netty ....
+
+Cheers
+Olivier
+
+On 2 October 2014 04:09, sameer chandekar <sameerchandekar2010@gmail.com> wrote:
+> Hi,
+>
+> Please help me to resolve issue I am facing with apache maven.
+>
+> I am trying to implement continuous integration.For which i am using apache
+> maven with build server. I have setup a repository using visual svn
+> server.I've created build using maven now when I try to deploy the build on
+> remote repository I am facing issue.
+> I am getting error code as 409 confilct  unable to deploy artifact . I've
+> attached the error logs in the attachment. I've tried to find similar issue
+> in apache mailing list but didn't find any solution.
+>
+> Waiting for your reply and thanks in advance.
+>
+> Regards,
+> Sameer Chandekar
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+
+
+-- 
+Olivier Lamy
+http://twitter.com/olamy | http://linkedin.com/in/olamy
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

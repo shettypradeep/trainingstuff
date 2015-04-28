@@ -1,0 +1,242 @@
+From users-return-137402-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Sep 28 21:11:00 2014
+Return-Path: <users-return-137402-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9859C17AD1
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 28 Sep 2014 21:11:00 +0000 (UTC)
+Received: (qmail 13816 invoked by uid 500); 28 Sep 2014 21:10:59 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 13746 invoked by uid 500); 28 Sep 2014 21:10:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 13734 invoked by uid 99); 28 Sep 2014 21:10:58 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 28 Sep 2014 21:10:58 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [85.13.151.183] (HELO dd34514.kasserver.com) (85.13.151.183)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 28 Sep 2014 21:10:54 +0000
+Received: from dd34514.kasserver.com (dd0800.kasserver.com [85.13.143.204])
+	by dd34514.kasserver.com (Postfix) with ESMTPSA id 82B724340372
+	for <users@maven.apache.org>; Sun, 28 Sep 2014 23:10:32 +0200 (CEST)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-SenderIP: 68.177.128.220
+User-Agent: ALL-INKL Webmail 2.11
+In-Reply-To: <CAK8jvqz0z_mQA8MGvuoQxWb7JzsASgrBXH3NqXyJsnpn1V_p9w@mail.gmail.com>
+References: <CAAZU44kc8QXRDuC_DJQsGd3q_+fOcMGyT_MLWOtG+zehS4n5Aw@mail.gmail.com> <D4640092-9856-4262-934E-7A01C28CABA6@takari.io> <CAAZU44=0C=nKaZqU+FT398KfngzaNFJyHejwjutiuuKk8Ze9Hg@mail.gmail.com> <3708638.mXRV576Ioi@herve-desktop> <5426FC68.9030600@gmx.de><CAK8jvqz0z_mQA8MGvuoQxWb7JzsASgrBXH3NqXyJsnpn1V_p9w@mail.gmail.com>
+Subject: Re: Maven site:deploy hosting providers??
+From: "Manfred Moser" <manfred@mosabuam.com>
+To: users@maven.apache.org
+Message-Id: <20140928211032.82B724340372@dd34514.kasserver.com>
+Date: Sun, 28 Sep 2014 23:10:32 +0200 (CEST)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+If you are looking for a working example setup, the android maven plugin uses Github pages.. 
+
+http://jayway.github.io/maven-android-plugin/
+https://github.com/jayway/maven-android-plugin
+
+Mirko Friedenhagen wrote on 28.09.2014 02:18:
+
+> I havr used scm-publish together with gh-pages branch as well and as
+> Karl-Heinz already stated, it works like a charm for me as well.
+> 
+> Regards
+> Mirko
+> -- 
+> Sent from my mobile
+> On Sep 27, 2014 8:05 PM, "Karl Heinz Marbaise" <khmarbaise@gmx.de> wrote:
+> 
+>> Hi,
+>>
+>> > we have scm-publish plugin for that
+>>
+>>> http://maven.apache.org/plugins/maven-scm-publish-plugin/
+>>>
+>>
+>> I've already used that for GitHub pages...works like a charm...
+>>
+>> https://github.com/khmarbaise/smpp
+>> https://github.com/khmarbaise/uptodate-maven-plugin etc.
+>>
+>> which makes it very ease...
+>>
+>> apart from that you can use github-site-plugin which works as well...
+>>
+>> https://github.com/github/maven-plugins
+>>
+>>
+>> Kind regards
+>> Karl-Heinz Marbaise
+>>
+>>>
+>>> Regards,
+>>>
+>>> Hervé
+>>>
+>>> Le samedi 27 septembre 2014 10:09:35 Kevin Burton a écrit :
+>>>
+>>>> I don't think github would work but would love to be wrong.
+>>>>
+>>>> Their static page hosting  is acceptable but it's tricky to make sure all
+>>>> pages get added and removed properly.
+>>>>
+>>>> Their binary hosting uses their own proprietary api which isn't supported
+>>>> by wagon.
+>>>>
+>>>> On Sep 27, 2014 4:49 AM, "Jason van Zyl" <jason@takari.io> wrote:
+>>>>
+>>>>> I believe there are tools that will allow you to publish your static
+>>>>> site
+>>>>> to Github pages.
+>>>>>
+>>>>> On Sep 27, 2014, at 2:21 AM, Kevin Burton <burton@spinn3r.com> wrote:
+>>>>>
+>>>>>> This is such an obviously problem I’m amazed there isn’t an easier
+>>>>>> solution.  Bintray looks cool. I just asked them how they feel about
+>>>>>>
+>>>>>
+>>>>> static
+>>>>>
+>>>>>  site hosting?
+>>>>>>
+>>>>>> I want something that works with mvn site:deploy
+>>>>>>
+>>>>>> On Fri, Sep 26, 2014 at 10:49 PM, Manfred Moser <manfred@mosabuam.com>
+>>>>>>
+>>>>>> wrote:
+>>>>>>
+>>>>>>> If you just want to have the sites hosted any hosting solution will do
+>>>>>>>
+>>>>>>
+>>>>> it.
+>>>>>
+>>>>>  CDN will be more expensive but I would really wonder if you need that
+>>>>>>>
+>>>>>>
+>>>>> for a
+>>>>>
+>>>>>  static site. You would have to get a LOT of traffic to make it worth
+>>>>>>> it.
+>>>>>>>
+>>>>>>> Bintray focuses on binary distribution and not site hosting.
+>>>>>>>
+>>>>>>> If you want both you could even just run Nexus OSS on any server and
+>>>>>>>
+>>>>>>
+>>>>> host
+>>>>>
+>>>>>  the binaries and the site using a Maven repository for the binaries and
+>>>>>>>
+>>>>>>
+>>>>> a
+>>>>>
+>>>>>  site repository for the site..
+>>>>>>>
+>>>>>>> manfred
+>>>>>>>
+>>>>>>> Bernd wrote on 26.09.2014 17:41:
+>>>>>>>
+>>>>>>>> Have a look at bintray
+>>>>>>>>
+>>>>>>>> https://bintray.com/docs/uploads/uploads_uploads.html
+>>>>>>>>
+>>>>>>>> Greetings
+>>>>>>>> Bernd
+>>>>>>>>
+>>>>>>>> Am 26.09.2014 21:39 schrieb "Kevin Burton" <burton@spinn3r.com>:
+>>>>>>>>
+>>>>>>>>> I don’t want to necessarily host our own repositories.
+>>>>>>>>>
+>>>>>>>>> They’re just static file repositories.
+>>>>>>>>>
+>>>>>>>>> Are there any hosting providers out there that support dav, SCP or
+>>>>>>>>>
+>>>>>>>>
+>>>>> HTTP
+>>>>>
+>>>>>  PUT
+>>>>>>>
+>>>>>>>  that would work with wagon?
+>>>>>>>>>
+>>>>>>>>> Required features are:
+>>>>>>>>>
+>>>>>>>>> - SSL
+>>>>>>>>>
+>>>>>>>>> - redundant copies on multiple servers (CDN)
+>>>>>>>>>
+>>>>>>>>> - dav/scp/ftp/ upload.. anything supported by wagon.
+>>>>>>>>>
+>>>>>>>>> - HTTP auth
+>>>>>>>>>
+>>>>>>>>> - domain masking
+>>>>>>>>>
+>>>>>>>>> … I just want something easy to setup and then never worry about it
+>>>>>>>>>
+>>>>>>>>
+>>>>>>> again.
+>>>>>>>
+>>>>>>>  --
+>>>>>>>>>
+>>>>>>>>> Founder/CEO Spinn3r.com
+>>>>>>>>> Location: *San Francisco, CA*
+>>>>>>>>> blog: http://burtonator.wordpress.com
+>>>>>>>>> … or check out my Google+ profile
+>>>>>>>>> <https://plus.google.com/102718274791889610666/posts>
+>>>>>>>>> <http://spinn3r.com>
+>>>>>>>>>
+>>>>>>>>
+>>>>>>> ---------------------------------------------------------------------
+>>>>>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>>>>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>>>>>
+>>>>>>
+>>>>>> --
+>>>>>>
+>>>>>> Founder/CEO Spinn3r.com
+>>>>>> Location: *San Francisco, CA*
+>>>>>> blog: http://burtonator.wordpress.com
+>>>>>> … or check out my Google+ profile
+>>>>>> <https://plus.google.com/102718274791889610666/posts>
+>>>>>> <http://spinn3r.com>
+>>>>>>
+>>>>>
+>>>>> Thanks,
+>>>>>
+>>>>> Jason
+>>>>>
+>>>>> ----------------------------------------------------------
+>>>>> Jason van Zyl
+>>>>> Founder,  Apache Maven
+>>>>> http://twitter.com/jvanzyl
+>>>>> http://twitter.com/takari_io
+>>>>> ---------------------------------------------------------
+>>>>>
+>>>>> the course of true love never did run smooth ...
+>>>>>
+>>>>>   -- Shakespeare
+>>>>>
+>>>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+> 
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

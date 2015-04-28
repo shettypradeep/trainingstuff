@@ -1,0 +1,73 @@
+From users-return-136981-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Aug  7 11:29:34 2014
+Return-Path: <users-return-136981-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7627811D81
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  7 Aug 2014 11:29:34 +0000 (UTC)
+Received: (qmail 59504 invoked by uid 500); 7 Aug 2014 11:29:32 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 59422 invoked by uid 500); 7 Aug 2014 11:29:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 59410 invoked by uid 99); 7 Aug 2014 11:29:32 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 07 Aug 2014 11:29:32 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of behrangsa@gmail.com designates 209.85.220.180 as permitted sender)
+Received: from [209.85.220.180] (HELO mail-vc0-f180.google.com) (209.85.220.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 07 Aug 2014 11:29:28 +0000
+Received: by mail-vc0-f180.google.com with SMTP id ij19so5958668vcb.39
+        for <users@maven.apache.org>; Thu, 07 Aug 2014 04:29:07 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=H07lZ5VhISBiRWzeRwW1pZmBIfoDOoxQ1sREpR0QWWk=;
+        b=BwiVOeURp4nZhIJPQu559WHMDuMNOQqFUXq45nNH9Cav1ydQkDQGwSh1uDcgkuDKP6
+         E+fpSdwu0tcADG8jFy6wkAGIqpW8uKBKaxDKogIhLXtJ6vQH9MiqSAHkHdm2zWipbSju
+         03883DFdImieoBcGxI14ZALLX6wzHtVhKQ8yuYfzuARVKJm/iLEAAhv4IhXfKGvlOPyb
+         oHOD3yV2IAXb1m04Oq/YvaAeZFUJq0MfT3bPHBLEUhbuuupQNFlQr/7gDEB5YLq24TD/
+         PfIl6ThcBDlDPFYNwDRJ4EbAJ1UYg6SJ+j9Tga1sDZ8P1MSlPrn1i82sIeG1+cERODob
+         uVDA==
+MIME-Version: 1.0
+X-Received: by 10.52.9.35 with SMTP id w3mr1629246vda.12.1407410947360; Thu,
+ 07 Aug 2014 04:29:07 -0700 (PDT)
+Received: by 10.58.116.145 with HTTP; Thu, 7 Aug 2014 04:29:07 -0700 (PDT)
+Date: Thu, 7 Aug 2014 21:29:07 +1000
+Message-ID: <CAERAJ+8vFG5Xz6+YeVAeYNW5kzjZDUa65z7DoPxPAzEJ-sRM_Q@mail.gmail.com>
+Subject: In a multi-module Maven project, what could make the parent project
+ not to be a part of the reactor?
+From: Behrang Saeedzadeh <behrangsa@gmail.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=20cf302ef9f692119d0500086592
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--20cf302ef9f692119d0500086592
+Content-Type: text/plain; charset=ISO-8859-1
+
+I was just reading the source code for the [Versions Maven Plugin](
+http://mojo.codehaus.org/versions-maven-plugin/), and noticed this snippet
+of code:
+
+       if ( reactorProjects.contains( getProject().getParent() ) )
+       {
+           getLog().info( "Project's parent is part of the reactor" );
+           return;
+       }
+
+When would the reactor not contain the parent module/project?
+
+Best regards,
+Behrang
+http://www.behrang.org
+
+--20cf302ef9f692119d0500086592--
+

@@ -1,0 +1,79 @@
+From users-return-134969-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan  6 12:57:08 2014
+Return-Path: <users-return-134969-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 58B4310A5C
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  6 Jan 2014 12:57:08 +0000 (UTC)
+Received: (qmail 10223 invoked by uid 500); 6 Jan 2014 12:56:59 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 10102 invoked by uid 500); 6 Jan 2014 12:56:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 10094 invoked by uid 99); 6 Jan 2014 12:56:57 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 12:56:57 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of adam.retter@googlemail.com designates 209.85.212.51 as permitted sender)
+Received: from [209.85.212.51] (HELO mail-vb0-f51.google.com) (209.85.212.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 12:56:53 +0000
+Received: by mail-vb0-f51.google.com with SMTP id 11so9133867vbe.10
+        for <users@maven.apache.org>; Mon, 06 Jan 2014 04:56:32 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlemail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=zeIaIwuLVejEIDIMBbG+Y6fLh2OukVfWdNsnj5C1YmE=;
+        b=Y0ttYVnu2a4STXPe1OHW1RuO4CbHfqY98v4EOG8YHu6WH3QpAvbq0zLXpLovJgNzLh
+         tHBbj6OnnAuuBwfF7tbvArOcRHnS6jsVhpyusOQhEmk7Z2O7xkvz9iIvXm0QYpeA+SE0
+         XtZkzE33fjXNTfRBrc0sueIEuj6KgxpU2LTeJ8tVL22vg/G0ZQ5dzivpCYeMC4HZr2gS
+         UdIux30Zj4lUdS6BcS95xniaFaGObIK0/CeuFlPkGK5r0bQJXmyka+vESOyb5vW0CqQR
+         D3TmwSrX6VWIgyNQ+GVXAnwsUspvOlNPX2dfqT6hWqewNBCzhDXzsp9f/Ygir0dfWTsW
+         tJsQ==
+MIME-Version: 1.0
+X-Received: by 10.220.252.71 with SMTP id mv7mr681934vcb.68.1389012992616;
+ Mon, 06 Jan 2014 04:56:32 -0800 (PST)
+Received: by 10.58.171.37 with HTTP; Mon, 6 Jan 2014 04:56:32 -0800 (PST)
+In-Reply-To: <CF7B81B6-429B-4406-850A-4DF3A842F798@natusoft.se>
+References: <80577B10-8927-4E40-9E41-5B69DBC66977@natusoft.se>
+	<21CDF2FA-C0D3-4CF0-9144-FA5FD9260834@gmail.com>
+	<CF7B81B6-429B-4406-850A-4DF3A842F798@natusoft.se>
+Date: Mon, 6 Jan 2014 12:56:32 +0000
+Message-ID: <CAPK0ichijoskM=d5gNacT2OpvMVkW=MH7DYmPz+D8oOs9sCHTw@mail.gmail.com>
+Subject: Re: Maven Central Opinion
+From: Adam Retter <adam.retter@googlemail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> I'll start with the latter. The arguments about quality I just don't buy. We are only talking poms here. Whatever is in the poms says nothing about the quality of the software itself.
+
+I agree the pom says nothing about the quality of the software.
+However, having a standard mechanism for describing in small detail
+software releases. By ensuring that this is consistent, it ensures
+that the quality of searching for artifacts in Maven central is
+maintained, it also ensures that when someone finds an artifact they
+can look at the pom to see what it does and who to contact should they
+have a problem. I consider that a small investment.
+
+
+-- 
+Adam Retter
+
+skype: adam.retter
+tweet: adamretter
+http://www.adamretter.org.uk
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

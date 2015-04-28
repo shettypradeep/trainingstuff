@@ -1,0 +1,82 @@
+From users-return-135752-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Mar 10 13:02:52 2014
+Return-Path: <users-return-135752-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7887CC406
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 10 Mar 2014 13:02:52 +0000 (UTC)
+Received: (qmail 74440 invoked by uid 500); 10 Mar 2014 13:02:46 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 73916 invoked by uid 500); 10 Mar 2014 13:02:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 73885 invoked by uid 99); 10 Mar 2014 13:02:42 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 10 Mar 2014 13:02:42 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.160.44 as permitted sender)
+Received: from [209.85.160.44] (HELO mail-pb0-f44.google.com) (209.85.160.44)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 10 Mar 2014 13:02:36 +0000
+Received: by mail-pb0-f44.google.com with SMTP id rp16so7274227pbb.3
+        for <users@maven.apache.org>; Mon, 10 Mar 2014 06:02:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=X8DCVFmg7tGnJZNxAbMcY0u4jHByz8daHemApheVjHc=;
+        b=oYPpnoaScAP6gZcMOO90FYiJnOzaiP5u/hJclpdZIzPEULJsc8+Pm79a0h9KDvT6kN
+         CR6wYzRXKg6koA+39cZ6Gv2xjuqRIdKLv+B7sbb35XuVWJu/0ghHNwgVZy45W9N/XkVj
+         A+7BL6yQEVk3diUbhpTwi9BZ0ui+plJSL8DqMcNE2ky67Cbh6K/Otbxho7N7x2OFyH+z
+         6lW+Vdz9a2T4AQBAWUVTj2fUBk7HFblp3tDeuQIk2/017jN6LNSYED16N6DeaKFi2WGA
+         98Nij0D4Rnj20Yi2XYyt9gm+s7UuOBFNidicl2GiD1Gk+DJD3YcT7XZhbPK7SCvL++kI
+         DA8Q==
+X-Received: by 10.66.241.73 with SMTP id wg9mr40486154pac.69.1394456533883;
+ Mon, 10 Mar 2014 06:02:13 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Mon, 10 Mar 2014 06:01:53 -0700 (PDT)
+In-Reply-To: <CAM0K-0AVeNx_CWRBE0XqipuBYeYHDcrU3Ft7hJL9eEKJiCPwBg@mail.gmail.com>
+References: <CAM0K-0CzKNaJ89zXuHAiEF1a3QYtybyXUjg0HPQrNVRWz-a9jQ@mail.gmail.com>
+ <CALy+7Uk5usRFLhxLhWyCDAOMpGvWSUBVVOg72XNh1ovbc640OA@mail.gmail.com>
+ <CAM0K-0CbT2Bt_NXu5RjaL2cyWC=sR1qjeRghBGJJMvd+HaCKYg@mail.gmail.com>
+ <CALy+7U=V0ReweVzA5Z3keQ390kHSvcH4KHC2asMO5GoRSOXT5Q@mail.gmail.com>
+ <CAM0K-0Bz_Xg=vEx9QsdQR6TWKHDw=RtGupbzNJSD19szcVs9QA@mail.gmail.com>
+ <CAM0K-0BAJDd5CXhUD65wo1gtkRHQNRmnVjpWC0pw7Pp1nqU+JA@mail.gmail.com>
+ <BLU172-W316F24902229426C8572AFAE750@phx.gbl> <CAM0K-0AVeNx_CWRBE0XqipuBYeYHDcrU3Ft7hJL9eEKJiCPwBg@mail.gmail.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Mon, 10 Mar 2014 08:01:53 -0500
+Message-ID: <CALy+7U=3xSB1d572A1kYzt43iyRdGO-VLdoWNE9zrvfoX+HN+Q@mail.gmail.com>
+Subject: Re: Netbeans 7.4 maven POM for com.oracle:ojdbc6:jar:11.2.0.1 is invalid
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> I'm not sure where you mean to check that ojdbc6 is listed as a dependency.
+> I am trying to convert the project from using MySql to Oracle,
+> so I might not have configured everything correctly.
+
+Add -X to the call to Maven (mvn -X ...) and pipe the output to a file
+(mvn -X ... > out.txt). Then search the file for ojdbc6 to see where
+and how the dependency is being brought into your project during the
+compile and test steps. I'd assume it is not part of your test
+classpath as you expect it to be. Once you confirm this, you can work
+on sorting out why.
+
+What is the XPath to the <dependency> node in your pom? Or paste the
+pom and that -X output at gist, pastebin etc so we can take a look &
+help (please don't email them here).
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

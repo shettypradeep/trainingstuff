@@ -1,0 +1,92 @@
+From users-return-135684-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar  5 11:14:26 2014
+Return-Path: <users-return-135684-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 881A11025A
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  5 Mar 2014 11:14:26 +0000 (UTC)
+Received: (qmail 19935 invoked by uid 500); 5 Mar 2014 11:14:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 19798 invoked by uid 500); 5 Mar 2014 11:14:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 19711 invoked by uid 99); 5 Mar 2014 11:14:12 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Mar 2014 11:14:12 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bimargulies@gmail.com designates 209.85.216.54 as permitted sender)
+Received: from [209.85.216.54] (HELO mail-qa0-f54.google.com) (209.85.216.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Mar 2014 11:14:06 +0000
+Received: by mail-qa0-f54.google.com with SMTP id w8so805559qac.41
+        for <users@maven.apache.org>; Wed, 05 Mar 2014 03:13:45 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=HTul66bnRPhNZNoUbIkK735cfJSJsyluFbgHP/wNb2s=;
+        b=skpkhrDfNNOa7tv1FZuA2fmMDk/JY0AjzlZg6lud9sqhKBAJELsGyVeM+WOAgHAIVu
+         K/JVBY5fSjZwF2XEUIzbuF6xB0dcR88Hr996peRriqQ0nyxJM0+EiWXzZ2ULTRZGE7Iw
+         E9IEOkGJ0khUL4DQKtpAZlXG8Th1w7no6VC1V3AKGuxslyJWtbREWveTl4QCLqPGDwK7
+         TYfhsYcwxCgdPH+y8BDHnsRXxY+lon2/9R/sNdPMX45oLiwW2emsCfZyEaphP14nB2iB
+         jylLmNv/zhit2L/tyBobgTb8FPuj1YKgpSH4T4WGMyr+Nk+NwTi0CIER96ZJu9dHI3BS
+         C7Hw==
+MIME-Version: 1.0
+X-Received: by 10.140.19.212 with SMTP id 78mr5646419qgh.84.1394018025050;
+ Wed, 05 Mar 2014 03:13:45 -0800 (PST)
+Received: by 10.140.84.138 with HTTP; Wed, 5 Mar 2014 03:13:44 -0800 (PST)
+In-Reply-To: <CALy+7U=1djW4rbsz2LWcCcQFL6RB5TBtCnCiAZs2oadG38dHxg@mail.gmail.com>
+References: <530C66D6.2010602@pocock.com.au>
+	<CALhtWkdAmrk07gcM+kdyDTbd7TuiAGutTbw=O_3jPmTz30=R4g@mail.gmail.com>
+	<5629A6219DB3E544AB84388D90149787479C9535@xmb-aln-x03.cisco.com>
+	<CALhtWkf9XQ9UpW-8Ez2peJtnXwXu+4Xy1eMHYXjGMka7kU0bjw@mail.gmail.com>
+	<5629A6219DB3E544AB84388D90149787479C9693@xmb-aln-x03.cisco.com>
+	<BLU172-W4066FDEA39D63E4A373642AE830@phx.gbl>
+	<5314791D.90506@pocock.pro>
+	<CALhtWkeEn1w9LQ8iwF047tNjom+Q+SnR4449KsP2fa8WAz0qvQ@mail.gmail.com>
+	<CALy+7U=1djW4rbsz2LWcCcQFL6RB5TBtCnCiAZs2oadG38dHxg@mail.gmail.com>
+Date: Wed, 5 Mar 2014 13:13:44 +0200
+Message-ID: <CALhtWkc7-bRuoDdj50Y1DLW3b4xqLtUtef5uD8BjTZ-cjD8Ukw@mail.gmail.com>
+Subject: Re: Google Summer of Code - Java opportunity, mentors needed
+From: Benson Margulies <bimargulies@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On Wed, Mar 5, 2014 at 6:12 AM, Wayne Fay <waynefay@gmail.com> wrote:
+>> When you call this GSOC, are you looking to sponsor a student within
+>> the Apache Maven project? I don't think that this is viable. If you
+>> have some other sponsoring organization and an intention to manage it
+>> elsewhere, then I wish you luck but I have no standing to object.
+>
+> Benson, scroll back and read the original message, he stated...
+
+
+OK, apologies.
+
+>
+>>> I have some plans for how this project could be broken down into
+>>> achievable tasks for a GSoC student but to go ahead it would need at
+>>> least one additional mentor, mainly because Google has accepted the
+>>> Ganglia organisation this year and I am one of the admins for Ganglia.
+>>> The project has been proposed under Debian (mainly as a way of enabling
+>
+> Wayne
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

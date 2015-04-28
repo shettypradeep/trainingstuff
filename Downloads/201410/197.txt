@@ -1,0 +1,84 @@
+From users-return-137631-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Oct 24 23:32:38 2014
+Return-Path: <users-return-137631-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0EC3617BAF
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 24 Oct 2014 23:32:38 +0000 (UTC)
+Received: (qmail 34737 invoked by uid 500); 24 Oct 2014 23:32:36 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 34646 invoked by uid 500); 24 Oct 2014 23:32:36 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 60536 invoked by uid 99); 24 Oct 2014 15:01:02 -0000
+X-ASF-Spam-Status: No, hits=-0.1 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of prvs=437465b696=Alejandro.Endo@grassvalley.com designates 12.161.118.91 as permitted sender)
+X-AuditID: 0a01015b-b7fb28e000000cb3-68-544a691a8138
+To: users@maven.apache.org
+MIME-Version: 1.0
+Subject: release of git folder
+X-KeepSent: 0FFD7D95:12FCC460-85257D7B:00500B10;
+ type=4; name=$KeepSent
+X-Mailer: Lotus Notes Release 8.5.3FP2 SHF99 September 04, 2012
+From: Alejandro.Endo@grassvalley.com
+Message-ID: <OF0FFD7D95.12FCC460-ON85257D7B.00500B10-85257D7B.00524464@belden.com>
+Date: Fri, 24 Oct 2014 10:58:34 -0400
+X-MIMETrack: Serialize by Router on BDCNotes1/BeldenCDT(Release 9.0.1FP2|August  03, 2014) at
+ 10/24/2014 10:58:35 AM,
+	Serialize complete at 10/24/2014 10:58:35 AM
+Content-Type: multipart/alternative; boundary="=_alternative 0052443185257D7B_="
+X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFrrMIsWRmVeSWpSXmKPExsXCxcjoriuV6RVi0DPR1OLR1uuMDowe7U+F
+	AhijGhhtkhJLyoIz0/P07WwS8/LySxJLUhVSUouTbZWcUnNSUvMUXDKLk3MSM3NTi3Q9g/11
+	LSxMLZUUMlNslYyUFApyEpNTc1PzSmyVEgsKUvNSlOy4FDCADVBZZp5Cal5yfkpmXrqtUmiI
+	m66Fkp2LZ7BzQitrxtKzG5gL/otU7Hz2nLmBsVeoi5GDQ0LARKLhXnoXIyeQKSZx4d56ti5G
+	Lg4hgfmMEr+/T2YESYgISEn8fHUdzOYVEJQ4OfMJC4gtLCAnce7iG2aIZk+JVzvb2CFse4nv
+	jz6A1bAJqEhM+3sHqjdIYvKPp2wge1kEVCVW7/IG2SUhsIxRYt2rbWD1zAIBEh/efWWZwMg7
+	C8m6WUhSELaOxIlVx5ghbG2JRVd+si9gZFnFyJdbYaSXBA5RveT83E2MkIiJ3sF47IfqIUYB
+	DkYlHt4aZq8QIdbEsuLK3EOMEhzMSiK859KAQrwpiZVVqUX58UWlOanFhxiDgM6cyCzFnZwP
+	jOa8knhjAwMiOUrivF8/1QQLCaQD4zk7NbUgtQhmKBMHJ8hSLimRYmBEphYllpZkxINSR3wx
+	MHlINTDy3qlLW+lVm3HtZXUbc9nEnY1lurlsD/QOl2vVdVzcYCQv5CPl3vJAWaSfe+KFJfb9
+	zx6vl9374N65fVPkWoxl7uXcWHHlxJNFHtdOs7ueWK/W/pnPODt2y/n2bSGvDeJb76rt2BFz
+	6//U2YaM7Kuz5vSELvG+Lv6yovy4MPvMxmPnl5yaGSuhxFKckWioxVxUnAgAjG22/+YCAAA=
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--=_alternative 0052443185257D7B_=
+Content-Type: text/plain; charset="US-ASCII"
+
+Hi guys, now that https://jira.codehaus.org/browse/MRELEASE-875 has been 
+fixed we are trying to release from a non-root module in a git repo but 
+encounter a problem at the git push stage of release:prepare. The url for 
+the git repo where it tries to push is wrong. Maven is appending the name 
+of the submodule's artifactId to the path of developerConnection that it 
+inherited from its parent; this behaviour was fine when we were in CVS, 
+but now in git it doesn't make sense. I found some people on SO (
+http://stackoverflow.com/questions/6727450/releasing-a-multi-module-maven-project-with-git
+) having the same issue but none of the workarounds I tried work.
+
+Is there an official fix or workaround for this?
+we're using maven 3.0.4 and m-release-p 2.5.1
+
+
+Thank you,
+
+Alejandro Endo | Software Designer/Concepteur de logiciels 
+
+DISCLAIMER:
+Privileged and/or Confidential information may be contained in this
+message. If you are not the addressee of this message, you may not
+copy, use or deliver this message to anyone. In such event, you
+should destroy the message and kindly notify the sender by reply
+e-mail. It is understood that opinions or conclusions that do not
+relate to the official business of the company are neither given
+nor endorsed by the company.
+Thank You.
+
+--=_alternative 0052443185257D7B_=--
+

@@ -1,0 +1,98 @@
+From users-return-136125-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr 11 09:20:33 2014
+Return-Path: <users-return-136125-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A625411410
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 11 Apr 2014 09:20:33 +0000 (UTC)
+Received: (qmail 6536 invoked by uid 500); 11 Apr 2014 09:20:29 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 5996 invoked by uid 500); 11 Apr 2014 09:20:26 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 5983 invoked by uid 99); 11 Apr 2014 09:20:24 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 11 Apr 2014 09:20:24 +0000
+X-ASF-Spam-Status: No, hits=-5.8 required=5.0
+	tests=ENV_AND_HDR_SPF_MATCH,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS,USER_IN_DEF_SPF_WL
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mmao@ebay.com designates 216.113.172.65 as permitted sender)
+Received: from [216.113.172.65] (HELO phx-mipot-002.corp.ebay.com) (216.113.172.65)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 11 Apr 2014 09:20:18 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=ebay.com; i=@ebay.com; q=dns/txt; s=ebaycorp;
+  t=1397208016; x=1428744016;
+  h=from:to:subject:date:message-id:mime-version;
+  bh=RNbne9XX2SCENbaH1MTmgTD797FYoYJoM5E3jzJBpys=;
+  b=YCI7vANt4uC3phe7CDhamUBBKEY5kubU49IPEgC8FEZMHa4R+tPrF9HB
+   Whv+WSSy0qiOse5N1vhC0t41ZabKY0jaTj6VDu8knvYRQkQp7T1fiVwJf
+   N1Ti8AoZyHoMxoZL+S0B/cJOkeN0vnualOk1AuYW8yxuQerX1dCt/dYKU
+   k=;
+X-EBay-Corp: Yes
+X-IronPort-AV: E=Sophos;i="4.97,841,1389772800"; 
+   d="scan'208,217";a="200042270"
+Received: from phx-vteml-004.corp.ebay.com (HELO PHX-EXMHT-002.corp.ebay.com) ([10.58.40.103])
+  by phx-mipot-002.corp.ebay.com with ESMTP; 11 Apr 2014 02:19:55 -0700
+Received: from PHX-EXRDA-S21.corp.ebay.com ([169.254.1.13]) by
+ PHX-EXMHT-002.corp.ebay.com ([10.58.12.72]) with mapi id 14.03.0174.001; Fri,
+ 11 Apr 2014 02:19:53 -0700
+From: "Mao, James(Maode)" <mmao@ebay.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: Why the number of tests run in parallel is more than in single
+ thread
+Thread-Topic: Why the number of tests run in parallel is more than in single
+ thread
+Thread-Index: Ac9VZy/e4h1I0TULT0SoFDo0aSe6KQ==
+Date: Fri, 11 Apr 2014 09:19:50 +0000
+Message-ID: <87911B8B30550C43B5947BA274E00CB4725760BB@PHX-EXRDA-S21.corp.ebay.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [10.58.61.242]
+Content-Type: multipart/alternative;
+	boundary="_000_87911B8B30550C43B5947BA274E00CB4725760BBPHXEXRDAS21corp_"
+MIME-Version: 1.0
+X-CFilter: Scanned
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_000_87911B8B30550C43B5947BA274E00CB4725760BBPHXEXRDAS21corp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+I am using Surefire plugin 2.17 with the following configuration
+
+<configuration>
+         <parallel>classes</parallel>
+         <forkMode>perthread</forkMode>
+         <threadCount>4</threadCount>
+         <reuseForks>true</reuseForks>
+         <perCoreThreadCount>true</perCoreThreadCount>
+</configuration>
+
+Previously the tests run in 2 min, now it finished in 30 seconds,
+
+However, with single thread, from the summary log, Tests run: 160, Failures=
+: 0, Errors: 0, Skipped: 4, the number of tests run stable at 160.
+
+But with multiple threads, the summary log shows Tests run: 1530, Failures:=
+ 0, Errors: 0, Skipped: 14, the number of tests run also not stable, someti=
+mes more than 1530, sometimes less than 1400.
+
+Is this the summary report issue? Or the it does run multiple times for a s=
+pecific tests?
+
+Thanks,
+James
+
+
+--_000_87911B8B30550C43B5947BA274E00CB4725760BBPHXEXRDAS21corp_--
+

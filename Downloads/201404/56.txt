@@ -1,0 +1,64 @@
+From users-return-136151-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 15 12:15:39 2014
+Return-Path: <users-return-136151-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9AA19117FF
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 15 Apr 2014 12:15:39 +0000 (UTC)
+Received: (qmail 9312 invoked by uid 500); 15 Apr 2014 12:15:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 8733 invoked by uid 500); 15 Apr 2014 12:15:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 8683 invoked by uid 99); 15 Apr 2014 12:15:04 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Apr 2014 12:15:04 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of e92-330cd@seznam.cz designates 77.75.72.26 as permitted sender)
+Received: from [77.75.72.26] (HELO mxh1.seznam.cz) (77.75.72.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Apr 2014 12:14:59 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=seznam.cz; s=beta;
+	t=1397564077; bh=dECS8rCiqXRbcczrjBevnSvmykzamdSSqbAo6WiOv+o=;
+	h=Received:From:To:Subject:Date:Message-Id:Mime-Version:X-Mailer:
+	 Content-Type;
+	b=Sqzbyg3gn3iM3jJhNByUTQvSlD+gpzu0oL+bRmgtxVbz2nTslpeMzwxcr8A+NgN3a
+	 a1XamPRkJn+KPVCJIhQZVIy7Pu+uYr1d+yJLQHoO4m1zX8ZYPWjlyGyN1z10qIXz6W
+	 BXyPi+EA9UYCsL4Og/IOhIavTP8Y+dUP+FYgRxWk=
+Received: from unknown ([91.217.55.78])
+	by email.seznam.cz (szn-ebox-4.4.160) with HTTP;
+	Tue, 15 Apr 2014 14:14:35 +0200 (CEST)
+From: <e92-330cd@seznam.cz>
+To: <users@maven.apache.org>
+Subject: how implement aether into osgi project?
+Date: Tue, 15 Apr 2014 14:14:35 +0200 (CEST)
+Message-Id: <74D.1aUyV.5ULGu8fuJS0.1JJIAh@seznam.cz>
+Mime-Version: 1.0 (szn-mime-1.1.2)
+X-Mailer: szn-ebox-4.4.160
+Content-Type: multipart/alternative;
+	boundary="=_0ae6fba503b8194e74297448=e8c1d42c-c519-57fc-ab76-5f2f3c574e1b_="
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--=_0ae6fba503b8194e74297448=e8c1d42c-c519-57fc-ab76-5f2f3c574e1b_=
+Content-Type: text/plain
+Content-Transfer-Encoding: 7bit
+
+Hello,
+I have to implement eclipse Aether into exesting osgi project build with 
+Maven. The idea is:
+
+Replace current OBR with Maven repo. But I cant find any good examples, 
+steps how to configure, implement embeded Maven Repo (Aether) into some 
+application.
+
+Any ideas? Thanks
+--=_0ae6fba503b8194e74297448=e8c1d42c-c519-57fc-ab76-5f2f3c574e1b_=--
+
+

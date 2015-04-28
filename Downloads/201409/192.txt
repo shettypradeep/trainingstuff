@@ -1,0 +1,70 @@
+From users-return-137365-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Sep 24 14:48:18 2014
+Return-Path: <users-return-137365-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E0E351175C
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 24 Sep 2014 14:48:17 +0000 (UTC)
+Received: (qmail 23559 invoked by uid 500); 24 Sep 2014 14:48:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 23478 invoked by uid 500); 24 Sep 2014 14:48:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 23420 invoked by uid 99); 24 Sep 2014 14:48:15 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 24 Sep 2014 14:48:15 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bimargulies@gmail.com designates 209.85.218.47 as permitted sender)
+Received: from [209.85.218.47] (HELO mail-oi0-f47.google.com) (209.85.218.47)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 24 Sep 2014 14:47:49 +0000
+Received: by mail-oi0-f47.google.com with SMTP id e131so5801811oig.6
+        for <users@maven.apache.org>; Wed, 24 Sep 2014 07:47:47 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=3KHeNGf1Axmth0T6vConTfYlqgrsVissg4ny/0IBDhw=;
+        b=Kz1eqquXMVyOXw9ohA7kV/qbxvKQsIwXTnUybgxsnITDSYkJrUko3ARdV7qY1qgvvz
+         UPbkSqi5CI+F7iRBwMTiGN+mCT1Ln4z0J3z0QwGhDkRKBuyR3QTboXfK8KvPdJE1mEfC
+         0VlINwwOvxsHi0mQdM+/Rc2Jbwg4dE3b27ggI4eyJl0Nrbl4NV9BPd1JyhjvwK5JVL5Q
+         MDYfhMnwfhm0GvS6k03WvfhWr5uBTGg6N6qfWUhgReebiFiXZ7MvRXLSUEpc5eraqpr/
+         cF5Cep2uZjxjVUqRQKRtRB89lrz3k1ZWW56gLrIJKISBKH17BR1tu/3obKSYS7dCAzTz
+         OI9Q==
+MIME-Version: 1.0
+X-Received: by 10.182.3.100 with SMTP id b4mr7174509obb.79.1411570067617; Wed,
+ 24 Sep 2014 07:47:47 -0700 (PDT)
+Received: by 10.202.1.19 with HTTP; Wed, 24 Sep 2014 07:47:47 -0700 (PDT)
+Date: Wed, 24 Sep 2014 10:47:47 -0400
+Message-ID: <CALhtWkfJLdj3MYVuZQPQF6KHZRyLhtQJmUQaYpj=rO3v22Ckaw@mail.gmail.com>
+Subject: What does it mean when dependency:list and dependency:tree disagree
+ on scope?
+From: Benson Margulies <bimargulies@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I've got a project where (a) we went to a lot of trouble to make sure
+that log4j was scoped to test, (b) dependency:list shows it as
+scope=test, (c) dependency:tree shows it as scope=compile, using the
+most recent dependency plugin and maven 3.0.5.
+
+The path to log4j is through slf4j-log4j, which dependency:analyze
+thinks is 'unused'.
+
+here is the confusing output of :tree:
+
+ +- org.slf4j:slf4j-log4j12:jar:1.6.3:test
+ |  \- log4j:log4j:jar:1.2.16:compile
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

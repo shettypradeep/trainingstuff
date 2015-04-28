@@ -1,0 +1,190 @@
+From users-return-136202-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr 18 17:30:50 2014
+Return-Path: <users-return-136202-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9C2FC11A58
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 18 Apr 2014 17:30:50 +0000 (UTC)
+Received: (qmail 10775 invoked by uid 500); 18 Apr 2014 17:30:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 10639 invoked by uid 500); 18 Apr 2014 17:30:45 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 10631 invoked by uid 99); 18 Apr 2014 17:30:45 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Apr 2014 17:30:45 +0000
+X-ASF-Spam-Status: No, hits=-2.3 required=5.0
+	tests=RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of jswank@sonatype.com designates 64.18.2.122 as permitted sender)
+Received: from [64.18.2.122] (HELO exprod7og129.obsmtp.com) (64.18.2.122)
+    by apache.org (qpsmtpd/0.29) with SMTP; Fri, 18 Apr 2014 17:30:40 +0000
+Received: from mail-ig0-f176.google.com ([209.85.213.176]) (using TLSv1) by exprod7ob129.postini.com ([64.18.6.12]) with SMTP
+	ID DSNKU1FhK5dh3A4l0o9ne61F48J5C1dgOnbz@postini.com; Fri, 18 Apr 2014 10:30:20 PDT
+Received: by mail-ig0-f176.google.com with SMTP id uy17so882656igb.9
+        for <users@maven.apache.org>; Fri, 18 Apr 2014 10:30:19 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:subject:message-id:references
+         :mime-version:content-type:content-disposition:in-reply-to
+         :user-agent;
+        bh=M/UVkkG04njNeA2F1lWA1W+01OuYqBYrcuEobvr2Tbw=;
+        b=AwFZeLpJ6gnjkExciuIkGmO8ucRcJiOlJcIk2gT2QuwGCrQkuTa9syCfSKBahuAq78
+         P5JBgnyCwjQ80fvA2Nmzzw/uZ/meqcQiS50xHaW2/DgnnBlcI6zAnNtztTmmL57HpQCQ
+         c9su1mEQKFrNor042AmekEsJbg/snpjwMdBvm98dgyisvnUKn3aLgLdU7NxrNteYy7E/
+         AU3C1C1Gh23Uk2uhnQTkrljkZ3bsrX1+eZek4ifPZpWkscU0Vf7RaBvX2FGEDYxRBr0T
+         ueJRmppYXAhdRu28MBmRTfrzT7J8yIO9Y2UVZXYhV2engeVuixx+84gc2g3DdV0zF+Du
+         JXvA==
+X-Gm-Message-State: ALoCoQkUERBaE/fXFWE2Lbp1LIukBpzzDlbqGsH2minydIGoz6jn5sYAAbLQTC5MaQF/vqnSHEwHmJOa/Gt3AcChUBVu1sJbRasOSomEg9XRHAjjPGbRAnMw17/9bvmezWirqA12qD49
+X-Received: by 10.50.253.194 with SMTP id ac2mr5350915igd.41.1397842219388;
+        Fri, 18 Apr 2014 10:30:19 -0700 (PDT)
+X-Received: by 10.50.253.194 with SMTP id ac2mr5350904igd.41.1397842219211;
+        Fri, 18 Apr 2014 10:30:19 -0700 (PDT)
+Received: from sonatype.com (74-137-239-133.dhcp.insightbb.com. [74.137.239.133])
+        by mx.google.com with ESMTPSA id j9sm5563280igu.10.2014.04.18.10.30.18
+        for <users@maven.apache.org>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 18 Apr 2014 10:30:18 -0700 (PDT)
+Date: Fri, 18 Apr 2014 13:30:16 -0400
+From: Jason Swank <jswank@sonatype.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Strange maven central response - do you see the same thing??
+Message-ID: <20140418173016.GF16193@sonatype.com>
+References: <CAPCjjnEGcgdBq_woPYpfd_UHtRe5g=qsnQ77gjkCpKdG5V90pA@mail.gmail.com>
+ <CAK8jvqyYhQaZLduEaGddtnb=o7Gs80S=wBg17hYaopQCk+gLeg@mail.gmail.com>
+ <CAPCjjnHMmNENgJwOCfF_5h2sKBgjZRT_9yBn7a5R1meygiMo7A@mail.gmail.com>
+ <CAPCjjnFR7UbARj+4Qoq_CPBvaA4deVam=_xdCwF66zRT4AJCUg@mail.gmail.com>
+ <5350DDA0.7050003@gmx.de>
+ <CAK8jvqzge4NK1-p0JQzAvcndy-RGuJrPo4gTmQLJc5DLU1WgXg@mail.gmail.com>
+ <CAPCjjnGTkz32Zd0NpWvf7Bh4DsqHYK_R3=KLxhCfDRdijEEy4A@mail.gmail.com>
+ <CAK8jvqwGmGv0gPKiwKeScJAquwGSHa0exO_EBmng_24UaH1BDQ@mail.gmail.com>
+ <53511D8C.7000009@gmx.de>
+ <CAPCjjnHLi=xQESbwMEpCK2zLTiLj1wBXm9mKwwz-JbyeG22AKA@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <CAPCjjnHLi=xQESbwMEpCK2zLTiLj1wBXm9mKwwz-JbyeG22AKA@mail.gmail.com>
+User-Agent: Mutt/1.5.22 (2013-10-16)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+Things are working correctly from a service perspective and there have
+been no recent changes: follow up w/ me directly with output from the
+same command if you're still seeing issues.
+
+Regards,
+Jason
+
+--
+Sonatype
+twitter: @sonatype_ops
+
+  $ curl -iL http://central.maven.org/maven2/org/apache/maven/scm/maven-scm-provider-cvsexe 
+  HTTP/1.1 301 Moved Permanently
+  Server: nginx
+  Content-Type: text/html
+  Location:
+  http://central.maven.org/maven2/org/apache/maven/scm/maven-scm-provider-cvsexe/
+  Via: 1.1 varnish
+  Content-Length: 184
+  Accept-Ranges: bytes
+  Date: Fri, 18 Apr 2014 17:25:26 GMT
+  Via: 1.1 varnish
+  Age: 115
+  Connection: keep-alive
+  X-Served-By: cache-v41-ASH, cache-d96-DAL
+  X-Cache: HIT, HIT
+  X-Cache-Hits: 1, 1
+  X-Timer: S1397841812.112793922,VS0,VS15,VE16,VE114617
+
+  HTTP/1.1 200 OK
+  Server: nginx
+  Content-Type: text/html
+  Via: 1.1 varnish
+  Content-Length: 2310
+  Accept-Ranges: bytes
+  Date: Fri, 18 Apr 2014 17:25:26 GMT
+  Via: 1.1 varnish
+  Age: 32308
+  Connection: keep-alive
+  X-Served-By: cache-v42-ASH, cache-d96-DAL
+  X-Cache: HIT, HIT
+  X-Cache-Hits: 1, 1
+  X-Timer: S1397809618.491005421,VS0,VS16,VE16,VE32308302
+  Vary: X-Repo-Manager, X-Repo-Manager
+
+
+On Fri, Apr 18, 2014 at 10:19:33AM -0700, Dan Tran wrote:
+> A friend of mine in the same city has no issue, neither my workplace.
+> 
+> At home, all my devices ( pc, ipad) seeing the same issue.  Reboot the
+> router does not help either
+> 
+> -D
+> 
+> 
+> On Fri, Apr 18, 2014 at 5:41 AM, Karl Heinz Marbaise <khmarbaise@gmx.de>wrote:
+> 
+> > Hi,
+> >
+> >
+> >  I guess Karl-Heinz and I are accessing from Germany, so maybe there is
+> >> some
+> >> routing problem on your side?
+> >>
+> >
+> > You guess is correct Mirko...
+> >
+> >
+> > Kind regards
+> > Karl-Heinz Marbaise
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+
+On Fri, Apr 18, 2014 at 10:19:33AM -0700, Dan Tran wrote:
+> A friend of mine in the same city has no issue, neither my workplace.
+> 
+> At home, all my devices ( pc, ipad) seeing the same issue.  Reboot the
+> router does not help either
+> 
+> -D
+> 
+> 
+> On Fri, Apr 18, 2014 at 5:41 AM, Karl Heinz Marbaise <khmarbaise@gmx.de>wrote:
+> 
+> > Hi,
+> >
+> >
+> >  I guess Karl-Heinz and I are accessing from Germany, so maybe there is
+> >> some
+> >> routing problem on your side?
+> >>
+> >
+> > You guess is correct Mirko...
+> >
+> >
+> > Kind regards
+> > Karl-Heinz Marbaise
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

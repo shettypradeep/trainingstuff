@@ -1,0 +1,108 @@
+From users-return-135661-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Mar  1 01:26:56 2014
+Return-Path: <users-return-135661-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id AA78910790
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  1 Mar 2014 01:26:56 +0000 (UTC)
+Received: (qmail 12538 invoked by uid 500); 1 Mar 2014 01:26:53 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 12351 invoked by uid 500); 1 Mar 2014 01:26:53 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 12343 invoked by uid 99); 1 Mar 2014 01:26:52 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 01 Mar 2014 01:26:52 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.216.48] (HELO mail-qa0-f48.google.com) (209.85.216.48)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 01 Mar 2014 01:26:46 +0000
+Received: by mail-qa0-f48.google.com with SMTP id m5so833445qaj.35
+        for <users@maven.apache.org>; Fri, 28 Feb 2014 17:26:25 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:subject:message-id:mime-version
+         :content-type:content-transfer-encoding;
+        bh=o5Wpgtoc74BOmxjbznEKIiwfSOPu6miPBKdOSOhXAPM=;
+        b=CAU7ow79Zyt2F2/nzgpOWIdmQK9yAAAgXCmoRCPXP/IFRvt1zfD4OTqsEvD76WWZri
+         WDZ3Hf98nQU4X9oxk4uA4xiVeADH/oIxSw0iAL4+1zbQuvfTCLqutogL8wv1jO1BiWJ+
+         1RhowuYcDupNpo8VA1Yb4lHTei7h8QNjE6+b07zH2qRXWtEcVUax2TpfyKqox4Kusjzr
+         AKC5EmqZ3dp01NOzdPt0Al8rOHI29y7zCcdK04tXI8sS+KafsegbxHF81XCHJYF2cPKD
+         XIWscOfgMlj2RjAZ1HDBddZSQvYfB2PGUDaLa3sSIdo0IJs7vWgyZCZD/0KugRCf82ZV
+         0jJw==
+X-Gm-Message-State: ALoCoQnv2oo/vo+HCQCZQYnuvQvs03zF8AS88eHCglhDTXfYd5LkdXRVoODB4y6t/5YCb5AJOp7f
+X-Received: by 10.140.39.50 with SMTP id u47mr7687074qgu.46.1393637185618;
+        Fri, 28 Feb 2014 17:26:25 -0800 (PST)
+Received: from localhost (HSI-KBW-078-042-226-075.hsi3.kabel-badenwuerttemberg.de. [78.42.226.75])
+        by mx.google.com with ESMTPSA id r40sm4877186qga.23.2014.02.28.17.26.24
+        for <users@maven.apache.org>
+        (version=TLSv1.2 cipher=RC4-SHA bits=128/128);
+        Fri, 28 Feb 2014 17:26:25 -0800 (PST)
+Date: Sat, 1 Mar 2014 02:26:21 +0100
+From: Bernd Eckenfels <ecki@zusammenkunft.net>
+To: users@maven.apache.org
+Subject: Releasing clean "company" parent Poms
+Message-ID: <20140301022621.00001d29.ecki@zusammenkunft.net>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello,
+
+I am currently wondering what the best way would be to deploy a
+"company wide" parent POM (with maven release plugin) but have only the
+information in the parent POM which is actually about the object model
+of the clients (and not the definitions for deploying and testing the
+parent).
+
+I have seen that the ASF and Maven parents have moved some release
+related code to a second site-pom. So you dont have the site-specific
+definitions cluttering up the parent pom.
+
+However there is still SCM information and plugins in the parent pom.
+
+So, basically there are multiple ways, one would be to use deploy-file,
+another would be to attach a source file as a deployed artifact. I
+wonder if there is a prefered way to do this. Or is there a reason not
+to do it.
+
+My main question is, how the coordinates of the build project and the
+build artifacts would overlap?
+
+So, I was thinking to have a repository like:
+
+
+poms/pom.xml modules=company,... (com.pany.poms:aggregator:1.0)
+     company/pom.xml             (com.pany.poms:company-build:1.0)
+     company/src/pom/pom.xml     (com.pany.parent:pom:1.0)
+
+When releasing poms/pom.xml the result would be a released company wide
+parent pom which does by itself only contain project/company metadata
+and not plugins for itself.
+
+(I guess the easiest would be to manually deploy a static file, but in
+that case I could not automate that with some testing and site
+creation).
+
+I guess this topic is somewhat more relevant since there have been some
+discussions about seperating the public visible models from (its own)
+build instructions in later POM schema versions.
+
+
+Gruss
+Bernd
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,168 @@
+From users-return-136741-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jul  8 05:30:53 2014
+Return-Path: <users-return-136741-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DD24311C67
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  8 Jul 2014 05:30:53 +0000 (UTC)
+Received: (qmail 75975 invoked by uid 500); 8 Jul 2014 05:30:51 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 75895 invoked by uid 500); 8 Jul 2014 05:30:51 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 75883 invoked by uid 99); 8 Jul 2014 05:30:50 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 08 Jul 2014 05:30:50 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of northrup.james@gmail.com designates 74.125.82.170 as permitted sender)
+Received: from [74.125.82.170] (HELO mail-we0-f170.google.com) (74.125.82.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 08 Jul 2014 05:30:48 +0000
+Received: by mail-we0-f170.google.com with SMTP id w61so5308703wes.29
+        for <users@maven.apache.org>; Mon, 07 Jul 2014 22:30:24 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=uXCFgp+oQ/whnpwYit1fvWCQnBvZGCXGH90l3lDHlhI=;
+        b=0EIzuOelgRuReLhSWcf3aHJNeoH1zbJayFoUa25qz0XfUexqREowYM3MvluZIK+1EV
+         4jenNl0EKw6xJ2Rx2B97BIKjOJSiGRmKXQ26CbXsJTpy6rmMd5mP/na05vuExLixPU/d
+         f7YxWn1tkHD+PMbFifjD5YAzfE3oTYN5Ke3p1n6PJHgilLy7AlQDNj+dQML7RrO1AD+v
+         A2ba6hbaOpU/gCIivbwOdpQBAYxS2d3iBUkBELZ8LfL0AlWOWxor1pPpzeyEVaoLiSD2
+         pZxkM0kipRKwq1Zru9JwE+5n3zumVkH6awlNNaJ0rnZPQWb45zaQLj88350rwhzImyl7
+         N9xQ==
+X-Received: by 10.195.17.164 with SMTP id gf4mr36968653wjd.45.1404797424531;
+ Mon, 07 Jul 2014 22:30:24 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.216.82.73 with HTTP; Mon, 7 Jul 2014 22:30:04 -0700 (PDT)
+In-Reply-To: <BLU172-W2326F878D0AC1B5C6DF432AE0D0@phx.gbl>
+References: <CAGYyBggemkhNybaU9ZkPvtoT2DWCvjg3M7kuZNJajqzzdbn2RA@mail.gmail.com>
+ <CAPkEcwibsDow-b+GLbC2Q12CeZ39jvOn5XbSdcXY4ZOWmANsYA@mail.gmail.com>
+ <CAGYyBghR5pw-0daFZLEfMMXsAoYKuwmoJZxO3+Uy79yjb-oJ9A@mail.gmail.com>
+ <CAPkEcwiWrLQLpC47hs3jsXXu7kX8T-+szcbcfoGZqp2sZZns-w@mail.gmail.com> <BLU172-W2326F878D0AC1B5C6DF432AE0D0@phx.gbl>
+From: james northrup <northrup.james@gmail.com>
+Date: Mon, 7 Jul 2014 22:30:04 -0700
+Message-ID: <CAPkEcwg-h62xm_6CcByog0B7mjC1MkWPiqrctYRzbx+nGaEn5Q@mail.gmail.com>
+Subject: Re: Running maven shade on a preexisting jar
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e016817de7882a404fda7e38e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e016817de7882a404fda7e38e
+Content-Type: text/plain; charset=UTF-8
+
+MG: sure or
+http://en.wikipedia.org/wiki/Java_Decompiler
+
+
+On Mon, Jul 7, 2014 at 4:13 PM, Martin Gainty <mgainty@hotmail.com> wrote:
+
+>
+>
+> > From: northrup.james@gmail.com
+> > Date: Mon, 7 Jul 2014 14:31:31 -0700
+> > Subject: Re: Running maven shade on a preexisting jar
+> > To: users@maven.apache.org
+> >
+> > shade is a uber jar plugin.  there are 3 uber jar plugins that matter,
+> > shade, maven-assembly, and proguard.
+> >
+> > for beginners:
+> > all of them work more or less by merging a project into a  single new jar
+> > just reading the pom dependencies.
+> >
+> > maven assembly does the least work.  good for quick jobs
+> >
+> > shade-plugin sometimes does a good job but imho if it works once you are
+> > buying into a false sense of security and will be bitten as you grow a
+> > project.
+> >
+> > proguard is industrial strength and imho returns the best result for
+> > investing in rtfm.
+> >
+> > all of the above have a special configs to do parts and pieces.  a
+> > beginner's mistake would be to pursue that course of action.  don't.
+>  make
+> > a simple uber-jar project with one output jar combined from all of the
+> > input jars, and learn how to exclude collisions.
+> >
+> > if you have  some proprietary jar with no source spend some time with jad
+> > to make source and refactor your packages to do the above, "simple"
+> > uber-jar
+> MG>James i had some difficulty locating Java Decompiler (JAD) ..can i
+> assume this is JAD repository we should reference?
+> MG>http://varaneckas.com/jad/
+> >
+> >
+> > On Mon, Jul 7, 2014 at 2:15 PM, Robert James <srobertjames@gmail.com>
+> wrote:
+> >
+> > > How do I run Maven Shade on a standalone jar (ie with no sources to
+> > > build from)? Please realize that I'm a beginner to Maven.
+> > >
+> > > On 7/7/14, james northrup <northrup.james@gmail.com> wrote:
+> > > > hi shade can possibly juxtapose jar deps diffrently from one build
+> to the
+> > > > next in my experience. if you think you are having collisions you
+> should
+> > > > probably do 2 things
+> > > >
+> > > > 1) use <exclude> on the older jar from the older <dependency> to
+> avoid
+> > > the
+> > > > collision
+> > > > 2) see if proguard fixes what shade breaks, if shade stays broken
+> after
+> > > #1.
+> > > >  it's pretty intense
+> > > >
+> > > >
+> > > > On Mon, Jul 7, 2014 at 12:21 PM, Robert James <
+> srobertjames@gmail.com>
+> > > > wrote:
+> > > >
+> > > >> I have a jar that I need to shade - that is, change the name of many
+> > > >> of the internal classes (to avoid conflicts with another jar) except
+> > > >> for a few classes which remain exposed.  The jar is already built,
+> > > >> source is not at hand.  How can I use maven shade to shade that jar?
+> > > >>
+> > > >> (Disclaimer: I'm a maven neophyte)
+> > > >>
+> > > >>
+> ---------------------------------------------------------------------
+> > > >> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > > >> For additional commands, e-mail: users-help@maven.apache.org
+> > > >>
+> > > >>
+> > > >
+> > > >
+> > > > --
+> > > > Jim Northrup  *  (408) 837-2270 *
+> > > >
+> > >
+> > > ---------------------------------------------------------------------
+> > > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > > For additional commands, e-mail: users-help@maven.apache.org
+> > >
+> > >
+> >
+> >
+> > --
+> > Jim Northrup  *  (408) 837-2270 *
+>
+>
+
+
+
+-- 
+Jim Northrup  *  (408) 837-2270 *
+
+--089e016817de7882a404fda7e38e--
+

@@ -1,0 +1,162 @@
+From users-return-137234-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Sep 10 18:50:18 2014
+Return-Path: <users-return-137234-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1CDD911DA1
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 10 Sep 2014 18:50:18 +0000 (UTC)
+Received: (qmail 66161 invoked by uid 500); 10 Sep 2014 18:50:16 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 66076 invoked by uid 500); 10 Sep 2014 18:50:16 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 66062 invoked by uid 99); 10 Sep 2014 18:50:15 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 10 Sep 2014 18:50:15 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of northrup.james@gmail.com designates 209.85.215.46 as permitted sender)
+Received: from [209.85.215.46] (HELO mail-la0-f46.google.com) (209.85.215.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 10 Sep 2014 18:50:12 +0000
+Received: by mail-la0-f46.google.com with SMTP id el20so1526661lab.19
+        for <users@maven.apache.org>; Wed, 10 Sep 2014 11:49:50 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=QZS6/4XeogDSSxSBLB9zCjNEVBJkk9vUr/RsyBpOUoU=;
+        b=ExD4rhI25kHWqCt0ujAZJxOUpeYz/mSZ08Ws4tKv/pwO+smOKOTdrQ2/twE4WiAf+A
+         Y1nCmOM13nz0tr6wtN7yV7I3b1mJ0jcNQ8sZD9B9MWxlHhiN3pICarrDymp9OoEqMW4o
+         F0PApk1/XSCdyoIp+7MZhRnXNEk21JIJ82T+3hKP9Jtvia/I0DwNa6QLhccqFIiYuAZe
+         kxk+xmpK1XFGqK02stlD32M3lqwXfYpPPQh/tr7KRnZ0NPk0L7iSUkPPEfeW1Mws2178
+         v1ce89kNhqcuaAHfw/OmJ/oodt7YkiojZGq7juB4b5ASGsKutp1+Vr80KfOuzZ2Wob/+
+         HzsA==
+X-Received: by 10.152.20.1 with SMTP id j1mr30222828lae.57.1410374990738; Wed,
+ 10 Sep 2014 11:49:50 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.25.78.204 with HTTP; Wed, 10 Sep 2014 11:49:30 -0700 (PDT)
+In-Reply-To: <BLU172-W2662F9088BC376DE8798E0AECF0@phx.gbl>
+References: <CAEkwH4OH7-TNjR_nptJS=UJR3E7MVzVoGmBcdfPor3WALbu5kg@mail.gmail.com>
+ <CA+nPnMwu5qjGLF31UoNOcMSSO4XWvesdPc174NF8k8jszcy4eA@mail.gmail.com>
+ <55BBB074DE5248439192BCB13699A45651E839AB@MSGEXSV21111.ent.wfb.bank.corp> <BLU172-W2662F9088BC376DE8798E0AECF0@phx.gbl>
+From: james northrup <northrup.james@gmail.com>
+Date: Wed, 10 Sep 2014 11:49:30 -0700
+Message-ID: <CAPkEcwhqs_gVsZSvB-fOoQW8ZnjBtTkxDRBC9wHXf+DN7uLpJQ@mail.gmail.com>
+Subject: Re: Build once, deploy everywhere
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e013d1d4c52bbf40502ba8470
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e013d1d4c52bbf40502ba8470
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+(http://)   12factor.net lean service deployment works well enough with
+maven projects if the presence of source is not a detriment to a given sla.
+ I use
+
+git pull;mvn install;bin/run.sh
+
+when transitioning to production from development and I agree with 12factor
+apps about ENV vars being a pretty good way to configure a service
+
+On Wed, Sep 10, 2014 at 11:25 AM, Martin Gainty <mgainty@hotmail.com> wrote=
+:
+
+>
+>
+>
+>
+> > From: cody.a.fyler@wellsfargo.com
+> > To: users@maven.apache.org
+> > Subject: RE: Build once, deploy everywhere
+> > Date: Wed, 10 Sep 2014 14:17:25 +0000
+> >
+> > =EF=BF=BDBoth of the below are good solutions.
+> >
+> > I've also seen folks use a run time based solution where a different se=
+t
+> of properties is loaded based on an Environment Variable common to all
+> servers.
+> MG>one example could be %HOMEPATH%/.m2/repository/settings.xml IMHO
+> MG>can your provide example of properties loaded thru a environment
+> variable?
+> >
+> > Cody Fyler
+> > Lending Grid Build Team
+> > G=3DLending Grid Builds
+> > (515) =E2=80=93 441 - 0814
+> >
+> > -----Original Message-----
+> > From: Stephen Connolly [mailto:stephen.alan.connolly@gmail.com]
+> > Sent: Wednesday, September 10, 2014 9:15 AM
+> > To: Maven Users List
+> > Subject: Re: Build once, deploy everywhere
+> >
+> > What you want to do is have your packaged software be independent of th=
+e
+> environment it is deployed to. That way you know by checking the SHA1 of
+> the artifact you can know it was the one that was tested by QA.
+> >
+> > So what you do is have your application read its configuration from an
+> external source.
+> >
+> > One example is you could read the configuration from the JNDI
+> environment (if you are deploying in a JavaEE server). Thus you can setup
+> the dev environment with the DB servers, etc defined in JNDI and the same
+> for QA, PROD, etc
+> >
+> > Another example is you could look for a .properties file on the
+> classpath or at a well known location (perhaps the user home or something
+> like that)
+> >
+> > The application should fail fast if any of the configuration settings
+> are missing to help diagnose issues.
+> >
+> > There are many ways to skin this cat, but rebuilding an artifact for
+> each environment should be considered a critical anti-pattern
+> >
+> > On 10 September 2014 15:03, Jan <raghurefer@gmail.com> wrote:
+> >
+> > > Hi All,
+> > >
+> > > Does anyone using Maven as Build Once and deploy Everywhere method?
+> > > Like lets say i don't want to recompile my source code everytime for
+> > > different environment DEV,SIT,UAT & PROD. I want to do my compile and
+> > > package only at DEV then deploy the artifact to all mentioned
+> > > environment. Is this possible using Maven, is there any reference any
+> one could share with me Please.
+> > >
+> >
+> =EF=BF=BD=D0=A2=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=
+=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=
+=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=
+=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=
+=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=
+=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=
+=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=
+=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=
+=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=EF=BF=BD=D0=A5F=EF=BF=BD
+> V=EF=BF=BD7V'67&=EF=BF=BD&R=EF=BF=BD R=EF=BF=BD=EF=BF=BD =EF=BF=BD=C3=A2 =
+W6W'2=EF=BF=BDV=EF=BF=BD7V'67&=EF=BF=BD&T =EF=BF=BD fV=EF=BF=BD=EF=BF=BD   =
+6=EF=BF=BDR=EF=BF=BD=EF=BF=BD&p=D0=A4f=EF=BF=BD"  FF=EF=BF=BDF=EF=BF=BD=EF=
+=BF=BD=EF=BF=BD =EF=BF=BD 6=EF=BF=BD=EF=BF=BD=EF=BF=BD
+> =EF=BF=BDG2=EF=BF=BD R=EF=BF=BD=EF=BF=BD =EF=BF=BD=C3=A2 W6W'2=D6=86V=EF=
+=BF=BD  =EF=BF=BD fV=EF=BF=BD=EF=BF=BD   6=EF=BF=BDR=EF=BF=BD=EF=BF=BD&p
+>
+
+
+
+
+--=20
+Jim Northrup  *  (408) 837-2270 *
+
+--089e013d1d4c52bbf40502ba8470--
+

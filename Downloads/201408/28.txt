@@ -1,0 +1,156 @@
+From users-return-137071-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Aug 18 22:20:57 2014
+Return-Path: <users-return-137071-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id AF41111558
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 18 Aug 2014 22:20:57 +0000 (UTC)
+Received: (qmail 39018 invoked by uid 500); 18 Aug 2014 22:20:55 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 38932 invoked by uid 500); 18 Aug 2014 22:20:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 38918 invoked by uid 99); 18 Aug 2014 22:20:55 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 18 Aug 2014 22:20:55 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [209.85.192.177] (HELO mail-pd0-f177.google.com) (209.85.192.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 18 Aug 2014 22:20:28 +0000
+Received: by mail-pd0-f177.google.com with SMTP id p10so8250783pdj.22
+        for <users@maven.apache.org>; Mon, 18 Aug 2014 15:20:26 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:to:subject:date:message-id:in-reply-to
+         :references:mime-version:content-type;
+        bh=dSluQ3e0lZibojihQY0x23JskuFzvKMP3+1pIHQJy58=;
+        b=Z8jvv2jBJH7JUQsV6sbw2EcjkGZxmqrtqmTh2+xZ/YjwZCdwS0B9UZYCWZDd2ec1NH
+         vjYd8p0As8VL3K8K/3W4wTaYqqQ3SnEzv1YotNG/3QLUoPcjkh911lkylmGg4e3vD9LD
+         43DEI+efa2uGSVOMwBH8XdVBeI/qkZ7K4+2kloBARu4AShb9t9EMX0Pj5fWPfrTwFPKT
+         uY1CJ3PihDW+UKiwvm71tbAVyoWr4U9RtIZSuiIR6ruYREtElsYkk+4yQedfhqRmk4zA
+         F2bRNraAzUVhzK8NkygExUzPH3/X9uD2nRuZ5sywortTxKKmMReh8xs9ErxLUc8HXkxM
+         PDEg==
+X-Gm-Message-State: ALoCoQmJfOleunqEJfJqs8gq4TwIgCK7bf+9UubzRfcFZoi35U+qxNeuzBIa29z8ZdOcven4kh9t
+X-Received: by 10.70.118.9 with SMTP id ki9mr45211925pdb.104.1408400426595;
+        Mon, 18 Aug 2014 15:20:26 -0700 (PDT)
+Received: from [10.0.0.142] (akl.smx.co.nz. [203.84.135.120])
+        by mx.google.com with ESMTPSA id qt2sm17172388pbb.29.2014.08.18.15.20.23
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Mon, 18 Aug 2014 15:20:25 -0700 (PDT)
+From: "Mark Derricutt" <mark@talios.com>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Remove old snapshots under local repository
+Date: Tue, 19 Aug 2014 10:20:08 +1200
+Message-ID: <28312299-0117-42EB-BD64-CE312B985D79@talios.com>
+In-Reply-To: <CAPCUOdFgo-RuYjdH5Xym5UVb_viD2LoPXa0NGw3A+jKAZdXCJw@mail.gmail.com>
+References: <CAPCjjnGKp2A-iDS+vBvjHTF_FX7RL4DeOMhRadMOCoO5pDMHdQ@mail.gmail.com>
+ <53F04794.6000406@artifact-software.com>
+ <CAPCjjnFpu8wZnGq42sEaR3vv-TwRSAecoDKA9JObWQoas8yJvw@mail.gmail.com>
+ <CAPCUOdFgo-RuYjdH5Xym5UVb_viD2LoPXa0NGw3A+jKAZdXCJw@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_MailMate_0E50EBBC-7841-440F-B9BC-386B10C77F58_="
+X-Mailer: MailMate (1.8r4447)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--=_MailMate_0E50EBBC-7841-440F-B9BC-386B10C77F58_=
+Content-Type: text/plain; format=flowed; markup=markdown
+
+I tend to use:
+
+     mvn dependency:purge-local-repository
+
+when sitting in a project directory, it'll go thru and delete all the 
+SNAPSHOTs and re-resolve.
+
+The only problem with it in the default mode, is that is _only_ deletes 
+the `.jar`. files and doesn't rebuild any metadata, so if you're using 
+version ranges you're kinda f**ked.
+
+However, I usually use it with the following setting:
+
+     mvn dependency:purge-local-repository 
+-DresolutionFuzziness=artifactId
+
+which will delete ALL files related to the artifact - all versions, all 
+meta data - it doesn't mean there's more to download again but works 
+wonderfully.
+
+MaRK
+
+On 18 Aug 2014, at 21:10, Adrien Rivard wrote:
+
+> Or delete all directories that end with -SNAPSHOT
+>
+>
+>
+> On Sun, Aug 17, 2014 at 8:18 AM, Dan Tran <dantran@gmail.com> wrote:
+>
+>> sounds like a good option.
+>>
+>> Thanks
+>>
+>> -D
+>>
+>>
+>> On Sat, Aug 16, 2014 at 11:11 PM, Ron Wheeler <
+>> rwheeler@artifact-software.com> wrote:
+>>
+>>> On 17/08/2014 1:50 AM, Dan Tran wrote:
+>>>
+>>>> Hi I need to find a way to walk into local repository and remove 
+>>>> all old
+>>>> snapshots.
+>>>>
+>>>> This is very helpful for developer to clean up his/her local rep.
+>>>>
+>>>> how safe it is by blindly remove any file with timestamp format ( 
+>>>> ie
+>>>> xxx-1.0.0-20140816.071953-49.jar)?
+>>>>
+>>>> Thanks
+>>>>
+>>>> -D
+>>>>
+>>>> Easiest thing to do is to delete the entire organization or project
+>>> branch (com.mycompany.project.*) from the local repo.
+>>>
+>>> This will not likely delete anything of great value or anything that 
+>>> can
+>>> not be easily retrieved from your company repo.
+>>>
+>>>
+>>> Ron
+>>>
+>>> --
+>>> Ron Wheeler
+>>> President
+>>> Artifact Software Inc
+>>> email: rwheeler@artifact-software.com
+>>> skype: ronaldmwheeler
+>>> phone: 866-970-2435, ext 102
+>>>
+>>>
+>>> ---------------------------------------------------------------------
+>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>
+>>>
+>>
+>
+>
+>
+> -- 
+> Adrien Rivard
+
+--=_MailMate_0E50EBBC-7841-440F-B9BC-386B10C77F58_=--
+

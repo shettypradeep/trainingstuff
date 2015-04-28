@@ -1,0 +1,77 @@
+From users-return-137803-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Nov 22 21:24:34 2014
+Return-Path: <users-return-137803-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B2A4510B1C
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 22 Nov 2014 21:24:34 +0000 (UTC)
+Received: (qmail 82847 invoked by uid 500); 22 Nov 2014 21:24:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 82561 invoked by uid 500); 22 Nov 2014 21:24:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 82530 invoked by uid 99); 22 Nov 2014 21:24:30 -0000
+Received: from mail-relay.apache.org (HELO mail-relay.apache.org) (140.211.11.15)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 22 Nov 2014 21:24:30 +0000
+Received: from mail-ob0-f178.google.com (mail-ob0-f178.google.com [209.85.214.178])
+	by mail-relay.apache.org (ASF Mail Server at mail-relay.apache.org) with ESMTPSA id 6EA661A061E;
+	Sat, 22 Nov 2014 21:24:24 +0000 (UTC)
+Received: by mail-ob0-f178.google.com with SMTP id gq1so5571246obb.37
+        for <multiple recipients>; Sat, 22 Nov 2014 13:24:28 -0800 (PST)
+X-Received: by 10.202.197.132 with SMTP id v126mr7260938oif.2.1416691468105;
+ Sat, 22 Nov 2014 13:24:28 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.135.3 with HTTP; Sat, 22 Nov 2014 13:23:47 -0800 (PST)
+From: Mirko Friedenhagen <mfriedenhagen@apache.org>
+Date: Sat, 22 Nov 2014 22:23:47 +0100
+Message-ID: <CAK8jvqxjF0BLY7WGcbdnm8sOmXxSc-=y3RmxcuaNGZTHPDT84Q@mail.gmail.com>
+Subject: [ANN] Apache Maven PMD Plugin 3.3 Released
+To: announce@maven.apache.org, Maven Users List <users@maven.apache.org>
+Cc: Maven Developers List <dev@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+
+The Maven team is pleased to announce the release of the Apache Maven
+PMD Plugin, version 3.3
+
+A Maven plugin for the PMD toolkit, that produces a report on both
+code rule violations and detected copy and paste fragments, as well as
+being able to fail the build based on these metrics.
+
+http://maven.apache.org/plugins/maven-pmd-plugin/
+
+You should specify the version in your project's plugin configuration:
+
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-pmd-plugin</artifactId>
+  <version>3.3</version>
+</plugin>
+
+
+Release Notes - Apache Maven PMD Plugin - Version 3.3
+
+Bug
+* [MPMD-192] Regression MPMD-89 is showing up with Maven 2.2.1 again
+for maven-pmd-plugin-3.3
+
+Improvement
+* [MPMD-191] Update to PMD 5.2.1
+* [MPMD-189] MavenProject/MavenSession Injection as a paremeter
+instead as a component.
+
+
+Enjoy,
+
+-The Maven team
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,129 @@
+From users-return-135247-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan 22 22:00:57 2014
+Return-Path: <users-return-135247-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 96AE410090
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 22 Jan 2014 22:00:57 +0000 (UTC)
+Received: (qmail 36351 invoked by uid 500); 22 Jan 2014 22:00:54 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 36269 invoked by uid 500); 22 Jan 2014 22:00:54 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 36261 invoked by uid 99); 22 Jan 2014 22:00:53 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 22 Jan 2014 22:00:53 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mfriedenhagen@gmail.com designates 209.85.219.42 as permitted sender)
+Received: from [209.85.219.42] (HELO mail-oa0-f42.google.com) (209.85.219.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 22 Jan 2014 22:00:48 +0000
+Received: by mail-oa0-f42.google.com with SMTP id i7so1200580oag.1
+        for <users@maven.apache.org>; Wed, 22 Jan 2014 14:00:27 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=vO1zxM16x2c8jcfla6M2JLV8y8J2SxdMW3A949IB1hc=;
+        b=gaYKc8s6hnCZHEMusJNVmj3jdCQcyiNGZJznjJpI57KVtD5PdTLmzRIrH/7UEhbXX2
+         VWTJekyKAkhoCegjWnTVRllny4dEElN1D9YlmmmF4kVD48mMq7ym0XhIHx/DsI4ubtJ1
+         /CdS/WEilYuw8slRpYL5hPMKp70Qhk8JUTtI8KWkygFRseMonRLLwisp+McELYgRsp13
+         sgo1aCS+RmISknbvKwM7w9L72KkH5AeU31lXoNMJ5mqdvH8spRol1tp0xq8UoLfL/rH+
+         GPeUaB8hsYr52OadptUdudOjXZKtVvE+aCVB3XpeAYkHeJX26PQKrIvp9QoIpZAhpfnz
+         0WnQ==
+X-Received: by 10.182.107.232 with SMTP id hf8mr2726560obb.75.1390428027154;
+ Wed, 22 Jan 2014 14:00:27 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.24.227 with HTTP; Wed, 22 Jan 2014 13:59:46 -0800 (PST)
+In-Reply-To: <CAG54imbUrmnPidF20TaW6mweE=YAYPdkXbY0ADSctaJ-krOXZg@mail.gmail.com>
+References: <CAG54ima6tyRD1XNQJdcMtB-7dWgVO=rR=_SEjXW4ABgsOeK-Kw@mail.gmail.com>
+ <CADN69y=DYWLm9Q-+htNMJ_iXqj+7C9fLuNhNZHFbBtx4yv5scA@mail.gmail.com> <CAG54imbUrmnPidF20TaW6mweE=YAYPdkXbY0ADSctaJ-krOXZg@mail.gmail.com>
+From: Mirko Friedenhagen <mfriedenhagen@gmail.com>
+Date: Wed, 22 Jan 2014 22:59:46 +0100
+Message-ID: <CAK8jvqzvANhMRZAS7O62+KBgMe8yDQBzu9eT5qdR-n6EO1BmvA@mail.gmail.com>
+Subject: Re: Excluding a submodule from package/install phases.
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Just for documentation purposes:
+- Netbeans sets an environment variable called
+NB_EXEC_MAVEN_PROCESS_UUID (AFAIK should be
+<property><name>env.NB_EXEC_MAVEN_PROCESS_UUID</name></property> in
+the profile).
+- I use this in $HOME/.mavenrc to extend MAVEN_OPTS with
+-Dorg.slf4j.simpleLogger.showDateTime=true when the variable is not
+set.
+- So when invoking Maven from the CLI I get relative timestamps which
+would make Netbeans Maven Console parser choke :-)
+Regards Mirko
+--
+http://illegalstateexception.blogspot.com/
+https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+https://bitbucket.org/mfriedenhagen/
+
+
+On Wed, Jan 22, 2014 at 5:49 PM, Todd Chapman <todd@chaka.net> wrote:
+> Thank you Curtis. That was very helpful.
+>
+>
+> On Tue, Jan 21, 2014 at 12:02 PM, Curtis Rueden <ctrueden@wisc.edu> wrote:
+>
+>> Hi Todd,
+>>
+>> > In our multi-module project we have one module that is only used for
+>> > development in our IDE. Is there a way to configure this project so
+>> > that it is always excluded from package phase?
+>>
+>> With Eclipse, you can do something similar using profiles:
+>>
+>> <profiles>
+>>   <profile>
+>>     <id>eclipse</id>
+>>     <activation>
+>>       <property>
+>>         <name>m2e.version</name>
+>>       </property>
+>>     </activation>
+>>     <modules>
+>>       <module>my-eclipse-specific-module</module>
+>>     </modules>
+>>   </profile>
+>> </profiles>
+>>
+>> This excludes the "my-eclipse-specific-module" module completely from the
+>> command-line build.
+>>
+>> If you aren't using Eclipse, perhaps your IDE sets a similar property.
+>>
+>> Regards,
+>> Curtis
+>>
+>>
+>> On Tue, Jan 21, 2014 at 10:52 AM, Todd Chapman <todd@chaka.net> wrote:
+>>
+>> > Hello,
+>> >
+>> > In our multi-module project we have one module that is only used for
+>> > development in our IDE. Is there a way to configure this project so that
+>> it
+>> > is always excluded from package phase?
+>> >
+>> > Thanks,
+>> >
+>> > -Todd
+>> >
+>>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

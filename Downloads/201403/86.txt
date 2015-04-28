@@ -1,0 +1,108 @@
+From users-return-135979-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Mar 28 07:55:26 2014
+Return-Path: <users-return-135979-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6008510A5C
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 28 Mar 2014 07:55:26 +0000 (UTC)
+Received: (qmail 94533 invoked by uid 500); 28 Mar 2014 07:55:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 93582 invoked by uid 500); 28 Mar 2014 07:55:20 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 93570 invoked by uid 99); 28 Mar 2014 07:55:17 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 07:55:17 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of t.broyer@gmail.com designates 209.85.216.171 as permitted sender)
+Received: from [209.85.216.171] (HELO mail-qc0-f171.google.com) (209.85.216.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 07:55:13 +0000
+Received: by mail-qc0-f171.google.com with SMTP id c9so5519148qcz.2
+        for <users@maven.apache.org>; Fri, 28 Mar 2014 00:54:52 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=DDpzljEZ5Xcc211n3S7JRo4SUM5EJoilz5op67HDZyQ=;
+        b=pXT5uQ8ryEvrYKhWpkSzBnCQny9D7CRaT404sKF7+P0LRw/uqV3yvuxfSvgaaZ5tzx
+         CPPJJgQbiGrpX2NRvUZh3XAPJkzZOMdMub6twHKvmXiISCOJy0wXZfMw37NqbotqTM7H
+         Vgk7VSImoE2vMQRBkNYprVzz/Rt9sUAtu2hvFhMv7fnyx2DT75yDP4VVB0cBpXuQnj5i
+         jpk50LbpHTViMxgpq+i67dR2zIvx1z9KIIpmzsNeJEWNuYwMHkHKntk4EZXvbqwZuFXO
+         2rEPGqlp0Yzd1cYBbHuWYt1/0/RfNx8wGkIqXFlgSbVO9CLc/XGAD5jeehXMc3ZL3z03
+         /IJg==
+MIME-Version: 1.0
+X-Received: by 10.224.130.135 with SMTP id t7mr175699qas.102.1395993292634;
+ Fri, 28 Mar 2014 00:54:52 -0700 (PDT)
+Received: by 10.140.108.101 with HTTP; Fri, 28 Mar 2014 00:54:52 -0700 (PDT)
+Received: by 10.140.108.101 with HTTP; Fri, 28 Mar 2014 00:54:52 -0700 (PDT)
+In-Reply-To: <1395992094190-5789830.post@n5.nabble.com>
+References: <1395650439461-5789365.post@n5.nabble.com>
+	<CAEayHEOGgV-7ZzoqTg7udryhk_by_Y8dADpwNNa9MxBXJHGQsA@mail.gmail.com>
+	<1395909138436-5789681.post@n5.nabble.com>
+	<CAEayHEMCboe7TbMuENpNFwo95k1KhU_4SeYX12jHL3jmEmL55g@mail.gmail.com>
+	<1395924571582-5789696.post@n5.nabble.com>
+	<CAEayHEN3a6YkJid5rsYnf2MD=Y8NEL3EHQF-khks=CA_3A8cMQ@mail.gmail.com>
+	<1395930457671-5789704.post@n5.nabble.com>
+	<CAEayHEPZXrDHECVyFTr69LO-kaNjpH73dZMetGxPdAZhkZkg_Q@mail.gmail.com>
+	<1395992094190-5789830.post@n5.nabble.com>
+Date: Fri, 28 Mar 2014 08:54:52 +0100
+Message-ID: <CAEayHEMxzvktyXex5xuTNngnFZuBJHCNv2gco4g+eF9ECgrcvw@mail.gmail.com>
+Subject: Re: multi-module phases sequence
+From: Thomas Broyer <t.broyer@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c1e878511d5204f5a6048c
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c1e878511d5204f5a6048c
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Well, we clearly disagree on whose "fault" it is at least. Declarative
+inputs and outputs also help with incremental builds (exactly what Takari
+built, but only serves within a plugin to know whether it should do real
+work or just be a no-op).
+Le 28 mars 2014 08:35, "mkarg" <karg@quipsy.de> a =C3=A9crit :
+
+> Now I understand. The problem is that Maven does not know upfront that a
+> plugin *might* possibly produce an artifact. That is correct, obviously,
+> and
+> thank you for pointing me to that fact.
+>
+> So actually the only "correct" solution would be to write a set of plugin=
+s
+> and a workflow, e. g. a "PowerBuilder Workflow", provide new types like
+> <type>powerbuilder-exe</type> and <type>powerbuilder-resource-zip</type>
+> and
+> so on, and tell the plugins in their own code how to share information.
+> Understood.
+>
+> Thank you for your patience, now I know how a smart solution is to be
+> build.
+> AND I know that Maven is not the bad guy here, but it is our own laziness=
+,
+> as we could simply write such a workflow! :-)
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/multi-module-phases-sequence-tp5789365p5=
+789830.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a11c1e878511d5204f5a6048c--
+

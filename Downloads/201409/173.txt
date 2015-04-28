@@ -1,0 +1,76 @@
+From users-return-137207-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Sep  6 22:12:51 2014
+Return-Path: <users-return-137207-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 55D7A11614
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  6 Sep 2014 22:12:51 +0000 (UTC)
+Received: (qmail 52472 invoked by uid 500); 6 Sep 2014 22:12:49 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 52375 invoked by uid 500); 6 Sep 2014 22:12:49 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 52362 invoked by uid 99); 6 Sep 2014 22:12:49 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 06 Sep 2014 22:12:49 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stefano.fornari@gmail.com designates 209.85.212.179 as permitted sender)
+Received: from [209.85.212.179] (HELO mail-wi0-f179.google.com) (209.85.212.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 06 Sep 2014 22:12:24 +0000
+Received: by mail-wi0-f179.google.com with SMTP id q5so962819wiv.0
+        for <users@maven.apache.org>; Sat, 06 Sep 2014 15:12:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=yy+a8ha+81EIZA6Ztz4sAVJvhQqdFzKvX+colOm87wE=;
+        b=z140ZGXD35uq1WO7PBQg7yurqaFbpcxgSykirCWVGuwflC/26TnxKx9ttFWRGNjDZY
+         ynlZbKDNsnQ5wCrUf6n3IwigFRRedQzbVRQ3V2mQXLhaJqNcCz8z5NVcDSlbsY7RNrG7
+         +StZC8SDDG2pEF2869Yp3wwkiVlUM49tqSdQk3MLF8/7Ia63v27Q5QSyJQ01pn0k7nxH
+         0jCkQDt1z0k9gWE5I3tp4wlFDrGWVxHsrLGhWnUpbtXsNoKFH+4BN+ZmlE7BIJy2x6Hh
+         vSkcPux0j8xOZoEjXt0VD7bUegufrYd9DaEKSiWsnk+GIskoHHjcL1HgRxGZxBzYeWzk
+         YAfg==
+MIME-Version: 1.0
+X-Received: by 10.180.13.83 with SMTP id f19mr12076843wic.80.1410041543576;
+ Sat, 06 Sep 2014 15:12:23 -0700 (PDT)
+Received: by 10.216.146.193 with HTTP; Sat, 6 Sep 2014 15:12:23 -0700 (PDT)
+In-Reply-To: <CANWgJS6zuhNZsUChfTxr5uZOOi11Do=DXnFW_yQ9mm6qtjpYLA@mail.gmail.com>
+References: <CAJ_7fd+dP1o9XMjnTS26LuzygWq77VCMVA9wNAjy9KevTORDWA@mail.gmail.com>
+	<CANWgJS6zuhNZsUChfTxr5uZOOi11Do=DXnFW_yQ9mm6qtjpYLA@mail.gmail.com>
+Date: Sun, 7 Sep 2014 00:12:23 +0200
+Message-ID: <CAJ_7fdLOhLZissq7wZaUHHBqn02FYmtMp5aJVtQL0KPQqJa43g@mail.gmail.com>
+Subject: Re: release plug in not committing the release version anymore
+From: Stefano Fornari <stefano.fornari@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c24aba52d30a05026ce181
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c24aba52d30a05026ce181
+Content-Type: text/plain; charset=UTF-8
+
+Hi Baptiste,
+thanks for the replay and sorry for my late one. That solved the issue
+indeed! thanks a lot.
+Ste
+
+
+On Sun, Aug 31, 2014 at 8:10 AM, Baptiste Mathus <ml@batmat.net> wrote:
+
+> Hi,
+> This description seems to match a known issue.
+> I see you're using maven release plugin 2.3.2. Upgrade to 2.5 and check if
+> it gifts better (see https://jira.codehaus.org/browse/MRELEASE-812 for
+> example).
+>
+[...]
+
+--001a11c24aba52d30a05026ce181--
+

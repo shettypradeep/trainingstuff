@@ -1,0 +1,157 @@
+From users-return-135133-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 14 13:24:56 2014
+Return-Path: <users-return-135133-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B254810B9B
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 14 Jan 2014 13:24:56 +0000 (UTC)
+Received: (qmail 50427 invoked by uid 500); 14 Jan 2014 13:24:51 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 50294 invoked by uid 500); 14 Jan 2014 13:24:50 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 50286 invoked by uid 99); 14 Jan 2014 13:24:50 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 13:24:50 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bmathus@gmail.com designates 74.125.83.51 as permitted sender)
+Received: from [74.125.83.51] (HELO mail-ee0-f51.google.com) (74.125.83.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 13:24:44 +0000
+Received: by mail-ee0-f51.google.com with SMTP id b57so211339eek.38
+        for <users@maven.apache.org>; Tue, 14 Jan 2014 05:24:24 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=LdzSpno+HMRT9/cLUUVixp0pmykCERaKKU6ovlgdbjI=;
+        b=0WM6I5Mr+0jR//gjIclVtO+0Bh6NnoVYDX8B3B/1W2TC6K5CzlMH9ZVRh/QrF1V4Ac
+         mjtybludqnTqUstPXtc1lC8mymoc812w0p3e2N5cvzOO/grs4rmaMSWDiV2SkIoEKcIy
+         FDQTlqlpRFMR0KDKNGrTKUEIQthDyP7MBXP1gNi0ZgWElzzI/CXOGlw0RhtA87C+oSt1
+         5oFe2dAgqQF04ypHrc2MEffg8BMi6Ic9EhljQ1NEe4IFdGNKbv0uRM+CZGY5/txIiAQW
+         mSzDiYQT4IjIpNmgDgYESqKK2qGHh7U+VjcGee91DSxGZYKV3c5+wcU1hVStjiyOYlWW
+         pVug==
+X-Received: by 10.15.82.67 with SMTP id z43mr2149370eey.60.1389705864105; Tue,
+ 14 Jan 2014 05:24:24 -0800 (PST)
+MIME-Version: 1.0
+Sender: bmathus@gmail.com
+Received: by 10.15.34.75 with HTTP; Tue, 14 Jan 2014 05:24:04 -0800 (PST)
+In-Reply-To: <52CEFFF0.302@alishomepage.com>
+References: <52CC4999.7040704@alishomepage.com> <CAKDUN1vAc3ha9ZKnxKKiqZtF_9ajYNMFeUzshkVCbu0PCgJfWw@mail.gmail.com>
+ <52CEFFF0.302@alishomepage.com>
+From: Baptiste Mathus <ml@batmat.net>
+Date: Tue, 14 Jan 2014 14:24:04 +0100
+X-Google-Sender-Auth: 9542Qob7aYPvnhHw96nJPNVW9rs
+Message-ID: <CANWgJS4kmy_sY11CMBPsPK636_d5zUWzf-Y94s5GWZs3PdiLOA@mail.gmail.com>
+Subject: Re: Maven2/Maven3 plugin development: Ensuring only the available
+ parameters are allowed
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e01681a305f54bb04efee1c96
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01681a305f54bb04efee1c96
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+Stephen already answered along those lines. What are you missing?
+Cheers
+
+
+2014/1/9 S. Ali Tokmen <nospam@alishomepage.com>
+
+> Hi Anders
+>
+> Thanks for your reply - and happy new year :)
+>
+> Is there any way I can inject / read the whole plugin configuration from
+> the plugin?
+>
+> Best regards
+>
+> S. Ali Tokmen
+> http://ali.tokmen.com/
+>
+> My IM, GSM, PGP and other contact details
+> are on http://contact.ali.tokmen.com
+>
+> On 08/01/14 20:00, Anders Hammar wrote:
+> > AFAIK there is no support for this. If you think there should be, please
+> > file a ticket [1].
+> >
+> > /Anders
+> >
+> > [1] http://jira.codehaus.org/browse/MNG/
+> >
+> >
+> > On Tue, Jan 7, 2014 at 7:38 PM, S. Ali Tokmen <nospam@alishomepage.com
+> >wrote:
+> >
+> >> Dear Maven users
+> >>
+> >> I am one of the owners of Codehaus CARGO, which has a Maven2/Maven3
+> >> plugin; and would have a question with regards to how parameters are
+> >> managed.
+> >>
+> >> We defined our MOJOs with parameters (you can see
+> >>
+> >>
+> http://svn.codehaus.org/cargo/extensions/trunk/maven2/plugin/src/main/java/org/codehaus/cargo/maven2/AbstractCargoMojo.java
+> >> for example), but what happens is that if a user unwillingly puts a
+> >> parameter in the wrong place then the plugin execution doesn't stop.
+> >>
+> >> As an example, I can write the below POM and build still works (even
+> >> thought the MOJO has no parameter called "foo"):
+> >>
+> >>   <plugin>
+> >>     <groupId>org.codehaus.cargo</groupId>
+> >>     <artifactId>cargo-maven2-plugin</artifactId>
+> >>     <version>1.4.6</version>
+> >>     <configuration>
+> >>       <foo>
+> >>         bar
+> >>       </foo>
+> >>     </configuration>
+> >>   </plugin>
+> >>
+> >> Is there any way I can instruct by MOJO to fail if there is an unknown
+> >> parameter?
+> >>
+> >> Please advise
+> >>
+> >> Thank you
+> >>
+> >> --
+> >>
+> >> S. Ali Tokmen
+> >> http://ali.tokmen.com/
+> >>
+> >> My IM, GSM, PGP and other contact details
+> >> are on http://contact.ali.tokmen.com
+> >>
+> >>
+> >> ---------------------------------------------------------------------
+> >> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> >> For additional commands, e-mail: users-help@maven.apache.org
+> >>
+> >>
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+> --
+> Baptiste <Batmat> MATHUS - http://batmat.net
+> Sauvez un arbre,
+> Mangez un castor ! nbsp;! <users-help@maven.apache.org>
+>
+
+--089e01681a305f54bb04efee1c96--
+

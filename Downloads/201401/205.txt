@@ -1,0 +1,68 @@
+From users-return-135168-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan 15 19:59:22 2014
+Return-Path: <users-return-135168-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D7E5010FE3
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 15 Jan 2014 19:59:22 +0000 (UTC)
+Received: (qmail 185 invoked by uid 500); 15 Jan 2014 19:59:17 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 139 invoked by uid 500); 15 Jan 2014 19:59:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 117 invoked by uid 99); 15 Jan 2014 19:59:09 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 15 Jan 2014 19:59:09 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [212.227.15.3] (HELO mout.web.de) (212.227.15.3)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 15 Jan 2014 19:59:02 +0000
+Received: from scotty.enterprise ([85.127.36.111]) by smtp.web.de (mrweb103)
+ with ESMTPSA (Nemesis) id 0MGA7n-1W6XXU3E4V-00FDDl for
+ <users@maven.apache.org>; Wed, 15 Jan 2014 20:58:31 +0100
+Received: from [192.168.0.135] (unknown [192.168.0.135])
+	by scotty.enterprise (Postfix) with ESMTP id E5B36566EE
+	for <users@maven.apache.org>; Wed, 15 Jan 2014 20:58:23 +0100 (CET)
+Message-ID: <52D6E880.1040901@web.de>
+Date: Wed, 15 Jan 2014 20:58:56 +0100
+From: Christian Pontesegger <christian.pontesegger@web.de>
+User-Agent: Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.1.1
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: javadoc:aggregate project filter
+References: <52D6D8C4.9080603@web.de> <F21547B4F425F9428444D12A51270506236CD063@NP1EXMB033.corp.halliburton.com>
+In-Reply-To: <F21547B4F425F9428444D12A51270506236CD063@NP1EXMB033.corp.halliburton.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:cBP4c2rqt0QifgLiteMvt+YgQxNDFMztsQJdv5Q2smRAVQjnrmA
+ LmT8VwAUVQalMTAFdqK/r1YkYr4rnuRAsOuIj6PkCh0LsI5zGiYKqV9bVp/Knb6oeH05J4f
+ mXbY92mxDB1sfXqKZ3SOIJzg1cKvbd65zikgCPImcFkBQMubgkpg5VADM8ywv67WSxYUt7Q
+ FG4ldiaCCFamiam23DKWw==
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+
+Am 15.01.2014 20:07, schrieb Justin Georgeson:
+> I'm in a similar environment and use profiles in my aggregator POM to specify different reactors for different things. I have a profile for a javadoc reactor which doesn't include any eclipse-feature, eclipse-test-plugin, or eclipse-repository projects (ie it only includes the projects for the actual plugins that constitute the product).
+
+Seems to be a feasible way. Still I would prefer to have filters - which 
+I guess is not possible right now.
+My documentation is built to one of these eclipse plugins providing 
+online help. By using different profiles I would have 2 separate build 
+steps: first build the documentation, afterwards build the product 
+(containing the docs).
+
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,152 @@
+From users-return-135701-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar  5 21:10:27 2014
+Return-Path: <users-return-135701-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C3FD910EAB
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  5 Mar 2014 21:10:27 +0000 (UTC)
+Received: (qmail 75442 invoked by uid 500); 5 Mar 2014 21:10:22 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 75339 invoked by uid 500); 5 Mar 2014 21:10:21 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 75331 invoked by uid 99); 5 Mar 2014 21:10:21 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Mar 2014 21:10:21 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.220.50 as permitted sender)
+Received: from [209.85.220.50] (HELO mail-pa0-f50.google.com) (209.85.220.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Mar 2014 21:10:17 +0000
+Received: by mail-pa0-f50.google.com with SMTP id kq14so1625034pab.23
+        for <users@maven.apache.org>; Wed, 05 Mar 2014 13:09:57 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=KPVC8FdRjuxB25CgdYsxuCr3tP8w9Kq6QRhVQpHTtOg=;
+        b=N07bDH/iyAKMFvJhtT7zDDXuysvzjvd3E+BqZLq/pW4zEIdlHuxG23VV7EIDipe0Jy
+         xKnPHeCGYq1bqq94zrPFnOg1s7inW+UNm8xtL9HdbD4BWJyImNT10QIejIJjF8zJzKcH
+         Q83mopKoOrsSd9hjHHJlMIIDYLvkY37OWPbMIkUNv0Nm7i1QrCesk3ygBLu22rwyhZnh
+         Ptqa0MTbh3B1kTIkvSLkydDf08NUMATMyfnhLHgM4eF/8UqIt14aOCkEYFF3uxDL6+Tn
+         Yqgu6h3cowxlXtPesfrAuYL51XfdcKziBKikNfUSnq+agWPqYXeBnOmQf83NlsXAhI7J
+         k7nA==
+MIME-Version: 1.0
+X-Received: by 10.66.241.73 with SMTP id wg9mr9723146pac.69.1394053797396;
+ Wed, 05 Mar 2014 13:09:57 -0800 (PST)
+Received: by 10.68.201.167 with HTTP; Wed, 5 Mar 2014 13:09:57 -0800 (PST)
+In-Reply-To: <53179066.507@renci.org>
+References: <531787D5.8090601@renci.org>
+	<1386892847.15852.1394052501970.open-xchange@ox-ap1>
+	<53179066.507@renci.org>
+Date: Wed, 5 Mar 2014 21:09:57 +0000
+Message-ID: <CA+nPnMxYY-aQtMR_sfp919NK3uyF6wRm5mGUXw5-HYvFdG8Qow@mail.gmail.com>
+Subject: Re: Using github as a maven repo
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b10cb1964448504f3e271c2
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b10cb1964448504f3e271c2
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Please please please use central.
+
+Every time you host your own public repo a kitten is horribly mutilated by
+the minions of the underworld.
+
+More seriously if anyone adds your repo they impact their build performance
+as they now have another repo to check artifacts against... It's not a big
+problem if you only have to add one repo... But the problem grows and next
+thing you know your maven build is checking 50 repos for every artifact and
+build time is a dog.
+
+This is why a repo manager is helpful and publishing to central if you can
+is the *best* thing to do
+
+On Wednesday, 5 March 2014, Howard <howard@renci.org> wrote:
+
+> Thanks Rafa!
+>
+> That was in fact the answer.  Well, I did admit it was likely something
+> stupid. :)
+>
+> Thanks also to Anders and Joachim for answering.  I will definitely think
+> about hosting our jars at maven central.  I didn't realize it was easy. I
+> did have a look at managing a repository here at RENCI, but since we hope
+> the usefulness of the project outlives it's funding, it would probably ma=
+ke
+> more sense for our repo to be off site.
+>
+> Thanks again
+> Howard
+>
+>
+> On 3/5/14, 3:48 PM, rafal.krupinski@smtsoftware.com
+> rafal.krupinski@smtsoftware.com wrote:
+>
+>>
+>>  Dnia 5 marzec 2014 o 21:23 Howard <howard@renci.org> napisa?(a):
+>>>
+>> [...]
+>>
+>>> For reference here's the part of the pom that is trying to download the
+>>> jar:
+>>>
+>>>      <dependency>
+>>>         <groupId>org.renci.databridge-util</groupId>
+>>>         <artifactId>databridge-util</artifactId>
+>>>         <version>1.0-BETA</version>
+>>>       </dependency>
+>>>
+>> Read your POM, there is no databridge-util in the groupId.
+>>
+>> Dependency should read
+>>
+>> <dependency>
+>> <groupId>org.renci</groupId>
+>> <artifactId>databridge-util</artifactId>
+>> <version>1.0-BETA</version>
+>> </dependency>
+>>
+>> Regards,
+>>
+>> Rafa=C5=82
+>>
+>> PS
+>>
+>> I love when people reply without providing actual answer :)
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+>
+> --
+> Howard Lander <mailto:howard@renci.org>
+> Senior Research Software Developer
+> Renaissance Computing Institute (RENCI) <http://www.renci.org>
+> The University of North Carolina at Chapel Hill
+> Duke University
+> North Carolina State University
+> 100 Europa Drive
+> Suite 540
+> Chapel Hill, NC 27517
+> 919-445-9651
+>
+
+
+--=20
+Sent from my phone
+
+--047d7b10cb1964448504f3e271c2--
+

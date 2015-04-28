@@ -1,0 +1,119 @@
+From users-return-135628-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 27 16:06:07 2014
+Return-Path: <users-return-135628-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 87948107A0
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 27 Feb 2014 16:06:07 +0000 (UTC)
+Received: (qmail 71371 invoked by uid 500); 27 Feb 2014 16:06:02 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 71275 invoked by uid 500); 27 Feb 2014 16:06:02 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 71266 invoked by uid 99); 27 Feb 2014 16:06:01 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Feb 2014 16:06:01 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [88.116.248.50] (HELO sartre.xss.co.at) (88.116.248.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Feb 2014 16:05:57 +0000
+Received: from goethe.intern.xss.co.at (goethe.intern.xss.co.at [192.168.162.10])
+	by sartre.xss.co.at (8.14.3/8.14.3) with ESMTP id s1RG5Z4q008675
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK)
+	for <users@maven.apache.org>; Thu, 27 Feb 2014 17:05:35 +0100
+Received: from linux-du93.site ([10.168.162.10])
+	by goethe.intern.xss.co.at (8.13.8/8.13.8) with ESMTP id s1RG5YIC004411
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES128-SHA bits=128 verify=NO)
+	for <users@maven.apache.org>; Thu, 27 Feb 2014 17:05:34 +0100
+Date: Thu, 27 Feb 2014 17:05:31 +0100
+From: Martin Hoeller <martin@xss.co.at>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Are skinny WARs still recommended?
+Message-ID: <20140227170531.6c38285c@linux-du93.site>
+In-Reply-To: <CAB7wfMqriOJptgWdX+SOt0HAXgXAWKnuLiKSNXqKSEhCZs0hfQ@mail.gmail.com>
+References: <20140227092431.205ec8f6@linux-du93.site>
+	<CAB7wfMqriOJptgWdX+SOt0HAXgXAWKnuLiKSNXqKSEhCZs0hfQ@mail.gmail.com>
+X-Mailer: Claws Mail 3.7.10 (GTK+ 2.24.7; x86_64-suse-linux-gnu)
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=PGP-SHA1;
+ boundary="Sig_/6ncWUit+1ZnqoP_51RzgLY8"; protocol="application/pgp-signature"
+X-Virus-Scanned: clamav-milter 0.98 at mail.intern.xss.co.at
+X-Virus-Status: Clean
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Sig_/6ncWUit+1ZnqoP_51RzgLY8
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: quoted-printable
+
+Hi Simon!
+
+Thanks for your help...
+
+On 27 Feb 2014, Simon Lessard wrote:
+
+> Hi Martin,
+>=20
+> Your definition of the skinny WAR is very slightly off and that may or not
+> solve your issue. A skinny WAR is not necessarily a WAR from which *all*
+> WEB-INF/lib was stripped, but rather one where all of its dependencies th=
+at
+> are shared by another module in the EAR gets stripped.
+
+You are right: skinny WARs might still contain some JARs in WEB-INF/lib.
+
+> For example, let say
+> you have:
+>=20
+> WAR1 depends on artifact1 and artifact2
+> WAR2 depends on artifact2 and artifact3
+> EJB-JAR depends on artifact1
+>=20
+> Then the EAR's lib should contain artifact1 and artifact2, WAR1 should not
+> contain any lib, WAR2 should still contain artifact3. Now, in your case, =
+if
+> your EAR contains 2 JSF application WARs, then your issue still stands and
+> I cannot really see how you'll be able to get truly skinny WAR as indeed
+> you must not remove the JSF related artifacts from the WARs. However, if
+> your EAR is a single WAR and some EJB/MDB then the skinny WAR should work
+> just fine (it's what we use here and it work fine, the web related
+> libraries stay in the WAR and don'T get promoted to the EAR).
+
+I have another concrete example with a single WAR where OmniFaces is a
+dependency by the WAR and by some EJB JAR, both contained in the EAR. The
+OmniFaces JAR goes in the EARs lib folder and thus OmniFaces ist not
+fully usable without workarounds. See also my question on StackOverflow:
+http://stackoverflow.com/questions/22046464/how-to-correctly-use-omnifaces-=
+in-an-ear
+
+So even with your definition of a skinny WAR the problem still exists.
+
+Some more ideas?
+
+- martin
+
+PS: I know this is not really a maven problem but maven-war-plugin and
+    maven-ear-plugin both have support for skinny WARs so I was hoping to
+    find some help here.
+
+--Sig_/6ncWUit+1ZnqoP_51RzgLY8
+Content-Type: application/pgp-signature; name=signature.asc
+Content-Disposition: attachment; filename=signature.asc
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.18 (GNU/Linux)
+
+iEYEARECAAYFAlMPYk0ACgkQYJf22JPx7tnpsQCgpnFUH/vsv2m0Uxofn/MqLga6
+TNIAoOEEplN6Bpri8tvSkjaEiBx6Egze
+=a1k6
+-----END PGP SIGNATURE-----
+
+--Sig_/6ncWUit+1ZnqoP_51RzgLY8--
+

@@ -1,0 +1,113 @@
+From users-return-137414-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Sep 30 17:35:45 2014
+Return-Path: <users-return-137414-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 568E117E6B
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 30 Sep 2014 17:35:45 +0000 (UTC)
+Received: (qmail 63205 invoked by uid 500); 30 Sep 2014 17:35:43 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 63119 invoked by uid 500); 30 Sep 2014 17:35:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 63107 invoked by uid 99); 30 Sep 2014 17:35:43 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 30 Sep 2014 17:35:43 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of lhartzman@gmail.com designates 209.85.213.177 as permitted sender)
+Received: from [209.85.213.177] (HELO mail-ig0-f177.google.com) (209.85.213.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 30 Sep 2014 17:35:17 +0000
+Received: by mail-ig0-f177.google.com with SMTP id h3so5997666igd.16
+        for <users@maven.apache.org>; Tue, 30 Sep 2014 10:35:15 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=zVLczlTAsvW7ldqy6ynpzX1/qiv6c8jtZMcHFxslxCE=;
+        b=0EmZF6pSflaIEXzhMn1mq7sdQUXTo4b6ZCiZjEh9Xbuf7CSBAU8+D+2voz3vUUGQ6e
+         sncxSNR0qASSjsYua3oKSaV9tiaf4055mIA6GSZzALcbE5mlyXrzYSNktqPWIyYp5YM4
+         NZY15Iz7DGOKyZeEShpBrNc0b0OT3WVR+4J5u+xbNc9WF0A4F3X+5b0v+fuimVNppMyJ
+         DnTFzJpmo2S2QpaauOdJYAJ1u8rwngNSNDHD4fjeb98111A5uewAexaTHmiKrfi+bS6D
+         KCVurH8CY15xNwsotfpHjXzCYhGm9p4AX/n8CLO7Rz0yefaxVjJ82CoivDU9mtNiHv1G
+         sHUw==
+MIME-Version: 1.0
+X-Received: by 10.43.165.133 with SMTP id mw5mr57747937icc.35.1412098515569;
+ Tue, 30 Sep 2014 10:35:15 -0700 (PDT)
+Received: by 10.107.33.77 with HTTP; Tue, 30 Sep 2014 10:35:15 -0700 (PDT)
+In-Reply-To: <CAKDUN1vd7anOeV1H=hcAC_oA1y+GZ4rrb-p=aZA5jqsJ_yFZXQ@mail.gmail.com>
+References: <CA+Awg+J-ogQKF-D+TWQTVrAq5ib8hhFxAPk-+mOF062Hpr8J0A@mail.gmail.com>
+	<CAKDUN1vd7anOeV1H=hcAC_oA1y+GZ4rrb-p=aZA5jqsJ_yFZXQ@mail.gmail.com>
+Date: Tue, 30 Sep 2014 10:35:15 -0700
+Message-ID: <CA+Awg+L_R0k69Uo2JCWNo0zCV6nde3PVVQE3pWBA72x+K+4W5Q@mail.gmail.com>
+Subject: Re: Can I alter packaging with Maven?
+From: Les Hartzman <lhartzman@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c254c868b86e05044bcefd
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c254c868b86e05044bcefd
+Content-Type: text/plain; charset=UTF-8
+
+Thanks Anders. I'll take a look at Jenkins. Sounds like an interesting
+learning experience.
+
+Les
+
+On Tue, Sep 30, 2014 at 2:33 AM, Anders Hammar <anders@hammar.net> wrote:
+
+> It is possible.
+> One way is to use a generic packaging plugin like the
+> maven-assembly-plugin. If that doesn't fit your desires, or you want a
+> "nicer solution", writting your own plugin is a different way. For example,
+> have a look at the Android Maven Plugin which creates android archives.
+>
+> That being said, the web app you're talking about should be a standard war
+> projekt (which uses the maven-war-plugin to produce the war archive). The
+> desktop app could possibly be a standard jar project. So I don't think you
+> need any special packaging plugins, but your question is rather how to
+> handle these two flavors of your application. Something that you should try
+> to solve, as it will significantly simplify things, is to have only one
+> package/archive. Have a look at how, for example, the Jenkins projekt has
+> solved this. They produce a war file that is possible to deploy to a web
+> container (web app) as well as start from command line (application). When
+> looking at that topic you're in pure Java land and shouldn't worry about
+> Maven.
+> If you need different config files it could be tricky to solve this way
+> though.
+>
+> /Anders
+>
+> On Mon, Sep 29, 2014 at 7:17 PM, Les Hartzman <lhartzman@gmail.com> wrote:
+>
+> > Hi,
+> >
+> > I'm a fairly basic maven user and would like to know if it is possible to
+> > have maven support multiple type of packaging or if I need to look at a
+> > different mechanism.
+> >
+> > What I want to do is to build a JavaFX application that depending on how
+> it
+> > is packaged is either a desktop app or a web app.
+> >
+> > There would potentially be some different configuration files that would
+> > pertain to the different packaging options.
+> >
+> > Can I use maven in this way or does someone know of another means of
+> > accomplishing the same thing?
+> >
+> > Thanks.
+> >
+> > Les
+> >
+>
+
+--001a11c254c868b86e05044bcefd--
+

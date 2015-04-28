@@ -1,0 +1,113 @@
+From users-return-135486-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb 14 12:55:49 2014
+Return-Path: <users-return-135486-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5FA0F104DE
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 14 Feb 2014 12:55:49 +0000 (UTC)
+Received: (qmail 98411 invoked by uid 500); 14 Feb 2014 12:55:44 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 98342 invoked by uid 500); 14 Feb 2014 12:55:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 98317 invoked by uid 99); 14 Feb 2014 12:55:42 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 12:55:42 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.216.176] (HELO mail-qc0-f176.google.com) (209.85.216.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 12:55:36 +0000
+Received: by mail-qc0-f176.google.com with SMTP id e16so19725996qcx.21
+        for <users@maven.apache.org>; Fri, 14 Feb 2014 04:55:15 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=dCr5cWArLtqGuilOSpyunYg4jsEaDZ8G37YQVP3Up5o=;
+        b=A8KWUUQ7K87/ifCBfKMzpoisORCQLU7MlSuDDl9joIwykwBhRIC091A7JmI9tH/i6E
+         /U2SjMCkaYnHa3hRMg8Lo9OV1JciqImyGfa08/J6V6bgX7r7VHUWwR3+M8z+AiJYEiWy
+         1BV81fmP1siBkIBoCsVPmefJcEPy1r7xZwRhc4OcslcS5luKnudEMk0q5UxF7VTWcOO7
+         eTREzuiPbHXKVenREFOZvD84ONIsh5BvFrLPRLJz4v4+D5YYnOx2Z/cjb6FRxqPH7OGi
+         VTAwdVbOv4+vx05uo5ySYe4gOiApeSbZz26121yy8hVXdGHBK1wIxt2nwIpC7He3r0V0
+         o25w==
+X-Gm-Message-State: ALoCoQmF9EvWQnPNqlXYEvtytCuXGtR8wdQZmxPrRUodB2eEJA2eS5aHMa40RcrgR8iwt0zS9iJc
+MIME-Version: 1.0
+X-Received: by 10.140.86.202 with SMTP id p68mr11743038qgd.81.1392382515269;
+ Fri, 14 Feb 2014 04:55:15 -0800 (PST)
+Received: by 10.224.45.8 with HTTP; Fri, 14 Feb 2014 04:55:15 -0800 (PST)
+X-Originating-IP: [92.236.209.108]
+In-Reply-To: <CAArU9iaUDOND2k8pn=_+rGfPp5SGcnQNZuRyJTzes-F=o43a_A@mail.gmail.com>
+References: <CAJj2ksm3Eezswp8dZ-rUcAkaqYL5FbAVZvMcQxqwuph0CGmtxA@mail.gmail.com>
+	<CAArU9iaUDOND2k8pn=_+rGfPp5SGcnQNZuRyJTzes-F=o43a_A@mail.gmail.com>
+Date: Fri, 14 Feb 2014 12:55:15 +0000
+Message-ID: <CAJj2ks=Wk8W=EUnd2trBqgK5cR_Qo+ML-yt-orLd1ds-6k31jg@mail.gmail.com>
+Subject: Re: Maven Site Plugin and report plugins that need dependencies declared
+From: Alex Potsides <alex@achingbrain.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c131b836ff7c04f25d51db
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c131b836ff7c04f25d51db
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Not sure I follow.  Are you saying that if I need to add a dependency to a
+project.build.plugins.plugin.configuration.reportPlugins.plugin I should do
+it at project.build.plugins.plugin instead?  E.g. as an additional
+dependency of the maven-site-plugin itself?  If so, I tried that and was
+unsurprised when it didn't work.  The maven-site-plugin does not appear to
+share it's classpath with child reportPlugins and quite rightly so.
+
+Following Herv=E9's advice I'm now using the older project.reporting.plugin=
+s
+config instead.  However due to
+http://jira.codehaus.org/browse/MSITE-444(unresolved since 2007)
+project.reporting.plugins.plugin can't hold a
+dependencies element so the whole thing is a bust.
+
+a.
+
+
+
+
+On Fri, Feb 14, 2014 at 12:19 PM, jieryn <jieryn@gmail.com> wrote:
+
+> Even though Herv=E9 has given the best answer, I thought I'd chime in
+> and say that The Maven Way would probably have you add the additional
+> dependency at the plugin level, and not the
+> configuration.reportPlugins.plugin level.. So, sorry, but you were
+> wrong twice. :-)
+>
+> On Thu, Feb 13, 2014 at 10:34 AM, Alex Potsides <alex@achingbrain.net>
+> wrote:
+> > <plugin>
+> >   <artifactId>maven-site-plugin</artifactId>
+> >   <version>3.3</version>
+> >   <configuration>
+> >     <reportPlugins>
+> >      <plugin>
+> >        <groupId>..</groupId>
+> >        <artifactId>..</artifactId>
+> >        <version>..</version>
+> >        <dependencies>
+> >          <dependency>
+> >            <artifactId>..</artifactId>
+> >            <groupId>..</groupId>
+> >            ...
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a11c131b836ff7c04f25d51db--
+

@@ -1,0 +1,99 @@
+From users-return-136587-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Jun 15 22:29:59 2014
+Return-Path: <users-return-136587-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9EF2111546
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 15 Jun 2014 22:29:59 +0000 (UTC)
+Received: (qmail 60842 invoked by uid 500); 15 Jun 2014 22:29:57 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 60740 invoked by uid 500); 15 Jun 2014 22:29:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 61192 invoked by uid 99); 15 Jun 2014 12:19:44 -0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+X-ME-Helo: wwinf1g18
+X-ME-Auth: Z291ZXNzZWpAb3JhbmdlLmZy
+X-ME-Date: Sun, 15 Jun 2014 14:19:15 +0200
+X-ME-IP: 82.121.207.221
+Date: Sun, 15 Jun 2014 14:19:15 +0200 (CEST)
+From: gouessej@orange.fr
+Reply-To: gouessej@orange.fr
+To: users@maven.apache.org
+Message-ID: <914700945.5959.1402834755128.JavaMail.www@wwinf1g18>
+Subject: No connector factories available
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Originating-IP: [82.121.207.221]
+X-WUM-FROM: |~|
+X-WUM-TO: |~|
+X-WUM-REPLYTO: |~|
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi
+
+I get the following error message since I upgraded Mageia Linux 4 (but maven-clean-plugin is already installed):
+[ERROR] Plugin org.apache.maven.plugins:maven-clean-plugin:2.5 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-clean-plugin:jar:2.5: Could not transfer artifact org.apache.maven.plugins:maven-clean-plugin:pom:2.5 from/to central (http://repo.maven.apache.org/maven2): No connector factories available -> [Help 1]
+org.apache.maven.plugin.PluginResolutionException: Plugin org.apache.maven.plugins:maven-clean-plugin:2.5 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-clean-plugin:jar:2.5
+at org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolve(DefaultPluginDependenciesResolver.java:122)
+at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getPluginDescriptor(DefaultMavenPluginManager.java:146)
+at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getMojoDescriptor(DefaultMavenPluginManager.java:265)
+at org.apache.maven.plugin.DefaultBuildPluginManager.getMojoDescriptor(DefaultBuildPluginManager.java:190)
+at org.apache.maven.lifecycle.internal.DefaultLifecycleExecutionPlanCalculator.setupMojoExecution(DefaultLifecycleExecutionPlanCalculator.java:157)
+at org.apache.maven.lifecycle.internal.DefaultLifecycleExecutionPlanCalculator.setupMojoExecutions(DefaultLifecycleExecutionPlanCalculator.java:144)
+at org.apache.maven.lifecycle.internal.DefaultLifecycleExecutionPlanCalculator.calculateExecutionPlan(DefaultLifecycleExecutionPlanCalculator.java:121)
+at org.apache.maven.lifecycle.internal.DefaultLifecycleExecutionPlanCalculator.calculateExecutionPlan(DefaultLifecycleExecutionPlanCalculator.java:134)
+at org.apache.maven.lifecycle.internal.BuilderCommon.resolveBuildPlan(BuilderCommon.java:92)
+at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:318)
+at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:153)
+at org.apache.maven.cli.MavenCli.execute(MavenCli.java:555)
+at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:214)
+at org.apache.maven.cli.MavenCli.main(MavenCli.java:158)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:606)
+at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: org.eclipse.aether.resolution.ArtifactDescriptorException: Failed to read artifact descriptor for org.apache.maven.plugins:maven-clean-plugin:jar:2.5
+at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.loadPom(DefaultArtifactDescriptorReader.java:329)
+at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.readArtifactDescriptor(DefaultArtifactDescriptorReader.java:217)
+at org.eclipse.aether.internal.impl.DefaultRepositorySystem.readArtifactDescriptor(DefaultRepositorySystem.java:288)
+at org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolve(DefaultPluginDependenciesResolver.java:108)
+... 25 more
+Caused by: org.eclipse.aether.resolution.ArtifactResolutionException: Could not transfer artifact org.apache.maven.plugins:maven-clean-plugin:pom:2.5 from/to central (http://repo.maven.apache.org/maven2): No connector factories available
+at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:460)
+at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:262)
+at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:239)
+at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.loadPom(DefaultArtifactDescriptorReader.java:314)
+... 28 more
+Caused by: org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact org.apache.maven.plugins:maven-clean-plugin:pom:2.5 from/to central (http://repo.maven.apache.org/maven2): No connector factories available
+at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:547)
+at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:437)
+... 31 more
+Caused by: org.eclipse.aether.transfer.NoRepositoryConnectorException: No connector factories available
+at org.eclipse.aether.internal.impl.DefaultRepositoryConnectorProvider.newRepositoryConnector(DefaultRepositoryConnectorProvider.java:208)
+at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:532)
+... 32 more
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

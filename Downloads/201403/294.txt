@@ -1,0 +1,89 @@
+From users-return-135940-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 26 04:08:33 2014
+Return-Path: <users-return-135940-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9CE08104ED
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Mar 2014 04:08:33 +0000 (UTC)
+Received: (qmail 13810 invoked by uid 500); 26 Mar 2014 04:08:29 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 13484 invoked by uid 500); 26 Mar 2014 04:08:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 13462 invoked by uid 99); 26 Mar 2014 04:08:26 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Mar 2014 04:08:26 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.160.176 as permitted sender)
+Received: from [209.85.160.176] (HELO mail-yk0-f176.google.com) (209.85.160.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Mar 2014 04:08:19 +0000
+Received: by mail-yk0-f176.google.com with SMTP id 19so163745ykq.35
+        for <users@maven.apache.org>; Tue, 25 Mar 2014 21:07:58 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type:content-transfer-encoding;
+        bh=AAj4NQNRtuBWNDqRQPHf4PfA+xQy1eGMKvxW7474lxs=;
+        b=GR81ANjK+diQ7Lt6raa1K5RPL1TOGzmcyYWoADK3TpmNd3f1f7RIoh4R3OJK2V0Voj
+         do/Jmf7/Ze51M/BcRE6UhAE9gMEiXkZu9/EzIZQueZf+7a7wriKxzwcA1/W6eXpPBkIb
+         9CYLfSMEq5j35EkTiq9yUjznObflWgR+MmOHFiPxivlOn5b2rxeMkbqxM4FhgANKwIRv
+         qvHb6P36l09R1INoDidBnu1jdFBLZ22gTqbaKADXdOBJbCuwa5QfqwYjY6AoBovZMwwV
+         /3P2UrjqTlI90tV3URBPLHh09ToLgARHqvPcixi6lLSgO8olQqMQH3jXxaWXPx+ZDeN/
+         FQvQ==
+X-Received: by 10.236.85.134 with SMTP id u6mr104626613yhe.8.1395806878326;
+        Tue, 25 Mar 2014 21:07:58 -0700 (PDT)
+Received: from [192.168.0.17] (S0106602ad07f9cfa.vc.shawcable.net. [24.85.131.20])
+        by mx.google.com with ESMTPSA id y9sm32148721yhc.40.2014.03.25.21.07.56
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Tue, 25 Mar 2014 21:07:57 -0700 (PDT)
+Message-ID: <5332529F.7050709@gmail.com>
+Date: Tue, 25 Mar 2014 21:07:59 -0700
+From: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Forcing Integration Tests Before a Release
+References: <532B4246.9050606@gmail.com>	<CAK8jvqxqOQS34dbfjxsJFv4E17bAddK3zKww6syckRPwOv6z6Q@mail.gmail.com>	<532C9CCE.70404@gmail.com>	<5331EF6E.1070106@gmail.com> <CAK8jvqzV4GUD6ciPEz=FRgUgMa54bf9dy6HLjVM_ZWqCwXKuVg@mail.gmail.com>
+In-Reply-To: <CAK8jvqzV4GUD6ciPEz=FRgUgMa54bf9dy6HLjVM_ZWqCwXKuVg@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Ahhh, actually adding "-P run-it" to the preparationGoals parameter does 
+exactly what I want, and I can dispense with all the other complexities.
+
+I did not realize I could add other arguments to the preparationGoals 
+parameter.
+
+Sometimes getting what you want from Maven is not obvious, until you get 
+it working :-)
+
+Thanks so much for the key Mirko
+
+Cheers, Eric
+
+
+On 3/25/2014 3:26 PM, Mirko Friedenhagen wrote:
+> Eric,
+>
+> you might modify the preparationGoals parameter to include
+> -DperformRelease=true.
+>
+> Regards
+> Mirko
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

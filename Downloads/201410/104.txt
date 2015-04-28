@@ -1,0 +1,91 @@
+From users-return-137607-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Oct 21 00:17:01 2014
+Return-Path: <users-return-137607-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A080E17C32
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 21 Oct 2014 00:17:01 +0000 (UTC)
+Received: (qmail 82088 invoked by uid 500); 21 Oct 2014 00:17:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 82000 invoked by uid 500); 21 Oct 2014 00:17:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 81989 invoked by uid 99); 21 Oct 2014 00:16:59 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 21 Oct 2014 00:16:59 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [209.85.216.181] (HELO mail-qc0-f181.google.com) (209.85.216.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 21 Oct 2014 00:16:34 +0000
+Received: by mail-qc0-f181.google.com with SMTP id r5so100905qcx.26
+        for <users@maven.apache.org>; Mon, 20 Oct 2014 17:16:33 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:subject:message-id:in-reply-to
+         :references:mime-version:content-type:content-transfer-encoding;
+        bh=3L1PUGnNakhEIkyq2MJ5BLsmGbKPm95NMmMNPhcEA3s=;
+        b=XGMmKyh2O1dzfv7Q9myrWZQPT1W0Py2py+kbrrNEZFA6L97tTB6QoiLaus8OwNXp9B
+         /OeRuwQGqejVlBufihx8tSJeX6yPFrmYSbMXUg/wl0qAuP4Np2XXdKHk9VMh6UGqI/ZO
+         KfES57828zt2gitXBsDDiw+9T8/L6IE1gTkRcpJW6SbDhJfFOJ4GjYRt9HdypR9in7Bu
+         rtuEEAU0pmdP1HCLsGC5eyzcLwTLlglfZEYu8/qRoCwSfM3kxURu8gEWDlg/frdJdQxa
+         wOMsC4dZJsUpLRkhqiDNMrjKNrXYduT+zyw8zUZ3ecMzYn5LljxiqxIAvvgPDkvKbRLc
+         /rpA==
+X-Gm-Message-State: ALoCoQlT0qwbiW3RsLHRxzmOu+i1b/XnjDS/DL9whsrdxWJknHlhESyarjjDzN+si6OPeR1kHfNI
+X-Received: by 10.224.161.139 with SMTP id r11mr40117314qax.34.1413850593259;
+        Mon, 20 Oct 2014 17:16:33 -0700 (PDT)
+Received: from localhost (HSI-KBW-109-193-068-033.hsi7.kabel-badenwuerttemberg.de. [109.193.68.33])
+        by mx.google.com with ESMTPSA id 8sm9306090qab.12.2014.10.20.17.16.32
+        for <users@maven.apache.org>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 20 Oct 2014 17:16:33 -0700 (PDT)
+Date: Tue, 21 Oct 2014 02:16:28 +0200
+From: Bernd Eckenfels <ecki@zusammenkunft.net>
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Company-wide checkstyle.xml ?
+Message-ID: <20141021021628.0000403a.ecki@zusammenkunft.net>
+In-Reply-To: <B0E50B9B-085F-488B-AC8A-7952451912BA@takari.io>
+References: <CAMH6+azzBnmEt7Vr8pf+DrnfwzE_k8hBgY6LaCdY_BjiHwTCWg@mail.gmail.com>
+	<B0E50B9B-085F-488B-AC8A-7952451912BA@takari.io>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Am Mon, 20 Oct 2014 11:47:05 -0400
+schrieb Jason van Zyl <jason@takari.io>:
+
+> The best mechanism I have seen to date for sharing configuration
+> amongst many projects is the Airbase POM in the Airlift project that
+> was developed by Henning (I've cc'd him).
+
+It seems that the project is well documented in the readme on Github:
+
+https://github.com/airlift/airbase/blob/master/pom.xml
+
+However what I see there:
+
+- the LICENSE-HEADER.txt template can be shared with modules (each
+  module must define air.main.basedir of its project parent.
+
+- PMD is confiuged only with PMD shipped rulesets
+  (/rulesets/java/basic.xml...). I guess this is from the PMD plugin.
+  So custom rules would require a new plugin?
+
+So not sure if any of those fix the problem. I suspect packaing the
+rules up in a plugin dependency might work (as long as they have their
+own parent).
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

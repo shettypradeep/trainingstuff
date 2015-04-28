@@ -1,0 +1,80 @@
+From users-return-137555-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Oct 13 21:03:52 2014
+Return-Path: <users-return-137555-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3F5D917828
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 13 Oct 2014 21:03:52 +0000 (UTC)
+Received: (qmail 28525 invoked by uid 500); 13 Oct 2014 21:03:49 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 28443 invoked by uid 500); 13 Oct 2014 21:03:49 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 28432 invoked by uid 99); 13 Oct 2014 21:03:49 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 13 Oct 2014 21:03:49 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.216.174] (HELO mail-qc0-f174.google.com) (209.85.216.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 13 Oct 2014 21:03:43 +0000
+Received: by mail-qc0-f174.google.com with SMTP id m20so5629821qcx.19
+        for <users@maven.apache.org>; Mon, 13 Oct 2014 14:03:21 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:message-id:date:from:user-agent:mime-version:to
+         :subject:content-type:content-transfer-encoding;
+        bh=gHRG3vG66l69vndGhDlH5lVyHBXOVFsREqCGpUg/xAw=;
+        b=KKDpwr2KFcC2pfSqPCCNxZETLIEZ7ELxLM0m25F0bUM/6n+u6b0CHW2It+ZBrQLSyd
+         7O7z8omUy2VfQ8lrroxdK9etmk9TS7DnsvDA129JTFNHf/h64OPUChd3sMQmduHaJxX0
+         jZZuN6BrEytft+8uqdsH9URqQuaVs2ggnOBJBN+CN1sAZBijn1KNNbv4o5F9vbTs11Zf
+         3a+GhF7ORgni3OtU2T0NjHjcGBga3KV+unM0GrF+m4YcntnAptSF4+F+BC1O/wjS14yN
+         eBpF2Gq2JqSc0FXjf9JQJfHX1t6IDZeI4mMzcxr3KqVGWcjhILeXlqJ+xjMoI1AEE/gk
+         zBuQ==
+X-Gm-Message-State: ALoCoQkDbvVu0kXFX6+qdDO+3Je2sAl4ixHYN34HzIJxglrJP7vg2Cfe+vZhtBIibHptOYphIab7
+X-Received: by 10.140.34.202 with SMTP id l68mr494763qgl.99.1413234201150;
+        Mon, 13 Oct 2014 14:03:21 -0700 (PDT)
+Received: from [192.168.16.243] (kuropkat.com. [70.182.188.182])
+        by mx.google.com with ESMTPSA id i33sm13757942qgd.8.2014.10.13.14.03.19
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Mon, 13 Oct 2014 14:03:20 -0700 (PDT)
+Message-ID: <543C3E28.5050609@t-sciences.com>
+Date: Mon, 13 Oct 2014 17:03:36 -0400
+From: Robert Kuropkat <rkuropkat@t-sciences.com>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Cleaning up a site:stage directory
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+
+Is there a commonly accepted way to clean up the local site staging 
+directory in a multi-module build?  As best I can tell, running a 'clean 
+compile site:site site:stage' on a project with a staging directory of 
+say ${basedir}/staging means the staging directory is difficult to 
+manage because maven runs the above goals on each module and then runs 
+them on the aggregator pom.  So basically, each module wipes out the 
+site files of the previous module.
+
+I could just modify the maven-clean-plugin on the first module to run to 
+have it clean out the staging directory, but that seems chunky...
+
+Robert Kuropkat
+
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

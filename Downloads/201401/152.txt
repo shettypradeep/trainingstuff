@@ -1,0 +1,75 @@
+From users-return-134966-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan  6 12:41:12 2014
+Return-Path: <users-return-134966-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 23EEB109FE
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  6 Jan 2014 12:41:12 +0000 (UTC)
+Received: (qmail 84805 invoked by uid 500); 6 Jan 2014 12:41:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 84743 invoked by uid 500); 6 Jan 2014 12:40:51 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 84710 invoked by uid 99); 6 Jan 2014 12:40:41 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 12:40:41 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of omarnetbox@googlemail.com designates 209.85.216.51 as permitted sender)
+Received: from [209.85.216.51] (HELO mail-qa0-f51.google.com) (209.85.216.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 12:40:36 +0000
+Received: by mail-qa0-f51.google.com with SMTP id o15so2891338qap.10
+        for <users@maven.apache.org>; Mon, 06 Jan 2014 04:40:15 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlemail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=vKgzxOfVUmzVNRQuMsNC/o9+yfHYBrNWH/PcqXUnAYU=;
+        b=Hq9Pys0uV/JnCQFxLaIyz+J3yJ5llL7zt+XWYdjNswQ84y0qH/tOuHrLjMbbbGUle1
+         TLES57uS7Hdy0ETs3MovTnqkLRZKxBKXfop87rpwh/vLSd/ZadYE+3GSWHuDZftM6XMc
+         kF6uFk/K+0DFew8UPH41woEBX8EiQnuI72UxmJM38x9hGN2yCcaLjY9AKAGSX0ApXmP+
+         mwOCqU06u0d9cxOkUhITBl6uOAMU/7HiGAZAegkNZhPlE8vTni8X4MfmnMOC6o49mcLc
+         oTmHnU2p/7ePN1qw7GNxK8AL2wRe2aeFp32lXS72leGP+iDK8+79/Tpfu9F6tX9qwx9/
+         2alQ==
+MIME-Version: 1.0
+X-Received: by 10.224.123.15 with SMTP id n15mr166198725qar.78.1389012015451;
+ Mon, 06 Jan 2014 04:40:15 -0800 (PST)
+Received: by 10.229.51.135 with HTTP; Mon, 6 Jan 2014 04:40:15 -0800 (PST)
+Date: Mon, 6 Jan 2014 12:40:15 +0000
+Message-ID: <CAG-F_6nCsZ_OH2m244JWYgNppU4eOB78K+X_tAk9X4wwOc2ftQ@mail.gmail.com>
+Subject: Using Plugin Truncated Name
+From: "Omar@Gmail" <omarnetbox@googlemail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0149cf80c5123a04ef4c8fa3
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0149cf80c5123a04ef4c8fa3
+Content-Type: text/plain; charset=ISO-8859-1
+
+I have written my own maven mojo plugin and wish to use the truncated name
+instead of the long name to invoke it, like so:
+
+Instead of
+mvn org.apache.maven.plugins:maven-pce-plugin:pull
+
+I want use:
+
+mvn pce:pull
+
+But even though I put it under group 'org.apache.maven.plugins' and named
+it maven-pce-plugin I still get error message:
+No plugin found for prefix 'pce' in the current project and in the plugin
+groups [*org.apache.maven.plugins*, org.codehaus.mojo] available from the
+repositories [local (C:\Users\omar\.m2\repository), central (
+http://repo.maven.apache.org/maven2)]
+
+What am I doing wrong? thanks for the help.
+
+--089e0149cf80c5123a04ef4c8fa3--
+

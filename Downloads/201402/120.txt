@@ -1,0 +1,119 @@
+From users-return-135564-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 19 00:12:01 2014
+Return-Path: <users-return-135564-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 746481010F
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 19 Feb 2014 00:12:01 +0000 (UTC)
+Received: (qmail 46652 invoked by uid 500); 19 Feb 2014 00:11:57 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 46481 invoked by uid 500); 19 Feb 2014 00:11:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 46472 invoked by uid 99); 19 Feb 2014 00:11:57 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Feb 2014 00:11:57 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Feb 2014 00:11:51 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id AD9236A76F2
+	for <users@maven.apache.org>; Tue, 18 Feb 2014 19:11:30 -0500 (EST)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 9a5YlQ4p2OPH for <users@maven.apache.org>;
+	Tue, 18 Feb 2014 19:11:21 -0500 (EST)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 834486A76F1
+	for <users@maven.apache.org>; Tue, 18 Feb 2014 19:11:21 -0500 (EST)
+Message-ID: <5303F6A7.9060403@artifact-software.com>
+Date: Tue, 18 Feb 2014 19:11:19 -0500
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: Maven Users List <users@maven.apache.org>
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: OutOfMemory exception when using Maven in ant
+References: <bb4611e8-1cd1-4712-a2aa-6f3a88296f19@default>
+In-Reply-To: <bb4611e8-1cd1-4712-a2aa-6f3a88296f19@default>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+This looks like an ant problem.
+You could try to increase the memory defaults in your Java VM.
+Make them really big and then pare them down if you feel the need to be 
+precise (No value in that technically).
+
+Ron
+
+On 18/02/2014 5:06 PM, Ron Bets wrote:
+> Hi there,
+>
+>   
+>
+> I am trying to incorporate Maven dependency management into my ant build as follows:
+>
+>   
+>
+>          <artifact:dependencies pathId="my.dependencies.class.path">
+>
+>              <dependency groupId="org.lib"
+>
+>                          artifactId="libtools"
+>
+>                          version="1.1.1"/>
+>
+>              <dependency groupId=" org.lib "
+>
+>                          artifactId="otherlib"
+>
+>                          version="1.1.1"/>
+>
+>              <remoteRepository refid="archiva.repository"/>
+>
+>          </artifact:dependencies>
+>
+>   
+>
+> When I do a clean build, i.e. 'ant clean my-target', I get the following exception:
+>
+> java.lang.OutOfMemoryError: PermGen space
+>
+>   
+>
+> Can someone help explain what is going on here and how I might mitigate this problem?  Once I have this working for the first classpath, I plan to change all my classpaths to use the repository, but this looks like a bit of a show-stopper.
+>
+>   
+>
+> Thanks in advance,
+>
+> Ron
+>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

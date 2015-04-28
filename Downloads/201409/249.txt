@@ -1,0 +1,164 @@
+From users-return-137331-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Sep 20 03:17:23 2014
+Return-Path: <users-return-137331-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7622611E92
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 20 Sep 2014 03:17:23 +0000 (UTC)
+Received: (qmail 677 invoked by uid 500); 20 Sep 2014 03:17:21 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 593 invoked by uid 500); 20 Sep 2014 03:17:21 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99691 invoked by uid 99); 20 Sep 2014 03:17:21 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 20 Sep 2014 03:17:21 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of grover.blue@gmail.com designates 209.85.216.173 as permitted sender)
+Received: from [209.85.216.173] (HELO mail-qc0-f173.google.com) (209.85.216.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 20 Sep 2014 03:16:54 +0000
+Received: by mail-qc0-f173.google.com with SMTP id i8so4085254qcq.4
+        for <users@maven.apache.org>; Fri, 19 Sep 2014 20:16:53 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=m7gz0fLMk8bkZ/QKuuPXxuMUXkKgisKdnQjnz8lIZjc=;
+        b=hJgPV9ejGhEpzT/DF1JiBBFUMGAD65AtGrGVzSVAWhDXeAKCXNsg7FLFaNZba5uybj
+         TINs3Ctxmnuot7yU1XRyf4+LS1HZ+qGfTMsZWZBYpmNXgAQAVS7yoY/mnfoeURazE7ZZ
+         /E4DeWGe0ygJVRzZWzie2Jhhgpsu14a9qUyXN6gNjAiWd1czQjggUeZkJNdpb09hznGo
+         e6sjL/6s5ylqEVDjNE9Jtf6e5REMk1OjGGHgLIu69B/ZsCON8pCfK7gRdB0vcDuJWvbL
+         n+glbhvC39Q2WjEtXkzCOGipmpa7HyaoqMRrkUPio+jKQJKbQiq5YkvHJCKq307q7O64
+         uFXw==
+MIME-Version: 1.0
+X-Received: by 10.140.95.237 with SMTP id i100mr6644625qge.6.1411183013303;
+ Fri, 19 Sep 2014 20:16:53 -0700 (PDT)
+Received: by 10.140.23.148 with HTTP; Fri, 19 Sep 2014 20:16:53 -0700 (PDT)
+Date: Fri, 19 Sep 2014 23:16:53 -0400
+Message-ID: <CAKuK4uE9D1bRtgMdvdSj255uVZgBLstirBVuM1jY1dUqeDOO2w@mail.gmail.com>
+Subject: Replacing token in WAR web.xml from EAR pom.xml
+From: Grover Blue <grover.blue@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a11c163c4389bed050376a698
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c163c4389bed050376a698
+Content-Type: text/plain; charset=UTF-8
+
+Hello,  I'm new to maven, and trying to navigate all the plugins and
+syntax.  Forgive me if this has been asked previously, but I can't seem to
+things to work.
+
+I have a root/parent project that contains several EAR projects, all which
+use the same WAR project.  I need to customize the contents of web.xml for
+each EAR build/package.  I'm not clear on the steps to do this.  I tried
+copying my ANT script over to the pom, but even though I could update the
+copied web.war, it never carries over to the final *.ear package.
+
+Here is what I'm attempting (shortcut.targetFull and realmName are defined
+properties in this pom):
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.7</version>
+                <executions>
+
+
+
+
+
+*<execution>
+<id>rename-realm</id>
+<phase></phase>
+<configuration>
+<target>                                <unzip
+src="${shortcut.targetFull}/web-${project.version}.war" dest="${*
+*shortcut.targetFull}/web"/>                                <replace
+file="${*
+*shortcut.targetFull}/web/WEB-INF/web.xml" token="@REALM_NAME@"
+value="${realmName}"/>                                <delete file="${*
+*shortcut.targetFull}/web-${project.version}.war"/>
+<zip destfile="${**shortcut.targetFull}/web-${project.version}.war"
+basedir="${*
+*shortcut.targetFull}/web" />                                <delete
+dir="${*
+
+
+
+
+
+*shortcut.targetFull}/web" />
+</target>                        </configuration>
+<goals>
+<goal>run</goal>
+</goals>                    </execution>*
+                    <execution>
+                        <id>rename-package</id>
+                        <phase></phase>
+                        <configuration>
+                            <target>
+                                <tstamp>
+                                    <format property="TODAY_BUILD"
+pattern="yyyyMMdd-HHmmss"  locale="en,US"/>
+                                </tstamp>
+                                <copy
+file="${project.build.directory}/${project.build.finalName}.ear"
+tofile="${project.build.directory}/${project.name
+}-${project.version}-${TODAY_BUILD}.ear"/>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>2.9</version>
+                <configuration>
+                    <version>6</version>
+                    <defaultLibBundleDir>lib</defaultLibBundleDir>
+                    <displayName>myweb</displayName>
+                    <initializeInOrder>true</initializeInOrder>
+                    <modules>
+                        <jarModule>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>lib1</artifactId>
+
+<includeInApplicationXml>false</includeInApplicationXml>
+                        </jarModule>
+                        <ejbModule>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>ejb1</artifactId>
+                        </ejbModule>
+                        <webModule>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>web</artifactId>
+                            <contextRoot>/myweb</contextRoot>
+                        </webModule>
+                    </modules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+--001a11c163c4389bed050376a698--
+

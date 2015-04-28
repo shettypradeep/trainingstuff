@@ -1,0 +1,68 @@
+From users-return-137144-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Aug 28 15:00:17 2014
+Return-Path: <users-return-137144-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C0D1711162
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 28 Aug 2014 15:00:17 +0000 (UTC)
+Received: (qmail 30624 invoked by uid 500); 28 Aug 2014 15:00:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 30545 invoked by uid 500); 28 Aug 2014 15:00:09 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 30532 invoked by uid 99); 28 Aug 2014 15:00:08 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 28 Aug 2014 15:00:08 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.220.50 as permitted sender)
+Received: from [209.85.220.50] (HELO mail-pa0-f50.google.com) (209.85.220.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 28 Aug 2014 14:59:42 +0000
+Received: by mail-pa0-f50.google.com with SMTP id kq14so2847803pab.23
+        for <users@maven.apache.org>; Thu, 28 Aug 2014 07:59:39 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=17J+ZdSC+HFHXuK232QmKTWEBiJRDD5a9ad8/CXOZ4I=;
+        b=byxknIq+4/KnOqkANWCkQdkuJMQYshX042YXKiBf8kS42SUStA/x65fX+wg8E+r87E
+         wJLsNUEY0sskU9u0w2cHfA11iIzwOmgYxNUdMWHPaJNw43HCcndcjPvc3ELuF2m4pIdi
+         hsIgAkKMSdcF2qDzUkXxOB0uoZFbectBGNEv2LS36v5O0tOB8+zGtP29kND7SYJ1r3nE
+         0lq9kxICT85AK+7XFFaTYQh10bMg0ly2lRZ70w7b9GXJSU8M8w+qfFiPejalCKGa99FH
+         BDUCKJ6Blc2D5grgD+kvfPQAH4msT1ei2rHmgUC7le7hyXvMIR8z0wnUXCQ2Bhf9OEkH
+         Ug7A==
+X-Received: by 10.68.106.66 with SMTP id gs2mr6482233pbb.141.1409237978170;
+ Thu, 28 Aug 2014 07:59:38 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.66.147.131 with HTTP; Thu, 28 Aug 2014 07:59:18 -0700 (PDT)
+In-Reply-To: <1409036826733-5802952.post@n5.nabble.com>
+References: <1409036826733-5802952.post@n5.nabble.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Thu, 28 Aug 2014 09:59:18 -0500
+Message-ID: <CALy+7UmN_66DQF-dJY4ULCcioJCOtHmH3vN0jd5KoHKNX_cYFQ@mail.gmail.com>
+Subject: Re: how to access properties defined in other module pom in maven
+ multimodule project
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> n pom of A.B.C i have defined a property as abc where A B C are modules. Now
+> i want to access that property in pom of A.D.F module
+
+What does the parent > child > grandchild relationship look like
+between these various modules? What you want may not be possible.
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

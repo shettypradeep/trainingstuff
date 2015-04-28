@@ -1,0 +1,83 @@
+From users-return-137018-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Aug 14 07:44:38 2014
+Return-Path: <users-return-137018-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0D7CC1118C
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 14 Aug 2014 07:44:38 +0000 (UTC)
+Received: (qmail 45559 invoked by uid 500); 14 Aug 2014 07:44:35 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 45479 invoked by uid 500); 14 Aug 2014 07:44:35 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 45464 invoked by uid 99); 14 Aug 2014 07:44:35 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 14 Aug 2014 07:44:35 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [88.116.248.50] (HELO sartre.xss.co.at) (88.116.248.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 14 Aug 2014 07:44:31 +0000
+Received: from goethe.intern.xss.co.at (goethe.intern.xss.co.at [192.168.162.10])
+	by sartre.xss.co.at (8.14.3/8.14.3) with ESMTP id s7E7i9Bk022411
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK)
+	for <users@maven.apache.org>; Thu, 14 Aug 2014 09:44:09 +0200
+Received: from linux-du93.site ([10.168.162.10])
+	by goethe.intern.xss.co.at (8.13.8/8.13.8) with ESMTP id s7E7i8wA018595
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES128-SHA bits=128 verify=NO)
+	for <users@maven.apache.org>; Thu, 14 Aug 2014 09:44:09 +0200
+Date: Thu, 14 Aug 2014 09:44:02 +0200
+From: Martin Hoeller <martin@xss.co.at>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Testing Maven 3.2.3
+Message-ID: <20140814094402.3c00775c@linux-du93.site>
+In-Reply-To: <CAG9vi9UxT3GZs+z0PP4tOw1_rTqSy=XkKM7EWC4U898=YWYhdA@mail.gmail.com>
+References: <6BF365F5-3D65-4592-B407-2DFE1D5D1436@takari.io>
+	<A81A759E-1608-4CD3-BC0C-34A86B72C48B@maven.org>
+	<55BBB074DE5248439192BCB13699A45651E26B7D@MSGEXSV21111.ent.wfb.bank.corp>
+	<CAG9vi9UxT3GZs+z0PP4tOw1_rTqSy=XkKM7EWC4U898=YWYhdA@mail.gmail.com>
+X-Mailer: Claws Mail 3.7.10 (GTK+ 2.24.7; x86_64-suse-linux-gnu)
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=PGP-SHA1;
+ boundary="Sig_/+bm3jo/UC+fhvmWKZO0xuoD"; protocol="application/pgp-signature"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Sig_/+bm3jo/UC+fhvmWKZO0xuoD
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: quoted-printable
+
+On 13 Aug 2014, Hilton Wichwski Silva wrote:
+
+> Example:
+> http://blog.ontoillogical.com/blog/2014/07/28/how-to-take-over-any-java-d=
+eveloper/
+
+Just to let you know: there is already a plugin available to verify
+signatures as described in this StackOverflow answer:
+http://stackoverflow.com/questions/6565084/maven-verify-signatures-of-downl=
+oaded-pom-jar-files/25302527#25302527
+
+hth,
+- martin
+
+--Sig_/+bm3jo/UC+fhvmWKZO0xuoD
+Content-Type: application/pgp-signature; name=signature.asc
+Content-Disposition: attachment; filename=signature.asc
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.18 (GNU/Linux)
+
+iEYEARECAAYFAlPsaMcACgkQYJf22JPx7tl7KQCg139W1o+3uRWPwkmm6BBEIiLa
+lGwAoJOfLDhna6Rv+ScrofMUe6xZZe7/
+=ebsm
+-----END PGP SIGNATURE-----
+
+--Sig_/+bm3jo/UC+fhvmWKZO0xuoD--
+

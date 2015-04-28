@@ -1,0 +1,73 @@
+From users-return-136561-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jun 12 07:14:38 2014
+Return-Path: <users-return-136561-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 24BAE11E8B
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 12 Jun 2014 07:14:38 +0000 (UTC)
+Received: (qmail 62384 invoked by uid 500); 12 Jun 2014 07:14:36 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 62302 invoked by uid 500); 12 Jun 2014 07:14:35 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 62292 invoked by uid 99); 12 Jun 2014 07:14:35 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 12 Jun 2014 07:14:35 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [130.83.156.249] (HELO lnx503.hrz.tu-darmstadt.de) (130.83.156.249)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 12 Jun 2014 07:14:29 +0000
+Received: from MX01.rbg.informatik.tu-darmstadt.de (mx01.rbg.informatik.tu-darmstadt.de [130.83.160.43])
+	by lnx503.hrz.tu-darmstadt.de (8.14.4/8.14.4/HRZ/PMX) with ESMTP id s5C7E7ka004019
+	for <users@maven.apache.org>; Thu, 12 Jun 2014 09:14:07 +0200
+	(envelope-from sewe@st.informatik.tu-darmstadt.de)
+Received: from andreass-mbp-2.fritz.box (unknown [82.195.74.145])
+	(using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	(Authenticated sender: sewe)
+	by MX01.rbg.informatik.tu-darmstadt.de (Postfix) with ESMTPSA id EFB1AFE4E
+	for <users@maven.apache.org>; Thu, 12 Jun 2014 09:14:06 +0200 (CEST)
+Message-ID: <5399533E.3040401@st.informatik.tu-darmstadt.de>
+Date: Thu, 12 Jun 2014 09:14:06 +0200
+From: Andreas Sewe <sewe@st.informatik.tu-darmstadt.de>
+Organization: Software Technology Group, TU Darmstadt
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Breadcrumb inheritance in site.xml
+References: <CALhtWkcJvzC0xg9X9vMj-td7yiCXf7K6-akkzO5Hk_jNq_CnfQ@mail.gmail.com> <53993E9F.6000300@gmail.com>
+In-Reply-To: <53993E9F.6000300@gmail.com>
+X-Enigmail-Version: 1.6
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-PMX-TU: seen v1.2 by 5.6.1.2065439, Antispam-Engine: 2.7.2.376379, Antispam-Data: 2014.6.12.70918
+X-PMX-RELAY: outgoing
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+> that wasn't possible during my time of activity, not sure if anything
+> changed since:
+> http://mail-archives.apache.org/mod_mbox/maven-users/201104.mbox/%3C4DA464C8.2060707@apache.org%3E
+
+yes, <https://jira.codehaus.org/browse/MSITE-582> got fixed and I have
+used the fix successfully in one of my projects.
+
+Best wishes,
+
+Andreas
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

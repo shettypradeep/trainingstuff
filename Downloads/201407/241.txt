@@ -1,0 +1,95 @@
+From users-return-136857-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jul 23 16:17:11 2014
+Return-Path: <users-return-136857-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CFA1C10B63
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 23 Jul 2014 16:17:11 +0000 (UTC)
+Received: (qmail 72998 invoked by uid 500); 23 Jul 2014 16:17:10 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 72917 invoked by uid 500); 23 Jul 2014 16:17:10 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 72894 invoked by uid 99); 23 Jul 2014 16:17:09 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 23 Jul 2014 16:17:09 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.217.173 as permitted sender)
+Received: from [209.85.217.173] (HELO mail-lb0-f173.google.com) (209.85.217.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 23 Jul 2014 16:17:07 +0000
+Received: by mail-lb0-f173.google.com with SMTP id p9so1092495lbv.4
+        for <users@maven.apache.org>; Wed, 23 Jul 2014 09:16:43 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=XV5GhNBFFSVFm806el9mpUdI6m+H8U6LNDsBQDsS0e0=;
+        b=x6zKevMhAzIYpsCY5CbJDvCH3tgUAt+eb5KZcInr9xGf9LnwkEQW1FeS317VuAoqv/
+         EFF/X8fSQRZ7OeBcvvtj4kkfYq+9aR24sk+jjjyMD2Mh4wKo1GHHim4LXTbSPtFg3Fq/
+         OIFdpDj0cDIDdpNQ5sXLUAO2EuyUvEmjWy+alPjkEOcfzbTrXey70jl0ukUU2FJ2yYwj
+         zAa/1H7l3g/+tHZmnxm6YBKWR3UpuhssYJ7sOzwLrGrZWX9wJOu0xpGXOqnt6Jc1OZkY
+         O/rtoAD2OLDQGBbPAZhkDE9I5S7zCwwhPjMOEI5FrEHAMAs1b0GmAPz15SUmLpF6WUSm
+         N4Ww==
+MIME-Version: 1.0
+X-Received: by 10.152.29.200 with SMTP id m8mr2921061lah.4.1406132203335; Wed,
+ 23 Jul 2014 09:16:43 -0700 (PDT)
+Received: by 10.114.122.194 with HTTP; Wed, 23 Jul 2014 09:16:43 -0700 (PDT)
+In-Reply-To: <7E5CC1E7-4E23-4DE0-B564-591A28E27F5B@fortysix.ch>
+References: <1406106759215-5800870.post@n5.nabble.com>
+	<7E5CC1E7-4E23-4DE0-B564-591A28E27F5B@fortysix.ch>
+Date: Wed, 23 Jul 2014 09:16:43 -0700
+Message-ID: <CAPCjjnHg76siCX3wnk9x1+2dfQTvMVusuANDT9m9RbWZT16gZw@mail.gmail.com>
+Subject: Re: How to use maven-scm-provider-jgit
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0158c29c7cb54c04fedeaa27
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0158c29c7cb54c04fedeaa27
+Content-Type: text/plain; charset=UTF-8
+
+the scm url prefix for git is scm:git,   for jgit, the prefix is scm:jgit
+
+
+On Wed, Jul 23, 2014 at 9:07 AM, domi@fortysix.ch <domi@fortysix.ch> wrote:
+
+> This should help you:
+>
+> http://maven.apache.org/scm/maven-scm-providers/maven-scm-providers-git/maven-scm-provider-jgit/
+> Domi
+>
+> On 23 Jul 2014, at 11:12, hisamith <hisamith@gmail.com> wrote:
+>
+> > I want to use maven-scm with jgit. I searched but I couldn't find any
+> > documentation on that. could you please direct me to any documentation or
+> > implementation on how to use maven-scm with jgit.
+> >
+> >
+> >
+> > --
+> > View this message in context:
+> http://maven.40175.n5.nabble.com/How-to-use-maven-scm-provider-jgit-tp5800870.html
+> > Sent from the Maven - Users mailing list archive at Nabble.com.
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--089e0158c29c7cb54c04fedeaa27--
+

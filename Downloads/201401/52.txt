@@ -1,0 +1,181 @@
+From users-return-134891-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan  2 19:07:26 2014
+Return-Path: <users-return-134891-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 35B7810CAD
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  2 Jan 2014 19:07:26 +0000 (UTC)
+Received: (qmail 10778 invoked by uid 500); 2 Jan 2014 19:07:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 10284 invoked by uid 500); 2 Jan 2014 19:07:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 10268 invoked by uid 99); 2 Jan 2014 19:07:23 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Jan 2014 19:07:23 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.220.52 as permitted sender)
+Received: from [209.85.220.52] (HELO mail-pa0-f52.google.com) (209.85.220.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Jan 2014 19:07:17 +0000
+Received: by mail-pa0-f52.google.com with SMTP id ld10so14921267pab.39
+        for <multiple recipients>; Thu, 02 Jan 2014 11:06:56 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=USDAs5bG7s54u2iegYXFH05743jXGQHYjH0d9cQudU4=;
+        b=CIG4IL5XJDhYjm+mDVjvQ+SwwbCvc4gCaWrwCZIcD/OGpqsxNgdQfOJVVY3xAQqHBT
+         VPCVrq+RUMEHxBzF+muWVU5ig8IqTOgKv2Pv80eyFJBqSPLJFWkHqB+Tda9mZllP5EXi
+         f/LGoTDnRY9Rgs4f36i4gJPx1OgSTFRz08DjYMrNeN2d13DE/EZWyWxWJyLarPVugyKu
+         xN+uKID5jzsq4pJQs6t6T3KO3nUoz6zUTRckYDlCzuSOWn/SPg+t4onJ3sQCZks291mG
+         aM/3Xruozdeg61RnYXG52szy1ZJkZNZYt/NgMRy/Nmky3EAsB8pkAXD4/+2NPWEEJsAD
+         gmQQ==
+MIME-Version: 1.0
+X-Received: by 10.66.241.73 with SMTP id wg9mr25241482pac.69.1388689615973;
+ Thu, 02 Jan 2014 11:06:55 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Thu, 2 Jan 2014 11:06:55 -0800 (PST)
+In-Reply-To: <op.w82ncx1zkdkhrr@robertscholte>
+References: <CA+nPnMwq2-s+HU=C_gjBehb92KDOePMOd2y9M-gUzmiu6UAnRQ@mail.gmail.com>
+	<CA+nPnMxc8hL09_sgVhk_jWKXFVn8_C3f7wxfQ5_NCbrUAKBsLg@mail.gmail.com>
+	<CAArU9iY_K1FmkFX1cx3ebQr13JVKCJYkr9HG3ifjVRnVU38D+Q@mail.gmail.com>
+	<520234cfeea2a93ffe5524c84bb1435a.squirrel@www.mosabuam.com>
+	<CABLGb9w0QWFtHTkz7xWhUgj8T4TXUJjxJFs8Q-BYe0qG88RnRg@mail.gmail.com>
+	<CA+nPnMzkumu_925CV+u+D5_wkHjwLCVSRmwMS6JuHvq16zp3Mg@mail.gmail.com>
+	<23db4a359ac8b220e15f373269ebc967.squirrel@www.mosabuam.com>
+	<CA+nPnMy32UXkeOz7-L8SdYymvuOtcVUGgqLca4UGg4MDade1Qg@mail.gmail.com>
+	<03B56DD5-E957-438E-A30E-439C2785032D@apache.org>
+	<781949f830750555c03856e45275c78b.squirrel@www.mosabuam.com>
+	<CA+nPnMw+yPfmovGb-DCxvgvqjUkboddWzBuHEyHZmauYPkiENw@mail.gmail.com>
+	<CA+nPnMzWqgsVuCMaK6FP0QfXDXSLadyUsP+dMeRy9cW73jdarA@mail.gmail.com>
+	<CA+nPnMyY0ST8OV4hfd1=-0vgEuTff8B8ym4iXwjWF16nW=ESHg@mail.gmail.com>
+	<CA+nPnMwwTCbHO64+axugaBXbttarKr86iembz57RNM_iAr_b7w@mail.gmail.com>
+	<58EAA08AF8232344ADDB2E31D4996BFD4BBC326B@SMAPEXCHIDAG3.prod.ad.merc.chicago.cme.com>
+	<CA+nPnMwAYirzveY3GjHMH_+-DcxfxxYquTBzU2XTmDGFDLmuwg@mail.gmail.com>
+	<CAPK0icjXAUmiqw0tQZ6615pmdFdO3r+9=TpB5mTd_X0XcvA1rA@mail.gmail.com>
+	<CA+nPnMws2yobgiC8iQN0pH5DqotB-N8-MoyxyA-6mar-eN1oLQ@mail.gmail.com>
+	<CAPK0iciy5OMVB31Xtf8zrbHiTo8GQtCqqVp=+pn-aghnHf24wQ@mail.gmail.com>
+	<CA+nPnMx+LJfDGqSpJAix=GWs1d4Nxh58m4_hNHCzNrTjgyFSyg@mail.gmail.com>
+	<op.w82ncx1zkdkhrr@robertscholte>
+Date: Thu, 2 Jan 2014 19:06:55 +0000
+Message-ID: <CA+nPnMz7rK8KJKnkBrsatnEAm2ueohH-LDEBt9yhi0T=7-Aj3Q@mail.gmail.com>
+Subject: Re: New logo?
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Developers List <dev@maven.apache.org>, Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b10cb194374dc04ef017f73
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b10cb194374dc04ef017f73
+Content-Type: text/plain; charset=ISO-8859-1
+
+I personally liked the anteater idea... We can ask the Ant PMC if we have a
+"winning" logo that we are worried about
+
+On Thursday, 2 January 2014, Robert Scholte wrote:
+
+> How "safe" is an aardvark or armadillo compared to an AntEater?
+>
+> https://www.google.com/search?q=creative+animal&hl=nl&
+> source=lnms&tbm=isch&sa=X&ei=uKnFUsCFBKGK0AWR6YHADQ&ved=
+> 0CAkQ_AUoAQ&biw=1858&bih=934#hl=nl&q=aardvark&tbm=isch&tbs=itp:clipart
+>
+>
+> Op Thu, 02 Jan 2014 18:52:57 +0100 schreef Stephen Connolly <
+> stephen.alan.connolly@gmail.com>:
+>
+>  So what... you cannot do worse than
+> http://people.apache.org/~stephenc/maven-logo-contest/maven.png
+>
+>
+> On 2 January 2014 16:55, Adam Retter <adam.retter@googlemail.com> wrote:
+>
+>  I would love to, but I posses absolutely zero artistic skill.
+>
+> On 2 January 2014 16:28, Stephen Connolly
+> <stephen.alan.connolly@gmail.com> wrote:
+> > how about you try sketching out what you mean!
+> >
+> >
+> > On 2 January 2014 16:18, Adam Retter <adam.retter@googlemail.com> wrote:
+> >
+> >> I like that one best personally. How about something like the Albanian
+> >> coat of arms?
+> >>
+> >> On 2 January 2014 15:11, Stephen Connolly
+> >> <stephen.alan.connolly@gmail.com> wrote:
+> >> > http://people.apache.org/~stephenc/maven-logo-contest/maven-15.png
+> >> >
+> >> >
+> >> > On 2 January 2014 14:52, Lyons, Roy <Roy.Lyons@cmegroup.com> wrote:
+> >> >
+> >> >> I was wondering if you might be able to try this with the bird flying
+> >> >> upwards and to the right.  Its a "moving up and to the future"
+> instead
+> >> of
+> >> >> "diving down into the past" kind of feeling.  If it looks good,
+> perhaps
+> >> it
+> >> >> can be a #15...
+> >> >>
+> >> >> On 1/2/14 7:18 AM, "Stephen Connolly" <
+> stephen.alan.connolly@gmail.com>
+> >> >> wrote:
+> >> >>
+> >> >> >As 9 is particularly problematic I have sketched -14 which is not a
+> >> direct
+> >> >> >copy of a silhouette. This still has the issue w.r.t. other marks
+> >> called
+> >> >> >maven using a silhouetted raven...
+> >> >> >
+> >> >> >http://people.apache.org/~stephenc/maven-logo-contest/
+> maven-14.png(in
+> >> >> >context:
+> >> >> >
+> >> http://people.apache.org/~stephenc/maven-logo-contest/screenshot-14.png
+> )
+> >> >> >
+> >> >> >
+> >> >> >On 2 January 2014 12:47, Stephen Connolly
+> >> >> ><stephen.alan.connolly@gmail.com>wrote:
+> >> >> >
+> >> >> >> two more that I drew over the holidays:
+> >> >> >>
+> >> >> >>
+> http://people.apache.org/~stephenc/maven-logo-contest/maven-12.png(in
+> >> >> >> context:
+> >> >> >>
+> >> http://people.apache.org/~stephenc/maven-logo-contest/screenshot-12.png
+> >> >> )
+> >> >> >>
+> >> >> >>
+> http://people.apache.org/~stephenc/maven-logo-contest/maven-13.png(in
+> >> >> >> context:
+> >> >> >>
+> >> http://people.apache.org/~stephenc/maven-logo-contest/screenshot-13.png
+> >> >> )
+> >> >> >>
+> >> >> >> I really would like some contributions from the community rather
+> than
+> >> >> >>just
+> >> >> >> things that I have sketched...
+> >> >> >>
+> >> >> >> At present, to my mind, the ones worth consideration are:
+> >> >> >>
+> >> >> >>
+> http://people.apache.org/~stephenc/maven-logo-contest/maven-3a.png
+> >> >> >> http://people.apache.org/~stephenc/maven-logo-<http://people.apache.org/~stephenc/maven-logo-contest/maven-5.png>
+>
+>
+
+-- 
+Sent from my phone
+
+--047d7b10cb194374dc04ef017f73--
+

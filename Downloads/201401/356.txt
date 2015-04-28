@@ -1,0 +1,156 @@
+From users-return-135218-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan 20 19:47:49 2014
+Return-Path: <users-return-135218-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9DDE210DB3
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 20 Jan 2014 19:47:49 +0000 (UTC)
+Received: (qmail 69082 invoked by uid 500); 20 Jan 2014 19:47:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 69004 invoked by uid 500); 20 Jan 2014 19:47:45 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 68995 invoked by uid 99); 20 Jan 2014 19:47:45 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Jan 2014 19:47:45 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of t.broyer@gmail.com designates 209.85.215.41 as permitted sender)
+Received: from [209.85.215.41] (HELO mail-la0-f41.google.com) (209.85.215.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Jan 2014 19:47:40 +0000
+Received: by mail-la0-f41.google.com with SMTP id mc6so5871407lab.14
+        for <users@maven.apache.org>; Mon, 20 Jan 2014 11:47:19 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=gD4dQ97X6H2y90bHjRfP4U8J42mR2zMdZwZYRqwrAVg=;
+        b=ZY7yfOx9J/E3fSFeOTg3qWjut7uF4XlWWgUJdvaQ8KmCqx3e+PT2eLqBV0crWX6mzc
+         INgUV4THvMlTXPIsW1QqPIc9v9D0GGSBaPVFd3Kn8ZbG+OJC9bm8nv1vQ+sag/z064DP
+         keWuK6+iTwDMvpgZAQx+rdB42KMVwoTn28GtrlIpLeaHWbBr8sSkaOLj5AoJEowTPLxr
+         vGPVkoh6Ecw+sJF9tcw56WespDOXL0DBPl6izLB98XhTCXySU1TGJKpxnPjoWiyWtw/R
+         1qP8lHTAfNXV7NoMMNYqoVFK71uZF/5YgS1WPWF8UyPBjUx+QhOfH0yc+lSnX+ARRGRM
+         Zkag==
+MIME-Version: 1.0
+X-Received: by 10.152.219.133 with SMTP id po5mr3178473lac.34.1390247239240;
+ Mon, 20 Jan 2014 11:47:19 -0800 (PST)
+Received: by 10.152.45.180 with HTTP; Mon, 20 Jan 2014 11:47:19 -0800 (PST)
+Received: by 10.152.45.180 with HTTP; Mon, 20 Jan 2014 11:47:19 -0800 (PST)
+In-Reply-To: <OF3C618DF9.E418F54A-ON85257C66.0064E4F4-85257C66.006600FF@belden.com>
+References: <OF32F0CB51.FB5A4FA2-ON85257C66.005B8339-85257C66.005D4B8C@belden.com>
+	<CA+nPnMz4afCMHpDL_dW2w7KW_F2ozV0=FG+UK2Op0QrzaLJ-7Q@mail.gmail.com>
+	<OF3C618DF9.E418F54A-ON85257C66.0064E4F4-85257C66.006600FF@belden.com>
+Date: Mon, 20 Jan 2014 20:47:19 +0100
+Message-ID: <CAEayHEN+FyFPcGOOyKkgeS=BWaJP1cRhj99H==LTtPDEa4Mg+Q@mail.gmail.com>
+Subject: Re: versions maven plugin
+From: Thomas Broyer <t.broyer@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113429c0d850e104f06c2838
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113429c0d850e104f06c2838
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Possibly using 1.0-SNAPSHOT instead of 1.0-RC-SNAPSHOT as your naming rule
+would make it easier: you're working towards 1.0 and on the path to this
+release you cut a few RCs: 1.0-RC-1, 1.0-RC-2, etc.
+Le 20 janv. 2014 19:34, <Alejandro.Endo@miranda.com> a =C3=A9crit :
+
+> Thank you Stephen. Are there any other ways to stabilize my dependencies
+> then?
+>
+> i have > 300 poms all depending on the released+1 development version.
+> This must be a common use-case when using RCs, no? you increase all your
+> versions to your next RC-2-SNAPSHOT as soon as you create your RC-1, but
+> if that RC-1 happens to be released, then all your poms will be depending
+> on the SNAPSHOT of an RC-2 that will never be made so you have to
+> "downgrade" your dependency versions
+>
+> Am I doing something out of the ordinary here?
+>
+>
+>
+>
+> Alejandro Endo | Software Designer/Concepteur de logiciels
+>
+>
+>
+> From:   Stephen Connolly <stephen.alan.connolly@gmail.com>
+> To:     Maven Users List <users@maven.apache.org>,
+> Date:   2014-01-20 12:34
+> Subject:        Re: versions maven plugin
+>
+>
+>
+> v-m-p does not roll back version numbers
+>
+>
+> On 20 January 2014 16:59, <Alejandro.Endo@miranda.com> wrote:
+>
+> > Not sure if this is the right list for codehaus plugins. If not I
+> > apologize
+> >
+> > I have a pom with this
+> >
+> >         <dependencies>
+> >                 <dependency>
+> >                         <groupId>foo.blah</groupId>
+> >                         <artifactId>bar</artifactId>
+> >                         <version>1.2.0-RC-7-SNAPSHOT</version>
+> >                 </dependency>
+> >         </dependencies>
+> >
+> > I want to run the versions plugin to replace 1.2.0-RC-7-SNAPSHOT with
+> the
+> > version we actually released of the code, which is 1.2.0-RC-6. Looking
+> at
+> > the available mojos, it seems like versions:use-latest-releases is the
+> > right one to use. In the matrix here it says that this goal will modify
+> > -SNAPSHOT dependencies. Well, it doesn't. If i instead set the version
+> to
+> > 1.2.0-RC-3 (no snapshot), the mojo does update the dependency to
+> > 1.2.0-RC-6 so I don't know if this is just the documentation being
+> wrong.
+> > I also tried use-latest-versions without success
+> >
+> > Any idea how to do this? I just want to change the dependencies (which
+> are
+> > currently SNAPSHOT due to the m-release-p) to the latest released
+> versions
+> >
+> > Thank you,
+> > Alejandro Endo | Software Designer/Concepteur de logiciels
+> >
+> > DISCLAIMER:
+> > Privileged and/or Confidential information may be contained in this
+> > message. If you are not the addressee of this message, you may not
+> > copy, use or deliver this message to anyone. In such event, you
+> > should destroy the message and kindly notify the sender by reply
+> > e-mail. It is understood that opinions or conclusions that do not
+> > relate to the official business of the company are neither given
+> > nor endorsed by the company.
+> > Thank You.
+> >
+>
+>
+> DISCLAIMER:
+> Privileged and/or Confidential information may be contained in this
+> message. If you are not the addressee of this message, you may not
+> copy, use or deliver this message to anyone. In such event, you
+> should destroy the message and kindly notify the sender by reply
+> e-mail. It is understood that opinions or conclusions that do not
+> relate to the official business of the company are neither given
+> nor endorsed by the company.
+> Thank You.
+>
+
+--001a113429c0d850e104f06c2838--
+

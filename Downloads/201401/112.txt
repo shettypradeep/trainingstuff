@@ -1,0 +1,111 @@
+From users-return-135033-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan  8 22:57:34 2014
+Return-Path: <users-return-135033-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EA0231083D
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  8 Jan 2014 22:57:34 +0000 (UTC)
+Received: (qmail 66478 invoked by uid 500); 8 Jan 2014 22:57:33 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 66371 invoked by uid 500); 8 Jan 2014 22:57:33 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 66355 invoked by uid 99); 8 Jan 2014 22:57:33 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 22:57:33 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of baerrach@gmail.com designates 209.85.128.170 as permitted sender)
+Received: from [209.85.128.170] (HELO mail-ve0-f170.google.com) (209.85.128.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 22:57:26 +0000
+Received: by mail-ve0-f170.google.com with SMTP id oy12so1839480veb.1
+        for <users@maven.apache.org>; Wed, 08 Jan 2014 14:57:05 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=lcteJjfNWx3e9nc8dDs9ipnfkXeMUsnY7f6lmBvRw+0=;
+        b=jtkL/jnFpTVkOxgVzrptHIFxVmobj9TwePUGpVCnoP6gzhKSCmq8PXFxFdurkQ9SoQ
+         XzTOl0ridCvCL5imXr/C9yglksxaZGVD0YyDXmNsTbxGYeXlrRjkQsfv+WTdO0accMK2
+         vM5WyoauZDQ7gpwxdMjJmbef3tmtLhqhyaIZgnbEDWWPs18H9zErgzMs7V2YFjext4Rr
+         36Qx1rfHQIqB0wbJ7AJkU54rvQK0losNFz+Veupi9VeeR+l3g66AjtVM1VlPOGm64kwT
+         eCMGEECQQIvxS12Al7B9pI6KlkKtBbHy93prdlUKhxy3sDhLEz4nkSLhhHRC4Xpmpc0W
+         cKmw==
+MIME-Version: 1.0
+X-Received: by 10.58.235.129 with SMTP id um1mr19758722vec.17.1389221825155;
+ Wed, 08 Jan 2014 14:57:05 -0800 (PST)
+Received: by 10.58.48.131 with HTTP; Wed, 8 Jan 2014 14:57:05 -0800 (PST)
+In-Reply-To: <1389212760240-5780962.post@n5.nabble.com>
+References: <1389155385482-5780920.post@n5.nabble.com>
+	<05F2D212-47B4-45E7-B1BC-934C1185C795@gold-family.us>
+	<1389209934062-5780950.post@n5.nabble.com>
+	<CALy+7Umn77Lkx7BB3gy7cN8oCJcaPvAa=Z4RJSeJPYQUSPvwgA@mail.gmail.com>
+	<1389212760240-5780962.post@n5.nabble.com>
+Date: Thu, 9 Jan 2014 09:27:05 +1030
+Message-ID: <CADVp3v9Y_8Lqp=-cNDiD64ySDiHDuN4rXJNxSJGfgEZsv9V8Xg@mail.gmail.com>
+Subject: Re: Maven install phase - Access is denied
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=ISO-8859-1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 9 January 2014 06:56, andre999 <andre999@hotmail.com> wrote:
+> <build>
+[del]
+>                         <plugin>
+>                                 <groupId>org.apache.maven.plugins</groupId>
+>                         <artifactId>maven-install-plugin</artifactId>
+>                         <version>2.5.1</version>
+>                         <configuration>
+>                                 <file>certloader-custom-action.jar</file>
+>                                 <file>certloader-custom-action-sources.jar</file>
+
+What do you expect this section to do?
+http://maven.apache.org/plugins/maven-install-plugin/install-mojo.html
+does not have a file property.
+And file implies a single entry, specifying it a second time would
+mean you overwrite the previous value.
+Lists are normally plural. (something like
+<files><file>A</file><file>B</file></files>
+
+If you want the sources to also be installed use the source plugin
+http://maven.apache.org/plugins/maven-source-plugin/
+
+You shouldn't need this section on install at all.
+
+I can't see anything in that pom that would mean a directory is being
+installed into your local m2 cache.
+
+The assembly plugin can have these types of issues when you specify
+"dir" as a distribution format on deploy.
+But deploy is after install so this is not the problem.
+
+The problem I have is that it is trying to install
+P:\Projects\HlkProjects\CertLoader\hlk-certloader\trunk\target\install4j\certImport
+to
+P:\.m2\repository\net\healthlink\certloader\hlk-certloader\1.0.2-SNAPSHOT\lk-certloader-1.0.2-SNAPSHOT-certImport
+
+Why is maven attaching \target\install4j\certImport as a build
+artifact that it thinks it needs to install.
+
+Try running mvn -X and redirect the output to a file.
+Then search for target\install4j\certImport and see which plugin is
+being configured with this value.
+That might give you a hint as to where to look to turn that off.
+I'd almost suspect the parent pom.
+Using resources:copy-resource does not attach anything to be installed
+and it is the only thing that is using target\install4j\certImport
+from your supplied output.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

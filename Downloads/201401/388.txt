@@ -1,0 +1,108 @@
+From users-return-135230-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 21 12:43:31 2014
+Return-Path: <users-return-135230-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5418010EAC
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 21 Jan 2014 12:43:31 +0000 (UTC)
+Received: (qmail 87626 invoked by uid 500); 21 Jan 2014 12:43:27 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 87238 invoked by uid 500); 21 Jan 2014 12:43:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 87229 invoked by uid 99); 21 Jan 2014 12:43:26 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 21 Jan 2014 12:43:26 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of gordon.cody@zafin.com designates 209.85.214.41 as permitted sender)
+Received: from [209.85.214.41] (HELO mail-bk0-f41.google.com) (209.85.214.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 21 Jan 2014 12:43:20 +0000
+Received: by mail-bk0-f41.google.com with SMTP id na10so634841bkb.0
+        for <users@maven.apache.org>; Tue, 21 Jan 2014 04:43:00 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=Pg74ddTbqXfELXSCg0mnB7xcZcaUUDCHdo8RcUIJRjw=;
+        b=SHdmIx1dvI5buRo9ReURGqZqyIMC8k/Xs5Lzj+qUZjUAgSFgikjTsCIRu3Z17rdDED
+         zMuVruUdizTRzZrUAp6koUQzPj1aX746YCUk1FjraI9eKh0/jtI52pyfZJzfZCU4n2QA
+         BQWI3g4ko/LvHiXk1hjkDi1qNHqGJ/ipVtEiWqTDWfPRvSGzAArAEpc35XG8+pjtYPEK
+         dcgO0kHwcjgDscnaQfXSi7iEgLPLbA1vzW9lNYxKaQseVIFEOMyrSvE0L+ayyWO9NBuC
+         SpSzYiczoBXANU+DbpYfKNq/vVQgYVM5vDd82m3X1Gaug9lszupBMWpSW1O6ubaw17Rw
+         NEXA==
+X-Gm-Message-State: ALoCoQmqTLJlqiFyWro999OLDP7RVzGdoXYBC9B1Qv0vRq5QijzZdXBJArMtCeUtKz3bXzyD5nf0ES3OK2EDOdizJHv9PsmRlyxLJ6jpwgC1GoSqX5boYyI=
+MIME-Version: 1.0
+X-Received: by 10.204.251.67 with SMTP id mr3mr13486312bkb.11.1390308180027;
+ Tue, 21 Jan 2014 04:43:00 -0800 (PST)
+Received: by 10.204.172.203 with HTTP; Tue, 21 Jan 2014 04:42:59 -0800 (PST)
+In-Reply-To: <0C723FEB5B4E5642B25B451BA57E2730751455DB@S1P5DAG3C.EXCHPROD.USA.NET>
+References: <0C723FEB5B4E5642B25B451BA57E27307514541C@S1P5DAG3C.EXCHPROD.USA.NET>
+	<op.w9z918zskdkhrr@robertscholte>
+	<0C723FEB5B4E5642B25B451BA57E2730751455DB@S1P5DAG3C.EXCHPROD.USA.NET>
+Date: Tue, 21 Jan 2014 07:42:59 -0500
+Message-ID: <CALN=NUF859zQ9vxxkZ_z=N9Jp9aVYho-GpseeEFLfp7jvaMq=g@mail.gmail.com>
+Subject: Re: maven-deploy-plugin: exclude specific project artifact(s)?
+From: Gordon Cody <gordon.cody@zafin.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bfcf5a633538404f07a591f
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bfcf5a633538404f07a591f
+Content-Type: text/plain; charset=US-ASCII
+
+Hello
+
+We use this to prevent deploying ears/wars into our repo. Everything is
+built but not everything gets deployed.
+Newer versions of the deploy plugin allow you to skip deployment so within
+a few specific poms you can add.
+
+              <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.1</version>
+                <configuration>
+                  <skip>true</skip>
+                </configuration>
+              </plugin>
+
+This should work as long as you assemble each piece separately (each has
+its own pom.xml) so divide and conquer.
+Hope this helps.
+
+-- 
+Best Regards, Gord Cody
+
+Release Manager  Zafin Labs Americas Inc.
+179 Colonnade Road-Suite 100, Ottawa ON, Canada
+Phone: +1 (613) 216-2504  Fax: +1 (613) 688-1374  Mobile: +1 613-601-2734
+Web: http://zafin.com  Email: gordon.cody@zafin.com
+
+-- 
+Zafin - Canada
+
+-- 
+http://zafin.com
+
+<http://zafin.com/>
+
+------------------------------
+
+Connect with us
+
+ <http://www.youtube.com/user/ZafinGlobal> <http://www.linkedin.com/company/Zafin>
+  <http://twitter.com/Zafin>
+
+News and Events
+
+Zafin among Top 10 FinTech Companies to Watch in 2014: American Banker<http://zafin.com/zafin-among-top-10-fintech-companies-to-watch-in-2014-american-banker/>
+
+--047d7bfcf5a633538404f07a591f--
+

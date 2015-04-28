@@ -1,0 +1,98 @@
+From users-return-135740-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Mar  9 07:11:13 2014
+Return-Path: <users-return-135740-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3EB6E10F3F
+	for <apmail-maven-users-archive@www.apache.org>; Sun,  9 Mar 2014 07:11:13 +0000 (UTC)
+Received: (qmail 51607 invoked by uid 500); 9 Mar 2014 07:11:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 51548 invoked by uid 500); 9 Mar 2014 07:11:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 51540 invoked by uid 99); 9 Mar 2014 07:11:06 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 09 Mar 2014 07:11:06 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.160.43 as permitted sender)
+Received: from [209.85.160.43] (HELO mail-pb0-f43.google.com) (209.85.160.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 09 Mar 2014 07:10:58 +0000
+Received: by mail-pb0-f43.google.com with SMTP id um1so5918232pbc.16
+        for <users@maven.apache.org>; Sat, 08 Mar 2014 23:10:37 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type:content-transfer-encoding;
+        bh=M4a7eREpTaVUymHIk/wTkW/1x9OvDU7LOsX3+8dgn7U=;
+        b=aS1Mj/dqqEx37K5eALkvuy+RODv0/UzawrdEhtzXkp78sZzKdGM5d5qZZ7OfSmquWa
+         nzICmFivAlXNARAmfYS28i5u2wFTO/PsY8gPE5bIpQOiI9bLXxFqUML5o3x4sDvzqPPW
+         0vthC/rZHe4hIEuooFjh0LGT0r5Njtd1e8Mf8QmGdvpOx/HcYdZ0zJVgQmFY7n3j+gjK
+         Y/N02t7FUPtdwF1pZpyFsKVCmMKCMUKLs/WRNgCn0tHZXyYlgJXXRx4bgLID9camCEyo
+         F1cjYKSuwGI88bp40QQQQG3ojDrXngCHTIVhSF8NJu+HZzXLkm2Tmo0tazTM2ahPCodQ
+         bjQA==
+X-Received: by 10.68.136.41 with SMTP id px9mr32891367pbb.14.1394349037263;
+        Sat, 08 Mar 2014 23:10:37 -0800 (PST)
+Received: from [192.168.0.17] (S0106602ad07f9cfa.vc.shawcable.net. [24.85.131.20])
+        by mx.google.com with ESMTPSA id js7sm53587907pbc.35.2014.03.08.23.10.35
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Sat, 08 Mar 2014 23:10:35 -0800 (PST)
+Message-ID: <531C13EB.7060104@gmail.com>
+Date: Sat, 08 Mar 2014 23:10:35 -0800
+From: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Maven Dependency on exe
+References: <531BCCE8.9090307@gmail.com>	<CALy+7UkojerVeKwTuPvjNkZ8fw7JZtLvdxyAL48BzhUPakLB9Q@mail.gmail.com> <CAPCjjnHuQjQCZ=aKmZrgbX7e7vcpNsLQ0d-ki82yL3j+ijCi-A@mail.gmail.com>
+In-Reply-To: <CAPCjjnHuQjQCZ=aKmZrgbX7e7vcpNsLQ0d-ki82yL3j+ijCi-A@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Cool, that does exactly what I want. Thanks so much.
+
+Cheers, Eric
+
+On 3/8/2014 9:33 PM, Dan Tran wrote:
+> use maven dependency to copy your exe into your target/dependency
+> directory.  Once that happen, you pass
+> ${project.build.directory}/dependency/your.exe to your test
+>
+> -D
+>
+>
+> On Sat, Mar 8, 2014 at 7:53 PM, Wayne Fay <waynefay@gmail.com> wrote:
+>
+>>> Understandably
+>>>
+>> C:\Users\Eric\.m2\repository\net\kolotyluk\windows\elevate\0.0.1-SNAPSHOT\elevate-0.0.1-SNAPSHOT.exe
+>>> does not show up on the classpath, but is there some way to pass this
+>>> information from Maven to the tests so they can find the executable?
+>> What unit test tool are you using? I would start looking there and
+>> make it work (perhaps even hardcoding some paths etc to start), then
+>> sort out a way to make it work with Maven once you have it working at
+>> a basic level.
+>>
+>> Wayne
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

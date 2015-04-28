@@ -1,0 +1,106 @@
+From users-return-135662-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Mar  1 09:13:21 2014
+Return-Path: <users-return-135662-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9804310EFA
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  1 Mar 2014 09:13:21 +0000 (UTC)
+Received: (qmail 53362 invoked by uid 500); 1 Mar 2014 09:13:18 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 52443 invoked by uid 500); 1 Mar 2014 09:13:09 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 55470 invoked by uid 99); 28 Feb 2014 14:25:37 -0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of santiago.gala@gmail.com designates 209.85.160.174 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:date:message-id:subject:from:to:content-type;
+        bh=29K2LkIzLR9HuqltobSsSMJj09nbW3SErswZZK3LOEE=;
+        b=q04IxHtFKwUJOoZvRapoTF6lE4x0GiCkDrJYdXG7QarGgYu60Gyn17bxgBD3TCZJ45
+         uNBk1bN+yg0w2TzmXF0Rdv+PWe+qPXNLHagEUGmCn9Bh2dSF0M38YjMuesz6O1qMpNAC
+         9nIoeGqcprEDKG0DOijBH+DNRdHtvOJt1SX1YHrc9PdJPrEEKn0Hc/tjdBjXuf76LAGp
+         hOCGmkjVh99D22VoTMG3r0AwcqVkKSP102fNpLOaZmIpQhAWkctxgaeoYZRzBeJufCSe
+         pZqMth0+agPj76jPp7DAkxYnlXGtWtyDfbs2BQGxIJNeGJbYg1mIyeMmhalr50Hk2wu6
+         kbQA==
+MIME-Version: 1.0
+X-Received: by 10.236.84.18 with SMTP id r18mr2023045yhe.99.1393597509351;
+ Fri, 28 Feb 2014 06:25:09 -0800 (PST)
+Sender: santiago.gala@gmail.com
+Date: Fri, 28 Feb 2014 15:25:09 +0100
+X-Google-Sender-Auth: 3xDAcmbG0DwAeNyrRTVUaxI6iSY
+Message-ID: <CAPXTYCXBbLVvz9-6ab61qMg1Xk+mmZfoG8dS20j4Fdgq2Qyk-w@mail.gmail.com>
+Subject: Problems with dependencyManagement in maven-release-plugin
+From: Santiago Gala <sgala@apache.org>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=20cf3011e29d813f2404f378342e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--20cf3011e29d813f2404f378342e
+Content-Type: text/plain; charset=UTF-8
+
+Hi, we are in the following (simplified and inherited) situation:
+
+* we use git (wth gerrit) as SCM and review system
+* we have a parent project, (let's call it com.example:P) with dependency
+management and all our internal and external dependencies there (except for
+the partent itself)
+* let's say we have a 'son' project com.example.test:A without other
+dependencies
+
+P version 1.0.0-SNAPSHOT POM specifies A version as ${project.version}, so
+it moves in synchronicity with P
+
+we want to use maven release plugin to prepare two local changes for its
+release. I use shell to illustrate, but the process can equally be done by
+hand
+
+export VERSION=1.0.0
+export NEW_VERSION=1.0.1-SNAPSHOT
+
+# Release the parent with 1.0
+mvn -B -Dmaven.repo.local=${LOCAL_REPO} release:clean release:prepare
+-DreleaseVersion=${VERSION} -Dtag=P-${VERSION}
+-DdevelopmentVersion=${NEW_VERSION} -DpushChanges=false
+#... it works
+
+Now, after I approve the changes in P, I got for A
+# clone and cd to A working copy
+mvn -B release:clean release:prepare -DreleaseVersion=${VERSION}
+-Dtag=${project}-${VERSION} -DdevelopmentVersion=${NEW_VERSION}
+-DpushChanges=false -Dproject.rel.com.example.test.P=${VERSION}
+-Dproject.dev.com.example.test.P=${NEW_VERSION}
+# it does not work
+
+It refuses to release or to take those values from the parametes. I must do
+the release without the -B, using "yes\n\n", "1.0.0", "1.0.1-SNAPSHOT",
+"A-1.0.0\n"
+
+In case there are other dependencies (say, B that depends on P and A), the
+plugin will ask for the versions of A, and the will not use them. It looks
+like a separate issue, which could be summarized as
+* maven-release-plugin does not recompute effective POM after new parent
+version is give.
+
+The first one could be summarized ad:
+* maven-release-plugin does not allow to script versions for the parent
+element in the POM.
+
+All tests done with maven 3.0.4 and maven release plugin 2.4.1 and 2.4.2,
+just in case.
+
+Any clue?
+
+Regards
+Santiago
+
+--20cf3011e29d813f2404f378342e--
+

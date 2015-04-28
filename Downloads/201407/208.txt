@@ -1,0 +1,122 @@
+From users-return-136756-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jul  9 11:04:32 2014
+Return-Path: <users-return-136756-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 09A9411AD9
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  9 Jul 2014 11:04:32 +0000 (UTC)
+Received: (qmail 31555 invoked by uid 500); 9 Jul 2014 11:04:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 31471 invoked by uid 500); 9 Jul 2014 11:04:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 31453 invoked by uid 99); 9 Jul 2014 11:04:30 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 09 Jul 2014 11:04:30 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.220.47] (HELO mail-pa0-f47.google.com) (209.85.220.47)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 09 Jul 2014 11:04:23 +0000
+Received: by mail-pa0-f47.google.com with SMTP id kq14so8932669pab.6
+        for <users@maven.apache.org>; Wed, 09 Jul 2014 04:04:01 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:to:subject:date:message-id:in-reply-to
+         :references:mime-version:content-type:content-transfer-encoding;
+        bh=23eFPBPeCAluYcEsbqRJhaC/BTqSNgo+7GPuftd7sII=;
+        b=IxlE0DGhZQzeSqmDdN4xm65MQOEPgIsyXPV/ZgORACQh0zKW+mGCiqvdDe9gs7lce+
+         E7ESYKkQINwHO/LHFodb5dq+Ow7Maaa6liJzvA8Ngtcy1rRlBpIoPpn0ITQe7rPlnFET
+         VZXMzBziuxvmS04HZHGMypaCNYAvcb6kQcETtz4ervmuaN5UMDtmvr5IPsyoxQImUpHb
+         UZFAsComl2QPQBIKHHIBVqMK/vIRH1Vn8dZeidXMYp3K6g3UXqu/TztEjedM3WtD4WUi
+         RXhQ9+Kk9Mdh76LGx+/WTGSyIRv6TRoT/ATR+Wnb/7kGIr0vyOOgbxdrhv88P+IcedL7
+         ykww==
+X-Gm-Message-State: ALoCoQlieiWsXZMoNr2V4uxK5s0753LU1hXWjOtTtuw3eLFmh47Ixj04A9KE58DYpYHu1wJzt26J
+X-Received: by 10.66.246.229 with SMTP id xz5mr950003pac.119.1404903841577;
+        Wed, 09 Jul 2014 04:04:01 -0700 (PDT)
+Received: from [192.168.15.101] (ip-118-90-42-203.xdsl.xnet.co.nz. [118.90.42.203])
+        by mx.google.com with ESMTPSA id ek2sm58565923pbd.30.2014.07.09.04.03.59
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Wed, 09 Jul 2014 04:04:00 -0700 (PDT)
+From: "Mark Derricutt" <mark@talios.com>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Remote repositories protocols
+Date: Wed, 09 Jul 2014 23:03:45 +1200
+Message-ID: <BF83A5EF-1431-4526-8E4A-44E17D2CE356@talios.com>
+In-Reply-To: <CA+nPnMzr6DAZe4t=9LNJLrh6Hi8_tH2O06+uLdepaiyU6H0+sA@mail.gmail.com>
+References: <CAJjUpCbWDe2gXFqH_2KvADBDa5_gpHSAxUQ9sPb3udF-gbLHFQ@mail.gmail.com>
+ <CA+nPnMzr6DAZe4t=9LNJLrh6Hi8_tH2O06+uLdepaiyU6H0+sA@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; format=flowed
+Content-Transfer-Encoding: quoted-printable
+X-Mailer: MailMate (1.8r4378)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I wonder if anyones considered doing a bit-torrent based repository.
+
+Each GAV entry could be its own entry in a tracker. *ponders*
+
+On 9 Jul 2014, at 19:48, Stephen Connolly wrote:
+
+> wagon is the extension point to implement additional protocols. You =
+
+> need to
+> register wagon implementations as extensions in order to use them in =
+
+> your
+> pom (or register them as additional dependencies of specific plugins =
+
+> in
+> your pom to use them for a specific plugin)
+>
+>
+> On 9 July 2014 07:42, Eric Cornely <ericcornely@gmail.com> wrote:
+>
+>> Hi,
+>>
+>> I read in the documentation (
+>>
+>> https://maven.apache.org/guides/introduction/introduction-to-repositor=
+ies.html
+>> )
+>> that "maven repositories can be accessed by a variety of protocols =
+
+>> such as
+>> file:// and http://"
+>>
+>> By curiosity I'm wondering what are the other protocols supported by =
+
+>> maven.
+>> Is there a list of them or a way I could make it ? by listing =
+
+>> existing
+>> wagon ? (Is wagon used only when deploy ?)
+>>
+>> I'm really wondering about ftp://, ftps://, ssh://, sftp:// and =
+
+>> smb://
+>> support. If you know one of these works as a repository url, tell me.
+>>
+>> Kind regards,
+>>
+>> Eric Cornely
+>> --
+>> Eric Cornely
+>> ericcornely@gmail.com
+>>
+>> Please consider the environment before printing this e-mail
+>>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

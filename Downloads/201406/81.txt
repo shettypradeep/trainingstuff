@@ -1,0 +1,95 @@
+From users-return-136694-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Jun 28 02:36:38 2014
+Return-Path: <users-return-136694-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0D86811CBC
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 28 Jun 2014 02:36:38 +0000 (UTC)
+Received: (qmail 83511 invoked by uid 500); 28 Jun 2014 02:36:36 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 83432 invoked by uid 500); 28 Jun 2014 02:36:36 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 83417 invoked by uid 99); 28 Jun 2014 02:36:35 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 28 Jun 2014 02:36:35 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.215.50 as permitted sender)
+Received: from [209.85.215.50] (HELO mail-la0-f50.google.com) (209.85.215.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 28 Jun 2014 02:36:34 +0000
+Received: by mail-la0-f50.google.com with SMTP id pv20so3433033lab.23
+        for <users@maven.apache.org>; Fri, 27 Jun 2014 19:36:09 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=89Azl74FEWIUqT3bd6+Ed0uDta3lYRXU3O3MlRPP3EU=;
+        b=ETCbaT9FLVqhXU1m+9HxVGjl7ar0O/ewuFKgItm0sSjM2bijnIn82aiPPrUo1Em1Fv
+         iN5p8y5vqtBvgBvkVpVqcYrEH7eBEzmXVAXuv8HTAuoAWLPt5i4FW5yifJGGUpe3yjXU
+         xY2aS/bebWCUPYfbieyQlnK49T3iEmsRA/i4a78wc5V572o7scN4uPCq2fPXlEbrqVuS
+         3dWv8V3SEh6yPT0lmxfrJXQTY0gwD8Z0BUSYdJngJxJn9k5u5WFM5RbsQmbcqbUiDNhQ
+         sCdLZms0KE7fPHUFm3EzDTzFmMHZdDLhria7LOCQjd2rEeaSAQC+G5k4iuT0Vm2KMFDl
+         nWYg==
+MIME-Version: 1.0
+X-Received: by 10.112.180.225 with SMTP id dr1mr17721052lbc.51.1403922969801;
+ Fri, 27 Jun 2014 19:36:09 -0700 (PDT)
+Received: by 10.114.194.100 with HTTP; Fri, 27 Jun 2014 19:36:09 -0700 (PDT)
+In-Reply-To: <CA+=EWnDGA7_Cmo8qxXZ3rm9gNWH9AZbKHhmzHXbxoweDbHD8QQ@mail.gmail.com>
+References: <CAPCjjnGwmZHQ3LeiFjvrxbbjqpmAS1em45V=0LsuFufG_jM7Sg@mail.gmail.com>
+	<CA+=EWnDGA7_Cmo8qxXZ3rm9gNWH9AZbKHhmzHXbxoweDbHD8QQ@mail.gmail.com>
+Date: Fri, 27 Jun 2014 19:36:09 -0700
+Message-ID: <CAPCjjnG=CAtinp7ugi3qJ82sAHJn-zOPk8__r0U6beacgeBH1g@mail.gmail.com>
+Subject: Re: Any one in Bay Area ( ~San Jose) with Comcast provider having
+ problem accessing http://central.maven.org/maven2/org/apache/maven/scm/maven-scm-provider-cvsexe/
+ ?
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c34940e83c5d04fcdc498b
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c34940e83c5d04fcdc498b
+Content-Type: text/plain; charset=UTF-8
+
+Hi Kalle
+
+Thanks,  it works for now, ( after a couple of months)
+
+-D
+
+
+On Fri, Jun 27, 2014 at 7:13 PM, Kalle Korhonen <kalle.o.korhonen@gmail.com>
+wrote:
+
+> Works fine for me on Comcast/Bay area.
+>
+> Kalle
+>
+>
+> On Fri, Jun 27, 2014 at 2:12 PM, Dan Tran <dantran@gmail.com> wrote:
+>
+> > I am having a problem[1] accessing
+> >
+> >
+> >
+> http://central.maven.org/maven2/org/apache/maven/scm/maven-scm-provider-cvsexe/
+> >
+> > I think it has something to do with CDN close to bayarea with comcast
+> >
+> > [1] https://issues.sonatype.org/browse/MVNCENTRAL-446
+> >
+> > Thanks
+> >
+> > -Dan
+> >
+>
+
+--001a11c34940e83c5d04fcdc498b--
+

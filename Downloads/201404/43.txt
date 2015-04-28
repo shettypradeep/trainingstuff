@@ -1,0 +1,116 @@
+From users-return-136094-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Apr  6 00:16:51 2014
+Return-Path: <users-return-136094-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 96329102B7
+	for <apmail-maven-users-archive@www.apache.org>; Sun,  6 Apr 2014 00:16:51 +0000 (UTC)
+Received: (qmail 29529 invoked by uid 500); 6 Apr 2014 00:16:47 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 29445 invoked by uid 500); 6 Apr 2014 00:16:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 44480 invoked by uid 99); 5 Apr 2014 21:43:42 -0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of gurgul.grzegorz@gmail.com does not designate 216.139.236.26 as permitted sender)
+Date: Sat, 5 Apr 2014 14:43:16 -0700 (PDT)
+From: kboom <gurgul.grzegorz@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1396734196958-5790551.post@n5.nabble.com>
+Subject: Maven JPA metamodel generation in multi-module project
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello,
+
+I've got a multi-module maven project. One of such modules should generate a
+JPA metamodel - I include a snipped in its pom:
+
+<plugin>
+				<groupId>org.bsc.maven</groupId>
+				<artifactId>maven-processor-plugin</artifactId>
+				<version>2.2.4</version>
+				<executions>
+					<execution>
+						<id>generate jpa metamodel sources</id>
+						<goals>
+							<goal>process</goal>
+						</goals>
+						<phase>generate-sources</phase>
+						<configuration>
+						
+<outputDirectory>${project.build.directory}/generated-sources/metamodel</outputDirectory>
+							<processors>
+							
+<processor>org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor</processor>
+							</processors>
+
+							<options>
+							
+<persistenceXml>src/main/resources/mappings/config/persistence.xml</persistenceXml>
+							</options>
+
+						</configuration>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>org.hibernate</groupId>
+						<artifactId>hibernate-jpamodelgen</artifactId>
+						<version>4.3.4.Final</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.3</version>
+				<executions>
+					<execution>
+						<id>add jpa metamodel sources</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+							
+<source>${project.build.directory}/generated-sources/metamodel</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+It works well when triggering build process by mvn clean install - all code
+is generated and there is no errors. But when I trigger clean install on the
+parent pom (and a aggregate project) code generation seem to be triggered,
+but effective only on the local JPA-annotated entities. The entities mapped
+by xml mappings (which are defined in other modules) does not contribute to
+the output source code (but they were in the first case!). Could someone
+tell me please what is wrong?
+
+I run out of options... Thank you!
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Maven-JPA-metamodel-generation-in-multi-module-project-tp5790551.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

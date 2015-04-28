@@ -1,0 +1,73 @@
+From users-return-137629-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Oct 23 22:13:05 2014
+Return-Path: <users-return-137629-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 863DA17A1A
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 23 Oct 2014 22:13:05 +0000 (UTC)
+Received: (qmail 97381 invoked by uid 500); 23 Oct 2014 22:13:01 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 97282 invoked by uid 500); 23 Oct 2014 22:13:01 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 97177 invoked by uid 99); 23 Oct 2014 22:13:01 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 23 Oct 2014 22:13:01 +0000
+Received: by minotaur.apache.org (Postfix, from userid 6004)
+	id 2202817A14; Thu, 23 Oct 2014 22:13:01 +0000 (UTC)
+To: announce@maven.apache.org
+Subject: [ANN] Apache Maven Shared Component: Maven Filtering Version 1.3 Released
+Cc: users@maven.apache.org,dev@maven.apache.org
+Message-Id: <20141023221301.2202817A14@minotaur.apache.org>
+Date: Thu, 23 Oct 2014 22:13:00 +0000 (UTC)
+From: khmarbaise@apache.org (Karl Heinz Marbaise)
+
+The Apache Maven team is pleased to announce the release of the 
+Apache Maven Shared Component: Maven Filtering Version 1.3
+
+The goal is to provide a shared component for all plugins that needs to filter
+resources.
+
+http://maven.apache.org/shared/maven-filtering/
+
+You should specify the version in your project's plugin configuration:
+
+<plugin>
+  <groupId>org.apache.maven.shared</groupId>
+  <artifactId>maven-filtering</artifactId>
+  <version>1.3</version>
+</plugin>
+
+
+Release Notes - Maven Filtering - Version 1.3
+
+http://jira.codehaus.org/secure/ReleaseNote.jspa?version=20184&styleName=Text&projectId=11761
+
+Bug:
+
+ * [MSHARED-325] - maven-filtering 1.2 throws MavenFilteringException: Mark invalid
+
+Improvements:
+
+ * [MSHARED-351] - Update version of plexus-interpolation to 1.19
+ * [MSHARED-352] - Update version of plexus-utils to 3.0.18
+ * [MSHARED-353] - Upgrade maven-shared-utils to 0.6
+ * [MSHARED-354] - Removed dependency plexus-container-default:1.0-alpha-9-stable-1
+ * [MSHARED-355] - Upgrade to Maven 2.2.1 compatiblity
+ * [MSHARED-366] - Add ability to do Stream/Reader based filtering
+
+Enjoy,
+
+-The Apache Maven team
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

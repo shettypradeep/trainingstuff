@@ -1,0 +1,127 @@
+From users-return-136110-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr  9 02:19:54 2014
+Return-Path: <users-return-136110-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C272810750
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  9 Apr 2014 02:19:54 +0000 (UTC)
+Received: (qmail 77804 invoked by uid 500); 9 Apr 2014 02:19:49 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 77761 invoked by uid 500); 9 Apr 2014 02:19:49 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 77750 invoked by uid 99); 9 Apr 2014 02:19:49 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 09 Apr 2014 02:19:49 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.192.43] (HELO mail-qg0-f43.google.com) (209.85.192.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 09 Apr 2014 02:19:44 +0000
+Received: by mail-qg0-f43.google.com with SMTP id f51so1715313qge.30
+        for <users@maven.apache.org>; Tue, 08 Apr 2014 19:19:23 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:subject:message-id:in-reply-to
+         :references:mime-version:content-type:content-transfer-encoding;
+        bh=/SddlIYRx89hePxnOzIl4nSBsM7HvOsGqwi+oDL/a80=;
+        b=lR27ohcT8FEktmZdVsNc9+1vkMlLGKA8u9QxCC3g2le9+Z9m9xrDK47OwNylBZ89un
+         wYuyABOuqeJ1+KkHxD6npOUICRcpRXioviSsenI2xNiFvdOsM7piRwY5v3JmECq7HYiK
+         t6dgN+ajd6pmrtHJe4aKcEvNr3WR24odriMSSRyVxnPeP+2CldVT7K7N3jKNTbwdEHXS
+         LsbmEHCrFr3TSpxid7S0bFhx+dmvFLz6EJIc/DawaqKkQpK75jkYpXcW0XyZxtGvQ5R3
+         kAYQEpmA2IpGnAP70iMXtUK9GhbbJgec3tsK1+UxQfyMOXIYIru8mB8xng59JtXd3AUY
+         KdyA==
+X-Gm-Message-State: ALoCoQkiYl5EPK2B8MU8laGMQzuuxJg99Fb2YZ+XB5J7QRYQrM7eEnrQtxgnVdzdRd/Hr6dNii5W
+X-Received: by 10.224.60.71 with SMTP id o7mr9269091qah.38.1397009963690;
+        Tue, 08 Apr 2014 19:19:23 -0700 (PDT)
+Received: from localhost (HSI-KBW-37-209-111-144.hsi15.kabel-badenwuerttemberg.de. [37.209.111.144])
+        by mx.google.com with ESMTPSA id 104sm5230374qgq.1.2014.04.08.19.19.23
+        for <users@maven.apache.org>
+        (version=TLSv1.2 cipher=RC4-SHA bits=128/128);
+        Tue, 08 Apr 2014 19:19:23 -0700 (PDT)
+Date: Wed, 9 Apr 2014 04:19:16 +0200
+From: Bernd Eckenfels <ecki@zusammenkunft.net>
+To: users@maven.apache.org
+Subject: Re: Maven Download and Regular Expression
+Message-ID: <20140409041916.00005b40.ecki@zusammenkunft.net>
+In-Reply-To: <AB6E61E63DE1FD4980E57BB61263360B2E074A78@INPUNDAGBE3.corp.amdocs.com>
+References: <AB6E61E63DE1FD4980E57BB61263360B2E074A78@INPUNDAGBE3.corp.amdocs.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello,
+
+maybe this sample code helps you how you could use Aether to inspect
+repository index:
+
+http://git.eclipse.org/c/aether/aether-demo.git/tree/aether-demo-snippets/src/main/java/org/eclipse/aether/examples/FindAvailableVersions.java
+
+check out http://eclipse.org/aether for details.
+
+Gruss
+Bernd
+
+ Am Tue, 8 Apr 2014 12:52:48 +0000
+schrieb MukeshKumar Bhansali <MukeshKumar.Bhansali@amdocs.com>:
+
+> Hi Folks,
+> I have a different requirement and not getting any hint.
+> 
+> The Requirement is like :
+> 
+> I want to download an artifact from Nexus using Maven, But I have
+> 
+> 
+> 1)      groupId
+> 
+> 2)      version
+> 
+> 3)      Partial artifactId ( prefix and suffix of artifactId means
+> not the exact one)
+> 
+> 
+> Example :
+> In case of this artifact :
+> 
+> groupId :              org.nihiocs.hudson.plugins
+> artifactId :           jobTreeMaker
+> version :               main
+> 
+> I have following information
+> 
+> groupId :              org.nihiocs.hudson.plugins
+> artifactId :           job*Maker (Prefix and Suffix)
+> version :               main
+> So in this case how I can download this artifact ?
+> 
+> It is also ok if I downloads entire
+> org/nihiocs/Hudson/plugins  ( org.nihiocs.hudson.plugins ) Directory.
+> 
+> I like it to done by maven only but it is ok if ant comes in action.
+> 
+> Thanks.
+> 
+> 
+> MUKESH KUMAR BHANSALI
+> 
+> 
+> This message and the information contained herein is proprietary and
+> confidential and subject to the Amdocs policy statement, you may
+> review at http://www.amdocs.com/email_disclaimer.asp
+> 
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

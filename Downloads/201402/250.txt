@@ -1,0 +1,113 @@
+From users-return-135410-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Feb 11 23:48:03 2014
+Return-Path: <users-return-135410-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8D9A71052F
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 11 Feb 2014 23:48:03 +0000 (UTC)
+Received: (qmail 61259 invoked by uid 500); 11 Feb 2014 23:47:59 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 61107 invoked by uid 500); 11 Feb 2014 23:47:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 61099 invoked by uid 99); 11 Feb 2014 23:47:59 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 11 Feb 2014 23:47:59 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ljnelson@gmail.com designates 209.85.216.169 as permitted sender)
+Received: from [209.85.216.169] (HELO mail-qc0-f169.google.com) (209.85.216.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 11 Feb 2014 23:47:53 +0000
+Received: by mail-qc0-f169.google.com with SMTP id w7so14313629qcr.28
+        for <users@maven.apache.org>; Tue, 11 Feb 2014 15:47:32 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=0e+/vT754UhDNh97xd+MFmkBwGFqQvTpX5GqiSA7B3Y=;
+        b=z6Ac9PLym9vpN1cPhj21e1+8gFUB7hcG/7Oj2f6IKJJTxccROKItWnqnizyoqGUAl1
+         g92Ts9V4PlK7sDWtPkyNvYCjMNhd0tA3kY47ZG6eS4bqZLg79Yaz9J8z9CKqUeHC3n65
+         TmpWCvU0x06ETX6grA9tLRepGO7lyRteIRdxPiZesvIW6+ZCsyTOcUvMsns3Q+2tq8BX
+         qoTh7D/t3Zu8Gk2rrGYnf6398Gdc7jDhoTq5pXm0O3YVhIO5Q3X+3T6xvqgj+XF0VnQp
+         YgZNG3OTqcDtXIFfMuY58guEVJ1D0aUBIv9cTW2RE8LFvh2nSQv1LLUH4B4ytQDGErVt
+         qMAg==
+MIME-Version: 1.0
+X-Received: by 10.224.36.129 with SMTP id t1mr58522206qad.8.1392162452597;
+ Tue, 11 Feb 2014 15:47:32 -0800 (PST)
+Received: by 10.96.61.9 with HTTP; Tue, 11 Feb 2014 15:47:32 -0800 (PST)
+In-Reply-To: <1392106732883-5784035.post@n5.nabble.com>
+References: <1392106732883-5784035.post@n5.nabble.com>
+Date: Tue, 11 Feb 2014 15:47:32 -0800
+Message-ID: <CAHNdxun4zRCm1mCpnA_q27OYJj0khLpKLpBsGCD0Es4DRn3Qaw@mail.gmail.com>
+Subject: Re: Adding dependency management to parent pom causes errors
+From: Laird Nelson <ljnelson@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0158a9e474ff6804f22a145c
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0158a9e474ff6804f22a145c
+Content-Type: text/plain; charset=UTF-8
+
+On Tue, Feb 11, 2014 at 12:18 AM, geoffh <hartnell_g@yahoo.co.uk> wrote:
+
+> In attempting to identify the cause, I started by just adding dependency
+>
+management to my parent pom
+> Simply adding
+> <dependencyManagement>
+> </dependencyManagement>
+> around the dependencies in my parent pom, causes dependencies not be
+> resolved
+>
+
+I'm not sure why the developers chose the words "dependency management" to
+identify the particular XML section in question.  It's very confusing.
+
+Think of the <dependencyManagement> section as serving two purposes.
+
+First, and foremost, it is template information.  If a given real
+<dependency> somewhere else omits a piece of information, then that piece
+of information is taken (if possible) from the <dependencyManagement>
+section.
+
+Second, which is really an outgrowth of the first, it constrains the
+versions of transitive dependencies that might be pulled in from somewhere
+else.  I say this is an outgrowth of the first concern, because strictly
+speaking your project never mentions a transitive dependency, so that
+"piece of information" is missing just like, say, a version string.
+
+Note as well that the stuff in the <dependencyManagement> section can be
+made up.  That is, you can put dependency management elements in there that
+don't actually pick out any dependencies in the world.  See my earlier
+point about this being a template area.
+
+Putting this all together, it still follows that you have to have *real*
+dependencies defined.  If you simply wrap your "real" dependencies with
+<dependencyManagement></dependencyManagement>, that is clearly not going to
+work: you've now specified a template, but nothing that the template will
+be merged into.
+
+The compilation error you're talking about looks like something more
+substantial than a bad dependency--you're getting a compiler error from
+within javac itself.
+
+I noticed that "-gwt" showed up in some of your artifact names; perhaps
+something with GWT is not playing nice.
+
+Hope something in here helps.
+
+Best,
+Laird
+
+-- 
+http://about.me/lairdnelson
+
+--089e0158a9e474ff6804f22a145c--
+

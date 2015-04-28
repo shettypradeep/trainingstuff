@@ -1,0 +1,104 @@
+From users-return-137492-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Oct  8 11:30:08 2014
+Return-Path: <users-return-137492-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 43F6A172FE
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  8 Oct 2014 11:30:08 +0000 (UTC)
+Received: (qmail 35725 invoked by uid 500); 8 Oct 2014 11:30:06 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 35634 invoked by uid 500); 8 Oct 2014 11:30:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 35622 invoked by uid 99); 8 Oct 2014 11:30:06 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Oct 2014 11:30:06 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of hws689@gmail.com designates 209.85.218.42 as permitted sender)
+Received: from [209.85.218.42] (HELO mail-oi0-f42.google.com) (209.85.218.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Oct 2014 11:29:40 +0000
+Received: by mail-oi0-f42.google.com with SMTP id a141so7123124oig.15
+        for <users@maven.apache.org>; Wed, 08 Oct 2014 04:29:39 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=+5zAbXGJmP6gOIZoRFOBobM/Gw77kz+CQ5kUqNWO0OM=;
+        b=VpMS9PPlhHlDot138PBFgeVG2sG6I/o2UR0OKTGsKewREVPEZdJZldI27ki5beAQa5
+         mw+dktJk9LfMoHNBqzGq/HRocelej9BJiqQulEkUeEj1+/8+EMAydFDWLe+1wp05B1JN
+         3k6Fo7JK5beNcSf5+TYNRiKvAB9e5R9EYNEy1ClvYrvNIPe85+LbH7NAzwIWd5K5NsLK
+         LKXLPYkBPumoxinpsaMrKhXuO4DsAMyWTWeKG6RMx0s0jQYMuKJD8bkNhkxBxHG04CoO
+         g3IY2EMpP0SSLz5RW2yBcd0huiq5QBLZs274eyUxNrPIzbyXxVt27cDeTOuQKuVZkZzY
+         uWXA==
+MIME-Version: 1.0
+X-Received: by 10.182.3.100 with SMTP id b4mr2455026obb.79.1412767779548; Wed,
+ 08 Oct 2014 04:29:39 -0700 (PDT)
+Received: by 10.202.48.199 with HTTP; Wed, 8 Oct 2014 04:29:39 -0700 (PDT)
+In-Reply-To: <1412738484852-5808036.post@n5.nabble.com>
+References: <1412347595640-5807695.post@n5.nabble.com>
+	<20141005044146.00004baf.ecki@zusammenkunft.net>
+	<1412554665557-5807858.post@n5.nabble.com>
+	<1412606316539-5807865.post@n5.nabble.com>
+	<CA+nPnMw+vyyV_iP-o9gMZ8dez0zW_wkzF_dAG-eTKvxrwGrmLA@mail.gmail.com>
+	<1412738484852-5808036.post@n5.nabble.com>
+Date: Wed, 8 Oct 2014 08:29:39 -0300
+Message-ID: <CAG9vi9VmL-+aK4XdvCJRW+hWani5XmA1uENX-Xe9YHWpSKwMug@mail.gmail.com>
+Subject: Re: WAR contains SNAPSHOT JARs with timestamps
+From: Hilton Wichwski Silva <hws689@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11348d50a677680504e7a14e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11348d50a677680504e7a14e
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Why you can=C2=B4t use timestamped  (SNAPSHOT) jars?
+
+Anyway, maybe this can help you
+
+http://stackoverflow.com/questions/1243574/how-to-stop-maven-artifactory-fr=
+om-keeping-snapshots-with-timestamps
+
+2014-10-08 0:21 GMT-03:00 captainslow <srinivas.nagesh@gmail.com>:
+
+> I tried adding the following, but couldn't get it to work. Timestamp was
+> appended to the SNAPSHOT jars.
+>
+> {code}
+> <plugin>
+>             <groupId>org.apache.maven.plugins</groupId>
+>             <artifactId>maven-war-plugin</artifactId>
+>             <version>2.4</version>
+>             <configuration>
+>
+> <outputFileNameMapping>@{artifactId}@-@{baseVersion}@.@{extension}@
+> </outputFileNameMapping>
+>             </configuration>
+>         </plugin>
+> {/code}
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/WAR-contains-SNAPSHOT-JARs-with-timestam=
+ps-tp5807695p5808036.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a11348d50a677680504e7a14e--
+

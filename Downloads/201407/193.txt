@@ -1,0 +1,97 @@
+From users-return-136882-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 24 21:03:16 2014
+Return-Path: <users-return-136882-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DFD141123E
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 24 Jul 2014 21:03:15 +0000 (UTC)
+Received: (qmail 28236 invoked by uid 500); 24 Jul 2014 21:03:14 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 28151 invoked by uid 500); 24 Jul 2014 21:03:14 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 28137 invoked by uid 99); 24 Jul 2014 21:03:14 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 21:03:14 +0000
+X-ASF-Spam-Status: No, hits=0.7 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [194.158.98.45] (HELO mail-3y.bbox.fr) (194.158.98.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 21:03:11 +0000
+Received: from herve-desktop.localnet (static-176-183-252-218.ncc.abo.bbox.fr [176.183.252.218])
+	by mail-3y.bbox.fr (Postfix) with ESMTP id 3A52765
+	for <users@maven.apache.org>; Thu, 24 Jul 2014 23:02:47 +0200 (CEST)
+From: =?ISO-8859-1?Q?Herv=E9?= BOUTEMY <herve.boutemy@free.fr>
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: testing-harness plugin: LocalRepositoryManager is not set
+Date: Thu, 24 Jul 2014 23:02:47 +0200
+Message-ID: <2811033.f8x19cZHoW@herve-desktop>
+User-Agent: KMail/4.13.2 (Linux/3.13.0-32-generic; KDE/4.13.2; x86_64; ; )
+In-Reply-To: <CADVp3v_y6nY7RVVkkAmeXUuuwTq1ZQ873mFUL4oOjUEdFneFxQ@mail.gmail.com>
+References: <53CFD6D8.5030200@linagora.com> <CADVp3v_y6nY7RVVkkAmeXUuuwTq1ZQ873mFUL4oOjUEdFneFxQ@mail.gmail.com>
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="iso-8859-1"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Le jeudi 24 juillet 2014 12:05:37 Barrie Treloar a =E9crit :
+> On 24 July 2014 01:08, Vincent Zurczak <vincent.zurczak@linagora.com>=
+ wrote:
+> > Hi,
+> >=20
+> > I am not sure this is the right mailing-list.
+> > Maybe I should have posted to the dev list. Anyway...
+> >=20
+> > I have started working on new Maven plug-in last week and I have se=
+t up
+> > unit tests using the testing-harness plugin.
+> > I have problems with Maven injected fields, such as the Maven proje=
+ct.
+>=20
+> Here will do, the devs are on both.
+>=20
+> (and you will have to wait for someone with more knowledge about usin=
+g the
+> testing harnesses)
+>=20
+> Back when I was trying to use them you had a choice of 3, I think its=
+ not
+> down to one but I dont know if the documentation on how to set it up =
+and
+> use it is readily available.
+yes, the 3 are still available, even if 2 options have been removed fro=
+m front=20
+page
+you can see the previous fonrt page in history [1], and the modules are=
+ still=20
+availabe (and can be seen from modules report, even if not written down=
+ in=20
+front page)
+
+Regards,
+
+Herv=E9
+
+[1] http://maven.apache.org/plugin-testing-archives/3.1.0/
+
+>=20
+> When you get your answers, would you add to the knowledge base?
+> It is always good to get fresh eyes on these things as the people who=
+
+> already know what's going on make assumptions that someone just start=
+ing
+> out need to know about.
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

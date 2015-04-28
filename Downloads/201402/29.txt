@@ -1,0 +1,78 @@
+From users-return-135417-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 12 02:54:33 2014
+Return-Path: <users-return-135417-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D0EF610B95
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 12 Feb 2014 02:54:33 +0000 (UTC)
+Received: (qmail 53083 invoked by uid 500); 12 Feb 2014 02:54:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 52774 invoked by uid 500); 12 Feb 2014 02:54:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 52766 invoked by uid 99); 12 Feb 2014 02:54:26 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Feb 2014 02:54:26 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of baerrach@gmail.com designates 209.85.223.180 as permitted sender)
+Received: from [209.85.223.180] (HELO mail-ie0-f180.google.com) (209.85.223.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Feb 2014 02:54:22 +0000
+Received: by mail-ie0-f180.google.com with SMTP id u16so403694iet.25
+        for <users@maven.apache.org>; Tue, 11 Feb 2014 18:54:02 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :cc:content-type;
+        bh=5cpeQkxis4mJlYw02kjoF0Cbj2cwt8akj4636paP7+U=;
+        b=n41ft9BJNyaJL5DFF5zx06AMCzQzoxiAVZ9KJFjU9wmOG/6cq3Xbz1MA8whO/Z55hb
+         7uekOs4xu+w1shikPFV2k7/UnmdYrQMmDxGL/e7zqWHwMCU9oZLXUV17A3KAx5jA82SE
+         w/4ndHQyFA94Rf0fS0sya2C18pI1jnSyYfhuqcT0yKKdyMQ0myW/Ze566MYjplsU4BsB
+         S84oqoR/XqwJ/xxCfO6kUK6IuPUbR7zCb7+JvFUo+GLiPhguh5nlc3Q19WcCqtChLQlH
+         CRg/mGi9chgggjgaiCGzSl0v7LxYaY9IL+hiV1ixXlWExce5O2JRcyi1Z+eeBof9MrYQ
+         rTSw==
+MIME-Version: 1.0
+X-Received: by 10.50.176.137 with SMTP id ci9mr1585560igc.31.1392173642060;
+ Tue, 11 Feb 2014 18:54:02 -0800 (PST)
+Received: by 10.42.133.136 with HTTP; Tue, 11 Feb 2014 18:54:01 -0800 (PST)
+In-Reply-To: <52FAE00E.2030206@gmail.com>
+References: <52FAE00E.2030206@gmail.com>
+Date: Wed, 12 Feb 2014 13:24:01 +1030
+Message-ID: <CADVp3v9gdTBevDmhFvbubXDZYvhcuviT8N0c7CTYxKnm4AWtvw@mail.gmail.com>
+Subject: Re: Can't Find Scala Archetype
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Cc: scala-ide-user@googlegroups.com
+Content-Type: text/plain; charset=ISO-8859-1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 12 February 2014 13:14, Eric Kolotyluk <eric.kolotyluk@gmail.com> wrote:
+> I am using the Typesafe Eclipse IDE, and for some reason it cannot find the
+> archetype for
+>
+> <groupId>net.alchim31.maven</groupId>
+> <artifactId>scala-archetype-simple</artifactId>
+> <version>1.5</version>
+>
+> At one time it could, but now it can't, and I have no idea why. The
+> diagnostics are completely useless in understanding the problem.
+>
+> Can anyone suggest anything that might be wrong and how to fix it?
+
+Central says it exists
+http://search.maven.org/#search|ga|1|scala-archetype-simple
+
+Are you behind a proxy?
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

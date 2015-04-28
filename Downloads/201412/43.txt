@@ -1,0 +1,65 @@
+From users-return-138049-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Dec 17 12:38:59 2014
+Return-Path: <users-return-138049-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5C2639A12
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 17 Dec 2014 12:38:59 +0000 (UTC)
+Received: (qmail 96647 invoked by uid 500); 17 Dec 2014 12:38:57 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 96566 invoked by uid 500); 17 Dec 2014 12:38:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 96549 invoked by uid 99); 17 Dec 2014 12:38:56 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 17 Dec 2014 12:38:56 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of borzh62@gmail.com designates 74.125.82.52 as permitted sender)
+Received: from [74.125.82.52] (HELO mail-wg0-f52.google.com) (74.125.82.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 17 Dec 2014 12:38:29 +0000
+Received: by mail-wg0-f52.google.com with SMTP id x12so20010415wgg.11
+        for <users@maven.apache.org>; Wed, 17 Dec 2014 04:37:44 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=+u4oB8va5l33N2UI2Vybcja2DnPmYs1a8tXNagyPL+k=;
+        b=WWdT6BJf1g+7HjkGUQX8lz1w83UPwMgU9cf6qaFUn7I0jfBHhddJIoTh+RjNlqQWMA
+         0YlfIeVDRRAh4NlmY8pfm7Mqke4c0EUDC5kVVF4btHoTNPXvAwNJyYKTv/uWpEZ97zfn
+         XfwiomTEyI6K4+rixKAOFIWM7QiktmB/9Y3YCg/Qcm22jWlEbSUiNYFnv1PHajWrOMKb
+         BBry6hF/m/oBzYF9CX2eF7Q7o+CfCP9gnY9Q6vyV1OG/IwMI2srgE1oNFfsHbcjCOnxa
+         /cD49EjhXZ3fGRK7RMbyVdjN6vTqKL8DpKKpmExN2Ez5hp0fPJt5eUcQB2/oVwUvrTm2
+         mNzg==
+MIME-Version: 1.0
+X-Received: by 10.194.92.116 with SMTP id cl20mr73086535wjb.71.1418819864169;
+ Wed, 17 Dec 2014 04:37:44 -0800 (PST)
+Received: by 10.180.75.136 with HTTP; Wed, 17 Dec 2014 04:37:44 -0800 (PST)
+Date: Wed, 17 Dec 2014 09:37:44 -0300
+Message-ID: <CAEeU5n-UAxaUbpJYD97QpnoxWYS8PrnFhRr-jEY71RMzZrJjOQ@mail.gmail.com>
+Subject: Maven follows symlinks
+From: Borzh <borzh62@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=047d7bd910c20113ac050a68be26
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bd910c20113ac050a68be26
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+I have problem with mvn eclipse:eclipse, it generates hard paths in its
+projects, instead of using
+path as it is (symlink).
+How to tell maven not to follow symlinks?
+
+Thanks in advance.
+
+--047d7bd910c20113ac050a68be26--
+

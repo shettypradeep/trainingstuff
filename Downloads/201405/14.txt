@@ -1,0 +1,99 @@
+From users-return-136338-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue May 13 05:01:03 2014
+Return-Path: <users-return-136338-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0BB291127D
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 13 May 2014 05:01:03 +0000 (UTC)
+Received: (qmail 64885 invoked by uid 500); 12 May 2014 10:14:22 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 64787 invoked by uid 500); 12 May 2014 10:14:22 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 64777 invoked by uid 99); 12 May 2014 10:14:22 -0000
+Received: from Unknown (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 12 May 2014 10:14:22 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=FORGED_YAHOO_RCVD,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 12 May 2014 10:14:19 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <sachikmails@yahoo.com>)
+	id 1WjnF6-0000ZW-6C
+	for users@maven.apache.org; Mon, 12 May 2014 03:13:56 -0700
+Date: Mon, 12 May 2014 03:13:56 -0700 (PDT)
+From: sachi <sachikmails@yahoo.com>
+To: users@maven.apache.org
+Message-ID: <1399889636177-5792944.post@n5.nabble.com>
+In-Reply-To: <CAJZRQKwm-pUpDsF77rd5w-X4C2f+f442W7MCZ24_FEZ-RW-YSA@mail.gmail.com>
+References: <CALy+7UmYJk9q+tKoVSBFyB2fNY=NbpLPPWCVBhQWz10y3kMjfQ@mail.gmail.com> <529D2F15.40005@austin.rr.com> <529E72A1.5040407@austin.rr.com> <CALy+7UkUByz_oHOqYqs2jeC0DpmOehji7rWzSx3n7Uge-qd4Zg@mail.gmail.com> <529FB75A.3040305@austin.rr.com> <CALy+7U=gLrQH-MzWSN7NB_AdKGaRC+c=6JnQYVhmCbZ5ySUamQ@mail.gmail.com> <52A0AA95.9060008@austin.rr.com> <77187BF5-8F6D-473D-900B-DBFDE15CF6A8@gmail.com> <52A0DE55.6090404@austin.rr.com> <CAJZRQKwm-pUpDsF77rd5w-X4C2f+f442W7MCZ24_FEZ-RW-YSA@mail.gmail.com>
+Subject: Re: Upgrade to 3.1.1 causes problems
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Kristian,
+I was also getting the following error
+
+Exception in thread "Thread-7" java.lang.LinkageError:
+org.codehaus.plexus.util.IOUtil
+	at java.lang.ClassLoader.defineClassImpl(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:364)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:154)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:777)
+	at java.net.URLClassLoader.access$400(URLClassLoader.java:96)
+	at java.net.URLClassLoader$ClassFinder.run(URLClassLoader.java:1225)
+	at java.security.AccessController.doPrivileged(AccessController.java:366)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:660)
+	at
+org.codehaus.plexus.classworlds.realm.ClassRealm.loadClassFromSelf(ClassRealm.java:389)
+	at
+org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:42)
+	at
+org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:259)
+	at
+org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:235)
+	at
+org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:227)
+	at org.codehaus.plexus.util.cli.StreamPumper.run(StreamPumper.java:159)
+
+
+I am using maven 3.1.1  and IBM JDK 1.7.1. 
+
+I replaced 
+
+maven-3.1.1/boot/plexus-classworlds-2.5.1.jar 
+
+with 
+
+maven-3.0.5/boot/plexus-classworlds-2.4.jar 
+
+ran few builds and there are no issues.
+
+FYI
+
+Sachi
+
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Upgrade-to-3-1-1-causes-problems-tp5776875p5792944.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

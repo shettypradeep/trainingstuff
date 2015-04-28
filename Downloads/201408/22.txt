@@ -1,0 +1,95 @@
+From users-return-136959-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Aug  4 16:18:25 2014
+Return-Path: <users-return-136959-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A73591146E
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  4 Aug 2014 16:18:25 +0000 (UTC)
+Received: (qmail 76746 invoked by uid 500); 4 Aug 2014 16:18:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 76668 invoked by uid 500); 4 Aug 2014 16:18:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 76648 invoked by uid 99); 4 Aug 2014 16:18:23 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 04 Aug 2014 16:18:23 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of paulus.benedictus@gmail.com designates 209.85.218.46 as permitted sender)
+Received: from [209.85.218.46] (HELO mail-oi0-f46.google.com) (209.85.218.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 04 Aug 2014 16:18:19 +0000
+Received: by mail-oi0-f46.google.com with SMTP id i138so4732155oig.33
+        for <users@maven.apache.org>; Mon, 04 Aug 2014 09:17:58 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=+RFG5jSMJtGYFSwxDgvmyQPO4DJIXvRrGEJjDhJSz/8=;
+        b=PlFrDFUMBHq1oCiAgeaB3qSeQPK5qZ6JoqNhWH9F798PtE54vgqWzibM0WtInA8Fz7
+         ko4LJCoRsGQyMceAMbHEyezaJHwIoXt9QfnQH3C85B1GH9+TDUBExsfCc5CApxEMh0mE
+         Obw+GTOZ3PVlL816sTBMbc3YoqD+kjNH/qU1QX5Mc/shauM371JiDkqUXKsrC6O4zzBq
+         NNqby0kBMaEG55Igi/7lbFLKG0RMUPAb1i15giHsfGS4YVMNW8hqdE8MhgYsSkAlGtS9
+         ANjcAQscl6TULT4Puk1xukbYFYGEv75KtPMvx3IRCj4mDRzIpY1WLPr8yOBDLXiGm1u1
+         OF2Q==
+MIME-Version: 1.0
+X-Received: by 10.182.108.228 with SMTP id hn4mr13132040obb.73.1407169078004;
+ Mon, 04 Aug 2014 09:17:58 -0700 (PDT)
+Sender: paulus.benedictus@gmail.com
+Received: by 10.76.95.202 with HTTP; Mon, 4 Aug 2014 09:17:57 -0700 (PDT)
+In-Reply-To: <F21547B4F425F9428444D12A5127050623872FAC@NP1EXMB033.corp.halliburton.com>
+References: <F21547B4F425F9428444D12A5127050623872FAC@NP1EXMB033.corp.halliburton.com>
+Date: Mon, 4 Aug 2014 11:17:57 -0500
+X-Google-Sender-Auth: kj1hwSBuo0m5cpJe6ZIa2Ib4xgQ
+Message-ID: <CABLGb9xS=z=9rE485FOn_M_Mp1QeMdOyYPmNRy5Pft+6Hsro4g@mail.gmail.com>
+Subject: Re: MD5 checksum validation tool [Windows]?
+From: Paul Benedict <pbenedict@apache.org>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0149d2bc08941804ffd015a8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0149d2bc08941804ffd015a8
+Content-Type: text/plain; charset=UTF-8
+
+Yup. I've used HashTab for years.
+http://www.implbits.com/hashtab.aspx
+
+
+Cheers,
+Paul
+
+
+On Mon, Aug 4, 2014 at 11:16 AM, Justin Georgeson <JGeorgeson@lgc.com>
+wrote:
+
+> All the checksum validation tools I've found only seem to support files
+> with format produced by the md5sum tool, ie -
+>
+> checksum1 relative/path/file1
+> checksum2 relative/path/to/file2
+> ...
+>
+> But Maven publishes sibling files of the same name with ".md5" appended,
+> and no relative path in the file. Does anyone know of a tool on Windows
+> (shell extension, standalone GUI) that people could use after downloading
+> the artifact (in this particular case it's an executable installer) and the
+> md5 file and just double-click the md5 file to validate the download (or
+> drag/drop the artifact and md5 file)?
+>
+> ----------------------------------------------------------------------
+> This e-mail, including any attached files, may contain confidential and
+> privileged information for the sole use of the intended recipient.  Any
+> review, use, distribution, or disclosure by others is strictly prohibited.
+>  If you are not the intended recipient (or authorized to receive
+> information for the intended recipient), please contact the sender by reply
+> e-mail and delete all copies of this message.
+>
+
+--089e0149d2bc08941804ffd015a8--
+

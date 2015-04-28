@@ -1,0 +1,123 @@
+From users-return-137802-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Nov 22 20:40:22 2014
+Return-Path: <users-return-137802-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4199C10A45
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 22 Nov 2014 20:40:22 +0000 (UTC)
+Received: (qmail 27371 invoked by uid 500); 22 Nov 2014 20:40:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 27289 invoked by uid 500); 22 Nov 2014 20:40:20 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 27278 invoked by uid 99); 22 Nov 2014 20:40:20 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 22 Nov 2014 20:40:20 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of khmarbaise@gmx.de designates 212.227.17.21 as permitted sender)
+Received: from [212.227.17.21] (HELO mout.gmx.net) (212.227.17.21)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 22 Nov 2014 20:39:53 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([217.247.3.163]) by mail.gmx.com
+ (mrgmx103) with ESMTPSA (Nemesis) id 0M6zvN-1Y6czV2h53-00wk0N for
+ <users@maven.apache.org>; Sat, 22 Nov 2014 21:39:52 +0100
+Message-ID: <5470F495.2070009@gmx.de>
+Date: Sat, 22 Nov 2014 21:39:49 +0100
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:31.0) Gecko/20100101 Thunderbird/31.2.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: deploying war artifact to nexus is failing; packaging as jar
+ works.
+References: <CAA-OJnhZBpcXbBZbKEqrauS+DZ8vHkk7gpS_BHreKJSgMYMQfw@mail.gmail.com> <CAMQUeZQ=Mvidk3HMeMpTBa6ivLZqni=sz7+ovidVcrraZ793qg@mail.gmail.com>
+In-Reply-To: <CAMQUeZQ=Mvidk3HMeMpTBa6ivLZqni=sz7+ovidVcrraZ793qg@mail.gmail.com>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:W51kaq7DfIq9lJW2VUn6RnXS3T4jVuTfxngzS8xiQtbYbga73Hi
+ L3ZJSAT/X2SmlDp6iSPoTrzgpEIL7ZndxmIpgp+Vi//HTTI6kg1aIRDBhxYNTby7dMjwtnn
+ UBax44MZLOUhD5qbmV1f5vzmdpBIJjpt2VXnaA0IPCdy9mY35j7ymU2rY8fEHXK1076RkMD
+ +wuk0OCoYOE0pfT3BJSSA==
+X-UI-Out-Filterresults: notjunk:1;
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+have you checked in Nexus if there where errors in the logs?
+
+
+Kind regards
+Karl Heinz Marbaise
+
+
+On 11/22/14 9:35 PM, Sartaj Hundal wrote:
+> You're getting an IOException (unexpected end of stream). Are you using the
+> right URL? Just an idea. You might have to set some property to 'false' so
+> that maven actually starts reading. Sorry if I couldn't be more help, it's
+> been awhile.. but your problem is definitely to do with IO.
+>
+> On Sat, Nov 22, 2014 at 3:47 AM, John Smith <jszjsmith@googlemail.com>
+> wrote:
+>
+>> Hello,
+>>
+>> I'm trying to distribute my war's artifact to nexus but I'm getting the
+>> following error below. If I change the packaging in the pom.xml to jar it
+>> will deploy fine.
+>>
+>> Can anyone see what I am doing wrong?
+>>
+>> thanks,
+>> John.
+>>
+>> [INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ my-webapp
+>> ---
+>> [INFO] Downloading:
+>>
+>> http://nexus.lan:38080/nexus/content/repositories/snapshots/me/john/my-webapp/0.0.1-SNAPSHOT/maven-metadata.xml
+>> [INFO] Downloaded:
+>>
+>> http://nexus.lan:38080/nexus/content/repositories/snapshots/me/john/my-webapp/0.0.1-SNAPSHOT/maven-metadata.xml
+>> (776 B at 1.9 KB/sec)
+>> [INFO] Uploading:
+>>
+>> http://nexus.lan:38080/nexus/content/repositories/snapshots/me/john/my-webapp/0.0.1-SNAPSHOT/my-webapp-0.0.1-20141122.103704-6.war
+>> [INFO] Uploading:
+>>
+>> http://nexus.lan:38080/nexus/content/repositories/snapshots/me/john/my-webapp/0.0.1-SNAPSHOT/my-webapp-0.0.1-20141122.103704-6.pom
+>> [INFO] Uploaded:
+>>
+>> http://nexus.lan:38080/nexus/content/repositories/snapshots/me/john/my-webapp/0.0.1-SNAPSHOT/my-webapp-0.0.1-20141122.103704-6.pom
+>> (5 KB at 197.5 KB/sec)
+>> [INFO]
+>> ------------------------------------------------------------------------
+>> [INFO] BUILD FAILURE
+>> [INFO]
+>> ------------------------------------------------------------------------
+>> [INFO] Total time: 3.133 s
+>> [INFO] Finished at: 2014-11-22T10:37:04+00:00
+>> [INFO] Final Memory: 14M/244M
+>> [INFO]
+>> ------------------------------------------------------------------------
+>> [ERROR] Failed to execute goal
+>> org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy (default-deploy)
+>> on project my-webapp: Failed to deploy artifacts: Could not transfer
+>> artifact me.john:my-webapp:war:0.0.1-20141122.103704-6 from/to My_Snapshots
+>> (http://nexus.lan:38080/nexus/content/repositories/snapshots/): unexpected
+>> end of stream -> [Help 1]
+>>
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

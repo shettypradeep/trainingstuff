@@ -1,0 +1,103 @@
+From users-return-136417-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed May 21 18:56:02 2014
+Return-Path: <users-return-136417-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7BB2F11330
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 21 May 2014 18:56:02 +0000 (UTC)
+Received: (qmail 55836 invoked by uid 500); 21 May 2014 18:56:01 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 55746 invoked by uid 500); 21 May 2014 18:56:01 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 55738 invoked by uid 99); 21 May 2014 18:56:01 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 21 May 2014 18:56:01 +0000
+Received: from localhost (HELO robertscholte) (127.0.0.1)
+  (smtp-auth username rfscholte, mechanism login)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Wed, 21 May 2014 18:56:00 +0000
+Content-Type: text/plain; charset=iso-8859-15; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Invalid pom during release perform while valid during usual mvn
+ install
+References: <CAHQ79Q2rSdYECXqift2u4+sYR8wQq6+TBfGziDUwsHjCWa3=MQ@mail.gmail.com> <CANWgJS7C5DaWVyRF9niimx2SHg70+muytcc-hrfbfzGfq53JSQ@mail.gmail.com> <CAHQ79Q3Yf9qJa4dmrf_1pFkDcBMMFE6uy0+HL4Up412K=mMuPg@mail.gmail.com>
+Date: Wed, 21 May 2014 20:55:58 +0200
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.xf737kxtkdkhrr@robertscholte>
+In-Reply-To: <CAHQ79Q3Yf9qJa4dmrf_1pFkDcBMMFE6uy0+HL4Up412K=mMuPg@mail.gmail.com>
+User-Agent: Opera Mail/12.17 (Win32)
+
+hi,
+
+what the release:perform is not more then:
+- check out the tag to target/checkout
+- run 'mvn deploy' from this directory
+
+so please verify the content of the target/checkout directory and try to  
+run 'mvn deploy' from this directory.
+that should give you a hint what went wrong.
+
+thanks,
+Robert
+
+Op Wed, 21 May 2014 18:28:01 +0200 schreef Tomasz Borek  
+<tomasz.borek@gmail.com>:
+
+> My thanks for speedy reply Baptiste. I'm using
+> org.apache.maven.plugins:maven-release-plugin:2.3.2
+>
+> pozdrawiam,
+> LAFK
+>
+>
+> 2014-05-21 17:12 GMT+02:00 Baptiste Mathus <bmathus@batmat.net>:
+>
+>> Which version of the maven-release-plugin are you using?
+>>
+>> Cheers
+>>
+>>
+>> 2014-05-21 13:54 GMT+02:00 Tomasz Borek <tomasz.borek@gmail.com>:
+>>
+>> > Ave!
+>> >
+>> > I've a problem with mvn release:perform, which fails on invalid POM  
+>> and
+>> > cuts of it's dependencies giving me compilation failure later
+>> >
+>> >
+>> > *EVEN THOUGH POM is valid.*I've arrived here via:
+>> >
+>> http://maven.apache.org/maven-release/maven-release-plugin/mail-lists.html
+>> >
+>> > Full problem description is available at SO:
+>> >
+>> >
+>> http://stackoverflow.com/questions/23546159/false-compile-error-during-mvn-releaseperform-says-invalid-pom-while-pom-is-fin
+>> >
+>> > I'm quite puzzled what's going on, any pointers are welcome.
+>> >
+>> > pozdrawiam,
+>> > LAFK
+>> >
+>>
+>>
+>>
+>> --
+>> Baptiste <Batmat> MATHUS - http://batmat.net
+>> Sauvez un arbre,
+>> Mangez un castor !
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

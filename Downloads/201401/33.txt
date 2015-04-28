@@ -1,0 +1,81 @@
+From users-return-135020-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan  8 18:55:21 2014
+Return-Path: <users-return-135020-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CCA1310D2B
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  8 Jan 2014 18:55:21 +0000 (UTC)
+Received: (qmail 98043 invoked by uid 500); 8 Jan 2014 18:51:27 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 97835 invoked by uid 500); 8 Jan 2014 18:51:18 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 97655 invoked by uid 99); 8 Jan 2014 18:51:06 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 18:51:06 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ljnelson@gmail.com designates 209.85.128.43 as permitted sender)
+Received: from [209.85.128.43] (HELO mail-qe0-f43.google.com) (209.85.128.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 18:51:02 +0000
+Received: by mail-qe0-f43.google.com with SMTP id jy17so2203210qeb.30
+        for <users@maven.apache.org>; Wed, 08 Jan 2014 10:50:41 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=sRs0NDMntphMpuVWh0MQ0ZTKkRYjiSbejz4rON1N1/0=;
+        b=OPbpBFsvv7/F8GhckC7DZr8F+u7fsIL9y7k89JrlTs1eCCiwQjYWL9IFJMs91ugknI
+         +DWoCx4tCB8j/g8dLQ5hlrBbfS1Los5vsSKrxg7vgm9gxeL+Y2FD6sLYvlSRRmkcN2IY
+         +tuv5AYDAM/BGdAobsltD/VoQURgjsa+T8Fbbp5eHPeQf+IcuEW87/2WoswPV93tqd+e
+         YK4PDb1o9SYyhxXA7Z9a1CXHSN5Tl7aFNbHIZSdh6uuGUyTbd++pAfOK6kepb/bgspX4
+         8LnEm5FmSBgzhPjpwDp1Fi5nVBL6PNHNuHVy1JdROOgiiU29yVwOAswAJuunZGju0S2S
+         4l2Q==
+MIME-Version: 1.0
+X-Received: by 10.49.24.211 with SMTP id w19mr216281163qef.9.1389207041577;
+ Wed, 08 Jan 2014 10:50:41 -0800 (PST)
+Received: by 10.96.169.200 with HTTP; Wed, 8 Jan 2014 10:50:41 -0800 (PST)
+Date: Wed, 8 Jan 2014 10:50:41 -0800
+Message-ID: <CAHNdxunR=4EmD2RZOxLiP7YCL-zZypancovmPCh+64oCbHykBA@mail.gmail.com>
+Subject: During plugin development, what is the context classloader set to?
+From: Laird Nelson <ljnelson@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b67795c3b98c704ef79f885
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b67795c3b98c704ef79f885
+Content-Type: text/plain; charset=UTF-8
+
+I have a plugin that I'm writing that needs to do two things during the
+course of its execution:
+Load a resource from the current project's classpath
+Load a resource from its own guts
+
+This is a fallback kind of thing: if the plugin can't find anything
+appropriate on the project classpath, then and only then do I want it to
+examine its own .jar file for the resource in question.
+
+My hunch is that there are probably already two classloaders set up for
+just this purpose.
+
+I am guessing (haven't tried yet) that the project classpath is probably
+visible to Thread.currentThread().getContextClassLoader().  Is that right?
+
+I'm also guessing (haven't tried yet) that from within my mojo
+this.getClass().getClassLoader() will return me a ClassLoader that is set
+up to be able to see my mojo's innards.  Is that right?
+
+Best,
+Laird
+
+-- 
+http://about.me/lairdnelson
+
+--047d7b67795c3b98c704ef79f885--
+

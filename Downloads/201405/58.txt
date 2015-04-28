@@ -1,0 +1,178 @@
+From users-return-136311-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu May  1 15:56:13 2014
+Return-Path: <users-return-136311-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 95B02101E3
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  1 May 2014 15:56:13 +0000 (UTC)
+Received: (qmail 38454 invoked by uid 500); 1 May 2014 15:56:08 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 38326 invoked by uid 500); 1 May 2014 15:56:08 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 38318 invoked by uid 99); 1 May 2014 15:56:08 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 01 May 2014 15:56:08 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [81.169.146.220] (HELO mo4-p00-ob.smtp.rzone.de) (81.169.146.220)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 01 May 2014 15:56:04 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1398959741; l=7048;
+	s=domk; d=j-hohwiller.de;
+	h=Content-Type:Subject:To:MIME-Version:From:Date:X-RZG-CLASS-ID:
+	X-RZG-AUTH;
+	bh=4BBelHZuGJeQwH3E9i4VUNsVxwk=;
+	b=iO6r2nPvAemBnv6hBkZMVQAcnzPbLe4LiqOYoIiKKFDmFmq2OkYZ2QcJmuv7tjPBBrN
+	neFRMOzwXfMygce3S/BIafejL1ZsU/XZX2OWv84zCTjRcvqwh1Z5tninJqJ1McslGyuqw
+	A4rvfd3WgGhjgJCBEsiM+aXEvgZh2lGcMfQ=
+X-RZG-AUTH: :JmMBZ0eIcbKJR7aGLMhBBT1soiSFCF2VXU3ajFlWruDt0TYMraRTflb1cybrVlP2lQ==
+X-RZG-CLASS-ID: mo00
+Received: from [192.168.178.35] (p5484D34F.dip0.t-ipconnect.de [84.132.211.79])
+	by smtp.strato.de (RZmta 32.39 DYNA|AUTH)
+	with ESMTPSA id c00c9bq41FtfXXM
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(Client did not present a certificate);
+	Thu, 1 May 2014 17:55:41 +0200 (CEST)
+Message-ID: <53626E7D.4080204@j-hohwiller.de>
+Date: Thu, 01 May 2014 17:55:41 +0200
+From: =?ISO-8859-1?Q?J=F6rg_Hohwiller?= <joerg@j-hohwiller.de>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: announce@mojo.codehaus.org, dev@mojo.codehaus.org, 
+ user@mojo.codehaus.org, users@maven.apache.org
+Subject: [ANN] flatten-maven-plugin 1.0.0-beta-1 Released
+Content-Type: multipart/signed; protocol="application/pkcs7-signature"; micalg=sha1; boundary="------------ms060508020300030608050201"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------ms060508020300030608050201
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+The Mojo team is pleased to announce the release of the flatten-maven-plu=
+gin version 1.0.0-beta-1.
+
+Flatten Maven Plugin generates a flattened version of your pom.xml and ma=
+kes maven to install
+and deploy this one instead of the original pom.xml.
+
+http://mojo.codehaus.org/flatten-maven-plugin/
+
+To get this update, simply specify the version in your project's plugin c=
+onfiguration:
+
+<plugin>
+         <groupId>org.codehaus.mojo</groupId>
+         <artifactId>flatten-maven-plugin</artifactId>
+         <version>1.0.0-beta-1</version>
+</plugin>
+
+All you need to do is add the plugin to the plugins in your build section=
+=2E
+
+This is the initial release.
+
+Enjoy,
+
+The Mojo team.
+ =20
+J=F6rg
+
+
+
+--------------ms060508020300030608050201
+Content-Type: application/pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+Content-Description: S/MIME Cryptographic Signature
+
+MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIIMgTCC
+BjQwggQcoAMCAQICAR4wDQYJKoZIhvcNAQEFBQAwfTELMAkGA1UEBhMCSUwxFjAUBgNVBAoT
+DVN0YXJ0Q29tIEx0ZC4xKzApBgNVBAsTIlNlY3VyZSBEaWdpdGFsIENlcnRpZmljYXRlIFNp
+Z25pbmcxKTAnBgNVBAMTIFN0YXJ0Q29tIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA3
+MTAyNDIxMDE1NVoXDTE3MTAyNDIxMDE1NVowgYwxCzAJBgNVBAYTAklMMRYwFAYDVQQKEw1T
+dGFydENvbSBMdGQuMSswKQYDVQQLEyJTZWN1cmUgRGlnaXRhbCBDZXJ0aWZpY2F0ZSBTaWdu
+aW5nMTgwNgYDVQQDEy9TdGFydENvbSBDbGFzcyAxIFByaW1hcnkgSW50ZXJtZWRpYXRlIENs
+aWVudCBDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMcJg8zOLdgasSmkLhOr
+lr6KMoOMpohBllVHrdRvEg/q6r8jR+EK75xCGhR8ToREoqe7zM9/UnC6TS2y9UKTpT1v7RSM
+zR0t6ndl0TWBuUr/UXBhPk+Kmy7bI4yW4urC+y7P3/1/X7U8ocb8VpH/Clt+4iq7nirMcNh6
+qJR+xjOhV+VHzQMALuGYn5KZmc1NbJQYclsGkDxDz2UbFqE2+6vIZoL+jb9x4Pa5gNf1TwSD
+kOkikZB1xtB4ZqtXThaABSONdfmv/Z1pua3FYxnCFmdr/+N2JLKutIxMYqQOJebr/f/h5t95
+m4JgrM3Y/w7YX9d7YAL9jvN4SydHsU6n65cCAwEAAaOCAa0wggGpMA8GA1UdEwEB/wQFMAMB
+Af8wDgYDVR0PAQH/BAQDAgEGMB0GA1UdDgQWBBRTcu2SnODaywFcfH6WNU7y1LhRgjAfBgNV
+HSMEGDAWgBROC+8apEBbpRdphzDKNGhD0EGu8jBmBggrBgEFBQcBAQRaMFgwJwYIKwYBBQUH
+MAGGG2h0dHA6Ly9vY3NwLnN0YXJ0c3NsLmNvbS9jYTAtBggrBgEFBQcwAoYhaHR0cDovL3d3
+dy5zdGFydHNzbC5jb20vc2ZzY2EuY3J0MFsGA1UdHwRUMFIwJ6AloCOGIWh0dHA6Ly93d3cu
+c3RhcnRzc2wuY29tL3Nmc2NhLmNybDAnoCWgI4YhaHR0cDovL2NybC5zdGFydHNzbC5jb20v
+c2ZzY2EuY3JsMIGABgNVHSAEeTB3MHUGCysGAQQBgbU3AQIBMGYwLgYIKwYBBQUHAgEWImh0
+dHA6Ly93d3cuc3RhcnRzc2wuY29tL3BvbGljeS5wZGYwNAYIKwYBBQUHAgEWKGh0dHA6Ly93
+d3cuc3RhcnRzc2wuY29tL2ludGVybWVkaWF0ZS5wZGYwDQYJKoZIhvcNAQEFBQADggIBAAqD
+CH14qywGXLhjjF6uHLkjd02hcdh9hrw+VUsv+q1eeQWB21jWj3kJ96AUlPCoEGZ/ynJNScWy
+6QMVQjbbMXltUfO4n4bGGdKo3awPWp61tjAFgraLJgDk+DsSvUD6EowjMTNx25GQgyYJ5RPI
+zKKR9tQW8gGK+2+RHxkUCTbYFnL6kl8Ch507rUdPPipJ9CgJFws3kDS3gOS5WFMxcjO5DwKf
+KSETEPrHh7p5shuuNktvsv6hxHTLhiMKX893gxdT3XLS9OKmCv87vkINQcNEcIIoFWbP9HOR
+z9v3vQwR4e3ksLc2JZOAFK+ssS5XMEoznzpihEP0PLc4dCBYjbvSD7kxgDwZ+Aj8Q9PkbvE9
+sIPP7ON0fz095HdThKjiVJe6vofq+n6b1NBc8XdrQvBmunwxD5nvtTW4vtN6VY7mUCmxsCie
+uoBJ9OlqmsVWQvifIYf40dJPZkk9YgGTzWLpXDSfLSplbY2LL9C9U0ptvjcDjefLTvqSFc7t
+w1sEhF0n/qpA2r0GpvkLRDmcSwVyPvmjFBGqUp/pNy8ZuPGQmHwFi2/14+xeSUDG2bwnsYJQ
+G2EdJCB6luQ57GEnTA/yKZSTKI8dDQa8Sd3zfXb19mOgSF0bBdXbuKhEpuP9wirslFe6fQ1t
+5j5R0xi72MZ8ikMu1RQZKCyDbMwazlHiMIIGRTCCBS2gAwIBAgIDB3MIMA0GCSqGSIb3DQEB
+BQUAMIGMMQswCQYDVQQGEwJJTDEWMBQGA1UEChMNU3RhcnRDb20gTHRkLjErMCkGA1UECxMi
+U2VjdXJlIERpZ2l0YWwgQ2VydGlmaWNhdGUgU2lnbmluZzE4MDYGA1UEAxMvU3RhcnRDb20g
+Q2xhc3MgMSBQcmltYXJ5IEludGVybWVkaWF0ZSBDbGllbnQgQ0EwHhcNMTMwODMxMTEwODQ4
+WhcNMTQwOTAxMTMwNjM3WjBfMRkwFwYDVQQNExBxUDNDNDdYTVFNVjFadGVBMR0wGwYDVQQD
+DBRqb2VyZ0BqLWhvaHdpbGxlci5kZTEjMCEGCSqGSIb3DQEJARYUam9lcmdAai1ob2h3aWxs
+ZXIuZGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCXH0wk15INjRT0/5DCO7x5
+4MYPXFInZKYoYDC3WH1LPzXizPHvnzz2Uep5QmYis+bvpToE1XckOyBBVxJZVUNLTYFWptSK
+wziMgKqXKxp6TlrcZaZbCnaL48Y2RqKYpEJvO9hU5/ECoaxE4J8wcdDB9EdUg05uR2xy/38A
+hmgdpT7gIPqFBjdwYs4FCKNkbDgsQgTzQCqTUmx/7Raf8Th8De8H6eKk8jKbKwPh1u/48fd1
+5zv0zzu+qKVSHGFDYwC+8WEkfAShn9EFoI2Im8HHeG9RMtTb+2j6ckepJDjujovAuai+QgWT
+64oXP15eD6QBUODBAJlF8t7S13pawDVpAgMBAAGjggLaMIIC1jAJBgNVHRMEAjAAMAsGA1Ud
+DwQEAwIEsDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwQwHQYDVR0OBBYEFP4GEF0p
+pC/Qo+Wpn95MtvZdH7BEMB8GA1UdIwQYMBaAFFNy7ZKc4NrLAVx8fpY1TvLUuFGCMB8GA1Ud
+EQQYMBaBFGpvZXJnQGotaG9od2lsbGVyLmRlMIIBTAYDVR0gBIIBQzCCAT8wggE7BgsrBgEE
+AYG1NwECAzCCASowLgYIKwYBBQUHAgEWImh0dHA6Ly93d3cuc3RhcnRzc2wuY29tL3BvbGlj
+eS5wZGYwgfcGCCsGAQUFBwICMIHqMCcWIFN0YXJ0Q29tIENlcnRpZmljYXRpb24gQXV0aG9y
+aXR5MAMCAQEagb5UaGlzIGNlcnRpZmljYXRlIHdhcyBpc3N1ZWQgYWNjb3JkaW5nIHRvIHRo
+ZSBDbGFzcyAxIFZhbGlkYXRpb24gcmVxdWlyZW1lbnRzIG9mIHRoZSBTdGFydENvbSBDQSBw
+b2xpY3ksIHJlbGlhbmNlIG9ubHkgZm9yIHRoZSBpbnRlbmRlZCBwdXJwb3NlIGluIGNvbXBs
+aWFuY2Ugb2YgdGhlIHJlbHlpbmcgcGFydHkgb2JsaWdhdGlvbnMuMDYGA1UdHwQvMC0wK6Ap
+oCeGJWh0dHA6Ly9jcmwuc3RhcnRzc2wuY29tL2NydHUxLWNybC5jcmwwgY4GCCsGAQUFBwEB
+BIGBMH8wOQYIKwYBBQUHMAGGLWh0dHA6Ly9vY3NwLnN0YXJ0c3NsLmNvbS9zdWIvY2xhc3Mx
+L2NsaWVudC9jYTBCBggrBgEFBQcwAoY2aHR0cDovL2FpYS5zdGFydHNzbC5jb20vY2VydHMv
+c3ViLmNsYXNzMS5jbGllbnQuY2EuY3J0MCMGA1UdEgQcMBqGGGh0dHA6Ly93d3cuc3RhcnRz
+c2wuY29tLzANBgkqhkiG9w0BAQUFAAOCAQEAQycR/+HHIhr2dNKQ1NVl1lYYiu81nbNsg66y
+q2EZh98I9pEGhJRn16U70P0hH8VQHOa4WcJIXOFLZ9+xiPGh+YJ1Pueuami+UcI211Mr0yU0
+DgzUIELOXOqrSE6K4x0DdfQvs1wugMHTbmqyYSXULNPzgv3zOyZdJ0rR8hSCs3rnOQDa+fvS
+E8Da/CvGgaUnlR9lI5X1bEFWQDx6koBC+nGqs31UvTuT8otkhJuooGMyA/MM2Xg5dMlXplmP
+GQAxR5n1UXxRrlgs9IVK08ePbY/JQIe6txiCTPAQUasIDmSUARY3qe+bimmD1fDMw/uLXU/E
+UHl7BV6zYNuyZG7J0zGCA90wggPZAgEBMIGUMIGMMQswCQYDVQQGEwJJTDEWMBQGA1UEChMN
+U3RhcnRDb20gTHRkLjErMCkGA1UECxMiU2VjdXJlIERpZ2l0YWwgQ2VydGlmaWNhdGUgU2ln
+bmluZzE4MDYGA1UEAxMvU3RhcnRDb20gQ2xhc3MgMSBQcmltYXJ5IEludGVybWVkaWF0ZSBD
+bGllbnQgQ0ECAwdzCDAJBgUrDgMCGgUAoIICHTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcB
+MBwGCSqGSIb3DQEJBTEPFw0xNDA1MDExNTU1NDFaMCMGCSqGSIb3DQEJBDEWBBSh2VhmlkSa
+6Tr0wgSUgE2k/D+oZTBsBgkqhkiG9w0BCQ8xXzBdMAsGCWCGSAFlAwQBKjALBglghkgBZQME
+AQIwCgYIKoZIhvcNAwcwDgYIKoZIhvcNAwICAgCAMA0GCCqGSIb3DQMCAgFAMAcGBSsOAwIH
+MA0GCCqGSIb3DQMCAgEoMIGlBgkrBgEEAYI3EAQxgZcwgZQwgYwxCzAJBgNVBAYTAklMMRYw
+FAYDVQQKEw1TdGFydENvbSBMdGQuMSswKQYDVQQLEyJTZWN1cmUgRGlnaXRhbCBDZXJ0aWZp
+Y2F0ZSBTaWduaW5nMTgwNgYDVQQDEy9TdGFydENvbSBDbGFzcyAxIFByaW1hcnkgSW50ZXJt
+ZWRpYXRlIENsaWVudCBDQQIDB3MIMIGnBgsqhkiG9w0BCRACCzGBl6CBlDCBjDELMAkGA1UE
+BhMCSUwxFjAUBgNVBAoTDVN0YXJ0Q29tIEx0ZC4xKzApBgNVBAsTIlNlY3VyZSBEaWdpdGFs
+IENlcnRpZmljYXRlIFNpZ25pbmcxODA2BgNVBAMTL1N0YXJ0Q29tIENsYXNzIDEgUHJpbWFy
+eSBJbnRlcm1lZGlhdGUgQ2xpZW50IENBAgMHcwgwDQYJKoZIhvcNAQEBBQAEggEAHybmL+c5
+zpFF9xxPNJ5j60iVwaFsMKwRusqelp17Lg6WoghRYWUJzN+uJkWh32M7Lk0g0NL3iLGfnfSI
+i4uBnFp+RxKIXFzyrlLWmQS4yAqlgB6o/vdV/8mB86bY03fahlFEP1X+nrrqJAuTSq/ZWbYi
+53BDgHBlAEHeoM7BGj65nJUJg+r+ddEa/8ngJOYOZp1l+DylZvLy/n5TQu7X09cP1DKY2nau
+a23irR5ve6vfDHQYxvBF4UWWKv/n+FAV0ILVyXM8vLqWknAIeEYhshbAGhLWMpgdmHnwmBn3
+jap8S95PwjxRUQM2azh5Pr9ZBLiKLDw0q4hhKvaw9MaCywAAAAAAAA==
+--------------ms060508020300030608050201--
+

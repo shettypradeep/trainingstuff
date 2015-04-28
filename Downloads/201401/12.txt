@@ -1,0 +1,109 @@
+From users-return-135048-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan  9 15:50:05 2014
+Return-Path: <users-return-135048-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0583210794
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  9 Jan 2014 15:50:05 +0000 (UTC)
+Received: (qmail 24519 invoked by uid 500); 9 Jan 2014 15:45:35 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 24420 invoked by uid 500); 9 Jan 2014 15:45:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 24408 invoked by uid 99); 9 Jan 2014 15:45:20 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Jan 2014 15:45:20 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of aheritier@gmail.com designates 209.85.215.51 as permitted sender)
+Received: from [209.85.215.51] (HELO mail-la0-f51.google.com) (209.85.215.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Jan 2014 15:45:14 +0000
+Received: by mail-la0-f51.google.com with SMTP id ec20so2256556lab.24
+        for <users@maven.apache.org>; Thu, 09 Jan 2014 07:44:54 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=GqmLdvxLzPuKfpH3IX4Bdl3gatyS01oTFrfM/wv81rA=;
+        b=jTo1t6v30pdGkzzv31wAbc3ajdhv586yagPQMaZapSw71mD2uaRVTF3/h7F0ZXsTBX
+         P/PN8hPzUincwVgunVqYJ4BwnCIRgsz7OUBkHu/OMTbulqWQk83tD/a7G7IsI/8VMmbg
+         Mber6C2Rx8EARVpUVTr3wyHJgCv9nJsvGOjzZk+3xJ51G3k3Ty0CZv+cXvBI7JPIYRoB
+         GHhsQ7fTyz7o/sY+SBy9sm/qD7gHNH+YZrSJwxKBWCPnmLovHZOIwNHllr6xlbNatVuA
+         SyIlE6LqpZRu4qdEBR7r9VoG1xCD7mUh3kJb2HP6vYdU5qz5cf2yJpk/4z4cxDZpzxlF
+         5S5Q==
+X-Received: by 10.112.151.42 with SMTP id un10mr1494218lbb.7.1389282294040;
+ Thu, 09 Jan 2014 07:44:54 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.114.28.226 with HTTP; Thu, 9 Jan 2014 07:44:33 -0800 (PST)
+In-Reply-To: <20140109153936.GD14330@IUPUI.Edu>
+References: <CABLGb9w0QWFtHTkz7xWhUgj8T4TXUJjxJFs8Q-BYe0qG88RnRg@mail.gmail.com>
+ <CA+nPnMzkumu_925CV+u+D5_wkHjwLCVSRmwMS6JuHvq16zp3Mg@mail.gmail.com>
+ <23db4a359ac8b220e15f373269ebc967.squirrel@www.mosabuam.com>
+ <CA+nPnMy32UXkeOz7-L8SdYymvuOtcVUGgqLca4UGg4MDade1Qg@mail.gmail.com>
+ <03B56DD5-E957-438E-A30E-439C2785032D@apache.org> <781949f830750555c03856e45275c78b.squirrel@www.mosabuam.com>
+ <CA+nPnMw+yPfmovGb-DCxvgvqjUkboddWzBuHEyHZmauYPkiENw@mail.gmail.com>
+ <CA+nPnMzWqgsVuCMaK6FP0QfXDXSLadyUsP+dMeRy9cW73jdarA@mail.gmail.com>
+ <CA+nPnMz7rK8KJKnkBrsatnEAm2ueohH-LDEBt9yhi0T=7-Aj3Q@mail.gmail.com>
+ <OF04E5ED2E.DBD431A0-ON85257C54.00728A07-85257C54.0072C9FD@us.ibm.com> <20140109153936.GD14330@IUPUI.Edu>
+From: =?ISO-8859-1?Q?Arnaud_H=E9ritier?= <aheritier@gmail.com>
+Date: Thu, 9 Jan 2014 16:44:33 +0100
+Message-ID: <CAFNCU-_K-2zZZrY55yuYRRW4aK=pbZK3TkyjAyjibSCQ58RAgQ@mail.gmail.com>
+Subject: Re: New logo?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b3435b6a10f8b04ef8b7d65
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b3435b6a10f8b04ef8b7d65
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I agreed about the animal/mascot choice and its meaning.
+We come back to another thread (on dev ML AFAIR) : what Maven is for you ?
+How to describe it (easily) ? What is differentiating it from others tools
+like Makefile, ant, gradle, builder ....
+
+Arnaud
+
+
+On Thu, Jan 9, 2014 at 4:39 PM, Mark H. Wood <mwood@iupui.edu> wrote:
+
+> On Thu, Jan 02, 2014 at 03:53:46PM -0500, Jeffrey E Care wrote:
+> > Stephen Connolly <stephen.alan.connolly@gmail.com> wrote on 01/02/2014
+> > 02:06:55 PM:
+> >
+> > > I personally liked the anteater idea... We can ask the Ant PMC if we
+> > have a
+> > > "winning" logo that we are worried about
+> >
+> > While some Ant folks might appreciate the tongue-in-cheek nature of an
+> > anteater logo, I think it be seen by many more folks as unnecessarily
+> > antagonistic.
+>
+> Perhaps.  I think it's a cute idea, but I feel that Maven and Ant have
+> different jobs, so for many it might be puzzling instead.  I think
+> there'd be quite a number of questions "why's your mascot an anteater,
+> of all things?"
+>
+> --
+> Mark H. Wood, Lead System Programmer   mwood@IUPUI.Edu
+> Machines should not be friendly.  Machines should be obedient.
+>
+
+
+
+--=20
+-----
+Arnaud H=E9ritier
+http://aheritier.net
+Mail/GTalk: aheritier AT gmail DOT com
+Twitter/Skype : aheritier
+
+--047d7b3435b6a10f8b04ef8b7d65--
+

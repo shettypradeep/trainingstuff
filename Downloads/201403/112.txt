@@ -1,0 +1,141 @@
+From users-return-135721-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar  6 17:17:42 2014
+Return-Path: <users-return-135721-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A612A10BE5
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  6 Mar 2014 17:17:42 +0000 (UTC)
+Received: (qmail 1051 invoked by uid 500); 6 Mar 2014 17:17:39 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 218 invoked by uid 500); 6 Mar 2014 17:17:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 210 invoked by uid 99); 6 Mar 2014 17:17:27 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 17:17:27 +0000
+X-ASF-Spam-Status: No, hits=-2.3 required=5.0
+	tests=RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of suresh.pamidipati@oracle.com designates 141.146.126.69 as permitted sender)
+Received: from [141.146.126.69] (HELO aserp1040.oracle.com) (141.146.126.69)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 17:17:20 +0000
+Received: from acsinet22.oracle.com (acsinet22.oracle.com [141.146.126.238])
+	by aserp1040.oracle.com (Sentrion-MTA-4.3.2/Sentrion-MTA-4.3.2) with ESMTP id s26HGwqR014282
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK);
+	Thu, 6 Mar 2014 17:16:58 GMT
+Received: from aserz7021.oracle.com (aserz7021.oracle.com [141.146.126.230])
+	by acsinet22.oracle.com (8.14.4+Sun/8.14.4) with ESMTP id s26HGvF7007515
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO);
+	Thu, 6 Mar 2014 17:16:57 GMT
+Received: from abhmp0005.oracle.com (abhmp0005.oracle.com [141.146.116.11])
+	by aserz7021.oracle.com (8.14.4+Sun/8.14.4) with ESMTP id s26HGvwH008723;
+	Thu, 6 Mar 2014 17:16:57 GMT
+MIME-Version: 1.0
+Message-ID: <bcd5cd25-0545-4ba5-90f1-90c263e79aba@default>
+Date: Thu, 6 Mar 2014 09:16:57 -0800 (PST)
+From: Venkata Suresh Kumar Pamidipati <suresh.pamidipati@oracle.com>
+To:  <users@maven.apache.org>, <mgainty@hotmail.com>
+Subject: Re: Invalid signature file digest for Manifest main attributes
+X-Mailer: Zimbra on Oracle Beehive
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+X-Source-IP: acsinet22.oracle.com [141.146.126.238]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi mgainty,
+
+Thanks for the response and information. I will contact the number given be=
+low.
+
+Thanks & Regards,
+Suresh
+
+
+----- Original Message -----
+From: mgainty@hotmail.com
+To: users@maven.apache.org, suresh.pamidipati@oracle.com
+Sent: Thursday, March 6, 2014 6:39:54 PM GMT +05:30 Chennai, Kolkata, Mumba=
+i, New Delhi
+Subject: RE: Invalid signature file digest for Manifest main attributes
+
+Hi Suresh
+
+=20
+
+Your best solution will come from  Oracle Support India
+They are supposed to know this information and will be able to assist you w=
+ith your problem
+Oracle India Support Line number is +91.22.66796200=20
+If  Oracle India is unable to assist you ..we can find a resource on this s=
+ide of the planet to help you
+
+
+Warm Regards
+
+ =20
+
+
+
+> Date: Wed, 5 Mar 2014 19:19:44 -0800
+> From: suresh.pamidipati@oracle.com
+> To: users@maven.apache.org
+> Subject: Invalid signature file digest for Manifest main attributes
+>=20
+> Hi,
+>=20
+> I am trying to build our project using maven. I have included multiple de=
+pendency jars in pom.xml and I am trying to build distribution jar using as=
+sembly:assembly goal. The command "mvn assembly:assembly" resulted in the b=
+elow error.=20
+>=20
+> [ERROR] Failed to execute goal org.apache.maven.plugins:maven-assembly-pl=
+ugin:2.4:assembly (default-cli) on project my-plugin: Execution default-cli=
+ of goal org.apache.maven.plugins:maven-assembly-plugin:2.4:assembly failed=
+: Invalid signature file digest for Manifest main attributes -> [Help 1]
+>=20
+> Two of the dependency jars when present together was causing this issue. =
+I tried commenting one of them and mvn assembly:assembly command worked fin=
+e. To make it work with both the jars present together, I tried by adding e=
+xcludes in dependency, assembly and even shade plugin configuration in pom.=
+xml to exclude MANIFEST files of one of those two jars as shown below, but =
+still the same error exists.
+>=20
+> <configuration>
+> <filters>
+> <filter>
+> <artifact>MyJar1:MyJar1</artifact>
+> <excludes>
+> <exclude>META-INF/*.SF</exclude>
+> <exclude>META-INF/*.DSA</exclude>
+> <exclude>META-INF/*.RSA</exclude>
+> </excludes>
+> </filter>
+> </filters>
+> </configuration>
+>=20
+> Please let me know how to resolve this error. I am not sure if the exclud=
+e statements were being ignored or I am missing some thing here. Any inform=
+ation on this will be really helpful.
+>=20
+> Thanks & Regards,
+> Suresh
+>=20
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>=20
+ =09=09 =09   =09=09 
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

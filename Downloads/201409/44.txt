@@ -1,0 +1,85 @@
+From users-return-137203-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Sep  6 03:08:28 2014
+Return-Path: <users-return-137203-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7A55311E70
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  6 Sep 2014 03:08:28 +0000 (UTC)
+Received: (qmail 29052 invoked by uid 500); 6 Sep 2014 03:08:26 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 28969 invoked by uid 500); 6 Sep 2014 03:08:26 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 28956 invoked by uid 99); 6 Sep 2014 03:08:25 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 06 Sep 2014 03:08:25 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.215.49 as permitted sender)
+Received: from [209.85.215.49] (HELO mail-la0-f49.google.com) (209.85.215.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 06 Sep 2014 03:08:00 +0000
+Received: by mail-la0-f49.google.com with SMTP id b17so14610892lan.8
+        for <users@maven.apache.org>; Fri, 05 Sep 2014 20:07:59 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=keHVwIvW5pPdr4kcKxPnuEw1hcbbnV5IeD7okvOgTMw=;
+        b=LHNfO1C9pkfz42LQnPdBbvyOUFvyCQgMSmgt40nGPLZrtOw4m1VUII/+/qAGjFC/zy
+         00q0t4VjS5UW1B8RUHhHpIla+lS6bI1BCeAF/lqikBn03g+X6d2Hsydu42/DW5NbgXBR
+         wQy/kyw0WoY3LVn846la0r8R4DjeGzCxO3GSMukCPoSFa7oW3qRCJwAuzeLWvLVDXHJZ
+         lbHuV69979CzlPEflLHVT65ORmyByKB9elc5kHIqm+i/e5jAlGCMB6bGIj19tCZdwR1B
+         a2Ii0xbNjIMZUoPs2zy1vnU97APcx8+7LMeg1pWqDaMIakYx9mVkrwH5POQ99uxD7UtE
+         AUxw==
+MIME-Version: 1.0
+X-Received: by 10.112.199.161 with SMTP id jl1mr14185411lbc.59.1409972879033;
+ Fri, 05 Sep 2014 20:07:59 -0700 (PDT)
+Received: by 10.114.27.103 with HTTP; Fri, 5 Sep 2014 20:07:58 -0700 (PDT)
+Date: Fri, 5 Sep 2014 20:07:58 -0700
+Message-ID: <CAPCjjnHzw2qiAcwc__KTZ8610AwAQyVJ1GntxA0KaQcNA4MoVQ@mail.gmail.com>
+Subject: [ANN] Build Helper Maven Plugin 1.9.1 Released
+From: Dan Tran <dantran@gmail.com>
+To: announce@mojo.codehaus.org, 
+	"dev@mojo.codehaus.org" <dev@mojo.codehaus.org>, Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c34b18990c6e05025ce4cc
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c34b18990c6e05025ce4cc
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+The Mojo team is pleased to announce the release of the
+build-helper-maven-plugin
+version 1.9.1
+
+This plugin contains various small independent goals to assist with Maven
+build lifecycle.
+
+http://mojo.codehaus.org/build-helper-maven-plugin/
+
+To get this update, simply specify the version in your project's plugin
+configuration:
+
+<plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.9.1</version>
+</plugin>
+
+Release Notes
+*https://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=11702&version=20534
+<https://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=11702&version=20534>*
+
+Enjoy,
+
+The Mojo team.
+
+--001a11c34b18990c6e05025ce4cc--
+

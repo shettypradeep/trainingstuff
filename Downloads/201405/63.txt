@@ -1,0 +1,162 @@
+From users-return-136439-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat May 24 07:36:50 2014
+Return-Path: <users-return-136439-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C35F3113B6
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 24 May 2014 07:36:50 +0000 (UTC)
+Received: (qmail 55062 invoked by uid 500); 24 May 2014 07:36:48 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 54972 invoked by uid 500); 24 May 2014 07:36:48 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 54964 invoked by uid 99); 24 May 2014 07:36:48 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 24 May 2014 07:36:48 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 74.125.82.175 as permitted sender)
+Received: from [74.125.82.175] (HELO mail-we0-f175.google.com) (74.125.82.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 24 May 2014 07:36:44 +0000
+Received: by mail-we0-f175.google.com with SMTP id t61so5807103wes.34
+        for <users@maven.apache.org>; Sat, 24 May 2014 00:36:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=wOORdsSvOhuYYXe189XHgQU6NbTOmqImdTecAhDLlF0=;
+        b=wkT5knDdjvQMWYmc4Da4M+i3NZDuEv1as1Tw1Ix8fDgQG9fxa0iJHr/sTpNNv4JAyO
+         EIIzL0TxNGFGfnLtx60K45Bxo0ibrxeiZcy1V/zofTiLx6a4N9WHkyz+n+KWPJj5YOnq
+         RBldh41yfVcZr5Ea1dmgTOjCiuhHVnnHzjDO+rioXPEbk8O+MyLi4FE5W0LSy1VoyhEQ
+         FaJQil5EiT2IsI04hV5ckwcupYlizKhbZDtwZzLcQ51c7WjAp5ele2Pp6YmugBicN4sj
+         eEjyt2rd/avergNAgLw5WX1rCYbPPlVEhbfFqMMsn6koFPJ708p2noCSrYM084AP6Uoq
+         gxWw==
+MIME-Version: 1.0
+X-Received: by 10.180.11.178 with SMTP id r18mr8982920wib.41.1400916983256;
+ Sat, 24 May 2014 00:36:23 -0700 (PDT)
+Received: by 10.194.137.12 with HTTP; Sat, 24 May 2014 00:36:23 -0700 (PDT)
+In-Reply-To: <CADVp3v8Rrx0WpaJCjDwRkGoeShevHj90k1T=p7fxRYeH7j7vAw@mail.gmail.com>
+References: <CAPCjjnFMA33p+MbvbM98Zd-M002c8--Phz=qP43KPBFYA933zw@mail.gmail.com>
+	<CADVp3v_v6FY5EdGfp_YpN_W4v7XPgjbiHdZwCye5zFBfw6VQ3Q@mail.gmail.com>
+	<CAPCjjnHJefP9Y_PvO7tgQCWfq+YXASBSqtKRXbqkSFRgoNKyng@mail.gmail.com>
+	<5368884B.1050400@landrus.de>
+	<CAPCjjnETY1RrbreWUDt6tWAS_nj=vR0sMFTZqkyC0mm+FSJHMg@mail.gmail.com>
+	<5368B651.2010205@abacus.ch>
+	<CAKDUN1tDrJ=var=u=jA8ry3FBiA2rR3hQ_t4mjBm=ijea8uJZA@mail.gmail.com>
+	<CADVp3v8Rrx0WpaJCjDwRkGoeShevHj90k1T=p7fxRYeH7j7vAw@mail.gmail.com>
+Date: Sat, 24 May 2014 00:36:23 -0700
+Message-ID: <CAPCjjnEr0PuaQrdtUU+m_CtPqY8ch7i=xJw1f9JyUvQw881_eQ@mail.gmail.com>
+Subject: Re: use separate mirrors for project dendencies and plugin
+ dependencies ??
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c2aca2259fdd04fa20674e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c2aca2259fdd04fa20674e
+Content-Type: text/plain; charset=UTF-8
+
+Anders' suggestion sounds very logical
+
+however, i found this at super pom
+
+  <repositories>
+    <repository>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>http://repo.maven.apache.org/maven2</url>
+      <layout>default</layout>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>http://repo.maven.apache.org/maven2</url>
+      <layout>default</layout>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+    </pluginRepository>
+  </pluginRepositories>
+
+Is there a way to disable/clear out the super pom pluginRepositories?
+If I add my own pluginRepositories, will it override the super pom
+one?
+
+
+Thanks
+
+Dan
+
+
+
+
+On Tue, May 6, 2014 at 6:20 AM, Barrie Treloar <baerrach@gmail.com> wrote:
+
+> On 6 May 2014 20:23, Anders Hammar <anders@hammar.net> wrote:
+>
+> > >
+> > > Presumably you are trying to separate artifacts used by plugins during
+> > > your build (where you might use e.g. GPL licensed modules) from
+> artifacts
+> > > used as dependencies in your project proper (where using that same GPL
+> > > licensed modules would make your legal department scream) by separating
+> > the
+> > > repositories used to provide them.
+> > >
+> > > As far as I know/understand all artifacts are downloaded to the same
+> > local
+> > > cache repository (~/.m2/repository), regardless of whether they were
+> > > required by some plugin or as a dependency of your project.
+> > >
+> > > This makes them available for both purposes and thus obliterates all
+> your
+> > > efforts of keeping them separate.
+> > >
+> > > Maven Masters: Please correct me if I'm wrong.
+> > >
+> >
+> > I don't think this is correct with Maven 3. Maven 3 uses Aether which
+> AFAIK
+> > keeps the repository id for the artifact to verify from where it was
+> > downloaded. Haven't verified for this use case though.
+> >
+> > So, using Maven 3 it should be possible to specify one repository
+> > declaration for your deps and one pluginRepository declaration (with a
+> > different repo id) for your plugins (incl deps). If you msut use mirror
+> > declarations, I would use this for the deps and add exclusions (using
+> '!')
+> > for any pluginRepository.
+> >
+> > /Anders
+>
+>
+> I don't remember what happens for duplicates.
+> I think it used to complain that the artifact doesn't exist (if the one it
+> downloaded from is not available, even though its available elsewhere).
+>
+> The GPL example isn't a good one, as the output of running GPL is not GPL
+> itself.
+>
+> I think Nexus allows you to restrict things by licence so that you can
+> curate what is available in your repository manager. You'd have to look at
+> the docs to find out.
+>
+
+--001a11c2aca2259fdd04fa20674e--
+

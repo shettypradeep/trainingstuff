@@ -1,0 +1,155 @@
+From users-return-134930-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Jan  4 02:18:05 2014
+Return-Path: <users-return-134930-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B453310FFE
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  4 Jan 2014 02:18:05 +0000 (UTC)
+Received: (qmail 20553 invoked by uid 500); 4 Jan 2014 02:18:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 20483 invoked by uid 500); 4 Jan 2014 02:18:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 20475 invoked by uid 99); 4 Jan 2014 02:18:03 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 04 Jan 2014 02:18:03 +0000
+X-ASF-Spam-Status: No, hits=3.2 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mgainty@hotmail.com designates 65.55.116.29 as permitted sender)
+Received: from [65.55.116.29] (HELO blu0-omc1-s18.blu0.hotmail.com) (65.55.116.29)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 04 Jan 2014 02:17:57 +0000
+Received: from BLU172-W13 ([65.55.116.9]) by blu0-omc1-s18.blu0.hotmail.com with Microsoft SMTPSVC(6.0.3790.4675);
+	 Fri, 3 Jan 2014 18:17:36 -0800
+X-TMN: [fGC6/mCtpGntm/A1IlkcAfcgUgrliKUg]
+X-Originating-Email: [mgainty@hotmail.com]
+Message-ID: <BLU172-W13ADAF341051B8EC9DB896AEB50@phx.gbl>
+Content-Type: multipart/alternative;
+	boundary="_091be6d2-19ee-456d-939c-6b880d3523cd_"
+From: Martin Gainty <mgainty@hotmail.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: RE: Topologically sorted list of Artifacts for use by a plugin?
+Date: Fri, 3 Jan 2014 21:17:35 -0500
+Importance: Normal
+In-Reply-To:
+ <CAHNdxunwRmqstW5tL6D-G4ga0ASdGAnMWpGOyoE=db8-1_vpqQ@mail.gmail.com>
+References:
+ <CAHNdxunwRmqstW5tL6D-G4ga0ASdGAnMWpGOyoE=db8-1_vpqQ@mail.gmail.com>
+MIME-Version: 1.0
+X-OriginalArrivalTime: 04 Jan 2014 02:17:36.0514 (UTC) FILETIME=[22740E20:01CF08F3]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_091be6d2-19ee-456d-939c-6b880d3523cd_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+> Date: Fri=2C 3 Jan 2014 14:03:22 -0800
+> Subject: Topologically sorted list of Artifacts for use by a plugin?
+> From: ljnelson@gmail.com
+> To: users@maven.apache.org
+>=20
+> Hello=3B in Maven 3.0.5 and 3.1.x=2C what is the preferred way=2C given a
+> MavenProject representing the current pom.xml/project=2C to obtain a list=
+ of
+> its resolved dependency Artifacts in test scope that has been topological=
+ly
+> sorted such that the Artifact at the head of the list has the fewest
+> dependencies and the artifact at the tail of the list has the most?
+>=20
+> I asked this question many moons ago (
+> http://maven.40175.n5.nabble.com/Topologically-sorting-dependencies-tp338=
+4898p3387803.html)
+> and after no answers=2C came up with what felt like an awful hack to prod=
+uce
+> what I wanted=2C whose code I pasted in that message.
+>=20
+> If you follow the link=2C you'll see that I used the ProjectSorter class=
+=2C
+> which is what Maven's reactor uses when processing a multi-module
+> project--which gives me exactly the order I wanted--but seems like overki=
+ll
+> and like misusing a tool=2C and maybe isn't the Right Way given all the n=
+ew
+> Aether stuff and whatnot.  Nevertheless=2C it is still how Maven's reacto=
+r
+> works=2C so...who knows.
+>=20
+> Anyway=2C I started there and "worked backwards"--needed a List of
+> MavenProjects to feed to it=2C so ended up using the MavenProjectBuilder=
+=2C as
+> you can see in the link.
+>=20
+> That class has since been deprecated and moved to the compat layer=2C tho=
+ugh=2C
+> and its replacement (another class named DefaultMavenProjectBuilder) has
+> removed the convenience method that I was using.  I'd like to update my
+> plugin to avoid depending on this deprecated subsystem.
+>=20
+> So then: suppose I'm writing a Maven plugin that needs to fetch a
+> particular well-known classpath resource from all artifacts available in
+> test scope=2C and needs that list to be in topological order (starting wi=
+th
+> an artifact that has the fewest dependencies and ending with the artifact
+> that has the most).  What is the preferred mechanism for doing this these
+> days?  Is it still by way of the ProjectSorter hammer?  Or is there a mor=
+e
+> elegant way to do it?
+>=20
+> (As background: I am working with Liquibase (http://www.liquibase.org/).
+>  Each of my .jar projects has a META-INF/liquibase/changelog.xml file in
+> it.  Various of these .jar projects already depend on each other--for uni=
+t
+> and integration testing=2C I'd like to use this dependency order=2C harve=
+st the
+> changelog.xml resources in each .jar file=2C and then combine them to cre=
+ate
+> only the database tables actually needed for the test.  If a.jar has A's
+> tables=2C and b.jar has B's tables and b.jar depends on a.jar=2C then I'd=
+ like
+> to run a.jar!/META-INF/liquibase/changelog.xml first=2C then
+> b.jar!/META-INF/liquibase/changelog.xml next=2C and I'd like to not have =
+to
+> specify this in any place in my pom.xmls=2C since the dependency order is
+> already captured there.)
+MG>so I would say you are definitely on the right track
+MG>so ....ProjectSorter.java.....
+MG>public List  getDependents( String id ) {  return dag.getParentLabels( i=
+d )=3B    }
+MG>will get you the required count of dependents you want
+MG>
+MG>so processing each child module strategy might implement something like:
+MG>"include in my reactor a known subset of selected artifacts" which would=
+ be implemented by..
+MG>mvn reactor:make-dependents -Dmake.folders=3DchildModule1
+MG>(from features of maven-reactor-plugin)
+MG>http://maven.apache.org/plugins/maven-reactor-plugin/examples.html
+MG>
+MG>so a way of assessing all of the modules by executing each module ..one =
+at a time
+MG>
+MG>for dir in /tmp/*
+MG>do
+MG> dir=3D${dir%*/}
+MG> mvn reactor:make-dependents -Dmake.folders=3D${dir##*/}
+MG>done
+MG>
+MG>*may* work as a Q&D test-harness to exercise each of your child modules
+MG>any reason for topological sorting of dependencies?
+
+> Best=2C
+> Happy 2014=2C
+> Laird
+MG>Happy 2014 Laird=2C
+MG>Martin
+> --=20
+> http://about.me/lairdnelson
+ 		 	   		  =
+
+--_091be6d2-19ee-456d-939c-6b880d3523cd_--
+

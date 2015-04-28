@@ -1,0 +1,74 @@
+From users-return-137299-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Sep 16 11:46:07 2014
+Return-Path: <users-return-137299-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B90DA11A89
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 16 Sep 2014 11:46:07 +0000 (UTC)
+Received: (qmail 24212 invoked by uid 500); 16 Sep 2014 11:46:05 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 24124 invoked by uid 500); 16 Sep 2014 11:46:05 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 24110 invoked by uid 99); 16 Sep 2014 11:46:05 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 16 Sep 2014 11:46:05 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of carlspring@gmail.com designates 209.85.217.180 as permitted sender)
+Received: from [209.85.217.180] (HELO mail-lb0-f180.google.com) (209.85.217.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 16 Sep 2014 11:45:38 +0000
+Received: by mail-lb0-f180.google.com with SMTP id b12so6324376lbj.11
+        for <users@maven.apache.org>; Tue, 16 Sep 2014 04:45:34 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:from:date:message-id:subject:to:content-type;
+        bh=LpCiEpMDgAUBEOcSL0uCTtF1DtzX1f2obWG37fnBrFo=;
+        b=txgRKfXKGha3+UVKq3AYzsFXYYeU34VVjas1ThLmYxG8c9Du8cIK5qH2ZKp63Sst+E
+         Y/JrV2ctIo2RQLqXdJM1TjB5RDHqV8w+2EJ3XYMvMctNjFtRPD9cTE5D4zkbs88YkJlX
+         pedz1DIGPfQZY+bQOlAwxkoionYjM/YazPX+JNl2iRGE1HIT4TIAOZPTfPl99YsObvww
+         52AHwmc7KqPD1CXiJOSZRSLovMj38t9ecpSq+SmE6qwN+SKDz9saqCfiBlg95Ic804j2
+         pdTxdTqAcOpK4vJu6XmK8AmJ6nb4RzzaYcYvmbldx+Ls2l5jOdjZE1Ro1bCbo4POp6Vr
+         86Vw==
+X-Received: by 10.152.44.136 with SMTP id e8mr36336824lam.36.1410867933993;
+ Tue, 16 Sep 2014 04:45:33 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.112.85.99 with HTTP; Tue, 16 Sep 2014 04:45:13 -0700 (PDT)
+From: Martin Todorov <carlspring@gmail.com>
+Date: Tue, 16 Sep 2014 12:45:13 +0100
+Message-ID: <CANnZoJskZfB4SOV+PBWMQZp8KDK6cApzKAB0gA518FEBjc2v1w@mail.gmail.com>
+Subject: Filtering resources with variables from build-helper-maven-plugin:reserve-network-port
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0160a8b207e19405032d4a41
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0160a8b207e19405032d4a41
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+I've been dealing with a bit of an odd scenario where i have number of
+projects running in Jenkins which all open ports for different things
+(Jetty, Derby, various other servers). So, in order for them to not clash,
+I am using the build-helper-maven-plugin's "reserve-network-port" goal
+attached to the "initialize" phases. This all works fine. However, I would
+like to use the variables for the assigned ports to filter some values in a
+few resource files. This seems to not be working.
+
+Is it at all possible to do something like this, or is this particular
+plugin running too late (or exporting the variables within a different
+context to what is visible to the maven-resources-plugin)?
+
+Thanks in advance and looking forward to your comments!
+
+Martin Todorov
+
+--089e0160a8b207e19405032d4a41--
+

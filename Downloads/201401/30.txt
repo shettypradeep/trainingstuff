@@ -1,0 +1,74 @@
+From users-return-135057-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan  9 18:07:56 2014
+Return-Path: <users-return-135057-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4E32710DB8
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  9 Jan 2014 18:07:56 +0000 (UTC)
+Received: (qmail 74186 invoked by uid 500); 9 Jan 2014 18:06:02 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 74134 invoked by uid 500); 9 Jan 2014 18:05:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74099 invoked by uid 99); 9 Jan 2014 18:05:54 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Jan 2014 18:05:54 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.220.53 as permitted sender)
+Received: from [209.85.220.53] (HELO mail-pa0-f53.google.com) (209.85.220.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Jan 2014 18:05:47 +0000
+Received: by mail-pa0-f53.google.com with SMTP id hz1so3617559pad.40
+        for <users@maven.apache.org>; Thu, 09 Jan 2014 10:05:26 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=uZC2D2SHfx57o1JVT2Yja/eVQzBs9Sb15wDBG/NNT78=;
+        b=lKuZqFad4nyEICpLtdx7JCoPWAW2v5Qioot1hSW/quPS+SpIKCOtCYAEjNvZLC2Luz
+         Gk9dNvM+uB+1YkuUIHDkQ6HB27cNzqqrTZ228HEeqGp12yG31ip6FpLGYZuIR/ADrpkz
+         SJ2TOXp76F5R0dBJ4qhF/pqfdXodb00rxUXjUk32cZ040IXU4hAdrV5XbqzZAeMUIqXe
+         sEXtrKOgo/12Xdwmm5mmH9QbwPaP0PbfQMzgGnyDWpP6zscWOAOdHrwi38rW0IHez33D
+         J/G3S16RN2UaN8cYQO48HrgA42PY4MY0L/JzuJebsbWsJtvVc2VwHYC9S0QdRxDo0VE6
+         r7Kg==
+X-Received: by 10.68.223.9 with SMTP id qq9mr5359752pbc.58.1389290726729; Thu,
+ 09 Jan 2014 10:05:26 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Thu, 9 Jan 2014 10:05:06 -0800 (PST)
+In-Reply-To: <1389289785604-5781041.post@n5.nabble.com>
+References: <1389289785604-5781041.post@n5.nabble.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Thu, 9 Jan 2014 12:05:06 -0600
+Message-ID: <CALy+7UkOEawTgvAX42QZ8aiN5KPmMtMTyPKgBLCkw40ULV7PMg@mail.gmail.com>
+Subject: Re: Can't set Class-Path in jar using external manifest file
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> I exported the manifest from the non-working jar file to a second file.  I
+> then compared the two files. The files are identical except for the position
+> of the Built-By and Build-Jdk elements. In the maven generated manifest,
+...
+> The Class-Path elements themselves are identical!!
+
+How did you compare them? What tool? Just Windows Notepad or something
+like a programmer's notepad that shows non-printing characters etc?
+How certain are you that they "are identical" as you said?
+
+You may have also run into a JVM issue. Have you tried other versions
+of the JVM?
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

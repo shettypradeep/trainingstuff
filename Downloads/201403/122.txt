@@ -1,0 +1,130 @@
+From users-return-135758-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Mar 10 16:25:44 2014
+Return-Path: <users-return-135758-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 46DD8CBE9
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 10 Mar 2014 16:25:44 +0000 (UTC)
+Received: (qmail 24747 invoked by uid 500); 10 Mar 2014 16:25:40 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 24631 invoked by uid 500); 10 Mar 2014 16:25:39 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 24623 invoked by uid 99); 10 Mar 2014 16:25:39 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 10 Mar 2014 16:25:39 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of adrien.rivard@gmail.com designates 209.85.220.172 as permitted sender)
+Received: from [209.85.220.172] (HELO mail-vc0-f172.google.com) (209.85.220.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 10 Mar 2014 16:25:34 +0000
+Received: by mail-vc0-f172.google.com with SMTP id la4so3852366vcb.31
+        for <users@maven.apache.org>; Mon, 10 Mar 2014 09:25:13 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=MJqlYtpEna4tQgHAHuJJRF8vI3GS86R5Ao6+mnlX8rw=;
+        b=MH/qU6fi5Xjsbn4pz4H1C7Xt6/iCDeJzeNGtJQtp7WzCkl7aAM5AbExCcLuiGGIVgn
+         7KYzzIovh7b+FfwR357gVPTm1tlhVDqf8lr4tmNmlY2P81g7F+cBsQQVeblfa6W2+EkJ
+         G5hi/4Aj99Eu829IG+bj1xTCN+wEHb2ipNfZkOvll3362wcMLBBIKXH4ILaotGuUwVBQ
+         n4bKHjCN0VE9L5+m4ktuUX3cUJbR1iAslTtpaQSe5K0pmX+D2dZ1aC5arvxG+4yCMRWS
+         2IPox1UCbCu4lsuv/i0ivBx8Ljyooe6YNWWjsDFe3R1sPrzPBTv3wAgIul261wsYRjgH
+         aDIQ==
+MIME-Version: 1.0
+X-Received: by 10.52.126.107 with SMTP id mx11mr769966vdb.41.1394468713632;
+ Mon, 10 Mar 2014 09:25:13 -0700 (PDT)
+Received: by 10.220.140.13 with HTTP; Mon, 10 Mar 2014 09:25:13 -0700 (PDT)
+In-Reply-To: <CF4329DB.10B4%richard.mauri@sap.com>
+References: <CF3F698F.FEB%richard.mauri@sap.com>
+	<CALy+7UkrjBKRZYhYtHQEjePF_k9gQk_1OiQ73Fp1Z_mRTGm3EQ@mail.gmail.com>
+	<CAKDUN1vZq3etVMPG_D5n90w6a43Ksc0GC3pOfP8zedqj6Tm5XQ@mail.gmail.com>
+	<CALy+7UmP+e5r9P9_CwzNLXLtr0Uz9HYE=eJ7G7n7yN4yDPx3yw@mail.gmail.com>
+	<CF4329DB.10B4%richard.mauri@sap.com>
+Date: Mon, 10 Mar 2014 17:25:13 +0100
+Message-ID: <CAPCUOdFYPyGaGbH94jZBcL+6y1wOg3VGevONWJr9oSg8Obh7_A@mail.gmail.com>
+Subject: Re: maven won't resolve from central log4j:log4j:1.2.8 through 1.2.15
+From: Adrien Rivard <adrien.rivard@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=bcaec520f68953979f04f4430c94
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--bcaec520f68953979f04f4430c94
+Content-Type: text/plain; charset=UTF-8
+
+Does'nt seem to work for me either when hitting maven central directly.
+Works ok when using my usual MRM.
+
+If I'm not wrong
+http://repo.maven.apache.org/maven2/log4j/log4j/maven-metadata.xml should
+return all versions while it returns only 2 .
+
+
+
+
+On Mon, Mar 10, 2014 at 4:37 PM, Mauri, Richard <richard.mauri@sap.com>wrote:
+
+> I am still having trouble.
+> It certainly should be easy to reproducee no?
+> It is a trivial settings.xml and pom.xml and mvn dependency:tree goal
+>
+> Thanks for helping, but please keep at it :-)
+>
+> On 3/10/14, 6:15 AM, "Wayne Fay" <waynefay@gmail.com> wrote:
+>
+> >>> Where did this repo.maven.apache.org url come from?
+> >>
+> >> Wayne, it's a correct URL for the central repository. It's the one we
+> >> define in the super-POM since Maven 3.0.something.
+> >
+> >Doh, well ignore that then. I should have done 30 seconds of searching
+> >before sending that one. :)
+> >
+> >But just FYI, when I myself tried accessing that URL last night, I had
+> >problems in my browser. First it was HTTPS problems as the URL did not
+> >match the server name being reported (I have the HTTPS Everywhere
+> >plugin turned on). I clicked "ignore" and went to the site and got
+> >HTTP 404 errors at /log4j/log4j/maven-metadata.xml so I moved up to
+> >/log4j/log4j and had the same errors. I did not grab the error but it
+> >was something related to Varnish cache - when I cause a 404 now, the
+> >error appears different.
+> >
+> >So at the very least, the mirror I was on (fastly.net) was having
+> >issues - and potentially this was mirrored to others, possibly
+> >explaining the troubles (??). I had no such trouble hitting the old
+> >standby of repo1.maven.org and resolving the files etc. These errors
+> >made me question the URL entirely.
+> >
+> >I hit it again just now and dns sends me to fastly.net again but this
+> >time the files are there.
+> >
+> >So, I would ask Richard to try again and see if things work better
+> >today, or if he is having the same troubles.
+> >
+> >Wayne
+> >
+> >---------------------------------------------------------------------
+> >To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> >For additional commands, e-mail: users-help@maven.apache.org
+> >
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Adrien Rivard
+
+--bcaec520f68953979f04f4430c94--
+

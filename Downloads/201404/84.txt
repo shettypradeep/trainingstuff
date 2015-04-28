@@ -1,0 +1,102 @@
+From users-return-136056-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr  2 14:12:30 2014
+Return-Path: <users-return-136056-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 60B1D10720
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  2 Apr 2014 14:12:30 +0000 (UTC)
+Received: (qmail 74384 invoked by uid 500); 2 Apr 2014 14:12:26 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 74321 invoked by uid 500); 2 Apr 2014 14:12:25 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74310 invoked by uid 99); 2 Apr 2014 14:12:25 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 02 Apr 2014 14:12:25 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [212.227.126.131] (HELO moutng.kundenserver.de) (212.227.126.131)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 02 Apr 2014 14:12:19 +0000
+Received: from [192.168.100.71] (mx01.assentis.com [212.94.34.196])
+	by mrelayeu.kundenserver.de (node=mreue001) with ESMTP (Nemesis)
+	id 0LrmbG-1XApil0znS-013iX6; Wed, 02 Apr 2014 16:11:57 +0200
+Message-ID: <533C1AAC.4030402@landrus.de>
+Date: Wed, 02 Apr 2014 16:11:56 +0200
+From: Christian Domsch <mail@landrus.de>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Scanning for Projects... before
+References: <1396438658817-5790393.post@n5.nabble.com> <CALy+7UmJnmf3GNEEDEzE0-hWPMmNFvtkZ8Ub-zr3CfZO-HanWQ@mail.gmail.com> <1396447740034-5790400.post@n5.nabble.com>
+In-Reply-To: <1396447740034-5790400.post@n5.nabble.com>
+Content-Type: multipart/alternative;
+ boundary="------------080209090502080807000804"
+X-Provags-ID: V02:K0:FESEgg4t80k7loql9sGGATt4Z6DCQk+9jJ1jLGnDT54
+ IXzW/X90/WzSEFAQ7DbNSOCcHITyafJ7Es1wPayl09rPJ2oH94
+ XlP7gTce2KTx+zD3GLNQWhTVj9HNagK5sMU0KjwdbV9cV2uBNl
+ 2NtiNweThIuBmKpfRfGubTOIbO/WgVIDy9BtPGVoDQUt3kkzTY
+ n3J5PPtD5TJZgprutX0X0byxFb9w1o+wldytiQCk+JEgHQJ1Ip
+ YiCTwQ8oHr2pc8nWqq7uihsSVhcHYmakZq6jbJtXClk9D8EYOs
+ IfGBXDE+/N6Iag8AcMB6del176/oXSRUEy7KizJPrHgXOs0f58
+ aLhoW5y2XFjUHYZBiF38=
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------080209090502080807000804
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Well, I think maven is the wrong thing to solve this here, since you 
+clearly use maven in a non intended way. In a CI setup, that would be a 
+build task before the maven task would be called.
+Christian
+On 02.04.2014 16:09, eugene wrote:
+> I want to delete a directory from local repo before building a multi-module
+> project.
+> I wrote a plugin for that and the directory get deleted indeed, but it gets
+> deleted too late.
+>
+> What I mean: my project "Project" has a dependency "com.test" that is not
+> present in local repo. I run mvn clean install. What happens is that maven
+> is scanning for projects and all the dependencies that it needs, downloading
+> them (I guess though artifact resolver) to my local repo. Then my plugin is
+> hooked to the "pre-clean" phase and it removes the directory
+> ".m2/repository/com". Now when "Project" actually needs dependency
+> "com.test" for the compile, this dependency is not present (my plugin
+> removed it) and maven fails.
+>
+> Why do I have such a weird case? Imagine I have releases artifacts that
+> actually do not change their version, but do change their contents. Maven
+> will not update my local repo unless their are snapshots, right? Well
+> snapshot is not an option right now (due to corporate things).
+>
+> That is why I first need to remove "com.test" then kick in the artifact
+> resolver.
+>
+> Thank you,
+> Eugene.
+>
+>
+>
+>
+>
+>
+> --
+> View this message in context: http://maven.40175.n5.nabble.com/Scanning-for-Projects-before-tp5790393p5790400.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+
+--------------080209090502080807000804--
+

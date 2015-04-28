@@ -1,0 +1,78 @@
+From users-return-137195-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep  5 00:05:14 2014
+Return-Path: <users-return-137195-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3597311B41
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  5 Sep 2014 00:05:13 +0000 (UTC)
+Received: (qmail 52353 invoked by uid 500); 5 Sep 2014 00:05:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 52270 invoked by uid 500); 5 Sep 2014 00:05:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 52258 invoked by uid 99); 5 Sep 2014 00:05:07 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 05 Sep 2014 00:05:07 +0000
+X-ASF-Spam-Status: No, hits=3.6 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_IMAGE_ONLY_12,HTML_MESSAGE,HTML_SHORT_LINK_IMG_2,RCVD_IN_DNSWL_LOW,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of burtonator2011@gmail.com designates 209.85.217.175 as permitted sender)
+Received: from [209.85.217.175] (HELO mail-lb0-f175.google.com) (209.85.217.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 05 Sep 2014 00:05:03 +0000
+Received: by mail-lb0-f175.google.com with SMTP id u10so12314770lbd.20
+        for <users@maven.apache.org>; Thu, 04 Sep 2014 17:04:41 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:from:date:message-id:subject:to:content-type;
+        bh=XNZrYGlNDwtBm/s7PTLBKnCrV06Z94GeI7Ot/pR5+CE=;
+        b=KOL5+4+urGpNW6YubiK9wynPdGnEBc+O2qO6vawp/w7Y0qmFd729i/s6f+l31LIt59
+         wnG1dSRcfDuEGuVFCbkRdTw/1uL5RD3Nt5zxETJOGqrJrvBRFTGJvkAe7fvluNEIT5OA
+         MynhFQiNL0IFEErxQPseMwv4qd4BXX5bgZnoETvByVrf0f69rPwMETHaDxDHJhYTzxy/
+         ZXePw6hcQRIK6bb1GzFHJgbfXx1gh11U4doUy/lpZbV6w+1kREYFEImC9mK6kfuInBm/
+         0YWkUETk7YnrBCTXYa+Io7TPAwgmUgUshutWhZ13s6BXM+1OEkTgSZAYsxHWBebMvJhG
+         q6IQ==
+X-Received: by 10.152.22.137 with SMTP id d9mr7890039laf.29.1409875481212;
+ Thu, 04 Sep 2014 17:04:41 -0700 (PDT)
+MIME-Version: 1.0
+Sender: burtonator2011@gmail.com
+Received: by 10.112.75.10 with HTTP; Thu, 4 Sep 2014 17:04:21 -0700 (PDT)
+From: Kevin Burton <burton@spinn3r.com>
+Date: Thu, 4 Sep 2014 17:04:21 -0700
+X-Google-Sender-Auth: _m3N1xtQ6wG89WQsmkukaoU-AU0
+Message-ID: <CAAZU44kh7ySaPzmvjjgVJMXLFpHO=7LvfKm7sBar7gVsFwoN=w@mail.gmail.com>
+Subject: packaging site/doxia content into another multi-module?
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=089e0158b6f23c3cfc05024637ab
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0158b6f23c3cfc05024637ab
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I have a multi-module maven build.
+
+In module A I have a site that I generate from doxia which is my products
+documentation.
+
+I have another mobile B, that hosts my console / web app and I want the
+docs to be packaged here and served from a static Jetty container.
+
+What are my options here?
+
+--=20
+
+Founder/CEO Spinn3r.com
+Location: *San Francisco, CA*
+blog: http://burtonator.wordpress.com
+=E2=80=A6 or check out my Google+ profile
+<https://plus.google.com/102718274791889610666/posts>
+<http://spinn3r.com>
+
+--089e0158b6f23c3cfc05024637ab--
+

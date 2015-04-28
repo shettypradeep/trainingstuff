@@ -1,0 +1,67 @@
+From users-return-136128-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr 11 20:54:35 2014
+Return-Path: <users-return-136128-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3881C10FB3
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 11 Apr 2014 20:54:35 +0000 (UTC)
+Received: (qmail 25601 invoked by uid 500); 11 Apr 2014 20:54:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 25526 invoked by uid 500); 11 Apr 2014 20:54:29 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 25518 invoked by uid 99); 11 Apr 2014 20:54:28 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 11 Apr 2014 20:54:28 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bimargulies@gmail.com designates 209.85.216.52 as permitted sender)
+Received: from [209.85.216.52] (HELO mail-qa0-f52.google.com) (209.85.216.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 11 Apr 2014 20:54:23 +0000
+Received: by mail-qa0-f52.google.com with SMTP id s7so3869310qap.11
+        for <users@maven.apache.org>; Fri, 11 Apr 2014 13:54:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=lToheJuW4bhEbZUkVzcwJewgBolSufnubsxOiAUrpw0=;
+        b=mVqcWELQBvLE7nGwhFjm+OYN80mocPgPjR3oUDaQFB7FiPPQwTmNbhRwQTVUsRlKH3
+         THLd3xlXe6Haj39kGAheCz1Dxwt+DNwQoLOl4IKOEjzNnLovCzQ/lV7l29jstXXaa3ha
+         iV9qv/w2M9ZP+HXBqSHiSqTBs4DA9c3xeFqCqUl1tGYGtc9f+ofeYrOym6bNIMnMFGK/
+         sEJKy7ROtmYVJtIpjtpnA0N/+5eCquZqjQcN6F3LkW8MNAUDZBSdodcbrtVwyzxGnUh5
+         2GuMpG824/UrFRESSP4+/bgSa/gRr/BFCcaCiXS/bHrZ/Xt6wBnCKoTVMr8YESs3z3ap
+         jlzA==
+MIME-Version: 1.0
+X-Received: by 10.140.33.244 with SMTP id j107mr30292854qgj.81.1397249640986;
+ Fri, 11 Apr 2014 13:54:00 -0700 (PDT)
+Received: by 10.140.103.176 with HTTP; Fri, 11 Apr 2014 13:54:00 -0700 (PDT)
+Date: Fri, 11 Apr 2014 16:54:00 -0400
+Message-ID: <CALhtWkdVC5NUd8DNHcEMoDXax_7BRoSxYTbdQxdwJeEacjoBXg@mail.gmail.com>
+Subject: Excluding the main compile class from the classpath in failsafe
+From: Benson Margulies <bimargulies@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Strange as it might seem, I need to exclude the main compiled artifact
+from the classpath while running an integration test.
+
+The integration test is testing a framework that has it's own way to
+get the stuff into the classpath. Obviously, I want to keep the
+_test_.
+
+Will http://maven.apache.org/surefire/maven-failsafe-plugin/integration-test-mojo.html#classpathDependencyExcludes
+allow me to exclude the main project artifact without losing the test
+itself?
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

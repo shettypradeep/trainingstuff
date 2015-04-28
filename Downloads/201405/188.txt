@@ -1,0 +1,164 @@
+From users-return-136422-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed May 21 20:59:18 2014
+Return-Path: <users-return-136422-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6734311941
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 21 May 2014 20:59:18 +0000 (UTC)
+Received: (qmail 30114 invoked by uid 500); 21 May 2014 20:59:17 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 30038 invoked by uid 500); 21 May 2014 20:59:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 30029 invoked by uid 99); 21 May 2014 20:59:17 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 21 May 2014 20:59:17 +0000
+X-ASF-Spam-Status: No, hits=2.5 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of northrup.james@gmail.com designates 209.85.212.174 as permitted sender)
+Received: from [209.85.212.174] (HELO mail-wi0-f174.google.com) (209.85.212.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 21 May 2014 20:59:12 +0000
+Received: by mail-wi0-f174.google.com with SMTP id r20so8343760wiv.13
+        for <users@maven.apache.org>; Wed, 21 May 2014 13:58:49 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=M0sNSkJgaxgSF9rvB3NdPeni6WgKG9BJjNiMTKBwl60=;
+        b=K8gNih5CxtYeLXn8fKhkWqnN7Z0H0SLweCvUymFkdTkhrbFxAkHTDE5fcO2RGJw8Kv
+         xsrmQWcxC+cj5JrkWSTa9nHxOk5tRrbdmnU5RS4FAskrN0NGiH5PTxqjmIPbzmPeYnB9
+         AjmgO0vFkBUdgnDhlU5dsK66kieZWIIlnMypNK0VnfIswCKMcVmwslGUNtIro8wa6WWW
+         ENm2E291E1haO4qhR6rPQm/IpkuGQmzp2f0xrP7/0JT8eihYJ0XXjghnOv/p0PoB4orw
+         IIEPnrdmpchffd9wnHQJ0gqQzSupAYEI+mwRi57D/szfBwGY5PgReP/zRrzHyVY0033v
+         R/aQ==
+X-Received: by 10.180.106.1 with SMTP id gq1mr12539209wib.45.1400705929500;
+ Wed, 21 May 2014 13:58:49 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.216.170.6 with HTTP; Wed, 21 May 2014 13:58:28 -0700 (PDT)
+In-Reply-To: <CANZa=Gu1S+dKK+No4LuUDjo2=7JpmSp6G+ho09qJnkwfB20Zvw@mail.gmail.com>
+References: <CANZa=GsRaWf9t-QpBi4tA4jMjUtHGLJEMQM_idBNSU1RdPLYyg@mail.gmail.com>
+ <CANZa=Gt0_Ta6jdvEz=tXknGFJRbkzFhAityXWMYr6B=L=G99Zw@mail.gmail.com>
+ <BLU172-W4418B93E61747865167B20AE3C0@phx.gbl> <CANZa=Gu1S+dKK+No4LuUDjo2=7JpmSp6G+ho09qJnkwfB20Zvw@mail.gmail.com>
+From: james northrup <northrup.james@gmail.com>
+Date: Wed, 21 May 2014 13:58:28 -0700
+Message-ID: <CAPkEcwgYtzogExJqrg=UtfNNQuA+5zhT7yuO-9FJybpqO8AJ3g@mail.gmail.com>
+Subject: Re: Shading all modules in a project
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d0443069a5ce11c04f9ef43f9
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d0443069a5ce11c04f9ef43f9
+Content-Type: text/plain; charset=UTF-8
+
+anecdotally i can only suggest that where assembly and shade might fail,
+proguard might be slightly smarter, if scarier.
+
+
+On Wed, May 21, 2014 at 12:20 PM, Nick Dimiduk <ndimiduk@gmail.com> wrote:
+
+> In general, I agree with you regarding the perils of this "fat jar"
+> approach. However, due to legacy reasons, this is a feature that we must
+> support. Give this context, is there any advice regarding how to use the
+> shade plugin to rewrite all references to the moved class in dependent
+> submodules? Is this a feature the share plugin supports? Assuming this is a
+> reasonable use of the shade plugin, we have a willingness to contribute a
+> patch.
+>
+> Thank you for the replies.
+> Nick
+>
+> On Wed, May 21, 2014 at 10:44 AM, Martin Gainty <mgainty@hotmail.com>
+> wrote:
+>
+> >
+> >
+> >
+> > > From: ndimiduk@gmail.com
+> > > Date: Wed, 21 May 2014 09:15:51 -0700
+> > > Subject: Re: Shading all modules in a project
+> > > To: users@maven.apache.org
+> >
+> > >
+> > > Ping. Any advice on this?
+> > >
+> > >
+> > > On Mon, May 12, 2014 at 9:01 AM, Nick Dimiduk <ndimiduk@gmail.com>
+> > wrote:
+> > >
+> > > > Hello,
+> > > >
+> > > > Over in Apache HBase, we have an interesting problem that I'm hoping
+> > the
+> > > > shade plugin can help us solve. It all started with a performance
+> > > > enhancement to reduce garbage by creating a subclass of a protobuf
+> type
+> > > > [0]. It works fine for us most of the time. However, when using this
+> > code
+> > > > from a Hadoop mapreduce job, things get strange. Due to the
+> > permissions on
+> > > > the parent object and the way Hadoop uses "fat" jars
+> > MG>Uberjar or KitchenSinkJar or FatJar or SealedJar forces the situation
+> of
+> > MG>whenever any of the dependencies in fatjar change that you are packing
+> > into fatjar you will need to trigger a repackage of FatJar
+> >
+> >
+> > > >we now have
+> > > > classloader troubles [1]. We were able to work around the issue by
+> > > > documenting the required classpath constructions. However, this is
+> not
+> > > > possible for all users. This is where the shade plugin comes in.
+> > > >
+> > > > I gave shade a shot [2], though I admit I'm not terribly familiar
+> with
+> > it,
+> > > > nor the inner workings of maven. As far as I can tell, the trouble is
+> > the
+> > > > plugin invocation is limited to the single module in our multi-module
+> > > > project. I think what's happening is shade is doing what I want for
+> the
+> > > > hbase-protocol module
+> > MG>yes but every time the original (non-shaded) project you are shading
+> is
+> > updated
+> > MG>then you will need a mechanism to trigger that update to your shaded
+> > jar (to grab those deltas)
+> >
+> >
+> > > >but I also need it to do bytecode rewriting
+> > > >for the
+> > > > modules that consume this module as well. Luckily, this detail is not
+> > part
+> > > > of our public API so it should be transparent to our users.
+> > > >
+> > > > My patch is posted on [2]. Any pointers/advice is greatly
+> appreciated.
+> > MG>break the fat jars into discrete individual maven artifacts is what i
+> > would suggest
+> > MG>
+> >
+> > > >
+> > > > Thanks in advance,
+> > > > Nick
+> > > >
+> > > > [0]: https://issues.apache.org/jira/browse/HBASE-9867
+> > > > [1]: https://issues.apache.org/jira/browse/HBASE-10304
+> > > > [2]: https://issues.apache.org/jira/browse/HBASE-11118
+> > > >
+> >
+>
+
+
+
+-- 
+Jim Northrup  *  (408) 837-2270 *
+
+--f46d0443069a5ce11c04f9ef43f9--
+

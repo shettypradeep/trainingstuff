@@ -1,0 +1,195 @@
+From users-return-136758-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jul  9 23:12:30 2014
+Return-Path: <users-return-136758-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5C52511E8D
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  9 Jul 2014 23:12:30 +0000 (UTC)
+Received: (qmail 11708 invoked by uid 500); 9 Jul 2014 23:12:28 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 11624 invoked by uid 500); 9 Jul 2014 23:12:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 11613 invoked by uid 99); 9 Jul 2014 23:12:28 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 09 Jul 2014 23:12:28 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (nike.apache.org: transitioning domain of alexddupree@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 09 Jul 2014 23:12:26 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <alexddupree@gmail.com>)
+	id 1X511t-0001WF-OW
+	for users@maven.apache.org; Wed, 09 Jul 2014 16:12:01 -0700
+Date: Wed, 9 Jul 2014 16:12:01 -0700 (PDT)
+From: Alexddupree <alexddupree@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1404947521694-5799844.post@n5.nabble.com>
+Subject: Javadoc aggregate NullPointerException
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I am trying to create an aggregate javadoc for a multi module project. The
+project compiles with mvn install -DskipTests (I am not running tests on my
+machine). When I run mvn validate javadoc:javadoc it works and compiles all
+of the javadoc in each modules \target\apidocs directory. Then when I run
+either mvn validate javadoc:javadoc javadoc:aggregate or mvn validate
+javadoc:aggregate fails partway through with about 1200 lines of errors.
+Some examples of types are:
+
+Failed to execute goal
+org.apache.maven.plugins:maven-javadoc-plugin:2.9.1:aggregate (default-cli)
+on project commons-superpom: An error has occurred in JavaDocs report
+generation:
+[ERROR] Exit code: 1 - C:\workspaces\win\tfs\****\Foo.java:21: type
+org.springframework.context.ApplicationListener does not take parameters
+[ERROR] public class Foo implements ApplicationContextAware,
+ApplicationListener<ContextRefreshedEvent> {
+[ERROR] ^
+.
+.
+.
+C:\workspaces\win\tfs\****\test\Bar.java:52: cannot find symbol
+[ERROR] symbol  : class PostInsertEvent
+[ERROR] location: class com.Barclass
+[ERROR] public void BarFunct(PostInsertEvent event) {
+[ERROR] ^
+[ERROR] C:java.lang.NullPointerException
+[ERROR] at com.sun.tools.javadoc.TypeMaker.getType(TypeMaker.java:67)
+[ERROR] at com.sun.tools.javadoc.TypeMaker.getType(TypeMaker.java:29)
+[ERROR] at
+com.sun.tools.javadoc.ClassDocImpl.superclassType(ClassDocImpl.java:439)
+[ERROR] at
+com.sun.tools.doclets.internal.toolkit.util.Util.getAllInterfaces(Util.java:386)
+[ERROR] at
+com.sun.tools.doclets.internal.toolkit.util.Util.getAllInterfaces(Util.java:424)
+[ERROR] at
+com.sun.tools.doclets.internal.toolkit.util.ClassTree.processType(ClassTree.java:162)
+[ERROR] at
+com.sun.tools.doclets.internal.toolkit.util.ClassTree.buildTree(ClassTree.java:114)
+[ERROR] at
+com.sun.tools.doclets.internal.toolkit.util.ClassTree.<init>(ClassTree.java:73)
+[ERROR] at
+com.sun.tools.doclets.internal.toolkit.AbstractDoclet.startGeneration(AbstractDoclet.java:104)
+[ERROR] at
+com.sun.tools.doclets.internal.toolkit.AbstractDoclet.start(AbstractDoclet.java:64)
+[ERROR] at
+com.sun.tools.doclets.formats.html.HtmlDoclet.start(HtmlDoclet.java:42)
+[ERROR] at com.sun.tools.doclets.standard.Standard.start(Standard.java:23)
+[ERROR] at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[ERROR] at
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+[ERROR] at
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+[ERROR] at java.lang.reflect.Method.invoke(Method.java:597)
+[ERROR] at
+com.sun.tools.javadoc.DocletInvoker.invoke(DocletInvoker.java:269)
+[ERROR] at com.sun.tools.javadoc.DocletInvoker.start(DocletInvoker.java:143)
+[ERROR] at com.sun.tools.javadoc.Start.parseAndExecute(Start.java:340)
+[ERROR] at com.sun.tools.javadoc.Start.begin(Start.java:128)
+[ERROR] at com.sun.tools.javadoc.Main.execute(Main.java:41)
+[ERROR] at com.sun.tools.javadoc.Main.main(Main.java:31)
+After it crashes all that is left in the /target directory next to my parent
+pom.xml is 2 files 1 is javadoc-bundle-options which contains an xml file:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<javadocOptions>
+  <docletArtifacts>
+    <docletArtifact />
+  </docletArtifacts>
+  <tagletArtifacts>
+    <tagletArtifact />
+  </tagletArtifacts>
+  <excludePackageNames>
+    <excludePackageName>org.foobar.*</excludePackageName>
+  </excludePackageNames>
+  <javadocResourcesDirectory>src/main/javadoc</javadocResourcesDirectory>
+</javadocOptions>
+and the second is site which contains a file called apidocs which contains 3
+files javadoc.bat, options, and packages. They contain what they appear to
+contain a batch script to run the javadoc.exe with those options and on
+those packages. When run without modification the javadoc.bat file fails
+with the same errors though slightly different output. 
+
+The first error I copied is straight up wrong. ApplicationListener is
+parameterized and can take ContextRefreshedEvent per the spring
+documentation. PostInsertEvent is correctly imported as well in the second
+error. 
+
+My plugin configuration for javadoc:aggregate is as follows:
+<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-javadoc-plugin</artifactId>
+	<version>${maven-javadoc-plugin.version}</version>
+	<executions>
+		<execution>
+			<id>attach-javadocs</id>
+			<goals>
+				<goal>aggregate</goal>
+			</goals>
+		</execution>
+	</executions>
+	<configuration>
+		<excludePackageNames>org.hibernate.*;org.spring.*</excludePackageNames>
+		<verbose>true</verbose>
+		<fork>true</fork>
+		<showDeprecation>true</showDeprecation>
+		<showWarnings>true</showWarnings>
+		<source>${java.source.version}</source>
+		<target>${java.target.version}</target>
+		<compilerVersion>${java.source.version}</compilerVersion>
+		<compilerArgument>-Xlint:all</compilerArgument>
+		<minmemory>128m</minmemory>
+		<maxmem>512m</maxmem>
+		
+		<encoding>${project.build.sourceEncoding}</encoding>
+		
+		<additionalparam>
+			-charset UTF-8
+			-docencoding UTF-8
+			-version
+			-author
+			-breakiterator
+			-linksource
+			-sourcetab 4
+			-windowtitle "${project.name} ${project.version} API Reference"
+			-doctitle "${project.name} ${project.version} API Reference"
+			-bottom "Copyright ${project.inceptionYear}-Present
+${project.organization.name}. All Rights Reserved."
+			-link http://java.sun.com/javase/6/docs/api/
+			-link http://jsr311.java.net/nonav/releases/1.1
+		</additionalparam>
+	</configuration>
+</plugin>
+
+If I exclude the commented package then the build runs fine. If however I
+exclude all of the files in the package and not the package then it crashes
+with very similar errors. I can generate the javadoc just fine in eclipse. I
+can stop the nullpointerexception if I edit the options file generated after
+a failure to use 3.3.2.GA/hibernate-core-3.3.2.GA.jar instead of
+hibernate-core-4.1.8.Final.jar and then run the bat file. This produces a
+complete aggregate javadoc site however, there are several errors relating
+to @Typedef in the run. Javadoc 1.7_60 and 1.6_45 both fail in the same way. 
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Javadoc-aggregate-NullPointerException-tp5799844.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

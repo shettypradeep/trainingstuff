@@ -1,0 +1,111 @@
+From users-return-137093-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Aug 20 03:27:56 2014
+Return-Path: <users-return-137093-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4D87411244
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 20 Aug 2014 03:27:56 +0000 (UTC)
+Received: (qmail 61495 invoked by uid 500); 20 Aug 2014 03:27:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 61415 invoked by uid 500); 20 Aug 2014 03:27:52 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 60946 invoked by uid 99); 20 Aug 2014 03:27:52 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 20 Aug 2014 03:27:52 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.217.172 as permitted sender)
+Received: from [209.85.217.172] (HELO mail-lb0-f172.google.com) (209.85.217.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 20 Aug 2014 03:27:26 +0000
+Received: by mail-lb0-f172.google.com with SMTP id z11so6276950lbi.17
+        for <users@maven.apache.org>; Tue, 19 Aug 2014 20:27:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=E0hOMScgmly7IlT/JhTxzaVK3m4l5g5fateIom3Laoc=;
+        b=HuTrrbmF60+vuf0i4GWrD0WnH/DX7KpFsKhZG4L/3BFQKA2yasjEaI07bDBrmqITcy
+         Bhy7uP6Anrb20m/gDG6YX+e3e2btWgwACzgZ76JmbQvfeTCSnqPqUD4zgRWAA+7Fa0Zq
+         FaESWmLkzdYfrWXGfWqBQ4XEBpxLrXqzWZ7VwWD5EVzrERuXz/RnaxgTF0qfrGbUr55z
+         eECWYLiKLHLU/TDdPJDWSSi9HFiXoavomd4lhCfYzgFLMgthShdk28SIqtFvUcIH6q7v
+         NZlg2C4ffDw2HGR+MgAv+lRX1RT0mSWbwzPzSqMbKV9TNrLa/9LvOrfQwdFqf5quODmM
+         IGTg==
+MIME-Version: 1.0
+X-Received: by 10.112.255.36 with SMTP id an4mr38459221lbd.31.1408505245956;
+ Tue, 19 Aug 2014 20:27:25 -0700 (PDT)
+Received: by 10.114.20.231 with HTTP; Tue, 19 Aug 2014 20:27:25 -0700 (PDT)
+In-Reply-To: <940B3C10-820E-4A61-BCF2-C37B3DEA07FE@talios.com>
+References: <CAPCjjnGKp2A-iDS+vBvjHTF_FX7RL4DeOMhRadMOCoO5pDMHdQ@mail.gmail.com>
+	<53F04794.6000406@artifact-software.com>
+	<CAPCjjnFpu8wZnGq42sEaR3vv-TwRSAecoDKA9JObWQoas8yJvw@mail.gmail.com>
+	<CAPCUOdFgo-RuYjdH5Xym5UVb_viD2LoPXa0NGw3A+jKAZdXCJw@mail.gmail.com>
+	<CAPCjjnFhni9vrkJYJRxJpvLFZ-wu9oG-oO0f73Cyv4R103COvw@mail.gmail.com>
+	<CAKDUN1vPea=2W4+y41sU6Gt463nrVqN3CL6bJQAmej6owobJ=w@mail.gmail.com>
+	<CADVp3v8c_aT-Ofntot6zyiunboUffVM7NAPPTcRVtTF4vNpwZw@mail.gmail.com>
+	<53F34BEA.6090002@artifact-software.com>
+	<CAPCjjnEtsvCmW2BM7+JAEsfQ1AXEruy92nSz3wrGrL=zzZzaAA@mail.gmail.com>
+	<E9BDF3F0-B7E9-48C3-AE52-9203DA6D1285@talios.com>
+	<CAPCjjnFQYWpUppBOgK-dSgsBH8tvDXQ2_T6A+5R+SjzwL=jaXw@mail.gmail.com>
+	<940B3C10-820E-4A61-BCF2-C37B3DEA07FE@talios.com>
+Date: Tue, 19 Aug 2014 20:27:25 -0700
+Message-ID: <CAPCjjnEi2bx-fMiG7Mjco7AwMRO1zGc7dBYya_wQMHcUG0jyDQ@mail.gmail.com>
+Subject: Re: Remove old snapshots under local repository
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1134d438d9810a0501072edd
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1134d438d9810a0501072edd
+Content-Type: text/plain; charset=UTF-8
+
+ah, that works with a project, in my case, i prefer not to have a project
+
+
+On Tue, Aug 19, 2014 at 8:07 PM, Mark Derricutt <mark@talios.com> wrote:
+
+> Nope, it's takes the dependencies from your project pom.xml:
+>
+>    mvn dependency:purge-local-repository -DresolutionFuzziness=artifactId
+>
+> Mark
+>
+> On 20 Aug 2014, at 14:11, Dan Tran wrote:
+>
+> > the problem here is I have to enter artifactId, am I missing any thing?
+> > specially for a developer who is very clueless about Maven
+> >
+> > -D
+> >
+> >
+> > On Tue, Aug 19, 2014 at 7:09 PM, Mark Derricutt <mark@talios.com> wrote:
+> >
+> >> So not using the dependency plugin like I suggested?
+> >>
+> >> On 20 Aug 2014, at 10:14, Dan Tran wrote:
+> >>
+> >>> After all consideration.  I use Ron's advice and create a internal
+> plugin
+> >>> to clean it up.
+> >>
+> >> ---------------------------------------------------------------------
+> >> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> >> For additional commands, e-mail: users-help@maven.apache.org
+> >>
+> >>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a1134d438d9810a0501072edd--
+

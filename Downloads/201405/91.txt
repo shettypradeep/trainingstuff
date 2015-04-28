@@ -1,0 +1,308 @@
+From users-return-136471-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri May 30 20:50:21 2014
+Return-Path: <users-return-136471-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F18C610970
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 30 May 2014 20:50:20 +0000 (UTC)
+Received: (qmail 88368 invoked by uid 500); 30 May 2014 20:50:19 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 88277 invoked by uid 500); 30 May 2014 20:50:19 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 88269 invoked by uid 99); 30 May 2014 20:50:19 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 30 May 2014 20:50:19 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ctrueden.wisc@gmail.com designates 209.85.220.175 as permitted sender)
+Received: from [209.85.220.175] (HELO mail-vc0-f175.google.com) (209.85.220.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 30 May 2014 20:50:16 +0000
+Received: by mail-vc0-f175.google.com with SMTP id id10so2739589vcb.34
+        for <users@maven.apache.org>; Fri, 30 May 2014 13:49:52 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=vYrlBz7cFl4MXp0Tzgvmbg26c1c5E6jajffbwToYT2s=;
+        b=AU8eqr316jzo1IS0/RWluEz/C9oprjf32xoJx2KWwKgRvQXrlYnftLWLN37Wi/OQSr
+         jYbhNmKHgRP+PbBh94oVvL6IXROHLuhqgoltnY6FBn86svXlQqv9Kb+7ZYiL7DJaNrGH
+         7aFN85Oo7NmpajkhKoiibm4OKr9E/VkUUG6Pe+XAU/MWr7NlmQmyuMKeK//fybLcpK0s
+         OGk0ymlI8pVCK5fb5UqEK8nxbu5yWR2UIxlj/bISFU6nPDyEGdMHULRSTxjErhp7C+r5
+         6/KKbda1JjiHxN3POFaZo+tYk4E+vuWKZV8q3AyyY1nJ/F4zlPjyWNSbeyOtanY6hoW+
+         vehw==
+X-Received: by 10.52.246.42 with SMTP id xt10mr13647260vdc.5.1401482992333;
+ Fri, 30 May 2014 13:49:52 -0700 (PDT)
+MIME-Version: 1.0
+Sender: ctrueden.wisc@gmail.com
+Received: by 10.58.15.168 with HTTP; Fri, 30 May 2014 13:49:22 -0700 (PDT)
+In-Reply-To: <003e01cf7c47$b0a2b850$11e828f0$@purelandsupply.com>
+References: <003e01cf7c47$b0a2b850$11e828f0$@purelandsupply.com>
+From: Curtis Rueden <ctrueden@wisc.edu>
+Date: Fri, 30 May 2014 15:49:22 -0500
+X-Google-Sender-Auth: x4t4faXah-MC4N0NcdRep8m6CvM
+Message-ID: <CADN69y=NbWwx0H6sB6R4r8aWvK2afGNWzsXXm=OVyRpdsDBqFA@mail.gmail.com>
+Subject: Re: Unmanaged dependency question
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1136018eeabb2504faa42f1e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1136018eeabb2504faa42f1e
+Content-Type: text/plain; charset=UTF-8
+
+Hi Matt,
+
+Have you seen this article?
+http://developer-blog.cloudbees.com/2013/03/playing-trade-offs-with-maven.html
+
+If you cannot deploy the Microsoft JARs to your own internal Maven
+repository, then you could try the non-maven-jar-plugin approach. It is
+strongly recommended over the "basedir repository hack" approach that you
+are using (presumably from
+https://devcenter.heroku.com/articles/local-maven-dependencies).
+
+Regards,
+Curtis
+
+
+On Fri, May 30, 2014 at 3:42 PM, Matt Whiteman <mwhiteman@purelandsupply.com
+> wrote:
+
+> Hi,
+>
+>
+>
+> This has probably been answered before, but I haven't been able to find the
+> answer and I'm hoping someone knows.
+>
+>
+>
+> I'm writing several apps that talk to a Microsoft SQL database, so I'm
+> using
+> the Hibernate dependency. Since Microsoft doesn't make the sqljdbc4 jar
+> available on Maven, I've downloaded it, and I'm trying to make it an
+> unmanaged dependency in its own standalone project so that I can simply
+> reference it in other projects' pom files without having to deploy the jar
+> to each one individually.
+>
+>
+>
+> I've followed the instructions for deploying an unmanaged dependency. As I
+> am the only developer at my company (at this time), I do not have a
+> separate
+> Maven server setup. I was hoping to simply deploy the dependency and then
+> run 'maven install' so that it copies everything needed into my .m2 folder.
+> This is my directory setup:
+>
+>
+>
+> (This is the project directory for the sqljdbc4 unmanaged dependency)
+>
+> C:\dev\Github-repos\addons\sqljdbc4
+>
+>   +- pom.xml
+>
+>   +-src
+>
+>   +-repo
+>
+>
+>
+> I followed the instructions to use mvn deploy on the local sqljdbc4.jar
+> file. I am using an artifactId of sqljdbc4, version 4.0, groupId of
+> com.microsoft.sqlserver. After deployment, the repo directory does appear
+> to
+> be correctly populated:
+>
+>
+>
+> C:\dev\Github-repos\addons\sqljdbc4
+>
+>   +- pom.xml
+>
+>   +-src
+>
+>   +-repo
+>
+>        +-com
+>
+>            +-microsoft
+>
+>                   +-sqlserver
+>
+>                        +-sqljdbc4
+>
+>                                 +-maven-metadata
+>
+>                                 +-4.0
+>
+>                                       +-sqljdbc4-4.0.jar
+>
+>                                       +-sqljdbc4-4.0.pom
+>
+>
+>
+> Next, following the instructions, I go back into the pom.xml file and add
+> the repository tag, so my pom.xml for this now looks like:
+>
+>
+>
+> <project xmlns="http://maven.apache.org/POM/4.0.0"
+> xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+> xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+> http://maven.apache.org/xsd/maven-4.0.0.xsd
+> <
+> http://maven.apache.org/POM/4.0.0%20http:/maven.apache.org/xsd/maven-4.0.0
+> .
+> xsd> ">
+>
+>   <modelVersion>4.0.0</modelVersion>
+>
+>   <groupId>com.microsoft.sqlserver</groupId>
+>
+>   <artifactId>sqljdbc4</artifactId>
+>
+>   <version>4.0</version>
+>
+>
+>
+> <repositories>
+>
+>     <!--other repositories if any-->
+>
+>     <repository>
+>
+>         <id>project.local</id>
+>
+>         <name>project</name>
+>
+>         <url>file:${project.basedir}/repo</url>
+>
+>     </repository>
+>
+> </repositories>
+>
+> </project>
+>
+>
+>
+>
+>
+> Now, here is the problem. Since I want to use this as a dependency in other
+> projects, I am trying to run 'maven install' so that it will push
+> everything
+> into my .m2 directory. The maven build is a success. However, the resulting
+> sqljdbc4.jar file in the target directory and up in the m2 directory is
+> only
+> 2kb (whereas the original jar file is 571kb, none of the content made it
+> in). As a result, projects that use this as a dependency build, but then
+> throw a ClassNotFoundException at runtime, because the classes aren't
+> there.
+>
+>
+>
+> I am building a separate project that uses this as a dependency:
+>
+>
+>
+> C:\dev\Github-repos\applications\myapp
+>
+>
+>
+> The pom.xml for this project uses the dependency correctly:
+>
+> <dependency>
+>
+>                 <groupId>com.microsoft.sqlserver</groupId>
+>
+>                 <artifactId>sqljdbc4</artifactId>
+>
+>                 <version>4.0</version>
+>
+> </dependency>
+>
+>
+>
+> I'm even using the maven assembly plugin to ensure a jar is built with all
+> dependencies packaged in:
+>
+>
+>
+>                     <plugin>
+>
+>
+> <artifactId>maven-assembly-plugin</artifactId>
+>
+>                                   <configuration>
+>
+>                                                 <descriptorRefs>
+>
+>
+> <descriptorRef>jar-with-dependencies</descriptorRef>
+>
+>                                                 </descriptorRefs>
+>
+>                                     <archive>
+>
+>                                       <manifest>
+>
+>                                         <addClasspath>true</addClasspath>
+>
+>
+> <mainClass>productfeeds.main.ProductFeedDriver</mainClass>
+>
+>                                       </manifest>
+>
+>                                     </archive>
+>
+>                                   </configuration>
+>
+>         <executions>
+>
+>           <execution>
+>
+>             <phase>package</phase>
+>
+>             <goals>
+>
+>               <goal>single</goal>
+>
+>             </goals>
+>
+>           </execution>
+>
+>         </executions>
+>
+>                                 </plugin>
+>
+>
+>
+>
+>
+> Any ideas what I'm doing wrong? I'm sure it's something really simple I've
+> overlooked. If I don't make this a standalone dependency, and simply use
+> 'mvn install:install-file -Dfile=sqljdbc4.jar
+> -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4.0
+> -Dpackaging=jar ', then everything works fine.
+>
+>
+>
+> Thanks,
+>
+>
+>
+> Matt
+>
+>
+>
+>
+
+--001a1136018eeabb2504faa42f1e--
+

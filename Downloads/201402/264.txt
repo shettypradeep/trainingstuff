@@ -1,0 +1,94 @@
+From users-return-135435-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 12 22:02:42 2014
+Return-Path: <users-return-135435-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6FCDD106B8
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 12 Feb 2014 22:02:42 +0000 (UTC)
+Received: (qmail 8890 invoked by uid 500); 12 Feb 2014 22:02:27 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 8839 invoked by uid 500); 12 Feb 2014 22:02:26 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 30135 invoked by uid 99); 12 Feb 2014 08:52:50 -0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of david.bernard.31@gmail.com designates 209.85.212.181 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :cc:content-type;
+        bh=t+8ZEhhRgvKwrtXKmw6YcsCPtdUwOXwVrkDKz8XG1tU=;
+        b=rUrb+Kv+YZ9aM+J3mhdYaRuxH9jbSJ2O3Yu4cjV42FgxTMNV+JjrCdxQlAxuaGuV/Y
+         QLjW/W+laNrP8/2egJK62C9/Ghx69L2m1jAEBy88wt5/l0DOZkzwbGUE0FnE6nrcsnOU
+         q/D0B/62cmhPkJ91Ob3dcVwomHCxfAyKosjepq02zGw6WzD4E3J9nbbkaSBis8BU/ITK
+         X8Aq6fmXv1hmcxd2tJe+5wv4D7RLUzzq7J9jX4V8rVWUFY7+bG4pczIbQw0SpOEqS9S3
+         t5V5PlC8bx0JsbqppIhSL+P3EQxDVv0zl/9AFFNq+iGBVEOxlnAejh+xKA2NO36lUcVr
+         BT7Q==
+MIME-Version: 1.0
+X-Received: by 10.180.37.162 with SMTP id z2mr995848wij.51.1392195145726; Wed,
+ 12 Feb 2014 00:52:25 -0800 (PST)
+In-Reply-To: <52FAE00E.2030206@gmail.com>
+References: <52FAE00E.2030206@gmail.com>
+Date: Wed, 12 Feb 2014 09:52:25 +0100
+Message-ID: <CAK3XY7Rj7XCZZ6=A+tJfO1UWvPkCn5RV4QT_gY4vdo0H-S_UuA@mail.gmail.com>
+Subject: Re: [scala-ide-user] Can't Find Scala Archetype
+From: David Bernard <david.bernard.31@gmail.com>
+To: "scala-ide-user@googlegroups.com" <scala-ide-user@googlegroups.com>
+Cc: maven users <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=e89a8f646f8f1e9dfe04f231b140
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--e89a8f646f8f1e9dfe04f231b140
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+What do you mean by "it cannot find" ?
+You can't see it in the list of archetype when you create a new maven
+project (via m2e) ? On my desktop it require few seconds to retrieve the
+list of archetypes from "Default Catalogs"
+
+  m2e - Maven Integration for Eclipse    1.4.0.20130601-0317
+org.eclipse.m2e.feature.feature.group    Eclipse.org - m2e
+  Scala IDE for Eclipse    4.0.0.m1-2_10-201311011355-8ed264f
+org.scala-ide.sdt.feature.feature.group    scala-ide.org
+
+/davidB
+
+
+On Wed, Feb 12, 2014 at 3:44 AM, Eric Kolotyluk <eric.kolotyluk@gmail.com>wrote:
+
+> I am using the Typesafe Eclipse IDE, and for some reason it cannot find
+> the archetype for
+>
+> <groupId>net.alchim31.maven</groupId>
+> <artifactId>scala-archetype-simple</artifactId>
+> <version>1.5</version>
+>
+> At one time it could, but now it can't, and I have no idea why. The
+> diagnostics are completely useless in understanding the problem.
+>
+> Can anyone suggest anything that might be wrong and how to fix it?
+>
+> Cheers, Eric
+>
+> --
+> You received this message because you are subscribed to the Google Groups
+> "Scala IDE User" group.
+> To unsubscribe from this group and stop receiving emails from it, send an
+> email to scala-ide-user+unsubscribe@googlegroups.com.
+> To view this discussion on the web visit https://groups.google.com/d/
+> msgid/scala-ide-user/52FAE00E.2030206%40gmail.com.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>
+
+--e89a8f646f8f1e9dfe04f231b140--
+

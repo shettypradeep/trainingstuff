@@ -1,0 +1,120 @@
+From users-return-137506-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Oct  9 13:27:23 2014
+Return-Path: <users-return-137506-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2337717B4D
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  9 Oct 2014 13:27:23 +0000 (UTC)
+Received: (qmail 40564 invoked by uid 500); 9 Oct 2014 13:27:16 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 40492 invoked by uid 500); 9 Oct 2014 13:27:16 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 40480 invoked by uid 99); 9 Oct 2014 13:27:15 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Oct 2014 13:27:15 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.218.43 as permitted sender)
+Received: from [209.85.218.43] (HELO mail-oi0-f43.google.com) (209.85.218.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Oct 2014 13:26:48 +0000
+Received: by mail-oi0-f43.google.com with SMTP id u20so2614606oif.16
+        for <users@maven.apache.org>; Thu, 09 Oct 2014 06:26:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=ti+57reg2Ji3jNZqP6FexVULA62MXQEgmRqPJvCRLA0=;
+        b=GWFXOQUMHgFk5D80A5Aa64aCJ+rm6H8wV/bhAQIVg+JOZv7AJTl4x993ohAQdGzTHc
+         JTy5pUvMm0YYqnWfkRdy63Ck1vfdjhvIjRM55S3Av++mwH6IAnRpQjINkWLbLbOgeAhB
+         s7MwnOovxG1zbH6EHWOsjgio3KkcUIUVR6xB553JsuNEYekRpysg53NzX8ywn28BtfhC
+         SXCxxBZfdOWVOx2MXjtJbOWbWMGp9r4ewyeWhlmyRjmqSV6/qpJ+xHP0RbZ1FDPC3JeH
+         SvO8glloL+7vwZJc4ZI7rbcBXOXLvjTeCKtbrFYPUIWtNs5I1Yv7wvkDFp4q4otBuftv
+         d0SA==
+MIME-Version: 1.0
+X-Received: by 10.182.165.36 with SMTP id yv4mr23009128obb.39.1412860749535;
+ Thu, 09 Oct 2014 06:19:09 -0700 (PDT)
+Received: by 10.60.116.39 with HTTP; Thu, 9 Oct 2014 06:19:09 -0700 (PDT)
+In-Reply-To: <CAFDw+_NyuN_u2OPgDa5UG0mBAwVjZ+2+-OZX1eUA0pzTH01vNw@mail.gmail.com>
+References: <CAFDw+_MKcYKPdc9M74-b0=AMwq-kKoWxzhwxjr--nWTpbKH9Kw@mail.gmail.com>
+	<CA+nPnMwTAfyeZqo+hFuYEg7JC7w-5tL1vDGPM_ma=RYORBPauw@mail.gmail.com>
+	<CAFDw+_NyuN_u2OPgDa5UG0mBAwVjZ+2+-OZX1eUA0pzTH01vNw@mail.gmail.com>
+Date: Thu, 9 Oct 2014 14:19:09 +0100
+Message-ID: <CA+nPnMzSC4KiN-cAjP8O49f-Q3sw=AZcZnXzCcGXAxTsonGg_g@mail.gmail.com>
+Subject: Re: What packaging to use for a sub-module that just runs integration tests?
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c2fd3417e4890504fd477e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c2fd3417e4890504fd477e
+Content-Type: text/plain; charset=UTF-8
+
+On 9 October 2014 14:01, Robert Mark Bram <robertmarkbram@gmail.com> wrote:
+
+> > Well the question you really will want to know is:
+> >
+> > "do I want any other modules to depend on the integration tests being
+> > successful?"
+>
+> The Hatter opened his eyes very wide on hearing this; but all he said
+> was, "Why is a mvn like a writing-desk?"
+>
+> > If the answer is "no" then you will just configure the integration test
+> > module with
+> >
+> <plugin><artifactId>maven-deploy-plugin</artifactId></configuration><skip>true</skip></configuration></plugin>
+>
+> Thanks again Stephen - nail, head and hammer. In my case, I have
+> nothing else depending on the Selenium project.
+>
+> > If the answer is "yes" then you will most likely need to deploy something
+> > (<packaging>pom</packaging>) and that may require adding the missing
+> > bindings into the lifecycle.
+>
+> Let me see if I understand this (though it isn't my case right now).
+> If I wanted to trigger something else based upon the Selenium tests
+> successful completion, I should have the Selenium POM use a deploy
+> phase so that some other project could depend on that artifact in the
+> same way that my Selenium POM is depending on an EAR being deployed?
+>
+>    <dependency>
+>       <groupId>${project.groupId}</groupId>
+>       <artifactId>FooProject-ADF</artifactId>
+>       <version>1.0</version>
+>       <type>ear</type>
+>    </dependency>
+>
+> If you are saying this, and I use <packaging>pom</packaging>, what
+> exactly would the Selenium project deploy?
+>
+>
+just the pom file.
+
+and that way if the integration tests' pom was not deployed to the repo
+then on another machine you will be unable to build the separate project
+that required that the integration tests ran.
+
+The case here is rather advanced and typically where you need to build
+different packagings on different machines... think windows installer and
+deb and rpm which all depend on the .ear
+
+
+> Rob
+> :)
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a11c2fd3417e4890504fd477e--
+

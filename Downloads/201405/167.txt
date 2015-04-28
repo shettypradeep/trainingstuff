@@ -1,0 +1,95 @@
+From users-return-136459-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed May 28 16:19:20 2014
+Return-Path: <users-return-136459-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 90DB010ACF
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 28 May 2014 16:19:20 +0000 (UTC)
+Received: (qmail 97574 invoked by uid 500); 28 May 2014 16:19:19 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 97495 invoked by uid 500); 28 May 2014 16:19:19 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 97487 invoked by uid 99); 28 May 2014 16:19:19 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 28 May 2014 16:19:19 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ctrueden.wisc@gmail.com designates 209.85.220.177 as permitted sender)
+Received: from [209.85.220.177] (HELO mail-vc0-f177.google.com) (209.85.220.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 28 May 2014 16:19:13 +0000
+Received: by mail-vc0-f177.google.com with SMTP id hq11so6797880vcb.22
+        for <users@maven.apache.org>; Wed, 28 May 2014 09:18:53 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=2RJNbX0Bi6vWdkalSesm7ObEbjYnORY5O9w7Q58bcXE=;
+        b=np26YQpJkzLSR5JOkt9ipWsjUHtsu3wN/cPZxsfMUhBDP6iroLYq1b1bBTyiqTJRFL
+         lZsjyIvag4WTQF6BTqYoi8wTdnOtU5azNlw+tkTLVHnSOW0cLA2lPopulvfignnrvakz
+         1e1Nj72RvmSxVaCDDnvdjg2jWKV+pNt5qoGnYYV0UxSUUgGwLqstL1UPHYINyYO57eFQ
+         8mysQdmNZ98yHe4oet5ku08mSNeu6Ed5jRhzDgtQTi6tMQ0b2hX4ubIEMsED1FbwbKIx
+         Hdav7FN2vTiv2EjYkrH1nR4dEDZ2FAdRhKUynWFD2zTaKL1WZTyHL2f2gkCUQbEYSyWS
+         e5pw==
+X-Received: by 10.58.34.72 with SMTP id x8mr588591vei.61.1401293933015; Wed,
+ 28 May 2014 09:18:53 -0700 (PDT)
+MIME-Version: 1.0
+Sender: ctrueden.wisc@gmail.com
+Received: by 10.58.15.168 with HTTP; Wed, 28 May 2014 09:18:22 -0700 (PDT)
+In-Reply-To: <CA+qV_zCMLRPkWYPeLcSRULP=OauyV5OBHVMMWCf5HHSxg0sLSA@mail.gmail.com>
+References: <CA+qV_zCMLRPkWYPeLcSRULP=OauyV5OBHVMMWCf5HHSxg0sLSA@mail.gmail.com>
+From: Curtis Rueden <ctrueden@wisc.edu>
+Date: Wed, 28 May 2014 11:18:22 -0500
+X-Google-Sender-Auth: ZWo0PThuA9gNy_unKNnjNTNT_Ps
+Message-ID: <CADN69ykHO-Ubf3KZFqmHOrvFJsPA6e-ZVQFZY+PK_psFZ_ej5w@mail.gmail.com>
+Subject: Re: how maven build plugins plugin use latest version
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0122a6861a77b004fa782b03
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0122a6861a77b004fa782b03
+Content-Type: text/plain; charset=UTF-8
+
+Hi Sartisty,
+
+> How to use the latest release version, not modify plugin version in
+> pom.xml frequently?
+
+Why not just keep it as an eternal 1.0.0-SNAPSHOT or some such? Then you'll
+never have to change the POMs that use it.
+
+But as Baptiste points out, all of those downstream projects will sacrifice
+build reproducibility. Imagine that you accidentally introduce a bug into
+your build plugin which starts failing the build erroneously. Then
+suddenly, projects which use that plugin might have failing builds with no
+code changes. Release tags that built yesterday will no longer build. Not a
+good situation!
+
+Regards,
+Curtis
+
+
+On Tue, May 27, 2014 at 3:31 AM, Sartisty <sartisty@gmail.com> wrote:
+
+> hi, all,
+> I have developed a maven build plugin and I will upgrade it
+> frequently. How to use the latest release version, not modify plugin
+> version in pom.xml frequently? One idea is no version setting, but it
+> will generate too much warnings. Setting LATEST, it won't work.
+> Is there any good solution? Glad to hear it.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--089e0122a6861a77b004fa782b03--
+

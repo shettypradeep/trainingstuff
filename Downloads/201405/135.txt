@@ -1,0 +1,89 @@
+From users-return-136331-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue May 13 04:53:31 2014
+Return-Path: <users-return-136331-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 33ADE11250
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 13 May 2014 04:53:31 +0000 (UTC)
+Received: (qmail 14983 invoked by uid 500); 10 May 2014 23:20:28 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 55547 invoked by uid 500); 10 May 2014 23:00:02 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 79364 invoked by uid 99); 10 May 2014 22:55:02 -0000
+Received: from Unknown (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 10 May 2014 22:55:02 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of nhrdls@gmail.com designates 209.85.220.51 as permitted sender)
+Received: from [209.85.220.51] (HELO mail-pa0-f51.google.com) (209.85.220.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 09 May 2014 17:36:38 +0000
+Received: by mail-pa0-f51.google.com with SMTP id kq14so4693362pab.10
+        for <users@maven.apache.org>; Fri, 09 May 2014 10:36:17 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type:content-transfer-encoding;
+        bh=S275879LfFRkKoQ3aoRLEbWXahwOfsrM3E7QIg5jeZk=;
+        b=ntMj/FyakHUjMeTrXZeDwfjYV3Xc/2dEyPVVqEGEy4GemwWL05dBPsNXxj1/OkHBxz
+         ihuYtDzhamY3mypa1WpC+NRsdPKsgBk3oXIDP8fetc9hWLOa/5cY1gF5S9bJid28MN/z
+         QsJPeK0pNZQKNJVhFF90793uvHgsMYrF8lYFMwlYUfqWKxjM0zow1epHzgZBvHHTiIZL
+         yGF9D1X3TFnRK4uW5As0G+ixdv0krHOsJTZT4zDOBLp/koK+roHIWFEXjFJijNpJFG3E
+         X6VE2SElf2Vw4kGfi3a7N1LKxTf+tiYCGhzmLuRBk7jW4sGtpChja6/b2CCipwhJoCbS
+         EcbA==
+X-Received: by 10.66.141.109 with SMTP id rn13mr22238341pab.117.1399656977788;
+        Fri, 09 May 2014 10:36:17 -0700 (PDT)
+Received: from [10.0.0.103] (173-164-138-60-SFBA.hfc.comcastbusiness.net. [173.164.138.60])
+        by mx.google.com with ESMTPSA id ih6sm1582534pbc.22.2014.05.09.10.36.16
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 09 May 2014 10:36:16 -0700 (PDT)
+Message-ID: <536D120F.4060805@gmail.com>
+Date: Fri, 09 May 2014 10:36:15 -0700
+From: Niranjan Rao <nhrdls@gmail.com>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.5.0
+MIME-Version: 1.0
+To: Maven <users@maven.apache.org>
+Subject: Re: How to override settings for maven module
+References: <536C2873.6040802@gmail.com>
+In-Reply-To: <536C2873.6040802@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Found the answer, you need to use combine.self="override" in the 
+compiler plugin settings. More details at 
+http://stackoverflow.com/questions/1771561/maven-is-it-possible-to-override-the-configuration-of-a-plugin-already-defined
+
+On 05/08/2014 05:59 PM, Niranjan Rao wrote:
+> I have a master POM file which defines common stuff such as common 
+> dependencies like junit and compiler settings.
+>
+> The compiler settings are set to treat warning as error using 
+> maven-compiler-plugin and Werror as compiler argument. I have a new 
+> module which declares the master pom as parent pom, but has generated 
+> code which has lot of warnings. I would like to disable treating 
+> warnings as errors only for this module or if possible only for 
+> generated package or generated source directory.
+>
+> I tried adding compiler plugin entry in module's pom file. But it 
+> looks like it overrides from parent. How do I disable warnings for 
+> this module only?
+>
+> Regards,
+>
+> Niranjan
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

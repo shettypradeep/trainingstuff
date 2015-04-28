@@ -1,0 +1,84 @@
+From users-return-136504-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jun  3 16:42:42 2014
+Return-Path: <users-return-136504-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E78C410AA9
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  3 Jun 2014 16:42:41 +0000 (UTC)
+Received: (qmail 74938 invoked by uid 500); 3 Jun 2014 16:42:40 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 74853 invoked by uid 500); 3 Jun 2014 16:42:40 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74843 invoked by uid 99); 3 Jun 2014 16:42:40 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 03 Jun 2014 16:42:40 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [134.68.171.23] (HELO mhw.ulib.iupui.edu) (134.68.171.23)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 03 Jun 2014 16:42:37 +0000
+Received: from mwood by mhw.ulib.iupui.edu with local (Exim 4.80.1)
+	(envelope-from <mwood@IUPUI.Edu>)
+	id 1Wrrmv-0004RV-6K
+	for users@maven.apache.org; Tue, 03 Jun 2014 12:42:13 -0400
+Date: Tue, 3 Jun 2014 12:42:13 -0400
+From: "Mark H. Wood" <mwood@IUPUI.Edu>
+To: users@maven.apache.org
+Subject: Re: Use native tar to unpack? good/bad idea?
+Message-ID: <20140603164213.GA8703@IUPUI.Edu>
+Mail-Followup-To: users@maven.apache.org
+References: <CAPCjjnEO9A_STBkPsLhgHa38ao=9T8wd8mo3mw6+UyqaXuvSvg@mail.gmail.com>
+ <4D1B2C20-D217-4701-B27C-6FAAAA18995C@Kriegisch.name>
+ <CAPCjjnHNMqGNjC=mHSvcTidivHso2PVWREgy3OBdsFR8RshyHQ@mail.gmail.com>
+ <8AD1E8C9-4164-4DB9-BDE9-9AA1E9945DA0@Kriegisch.name>
+ <CAPCjjnGWDY=-Nh+ksJcx5uaiMOk_WRcVY98FG1pMVsiORmgnzw@mail.gmail.com>
+ <CAPCjjnHcuturZSe7-TJsFMV4Lo_iMR3Vkn5rBf10ggm=+PNhng@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha256;
+	protocol="application/pgp-signature"; boundary="NzB8fVQJ5HfG6fxh"
+Content-Disposition: inline
+In-Reply-To: <CAPCjjnHcuturZSe7-TJsFMV4Lo_iMR3Vkn5rBf10ggm=+PNhng@mail.gmail.com>
+User-Agent: Mutt/1.5.22 (2013-10-16)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--NzB8fVQJ5HfG6fxh
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+On Mon, Jun 02, 2014 at 04:15:15PM -0700, Dan Tran wrote:
+> BTW,
+>=20
+> I never have good luck with plexus-archiver, and always ended up to
+> implement my own 'unpack' using native tar to speed up the build and also
+> reserve the softlinks in the archive.
+
+If plexus-archiver needs work, maybe they would accept a patch.  Then
+everybody wins.
+
+--=20
+Mark H. Wood, Lead System Programmer   mwood@IUPUI.Edu
+Machines should not be friendly.  Machines should be obedient.
+
+--NzB8fVQJ5HfG6fxh
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.22 (GNU/Linux)
+
+iEYEAREIAAYFAlON+uUACgkQs/NR4JuTKG8SewCgpaFW+zh9RjACUwPhc4W3Fu0u
+xAEAnijtxS2YEzKjuOOKx40+YAYNb5Nw
+=Ni52
+-----END PGP SIGNATURE-----
+
+--NzB8fVQJ5HfG6fxh--
+

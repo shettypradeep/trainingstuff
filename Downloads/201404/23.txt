@@ -1,0 +1,128 @@
+From users-return-136221-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 22 06:10:29 2014
+Return-Path: <users-return-136221-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DBD64110AF
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 22 Apr 2014 06:10:29 +0000 (UTC)
+Received: (qmail 82064 invoked by uid 500); 22 Apr 2014 06:10:26 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 81743 invoked by uid 500); 22 Apr 2014 06:10:25 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 81735 invoked by uid 99); 22 Apr 2014 06:10:25 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Apr 2014 06:10:24 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of reena2485@gmail.com designates 209.85.219.50 as permitted sender)
+Received: from [209.85.219.50] (HELO mail-oa0-f50.google.com) (209.85.219.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Apr 2014 06:10:18 +0000
+Received: by mail-oa0-f50.google.com with SMTP id i11so3300421oag.9
+        for <users@maven.apache.org>; Mon, 21 Apr 2014 23:09:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=QBHlNbqJdoWcMehoYJrAhVn/xpH6U/CP/K993ciRdC8=;
+        b=FZ7z3AQ92ibuglRPCFqmwRt/z/bFHHiWrAphIgNGbHId4ZklLn3yLUf/HxJkepXK0Z
+         txQl45ZG+IaHOXSG+RMixehMBvbz1AWSeRt4xeToMSE4A5zuOm+Y90Ml6iizdgeI4QL2
+         QVxWMvcH2gXOjMxe8MbXg3RAIv+ARc3yn5PxcV8PBVCSqcSNViAY3Mf7UgsJ2jryUGV+
+         dFu1EsBBFS7pnfxlpUWENQVmFp1AezmVg74GmQfyrgEdKb4d5KG82oagRG50BUjY2+tG
+         k/IC3wWFgHycVww6YL7lyUJZkut9SZCqdqT+LmDIfvLNZXY298IUxQ7U1DZRnp3KV1Dp
+         Dq3g==
+MIME-Version: 1.0
+X-Received: by 10.182.181.105 with SMTP id dv9mr242670obc.59.1398146995786;
+ Mon, 21 Apr 2014 23:09:55 -0700 (PDT)
+Received: by 10.182.119.35 with HTTP; Mon, 21 Apr 2014 23:09:55 -0700 (PDT)
+In-Reply-To: <1398131564793-5791740.post@n5.nabble.com>
+References: <1398131564793-5791740.post@n5.nabble.com>
+Date: Tue, 22 Apr 2014 11:39:55 +0530
+Message-ID: <CAJCPZZ34gg9cdPq69p6PxJj2DsHYkPqZ0SVodf4PoGDWZkHDPw@mail.gmail.com>
+Subject: Re: .m2 folder creation
+From: reena upadhyay <reena2485@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0115f41a0718c704f79b77fe
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0115f41a0718c704f79b77fe
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+There are two ways to generate maven project structure:
+First way:
+Download the maven package, unzip it and set the maven path up to bin
+enviornmnet variable.
+
+Now once you are done with this you can generate the maven project
+structure
+through command prompt using below command:
+
+mvn archetype:generate
+-DgroupId=com.dns-DartifactId=hibernatemappingexample
+-DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+Second way:
+Install m2e plugin in eclipse to enable support of maven in eclipse.
+
+To make a maven project structure:
+File->project->maven project-> select the archetype you want, then provide
+the group id and artifact id.
+
+By default .m2 directory (contains all jar dependency) is created inside
+C:\Users\reena.upadhyay location. You can change its location in
+conf/settings.xml
+
+
+I hope this answers your question :)
+
+
+On Tue, Apr 22, 2014 at 7:22 AM, Mayank <mayankanand07@gmail.com> wrote:
+
+> Hi,
+>
+> I am new to Maven, so need some help !!
+>
+> I have started using by unzipping its binary.zip and setting the
+> environment
+> variables and got the mvn -version executed successfully but after that
+> none
+> of the command worked, probably because of setting.xml (not sure, please
+> clarify).
+> Then I got another idea and integrated the maven plugin in Eclipse Kepler
+> and got that successful too. Then I tried to create jsf archetype project
+> in
+> eclipse, but I did not get the correct structure and facet option (though I
+> also tried to change the builder and nature in .project file).
+> Now I am confused, I want to use mvn plugin for eclipse and confusion is
+> does successfully integrating the maven plugin with eclipse is enough or
+> does env variable creation and unzipped maven folder are mandatory ?
+>
+> And since I noticed about .m2 folder after two different tries so I am not
+> sure which one actually created it ?
+>
+> Kindly help urgently!!
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/m2-folder-creation-tp5791740.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--089e0115f41a0718c704f79b77fe--
+

@@ -1,0 +1,118 @@
+From users-return-137961-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Dec  9 00:46:45 2014
+Return-Path: <users-return-137961-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 867AFC5A6
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  9 Dec 2014 00:46:45 +0000 (UTC)
+Received: (qmail 8564 invoked by uid 500); 9 Dec 2014 00:46:44 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 8493 invoked by uid 500); 9 Dec 2014 00:46:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 8475 invoked by uid 99); 9 Dec 2014 00:46:42 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Dec 2014 00:46:42 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dhoffer6@gmail.com designates 209.85.214.182 as permitted sender)
+Received: from [209.85.214.182] (HELO mail-ob0-f182.google.com) (209.85.214.182)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Dec 2014 00:46:38 +0000
+Received: by mail-ob0-f182.google.com with SMTP id wo20so4507991obc.41
+        for <users@maven.apache.org>; Mon, 08 Dec 2014 16:44:03 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=9W0xGTRjnDzzrppBeUBrk/RqBQdTsRKIIwS6xw9yRUw=;
+        b=yXFmI1wstqBOvgN2TOJpb7Ao9610XswYSkJaw75REupINJOK7JIcbU9pvy9htmK0KH
+         Wv0SHmBIqIRWkI3JJEbtHkm/KMOvOXqonI/9QHMQYl1c/QCp76kA3zhLCsI/s/5oCJci
+         7Ukf5Ee5hDrC1G9MSQ+bRFpmEqI26fj3rK0HYe7FG2f4ZgV+zgIK3buPL3DQWwtYUXB2
+         //sYwAJuNvUYcVUDLcxmn4SPrihprPJOJCWWfA/x6n2Bc3TgGcSDHtsUf+YdNcDi29Nh
+         jXMdk2mPSUOC7L6/Uf+gd7iIC5oWdw9BBCKNV5RvXVug/r88GaaWa09LSti6j1nsIwXm
+         i+Pg==
+MIME-Version: 1.0
+X-Received: by 10.183.24.129 with SMTP id ii1mr97175obd.34.1418085842960; Mon,
+ 08 Dec 2014 16:44:02 -0800 (PST)
+Received: by 10.76.74.132 with HTTP; Mon, 8 Dec 2014 16:44:02 -0800 (PST)
+In-Reply-To: <5049531.alCp08zIy1@herve-desktop>
+References: <CAA8BW8EgW9UZ2NVLbrVZCGA8Xo3b5UotS44KUxhRbGjGiwh8gw@mail.gmail.com>
+	<5049531.alCp08zIy1@herve-desktop>
+Date: Mon, 8 Dec 2014 17:44:02 -0700
+Message-ID: <CAA8BW8FSD2Cuw8kAWr9WnP1AWFOuoURkFrO4fCDf-X28aEenLg@mail.gmail.com>
+Subject: Re: Maven 3.2.3 upgrade
+From: David Hoffer <dhoffer6@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1134b2caee48850509bdd6a3
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1134b2caee48850509bdd6a3
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+One other issue came up in this upgrade.  We still have branches that have
+to stay at 3.0.x.  How can I make the trunk build use 3.2.3 w/o changing
+everyone's M2_HOME?  Is there a way to bootstrap the build so the build
+picks the specified version of Maven?  E.g. I want the build to specify the
+version used not the system.
+
+-Dave
+
+On Mon, Dec 8, 2014 at 2:41 PM, Herv=C3=A9 BOUTEMY <herve.boutemy@free.fr> =
+wrote:
+
+> Le lundi 8 d=C3=A9cembre 2014 13:01:10 David Hoffer a =C3=A9crit :
+> > I'm contemplating an upgrade of a large Maven 3.0.4 build to 3.2.3, jus=
+t
+> > wondering if anyone knows of either any key gotchas in the upgrade and/=
+or
+> > key benefits?
+> you should check compatibility issues known with some plugins:
+> https://cwiki.apache.org/confluence/display/MAVEN/AetherClassNotFound
+>
+> some are fixed if you're using recent version of the affected plugins,
+> some are
+> not yet fixed
+>
+>
+> for the benefits, choose your favorite from release notes
+> http://maven.apache.org/release-notes-all.html
+>
+> >
+> > One feature I'm wondering at the outset is...with 3.2.3 can I specify t=
+he
+> > reporting plugin versions in pluginManagement or does this still need t=
+o
+> be
+> > done manually?
+> see https://jira.codehaus.org/browse/MNG-5477
+> so changing Maven version is just about avoiding a misleading warning
+> What is important is maven-site-plugin version.
+>
+> And see https://jira.codehaus.org/browse/MSITE-516
+> maven-site-plugin version 3.4 has major improvement regarding
+> pluginManagement
+>
+> Regards,
+>
+> Herv=C3=A9
+>
+> >
+> > -Dave
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a1134b2caee48850509bdd6a3--
+

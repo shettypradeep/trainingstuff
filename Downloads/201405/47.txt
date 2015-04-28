@@ -1,0 +1,108 @@
+From users-return-136393-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun May 18 08:28:44 2014
+Return-Path: <users-return-136393-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C6CA71149E
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 18 May 2014 08:28:44 +0000 (UTC)
+Received: (qmail 73270 invoked by uid 500); 18 May 2014 08:20:38 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 53257 invoked by uid 500); 18 May 2014 07:55:37 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 41617 invoked by uid 99); 18 May 2014 07:34:56 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 18 May 2014 07:34:56 +0000
+X-ASF-Spam-Status: No, hits=2.8 required=5.0
+	tests=HTML_IMAGE_ONLY_24,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of jeffmaury@gmail.com designates 209.85.217.170 as permitted sender)
+Received: from [209.85.217.170] (HELO mail-lb0-f170.google.com) (209.85.217.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 18 May 2014 07:34:52 +0000
+Received: by mail-lb0-f170.google.com with SMTP id w7so3141696lbi.29
+        for <users@maven.apache.org>; Sun, 18 May 2014 00:34:31 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=KM8bB2xiGgu1iEeEAFpptET21KYr9f+1l5NwiHLJCeI=;
+        b=h0x7Zv6um1boLrz59FmW7Z1QcYVoKUdYLknrgw46urpKK5C6SzYsslrhLo4FVsBuDK
+         bHrY/m3/NEeulzqqsFkkwq/4LuY0FQIaP8Nkb/eST+GlOljcwYSjNbQ695EasQB53uKD
+         yqQpRzwBHzSkAP8y+U4f78KlDh5AmIsmZvqE6AKcbUVdwuqer18Rx4UwO+t7ZfO7lYxu
+         Aloi7SctXmNEWYM7CSsn22qIu8lJcmDBgQ8Flb/aLoJ4MlNtIAjZ2u0VCFyTuuCZUSWi
+         fjU2qe4AuqwyXZmIzP7zW6lvdSjbsu8vjchc/NQo8oOuwNnw7gBaDXqVBaX6rySmt+o7
+         WCYw==
+X-Received: by 10.112.189.103 with SMTP id gh7mr19316839lbc.35.1400398471338;
+ Sun, 18 May 2014 00:34:31 -0700 (PDT)
+MIME-Version: 1.0
+Sender: jeffmaury@gmail.com
+Received: by 10.114.191.195 with HTTP; Sun, 18 May 2014 00:33:50 -0700 (PDT)
+In-Reply-To: <1400330684696-5793267.post@n5.nabble.com>
+References: <1400330684696-5793267.post@n5.nabble.com>
+From: Jeff MAURY <jeffmaury@jeffmaury.com>
+Date: Sun, 18 May 2014 09:33:50 +0200
+X-Google-Sender-Auth: nsPDchWTFEtR5xKkHGAsP-KEnwc
+Message-ID: <CANyrOm5zhkrYRowrfsm_0oPPEt2dRFxKCmoSB1Wym=YVB1K29A@mail.gmail.com>
+Subject: Re: Custom plugin: how to process filtered resources
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c376b26d9f7504f9a7aded
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c376b26d9f7504f9a7aded
+Content-Type: text/plain; charset=UTF-8
+
+You need to read them from the target folder.
+
+Jeff
+
+
+On Sat, May 17, 2014 at 2:44 PM, gdrouet <guidrouet@gmail.com> wrote:
+
+> Hi,
+>
+> I wrote a custom plugin that processes some resources inside my project.
+> Some of them are filtered before my plugin get executed. However, I don't
+> know how my plugin can process the filtered resource. Currently, it could
+> only read the raw resource.
+>
+> I would like to know how my custom plugin can get the filtered version of
+> any resource.
+>
+> Can you help me ?
+>
+> Thanks !
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/Custom-plugin-how-to-process-filtered-resources-tp5793267.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Jeff MAURY
+
+
+"Legacy code" often differs from its suggested alternative by actually
+working and scaling.
+ - Bjarne Stroustrup
+
+http://www.jeffmaury.com
+http://riadiscuss.jeffmaury.com
+http://www.twitter.com/jeffmaury
+
+--001a11c376b26d9f7504f9a7aded--
+

@@ -1,0 +1,99 @@
+From users-return-137362-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Sep 24 09:35:19 2014
+Return-Path: <users-return-137362-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DA35A11D1C
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 24 Sep 2014 09:35:19 +0000 (UTC)
+Received: (qmail 26788 invoked by uid 500); 24 Sep 2014 09:35:17 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 26704 invoked by uid 500); 24 Sep 2014 09:35:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 26693 invoked by uid 99); 24 Sep 2014 09:35:17 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 24 Sep 2014 09:35:17 +0000
+X-ASF-Spam-Status: No, hits=0.7 required=5.0
+	tests=SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 24 Sep 2014 09:35:12 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <Jeremie.BOUSQUET@gemalto.com>)
+	id 1XWiyJ-0003p7-AA
+	for users@maven.apache.org; Wed, 24 Sep 2014 02:34:51 -0700
+Date: Wed, 24 Sep 2014 02:34:51 -0700 (PDT)
+From: "JeremieB." <Jeremie.BOUSQUET@gemalto.com>
+To: users@maven.apache.org
+Message-ID: <1411551291269-5806363.post@n5.nabble.com>
+Subject: Use "quiet reference" notation for properties
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello,
+
+I wonder if there is any easy way to do the equivalent of Velocity "quiet
+references" with Maven poms ... ?
+
+Here is my use-case (in a corporate pom):
+- I set a property "label" containing some versions and reference to
+"${buildNumber}"
+- This property "${buildNumber}" is optionally set by the
+buildnumber-maven-plugin, ie the plugin is declared or not in the build
+depending on projects, ie if they want to use a build number or not
+The idea is to provide in a corporate pom a default label naming scheme,
+including a build number but only if it is used and defined by inheriting
+project.
+
+Problem is that if buildnumber-maven-plugin is not declared in a project,
+the "label" property contains "${buildNumber}" literally, whereas if
+undefined I would prefer it to be resolved as an empty string.
+In Velocity I would write something like:
+${project.version}-$!{buildNumber}
+
+If I set a default value to empty string to the buildNumber property, then
+the buildnumber-maven-plugin doesn't override this value, so this is not a
+solution either.
+
+I could workaround this by using buildhelper:regex-property to remove the
+"${buildNumber}" literal expression if it wasn't resolved, but it seems a
+bit convoluted in a corporate pom, and requires proper ordering of plugins
+executions so I don't find this very reliable or maintainable.
+I kept it though, as all other solutions I could think of, imply more manual
+actions from users, or slow down the build too much... My main objective in
+the corporate pom being to be the least obtrusive possible.
+
+Solutions I thought about:
+- run the buildnumber-maven-plugin all the time, and set
+"revisionOnScmFailure" to empty string --> slows down all builds for an
+optional feature
+- add this buildnumber-maven-plugin declaration in a profile, and set
+"buildNumber" property to empty string if this profile is not activated -->
+complex profiles activation/deactivation requiring CLI switches
+
+Do you think there's something better that I didn't think about ?
+
+Thanks,
+Jeremie
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Use-quiet-reference-notation-for-properties-tp5806363.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

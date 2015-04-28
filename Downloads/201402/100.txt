@@ -1,0 +1,88 @@
+From users-return-135600-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Feb 25 09:15:11 2014
+Return-Path: <users-return-135600-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9715E1000B
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 25 Feb 2014 09:15:11 +0000 (UTC)
+Received: (qmail 41050 invoked by uid 500); 25 Feb 2014 09:15:06 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 40408 invoked by uid 500); 25 Feb 2014 09:15:05 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 40394 invoked by uid 99); 25 Feb 2014 09:15:03 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Feb 2014 09:15:03 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of baerrach@gmail.com designates 209.85.220.181 as permitted sender)
+Received: from [209.85.220.181] (HELO mail-vc0-f181.google.com) (209.85.220.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Feb 2014 09:14:57 +0000
+Received: by mail-vc0-f181.google.com with SMTP id lg15so3299791vcb.26
+        for <users@maven.apache.org>; Tue, 25 Feb 2014 01:14:37 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=KT5vXg2XKt8fZfrN551f/1ExksPnAECQ66QQGxNc8h8=;
+        b=PLYSxZLHkd9Dy1NZ1o0ZPzSVnqzCUZEhAsMBLPacnVldkGHTH0X3hgqT3BA11MEGs7
+         qxa++2LQ8g68SRRScKeknc3kDfHbsxUNSy3QbCrCZJ9CPpaIuZEb+43XMVfo0YXCkVZj
+         Jdap8aQfbXKuQebhHuBclBzacPmdAl5hVh9R1yWBANEZpkAYOkZb2ArbSY+r8pZXEuSJ
+         UtR0xXmLOf6ld69LFByQPMGHgpCGUjtz0XRzPI07QHidysxSaW0PF2YTPtwQalgZZ0aM
+         /8KqCz/gmCAdnATHagKNDe2HSzXYM6w4VE8PHT0NqvmwOsG1H/wXldG2yh0MVyoa4j4x
+         KKTw==
+MIME-Version: 1.0
+X-Received: by 10.52.165.101 with SMTP id yx5mr59805vdb.29.1393319676888; Tue,
+ 25 Feb 2014 01:14:36 -0800 (PST)
+Received: by 10.58.48.131 with HTTP; Tue, 25 Feb 2014 01:14:36 -0800 (PST)
+In-Reply-To: <1393317543347-5786423.post@n5.nabble.com>
+References: <CAPg65qhXj4b9VsK2eKd4VTpf3ghWMn603GWz_JFQX4C0HSPPww@mail.gmail.com>
+	<52FE29B7.20407@artifact-software.com>
+	<1392392192345-5784856.post@n5.nabble.com>
+	<52FE659D.1000809@artifact-software.com>
+	<1392437696526-5784947.post@n5.nabble.com>
+	<CA+nPnMw10XjXqb4Y7-uuG13tptPKh40mPpiWkO53GQtmFr4R8g@mail.gmail.com>
+	<CAPg65qjd50aQ7Z62Gbv7A-Q6kTT7S0H8rfSuj=dy-KVh5Fu9Jw@mail.gmail.com>
+	<CALy+7UmOyvYLxHQk-v9q9P+LQrtUcCa9BruRmk_W-bMkDuUXGQ@mail.gmail.com>
+	<1392861493863-5785441.post@n5.nabble.com>
+	<CALy+7U=LTDT1j+K60pAaAHO7Qs6t33kN8SCKt34vzVpiOOphEQ@mail.gmail.com>
+	<1393317543347-5786423.post@n5.nabble.com>
+Date: Tue, 25 Feb 2014 19:44:36 +1030
+Message-ID: <CADVp3v-KZjRvpa19piD1tbBxj3gKKCSByGOWFrFfeL6jX7MwLg@mail.gmail.com>
+Subject: Re: Why does Maven fail to compile my project occasionally?
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=ISO-8859-1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> Well, Eclipse is not installed on my daily-build server, so I guess it has
+> nothing to do with Eclipse. ;-)
+>
+> I guess when Maven encounters the missing-dependency compilation error, it
+> doesn't stop compiling immediately, and it tries its best to compile other
+> unrelated modules. When I compile the whole project again, the missing
+> dependent modules may appear in the local repository because the unrelated
+> modules compiled previously have declared them as dependencies.
+>
+> Anyway, the long-lasting problem has been solved perfectly. Thank you guys!
+
+What you have is a http://en.wikipedia.org/wiki/Heisenbug
+And you need to understand what the root cause of the problem is.
+Otherwise you will suffer this problem again in the future.
+
+Plus, once you understand the problem you should post back to the list
+and explain it.
+So that other people can google their similar problems and find the answer.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

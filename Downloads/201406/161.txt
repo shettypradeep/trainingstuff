@@ -1,0 +1,211 @@
+From users-return-136607-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jun 17 20:29:46 2014
+Return-Path: <users-return-136607-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 102BD114A9
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 17 Jun 2014 20:29:46 +0000 (UTC)
+Received: (qmail 52820 invoked by uid 500); 17 Jun 2014 20:29:43 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 52738 invoked by uid 500); 17 Jun 2014 20:29:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 52726 invoked by uid 99); 17 Jun 2014 20:29:43 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 17 Jun 2014 20:29:43 +0000
+X-ASF-Spam-Status: No, hits=0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS,WEIRD_PORT
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of adavidson2@apple.com designates 17.151.62.29 as permitted sender)
+Received: from [17.151.62.29] (HELO mail-in7.apple.com) (17.151.62.29)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 17 Jun 2014 20:29:38 +0000
+DKIM-Signature: v=1; a=rsa-sha256; d=apple.com; s=mailout2048s; c=relaxed/simple;
+	q=dns/txt; i=@apple.com; t=1403036953; x=2266950553;
+	h=From:Sender:Reply-To:Subject:Date:Message-id:To:Cc:MIME-version:Content-type:
+	Content-transfer-encoding:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-reply-to:References:List-Id:
+	List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=96rSnztb7QoxVd8xL4b7yNQ6HJFZy2zoKspbPa/KnFM=;
+	b=OHUdHO24Gj3YH5ctcck+UdVkhqFbhQiYtzcaWUfZsRNESHHfRWP3O23bxVgnrQpe
+	KP7m7369GjLbd5xYwMyEvhkf5ZrPlgsp/dzxZM+ru5kJJkmGjtjmsa2lM3UlfxLk
+	YVRX0Puf7dZS+ErFwVIvGvdxeMcJXtElUXrXLeSS4MEX/GvvscHjY0hy+Jzl9ozt
+	galB42jhHu42q0qDwOUB2fRfo5cGzOnmsokTFSoIPBZxcdzgTC7RU8uugEeaxP7N
+	r2JmVJ+hqztbW2ZOPJBH+QHx+R3paZMeK2wTi+KCi4sNIQNNQST3FlgC5cidk79h
+	c1OM52Lw462cwXd5PT8S3A==;
+Received: from mail-out.apple.com (crispin.apple.com [17.151.62.50])
+	(using TLS with cipher RC4-MD5 (128/128 bits))
+	(Client did not present a certificate)
+	by mail-in7.apple.com (Apple Secure Mail Relay) with SMTP id F1.CB.20114.915A0A35; Tue, 17 Jun 2014 13:29:13 -0700 (PDT)
+MIME-version: 1.0
+Content-type: text/plain; charset=windows-1252
+Received: from relay6.apple.com ([17.128.113.90]) by local.mail-out.apple.com
+ (Oracle Communications Messaging Server 7.0.5.30.0 64bit (built Oct 22 2013))
+ with ESMTP id <0N7B00FDKY793S11@local.mail-out.apple.com> for
+ users@maven.apache.org; Tue, 17 Jun 2014 13:29:13 -0700 (PDT)
+X-AuditID: 11973e16-f79b86d000004e92-b9-53a0a5192fda
+Received: from cilantro.apple.com (cilantro.apple.com [17.128.115.18])
+	(using TLS with cipher RC4-MD5 (128/128 bits))
+	(Client did not present a certificate)	by relay6.apple.com (Apple SCV relay)
+ with SMTP id 52.52.30921.C05A0A35; Tue, 17 Jun 2014 13:29:00 -0700 (PDT)
+Received: from [17.115.45.226] by cilantro.apple.com
+ (Oracle Communications Messaging Server 7.0.5.30.0 64bit (built Oct 22 2013))
+ with ESMTPSA id <0N7B00LAXY8O0430@cilantro.apple.com> for
+ users@maven.apache.org; Tue, 17 Jun 2014 13:29:12 -0700 (PDT)
+Subject: Re: newbie problem with deploy:deploy-file
+From: Andrew Davidson <adavidson2@apple.com>
+In-reply-to: <op.xhl2xti0kdkhrr@robertscholte>
+Date: Tue, 17 Jun 2014 13:29:11 -0700
+Content-transfer-encoding: quoted-printable
+Message-id: <47E4F11E-2C01-4B2F-9D5A-065034D908C5@apple.com>
+References: <BF890391-BE73-4B0D-A26A-B17C71D63BFD@apple.com>
+ <op.xhl2xti0kdkhrr@robertscholte>
+To: Maven Users List <users@maven.apache.org>
+X-Mailer: Apple Mail (2.1878.2)
+X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFlrLLMWRmVeSWpSXmKPExsUiON3OSFdy6YJgg+uf2C0ebb3O6MDo0f5U
+	KIAxissmJTUnsyy1SN8ugSvj/oE3jAXnJSsO7vrI2sC4QLSLkZNDQsBE4vr9tywQtpjEhXvr
+	2boYuTiEBGYySSy4vowRJMErICjxY/I9oCIODmYBPYn7F7UgauYySSw9/4YNZtDD67cYIRIT
+	mSQWb94NlhASaGCSWHZXEMQWFjCW2P56Btg2NgEdib9bG5hBbE6godued7GDLGARUJU405QI
+	EmYW0JZ48u4CK8QNNhITL91nBCkREkiQeDkjHiQsIqAr8fDiE2aIE+QlZrSfYIew77NKbPkf
+	PoFReBaSD2YhfDALyYIFjMyrGIVyEzNzdDPzzPUSCwpyUvWS83M3MULCV2wH48NVVocYBTgY
+	lXh4E/IXBAuxJpYVV+YeYpTmYFES55XqBAoJpCeWpGanphakFsUXleakFh9iZOLglGpgdGs6
+	pLtQt+/z1Idin8x/GHWEnl6tX2YySebMVvZFsqoP13W0b6xxe/Dn8Bo+65kWv+5dk2U/Pj22
+	4K71TPfgnAffo4W4TS047gnG3zP2tJTc+UvOX3mf1Msw+0UtWxbpFhtzSFh85TsYcffSOuUL
+	/xbOjUg/xPl5ieydmm28yYKax3SvNczZqcRSnJFoqMVcVJwIAFhuNfNAAgAA
+X-Brightmail-Tracker:
+ H4sIAAAAAAAAA+NgFprMLMWRmVeSWpSXmKPExsUi2FAspMuzdEGwwYyvnBaPtl5ndGD0aH8q
+	FMAYxWWTkpqTWZZapG+XwJVx/8AbxoLzkhUHd31kbWBcINrFyMkhIWAi8fD6LUYIW0ziwr31
+	bCC2kMBEJokNX8Mg7AYmiWV3BbsYOTiYBfQk7l/UAgnzChhIvDl4nAnEFhYwltj+egYLiM0m
+	oCPxd2sDM4jNCVS+7XkXO0gri4CqxJmmRJAws4C2xJN3F1ghxthITLx0nxGkREggQeLljHiQ
+	sIiArsTDi0+YIQ6Tl5jRfoJ9AiP/LIQbZiG5YRaSoQsYmVcxChSl5iRWmuklFhTkpOol5+du
+	YgQHVWHUDsaG5VaHGAU4GJV4eBPyFwQLsSaWFVfmHmKU4GBWEuE9lwUU4k1JrKxKLcqPLyrN
+	SS0+xCjNwaIkzntq8vxgIYH0xJLU7NTUgtQimCwTB6dUA2Na6Z461gZhE+UtGW8NLhWaBi1q
+	MFos3CVgFnS/nfPV4WJHnaodBuZTo6T0Hy8UM+BRjdWyKbXwlL27Qf238arYI1fut9lppq+d
+	Mn2CcNOnJ2cO/T7lolfDGed9/g2v7JfQRRdmH0s6bi0mfHt+zQQLjgSrR2tlbXtP5fd0L/OI
+	7dhVc/0PrxJLcUaioRZzUXEiAEfdcWgmAgAA
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+many many thanks
+
+Andy
+On Jun 17, 2014, at 11:28 AM, Robert Scholte <rfscholte@apache.org> =
+wrote:
+
+> Hi Andy,
+>=20
+> First of all: welcome in the world of Apache Maven!
+> I won't go into detail too much right now, I'd suggest to do some =
+getting-started tutorials[2] to understand the basics.
+>=20
+> Let's start with:
+> With Maven you can call 2 things: a phase of a lifecycle[1] or a goal =
+from a specific plugin.
+> if you're running 'mvn deploy:deploy-file' you're only executing 1 =
+goal.
+> And 'mvn deploy' means you're executing all phases up to deploy, =
+representing a chain of goals.
+>=20
+> Since you're using an execution-block I assume you just want to call =
+'mvn deploy'.
+>=20
+> thanks,
+> Robert
+>=20
+> [1] =
+http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.=
+html
+> [2] http://maven.apache.org/guides/index.html
+>=20
+> Op Tue, 17 Jun 2014 00:51:21 +0200 schreef Andrew Davidson =
+<adavidson2@apple.com>:
+>=20
+>> Hi
+>>=20
+>> I recently joined an existing project that uses the maven ant plug =
+into to build artifacts that we need to distribute. I am trying to add  =
+support for deploy-file
+>>=20
+>> $ mvn  deploy:deploy-file -DskipTests 2>&1 | tee mvn.deploy-file.out
+>> [ERROR] Failed to execute goal =
+org.apache.maven.plugins:maven-deploy-plugin:2.8:deploy-file =
+(default-cli) on project mary-aide-dist: The parameters 'file' for goal =
+org.apache.maven.plugins:maven-deploy-plugin:2.8:deploy-file are missing =
+or invalid -> [Help 1]
+>> [ERROR]
+>>=20
+>> I have tried using -X and -e how ever I can still can not figure out =
+what the problem is.
+>>=20
+>> any idea what I am doing wrong? 			=09
+>>=20
+>> thanks
+>>=20
+>> Andy
+>>=20
+>>=20
+>> <distributionManagement> =85 </>
+>>=20
+>> <properties>
+>> 	=
+<mary-aide-proxy.tar>mary-aide-proxy-${project.version}</mary-aide-proxy.t=
+ar>
+>>=20
+>> 	<release.repositoryId>libs-release</release.repositoryId>
+>> 	=
+<release.url>http://maryx01-c.bogco.com:8081/artifactory/libs-release-loca=
+l/
+>> 	</release.url>
+>>=20
+>> 	<snapshot.repositoryId>libs-snapshot</snapshot.repositoryId>
+>> 	=
+<snapshot.url>http://maryx01-c.bigco.com:8081/artifactory/libs-snapshot-lo=
+cal/
+>> 	</snapshot.url>
+>>=20
+>> </properties>
+>>=20
+>> <plugin>
+>> 	<groupId>org.apache.maven.plugins</groupId>
+>> 	<artifactId>maven-deploy-plugin</artifactId>
+>> 	<executions>
+>>=20
+>> 		<execution>
+>> 			<id>mary-aide-proxy</id>
+>> 			<phase>deploy</phase>
+>> 			<goals>
+>> 				<goal>deploy-file</goal>
+>> 			</goals>
+>> 			<configuration>
+>> 				=
+<file>target/${mary-aide-proxy.tar}.tar.gz</file>
+>> 				=
+<repositoryId>${release.repositoryId}</repositoryId>
+>> 				<url>${release.url}</url>
+>> 				=
+<groupId>${project.parent.groupId}</groupId>
+>> 				=
+<artifactId>${project.parent.artifactId}</artifactId>
+>> 				=
+<version>${project.parent.version}</version>
+>> 				<generatePom>false</generatePom>
+>> 				<packaging>tar.gz</packaging>
+>> 			</configuration>
+>> 		</execution>
+>> 	</executions>
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>=20
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

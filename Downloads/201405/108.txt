@@ -1,0 +1,74 @@
+From users-return-136319-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri May  2 03:46:45 2014
+Return-Path: <users-return-136319-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 43B3111A3B
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  2 May 2014 03:46:45 +0000 (UTC)
+Received: (qmail 75093 invoked by uid 500); 2 May 2014 03:46:37 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 74255 invoked by uid 500); 2 May 2014 03:46:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74229 invoked by uid 99); 2 May 2014 03:46:29 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 02 May 2014 03:46:29 +0000
+Received: from localhost (HELO mail-ob0-f182.google.com) (127.0.0.1)
+  (smtp-auth username olamy, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Fri, 02 May 2014 03:46:29 +0000
+Received: by mail-ob0-f182.google.com with SMTP id uy5so4613049obc.13
+        for <multiple recipients>; Thu, 01 May 2014 20:46:28 -0700 (PDT)
+X-Received: by 10.182.241.67 with SMTP id wg3mr13401537obc.16.1399002388550;
+ Thu, 01 May 2014 20:46:28 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.182.118.103 with HTTP; Thu, 1 May 2014 20:46:08 -0700 (PDT)
+From: Olivier Lamy <olamy@apache.org>
+Date: Fri, 2 May 2014 13:46:08 +1000
+Message-ID: <CAPoyBqTDuVqGEkKD8pGT2bnZsy01=xa0WLuY4A-Ezjatk2eQCQ@mail.gmail.com>
+Subject: [ANN] Apache Maven Shade Plugin 2.3 Released
+To: announce@maven.apache.org, Maven Users List <users@maven.apache.org>
+Cc: Maven Developers List <dev@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+
+The Apache Maven team is pleased to announce the release of the Apache
+Maven Shade Plugin, version 2.3.
+
+This plugin provides the capability to package the artifact in an
+uber-jar, including its dependencies and to shade - i.e. rename - the
+packages of some of the dependencies.
+
+http://maven.apache.org/plugins/maven-shade-plugin/
+
+You should specify the version in your project's plugin configuration:
+
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-shade-plugin</artifactId>
+  <version>2.3</version>
+</plugin>
+
+Release Notes - Maven Shade Plugin - Version 2.3
+
+** Bug
+    * [MSHADE-166] - maven-shade-plugin not compatible with Java 8
+
+** Improvement
+    * [MSHADE-167] - [PATCH] When individual classes are renamed, they
+are not debuggable
+
+
+Have Fun!
+--
+The Apache Maven team
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

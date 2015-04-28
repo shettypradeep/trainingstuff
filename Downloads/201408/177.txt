@@ -1,0 +1,81 @@
+From users-return-137137-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Aug 27 20:39:38 2014
+Return-Path: <users-return-137137-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 800D111D6F
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 27 Aug 2014 20:39:38 +0000 (UTC)
+Received: (qmail 72149 invoked by uid 500); 27 Aug 2014 20:39:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 72054 invoked by uid 500); 27 Aug 2014 20:39:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 72038 invoked by uid 99); 27 Aug 2014 20:39:30 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 27 Aug 2014 20:39:30 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of khmarbaise@gmx.de designates 212.227.15.19 as permitted sender)
+Received: from [212.227.15.19] (HELO mout.gmx.net) (212.227.15.19)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 27 Aug 2014 20:39:23 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([217.247.29.6]) by mail.gmx.com
+ (mrgmx001) with ESMTPSA (Nemesis) id 0MHH6Z-1X9JrB0LWV-00E4XG for
+ <users@maven.apache.org>; Wed, 27 Aug 2014 22:39:02 +0200
+Message-ID: <53FE41E5.1080302@gmx.de>
+Date: Wed, 27 Aug 2014 22:39:01 +0200
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Atomic deploy at end to repo manager like Nexus
+References: <CAPCjjnF3kyacbJRntxc3EudL21mkdJe5m0SAZ8kNLpWLvE3y0g@mail.gmail.com>
+In-Reply-To: <CAPCjjnF3kyacbJRntxc3EudL21mkdJe5m0SAZ8kNLpWLvE3y0g@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:FsfuCLtKgmhczKRqlKstdedw9zG5cLXUQRBCLvxv3zr69BfUTSF
+ PHXAgaVIwxQF87IX5S2Jk9YWYlatshkNHnnyB3La7juV1EvcUT5oBDMU5sN5HDjiZTkrik9
+ sz9oohg1luUWAsPq7jjieLv5/56jEJBp1dUZS0v78yqCViwI914zeMgg9IoY+51vqw0/c30
+ 7RRCgy+avBM92Y/k9aW0w==
+X-UI-Out-Filterresults: notjunk:1;
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Dan,
+
+are you using deployAtEnd / installAtEnd options of 
+maven-install-plugin, maven-deploy-plugin ? or do you have any issues 
+with that ?
+
+
+On 8/27/14 10:36 PM, Dan Tran wrote:
+> Hi
+>
+> Per last Maven hangout, Jason and Karl had a discussion and code shared on
+> topic. unzip [1] nexus plugin was mentioned
+>
+> Can you share this knowledge?
+>
+> For my case, I have a multiple module multiple platform builds orchestrated
+> by CI ( jenkins)
+>
+> I like to to delay all the deployments, all the way to the end, zip the up,
+> and deploy to nexus which will correctly unpack and merge to one of the
+> repositories ( ie snapshot or staging )
+
+
+Kind regards
+Karl-Heinz Marbaise
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

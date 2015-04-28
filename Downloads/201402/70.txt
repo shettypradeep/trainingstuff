@@ -1,0 +1,207 @@
+From users-return-135461-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 13 18:32:54 2014
+Return-Path: <users-return-135461-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 560751029D
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 13 Feb 2014 18:32:54 +0000 (UTC)
+Received: (qmail 32609 invoked by uid 500); 13 Feb 2014 18:32:49 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 32534 invoked by uid 500); 13 Feb 2014 18:32:49 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 32526 invoked by uid 99); 13 Feb 2014 18:32:48 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 18:32:48 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bmathus@gmail.com designates 209.85.215.177 as permitted sender)
+Received: from [209.85.215.177] (HELO mail-ea0-f177.google.com) (209.85.215.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 18:32:44 +0000
+Received: by mail-ea0-f177.google.com with SMTP id m10so2697697eaj.36
+        for <users@maven.apache.org>; Thu, 13 Feb 2014 10:32:23 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=TrvD8tQPtmkOwN6wF1bBs4x8kG4j3riPy7SNcnqr7Os=;
+        b=VV9WAStJONBr6kHh4erFkgaX/WUO27enGuzvVIf+Dk2O/kpkGgFvH2LvT7xWb5aHLq
+         gqywpnGE/gWKCYU7Y4R91LkuxE6BuuaxzgHzREeYYThUCDqsyr69a4rineRp6eEd1nQ8
+         6e6zBmWhed2DtE+VZDrBPgbOKyB11SfvxR5zIknk9k6ZDcWZ7vtoqL48JR5JK3ZXSO1M
+         szTA6dhBCKxfi+krJfvym/VWZxsLvvTAfFriAqs29UuYxuAzvxW3kAW3TiOaMGtFMpp/
+         VeYB6YKfKoYiSYpnOKASXcvpKI3+Yqmxx2Lmb9TlGX15HLiiE0qIgDQ94Plh1Qqh/42f
+         AKaA==
+MIME-Version: 1.0
+X-Received: by 10.15.10.73 with SMTP id f49mr3788397eet.2.1392316343582; Thu,
+ 13 Feb 2014 10:32:23 -0800 (PST)
+Sender: bmathus@gmail.com
+Received: by 10.14.224.198 with HTTP; Thu, 13 Feb 2014 10:32:23 -0800 (PST)
+Received: by 10.14.224.198 with HTTP; Thu, 13 Feb 2014 10:32:23 -0800 (PST)
+In-Reply-To: <CAJZYdziKda4m1LLqefAzztmM6QM2ooA7mSsLkrUt4YMbbwy=Hg@mail.gmail.com>
+References: <CAJZYdzjdZKS69VX64izc104aeb2m0CZQqcR2BWCbaHp3mginjg@mail.gmail.com>
+	<52F4EED5.2040305@artifact-software.com>
+	<CAJZYdzjLSdYqes9wtokB0U6yvO8DkV1Qt8dqf2s2i_gwuR_uvA@mail.gmail.com>
+	<52F50425.50107@artifact-software.com>
+	<CAJZYdziKda4m1LLqefAzztmM6QM2ooA7mSsLkrUt4YMbbwy=Hg@mail.gmail.com>
+Date: Thu, 13 Feb 2014 19:32:23 +0100
+X-Google-Sender-Auth: iOgcjvlMrvSzGMcshSysgYnrTH8
+Message-ID: <CANWgJS6gedPKQ_S5Gyt_D6j4KFnJoSfBrUf7GdE6ht6wo7fq6Q@mail.gmail.com>
+Subject: Re: maven-ear-plugin silently overrides libraries
+From: Baptiste Mathus <bmathus@batmat.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c3fa6c13044904f24de931
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c3fa6c13044904f24de931
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+That's the way to go. Even more if you're able to attach a test project.
+One report without report is far less likely to be worked on.
+Cheers
+Le 13 f=C3=A9vr. 2014 14:06, "Reto Habl=C3=BCtzel" <rethab@rethab.ch> a =C3=
+=A9crit :
+
+> So what's the status on this? Shall I create a ticket?
+>
+>
+> On Fri, Feb 7, 2014 at 5:04 PM, Ron Wheeler
+> <rwheeler@artifact-software.com>wrote:
+>
+> > Exclusions will not help in this case.
+> > Looking through the dependency hierarchy will at least get you to see t=
+he
+> > problem earlier which I think was the nature of your question.
+> >
+> > It appears from my brief reading and fun with making servlets run in
+> > production that classloaders merge classes by name.
+> > Maven does not.
+> >
+> > I am a bit surprised that groupId does not count.
+> >
+> > If one uses a lot of third -party libraries, it would seem inevitable
+> that
+> > you could need com.artifact-software:utilities:1.0 at the same time as
+> > ch.rethab:utilities:1.0 at the same time.
+> > The classloader is not going to cause any problem but if Maven throws o=
+ut
+> > one of these as a duplicate, you will be missing classes at run-time.
+> >
+> > It is difficult to force everyone to create unique artifactIds unless y=
+ou
+> > get rid of the GroupId altogther and make GAV -> <AV> and put the group
+> > name into the artifactID.
+> >
+> > This seems to be a design flaw if it is true.
+> >
+> > Ron
+> >
+> >
+> > On 07/02/2014 9:43 AM, Reto Habl=C3=BCtzel wrote:
+> >
+> >> Sure, but exclusions don't do the trick if you need both of them, do
+> >> they? I am talking about completely independent libraries that happen =
+to
+> >> have the same artifactId.
+> >>
+> >> Those were actually both libraries of mine and I could obviously fix
+> this
+> >> issue rather simply, but I was just thinking that it would be helpful =
+to
+> >> have at least a warning or something from maven - regardless of the ID=
+E.
+> >>
+> >> - Reto
+> >>
+> >>
+> >> On Fri, Feb 7, 2014 at 3:33 PM, Ron Wheeler <rwheeler@artifact-softwar=
+e.
+> >> com <mailto:rwheeler@artifact-software.com>> wrote:
+> >>
+> >>     If your IDE supports Maven (Eclipse/STS for example), you will see
+> >>     the conflict in the dependency hierarchy view and you can fix it
+> >>     with the right exclusions.
+> >>
+> >>     It is almost always worth a quick look through the dependency
+> >>     hierarchy view if you use a lot of third party libraries.
+> >>     Not everyone updates their dependencies when they build a
+> >>     shareable library.
+> >>     You can sometimes get some pretty old versions of things dragged
+> >>     in with the latest version of otherwise well-written libraries.
+> >>     Exclusions need to be added to get what you want in your artifacts=
+.
+> >>
+> >>     Ron
+> >>
+> >>
+> >>     On 07/02/2014 9:21 AM, Reto Habl=C3=BCtzel wrote:
+> >>
+> >>         Hi there,
+> >>
+> >>         I built an ear using the maven-ear-plugin (version 2.6).
+> >>
+> >>         The ear is configured such that it includes two libraries into
+> >>         the lib
+> >>         folder, both with the same artifactId as well as the same
+> >>         version, but a
+> >>         different groupId. Now if I simply call 'mvn package' only the
+> >>         first one is
+> >>         included, but no warning whatsoever appears. Only once I turn
+> >>         on debugging
+> >>         (mvn --debug package), I see one subtle message:
+> >>         [DEBUG] Skipping artifact [jar:com.foo:bar:1.0] as it is
+> >>         already up to date
+> >>         at [lib/bar-1.0.jar]
+> >>
+> >>         Wouldn't it make sense to either include the groupId in the
+> >>         filename or at
+> >>         least make a check (that includes the groupId) beforehand if
+> >>         there are any
+> >>         conflicts?
+> >>
+> >>         Cheers,
+> >>         Reto
+> >>
+> >>
+> >>
+> >>     --     Ron Wheeler
+> >>     President
+> >>     Artifact Software Inc
+> >>     email: rwheeler@artifact-software.com
+> >>     <mailto:rwheeler@artifact-software.com>
+> >>
+> >>     skype: ronaldmwheeler
+> >>     phone: 866-970-2435, ext 102
+> >>
+> >>
+> >>
+> ---------------------------------------------------------------------
+> >>     To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> >>     <mailto:users-unsubscribe@maven.apache.org>
+> >>
+> >>     For additional commands, e-mail: users-help@maven.apache.org
+> >>     <mailto:users-help@maven.apache.org>
+> >>
+> >>
+> >>
+> >
+> > --
+> > Ron Wheeler
+> > President
+> > Artifact Software Inc
+> > email: rwheeler@artifact-software.com
+> > skype: ronaldmwheeler
+> > phone: 866-970-2435, ext 102
+> >
+> >
+>
+
+--001a11c3fa6c13044904f24de931--
+

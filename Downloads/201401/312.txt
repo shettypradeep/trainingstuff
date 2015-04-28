@@ -1,0 +1,216 @@
+From users-return-135084-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jan 10 17:01:21 2014
+Return-Path: <users-return-135084-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E6E3910649
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 10 Jan 2014 17:01:21 +0000 (UTC)
+Received: (qmail 63532 invoked by uid 500); 10 Jan 2014 17:01:14 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 63474 invoked by uid 500); 10 Jan 2014 17:01:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 63466 invoked by uid 99); 10 Jan 2014 17:01:13 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 10 Jan 2014 17:01:13 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.220.47 as permitted sender)
+Received: from [209.85.220.47] (HELO mail-pa0-f47.google.com) (209.85.220.47)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 10 Jan 2014 17:01:09 +0000
+Received: by mail-pa0-f47.google.com with SMTP id kq14so4993687pab.20
+        for <users@maven.apache.org>; Fri, 10 Jan 2014 09:00:49 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=GoThNnWzHN/8eKt3L5DXnKjpDlx7Xq3ojvbsGkrdaCU=;
+        b=K3StGr+KJ3xBDhdIBDUtL+yL/trK+G0MmRzyP8WlrLkvuWSfjO/teWsK6pVspmhD6w
+         4wR/mI+kkw9VXjTc7UfvCj+PZcMNfAPu70pZtt6CJ935Er62YQmcmgj5HFOhmpyILtf1
+         EsFuTKGSsv0C0uZCQyGO8xDe5OdxZpCmz6ZZz5QiWsjrBHQ69OZIdcedJ2xuWIOYhcHH
+         TFadMLTrOUPA3GAcesMkVlQoe80Ig4bqC0xYuH/tRCVdsAO7yWDv7P+Va96mdo7RypnO
+         38D/jCsZaZJD+wPffarbJPEqTOOs+34hmesHt5bQTy52Ga8Y3tyqGc86KqhUT69NJNRp
+         Ukrw==
+MIME-Version: 1.0
+X-Received: by 10.68.223.9 with SMTP id qq9mr12771854pbc.58.1389373248901;
+ Fri, 10 Jan 2014 09:00:48 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Fri, 10 Jan 2014 09:00:48 -0800 (PST)
+In-Reply-To: <CAJZRQKyYzXaRC4RO5HiZsijgqJFfdDkjzkRiTO7hVspnFSErQA@mail.gmail.com>
+References: <CA+nPnMzkumu_925CV+u+D5_wkHjwLCVSRmwMS6JuHvq16zp3Mg@mail.gmail.com>
+	<23db4a359ac8b220e15f373269ebc967.squirrel@www.mosabuam.com>
+	<CA+nPnMy32UXkeOz7-L8SdYymvuOtcVUGgqLca4UGg4MDade1Qg@mail.gmail.com>
+	<03B56DD5-E957-438E-A30E-439C2785032D@apache.org>
+	<781949f830750555c03856e45275c78b.squirrel@www.mosabuam.com>
+	<CA+nPnMw+yPfmovGb-DCxvgvqjUkboddWzBuHEyHZmauYPkiENw@mail.gmail.com>
+	<CA+nPnMzWqgsVuCMaK6FP0QfXDXSLadyUsP+dMeRy9cW73jdarA@mail.gmail.com>
+	<CA+nPnMyY0ST8OV4hfd1=-0vgEuTff8B8ym4iXwjWF16nW=ESHg@mail.gmail.com>
+	<20140109151225.GC14330@IUPUI.Edu>
+	<CADN69ymEmQ7KaZfnOvKLD_A7Pi_GR+DOnA8e=z8J-_hQUF1CPA@mail.gmail.com>
+	<20140109155136.GE14330@IUPUI.Edu>
+	<CAPLpRQKXkm3NEw=GZK7ECpzi4fF0ZN8iMtCBLhVOBWXoY_nWow@mail.gmail.com>
+	<CA+nPnMwgL9gbS6aq+rip1s25h-XcJe1fN2UBgmMKo3ym-vT5cQ@mail.gmail.com>
+	<CAJZRQKxC7RauiuekekfkWzTDA5vzMMvhqEGt2EP0pgEbiOtemQ@mail.gmail.com>
+	<58EAA08AF8232344ADDB2E31D4996BFD4BBD5AF2@SMNPEXCHIDAG2.prod.ad.merc.chicago.cme.com>
+	<CAJZRQKyYzXaRC4RO5HiZsijgqJFfdDkjzkRiTO7hVspnFSErQA@mail.gmail.com>
+Date: Fri, 10 Jan 2014 17:00:48 +0000
+Message-ID: <CA+nPnMz_xipuJZqvP7Tr0XcorghqoUE9u5_bUH_5mjVL1vTHaQ@mail.gmail.com>
+Subject: Re: New logo?
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b163441f6264604efa0aaba
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b163441f6264604efa0aaba
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Do you mean something like maven-16 that I just uploaded to the contest
+wiki page?
+https://cwiki.apache.org/confluence/download/attachments/38569278/maven-16.=
+png?version=3D1&modificationDate=3D1389373170779&api=3Dv2
+
+
+On 10 January 2014 16:40, Kristian Rosenvold
+<kristian.rosenvold@gmail.com>wrote:
+
+> Way cool; this toy is a nordic classic (in wood). I can see "Jar" & "War"
+> on the boxes.
+>
+> http://www.sprell.no/produktbilder/2013/Brio_Putteboks_r=F8d.jpg
+>
+> For some reason I'm not entirely sure I understand I also enjoy the train=
+:
+>
+>
+> http://playworldcorp.com/wp-content/uploads/2012/03/wooden-toys_playworld=
+_corp.jpg
+>
+> I suppose it's because it's a goods train (not a passenger train), and th=
+e
+> individual carriages contain my jar files...
+>
+> Kristian
+>
+>
+>
+> 2014/1/10 Lyons, Roy <Roy.Lyons@cmegroup.com>
+>
+> > HAH.  I like that.  It makes me think of the kids toy where you put
+> shapes
+> > into holes.
+> >
+> >
+> http://www.toysrus.com/graphics/media/trus/Aplusplus/2012/2501235/MATTEL-=
+25
+> > 01235-01.jpg
+> >
+> > Each block shape represents a type of output (.war, .jar, .ear, .so,
+> .dll,
+> > .zip, .someotherextensionthatyoudreamup)
+> >
+> > Each hole represents a workflow to make that happen.  Ok its a little b=
+it
+> > reverse order, and more like
+> http://static.ddmcdn.com/gif/play-doh-12.jpg
+> >
+> >
+> >
+> >
+> > Anyhow, I like the "cookie cutter" approach to a logo because it goes
+> with
+> > Kristian's sentiment (which I happen to agree with once I read it).
+> >
+> > Perhaps even an actual logo as a set of cookie cutters (kind of like
+> > http://ecx.images-amazon.com/images/I/41BUOIKf4zL.jpg which is funny
+> > because it has all kinds of animals in it too )
+> >
+> >
+> >
+> >
+> > On 1/10/14 1:20 AM, "Kristian Rosenvold" <kristian.rosenvold@gmail.com>
+> > wrote:
+> >
+> > >I think the association-work around what maven /is/ is a great way to
+> > >approach a logo contest elsewhere. I have worked with some great graph=
+ic
+> > >designers in my time, and the kind input the good ones want are
+> typically
+> > >related around your thoughts/feelings around the product rather than
+> which
+> > >particular animal you prefer, which is a bit of a secondary kind of
+> input
+> > >along with all different kinds of other constraints/ideas (the boss
+> > >prefers
+> > >blue).
+> > >
+> > >When I first encountered maven I had come to the realization that all =
+my
+> > >ant projects were basically the same, and that there was no reason for
+> > >customizing
+> > >what was basically a standard process. So maven gives me associations
+> to a
+> > >mass-production line at a factory, rather than a tailor making
+> individual
+> > >processes. Furthermore, the lifecycle amplifies the idea of a
+> > >conveyor-belt
+> > >mass-production line; all parts move through the same conveyor belt
+> > >process, stopping at
+> > >individual stages to get work done. I would almost be willing to think
+> of
+> > >a
+> > >waterfall (Uh-oh...)
+> > >
+> > >So it would appear to me that I'm not thinking of an animal at all !
+> > >
+> > >Kristian
+> > >
+> > >
+> > >
+> > >
+> > >
+> > >
+> > >
+> > >2014/1/9 Mark H. Wood <mwood@iupui.edu>
+> > >
+> > >> On Thu, Jan 09, 2014 at 09:32:54AM -0600, Curtis Rueden wrote:
+> > >> > All of the logos are OK, but none of them really symbolize anythin=
+g
+> in
+> > >> > particular about Maven. IMO the best logos encapsulate the purpose
+> of
+> > >>the
+> > >> > project somehow, either overtly, covertly or both.
+> > >>
+> > >> Good point.  I was associating with the name "Maven", looking for a
+> > >> symbol of in-depth understanding of a specialized field.
+> > >>
+> > >> http://en.wiktionary.org/wiki/maven
+> > >>
+> > >> So, what does Maven do?  It passes unique source and object code
+> > >> inputs through a standardized process, guided by an expression of th=
+e
+> > >> relationships among those inputs, to assemble a well-specified
+> > >> configuration of runnable code.  What does that look like?
+> > >>
+> > >> --
+> > >> Mark H. Wood, Lead System Programmer   mwood@IUPUI.Edu
+> > >> Machines should not be friendly.  Machines should be obedient.
+> > >>
+> >
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+>
+
+--047d7b163441f6264604efa0aaba--
+

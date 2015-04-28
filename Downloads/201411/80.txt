@@ -1,0 +1,85 @@
+From users-return-137754-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Nov 16 19:29:10 2014
+Return-Path: <users-return-137754-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C848910C89
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 16 Nov 2014 19:29:10 +0000 (UTC)
+Received: (qmail 46190 invoked by uid 500); 16 Nov 2014 19:29:08 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 46116 invoked by uid 500); 16 Nov 2014 19:29:08 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 46104 invoked by uid 99); 16 Nov 2014 19:29:08 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 16 Nov 2014 19:29:08 +0000
+X-ASF-Spam-Status: No, hits=3.1 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_IMAGE_ONLY_16,HTML_MESSAGE,HTML_SHORT_LINK_IMG_2,RCVD_IN_DNSWL_LOW,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of burtonator2011@gmail.com designates 209.85.215.44 as permitted sender)
+Received: from [209.85.215.44] (HELO mail-la0-f44.google.com) (209.85.215.44)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 16 Nov 2014 19:29:03 +0000
+Received: by mail-la0-f44.google.com with SMTP id hz20so7199595lab.17
+        for <users@maven.apache.org>; Sun, 16 Nov 2014 11:28:42 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:from:date:message-id:subject:to:content-type;
+        bh=4EoitAogIGCOJNQQTcMThlABi8/7NE5X61VwijR8mHU=;
+        b=sXAqGMB9V5C+/QYfPoeGdeLwCnP9Cam5rdJ/tH58Xu2m7l6wPf6dGdwTbd8lthl4gF
+         7SjmN0AAwIuVFaVvm4Jynyb/EK8qtS/9FIUbwzaZOKe3tNMGsmq7EWrVGIAA+gbppoFZ
+         xXYRySDez/v3u9FtJ417ujgprcFL+ilpsMPAwwPxidZ3qyfhML78eIC5TltXc8l2IMN+
+         sBaGbGn/Z9qu8QzPgnb4SPh5YfWOQtqFowKsNnlBm4G9ou+UN5EZ4c1UNBsGmmhZDM8+
+         1OIgQlL1sLm3jT8QPZ+hq4uYUpWrWc9Y4lRNHF8vpu7GA34ZjnWb0FVEfsDZjl1lnWnu
+         C37w==
+X-Received: by 10.112.137.39 with SMTP id qf7mr22073187lbb.47.1416166122351;
+ Sun, 16 Nov 2014 11:28:42 -0800 (PST)
+MIME-Version: 1.0
+Sender: burtonator2011@gmail.com
+Received: by 10.112.166.137 with HTTP; Sun, 16 Nov 2014 11:28:22 -0800 (PST)
+From: Kevin Burton <burton@spinn3r.com>
+Date: Sun, 16 Nov 2014 11:28:22 -0800
+X-Google-Sender-Auth: Wf1K-y9pwbtR0nr3uNx1JCWLE8Q
+Message-ID: <CAAZU44k8XqAWsKCbnYuXVTrvXcaKYNT7pnVP8Xi6Fj6oZDYWqw@mail.gmail.com>
+Subject: Sorting javadoc output by importance of documentation and length of docs?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e011609ccaa739e0507fede7f
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e011609ccaa739e0507fede7f
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+This is slightly off topic so I apologize.
+
+Javadoc is great for the developer but the main problem is that important
+documents can be hidden in a sea of classes.
+
+My Javadoc tends to have say 20-40 important documents on the design of a
+system but the rest of the Javadoc just tends to have an overview.
+
+I=E2=80=99d like a way to organize it more as a book, maybe even by the len=
+gth of
+the documentation instead of being organized as a table of contents.
+
+This way my ops guys and other members of the team can find the
+documentation they=E2=80=99re looking for and not necessarily how a specifi=
+c
+component behaves.
+
+--=20
+
+Founder/CEO Spinn3r.com
+Location: *San Francisco, CA*
+blog: http://burtonator.wordpress.com
+=E2=80=A6 or check out my Google+ profile
+<https://plus.google.com/102718274791889610666/posts>
+<http://spinn3r.com>
+
+--089e011609ccaa739e0507fede7f--
+

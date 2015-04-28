@@ -1,0 +1,90 @@
+From users-return-135724-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Mar  7 00:49:36 2014
+Return-Path: <users-return-135724-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2D625101BD
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  7 Mar 2014 00:49:36 +0000 (UTC)
+Received: (qmail 98155 invoked by uid 500); 7 Mar 2014 00:49:32 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 97973 invoked by uid 500); 7 Mar 2014 00:49:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 97965 invoked by uid 99); 7 Mar 2014 00:49:31 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 07 Mar 2014 00:49:31 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of davek1802@gmail.com designates 74.125.82.172 as permitted sender)
+Received: from [74.125.82.172] (HELO mail-we0-f172.google.com) (74.125.82.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 07 Mar 2014 00:49:25 +0000
+Received: by mail-we0-f172.google.com with SMTP id t61so4164291wes.17
+        for <users@maven.apache.org>; Thu, 06 Mar 2014 16:49:04 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=L0C3Tu9W5lwXuB/ItA5n2bSc+VQwu3XSIDogsRj2x18=;
+        b=V/Jivw1h+D974kI26gKtqlRpeVBzlvTXyBI7G859qGjK0/c13ILAwrXg7qqNtWxiVX
+         vRmZ0Laz0KIj+nJfWkcq3zSYuwXEPoGjcqwSX8ON2ubwMhwkUorLsF766n6oDSF8HG9O
+         N1Xt3IEHWi5BrQZxWypZA0mtoP8oJwXPBtJWS0Dk8h80XN+PAg9mU+TIwYHwUnJsbjRF
+         e5PEbecrRvtR9aqBAL9fh6M30bp+NHZlhKHhat4DpLOXOaeX9VqqxvgVoKVdd5d3s/iO
+         RTHcP4viQDaLFZHK3updN1ZclqebApwm4dp1onnBfZ2dBwq6OX2Ay11I0eFmaJ+OZLIW
+         1GMA==
+MIME-Version: 1.0
+X-Received: by 10.194.236.9 with SMTP id uq9mr14522315wjc.31.1394153344700;
+ Thu, 06 Mar 2014 16:49:04 -0800 (PST)
+Received: by 10.227.143.10 with HTTP; Thu, 6 Mar 2014 16:49:04 -0800 (PST)
+Date: Thu, 6 Mar 2014 16:49:04 -0800
+Message-ID: <CAM0K-0CzKNaJ89zXuHAiEF1a3QYtybyXUjg0HPQrNVRWz-a9jQ@mail.gmail.com>
+Subject: Netbeans 7.4 maven POM for com.oracle:ojdbc6:jar:11.2.0.1 is invalid
+From: Dave Kennedy <davek1802@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=089e01493de0df997904f3f99e85
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01493de0df997904f3f99e85
+Content-Type: text/plain; charset=ISO-8859-1
+
+When the project is built the following message is generated.
+
+"The POM for com.oracle:ojdbc6:jar:11.2.0.1 is invalid, transitive
+dependencies (if any) will not be available, enable debug logging for more
+details"
+
+The POM and repository look to be correct.
+
+Any suggestions on how to resolve this issue would be appreciated.
+
+pom.xml
+
+    <dependency>
+        <groupId>com.oracle</groupId>
+        <artifactId>ojdbc6</artifactId>
+        <version>11.2.0.1</version>
+        <scope>provided</scope>
+    </dependency>
+
+maven command
+
+ mvn install:install-file -Dfile=ojdbc6-11.2.0.1.jar -DgroupId=com.oracle
+-DartifactId=ojdbc6 -Dversion=11.2.0.1 -Dpackaging=jar
+
+creates the .jar and .pom files
+C:\Users\me\.m2\repository\com\oracle\ojdbc6\11.2.0.1\ojdbc6-11.2.0.1.jar C:
+\Users\me\.m2\repository\com\oracle\ojdbc6\11.2.0.1\ojdbc6-11.2.0.1.pom
+
+<project>
+  <groupId>com.oracle</groupId>
+  <artifactId>ojdbc6</artifactId>
+  <version>11.2.0.1</version>
+</project>
+
+--089e01493de0df997904f3f99e85--
+

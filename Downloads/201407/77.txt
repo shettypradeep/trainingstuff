@@ -1,0 +1,79 @@
+From users-return-136830-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jul 22 15:26:45 2014
+Return-Path: <users-return-136830-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1FB3B1185F
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 22 Jul 2014 15:26:45 +0000 (UTC)
+Received: (qmail 44113 invoked by uid 500); 22 Jul 2014 15:26:42 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 44032 invoked by uid 500); 22 Jul 2014 15:26:42 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 44012 invoked by uid 99); 22 Jul 2014 15:26:41 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Jul 2014 15:26:41 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of khmarbaise@gmx.de designates 212.227.17.22 as permitted sender)
+Received: from [212.227.17.22] (HELO mout.gmx.net) (212.227.17.22)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Jul 2014 15:26:38 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([91.35.1.198]) by mail.gmx.com
+ (mrgmx101) with ESMTPSA (Nemesis) id 0MH4Os-1XMJGu1Omw-00Do5L for
+ <users@maven.apache.org>; Tue, 22 Jul 2014 17:26:14 +0200
+Message-ID: <53CE8297.1080401@gmx.de>
+Date: Tue, 22 Jul 2014 17:26:15 +0200
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: maven-dependency-plugin unpacking aar format?
+References: <CAA8BW8HFWKNmv_ZTE9wuYQMDJ_FxUzhkXAnW_g3wrVFjovj=cA@mail.gmail.com> <53CD80A3.6040302@gmx.de> <CAA8BW8FDv2vZhEg5OSOFkyWuRvUAt_Z_tYx7iV80MuQLEx2fcw@mail.gmail.com> <CAEBcyzq7aznBgKfVH6DzyzWnVmSwTs3zpfrsOZY1xTUnfqaF6g@mail.gmail.com> <BLU172-W40C66356CCF5989329FB7BAEF00@phx.gbl> <CAEBcyzpv85QdvChGKJXDkq1i8dQ3coF_hJuibOYkxfaGwcUvpA@mail.gmail.com> <CAA8BW8GoweJbtwFQZG3Rhshzo+-Zr5=MyeFJ9TqT8mvKhQ+A0g@mail.gmail.com> <CAEBcyzpsG2dDB36aqZ3tVm7Gk=gKpvLq-qXRNzAEx=P8sEVXiA@mail.gmail.com> <61201C6A-08F4-4AEF-A592-81447C4B4DB7@fortysix.ch> <CAEBcyzr8NLEKZtNeBO9Lcx4p7S_qMPX8FTuucnGzkTU8WeA9pA@mail.gmail.com> <CFF3CCF7.11368%Robert.Puncel@jpl.nasa.gov>
+In-Reply-To: <CFF3CCF7.11368%Robert.Puncel@jpl.nasa.gov>
+Content-Type: text/plain; charset=windows-1252; format=flowed
+Content-Transfer-Encoding: 8bit
+X-Provags-ID:  V03:K0:5T8PJEmWXsdNGevRgGkN/JYgECBUs3QhYFuDLRnGxkkiSWk9e0H
+ Z/G1mkchGzqMru8+nqa7P7Q7N5inQXdhPnEHPOLNHCCVhN89cOfeFuRgYx/EYJL4XrGzWM7
+ b5Fvx4+tO7FyIQ/F1R69J/Gtc+BSsBbNRJgHwvx819GlwvdEfBO9ny8LVXHj7/mmDtugH2j
+ 9Ut0jPlQf0+2Egz8cAxjQ==
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Robert,
+
+ > Sorry to interject, but isn¹t the unpack goal of the 
+maven-assembly-plugin
+> deprecated?  The documentation actually refers users to the MDP¹s unpack
+> capabilities:
+> https://maven.apache.org/plugins/maven-assembly-plugin/plugin-info.html
+>
+> That page is dated from 2012, so I¹m not sure if something has changed
+> since it was last published.
+
+What you mentioned is correct...the unpack goal is marked as deprecated 
+and will be removed...
+
+This page is not updated cause on the public available things have not 
+being changed...
+
+Apart from that those pages are only updated according with new released 
+which has not been done yet....
+
+(new release is in preparation 2.4.1 
+(http://jira.codehaus.org/browse/MASSEMBLY), but it will take some time)...
+
+Kind regards
+Karl-Heinz Marbaise
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

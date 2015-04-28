@@ -1,0 +1,90 @@
+From users-return-135474-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb 14 06:47:37 2014
+Return-Path: <users-return-135474-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BC05510A41
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 14 Feb 2014 06:47:37 +0000 (UTC)
+Received: (qmail 25665 invoked by uid 500); 14 Feb 2014 06:47:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 24545 invoked by uid 500); 14 Feb 2014 06:47:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 24526 invoked by uid 99); 14 Feb 2014 06:47:24 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 06:47:24 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of waynefay@gmail.com designates 209.85.192.176 as permitted sender)
+Received: from [209.85.192.176] (HELO mail-pd0-f176.google.com) (209.85.192.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 06:47:20 +0000
+Received: by mail-pd0-f176.google.com with SMTP id w10so11528157pde.21
+        for <users@maven.apache.org>; Thu, 13 Feb 2014 22:47:00 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=ped+I5+GYU+Ky7XON98EX1e/sXEb3B/VVYiEgPDob88=;
+        b=elsITZ+p8aAclP2xryif+t8shJVWEPX8Uv7ULLU4yipo7O3bFYsa3QsWOttNCBGlUg
+         UgdlIz93fFS18gTh9rmpA+bDvuyCYD1JWy8zrSOr9c25PvRXKsYoigZcsLmUjyPnZ9PT
+         /A5eoAqdF4JH0G0eFRskIjlNIyvTX/dGGX2ydaVSnt4NbZsl/QaEg18ur6J69ECFA1Fr
+         2Xa+Mf1BErpNuqmll3hABbOYsrmXsGpRD1X6J/PAIiKCjlTmO9ypl05wRh+tsmVFnm0P
+         7jYQnAzSv7apCheuPF0R85wVb0fn1mbmGK065gnfsZw7ryhjIlQSrBPj8yzxkjCRNbfm
+         eS2Q==
+X-Received: by 10.68.190.169 with SMTP id gr9mr7124835pbc.30.1392360420618;
+ Thu, 13 Feb 2014 22:47:00 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Thu, 13 Feb 2014 22:46:38 -0800 (PST)
+In-Reply-To: <1392296651866-5784481.post@n5.nabble.com>
+References: <1392296651866-5784481.post@n5.nabble.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Fri, 14 Feb 2014 00:46:38 -0600
+Message-ID: <CALy+7UkP6VN9DBiKOeOo9baxLUCVaM5qcf2crotfsQOsA7tKOA@mail.gmail.com>
+Subject: Re: Maven parent POM - execute plugin after the submodule execution
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Just add another submodule.
+Make it depend on the "last" submodule (eg you had A, B, C before -
+make this D, and depend on C, assumes C depends on B which depends on
+A).
+Add the plugin to D.
+
+Wayne
+
+On Thu, Feb 13, 2014 at 7:04 AM, DenisDasKind <bltomov@abv.bg> wrote:
+> Hi Everybody, in my project i have a pom, that contains some childs
+> (submodules). The pom was defined as pom packaging type, and all is working
+> fine. But now i must execute a maven plugin, that should be executed after
+> the submodule build was finished. Is this possible, and when not, how can i
+> realize this? The parent pom is only a aggregator pom.
+>
+> Thank you in Advance!
+>
+> Regards,
+> Denis
+>
+>
+>
+> --
+> View this message in context: http://maven.40175.n5.nabble.com/Maven-parent-POM-execute-plugin-after-the-submodule-execution-tp5784481.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

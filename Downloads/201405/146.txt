@@ -1,0 +1,111 @@
+From users-return-136335-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun May 11 00:58:38 2014
+Return-Path: <users-return-136335-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3E15B12AC1
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 11 May 2014 00:58:38 +0000 (UTC)
+Received: (qmail 48521 invoked by uid 500); 10 May 2014 23:29:49 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 6500 invoked by uid 500); 10 May 2014 23:19:47 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 72817 invoked by uid 99); 10 May 2014 23:01:28 -0000
+Received: from Unknown (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 10 May 2014 23:01:28 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of cvgaviao@gmail.com designates 209.85.213.47 as permitted sender)
+Received: from [209.85.213.47] (HELO mail-yh0-f47.google.com) (209.85.213.47)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 07 May 2014 15:36:08 +0000
+Received: by mail-yh0-f47.google.com with SMTP id z6so654963yhz.34
+        for <users@maven.apache.org>; Wed, 07 May 2014 08:35:45 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject
+         :content-type;
+        bh=HTz3Vy1In5KQKFKaaVr8hrUDN6uKxKMZdCDYh8PhUnQ=;
+        b=o3V9v2BDp++qtCBLExptNDDJZgreMaMuKC5YVoEZQj7yIcqoC7KpaOhlGV6b/en59N
+         T+sWMWxcL/IO4YyPSZ6738pb5tDj4DPNBLiT2pi/FYCsca4UXwP4XMUBv6NgrW87ROC/
+         xJYcv2NeiSJMJhCJrBL3gNpX9L8sF9VWCwpwt/UfHXWMcDsmbFyUrwbmcIvjiygB+gpo
+         5H92ovI6feXmbxIqlyYsQZF5k9qVieEbwsOfzOuXbHf1xROey1mBTINPXL8088XAIpFT
+         pGsbsaLDSkNIj8DmB7iH5P68cL7tN7AT+juOCVyN40CI43EIXJlyQM+sqKE73YEp2xeK
+         5zAQ==
+X-Received: by 10.236.105.141 with SMTP id k13mr68433293yhg.141.1399476945652;
+        Wed, 07 May 2014 08:35:45 -0700 (PDT)
+Received: from [10.0.1.40] ([187.18.202.195])
+        by mx.google.com with ESMTPSA id i1sm27579338yhq.12.2014.05.07.08.35.44
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 07 May 2014 08:35:45 -0700 (PDT)
+Message-ID: <536A52CF.8030604@gmail.com>
+Date: Wed, 07 May 2014 12:35:43 -0300
+From: =?ISO-8859-1?Q?Cristiano_Gavi=E3o?= <cvgaviao@gmail.com>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.5.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: How to resolve and get the right packaging type?
+Content-Type: multipart/alternative;
+ boundary="------------050401080902000001090706"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------050401080902000001090706
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Hello,
+
+I'm using maven-bundle-plugin in a project. it generates a jar but its 
+packaging type is "bundle".
+
+Maven doesn't complains when I declare a bundle dependency without the 
+type property (that defaults to "jar").
+
+In the plugin that I'm developing I need to create some files based on 
+that packaging type.
+I tried to resolve each direct dependency and tried to get its packaging 
+type (the one fixed in its pom), but it is not working, because I always 
+get the "jar" value.
+
+>     for (Artifact artifact : artifacts) {
+>
+>                 getLog().debug("Resolving dependency artifact " +
+>     artifact);
+>                 ArtifactResolutionRequest request = new
+>     ArtifactResolutionRequest()
+>                         .setArtifact(artifact)
+>                         .setRemoteRepositories(remoteRepositories)
+>     .setLocalRepository(localArtifactRepository);
+>
+>                 ArtifactResolutionResult resolutionResult =
+>     repositorySystem
+>                         .resolve(request);
+>                 if (resolutionResult.hasExceptions()) {
+>                     throw new MojoExecutionException("Could not
+>     resolve artifact: "
+>                             + artifact,
+>     resolutionResult.getExceptions().get(0));
+>                 }
+>                 artifact = (Artifact)
+>     resolutionResult.getArtifacts().iterator()
+>                         .next();
+>
+>                 String type = artifact.getType();
+
+    I need to know the declared artifact packaging type. How could I
+    achieve this?
+
+    thanks for any tip.
+
+    Cristiano
+
+
+--------------050401080902000001090706--
+

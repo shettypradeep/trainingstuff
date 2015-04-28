@@ -1,0 +1,113 @@
+From users-return-137258-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 12 14:56:57 2014
+Return-Path: <users-return-137258-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 14C6E11ADC
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 12 Sep 2014 14:56:57 +0000 (UTC)
+Received: (qmail 57425 invoked by uid 500); 12 Sep 2014 14:56:55 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 57339 invoked by uid 500); 12 Sep 2014 14:56:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 57322 invoked by uid 99); 12 Sep 2014 14:56:54 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 14:56:54 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of christofer.dutz@c-ware.de designates 157.56.112.129 as permitted sender)
+Received: from [157.56.112.129] (HELO emea01-am1-obe.outbound.protection.outlook.com) (157.56.112.129)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 14:56:49 +0000
+Received: from DBXPR05MB237.eurprd05.prod.outlook.com (10.242.143.147) by
+ DBXPR05MB240.eurprd05.prod.outlook.com (10.242.143.154) with Microsoft SMTP
+ Server (TLS) id 15.0.1024.12; Fri, 12 Sep 2014 14:56:05 +0000
+Received: from DBXPR05MB237.eurprd05.prod.outlook.com ([169.254.14.160]) by
+ DBXPR05MB237.eurprd05.prod.outlook.com ([169.254.14.160]) with mapi id
+ 15.00.1024.012; Fri, 12 Sep 2014 14:56:05 +0000
+From: Christofer Dutz <christofer.dutz@c-ware.de>
+To: Maven Users List <users@maven.apache.org>
+Subject: AW: Releasing Maven Plugins
+Thread-Topic: Releasing Maven Plugins
+Thread-Index: AQHPzoWSiQb6D6m/t0qorC/0t04sYJv9ciQAgAAF34CAAB2pIw==
+Date: Fri, 12 Sep 2014 14:56:05 +0000
+Message-ID: <1410533761479.68076@c-ware.de>
+References: <1410525516105.34402@c-ware.de>
+	<5412EB2E.8030904@gmx.de>,<CAKDUN1uEN=9S8Ad+w4z=KZ=TABaqzwshdp1QJXgDw=LYnJWScQ@mail.gmail.com>
+In-Reply-To: <CAKDUN1uEN=9S8Ad+w4z=KZ=TABaqzwshdp1QJXgDw=LYnJWScQ@mail.gmail.com>
+Accept-Language: de-DE, en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-ms-exchange-transport-fromentityheader: Hosted
+x-originating-ip: [217.110.228.68]
+x-microsoft-antispam: BCL:0;PCL:0;RULEID:;UriScan:;
+x-forefront-prvs: 0332AACBC3
+x-forefront-antispam-report: SFV:NSPM;SFS:(10019020)(6009001)(252514010)(199003)(189002)(71364002)(51704005)(81342001)(99396002)(81542001)(4396001)(87936001)(2656002)(83072002)(85852003)(229853001)(74482001)(77982001)(107046002)(107886001)(77096002)(110136001)(50986999)(76176999)(97736003)(21056001)(54356999)(66066001)(75402002)(20776003)(64706001)(36756003)(90102001)(79102001)(86362001)(92726001)(92566001)(95666004)(83322001)(46102001)(19580405001)(19580395003)(106116001)(106356001)(101416001)(31966008)(74662001)(117636001)(105586002)(85306004);DIR:OUT;SFP:1102;SCL:1;SRVR:DBXPR05MB240;H:DBXPR05MB237.eurprd05.prod.outlook.com;FPR:;MLV:sfv;PTR:InfoNoRecords;A:1;MX:1;LANG:en;
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-OriginatorOrg: c-ware.de
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Unfortunately not. To me it seems as if the reactor checks if everything is=
+ available and if it's missing the build fails. The strange thing is that i=
+t only checks if something is there ... during the build the freshly built =
+version of the plugin is used ... it's just that maven gives up before even=
+ starting :-|=0A=
+=0A=
+Chris=0A=
+________________________________________=0A=
+Von: anders.g.hammar@gmail.com <anders.g.hammar@gmail.com> im Auftrag von A=
+nders Hammar <anders@hammar.net>=0A=
+Gesendet: Freitag, 12. September 2014 15:07=0A=
+An: Maven Users List=0A=
+Betreff: Re: Releasing Maven Plugins=0A=
+=0A=
+>=0A=
+> The main problem is that the project contains the plugin as=0A=
+>>=0A=
+> >well as some modules that use the plugin.=0A=
+>=0A=
+This is the basic mistake in this scenario. If you build a maven-plugin=0A=
+> make a separate project from it and do the release etc. only from the=0A=
+> maven-plugin and afterwards you have the release available and can contin=
+ue=0A=
+> with the rest which uses the release...=0A=
+=0A=
+=0A=
+Although I haven't tried it myself, my understanding is that it should be=
+=0A=
+possible to use a plugin built within a multi-module project in some of the=
+=0A=
+other modules when using Maven 3.x. This is not possible with Maven 2.x=0A=
+though. However, it requires the plugin to be built before the modules that=
+=0A=
+uses it (which the reactor should be able to calculate, unless there are=0A=
+some circular module dependencies).=0A=
+=0A=
+/Anders=0A=
+=0A=
+=0A=
+>=0A=
+>=0A=
+> Kind regards=0A=
+> Karl-Heinz Marbaise=0A=
+>=0A=
+> ---------------------------------------------------------------------=0A=
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org=0A=
+> For additional commands, e-mail: users-help@maven.apache.org=0A=
+>=0A=
+>=0A=
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

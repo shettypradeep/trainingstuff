@@ -1,0 +1,313 @@
+From users-return-136290-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr 30 13:00:09 2014
+Return-Path: <users-return-136290-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7F09011072
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 30 Apr 2014 13:00:09 +0000 (UTC)
+Received: (qmail 27772 invoked by uid 500); 30 Apr 2014 13:00:05 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 27366 invoked by uid 500); 30 Apr 2014 13:00:05 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 27358 invoked by uid 99); 30 Apr 2014 13:00:04 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 30 Apr 2014 13:00:04 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of geraltzrivie@gmail.com designates 209.85.220.169 as permitted sender)
+Received: from [209.85.220.169] (HELO mail-vc0-f169.google.com) (209.85.220.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 30 Apr 2014 12:59:59 +0000
+Received: by mail-vc0-f169.google.com with SMTP id im17so2177948vcb.28
+        for <users@maven.apache.org>; Wed, 30 Apr 2014 05:59:36 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=oTCRkU53uq1cUBacMwr9Q8ElQEDnDGj1FI462JbBN3w=;
+        b=xsRBMF6u3HDXUHnRh4JgHtGQA/ojBJ8E7FI4Wkh2crnu4wqNWMRV4RwCY2ewqMXubP
+         ZbQS2w4dAdri7MGPgbGCGUxIfSMGiGIGJnO0tMtAZQxwgzGzTpaCvd0GxBCl5Fv2Eunc
+         ppEztbAPXKHBvLZU3zVof95LlupXfaOyQrZoh+8i8O/fH0DL7mw9gqcT/jU6Y2UOJXuK
+         H7uUH74JIYiP8Oah38lCRVB4RHO88I1r89yTkAgEJgbGot2QpQAUTu6u9w4znJQqJG6c
+         1e6qrWBkBkGzlRTV90ibXlLL/D3w8HbmHVbAZQJSlFdMIzQvDcIfeWi4hqAwaCZ9UPKF
+         ByKg==
+MIME-Version: 1.0
+X-Received: by 10.58.127.168 with SMTP id nh8mr180244veb.44.1398862776059;
+ Wed, 30 Apr 2014 05:59:36 -0700 (PDT)
+Received: by 10.58.133.50 with HTTP; Wed, 30 Apr 2014 05:59:35 -0700 (PDT)
+In-Reply-To: <CAA9S6i4Az8JdcvDT0bcNbcQDKPnVnMfZ8pAsb1vNKiiG70C9DA@mail.gmail.com>
+References: <CAFdPtEh8Vr9nAPcBdrf7xxgTV+JEqVPQFh5vf5mOGH-eUwhC4g@mail.gmail.com>
+	<CAA9S6i6g=VvOEM_+zFFsOu9NGnYJuU3s0_-DG1b4SF=QY-mg8g@mail.gmail.com>
+	<1569E694-FA3A-40E1-99E0-34C0BDBA42A7@gmail.com>
+	<CAFdPtEhA3Y+AP7Lhx3fo27Fm5r_tUm1iOAGrNbkrc464Ojfmhw@mail.gmail.com>
+	<CAA9S6i6yn5B3pGMutGAH6fVpXHnR0SELdwj7HhB4AG=F=5iXsA@mail.gmail.com>
+	<CAA9S6i4Az8JdcvDT0bcNbcQDKPnVnMfZ8pAsb1vNKiiG70C9DA@mail.gmail.com>
+Date: Wed, 30 Apr 2014 14:59:35 +0200
+Message-ID: <CAFdPtEgfD4zi8tSzAV8qm7HV_zwhroLsE3F25yDL0C+OmaAkTw@mail.gmail.com>
+Subject: Re: Log4J - "cannot find symbol - method trace(String)"
+From: =?UTF-8?B?RHXFoWFuIFJ5Y2hub3Zza8O9?= <geraltzrivie@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b675a6edb4e5904f8421ee4
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b675a6edb4e5904f8421ee4
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Thank you all, I have finally managed to find the root of the problem.
+Nick's warning about the possibility of a different Log4J version as a
+transitive dependency got me thinking and I tried disabling the
+dependencies, one at a time, to see what would happen. The errors
+disappeared after disabling a custom 3rd party library that I have
+installed to my local repository manually and after inspecting its contents
+it turned out that there is an older Log4J version packed inside the JAR
+along with the rest of the library.
+
+Thank you once more for all your quick responses,
+Du=C5=A1an
+
+
+
+2014-04-30 14:44 GMT+02:00 Nick Stolwijk <nick.stolwijk@gmail.com>:
+
+> And for another thought: maybe of your other dependencies include the
+> org.apache.log4j.Logger class but with a different version.
+>
+> Check with maven copy dependencies and a grep over the contents of all
+> the jar files.
+>
+> Here is how I do it:
+>
+> 02:40:48 {master} ~/sandbox/bowling-nickstolwijk$ mvn
+> dependency:copy-dependencies
+> [INFO] Scanning for projects...
+> [INFO]
+> [INFO] Using the builder
+>
+> org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreaded=
+Builder
+> with a thread count of 1
+> [INFO]
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] Building bowling-nickstolwijk 1.0-SNAPSHOT
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO]
+> [INFO] --- maven-dependency-plugin:2.8:copy-dependencies (default-cli)
+> @ bowling-nickstolwijk ---
+> [INFO] hamcrest-core-1.3.jar already exists in destination.
+> [INFO] junit-4.11.jar already exists in destination.
+> [INFO] hamcrest-library-1.3.jar already exists in destination.
+> [INFO] mockito-core-1.9.5.jar already exists in destination.
+> [INFO] objenesis-1.0.jar already exists in destination.
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] BUILD SUCCESS
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] Total time: 1.143 s
+> [INFO] Finished at: 2014-04-30T14:41:08+01:00
+> [INFO] Final Memory: 9M/153M
+> [INFO]
+> ------------------------------------------------------------------------
+> 02:41:08 {master} ~/sandbox/bowling-nickstolwijk$ cd target/dependency/
+> 02:41:16 {master} ~/sandbox/bowling-nickstolwijk/target/dependency$
+> findjar.sh . Logger
+> Starting search for JAR files from directory .
+> Looking for the class Logger
+>
+> This might take a while...
+>
+> org/mockito/internal/debugging/VerboseMockInvocationLogger.class
+> org/mockito/internal/debugging/VerboseMockInvocationLogger.java
+> org/mockito/internal/util/ConsoleMockitoLogger.class
+> org/mockito/internal/util/ConsoleMockitoLogger.java
+> org/mockito/internal/util/MockitoLogger.class
+> org/mockito/internal/util/MockitoLogger.java
+> org/mockito/internal/util/SimpleMockitoLogger.class
+> org/mockito/internal/util/SimpleMockitoLogger.java
+> ./mockito-core-1.9.5.jar
+> 02:41:20 {master} ~/sandbox/bowling-nickstolwijk/target/dependency$
+> cat ~/bin/findjar.sh
+> #!/bin/sh
+> #
+> # findjar.sh by Samuli Kaski
+> #
+>
+> VERBOSE=3Dno
+>
+> if [ $# -ne 2 ]; then
+>         echo "Usage: findjar.sh <path> <classname>";
+>         exit;
+> fi
+>
+> STARTPATH=3D$1
+> CLASS=3D$2
+>
+> echo "Starting search for JAR files from directory $STARTPATH"
+> echo "Looking for the class $CLASS"
+> echo ""
+> echo "This might take a while..."
+> echo ""
+>
+> for jar in `find $STARTPATH -name '*.jar'`;
+> do
+>  BASENAME=3D`basename $jar`
+>
+>  jar -tf $jar | grep $CLASS
+>
+>  if [ $? -eq 0 ]; then
+>
+>    echo "$jar"
+>  fi
+> done
+>
+> Hth,
+> Nick Stolwijk
+>
+> ~~~ Try to leave this world a little better than you found it and,
+> when your turn comes to die, you can die happy in feeling that at any
+> rate you have not wasted your time but have done your best ~~~
+>
+> Lord Baden-Powell
+>
+>
+> On Wed, Apr 30, 2014 at 2:29 PM, Nick Stolwijk <nick.stolwijk@gmail.com>
+> wrote:
+> > Could you check your checksum on the log4j jar file? Maybe there is
+> > some corruption in your repository.
+> >
+> > 02:28:40 ~/.m2/repository/log4j/log4j/1.2.17$ ls -altr log4j-1.2.17.jar
+> > -rw-r--r-- 1 nick nick 489884 Jan  8 13:31 log4j-1.2.17.jar
+> > 02:28:45 ~/.m2/repository/log4j/log4j/1.2.17$ sha1sum log4j-1.2.17.jar
+> > 5af35056b4d257e4b64b9e8069c0746e8b08629f  log4j-1.2.17.jar
+> > 02:28:47 ~/.m2/repository/log4j/log4j/1.2.17$ cat log4j-1.2.17.jar.sha1
+> > 5af35056b4d257e4b64b9e8069c0746e8b08629f
+> >
+> > Hth,
+> >
+> > Nick Stolwijk
+> >
+> > ~~~ Try to leave this world a little better than you found it and,
+> > when your turn comes to die, you can die happy in feeling that at any
+> > rate you have not wasted your time but have done your best ~~~
+> >
+> > Lord Baden-Powell
+> >
+> >
+> > On Wed, Apr 30, 2014 at 2:00 PM, Du=C5=A1an Rychnovsk=C3=BD
+> > <geraltzrivie@gmail.com> wrote:
+> >> Thank you both for your help. Unfortunatelly, neither seems to be the
+> case.
+> >>
+> >>  * dependency:tree confirmed that version 1.2.17 is beeing used indeed
+> >> (log4j:log4j:jar:1.2.17:compile),
+> >>  * I have verified that the import statement is correct (import
+> >> org.apache.log4j.Logger;).
+> >>
+> >> Du=C5=A1an
+> >>
+> >>
+> >>
+> >> 2014-04-30 13:55 GMT+02:00 Stuart McCulloch <mcculls@gmail.com>:
+> >>
+> >>> Also check your java imports, just in case you=E2=80=99ve imported a =
+different
+> >>> Logger by mistake (such as java.util.logging.Logger)
+> >>>
+> >>> On 30 Apr 2014, at 12:48, Nick Stolwijk <nick.stolwijk@gmail.com>
+> wrote:
+> >>>
+> >>> > You can use the dependency:tree[1] goal to view a tree of your
+> >>> > dependencies to see if the correct version of Log4J is being includ=
+ed
+> >>> > in the compiler classpath.
+> >>> >
+> >>> > [1]
+> >>>
+> https://maven.apache.org/plugins/maven-dependency-plugin/tree-mojo.html
+> >>> >
+> >>> > Hth,
+> >>> >
+> >>> > Nick Stolwijk
+> >>> >
+> >>> > ~~~ Try to leave this world a little better than you found it and,
+> >>> > when your turn comes to die, you can die happy in feeling that at a=
+ny
+> >>> > rate you have not wasted your time but have done your best ~~~
+> >>> >
+> >>> > Lord Baden-Powell
+> >>> >
+> >>> >
+> >>> > On Wed, Apr 30, 2014 at 1:41 PM, Du=C5=A1an Rychnovsk=C3=BD
+> >>> > <geraltzrivie@gmail.com> wrote:
+> >>> >> Hi everyone,
+> >>> >>
+> >>> >> I have the following dependency in my project's POM:
+> >>> >>
+> >>> >> ...
+> >>> >> <dependency>
+> >>> >>    <groupId>log4j</groupId>
+> >>> >>    <artifactId>log4j</artifactId>
+> >>> >>    <version>1.2.17</version>
+> >>> >> </dependency>
+> >>> >> ...
+> >>> >>
+> >>> >> The artifact is downloaded to my local repository, but, during the
+> >>> compile
+> >>> >> phase, the following error is emitted and the build process is
+> aborted:
+> >>> >>
+> >>> >> [ERROR] Failed to execute goal
+> >>> >> org.apache.maven.plugins:maven-compiler-plugin:2.5.1:compile
+> >>> >> (default-compile) on project dbtoixattrdt: Compilation failure:
+> >>> Compilation
+> >>> >> failure:
+> >>> >> [ERROR]
+> >>> >>
+> >>>
+> d:\prace\dbtoixattrdt\DBToIXATTRDT-TRUNK\src\main\java\dbtoixattrdt\Trace=
+LogAspect.java:[19,8]
+> >>> >> error: cannot find symbol
+> >>> >> [ERROR] symbol:   method trace(String)
+> >>> >> [ERROR] location: variable logger of type Logger
+> >>> >>
+> >>> >> This error message does not make much sense, as the trace method
+> should
+> >>> be
+> >>> >> available on the Logger class in Log4J version 1.2.17.
+> >>> >>
+> >>> >> What can be wrong?
+> >>> >>
+> >>> >> Thanks in advance,
+> >>> >> Du=C5=A1an
+> >>> >
+> >>> > -------------------------------------------------------------------=
+--
+> >>> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> >>> > For additional commands, e-mail: users-help@maven.apache.org
+> >>> >
+> >>>
+> >>>
+> >>> ---------------------------------------------------------------------
+> >>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> >>> For additional commands, e-mail: users-help@maven.apache.org
+> >>>
+> >>>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7b675a6edb4e5904f8421ee4--
+

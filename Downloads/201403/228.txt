@@ -1,0 +1,72 @@
+From users-return-135671-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Mar  3 13:46:45 2014
+Return-Path: <users-return-135671-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0490F10D4F
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  3 Mar 2014 13:46:45 +0000 (UTC)
+Received: (qmail 23527 invoked by uid 500); 3 Mar 2014 13:46:40 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 23112 invoked by uid 500); 3 Mar 2014 13:46:35 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 23096 invoked by uid 99); 3 Mar 2014 13:46:33 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 03 Mar 2014 13:46:33 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.160.46 as permitted sender)
+Received: from [209.85.160.46] (HELO mail-pb0-f46.google.com) (209.85.160.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 03 Mar 2014 13:46:26 +0000
+Received: by mail-pb0-f46.google.com with SMTP id rq2so3799647pbb.33
+        for <users@maven.apache.org>; Mon, 03 Mar 2014 05:46:05 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=09KFGUeNzUKluzcX7vsNxK2RpSpcILzzC3BaHxBQNlg=;
+        b=hidEm0rioLiADkgLij1MdPx45tqCq5i/TS1rxaPbazEuu9cGSOV0Vq7vmQJhF3uFt8
+         l0TnmJAiclootltQ77vxKWHUsKUew6vewcoSmWKE/lBn8fLAUzGS0R4aP6uThB+/cDi3
+         Z8misDN3uNUQ5UHeMIZo92RuTuhxVCnGow2nCrBUhN2rK4Vlqz1QqT4tOB9mKbxuG0/s
+         WqEcrN01ljzI/kbw3B49DboD6+g9n3+wkS+FZqsWezjPVBLnYeSYRoBjox60uXIX2Ucu
+         PJoHlgTW3I/k1go9R2JTTndRYDkWoDXbpwqDaAQHbUigdNaRBWBPCkMXAaa2zaSsv6M+
+         c0vA==
+X-Received: by 10.68.229.106 with SMTP id sp10mr19708679pbc.23.1393854365209;
+ Mon, 03 Mar 2014 05:46:05 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Mon, 3 Mar 2014 05:45:45 -0800 (PST)
+In-Reply-To: <CABt1HWqqXbQnj05nodqNtz6Ky6ZGZ9hRyXi1hNSsUVQg4pEr5g@mail.gmail.com>
+References: <1393581801993-5786736.post@n5.nabble.com> <20140228125300.639cda52@linux-du93.site>
+ <CABt1HWqqXbQnj05nodqNtz6Ky6ZGZ9hRyXi1hNSsUVQg4pEr5g@mail.gmail.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Mon, 3 Mar 2014 07:45:45 -0600
+Message-ID: <CALy+7UnBvX8sbimdHzfiE7DMZ27XJvYjQAN6E3=aNxxvs9wXwg@mail.gmail.com>
+Subject: Re: Maven copies 3 jars in lib folder (skinny war) for no reason
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> I still cannot understand why those three jars are copied there. Two of
+> them they are not in the dependency tree at all, so the war should not need
+> them, and the other one (seam) is a depedency of other 4 artifacts, which
+> means that is also referenced from ouside the war so it should be on the
+> EAR lib.
+
+Have you run "mvn clean" recently? If not, they may just be leftovers
+from previous builds still in the target folder which keeps them in
+the WAR.
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,194 @@
+From users-return-137292-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Sep 15 16:34:13 2014
+Return-Path: <users-return-137292-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 20E04112FE
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 15 Sep 2014 16:34:13 +0000 (UTC)
+Received: (qmail 31385 invoked by uid 500); 15 Sep 2014 16:34:11 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 31295 invoked by uid 500); 15 Sep 2014 16:34:11 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 31283 invoked by uid 99); 15 Sep 2014 16:34:11 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 15 Sep 2014 16:34:11 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of carlspring@gmail.com designates 209.85.217.177 as permitted sender)
+Received: from [209.85.217.177] (HELO mail-lb0-f177.google.com) (209.85.217.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 15 Sep 2014 16:34:05 +0000
+Received: by mail-lb0-f177.google.com with SMTP id l4so4830840lbv.36
+        for <users@maven.apache.org>; Mon, 15 Sep 2014 09:33:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=G8ANBv9poo9pBvxn6LnXo+c9aTPLee1YdH4FQeczuDM=;
+        b=UGrhSflvLls6dxSPchUGM0HyN/rJnxfuP5VHaRIYSHG34c0KI6uJ+Rd+2zc64V9zyU
+         zW8HtwbiOBu/D/146tIQ6yytokgiYZOpUQ9pce9I8/Z9td57vbvb0IgoP5LqAgcRw6Lg
+         dobOF54vNjP8O7VB99ufhQVkpMrreHHMu/WI84zIMgOqrVQsP+D2xR0BQFBMSl0Ik7nT
+         MxPXoxhSiejD7cWiWS+5UukuIX5gd8Vd5Kvx2xSdrY/kSBjU+udV5JF1aN6c+MiPN3M5
+         4DTLYgffCAyFier5OmGw0EAU8y0HsfXbrziEjHO35ChCMrg9COX5or6pC3qu5eyjqaNq
+         IJ/w==
+X-Received: by 10.112.141.7 with SMTP id rk7mr4456183lbb.83.1410798343282;
+ Mon, 15 Sep 2014 09:25:43 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.112.85.99 with HTTP; Mon, 15 Sep 2014 09:25:23 -0700 (PDT)
+In-Reply-To: <CA+kKrXo__TB+NPx=-VGdcrMsgiC34WfkqsBqtWO04q7pN71Z-Q@mail.gmail.com>
+References: <CA+kKrXo__TB+NPx=-VGdcrMsgiC34WfkqsBqtWO04q7pN71Z-Q@mail.gmail.com>
+From: Martin Todorov <carlspring@gmail.com>
+Date: Mon, 15 Sep 2014 17:25:23 +0100
+Message-ID: <CANnZoJuwak1nb+L8t7tQY2Xrkd27o8g_ak+vgZ0yHcmmzMRjvQ@mail.gmail.com>
+Subject: Re: making jar with conf files
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c37e1a19e41605031d16e2
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c37e1a19e41605031d16e2
+Content-Type: text/plain; charset=UTF-8
+
+Hi Aitor,
+
+You should place all your configuration files under src/main/resources. For
+example: src/main/resources/myconf/myconf.properties. All files under
+src/main/resources will get packaged into your artifact's jar file.
+Furthermore, all your test resources should be placed (likewise) under
+src/test/resources. The resources under there won't be packaged under your
+final artifact and will only be used for the purpose of your tests.
+
+Kind regards,
+
+Martin
+
+
+
+
+On Mon, Sep 15, 2014 at 4:59 PM, Aitor Iturriondobeitia <
+laudio.info@gmail.com> wrote:
+
+> hello
+>
+> i have one java maven proyecto.
+> into this proyect i have one dir "myconf" with the conf files
+> whe i make the jar install (mvn clean install) it creates the jar files
+> with the code but no the con files.
+> the structure is:
+> myproyecto
+>  |-src/java/main/.....
+>   |-myconf
+>     |-miconf.properties
+> |-myconf.xml
+> into my jar only appears the META-INF dir and the code but not the myconf
+> directory and the conf files.
+> the pom.xml file is:
+> <project xmlns="http://maven.apache.org/POM/4.0.0"
+> xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+> xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+> http://maven.apache.org/xsd/maven-4.0.0.xsd">
+> <modelVersion>4.0.0</modelVersion>
+> <groupId>mygroup</groupId>
+> <artifactId>myid</artifactId>
+> <name>myid</name>
+> <packaging>jar</packaging>
+> <version>0.0.1-SNAPSHOT</version>
+> <description>myid</description>
+> <build>
+> <sourceDirectory>${basedir}/src/java/main</sourceDirectory>
+> <filters>
+> </filters>
+> <resources>
+> <resource>
+> <directory>c:\config</directory>
+> <filtering>true</filtering>
+> <includes>
+> <include>myconf/**/*.*</include>
+> </includes>
+> </resource>
+> </resources>
+> <plugins>
+> <plugin>
+> <groupId>org.apache.maven.plugins</groupId>
+> <artifactId>maven-compiler-plugin</artifactId>
+> <configuration>
+> <source>1.6</source>
+> <target>1.6</target>
+> <encoding>Cp1252</encoding>
+> </configuration>
+> </plugin>
+> <plugin>
+> <groupId>org.apache.maven.plugins</groupId>
+> <artifactId>maven-dependency-plugin</artifactId>
+> <executions>
+> <execution>
+> <id>copy-dependencies</id>
+> <phase>package</phase>
+> <goals>
+> <goal>copy-dependencies</goal>
+> </goals>
+> <configuration>
+> <outputDirectory>
+> target/lib
+> </outputDirectory>
+> <overWriteReleases>true</overWriteReleases>
+> <overWriteSnapshots>
+> true
+> </overWriteSnapshots>
+> <overWriteIfNewer>true</overWriteIfNewer>
+> </configuration>
+> </execution>
+> </executions>
+> </plugin>
+> <plugin>
+> <groupId>org.apache.maven.plugins</groupId>
+> <artifactId>maven-jar-plugin</artifactId>
+> <version>2.5</version>
+> <configuration>
+> <archive>
+> <manifest>
+> <mainClass>
+> com.myo.myclass
+> </mainClass>
+> <addClasspath>true</addClasspath>
+> <classpathPrefix>lib</classpathPrefix>
+> </manifest>
+> <manifestEntries>
+> <Autor>yo</Autor>
+> <Empresa>anonimo</Empresa>
+> <Built-By>mio</Built-By>
+> </manifestEntries>
+> </archive>
+> </configuration>
+> </plugin>
+> </plugins>
+> </build>
+>
+> <dependencies>
+> <dependency>
+> <groupId>org.apache.poi</groupId>
+> <artifactId>poi</artifactId>
+> <version>3.6</version>
+> </dependency>
+> <dependency>
+> <groupId>org.apache.poi</groupId>
+> <artifactId>poi-ooxml</artifactId>
+> <version>3.6</version>
+> </dependency>
+> <dependency>
+> <groupId>log4j</groupId>
+> <artifactId>log4j</artifactId>
+> <version>1.2.15</version>
+> </dependency>
+> </dependencies>
+> </project>
+>
+
+--001a11c37e1a19e41605031d16e2--
+

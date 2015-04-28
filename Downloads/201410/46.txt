@@ -1,0 +1,89 @@
+From users-return-137664-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Oct 31 15:52:35 2014
+Return-Path: <users-return-137664-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BDC63179A5
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 31 Oct 2014 15:52:35 +0000 (UTC)
+Received: (qmail 30461 invoked by uid 500); 31 Oct 2014 15:52:33 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 30373 invoked by uid 500); 31 Oct 2014 15:52:33 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 30362 invoked by uid 99); 31 Oct 2014 15:52:33 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 31 Oct 2014 15:52:33 +0000
+Received: from localhost (HELO robertscholte) (127.0.0.1)
+  (smtp-auth username rfscholte, mechanism login)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Fri, 31 Oct 2014 15:52:33 +0000
+Content-Type: text/plain; charset=iso-8859-15; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: mvn release:branch updating POM incorrectly
+References: <1414770064173-5811978.post@n5.nabble.com>
+Date: Fri, 31 Oct 2014 16:52:26 +0100
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.xolqdof7kdkhrr@robertscholte>
+In-Reply-To: <1414770064173-5811978.post@n5.nabble.com>
+User-Agent: Opera Mail/12.17 (Win32)
+
+Hi,
+
+I can't see which version you are using.
+A good start would be to ensure you're using the latest (i.e 2.5.1) by  
+locking the version in the pom.xml
+If it still happens, go through the Jira list[1] to see if there's an  
+issue matching your problem.
+
+thanks,
+Robert
+
+[1] https://jira.codehaus.org/browse/MRELEASE
+
+Op Fri, 31 Oct 2014 16:41:04 +0100 schreef Leonie  
+<leonie.kruger@rmb.co.za>:
+
+> Good day,
+>
+> I hope someone can assist. I have posted something, but did not get any
+> reply. When running the release:branch, my branch gets created, but my  
+> scn
+> connection url in the trunk POM is not updating to point to the new  
+> branch's
+> URL.
+>
+> I tried to pinpoint the problem. I opened the POM in notepad ++ and ran  
+> the
+> mvn release:branch command. I could see the POM file updated when the  
+> second
+> cmd.exe ran, but when the third cmd.exe ran, the POM changed scm  
+> connection
+> url back to what it was before I tried to create the branch. Thanks in
+> advance. I need a solution before Monday and have no idea what to do
+> anymore.
+> pr <http://maven.40175.n5.nabble.com/file/n5811978/Untitled.bmp> oblem. I
+> can see that my POM file gets updated, b
+>
+>
+>
+> --
+> View this message in context:  
+> http://maven.40175.n5.nabble.com/mvn-release-branch-updating-POM-incorrectly-tp5811978.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,117 @@
+From users-return-136619-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jun 20 13:42:15 2014
+Return-Path: <users-return-136619-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 55FE9114CB
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 20 Jun 2014 13:42:15 +0000 (UTC)
+Received: (qmail 50911 invoked by uid 500); 20 Jun 2014 13:42:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 50814 invoked by uid 500); 20 Jun 2014 13:42:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 50801 invoked by uid 99); 20 Jun 2014 13:42:13 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 20 Jun 2014 13:42:13 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mfriedenhagen@gmail.com designates 209.85.219.44 as permitted sender)
+Received: from [209.85.219.44] (HELO mail-oa0-f44.google.com) (209.85.219.44)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 20 Jun 2014 13:42:11 +0000
+Received: by mail-oa0-f44.google.com with SMTP id i7so7345383oag.3
+        for <users@maven.apache.org>; Fri, 20 Jun 2014 06:41:46 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=b028JttoIpSBYw9LmfkjZf3edBPEfxHQRxLtoxBOipE=;
+        b=bfXthQ//ASKOdzyRM2bFyBaq7it7YYk0z2Y2ZIouhXoSAPUTTWW7VVoEmnF6Kr2B9a
+         Ea6YURzw2megozUr93yYC1ItWySDCRKvbWu+ligJRT+2sShOvgLqBpiX/3dlDR2TUBNb
+         SdhMal+xHk8Qqh0qAzeNxB8CucV8C4lhvjUi26cjGmQgYHwIIMjZMdw5E8nWHHZjjOeS
+         tdBq06MiZfgTLkpV6DT1sSYCrTf4WcFnWuTHPjZ9pCZLwWQ7V4MshfKBNx5XosHcq3XF
+         aJQOwWh25ZVpcZtNqjZ1sauPo9fCDGs43TBFRuTQm2V02UXzQOWaHtVXLrTzK2kmxSGT
+         e26g==
+X-Received: by 10.60.42.162 with SMTP id p2mr3542696oel.27.1403271706579; Fri,
+ 20 Jun 2014 06:41:46 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.182.106.193 with HTTP; Fri, 20 Jun 2014 06:41:06 -0700 (PDT)
+In-Reply-To: <CAArU9iboqCctm90HG0fptg9rE0HqgWO_9dcVoN9Bxt_sZZe0dw@mail.gmail.com>
+References: <CAK8jvqyWA1V5OQAUi0bFA=72bR_jiXy2smzqh+4n_QR1T8gqOQ@mail.gmail.com>
+ <CAArU9iboqCctm90HG0fptg9rE0HqgWO_9dcVoN9Bxt_sZZe0dw@mail.gmail.com>
+From: Mirko Friedenhagen <mfriedenhagen@gmail.com>
+Date: Fri, 20 Jun 2014 15:41:06 +0200
+Message-ID: <CAK8jvqyh6v8PxDezJVm5OZ=6QO0XRVBL_wQneEDpJpbJgi-Y8A@mail.gmail.com>
+Subject: Re: Maven plugin which displays the parents of a given project recursively
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Thanks, putting a goal like this in the versions-maven-plugin is a
+good idea :-).
+Concerning automatic updates:
+* We do this in some ways, in the end product teams have the
+responsibility for a working release, so I may just advise to do this.
+* Unfortunately Maven configurations and usage are to diverse to
+enforce this easily.
+
+Regards Mirko
+--
+http://illegalstateexception.blogspot.com/
+https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+https://bitbucket.org/mfriedenhagen/
+
+
+On Fri, Jun 20, 2014 at 2:52 PM, jieryn <jieryn@gmail.com> wrote:
+> http://mojo.codehaus.org/versions-maven-plugin/
+>
+> I have Jenkins jobs which @weekly run a smoke test "update all the
+> things and see if it works" build, for each project. I also have a set
+> of jobs which are virtually the same but simply run the display
+> versions of the plugin goals.
+>
+> If the team gets confident in this process, you can exploit
+> scm:checkin to automatically commit these dependency and parent
+> updates if the build is successful. It's pretty easy, actually.
+>
+> On Fri, Jun 20, 2014 at 8:09 AM, Mirko Friedenhagen
+> <mfriedenhagen@gmail.com> wrote:
+>> Hello,
+>>
+>> does anybody know of a plugin which shows the GAV coordinates of the
+>> parents of a given project recursively? Or is there any feasible
+>> plugin where I could contribute with a goal?
+>>
+>> My team of 3 is consulting approx. 200 developers in regards of build
+>> engineering with ca. 1000 Jenkins jobs and we often see they are using
+>> outdated versions of our department POM. Having this information in
+>> the console of a Jenkins job would allow to see this without checking
+>> the POM.
+>>
+>> Regards Mirko
+>> --
+>> http://illegalstateexception.blogspot.com/
+>> https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+>> https://bitbucket.org/mfriedenhagen/
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

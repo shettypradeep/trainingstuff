@@ -1,0 +1,137 @@
+From users-return-135985-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Mar 28 11:25:05 2014
+Return-Path: <users-return-135985-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C5369100D1
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 28 Mar 2014 11:25:05 +0000 (UTC)
+Received: (qmail 54005 invoked by uid 500); 28 Mar 2014 11:25:02 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 53531 invoked by uid 500); 28 Mar 2014 11:25:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 53520 invoked by uid 99); 28 Mar 2014 11:24:59 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 11:24:59 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [88.116.248.50] (HELO sartre.xss.co.at) (88.116.248.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 11:24:55 +0000
+Received: from goethe.intern.xss.co.at (goethe.intern.xss.co.at [192.168.162.10])
+	by sartre.xss.co.at (8.14.3/8.14.3) with ESMTP id s2SBOWBj003040
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK);
+	Fri, 28 Mar 2014 12:24:32 +0100
+Received: from linux-du93.site ([10.168.162.10])
+	by goethe.intern.xss.co.at (8.13.8/8.13.8) with ESMTP id s2SBOWXp001044
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES128-SHA bits=128 verify=NO);
+	Fri, 28 Mar 2014 12:24:32 +0100
+Date: Fri, 28 Mar 2014 12:24:26 +0100
+From: Martin Hoeller <martin@xss.co.at>
+To: "Maven Users List" <users@maven.apache.org>
+Cc: bmathus@batmat.net
+Subject: Re: OutOfMemoryError with maven-javadoc-plugin
+Message-ID: <20140328122426.3493fa7e@linux-du93.site>
+In-Reply-To: <CANWgJS5gA-7vKFKKppwyWcn=iZanw0qrRMn0hxyXSyMu4wuq5A@mail.gmail.com>
+References: <20140328103657.63a66f1e@linux-du93.site>
+	<CANWgJS5gA-7vKFKKppwyWcn=iZanw0qrRMn0hxyXSyMu4wuq5A@mail.gmail.com>
+X-Mailer: Claws Mail 3.7.10 (GTK+ 2.24.7; x86_64-suse-linux-gnu)
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=PGP-SHA1;
+ boundary="Sig_/uQ761cu0SMdHEjqeanzKH8k"; protocol="application/pgp-signature"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Sig_/uQ761cu0SMdHEjqeanzKH8k
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi Baptiste!
+
+I tried it but it didn't change anything. Still OutOfMemoryError :(
+
+-martin
+
+On 28 M=C3=A4r 2014, Baptiste Mathus wrote:
+
+> Sorry, I haven't used javadoc for years now, but as javadoc is an external
+> tool, I guess you should specify additionalJOption?
+> http://maven.apache.org/plugins/maven-javadoc-plugin/javadoc-mojo.html#ad=
+ditionalJOption
+>=20
+> Cheers
+>=20
+>=20
+> 2014-03-28 10:36 GMT+01:00 Martin Hoeller <martin@xss.co.at>:
+>=20
+> > Hi!
+> >
+> > I have a quite large multimodule project with >150 modules. When
+> > executing "mvn site" the maven-javadoc-plugin is executed with default
+> > configuration. After some time of execution it fails in "aggregate" goal
+> > and I get a
+> >
+> >   Exception in thread "main" java.lang.OutOfMemoryError: GC overhead li=
+mit
+> > exceeded"
+> >
+> > I know, I can adjust MAVEN_OPTS to give it more memory and I tried it w=
+ith
+> > MAVEN_OPTS=3D"-Xmx1536m -Xms512m -XX:MaxPermSize=3D512m" and with
+> > MAVEN_OPTS=3D"-Xmx1280m -Xms256m -XX:MaxPermSize=3D768m". Both just lea=
+ding
+> > to another OutOfMemoryError (but no GC overhead limit exceeded).
+> >
+> > I'm currently using maven 3.1.1 and tested with m-javadoc-p 2.8 and 2.9=
+.1
+> > (no difference).
+> >
+> > So my question is: does any body have some idea how to tweak parameters
+> > to solve this issue?
+> >
+> > My current workaround is to disable aggregation in <reporting> section =
+as
+> > described here [0]. But this is really just a workaround, no solution :(
+> >
+> > thx for your help,
+> > - martin
+> >
+> > [0]
+> > https://maven.apache.org/plugins/maven-javadoc-plugin/examples/selectiv=
+e-javadocs-report.html
+> >
+>=20
+>=20
+>=20
+> --=20
+> Baptiste <Batmat> MATHUS - http://batmat.net
+> Sauvez un arbre,
+> Mangez un castor !
+
+
+--=20
+Martin H=C3=B6ller                   | martin.hoeller@xss.co.at
+*x Software + Systeme           | http://www.xss.co.at/
+Karmarschgasse 51/2/20          | Tel: +43-1-6060114-40
+A-1100 Vienna, Austria          | Fax: +43-1-6060114-71
+
+--Sig_/uQ761cu0SMdHEjqeanzKH8k
+Content-Type: application/pgp-signature; name=signature.asc
+Content-Disposition: attachment; filename=signature.asc
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.18 (GNU/Linux)
+
+iEYEARECAAYFAlM1W+4ACgkQYJf22JPx7tlh/wCcCb3LLSmr/gz1vAj+P3B9gqtg
+6UkAnj4eDfq/6vzs3GF1wY1imjnS1Mhd
+=iTzM
+-----END PGP SIGNATURE-----
+
+--Sig_/uQ761cu0SMdHEjqeanzKH8k--
+

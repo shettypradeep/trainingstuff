@@ -1,0 +1,108 @@
+From users-return-136312-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu May  1 16:40:46 2014
+Return-Path: <users-return-136312-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6A64610434
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  1 May 2014 16:40:46 +0000 (UTC)
+Received: (qmail 57798 invoked by uid 500); 1 May 2014 16:40:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 57724 invoked by uid 500); 1 May 2014 16:40:41 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 57716 invoked by uid 99); 1 May 2014 16:40:41 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 01 May 2014 16:40:41 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.213.174 as permitted sender)
+Received: from [209.85.213.174] (HELO mail-ig0-f174.google.com) (209.85.213.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 01 May 2014 16:40:36 +0000
+Received: by mail-ig0-f174.google.com with SMTP id h18so707234igc.13
+        for <users@maven.apache.org>; Thu, 01 May 2014 09:40:15 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type:content-transfer-encoding;
+        bh=GM7m7EGWHv4BLjpD3ndpAYu4VMPlLFXhzkAEElZTIp4=;
+        b=kgl1IDsr5C7LqvRLFPXR9hLTUEm4m/eCdIMmiOJ5E2Qb3ZuruR6xyrDcj04xmp03ok
+         ThNJhoXVwrVZGrOAjPBEymuEYVl9X+/7zcLJ4aKwM+HdfTFq2oKpEXrP/8X2Gl3mLayc
+         mc/x2knEGkdkgKvrNCRM3b/0k3CGcdjfT3LnLkkn7X9hmJmBbaJrBeOZ4f98+abQxbbu
+         meSl/Bl03mlvfc36yfA76iCgu9QGLHB3VMZsOyTQNrv9SXAhdxurTg4JrJw4Wai1q9JO
+         O7lEbYKMm8PS21390xqJEhNAxJaKkB/LAVVxqNCr3tmlMQsJZBb0TFZCIPnYWA4JKEnN
+         NZXw==
+X-Received: by 10.50.36.66 with SMTP id o2mr4308566igj.24.1398962415285;
+        Thu, 01 May 2014 09:40:15 -0700 (PDT)
+Received: from Erics-MacBook-Pro.local (S0106602ad07f9cfa.vc.shawcable.net. [24.85.131.20])
+        by mx.google.com with ESMTPSA id z4sm10142043igl.13.2014.05.01.09.40.13
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Thu, 01 May 2014 09:40:14 -0700 (PDT)
+Message-ID: <536278EC.5050100@gmail.com>
+Date: Thu, 01 May 2014 09:40:12 -0700
+From: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: [ANN] flatten-maven-plugin 1.0.0-beta-1 Released
+References: <53626E7D.4080204@j-hohwiller.de>
+In-Reply-To: <53626E7D.4080204@j-hohwiller.de>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 8bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+When I tried using Maven with IBM's Jazz, I had to manually flatten my 
+projects because Jazz could not deal with nested projects (modules).
+
+Was the flatten-maven-plugin designed to solve this problem, or some 
+other problems?
+
+Cheers, Eric
+
+On 2014-05-01, 8:55 AM, Jörg Hohwiller wrote:
+> Hi,
+>
+> The Mojo team is pleased to announce the release of the 
+> flatten-maven-plugin version 1.0.0-beta-1.
+>
+> Flatten Maven Plugin generates a flattened version of your pom.xml and 
+> makes maven to install
+> and deploy this one instead of the original pom.xml.
+>
+> http://mojo.codehaus.org/flatten-maven-plugin/
+>
+> To get this update, simply specify the version in your project's 
+> plugin configuration:
+>
+> <plugin>
+>         <groupId>org.codehaus.mojo</groupId>
+>         <artifactId>flatten-maven-plugin</artifactId>
+>         <version>1.0.0-beta-1</version>
+> </plugin>
+>
+> All you need to do is add the plugin to the plugins in your build 
+> section.
+>
+> This is the initial release.
+>
+> Enjoy,
+>
+> The Mojo team.
+>
+> Jörg
+>
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

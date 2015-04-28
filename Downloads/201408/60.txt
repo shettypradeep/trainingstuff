@@ -1,0 +1,152 @@
+From users-return-137143-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Aug 28 14:58:13 2014
+Return-Path: <users-return-137143-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F0F311113D
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 28 Aug 2014 14:58:12 +0000 (UTC)
+Received: (qmail 24691 invoked by uid 500); 28 Aug 2014 14:58:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 24589 invoked by uid 500); 28 Aug 2014 14:58:09 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 24391 invoked by uid 99); 28 Aug 2014 14:58:08 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 28 Aug 2014 14:58:08 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.216.54] (HELO mail-qa0-f54.google.com) (209.85.216.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 28 Aug 2014 14:58:03 +0000
+Received: by mail-qa0-f54.google.com with SMTP id x12so824709qac.13
+        for <users@maven.apache.org>; Thu, 28 Aug 2014 07:57:42 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:content-type:message-id:mime-version
+         :subject:date:references:to:in-reply-to;
+        bh=VP2PEON3ChtgCm0U7Y/JRNamvfhcKyRpLKdjfNlJgRE=;
+        b=QU/l72E0U5RsO85cf4Xi+t18I5HuynZQDNuRm+fYWVFuwwL7+wQE7ECDlQnPPfZVx9
+         dcvb+DPF0c4SDkX1vw3gq5RcZDHQBbqI/pLdxxyvSX7wrLqaCAkoQfRepVOL27uMFkgN
+         s9rf0IB1IcBAvUqkGR1PmUOX52x+lMqZDtfBZnoJ6KtRpHNANq6YSulrSoDx8+Ra28vY
+         3j2He6g0EGPRK9rgqATCYn/wx6A5VPep+gPvKjUtPvZ2wTVI21VqsRiL7XnLwcueyFdP
+         YZPpjNffC9+cRvBN9BzUEOhiVk3pAipZ1heiC+q+LmeTO8JGpU7ORuUsRvnCpXaDiLO1
+         hKLg==
+X-Gm-Message-State: ALoCoQmfj9knML3h5WpcVOAcIPBT4Id4rrTJqBbSzDKl+lZ8BHJD9Z3bLzbDqg2Io9p6RgrLip6S
+X-Received: by 10.224.131.8 with SMTP id v8mr7340841qas.31.1409237862060;
+        Thu, 28 Aug 2014 07:57:42 -0700 (PDT)
+Received: from [10.0.1.11] (192-0-154-177.cpe.teksavvy.com. [192.0.154.177])
+        by mx.google.com with ESMTPSA id 96sm5879014qgf.20.2014.08.28.07.57.41
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Thu, 28 Aug 2014 07:57:41 -0700 (PDT)
+From: Jason van Zyl <jason@takari.io>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_2E35F0CB-14F8-4BB6-8147-ADF241F2500A"
+Message-Id: <E5B01B08-D921-4A99-8A46-46344212A789@takari.io>
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.2\))
+Subject: Re: Atomic deploy at end to repo manager like Nexus
+Date: Thu, 28 Aug 2014 10:57:40 -0400
+References: <CAPCjjnF3kyacbJRntxc3EudL21mkdJe5m0SAZ8kNLpWLvE3y0g@mail.gmail.com> <53FE41E5.1080302@gmx.de> <CAPCjjnEHZa76RSYQbnE50+QD=VDHxQHhkCNnbdv5v12nMM8UdA@mail.gmail.com>
+To: Maven Users List <users@maven.apache.org>
+In-Reply-To: <CAPCjjnEHZa76RSYQbnE50+QD=VDHxQHhkCNnbdv5v12nMM8UdA@mail.gmail.com>
+X-Mailer: Apple Mail (2.1878.2)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_2E35F0CB-14F8-4BB6-8147-ADF241F2500A
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+If you want to pop into the hangout we can chat about it. I gave Karl a =
+little sample. The code that Takari is working on will be open source in =
+about 4 weeks but the mechanism we're using is available in the core =
+already. Our solution requires a custom server side because we're doing =
+an advanced form of continuous delivery. What I gave Karl can easily be =
+extended to work.
+
+On Aug 27, 2014, at 4:49 PM, Dan Tran <dantran@gmail.com> wrote:
+
+> Hi Karl,
+>=20
+> My build spans multiple hosts ( with helps from Jenkis), so =
+deployAtEnd is
+> not good enough.
+>=20
+> -D
+>=20
+>=20
+> On Wed, Aug 27, 2014 at 1:39 PM, Karl Heinz Marbaise =
+<khmarbaise@gmx.de>
+> wrote:
+>=20
+>> Hi Dan,
+>>=20
+>> are you using deployAtEnd / installAtEnd options of =
+maven-install-plugin,
+>> maven-deploy-plugin ? or do you have any issues with that ?
+>>=20
+>>=20
+>>=20
+>> On 8/27/14 10:36 PM, Dan Tran wrote:
+>>=20
+>>> Hi
+>>>=20
+>>> Per last Maven hangout, Jason and Karl had a discussion and code =
+shared on
+>>> topic. unzip [1] nexus plugin was mentioned
+>>>=20
+>>> Can you share this knowledge?
+>>>=20
+>>> For my case, I have a multiple module multiple platform builds
+>>> orchestrated
+>>> by CI ( jenkins)
+>>>=20
+>>> I like to to delay all the deployments, all the way to the end, zip =
+the
+>>> up,
+>>> and deploy to nexus which will correctly unpack and merge to one of =
+the
+>>> repositories ( ie snapshot or staging )
+>>>=20
+>>=20
+>>=20
+>> Kind regards
+>> Karl-Heinz Marbaise
+>>=20
+>>=20
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>=20
+>>=20
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+http://twitter.com/takari_io
+---------------------------------------------------------
+
+Simplex sigillum veri. (Simplicity is the seal of truth.)
+
+
+
+
+
+
+
+
+
+
+--Apple-Mail=_2E35F0CB-14F8-4BB6-8147-ADF241F2500A--
+

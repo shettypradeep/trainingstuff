@@ -1,0 +1,92 @@
+From users-return-136620-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jun 20 14:19:27 2014
+Return-Path: <users-return-136620-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 584C211621
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 20 Jun 2014 14:19:27 +0000 (UTC)
+Received: (qmail 32912 invoked by uid 500); 20 Jun 2014 14:19:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 32818 invoked by uid 500); 20 Jun 2014 14:19:25 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 32385 invoked by uid 99); 20 Jun 2014 14:19:25 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 20 Jun 2014 14:19:25 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bimargulies@gmail.com designates 209.85.214.176 as permitted sender)
+Received: from [209.85.214.176] (HELO mail-ob0-f176.google.com) (209.85.214.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 20 Jun 2014 14:19:17 +0000
+Received: by mail-ob0-f176.google.com with SMTP id wm4so1120791obc.21
+        for <users@maven.apache.org>; Fri, 20 Jun 2014 07:18:57 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=+cRjochlwbe1lTHMaN1jWW33/VWvOcW99ynhH9u9A1U=;
+        b=RRLv0IwZWWQNKLH7sjnli8ycwpAELKToJrUw7AxF+sLs92rGTnvTonqIiVimr4AQm/
+         LR+Hw7diXcM49Tnurr80lXtD5jyVBt6Gx4s/kIbSlUSLFqP4su/w6R7HHbnqQ6p+ghg8
+         uUowXOtKd+U9qa6ay1JclM+k9v0yNLvqjFEgYiqTjCxBxvayJWeeJDaskENGP0LvfrXk
+         t4cMia1GTgftvjJ0lwA5usu291j6oYpOkCeXffB/gAOytaV3sChpW3O7yA3Qq4Chz8/A
+         OPFDPoWf7NYW8iiDRpXkiNIiZyLmYRH6GLWiPAZ2O4wQO1yUs45tXFtHdfcl6K0mEi0a
+         Gl0w==
+MIME-Version: 1.0
+X-Received: by 10.60.131.232 with SMTP id op8mr3728648oeb.42.1403273937228;
+ Fri, 20 Jun 2014 07:18:57 -0700 (PDT)
+Received: by 10.202.69.198 with HTTP; Fri, 20 Jun 2014 07:18:57 -0700 (PDT)
+In-Reply-To: <CAJZRQKz1asNfsnUZpP7Rznz0aPsX+Ve0adMd1hjQO5X8-Kc-eA@mail.gmail.com>
+References: <CALhtWkd7c8ZZ_BjJDB27WJwn9tn2boOuw4T4zC22HkdTK8oOzw@mail.gmail.com>
+	<CAJZRQKz1asNfsnUZpP7Rznz0aPsX+Ve0adMd1hjQO5X8-Kc-eA@mail.gmail.com>
+Date: Fri, 20 Jun 2014 10:18:57 -0400
+Message-ID: <CALhtWkf=8J0MQYOvO0tctU6UtWdr_8FMsb4kjvooKbCFE=pYmA@mail.gmail.com>
+Subject: Re: Finer control of surefire method parallelism?
+From: Benson Margulies <bimargulies@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+That wouldn't have worked, but some
+
+   synchronized (CommandClass.class) {
+   }
+
+in the test methods did.
+
+
+On Fri, Jun 20, 2014 at 8:23 AM, Kristian Rosenvold
+<kristian.rosenvold@gmail.com> wrote:
+> I would add a static threadlocal buffer to the PrintStream you're installing :)
+>
+> Kristian
+>
+>
+> 2014-06-20 13:56 GMT+02:00 Benson Margulies <bimargulies@gmail.com>:
+>> I've got some tests that are validating the usage messages of main
+>> methods. To do this, they go and call System.setOut. Running two of
+>> these in parallel is, of course, a disaster.
+>>
+>> Is there any way to exempt a class from the parallel option?
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

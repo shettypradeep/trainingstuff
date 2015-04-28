@@ -1,0 +1,122 @@
+From users-return-135403-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb 10 21:53:44 2014
+Return-Path: <users-return-135403-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CB1FD10586
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 10 Feb 2014 21:53:44 +0000 (UTC)
+Received: (qmail 65747 invoked by uid 500); 10 Feb 2014 21:53:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 65685 invoked by uid 500); 10 Feb 2014 21:53:19 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 65667 invoked by uid 99); 10 Feb 2014 21:53:19 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 10 Feb 2014 21:53:19 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bimargulies@gmail.com designates 209.85.216.176 as permitted sender)
+Received: from [209.85.216.176] (HELO mail-qc0-f176.google.com) (209.85.216.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 10 Feb 2014 21:53:14 +0000
+Received: by mail-qc0-f176.google.com with SMTP id e16so11673730qcx.35
+        for <users@maven.apache.org>; Mon, 10 Feb 2014 13:52:53 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type:content-transfer-encoding;
+        bh=peNkZja3/Q8H77zFYUqanuPRu2kbHv7htm6ewVd8Rog=;
+        b=RQTU7D1k4xCGydwo7L++f6CDot4Rph9Q4K/XbfXE3uNiJ+CsRH3lIZ+hpVC0vsEO/u
+         LnoGVU5XBXviSANrAhGqOrtjynIyyMlemCcsMk1RWC8IPjt6q+RHxDPGWVsUwordfEJS
+         v7HFsRwCsKWTE9phdVYjnNhukOJFJmT4ifwDSFuzspAL8Za6voSXNoKvRMrWqSlrHPZf
+         YF4gWbyfyoWbQ+NrFvmcDDBzWX+f+kKwQHWITnhXaF9cTVA7jTmTp5/p4A0np2x2VlN6
+         5XHVsu03npPVXlBqD06SjbxKJbKAw/7/0fp9EvqsFwxzgVOKU3i+euQQsbhln0nTXtWO
+         WWCw==
+MIME-Version: 1.0
+X-Received: by 10.224.88.131 with SMTP id a3mr52187905qam.34.1392069173633;
+ Mon, 10 Feb 2014 13:52:53 -0800 (PST)
+Received: by 10.140.84.176 with HTTP; Mon, 10 Feb 2014 13:52:53 -0800 (PST)
+In-Reply-To: <8D07ADFE-575E-4A82-A1EF-444C7A2B9524@yahoo.com>
+References: <D2CBF21F-C618-4564-8B47-878B8E55F982@yahoo.com>
+	<CALhtWkeOqCqE3JmPNLgiXNxEKDAtA6pxv7D7mPWxL8WrgTJVaw@mail.gmail.com>
+	<8D07ADFE-575E-4A82-A1EF-444C7A2B9524@yahoo.com>
+Date: Mon, 10 Feb 2014 16:52:53 -0500
+Message-ID: <CALhtWkfn+WrmDZC=vH8Zv5ZERgzC-7mkWpaizgX9giWFH-981A@mail.gmail.com>
+Subject: Re: Add Apache License to reduced pom (shade plugin)
+From: Benson Margulies <bimargulies@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+that JIRA is different. It is asking for _comments_ from the original
+pom to flow through, which is pretty nearly impossible. if you ask for
+a brand new comment to be inserted based on some configuration
+element, and better yet offer a patch, that's doable.
+
+
+On Sun, Feb 9, 2014 at 5:20 PM, Flavio Junqueira <fpjunqueira@yahoo.com> wr=
+ote:
+> Thanks for getting back, but I'm not sure creating a jira is any good in =
+this case. We've found this jira:
+>
+> https://jira.codehaus.org/browse/MSHADE-48
+>
+> which has been open for quite some time. I'm basically interested in what=
+ other projects have had
+> this same problem and how they solved it. Perhaps it is ok to have the re=
+duced pom without a license
+> because it is a generated file.
+>
+> Thanks,
+> -Flavio
+>
+>
+> On 09 Feb 2014, at 03:22, Benson Margulies <bimargulies@gmail.com> wrote:
+>
+>> Please file a JIRA on the shade plugin.
+>>
+>> On Sat, Feb 8, 2014 at 10:48 AM, Flavio Junqueira <fpjunqueira@yahoo.com=
+> wrote:
+>>> Hi there,
+>>>
+>>> We are using the shade plugin in the Apache BookKeeper project (BOOKKEE=
+PER-724, BOOKKEEPER-730) and we originally wanted to the add the Apache lic=
+ense to the reduced pom generated so that we could ship it with our next re=
+lease. However, we couldn't find any option that allows us to add the licen=
+se automatically. Is it right that there is no option to add it automatical=
+ly to the reduced pom? If this is right, then the next question is if we re=
+ally need to add the license header to a generated file.
+>>>
+>>> Has anyone had this problem before? Any suggestion of how to deal with =
+this problem?
+>>>
+>>> Thanks!
+>>> -Flavio
+>>> ---------------------------------------------------------------------
+>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,59 @@
+From users-return-136536-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jun  5 00:46:49 2014
+Return-Path: <users-return-136536-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 206101120C
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  5 Jun 2014 00:46:49 +0000 (UTC)
+Received: (qmail 92389 invoked by uid 500); 5 Jun 2014 00:46:47 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 92286 invoked by uid 500); 5 Jun 2014 00:46:47 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 96929 invoked by uid 99); 4 Jun 2014 22:49:18 -0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Date: Wed, 4 Jun 2014 15:48:51 -0700 (PDT)
+From: aw110f <aw110f@yp.com>
+To: users@maven.apache.org
+Message-ID: <1401922131203-5794926.post@n5.nabble.com>
+In-Reply-To: <AANLkTimbJ-mrQ=cotOH250jTAiXYw4KuFEMjwy9yRGZm@mail.gmail.com>
+References: <AANLkTi=aQwbYBTjBXuGj7+KuvUxTQLLUm9oiu8AmQrKG@mail.gmail.com> <4D3EEA53.9040306@apache.org> <AANLkTimbJ-mrQ=cotOH250jTAiXYw4KuFEMjwy9yRGZm@mail.gmail.com>
+Subject: Re: Site deployment (scp) with NullKnownHostProvider fails on
+ Maven3
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I'm running into the same problem where I'm trying to disable host key
+checking but it still doesn't bypass it.
+
+      <configuration>
+        <knownHostsProvider
+implementation="org.apache.maven.wagon.providers.ssh.knownhost.KnownHostProvider">
+          <hostKeyChecking>no</hostKeyChecking>
+        </knownHostsProvider>
+      </configuration>
+
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Site-deployment-scp-with-NullKnownHostProvider-fails-on-Maven3-tp3356273p5794926.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

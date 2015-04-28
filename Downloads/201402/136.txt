@@ -1,0 +1,93 @@
+From users-return-135657-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb 28 19:13:16 2014
+Return-Path: <users-return-135657-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 646B11070F
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 28 Feb 2014 19:13:16 +0000 (UTC)
+Received: (qmail 27476 invoked by uid 500); 28 Feb 2014 19:13:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 27367 invoked by uid 500); 28 Feb 2014 19:13:12 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 27359 invoked by uid 99); 28 Feb 2014 19:13:12 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Feb 2014 19:13:12 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [98.139.213.55] (HELO nm17-vm1.bullet.mail.bf1.yahoo.com) (98.139.213.55)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Feb 2014 19:13:06 +0000
+Received: from [66.196.81.174] by nm17.bullet.mail.bf1.yahoo.com with NNFMP; 28 Feb 2014 19:12:44 -0000
+Received: from [98.139.212.205] by tm20.bullet.mail.bf1.yahoo.com with NNFMP; 28 Feb 2014 19:12:44 -0000
+Received: from [127.0.0.1] by omp1014.mail.bf1.yahoo.com with NNFMP; 28 Feb 2014 19:12:44 -0000
+X-Yahoo-Newman-Property: ymail-3
+X-Yahoo-Newman-Id: 845893.35698.bm@omp1014.mail.bf1.yahoo.com
+Received: (qmail 75655 invoked by uid 60001); 28 Feb 2014 19:12:44 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s1024; t=1393614764; bh=z3/OMlyEMgNFsfkRU1IWYogb9AH3axhEG9ccaXQJ4a8=; h=X-YMail-OSG:Received:X-Rocket-MIMEInfo:X-Mailer:References:Message-ID:Date:From:Reply-To:Subject:To:In-Reply-To:MIME-Version:Content-Type; b=hmvwVPe9Y3bCW5mqFzxQEucR+X0f+7YOgZ6b5WgvHKFU2yDnw6NYHwAxbfZjDqMiVzwqGSBqeYQlhIp9IN1lgtfw31JfWAXSZaatmZAlQeW5HvAb8+uaFIyGy9peK1rd7E07D6f3bbHBACJF/3DLy6PQ5ORpJ28GL0tWBTnHJ94=
+DomainKey-Signature:a=rsa-sha1; q=dns; c=nofws;
+  s=s1024; d=yahoo.com;
+  h=X-YMail-OSG:Received:X-Rocket-MIMEInfo:X-Mailer:References:Message-ID:Date:From:Reply-To:Subject:To:In-Reply-To:MIME-Version:Content-Type;
+  b=YjVonHchEajC0yjkK6EcxYO7SbLM+yoS5TmPucGa0jAmmjuJK8g4MDTyB4fM89D3W3qr7+gBWVZFKaBhtSFMU99SxWEUkfiONgzhrEtxPcta1RFSI7GqI2uRghBYm5MbRX8zqiuaI60AicCinqjbc5lkMEtw2w5F89sNGVuRP9E=;
+X-YMail-OSG: mG9F6e4VM1kz5rMEzDd75uAcMUomCYKz0dOYTLDtXewsEWt
+ EFBcVwHFTqJHgJeH5uwnkiXlWvDL6G9LaGy2UwLQZ.F4dcgYFLANt8DZR.e7
+ 7m8XKH053KEX1X0VQEYZIuzAI.sYHITRPYz7o3tYQqbxSmcbaR1xM389H0CX
+ Q_RQjyiZXKGBxe5smGwZFlsaHYJPiGkpsNEPKtiNTHeAp.GATrqilw8NwxG0
+ eZUMmmYLyQgHJA72bSYowmrMvRP49RqiYFOnsmwMyNJ_nDlbUv4I61idqumb
+ o3NTywXFKYE3QMq3d2CWeTaXQEdcy0RApszHtMRWY5eFv.OoidarFPkxfxja
+ ZPtCCvLmVxOb1FOXrXME.R.AYzkH02T6g2XiRqazuRELdLwpRQUVDmzC8aDz
+ idS.ReG2RLvXCDpy8xtQ.r2aa5fpTf1aHuw5Qvl3fC6RupY7atBikwQS4Lbd
+ _tEF4nECmU8cHzctGJDYhRPYmszcCjFYcuSkgDyDzhOr6GgWHHN0aFMJlw5K
+ yTyvW29GT7jD3mIJ7MhLwSyIrNiaY2znS3bZMKt7w2CqYn6OggWyjur6AdHt
+ 08caI3zstJcmT8FgXKt3k7fseuFQ0pzM1ANJZAS28tlScYGLBnN.cwZINEwI
+ CodmNu0if1mSfHIxfuPL.Tf2mXQg.ui0Bco.bFlv9i.JW21U8f1Hnqe5KO1k
+ Io8gI6.kbbHxMT36JAv7dGK8Qv4VEn5QdJFBuWAyqz3w8jQ--
+Received: from [2.176.226.64] by web141603.mail.bf1.yahoo.com via HTTP; Fri, 28 Feb 2014 11:12:44 PST
+X-Rocket-MIMEInfo: 002.001,T0suIEFjY29yZGluZyB0byB0aGUgbWFudWFsOgoKcGxlYXNlIGVuc3VyZSB5b3VyIHNldHRpbmdzLnhtbCBmaWxlICh1c3VhbGx5IAoke3VzZXIuaG9tZX0vLm0yL3NldHRpbmdzLnhtbCkgaXMgc2VjdXJlZCB3aXRoIHBlcm1pc3Npb25zIGFwcHJvcHJpYXRlIApmb3IgeW91ciBvcGVyYXRpbmcgc3lzdGVtKS4KClRoZXJlIGlzIG5vIHNldHRpbmdzLnhtbCBpbiB.Ly5tMi8KSSBvbmx5IHNlZSB.Ly5tMi9yZXBvc2l0b3J5LwoKQWxzbywgSSB3YW50IHRvIGtub3cgaXMgaXQgcG9zc2libGUgdG8gdXNlIFNPQ0sBMAEBAQE-
+X-Mailer: YahooMailWebService/0.8.177.636
+References: <1393613215.86638.YahooMailNeo@web141603.mail.bf1.yahoo.com> <CALy+7Uk0b9GsN4avZ8VRK1aWaVgUULxyciTJf2VSQcx+ZMxb3w@mail.gmail.com>
+Message-ID: <1393614764.655.YahooMailNeo@web141603.mail.bf1.yahoo.com>
+Date: Fri, 28 Feb 2014 11:12:44 -0800 (PST)
+From: Mahmood Naderan <nt_mahmood@yahoo.com>
+Reply-To: Mahmood Naderan <nt_mahmood@yahoo.com>
+Subject: Re: Using a proxy server during "mvn install"
+To: Maven Users List <users@maven.apache.org>
+In-Reply-To: <CALy+7Uk0b9GsN4avZ8VRK1aWaVgUULxyciTJf2VSQcx+ZMxb3w@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="-221842591-510133615-1393614764=:655"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+---221842591-510133615-1393614764=:655
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+OK. According to the manual:=0A=0Aplease ensure your settings.xml file (usu=
+ally =0A${user.home}/.m2/settings.xml) is secured with permissions appropri=
+ate =0Afor your operating system).=0A=0AThere is no settings.xml in ~/.m2/=
+=0AI only see ~/.m2/repository/=0A=0AAlso, I want to know is it possible to=
+ use SOCKS5? The example states:=0A=0A=0A<settings> . . <proxies> <proxy> <=
+active>true</active> <protocol>http</protocol> <host>proxy.somewhere.com</h=
+ost> <port>8080</port> <username>proxyuser</username> <password>somepasswor=
+d</password> <nonProxyHosts>www.google.com|*.somewhere.com</nonProxyHosts> =
+</proxy> </proxies> . .=0A</settings>=0A=0ASo if I want to use SOCKS5, I ha=
+ve to use <protocol>socks5</protocol>. Is that right?=0A=0A=0A=0A=A0=0ARega=
+rds,=0AMahmood=0A=0A=0A=0AOn Friday, February 28, 2014 10:37 PM, Wayne Fay =
+<waynefay@gmail.com> wrote:=0A =0AYes, and this is well documented on the M=
+aven site.=0A=0ASearch with Google, Yahoo, Bing, etc with the following ter=
+ms:=0Amaven proxy configure=0A=0AWayne=0A=0A=0AOn Fri, Feb 28, 2014 at 12:4=
+6 PM, Mahmood Naderan <nt_mahmood@yahoo.com> wrote:=0A> Hi=0A>=0A> I run "m=
+vn install" to build YCSB. In the middle of the compilation, it connects to=
+ clojars.org.=0A> Right now we have some network problems. Is it possible t=
+o tell mvn to use a proxy server IP:PORT for connecting to clojars?=0A>=0A>=
+ Regards,=0A> Mahmood=0A=0A------------------------------------------------=
+---------------------=0ATo unsubscribe, e-mail: users-unsubscribe@maven.apa=
+che.org=0AFor additional commands, e-mail: users-help@maven.apache.org
+---221842591-510133615-1393614764=:655--
+

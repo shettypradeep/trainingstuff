@@ -1,0 +1,81 @@
+From users-return-136520-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jun  4 15:47:43 2014
+Return-Path: <users-return-136520-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0F17711960
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  4 Jun 2014 15:47:43 +0000 (UTC)
+Received: (qmail 7880 invoked by uid 500); 4 Jun 2014 15:47:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 7794 invoked by uid 500); 4 Jun 2014 15:47:41 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 7784 invoked by uid 99); 4 Jun 2014 15:47:41 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 04 Jun 2014 15:47:41 +0000
+X-ASF-Spam-Status: No, hits=0.0 required=5.0
+	tests=
+X-Spam-Check-By: apache.org
+Received-SPF: unknown (athena.apache.org: error in processing during lookup of jim.garrison@nwea.org)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 04 Jun 2014 15:47:36 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <jim.garrison@nwea.org>)
+	id 1WsDPH-0008Mz-KM
+	for users@maven.apache.org; Wed, 04 Jun 2014 08:47:15 -0700
+Date: Wed, 4 Jun 2014 08:47:15 -0700 (PDT)
+From: jhgnwea <jim.garrison@nwea.org>
+To: users@maven.apache.org
+Message-ID: <1401896835575-5794892.post@n5.nabble.com>
+In-Reply-To: <CABLGb9z40sOaRgcbmQUcxAYDcakGfUJ40QTdTes+uq9bLcDvqQ@mail.gmail.com>
+References: <0C723FEB5B4E5642B25B451BA57E2730A29DFF4A@S1P5DAG3C.EXCHPROD.USA.NET> <CABLGb9wseqSagrFtUvNgc1aREcsAx=PLKdQD_5-rLAFSAOLTWA@mail.gmail.com> <CAPCjjnFTmb9aZO6a9W6SpmzUH5U=JaUT9qkpQ=mViabkQszOxQ@mail.gmail.com> <CABLGb9z40sOaRgcbmQUcxAYDcakGfUJ40QTdTes+uq9bLcDvqQ@mail.gmail.com>
+Subject: Re: Controlling order of plugin execution
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Paul Benedict wrote
+> I agree with Dan. Last I check, IIRC, the order of operations of plugins
+> is
+> defined by their sequential order in the POM. However, I also find this a
+> bit problematic with inheritance -- I don't know off the top of my head
+> what happens then.
+
+Ordering applies only for executions of a single plugin.  If you need to
+interleave executions of two or more plugins you're out of luck.  Say you
+have two plugins, exec-maven and maven-sql, and want to run 
+
+    exec-maven A1
+    maven-sql B1
+    exec-maven A2
+    maven-sql B2
+
+A1 and A2 will run in that order, and (B1, B2) will be ordered, but you
+can't control which set (A or B) runs first without horribly abusing the
+phase bindings.  And, if you have a more complex sequence with 3  plugins
+and multiple executions of each, there aren't enough available phases to
+successfully order everything.
+
+It should be possible to bind multiple plugin executions, of DIFFERENT
+plugins, to a single phase and deterministically specify the execution
+order.
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Controlling-order-of-plugin-execution-tp5794777p5794892.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

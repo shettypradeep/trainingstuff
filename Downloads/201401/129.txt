@@ -1,0 +1,126 @@
+From users-return-135248-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan 23 12:00:47 2014
+Return-Path: <users-return-135248-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A1C1D10648
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 23 Jan 2014 12:00:47 +0000 (UTC)
+Received: (qmail 41060 invoked by uid 500); 23 Jan 2014 12:00:44 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 40344 invoked by uid 500); 23 Jan 2014 12:00:40 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 40336 invoked by uid 99); 23 Jan 2014 12:00:39 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 23 Jan 2014 12:00:39 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.more@gmail.com designates 209.85.219.54 as permitted sender)
+Received: from [209.85.219.54] (HELO mail-oa0-f54.google.com) (209.85.219.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 23 Jan 2014 12:00:33 +0000
+Received: by mail-oa0-f54.google.com with SMTP id i4so1978047oah.41
+        for <users@maven.apache.org>; Thu, 23 Jan 2014 04:00:12 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=BLd/2RvFgowAL4YsjW4RWUcCMinzZGK2YMES+BYXKTY=;
+        b=AnMc3dlayZ4clGYvZtqUtytgI9MBIzr8bW4/U/hNKLiXXIlYrWkFk5CcpsfK/fuSwX
+         ekCyUloF5Up5heO9sHnPFeeFh00qrKAvJlwxNU0mOFjq21pA8OL9PjCmLhjTzBsKjLFd
+         RkMJzHP2IDyze6Kxgvw4++ZjYtrwkvjqyzxhRSYPriygBuTQtfzDqWCL/pkX3x1qBLF7
+         cBOlvm6fVVqsESRWjU+HH0PzmA5yKxmPF2bYJjO+NiIus6JzVB+7rz0PaMvCzsqSLyET
+         tdx9YH+bZIKW6+QsdmFCucFJqU8yqEosiO6a0zNGggQf8kQI7gMbOQ65hYtcUsunixJU
+         Y2XQ==
+MIME-Version: 1.0
+X-Received: by 10.182.233.228 with SMTP id tz4mr409377obc.56.1390478412250;
+ Thu, 23 Jan 2014 04:00:12 -0800 (PST)
+Received: by 10.76.89.234 with HTTP; Thu, 23 Jan 2014 04:00:12 -0800 (PST)
+In-Reply-To: <CAHNdxunpGWLKfdOnnw5_EkzdDdM8XyeEpq0Q29UXBy7VXTrhdA@mail.gmail.com>
+References: <CAL2vA_ODuW=48CCtfh42TG+ojvAEMWAFUNtAu4PACEZor7oeVw@mail.gmail.com>
+	<CAHNdxunpGWLKfdOnnw5_EkzdDdM8XyeEpq0Q29UXBy7VXTrhdA@mail.gmail.com>
+Date: Thu, 23 Jan 2014 07:00:12 -0500
+Message-ID: <CAL2vA_MWZZLu+wd1h7Tsh6UbEd9TCtb_ovYyBwLEHoab+bjS_g@mail.gmail.com>
+Subject: Re: maven plugin compatibility with 3.0.X and 3.1.X and Aether
+From: Stephen More <stephen.more@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c30600d4866b04f0a1fbd1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c30600d4866b04f0a1fbd1
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Your code does an excellent job showing how to resolve the dependencies of
+a project. I am trying to resolve the dependencies of a plugin.
+
+org.apache.maven.model.Plugin can list the org.apache.maven.model.Dependenc=
+y
+- but how do I turn a Dependency into an Artifact since ArtifactFactory has
+been deprecated:
+http://maven.apache.org/ref/3.1.1/maven-core/apidocs/org/apache/maven/artif=
+act/factory/ArtifactFactory.html?
+
+
+On Mon, Jan 20, 2014 at 3:21 PM, Laird Nelson <ljnelson@gmail.com> wrote:
+
+> On Mon, Jan 20, 2014 at 10:37 AM, Stephen More <stephen.more@gmail.com
+> >wrote:
+>
+> > I am working on a maven plugin that needs to work with both 3.0.X and
+> 3.1.X
+> > and Aether ( org.sonatype.aether vs org.eclipse.aether) . What is
+> > recommended, one or two separate plugins ? Has anyone already created a
+> > utility that will work with either ?
+> >
+>
+> I just went through this.  It's not very well documented.  If you're doin=
+g
+> dependency resolution, you might gain some insight from my considerable
+> pain; see
+>
+> https://github.com/ljnelson/maven-artifacts/blob/master/src/main/java/com=
+/edugility/maven/Artifacts.java#L138to
+> get started.
+>
+> Briefly, the DependencyGraphBuilder component can be injected into your
+> plugin, and it does the dirty work of hiding how dependencies are
+> discovered.  Here's the javadoc:
+>
+> http://maven.apache.org/shared/maven-dependency-tree/apidocs/org/apache/m=
+aven/shared/dependency/graph/DependencyGraphBuilder.html
+>
+> Similarly, the ArtifactResolver component=97while it lives in the
+> maven-compat project, and while it consists of lots of deprecated
+> methods=97has one undeprecated method for resolving an artifact in an
+> Eclipse/Sonatype-independent manner.  I found that by leveraging these tw=
+o
+> components I could make my plugin work properly without having to rely on
+> either Aether :-).  Here's the javadoc:
+>
+> http://maven.apache.org/maven-compat/apidocs/org/apache/maven/artifact/re=
+solver/ArtifactResolver.html
+> You want this method (undocumented; you'll need to dig into the
+> DefaultArtifactResolver source code to figure out what things can be null=
+,
+> what can't, etc. etc.):
+>
+> http://maven.apache.org/ref/3.1.1/maven-compat/apidocs/org/apache/maven/a=
+rtifact/resolver/ArtifactResolver.html#resolve(org.apache.maven.artifact.re=
+solver.ArtifactResolutionRequest)
+>
+> Best,
+> Laird
+>
+> --
+> http://about.me/lairdnelson
+>
+
+--001a11c30600d4866b04f0a1fbd1--
+

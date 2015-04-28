@@ -1,0 +1,193 @@
+From users-return-135222-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan 20 21:11:54 2014
+Return-Path: <users-return-135222-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CC5B110168
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 20 Jan 2014 21:11:54 +0000 (UTC)
+Received: (qmail 41672 invoked by uid 500); 20 Jan 2014 21:11:51 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 41539 invoked by uid 500); 20 Jan 2014 21:11:51 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 41531 invoked by uid 99); 20 Jan 2014 21:11:51 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Jan 2014 21:11:51 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,WEIRD_PORT
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of anders.g.hammar@gmail.com designates 74.125.82.53 as permitted sender)
+Received: from [74.125.82.53] (HELO mail-wg0-f53.google.com) (74.125.82.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Jan 2014 21:11:45 +0000
+Received: by mail-wg0-f53.google.com with SMTP id y10so7487082wgg.32
+        for <users@maven.apache.org>; Mon, 20 Jan 2014 13:11:25 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=bDjcf4wsI+DRVwnOEacpx7YQTJPi31fREwxHj5SGsGs=;
+        b=kD7vW47yo1jMEYlqheXaSktjTjJvGRcp8+c8LMqOCDDg3chWqyHl3RwRwgA5DjxOVJ
+         sHBNT3S5kfSV5chn7YbyJsWUcVfYw5UD+xJKJWex0geWlIoMc3g9BrmaAPlatVDspzqI
+         tiGna/e71r0erGaba14S1YSTPOPBP/yn0MnjQlFEJRzMADw1RHu9xCwWyJqaqPWH/Xpi
+         b4nxLdvT3yLuytSoEvprxYDpCMx5vp58TEJQculRjF4FJf8SuSZQsb7+Ce3yC63otSMm
+         62qzqXldW+xilCNkT80E0v7GjZ8IOMwcECA+L1agbHjq51xsB9oyk9RcKa4qgpX6uul+
+         X8cQ==
+MIME-Version: 1.0
+X-Received: by 10.194.62.243 with SMTP id b19mr3371088wjs.63.1390252285213;
+ Mon, 20 Jan 2014 13:11:25 -0800 (PST)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.137.38 with HTTP; Mon, 20 Jan 2014 13:11:25 -0800 (PST)
+In-Reply-To: <1390251678487-5781962.post@n5.nabble.com>
+References: <1390251678487-5781962.post@n5.nabble.com>
+Date: Mon, 20 Jan 2014 22:11:25 +0100
+X-Google-Sender-Auth: AmeWuK-GjD4JPN5k4n0eoVJtNjM
+Message-ID: <CAKDUN1vT1k-W2cGAs0HfrkR35pKm1RTXYaeXuZSThc81v3ha8A@mail.gmail.com>
+Subject: Re: Deploy to Nexus OSS failed with error: ReasonPhrase:Forbidden
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b86d6be9bc26b04f06d55da
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b86d6be9bc26b04f06d55da
+Content-Type: text/plain; charset=ISO-8859-1
+
+I think this question should fit the Nexus users mailing list much better.
+More info here: http://www.sonatype.org/nexus/participate
+
+/Anders
+
+
+On Mon, Jan 20, 2014 at 10:01 PM, hujirong <jirong.hu@gmail.com> wrote:
+
+> This is a brand new setup with both Maven and Nexus OSS in my local PC,
+> everything new and there is nothing in Nexus yet. All settings are default
+> and I haven't changed anything in Nexus. The user "deployment" should have
+> full access to all repositories.
+>
+> I was running "mvn deploy" and expect the result show in Nexus OSS. Is it
+> trying to downloading as the message show or uploading?
+>
+>
+> [INFO]
+> [INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ my-app ---
+> [INFO] Building jar: C:\my-app\target\my-app-1.0-SNAPSHOT.jar
+> [INFO]
+> [INFO] --- maven-install-plugin:2.4:install (default-install) @ my-app ---
+> [INFO] Installing C:\my-app\target\my-app-1.0-SNAPSHOT.jar to C:\Documents
+> and
+>
+> Settings\jhu06\.m2\repository\com\mycompany\app\my-app\1.0-SNAPSHOT\my-app-1.0-SNAPSHOT.jar
+> [INFO] Installing C:\my-app\pom.xml to C:\Documents and
+>
+> Settings\jhu06\.m2\repository\com\mycompany\app\my-app\1.0-SNAPSHOT\my-app-1.0-SNAPSHOT.pom
+> [INFO]
+> [INFO] --- maven-deploy-plugin:2.7:deploy (default-deploy) @ my-app ---
+> *Downloading:
+>
+> http://localhost:8081/nexus/content/repositories/snapshots/com/mycompany/app/my-app/1.0-SNAPSHOT/maven-metadata.xml
+> *[WARNING] Could not transfer metadata
+> com.mycompany.app:my-app:1.0-SNAPSHOT/maven-metadata.xml from/to snapshots
+> (http:/
+> /localhost:8081/nexus/content/repositories/snapshots): Access denied to:
+> http://localhost:8081/nexus/content/repositorie
+> s/snapshots/com/mycompany/app/my-app/1.0-SNAPSHOT/maven-metadata.xml ,
+> ReasonPhrase:Forbidden.
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] BUILD FAILURE
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] Total time: 2.312s
+> [INFO] Finished at: Mon Jan 20 15:54:15 EST 2014
+> [INFO] Final Memory: 11M/29M
+> [INFO]
+> ------------------------------------------------------------------------
+> [ERROR] Failed to execute goal
+> org.apache.maven.plugins:maven-deploy-plugin:2.7:deploy (default-deploy) on
+> project my-ap
+> p: Failed to retrieve remote metadata
+> com.mycompany.app:my-app:1.0-SNAPSHOT/maven-metadata.xml: Could not
+> transfer
+> metad
+> ata com.mycompany.app:my-app:1.0-SNAPSHOT/maven-metadata.xml from/to
+> snapshots (http://localhost:8081/nexus/content/repo
+> sitories/snapshots): Access denied to:
+>
+> http://localhost:8081/nexus/content/repositories/snapshots/com/mycompany/app/my-a
+> pp/1.0-SNAPSHOT/maven-metadata.xml , ReasonPhrase:Forbidden. -> [Help 1]
+> [ERROR]
+> [ERROR] To see the full stack trace of the errors, re-run Maven with the -e
+> switch.
+> [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+> [ERROR]
+> [ERROR] For more information about the errors and possible solutions,
+> please
+> read the following articles:
+> [ERROR] [Help 1]
+> http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+> C:\my-app>
+>
+>
+> *I have this in the default settings.xml:*
+>
+>     </server>
+>     -->
+>
+>         <server>
+>             <id>snapshots</id>
+>             <username>deployment</username>
+>             <password>deployment123</password>
+>         </server>
+>         <server>
+>             <id>releases</id>
+>             <username>deployment</username>
+>             <password>deployment123</password>
+>         </server>
+>         <server>
+>             <id>thirdparty</id>
+>             <username>deployment</username>
+>             <password>deployment123</password>
+>         </server>
+>     </servers>
+> </settings>
+>
+> *and this in the project pom.xml:*
+>
+>   <distributionManagement>
+>     <repository>
+>         <id>releases</id>
+>                 <name>Internal Releases</name>
+>         <url>http://localhost:8081/nexus/content/repositories/releases
+> </url>
+>     </repository>
+>
+>     <snapshotRepository>
+>         <id>snapshots</id>
+>         <name>Internal Snapshots</name>
+>
+> <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+>     </snapshotRepository>
+> </distributionManagement>
+>
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/Deploy-to-Nexus-OSS-failed-with-error-ReasonPhrase-Forbidden-tp5781962.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7b86d6be9bc26b04f06d55da--
+

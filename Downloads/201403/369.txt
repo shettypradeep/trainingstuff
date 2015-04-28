@@ -1,0 +1,261 @@
+From users-return-135818-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 13 15:59:05 2014
+Return-Path: <users-return-135818-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C51B410205
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 13 Mar 2014 15:59:05 +0000 (UTC)
+Received: (qmail 73473 invoked by uid 500); 13 Mar 2014 15:59:01 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 73403 invoked by uid 500); 13 Mar 2014 15:59:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 73386 invoked by uid 99); 13 Mar 2014 15:58:58 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Mar 2014 15:58:58 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of balteo@gmail.com designates 74.125.82.170 as permitted sender)
+Received: from [74.125.82.170] (HELO mail-we0-f170.google.com) (74.125.82.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Mar 2014 15:58:53 +0000
+Received: by mail-we0-f170.google.com with SMTP id w61so1042325wes.15
+        for <users@maven.apache.org>; Thu, 13 Mar 2014 08:58:31 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=z7wrbzuSjaCLohO4FYixuLLFj83GjVzq8wcsIDuN3SU=;
+        b=ON7Ylw8/AEyx2j6oWb6A9f84JXAKYF6vf7Z1bEj0vcLWtsAizW8k5zXLb82GbWzwJi
+         Kf1xGWw8f7KFKh4c9zssSWMGq/HzCsDllLMNl9Bbdu4cx9CEqGRkTSUo9A3mAtfZVp6W
+         S6GTfF+S5iCPeOWR2pM6tVj2L+Y7l4CRwz4BX+YR5UUY83eqLrVS6luhYb5FM86blHod
+         1/ITbzFr5PobFm2FcWCibxeZ3MXlVaSkNc5IuXwQPNPbaVivCxpO972vY51dbfSkPONL
+         yOroBWsYblqOSIeaiLpv1fnCpoXtUyUQYmpfp6SEN7i27YtUwi9PLqK8eNHeh44wWCUr
+         CxEA==
+MIME-Version: 1.0
+X-Received: by 10.194.85.19 with SMTP id d19mr6625wjz.96.1394726311750; Thu,
+ 13 Mar 2014 08:58:31 -0700 (PDT)
+Received: by 10.227.253.198 with HTTP; Thu, 13 Mar 2014 08:58:31 -0700 (PDT)
+Date: Thu, 13 Mar 2014 16:58:31 +0100
+Message-ID: <CA+uk_pK5ERBL+6triXKasDqvGaYkLaHhocHmp0+7oX9_5ayk_Q@mail.gmail.com>
+Subject: Filtering issues with maven and assemblies...
+From: Julien Martin <balteo@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bfcfa005f11e004f47f065a
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bfcfa005f11e004f47f065a
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hello,
+
+I am having issues with maven filtering. My resources are not filtered...
+
+I want to generate a jar with dependencies with custom filtering.
+
+Can anyone please help? Here is my configuration (*pom.xml* and
+*assembly.xml*):
+
+
+
+
+*Resources:*
+
+   <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
+*Plugins:*
+
+<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>target</outputDirectory>
+                            <resources>
+                                <resource>
+
+<directory>misc/external-resources</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>dev</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>target/dev</outputDirectory>
+                            <filters>
+
+<filter>src/main/resources/filters/dev.properties</filter>
+                            </filters>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>prod</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>target/prod</outputDirectory>
+                            <filters>
+
+<filter>src/main/resources/filters/prod.properties</filter>
+                            </filters>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.1</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+
+<source>${project.generated-sources.directory}</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.4</version>
+                <executions>
+                    <execution>
+                        <id>dev</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <archive>
+                                <manifest>
+                                    <addClasspath>true</addClasspath>
+
+<mainClass>com.otcexids.main.Main</mainClass>
+                                </manifest>
+                            </archive>
+                            <descriptors>
+
+<descriptor>src/main/resources/assemble/assembly.xml</descriptor>
+                            </descriptors>
+                            <filters>
+
+<filter>src/main/resources/filters/dev.properties</filter>
+                            </filters>
+                            <finalName>IDS-dev</finalName>
+                            <appendAssemblyId>false</appendAssemblyId>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>prod</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <archive>
+                                <manifest>
+                                    <addClasspath>true</addClasspath>
+
+<mainClass>com.otcexids.main.Main</mainClass>
+                                </manifest>
+                            </archive>
+                            <descriptors>
+
+<descriptor>src/main/resources/assemble/assembly.xml</descriptor>
+                            </descriptors>
+                            <filters>
+
+<filter>src/main/resources/filters/prod.properties</filter>
+                            </filters>
+                            <finalName>IDS-prod</finalName>
+                            <appendAssemblyId>false</appendAssemblyId>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+*Assembly.xml*
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns="
+http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="
+http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2
+http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+    <id>jar-with-dependencies</id>
+    <formats>
+        <format>jar</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>/</outputDirectory>
+            <useProjectArtifact>true</useProjectArtifact>
+            <unpack>true</unpack>
+            <scope>runtime</scope>
+        </dependencySet>
+    </dependencySets>
+    <files>
+        <file>
+            <filtered>true</filtered>
+            <outputDirectory>wsdl/brokerhub</outputDirectory>
+
+<source>src/main/resources/wsdl/brokerhub/soapinterface_1.2.wsdl</source>
+        </file>
+        <file>
+            <filtered>true</filtered>
+            <outputDirectory>wsdl/finderpro</outputDirectory>
+
+<source>src/main/resources/wsdl/finderpro/B2T_DataModel.asmx.wsdl</source>
+        </file>
+        <file>
+            <filtered>false</filtered>
+            <outputDirectory>wsdl/website</outputDirectory>
+
+<source>src/main/resources/wsdl/website/WSWebsiteIDS.wsdl</source>
+        </file>
+
+    </files>
+</assembly>
+
+Can anyone please help?
+
+Regards,
+
+J.
+
+--047d7bfcfa005f11e004f47f065a--
+

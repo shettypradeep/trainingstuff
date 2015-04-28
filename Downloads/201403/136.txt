@@ -1,0 +1,125 @@
+From users-return-135682-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar  5 03:02:13 2014
+Return-Path: <users-return-135682-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 907D9104F4
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  5 Mar 2014 03:02:13 +0000 (UTC)
+Received: (qmail 36292 invoked by uid 500); 5 Mar 2014 03:02:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 35382 invoked by uid 500); 5 Mar 2014 03:02:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 35359 invoked by uid 99); 5 Mar 2014 03:01:31 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Mar 2014 03:01:31 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bimargulies@gmail.com designates 209.85.216.172 as permitted sender)
+Received: from [209.85.216.172] (HELO mail-qc0-f172.google.com) (209.85.216.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Mar 2014 03:01:27 +0000
+Received: by mail-qc0-f172.google.com with SMTP id i8so514068qcq.31
+        for <users@maven.apache.org>; Tue, 04 Mar 2014 19:01:07 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type:content-transfer-encoding;
+        bh=zs2rq4fL2Zk/kfkXAfDwsTtnB4Y2gWdF0radGnyrjUY=;
+        b=xk4q5F432QvEaemPkPZHpB7xLLGyhLM0ealds/YMBxBR7pejfigE1nc2sOLWzXdDqq
+         XhnDP1TTJ1/hCBOJV+11dxhPPnVE/ZrQVG4J36ygXUyEMKuU1gxPHg7e3vCNIq6s0SdE
+         oiueapouUm4C707DkE9a6EWEem57WmpoxT0QFtF0qizTkXw38ejqJrHBg0Q464ZHuBWM
+         E6xScvfzuT2g6w/HolBk6jGxsXeEuc6SFhPcTqmlHlGzZaa8PwJMAPiS2A3uqEi1zdfQ
+         75flrievRi0WTT9EXg2ZRL0xwqVpnCDizq0gQtuvr08J2W7OodVn40pZ6xYxxxgl9Hra
+         6VGQ==
+MIME-Version: 1.0
+X-Received: by 10.224.79.19 with SMTP id n19mr3621650qak.99.1393988467221;
+ Tue, 04 Mar 2014 19:01:07 -0800 (PST)
+Received: by 10.140.84.138 with HTTP; Tue, 4 Mar 2014 19:01:07 -0800 (PST)
+In-Reply-To: <5314791D.90506@pocock.pro>
+References: <530C66D6.2010602@pocock.com.au>
+	<CALhtWkdAmrk07gcM+kdyDTbd7TuiAGutTbw=O_3jPmTz30=R4g@mail.gmail.com>
+	<5629A6219DB3E544AB84388D90149787479C9535@xmb-aln-x03.cisco.com>
+	<CALhtWkf9XQ9UpW-8Ez2peJtnXwXu+4Xy1eMHYXjGMka7kU0bjw@mail.gmail.com>
+	<5629A6219DB3E544AB84388D90149787479C9693@xmb-aln-x03.cisco.com>
+	<BLU172-W4066FDEA39D63E4A373642AE830@phx.gbl>
+	<5314791D.90506@pocock.pro>
+Date: Wed, 5 Mar 2014 05:01:07 +0200
+Message-ID: <CALhtWkeEn1w9LQ8iwF047tNjom+Q+SnR4449KsP2fa8WAz0qvQ@mail.gmail.com>
+Subject: Re: Google Summer of Code - Java opportunity, mentors needed
+From: Benson Margulies <bimargulies@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+When you call this GSOC, are you looking to sponsor a student within
+the Apache Maven project? I don't think that this is viable. If you
+have some other sponsoring organization and an intention to manage it
+elsewhere, then I wish you luck but I have no standing to object.
+
+
+On Mon, Mar 3, 2014 at 2:44 PM, Daniel Pocock <daniel@pocock.pro> wrote:
+> On 27/02/14 02:21, Martin Gainty wrote:
+>>
+>>
+>>
+>>> From: jnord@cisco.com
+>>> To: users@maven.apache.org
+>>> Subject: RE: Google Summer of Code - Java opportunity, mentors needed
+>>> Date: Wed, 26 Feb 2014 16:17:29 +0000
+>>>
+>>>>> Nowhere in that was the sources jar mentioned - yet you seemed to hav=
+e
+>>>> jumped directly to a solution and then said can=E2=80=99t be done.
+>>>>
+>>>> No, I discussed the two paths from the POM: -sources and <scm/>
+>>> My mistake, sorry.
+>>>
+>>>>> There is a critical need for this inside businesses as well as Debian=
+ (how do
+>>>> we know that "org.foobar:baz:1.2.3:jar" is MIT as it claims and doesn=
+=E2=80=99t
+>>>> contain some GPL Code.
+>>>>
+>>>> Which is a fine reason to contribute it Maven 4 where the POM could co=
+ntain
+>>>> the necessary metadata to enable it.
+>>> This shouldn't prohibit something using what exists now.
+>>>
+>>> One commercial company has done something for some subset of artifacts =
+- which may have been entirely human process/mixed or automated.
+>> MG>How will the aggrgeator mechanism aggreate for this subset of artifac=
+ts
+>> MG>Scope?
+>> MG>Classifier?
+>>
+>> MG>With regards to GPLartifacts could'nt we find the necessary violation=
+s with Sonatype CLM
+>> MG>(No plug for Sonatype intended)
+>
+>
+> I've put up more details of how this project could be broken down into
+> discrete tasks:
+>
+> http://danielpocock.com/automatically-and-recursively-building-java-proje=
+cts
+>
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,117 @@
+From users-return-136831-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jul 22 15:43:05 2014
+Return-Path: <users-return-136831-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 78F49118E1
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 22 Jul 2014 15:43:05 +0000 (UTC)
+Received: (qmail 12461 invoked by uid 500); 22 Jul 2014 15:43:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 12384 invoked by uid 500); 22 Jul 2014 15:43:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 12373 invoked by uid 99); 22 Jul 2014 15:43:03 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Jul 2014 15:43:03 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [74.125.82.45] (HELO mail-wg0-f45.google.com) (74.125.82.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Jul 2014 15:43:01 +0000
+Received: by mail-wg0-f45.google.com with SMTP id x12so8083725wgg.28
+        for <users@maven.apache.org>; Tue, 22 Jul 2014 08:42:36 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=zkzUeOg0WTmpfvAnUQ9gbPjpQxCAbLjkX4riWEH/mq4=;
+        b=hWOKAWcgKtu0pWnFb04elPAv83hUHS5HvOUXUYzpCIuO3aTqy5ItmZn6KJ8lIPNnA/
+         pTiTK4WPbWxoo/863PVR2i6F0LcE1PpTqXPyRKJB8oU1qYl/teXJzKEWor11rYoWPzLD
+         va9mSC7SGvetN557MgCYZ6de9SLzyAASKAZCsBgwI4d7pBsKnf5uJTPCF5l5Z7ORig9F
+         m/NEl3DBJRA62gBRluNT1Kv95PP9GhJSMP663l22+lzOGOXdw65Hft0J/U/PqqaU5icZ
+         TzTE0IUqcFvqSO7DJ5QMrguVMTLsL7pYdrNyBp6fHsIi5KOFhTrY54mqx/nOhjWOWdsd
+         YIrg==
+X-Gm-Message-State: ALoCoQniOhZxVQtAu1+L1wFGZWz6gPAgNaT/a6yVafbgM5OyI9oynJUsa14OGNjRwWtY/t4lCFMa
+MIME-Version: 1.0
+X-Received: by 10.194.87.134 with SMTP id ay6mr34038526wjb.84.1406043755881;
+ Tue, 22 Jul 2014 08:42:35 -0700 (PDT)
+Received: by 10.216.36.5 with HTTP; Tue, 22 Jul 2014 08:42:35 -0700 (PDT)
+X-Originating-IP: [101.165.250.71]
+In-Reply-To: <53CE8297.1080401@gmx.de>
+References: <CAA8BW8HFWKNmv_ZTE9wuYQMDJ_FxUzhkXAnW_g3wrVFjovj=cA@mail.gmail.com>
+	<53CD80A3.6040302@gmx.de>
+	<CAA8BW8FDv2vZhEg5OSOFkyWuRvUAt_Z_tYx7iV80MuQLEx2fcw@mail.gmail.com>
+	<CAEBcyzq7aznBgKfVH6DzyzWnVmSwTs3zpfrsOZY1xTUnfqaF6g@mail.gmail.com>
+	<BLU172-W40C66356CCF5989329FB7BAEF00@phx.gbl>
+	<CAEBcyzpv85QdvChGKJXDkq1i8dQ3coF_hJuibOYkxfaGwcUvpA@mail.gmail.com>
+	<CAA8BW8GoweJbtwFQZG3Rhshzo+-Zr5=MyeFJ9TqT8mvKhQ+A0g@mail.gmail.com>
+	<CAEBcyzpsG2dDB36aqZ3tVm7Gk=gKpvLq-qXRNzAEx=P8sEVXiA@mail.gmail.com>
+	<61201C6A-08F4-4AEF-A592-81447C4B4DB7@fortysix.ch>
+	<CAEBcyzr8NLEKZtNeBO9Lcx4p7S_qMPX8FTuucnGzkTU8WeA9pA@mail.gmail.com>
+	<CFF3CCF7.11368%Robert.Puncel@jpl.nasa.gov>
+	<53CE8297.1080401@gmx.de>
+Date: Wed, 23 Jul 2014 01:42:35 +1000
+Message-ID: <CAEBcyzq-PbJoTyO9O+wfcuUhP36UcJwdfpPunZuA9WgZbUoyDA@mail.gmail.com>
+Subject: Re: maven-dependency-plugin unpacking aar format?
+From: William Ferguson <william.ferguson@xandar.com.au>
+To: Maven Users List <users@maven.apache.org>, info@soebes.de
+Content-Type: multipart/alternative; boundary=089e0102ee049bdd3604feca120b
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0102ee049bdd3604feca120b
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Ah well. I was just going from memory.
+
+
+On Wed, Jul 23, 2014 at 1:26 AM, Karl Heinz Marbaise <khmarbaise@gmx.de>
+wrote:
+
+> Hi Robert,
+>
+>
+> > Sorry to interject, but isn=C2=B9t the unpack goal of the
+> maven-assembly-plugin
+>
+>> deprecated?  The documentation actually refers users to the MDP=C2=B9s u=
+npack
+>> capabilities:
+>> https://maven.apache.org/plugins/maven-assembly-plugin/plugin-info.html
+>>
+>> That page is dated from 2012, so I=C2=B9m not sure if something has chan=
+ged
+>> since it was last published.
+>>
+>
+> What you mentioned is correct...the unpack goal is marked as deprecated
+> and will be removed...
+>
+> This page is not updated cause on the public available things have not
+> being changed...
+>
+> Apart from that those pages are only updated according with new released
+> which has not been done yet....
+>
+> (new release is in preparation 2.4.1 (http://jira.codehaus.org/
+> browse/MASSEMBLY), but it will take some time)...
+>
+>
+> Kind regards
+> Karl-Heinz Marbaise
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--089e0102ee049bdd3604feca120b--
+

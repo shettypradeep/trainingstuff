@@ -1,0 +1,149 @@
+From users-return-137969-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Dec  9 15:44:23 2014
+Return-Path: <users-return-137969-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5002D10463
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  9 Dec 2014 15:44:23 +0000 (UTC)
+Received: (qmail 50207 invoked by uid 500); 9 Dec 2014 15:44:21 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 50127 invoked by uid 500); 9 Dec 2014 15:44:21 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 50115 invoked by uid 99); 9 Dec 2014 15:44:20 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Dec 2014 15:44:20 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dhoffer6@gmail.com designates 209.85.214.170 as permitted sender)
+Received: from [209.85.214.170] (HELO mail-ob0-f170.google.com) (209.85.214.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Dec 2014 15:44:16 +0000
+Received: by mail-ob0-f170.google.com with SMTP id wp18so632739obc.1
+        for <users@maven.apache.org>; Tue, 09 Dec 2014 07:43:11 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=vpDO8vTjN3dBk8rW+2ga+Uo2r5kZ/bxmFSD8PeGcigU=;
+        b=UKnUS3g0QtYo4uVGHWt+95LYg9eVYMLeWKY/bjvRW6eNC2uvRWIugR8kvC1Ul4ASA+
+         UI8TYNNeJnA4T9arXPzj2Rm/f6OFysZADYuGIbJOUctL1QwP4I3OdUMYhbDvXd4ubATA
+         6ukvpfWDdLq8wTeLEl/xXTVCosLjfQuGXHQbysebZyoVkZ1vGiWm7JgoLYDLamNt8XMV
+         y/JpgP5TDe0dpuUSL2c/4xVSQ6n/Y58f3eFOBxxKze7CRpFUDTJUxbGmPkzK5FmVD1VV
+         Rr/Wp1C5zgOElk9ZAesiS4+T1ivPZ0XugeHNLRdv9hjznTvzJxoG+Rwfx4fZky1Z5086
+         HejQ==
+MIME-Version: 1.0
+X-Received: by 10.60.78.137 with SMTP id b9mr5507036oex.1.1418139791297; Tue,
+ 09 Dec 2014 07:43:11 -0800 (PST)
+Received: by 10.76.74.132 with HTTP; Tue, 9 Dec 2014 07:43:11 -0800 (PST)
+In-Reply-To: <CAPCUOdFEO64WgxzWv-Di4pM9ZfzCesKA0_rX_Lnz68yXJTb26A@mail.gmail.com>
+References: <CAA8BW8EgW9UZ2NVLbrVZCGA8Xo3b5UotS44KUxhRbGjGiwh8gw@mail.gmail.com>
+	<5049531.alCp08zIy1@herve-desktop>
+	<CAA8BW8FSD2Cuw8kAWr9WnP1AWFOuoURkFrO4fCDf-X28aEenLg@mail.gmail.com>
+	<m66bph$au$1@ger.gmane.org>
+	<20141209095124.00002c05.ecki@zusammenkunft.net>
+	<CAA8BW8GNb6nxXM+0K5=L3oFEh=+SDKW1zpqXtVkBWoOm4PTzaA@mail.gmail.com>
+	<CAPCUOdFEO64WgxzWv-Di4pM9ZfzCesKA0_rX_Lnz68yXJTb26A@mail.gmail.com>
+Date: Tue, 9 Dec 2014 08:43:11 -0700
+Message-ID: <CAA8BW8HeEafnHpDGcdVryVyoSR=SBqwK03UPk_pv0nOGEyo2Gg@mail.gmail.com>
+Subject: Re: Maven 3.2.3 upgrade
+From: David Hoffer <dhoffer6@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0111c05880970e0509ca6693
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0111c05880970e0509ca6693
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+In our case devs will be in active development in both branches so
+potentially building both at the same time.  So it seems I either have to
+upgrade both to 3.2.3 or make the old one at least work with 3.2.3 or don't
+upgrade at all.
+
+Maven really needs a bootstrap process where the build specifies the
+version used so multiple builds can co-exist using any maven version, is
+that a planned feature?
+
+-Dave
+
+On Tue, Dec 9, 2014 at 8:25 AM, Adrien Rivard <adrien.rivard@gmail.com>
+wrote:
+
+> Have them execute a wrapper script that set Maven paths according to the
+> current project and execute it.
+> you can even alias this script to "mvn" command.
+>
+>
+> On Tue, Dec 9, 2014 at 4:12 PM, David Hoffer <dhoffer6@gmail.com> wrote:
+>
+> > I don't think the CI Server is an issue as we have lots of flexibility
+> when
+> > we setup those jobs.  The issue is for developer builds.  I'm not clear
+> how
+> > to setup workstations to make it easy to build projects with different
+> > Maven versions.
+> >
+> > Our standard practice is to set M2_HOME to the maven install and then a=
+dd
+> > %M2_HOME%/bin to the path.
+> >
+> > The suggestion was to not set M2_HOME...okay I thought that was require=
+d
+> > but we can not set it.  We still need Maven in our path.  Are you sayin=
+g
+> > that if I set the path to Maven version X, my build can somehow specify
+> to
+> > use Maven version Y or Z?  All I've seen in Maven thus far is the abili=
+ty
+> > to specify what version must be used not what version to use, and it's
+> the
+> > later I'm looking for.  I don't want devs to have to reconfigure their
+> > system props to build different code branches.
+> >
+> > -Dave
+> >
+> > On Tue, Dec 9, 2014 at 1:51 AM, Bernd Eckenfels <ecki@zusammenkunft.net=
+>
+> > wrote:
+> >
+> > > Am Tue, 09 Dec 2014 09:27:29 +0100
+> > > schrieb J=C3=B6rg Schaible <joerg.schaible@swisspost.com>:
+> > >
+> > > > > One other issue came up in this upgrade.  We still have branches
+> > > > > that have to stay at 3.0.x.  How can I make the trunk build use
+> > > > > 3.2.3 w/o changing everyone's M2_HOME?  Is there a way to bootstr=
+ap
+> > > > > the build so the build picks the specified version of Maven?  E.g=
+.
+> > > > > I want the build to specify the version used not the system.
+> > > >
+> > > > Don't set it at all. The mvn shell scripts will automatically do so
+> > > > for their Maven version on-the-fly.
+> > >
+> > > and use a CI Server where you configure the maven path for each job.
+> > >
+> > > Gruss
+> > > Bernd
+> > >
+> > > ---------------------------------------------------------------------
+> > > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > > For additional commands, e-mail: users-help@maven.apache.org
+> > >
+> > >
+> >
+>
+>
+>
+> --
+> Adrien Rivard
+>
+
+--089e0111c05880970e0509ca6693--
+

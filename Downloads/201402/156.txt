@@ -1,0 +1,120 @@
+From users-return-135632-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 27 16:31:44 2014
+Return-Path: <users-return-135632-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 77894108C0
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 27 Feb 2014 16:31:44 +0000 (UTC)
+Received: (qmail 47247 invoked by uid 500); 27 Feb 2014 16:31:38 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 47179 invoked by uid 500); 27 Feb 2014 16:31:38 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 47170 invoked by uid 99); 27 Feb 2014 16:31:38 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Feb 2014 16:31:38 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of antonio.petrelli@gmail.com designates 209.85.216.182 as permitted sender)
+Received: from [209.85.216.182] (HELO mail-qc0-f182.google.com) (209.85.216.182)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Feb 2014 16:31:32 +0000
+Received: by mail-qc0-f182.google.com with SMTP id e16so1710583qcx.27
+        for <users@maven.apache.org>; Thu, 27 Feb 2014 08:31:11 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=faWVLTglt8dNdMV+mvOT+dVeU5aqVEkq6m3mk+foduc=;
+        b=xABR6V3JhGe8wkIjGJ/ze2ks9pCspk1I88MlPTWMpaLWP0fCy/PqIrv0JJnCaFQUGU
+         QHmJU13+YQNf1H1KWcYQPUKohKcirMDIooC7OBrQHnO20vyyu4IwHs65upBuosYSDtGK
+         MWIWlesEEZeB6Zsjo657f8YlmeNXOz1Feb82Vm7BNaGD8QNUe6PDXfGgv9mPqQWNVmmV
+         y3oskwFc94CkwpRE/ZIgDR/IdGiPvc3IIsS0rLud7S5ib06GpUHOVhP8tZyw5at6JiFU
+         7ATVXeGxfhjo73bAms1tEmiDJ3V/rBXeOkGo3IdMYpx8bOvbvHNmbJZWb4IK37x3n28O
+         KX8w==
+MIME-Version: 1.0
+X-Received: by 10.140.92.54 with SMTP id a51mr4179348qge.111.1393518671487;
+ Thu, 27 Feb 2014 08:31:11 -0800 (PST)
+Received: by 10.229.189.133 with HTTP; Thu, 27 Feb 2014 08:31:11 -0800 (PST)
+In-Reply-To: <20140227172637.797e2808@linux-du93.site>
+References: <20140227092431.205ec8f6@linux-du93.site>
+	<CAB7wfMqriOJptgWdX+SOt0HAXgXAWKnuLiKSNXqKSEhCZs0hfQ@mail.gmail.com>
+	<20140227170531.6c38285c@linux-du93.site>
+	<CAHTRnezVoc=hiDxHMEVJz1HP1Xx2DKcFbxW0_TUeEwUR4Wyyqg@mail.gmail.com>
+	<20140227171404.321aef96@linux-du93.site>
+	<CAHTRneycD+yQQby5pQJ8nBf1hSahH=mTS=2VrVUDwOipkkizxg@mail.gmail.com>
+	<20140227172637.797e2808@linux-du93.site>
+Date: Thu, 27 Feb 2014 17:31:11 +0100
+Message-ID: <CAHTRnexnK5ECtJbRAw8+MBU=Yh_wAs5uWVttL1nkoHAvs2SB+Q@mail.gmail.com>
+Subject: Re: Are skinny WARs still recommended?
+From: Antonio Petrelli <antonio.petrelli@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113ab97a66ea4504f365d95a
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113ab97a66ea4504f365d95a
+Content-Type: text/plain; charset=ISO-8859-1
+
+2014-02-27 17:26 GMT+01:00 Martin Hoeller <martin@xss.co.at>:
+
+> On 27 Feb 2014, Antonio Petrelli wrote:
+>
+> > 2014-02-27 17:14 GMT+01:00 Martin Hoeller <martin@xss.co.at>:
+> >
+> > > On 27 Feb 2014, Antonio Petrelli wrote:
+> > >
+> > > > 2014-02-27 17:05 GMT+01:00 Martin Hoeller <martin@xss.co.at>:
+> > > >
+> > > > > I have another concrete example with a single WAR where OmniFaces
+> is a
+> > > > > dependency by the WAR and by some EJB JAR, both contained in the
+> EAR.
+> > > The
+> > > > > OmniFaces JAR goes in the EARs lib folder and thus OmniFaces ist
+> not
+> > > > > fully usable without workarounds. See also my question on
+> > > StackOverflow:
+> > > > >
+> > > > >
+> > >
+> http://stackoverflow.com/questions/22046464/how-to-correctly-use-omnifaces-in-an-ear
+> > > > >
+> > > > >
+> > > > Hi,
+> > > > the real question is: why do you want to use a JSF-specific library
+> > > inside
+> > > > an EJB?
+> > >
+> > > OmniFaces is a JSF library but not UI component focused like RichFaces.
+> > > It hast some really nice classes like BeanManager that could be useful
+> > > outside a JSF application.
+> > >
+> >
+> > If it's really BeanManager or few classes that you need, I suggest to use
+> > the Shade plugin, to create an artifact with one (or few) classes,
+> possibly
+> > moved to another package:
+> >
+> http://maven.apache.org/plugins/maven-shade-plugin/examples/class-relocation.html
+>
+> I was already thinking of this :)
+>
+> However, I felt like there would be something wrong with this approach, as
+> I usually just need to declare a dependency when I want to use a library.
+> Not repackage it and include the classes twice in the EAR.
+>
+
+In fact what I proposed is a workaround. Probably you could collaborate
+with OmniFaces to split the library into a "common" jar and a JSF-specific
+jar, so that the common can be safely put in the EAR.
+
+Antonio
+
+--001a113ab97a66ea4504f365d95a--
+

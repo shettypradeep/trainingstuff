@@ -1,0 +1,164 @@
+From users-return-136804-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jul 18 15:02:19 2014
+Return-Path: <users-return-136804-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BEEF3112DA
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 18 Jul 2014 15:02:19 +0000 (UTC)
+Received: (qmail 95060 invoked by uid 500); 18 Jul 2014 15:02:18 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 94980 invoked by uid 500); 18 Jul 2014 15:02:18 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 94969 invoked by uid 99); 18 Jul 2014 15:02:17 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Jul 2014 15:02:17 +0000
+X-ASF-Spam-Status: No, hits=-0.1 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [12.161.118.91] (HELO mx2.belden.com) (12.161.118.91)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Jul 2014 15:02:15 +0000
+X-AuditID: 0a01015b-b7fb28e000000cb3-07-53c936de76b9
+Received: from bdcnotes1.belden.com ( [10.1.1.71])
+	by mx2.belden.com (Service Ready) with SMTP id 65.DE.03251.ED639C35; Fri, 18 Jul 2014 11:01:50 -0400 (EDT)
+In-Reply-To: <BLU172-W44BDE469E8B951662ADD31AEF50@phx.gbl>
+References: <CDF32190-517E-4AF0-A17F-7D39793F9B25@fortysix.ch>,<OF37E08195.95C3EC65-ON85257D19.004C0A85-85257D19.004C573C@belden.com> <BLU172-W44BDE469E8B951662ADD31AEF50@phx.gbl>
+To: "Maven Users List" <users@maven.apache.org>
+MIME-Version: 1.0
+Subject: RE: mvn release with pom.xml not in root of git repo
+X-KeepSent: A2EA8D3D:55344F1E-85257D19:00526DE8;
+ type=4; name=$KeepSent
+X-Mailer: Lotus Notes Release 8.5.3FP2 SHF99 September 04, 2012
+From: Alejandro.Endo@miranda.com
+Message-ID: <OFA2EA8D3D.55344F1E-ON85257D19.00526DE8-85257D19.005290D1@belden.com>
+Date: Fri, 18 Jul 2014 11:01:49 -0400
+X-MIMETrack: Serialize by Router on BDCNotes1/BeldenCDT(Release 9.0 HF625|September 19, 2013) at
+ 07/18/2014 11:01:51 AM,
+	Serialize complete at 07/18/2014 11:01:51 AM
+Content-Type: multipart/alternative; boundary="=_alternative 005290A385257D19_="
+X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFmplleLIzCtJLcpLzFFi42LhYmR0171ndjLYYO1lJYtHW68zOjB6tD8V
+	CmCMamC0SUosKQvOTM/Tt7NJzMvLL0ksSVVISS1OtlVySs1JSc1TcMksTs5JzMxNLdL1DPbX
+	tbAwtVRSyEyxVTJSUijISUxOzU3NK7FVSiwoSM1LUbLjUsAANkBlmXkKqXnJ+SmZeem2SqEh
+	broWSnYunsHOCa2sGe9fvWUu+G1VMXn7UsYGxrmGXYycHBICJhI/pxxlg7DFJC7cWw9kc3EI
+	CcxnlJg75S1YglPASqLtwyx2EFtIYDOjxJEf+iC2iIC+xLKD91lAbF4BQYmTM5+A2cICthKN
+	X7ZCDfWUuHToKCOEbS/x/dEHsBo2AQWJuVc2sUH0Bkn8PrEUzGYRUJW4tfcNC8gREgIrGSVa
+	Z84FSzALBEj82rObbQIj/ywk+2YhSUHYehJTrrYwQtjaEssWvmaGsHUlLvyfwoIsvoCRbRUj
+	X26FkV4SOA70kvNzNzFCojJ6B+OxH6qHGAU4GJV4eOveHw8WYk0sK67MPcQowcGsJMI7QeNk
+	sBBvSmJlVWpRfnxRaU5q8SHGIKD7JzJLcSfnAxNGXkm8sYEBkRwlcd6vn2qChQTSgSkjOzW1
+	ILUIZigTByfIUi4pkWJg1KcWJZaWZMSD0lN8MTBBSTUw1tw6VOq9eirHM/OzLZ926XOKtqfq
+	cqQoFj2T0OE/mc34R6Qm85DLWuHz2cdPq3BXr+nY5Bd5un+LePyB6SWpOafmPNnIlnC79Zeq
+	x9vc30/ktc1vfS5U7hHYEvbUTPPZjEln2JwnqEXve3gnR+xtNK/fwqY5F3p2LTOd32PTf6nV
+	LyrS6tFjJZbijERDLeai4kQAee+a8BgDAAA=
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--=_alternative 005290A385257D19_=
+Content-Type: text/plain; charset="ISO-8859-1"
+content-transfer-encoding: quoted-printable
+
+i do have the latest m-release-p, but the git version i don't know how to 
+set that nor what it currently is. How can i check that?
+
+Thank you Martin
+
+Alejandro Endo | Software Designer/Concepteur de logiciels 
+
+
+
+
+
+From:   Martin Gainty <mgainty@hotmail.com>
+To:     "users@maven.apache.org" <users@maven.apache.org>, 
+Date:   2014-07-18 10:26
+Subject:        RE: mvn release with pom.xml not in root of git repo
+
+
+
+
+> To: users@maven.apache.org
+> Subject: Re: mvn release with pom.xml not in root of git repo
+> From: Alejandro.Endo@miranda.com
+> Date: Fri, 18 Jul 2014 09:53:50 -0400
+> 
+> I've been tracking this bug for a while now
+> Still no progress
+> 
+> You can track it here. There is a workaround there that i haven't tried
+> 
+> Let us know if you try it and whether it works
+> 
+> https://jira.codehaus.org/browse/MRELEASE-875
+> 
+> Alejandro Endo | Software Designer/Concepteur de logiciels 
+MG>Alejando-
+MG>did you try latest maven-release-plugin with GIT 2.5 (as robert 
+suggested) ?
+MG>Saludos desde EEUU/Salutations aux =C9tats-Unis
+MG>Martin
+> 
+> 
+> 
+> 
+> From:   "domi@fortysix.ch" <domi@fortysix.ch>
+> To:     Maven Users List <users@maven.apache.org>, 
+> Date:   2014-07-18 00:39
+> Subject:        mvn release with pom.xml not in root of git repo
+> 
+> 
+> 
+> Hi,
+> 
+> This question has been asked quite a couple of times already, but I 
+never 
+> found a real solution nor do I know if this should really be supported:
+> Is it possible to do a release with the maven-release-plugin when the 
+> parent pom.xml is not in the root of the git repo?
+> This is no problem with Subversion, but with git I have never managed to 
+
+> get this working.
+> 
+> so layout is like this:
+> 
+> repo-dir
+> |_.git
+> |_subdir/pom.xml
+> |_subdir/subsubdir/pom.xml
+> 
+> has anyone done this? how?
+> 
+> Domi
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+> 
+> 
+> 
+> DISCLAIMER:
+> Privileged and/or Confidential information may be contained in this
+> message. If you are not the addressee of this message, you may not
+> copy, use or deliver this message to anyone. In such event, you
+> should destroy the message and kindly notify the sender by reply
+> e-mail. It is understood that opinions or conclusions that do not
+> relate to the official business of the company are neither given
+> nor endorsed by the company.
+> Thank You.
+  
+
+DISCLAIMER:
+Privileged and/or Confidential information may be contained in this
+message. If you are not the addressee of this message, you may not
+copy, use or deliver this message to anyone. In such event, you
+should destroy the message and kindly notify the sender by reply
+e-mail. It is understood that opinions or conclusions that do not
+relate to the official business of the company are neither given
+nor endorsed by the company.
+Thank You.
+
+--=_alternative 005290A385257D19_=--
+

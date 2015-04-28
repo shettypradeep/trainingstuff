@@ -1,0 +1,112 @@
+From users-return-137541-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Oct 13 05:53:37 2014
+Return-Path: <users-return-137541-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B32921751B
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 13 Oct 2014 05:53:36 +0000 (UTC)
+Received: (qmail 9939 invoked by uid 500); 13 Oct 2014 05:53:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 9815 invoked by uid 500); 13 Oct 2014 05:53:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9785 invoked by uid 99); 13 Oct 2014 05:53:29 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 13 Oct 2014 05:53:29 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of anders.g.hammar@gmail.com designates 209.85.212.176 as permitted sender)
+Received: from [209.85.212.176] (HELO mail-wi0-f176.google.com) (209.85.212.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 13 Oct 2014 05:53:24 +0000
+Received: by mail-wi0-f176.google.com with SMTP id hi2so6377884wib.15
+        for <users@maven.apache.org>; Sun, 12 Oct 2014 22:53:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=sg51tX9k3Cb+p/nJNgjPgxjMtIhwKdU1pw5al1AXbmQ=;
+        b=xRZbrZ34QFN2Y3Z5QXY/EozCymiVsEGuAIfhfYYZc7GvRhbF/gZhl2iWZt93P+sobg
+         +pQWQRVGStkJ/ZENSV87Pv2LSJoI91kmwZrUPg76sHBPNU+aHbdnkIdD5Lc94onr6wdY
+         mOPHCe323Q3+3sY/jpoYwd6yswkk401iD8M7N88XUbpedbeAUA2alc8vWXVeaDjNqnyH
+         4tBc7HWfV6dfG3OrssUfgt0AjF1cEDZpqSZCpkqJhxnn3rST2VYhP9OA/2JsWFutCMaX
+         /IMaxLlVLwgcaRhvkwsdyCbBlHOZvsTzDF7OzO5xTGhEOB5dAd/xhKjnmB37yW7rjppi
+         kQ0A==
+MIME-Version: 1.0
+X-Received: by 10.194.81.101 with SMTP id z5mr18723149wjx.17.1413179583913;
+ Sun, 12 Oct 2014 22:53:03 -0700 (PDT)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.165.74 with HTTP; Sun, 12 Oct 2014 22:53:03 -0700 (PDT)
+In-Reply-To: <CAEayHEPKOwsT2FdY0T_BxjjVO8qOAMhzp9vGbkew_t8Q26ppWg@mail.gmail.com>
+References: <CAEayHEPKOwsT2FdY0T_BxjjVO8qOAMhzp9vGbkew_t8Q26ppWg@mail.gmail.com>
+Date: Mon, 13 Oct 2014 07:53:03 +0200
+X-Google-Sender-Auth: kp9sF8_Ieq7TzEuTQxENEIHlr3A
+Message-ID: <CAKDUN1tJ+Sjqu8g06zGW+HcTjz1LuYXWHexCvW7J7GZhYWn+Aw@mail.gmail.com>
+Subject: Re: How to resolve artifacts while respecting projects' dependency
+ management? (or finding an alternative)
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bea40561a6500050547837d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bea40561a6500050547837d
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+If it is a dependency only needed by the plugin in question (during build
+time) it should not be added to the project's dependencies. However, it
+should probably be added as a dependency to the plugin in the pom, hich
+will add it to the classpath for the plugin execution. However, AFAIK that
+section does not honor versions declared in the depMgmt section.
+
+/Anders
+
+On Mon, Oct 13, 2014 at 1:17 AM, Thomas Broyer <t.broyer@gmail.com> wrote:
+
+> Hi all,
+>
+> I have a situation where a plugin needs to take the project's classpath a=
+nd
+> add some elements to it. What I'd like is that the elements be resolved a=
+s
+> if they were declared as dependencies in the project's POM: take into
+> account dependencyManagement for the artifact's version and (more
+> importantly) its transitive dependencies.
+> How to do it? (in a way compatible with all Maven 3.x releases)
+>
+> Or do you think it'd be a better approach to just ask people add those
+> dependencies to their projects? They're tools needed for building the
+> project, but they don't need to be in the javac classpath. I tend to
+> believe this approach is much cleaner, but would appreciate external
+> feedback.
+> The plugin currently resolves the dependencies using maven-compat's
+> ArtifactResolver but I don't think this respects the projects
+> dependencyManagement (BTW, the "root" artifact passed comes from the
+> pluginArtifactMap); it also unconditionally add the JARs to the classpath=
+,
+> which could cause conflicts I believe in some (edge-case) conditions. The
+> first question I asked because I'd like to keep backwards compatibility a=
+nd
+> try to fix things (or at least make them better), but if the best practic=
+e
+> is to add the dependencies to the project using the plugin, I'd just leav=
+e
+> resolution as it is today but disable it behind a flag (either the plugin
+> extends the classpath in some "broken" way, or you add the dependencies t=
+o
+> your project and the plugin just uses the project's classpath).
+>
+> --
+> Thomas Broyer
+> /t=C9=94.ma.b=CA=81wa.je/ <http://xn--nna.ma.xn--bwa-xxb.je/> <
+> http://xn--nna.ma.xn--bwa-xxb.je/>
+>
+
+--047d7bea40561a6500050547837d--
+

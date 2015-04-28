@@ -1,0 +1,87 @@
+From users-return-136372-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri May 16 15:20:24 2014
+Return-Path: <users-return-136372-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9E05B11778
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 16 May 2014 15:20:24 +0000 (UTC)
+Received: (qmail 66233 invoked by uid 500); 16 May 2014 11:47:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 74353 invoked by uid 500); 16 May 2014 11:37:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 54742 invoked by uid 99); 16 May 2014 11:17:36 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 16 May 2014 11:17:36 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.217.180 as permitted sender)
+Received: from [209.85.217.180] (HELO mail-lb0-f180.google.com) (209.85.217.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 15 May 2014 14:28:02 +0000
+Received: by mail-lb0-f180.google.com with SMTP id p9so852266lbv.39
+        for <users@maven.apache.org>; Thu, 15 May 2014 07:27:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=wVwLY4sh46RFtF3enrMczga1xerTN/Cqtfd/Vnp27B4=;
+        b=Xp9Ha0YqyR+il7t09fSkGGF1BgSvM353sPnUaJbpZHjALb4dFiV0Nabwqpp0zE8VHk
+         vMg+fpmuErVltIe2daeaY0DogZdGvbKE1OaVgaGpImDfCoPGgeBsom8x7xfjtMXUlQJ+
+         yZCMxVKTarYwqKaMsNRRji6E1xPdS660i8w+xG7iblSSvU6rSxuPvCxIJvAGbE+CRHSk
+         p++WkTFsl2kHpCCXnahTi9Fvl8E6kzLuTTz2TRwbaKI4f9+NHDLQ4Q17pH5JlbTEZivp
+         LlqMaAOV5RqyJmcqAbC2agla1mFnu1Le4zuQStTos10nQEi/+E/oG90YcZMuahlAFZXW
+         35Yg==
+MIME-Version: 1.0
+X-Received: by 10.112.150.130 with SMTP id ui2mr1221483lbb.80.1400164060677;
+ Thu, 15 May 2014 07:27:40 -0700 (PDT)
+Received: by 10.114.48.6 with HTTP; Thu, 15 May 2014 07:27:40 -0700 (PDT)
+In-Reply-To: <CAMH6+az8EcyC9M2xP76wc9UAZeTZHXC9THPAPNw_K7aRaBJFiA@mail.gmail.com>
+References: <CAMH6+az8EcyC9M2xP76wc9UAZeTZHXC9THPAPNw_K7aRaBJFiA@mail.gmail.com>
+Date: Thu, 15 May 2014 07:27:40 -0700
+Message-ID: <CAPCjjnHQ6QaEsQK9xBJSRruPqM3HG4nS6ZQ9b=Nwfuj7_rbSWQ@mail.gmail.com>
+Subject: Re: Sharing of values across dependant projects?
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b3a821a76ccee04f9711986
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b3a821a76ccee04f9711986
+Content-Type: text/plain; charset=UTF-8
+
+possible ideas:
+
+1. use templating-maven-plugin to copy resource across
+
+2. place the resource into a file and deploy/install as a classifier to be
+consumed by B using maven-dependency-plugin
+
+-D
+
+
+On Fri, May 9, 2014 at 7:02 AM, James Green <james.mk.green@gmail.com>wrote:
+
+> I have two projects - A and B. B depends on A.
+>
+> A is built with a number (call it a build number). B needs to which number
+> is in A at the time B builds.
+>
+> Any ideas how to achieve this without any human intervention?
+>
+> FWIW the use case here is that A is software distributed by B (a WAR
+> archive). A queries B for an updated build number, thus implementing
+> "automatic updates". I'm trying to automate the setting of this number
+> across the two projects but I've drawn a blank inside Jenkins for the
+> moment.
+>
+> James
+>
+
+--047d7b3a821a76ccee04f9711986--
+

@@ -1,0 +1,94 @@
+From users-return-136974-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Aug  6 07:40:14 2014
+Return-Path: <users-return-136974-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8E1EF11823
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  6 Aug 2014 07:40:14 +0000 (UTC)
+Received: (qmail 49632 invoked by uid 500); 6 Aug 2014 07:40:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 49551 invoked by uid 500); 6 Aug 2014 07:40:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 49540 invoked by uid 99); 6 Aug 2014 07:40:12 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 06 Aug 2014 07:40:12 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.192.42] (HELO mail-qg0-f42.google.com) (209.85.192.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 06 Aug 2014 07:40:07 +0000
+Received: by mail-qg0-f42.google.com with SMTP id j5so2275055qga.29
+        for <users@maven.apache.org>; Wed, 06 Aug 2014 00:39:46 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to
+         :content-type;
+        bh=rWjsgwTjlwhN6NmAdz7U3XEwHnEr97o5L7xHY2TFPgA=;
+        b=l7jzrOZZA5ZqMNI4mCIk63wkc95a9nrQZ/JRsdEXD2ybEhe8gSf3wJnwTEUFh7kT0m
+         QWoRRB4oJx+zB8vlhO1UruoJUeDl91RXZk2lJ5H+2yutG0Og5TUMElniIuKJ3VqeOEYp
+         ROihMxOsw+Z7CovLfC4+6Bc2Lekwg4zDobQmVpKecapmn44FyF1ROCvAnrIPULCTTYhS
+         iwdQ9bLo09A3Z4UKk0e4QJ74t4dopBlD4A540KvHR2unxocCpC2uRsdIHsiRIqLntgjG
+         xdihxuYrF+FYpaZphqw9lw9986fj0BS51E0SgXitejSp5Kmfi8N8qBj5RCLmvn1MWqjo
+         BeBg==
+X-Gm-Message-State: ALoCoQl8niOOoZ0oA+YwQ87U7RN7EvBO+evFZn2dEBtGp45/wv3X+RW1peKUgMweljvnOLRS/sUZ
+MIME-Version: 1.0
+X-Received: by 10.229.231.74 with SMTP id jp10mr14025066qcb.29.1407310786379;
+ Wed, 06 Aug 2014 00:39:46 -0700 (PDT)
+Received: by 10.140.50.109 with HTTP; Wed, 6 Aug 2014 00:39:46 -0700 (PDT)
+X-Originating-IP: [91.41.133.136]
+Date: Wed, 6 Aug 2014 09:39:46 +0200
+Message-ID: <CAGCwEM-F=ppNGvfhVR6PK3sGmcF29g-k_xUPn4-5gzUCX3GGdw@mail.gmail.com>
+Subject: Shade plugin: Shade more than one artifact
+From: Alexander Reelsen <alr@spinscale.de>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a1134765282e39704fff113bd
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1134765282e39704fff113bd
+Content-Type: text/plain; charset=UTF-8
+
+Hi there,
+
+first, apologies, if I am on the wrong list for this topic, maybe there is
+a more specific list, so feel free to point me towards it.
+
+I am currently trying to persuade the shade plugin to actually shade more
+than one artifact. My goal is to create two different test jars. One, which
+contains only the needed infrastructure to use in other projects and
+another one, that includes all the tests of the current project, so I can
+take that jar, unpack it in another project and run all the tests in the
+scope of that project (this is used for a plugin the main project, to make
+sure, that this plugin does not accidentally remove features needed for
+normal functioning). The plugin cannot be merged or created as a sub-module
+of the main project, from which I want to create the jars.
+
+My current (non-working) workflow is to create two jars using the
+maven-jar-plugin and let the shade plugin do its work, which it does only
+with the default jar.
+
+My current workaround is to have a default mvn profile which creates the
+slim test jar and another one, which creates the fat test jar - however I
+would like to built both at the same time and deploy them.
+
+The pom.xml from my current workaround can be found at
+https://github.com/spinscale/elasticsearch/blob/build/test-jar-profiles/pom.xml#L1501-L1632
+
+I'd love to get some feedback if this is possible at all using the shade
+plugin, or if my approach is bad and I am supposed to do something
+completely different.
+
+Thanks a lot and have a nice day!
+
+
+--Alex
+
+--001a1134765282e39704fff113bd--
+

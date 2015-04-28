@@ -1,0 +1,174 @@
+From users-return-135493-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb 14 15:09:13 2014
+Return-Path: <users-return-135493-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 37F3010963
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 14 Feb 2014 15:09:13 +0000 (UTC)
+Received: (qmail 84072 invoked by uid 500); 14 Feb 2014 15:09:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 84009 invoked by uid 500); 14 Feb 2014 15:09:08 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 83907 invoked by uid 99); 14 Feb 2014 15:09:06 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 15:09:06 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of levskiweng@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 15:09:02 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <levskiweng@gmail.com>)
+	id 1WEKNd-0003G0-SJ
+	for users@maven.apache.org; Fri, 14 Feb 2014 07:08:41 -0800
+Date: Fri, 14 Feb 2014 07:08:41 -0800 (PST)
+From: LevskiWeng <levskiweng@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1392390521857-5784853.post@n5.nabble.com>
+In-Reply-To: <52FE29B7.20407@artifact-software.com>
+References: <CAPg65qhXj4b9VsK2eKd4VTpf3ghWMn603GWz_JFQX4C0HSPPww@mail.gmail.com> <52FE29B7.20407@artifact-software.com>
+Subject: Re: Why does Maven fail to compile my project occasionally?
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Sorry for that, I forgot to translate all the Chinese characters into
+English, those Chinese characters have the same meaning of 'Cannot find the
+symbol'.
+
+I will change the compilers to javac and see what will happen. I'll post my
+result later.
+
+The reason why I'm deleting my local repository is that when I delete a
+.java file in my project when developing, the maven treats the module as
+unmodified and skips to the next module. And I use this workaround to make
+sure all the modules are up-to-date.
+
+ =20
+
+Ron Wheeler wrote
+> Since the error message is in Chinese it is a bit difficult to tell.
+> Why are you deleting your local repo?
+> Is it possible that you are using different compilers?
+> How is TYPE_AGENT_ID source com compiles - same pom?
+>=20
+> On 14/02/2014 9:12 AM, Levski Weng wrote:
+>> Hello, I'm new to Maven. Currently I use Maven 3.1.1 to compile my
+>> project
+>> (using Jenkins). But occasionally, maven report error messages like the
+>> following:
+>>
+>> ---- Begin of the console output ----
+>> ...
+>>
+>> [INFO] Compiling 132 source files to C:\Program Files
+>> (x86)\Jenkins\jobs\CDMS-web-server\workspace\src\com.xxx.system\com.xxx.=
+system.devicecenter\target\classes
+>>
+>> [INFO]
+>> -------------------------------------------------------------[ERROR]
+>> COMPILATION ERROR : [INFO]
+>> -------------------------------------------------------------[ERROR]
+>> \Program Files
+>> (x86)\Jenkins\jobs\CDMS-web-server\workspace\src\com.xxx.system\com.xxx.=
+system.devicecenter\src\main\java\com\xxx\system\devicecenter\network\Agent=
+IdResourceMapIpHandle.java:[36,24]
+>> =E6=89=BE=E4=B8=8D=E5=88=B0=E7=AC=A6=E5=8F=B7Symbol=EF=BC=9A Variable TY=
+PE_AGENT_ID
+>> Location=EF=BC=9A Class com.xxx.system.common.ResourceTypeDef[ERROR] \Pr=
+ogram
+>> Files
+>> (x86)\Jenkins\jobs\CDMS-web-server\workspace\src\com.xxx.system\com.xxx.=
+system.devicecenter\src\main\java\com\xxx\system\devicecenter\network\Agent=
+UuidResourceMapIpHandle.java:[38,24]
+>> =E6=89=BE=E4=B8=8D=E5=88=B0=E7=AC=A6=E5=8F=B7Symbol=EF=BC=9A Variable TY=
+PE_AGENT_UUID
+>> Location=EF=BC=9A Class com.xxx.system.common.ResourceTypeDef[ERROR] \Pr=
+ogram
+>> Files
+>> (x86)\Jenkins\jobs\CDMS-web-server\workspace\src\com.xxx.system\com.xxx.=
+system.devicecenter\src\main\java\com\xxx\system\devicecenter\network\Agent=
+IdAgentUpdateMapIpHandle.java:[32,24]
+>> =E6=89=BE=E4=B8=8D=E5=88=B0=E7=AC=A6=E5=8F=B7Symbol=EF=BC=9A Variable TY=
+PE_COMPUTER_ID_FOR_UPDATE
+>> Location=EF=BC=9A Class com.xxx.system.common.ResourceTypeDef
+>> [INFO] 3 errors
+>> [INFO] -------------------------------------------------------------
+>> ...
+>>
+>> ---- End of the console output ----
+>>
+>> However, when I build the Jenkins job again without any modification,
+>> maven builds the project successfully.
+>> My code is correct because I could successfully build the whole
+>> project in Eclipse again and again.
+>>
+>> I use the following Maven parameters:
+>> clean install -Dmaven.test.skip=3Dtrue --update-snapshots --batch-mode
+>> --fail-fast --debug
+>>
+>> I could reproduce the scenario by rebuild the project after deleting
+>> all the sub-folders and files in the maven local repository:
+>>
+>> .repository/com/xxx/
+>>
+>> I'm confused about this, and on internet, nobody seems to have the
+>> same problem.
+>>
+>> Any suggestions? Thanks in advanced.
+>>
+>> --
+>>
+>> Levski Weng
+>>
+>>
+>>
+>>
+>>
+>=20
+>=20
+> --=20
+> Ron Wheeler
+> President
+> Artifact Software Inc
+> email:=20
+
+> rwheeler@
+
+> skype: ronaldmwheeler
+> phone: 866-970-2435, ext 102
+>=20
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail:=20
+
+> users-unsubscribe@.apache
+
+> For additional commands, e-mail:=20
+
+> users-help@.apache
+
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Why-does-Mav=
+en-fail-to-compile-my-project-occasionally-tp5784849p5784853.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,216 @@
+From users-return-137194-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Sep  4 20:16:52 2014
+Return-Path: <users-return-137194-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0EC1A113DA
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  4 Sep 2014 20:16:52 +0000 (UTC)
+Received: (qmail 24238 invoked by uid 500); 4 Sep 2014 20:16:49 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 24153 invoked by uid 500); 4 Sep 2014 20:16:49 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 24139 invoked by uid 99); 4 Sep 2014 20:16:48 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 04 Sep 2014 20:16:48 +0000
+X-ASF-Spam-Status: No, hits=0.7 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [81.169.146.162] (HELO mo4-p00-ob.smtp.rzone.de) (81.169.146.162)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 04 Sep 2014 20:16:43 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1409861781; l=8659;
+	s=domk; d=j-hohwiller.de;
+	h=Content-Type:In-Reply-To:References:Subject:To:MIME-Version:From:
+	Date;
+	bh=v1GY8GVAhiradao9bYAG0tVlfiw=;
+	b=lX5uOdtO4YkchNl8tbWs5w3xAa2W1jGAmgl1L2BDaRlkjV3IBzXOK0lg3XnJbQcmYMO
+	lkbi5nbptVtYHhXVjhnB4lX+4QSSShJg68QWrzSfBxlvek9VXI1Tak3z2BCn4dNuj60bu
+	OBQBWFdOmC30IRaeuNoSPa4OPj5cdAPJUUY=
+X-RZG-AUTH: :JmMBZ0eIcbKJR7aGLMhBBT1soiSFCF2VXU3ajFlWruDt0TYDoKRQfXqROSf1BfCpuA==
+X-RZG-CLASS-ID: mo00
+Received: from [192.168.178.50] (p4FCD3EA3.dip0.t-ipconnect.de [79.205.62.163])
+	by smtp.strato.de (RZmta 35.8 DYNA|AUTH)
+	with ESMTPSA id m06533q84KGK7Xa
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	for <users@maven.apache.org>;
+	Thu, 4 Sep 2014 22:16:20 +0200 (CEST)
+Message-ID: <5408C894.6040807@j-hohwiller.de>
+Date: Thu, 04 Sep 2014 22:16:20 +0200
+From: =?ISO-8859-15?Q?J=F6rg_Hohwiller?= <joerg@j-hohwiller.de>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: maven-dependency-plugin unpacking aar format?
+References: <CAA8BW8HFWKNmv_ZTE9wuYQMDJ_FxUzhkXAnW_g3wrVFjovj=cA@mail.gmail.com> <op.xjet3z06kdkhrr@robertscholte>
+In-Reply-To: <op.xjet3z06kdkhrr@robertscholte>
+Content-Type: multipart/signed; protocol="application/pkcs7-signature"; micalg=sha1; boundary="------------ms030602020106010701080709"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------ms030602020106010701080709
+Content-Type: text/plain; charset=ISO-8859-15; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+Hi there,
+
+just my few cents...
+An artifact type is something quite central. IMHO it is not the best way =
+
+to force all artifacts to keep the information how to unpack it in their =
+
+POMs and then magically fiddle it out from there.
+
+If I type "mvn foo" and there is a maven-foo-plugin or foo-maven-plugin=20
+in the right groupId, then maven will automatically figure it out. So I=20
+would expect something similar here.
+<packaging>aar</packaging>
+could trigger that some aar-maven-plugin is responsible for packaging.=20
+There could be a convenience goal for unpacking.
+
+If you want to have some proprietary packaging in some other namespace=20
+(and not available in central) there could be some hint configured in=20
+settings.xml.
+
+Cheers
+   J=F6rg
+
+Am 22.07.2014 19:41, schrieb Robert Scholte:
+> Hi,
+>
+> to be able to unpack/unarchive Maven must know which Unarchiver should =
+
+> be used for this type. 'aar' is not one of the few default supported=20
+> types, hence the exception.
+> The plugin responsible for packaging the aar-file should also have=20
+> configured how to unarchive the aar-file.
+> In case of dependency:unpack it is quite simple: I would expect that=20
+> the packaging plugin is configured in the pom.xml with a=20
+> <extension>true</extension>. This way Maven can find such information.
+>
+> However, I can imagine that in case of unpack-dependencies the=20
+> aar-project.pom isn't used to detect the corresponding Unarchiver.=20
+> Sounds like an improvement to me.
+>
+> thanks,
+> Robert
+>
+> ps. this is also an interesting usecase for the consumer-pom or the=20
+> flatten-maven-plugin
+>
+>
+>
+> Op Mon, 21 Jul 2014 22:40:18 +0200 schreef David Hoffer=20
+> <dhoffer6@gmail.com>:
+>
+>> I'm getting the following error trying to unpack some files from an aa=
+r.
+>>  Is this not supported?  Is there any way to do this?
+>>
+>> Failed to execute goal
+>> org.apache.maven.plugins:maven-dependency-plugin:2.8:unpack-dependenci=
+es
+>> (unpack-service) on project service: Unknown archiver type: No such
+>> archiver: 'aar'. -> [Help 1]
+>>
+>> -Dave
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+
+
+--------------ms030602020106010701080709
+Content-Type: application/pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+Content-Description: S/MIME Cryptographic Signature
+
+MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIIMgTCC
+BjQwggQcoAMCAQICAR4wDQYJKoZIhvcNAQEFBQAwfTELMAkGA1UEBhMCSUwxFjAUBgNVBAoT
+DVN0YXJ0Q29tIEx0ZC4xKzApBgNVBAsTIlNlY3VyZSBEaWdpdGFsIENlcnRpZmljYXRlIFNp
+Z25pbmcxKTAnBgNVBAMTIFN0YXJ0Q29tIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA3
+MTAyNDIxMDE1NVoXDTE3MTAyNDIxMDE1NVowgYwxCzAJBgNVBAYTAklMMRYwFAYDVQQKEw1T
+dGFydENvbSBMdGQuMSswKQYDVQQLEyJTZWN1cmUgRGlnaXRhbCBDZXJ0aWZpY2F0ZSBTaWdu
+aW5nMTgwNgYDVQQDEy9TdGFydENvbSBDbGFzcyAxIFByaW1hcnkgSW50ZXJtZWRpYXRlIENs
+aWVudCBDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMcJg8zOLdgasSmkLhOr
+lr6KMoOMpohBllVHrdRvEg/q6r8jR+EK75xCGhR8ToREoqe7zM9/UnC6TS2y9UKTpT1v7RSM
+zR0t6ndl0TWBuUr/UXBhPk+Kmy7bI4yW4urC+y7P3/1/X7U8ocb8VpH/Clt+4iq7nirMcNh6
+qJR+xjOhV+VHzQMALuGYn5KZmc1NbJQYclsGkDxDz2UbFqE2+6vIZoL+jb9x4Pa5gNf1TwSD
+kOkikZB1xtB4ZqtXThaABSONdfmv/Z1pua3FYxnCFmdr/+N2JLKutIxMYqQOJebr/f/h5t95
+m4JgrM3Y/w7YX9d7YAL9jvN4SydHsU6n65cCAwEAAaOCAa0wggGpMA8GA1UdEwEB/wQFMAMB
+Af8wDgYDVR0PAQH/BAQDAgEGMB0GA1UdDgQWBBRTcu2SnODaywFcfH6WNU7y1LhRgjAfBgNV
+HSMEGDAWgBROC+8apEBbpRdphzDKNGhD0EGu8jBmBggrBgEFBQcBAQRaMFgwJwYIKwYBBQUH
+MAGGG2h0dHA6Ly9vY3NwLnN0YXJ0c3NsLmNvbS9jYTAtBggrBgEFBQcwAoYhaHR0cDovL3d3
+dy5zdGFydHNzbC5jb20vc2ZzY2EuY3J0MFsGA1UdHwRUMFIwJ6AloCOGIWh0dHA6Ly93d3cu
+c3RhcnRzc2wuY29tL3Nmc2NhLmNybDAnoCWgI4YhaHR0cDovL2NybC5zdGFydHNzbC5jb20v
+c2ZzY2EuY3JsMIGABgNVHSAEeTB3MHUGCysGAQQBgbU3AQIBMGYwLgYIKwYBBQUHAgEWImh0
+dHA6Ly93d3cuc3RhcnRzc2wuY29tL3BvbGljeS5wZGYwNAYIKwYBBQUHAgEWKGh0dHA6Ly93
+d3cuc3RhcnRzc2wuY29tL2ludGVybWVkaWF0ZS5wZGYwDQYJKoZIhvcNAQEFBQADggIBAAqD
+CH14qywGXLhjjF6uHLkjd02hcdh9hrw+VUsv+q1eeQWB21jWj3kJ96AUlPCoEGZ/ynJNScWy
+6QMVQjbbMXltUfO4n4bGGdKo3awPWp61tjAFgraLJgDk+DsSvUD6EowjMTNx25GQgyYJ5RPI
+zKKR9tQW8gGK+2+RHxkUCTbYFnL6kl8Ch507rUdPPipJ9CgJFws3kDS3gOS5WFMxcjO5DwKf
+KSETEPrHh7p5shuuNktvsv6hxHTLhiMKX893gxdT3XLS9OKmCv87vkINQcNEcIIoFWbP9HOR
+z9v3vQwR4e3ksLc2JZOAFK+ssS5XMEoznzpihEP0PLc4dCBYjbvSD7kxgDwZ+Aj8Q9PkbvE9
+sIPP7ON0fz095HdThKjiVJe6vofq+n6b1NBc8XdrQvBmunwxD5nvtTW4vtN6VY7mUCmxsCie
+uoBJ9OlqmsVWQvifIYf40dJPZkk9YgGTzWLpXDSfLSplbY2LL9C9U0ptvjcDjefLTvqSFc7t
+w1sEhF0n/qpA2r0GpvkLRDmcSwVyPvmjFBGqUp/pNy8ZuPGQmHwFi2/14+xeSUDG2bwnsYJQ
+G2EdJCB6luQ57GEnTA/yKZSTKI8dDQa8Sd3zfXb19mOgSF0bBdXbuKhEpuP9wirslFe6fQ1t
+5j5R0xi72MZ8ikMu1RQZKCyDbMwazlHiMIIGRTCCBS2gAwIBAgIDCxCBMA0GCSqGSIb3DQEB
+BQUAMIGMMQswCQYDVQQGEwJJTDEWMBQGA1UEChMNU3RhcnRDb20gTHRkLjErMCkGA1UECxMi
+U2VjdXJlIERpZ2l0YWwgQ2VydGlmaWNhdGUgU2lnbmluZzE4MDYGA1UEAxMvU3RhcnRDb20g
+Q2xhc3MgMSBQcmltYXJ5IEludGVybWVkaWF0ZSBDbGllbnQgQ0EwHhcNMTQwOTAzMDU0NTAw
+WhcNMTUwOTA0MDc1ODQyWjBfMRkwFwYDVQQNExAzeXlzRlZndTM1RjR2bTFCMR0wGwYDVQQD
+DBRqb2VyZ0BqLWhvaHdpbGxlci5kZTEjMCEGCSqGSIb3DQEJARYUam9lcmdAai1ob2h3aWxs
+ZXIuZGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCweH8hY0q/ahTxsHZOjl59
+1a1+2XEiH5R8HWcaGelGl6hwvvlxbdXfn7A5WpsWijSl0hVWjn5C98piZfNLv9+cVNRFLv8L
+heMVvQWfXKTMjT4eqLPW8jjU/bjxLYniBFwc9dCp+OKCy7uqCgTVQcSseIJY9MuSNpizK5RJ
+V8W+2sPzp8UvtvzskWCbl+86gai1UO6r09Ygq/W8YmHT8RhHBfB6wDubwZZW+e9bxQQnvSoH
+AaIDHNcuRnFkcxUN31POaQEVLsjdWDMJ/2T1ZpKuOWhtnpk/1eIqq8nywSpYgXhX2lBTVWG+
+pGTYlsXJD/WTeDvDekF/29Al+6BdafDpAgMBAAGjggLaMIIC1jAJBgNVHRMEAjAAMAsGA1Ud
+DwQEAwIEsDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwQwHQYDVR0OBBYEFPznYW2v
+oCUu3TdXC+c1zoWY01TeMB8GA1UdIwQYMBaAFFNy7ZKc4NrLAVx8fpY1TvLUuFGCMB8GA1Ud
+EQQYMBaBFGpvZXJnQGotaG9od2lsbGVyLmRlMIIBTAYDVR0gBIIBQzCCAT8wggE7BgsrBgEE
+AYG1NwECAzCCASowLgYIKwYBBQUHAgEWImh0dHA6Ly93d3cuc3RhcnRzc2wuY29tL3BvbGlj
+eS5wZGYwgfcGCCsGAQUFBwICMIHqMCcWIFN0YXJ0Q29tIENlcnRpZmljYXRpb24gQXV0aG9y
+aXR5MAMCAQEagb5UaGlzIGNlcnRpZmljYXRlIHdhcyBpc3N1ZWQgYWNjb3JkaW5nIHRvIHRo
+ZSBDbGFzcyAxIFZhbGlkYXRpb24gcmVxdWlyZW1lbnRzIG9mIHRoZSBTdGFydENvbSBDQSBw
+b2xpY3ksIHJlbGlhbmNlIG9ubHkgZm9yIHRoZSBpbnRlbmRlZCBwdXJwb3NlIGluIGNvbXBs
+aWFuY2Ugb2YgdGhlIHJlbHlpbmcgcGFydHkgb2JsaWdhdGlvbnMuMDYGA1UdHwQvMC0wK6Ap
+oCeGJWh0dHA6Ly9jcmwuc3RhcnRzc2wuY29tL2NydHUxLWNybC5jcmwwgY4GCCsGAQUFBwEB
+BIGBMH8wOQYIKwYBBQUHMAGGLWh0dHA6Ly9vY3NwLnN0YXJ0c3NsLmNvbS9zdWIvY2xhc3Mx
+L2NsaWVudC9jYTBCBggrBgEFBQcwAoY2aHR0cDovL2FpYS5zdGFydHNzbC5jb20vY2VydHMv
+c3ViLmNsYXNzMS5jbGllbnQuY2EuY3J0MCMGA1UdEgQcMBqGGGh0dHA6Ly93d3cuc3RhcnRz
+c2wuY29tLzANBgkqhkiG9w0BAQUFAAOCAQEADaJCsTXNkFq+j5Nhs6lCjQd8YRTXJr0XKJpp
+wfwSdaWU5zGjqJV6sv2RdsYw60SGmdUjgf3GfMlQRZlqiayrWKTQB/fEyYtIoa6Y0a24BFlo
+odlRoWuTfbL+fiRtzQap0hYRPyFp7ytNRwUw89nzJODp2dXdPIuwHNO9RCYkyv+e7NQ7/vxY
+NWI3FCcyUWcK6Sjd277Lod9k97zihTzLv5jdBk/TIk9ky5qz4t52Tw/SK5aeGNRufQ1JtjlC
+wCuAgba0Bs+PCTvktNcTOqXbsR4a8udTKLgI3pZcVALdcv/tI45uhqQkqIfTDrn6l6y/iVIh
+9pwrEyqsWdVLyCdmgzGCA90wggPZAgEBMIGUMIGMMQswCQYDVQQGEwJJTDEWMBQGA1UEChMN
+U3RhcnRDb20gTHRkLjErMCkGA1UECxMiU2VjdXJlIERpZ2l0YWwgQ2VydGlmaWNhdGUgU2ln
+bmluZzE4MDYGA1UEAxMvU3RhcnRDb20gQ2xhc3MgMSBQcmltYXJ5IEludGVybWVkaWF0ZSBD
+bGllbnQgQ0ECAwsQgTAJBgUrDgMCGgUAoIICHTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcB
+MBwGCSqGSIb3DQEJBTEPFw0xNDA5MDQyMDE2MjBaMCMGCSqGSIb3DQEJBDEWBBSt8y/uypFq
+u3o3o8pmgRo4GJUhUjBsBgkqhkiG9w0BCQ8xXzBdMAsGCWCGSAFlAwQBKjALBglghkgBZQME
+AQIwCgYIKoZIhvcNAwcwDgYIKoZIhvcNAwICAgCAMA0GCCqGSIb3DQMCAgFAMAcGBSsOAwIH
+MA0GCCqGSIb3DQMCAgEoMIGlBgkrBgEEAYI3EAQxgZcwgZQwgYwxCzAJBgNVBAYTAklMMRYw
+FAYDVQQKEw1TdGFydENvbSBMdGQuMSswKQYDVQQLEyJTZWN1cmUgRGlnaXRhbCBDZXJ0aWZp
+Y2F0ZSBTaWduaW5nMTgwNgYDVQQDEy9TdGFydENvbSBDbGFzcyAxIFByaW1hcnkgSW50ZXJt
+ZWRpYXRlIENsaWVudCBDQQIDCxCBMIGnBgsqhkiG9w0BCRACCzGBl6CBlDCBjDELMAkGA1UE
+BhMCSUwxFjAUBgNVBAoTDVN0YXJ0Q29tIEx0ZC4xKzApBgNVBAsTIlNlY3VyZSBEaWdpdGFs
+IENlcnRpZmljYXRlIFNpZ25pbmcxODA2BgNVBAMTL1N0YXJ0Q29tIENsYXNzIDEgUHJpbWFy
+eSBJbnRlcm1lZGlhdGUgQ2xpZW50IENBAgMLEIEwDQYJKoZIhvcNAQEBBQAEggEAA3hajDOv
+tboT+ihD2dAFhx/3OCMiuoQGoOnbJGJTL9IcT/Kyi+9gOmYsoM/QpfeI+iyFZbHGUBfqLR2G
+dicrO9Eqx7UX2DKZGV7J1ncGegZB6X2qOpz0tyz8UrLU7bNwb/HFOpcKAIxbh1r2OVkhw8/6
+bcc/GznGGGwtzvyjbCHVq5EkL1hMQVIAH0xou1PGzY7QIFnDt27rJY/hroCHbC0s5dCs/bnw
+8YhjhNW2Kwvv6sB5yeqScRord/Z8UVOLZiIym8gTjNmzDO1Ri2hyEvr692wfSVvyZQazlHdg
+epUg6zAnexiIqSxiFHajjstk8L+5hCO0Nvkn2SqB7TtWbwAAAAAAAA==
+--------------ms030602020106010701080709--
+

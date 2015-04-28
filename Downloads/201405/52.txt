@@ -1,0 +1,86 @@
+From users-return-136461-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri May 30 00:15:55 2014
+Return-Path: <users-return-136461-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 64BF310C05
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 30 May 2014 00:15:55 +0000 (UTC)
+Received: (qmail 72300 invoked by uid 500); 30 May 2014 00:15:54 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 72220 invoked by uid 500); 30 May 2014 00:15:54 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 72212 invoked by uid 99); 30 May 2014 00:15:54 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 30 May 2014 00:15:54 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ljnelson@gmail.com designates 209.85.192.51 as permitted sender)
+Received: from [209.85.192.51] (HELO mail-qg0-f51.google.com) (209.85.192.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 30 May 2014 00:15:51 +0000
+Received: by mail-qg0-f51.google.com with SMTP id q107so3267751qgd.24
+        for <users@maven.apache.org>; Thu, 29 May 2014 17:15:27 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=+dBeQWSD+nPVNCf5MFCrzYVfxi4GQaBvFcfwigW4F/4=;
+        b=ftdfqXctvJZ5FsoG7dpOzwo9StQaA9XpCVp/7DAX1mGbSV4e0IQMRMdx1EtPdsDbSD
+         1WmSM/hWfew40sG9/I5XahRzvPSabT2XU3MgERw+dkSHlWEPOYIAukSgF6qMTCzsd9mU
+         lEqcsjN7FUMuofk7yROm8K52CwZa+oTeuKidrgp5MBW/PDeb6tBfju/fZlacQUDtcSP8
+         ueeCXhV0fBRW+QO/y49Llx5cFattzHoNsT00kEnq3gjii0p1ajZCudaBlgZaAvzt9y0q
+         Zj5NJreNUpoNXLESlRAYN+GqSWEdRPl17PjLXmMx6ccrMPhetMvpq7YWRBa9M0LJyTMy
+         A4AQ==
+MIME-Version: 1.0
+X-Received: by 10.224.11.70 with SMTP id s6mr15465169qas.65.1401408927330;
+ Thu, 29 May 2014 17:15:27 -0700 (PDT)
+Received: by 10.96.46.137 with HTTP; Thu, 29 May 2014 17:15:27 -0700 (PDT)
+In-Reply-To: <CAHNdxunGiSpmRipvkmmhUzcnoW8tm4g6bod0oz+LX4AMO-x-3w@mail.gmail.com>
+References: <CAHNdxunGiSpmRipvkmmhUzcnoW8tm4g6bod0oz+LX4AMO-x-3w@mail.gmail.com>
+Date: Thu, 29 May 2014 20:15:27 -0400
+Message-ID: <CAHNdxunNg-9CQS_EV97ROGJtYw9hjZf_9N7sZVO4_UVONFO1WA@mail.gmail.com>
+Subject: Re: Maven release plugin having trouble with transformations?
+From: Laird Nelson <ljnelson@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c2c5a64c940304fa92f1e5
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c2c5a64c940304fa92f1e5
+Content-Type: text/plain; charset=UTF-8
+
+On Thu, May 29, 2014 at 7:52 PM, Laird Nelson <ljnelson@gmail.com> wrote:
+
+> Now, on a particular project on GitHub, it is incorrectly transforming my
+> pom.xml and attempting to release the project as a snapshot.
+>
+
+Whittling this down a bit, it looks like the transformation works properly,
+because after transformation, the release plugin runs a build, and I can
+see in that build that the version is correct (i.e. non-SNAPSHOT).
+
+It appears to be in what is selected for tagging.  The thing that is tagged
+(and then checked out later, and then released/deployed) is my original
+development pom.xml.
+
+It is as though the transformation is not being committed properly, or that
+the tag is being misapplied.  All the other mysterious screwed-up behavior
+descends from here.
+
+What could account for this?  Why now?  Is there something GitHub-related
+that might have changed (though that seems wrong)?
+
+Best,
+Laird
+
+-- 
+http://about.me/lairdnelson
+
+--001a11c2c5a64c940304fa92f1e5--
+

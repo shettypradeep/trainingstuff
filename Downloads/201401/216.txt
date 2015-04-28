@@ -1,0 +1,68 @@
+From users-return-135093-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jan 10 22:00:05 2014
+Return-Path: <users-return-135093-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BF82410311
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 10 Jan 2014 22:00:05 +0000 (UTC)
+Received: (qmail 57652 invoked by uid 500); 10 Jan 2014 22:00:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 57594 invoked by uid 500); 10 Jan 2014 22:00:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 57586 invoked by uid 99); 10 Jan 2014 22:00:03 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 10 Jan 2014 22:00:03 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [74.125.82.181] (HELO mail-we0-f181.google.com) (74.125.82.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 10 Jan 2014 21:59:57 +0000
+Received: by mail-we0-f181.google.com with SMTP id u56so2262307wes.26
+        for <users@maven.apache.org>; Fri, 10 Jan 2014 13:59:36 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to
+         :content-type;
+        bh=Cm2EBnyt3htqyL5sBsq0t2au8txRRkYkRw7c1oHwfEk=;
+        b=IYXrjar5pfRO64afHBCTgt5CCD9I28ViuBf0R9a2KVAIzVr2PAoG+O9QhEu0XF/jiB
+         v5zecTJoh/+chWyOwA7E6RXKuumfpL4HprXFsaghqgQlvGRpmAk+eLhlxswpdJSYfZcM
+         evzIwYK3JOqbfFwVKjLvbYLcsfpEOjywi9Or99SNDMEMeElxztkLunsLi0IX6/5/Tjcl
+         G5HppNZU2ffLrgZ1/tcSwR7Aw/YgyiJbil9IbAzGAdIVkLygc7L0pbVO7xIuv5qz7uXf
+         T7l1ddtJI3j9/j8+INwIuVAab+JYQmkRWFbH9Te0UFiouWFwnC/7ZfrUzI9YY2ae5aY7
+         e0ag==
+X-Gm-Message-State: ALoCoQkeUO+3yxAha6gS78PlHmIrAegbsLu1/zM7gWwlXG8ZBO6obLaMsRh22JiXtl386gE3kH8x
+MIME-Version: 1.0
+X-Received: by 10.194.178.135 with SMTP id cy7mr10781514wjc.21.1389391176501;
+ Fri, 10 Jan 2014 13:59:36 -0800 (PST)
+Received: by 10.180.7.106 with HTTP; Fri, 10 Jan 2014 13:59:36 -0800 (PST)
+Date: Fri, 10 Jan 2014 16:59:36 -0500
+Message-ID: <CAG54imb9m34Q4VsyMoGdp2t4fcPMEfxR-1zpcU6kNWF+vsXwoA@mail.gmail.com>
+Subject: Running cleanup code after tests in multi-module project.
+From: Todd Chapman <todd@chaka.net>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=089e013d1dd487ceb804efa4d761
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e013d1dd487ceb804efa4d761
+Content-Type: text/plain; charset=UTF-8
+
+What is the best way to run cleanup code after testing a multi-module
+project?
+
+Basically, post-integration-test for the entire reactor. Is the best way to
+create another module that is last to run in the reactor order?
+
+Thanks!
+
+-Todd
+
+--089e013d1dd487ceb804efa4d761--
+

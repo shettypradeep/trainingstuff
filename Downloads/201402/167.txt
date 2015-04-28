@@ -1,0 +1,88 @@
+From users-return-135602-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Feb 25 09:57:36 2014
+Return-Path: <users-return-135602-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 688AB1017C
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 25 Feb 2014 09:57:36 +0000 (UTC)
+Received: (qmail 9318 invoked by uid 500); 25 Feb 2014 09:57:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 9240 invoked by uid 500); 25 Feb 2014 09:57:31 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9230 invoked by uid 99); 25 Feb 2014 09:57:31 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Feb 2014 09:57:31 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of kbernalruiz@gmail.com designates 209.85.213.170 as permitted sender)
+Received: from [209.85.213.170] (HELO mail-ig0-f170.google.com) (209.85.213.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Feb 2014 09:57:25 +0000
+Received: by mail-ig0-f170.google.com with SMTP id t19so6076231igi.1
+        for <users@maven.apache.org>; Tue, 25 Feb 2014 01:57:04 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=hzkp3Orxbk8o8WYIKdHbBMxBLPZu/zyG6JTOcLBPngk=;
+        b=AhjgPHc5gItVpnDAeUlpwa5hdz2FZLAzalEn4dDV7cwtHOId0cWSc8PeLo6aR7105M
+         6UuiQ5vgDrNq8HXsLEeLi4HFbNnsiaVNafsHxIHdfNrw7Ik5oNU5Yj3+5Nr3ei5rPMBU
+         huvvaPJKTo3NviOqK4JsmoCtnIG9oWXVwaI1h9h4Sggu/6CJDoAoIL8tga945MVCmZQ7
+         QiwMvK9T8Ax7Z1POze3OAIX8bWRFHzdxiy9y/4BgUY/VGqmg/+f3JtXduzLxAOpDv2Xd
+         EM/A748e+yGCpeM+GfDL9es9CgZ3D8qUdqAcwdcazAGUBURECkB5cOOUhDGhMy7vMDfb
+         0D+A==
+MIME-Version: 1.0
+X-Received: by 10.42.16.199 with SMTP id q7mr18877865ica.16.1393322224470;
+ Tue, 25 Feb 2014 01:57:04 -0800 (PST)
+Received: by 10.64.220.1 with HTTP; Tue, 25 Feb 2014 01:57:04 -0800 (PST)
+In-Reply-To: <CADVp3v_hopuQzgkeCd12Pq3+D-N+fU87o80F9d7k+g-ky2RTTA@mail.gmail.com>
+References: <CAPzuzUeqS4dAdp+ESOQXWOafoyRT=Nm7phPTozUVJXwiCcye+w@mail.gmail.com>
+	<CANWgJS5hvhXhjLfHsF5-L7H3rUV=bPXC9V1FfG2w4WALJ0YdMg@mail.gmail.com>
+	<CAPzuzUe6WhV4gNL3UceuCqJ6CoY0=6cAadn8Tw_CQf1uVF-hMQ@mail.gmail.com>
+	<CADVp3v_hopuQzgkeCd12Pq3+D-N+fU87o80F9d7k+g-ky2RTTA@mail.gmail.com>
+Date: Tue, 25 Feb 2014 10:57:04 +0100
+Message-ID: <CAPzuzUcRr-5AxJGPpAHgeg+F-X8-Yr0jOVx9StbaNuE0T4E5oA@mail.gmail.com>
+Subject: Re: Where the binnary of mvn knows which mojo do i want to execute?
+From: enrique bernal ruiz <kbernalruiz@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=20cf303f66743f4e6804f3381cd0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--20cf303f66743f4e6804f3381cd0
+Content-Type: text/plain; charset=ISO-8859-1
+
+Ok! thank you very much for the help to all of you!
+
+
+
+
+2014-02-24 21:38 GMT+01:00 Barrie Treloar <baerrach@gmail.com>:
+
+> On 25 February 2014 00:46, enrique bernal ruiz <kbernalruiz@gmail.com>
+> wrote:
+> > Hello! And thank you so much for your help.
+> > I am working(starting) with it, and i am trying to understand it. What
+> mvn
+> > does when i call mvn run for example, i mean, I have a collection of mvn
+>
+>
+> Please have a look at the freely available books at
+> http://maven.apache.org/articles.html
+>
+> Some of these may be in a language more native to you than English.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--20cf303f66743f4e6804f3381cd0--
+

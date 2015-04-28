@@ -1,0 +1,99 @@
+From users-return-136092-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Apr  5 14:51:59 2014
+Return-Path: <users-return-136092-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2023C118A2
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  5 Apr 2014 14:51:59 +0000 (UTC)
+Received: (qmail 72695 invoked by uid 500); 5 Apr 2014 14:51:55 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 72056 invoked by uid 500); 5 Apr 2014 14:51:50 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 72045 invoked by uid 99); 5 Apr 2014 14:51:49 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 05 Apr 2014 14:51:49 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.220.45 as permitted sender)
+Received: from [209.85.220.45] (HELO mail-pa0-f45.google.com) (209.85.220.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 05 Apr 2014 14:51:43 +0000
+Received: by mail-pa0-f45.google.com with SMTP id kl14so4754919pab.18
+        for <users@maven.apache.org>; Sat, 05 Apr 2014 07:51:22 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type:content-transfer-encoding;
+        bh=SpZMk0WOXciN/jM7Y3drahxR1q2axCOxDES/acpdrbo=;
+        b=rDXobR9T4M4dX59RzgnF0Sy4T4CQJTLE7qFnnccC9VWXwWYv/t1nAeHOR0xiP/IbSN
+         NKmg6SqeTnohlvy2SS0OHVcrPNIhV8HaRXTaJXcpO6s9u0ydKQqGDGbM+cC+qaAVSX2X
+         oeC4ZD77aG3EigDKREkCH17lc+uQ9iXSnAbUxl9tkDTFSKLb8J8QZs3Si4YmhPQF4ZNg
+         QI1M+00V180BeAZzQ9esWaUO374/zYlNPiY4gcD69+jt9hq/BHrpv+VdClzMGfniDOXG
+         avU62pKYY+fYjeSoc7ufrgLjleQdZAiUWC85oenetD2DTwIkLyZRVUu8alRxkFvV7+n5
+         0Icg==
+X-Received: by 10.68.171.193 with SMTP id aw1mr20897818pbc.117.1396709482706;
+        Sat, 05 Apr 2014 07:51:22 -0700 (PDT)
+Received: from [192.168.0.17] (S0106602ad07f9cfa.vc.shawcable.net. [24.85.131.20])
+        by mx.google.com with ESMTPSA id pe3sm24853575pbc.23.2014.04.05.07.51.20
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Sat, 05 Apr 2014 07:51:21 -0700 (PDT)
+Message-ID: <53401868.40007@gmail.com>
+Date: Sat, 05 Apr 2014 07:51:20 -0700
+From: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Maven Filtering
+References: <533F4A90.90000@kolotyluk.net> <CALy+7U=1tDZmRygi_scj=JxqkGXf0wqbx5rCAzUpzTYjH8A+Vg@mail.gmail.com>
+In-Reply-To: <CALy+7U=1tDZmRygi_scj=JxqkGXf0wqbx5rCAzUpzTYjH8A+Vg@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Who-Hoo, thanks so much Wayne :-)
+
+That  totally solves my problem.
+
+Basically, I was filtering one of the .apt files for my site (actually, 
+.apt.vm) and was getting confused about filtering.
+
+Great way to wake up Saturday morning with a simple solution to 
+something that was making me crazy.
+
+The documentation was not wrong, I was just not reading enough of it.
+
+Cheers, Eric
+
+
+
+
+On 4/4/2014 8:18 PM, Wayne Fay wrote:
+>> Am I going insane, is this a bug in Maven, or is the documentation wrong?
+>>
+>> Is there some other way to escape the filtering?
+> Generally, this should work. Did you specify the escapeString
+> configuration [1]? What version of plugins etc are you using?
+>
+> [1] http://maven.apache.org/plugins/maven-resources-plugin/examples/escape-filtering.html
+>
+> Wayne
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

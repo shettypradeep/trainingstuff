@@ -1,0 +1,98 @@
+From users-return-137108-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Aug 22 12:26:15 2014
+Return-Path: <users-return-137108-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1BA8D11281
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 22 Aug 2014 12:26:15 +0000 (UTC)
+Received: (qmail 97155 invoked by uid 500); 22 Aug 2014 12:26:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 97063 invoked by uid 500); 22 Aug 2014 12:26:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 97051 invoked by uid 99); 22 Aug 2014 12:26:12 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 22 Aug 2014 12:26:12 +0000
+X-ASF-Spam-Status: No, hits=0.7 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [194.158.98.15] (HELO mail-2y.bbox.fr) (194.158.98.15)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 22 Aug 2014 12:26:06 +0000
+Received: from herve-desktop.localnet (static-176-183-252-218.ncc.abo.bbox.fr [176.183.252.218])
+	by mail-2y.bbox.fr (Postfix) with ESMTP id 28B9E64
+	for <users@maven.apache.org>; Fri, 22 Aug 2014 14:25:45 +0200 (CEST)
+From: =?ISO-8859-1?Q?Herv=E9?= BOUTEMY <herve.boutemy@free.fr>
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Debugging duplicate phase executions ...
+Date: Fri, 22 Aug 2014 14:25:44 +0200
+Message-ID: <2523527.7zC1fUfbK7@herve-desktop>
+User-Agent: KMail/4.13.3 (Linux/3.13.0-34-generic; KDE/4.13.3; x86_64; ; )
+In-Reply-To: <CAGqeSTGmfwiUY45HExC-oeewNtH7yR5OVcc1AGZsOpYv=mFGog@mail.gmail.com>
+References: <CAGqeSTGmfwiUY45HExC-oeewNtH7yR5OVcc1AGZsOpYv=mFGog@mail.gmail.com>
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="iso-8859-1"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+- use Maven 3.2.2 at least: MNG-5630 will really help you understand
+- if not possible, use m-site-p 3.4: MSHARED-333 does something quite=20=
+
+equivalent and doesn't require a specific Maven version
+
+and you can read MJAVADOC-171, where I managed to analyze the problem (=
+quite=20
+recently...) and explained it as much as possible
+
+
+in summary, there is a problem with forked lifecycles launched by plugi=
+ns=20
+executed from m-site-p (which gets even bigger when run in aggregated m=
+ode): I=20
+now understand the problem, given previous analysis (which took me a fe=
+w years=20
+of thinking/trying/...), but I still didn't have time to work on a fix
+
+If you're interested on working with me on this, I'll be happy to have =
+someone=20
+with me
+
+Regards,
+
+Herv=E9
+
+Le jeudi 21 ao=FBt 2014 22:53:03 Michael Norman a =E9crit :
+> I have a simple Maven project (a web-app) that uses the '
+> frontend-maven-plugin'
+> to handle various Javascript-related chores (installing node, running=
+
+> Grunt, Karma etc.)
+>=20
+> Unfortunately, the frontend stuff runs twice on a 'mvn clean site' co=
+mmand
+> - when
+> I turned on debug-output (in Eclipse) I can "see" the reactor list 2 =
+calls
+> to the frontend plugin.
+>=20
+> Is there any techniques or help anyone can suggest to try to figure o=
+ut
+> what is causing
+> the extra execution?
+>=20
+> Thanks in advance,
+> ---
+> Mike Norman
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

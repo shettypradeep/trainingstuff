@@ -1,0 +1,93 @@
+From users-return-136259-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr 25 05:15:19 2014
+Return-Path: <users-return-136259-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9E80D11C43
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 25 Apr 2014 05:15:19 +0000 (UTC)
+Received: (qmail 33974 invoked by uid 500); 25 Apr 2014 05:15:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 33344 invoked by uid 500); 25 Apr 2014 05:15:05 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 33326 invoked by uid 99); 25 Apr 2014 05:15:02 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 25 Apr 2014 05:15:02 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bmathus@gmail.com designates 209.85.213.45 as permitted sender)
+Received: from [209.85.213.45] (HELO mail-yh0-f45.google.com) (209.85.213.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 25 Apr 2014 05:14:58 +0000
+Received: by mail-yh0-f45.google.com with SMTP id a41so3116212yho.4
+        for <users@maven.apache.org>; Thu, 24 Apr 2014 22:14:35 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=8xxJHEeUvrjMUXZz6ZEJCl4nTDmjhTFz2EqG9Dtbhd0=;
+        b=TZ+bxsUo6MshhvZkgYe/CAxcVU8SoZqE/BwwD9f6ADaJUsDWg0vZ+Gri3O6HaB9NTd
+         lInggGN+D+mqV1k932C2ej7/DQbkWAfeaqJte4AUnHaLVevs1iO18r6LZKFyLYD9MOzF
+         KNs5yo17aDsuUlrPwEHeUQKQFPximon+FIJpcGmsrch4nXKS3vhB0Z515CJ4zaOvJi6O
+         A/8+xxdETvECa/YaJTs/hndoTm2Qdc52UM+g7xwJ8dQIpqvthYyhQjs4S8m4e+VKZlcB
+         3Bl/EvdlFk+F7rVQZLZuMycibxZs7umuKiIN3Y7OgZJ8/qDSxTCRyM0wrJ8M8C6lsb1L
+         FOkA==
+MIME-Version: 1.0
+X-Received: by 10.236.32.178 with SMTP id o38mr70314yha.119.1398402874909;
+ Thu, 24 Apr 2014 22:14:34 -0700 (PDT)
+Sender: bmathus@gmail.com
+Received: by 10.170.219.5 with HTTP; Thu, 24 Apr 2014 22:14:34 -0700 (PDT)
+Received: by 10.170.219.5 with HTTP; Thu, 24 Apr 2014 22:14:34 -0700 (PDT)
+In-Reply-To: <1398386249777-5791911.post@n5.nabble.com>
+References: <CALxHchkm7BPp3Ww7NmAjpMAfoyTYQGTwfVA4k_U-74b-65mg_w@mail.gmail.com>
+	<CAH-zGCjFEmXyc=ERKeqv3TxZ5qOXKn_P-NNQ7hc5O9p2zN0O4A@mail.gmail.com>
+	<BLU172-W47DC2C01C43B4E68C86622AE6F0@phx.gbl>
+	<1398386249777-5791911.post@n5.nabble.com>
+Date: Fri, 25 Apr 2014 07:14:34 +0200
+X-Google-Sender-Auth: ND5azLCS8Xon_EMUrPhkyDDh8hI
+Message-ID: <CANWgJS4Xmw=tNQwnvtjCz5kN86sRbdwRi8ZaqPNOiiDtO4B3dg@mail.gmail.com>
+Subject: RE: ForkedBooter in 2.2.1 does not honor MAVEN_OPTS
+From: Baptiste Mathus <bmathus@batmat.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0158cb529cbb4604f7d70a0b
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0158cb529cbb4604f7d70a0b
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Yes, it does not isolate your tests from your main maven build. So if for
+example your tests require too much memory, the OOME will kill the whole
+maven build.
+
+BTW, as maven 2.x is in the title, you should be aware it's now
+deprecated/end of life.
+
+Cheers
+Le 25 avr. 2014 03:22, "victropolis" <victropolis@gmail.com> a =C3=A9crit :
+
+>
+> Is there any downside to using <forkMode>never</forkMode>?
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/ForkedBooter-in-2-2-1-does-not-honor-MAV=
+EN-OPTS-tp5764410p5791911.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--089e0158cb529cbb4604f7d70a0b--
+

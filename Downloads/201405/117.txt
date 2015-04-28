@@ -1,0 +1,103 @@
+From users-return-136397-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon May 19 10:59:48 2014
+Return-Path: <users-return-136397-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D21D4117E4
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 19 May 2014 10:59:47 +0000 (UTC)
+Received: (qmail 58374 invoked by uid 500); 19 May 2014 10:59:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 58290 invoked by uid 500); 19 May 2014 10:59:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 58282 invoked by uid 99); 19 May 2014 10:59:44 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 19 May 2014 10:59:44 +0000
+X-ASF-Spam-Status: No, hits=0.9 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,RCVD_NUMERIC_HELO,SPF_HELO_PASS,SPF_PASS,T_FSL_HELO_BARE_IP_2
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of gcjtmu-turbine-maven-user-846@m.gmane.org designates 80.91.229.3 as permitted sender)
+Received: from [80.91.229.3] (HELO plane.gmane.org) (80.91.229.3)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 19 May 2014 10:59:41 +0000
+Received: from list by plane.gmane.org with local (Exim 4.69)
+	(envelope-from <gcjtmu-turbine-maven-user-846@m.gmane.org>)
+	id 1WmLHp-0003eI-2j
+	for users@maven.apache.org; Mon, 19 May 2014 12:59:17 +0200
+Received: from 155.55.49.12 ([155.55.49.12])
+        by main.gmane.org with esmtp (Gmexim 0.1 (Debian))
+        id 1AlnuQ-0007hv-00
+        for <users@maven.apache.org>; Mon, 19 May 2014 12:59:17 +0200
+Received: from sb by 155.55.49.12 with local (Gmexim 0.1 (Debian))
+        id 1AlnuQ-0007hv-00
+        for <users@maven.apache.org>; Mon, 19 May 2014 12:59:17 +0200
+X-Injected-Via-Gmane: http://gmane.org/
+Mail-Followup-To: users@maven.apache.org
+To: users@maven.apache.org
+From: Steinar Bang <sb@dod.no>
+Subject: Re: What packaging for Jira excel reports with maven?
+Date: Mon, 19 May 2014 12:59:06 +0200
+Organization: Probably a good idea
+Lines: 38
+Message-ID: <upzctx8mghl1.fsf@dod.no>
+References: <upzcwqf9fe6e.fsf@dod.no>
+	<CAKDUN1sf6xNVUHws7dTjO3q4FsLnC145Z5=zJHVw=9g05Nga9w@mail.gmail.com>
+Mime-Version: 1.0
+Content-Type: text/plain
+X-Complaints-To: usenet@ger.gmane.org
+X-Gmane-NNTP-Posting-Host: 155.55.49.12
+Mail-Copies-To: never
+User-Agent: Gnus/5.130008 (Ma Gnus v0.8) Emacs/24.3 (windows-nt)
+Cancel-Lock: sha1:/8kU7H33veE2eYz3PC6HLoZ7exY=
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+>>>>> Anders Hammar <anders@hammar.net>:
+
+> I categorize different usage of Maven into two categories:
+> A) As a build tool
+> B) As a utility tool
+[snip!]
+> My point here is that if you're in category A then Maven is absolutely
+> appropriate. At least if you're building everything else with
+> Maven. But if you're in category B, then Maven is just one of many
+> options you have. I would even go as far as saying that there are
+> simpler solutions, one being a shell script (or Windows batch file)
+> where you just have you Java command with the jar on the classpath and
+> the options to have the excel file generated.
+
+A solution like this, is what I would like to replace, actually. :-)
+
+> Using Maven here would just add an additional dependency (to Maven)
+> which could just complicate things.
+
+What we have, is:
+ - A jar that is built with maven, and installed in the local plexus
+   archive, this Jar file creates an excel file from a template
+ - Many jenkins projects that uses the jar together with two python
+   scrips
+ - The python scripts, are:
+  - A script to delete existing XLS files in the working directory
+  - A script to download the jar from plexus
+
+What I would like to have, are maven projects that would:
+ 1. Have the jar project as a dependency
+ 2. Run the jar to create the XLS spreadsheet in the target directory
+ 3. Offer the the XLS spreadsheet in the target directory as a Jenkins
+    build artifact
+
+Ie. since the python scripts does things that maven does by default
+(clean the working directory, and download jar files from plexus),
+replacing them with a maven project seemed like a good idea.
+ 
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,86 @@
+From users-return-136106-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr  8 16:03:20 2014
+Return-Path: <users-return-136106-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A23B8111AA
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  8 Apr 2014 16:03:20 +0000 (UTC)
+Received: (qmail 86171 invoked by uid 500); 8 Apr 2014 16:03:16 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 85622 invoked by uid 500); 8 Apr 2014 16:03:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 85606 invoked by uid 99); 8 Apr 2014 16:03:14 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 08 Apr 2014 16:03:14 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of glahiru@gmail.com designates 74.125.82.178 as permitted sender)
+Received: from [74.125.82.178] (HELO mail-we0-f178.google.com) (74.125.82.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 08 Apr 2014 16:03:09 +0000
+Received: by mail-we0-f178.google.com with SMTP id u56so1162960wes.37
+        for <users@maven.apache.org>; Tue, 08 Apr 2014 09:02:48 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=3c5iWpNsh+FfzjZA9rxzfUhEQer67xFzovJ1oqo6klM=;
+        b=OqRY/y3ROxUxKm72ojNQqg3WwHvjhmVba83X6goEyUb+QDQX8Ud9xb32i+L5giXxz6
+         gIqGXI9AOtJBQ0r8+A5Mdts4QefG7ESUZJ9/9PfuwjI5ayAjeJhaLcBW6zR4EEO8tJ8t
+         /7uIyPl1wnj884l+Nh+5J6vQFI7xG85/48YR2hjuh5k5j2sTjEGnUJ+j8hV7wctAEelH
+         MFtDph/7+iyQWCgcGic5Cd2xwdE97pNUEZakVAlzaH/3WMWZWTIehFINoOid6t2r1eW3
+         v/LtSqvxmArxOMwInuShqKkealRdry2u6vZug4zRhUnZNn7XFaiuI3hiBC82TXxE1/V+
+         /xww==
+MIME-Version: 1.0
+X-Received: by 10.180.36.101 with SMTP id p5mr5265884wij.8.1396972968278; Tue,
+ 08 Apr 2014 09:02:48 -0700 (PDT)
+Received: by 10.216.191.136 with HTTP; Tue, 8 Apr 2014 09:02:48 -0700 (PDT)
+Date: Tue, 8 Apr 2014 12:02:48 -0400
+Message-ID: <CAKq9_6JFBjo=f_cpC12-Q8NVazndiHuPfwZuAyEic2Wc_St31g@mail.gmail.com>
+Subject: Different profiles with different surefire excludes and includes
+ doesn't work
+From: Lahiru Gunathilake <glahiru@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=e89a8f50345e89020304f68a1da8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--e89a8f50345e89020304f68a1da8
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi All,
+
+I made my parent pom[1] with multiple profiles, and my requirement is the
+enable different types of tests for each profiles.
+
+When I just put the default profiles and test it my excludes in default
+profile works fine, but when i add another new profile with a different
+name (ex: gridTests) and try the default profile, it actually run my
+excludes in the new profiles. I have copied my profile configuration below.
+
+Can someone please help me whats wrong I am doing or is it a bug in maven.
+This is my maven environment.
+
+Apache Maven 3.0.2 (r1056850; 2011-01-08 19:58:10-0500)
+Java version: 1.6.0_24, vendor: Apple Inc.
+Java home: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+Default locale: si, platform encoding: MacRoman
+OS name: "mac os x", version: "10.6.8", arch: "x86_64", family: "mac"
+
+
+[1]http://pastebin.com/xwvjH45H
+
+Lahiru
+
+-- 
+System Analyst Programmer
+PTI Lab
+Indiana University
+
+--e89a8f50345e89020304f68a1da8--
+

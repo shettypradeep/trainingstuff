@@ -1,0 +1,75 @@
+From users-return-137406-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Sep 29 17:17:54 2014
+Return-Path: <users-return-137406-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5AEB9177EF
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 29 Sep 2014 17:17:54 +0000 (UTC)
+Received: (qmail 6713 invoked by uid 500); 29 Sep 2014 17:17:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 6622 invoked by uid 500); 29 Sep 2014 17:17:52 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 6607 invoked by uid 99); 29 Sep 2014 17:17:52 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 29 Sep 2014 17:17:52 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of lhartzman@gmail.com designates 209.85.213.177 as permitted sender)
+Received: from [209.85.213.177] (HELO mail-ig0-f177.google.com) (209.85.213.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 29 Sep 2014 17:17:46 +0000
+Received: by mail-ig0-f177.google.com with SMTP id h3so3805226igd.10
+        for <users@maven.apache.org>; Mon, 29 Sep 2014 10:17:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=5iW1NsWrThV6vft6k5n3hu7g80V7AxkPk6ICiyIeC24=;
+        b=grQLRQjrX3Xkxmebxk6BIlrH8zRONfHdti2Wwn1aQL6YxFVreG0WI5bD3IJeuMGmnV
+         16St8lUw4t+pkjo0iW07VnvVrQdkzrLzwavgw5u7VJgQ+Syqyu0EHU+xBzSuS5ee0qdR
+         gUMb2b9MhSpIQDfXPbTvg97nxgcy6JTCUngseZ9peOgxpQh1KJALc6QzGcFkjATgkNf7
+         1DOiFhao1gVghmIanTJf4mIm3DBFoem50ij68IoRH10/uhWTxiAHQUfJlWcF89deg+aU
+         724P59BVvMuOGehzfmEXQzJ2EFFi/wjClr9hrl6Ak8ON4CiL1rPtoQJYOImk0RJ8JOWq
+         WWHA==
+MIME-Version: 1.0
+X-Received: by 10.43.165.133 with SMTP id mw5mr47296904icc.35.1412011046258;
+ Mon, 29 Sep 2014 10:17:26 -0700 (PDT)
+Received: by 10.107.33.77 with HTTP; Mon, 29 Sep 2014 10:17:26 -0700 (PDT)
+Date: Mon, 29 Sep 2014 10:17:26 -0700
+Message-ID: <CA+Awg+J-ogQKF-D+TWQTVrAq5ib8hhFxAPk-+mOF062Hpr8J0A@mail.gmail.com>
+Subject: Can I alter packaging with Maven?
+From: Les Hartzman <lhartzman@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a11c254c8d4f5e0050437708d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c254c8d4f5e0050437708d
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+I'm a fairly basic maven user and would like to know if it is possible to
+have maven support multiple type of packaging or if I need to look at a
+different mechanism.
+
+What I want to do is to build a JavaFX application that depending on how it
+is packaged is either a desktop app or a web app.
+
+There would potentially be some different configuration files that would
+pertain to the different packaging options.
+
+Can I use maven in this way or does someone know of another means of
+accomplishing the same thing?
+
+Thanks.
+
+Les
+
+--001a11c254c8d4f5e0050437708d--
+

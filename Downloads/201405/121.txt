@@ -1,0 +1,88 @@
+From users-return-136376-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri May 16 19:25:09 2014
+Return-Path: <users-return-136376-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6907011B14
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 16 May 2014 19:25:09 +0000 (UTC)
+Received: (qmail 81529 invoked by uid 500); 16 May 2014 12:27:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 81274 invoked by uid 500); 16 May 2014 12:25:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 81151 invoked by uid 99); 16 May 2014 12:25:09 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 16 May 2014 12:25:09 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ctrueden.wisc@gmail.com designates 209.85.128.179 as permitted sender)
+Received: from [209.85.128.179] (HELO mail-ve0-f179.google.com) (209.85.128.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 16 May 2014 12:25:05 +0000
+Received: by mail-ve0-f179.google.com with SMTP id oy12so2932364veb.38
+        for <users@maven.apache.org>; Fri, 16 May 2014 05:24:44 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=u4Asfho3CNz52rQssR64PTEwsaB4QscmG1vX9m52rvc=;
+        b=QD9izi3LuIxfGBANOL9qK5uRzCa9ypJ0nGd8Z/NkCiSe5YTuPO1F0Py0dl4KM1NUA/
+         leEZDVaXvZivAwZ9+K7DLjrothpt/ivLXEHxTJ+RSLC9qfVrBYW1XChXuQQWwm42T60U
+         9WhxlnRz2g9lhQqHnU74uqtXDtxGi7r98UGNIIHeoBufv9YliE/+U2dmRKj47sTwXyo0
+         yCxthdg4ez2xC0+scTfczNtmJMBVYUtaRXlzP99OlPBY9Ph4wEFo7h+Yu99ygEWFVlbm
+         PIaMUoTalO6qA5vFE8wQn4R8nKY65L8ExG2fvBmp4nYz2JStLFExABmkDkQyo8N9SJ1y
+         yIbA==
+MIME-Version: 1.0
+X-Received: by 10.58.74.38 with SMTP id q6mr13476918vev.7.1400243084605; Fri,
+ 16 May 2014 05:24:44 -0700 (PDT)
+Sender: ctrueden.wisc@gmail.com
+Received: by 10.58.1.132 with HTTP; Fri, 16 May 2014 05:24:44 -0700 (PDT)
+Received: by 10.58.1.132 with HTTP; Fri, 16 May 2014 05:24:44 -0700 (PDT)
+In-Reply-To: <CABLGb9zPnrbrYztYY7YKEZj=xxoh_aH=tNzkrH2mqOXdsCvbKw@mail.gmail.com>
+References: <CABLGb9zPnrbrYztYY7YKEZj=xxoh_aH=tNzkrH2mqOXdsCvbKw@mail.gmail.com>
+Date: Fri, 16 May 2014 07:24:44 -0500
+X-Google-Sender-Auth: 0-pzTiUKGHoDCsn8k7Bo_N_J8eU
+Message-ID: <CADN69ynDGZT1DwzMf-FQgFfgO1V5bE0PSWAy2o0G_pHra+HM8Q@mail.gmail.com>
+Subject: Re: What's a good plugin to translate markdown content?
+From: Curtis Rueden <ctrueden@wisc.edu>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bacbedca8480404f9837f3f
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bacbedca8480404f9837f3f
+Content-Type: text/plain; charset=UTF-8
+
+Hi Paul,
+
+> I am looking for a plugin that can generate HTML from markdown document.
+
+You could write your own plugin that uses Markdownj. Or easier: a groovy
+script that does so with groovy-maven-plugin bound to the desired Maven
+goal. [1]
+
+Otherwise, Doxia already supports Markdown so maven-site-plugin could work,
+couldn't it?
+
+-Curtis
+
+[1] We use this to code generate sources using velocity:
+https://github.com/imagej/imagej-ops/blob/imagej-ops-0.3.0/pom.xml
+
+ On May 16, 2014 3:26 AM, "Paul Benedict" <pbenedict@apache.org> wrote:
+
+> I am looking for a plugin that can generate HTML from markdown document.
+> This is not about using the site goal but static pages for a site. Anyone
+> been using something like this?
+>
+> Cheers,
+> Paul
+>
+
+--047d7bacbedca8480404f9837f3f--
+

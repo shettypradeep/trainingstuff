@@ -1,0 +1,111 @@
+From users-return-135962-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 27 12:57:49 2014
+Return-Path: <users-return-135962-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4E1F111B38
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 27 Mar 2014 12:57:49 +0000 (UTC)
+Received: (qmail 76468 invoked by uid 500); 27 Mar 2014 12:57:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 75920 invoked by uid 500); 27 Mar 2014 12:57:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 75906 invoked by uid 99); 27 Mar 2014 12:57:42 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Mar 2014 12:57:42 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of t.broyer@gmail.com designates 209.85.216.173 as permitted sender)
+Received: from [209.85.216.173] (HELO mail-qc0-f173.google.com) (209.85.216.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Mar 2014 12:57:38 +0000
+Received: by mail-qc0-f173.google.com with SMTP id r5so4220629qcx.32
+        for <users@maven.apache.org>; Thu, 27 Mar 2014 05:57:17 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=h5PqFUFE2cJQxzv3cxMPnGUwn69O3AIrP0RScthRLu4=;
+        b=TsUlrqu50B17HvYFopTzFlb4WS1zEmDqhFM66sB67Zu1YTrCfEm9oAUNfpDm9u3OOQ
+         PYE7w3SZYReZc1EX1oFKfULfHyzZuvXFy5T4uIohIPj/BvxvHIoioPMy5LfeoqBBs3UR
+         vcS/7CWqkEiAeRvsx+kJdSNWQ8E8BJSn7W3fxhifNNYzLMkByOs8v0dzOVeDU+nq52Ra
+         TVZ03gD3PglQme1XsLWDpqCBhhbJQOdJtgVAnoG5dL4hehGmqdxLa8gOKxK5vhGMicxd
+         ALymWGvORfQULc0S4g2Z3vHwxY5T8MnLtWp+VmLisYrVhUXAQ2VKa8nPOcsKVjWc9gwf
+         xpHg==
+X-Received: by 10.140.20.167 with SMTP id 36mr1728998qgj.54.1395925037566;
+ Thu, 27 Mar 2014 05:57:17 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.140.108.101 with HTTP; Thu, 27 Mar 2014 05:56:57 -0700 (PDT)
+In-Reply-To: <1395924571582-5789696.post@n5.nabble.com>
+References: <1395650439461-5789365.post@n5.nabble.com> <CAEayHEOGgV-7ZzoqTg7udryhk_by_Y8dADpwNNa9MxBXJHGQsA@mail.gmail.com>
+ <1395909138436-5789681.post@n5.nabble.com> <CAEayHEMCboe7TbMuENpNFwo95k1KhU_4SeYX12jHL3jmEmL55g@mail.gmail.com>
+ <1395924571582-5789696.post@n5.nabble.com>
+From: Thomas Broyer <t.broyer@gmail.com>
+Date: Thu, 27 Mar 2014 13:56:57 +0100
+Message-ID: <CAEayHEN3a6YkJid5rsYnf2MD=Y8NEL3EHQF-khks=CA_3A8cMQ@mail.gmail.com>
+Subject: Re: multi-module phases sequence
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c126f6ff50c804f5961fad
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c126f6ff50c804f5961fad
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Except Maven has no idea how to reach a state when =E2=80=9CModule B must e=
+xist=E2=80=9D,
+because plugins don't tell Maven that they'll create that specific
+artifact. For a module with <package>jar</package> and not too much
+customization, it's easy to infer that moduleb:jar would exist after
+running up to the package phase of the moduleb module; similarly for a WAR
+or EAR. But how about test-jar and java-sources? (not all of them are
+packaged using the maven-jar-plugin or maven-source-plugin) how about zip
+files and other assemblies? Maven would have to use heuristics based on
+specific plugins (maven-jar-plugin's test-jar packages a test-jar,
+maven-source-plugin's jar-no-fork packages a java-source); this is bad for
+modularity, and too error-prone.
+
+
+On Thu, Mar 27, 2014 at 1:49 PM, mkarg <karg@quipsy.de> wrote:
+
+> I understand the issues, but I do not see why we should all just sit back
+> and
+> say "Maven is broken by design, so all is good, just keep it as it is.". =
+I
+> do not see that it is unfixable wrt the original question, as only thing =
+I
+> asked for is that Maven accepts that if Module A needs Module B then it i=
+s
+> obvious that Module B must exist. In the end it is just a need for partia=
+l
+> serialization. I mean, I can even fix it by hand (merging two poms in one
+> and all works fine, as the executions run top to bottom), so it MUST be
+> possible to do just this partial fix in Maven core.
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/multi-module-phases-sequence-tp5789365p5=
+789696.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+--=20
+Thomas Broyer
+/t=C9=94.ma.b=CA=81wa.je/ <http://xn--nna.ma.xn--bwa-xxb.je/>
+
+--001a11c126f6ff50c804f5961fad--
+

@@ -1,0 +1,162 @@
+From users-return-135008-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan  7 14:05:40 2014
+Return-Path: <users-return-135008-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 75C6810DC1
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  7 Jan 2014 14:05:40 +0000 (UTC)
+Received: (qmail 4699 invoked by uid 500); 7 Jan 2014 14:00:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 4257 invoked by uid 500); 7 Jan 2014 13:59:26 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 4103 invoked by uid 99); 7 Jan 2014 13:59:12 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 07 Jan 2014 13:59:12 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.160.48 as permitted sender)
+Received: from [209.85.160.48] (HELO mail-pb0-f48.google.com) (209.85.160.48)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 07 Jan 2014 13:59:07 +0000
+Received: by mail-pb0-f48.google.com with SMTP id md12so157262pbc.7
+        for <users@maven.apache.org>; Tue, 07 Jan 2014 05:58:45 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=HqYJqd/0lLOXv/TcS7oAc9qFGJu8FK5fchbQyI3MQsk=;
+        b=ft9Yt9FM+2xG3MR9J59LmvPPBlcFFyCynuBtoKdvwbrRXS//o4HSP5gKOYeWr9ME83
+         14X35JpMWE2LR5pxzX3MCX0oypvoablcpTCiCm0oi1McsC+Y7Bs8U7FKb7lWAF2GZH1b
+         xN5HoJOUsrzdsWxz75T2oS3aZxcx9gIfZDgwu+BLNt4Hzy5jYE36w2HI/+OSRlYGAhll
+         xtA2yf7D+wQU9qjnVPSugzMnXmprac2KjxilrQwZE9jVv0qLFSndNG4U+/y+qoErwq8c
+         8G06Ph4fngcDOfcMgxiSv4uXsUSBtytDtGWzG7gpSPY2tvYtRpiY3V/iVz1uXwoSx48d
+         tbmg==
+MIME-Version: 1.0
+X-Received: by 10.66.102.39 with SMTP id fl7mr5414738pab.43.1389103125683;
+ Tue, 07 Jan 2014 05:58:45 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Tue, 7 Jan 2014 05:58:45 -0800 (PST)
+In-Reply-To: <52CC0060.4040300@gmail.com>
+References: <1311115485921-4614001.post@n5.nabble.com>
+	<CADVp3v9s=A2jSYCP10vSS_Or6RvBCZtgFOWmNFxQQ-s2yRLNyg@mail.gmail.com>
+	<1311120899714-4614151.post@n5.nabble.com>
+	<CADVp3v_=nJyeZUmcZMc2YmZtABEWENfwpm1BukVqYaO0Wbv0VQ@mail.gmail.com>
+	<1311123142861-4614201.post@n5.nabble.com>
+	<CADVp3v96Rz4D_UUOw6it9izLC4EbuHctActE03AOBFRKkH3htQ@mail.gmail.com>
+	<1389049947844-5780688.post@n5.nabble.com>
+	<52CB6DB4.4050703@artifact-software.com>
+	<AA0A1283-9C6B-45A2-9944-F06FF0A006C2@talios.com>
+	<CADVp3v9K2AfKnrmJysmFaLtC2OTFCeqLSKA8XhCdXP=1tKGLOg@mail.gmail.com>
+	<52CC0060.4040300@gmail.com>
+Date: Tue, 7 Jan 2014 13:58:45 +0000
+Message-ID: <CA+nPnMzPzCB9O=zGurFNxXfa76WbRA+RtpWcwf0mpEGhOEOWCg@mail.gmail.com>
+Subject: Re: Misunderstanding modules: "Two or more projects in the reactor
+ have the same identifier"
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bd9164e5ced8904ef61c6b9
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bd9164e5ced8904ef61c6b9
+Content-Type: text/plain; charset=ISO-8859-1
+
+FYI I call that a local aggregator pom. I typically set them up for the
+various projects I jump between. I can then just open the whole set of
+projects from intellij in one go and as this is maven I can safely discard
+all the IDE's project info and have it regenerated from the pom and the
+pom's reactor.
+
+When I check a local aggregator into SCM I typically use the file based
+activation to add each module via a profile for that module... but usually
+I just keep them local only
+
+
+On 7 January 2014 13:25, Patrick Turcotte <patrek@gmail.com> wrote:
+
+>
+> We are doing something similar with what I call an assembly project.
+>
+> I have the following structure:
+>
+> assembly
+>   - pom.xml
+>   - projectA
+>     - pom.xml
+>   - projectB
+>     - pom.xml
+>   - projectC
+>     - pom.xml
+>   - projectX
+>     - pom.xml
+>
+> Where the assembly's pom.xml contains like:
+>
+> <packaging>pom</packaging>
+> <modules>
+>   <module>projectA</module>
+>   <module>projectB</module>
+>   <module>projectC</module>
+>   <module>projectX</module>
+> </modules>
+>
+> And dependencies between projects are set within each module (versions may
+> be in a parent pom)
+>
+> Then, in my "assembly" project, I do
+> mvn install
+>
+> Or, with multiple windows open, I would do a mvn install for projectA and
+> then switch to projectX and build it.
+>
+> Hope this helps.
+>
+> Patrick
+>
+>
+> On 07/01/14 12:49 AM, Barrie Treloar wrote:
+>
+>> On 7 January 2014 15:29, Mark Derricutt <mark@talios.com> wrote:
+>>
+>>> When the project is relatively new and the internally-developed
+>>>>> dependency
+>>>>> "A" is no where near being mature, nearly every change being made to
+>>>>> "Project X" requires a corresponding change to A. At this point in the
+>>>>> development cycle (and for many months in the foreseeable future) I
+>>>>> actually
+>>>>> /do/ need to rebuild A every time I build X.
+>>>>>
+>>>> What I've often done here is create a new workspace area that contains
+>>> symlinks ( or git submodule checkouts ) of each of the modules I'm working
+>>> on, and having a simple pom.xml in the top level that sets up a reactor
+>>> build, then just build that.
+>>>
+>> There was also some talk about automating this step.
+>> But its vapourware at the moment.
+>>
+>> It would work by checking your current pom for any -SNAPSHOT
+>> dependencies and then pulling out the source code for those and
+>> sitting them in the parent directory.
+>> And as you say the parent pom is just a helper that has a bunch of
+>> modules to make building things easier - and you would never check
+>> that pom into version control.
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7bd9164e5ced8904ef61c6b9--
+

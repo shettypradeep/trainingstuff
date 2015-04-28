@@ -1,0 +1,151 @@
+From users-return-137852-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Nov 26 11:24:41 2014
+Return-Path: <users-return-137852-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 850C5C606
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Nov 2014 11:24:41 +0000 (UTC)
+Received: (qmail 44868 invoked by uid 500); 26 Nov 2014 11:24:39 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 44783 invoked by uid 500); 26 Nov 2014 11:24:39 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 44771 invoked by uid 99); 26 Nov 2014 11:24:39 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Nov 2014 11:24:39 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of enygma2002@gmail.com designates 209.85.192.173 as permitted sender)
+Received: from [209.85.192.173] (HELO mail-pd0-f173.google.com) (209.85.192.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Nov 2014 11:24:14 +0000
+Received: by mail-pd0-f173.google.com with SMTP id ft15so2645824pdb.4
+        for <users@maven.apache.org>; Wed, 26 Nov 2014 03:22:42 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=zbkHi6y2yxObtMj99uCyI352ldaIacKe5oPnGbNN0+o=;
+        b=gtP6rYBtScGAOAKpIV0sRW1hKZXUfsfnkJyXLmkizc633r3BPyx8UyKr4lZ8jJTcCX
+         reWt81gIW69Ob28qr6Qrgr2MuqkvBAq0YAlj6ToA+zttF8yclhQAdfJezEmJQGV3yEFX
+         Oe0KQ+5WvqEYVc2Dmt/W2XeoL1jOLru1LS94cSRAs7VBGfrht9ERBOtwFUth6fim2wEA
+         jYUgRWGtVMT3mno+5WCsL199wXuHnyESjaFZ+EzVaC0rGYB4s1OEQFUwSOzTiPNQXz0L
+         QVkHRpwC5vNVac9qa48goRbYMFMDTfwrV6UlQ+F6OxHbAh7NOHCE5e46NgGFCZF2I6ij
+         RJwA==
+X-Received: by 10.66.118.198 with SMTP id ko6mr52001460pab.19.1417000962497;
+ Wed, 26 Nov 2014 03:22:42 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.70.3.226 with HTTP; Wed, 26 Nov 2014 03:22:22 -0800 (PST)
+In-Reply-To: <etPan.54745870.327b23c6.28a@Slartibartfast.local>
+References: <CADGDyYL0yOwJB45_V3KoKUi=6iar8wxJhpck7DuaGYAm1-qNig@mail.gmail.com>
+ <etPan.54745870.327b23c6.28a@Slartibartfast.local>
+From: Eduard Moraru <enygma2002@gmail.com>
+Date: Wed, 26 Nov 2014 13:22:22 +0200
+Message-ID: <CADGDyY+AGJbuxkKWcg49WkgUouvQJ3uKXNJxgkOxj8yMS9JeAQ@mail.gmail.com>
+Subject: Re: Using the Maven Indexer
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=e89a8ffbad2f0423340508c13f2e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--e89a8ffbad2f0423340508c13f2e
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Tue, Nov 25, 2014 at 12:22 PM, Tamas Cservenak <tamas@cservenak.net>
+wrote:
+
+> Hi there,
+>
+> 1) yes, indexing context retains the artefact =E2=80=9Corigin=E2=80=9D (i=
+e. repo), so you
+> need context per origin. Sadly, the 1 index per context is current
+> limitation of maven indexer, but this problem is known. Created
+> http://jira.codehaus.org/browse/MINDEXER-93
+>
+> 2) Yes, merged context is basically delegating to member contexts. under
+> the hud, it uses Lucene=E2=80=99s MultiReader to actually perform the sea=
+rch.
+>
+
+I have solved the search problem for now by using the SearchEngine
+component and issuing an IteratorSearchRequest on a list of
+IndexingContexts to get paginated results. Will have to see how that works
+on the long run.
+
+Thanks,
+Eduard
+
+
+> Re ranging, there are already issues (or problem spread across multiple
+> issues), most notably this one
+> http://jira.codehaus.org/browse/MINDEXER-8
+>
+> 3) I think yes. Currently, indexer is being transitioned from Plexus to
+> JSR330, and as you see in examples, it should work with any container
+> supporting it. re =E2=80=9Cmanually wiring=E2=80=9D, in latest releases y=
+ou might be able
+> to do it, but in older ones probably not, as Plexus supported field
+> injection only, and some of those member was not exposed via getter/sette=
+r.
+> See
+> http://jira.codehaus.org/browse/MINDEXER-80
+>
+>
+> --
+> Thanks,
+> ~t~
+>
+> On 21 Nov 2014 at 18:08:26, Eduard Moraru (enygma2002@gmail.com) wrote:
+>
+> Hi,
+>
+> I have recently started playing with the maven indexer [1], following the
+> examples [2], and I have some questions (since AFAIS, documentation is
+> practically unexistent on the matter):
+>
+> 1) From what I can understand, you need an IndexingContext for each
+> repository you plan to index. This makes you end up with n lucene indexes=
+,
+> one for each repository. Is there any way that I could have just 1 lucene
+> index, with all my repositories indexed in the same place? If the main
+> purpose is searchig, why scatter the indexed information across n indexes
+> and make the whole process dificult? Maybe I`m missing something.
+>
+> 2) On the same line as the first question, when it comes to searching, it
+> seems that I can use a MergedIndexingContext to perform a search on
+> multiple (all) indexed repositories (IndexingContexts). How does this mer=
+ge
+> the search results? I assume it takes each lucene index and queries it
+> individually, but this probably means that the lucene scores of these
+> merged results are completely messed up and ureliable, right?
+> Any suggestions on how to properly perform search over multiple indexed
+> repositories?
+>
+> 3) About the Plexus Container: Am I forced to initialize and use one, or
+> can I/should manually instantiate the default implementations and use the=
+m
+> instead?
+>
+> I`ll probably come up with more questions along the way, hope someone wil=
+l
+> find the time to guide me on the right path.
+>
+> Thanks,
+> Eduard
+>
+> ----------
+> [1] https://github.com/apache/maven-indexer/
+> [2]
+>
+> https://github.com/apache/maven-indexer/tree/master/indexer-examples/inde=
+xer-examples-basic
+>
+
+--e89a8ffbad2f0423340508c13f2e--
+

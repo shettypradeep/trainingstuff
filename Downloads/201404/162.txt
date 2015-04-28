@@ -1,0 +1,76 @@
+From users-return-136240-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr 23 03:10:55 2014
+Return-Path: <users-return-136240-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C86331026D
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 23 Apr 2014 03:10:55 +0000 (UTC)
+Received: (qmail 54462 invoked by uid 500); 23 Apr 2014 03:10:51 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 53893 invoked by uid 500); 23 Apr 2014 03:10:49 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 53744 invoked by uid 99); 23 Apr 2014 03:10:48 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 23 Apr 2014 03:10:48 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of paulus.benedictus@gmail.com designates 209.85.192.51 as permitted sender)
+Received: from [209.85.192.51] (HELO mail-qg0-f51.google.com) (209.85.192.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 23 Apr 2014 03:10:43 +0000
+Received: by mail-qg0-f51.google.com with SMTP id f51so380868qge.10
+        for <users@maven.apache.org>; Tue, 22 Apr 2014 20:10:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:date:message-id:subject:from:to:content-type;
+        bh=ZboD74jhlJUDX1LoJB1voBYTA+w2SNYpM9EJ1FxujTk=;
+        b=V9qBsg7VhEzDuoopdT/L/bgukq5qii+3HqdNeJEjR+JyPcfjJECm1sX47fpQJkKw+U
+         o7yetS3XkoI5Dy8trbX0X9uPvE/Iu1MvVvtBuhuunM2mc/Y5N3g5tAoVMQ6c93DDfFRq
+         9fEs5JrD7pEK7qoAobJ5X5Tt8DYD9TB+SzsHW1q5cXsftNk8fMPYX79zXgozXAxV0J7o
+         y8WqLB3XzzBQckg7UD9Qn+gNYlV3MV+1Dhg2o5cyTNHRW3RiVerTRIc+kpzBEhqrXZo8
+         2vZC9kI7t7jSDjIbSEgMfBqblBfmXOFoKjL5Y5IQKwi5yqv/CPxR15hgxNZPf1pqT87G
+         Acvg==
+MIME-Version: 1.0
+X-Received: by 10.224.65.194 with SMTP id k2mr52403556qai.59.1398222620131;
+ Tue, 22 Apr 2014 20:10:20 -0700 (PDT)
+Sender: paulus.benedictus@gmail.com
+Received: by 10.96.193.100 with HTTP; Tue, 22 Apr 2014 20:10:20 -0700 (PDT)
+Date: Tue, 22 Apr 2014 22:10:20 -0500
+X-Google-Sender-Auth: cyphGfb4vdyWKfM9EPWZ-0dsOlg
+Message-ID: <CABLGb9zEyrty0Mqd9r6-7mSjXssJmRHxCTpmqrVZPv3a=wPdSw@mail.gmail.com>
+Subject: Trouble downloading a dependency
+From: Paul Benedict <pbenedict@apache.org>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a11c2d1c297078604f7ad124a
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c2d1c297078604f7ad124a
+Content-Type: text/plain; charset=UTF-8
+
+Output from Maven...
+Downloading:
+http://repo1.maven.org/maven2/org/jboss/spec/javax/ejb/jboss-ejb-api_3.2_spec/1.0.0.Final/jboss-ejb-api_3.2_spec-1.0.0.Final.pom
+
+...and then this error:
+"connect: Address is invalid on local machine, or port is not valid on
+remote machine"
+
+I don't understand the error. If I paste the URL into my browser, the POM
+exists. I even turned off my antivirus/firewall to make sure nothing was
+blocking Java -- and still the same result.
+
+Any clues what could be causing this?
+
+-- 
+Cheers,
+Paul
+
+--001a11c2d1c297078604f7ad124a--
+

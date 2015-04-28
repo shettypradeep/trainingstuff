@@ -1,0 +1,115 @@
+From users-return-135166-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan 15 19:08:10 2014
+Return-Path: <users-return-135166-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7510010D61
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 15 Jan 2014 19:08:10 +0000 (UTC)
+Received: (qmail 45642 invoked by uid 500); 15 Jan 2014 19:08:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 45548 invoked by uid 500); 15 Jan 2014 19:08:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 45538 invoked by uid 99); 15 Jan 2014 19:08:03 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 15 Jan 2014 19:08:03 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [67.231.152.145] (HELO mx0b-0000bf01.pphosted.com) (67.231.152.145)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 15 Jan 2014 19:07:54 +0000
+Received: from pps.filterd (m0042341 [127.0.0.1])
+	by mx0b-0000bf01.pphosted.com (8.14.5/8.14.5) with SMTP id s0FJ6MWJ003335
+	for <users@maven.apache.org>; Wed, 15 Jan 2014 13:07:32 -0600
+Received: from np1exhc003.corp.halliburton.com ([34.254.246.202])
+	by mx0b-0000bf01.pphosted.com with ESMTP id 1hdrrquncc-2
+	(version=TLSv1/SSLv3 cipher=AES128-SHA bits=128 verify=NOT)
+	for <users@maven.apache.org>; Wed, 15 Jan 2014 13:07:31 -0600
+Received: from NP1EXMB033.corp.halliburton.com ([169.254.4.138]) by
+ NP1EXHC003.corp.halliburton.com ([34.34.137.235]) with mapi id
+ 14.02.0387.000; Wed, 15 Jan 2014 13:07:30 -0600
+From: Justin Georgeson <JGeorgeson@lgc.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: RE: javadoc:aggregate project filter
+Thread-Topic: javadoc:aggregate project filter
+Thread-Index: AQHPEiLiUjJ53zF7KE2chtAqU7JrR5qGJTVg
+Date: Wed, 15 Jan 2014 19:07:29 +0000
+Message-ID: <F21547B4F425F9428444D12A51270506236CD063@NP1EXMB033.corp.halliburton.com>
+References: <52D6D8C4.9080603@web.de>
+In-Reply-To: <52D6D8C4.9080603@web.de>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-originating-ip: [34.34.116.132]
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-HALSTAMP: TRUE
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10432:5.11.87,1.0.14,0.0.0000
+ definitions=2014-01-15_06:2014-01-15,2014-01-15,1970-01-01 signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0
+ kscore.is_bulkscore=5.81782586612234e-05 kscore.compositescore=0
+ circleOfTrustscore=0 compositescore=0.0652767626515575
+ urlsuspect_oldscore=0.0652767626515575 suspectscore=0
+ recipient_domain_to_sender_totalscore=0 phishscore=0 bulkscore=0
+ kscore.is_spamscore=0 recipient_to_sender_totalscore=0
+ recipient_domain_to_sender_domain_totalscore=0 rbsscore=0.0652767626515575
+ spamscore=0 recipient_to_sender_domain_totalscore=0 urlsuspectscore=0.9
+ adultscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=7.0.1-1305240000 definitions=main-1401150125
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I'm in a similar environment and use profiles in my aggregator POM to speci=
+fy different reactors for different things. I have a profile for a javadoc =
+reactor which doesn't include any eclipse-feature, eclipse-test-plugin, or =
+eclipse-repository projects (ie it only includes the projects for the actua=
+l plugins that constitute the product).
+
+-----Original Message-----
+From: Christian Pontesegger [mailto:christian.pontesegger@web.de]=20
+Sent: Wednesday, January 15, 2014 12:52 PM
+To: users@maven.apache.org
+Subject: javadoc:aggregate project filter
+
+Hi,
+
+I'd like to create API documentation for an eclipse RCP project.=20
+Therefore I use the javadoc:aggregate goal which nicely builds documentatio=
+n for all my projects.
+
+Now I want to filter some of them. When building with tycho junit tests are=
+ typically kept in a separate project. Still the package names for a test c=
+lass ae the same as for the main class. This seems to be the best practice =
+approach right now.
+
+Currently API documentation for test classes is built too. Is there a way t=
+o filter a whole project from the aggregation step?
+
+The only other approach I found was to use the javadoc:javadoc goal and to =
+manually add paths using the sourcepath parameter. For a big project this i=
+s an error prone task which I would like to avoid.
+
+regards
+Christian
+
+----------------------------------------------------------------------
+This e-mail, including any attached files, may contain confidential and pri=
+vileged information for the sole use of the intended recipient.  Any review=
+, use, distribution, or disclosure by others is strictly prohibited.  If yo=
+u are not the intended recipient (or authorized to receive information for =
+the intended recipient), please contact the sender by reply e-mail and dele=
+te all copies of this message.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

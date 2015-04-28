@@ -1,0 +1,68 @@
+From users-return-137534-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Oct 11 11:44:28 2014
+Return-Path: <users-return-137534-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 712BE17766
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 11 Oct 2014 11:44:28 +0000 (UTC)
+Received: (qmail 36847 invoked by uid 500); 11 Oct 2014 11:44:26 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 36617 invoked by uid 500); 11 Oct 2014 11:44:25 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 36586 invoked by uid 99); 11 Oct 2014 11:44:25 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 11 Oct 2014 11:44:25 +0000
+Received: by minotaur.apache.org (Postfix, from userid 6004)
+	id AAF8717763; Sat, 11 Oct 2014 11:44:24 +0000 (UTC)
+To: announce@maven.apache.org
+Subject: [ANN] Apache Maven Source Plugin Version 2.4 Released
+Cc: users@maven.apache.org,dev@maven.apache.org
+Message-Id: <20141011114424.AAF8717763@minotaur.apache.org>
+Date: Sat, 11 Oct 2014 11:44:23 +0000 (UTC)
+From: khmarbaise@apache.org (Karl Heinz Marbaise)
+
+The Apache Maven team is pleased to announce the release of the 
+Apache Maven Source Plugin, version 2.4
+
+The Resources Plugin handles the copying of project resources to the output
+directory. 
+
+http://maven.apache.org/plugins/maven-source-plugin/
+
+You should specify the version in your project's plugin configuration:
+
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-source-plugin</artifactId>
+  <version>2.4</version>
+</plugin>
+
+Release Notes - Maven Source Plugin - Version 2.4
+
+http://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=11147&version=20597
+
+Improvements:
+
+ * [MSOURCES-71] - MavenProject/MavenSession Injection as a paremeter instead as a component.
+ * [MSOURCES-72] - Upgrade to Maven 2.2.1 compatiblity
+ * [MSOURCES-73] - Update version of plexus-archiver to 2.6.1
+ * [MSOURCES-74] - Upgrade to plexus-archiver 2.6.3
+
+Enjoy,
+
+-The Apache Maven team
+
+Karl Heinz Marbaise
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

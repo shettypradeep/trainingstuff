@@ -1,0 +1,81 @@
+From users-return-135570-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 19 21:49:10 2014
+Return-Path: <users-return-135570-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8BA0910300
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 19 Feb 2014 21:49:10 +0000 (UTC)
+Received: (qmail 40042 invoked by uid 500); 19 Feb 2014 21:49:01 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 39922 invoked by uid 500); 19 Feb 2014 21:49:01 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 39912 invoked by uid 99); 19 Feb 2014 21:49:00 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Feb 2014 21:49:00 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of waynefay@gmail.com designates 209.85.192.177 as permitted sender)
+Received: from [209.85.192.177] (HELO mail-pd0-f177.google.com) (209.85.192.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Feb 2014 21:48:55 +0000
+Received: by mail-pd0-f177.google.com with SMTP id x10so907756pdj.8
+        for <users@maven.apache.org>; Wed, 19 Feb 2014 13:48:35 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=HtteAB3Kyvm9imIrk+4S8bJv/LuDD21O9hHpqafE2M4=;
+        b=Ufb3jqVz+ZpdH46TwENYpPrCpO9FXduP1vM2DoDXDc0E7MxpSYp9cCsvgQEC54Mvds
+         B6U0TMhI49uRMitskAuffrAqfoYkSmgqa1a8tA9fMfU4dbgd7YEQWuVASMNWhbNGKa+b
+         V1KlGMEmjO8SttRCzoLw6HrvBVXTVW2FwAOSW8U2GmNsq4NU0RL0eIVNmVUJJhh8N+OY
+         s1TOW1vY+RmabzncorJotMC6X8gmtyPZOnmBQhkd3FSCy4NKjlUeHKM3zAXEfsqxWW+3
+         mf+jIULPoov4/uSxcfL8Isv7OdiVn8Ln6xvfQedcS+63r8DIGesCDjKJFN7Xh3nREnO/
+         0w0Q==
+X-Received: by 10.66.252.135 with SMTP id zs7mr42797174pac.13.1392846515167;
+ Wed, 19 Feb 2014 13:48:35 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Wed, 19 Feb 2014 13:48:15 -0800 (PST)
+In-Reply-To: <CAMrx5DxqhShDEsWMS2nRRVVn78XhC5dZGNYD-FG=7MAkSg-FMw@mail.gmail.com>
+References: <CAMrx5DxqhShDEsWMS2nRRVVn78XhC5dZGNYD-FG=7MAkSg-FMw@mail.gmail.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Wed, 19 Feb 2014 15:48:15 -0600
+Message-ID: <CALy+7Un3qA3Mpvm1sTQYZq4WM5WMYg_F2UZ2p1iiZ9ZUVaw-oQ@mail.gmail.com>
+Subject: Re: Solution for handeling many conflicts in maven dependencies.
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> is a problem. We excluded zookeeper from netflix-curator and hadoop, but
+> not from hbase. So when we use all 3 artifacts we receive zookeeper from
+> hbase, but when use only netflix-curator and hadoop we can lost needed
+> artifacts.
+
+You should have a direct dependency on zookeeper if you are using it,
+and not just assume you will get it as a transitive dependency from
+hbase. What happens when hbase suddenly stops using zookeeper (even if
+this is wildly unlikely)?
+
+> And we would recognize it only when in Runtime we receive
+> "ClassNotFoundException". That's why I want to write an additional plugin
+> for this case. This plugin would check: if you have dependency on some
+> artifact, you should depend on artifacts, which were excluded from that
+> artifact. If you lost some artifact, you need to add it or configure an
+> exception.
+
+Have you looked at the dependency plugin, specifically the analyze mojo?
+https://maven.apache.org/plugins/maven-dependency-plugin/analyze-mojo.html
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,91 @@
+From users-return-135874-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 20 01:11:11 2014
+Return-Path: <users-return-135874-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7F18DC349
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 20 Mar 2014 01:11:11 +0000 (UTC)
+Received: (qmail 54264 invoked by uid 500); 20 Mar 2014 01:11:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 54205 invoked by uid 500); 20 Mar 2014 01:11:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 54194 invoked by uid 99); 20 Mar 2014 01:11:06 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Mar 2014 01:11:06 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of akarasulu@gmail.com designates 209.85.128.170 as permitted sender)
+Received: from [209.85.128.170] (HELO mail-ve0-f170.google.com) (209.85.128.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Mar 2014 01:11:00 +0000
+Received: by mail-ve0-f170.google.com with SMTP id pa12so153390veb.29
+        for <users@maven.apache.org>; Wed, 19 Mar 2014 18:10:38 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=Pdv4p1mupPggs4xFnJ8mGOWqqQPpJX2wic6lUUYVM9I=;
+        b=SOAo4cQH2PnH32bbhfYzF1tQMLYt0C2shyFP9DUyAApEjuOIO3C2fGwL9i+QgXpZVO
+         EgdoqLdcqKdEmAJYysH53/5A8zJeKSbq1Bg7pYw1gWKgMxj9QfSycBNyOBL9PXwrQxxZ
+         jbTC/xS1M/cc68vcwTlfEWfePdujZ1k+c+D8J3LG8E/bK98JQy1543adH6lAUqs0doP8
+         fTOQUtuCcgsH4UdjfRurockw1/yqcs1RJ5AqssM2/gzQBUsFymxt8ifi79CH+0Pq4y6l
+         giewxe3Ht3CeYVt+ZAtUxSq8uoQkCcXHnpRUCzE5A/lp7RSj2ZAlmQ28g1bAAl/mpoLo
+         Sc7w==
+MIME-Version: 1.0
+X-Received: by 10.220.131.210 with SMTP id y18mr32711785vcs.12.1395277838840;
+ Wed, 19 Mar 2014 18:10:38 -0700 (PDT)
+Sender: akarasulu@gmail.com
+Received: by 10.52.135.179 with HTTP; Wed, 19 Mar 2014 18:10:38 -0700 (PDT)
+In-Reply-To: <CADwPi+HM=Ls83GpRhAVnzMXNoku9cwUEdiSSidARo31KRgje0w@mail.gmail.com>
+References: <CADwPi+HM=Ls83GpRhAVnzMXNoku9cwUEdiSSidARo31KRgje0w@mail.gmail.com>
+Date: Thu, 20 Mar 2014 03:10:38 +0200
+X-Google-Sender-Auth: LZ--OdU7QtsRIjuEpT0XS6Q-Ycg
+Message-ID: <CADwPi+FTp7E6Moz5FOgqP6nJBL+nozVSSSPUiy1OvstrbGPadA@mail.gmail.com>
+Subject: Re: [Failsafe] How to properly conduct integration tests on
+ executable jar files
+From: Alex Karasulu <akarasulu@apache.org>
+To: J Aaron Farr <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11348884f27b8d04f4ff6fb7
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11348884f27b8d04f4ff6fb7
+Content-Type: text/plain; charset=ISO-8859-1
+
+On Thu, Mar 13, 2014 at 4:54 AM, Alex Karasulu <akarasulu@apache.org> wrote:
+
+> Hello,
+>
+> I've got a module that builds an executable jar file using the Maven
+> Assembly Plugin. I'm trying to setup an integration test (in the same
+> module) that runs this executable jar file as a separate process and
+> interacts with it. To fire up the executable jar file, my integration test
+> requires the path to the executable jar file.
+>
+> I'm trying to achieve this by passing a property to the integration-test
+> via system properties. This makes me feel really really dirty though and it
+> has issues: although the test runs on the CLI it does not in any IDE
+> without requiring further configuration (i.e. the property has to be
+> manually added to a run configuration).
+>
+> After googling around a bit and reading the documentation there seems to
+> be no other option for this scenario. In case I'm overlooking something, I
+> wanted to ask here if there is a better way to start up this executable jar
+> file or pass in the needed parameters to do so in the integration test?
+>
+>
+Thanks for the feedback. I eventually used Stephen's suggestion (test
+resource filtering) and it works like a champ for both the IDE and the CLI.
+
+-- 
+Best Regards,
+-- Alex
+
+--001a11348884f27b8d04f4ff6fb7--
+

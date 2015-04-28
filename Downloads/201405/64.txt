@@ -1,0 +1,91 @@
+From users-return-136342-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon May 12 22:03:20 2014
+Return-Path: <users-return-136342-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0D68E115B3
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 12 May 2014 22:03:20 +0000 (UTC)
+Received: (qmail 69014 invoked by uid 500); 12 May 2014 16:31:59 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 68926 invoked by uid 500); 12 May 2014 16:31:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 68918 invoked by uid 99); 12 May 2014 16:31:59 -0000
+Received: from Unknown (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 12 May 2014 16:31:59 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of khmarbaise@gmx.de designates 212.227.15.15 as permitted sender)
+Received: from [212.227.15.15] (HELO mout.gmx.net) (212.227.15.15)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 12 May 2014 16:31:54 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([79.252.205.84]) by mail.gmx.com
+ (mrgmx103) with ESMTPSA (Nemesis) id 0M6SE3-1WztWb0OZ1-00yP2l for
+ <users@maven.apache.org>; Mon, 12 May 2014 18:31:30 +0200
+Message-ID: <5370F762.8070909@gmx.de>
+Date: Mon, 12 May 2014 18:31:30 +0200
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.5.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: How to override settings for maven module
+References: <536C2873.6040802@gmail.com>
+In-Reply-To: <536C2873.6040802@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:RI2lrtmUpcZErMMkrqMdRdt0XyNMMvDANF9Zz3ZDY+E6wBhlX6R
+ TIA8T5OaHviUh4yEdAO8SBp9Us7A0+8vz47vxnwn3/OSrOC4GIn4l2M/jN+3kXBzeVEtkJK
+ 0cWslq5zPb9JZpu4JMLfdz294uY9ZXH9DjJfv/vCEvtk6pUf2EGHJ0u6001pipDBPY8K/j4
+ tY9E2sNT002mJkXU/3GsQ==
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+the first thing in such situations is to create a separate module which 
+contains the generation code part. In this module you can change the 
+configuration for maven-compiler-plugin via a pluginManagemen block...
+
+So looks like this:
+
+   parent (pom.xml)
+     +-- mod-generated (pom.xml)
+     +-- mod-the-rest (pom.xml)
+
+If you follow this suggestions you have clear separation of concern for 
+your modules and you only need to change the configuration for the 
+mod-generated.
+
+Kind regards
+Karl-Heinz Marbaise
+
+On 5/9/14 2:59 AM, Niranjan Rao wrote:
+> I have a master POM file which defines common stuff such as common
+> dependencies like junit and compiler settings.
+>
+> The compiler settings are set to treat warning as error using
+> maven-compiler-plugin and Werror as compiler argument. I have a new
+> module which declares the master pom as parent pom, but has generated
+> code which has lot of warnings. I would like to disable treating
+> warnings as errors only for this module or if possible only for
+> generated package or generated source directory.
+>
+> I tried adding compiler plugin entry in module's pom file. But it looks
+> like it overrides from parent. How do I disable warnings for this module
+> only?
+>
+> Regards,
+>
+> Niranjan
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

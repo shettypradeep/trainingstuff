@@ -1,0 +1,119 @@
+From users-return-135577-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 20 17:15:13 2014
+Return-Path: <users-return-135577-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2D6E811D28
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 20 Feb 2014 17:15:13 +0000 (UTC)
+Received: (qmail 12129 invoked by uid 500); 20 Feb 2014 17:15:08 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 12065 invoked by uid 500); 20 Feb 2014 17:15:08 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 12055 invoked by uid 99); 20 Feb 2014 17:15:08 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Feb 2014 17:15:08 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of predatorvi@gmail.com designates 209.85.220.177 as permitted sender)
+Received: from [209.85.220.177] (HELO mail-vc0-f177.google.com) (209.85.220.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Feb 2014 17:15:04 +0000
+Received: by mail-vc0-f177.google.com with SMTP id if11so2097566vcb.8
+        for <users@maven.apache.org>; Thu, 20 Feb 2014 09:14:43 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=kdjMd88ufuxS1wrrEj1QC7Ocn1fCGr6nUUdqfjaG5eU=;
+        b=Y7olhSwnuT3GkKSw2elGHwR4DD9GGez2k4DA9xnIjS+tLJxAA5p2eMQXdT0ekuh6gj
+         A0P8q79EuG7W/wvYZyyCO7uF5Ixi0mRDr9KIEDs40Lzi9RooKRpFYLkjgL0XieAw9lGy
+         Ym2AcOeOu3z3D4VMxtZXKdetlLxxdTCeg8xXmZ60FJsWY2Bb9QoybD/NG31cdo0K1lvi
+         SiICZGhC/wzFJlMIzFjPe+YhCgoCHxCJs3TbRpwtKlhRLuLLMiT4hg8kzxvnXYPMviDM
+         WzaF4VV5ubQxwDIA/StqpXynwKwg+A4zC+MROxVbQyNP03NUP9IaFo+XHGf4QtNW5jkX
+         KjXA==
+X-Received: by 10.53.10.137 with SMTP id ea9mr1381755vdd.74.1392916483241;
+ Thu, 20 Feb 2014 09:14:43 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.220.86.67 with HTTP; Thu, 20 Feb 2014 09:14:23 -0800 (PST)
+In-Reply-To: <CAPJK9=+yczFUavwAcyoYb3oaFpqfNuPAw8L1nYvw2KXROusrPg@mail.gmail.com>
+References: <CAPJK9=+yczFUavwAcyoYb3oaFpqfNuPAw8L1nYvw2KXROusrPg@mail.gmail.com>
+From: Jeff <predatorvi@gmail.com>
+Date: Thu, 20 Feb 2014 10:14:23 -0700
+Message-ID: <CAPJK9=Kfhs6q1BEL81-tnvqEQL7N1MxFEM-BzqGxjAFRXP9new@mail.gmail.com>
+Subject: Re: Help[please]: maven-surefire-plugin with TestNG group
+ dependencies not working....
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1134044c2f7ec104f2d9a440
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1134044c2f7ec104f2d9a440
+Content-Type: text/plain; charset=ISO-8859-1
+
+Anyone have similar issues running tests w/ group dependencies?
+
+
+On Tue, Feb 18, 2014 at 5:52 PM, Jeff <predatorvi@gmail.com> wrote:
+
+> I'm having a frustrating test dependency issue and I don't know if it is
+> my configuration or a problem.  I've got two test classes in my maven
+> project using testng:6.8.7 and maven-surefire-plugin:2.16.
+>
+> The first test class has the following annotation on the test *class* which
+> should be inherited by the test methods:
+>
+> *     @Test(groups={ "functional" })*
+> *      public class FuncTest{...}*
+>
+> on the other test *class*, I have:
+>
+> *     @Test(groups={ "load" }, dependsOnGroups = { "functional" })*
+> *      public class LoadTest {...}*
+>
+> When I run the following:
+>
+>      *mvn test*
+>
+> I get the error:
+>
+>      *[ERROR] DependencyMap::Method LoadTest depends on nonexistent group
+> "functional"*
+>
+> If I REMOVE the "dependsOnGroups..." it works.  If I do any of the
+> following but keep the "dependsOnGroups" option:
+>
+>     * mvn test -Dtest=LoadTest,FuncTest*
+>     * mvn test -Dgroups=functional,load*
+>     * mvn test -Dgroups=functional,load **-Dtest=LoadTest,FuncTest*
+>
+> it fails with the error above.  If I run it outside of Maven by calling
+> org.testng.TestNG directly, it works fine.
+>
+> I also tried moving the group definitions/dependencies to the test method
+> directly, but that didn't change.
+>
+> *What am I missing?  *
+>
+> Thanks!
+>
+> --
+> Jeff Vincent
+> See my LinkedIn profile at:
+> http://www.linkedin.com/in/rjeffreyvincent
+>
+
+
+
+-- 
+Jeff Vincent
+See my LinkedIn profile at:
+http://www.linkedin.com/in/rjeffreyvincent
+
+--001a1134044c2f7ec104f2d9a440--
+

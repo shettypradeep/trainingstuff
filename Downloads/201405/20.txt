@@ -1,0 +1,88 @@
+From users-return-136444-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun May 25 12:19:05 2014
+Return-Path: <users-return-136444-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E396611A55
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 25 May 2014 12:19:04 +0000 (UTC)
+Received: (qmail 94437 invoked by uid 500); 25 May 2014 12:19:02 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 94350 invoked by uid 500); 25 May 2014 12:19:02 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 94341 invoked by uid 99); 25 May 2014 12:19:02 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 25 May 2014 12:19:02 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [64.85.173.253] (HELO server.dankulp.com) (64.85.173.253)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 25 May 2014 12:18:59 +0000
+Received: by server.dankulp.com (Postfix, from userid 5000)
+	id E821E184621; Sun, 25 May 2014 08:18:34 -0400 (EDT)
+X-Spam-Checker-Version: SpamAssassin 3.3.2 (2011-06-06) on server.dankulp.com
+X-Spam-Level: 
+X-Msg-File: /tmp/mailfilter-users@maven.apache.org.b24Lh0DMU4
+Received: from [192.168.1.104] (c-50-176-22-10.hsd1.ma.comcast.net [50.176.22.10])
+	(using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by server.dankulp.com (Postfix) with ESMTPSA id 6B44618056A
+	for <users@maven.apache.org>; Sun, 25 May 2014 08:18:31 -0400 (EDT)
+Content-Type: text/plain; charset=us-ascii
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.2\))
+Subject: Re: Replacement for ArtifactResolver in Maven-3?
+From: Daniel Kulp <dkulp@apache.org>
+In-Reply-To: <CAEBcyzoPWoOY4nfOO2sBkK7LOUfAYgy6L0ejbuvQgvwQERebnQ@mail.gmail.com>
+Date: Sun, 25 May 2014 08:18:31 -0400
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <668F5C69-080F-4D8D-ADEC-D140F577A8EE@apache.org>
+References: <CAEBcyzoPWoOY4nfOO2sBkK7LOUfAYgy6L0ejbuvQgvwQERebnQ@mail.gmail.com>
+To: Maven Users List <users@maven.apache.org>
+X-Mailer: Apple Mail (2.1878.2)
+X-Virus-Checked: Checked by ClamAV on apache.org
+X-Old-Spam-Status: No, score=-2.7 required=3.0 tests=ALL_TRUSTED,AWL,BAYES_00
+	shortcircuit=no autolearn=ham version=3.3.2
+
+
+On May 25, 2014, at 4:20 AM, William Ferguson =
+<william.ferguson@xandar.com.au> wrote:
+
+> ArtifactResolver has been deprecated but it doesn't provide guidance =
+on an
+> appropriate replacement.
+> http://maven.apache.org/ref/3.2.1/maven-compat/apidocs/index.html
+>=20
+> In the spirit of trying to move in the right direction what should I =
+use
+> instead?
+
+
+I looked into this twice last week and ended up using  =
+org.apache.maven.repository.RepositorySystem
+
+See:
+=
+https://svn.apache.org/repos/asf/aries/trunk/versioning/versioning-plugin/=
+src/main/java/org/apache/aries/versioning/mojo/VersionCheckerMojo.java
+
+
+
+
+--=20
+Daniel Kulp
+dkulp@apache.org - http://dankulp.com/blog
+Talend Community Coder - http://coders.talend.com
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,68 @@
+From users-return-136353-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed May 14 00:53:04 2014
+Return-Path: <users-return-136353-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 36F631176D
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 14 May 2014 00:53:04 +0000 (UTC)
+Received: (qmail 24470 invoked by uid 500); 13 May 2014 23:53:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 24389 invoked by uid 500); 13 May 2014 23:53:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 88970 invoked by uid 99); 10 May 2014 22:55:38 -0000
+X-ASF-Spam-Status: No, hits=3.2 required=5.0
+	tests=HELO_DYNAMIC_IPADDR,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ctron@dentrassi.de designates 83.169.20.27 as permitted sender)
+X-No-Relay: not in my network
+Message-ID: <536CA56A.2090001@dentrassi.de>
+Date: Fri, 09 May 2014 11:52:42 +0200
+From: Jens Reimann <ctron@dentrassi.de>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.5.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Using plugins from the command line that come not from maven central
+X-Enigmail-Version: 1.5.2
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+I want to execute a project-less maven plugin from the command line.
+However the plugin is not in maven central and I cannot place the plugin
+repository in the settings.xml file.
+
+Now I can use the dependency:get plugin to fetch the plugin from the
+remote repository into my local repository. However I have to use the
+command line switch -llr, which triggers a warning. Otherwise maven
+complains about the fact that the plugin cannot be found at maven
+central (though it really is in the local repository).
+
+Adding -llr works, and the plugin is found.
+
+However I would like to have a way were I can run a project-less plugin,
+from the command line, using an alternate plugin repository.
+
+Like:
+    mvn mygroup:myartifact:1.2.3:do-my-stuff
+-Dmaven.plugin.repository=http://my.own/repository
+
+I have not found such a property in the documentation.
+
+Jens
+
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

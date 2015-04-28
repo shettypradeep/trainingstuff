@@ -1,0 +1,237 @@
+From users-return-137359-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Sep 23 19:37:29 2014
+Return-Path: <users-return-137359-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C9EDF111BA
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 23 Sep 2014 19:37:29 +0000 (UTC)
+Received: (qmail 79315 invoked by uid 500); 23 Sep 2014 19:37:28 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 79223 invoked by uid 500); 23 Sep 2014 19:37:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 79211 invoked by uid 99); 23 Sep 2014 19:37:27 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 23 Sep 2014 19:37:27 +0000
+X-ASF-Spam-Status: No, hits=2.5 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of grover.blue@gmail.com designates 209.85.216.44 as permitted sender)
+Received: from [209.85.216.44] (HELO mail-qa0-f44.google.com) (209.85.216.44)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 23 Sep 2014 19:37:02 +0000
+Received: by mail-qa0-f44.google.com with SMTP id x12so2226239qac.3
+        for <users@maven.apache.org>; Tue, 23 Sep 2014 12:37:00 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=ZmcVAkHAQ5cpc89c9Zgpu0OqaPZPHeyKbyV/P70/PJM=;
+        b=BWKjKiRq+DMQHkjGnRutMYBoYYT0TiDehty4e8ZYveS7sqQE69/aqODA6KKGRO3/cl
+         1JVRKGAojLNNNvqgbGVguMoEn0qV5CtF8p0TAPmVz96Oeoq01Jxpht2PTJc94SbEUUr8
+         v4ZlCXk5Vtj2xDaAiTrwJIwmJl/evjB1RTkZKxf9uCSVuDJZV/VyHE/+fMVuUgfsMTr/
+         347gIcKquboQo8oPteqfwK5hIaUqy4kI4OwkC5hvgR7eZokTga7tIsh2nEahNUHJ89cw
+         nV+pOtW/Tk3K3HTvZ7T/lDvFpmLKAMSRA/OwOzskz8lccdDe7ux1mHzOXQdkKn0+wvVd
+         bmRw==
+MIME-Version: 1.0
+X-Received: by 10.224.111.193 with SMTP id t1mr2370951qap.103.1411501020643;
+ Tue, 23 Sep 2014 12:37:00 -0700 (PDT)
+Received: by 10.140.23.148 with HTTP; Tue, 23 Sep 2014 12:37:00 -0700 (PDT)
+In-Reply-To: <CA+nPnMyg+doZuQBZmD+mVNGSPfCeNeg7dqvdwsh1ODT3dXXm+g@mail.gmail.com>
+References: <CAKuK4uH7S5Z54van32ExnPu+_d8bP9BA-Vz-4BTK2QQ5My_KHQ@mail.gmail.com>
+	<CADN69y=zCBy+XJs9V338GTr1FP9y30NVbfOU09SUKcjM6Masxg@mail.gmail.com>
+	<CAMH6+axK==g5Gk26muHO1FKaKiRxdS=Ut70jP60sSda-8brRsg@mail.gmail.com>
+	<CA+nPnMzYQmLcMz08GvYgFf4EDA9Ab_9w+veBokjUn-uiXnGZsw@mail.gmail.com>
+	<CADN69y=FBRcT9y5NmGkJ1e0sTw5r8SmYgfAf70ZRBE+mQ8Acrg@mail.gmail.com>
+	<CAMH6+awnfFY6P+iKABaxo+tsqCT3Ju6Xm-m31N8vc5nzNJ5YhQ@mail.gmail.com>
+	<CADN69ynbp-Bn62ZOjVNn3Q0hYqyCQc9FCLF5dPu+9phGUNK4PQ@mail.gmail.com>
+	<CA+nPnMyg+doZuQBZmD+mVNGSPfCeNeg7dqvdwsh1ODT3dXXm+g@mail.gmail.com>
+Date: Tue, 23 Sep 2014 15:37:00 -0400
+Message-ID: <CAKuK4uHt=upNZASGdZg2YTpkfkkn-Wd4Yb4+aQwrab3fhdi8bg@mail.gmail.com>
+Subject: Re: usage with Jenkins
+From: Grover Blue <grover.blue@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b6737f0ef896b0503c0b0f1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b6737f0ef896b0503c0b0f1
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I'd like to weigh in on this.  The maven-based job type is great for quick
+or single-dimensional project, especially when you know the scope will not
+change.  I tend to prefer freestyle because of flexibility.
+
+In reality, the solution is to just have one project type with varied
+initialization types.  I'm pretty sure that's happening in the backend, but
+the details are hidden (needs confirmation).
+
+BTW, in order to have artifacts listed one has to enable artifact
+archiving, not publishing.
+
+Everything works now (except for the job stalling on deployment to a
+self-signed cert GF 4.1 installation.  :)
+
+
+
+On Tue, Sep 23, 2014 at 2:43 PM, Stephen Connolly <
+stephen.alan.connolly@gmail.com> wrote:
+
+> FYI my aim is to supersede the evil job type with some enhanced reporting
+> in what is currently called the literate job type.
+>
+> That would mean you'd get the per-module reporting.
+>
+> The current evil job type's other "killer" feature is automatic downstrea=
+m
+> job triggering... Which is actually broken as it does not take into accou=
+nt
+> the local repo that the -SNAPSHOTs may or may not have been deployed into
+> and assumes that `package` is the same as `deploy` as far as triggering i=
+s
+> concerned as well as ignoring that deployment might be to a staging repo,
+> so the artifacts may not be available downstream... However, despite bein=
+g
+> fundamentally broken at every level, you would be surprised how many peop=
+le
+> feel locked into the evil job type because of this...
+>
+> In short, there is so many issues with it that I cannot recommend its
+> use... The only semi useful feature from my PoV is per module reporting.
+>
+> (Sadly my day job has me having to support the evil job type from time to
+> time... Though usually those tickets get picked up by Kohsuke if I start
+> another "evil job type" tirade ;-) )
+>
+> On Tuesday, 23 September 2014, Curtis Rueden <ctrueden@wisc.edu> wrote:
+>
+> > Hi James,
+> >
+> > > I can no longer see "Deploy artifacts to Maven repository"
+> > > as a post-build action.
+> >
+> > Just add a build step that does "mvn deploy" or similar.
+> >
+> > > Dare I ask what I'm missing having chosen the full-fat option..?
+> >
+> > If you're asking what you cannot do with freeform jobs: I don't know of
+> > anything. I think the Maven-style job is just a convenience to get very
+> > basic CI set up as quickly as possible, for people without much technic=
+al
+> > know-how.
+> >
+> > If you're asking for more details on limitations of the Maven-style job=
+:
+> > it's been awhile, but IIRC my group had several problems. One such was
+> that
+> > the Jenkins Git plugin did not fire Maven-style jobs upon receiving the
+> > push notification from GitHub. Another really serious problem is that y=
+ou
+> > can't add arbitrary shell script as a post-build step. And needing to d=
+o
+> > this is, in my experience, extremely common.
+> >
+> > It wouldn't be that big of an issue if there were an easy way to later
+> > "convert" a Maven-style job to a freestyle job should the need arise. B=
+ut
+> > try a web search on that topic and you'll see what I mean about it bein=
+g
+> a
+> > highly non-trivial problem.
+> >
+> > Regards,
+> > Curtis
+> >
+> > On Tue, Sep 23, 2014 at 8:56 AM, James Green <james.mk.green@gmail.com
+> > <javascript:;>>
+> > wrote:
+> >
+> > > News to me. Ironically I'm just setting up a new Jenkins job so tried
+> the
+> > > freeform style - I can no longer see "Deploy artifacts to Maven
+> > repository"
+> > > as a post-build action.
+> > >
+> > > Dare I ask what I'm missing having chosen the full-fat option..?
+> > >
+> > > On 23 September 2014 14:02, Curtis Rueden <ctrueden@wisc.edu
+> > <javascript:;>> wrote:
+> > >
+> > > > The Maven style build will also lock you in to a small subset of
+> > > Jenkins's
+> > > > usual features. And when you eventually need a feature not availabl=
+e
+> > > with a
+> > > > Maven-style build, there is no conversion path from Maven-style to
+> > > > Freestyle -- you have to recreate the job (losing the build history
+> > > etc.).
+> > > >
+> > > > -Curtis
+> > > > On Sep 23, 2014 7:33 AM, "Stephen Connolly" <
+> > > > stephen.alan.connolly@gmail.com <javascript:;>>
+> > > > wrote:
+> > > >
+> > > > > Freestyle does not mess with your build and change it from buildi=
+ng
+> > the
+> > > > way
+> > > > > maven intends. Google "stephen's java adventures Jenkins maven
+> > > considered
+> > > > > evil" for a more detailed discussion
+> > > > >
+> > > > > On Tuesday, 23 September 2014, James Green <
+> james.mk.green@gmail.com
+> > <javascript:;>>
+> > > > > wrote:
+> > > > >
+> > > > > > On 23 September 2014 02:23, Curtis Rueden <ctrueden@wisc.edu
+> > <javascript:;>
+> > > > > > <javascript:;>> wrote:
+> > > > > > >
+> > > > > > >
+> > > > > > > Also, stay away from the Jenkins "Maven" style job. Freestyle
+> is
+> > > more
+> > > > > > > flexible and less buggy.
+> > > > > > >
+> > > > > >
+> > > > > > Based on ..?
+> > > > > >
+> > > > >
+> > > > >
+> > > > > --
+> > > > > Sent from my phone
+> > > > >
+> > > >
+> > >
+> >
+>
+>
+> --
+> Sent from my phone
+>
+
+
+
+--=20
+=E2=80=9CIf the American people ever allow private banks to control the iss=
+ue of
+their currency, first by inflation, then by deflation, the banks...will
+deprive the people of all property until their children wake-up homeless on
+the continent their fathers conquered... The issuing power should be taken
+from the banks and restored to the people, to whom it properly belongs."
+-- Thomas Jefferson
+
+"Government big enough to supply everything...is big enough to take
+everything you have. The course of history shows that as a government
+grows, liberty decreases" --- Thomas Jefferson
+
+www.CampaignForLiberty.org
+
+--047d7b6737f0ef896b0503c0b0f1--
+

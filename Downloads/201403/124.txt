@@ -1,0 +1,73 @@
+From users-return-135932-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Mar 25 22:09:54 2014
+Return-Path: <users-return-135932-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7CE8210734
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 25 Mar 2014 22:09:54 +0000 (UTC)
+Received: (qmail 72475 invoked by uid 500); 25 Mar 2014 22:09:50 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 72408 invoked by uid 500); 25 Mar 2014 22:09:50 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 72398 invoked by uid 99); 25 Mar 2014 22:09:50 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Mar 2014 22:09:50 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.160.46] (HELO mail-pb0-f46.google.com) (209.85.160.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Mar 2014 22:09:43 +0000
+Received: by mail-pb0-f46.google.com with SMTP id rq2so1050971pbb.19
+        for <users@maven.apache.org>; Tue, 25 Mar 2014 15:09:21 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:to:subject:date:message-id:in-reply-to
+         :references:mime-version:content-type;
+        bh=MV2XGG/9PrA8SNAU4r5G6KlYGp7HkFmL0rnRCtei+Gc=;
+        b=VkW8Kp4Hf06YySDwV1ucewQQQijHRAsnyh1pBR/opR/ElVLUam8dCa1eHg99Dq3a7E
+         H+MSeZpLNiFr/B0tVzM16V8vJTEsOg/n0I1sNqU832oEI0ABMxxn7vbMs2rLAa6guJD8
+         BGcRQBoC/2gbup6SbwFt5syPZ7Rf30i9eFvp6ZnxRWonbNMHxZOxNl97c+g/2ZmnT3dJ
+         PD6Dr0fgJiwJRJHwxXUghSj78Rtq/2umcygh7YDkcU6rP48JqBsJIz+DpnQ2p9iK++5O
+         t4HgAyAezSa0KvGE2A7tb6k2vL5qPEl+u/uzx8aRpPR6s4CVjxB+wX2l2BT6BMf5VkX3
+         nEYg==
+X-Gm-Message-State: ALoCoQkRt7Vxnh8qGBJTvdFiX48u/wwTRVXmb9cJ0iMLngfRB3xgi+wdwTCvCBeQhMQNhE/2Sjl0
+X-Received: by 10.66.102.66 with SMTP id fm2mr240065pab.51.1395785361070;
+        Tue, 25 Mar 2014 15:09:21 -0700 (PDT)
+Received: from [10.0.0.142] (akl.smx.co.nz. [203.84.135.120])
+        by mx.google.com with ESMTPSA id qw8sm49331596pbb.27.2014.03.25.15.09.19
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Tue, 25 Mar 2014 15:09:20 -0700 (PDT)
+From: "Mark Derricutt" <mark@talios.com>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Incremental build API
+Date: Wed, 26 Mar 2014 11:09:15 +1300
+Message-ID: <52B091BA-2472-4A2F-9544-972DC91F7FFB@talios.com>
+In-Reply-To: <E9DAAECA-C429-40FC-9B89-18D819971EC6@takari.io>
+References: <E9DAAECA-C429-40FC-9B89-18D819971EC6@takari.io>
+MIME-Version: 1.0
+Content-Type: text/plain; format=flowed
+X-Mailer: MailMate (1.7.2r4025)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Looking interesting - will definitely take a look at this for my various 
+language plugins ( coffee script, clojure, frege ).
+
+On 26 Mar 2014, at 6:44, Jason van Zyl wrote:
+
+> A note to those interested that the use of the API in Maven requires 
+> 3.2.1+.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

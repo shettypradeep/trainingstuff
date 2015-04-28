@@ -1,0 +1,98 @@
+From users-return-137392-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Sep 27 15:24:28 2014
+Return-Path: <users-return-137392-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C8EC617CA7
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 27 Sep 2014 15:24:28 +0000 (UTC)
+Received: (qmail 99691 invoked by uid 500); 27 Sep 2014 15:24:26 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99610 invoked by uid 500); 27 Sep 2014 15:24:26 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99599 invoked by uid 99); 27 Sep 2014 15:24:26 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 27 Sep 2014 15:24:26 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of khmarbaise@gmx.de designates 212.227.15.15 as permitted sender)
+Received: from [212.227.15.15] (HELO mout.gmx.net) (212.227.15.15)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 27 Sep 2014 15:23:59 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([217.247.55.218]) by
+ mail.gmx.com (mrgmx002) with ESMTPSA (Nemesis) id 0LlESk-1Y5IrI2QXm-00b5rS
+ for <users@maven.apache.org>; Sat, 27 Sep 2014 17:23:58 +0200
+Message-ID: <5426D691.60003@gmx.de>
+Date: Sat, 27 Sep 2014 17:24:01 +0200
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Surefire and testing plugin issue
+References: <CAKQjojTyS071pCdGxWrSehWMqgNWcMKtOr_L1eA89jg+5Ptucg@mail.gmail.com>
+In-Reply-To: <CAKQjojTyS071pCdGxWrSehWMqgNWcMKtOr_L1eA89jg+5Ptucg@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:i9cC72ZS7RJeqmejrVlJHGT0uO0yqe8cUxY+UXzQjWyFTzfiq9U
+ KAXPE/+wh9mG4bvwlgGMTteJiLHgi/Q3z4BI5AopMCMVB6L0rEFcO8qzfZAoh3HxeEyqE1O
+ JbIppGVfM9z/U54KgaTW04BoaclpB5dvRkt0689Wvy5jraMcs+XDlUnAhYF4rqQd9EQu+IF
+ GaFjUEi4ll3uE8ZAkTF/w==
+X-UI-Out-Filterresults: notjunk:1;
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+
+ >> Hi,
+>>
+>> I am using maven-surefire-plugin version 2.17 and testng plugin version
+>> 6.3.1 (jdk version is 1.7 ).
+
+so ok so far you are using maven-surefire-plugin 2.17 and have 
+configured a dependency to testng in version 6.3.1?
+First why are you using such an old version of TestNG..(2011?)...
+
+Furthermore there is no testng plugin....
+
+Can you show your pom file which you are using otherwise it's hard to 
+guess what's wrong...
+
+
+
+
+> Some of our tests are failing and in the
+>> testng-results.xml file it is reported as fail. The issue is "maven" is
+>> reporting the failed tests as "skipped" and the final build status is
+>> SUCCESS.
+>>
+>> Has anyone faced this issue ? if so what is the soln.
+>>
+>> I tried with "surefire-testng" plugin instead of "testng" plugin. With
+>> this change, maven is properly reporting the failed tests and the final
+>> build is reported as FAIL
+>>
+>> What is the difference between testng and surefire-testng plugin , I don't
+>> see any mention in the surefire plugin page, so I am not sure if it is
+>> correct to use this plugin.
+>>
+>> Any help is appreciated
+>>
+
+Kind regards
+Karl-Heinz Marbaise
+
+
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

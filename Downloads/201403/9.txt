@@ -1,0 +1,100 @@
+From users-return-135988-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Mar 28 12:44:19 2014
+Return-Path: <users-return-135988-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 00D9F103F9
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 28 Mar 2014 12:44:19 +0000 (UTC)
+Received: (qmail 64010 invoked by uid 500); 28 Mar 2014 12:44:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 63057 invoked by uid 500); 28 Mar 2014 12:44:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 63045 invoked by uid 99); 28 Mar 2014 12:44:10 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 12:44:10 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.220.43 as permitted sender)
+Received: from [209.85.220.43] (HELO mail-pa0-f43.google.com) (209.85.220.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 12:44:05 +0000
+Received: by mail-pa0-f43.google.com with SMTP id bj1so4959591pad.30
+        for <users@maven.apache.org>; Fri, 28 Mar 2014 05:43:43 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=4gsDjsuI1zNJYPKsQjklXLhGq9uS+s+/rGABemHC/wU=;
+        b=fWaKYbPlideyOE4Vo9VkNdTYaLP/XK+8C7dU5GaCQ9XVhTc+kfpjCJCW6o8FLpVvNd
+         A7FE7sS52zYaEKGEfyfuYuXMvr7BpjMFPpmd1hBxTFU8SbaKHj+/PcUEyP5HtIkuSZaC
+         8xjNeFdkwP52XRnyxuMnbTu4pqAiEsNCQNkXJw6ZnkhsoID20rcWp+KqbUs0uj0PAtr5
+         SKUegaXYda74Bd5nnj/pNc83sTcNJjtIlc7wMFOKDnNWnU094tOBIE+lfyH4IWRJbANC
+         uUGCm877KTenqxM0yw7rgWIJ51RCLGC2z6txw0Z/cj7w4kBN+Uom4GLSzKhJ8Dnxd3m4
+         +o7A==
+MIME-Version: 1.0
+X-Received: by 10.68.113.194 with SMTP id ja2mr8443282pbb.30.1396010623030;
+ Fri, 28 Mar 2014 05:43:43 -0700 (PDT)
+Received: by 10.68.201.167 with HTTP; Fri, 28 Mar 2014 05:43:42 -0700 (PDT)
+In-Reply-To: <1396009391638-5789868.post@n5.nabble.com>
+References: <1396000799217-5789837.post@n5.nabble.com>
+	<CANWgJS6WiA1b4mew9Y5sHFy0Vpp9iWMidkTaitwKF52vfyo2Pw@mail.gmail.com>
+	<1396005159305-5789843.post@n5.nabble.com>
+	<CA+nPnMxJvqyWcnsWADF00zr+emGdw-kA4fZeSY9duCOj3zs96A@mail.gmail.com>
+	<1396009391638-5789868.post@n5.nabble.com>
+Date: Fri, 28 Mar 2014 12:43:42 +0000
+Message-ID: <CA+nPnMxp6vhW6BaDQ22b5P2pHVVZTAkwpd7NW1PVgfxuzw9gTw@mail.gmail.com>
+Subject: Re: maven release-plugin 2.5 bug - releasing snapshots...
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b6dce4049dc3a04f5aa0d2a
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b6dce4049dc3a04f5aa0d2a
+Content-Type: text/plain; charset=ISO-8859-1
+
+You do know you are not allowed to release a version containing a -SNAPSHOT
+don't you?
+
+
+On 28 March 2014 12:23, ghostwolf59 <martin.cedervall@commerce.wa.gov.au>wrote:
+
+> Sorry for that - I was just in the process of updating this.... a simple
+> copy/paste mistake
+>
+> I am using 2.5 when the problem occur - as illustrated on the image below
+>
+> <
+> http://maven.40175.n5.nabble.com/file/n5789868/release-version-prompt-v.2.5-w.version.jpg
+> >
+>
+> As you can see the prompt "What is the release version for " ... keep
+> coming
+> back - v2.5 does not accept me overwriting this.
+>
+> Using v.2.2.2 allow me to overwrite this with anything that then takes me
+> to
+> the scm prompt and so on - which ultimately allow me to do what I really
+> want.
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/maven-release-plugin-2-5-bug-releasing-snapshots-tp5789837p5789868.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7b6dce4049dc3a04f5aa0d2a--
+

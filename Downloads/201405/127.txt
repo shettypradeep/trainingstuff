@@ -1,0 +1,81 @@
+From users-return-136318-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu May  1 22:12:34 2014
+Return-Path: <users-return-136318-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 851401130A
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  1 May 2014 22:12:34 +0000 (UTC)
+Received: (qmail 38093 invoked by uid 500); 1 May 2014 22:12:29 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 38040 invoked by uid 500); 1 May 2014 22:12:29 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 38026 invoked by uid 99); 1 May 2014 22:12:29 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 01 May 2014 22:12:29 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of btv1==198bd42a521==apiwoni@obsglobal.com designates 67.139.72.72 as permitted sender)
+Received: from [67.139.72.72] (HELO pdxbarracuda.obsglobal.com) (67.139.72.72)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 01 May 2014 22:12:24 +0000
+X-ASG-Debug-ID: 1398982305-0631b410cc4a420001-NdriAu
+Received: from mail.obsglobal.com (pdxvmmxcaht02.obsglobal.com [172.16.7.85]) by pdxbarracuda.obsglobal.com with ESMTP id E41U6XdFEwJUz3RF (version=TLSv1 cipher=AES128-SHA bits=128 verify=NO) for <users@maven.apache.org>; Thu, 01 May 2014 15:11:45 -0700 (PDT)
+X-Barracuda-Envelope-From: apiwoni@obsglobal.com
+Received: from PDXVMMXMB01.obsglobal.com ([fe80::1042:1f08:2d84:7b52]) by
+ PDXVMMXCAHT02.obsglobal.com ([fe80::b560:95ac:967e:4acc%10]) with mapi id
+ 14.03.0174.001; Thu, 1 May 2014 15:12:49 -0700
+From: "Piwoni, Andre" <apiwoni@obsglobal.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: Maven Archetype Modularity
+Thread-Topic: Maven Archetype Modularity
+X-ASG-Orig-Subj: Maven Archetype Modularity
+Thread-Index: Ac9lhknaq4YxjA2/Q2ekGEZP0hlY/g==
+Date: Thu, 1 May 2014 22:12:49 +0000
+Message-ID: <900C07643A67284EA96EA638C0E7A79B301F8E6F@PDXVMMXMB01.obsglobal.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [172.16.132.25]
+Content-Type: multipart/alternative;
+	boundary="_000_900C07643A67284EA96EA638C0E7A79B301F8E6FPDXVMMXMB01obsg_"
+MIME-Version: 1.0
+X-Barracuda-Connect: pdxvmmxcaht02.obsglobal.com[172.16.7.85]
+X-Barracuda-Start-Time: 1398982305
+X-Barracuda-Encrypted: AES128-SHA
+X-Barracuda-URL: http://pdxbarracuda.obsglobal.com:8000/cgi-mod/mark.cgi
+X-Virus-Scanned: by bsmtpd at obsglobal.com
+X-Barracuda-BRTS-Status: 1
+X-Barracuda-Spam-Score: 0.00
+X-Barracuda-Spam-Status: No, SCORE=0.00 using global scores of TAG_LEVEL=1000.0 QUARANTINE_LEVEL=1000.0 KILL_LEVEL=9.0 tests=HTML_MESSAGE
+X-Barracuda-Spam-Report: Code version 3.2, rules version 3.2.3.5445
+	Rule breakdown below
+	 pts rule name              description
+	---- ---------------------- --------------------------------------------------
+	0.00 HTML_MESSAGE           BODY: HTML included in message
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_000_900C07643A67284EA96EA638C0E7A79B301F8E6FPDXVMMXMB01obsg_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+I have one archetype A which can be used to generate project B with module =
+C and module D. I also need capability to generate second, third etc. modul=
+e C that could be added to existing project B.
+How could I reuse module C definition in both cases? I could possibly creat=
+e one  archetype for module C and one for module D as partial, if this woul=
+d work? But would there be a way to reuse these archetypes by another arche=
+type that can generate module C and D?
+
+Thanks,
+Andre Piwoni
+
+--_000_900C07643A67284EA96EA638C0E7A79B301F8E6FPDXVMMXMB01obsg_--
+

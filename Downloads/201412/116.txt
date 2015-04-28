@@ -1,0 +1,101 @@
+From users-return-138036-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Dec 16 10:31:05 2014
+Return-Path: <users-return-138036-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C798E9053
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 16 Dec 2014 10:31:05 +0000 (UTC)
+Received: (qmail 71518 invoked by uid 500); 16 Dec 2014 10:31:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 71423 invoked by uid 500); 16 Dec 2014 10:31:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 71410 invoked by uid 99); 16 Dec 2014 10:31:02 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 16 Dec 2014 10:31:02 +0000
+X-ASF-Spam-Status: No, hits=0.0 required=5.0
+	tests=
+X-Spam-Check-By: apache.org
+Received-SPF: unknown (athena.apache.org: error in processing during lookup of m.de.kort@portbase.com)
+Received: from [62.177.210.148] (HELO mail.portbase.com) (62.177.210.148)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 16 Dec 2014 10:30:56 +0000
+Received: from KA01PWIEXC001.AD.portinfolink.com (10.15.30.32) by
+ mail.portbase.com (10.15.10.31) with Microsoft SMTP Server (TLS) id
+ 14.2.347.0; Tue, 16 Dec 2014 11:30:17 +0100
+Received: from KA01PWIEXM001.AD.portinfolink.com ([::1]) by
+ KA01PWIEXC001.AD.portinfolink.com ([::1]) with mapi id 14.02.0387.000; Tue,
+ 16 Dec 2014 11:30:19 +0100
+From: Melvyn de Kort <m.de.kort@portbase.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: SCM config with *special* setup
+Thread-Topic: SCM config with *special* setup
+Thread-Index: AdAZDbtZropBi+qoSDiQcNruahBsMA==
+Date: Tue, 16 Dec 2014 10:30:19 +0000
+Message-ID: <013EC3103718A9498A522D8AFC31F99009DC36@KA01PWIEXM001.AD.portinfolink.com>
+Accept-Language: en-US, nl-NL
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [172.16.111.100]
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello everybody,
+
+My team is currently migrating a legacy Ant project with a bad Subversion l=
+ayout to Maven.
+We're running into 2 problems with the Maven scm configuration.
+Let me first sketch the Subversion layout:
+
+ROOT
+  - trunk
+  -- department
+      - parent
+        - pom.xml
+      - project1
+        - pom.xml (inherits parent)
+      - project2
+        - pom.xml (inherits parent)
+      - release
+        - pom.xml (inherits parent)
+  - branches
+    - feature1
+      - department
+        - parent
+          - pom.xml
+        - project1
+          - pom.xml (inherits parent)
+        - project2
+          - pom.xml (inherits parent)
+        - release
+          - pom.xml (inherits parent)
+  - tags
+    - ...
+
+When developping code, we work on branches, we then merge back to trunk and=
+ at some point we make a new branch from trunk for the release.
+Since we have our trunk and branches on a higher level than the projects, w=
+e would have to add the branch name in the <scm> URL to gain a full path.
+Of course this is not what we want, because the Maven release plugin won't =
+know how to make tags etc.
+One possibility might be to use a compound of 2 variables (base url and bra=
+nch name) and a relative path, but this feels like a very dirty workaround.
+Does any of you have experience with a setup like this?
+
+Kind regards,
+
+Melvyn de Kort
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,208 @@
+From users-return-137150-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Aug 29 02:38:25 2014
+Return-Path: <users-return-137150-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 23F0011E9C
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 29 Aug 2014 02:38:25 +0000 (UTC)
+Received: (qmail 7761 invoked by uid 500); 29 Aug 2014 02:38:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 7677 invoked by uid 500); 29 Aug 2014 02:38:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 7666 invoked by uid 99); 29 Aug 2014 02:38:23 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 29 Aug 2014 02:38:23 +0000
+X-ASF-Spam-Status: No, hits=0.7 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [54.206.16.166] (HELO smtpbgau1.qq.com) (54.206.16.166)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 29 Aug 2014 02:37:57 +0000
+X-QQ-mid: bizesmtp4t1409279867t951t281
+Received: from [192.168.0.102] (unknown [182.18.15.192])
+	by esmtp4.qq.com (ESMTP) with SMTP id 0
+	for <users@maven.apache.org>; Fri, 29 Aug 2014 10:37:47 +0800 (CST)
+X-QQ-SSF: 00400000000000F0FGF2000A0000000
+X-QQ-FEAT: 7FdMtjbnfBoKfoHVswHbLacud+tZwxJb7oXU/dQGGU8xTpzd9fUZ0b+GXB3Un
+	sixb/1dMTSsA7KHevYB3Oy4zudnEHQKhSKJ6sHNS8IWi72IOTlwjB6Oi0nNZacPJO+1slU1
+	mxi4QB9s17ttj439JpI7fcNOfzFsy++CKJ4WLHh89+7fKbhGikwJYO6U6oN+RloAzwyhLel
+	pkCxSy1kyow==
+X-QQ-GoodBg: 2
+Message-ID: <53FFE77D.20808@embracesource.com>
+Date: Fri, 29 Aug 2014 10:37:49 +0800
+From: TOM <tom.wang@embracesource.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Thunderbird/31.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: hi, I just want to get help about maven archetype,please help
+ me
+References: <53E9D74D.2040809@embracesource.com> <2160282.Kpxr7bDso4@herve-desktop> <53F1C0B4.5050300@embracesource.com> <1467539.suf15X79Np@herve-desktop>,<53F40EAC.1030809@embracesource.com> <BLU172-W49B9228619F17191497D47AED20@phx.gbl>
+In-Reply-To: <BLU172-W49B9228619F17191497D47AED20@phx.gbl>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 8bit
+X-QQ-SENDSIZE: 520
+X-QQ-Bgrelay: 1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+i can't, i think this parameter is used for generated whole archetype 
+project but this is not i need.
+
+
+在 2014-08-21 1:51, Martin Gainty 写�?�:
+>
+>> Date: Wed, 20 Aug 2014 10:57:48 +0800
+>> From: tom.wang@embracesource.com
+>> To: users@maven.apache.org
+>> Subject: Re: hi, I just want to get help about maven archetype,please help me
+>>
+>> yeah, it works! __artifactId__ and __rootArtifactId__ all works well
+>> but this way bring a new little problem: my archetype is come from a
+>> demo project using archetype:create-from-project,now i get a archetype
+>> and change some directory's name to __artifactId__,later i want to make
+>> some tuning on the demo project and call mvn
+>> archetype:create-from-project again, then i have to rename those
+>> directory's name again.
+> MG>can you not specify outputDirectory from archetype:create-project for your new outputDirectory?
+> MG>http://maven.apache.org/archetype/maven-archetype-plugin/create-from-project-mojo.html
+>
+>> do you have any suggestions ? why not the archetype plugin put the java
+>> sources into right path directly?
+>>
+>>
+>> 在 2014-08-18 19:25, Hervé BOUTEMY 写�?�:
+>>> ah ok
+>>> so you don't need a custom plugin to add artifactId: just put content in a
+>>> directory named __artifactId__
+>>>
+>>> see http://stackoverflow.com/questions/6378589/how-to-rename-a-directory-with-the-artifactid-when-using-a-maven-archetype
+>>>
+>>> Regards,
+>>>
+>>> Hervé
+>>>
+>>> Le lundi 18 août 2014 17:00:36 TOM a écrit :
+>>>> i think i got it,i debuged archetype:generate and found code like this
+>>>>
+>>>> DefaultFilesetArchetypeGenerator.java
+>>>> private File getOutputFile( String template, String directory, File
+>>>> outputDirectoryFile, boolean packaged,
+>>>>                                    String packageName, String
+>>>> moduleOffset, Context context )
+>>>>        {
+>>>>            String templateName = StringUtils.replaceOnce( template,
+>>>> directory, "" );
+>>>>
+>>>>            String outputFileName =
+>>>>                directory + "/" + ( packaged ? getPackageAsDirectory(
+>>>> packageName ) : "" ) + "/" + templateName.substring(
+>>>>                    moduleOffset.length() );
+>>>>
+>>>>            if ( TOKEN_PATTERN.matcher( outputFileName ).matches() )
+>>>>            {
+>>>>                outputFileName = replaceFilenameTokens( outputFileName,
+>>>> context );
+>>>>            }
+>>>>
+>>>>            return new File( outputDirectoryFile, outputFileName );
+>>>>        }
+>>>>
+>>>> so maybe archetype plugin doesn't intend deal with the artifactId in the
+>>>> path,am i right?
+>>>> i wrote a plugin to adjust file path myself
+>>>>
+>>>> 在 2014-08-18 15:54, Hervé BOUTEMY 写�?�:
+>>>>> ok, need to investigate
+>>>>> can you create a Jira issue and attach an example project?
+>>>>>
+>>>>> Regards,
+>>>>>
+>>>>> Hervé
+>>>>>
+>>>>> Le lundi 18 août 2014 10:01:16 TOM a écrit :
+>>>>>> thank you ,but my descriptor already is packaged= true
+>>>>>> <fileSet filtered="true" packaged="true" encoding="UTF-8">
+>>>>>>
+>>>>>>           <directory>src/main/java</directory>
+>>>>>>           <includes>
+>>>>>>           
+>>>>>>             <include>**/*.java</include>
+>>>>>>           
+>>>>>>           </includes>
+>>>>>>         
+>>>>>>         </fileSet>
+>>>>>>
+>>>>>> 在 2014-08-18 0:10, Hervé BOUTEMY 写�?�:
+>>>>>>> use packaged="true" [1]
+>>>>>>>
+>>>>>>> Regards,
+>>>>>>>
+>>>>>>> Hervé
+>>>>>>>
+>>>>>>> [1]
+>>>>>>> http://maven.apache.org/archetype/archetype-models/archetype-descriptor/
+>>>>>>> a
+>>>>>>> rchetype-descriptor.html>
+>>>>>>>
+>>>>>>> Le mardi 12 août 2014 16:58:53 TOM a écrit :
+>>>>>>>> I use mvn archetype:create-from-project to generate a archetype
+>>>>>>>> project.
+>>>>>>>> and use it to generate a project
+>>>>>>>>
+>>>>>>>> the content of archetype file UserDTO(generaged by
+>>>>>>>> archetype:create-from-project)
+>>>>>>>> package ${package}.${artifactId}.dto;
+>>>>>>>>
+>>>>>>>> then i mvn archetype:generate -DarchetypeArtifactId=myapp
+>>>>>>>> -DgroupId=test
+>>>>>>>> -DartifactId=good
+>>>>>>>>
+>>>>>>>> then the generated UserDTO with correct package(package test.good.dto),
+>>>>>>>> but it is in src/main/java/test/dto , not expected
+>>>>>>>> src/main/java/test/good/dto
+>>>>>>>>
+>>>>>>>> please help me and thank a lot
+>>>>>>>>
+>>>>>>>>
+>>>>>>>>
+>>>>>>>> ---------------------------------------------------------------------
+>>>>>>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>>>>>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>>>>> ---------------------------------------------------------------------
+>>>>>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>>>>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>>>> ---------------------------------------------------------------------
+>>>>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>>>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>>> ---------------------------------------------------------------------
+>>>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>> ---------------------------------------------------------------------
+>>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>>> For additional commands, e-mail: users-help@maven.apache.org
+>>> ---------------------------------------------------------------------
+>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>
+>>>
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>   		 	   		
+
+
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

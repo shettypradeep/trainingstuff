@@ -1,0 +1,150 @@
+From users-return-135764-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Mar 11 02:47:35 2014
+Return-Path: <users-return-135764-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B891410B49
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 11 Mar 2014 02:47:35 +0000 (UTC)
+Received: (qmail 94264 invoked by uid 500); 11 Mar 2014 02:47:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 94012 invoked by uid 500); 11 Mar 2014 02:47:26 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 93991 invoked by uid 99); 11 Mar 2014 02:47:25 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 11 Mar 2014 02:47:25 +0000
+X-ASF-Spam-Status: No, hits=3.2 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mgainty@hotmail.com designates 65.55.116.35 as permitted sender)
+Received: from [65.55.116.35] (HELO blu0-omc1-s24.blu0.hotmail.com) (65.55.116.35)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 11 Mar 2014 02:47:19 +0000
+Received: from BLU172-W45 ([65.55.116.8]) by blu0-omc1-s24.blu0.hotmail.com with Microsoft SMTPSVC(6.0.3790.4675);
+	 Mon, 10 Mar 2014 19:46:59 -0700
+X-TMN: [VvEuch8hi2ICUSqrEND4wGZ//bEBKaYE]
+X-Originating-Email: [mgainty@hotmail.com]
+Message-ID: <BLU172-W4563704B3BA956C6A26C1CAE770@phx.gbl>
+Content-Type: multipart/alternative;
+	boundary="_325b93b3-05a0-4858-bdfb-b83306988e66_"
+From: Martin Gainty <mgainty@hotmail.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: RE: Netbeans 7.4 maven POM for com.oracle:ojdbc6:jar:11.2.0.1 is
+ invalid
+Date: Mon, 10 Mar 2014 22:46:58 -0400
+Importance: Normal
+In-Reply-To:
+ <CAM0K-0AVeNx_CWRBE0XqipuBYeYHDcrU3Ft7hJL9eEKJiCPwBg@mail.gmail.com>
+References:
+ <CAM0K-0CzKNaJ89zXuHAiEF1a3QYtybyXUjg0HPQrNVRWz-a9jQ@mail.gmail.com>,<CALy+7Uk5usRFLhxLhWyCDAOMpGvWSUBVVOg72XNh1ovbc640OA@mail.gmail.com>,<CAM0K-0CbT2Bt_NXu5RjaL2cyWC=sR1qjeRghBGJJMvd+HaCKYg@mail.gmail.com>,<CALy+7U=V0ReweVzA5Z3keQ390kHSvcH4KHC2asMO5GoRSOXT5Q@mail.gmail.com>,<CAM0K-0Bz_Xg=vEx9QsdQR6TWKHDw=RtGupbzNJSD19szcVs9QA@mail.gmail.com>,<CAM0K-0BAJDd5CXhUD65wo1gtkRHQNRmnVjpWC0pw7Pp1nqU+JA@mail.gmail.com>,<BLU172-W316F24902229426C8572AFAE750@phx.gbl>,<CAM0K-0AVeNx_CWRBE0XqipuBYeYHDcrU3Ft7hJL9eEKJiCPwBg@mail.gmail.com>
+MIME-Version: 1.0
+X-OriginalArrivalTime: 11 Mar 2014 02:46:59.0486 (UTC) FILETIME=[2C87BBE0:01CF3CD4]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_325b93b3-05a0-4858-bdfb-b83306988e66_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+MG>David...all comments prefixed by MG>
+
+ > Date: Sun=2C 9 Mar 2014 10:10:43 -0700
+> Subject: Re: Netbeans 7.4 maven POM for com.oracle:ojdbc6:jar:11.2.0.1 is=
+ invalid
+> From: davek1802@gmail.com
+> To: users@maven.apache.org
+>=20
+> Martin=2C
+> I'm not sure where you mean to check that ojdbc6 is listed as a dependenc=
+y.
+> I am trying to convert the project from using MySql to Oracle=2C
+> so I might not have configured everything correctly.
+>=20
+> This is in the testingContext.xml file:
+
+
+MG>
+
+<!-- assume p namespace resolves
+
+<?xml version=3D"1.0" encoding=3D"UTF-8"?>
+> <beans xmlns=3D"http://www.springframework.org/schema/beans" xmlns:xsi=3D=
+"
+> http://www.w3.org/2001/XMLSchema-instance"
+> xmlns:p=3Dhttp://www.springframework.org/schema/p
+
+-->
+
+MG>
+
+
+> <bean id=3D"jpaVendorAdapter"
+>=20
+> class=3D"org.springframework.orm.jpa.vendor.EclipseLinkJpaVendorAdapter"
+> p:showSql=3D"true"
+>=20
+> p:databasePlatform=3D"org.eclipse.persistence.platform.database.OraclePla=
+tform"
+> />
+>=20
+> pom.xml:
+> <dependency>
+> <groupId>com.oracle</groupId>
+> <artifactId>ojdbc6</artifactId>
+> <version>11.2.0.1</version>
+> </dependency>
+>=20
+> testingContext.xml:
+> <?xml version=3D"1.0" encoding=3D"UTF-8"?>
+> <beans xmlns=3D"http://www.springframework.org/schema/beans" xmlns:xsi=3D=
+"
+> http://www.w3.org/2001/XMLSchema-instance"
+> xmlns:p=3D"http://www.springframework.org/schema/p"
+> xmlns:context=3D"http://www.springframework.org/schema/context"
+> xmlns:tx=3D"http://www.springframework.org/schema/tx"
+> xsi:schemaLocation=3D"
+> http://www.springframework.org/schema/beans
+> http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+> http://www.springframework.org/schema/context
+> http://www.springframework.org/schema/context/spring-context-3.0.xsd
+> http://www.springframework.org/schema/tx
+> http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+
+MG>right now you list a bunch of xsds for every namespace except p
+
+MG>you *should* have a schemaLocation for xmlns:p
+
+> <bean id=3D"propertyConfigurer"
+>=20
+> class=3D"org.springframework.beans.factory.config.PropertyPlaceholderConf=
+igurer"
+> p:location=3D"classpath:jdbc.properties" />
+>=20
+> <bean id=3D"ahmDataSource"
+>=20
+> class=3D"org.springframework.jdbc.datasource.DriverManagerDataSource"
+
+
+> p:driverClassName=3D"${jdbc.driverClassName}"
+MG>we would need to know what jdbc.driverClassName resolves to in jdbc.prop=
+erties
+MG>BTW this is the class that needs to be packaged in your dependency liste=
+d above (ojdbc6-11.2.0.1.jar)
+
+> p:url=3D"${jdbc.url}"
+MG>we would need to know what jdbc.url resolves to in jdbc.properties
+
+> p:username=3D"${jdbc.username}"
+MG>we would need to know what jdbc.username resolves to in jdbc.properties
+=20
+"We do these things..not because they are easy..but because they are hard".=
+..JFK 		 	   		  =
+
+--_325b93b3-05a0-4858-bdfb-b83306988e66_--
+

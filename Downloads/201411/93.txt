@@ -1,0 +1,83 @@
+From users-return-137813-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Nov 25 08:39:36 2014
+Return-Path: <users-return-137813-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E69B5105C7
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 25 Nov 2014 08:39:35 +0000 (UTC)
+Received: (qmail 71609 invoked by uid 500); 25 Nov 2014 08:39:33 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 71525 invoked by uid 500); 25 Nov 2014 08:39:33 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 71514 invoked by uid 99); 25 Nov 2014 08:39:33 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Nov 2014 08:39:33 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [85.13.134.252] (HELO dd12814.kasserver.com) (85.13.134.252)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Nov 2014 08:39:27 +0000
+Received: from dd12814.kasserver.com (dd0803.kasserver.com [85.13.146.34])
+	by dd12814.kasserver.com (Postfix) with ESMTPSA id D3D5411C074C;
+	Tue, 25 Nov 2014 09:39:04 +0100 (CET)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+X-SenderIP: 84.168.232.53
+User-Agent: ALL-INKL Webmail 2.11
+In-Reply-To: <5473F127.8010201@gmail.com>
+References: <5473F127.8010201@gmail.com>
+Subject: Re: Enforcing annotations
+From: "Alexander Kriegisch" <alexander@kriegisch.name>
+To: users@maven.apache.org
+Message-Id: <20141125083904.D3D5411C074C@dd12814.kasserver.com>
+Date: Tue, 25 Nov 2014 09:39:04 +0100 (CET)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+FYI, Maven users: I have just added an answer [1] to the StackOverflow question in order not to bloat the list here. My solution uses AspectJ. Maybe there are better ways to do that, but for me it works. I use AspectJ anyway and find it convenient to also do some rule enforcement during compilation via "declare error" or "declare warning".
+
+[1] http://stackoverflow.com/a/27121947/1082681
+-- 
+Alexander Kriegisch
+http://scrum-master.de
+
+
+Niranjan Rao schrieb am 25.11.2014 04:01:
+
+> Since this was not a maven question directly, I tried posting this at 
+> stackoverflow first at 
+> https://stackoverflow.com/questions/27068654/how-to-enforce-verify-spring-scope-annotation-on-spring-beans.
+> 
+> Did not get much traction.
+> 
+> We do use spring and its dependency injection mechanism using 
+> annotations only. No XML files for spring.  However the trouble starts 
+> when developers start mixing beans of different scopes - most of the 
+> time by accident. Many developers forget that beans are singleton in 
+> scope by default and end up creating beans (or services) that has state. 
+> They are happy because if it works on their machine but creates 
+> interesting mix/match of data when more than one user logs in to the 
+> application.
+> 
+> Right now, I am thinking of simple solution - enforce that every spring 
+> component needs to have scope annotation also. Thought behind this is it 
+> will force developer to think about the scope by explicitly declaring 
+> the value.
+> 
+> Are there any plugins that can do this? If not, can I extend maven 
+> enforcer plugin or findbugs in anyway to do this? Open to any other 
+> suggestions also.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

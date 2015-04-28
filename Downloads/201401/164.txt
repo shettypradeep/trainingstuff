@@ -1,0 +1,210 @@
+From users-return-135298-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan 29 19:05:14 2014
+Return-Path: <users-return-135298-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6E4291028E
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 29 Jan 2014 19:05:14 +0000 (UTC)
+Received: (qmail 41216 invoked by uid 500); 29 Jan 2014 19:05:10 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 41084 invoked by uid 500); 29 Jan 2014 19:05:10 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 41076 invoked by uid 99); 29 Jan 2014 19:05:10 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Jan 2014 19:05:10 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [164.109.139.151] (HELO hygiene1b.cmegroup.com) (164.109.139.151)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Jan 2014 19:05:04 +0000
+X-SBRS-none: None
+X-IronPort-AV: E=Sophos;i="4.95,743,1384322400"; 
+   d="scan'208";a="23206395"
+Received: from unknown (HELO SMRPEXNYLAG1.prod.ad.merc.chicago.cme.com) ([192.168.12.62])
+  by Hygiene1b.cmegroup.com with ESMTP; 29 Jan 2014 13:04:11 -0600
+Received: from SMAPEXCHIDAG3.prod.ad.merc.chicago.cme.com
+ ([fe80::add5:2830:4a67:ccf8]) by SMRPEXNYLAG1.prod.ad.merc.chicago.cme.com
+ ([fe80::f1ba:73c9:9e6:b943%17]) with mapi id 14.02.0309.002; Wed, 29 Jan 2014
+ 13:04:41 -0600
+From: "Lyons, Roy" <Roy.Lyons@cmegroup.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: dependency plugin strangeness
+Thread-Topic: dependency plugin strangeness
+Thread-Index: AQHPHHwOrwhoFZdZ8Ee55xKe7Xj8O5qb7qOAgAB+U4D//6P7AA==
+Date: Wed, 29 Jan 2014 19:04:40 +0000
+Message-ID: <58EAA08AF8232344ADDB2E31D4996BFD5484096C@SMAPEXCHIDAG3.prod.ad.merc.chicago.cme.com>
+References: <58EAA08AF8232344ADDB2E31D4996BFD5483CDFA@SMAPEXCHIDAG3.prod.ad.merc.chicago.cme.com>
+ <CA+nPnMytiv6nsoY44ODWQtVCYp6Uqvib0xGx4gHHuQDj9=V9Qg@mail.gmail.com>
+ <CAH-zGCiVL8i0oOmoMUS69GOMqM-7BcaiDPYZxa72=x7V5vidkQ@mail.gmail.com>
+In-Reply-To: <CAH-zGCiVL8i0oOmoMUS69GOMqM-7BcaiDPYZxa72=x7V5vidkQ@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+user-agent: Microsoft-MacOutlook/14.3.9.131030
+x-originating-ip: [172.27.34.94]
+Content-Type: text/plain; charset="us-ascii"
+Content-ID: <6E1E8502101E4C40A1F333A59187B81F@cme.com>
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+After Stephen mentioned trying different versions, I had the developer try
+out maven 2.2.1.  I was about to report back that this worked and how
+strange it was -- but before sending I saw this email from Vincent.
+
+I'll pass along the system scope issue - perhaps that is the nail in the
+coffin.  We reverted with 2.2.1, with instructions to work on making it
+3.x compliant in the background.
+
+Thank you for all the input on this issue.  It is very much appreciated.
+
+Thanks,
+
+Roy
+
+On 1/29/14 12:33 PM, "Vincent Latombe" <vincent.latombe@gmail.com> wrote:
+
+>Hi,
+>
+>I have already seen such error.
+>It is caused by the combination of a managed dependency (through
+>dependencyManagement) defining a dependency with system scope + Maven 3 +
+>Sonar. The same with Maven 2.2.1 should work.
+>Though, I have never seen it directly in a dependency:tree execution; only
+>through a sonar analysis.
+>
+>On my side, I got rid of the system scope usages.
+>
+>Vincent
+>
+>
+>2014-01-29 Stephen Connolly <stephen.alan.connolly@gmail.com>
+>
+>> The crucial detail was omitted... what version of Maven?
+>>
+>> I suspect it could be a transitive dependency with system scope causing
+>>a
+>> bug of some sort.
+>>
+>> Most likely if you switch to a different version of Maven the command
+>>will
+>> work... in which case you might be able to construct a test case to
+>>prove a
+>> regression.
+>>
+>> Touchstone versions of Maven to try are: 2.2.1, 3.0.4/3.0.5 and 3.1.1
+>>
+>> If you see the error on all three then it is something different... but
+>> still an important data point.
+>>
+>> More of the stack trace would help... ideally include a line or two
+>>above
+>> and below... there is often crucial details therein... if you need to
+>>hide
+>> GAV details, change the groupId's to something gibberish, e.g.
+>> com.foobar:foo-manchu:1.0-SNAPSHOT and other dummy GAVs
+>>
+>>
+>> On 28 January 2014 22:55, Lyons, Roy <Roy.Lyons@cmegroup.com> wrote:
+>>
+>> > So, I tried my google-fu first - and in general my google-fu is very
+>>very
+>> > strong...
+>> >
+>> > I've been fighting with this multi-module plan for some time now with
+>>the
+>> > developer who is reporting the issue to me.  The issue manifested
+>>itself
+>> as
+>> > part of a Sonar failure...  the funny thing is, that the failure was
+>>on a
+>> > dependenct tree resolution that Sonar was doing - so I had him try the
+>> > dependency plugin and perform a dependency:tree
+>> >
+>> > dependency tree failed us...  well, it probably isn't dependency
+>>plugin's
+>> > fault but I am at a loss as to what it is really dying on or why.
+>> >
+>> > I would absolutely love it if someone saw this and said "Oh yeah, I
+>>know
+>> > that issue.  Its a real pain.  They have XXX defined incorrectly in
+>>their
+>> > multimodule build so the dependency plugin is in a circular dependency
+>> > loop" (or something like that).  I have no idea if its a dependency
+>>loop,
+>> > was just an example.
+>> >
+>> > I can't share the poms because its all proprietary closed source stuff
+>> > (and I have to be careful about what is shared).  If this means that I
+>> dont
+>> > have enough info to help, I can live with that - and will continue to
+>> plow
+>> > forwards...  I just wanted to see if theres someone on the list who
+>>knows
+>> > exactly what I should be looking for to help shorten my investigation
+>> time.
+>> >
+>> > Here's an example of what dependency:tree is complaining about.
+>> >
+>> >
+>> >  mvn dependency:tree -Dverbose=3Dtrue -DoutputFile=3Ddependencies.txt =
+-e
+>>-X
+>> >
+>> > urls[38] =3D
+>> >
+>>=20
+>>file:/C:/Users/thisguysuserid/.m2/repository/commons-collections/commons-
+>>collections/3.2.1/commons-collections-3.2.1.jar
+>> > Number of foreign imports: 1
+>> > import: Entry[import  from realm ClassRealm[maven.api, parent: null]]
+>> > -----------------------------------------------------
+>> >
+>> >         at
+>> >
+>>=20
+>>org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuil
+>>dPluginManager.java:139)
+>> >         at
+>> >
+>>=20
+>>org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.jav
+>>a:209)
+>> >         ... 19 more
+>> > Caused by: org.apache.maven.plugin.PluginContainerException: An API
+>> > incompatibility was encountered while executing
+>> > org.apache.maven.plugins:maven-dependency-plugin:2.8:tree:
+>> > java.lang.AbstractMethodError:
+>> >
+>>=20
+>>org.apache.maven.shared.dependency.tree.DependencyTreeResolutionListener.
+>>manageArtifactSystemPath(Lorg/apache/maven/artifact/Artifact;Lorg/apache/
+>>maven/artifact/Artifact;)V
+>> >
+>> >
+>> >
+>> >
+>> >
+>> >
+>> > ---------------------------------------------------------------------
+>> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> > For additional commands, e-mail: users-help@maven.apache.org
+>> >
+>> >
+>>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

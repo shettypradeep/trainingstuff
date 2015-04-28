@@ -1,0 +1,84 @@
+From users-return-136217-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Apr 21 22:20:40 2014
+Return-Path: <users-return-136217-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D7A141156E
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 21 Apr 2014 22:20:40 +0000 (UTC)
+Received: (qmail 90846 invoked by uid 500); 21 Apr 2014 22:20:36 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 90697 invoked by uid 500); 21 Apr 2014 22:20:36 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 90687 invoked by uid 99); 21 Apr 2014 22:20:36 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 21 Apr 2014 22:20:36 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ljnelson@gmail.com designates 209.85.192.51 as permitted sender)
+Received: from [209.85.192.51] (HELO mail-qg0-f51.google.com) (209.85.192.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 21 Apr 2014 22:20:32 +0000
+Received: by mail-qg0-f51.google.com with SMTP id f51so2628047qge.24
+        for <users@maven.apache.org>; Mon, 21 Apr 2014 15:20:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=KCmoBWhkUdJUusEOpuLsIWJONeIQojBDKVFc/wVoAl0=;
+        b=zMIv4HXZ5Im9uNYPYIRSV8xKrZub+sI+3WUWyh8sO1ApMc9T7RqAVndbdGR9NI6HVp
+         B/WBPwqWgDFv1SRWcaEPvnXU8wFXULATbjH9gtBCwiuqQ9/S5ZjyXeiIN27pGxRhWyvN
+         cUsXXJpUI2FQWxuUQ/N5gIGB+YW09eR/aZPKkN+bVMoj6JjqyyXA2DDuIisL0Yn6ipb5
+         8/MLmAkWEDsuaGoRTT0XT1HT5ZMb83BJHwdwpNQsFxD29aYKFTb74gf5ooclBPcvj5L2
+         EFeRkmicjwh7skeZkCveqOPu7zePgMcjpJTFpZlyUiyjYZe7J0/V0bfm8npwK2N3UkRi
+         QDgQ==
+MIME-Version: 1.0
+X-Received: by 10.140.83.37 with SMTP id i34mr6827447qgd.100.1398118811723;
+ Mon, 21 Apr 2014 15:20:11 -0700 (PDT)
+Received: by 10.96.33.194 with HTTP; Mon, 21 Apr 2014 15:20:11 -0700 (PDT)
+In-Reply-To: <CAHNdxumEymPS0nN6ccXVHxtSJGqT3T_prAPKLJNjv1eE-9hAiw@mail.gmail.com>
+References: <CAHNdxu=rRju7pnUcT+caSSJiKjTGy7XOnN=nT5CTSJsZbXwxDA@mail.gmail.com>
+	<CAHNdxumBTxzqpD4M84Mu6TYnkMaFZ+DiXZm0NGibw=uhaaZLbQ@mail.gmail.com>
+	<CAHNdxu=yGbT88oPPJf45gqfJvqVRZ=NWiMZ6i-r1M+ZxGoFECQ@mail.gmail.com>
+	<17050346.FA4H40FXVZ@herve-desktop>
+	<CAHNdxumEymPS0nN6ccXVHxtSJGqT3T_prAPKLJNjv1eE-9hAiw@mail.gmail.com>
+Date: Mon, 21 Apr 2014 15:20:11 -0700
+Message-ID: <CAHNdxunXs600yQDFJ42F3Ee6bPCguKd7n77H=k0FguUe0yN2PA@mail.gmail.com>
+Subject: Re: Javadoc plugin with Javadoc 8: error fetching URLs
+From: Laird Nelson <ljnelson@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c0f62c2087d204f794e779
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c0f62c2087d204f794e779
+Content-Type: text/plain; charset=UTF-8
+
+On Mon, Apr 21, 2014 at 3:01 PM, Laird Nelson <ljnelson@gmail.com> wrote:
+
+> OK.  Patch submitted for MJAVADOC-393<http://jira.codehaus.org/browse/MJAVADOC-393>
+> .
+>
+> I've also opened http://jira.codehaus.org/browse/MJAVADOC-394 and
+> http://jira.codehaus.org/browse/MJAVADOC-395 and am in the process of
+> submitting patches for them and cross-linking them together.
+>
+
+This work is now complete; kindly let me know if there are additional
+changes to be made.
+MJAVADOC-395<http://jira.codehaus.org/browse/MJAVADOC-395>can serve as
+the "umbrella" bug for all three; it has links to related bugs.
+
+Best,
+Laird
+
+-- 
+http://about.me/lairdnelson
+
+--001a11c0f62c2087d204f794e779--
+

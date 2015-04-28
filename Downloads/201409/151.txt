@@ -1,0 +1,81 @@
+From users-return-137305-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Sep 17 13:24:24 2014
+Return-Path: <users-return-137305-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6BACE11E88
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 17 Sep 2014 13:24:24 +0000 (UTC)
+Received: (qmail 11916 invoked by uid 500); 17 Sep 2014 13:24:18 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 11652 invoked by uid 500); 17 Sep 2014 13:24:18 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 11621 invoked by uid 99); 17 Sep 2014 13:24:18 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 17 Sep 2014 13:24:18 +0000
+Received: from localhost (HELO mail-ob0-f171.google.com) (127.0.0.1)
+  (smtp-auth username bimargulies, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Wed, 17 Sep 2014 13:24:18 +0000
+Received: by mail-ob0-f171.google.com with SMTP id uz6so1069441obc.16
+        for <multiple recipients>; Wed, 17 Sep 2014 06:24:17 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.60.119.98 with SMTP id kt2mr42998784oeb.13.1410960257370;
+ Wed, 17 Sep 2014 06:24:17 -0700 (PDT)
+Received: by 10.202.1.200 with HTTP; Wed, 17 Sep 2014 06:24:17 -0700 (PDT)
+Date: Wed, 17 Sep 2014 09:24:17 -0400
+Message-ID: <CALhtWkcMP7z4xs9-He+OP0fpKibbjAHgntRunf62J8ZNreb2gA@mail.gmail.com>
+Subject: [ANN] Maven SCM 1.9.2 Released
+From: Benson Margulies <bimargulies@apache.org>
+To: announce@maven.apache.org, Maven Users List <users@maven.apache.org>, 
+	Maven Developers List <dev@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+
+The Apache Maven team is pleased to announce the release of the Apache
+Maven SCM, version 1.9.2
+
+This is a shared component that allows maven plugins to interact with
+source control systems..
+
+http://maven.apache.org/scm
+
+
+Release Notes - Maven SCM 1.9.2
+
+
+Release Notes - Maven SCM - Version 1.9.2
+
+
+
+** Bug
+    * [SCM-759] - cannot create Branch with TFS-provider: "TF10125:
+The path must start with $/"
+
+
+
+
+
+
+** Task
+    * [SCM-767] - mockito should be under test scope,  not compile
+scope for accurev provider
+    * [SCM-768] - TfsBranchCommandTest is failing
+    * [SCM-769] - Unable to load maven-scm-provider-vss with Eclipse's M2E
+
+
+
+
+Enjoy,
+
+-The Apache Maven team
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

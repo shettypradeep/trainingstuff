@@ -1,0 +1,109 @@
+From users-return-136933-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jul 28 18:50:25 2014
+Return-Path: <users-return-136933-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 215F3112E6
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 28 Jul 2014 18:50:25 +0000 (UTC)
+Received: (qmail 31896 invoked by uid 500); 28 Jul 2014 18:50:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 31819 invoked by uid 500); 28 Jul 2014 18:50:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 31796 invoked by uid 99); 28 Jul 2014 18:50:22 -0000
+Received: from Unknown (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 28 Jul 2014 18:50:22 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.215.46 as permitted sender)
+Received: from [209.85.215.46] (HELO mail-la0-f46.google.com) (209.85.215.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 28 Jul 2014 18:50:22 +0000
+Received: by mail-la0-f46.google.com with SMTP id b8so5754777lan.19
+        for <users@maven.apache.org>; Mon, 28 Jul 2014 11:49:57 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=B2u6IO9i7X9b1WqBcg8GtYPw4G3XMfQYHkKdw69ssyU=;
+        b=t/MzHq5aiH72UQ3d3X8OLslNovgmVpaP7MjpVPWZ2KrRC+o8eRHgjJWpz/aUSsJoKh
+         3iFnDuQwGUZZ1IPn1w7gK4lhCuGpCj5S9lUew72IPJ+Q2/IuS8habgVZjrsL5EllVz2d
+         unZDgzPQ8FhyKi5DHxD6M/Vocd6dkKynFmO2TpdJLXYi07/GGtvuqa+7eNpxYyBm5grh
+         F4pyPjDdsHAIrh/JXPkB/gq2nGarofMkm89PnOH86DL5LD9ugUmU2taEVGwbQTEln9k3
+         HKzzToJv86zTBsD1fZHp39d67qB/R5NZDDSfE4EoRv9JJL1YVxLNLousJy27xoN1R0KN
+         r6ZQ==
+MIME-Version: 1.0
+X-Received: by 10.152.116.105 with SMTP id jv9mr36703097lab.47.1406573397713;
+ Mon, 28 Jul 2014 11:49:57 -0700 (PDT)
+Received: by 10.114.20.231 with HTTP; Mon, 28 Jul 2014 11:49:57 -0700 (PDT)
+In-Reply-To: <trinity-5b4a7fca-9d5e-47c7-a03d-3c385b7ab153-1406535124149@3capp-gmx-bs18>
+References: <trinity-5b4a7fca-9d5e-47c7-a03d-3c385b7ab153-1406535124149@3capp-gmx-bs18>
+Date: Mon, 28 Jul 2014 11:49:57 -0700
+Message-ID: <CAPCjjnHppc+BhFe3-bGEY93bJQesNHdMc2DmWfcK1yXM4njzCw@mail.gmail.com>
+Subject: Re: Maven 3 Plugin Development with Repository Queries
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c34ce2b8abc004ff456339
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c34ce2b8abc004ff456339
+Content-Type: text/plain; charset=UTF-8
+
+I am interested on the query capability. However, I ended up to  use
+maven-dependency-tree and maven-compat to resolve artifacts. Take a look at
+maven-dependency-plugin, maven-report-info-plugin, license-maven-plugin for
+various sample code.  However, those are not directly deal with aether
+
+-D
+
+
+On Mon, Jul 28, 2014 at 1:12 AM, Johannes Schneider <jsdump@gmx.de> wrote:
+
+> Hi,
+>
+> I am developing a plugin that needs to query the repositories. I'm using
+> the Aether API because I thought that's the Maven 3 way to do it (cf.
+> http://blog.sonatype.com/2011/01/how-to-use-aether-in-maven-plugins/) and
+> because many of the Maven 2 methods are marked as deprecated. With Maven
+> 3.0.5, everything works fine. But now, trying Maven 3.2.1 and 3.2.2, I get
+> an exception:
+> ------
+> Error injecting: com.dialogika.infport.plugins.helper.CheckParentMojo
+> java.lang.NoClassDefFoundError: org/sonatype/aether/artifact/Artifact
+> ------
+>
+> It is the injection of org.sonatype.aether.RepositorySystem that does not
+> work anymore:
+> ------
+> @Component
+> private RepositorySystem repoSystem;
+> ------
+>
+> First of all, I am of course interested in how to fix this problem, but,
+> asking more generally: Is the Aether API still the way of how to resolve
+> artifacts? Or should I better stick to the Maven 2 API (as most of the
+> plugins out there still are, as I saw)?
+>
+> And, in addition to this: Are there any good, up-to-date resources on how
+> to write maven plugins? Some plugins I could use as a a reference? Many of
+> the tutorials and examples seem to be quite out-dated and not going very
+> deep into details.
+>
+> Thanks in advance for your help!
+>
+> Johannes
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a11c34ce2b8abc004ff456339--
+

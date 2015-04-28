@@ -1,0 +1,213 @@
+From users-return-136883-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 24 21:19:17 2014
+Return-Path: <users-return-136883-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BC399112D8
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 24 Jul 2014 21:19:17 +0000 (UTC)
+Received: (qmail 80151 invoked by uid 500); 24 Jul 2014 21:19:16 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 80053 invoked by uid 500); 24 Jul 2014 21:19:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 80035 invoked by uid 99); 24 Jul 2014 21:19:15 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 21:19:15 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mansour.alakeel@gmail.com designates 209.85.192.43 as permitted sender)
+Received: from [209.85.192.43] (HELO mail-qg0-f43.google.com) (209.85.192.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 21:19:12 +0000
+Received: by mail-qg0-f43.google.com with SMTP id a108so3977525qge.2
+        for <users@maven.apache.org>; Thu, 24 Jul 2014 14:18:47 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type
+         :content-transfer-encoding;
+        bh=dNqjMUAJ6jomUqI4jIccrCORcLSetxzdoo/ghQmUA20=;
+        b=OIQtsu7o3HsOuahPfIVyHmW862KmssX/wvEWye4opgvLJS8HOjkl3E35RYJintlJUV
+         UJDP6hTNW6Zezap9w98O/2th4UeCYH0/1lCaGjaYnQizFe5+7Uyc3Nco2QjCv1WNrMbN
+         OErBNZE27d1ZSWR+atHCUH1qmIyjbx2Q15is1VthevtPRGOvotqbXhCdqhSZFMOFFAqy
+         DnVia5t6GZS4zpnfWqHnsvw6G0LryHKjaq1HbvcfobMt/POONZ+0NbtH9VsKIbzoMA5e
+         aAIVk9Novcb9IEg9aChUpDNua8eunRmyjUrDjBaW5A6QTH4Q1FZkOd26JUOi8rWEGSYe
+         12eA==
+MIME-Version: 1.0
+X-Received: by 10.140.87.75 with SMTP id q69mr18970388qgd.94.1406236727327;
+ Thu, 24 Jul 2014 14:18:47 -0700 (PDT)
+Received: by 10.96.206.229 with HTTP; Thu, 24 Jul 2014 14:18:47 -0700 (PDT)
+Date: Thu, 24 Jul 2014 17:18:47 -0400
+Message-ID: <CAFvvX=aCq9Md0u=Cs_NGjQMD4h4Hg6QRBy0H+U0NesT-SPw=Aw@mail.gmail.com>
+Subject: antrun classpath with taskdef
+From: Mansour Al Akeel <mansour.alakeel@gmail.com>
+To: users@maven.apache.org
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I am running a target in ant. This target depends on external task
+from ddlutils.
+
+
+<profile>
+            <id>db</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.
+plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>1.7</version>
+                        <executions>
+                            <execution>
+                                <id>setup-db</id>
+                                <phase>process-resources</phase>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <detail>true</detail>
+                            <target name=3D"database-setup"  >
+                                <path id=3D"current.classpath">
+                                    <path refid=3D"maven.plugin.classpath" =
+/>
+                                    <path refid=3D"maven.compile.classpath"=
+ />
+                                    <path refid=3D"maven.runtime.classpath"=
+ />
+                                </path>
+                                <taskdef name=3D"ddlToDatabase"
+classname=3D"org.apache.ddlutils.task.DdlToDatabaseTask"
+classpathref=3D"current.classpath">
+                                    <!-- <classpath
+refid=3D"current.classpath" /> -->
+                                </taskdef>
+                                <property name=3D"current_classpath"
+refid=3D"current.classpath" />
+                                <!-- <pathconvert
+pathsep=3D"${line.separator}| |..... " property=3D"formatted.classpath"
+refid=3D"current.classpath"  /> -->
+                                <ddlToDatabase>
+                                    <database
+driverClassName=3D"org.postgresql.Driver"
+url=3D"jdbc:postgresql://localhost/test" username=3D"postgres"
+password=3D"postgres" />
+                                    <fileset dir=3D"src/sql/">
+                                        <include name=3D"schema.xml" />
+                                    </fileset>
+                                    <createDatabase failonerror=3D"true" />
+                                    <writeSchemaToDatabase />
+                                </ddlToDatabase>
+                            </target>
+                        </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.apache.ddlutils</groupId>
+                                <artifactId>ddlutils</artifactId>
+                                <version>1.0</version>
+                            </dependency>
+                            <dependency>
+                                <groupId>log4j</groupId>
+                                <artifactId>log4j</artifactId>
+                                <version>1.2.17</version>
+                            </dependency>
+                            <!-- <dependency> -->
+                            <!-- <groupId>org.postgresql</groupId> -->
+                            <!-- <artifactId>postgresql</artifactId> -->
+                            <!-- <version>9.3-1100-jdbc41</version> -->
+                            <!-- </dependency> -->
+                        </dependencies>
+                    </plugin>
+
+
+The task creates a jdbc connection to load data into a DB. The
+connection needs the JDBC driver.
+If I add the driver to the <dependencies> section, everything works
+fine. However, the dependency on the driver is declared somewhere else
+(in the global dependencies), and this driver may change depending on
+the DB. Therefore we don't want to declare it twice. The option we
+have is to use "maven.compile.classpath". However, for some reason, I
+am getting an  exception about the driver class not found:
+
+Caused by: org.apache.ddlutils.DatabaseOperationException: Error while
+trying to create a database: org.postgresql.Driver
+        at org.apache.ddlutils.platform.postgresql.PostgreSqlPlatform.creat=
+eOrDropDatabase(PostgreSqlPlatform.java:164)
+        at org.apache.ddlutils.platform.postgresql.PostgreSqlPlatform.creat=
+eDatabase(PostgreSqlPlatform.java:201)
+        at org.apache.ddlutils.task.CreateDatabaseCommand.execute(CreateDat=
+abaseCommand.java:80)
+        ... 35 more
+Caused by: java.lang.ClassNotFoundException: org.postgresql.Driver
+        at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadC=
+lass(SelfFirstStrategy.java:50)
+        at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedL=
+oadClass(ClassRealm.java:259)
+        at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(Class=
+Realm.java:235)
+        at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(Class=
+Realm.java:227)
+        at java.lang.Class.forName0(Native Method)
+        at java.lang.Class.forName(Class.java:188)
+        at org.apache.ddlutils.platform.postgresql.PostgreSqlPlatform.creat=
+eOrDropDatabase(PostgreSqlPlatform.java:155)
+        ... 37 more
+
+
+To troubleshoot the issue, I printed out the classpath ref
+"current.classpath", and the driver jar was there, and can be seen as
+the last dependency in the output !
+
+
+Setting project property:
+maven.dependency.org.apache.portals.bridges.portals-bridges-common.jar.path
+-> /home/mansour/.m2/repository/org/apache/portals/bridges/portals-bridges-=
+common/2.0/portals-bridges-common-2.0.jar
+Setting project property:
+maven.dependency.org.apache.portals.applications.apa-logging.jar.path
+-> /home/mansour/.m2/repository/org/apache/portals/applications/apa-logging=
+/1.0/apa-logging-1.0.jar
+Setting project property:
+maven.dependency.org.postgresql.postgresql.jar.path ->
+/home/mansour/.m2/repository/org/postgresql/postgresql/9.3-1100-jdbc41/post=
+gresql-9.3-1100-jdbc41.jar
+[INFO] Executing tasks Build sequence for target(s) `database-setup'
+is [database-setup]
+Complete build sequence is [database-setup, ]
+
+database-setup:
+Adding reference: current.classpath
+Class org.apache.ddlutils.task.DdlToDatabaseTask loaded from parent
+loader (parentFirst)
+ +Datatype ddlToDatabase org.apache.ddlutils.task.DdlToDatabaseTask
+Setting project property: current_classpath ->
+/home/mansour/.m2/repository/org/apache/maven/plugins/maven-antrun-plugin/1=
+.7/maven-antrun-plugin-1.7.jar:
+........:
+/home/mansour/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.3.2/=
+jackson-mapper-asl-1.3.2.jar:/home/mansour/.m2/repository/org/codehaus/jack=
+son/jackson-xc/1.3.2/jackson-xc-1.3.2.jar:/home/mansour/.m2/repository/org/=
+slf4j/slf4j-log4j12/1.6.6/slf4j-log4j12-1.6.6.jar:/home/mansour/.m2/reposit=
+ory/org/slf4j/jcl-over-slf4j/1.7.4/jcl-over-slf4j-1.7.4.jar:/home/mansour/.=
+m2/repository/org/postgresql/postgresql/9.3-1100-jdbc41/postgresql-9.3-1100=
+-jdbc41.jar
+
+
+Is there something wrong I am doing, that is preventing antrun taskdef
+from using the current.classpath ref ??
+
+Thank you.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

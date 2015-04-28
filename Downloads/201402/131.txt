@@ -1,0 +1,119 @@
+From users-return-135415-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 12 02:06:46 2014
+Return-Path: <users-return-135415-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C32B310A44
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 12 Feb 2014 02:06:46 +0000 (UTC)
+Received: (qmail 86500 invoked by uid 500); 12 Feb 2014 02:06:42 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 86407 invoked by uid 500); 12 Feb 2014 02:06:41 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 86399 invoked by uid 99); 12 Feb 2014 02:06:41 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Feb 2014 02:06:41 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of baerrach@gmail.com designates 209.85.220.176 as permitted sender)
+Received: from [209.85.220.176] (HELO mail-vc0-f176.google.com) (209.85.220.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Feb 2014 02:06:35 +0000
+Received: by mail-vc0-f176.google.com with SMTP id la4so6481990vcb.21
+        for <users@maven.apache.org>; Tue, 11 Feb 2014 18:06:15 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=Hqkb4VSBkgTMMMOS62XK6rH9GkFJYXj7XptAoagBJmo=;
+        b=RqmNXi01Wj7MdZ6uCtPj6xAnIaofhVnkSqIlcjvS4+t1yVozFIe9pRlkaAadd7iySs
+         O4FF+/O69cyd5Wne28UdQapXcp5Qf9EOjxmknxQa/6IliIVd32PgB25FSGJKUQoiAL1n
+         A9WyRHsBTTzjzVy9H6TL5h9YCbmSkZP9h9+V9YYmDoDetuCdG0eTogRyw46+5sm04Cf5
+         weaM1KQAqKxHP5UcdXjhMaydC6PYHrN4SBjvNchK/gKhjXmCAmdh3+X7LXF3i7FsLE9A
+         7y0+hrUNTIUIVCZN3/nIkOQ5QrpzWqB6vDhDUQqfYYaO1dh2VU8iN56PhZ+2j6ydivxD
+         8NsA==
+MIME-Version: 1.0
+X-Received: by 10.221.39.138 with SMTP id tm10mr30969505vcb.7.1392170774941;
+ Tue, 11 Feb 2014 18:06:14 -0800 (PST)
+Received: by 10.58.48.131 with HTTP; Tue, 11 Feb 2014 18:06:14 -0800 (PST)
+In-Reply-To: <52FACAA8.8020905@artifact-software.com>
+References: <52FACAA8.8020905@artifact-software.com>
+Date: Wed, 12 Feb 2014 12:36:14 +1030
+Message-ID: <CADVp3v-8iKp2eNJdwCGKtCxP+Jz31-f8EYWBv6aJSHztfGFKew@mail.gmail.com>
+Subject: Re: maven-assembly-plugin:2.4 The following patterns were never
+ triggered in this artifact inclusion filter
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>, Ron Wheeler <rwheeler@artifact-software.com>
+Content-Type: text/plain; charset=ISO-8859-1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 12 February 2014 11:43, Ron Wheeler <rwheeler@artifact-software.com> wrote:
+> I am trying to build a timesaving module that will build tar files to be
+> installed on a server
+> I have defined a bunch of dependencies in the pom and want to build 2 tar
+> files by invoking 2 instances of the plug-in.
+> In each one I want to specify a list of dependencies to be included from the
+> repository.
+>   in the assembly descriptor I have
+>   dependencySets
+>     dependencySet
+>       includes
+>         include com.artifact-software.taw:taw-localized-iumessage-ws
+>         include com.artifact-software.taw:taw-dataccess-ws:
+>
+> I would like it to take just these 2 modules for this tar file.
+> There are a lot more dependencies that will go in the second invocation of
+> the assembly plug-in.
+>
+>
+> This gets the following message
+>
+> [INFO] --- maven-assembly-plugin:2.4:single (default) @
+> taw-webapps-assembler ---
+> [INFO] Reading assembly descriptor: src/assembly/webapps-tar.xml
+> [WARNING] The following patterns were never triggered in this artifact
+> inclusion filter:
+> o  'com.artifact-software.taw:taw-localized-iumessage-ws'
+> o  'com.artifact-software.taw:taw-dataccess-ws:'
+>
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] BUILD FAILURE
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] Total time: 9.658s
+> [INFO] Finished at: Tue Feb 11 19:54:13 EST 2014
+> [INFO] Final Memory: 10M/148M
+> [INFO]
+> ------------------------------------------------------------------------
+> [ERROR] Failed to execute goal
+> org.apache.maven.plugins:maven-assembly-plugin:2.4:single (default) on
+> project taw-webapps-assembler: Failed to create
+> assembly: Error creating assembly archive webapps: You must set at least one
+> file. -> [Help 1]
+>
+> What have I misunderstood about the assembly.
+
+I'm assuming you've read the docs.
+
+>From http://maven.apache.org/plugins/maven-assembly-plugin/examples/single/including-and-excluding-artifacts.html
+I think the shortened form assumes a "jar" classifier.
+I'm guessing from your assembly name "webapps-tar.xml" that these might be wars?
+Have you tried using the long form of the dependency conflict id?
+
+>From http://maven.apache.org/plugins/maven-assembly-plugin/examples/multimodule/module-binary-inclusion-simple.html
+What phase to did you attach the plugin to?
+It may be possible you haven't bound it to a phase that has resolved
+the dependencies and so there are none for it to find.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,172 @@
+From users-return-136992-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Aug  8 14:20:18 2014
+Return-Path: <users-return-136992-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 20B97119F7
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  8 Aug 2014 14:20:18 +0000 (UTC)
+Received: (qmail 23478 invoked by uid 500); 8 Aug 2014 14:20:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 23191 invoked by uid 500); 8 Aug 2014 14:20:12 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 22895 invoked by uid 99); 8 Aug 2014 14:20:12 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 08 Aug 2014 14:20:12 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [209.85.220.50] (HELO mail-pa0-f50.google.com) (209.85.220.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 08 Aug 2014 14:13:31 +0000
+Received: by mail-pa0-f50.google.com with SMTP id et14so7372998pad.37
+        for <users@maven.apache.org>; Fri, 08 Aug 2014 07:13:29 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:content-type:message-id:mime-version
+         :subject:date:references:to:in-reply-to;
+        bh=d9r1TZ4oq2VWD7owbG4/a2e40hxIn8wGGeGZWoxG/zc=;
+        b=eLAZFv/ROpF1KXHCaX2lxlXIup2oKtMJz0mRdX/9HbUdE+G1obU1WQS6T0qUI6uPTg
+         +oX6JbeGc7DNzFMiaikFX4xKmaf+CTaZS2zs8ZaabrStYNrccuBA58/ROdJ5OStsaiN3
+         FvACKDrlERA6GsEALwGOKbMjItjvMsiQoiDz+8sF9mUt+umOtCeGX/k/ycVsXIF/borp
+         vT9WdcdRJxy1eNoEt/tY5zHqFEFtoxJfz1OMkJN66+N5pTDP6KBET/w0oj4rO1IrlGsl
+         /kOkyLNyWOD7Mt7LYvS1V1ju9BVuuVZnlSpVJcIL4IA3WBC8KlRa3qE8qlP28SguaYfK
+         Z+zg==
+X-Gm-Message-State: ALoCoQlo4LIpUXalfWOTBUUYyJZCqhdxXTIu24Pow6+NjXEAVWHIrT2AClKk8NkJqAQhRZjXwEVt
+X-Received: by 10.66.141.109 with SMTP id rn13mr24889982pab.117.1407507208936;
+        Fri, 08 Aug 2014 07:13:28 -0700 (PDT)
+Received: from [192.168.0.126] ([108.169.4.146])
+        by mx.google.com with ESMTPSA id et1sm3155106pbc.39.2014.08.08.07.13.27
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 08 Aug 2014 07:13:28 -0700 (PDT)
+From: Jason van Zyl <jason@takari.io>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_648017DA-C37F-447F-BC98-D9398079826B"
+Message-Id: <16299D38-4A02-4121-AC0C-9C624EDF2BEE@takari.io>
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.2\))
+Subject: Re: Defining component by hint for plexus in pom.xml
+Date: Fri, 8 Aug 2014 07:13:25 -0700
+References: <CAB9FDbnr_53nE01Lw7kUaNabZZ_YKHvsjbcQ6mktLKYsOwPadQ@mail.gmail.com>
+To: Maven Users List <users@maven.apache.org>
+In-Reply-To: <CAB9FDbnr_53nE01Lw7kUaNabZZ_YKHvsjbcQ6mktLKYsOwPadQ@mail.gmail.com>
+X-Mailer: Apple Mail (2.1878.2)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_648017DA-C37F-447F-BC98-D9398079826B
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+An easier way is to inject a Map of parsers keyed by the hint and then =
+lookup the parser you require based on the configuration of the plugin.
+
+@Component
+private Map<String,Parser> parsers;
+
+@Parameter
+private String mode;
+
+Parser parser =3D parsers.get(mode);
+
+We currently have no way to make bindings from plugin configuration for =
+injection. Something I'd like to do with the JSR330 work but not =
+possible now.
+
+On Aug 8, 2014, at 6:43 AM, Ben Tatham <bentatham@nanometrics.ca> wrote:
+
+> Hi,
+> I'm trying to do some pretty advanced things with custom plugins with
+> @Components.
+>=20
+> Basically, I want to use the same mojo with slight variations, and I =
+want
+> to be able to inject those variations via the pom (or via the =
+<packaging>
+> perhaps as well).  The plugin already defines a custom lifecycle, so I =
+am
+> ok if I have to define that lifecycle twice, I just don't want to have =
+to
+> define the 12+ mojos twice for almost the exact same thing.
+>=20
+> Essentially, I have a mojo that define a @Component:
+>=20
+> @Component
+> Parser parser;
+>=20
+>=20
+> I then I have two implementations of that Parser interface:
+>=20
+> @Component(role=3DParser.class, hint=3D"simple")
+> public class SimpleParser implements Parser
+>=20
+> and
+>=20
+> @Component(role=3DParser.class, hint=3D"complex")
+> public class ComplexParser implements Parser
+>=20
+>=20
+> I know that on the mojo itself, could tell the mojo which one to use =
+(by
+> setting it like this: @Component(hint =3D "complex")
+>=20
+> but what I really want is to force the user to define the hint in the =
+pom
+> or command line.  But as far as I can tell, there is no way to do =
+this.  Is
+> there a way around this other than making two separate mojos, which =
+then
+> defeats the purpose of using plexus at all here as far as I can tell,
+> because  I may as well just define the implementation explicitly =
+(albeit,
+> plexus would still be useful for test code, I suppose).
+>=20
+> Can I use an expression for the hint, and perhaps pass that as a =
+separate
+> parameter somehow?
+>=20
+> Any help or suggestions would be appreciated.
+>=20
+> -Ben
+>=20
+>=20
+>=20
+> --=20
+> Ben Tatham
+> Sr. Software Engineer
+> Nanometrics Inc.
+> +1 613-592-6776 x254
+> http://www.nanometrics.ca
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+http://twitter.com/takari_io
+---------------------------------------------------------
+
+In short, man creates for himself a new religion of a rational
+and technical order to justify his work and to be justified in it.
+
+  -- Jacques Ellul, The Technological Society
+
+
+
+
+
+
+
+
+
+
+--Apple-Mail=_648017DA-C37F-447F-BC98-D9398079826B--
+

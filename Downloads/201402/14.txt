@@ -1,0 +1,127 @@
+From users-return-135386-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb  7 17:04:34 2014
+Return-Path: <users-return-135386-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 89C8F10E2C
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  7 Feb 2014 17:04:34 +0000 (UTC)
+Received: (qmail 39851 invoked by uid 500); 7 Feb 2014 17:04:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 39770 invoked by uid 500); 7 Feb 2014 17:04:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 39760 invoked by uid 99); 7 Feb 2014 17:04:29 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 07 Feb 2014 17:04:29 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of t.broyer@gmail.com designates 209.85.216.41 as permitted sender)
+Received: from [209.85.216.41] (HELO mail-qa0-f41.google.com) (209.85.216.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 07 Feb 2014 17:04:25 +0000
+Received: by mail-qa0-f41.google.com with SMTP id w8so5710641qac.14
+        for <users@maven.apache.org>; Fri, 07 Feb 2014 09:04:05 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=m7h6ukQimBMLG612hhbQiGNJdwJTc+Ywza7Hb1PhNgs=;
+        b=ENHQkFADgU7xrgbXdQ7M/NxyeH//2BHPXiWoUV4yImEdvyYbP6nMquyAr1FV3dbkRs
+         aqBBuPkm1kesfUCHvX2dXV/oEPwzYoPOxRe4cgvmEH5RF08kgzYHIsxm2tAb/14Ntx7o
+         jHVxbPvy9X0VrjIu4y+I1w23u8AOErUfXeGLBX6qzhQLwz3hNWs8EnLdStPRrp8oV5bH
+         Fcp9ZxVo96Nw1XAMfQ9XzkKy9CpEMC9FIET3+Rd1S3623KDvqSEchzTlYjYEg7LqHyb1
+         5iiQX0gh1nnBEGMw7UioPZzlzRq1CdH2CuRWKRs532QMkivRxO8K+k1hrV3DZJrUWVNA
+         ULcg==
+X-Received: by 10.140.32.98 with SMTP id g89mr22594755qgg.37.1391792644989;
+ Fri, 07 Feb 2014 09:04:04 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.140.95.244 with HTTP; Fri, 7 Feb 2014 09:03:44 -0800 (PST)
+In-Reply-To: <9dfd3d79ad334d17a62311e27ac6c438@AMSPR03MB018.eurprd03.prod.outlook.com>
+References: <20140207103310.500020fb@linux-du93.site> <9dfd3d79ad334d17a62311e27ac6c438@AMSPR03MB018.eurprd03.prod.outlook.com>
+From: Thomas Broyer <t.broyer@gmail.com>
+Date: Fri, 7 Feb 2014 18:03:44 +0100
+Message-ID: <CAEayHEOHq4HV6b5XdGkBF96SZ3=+mLw2k3jQBHJJeMK0456OtQ@mail.gmail.com>
+Subject: Re: Best practices for Java EE 7 dependencies
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113a5f7034ab0f04f1d3fa29
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113a5f7034ab0f04f1d3fa29
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Because javax:javaee-api:7.0 doesn't use dependencyManagement, but declares
+straight dependencies, I don't think <scope>import</scope> would work (or
+be appropriate); however you should be able to declare javax:javaee-api:1.0
+as a managed dependency (in <dependencyManagement>, but without any
+specific scope, i.e. <scope>compile</scope> as it's the default) and then
+declare needed dependencies; I'm not sure that'd work either though. So I
+think the only real choice is to add it as a dependency, with
+<scope>provided</scope>; you'll have all the JARs in the classpath at build
+time, but only at build time.
+
+
+On Fri, Feb 7, 2014 at 11:56 AM, Samuli Saarinen <samuli.saarinen@remion.co=
+m
+> wrote:
+
+> Hi,
+>
+> You could import the dependencies  in dependencyManagement as described i=
+n
+> [1] and only declare needed dependencies in the project.
+>
+> Cheers
+>
+> Samuli
+>
+> [1]
+> http://maven.apache.org/guides/introduction/introduction-to-dependency-me=
+chanism.html#Importing_Dependencies
+>
+> -----Original Message-----
+> From: Martin Hoeller [mailto:martin@xss.co.at]
+> Sent: 7. helmikuuta 2014 11:33
+> To: Maven Users List
+> Subject: Best practices for Java EE 7 dependencies
+>
+> Hi!
+>
+> I'm wondering what the best practices are for specifying Java EE 7
+> dependencies in my modules.
+>
+> There is the so called BOM (bill of materials) POM: javax:javaee-api:7.0
+> which lists all API submodules required for JEE7. Specifying this in my
+> module as
+>
+>   <dependency>
+>     <groupId>javax</groupId>
+>     <artifactId>javaee-api</artifactId>
+>     <version>7.0</version>
+>   </dependency>
+>
+> works and is the least work for me. However, this way I got all JEE APIs
+> on the CLASSPATH even if I just need a few of them. Further on, the
+> actual dependencies are now transitive which is (IMHO) not fully correct.
+> Should I better specify the exact dependencies and investigate some more
+> work in POM maintainance? What would this gain me?
+>
+> What do you think?
+>
+> - martin
+>
+
+
+
+--=20
+Thomas Broyer
+/t=C9=94.ma.b=CA=81wa.je/ <http://xn--nna.ma.xn--bwa-xxb.je/>
+
+--001a113a5f7034ab0f04f1d3fa29--
+

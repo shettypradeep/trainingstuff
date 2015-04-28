@@ -1,0 +1,62 @@
+From users-return-137243-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Sep 11 19:53:46 2014
+Return-Path: <users-return-137243-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 031AE1191B
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 11 Sep 2014 19:53:46 +0000 (UTC)
+Received: (qmail 85593 invoked by uid 500); 11 Sep 2014 19:53:44 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 85506 invoked by uid 500); 11 Sep 2014 19:53:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 85494 invoked by uid 99); 11 Sep 2014 19:53:43 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 11 Sep 2014 19:53:43 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dhoffer6@gmail.com designates 209.85.220.178 as permitted sender)
+Received: from [209.85.220.178] (HELO mail-vc0-f178.google.com) (209.85.220.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 11 Sep 2014 19:53:38 +0000
+Received: by mail-vc0-f178.google.com with SMTP id hy4so5996740vcb.23
+        for <users@maven.apache.org>; Thu, 11 Sep 2014 12:53:17 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=weYZv9sXZry8RR9AcF7kpW6E/Dm+4CiZ3/pfrF1c4is=;
+        b=ElcVI75WCid9F+YkOqfxnOkebGJ5oeDmgyo76UXz0Ra+6cv+OW/xZ1So4CU4fIdebv
+         3uU1hX1B6pKSTnCbBCTY++N2fjOK7eOw3lbg0EjShb0LKTlR59Bk0pGDwasVgSfnOn7z
+         d8UZrB58NbdRPFlLruvbxq/3RLieAvQao1LFr7aM8ALVhRkuPYyrFMkK7OqZDNADJcd1
+         Ci6HFbqkfQuY66n5d7AySFOKcWNpDGV+FF8cOuUsemloEJPnej3gqJOMF2+nVhjQuR1q
+         XaqclyzjZGUhVBK8qs1O0FLtXR33Mfm33ZH6ow4vRYnDOY6r45TsHW2pub5r0AfGVzvv
+         j3yg==
+MIME-Version: 1.0
+X-Received: by 10.220.186.196 with SMTP id ct4mr2616943vcb.51.1410465197640;
+ Thu, 11 Sep 2014 12:53:17 -0700 (PDT)
+Received: by 10.220.131.70 with HTTP; Thu, 11 Sep 2014 12:53:17 -0700 (PDT)
+Date: Thu, 11 Sep 2014 13:53:17 -0600
+Message-ID: <CAA8BW8HGvAKRZXQ_j8pYzJuoNs5X98PTbSK_ohsuuFV1-j2xtQ@mail.gmail.com>
+Subject: maven-surefire-plugin does not fail build if TestNG and JUnit47 are used
+From: David Hoffer <dhoffer6@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b67631212d3d30502cf859f
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b67631212d3d30502cf859f
+Content-Type: text/plain; charset=UTF-8
+
+I have a module where maven-surefire-plugin (2.10) is configured to use
+TestNG and JUnit47.  The former has several tests that all succeed and the
+later has two tests that fail.  However the build succeeds.  How can I
+configure surefire so the build fails if either have failures which is the
+expected behavior?
+
+--047d7b67631212d3d30502cf859f--
+

@@ -1,0 +1,166 @@
+From users-return-137817-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Nov 25 10:26:09 2014
+Return-Path: <users-return-137817-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 64A7410944
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 25 Nov 2014 10:26:09 +0000 (UTC)
+Received: (qmail 43483 invoked by uid 500); 25 Nov 2014 10:26:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 43392 invoked by uid 500); 25 Nov 2014 10:26:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 43381 invoked by uid 99); 25 Nov 2014 10:26:07 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Nov 2014 10:26:07 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [209.85.216.172] (HELO mail-qc0-f172.google.com) (209.85.216.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Nov 2014 10:25:40 +0000
+Received: by mail-qc0-f172.google.com with SMTP id m20so157584qcx.17
+        for <users@maven.apache.org>; Tue, 25 Nov 2014 02:24:54 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:message-id:in-reply-to:references
+         :subject:mime-version:content-type;
+        bh=uW68WOWQmHFjSk1ozoLHxXeOGm7znDGbGYfe4JfxWYk=;
+        b=I8nNoFLPJTIGh7xkMVFp53JE2uivgDRz+7hHhqeMpNDyVvkdGg+ZY5li7EeyMOrvpf
+         U7+9HHJm9Ee1Y4JBw6JgQN9HFXdjghztl7m3n9mzI5mEVyiozRF0nq8c7Rn9qAx100rV
+         5olPGI6QPzrHvdscOdoHtUAdvB4LX3I7dA24SzJ3k7viXmj14foAotTx4yiScjAVZ9vr
+         ufjc0Bj3H0hkm/2P4QFo222FnMo8D9UIZ2RDREUwQo48gA65juEBqGoqG2PvB2qyI73b
+         +MmTkUKx+tDSHDFv8p9xlfV/CQjlWxB+b1xmi2qeEg7qVqpHcN6RVBSSbNc86Y+Vpjht
+         2V8g==
+X-Gm-Message-State: ALoCoQm5fAJxG0tuvalws2NwGW5EJkm8Jo3k4opmvAQKpqqC1DEYU8sHjnEqgXVKZXjpyTJROHXe
+X-Received: by 10.140.30.33 with SMTP id c30mr35996094qgc.32.1416911094603;
+        Tue, 25 Nov 2014 02:24:54 -0800 (PST)
+Received: from Slartibartfast.local (5403ACA3.catv.pool.telekom.hu. [84.3.172.163])
+        by mx.google.com with ESMTPSA id 34sm633414qgt.19.2014.11.25.02.24.53
+        for <users@maven.apache.org>
+        (version=TLSv1.2 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Tue, 25 Nov 2014 02:24:54 -0800 (PST)
+Date: Tue, 25 Nov 2014 11:24:52 +0100
+From: Tamas Cservenak <tamas@cservenak.net>
+To: Maven Users List <users@maven.apache.org>
+Message-ID: <etPan.547458f4.74b0dc51.28a@Slartibartfast.local>
+In-Reply-To: <CADGDyYLJVp-yyr8JYyTCfgKbUJ0hV637z9RS6u3a1yHyLWc10A@mail.gmail.com>
+References: <CADGDyYL0yOwJB45_V3KoKUi=6iar8wxJhpck7DuaGYAm1-qNig@mail.gmail.com>
+ <CADGDyYLJVp-yyr8JYyTCfgKbUJ0hV637z9RS6u3a1yHyLWc10A@mail.gmail.com>
+Subject: Re: Using the Maven Indexer
+X-Mailer: Airmail (280)
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="547458f4_19495cff_28a"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--547458f4_19495cff_28a
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+Maven Indexer requires =46S access, hence, you can index only local repos=
+itories. To have indexing context of remote repository, you must ensure t=
+hat remote repository publishes the index. If remote does not publish it,=
+ you have no other choice than nag the remote repository owner to publish=
+ it.
+
+You have working examples in repo that shows how to get and keep fresh Ce=
+ntral index (that is a remote index and does publish index).
+
+--=C2=A0
+Thanks,
+=7Et=7E
+
+On 24 Nov 2014 at 12:46:37, Eduard Moraru (enygma2002=40gmail.com) wrote:=
+
+
+Hi, =20
+
+I have a new question: How can I index a remote repository=3F All the =20
+examples I have found and even the NexusIndexerCli seem to be focused abo=
+ut =20
+indexing *only* local repositories and then publishing this index for =20
+consumption. =20
+
+I do not want to do that. Is there any way I can pass an URL to an =20
+IndexPackingRequest instead of a (local) directory=3F Basically, my use c=
+ase =20
+is: =20
+
+1. Take a maven URL =20
+2. If it has an index already created, use it through an =20
+IndexUpdatingRequest =20
+3. If not, create a local index (IndexPackingRequest=3F) =20
+4. In both cases, I then need to periodically update/synchronize my local=
+ =20
+index of the remote repository. =20
+
+Any help is deeply appreciated. =20
+
+Thanks, =20
+Eduard =20
+
+On =46ri, Nov 21, 2014 at 7:07 PM, Eduard Moraru <enygma2002=40gmail.com>=
+ wrote: =20
+
+> Hi, =20
+> =20
+> I have recently started playing with the maven indexer =5B1=5D, followi=
+ng the =20
+> examples =5B2=5D, and I have some questions (since A=46AIS, documentati=
+on is =20
+> practically unexistent on the matter): =20
+> =20
+> 1) =46rom what I can understand, you need an IndexingContext for each =20
+> repository you plan to index. This makes you end up with n lucene index=
+es, =20
+> one for each repository. Is there any way that I could have just 1 luce=
+ne =20
+> index, with all my repositories indexed in the same place=3F If the mai=
+n =20
+> purpose is searchig, why scatter the indexed information across n index=
+es =20
+> and make the whole process dificult=3F Maybe I=60m missing something. =20
+> =20
+> 2) On the same line as the first question, when it comes to searching, =
+it =20
+> seems that I can use a MergedIndexingContext to perform a search on =20
+> multiple (all) indexed repositories (IndexingContexts). How does this m=
+erge =20
+> the search results=3F I assume it takes each lucene index and queries i=
+t =20
+> individually, but this probably means that the lucene scores of these =20
+> merged results are completely messed up and ureliable, right=3F =20
+> Any suggestions on how to properly perform search over multiple indexed=
+ =20
+> repositories=3F =20
+> =20
+> 3) About the Plexus Container: Am I forced to initialize and use one, o=
+r =20
+> can I/should manually instantiate the default implementations and use t=
+hem =20
+> instead=3F =20
+> =20
+> I=60ll probably come up with more questions along the way, hope someone=
+ will =20
+> find the time to guide me on the right path. =20
+> =20
+> Thanks, =20
+> Eduard =20
+> =20
+> ---------- =20
+> =5B1=5D https://github.com/apache/maven-indexer/ =20
+> =5B2=5D =20
+> https://github.com/apache/maven-indexer/tree/master/indexer-examples/in=
+dexer-examples-basic =20
+> =20
+
+--547458f4_19495cff_28a--
+
+

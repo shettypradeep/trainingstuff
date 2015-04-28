@@ -1,0 +1,91 @@
+From users-return-135753-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Mar 10 13:16:58 2014
+Return-Path: <users-return-135753-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B1F56C460
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 10 Mar 2014 13:16:58 +0000 (UTC)
+Received: (qmail 1802 invoked by uid 500); 10 Mar 2014 13:16:54 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99661 invoked by uid 500); 10 Mar 2014 13:16:47 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99334 invoked by uid 99); 10 Mar 2014 13:16:40 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 10 Mar 2014 13:16:40 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.160.53 as permitted sender)
+Received: from [209.85.160.53] (HELO mail-pb0-f53.google.com) (209.85.160.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 10 Mar 2014 13:16:35 +0000
+Received: by mail-pb0-f53.google.com with SMTP id rp16so7224044pbb.40
+        for <users@maven.apache.org>; Mon, 10 Mar 2014 06:16:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=q5ur0Rz5UYwaDzhlPXndvHa1OjsKJAEe7Gf2VzBEDz4=;
+        b=ounkTEUhxqTFgiLJxJTQRWGt4za4ds0RMbHVgTbjmMSVPXos5H36TJmi2KFBQKbmUC
+         nwGkBBn42uGrJ/QG8hIU1Yzx0WSv2vUaip3fKYJ4k34FjS5quj4rlSYGruAOkd04WVdm
+         WzgS+qa3SkHosy5tyQVA1ET58I6ni2j8XwtB7ot5mU0dGJVclipGluBXxUWm+Mt+A8RR
+         YycXgueL736afcP1C/NLROFqCAQ26mbISP0hJOR2EEMmLGjeq/zuXDtYpcSc908TAPn0
+         tblSgqxeN4TFCNdgUPTDYdgiXMoWEWUxQlUofvNcn9J5TNYdw0v2RMqf334eKH/d/FK4
+         CoaQ==
+X-Received: by 10.68.44.71 with SMTP id c7mr40253095pbm.24.1394457372924; Mon,
+ 10 Mar 2014 06:16:12 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Mon, 10 Mar 2014 06:15:52 -0700 (PDT)
+In-Reply-To: <CAKDUN1vZq3etVMPG_D5n90w6a43Ksc0GC3pOfP8zedqj6Tm5XQ@mail.gmail.com>
+References: <CF3F698F.FEB%richard.mauri@sap.com> <CALy+7UkrjBKRZYhYtHQEjePF_k9gQk_1OiQ73Fp1Z_mRTGm3EQ@mail.gmail.com>
+ <CAKDUN1vZq3etVMPG_D5n90w6a43Ksc0GC3pOfP8zedqj6Tm5XQ@mail.gmail.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Mon, 10 Mar 2014 08:15:52 -0500
+Message-ID: <CALy+7UmP+e5r9P9_CwzNLXLtr0Uz9HYE=eJ7G7n7yN4yDPx3yw@mail.gmail.com>
+Subject: Re: maven won't resolve from central log4j:log4j:1.2.8 through 1.2.15
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+>> Where did this repo.maven.apache.org url come from?
+>
+> Wayne, it's a correct URL for the central repository. It's the one we
+> define in the super-POM since Maven 3.0.something.
+
+Doh, well ignore that then. I should have done 30 seconds of searching
+before sending that one. :)
+
+But just FYI, when I myself tried accessing that URL last night, I had
+problems in my browser. First it was HTTPS problems as the URL did not
+match the server name being reported (I have the HTTPS Everywhere
+plugin turned on). I clicked "ignore" and went to the site and got
+HTTP 404 errors at /log4j/log4j/maven-metadata.xml so I moved up to
+/log4j/log4j and had the same errors. I did not grab the error but it
+was something related to Varnish cache - when I cause a 404 now, the
+error appears different.
+
+So at the very least, the mirror I was on (fastly.net) was having
+issues - and potentially this was mirrored to others, possibly
+explaining the troubles (??). I had no such trouble hitting the old
+standby of repo1.maven.org and resolving the files etc. These errors
+made me question the URL entirely.
+
+I hit it again just now and dns sends me to fastly.net again but this
+time the files are there.
+
+So, I would ask Richard to try again and see if things work better
+today, or if he is having the same troubles.
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

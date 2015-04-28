@@ -1,0 +1,84 @@
+From users-return-137246-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 12 03:26:03 2014
+Return-Path: <users-return-137246-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9A2D9118A0
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 12 Sep 2014 03:26:03 +0000 (UTC)
+Received: (qmail 72469 invoked by uid 500); 12 Sep 2014 03:26:01 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 72383 invoked by uid 500); 12 Sep 2014 03:26:01 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 72358 invoked by uid 99); 12 Sep 2014 03:26:01 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 03:26:01 +0000
+X-ASF-Spam-Status: No, hits=3.1 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_IMAGE_ONLY_16,HTML_MESSAGE,HTML_SHORT_LINK_IMG_2,RCVD_IN_DNSWL_LOW,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of burtonator2011@gmail.com designates 209.85.217.179 as permitted sender)
+Received: from [209.85.217.179] (HELO mail-lb0-f179.google.com) (209.85.217.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 03:25:56 +0000
+Received: by mail-lb0-f179.google.com with SMTP id p9so144235lbv.10
+        for <users@maven.apache.org>; Thu, 11 Sep 2014 20:25:35 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:from:date:message-id:subject:to:content-type;
+        bh=uny6k4V0bBUIpX0VWSOhGph1M+3nP9W9noDpRSOyBHw=;
+        b=DBkmLe8JeoiaZrCjpsnsojZRBeCXDWo22Sqs3fTZbVVMJxktr1pit7U5ZuSgnzWLNV
+         CDv7zqqzcwQmurU4uM00yWlZ1Lh4DmIbycPX6YKLhD1TsLdSO8oE/fSml4Elwa4XcVEg
+         7Y2+zCrraBT+MpZXg/jK6wKoMpWbYTlmLFmUNvlsa51WpcsExcONzKpH4RIgwDPpzKtZ
+         6onU33IVvgpzBJoW3wWxB5cCMVjVqUlJm8u4CY7195QQdM2nTaeHsPXzSptWktTR7Dif
+         QcAJit8wqRdaJAJNsDl8yXtW8TsUvBlp2XVMheGSoEJKAYO+Nu3IrgoyJmXhkvbDfCfa
+         7VRg==
+X-Received: by 10.152.22.137 with SMTP id d9mr5560405laf.29.1410492335471;
+ Thu, 11 Sep 2014 20:25:35 -0700 (PDT)
+MIME-Version: 1.0
+Sender: burtonator2011@gmail.com
+Received: by 10.112.210.137 with HTTP; Thu, 11 Sep 2014 20:25:15 -0700 (PDT)
+From: Kevin Burton <burton@spinn3r.com>
+Date: Thu, 11 Sep 2014 20:25:15 -0700
+X-Google-Sender-Auth: JShx2-JSh8G6Y8k8hbJppjA4_e4
+Message-ID: <CAAZU44kFZ0cNGa_qOXf6Wj_LRRM18LE3v0xKMLZ0+Z44ZffpFg@mail.gmail.com>
+Subject: Tell maven to not have the parent pom as a dependency?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0158b6f29d42a00502d5d6b6
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0158b6f29d42a00502d5d6b6
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I have an OSS module in a multi-module maven project.
+
+I want to post this to a public repo=E2=80=A6 it=E2=80=99s open source.
+
+The problem is that the parent module is not OSS.
+
+When I setup a <dependency> it pulls in my OSS module just fine, but then
+it tries to pull down the parent module, which isn=E2=80=99t in the repo, a=
+nd
+breaks.
+
+The parent pom isn=E2=80=99t really a dependency=E2=80=A6 so I=E2=80=99d li=
+ke it to not need it
+
+is this possible?
+
+--=20
+
+Founder/CEO Spinn3r.com
+Location: *San Francisco, CA*
+blog: http://burtonator.wordpress.com
+=E2=80=A6 or check out my Google+ profile
+<https://plus.google.com/102718274791889610666/posts>
+<http://spinn3r.com>
+
+--089e0158b6f29d42a00502d5d6b6--
+

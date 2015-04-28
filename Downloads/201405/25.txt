@@ -1,0 +1,79 @@
+From users-return-136360-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu May 15 05:59:08 2014
+Return-Path: <users-return-136360-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C3E9911296
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 15 May 2014 05:59:08 +0000 (UTC)
+Received: (qmail 83106 invoked by uid 500); 14 May 2014 23:43:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 82981 invoked by uid 500); 14 May 2014 23:43:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 82962 invoked by uid 99); 14 May 2014 23:43:15 -0000
+Received: from Unknown (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 14 May 2014 23:43:15 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [85.13.151.183] (HELO dd34514.kasserver.com) (85.13.151.183)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 14 May 2014 23:42:54 +0000
+Received: from dd34514.kasserver.com (dd0800.kasserver.com [85.13.143.204])
+	by dd34514.kasserver.com (Postfix) with ESMTPSA id AA9394340538
+	for <users@maven.apache.org>; Thu, 15 May 2014 01:42:32 +0200 (CEST)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+X-SenderIP: 24.68.152.10
+User-Agent: ALL-INKL Webmail 2.11
+In-Reply-To: <1400078487964-5793054.post@n5.nabble.com>
+References: <1400078487964-5793054.post@n5.nabble.com>
+Subject: Re: Version in Mojo
+From: "Manfred Moser" <manfred@mosabuam.com>
+To: users@maven.apache.org
+Message-Id: <20140514234232.AA9394340538@dd34514.kasserver.com>
+Date: Thu, 15 May 2014 01:42:32 +0200 (CEST)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Store the version of the plugin in a properties file and load it at runtime.. 
+
+DenisDasKind wrote on 14.05.2014 07:41:
+
+> Hi,
+> 
+> i'm new to maven, and now i have the following problem. I have a custom
+> Mojo, and the Mojo should print the own version stored in the pom.xml of
+> this mojo. And now i have trouble to get this version. I have tried the
+> project.version, but this is always the version of the pom, that calls my
+> Mojo. A easy way, will be when the version is hardcoded, but this is not the
+> best way, becausae each time when the version is changed (release) i must
+> change it manually.
+> Is there a better way to get this version?
+> 
+> Thank you in advance!
+> 
+> 
+> 
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/Version-in-Mojo-tp5793054.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+> 
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+> 
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

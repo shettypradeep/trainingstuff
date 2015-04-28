@@ -1,0 +1,78 @@
+From users-return-135733-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Mar  8 23:23:39 2014
+Return-Path: <users-return-135733-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1DA3F10A2E
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  8 Mar 2014 23:23:39 +0000 (UTC)
+Received: (qmail 37370 invoked by uid 500); 8 Mar 2014 23:23:35 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 37282 invoked by uid 500); 8 Mar 2014 23:23:35 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 37274 invoked by uid 99); 8 Mar 2014 23:23:35 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 08 Mar 2014 23:23:35 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of waynefay@gmail.com designates 209.85.192.169 as permitted sender)
+Received: from [209.85.192.169] (HELO mail-pd0-f169.google.com) (209.85.192.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 08 Mar 2014 23:23:29 +0000
+Received: by mail-pd0-f169.google.com with SMTP id fp1so5566633pdb.28
+        for <users@maven.apache.org>; Sat, 08 Mar 2014 15:23:09 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=iY11dhFb7wuZjrL1LPPqv1aw3sbQtpLu5cX0BMtgoAQ=;
+        b=l8mwyLH0juiVyQFAswWAHo8MiVaUeNsj/oRDSiLh6qNpaAWnN1FfXLoNZlk/fjsADB
+         /IjSbba19laAHm//KshXtkf49VAXstpYt2W6Ierj6YkCl5fk5HMsOoJBV0xYH9zXmRDB
+         hOeCOhGq5m3Y9EAY4v47I5DChYHXiIe6O4jKpwJYqdtJEmEOVVFLxa76xQ9KGGZd2TGG
+         A9MCe4T7nG1DyJaHDBVei9C4acXhI78ScyD6Um3eQoITRl5u0Wxk4X1Tz8DcjdD0pTa8
+         LYxx0/JDNEQBXfY1Vy+3Pyf71CKmm1/TX1MRQ+yb04KL14D7TlMtgMM7I0AX1QYBJ6BN
+         q1vw==
+X-Received: by 10.68.202.230 with SMTP id kl6mr31277133pbc.55.1394320989535;
+ Sat, 08 Mar 2014 15:23:09 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Sat, 8 Mar 2014 15:22:49 -0800 (PST)
+In-Reply-To: <CAM0K-0Bz_Xg=vEx9QsdQR6TWKHDw=RtGupbzNJSD19szcVs9QA@mail.gmail.com>
+References: <CAM0K-0CzKNaJ89zXuHAiEF1a3QYtybyXUjg0HPQrNVRWz-a9jQ@mail.gmail.com>
+ <CALy+7Uk5usRFLhxLhWyCDAOMpGvWSUBVVOg72XNh1ovbc640OA@mail.gmail.com>
+ <CAM0K-0CbT2Bt_NXu5RjaL2cyWC=sR1qjeRghBGJJMvd+HaCKYg@mail.gmail.com>
+ <CALy+7U=V0ReweVzA5Z3keQ390kHSvcH4KHC2asMO5GoRSOXT5Q@mail.gmail.com> <CAM0K-0Bz_Xg=vEx9QsdQR6TWKHDw=RtGupbzNJSD19szcVs9QA@mail.gmail.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Sat, 8 Mar 2014 17:22:49 -0600
+Message-ID: <CALy+7UnegioVjqaiSXR2noOv5Xi4rLa3BHWz0BKy+HSbQsGnkA@mail.gmail.com>
+Subject: Re: Netbeans 7.4 maven POM for com.oracle:ojdbc6:jar:11.2.0.1 is invalid
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> pom.xml
+>         <dependency>
+>             <groupId>com.oracle</groupId>
+>             <artifactId>ojdbc6</artifactId>
+>             <version>11.2.0.1</version>
+>             <scope>provided</scope>
+>         </dependency>
+
+What is the complete path in the pom.xml file to this dependency node?
+Use XSLT or post the pom file at pastebin, gist, etc.
+
+Also consider changing the scope just for testing purposes. Try
+compile and/or test instead of provided.
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

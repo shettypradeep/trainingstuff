@@ -1,0 +1,236 @@
+From users-return-136498-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jun  3 05:54:28 2014
+Return-Path: <users-return-136498-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 088C711595
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  3 Jun 2014 05:54:28 +0000 (UTC)
+Received: (qmail 7639 invoked by uid 500); 3 Jun 2014 05:54:26 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 7561 invoked by uid 500); 3 Jun 2014 05:54:26 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 7550 invoked by uid 99); 3 Jun 2014 05:54:26 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 03 Jun 2014 05:54:26 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.223.177] (HELO mail-ie0-f177.google.com) (209.85.223.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 03 Jun 2014 05:54:24 +0000
+Received: by mail-ie0-f177.google.com with SMTP id y20so5254562ier.8
+        for <users@maven.apache.org>; Mon, 02 Jun 2014 22:53:59 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=ECNR6Sa/JBz4OMzCvU3NO10SSDEL4DPDXQpHVeaF4nA=;
+        b=fOJ1nyeAZe2DV3V9q5vlIqJF5lSazGL+/UvTz32dxIvcDyxXle95g63dNQec8oV71W
+         f6BgDDL3xxSlm5MYFn/bpJw6WeWAb8PIB+MfbtAwIfqhVclVSctjUrvFg79297/V6MyE
+         u+B/5WIt/4EpNA+Bpu1IIIt+CjTZ2sTgVmrMN7JOf3Ing1v4yQZMIJfGGf6mP3+QlsUN
+         0I+JOySA1lSmj2ZUu3Ko7BPbmhIiyNixtPJFx1dSuAF08I1DB3SIoAGtWh/Xb9tcIaO0
+         g08yOLIK7uKIPEEojnIYPcoIaVenRjpX0jL4ag+kX6/cmnuYKYuZ9KvQ8GyxqOji8rRa
+         Rm9g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:sender:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=ECNR6Sa/JBz4OMzCvU3NO10SSDEL4DPDXQpHVeaF4nA=;
+        b=aR2CyWzOAdgrJTh14hy4hOxSdHYM264Uzhf3sgyllZrI0L13yXJSTSNnEdBVcs7ePF
+         iJYmtaWnmaf+0uhOSkglnfTrCDSipBokRoy4JEYsraXKsFKJ0cBusCf0hkg3LIieMlnP
+         uMFi7Gt1BPQ07GPcLdTv3N5q6CYLSmE2HDVbak2FYNCt0YaVH775HgpEkBg5F5qILJa3
+         pq6pkQyD5wRs+J5c5N6o4xCTy4EasxLjOX6YhJTTwzcOX6N3HnBbzUBpXpu/g++K8Ol9
+         KQTL1g1WCsKTMq205to57893JI80zqBo5ray/GKUqeMig9y8hegKP9SKDD9OvFTWdhzD
+         y33Q==
+X-Gm-Message-State: ALoCoQnfWwoYjTmZgsCLMp1B2N2dtErUMNiSMPvYXNbdp0DpDZilQjHZBAI6WKgHoe/U7fBkoWvB
+MIME-Version: 1.0
+X-Received: by 10.43.80.5 with SMTP id zs5mr7331200icb.72.1401774839895; Mon,
+ 02 Jun 2014 22:53:59 -0700 (PDT)
+Sender: kristian.rosenvold@zenior.no
+Received: by 10.50.111.226 with HTTP; Mon, 2 Jun 2014 22:53:59 -0700 (PDT)
+In-Reply-To: <CAPCjjnEpE34F55REqveMCp+F2muhdYc+KfF1A0ogz=YVHDM84Q@mail.gmail.com>
+References: <CAPCjjnEO9A_STBkPsLhgHa38ao=9T8wd8mo3mw6+UyqaXuvSvg@mail.gmail.com>
+	<4D1B2C20-D217-4701-B27C-6FAAAA18995C@Kriegisch.name>
+	<CAPCjjnHNMqGNjC=mHSvcTidivHso2PVWREgy3OBdsFR8RshyHQ@mail.gmail.com>
+	<8AD1E8C9-4164-4DB9-BDE9-9AA1E9945DA0@Kriegisch.name>
+	<CAPCjjnGWDY=-Nh+ksJcx5uaiMOk_WRcVY98FG1pMVsiORmgnzw@mail.gmail.com>
+	<CAPCjjnHcuturZSe7-TJsFMV4Lo_iMR3Vkn5rBf10ggm=+PNhng@mail.gmail.com>
+	<96DFF233-8D29-4BDC-B4D6-5B14BF2B60BA@takari.io>
+	<CAPCjjnEpE34F55REqveMCp+F2muhdYc+KfF1A0ogz=YVHDM84Q@mail.gmail.com>
+Date: Tue, 3 Jun 2014 07:53:59 +0200
+X-Google-Sender-Auth: HGe0WP3bOBWGmjRZIIDm5ZuyBeA
+Message-ID: <CAJZRQKx5Zm20DvmJ5h+F-CuYBuRZOKtwyMKscKuepUFatPbb6w@mail.gmail.com>
+Subject: Re: Use native tar to unpack? good/bad idea?
+From: Kristian Rosenvold <kristian.rosenvold@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I know I have a couple of branches that at least convert all the
+plexus-archiver zip stuff to use commons-compress, which is reasonably
+simple to plug into plexus-archiver. I have been a bit reluctant to
+push these changes since I've been mildly concerned about fallout. I
+think it should be fairly simple to convert the remaining
+plexus-archiver code to use commons-compress too, including the tar
+stuff.
+
+I am more concerned about the testing aspect of this change, it would
+require extensive testing and probably some community effort. Is there
+any interest in this ?
+
+Commons-compress is at least maintained; which is a Good Thing  ;)
+
+
+Kristian
+
+
+2014-06-03 6:20 GMT+02:00 Dan Tran <dantran@gmail.com>:
+> Looks like it is worth a try to get maven-dependency-plugin having an
+> option to use native tar during unpack.
+>
+> Thanks Jason
+>
+> -Dan
+>
+>
+>
+> On Mon, Jun 2, 2014 at 6:32 PM, Jason van Zyl <jason@takari.io> wrote:
+>
+>> I have had many problems with Java-based TAR solutions. I often use this
+>> where I can:
+>>
+>>
+>> https://github.com/airlift/airship/blob/master/airship-shared/src/main/java/io/airlift/airship/shared/FileUtils.java
+>>
+>> On Jun 2, 2014, at 7:15 PM, Dan Tran <dantran@gmail.com> wrote:
+>>
+>> > BTW,
+>> >
+>> > I never have good luck with plexus-archiver, and always ended up to
+>> > implement my own 'unpack' using native tar to speed up the build and also
+>> > reserve the softlinks in the archive.
+>> >
+>> > So am asking the user list to see if there any interests in this feature
+>> to
+>> > give enough incentive to implement it
+>> >
+>> > Thanks
+>> >
+>> > -D
+>> >
+>> >
+>> >
+>> > On Mon, Jun 2, 2014 at 4:08 PM, Dan Tran <dantran@gmail.com> wrote:
+>> >
+>> >> Hi Alex,  I will find a good sample file for you.
+>> >>
+>> >> Thanks
+>> >>
+>> >> -D
+>> >>
+>> >>
+>> >> On Mon, Jun 2, 2014 at 3:57 PM, Alexander Kriegisch <
+>> >> Alexander@kriegisch.name> wrote:
+>> >>
+>> >>> Oh, I see, multiple options. Okay, then yes - maintenance nightmare. I
+>> >>> think we should not easily give up Java's idea of platform
+>> independence and
+>> >>> Maven's whole point: creating standardised, repeatable builds.
+>> >>>
+>> >>> If your idea is a reaction on your latest tar.gz problems, maybe we can
+>> >>> find another solution for it. You have not reacted on my offer to
+>> inspect
+>> >>> your files and see if I have an idea how to fix that in Java. :-)
+>> >>> --
+>> >>> Alexander Kriegisch
+>> >>>
+>> >>>
+>> >>>> Am 03.06.2014 um 00:48 schrieb Dan Tran <dantran@gmail.com>:
+>> >>>>
+>> >>>> correct,   I would expect user to install tar.exe or cygwin with tar
+>> on
+>> >>>> windows and activate the option.  By default, it still uses
+>> >>> plexus-archiver
+>> >>>> to unpack
+>> >>>>
+>> >>>> -D
+>> >>>>
+>> >>>>
+>> >>>> On Mon, Jun 2, 2014 at 3:42 PM, Alexander Kriegisch <
+>> >>>> Alexander@kriegisch.name> wrote:
+>> >>>>
+>> >>>>> Windows does not have tar by default. You need to install Git (incl.
+>> >>> Git
+>> >>>>> Bash), Cygwin, GnuWin32 or similar. I would not expect any user to
+>> >>> have tar
+>> >>>>> installed at all or if so then in any predictable location or even
+>> >>>>> reachable via PATH.
+>> >>>>> --
+>> >>>>> Alexander Kriegisch
+>> >>>>>
+>> >>>>>
+>> >>>>>> Am 03.06.2014 um 00:36 schrieb Dan Tran <dantran@gmail.com>:
+>> >>>>>>
+>> >>>>>> I am think of enhancing maven-dependency-plugin by adding option  to
+>> >>>>> unpack
+>> >>>>>> 'tar' like artifact using native tar since it is faster and reserve
+>> >>> soft
+>> >>>>>> links (?)
+>> >>>>>>
+>> >>>>>> Thoughts? would it be a maintaining night mare??
+>> >>>>>>
+>> >>>>>> Thanks
+>> >>>>>>
+>> >>>>>> -Dan
+>> >>>>>
+>> >>>>> ---------------------------------------------------------------------
+>> >>>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> >>>>> For additional commands, e-mail: users-help@maven.apache.org
+>> >>>>>
+>> >>>>>
+>> >>>
+>> >>> ---------------------------------------------------------------------
+>> >>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> >>> For additional commands, e-mail: users-help@maven.apache.org
+>> >>>
+>> >>>
+>> >>
+>>
+>> Thanks,
+>>
+>> Jason
+>>
+>> ----------------------------------------------------------
+>> Jason van Zyl
+>> Founder,  Apache Maven
+>> http://twitter.com/jvanzyl
+>> http://twitter.com/takari_io
+>> ---------------------------------------------------------
+>>
+>> To think is easy. To act is hard. But the hardest thing in the world is to
+>> act in accordance with your thinking.
+>>
+>>  -- Johann von Goethe
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

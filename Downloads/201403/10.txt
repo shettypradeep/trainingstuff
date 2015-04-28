@@ -1,0 +1,83 @@
+From users-return-135807-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 13 08:51:14 2014
+Return-Path: <users-return-135807-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4634D10D3D
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 13 Mar 2014 08:51:14 +0000 (UTC)
+Received: (qmail 83835 invoked by uid 500); 13 Mar 2014 08:51:10 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 83410 invoked by uid 500); 13 Mar 2014 08:51:09 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 83400 invoked by uid 99); 13 Mar 2014 08:51:08 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Mar 2014 08:51:08 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [62.13.150.126] (HELO outmail01446.authsmtp.com) (62.13.150.126)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Mar 2014 08:51:02 +0000
+Received: from mail-c235.authsmtp.com (mail-c235.authsmtp.com [62.13.128.235])
+	by punt18.authsmtp.com (8.14.2/8.14.2/) with ESMTP id s2D8ofBZ086195
+	for <users@maven.apache.org>; Thu, 13 Mar 2014 08:50:41 GMT
+Received: from Gaia.hannover.rmcon.de (s-linux-252.rmcon.de [145.253.210.14])
+	(authenticated bits=0)
+	by mail.authsmtp.com (8.14.2/8.14.2/) with ESMTP id s2D8obCn071168
+	(version=TLSv1/SSLv3 cipher=AES128-SHA bits=128 verify=FAIL)
+	for <users@maven.apache.org>; Thu, 13 Mar 2014 08:50:37 GMT
+Received: from Gaia.hannover.rmcon.de ([::1]) by Gaia.hannover.rmcon.de
+ ([::1]) with mapi; Thu, 13 Mar 2014 09:50:36 +0100
+From: Martin Egge <martin.egge@rmcon.de>
+To: Maven Users List <users@maven.apache.org>
+Date: Thu, 13 Mar 2014 09:50:34 +0100
+Subject: AW: Broken links in surefire-report
+Thread-Topic: Broken links in surefire-report
+Thread-Index: Ac8+Is4CbSGp1LGbS92ZUllbvPsV2AAdjQ5g
+Message-ID: <DF3AA5068A925940AA6A19E71564B5B102D7C6BB17AC@Gaia.hannover.rmcon.de>
+References: <DF3AA5068A925940AA6A19E71564B5B102D7C6BB176C@Gaia.hannover.rmcon.de>
+ <CAK2FUK0bxXOMhjKq6LcmRPcujAzSpfzG8UiZbGC5s4CaNU1qrA@mail.gmail.com>
+In-Reply-To: <CAK2FUK0bxXOMhjKq6LcmRPcujAzSpfzG8UiZbGC5s4CaNU1qrA@mail.gmail.com>
+Accept-Language: de-DE
+Content-Language: de-DE
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+acceptlanguage: de-DE
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-Server-Quench: 8c5359e7-aa8c-11e3-b802-002590a15da7
+X-AuthReport-Spam: If SPAM / abuse - report it at: http://www.authsmtp.com/abuse
+X-AuthRoute: OCd2YQ4XBVZQRR4G CyVCASBPRC0/IxZL B1kPIB1HO1cTTixU O1hXKBxaKFQXRVwf XCRcFVVXTyAgG3x3 awtVfQVVaE9OVQZt HklNR0xQEQZ2Ax0B GB8aTRt3aAQIO3wE bRkwLS5bW0V7c04z QEpTHSMONmJjbWlK V10JJgsHbQJLKxxY OFh/Vm4NYWcCb3ox RlI/Nm8nFAoNYA5P RQIAKxoWQEAIBXY9 QVgZAC8iE0wfSmAp IgQhMEJ0
+X-Authentic-SMTP: 61633531363236.1023:706
+X-AuthFastPath: 0 (Was 255)
+X-AuthSMTP-Origin: 145.253.210.14/25
+X-AuthVirus-Status: No virus detected - but ensure you scan with your own anti-virus system.
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+> Would you mind filing the bug in our Jira? And as you seem to have spotte=
+d
+> the problem already, perhaps you'd have fun making a fork on GitHub and
+> providing a pull request with a test and a fix?
+
+Done. The pull request can be found at:
+https://github.com/apache/maven-surefire/pull/36
+
+
+Regards,
+Martin
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

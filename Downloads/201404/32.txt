@@ -1,0 +1,92 @@
+From users-return-136294-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr 30 20:38:08 2014
+Return-Path: <users-return-136294-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 40E651014F
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 30 Apr 2014 20:38:08 +0000 (UTC)
+Received: (qmail 86329 invoked by uid 500); 30 Apr 2014 20:38:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 86235 invoked by uid 500); 30 Apr 2014 20:38:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 86226 invoked by uid 99); 30 Apr 2014 20:38:03 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 30 Apr 2014 20:38:03 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ctrueden.wisc@gmail.com designates 209.85.128.176 as permitted sender)
+Received: from [209.85.128.176] (HELO mail-ve0-f176.google.com) (209.85.128.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 30 Apr 2014 20:37:58 +0000
+Received: by mail-ve0-f176.google.com with SMTP id db11so2864168veb.35
+        for <users@maven.apache.org>; Wed, 30 Apr 2014 13:37:37 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=4Hh3Vmm4aSK4LddUGTEDqp6usFqpC9rCMe8Sm0T6m0A=;
+        b=Us07h8pSjM2piLxklElWD6ynK1uy65/0iYO/weemTfxKgM8IG+m31tF++Tj5qT8WB+
+         59WWPwmd8U5w7BtwmD7rwixIf0L/zNedMvqxGWvWJL0BZ2w1fLt5Vhau2HnjG7+gH51C
+         MiC+HrfgAEAM5aj496MO5BFf4WAFU8VhorhNODKHXaHaWSTU61Epp0wbpcjv/C+6e52x
+         N5Mv9oJPU93fNm1T2GGuD2oo8pcQRJVENVMLyOx/Lfim5cW0X4lAxnzMddbRl+ngxPLf
+         bf7Xtftv0AhnvSXkNNjWFEMYLfvBtYRU4LRcBoyye+vLrM524M7TDCP8FG8XU7JeA+hk
+         SHNA==
+X-Received: by 10.221.29.137 with SMTP id ry9mr5095083vcb.6.1398890257566;
+ Wed, 30 Apr 2014 13:37:37 -0700 (PDT)
+MIME-Version: 1.0
+Sender: ctrueden.wisc@gmail.com
+Received: by 10.58.1.132 with HTTP; Wed, 30 Apr 2014 13:37:07 -0700 (PDT)
+In-Reply-To: <CAKq9_6J3RpRLymWrKRE-Jva=U2OCqqgsb+Vs6GmWDTuOMUMj3A@mail.gmail.com>
+References: <CAKq9_6J3RpRLymWrKRE-Jva=U2OCqqgsb+Vs6GmWDTuOMUMj3A@mail.gmail.com>
+From: Curtis Rueden <ctrueden@wisc.edu>
+Date: Wed, 30 Apr 2014 15:37:07 -0500
+X-Google-Sender-Auth: bvnjdKpxfPFtOkX7jju2phLdGe8
+Message-ID: <CADN69ynZbCKUpSA=xKufEhdGpC5myvw0ghB9+bKfGqP_WPkRhw@mail.gmail.com>
+Subject: Re: Finding unused dependencies
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1133935ce1d3d904f8488433
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1133935ce1d3d904f8488433
+Content-Type: text/plain; charset=UTF-8
+
+Hi Lahiru,
+
+> I there a way to get a warning about unused dependency in a pom file
+> for a given module.
+
+mvn dependency:analyze
+
+Regards,
+Curtis
+
+
+On Wed, Apr 30, 2014 at 3:35 PM, Lahiru Gunathilake <glahiru@gmail.com>wrote:
+
+> Hi Users,
+>
+> I wonder whether there's an easy way to find unused dependencies for a
+> module.I have a module which has bunch of dependencies, I have removed most
+> of them but I wonder whether there's an easy way rather manually doing it.
+>
+> I there a way to get a warning about unused dependency in a pom file for a
+> given module.
+>
+> Thanks
+> Lahiru
+>
+> --
+> System Analyst Programmer
+> PTI Lab
+> Indiana University
+>
+
+--001a1133935ce1d3d904f8488433--
+

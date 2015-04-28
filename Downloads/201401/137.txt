@@ -1,0 +1,104 @@
+From users-return-135225-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 21 07:28:29 2014
+Return-Path: <users-return-135225-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 56C371070B
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 21 Jan 2014 07:28:29 +0000 (UTC)
+Received: (qmail 51663 invoked by uid 500); 21 Jan 2014 07:28:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 51171 invoked by uid 500); 21 Jan 2014 07:28:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 51157 invoked by uid 99); 21 Jan 2014 07:28:13 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 21 Jan 2014 07:28:13 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bmathus@gmail.com designates 74.125.83.51 as permitted sender)
+Received: from [74.125.83.51] (HELO mail-ee0-f51.google.com) (74.125.83.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 21 Jan 2014 07:28:08 +0000
+Received: by mail-ee0-f51.google.com with SMTP id b57so3848114eek.38
+        for <users@maven.apache.org>; Mon, 20 Jan 2014 23:27:47 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=eO9VhtZ+qPoUh2ALcoHC25X2qvzi/fN6s/qPVeObkY4=;
+        b=G2XssJe1hOVoVdNJgOMXPuk8toQ7JPwFIxM2B0fWMLHg7rmbvUDNm31h6NPiYFscWo
+         taAHbpZvamjKCUlgYk7qRNrwpUw+rcU1f5Mg2PvLNGoAWtaHmehF37MbSFqZdb7w/0Ht
+         UsTfWfArbA+qbQPPCmOgqbu1cB9sOa/PV5U0FD7DkngH7K1/+CUKo3zDP09lL7oaM7v5
+         dHqZdM76yLzir0Vw0oRmVzc8K3t1vMcT8fqMi5MKXbVBvVO9bKA8VpF4oyCIo3IYZrm1
+         SukxUxByH5ZOIZpMQaMTek+naZ7RlkakrH8cDV9o6A008zWFtgWAepY/oKUMXkpRRjHr
+         5X6g==
+MIME-Version: 1.0
+X-Received: by 10.14.194.131 with SMTP id m3mr22186690een.2.1390289267482;
+ Mon, 20 Jan 2014 23:27:47 -0800 (PST)
+Sender: bmathus@gmail.com
+Received: by 10.14.224.198 with HTTP; Mon, 20 Jan 2014 23:27:47 -0800 (PST)
+Received: by 10.14.224.198 with HTTP; Mon, 20 Jan 2014 23:27:47 -0800 (PST)
+In-Reply-To: <1390239550739-5781929.post@n5.nabble.com>
+References: <1390239550739-5781929.post@n5.nabble.com>
+Date: Tue, 21 Jan 2014 08:27:47 +0100
+X-Google-Sender-Auth: huLceL2FHMzU0jBJfrrv1cCAuc8
+Message-ID: <CANWgJS5rckjQicU=Cr+P6Yx-ApwFP9QiPaW6dOypeJog9gnipg@mail.gmail.com>
+Subject: Re: turns EAR into an OSGi
+From: Baptiste Mathus <bmathus@batmat.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b342c64ec685d04f075f165
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b342c64ec685d04f075f165
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+Seems not so much a maven question. More an OSGi one.
+IMO, you should start by thinking about or explaining what you would expect
+maven to do.
+
+Knowing both Java EE and OSGi (here it's bundles) a bit, I can't see even
+doing it manually anything obvious to something approaching a conversion.
+Le 20 janv. 2014 18:39, "acostela" <acostela1989@gmail.com> a =C3=A9crit :
+
+> Hi everybody.
+>
+> I'm a bit new with maven. I've worked with it before but no in the depth
+> that I need now. I have searched trough internet and inside this forum an=
+d
+> I
+> didn't found anything conclusive to my question.
+>
+> I have an Enterprise Java application that it's build with Maven and it h=
+as
+> several modules in it. I have some EJBs other kind of classes and package=
+s
+> like Jars etc. I use an ear package to build all together into an .ear
+> package. I would like to turns this into an OSGi. Can I do this with mave=
+n?
+> What it's the best way to achieve this?
+>
+> Thank you very much to everybody.
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/turns-EAR-into-an-OSGi-tp5781929.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7b342c64ec685d04f075f165--
+

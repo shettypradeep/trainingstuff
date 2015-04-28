@@ -1,0 +1,234 @@
+From users-return-137836-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Nov 25 19:52:22 2014
+Return-Path: <users-return-137836-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 26EC010DBF
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 25 Nov 2014 19:52:22 +0000 (UTC)
+Received: (qmail 99277 invoked by uid 500); 25 Nov 2014 19:52:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99181 invoked by uid 500); 25 Nov 2014 19:52:20 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99169 invoked by uid 99); 25 Nov 2014 19:52:20 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Nov 2014 19:52:20 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=FORGED_YAHOO_RCVD,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of its_toasted@yahoo.com designates 98.138.91.151 as permitted sender)
+Received: from [98.138.91.151] (HELO nm21-vm3.bullet.mail.ne1.yahoo.com) (98.138.91.151)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Nov 2014 19:52:15 +0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s2048; d=yahoo.com;
+	b=o65Ku6YHgdfH5nXp9s5s3qT3H6VrCcuFvI0vViWgJQUY34MwnCF+ewlPPbDLUi7rmfTqRTK8HoRK3S/kX7AndbfFtYCsTGGQW6qkHnjIF0sTJVIFAocKEjD9WJIBFmOgBi2TLPgNTVuPZsukSflkAtgDEAFN+c7an6vTxuqpwOZM4L2nlJgAcIjvMJ12YOqi422Yhh8m6qcAFyAKPzVqCz6g2QWUszl4g7PQ6L0XXf84LCS8tSAuv0hBQIWgpD+SKT4xgcafUKErNXGZXTBYZ1PjTKzgLPXa/p1N6AuNU2XEZP8Rrs84xmUC0WUZdMidkYLE9DGHdtxyw/rFRT50+g==;
+Received: from [98.138.226.178] by nm21.bullet.mail.ne1.yahoo.com with NNFMP; 25 Nov 2014 19:51:54 -0000
+Received: from [98.138.84.41] by tm13.bullet.mail.ne1.yahoo.com with NNFMP; 25 Nov 2014 19:51:54 -0000
+Received: from [127.0.0.1] by smtp109.mail.ne1.yahoo.com with NNFMP; 25 Nov 2014 19:51:54 -0000
+X-Yahoo-Newman-Id: 215618.61138.bm@smtp109.mail.ne1.yahoo.com
+X-Yahoo-Newman-Property: ymail-3
+X-YMail-OSG: kesBrS0VM1lu0q8lM5ik5LZQeZc9_KvmHddXFwT0lIDdsCY
+ ds_PLJYkmyDpERZ.yzTVaBZ9EUg60_LuPoebHdyec1MLjN6a_ECYSFzgRXrl
+ S5OJkLUDo3C8E61hQrn8kSAUV.FoxuaFI40AR8HoRvyjwbpVBhunfxsG31DO
+ POjVf_OALRbQWVSGfhFY0.pd7gtDhY6b8Wu4UI_4AJKRsiBFiFVgRvj7bHfr
+ jiNoBqQxBfEO9BQRQ1pbpXmJ5i3kjSteNgXjY_LYcQreeCu68GN4ZCxM9djj
+ g5qUS6b7nZpba9b8tG6NDxe.CI6fzmnRqqxGHyZ2_74aIa1q.3WAFrmXgDKf
+ Kj7_aa.5LLYDDSvKFytE20aE6XYd11nCBUsn6A9WZhQ0EYmOkvjOSQnwuntO
+ oA2GWRqQPANDsHm64iLjWgLL65jt8KP4GHLzHcyM4SdVukJjvBNaSCovllbs
+ 1G2fVswIHT3cW4bUYwG8n0ukSAU6TrskbteQcCWD0Y5C0GLSO0NemF4CYMIn
+ 1ENNd47p5ffCvLU2vvN9WdjCZRvPoSM9JYJRprKRaT4glJSaDOJfoEK9FKUH
+ 7myiYgv6HBWNf2sFgBvQWngt.jAEyMdVCrT7m1mxhKraEloTWpXzQLtu2MlO
+ 6tz0NeYlXgjaTfT2HHbZ30r568_0NhyAxT397AG4V6jc0ivFNafHXvuvoeHf
+ HT.RhjcY8DtzYknQKFVUDXe9MRGHUua75
+X-Yahoo-SMTP: PKuT8k2swBCeFOHzkGy5rTOUTa2hBxlR
+Message-ID: <5474DDD7.6080808@yahoo.com>
+Date: Tue, 25 Nov 2014 11:51:51 -0800
+From: Mark Eggers <its_toasted@yahoo.com.INVALID>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Thunderbird/31.2.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Linux Command Line System Property Issue
+References: <BN3PR0301MB083682B7D7D2057D2FC9D7FACE730@BN3PR0301MB0836.namprd03.prod.outlook.com> <CAPCUOdEaR5v4BZwidq3ogUKTyhPiBmq0aXmg+rfHtCcAq5iQ1w@mail.gmail.com> <BN3PR0301MB08366AC9F00A43E270118726CE730@BN3PR0301MB0836.namprd03.prod.outlook.com>
+In-Reply-To: <BN3PR0301MB08366AC9F00A43E270118726CE730@BN3PR0301MB0836.namprd03.prod.outlook.com>
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+X-Antivirus: avast! (VPS 141125-1, 11/25/2014), Outbound message
+X-Antivirus-Status: Clean
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Phillip,
+
+Try single quotes. Double quotes in bash allow special characters
+(including spaces) to be interpreted by the shell. Single quotes
+prevent the shell from being interpreted.
+
+mvn package -DmavenArgLine='arg1 arg2'
+
+Partial results:
+
+[INFO] --- maven-antrun-plugin:1.7:run (echo) @ FooLine ---
+[INFO] Executing tasks
+
+echo:
+     [echo] arg1 arg2
+
+My pom.xml (sorry for the line wrapping):
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.mdeggers</groupId>
+    <artifactId>FooLine</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.7</version>
+                <executions>
+                    <execution>
+                        <id>echo</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <target name="echo">
+                        <echo>${mavenArgLine}</echo>
+                    </target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+
+My maven version (on Fedora 20, 64 bit - sorry for the line wrapping):
+
+Apache Maven 3.2.3 (33f8c3e1027c3ddde99d3cdebad2656a31e8fdf4;
+2014-08-11T13:58:10-07:00)
+Maven home: /opt/Apache/maven
+Java version: 1.7.0_72, vendor: Oracle Corporation
+Java home: /opt/Sun/jdk1.7.0_72/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "3.17.3-200.fc20.x86_64", arch: "amd64",
+family: "unix"
+
+. . . just my two cents
+/mde/
+
+On 11/25/2014 11:29 AM, Gribnau, Phillip wrote:
+> Hi,
+> 
+> Thanks for the suggestion. I tried it but it doesn't work. For some
+> reason on linux it tries to process the second argument as a
+> lifecycle phase. I am using v3.2.1 btw.
+> 
+> mvn clean install "-DmavenArgLine=arg1 arg2" -e 2>&1
+> 
+> [ERROR] Unknown lifecycle phase "arg2". You must specify a valid
+> lifecycle phase or a goal in the format <plugin-prefix>:<goal> or
+> <plugin-group-id>:<plugin-artifact-id>[:<plugin-version>]:<goal>.
+> Available lifecycle phases are: validate, initialize,
+> generate-sources, process-sources, generate-resources,
+> process-resources, compile, process-classes, generate-test-sources,
+> process-test-sources, generate-test-resources,
+> process-test-resources, test-compile, process-test-classes, test,
+> prepare-package, package, pre-integration-test, integration-test,
+> post-integration-test, verify, install, deploy, pre-site, site,
+> post-site, site-deploy, pre-clean, clean, post-clean. -> [Help 1]
+> 
+> -----Original Message----- From: Adrien Rivard
+> [mailto:adrien.rivard@gmail.com] Sent: Tuesday, November 25, 2014
+> 1:33 AM To: Maven Users List Subject: Re: Linux Command Line System
+> Property Issue
+> 
+> Hi,
+> 
+> Maybe try "-DmavenArgLine=arg1 arg2" It works on plain java but
+> can''t think of a way to test it quickly with maven.
+> 
+> 
+> On Tue, Nov 25, 2014 at 2:21 AM, Gribnau, Phillip
+> <pgribnau@informatica.com> wrote:
+> 
+>> Hi Everyone,
+>> 
+>> I am having trouble passing in a value via the command line on
+>> bash in linux, but I have it working correctly on windows.
+>> 
+>> On the command line, if I pass in the following: 
+>> -DmavenArgLine="arg1 arg2"
+>> 
+>> The error on linux is: Unknown lifecycle phase "arg2" Windows is
+>> able to interpret this correctly and show "arg1 arg2" in the
+>> output, verified by using the following plugin:
+>> 
+>> <plugin> <artifactId>maven-antrun-plugin</artifactId> 
+>> <version>1.7</version> <executions> <execution> 
+>> <phase>generate-sources</phase> <configuration> <tasks> 
+>> <echo>${mavenArgLine}</echo> </tasks> </configuration> <goals> 
+>> <goal>run</goal> </goals> </execution> </executions> </plugin>
+>> 
+>> 
+>> My need is that the value of mavenArgLine has to be given from
+>> the command line as the value can differ from different
+>> environments. Is there a way to pass in the value of mavenArgLine
+>> in linux with spaces?
+>> 
+>> 
+>> Thanks, Phillip
+>> 
+>> 
+> 
+> 
+> -- Adrien Rivard
+> 
+> ---------------------------------------------------------------------
+>
+> 
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+> 
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2
+
+iQEcBAEBAgAGBQJUdN3XAAoJEEFGbsYNeTwtgbIH/2m3bzABZxPhgc7ZnfV4Buq2
+X4owJ0MCkY84U7xVMZRmRx/9YUYb5lbKH9Evm/hxsM8vfWcPfYka4z51AcXbyRzy
+Q90a8PxaZQJootaTViYm8Wm+mATADtYIF3DDarptrlSB0GOCx2rlkJ/E9qBqr0Mv
+iLlNyHaQIILnafavqx7ahL1yTZldHaxhqKFMU3xrVW0CLch9W0CTkYpm1GspvztZ
+ffTlnOE86OI6TYS0/oxZWTs6RT7HdTYDSMaARpTkPNIjk62dewWPRhSiQp1ddeUD
+95NdJDesX/vZjko6/BMczgDrSXmOOprqskg2OC2oRRD3EkY/OjWVFghJt/oqB0s=
+=cvwo
+-----END PGP SIGNATURE-----
+
+---
+This email is free from viruses and malware because avast! Antivirus protection is active.
+http://www.avast.com
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

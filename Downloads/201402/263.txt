@@ -1,0 +1,180 @@
+From users-return-135582-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Feb 23 16:40:21 2014
+Return-Path: <users-return-135582-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4295E101BE
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 23 Feb 2014 16:40:21 +0000 (UTC)
+Received: (qmail 12662 invoked by uid 500); 23 Feb 2014 16:40:17 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 12597 invoked by uid 500); 23 Feb 2014 16:40:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 12589 invoked by uid 99); 23 Feb 2014 16:40:16 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 23 Feb 2014 16:40:16 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of justinhrobbins@gmail.com designates 209.85.214.178 as permitted sender)
+Received: from [209.85.214.178] (HELO mail-ob0-f178.google.com) (209.85.214.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 23 Feb 2014 16:40:10 +0000
+Received: by mail-ob0-f178.google.com with SMTP id va2so3157022obc.9
+        for <users@maven.apache.org>; Sun, 23 Feb 2014 08:39:50 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=NVZ844slc1IEUesM7Csf2vf5JSUimXbqp86D/zK8a8A=;
+        b=p0EXAPg3ILI3h1hmaALasn8JnUNIFstwmuUi/7rhgg7Hbctce4KwRIUcuB78LpQjui
+         Gx0cIEjseh1q1XGJPdHjrlY9huAsoT+FPJigOUK3268HdB81VQvjl3dqFEct+WmIqcOA
+         Dip6OroeWSI5arIiKKRjwEBSvjyARiikcKSimcUVVuX0bFSVqQJxDxKTmmSClOG6u1xJ
+         w2EiRbb9b5C6/p2RYWM2cS3OurQ+FiCWh9HjZXt9d/pS8gfTSABX6UU+1O+/OLYvkxxR
+         VDDEPGcVRT0pcrByW84HnEjqcrnIpnkrLZawH3tgq+S09dApdFu5pp4vidTKAZ5nZGiz
+         08Zw==
+MIME-Version: 1.0
+X-Received: by 10.60.130.234 with SMTP id oh10mr18233846oeb.60.1393173589846;
+ Sun, 23 Feb 2014 08:39:49 -0800 (PST)
+Received: by 10.182.207.36 with HTTP; Sun, 23 Feb 2014 08:39:49 -0800 (PST)
+In-Reply-To: <5597676.gU2Vy7hCOq@herve-desktop>
+References: <CAK7_69du2_mShGCOLiLHRV7sV_3SVifV4KYOFffMQ0wv3PdCEA@mail.gmail.com>
+	<5597676.gU2Vy7hCOq@herve-desktop>
+Date: Sun, 23 Feb 2014 09:39:49 -0700
+Message-ID: <CAK7_69dAPt19HfiR4eEC1WePU=dMO__o_jR0RZD6RJze8ANLqA@mail.gmail.com>
+Subject: Re: How to fix broken sub-module links in Maven Site for multi-module project?
+From: Justin Robbins <justinhrobbins@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e013a1106eef16f04f315803e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e013a1106eef16f04f315803e
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+I was able to fix this issue by adding a <url> element to the parent pom.
+I don't understand why that would fix it tough.
+
+Prior to adding the <url> element I saw this in the log:
+[WARNING] No project URL defined - decoration links will not be relativized=
+!
+
+After adding <url> element the log shows this:
+[INFO] Relativizing decoration links with respect to project URL:
+https://github.com/justinhrobbins/multi-module-site-report-test
+
+https://maven.apache.org/plugins/maven-site-plugin/faq.html#Use_of_url
+
+Herve: thanks for your comments.  I confirmed v2.7 was indeed being used.
+but i took your advice and added a direct dependency to 2.7.  there was no
+change in behavior until i added the <url> element to the parent pom
+
+
+On Sat, Feb 22, 2014 at 7:41 PM, Herv=E9 BOUTEMY <herve.boutemy@free.fr>wro=
+te:
+
+> looks like a bug in maven-project-info-reports-plugin, which is the plugi=
+n
+> launched by maven-site-plugin to generate every "Project information"
+> reports
+>
+> Notice: m-site-p launches plugins for each report, then a failure when
+> generating a site is not always a m-site-p bug. But every bug in every
+> report
+> plugin launched by m-site-p is sometimes (often?) seen as m-site-p bug :)
+>
+> I see you defined
+>
+> <maven.project.info.reports.plugin.version>2.7</maven.project.info.report=
+s.plugin.version>
+> but you don't use it: are you sure that the latest plugin version is used
+> in
+> your test?
+>
+> Regards,
+>
+> Herv=E9
+>
+> Le jeudi 20 f=E9vrier 2014 21:24:02 Justin Robbins a =E9crit :
+> > I am creating a Maven Site for a 3-level multi-module maven project whi=
+ch
+> > is structured like this:
+> >
+> > parent
+> >
+> >   >  child-a
+> >   >
+> >   >>   child-b
+> >
+> > I am running mvn site site:stage
+> >
+> > The Maven site module link (from the About page) works for child-a but =
+is
+> > broken for the nested module child-b. (The link to child-b does work if=
+ I
+> > first click the link to child-a.)
+> >
+> > See for yourself here:
+> >
+> http://justinhrobbins.github.io/multi-module-site-report-test/site/0.0.1-=
+SNA
+> > PSHOT/
+> >
+> > I have the following in my parent pom:
+> >
+> > <distributionManagement>
+> >     <site>
+> >         <id>site</id>
+> >         <name>site</name>
+> >         <url>scp://www.yourcompany.com/www/docs/project/</url>
+> >     </site>
+> > </distributionManagement>
+> >
+> > What needs to be done in order for the links to work for all the projec=
+t
+> > modules in this Maven site report? (i know the is not real, for the
+> moment
+> > i want it to work in stage)
+> >
+> > I added a simple test case project to Github that demonstrates the issu=
+e:
+> > https://github.com/justinhrobbins/multi-module-site-report-test
+> >
+> > I am using the following plugin versions:
+> >
+> > <maven.site.plugin.version>3.3</maven.site.plugin.version>
+> > <maven.source.plugin.version>2.2.1</maven.source.plugin.version>
+> >
+> > I have also tried adding distributionManagement/site/url to each child
+> > module.  That fixes the link to child-b from the main Site page, but th=
+en
+> > the link from child-a to child-b is broken.  These changes can be found
+> in
+> > this branch:
+> >
+> https://github.com/justinhrobbins/multi-module-site-report-test/tree/Dist=
+rib
+> > utionMgtInEachModule
+> >
+> > I have read the following relevant pages in the docs:
+> >
+> http://maven.apache.org/plugins/maven-site-plugin/examples/multimodule.ht=
+ml
+> > http://maven.apache.org/plugins/maven-site-plugin/faq.html#Use_of_url
+> >
+> > Any suggestions are appreciated.
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--089e013a1106eef16f04f315803e--
+

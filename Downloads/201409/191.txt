@@ -1,0 +1,180 @@
+From users-return-137330-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Sep 20 00:24:24 2014
+Return-Path: <users-return-137330-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8779C11A96
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 20 Sep 2014 00:24:24 +0000 (UTC)
+Received: (qmail 4555 invoked by uid 500); 20 Sep 2014 00:24:22 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 4469 invoked by uid 500); 20 Sep 2014 00:24:22 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 4452 invoked by uid 99); 20 Sep 2014 00:24:22 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 20 Sep 2014 00:24:22 +0000
+X-ASF-Spam-Status: No, hits=1.8 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of burtonator2011@gmail.com designates 209.85.215.43 as permitted sender)
+Received: from [209.85.215.43] (HELO mail-la0-f43.google.com) (209.85.215.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 20 Sep 2014 00:23:56 +0000
+Received: by mail-la0-f43.google.com with SMTP id gi9so4077745lab.16
+        for <users@maven.apache.org>; Fri, 19 Sep 2014 17:23:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=rePv9ruIAErIf+L12fToLFYb/vJTuSJT9j2P0OF7Ago=;
+        b=IYLT+HDpbcc61ALQoP/E6UE/uTti5Zi3JBkc/krx+Ua5AuIJWzci9ru4NFlRTlXkRy
+         lhmRVE5E28oX7Po2mozWK+IatC3iaCxgz/SNSkYHhvF6M3lSuEBzQwszHFYtWozfGMGu
+         CoRCq+y6nUFO00G5PzgvnRY3ePsPKORXkPqbW53UhxNwLK0vNBKVWPtJ8vHJsniKWiuN
+         O56LCujNoh504Fys56HV5NRclwao7RR1U4S1r4i7rLhHoiBoa0Vz/ujV61wkx3+dI2HK
+         Od5o+Or7fBQzWGWTlGIT/PMekiMHhQ1NSMvXMI7VA6hJapgTb9X4I/QGisgDL+UT1W0E
+         bHBg==
+X-Received: by 10.152.29.129 with SMTP id k1mr9920616lah.81.1411172635736;
+ Fri, 19 Sep 2014 17:23:55 -0700 (PDT)
+MIME-Version: 1.0
+Sender: burtonator2011@gmail.com
+Received: by 10.112.210.101 with HTTP; Fri, 19 Sep 2014 17:23:35 -0700 (PDT)
+In-Reply-To: <CANnZoJszHeTjS9OHbPPyyh_-B3EGLv0AOci3Soq9TWW1O7EQNA@mail.gmail.com>
+References: <CAAZU44mmd5XNEbZaTMFt+UaixE19MXtAf5bSMTm9hB1Rt4yZ1Q@mail.gmail.com>
+ <CADN69ykruM0o3QPhBjW-wfcET+aTSTdvYkZiw9vtem_gFB-r3Q@mail.gmail.com> <CANnZoJszHeTjS9OHbPPyyh_-B3EGLv0AOci3Soq9TWW1O7EQNA@mail.gmail.com>
+From: Kevin Burton <burton@spinn3r.com>
+Date: Fri, 19 Sep 2014 17:23:35 -0700
+X-Google-Sender-Auth: 26wmrZtWvujADRJD8dTPNgilPB8
+Message-ID: <CAAZU44mh-BJoKhoaSr-c62t3N_nCAvqO5APJ-_bjXpvODEgfDw@mail.gmail.com>
+Subject: Re: retrying flakey tests?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0160b7daab7f1c0503743bb9
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0160b7daab7f1c0503743bb9
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+The loop idea is a good one.. I=E2=80=99d have to implement that on my own =
+but it=E2=80=99s
+not the end of the world.
+
+And I=E2=80=99d love to live in a world you present above where all test ca=
+ses work
+and can be isolated :)
+
+=E2=80=A6 but it=E2=80=99s not practical. Google has a big problem with thi=
+s in their unit
+testing.  They have millions of unit tests and they can=E2=80=99t fail a wh=
+ole
+build because 1/5000 of their tests are flakey.  At 1M tests you=E2=80=99re=
+ going
+to end up with a lot failing.
+
+In my situations I have weird race conditions with ActiveMQ having a JMX
+bug where there=E2=80=99s a race from the GC time of the queue and the time=
+ I read
+the JMX value.
+
+I have about 2-3 of these.. I CAN NOT reproduce these at all.. only during
+testing. It=E2=80=99s amazingly annoying :-(
+
+On Fri, Sep 19, 2014 at 10:18 AM, Martin Todorov <carlspring@gmail.com>
+wrote:
+
+> I agree with Curtis about the possible approach of doing a for loop. I'm
+> also aware of the fact that every corner case is a case of it's own and
+> that you sometimes need to be able to do things quick and dirty.
+>
+> I had a manager who insisted I should simply ignore one of the test cases
+> he'd written, which was failing regularly only during releasing on our CI
+> server. He refused to fix the test for about a year and a half, as it was
+> "a flake". Eventually, it started hitting people big time, especially whe=
+n
+> we moved to the cloud, and it turned out to be something which shouldn't
+> have been ignored at all...
+>
+> In the end, it's all up to you, but I'd recommend playing it as safe as
+> possible! :-)
+>
+> On Fri, Sep 19, 2014 at 6:08 PM, Curtis Rueden <ctrueden@wisc.edu> wrote:
+>
+> > Hi Kevin,
+> >
+> > > Is there a way to retry a flakey test?
+> >
+> > In general I agree with Martin Todorov that tests should be small and
+> > atomic, and flakiness is a sign of larger problems. However, I also agr=
+ee
+> > with you that sometimes flaky tests are a reality: my group has run int=
+o
+> > this with behavior of the JVM garbage collector differing on Windows, f=
+or
+> > example, in a rather nondeterministic way. In that case, retrying tests
+> > ~5-10 times was a good solution for us.
+> >
+> > But rather than configuring Surefire or Failsafe to do this, I'd sugges=
+t
+> > (if possible) to write it into the test itself. Put the test in a for
+> loop,
+> > and then assert at the end that numSuccesses > 0 or whatever. You then
+> also
+> > issue a warning if numSuccesses !=3D numAttempts, as you requested. In
+> short:
+> > it gives you the flexibility you need.
+> >
+> > Regards,
+> > Curtis
+> >
+> > On Fri, Sep 19, 2014 at 11:24 AM, Kevin Burton <burton@spinn3r.com>
+> wrote:
+> >
+> > > Is there a way to retry a flakey test?
+> > >
+> > > I=E2=80=99d basically like to have a flag that retries a failing test=
+ 2 or 3
+> > times.
+> > >
+> > > Flakey and non deterministic tests are a fact of life in more
+> complicated
+> > > systems.
+> > >
+> > > The main problem being that they are impossible to setup again becaus=
+e
+> > > they=E2=80=99re usually race conditions.
+> > >
+> > > If I could just retry the test a second time , that would solve this
+> > issue.
+> > >
+> > > Would be nice to have the build warned that the test is failing
+> though..
+> > >
+> > > --
+> > >
+> > > Founder/CEO Spinn3r.com
+> > > Location: *San Francisco, CA*
+> > > blog: http://burtonator.wordpress.com
+> > > =E2=80=A6 or check out my Google+ profile
+> > > <https://plus.google.com/102718274791889610666/posts>
+> > > <http://spinn3r.com>
+> > >
+> >
+>
+
+
+
+--=20
+
+Founder/CEO Spinn3r.com
+Location: *San Francisco, CA*
+blog: http://burtonator.wordpress.com
+=E2=80=A6 or check out my Google+ profile
+<https://plus.google.com/102718274791889610666/posts>
+<http://spinn3r.com>
+
+--089e0160b7daab7f1c0503743bb9--
+

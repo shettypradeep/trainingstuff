@@ -1,0 +1,75 @@
+From users-return-135699-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar  5 21:02:50 2014
+Return-Path: <users-return-135699-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7AA6610E58
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  5 Mar 2014 21:02:50 +0000 (UTC)
+Received: (qmail 49680 invoked by uid 500); 5 Mar 2014 21:02:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 49624 invoked by uid 500); 5 Mar 2014 21:02:41 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 49616 invoked by uid 99); 5 Mar 2014 21:02:41 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Mar 2014 21:02:41 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.192.173] (HELO mail-pd0-f173.google.com) (209.85.192.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Mar 2014 21:02:35 +0000
+Received: by mail-pd0-f173.google.com with SMTP id z10so1543208pdj.32
+        for <users@maven.apache.org>; Wed, 05 Mar 2014 13:02:13 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:to:subject:date:message-id:in-reply-to
+         :references:mime-version:content-type;
+        bh=ri4vqCRTUm2AAZ3srLYoa0y6uSqxsn7PqSn8FFStsL0=;
+        b=gvLQ7KYTCL7k0VbKyXr2Q4LhsaklzF3RwQX2q0fW4m89luOXsEqrcDuEw4mOJeFu3h
+         nhulR1FExFQLddixx8aE85kg1Pn7S4hqsygay/9s4RHzFrfdKlXrkJt1fj4npddCxb0B
+         SJomOeFV9Ji82DU0IUMSZxNVbqksJlzCNVXtVUnEAwy6NZmNwoKp8rcSQ9jUZHF2IFQw
+         KB+c9W/Q4zlUxrb9Q8Rw0MPU9BTvQ3aRYIdcEuqHtVb5A6iBP6Z/iWZu7KSae+zsKseh
+         xN7zmcWWSg3EwVkBybQrwmvJgSeevVRjMEB7uFObsjYhoU/DoSyeyOwWCgWiv1j34JZV
+         RiuQ==
+X-Gm-Message-State: ALoCoQkR/hgZff8coEd+5IdoQCK7KWAhOl2QTAMu545dSsFTXoOQMETaaiWhOl8OfFvPLB0Ff/+p
+X-Received: by 10.66.161.38 with SMTP id xp6mr9488990pab.145.1394053333837;
+        Wed, 05 Mar 2014 13:02:13 -0800 (PST)
+Received: from [10.0.0.142] (akl.smx.co.nz. [203.84.135.120])
+        by mx.google.com with ESMTPSA id n6sm11914841pbj.22.2014.03.05.13.02.11
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Wed, 05 Mar 2014 13:02:12 -0800 (PST)
+From: "Mark Derricutt" <mark@talios.com>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: [ANN] Apache Maven Release 2.5 Released
+Date: Thu, 06 Mar 2014 10:02:07 +1300
+Message-ID: <E910D843-42E7-4804-8BE5-D5E5BCEC1076@talios.com>
+In-Reply-To: <CALhtWkfTX1yvo+P0toicn8QqkpbDpgiGKyOZi=0SZ7J7x5udNg@mail.gmail.com>
+References: <CALhtWkfTX1yvo+P0toicn8QqkpbDpgiGKyOZi=0SZ7J7x5udNg@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; format=flowed
+X-Mailer: MailMate (1.7.2r4025)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 6 Mar 2014, at 0:44, Benson Margulies wrote:
+
+> http://maven.apache.org/maven-release/maven-release-manager/
+
+I don't think I've ever actually come across the maven-release-manager 
+before - is there any information about how/what it does - the 
+"introduction" on the project page is rather.....   hopeless.
+
+Mark
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

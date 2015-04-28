@@ -1,0 +1,105 @@
+From users-return-137705-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Nov  5 10:38:19 2014
+Return-Path: <users-return-137705-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 76428FEE4
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  5 Nov 2014 10:38:19 +0000 (UTC)
+Received: (qmail 23446 invoked by uid 500); 5 Nov 2014 10:38:17 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 23360 invoked by uid 500); 5 Nov 2014 10:38:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 23338 invoked by uid 99); 5 Nov 2014 10:38:16 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Nov 2014 10:38:16 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.218.44 as permitted sender)
+Received: from [209.85.218.44] (HELO mail-oi0-f44.google.com) (209.85.218.44)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Nov 2014 10:37:50 +0000
+Received: by mail-oi0-f44.google.com with SMTP id h136so11864504oig.31
+        for <users@maven.apache.org>; Wed, 05 Nov 2014 02:36:19 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=pwcsMpbhAU5poBlSQl3786WQkwKHmAwPUhzUrDYan7Y=;
+        b=OzfTc+fddZ3SMTTecciYPpU5JPle/kj8BOpVPuw6uVP0I8+FBOOsCMxVO6KVApVNwy
+         cab+XdjC2cG/DDAiH3uvpVR5DP1Bwnja38JCPUk9fkm7JNjTTB9TEVSbdpT0o3rAa5/x
+         CIBud/TvG0NhmN/R14zCCKgSRXPuZh97/SMFqzIewnlLrZvyXxR2q02gWdyXxnGxu/7E
+         yD5EX5KfAYszJjSwBsdV11Nk6Zsi3X8QX2/9qWMaaiAQk2aXxm9sWIHgAB3+SNTPM10A
+         bKR1cxsGiF0aAVRpNKswQIgeDr6PQ0LbfJ9kSRRjS1uO3VtcnA/r8JGHcPWjy46QULym
+         /suw==
+MIME-Version: 1.0
+X-Received: by 10.60.59.40 with SMTP id w8mr32760397oeq.4.1415183779114; Wed,
+ 05 Nov 2014 02:36:19 -0800 (PST)
+Received: by 10.60.116.39 with HTTP; Wed, 5 Nov 2014 02:36:19 -0800 (PST)
+Date: Wed, 5 Nov 2014 10:36:19 +0000
+Message-ID: <CA+nPnMx2f0XPdjcwBTsCcZWT4=Rc8QzDe3mV57F7Vz4Dd-XYtQ@mail.gmail.com>
+Subject: [ANN] Animal Sniffer 1.12 Released
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: announce@mojo.codehaus.org, Maven Users List <users@maven.apache.org>, 
+	"user@mojo.codehaus.org" <user@mojo.codehaus.org>, "dev@mojo.codehaus.org" <dev@mojo.codehaus.org>, 
+	Ant Users List <user@ant.apache.org>, 
+	"jenkinsci-dev@googlegroups.com" <jenkinsci-dev@googlegroups.com>
+Content-Type: multipart/alternative; boundary=089e015372aa72942905071a26bf
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e015372aa72942905071a26bf
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+The Mojo team is pleased to announce the release of Animal Sniffer version
+1.12.
+
+Animal Sniffer provides tools to assist verifying that classes
+compiled with a newer JDK/API are compatible with an older JDK/API.
+
+The following tools are provided by animal sniffer:
+
+* A command line tool to dump the class file version number
+(http://mojo.codehaus.org/animal-sniffer/animal-sniffer/index.html).
+This helps you track down the offending jar file when you see
+UnsupportedClassVersionError.
+
+* A set of ANT tasks
+(http://mojo.codehaus.org/animal-sniffer/animal-sniffer-ant-tasks/index.html
+)
+for verifying that your classes comply with an API signature as well
+as tasks for creating API signatures from a JDK, or a collection or
+jar and class files, or a collection of other API signature files, or
+combination of these elements.
+
+* A rule for use in the maven-enforcer-plugin
+(
+http://mojo.codehaus.org/animal-sniffer/animal-sniffer-enforcer-rule/index.html
+)
+for verifying that your classes comply with an API signature .
+
+* A maven plugin
+(http://mojo.codehaus.org/animal-sniffer-maven-plugin/index.html) for
+verifying that your classes comply with an API signature as well as
+for creating API signatures from a JDK, or the current module's
+classes, or the current module's dependencies, or a collection of
+other API signature files, or combination of these elements.
+
+The artifacts have are available from the Maven Central repository.
+
+Release Notes - Mojo's Animal Sniffer - Version 1.12
+
+** New Feature
+    * [MANIMALSNIFFER-47] - Allow the maven plugin and enforcer rule to be
+able to filter the dependencies
+
+The Mojo Team.
+
+--089e015372aa72942905071a26bf--
+

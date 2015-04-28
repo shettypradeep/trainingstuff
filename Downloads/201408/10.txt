@@ -1,0 +1,73 @@
+From users-return-137129-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Aug 27 08:20:09 2014
+Return-Path: <users-return-137129-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 105A611FF8
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 27 Aug 2014 08:20:09 +0000 (UTC)
+Received: (qmail 36068 invoked by uid 500); 27 Aug 2014 08:20:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 35966 invoked by uid 500); 27 Aug 2014 08:20:04 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 35954 invoked by uid 99); 27 Aug 2014 08:20:04 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 27 Aug 2014 08:20:04 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of baerrach@gmail.com designates 209.85.213.51 as permitted sender)
+Received: from [209.85.213.51] (HELO mail-yh0-f51.google.com) (209.85.213.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 27 Aug 2014 08:19:39 +0000
+Received: by mail-yh0-f51.google.com with SMTP id f73so13250237yha.10
+        for <users@maven.apache.org>; Wed, 27 Aug 2014 01:19:38 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=zf4dExhRCB0ekPG3+MwIK1/VQWVldFX8DidcRQ9jJpM=;
+        b=dAcs1DHeCJf6wdcmv7GI5vA+bbRrUdcsE5tLt/1Br7vHrUS5IWJYIzdTVIVXbOg1/X
+         Vq8JqyY+nYrWuHnHyeuM7LgbKtfU8ZWnFTD1qZvQ+FuOFCj4/rARDW9QqD/fbWdSGIjt
+         GBYhg7LRtNtjPBs8Te/jMEDtYzhrU+BADBlIRqp4mtaKtGqIBVWK4yvr88HK2s/ESA0J
+         KwDG4LykZSxUp0lPIl0mIWXTCoGKjlbZ1nGkPzrEC6OBXbRrPNvnNbTPgYtMVv9vEFzj
+         /htQGYdnpN6mdTH1hOR96E6Rf8PDaqjaMeOrrAQjN4HKD7yH41h3PRSbk3udjN6FYEGo
+         JXcQ==
+MIME-Version: 1.0
+X-Received: by 10.52.146.17 with SMTP id sy17mr13623607vdb.29.1409127578153;
+ Wed, 27 Aug 2014 01:19:38 -0700 (PDT)
+Received: by 10.220.97.146 with HTTP; Wed, 27 Aug 2014 01:19:38 -0700 (PDT)
+In-Reply-To: <EA9E1E1442A04312938215B1CCD94E24@gmail.com>
+References: <3C8773DCAF2F48179EE39D482559C6CB@gmail.com>
+	<EA9E1E1442A04312938215B1CCD94E24@gmail.com>
+Date: Wed, 27 Aug 2014 17:49:38 +0930
+Message-ID: <CADVp3v8qeC6+cr9htEzRM+pt==sQrN9ovDUf1dU2pkfer5JKpw@mail.gmail.com>
+Subject: Re: maven 3.1.1 crashes on GC overhead limit exceeded with millions
+ of org.eclipse.aether.graph.DefaultDependencyNode
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=bcaec52d5987bd3b260501981431
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--bcaec52d5987bd3b260501981431
+Content-Type: text/plain; charset=UTF-8
+
+On 27 August 2014 17:05, Juven Xu <juvenshun@gmail.com> wrote:
+
+> after enabling debug log I got 1.1G log full of lines of this:
+>
+> [DEBUG] Using mirror tbmirror (
+> http://mvnrepo.taobao.ali.com/mvn/repository) for
+> sonatype-nexus-snapshots (
+> https://oss.sonatype.org/content/repositories/snapshots).
+
+
+Have you confirmed that your mirror is working as expected?
+
+--bcaec52d5987bd3b260501981431--
+

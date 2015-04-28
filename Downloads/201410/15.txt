@@ -1,0 +1,119 @@
+From users-return-137586-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Oct 18 19:08:02 2014
+Return-Path: <users-return-137586-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2CFDF17713
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 18 Oct 2014 19:08:02 +0000 (UTC)
+Received: (qmail 98891 invoked by uid 500); 18 Oct 2014 19:08:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 98639 invoked by uid 500); 18 Oct 2014 19:08:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 98614 invoked by uid 99); 18 Oct 2014 19:07:59 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 18 Oct 2014 19:07:59 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.213.176] (HELO mail-ig0-f176.google.com) (209.85.213.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 18 Oct 2014 19:07:55 +0000
+Received: by mail-ig0-f176.google.com with SMTP id hn15so3322918igb.3
+        for <users@maven.apache.org>; Sat, 18 Oct 2014 12:07:34 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=JDx8xblAMy99SJPakqltxl4l3KDtJlLCeZIBCx+dBsc=;
+        b=0eImdAiKwIH5VfoifxO2YUGWYq9guv1y8ldI8rg72+UNhXuz2kniZNsUdPMWNO8ZMT
+         wC2CPx0iQT491CJTV8Ek6XPdGkvf2GdcwD2ff7OoSSPRd7LH60m3awJumBSxbc9tMpp3
+         v3kBJ5AAeHv8WCaGlk6k15qCgOxlCTZh4zwTzkhl0dLsgtXJvkSxoNEREoCHCyL7jJX5
+         ockH5w/bljDEbCPkHMJX4sRWEG7BXvAyOSj+UTRJA3eYVnMZxqjmUPGxHiILNqXICvVE
+         L+C0kgoFbcbbAC1jVp5qO6ded0NNwVIZ3T+OvNjyrkjxWSMm1qr17AKy3ZxSc5XMm7oB
+         fXSw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:sender:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=JDx8xblAMy99SJPakqltxl4l3KDtJlLCeZIBCx+dBsc=;
+        b=dIDApK/RfIiPI4kTwyHOtD43fuvmnRo97SJ8GeToj6gz47ygdNp1KgHYWxdjcVLyqy
+         3LJBgCaelKuMLOaHq1pt3TIIok4WIaRiIVErSe31NNNOuxJyIjX3l3u0EgZFnUzuM8/U
+         5Kt08NCpvI63g7Vtc8iQEeSHk1Fs/cStXdVUfRhiT/5pF2atjbCQ3IVFqxRqhhK3hFyW
+         wVDSQ+UJC+zhthcTQbKqiCyIrPuN9CIrtzc8QIPlk9xLRcmUuE9EPedrksuoZTiMyTyW
+         c3IgmnmgWzsj8oZ7PiW5gBjbvB6k/K7MpoCIr9K4tYsEqglWEOdWVXrSxOxbKuS4WczU
+         ShSQ==
+X-Gm-Message-State: ALoCoQkFTwyh+92GvT0AowDn9ZOxqLSaM66jzr2Hs2KGIoRhfaHvB3fRjga2SHemVdgMBFf0bvEs
+MIME-Version: 1.0
+X-Received: by 10.42.151.66 with SMTP id d2mr2412701icw.74.1413659254768; Sat,
+ 18 Oct 2014 12:07:34 -0700 (PDT)
+Sender: kristian.rosenvold@zenior.no
+Received: by 10.50.7.10 with HTTP; Sat, 18 Oct 2014 12:07:34 -0700 (PDT)
+In-Reply-To: <CAJZRQKzrSKxrfWdSvpHnc5QdiH+FmmqL30ghDv31cWUu6CPMLg@mail.gmail.com>
+References: <CAJZRQKzrSKxrfWdSvpHnc5QdiH+FmmqL30ghDv31cWUu6CPMLg@mail.gmail.com>
+Date: Sat, 18 Oct 2014 21:07:34 +0200
+X-Google-Sender-Auth: 0gD67kWOLq4LsWcY_yqKpuW7iFI
+Message-ID: <CAJZRQKxXY__5j7ALwe9zmTwsLB9ocF2TH27TGRPeojU1RXeoOA@mail.gmail.com>
+Subject: Re: Important Notice for all users of the parallel build feature
+From: Kristian Rosenvold <kristian.rosenvold@gmail.com>
+To: Maven Users List <users@maven.apache.org>, Maven Developers List <dev@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Additionally, this issue affects parallel artifact download/pom
+interpolation in maven core. The overall symptom is interpolation
+expressions like ${project.name} not being resolved, but this can lead
+to interesting kinds of corruption.
+
+The fix can be applied to all 3.x versions of maven by dropping the
+jar in lib/ext. 2.x is not affected.
+
+Kristian
+
+
+2014-10-18 20:22 GMT+02:00 Kristian Rosenvold <kristian.rosenvold@gmail.com>:
+> Thanks to an excellent testcase provided by a JIRA user, a significant
+> source of thread safety bugs has been located and fixed. The problem
+> has an extensive reach, and can be the source of practically *any*
+> issue in parallel builds, and is probably the root cause of most JIRA
+> issues filed wrt parallel build problems.
+>
+> Fortunately, there is a very simple fix by putting the following
+> inside your plugin configuration:
+>
+>         <plugin>
+>           ...
+>           <dependencies>
+>             <dependency>
+>               <groupId>org.codehaus.plexus</groupId>
+>               <artifactId>plexus-interpolation</artifactId>
+>               <version>1.21</version>
+>             </dependency>
+>           </dependencies>
+>         </plugin>
+>
+>
+> You should also put this jar file in the lib/ext folder of your maven
+> installation:
+>
+> http://repo1.maven.org/maven2/org/codehaus/plexus/plexus-interpolation/1.21/plexus-interpolation-1.21.jar
+>
+>
+> Which plugins are affected ? It's almost easier to tell which is /not/
+> affected. See the "relates" link on
+> https://jira.codehaus.org/browse/PLXCOMP-258 to see which
+> plugins/tools are affected.
+>
+> Kristian
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

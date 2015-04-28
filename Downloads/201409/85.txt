@@ -1,0 +1,122 @@
+From users-return-137225-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Sep 10 14:22:55 2014
+Return-Path: <users-return-137225-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 45AD71121F
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 10 Sep 2014 14:22:55 +0000 (UTC)
+Received: (qmail 99878 invoked by uid 500); 10 Sep 2014 14:22:53 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99797 invoked by uid 500); 10 Sep 2014 14:22:53 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99784 invoked by uid 99); 10 Sep 2014 14:22:53 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 10 Sep 2014 14:22:53 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.219.48 as permitted sender)
+Received: from [209.85.219.48] (HELO mail-oa0-f48.google.com) (209.85.219.48)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 10 Sep 2014 14:22:49 +0000
+Received: by mail-oa0-f48.google.com with SMTP id m1so12881123oag.7
+        for <users@maven.apache.org>; Wed, 10 Sep 2014 07:22:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=DH1JiItXzlbEFY1fsaSEUY98CwvxjL6WXo0Yz5eo3uQ=;
+        b=lBa0V1aQvBwvcxgNrSzgP43u33cTI/yC/bV6IOKE7SNH72H+vWy05Haz8vF/QvZmSJ
+         rrBfmk6e6gZkhYt3zQKdmfw7LtADfsrK1nEKBb3Ym5G0klh5HX++Fbcde1gsmn5MM8pT
+         M7sSkRRYaPP7TIyt0r36xKEf5suJ8F7OzusdgDYppLYfkbTNROIP3yhfiM3bfODm097j
+         QD1HpQjzgu4bvKxY7dMVI9yQpOvd9Uv2KeWFkmW6TTPiobJH0cvbT9ybQJHlYhvE4ykC
+         0ppL/dTixHt+0Yc+Mc28SXw8hNB8BEfObyarh9ufUvjgoVjPB4d70VhHnKBOyazMERDj
+         9x0g==
+MIME-Version: 1.0
+X-Received: by 10.182.181.42 with SMTP id dt10mr2632119obc.69.1410358948471;
+ Wed, 10 Sep 2014 07:22:28 -0700 (PDT)
+Received: by 10.60.226.200 with HTTP; Wed, 10 Sep 2014 07:22:28 -0700 (PDT)
+In-Reply-To: <55BBB074DE5248439192BCB13699A45651E839AB@MSGEXSV21111.ent.wfb.bank.corp>
+References: <CAEkwH4OH7-TNjR_nptJS=UJR3E7MVzVoGmBcdfPor3WALbu5kg@mail.gmail.com>
+	<CA+nPnMwu5qjGLF31UoNOcMSSO4XWvesdPc174NF8k8jszcy4eA@mail.gmail.com>
+	<55BBB074DE5248439192BCB13699A45651E839AB@MSGEXSV21111.ent.wfb.bank.corp>
+Date: Wed, 10 Sep 2014 15:22:28 +0100
+Message-ID: <CA+nPnMw+hxThLK-p2_oKTzQy5SB7pd_PLDWgFoq4YS_FFzDCTw@mail.gmail.com>
+Subject: Re: Build once, deploy everywhere
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e01161dc0212a720502b6c845
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01161dc0212a720502b6c845
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+The down side of that is that if your environment details for a specific
+server change, then you need to rebuild.
+
+If you are loading configuration from an external source then you just
+update the external source and continue with the app as is.
+
+On 10 September 2014 15:17, <cody.a.fyler@wellsfargo.com> wrote:
+
+> Both of the below are good solutions.
+>
+> I've also seen folks use a run time based solution where a different set
+> of properties is loaded based on an Environment Variable common to all
+> servers.
+>
+> Cody Fyler
+> Lending Grid Build Team
+> G=3DLending Grid Builds
+> (515) =E2=80=93 441 - 0814
+>
+> -----Original Message-----
+> From: Stephen Connolly [mailto:stephen.alan.connolly@gmail.com]
+> Sent: Wednesday, September 10, 2014 9:15 AM
+> To: Maven Users List
+> Subject: Re: Build once, deploy everywhere
+>
+> What you want to do is have your packaged software be independent of the
+> environment it is deployed to. That way you know by checking the SHA1 of
+> the artifact you can know it was the one that was tested by QA.
+>
+> So what you do is have your application read its configuration from an
+> external source.
+>
+> One example is you could read the configuration from the JNDI environment
+> (if you are deploying in a JavaEE server). Thus you can setup the dev
+> environment with the DB servers, etc defined in JNDI and the same for QA,
+> PROD, etc
+>
+> Another example is you could look for a .properties file on the classpath
+> or at a well known location (perhaps the user home or something like that=
+)
+>
+> The application should fail fast if any of the configuration settings are
+> missing to help diagnose issues.
+>
+> There are many ways to skin this cat, but rebuilding an artifact for each
+> environment should be considered a critical anti-pattern
+>
+> On 10 September 2014 15:03, Jan <raghurefer@gmail.com> wrote:
+>
+> > Hi All,
+> >
+> > Does anyone using Maven as Build Once and deploy Everywhere method?
+> > Like lets say i don't want to recompile my source code everytime for
+> > different environment DEV,SIT,UAT & PROD. I want to do my compile and
+> > package only at DEV then deploy the artifact to all mentioned
+> > environment. Is this possible using Maven, is there any reference any
+> one could share with me Please.
+> >
+>
+
+--089e01161dc0212a720502b6c845--
+

@@ -1,0 +1,136 @@
+From users-return-136469-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri May 30 10:21:32 2014
+Return-Path: <users-return-136469-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 39448109D4
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 30 May 2014 10:21:32 +0000 (UTC)
+Received: (qmail 49231 invoked by uid 500); 30 May 2014 10:21:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 49142 invoked by uid 500); 30 May 2014 10:21:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 49134 invoked by uid 99); 30 May 2014 10:21:30 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 30 May 2014 10:21:30 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of nhoj.patrick@gmail.com designates 209.85.220.176 as permitted sender)
+Received: from [209.85.220.176] (HELO mail-vc0-f176.google.com) (209.85.220.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 30 May 2014 10:21:26 +0000
+Received: by mail-vc0-f176.google.com with SMTP id la4so1822881vcb.35
+        for <users@maven.apache.org>; Fri, 30 May 2014 03:21:06 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :cc:content-type;
+        bh=zei3LVETUh2r+HzZo+jhjldYGyohMGJzYtwfFsco54A=;
+        b=PAorfaV5OTuC0mqHwhR623QVL6KOiD219C3xkgd30WIgVavTxcdYJQRS4VrLGrD5eD
+         RMtprhkVnOp7IWUJNENlIHwTPhHA7d6sxhkqgGv+RB8YcIV6Ia7YrQr2TGrCIJX/UPEr
+         yxX9rwKFfDHdU3UTFEfjl1hR2Auo/87f7YKdw855FmsdXqnRdGrbe/Q0or7NFd19jNmS
+         nqakG0Ru7pPvr8rS6InFZ3hyYCCdhT6b6SF6xsE/cGI+GY3sBmbkMrswEXCu35fnTCIH
+         qC4naxasmqmAdPAH9LBirOrRJ0BFUro2uirNmgcabal2Vz1UG+7eAdUkoEz1eO6KOdXT
+         W3xw==
+MIME-Version: 1.0
+X-Received: by 10.58.246.132 with SMTP id xw4mr13011601vec.2.1401445265951;
+ Fri, 30 May 2014 03:21:05 -0700 (PDT)
+Received: by 10.58.238.101 with HTTP; Fri, 30 May 2014 03:21:05 -0700 (PDT)
+In-Reply-To: <1401443290.29103.YahooMailNeo@web122605.mail.ne1.yahoo.com>
+References: <1401420538.41978.YahooMailNeo@web122602.mail.ne1.yahoo.com>
+	<53884F1A.9080905@gmx.de>
+	<1401443290.29103.YahooMailNeo@web122605.mail.ne1.yahoo.com>
+Date: Fri, 30 May 2014 11:21:05 +0100
+Message-ID: <CAH9u10kqU12UimHR5qrA=MYqN7EL+95UZEuHUSvDVz=x_w3=+Q@mail.gmail.com>
+Subject: Re: How to move the <directory> of a multi-module project?
+From: John Patrick <nhoj.patrick@gmail.com>
+To: Maven Users List <users@maven.apache.org>, Thai Dang Vu <dxxvi@yahoo.com>
+Cc: "info@soebes.de" <info@soebes.de>
+Content-Type: multipart/alternative; boundary=047d7bd8fe943fd3d604fa9b67b9
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bd8fe943fd3d604fa9b67b9
+Content-Type: text/plain; charset=UTF-8
+
+So I'm guessing you then have mapped tmp to a ram drive, otherwise tmp will
+still be on your SSD unless you also have a non-SSD too which is mapped to
+tmp.
+
+Honestly as long as it's a new ish SSD, your not writing GB and GB per hour
+constantly 24/7, your SSD is under about 60% full then I would not worry
+that much.
+
+They are designed to wear the drive evenly which is an issue if you want to
+get ride of the SSD as dban won't correctly scrub the disk as the disk lies
+about which sector is being written too.
+
+My development laptop is 12 months old with a 512GB SSD, about 50% full and
+I'm doing several builds an hour, with one full clean install per hour and
+I'm expecting it to last lots more years before it dies.
+
+John
+
+
+
+On 30 May 2014 10:48, Thai Dang Vu <dxxvi@yahoo.com> wrote:
+
+>
+> Thanks, John, for answering my question. There's no special reason, I have
+> the project on a SSD drive and don't want to write to that so often.
+>
+>
+>
+> On Friday, May 30, 2014 5:28 AM, Karl Heinz Marbaise <khmarbaise@gmx.de>
+> wrote:
+>
+>
+>
+> Hi,
+>
+>
+> >
+> > grandfather
+> >       |
+> >       |---- pom.xml
+> >       |
+> >       |---- father
+> >                |
+> >                |---- pom.xml
+> >                |
+> >                |---- son
+> >                       |
+> >                       |---- pom.xml
+> >
+> > If I build that project, I will have these target directories:
+> /home/me/projects/grandfather/target,
+> /home/me/projects/grandfather/father/target and
+> /home/me/projects/grandfather/father/son/target.
+> >
+> >
+> > Is there anyway to modify only 1 pom.xml (it doesn't matter if it is
+> grandfather's or father's or son's) so that the target directories are
+> /tmp/grandfather/target, /tmp/grandfather/father/target and
+> /tmp/grandfather/father/son/target?
+>
+> So my question to this is: Why do want to do this? What's the reason to
+> use a folder outside the modules ? Can you explain your use case and why
+> you need it such that way and can't stuck with the conventions
+> project/target ?
+>
+> Kind regards
+> Karl-Heinz Marbaise
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+--047d7bd8fe943fd3d604fa9b67b9--
+

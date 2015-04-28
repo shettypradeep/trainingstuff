@@ -1,0 +1,116 @@
+From users-return-135032-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan  8 22:38:50 2014
+Return-Path: <users-return-135032-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 542B510792
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  8 Jan 2014 22:38:50 +0000 (UTC)
+Received: (qmail 22836 invoked by uid 500); 8 Jan 2014 22:38:48 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 22762 invoked by uid 500); 8 Jan 2014 22:38:48 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 22754 invoked by uid 99); 8 Jan 2014 22:38:48 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 22:38:48 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.192.179 as permitted sender)
+Received: from [209.85.192.179] (HELO mail-pd0-f179.google.com) (209.85.192.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 22:38:41 +0000
+Received: by mail-pd0-f179.google.com with SMTP id r10so2325512pdi.24
+        for <users@maven.apache.org>; Wed, 08 Jan 2014 14:38:20 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=a/RnkKN1LodmGtLXIp4hdQ6ERHB/9kSkaRQK2J8+Seg=;
+        b=s5tOeISH4gSuWXacekuaQsrjBqq6itCaXqxGaxQaEyBF1/aIkgloGq0OLiAiPtDpCM
+         CpBSFm0HkB2P5SIRMOA9Rchbdbo6i6YJIJURSMzMhg037GYSb6R1f06s65rnkB4t1ERZ
+         TH2N+zN7Ls62vXg5su8z6GuQAILqmcI/ItfpnTine8vYzCMvmZp2/2tB474ZuZT0t2ne
+         obtwpp5AXXlyh7fsZsa5uKaWVcSGTXgM8U0M3NFu2KHD504y6YzHrlAOSavdYUP5llJO
+         +oHKKs4PkPa2Q8N9yCdQr8Vma2zY/diYHdFR/gmVisQxyEABATpNeK+ZkoKyadYcqZ/k
+         s+RQ==
+MIME-Version: 1.0
+X-Received: by 10.66.248.130 with SMTP id ym2mr15966143pac.9.1389220699984;
+ Wed, 08 Jan 2014 14:38:19 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Wed, 8 Jan 2014 14:38:19 -0800 (PST)
+In-Reply-To: <CAG54imaRda46pY4=aeuWPtcPCqP5jK_KumH=JbSR7GVzHPtDvA@mail.gmail.com>
+References: <CAG54imaRda46pY4=aeuWPtcPCqP5jK_KumH=JbSR7GVzHPtDvA@mail.gmail.com>
+Date: Wed, 8 Jan 2014 22:38:19 +0000
+Message-ID: <CA+nPnMyCbU4KGXbF1Bn7KOph5Lnr+EY4TMpX7UAb=b9U5auVsw@mail.gmail.com>
+Subject: Re: Need advice automating a Java test suite.
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b2e15cd565abf04ef7d26d9
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b2e15cd565abf04ef7d26d9
+Content-Type: text/plain; charset=ISO-8859-1
+
+Profiles are the path to madness.
+
+There are two ways I can see to tackle this:
+
+1. Use the invoker plugin to fork maven builds for each of your test steps
+
+Or
+
+2. Use a multi-module project so that the separate modules do the separate
+parts.
+
+The second is likely the more "maven way" but the 1st is not too far off,
+if done right, and probably the easiest to implement... Not too hard to
+refactor to #2 if you decide to later
+
+On Wednesday, 8 January 2014, Todd Chapman wrote:
+
+> Hello,
+>
+> We have a java multi-module project that has a somewhat painful to run test
+> suite that I would like to get under control using Maven.
+>
+> Currently it takes 5 separate Maven commands to setup, run, and teardown
+> all the tests and test databases. I'd like to get this down to one command.
+> Also I would like this structured so that individual parts of the process
+> can be run separately to aid in debugging problems.
+>
+> The pom has 1 profile for each part of the task, all bound to the "test"
+> goal:
+>
+> mvn clean test -P test-setup-1,local-enterprise-test-db  (exec:java plugin
+> to setup up a database)
+> mvn test -P test-setup-2,local-enterprise-test-db           (exec:java
+> plugin to setup up a 2nd database)
+> mvn test -P test-design,local-enterprise-test-db            (surefire
+> plugin to run a subset of the tests with maven properties set)
+> mvn test -P test-transactional,local-enterprise-test-db   (surefire plugin
+> to run a different subset of the tests with different maven properties set)
+> mvn test -P test-tear-down,local-enterprise-test-db        (exec:java
+> plugin to teardown the databases)
+>
+>
+> The problem I am running into is how to get this organized so that it all
+> happens with 1 command. It seems nearly unpossible.
+>
+> Can anyone offer any advice on how to accomplish this? Pointer to relevant
+> articles, blog posts, stackoverflow questions would be most appreciated.
+>
+> Thanks!
+>
+> -Todd
+>
+
+
+-- 
+Sent from my phone
+
+--047d7b2e15cd565abf04ef7d26d9--
+

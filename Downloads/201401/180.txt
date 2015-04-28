@@ -1,0 +1,113 @@
+From users-return-134972-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan  6 13:32:05 2014
+Return-Path: <users-return-134972-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3535510B3C
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  6 Jan 2014 13:32:05 +0000 (UTC)
+Received: (qmail 71938 invoked by uid 500); 6 Jan 2014 13:31:48 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 71575 invoked by uid 500); 6 Jan 2014 13:31:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 71563 invoked by uid 99); 6 Jan 2014 13:31:42 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 13:31:42 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of omarnetbox@googlemail.com designates 209.85.216.48 as permitted sender)
+Received: from [209.85.216.48] (HELO mail-qa0-f48.google.com) (209.85.216.48)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 13:31:38 +0000
+Received: by mail-qa0-f48.google.com with SMTP id w5so2945612qac.14
+        for <users@maven.apache.org>; Mon, 06 Jan 2014 05:31:17 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlemail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=ZqyMZf+ezqKe5jN91ded6wHeYwUwEoMEXu+V2o8t6kQ=;
+        b=vuC7sm1AiJL9vJvWlDgbr312hTmj45JN+EhxXtWqx0Sr67Xj76YbOG6n1Q5eAGX/ff
+         wKilMi2jBKAT9F4L8CugtLxPFN5SFpbf2r6IyNmSlxZ2mOYFyMx8zWEvGWIhYHUOBrHZ
+         sa8yAkIkKFjNAlG4qRrgnA6YBJLKSv5506H8YnfInmpnZ38gCfs7lU/2p4C6Gxarhd/T
+         LURqV3UDOddcpbi4B1psgKTPy8tf0tsF+LzeNvx5PGhCtz2NKKx8Un7cy9cDhkMjLPrK
+         ejUNI3Plx/FLniFbLaxi0gshkhNu7Q0DiwqhIHbjUlyqLDZzP3lzO4TyLeESWabk0bLh
+         eF1A==
+MIME-Version: 1.0
+X-Received: by 10.49.28.101 with SMTP id a5mr185426262qeh.70.1389015077669;
+ Mon, 06 Jan 2014 05:31:17 -0800 (PST)
+Received: by 10.229.51.135 with HTTP; Mon, 6 Jan 2014 05:31:17 -0800 (PST)
+In-Reply-To: <CA+nPnMxMj+hj3OCXp9RkxH280YdyZTt9z1boAQAhNAMD31AS2A@mail.gmail.com>
+References: <CAG-F_6nCsZ_OH2m244JWYgNppU4eOB78K+X_tAk9X4wwOc2ftQ@mail.gmail.com>
+	<CA+nPnMxMj+hj3OCXp9RkxH280YdyZTt9z1boAQAhNAMD31AS2A@mail.gmail.com>
+Date: Mon, 6 Jan 2014 13:31:17 +0000
+Message-ID: <CAG-F_6=snTx+pSNJK204EKEv7WcHgtcnigs65EtheJmPP+bimw@mail.gmail.com>
+Subject: Re: Using Plugin Truncated Name
+From: "Omar@Gmail" <omarnetbox@googlemail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bd6adbc4ad21c04ef4d46cb
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bd6adbc4ad21c04ef4d46cb
+Content-Type: text/plain; charset=ISO-8859-1
+
+Thanks Stephen,
+
+What you suggest sounds like good practice (not sure why though) however
+not a fix for my issue.
+
+The fix is as follows: - somehow your response inspired me :)
+
+In the pom.xml file of the custom plugin there is a plugin configured
+maven-plugin-plugin in that plugin add configuration
+
+<goalPrefix>pce</goalPrefix>
+
+I then installed the plugin and I tried mvn pce:pull and that worked fine.
+Job done.
+
+
+
+On 6 January 2014 12:44, Stephen Connolly
+<stephen.alan.connolly@gmail.com>wrote:
+
+> On 6 January 2014 12:40, Omar@Gmail <omarnetbox@googlemail.com> wrote:
+>
+> > I have written my own maven mojo plugin and wish to use the truncated
+> name
+> > instead of the long name to invoke it, like so:
+> >
+> > Instead of
+> > mvn org.apache.maven.plugins:maven-pce-plugin:pull
+> >
+> > I want use:
+> >
+> > mvn pce:pull
+> >
+> > But even though I put it under group 'org.apache.maven.plugins' and named
+> > it maven-pce-plugin I still get error message:
+> >
+>
+> Nooooo don't put it there... you don't own that group Id.
+>
+> Put it in your own groupId and then in your settings.xml just add your
+> group Id as the <pluginGroups>
+> http://maven.apache.org/settings.html#Plugin_Groups
+>
+>
+> > No plugin found for prefix 'pce' in the current project and in the plugin
+> > groups [*org.apache.maven.plugins*, org.codehaus.mojo] available from the
+> > repositories [local (C:\Users\omar\.m2\repository), central (
+> > http://repo.maven.apache.org/maven2)]
+> >
+> > What am I doing wrong? thanks for the help.
+> >
+>
+
+--047d7bd6adbc4ad21c04ef4d46cb--
+

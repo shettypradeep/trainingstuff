@@ -1,0 +1,80 @@
+From users-return-137024-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Aug 15 01:07:31 2014
+Return-Path: <users-return-137024-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C777711A15
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 15 Aug 2014 01:07:31 +0000 (UTC)
+Received: (qmail 71576 invoked by uid 500); 15 Aug 2014 01:07:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 71494 invoked by uid 500); 15 Aug 2014 01:07:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 71470 invoked by uid 99); 15 Aug 2014 01:07:29 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 15 Aug 2014 01:07:29 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of pablo.leon@horus.es designates 2.139.157.236 as permitted sender)
+Received: from [2.139.157.236] (HELO correo.horus.es) (2.139.157.236)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 15 Aug 2014 01:07:02 +0000
+Received: from [192.168.1.34] (83.60.160.3) by horus27 (Axigen)
+ with (AES128-SHA encrypted) ESMTPSA id 1E138B;
+ Fri, 15 Aug 2014 03:06:51 +0200
+Message-ID: <53ED5D2A.3000902@horus.es>
+Date: Fri, 15 Aug 2014 03:06:50 +0200
+From: =?ISO-8859-1?Q?Pablo_Le=F3n?= <pablo.leon@horus.es>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0)
+ Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Doxia Eclipse Editor Plugin problem with snippet macro
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-AxigenVirus-Level: 1
+X-AxigenSpam-Level: 10
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+I have been successfully using the Doxia Eclipse Editor Plugin for a few 
+months. But now I'm facing a compatibility problem related to the 
+snippet macro. if I use the following macro:
+
+     %{snippet|file=${basedir}/src/path/to/file.txt}
+
+then the "mvn site" issues the error:
+
+     Error during retrieving content skip as ignoreDownloadError activated.
+
+If I remove the ${basedir} variable from the macro, the "mvn site" works 
+as expected, but then I get this error in the eclipse IDE:
+
+     Doxia Converter Exception: 
+C:\eclipse\install\dir\src\path\to\file.txt (path not found)
+
+I'm unable to specify the path of the snippet file in a compatible 
+manner, I have tried using $basedir, ${basedir} and ${project.basedir}, 
+but I always get the same results.
+
+Anyone has any suggestion?
+
+There are any plans to release an update of the Doxia Eclipse Editor 
+Plugin which uses the same default directory as the "mvn site" command?
+
+Regards,
+
+                 Pablo.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

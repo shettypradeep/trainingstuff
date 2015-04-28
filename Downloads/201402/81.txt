@@ -1,0 +1,119 @@
+From users-return-135546-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb 17 09:08:21 2014
+Return-Path: <users-return-135546-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A345510819
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 17 Feb 2014 09:08:21 +0000 (UTC)
+Received: (qmail 88002 invoked by uid 500); 17 Feb 2014 09:08:16 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 87835 invoked by uid 500); 17 Feb 2014 09:08:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 87816 invoked by uid 99); 17 Feb 2014 09:08:13 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 17 Feb 2014 09:08:13 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bmathus@gmail.com designates 209.85.215.172 as permitted sender)
+Received: from [209.85.215.172] (HELO mail-ea0-f172.google.com) (209.85.215.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 17 Feb 2014 09:08:07 +0000
+Received: by mail-ea0-f172.google.com with SMTP id l9so6467928eaj.3
+        for <users@maven.apache.org>; Mon, 17 Feb 2014 01:07:46 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=CzjOlTVH17duyXG5yl1Zt5seEROJH38PPZ5E/utgQYU=;
+        b=okIYnknM3tG2eEVPV5L0WryXOy0LWI+occIvGblFWNI2UU/FZpJNMgA6Ahnavhbc9k
+         t9meMS0XNMLEfhR/1VR0bwDbsoI8wKMDjDvDZbdE8iSphTmEIp0lV3eVwpFU5KOyfznD
+         CpIOyMz6w1a2HdiF/YXgjg1p/FqJIQRmcdsyhuu/mx5V03f+uebKdPzMf1im+oaVjwYH
+         5cS2qbTNhEbx+qoA/pJH5RVRl5Ff+855CXW9LD+pauRueqCERkqM753BjCz4+6uXbXww
+         IsoCnodsxL1a32Fnfud9k8ZV9WdDmefxiSz2foAAILY62aMyKsm2z7fAXt/NfHE795MZ
+         mTzQ==
+X-Received: by 10.14.8.194 with SMTP id 42mr26124272eer.16.1392628066822; Mon,
+ 17 Feb 2014 01:07:46 -0800 (PST)
+MIME-Version: 1.0
+Sender: bmathus@gmail.com
+Received: by 10.14.224.198 with HTTP; Mon, 17 Feb 2014 01:07:26 -0800 (PST)
+In-Reply-To: <5301B253.70603@apconsult.de>
+References: <5301ADBC.3080909@apconsult.de> <5301B253.70603@apconsult.de>
+From: Baptiste Mathus <ml@batmat.net>
+Date: Mon, 17 Feb 2014 10:07:26 +0100
+X-Google-Sender-Auth: E4EZQ_ZHmtDZeXhdoGUiXr0I5sQ
+Message-ID: <CANWgJS5H0vnAC1Tq8gDu4qLGspTNGRPxi1PoBMefTYy3gKaZig@mail.gmail.com>
+Subject: Re: Looking for org.apache.poi 3.10-FINAL
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c1ba683a2d7f04f2967d46
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c1ba683a2d7f04f2967d46
+Content-Type: text/plain; charset=UTF-8
+
+2014-02-17 7:55 GMT+01:00 David Law <m2eclipse@apconsult.de>:
+
+> Ron, Wayne,
+>
+> this wasted several days (elapsed) of my time:
+> I spent ages trying out options & trying to figure out what I'd done
+> wrong...
+> ...rebuilding & updating indices, hacking through to
+> workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration,
+> to set logging to ALL, but even ALL  was somewhat sparse.
+>
+
+M2E is not Maven per-se. When a question is about a particular tool, I'd
+advice you to try and target the most specific ML/support system:
+https://eclipse.org/m2e/support/
+
+
+
+> I tried Google & found loads of hits that had nothing to do with it.
+> I found nothing at apache maven or maven central or m2eclipse.
+> I tried the POI Forum, but it became clear that wasn't the problem.
+>
+> As Wayne rightly points out "where is the right place to document it?".
+> With a complex issue like this with multiple components where do you start?
+> But thats all the more reason to document it somewhere...
+
+
+> Right now it seems to me not to be a maven problem as such.
+> Its about how maven central creates its indices & how m2e uses them.
+> So in theory it needs to be documented in both, correspondingly
+> cross-referenced.
+> But as the m2e FAQ is subscription-only it would seem the only place is the
+> maven central FAQ.  And its so important, it should be a point in its
+> own right:
+>
+> "Why can't I see new artifacts in my client (e.g. m2eclipse)?"
+> (Tip -> you can get as-yet-unindexed artifacts explicitly...blah, blah)
+>
+
+Again, not the best ML to discuss it.
+
+
+>
+> And then there's the question, why does m2e use the high-latency index?
+
+If its performance/server-load, then it could be
+> a rethink of the index-structure is necessary.
+> Is that a maven issue?
+> I have some ideas there...
+>
+
+Definitely not Maven related. Maven core has nothing to do with the indexes
+you describe, doesn't know/need it.
+It's more an IDE/search engine facility to help people find versions. I
+personally almost never use those for example.
+
+Cheers
+
+--001a11c1ba683a2d7f04f2967d46--
+

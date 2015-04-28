@@ -1,0 +1,121 @@
+From users-return-137940-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Dec  5 16:06:41 2014
+Return-Path: <users-return-137940-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3BBB410DF2
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  5 Dec 2014 16:06:41 +0000 (UTC)
+Received: (qmail 57807 invoked by uid 500); 5 Dec 2014 16:06:38 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 57564 invoked by uid 500); 5 Dec 2014 16:06:38 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 57306 invoked by uid 99); 5 Dec 2014 16:06:37 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 05 Dec 2014 16:06:37 +0000
+X-ASF-Spam-Status: No, hits=2.5 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of laudio.info@gmail.com designates 209.85.218.51 as permitted sender)
+Received: from [209.85.218.51] (HELO mail-oi0-f51.google.com) (209.85.218.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 05 Dec 2014 16:06:32 +0000
+Received: by mail-oi0-f51.google.com with SMTP id e131so639118oig.24
+        for <users@maven.apache.org>; Fri, 05 Dec 2014 08:06:12 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :cc:content-type;
+        bh=+OVY6jc1GYaI6Dyx7DTe64/bZ809sefiN4nIha81jLI=;
+        b=l2e3M1IEuIayd+03pTZBVtYVCxYvwTlOX5CMJovaiswtIDTe+GNDfeHBiTerVR4IRv
+         D9Smz7GaFN3PNszJONRaGKWrVrECGLQWFkvAeaD+irmcK7Nn4BpA8GW6PS2LeTCqse1x
+         mr8vArOQwYqWBxTqOGB400A7NrHtzxb58/kk7rJDNwaRDntAcr99QA2gzUr/MeCWHoJB
+         5/NPHQ/Oy0ISIFxkrdNwh+g/Yh99PDybydjvMNVQnpXLDpjzaMz9peS4MgDPoZM83992
+         cuxFCPPEJ7InFa9RYDVHbWzwg8DcQIRw68yEPFjslkze44eMiZIw2kXr5us9YABHWNZg
+         IvSw==
+MIME-Version: 1.0
+X-Received: by 10.60.134.20 with SMTP id pg20mr11078090oeb.36.1417795572090;
+ Fri, 05 Dec 2014 08:06:12 -0800 (PST)
+Received: by 10.182.245.195 with HTTP; Fri, 5 Dec 2014 08:06:12 -0800 (PST)
+In-Reply-To: <CACgCGhqOtevoEwGiEsBLjfXNQN+DCqB7-6vxh4JihtEdEXRWxQ@mail.gmail.com>
+References: <CA+kKrXo667EknbwvNrkRjWVGTM=WWxiSjeCwk85YvVpYFvXYxg@mail.gmail.com>
+	<CACgCGhqOtevoEwGiEsBLjfXNQN+DCqB7-6vxh4JihtEdEXRWxQ@mail.gmail.com>
+Date: Fri, 5 Dec 2014 17:06:12 +0100
+Message-ID: <CA+kKrXpX5jsqaA_kWrGp33tbefFbw8Pzw0t+qAL_O3c-t48-pg@mail.gmail.com>
+Subject: Re: First copy one file, befo re anything
+From: Aitor Iturriondobeitia <laudio.info@gmail.com>
+To: Yaron Goldstein <yarongoldstein10@gmail.com>
+Cc: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b472948704ee805097a41c4
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b472948704ee805097a41c4
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Thanks
+I must copy the file to one dir out of the project. The file is Info the
+project  ($project.base}/Filters and i must to move to c:/Filters
+Thanks
+
+El viernes, 5 de diciembre de 2014, Yaron Goldstein <
+yarongoldstein10@gmail.com> escribi=C3=B3:
+
+> Hi.
+> Use the ant plugin. Here's an example:
+>
+> <build>
+>
+> <plugin>
+>
+> <artifactId>maven-antrun-plugin</artifactId>
+>
+> <executions>
+>
+>           <execution>
+>
+> <phase>validate</phase>
+>
+> <goals>
+>
+> <goal>run</goal>
+>
+> </goals>
+>
+> <configuration>
+>
+> <tasks>
+>
+> <delete file=3D"src/main/resources/config.properties" />
+>
+> <copy file=3D"src/main/resources/gold/config.properties"
+>
+> tofile=3D"src/main/resources/config.properties" />
+>
+> <delete file=3D"src/main/resources/TestData.properties" />
+>
+> <copy file=3D"src=D7=A5=D7=A5=D7=A5=D7=A5=D7=A5
+>
+> Thanks,
+>
+> Yaron
+> =D7=91=D7=AA=D7=90=D7=A8=D7=99=D7=9A 5 =D7=91=D7=93=D7=A6=D7=9E' 2014 17:=
+13, "Aitor Iturriondobeitia" <laudio.info@gmail.com
+> <javascript:_e(%7B%7D,'cvml','laudio.info@gmail.com');>> =D7=9B=D7=AA=D7=
+=91:
+>
+>> hello
+>> I must to copy one file before anything,
+>> This file contains some properties for filtering
+>> What plugin must i use and how for moving one file to one directory?
+>> Thanks
+>>
+>
+
+--047d7b472948704ee805097a41c4--
+

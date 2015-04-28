@@ -1,0 +1,212 @@
+From users-return-136503-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jun  3 14:14:59 2014
+Return-Path: <users-return-136503-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 92A2E10276
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  3 Jun 2014 14:14:59 +0000 (UTC)
+Received: (qmail 6694 invoked by uid 500); 3 Jun 2014 14:14:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 6606 invoked by uid 500); 3 Jun 2014 14:14:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 6595 invoked by uid 99); 3 Jun 2014 14:14:57 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 03 Jun 2014 14:14:57 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mehul.sanghvi@gmail.com designates 74.125.82.180 as permitted sender)
+Received: from [74.125.82.180] (HELO mail-we0-f180.google.com) (74.125.82.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 03 Jun 2014 14:14:53 +0000
+Received: by mail-we0-f180.google.com with SMTP id q58so6954562wes.11
+        for <users@maven.apache.org>; Tue, 03 Jun 2014 07:14:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=xcvjD7o+rgGUCEn+xqZ1qtt7Zq3I7dc7zL5k+V2BhnY=;
+        b=K14F93LQDn7H8kHTmzFmgdNydw2kfUkvmdOceBuHezVmi2sw+EsX72EFpcbTMeI77/
+         4xT2GY2tQkK5GazJtkQH0sYx5KG9jGulc+mUnvppsM+pALvp0CKGtxIeP93FUNiyrBPu
+         TXBsCOUTt4a8rDZHx310TdCYAXqkZWGZ4ElYLsNBhFtuO4NmOWxlXNFNmwHdOpjArEjJ
+         Hx2ksVHv8YTBl2bPZvqm2NTWPsmG5wjDDisj+QSiTUTtdE+9uMaQMWMQQy0wZw7NUXD2
+         232m90RNTDiJf6ko/PSWsqvBvaAvmsFTVIYPbumidsmjOK8fKznlzZytL7cQElZYTJ5X
+         Az/Q==
+MIME-Version: 1.0
+X-Received: by 10.194.184.179 with SMTP id ev19mr16701123wjc.85.1401804872482;
+ Tue, 03 Jun 2014 07:14:32 -0700 (PDT)
+Received: by 10.217.40.136 with HTTP; Tue, 3 Jun 2014 07:14:32 -0700 (PDT)
+In-Reply-To: <CAEBcyzoQ_KuF=vSzgzz07eCHO+73+bM1pWGpWZN5nx84gV8Xag@mail.gmail.com>
+References: <538cf55e.08578c0a.5a7d.fffff32f@mx.google.com>
+	<1F86962E-C3DD-4DD5-9380-4AA41903E4CA@takari.io>
+	<CAPo9-A9U7681=oFPX9tVzBFERsb4RXnr_qqMb2wAKhLh7N0TOA@mail.gmail.com>
+	<CAEBcyzoQ_KuF=vSzgzz07eCHO+73+bM1pWGpWZN5nx84gV8Xag@mail.gmail.com>
+Date: Tue, 3 Jun 2014 10:14:32 -0400
+Message-ID: <CAPo9-A95wpkeXQHoot+mR9eP1BrzwKH2cB2Zey=fUKWM+eBASA@mail.gmail.com>
+Subject: Re: Nexus / Maven repository artifact handling
+From: Mehul Sanghvi <mehul.sanghvi@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b87371e7807d004faef2119
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b87371e7807d004faef2119
+Content-Type: text/plain; charset=UTF-8
+
+Jason, William,
+
+       Thanks for the clarifications.   The information will certainly help
+in setting
+up for the next release cycle.
+
+
+cheers,
+
+     mehul
+
+
+
+On Tue, Jun 3, 2014 at 12:29 AM, William Ferguson <
+william.ferguson@xandar.com.au> wrote:
+
+> Mehul, this is the wrong pattern to use. It goes against the entire Maven
+> dependency mechanism.
+>
+> Each GAV (aside from snapsghots) should represent a unique build.
+>
+> You should be creating new RC GAVs for each release candidate. eg
+> groupX-artifactX-versionZ.rc1
+>
+> William
+>
+>
+>
+> On Tue, Jun 3, 2014 at 12:27 PM, Mehul Sanghvi <mehul.sanghvi@gmail.com>
+> wrote:
+>
+> > We use SNAPSHOT during development, say 1.1.0-SNAPSHOT.  At code freeze,
+> we
+> > branch off from main line to a version specific branch and remove
+> SNAPSHOT
+> > from the version string, so it becomes 1.1.0.  Between code freeze and
+> > release we have RC builds.  Its at that point that when a newer build of
+> > the same artifact is uploaded, so the GAV is identical,
+> > maven will not download the newest build.  So its the same JAR file being
+> > uploaded, with the same version.  The only thing changing is the file
+> size
+> > and time stamp of the uploaded
+> > artifact.
+> >
+> > So I have fubar-1.1.0.jar uploaded to Nexus.  The consumer picks up this
+> > jar file and downloads to ~/.m2.  Now we find some problems with it, and
+> > there is an update.  So a newer
+> > fubar-1.1.0.jar is uploaded, over-writing the old one.  Then next time a
+> > build of the consuming project is run, it does not download the newly
+> built
+> > fubar-1.1.0.jar.  Based on what
+> > you're saying, this is a feature and the right way to do things, correct
+> ?
+> >
+> >
+> > Than, how do folks handle RC versions ?
+> >
+> >
+> >
+> > cheers,
+> >
+> >      mehul
+> >
+> >
+> >
+> >
+> >
+> > On Mon, Jun 2, 2014 at 6:54 PM, Jason van Zyl <jason@takari.io> wrote:
+> >
+> > > Are you deploying different artifacts with the same version? Release
+> > > versions are expected to be immutable and Maven will not try to
+> download
+> > a
+> > > released artifact again because it's not expected to change. If you are
+> > > deploying different artifacts using the same version you are using
+> Maven
+> > > incorrectly.
+> > >
+> > > On Jun 2, 2014, at 6:06 PM, mehul.sanghvi@gmail.com wrote:
+> > >
+> > > >
+> > > > We have a Nexus server to which various projects upload artifacts.
+> > > > The artifacts are uploaded to a release repository, not a snapshot
+> > > repository.
+> > > >
+> > > > One project is just a consumer of the artifacts.  It does not upload
+> > > anything.
+> > > >
+> > > > Even though we have an updated artifact available, the consuming
+> > project
+> > > does not download the artifacts from nexus until we clear out the local
+> > > repo in ~/.m2.
+> > > >
+> > > > How does Nexus / Maven determine that a new artifact needs to be
+> > > downloaded from the remote repo?  The timestamp reflects the time of
+> > upload
+> > > of the artifact.  So what am I missing ?
+> > > >
+> > > > The GAV is of the form:
+> > > >
+> > > >     group:artifact.id:group.artifact.id-11.1.0.jar
+> > > >
+> > > > When a new group.artifact.id-11.1.0.jar is uploaded, it won't get
+> > > downloaded by the consuming project.
+> > > >
+> > > >
+> > > > cheers,
+> > > >
+> > > >         mehul
+> > > >
+> > > > --
+> > > > Sent from my "smart" phone
+> > > >
+> > > >
+> > >
+> > > Thanks,
+> > >
+> > > Jason
+> > >
+> > > ----------------------------------------------------------
+> > > Jason van Zyl
+> > > Founder,  Apache Maven
+> > > http://twitter.com/jvanzyl
+> > > http://twitter.com/takari_io
+> > > ---------------------------------------------------------
+> > >
+> > >
+> > >
+> > >
+> > >
+> > >
+> > >
+> > >
+> > >
+> > >
+> > >
+> >
+> >
+> > --
+> > Mehul N. Sanghvi
+> > email: mehul.sanghvi@gmail.com
+> >
+>
+
+
+
+-- 
+Mehul N. Sanghvi
+email: mehul.sanghvi@gmail.com
+
+--047d7b87371e7807d004faef2119--
+

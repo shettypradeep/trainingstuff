@@ -1,0 +1,87 @@
+From users-return-137519-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Oct 10 03:43:03 2014
+Return-Path: <users-return-137519-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id AD59917D40
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 10 Oct 2014 03:43:03 +0000 (UTC)
+Received: (qmail 27325 invoked by uid 500); 10 Oct 2014 03:43:02 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 27247 invoked by uid 500); 10 Oct 2014 03:43:02 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 27229 invoked by uid 99); 10 Oct 2014 03:43:01 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 10 Oct 2014 03:43:01 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of maven.2.user@gmail.com designates 209.85.192.52 as permitted sender)
+Received: from [209.85.192.52] (HELO mail-qg0-f52.google.com) (209.85.192.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 10 Oct 2014 03:42:56 +0000
+Received: by mail-qg0-f52.google.com with SMTP id q108so3396078qgd.11
+        for <users@maven.apache.org>; Thu, 09 Oct 2014 20:42:35 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=vt0lcx/ohuVw8snpqS8HMCb2AKRLgXj0KRJylAiRe3Y=;
+        b=Wz01L+3nUzPad7Gk+nc86mMpishywylyZsUqNRsKHNoAYt1lP1fQ/qpXgCfvCVGqCO
+         Wpek9KzlbYwK/JUEy69M/yxQaLb3zGs9lc+gH2VAJzCpqEqVlY33eieRnotvhQv4+1zW
+         Af8aZJ63BRINVSOqgJ3MPWV+QmciTW0fy3aUSCmfTjavXTwiUtlOvvpC3qut74NqE6J6
+         B+E41yDHJzHMYgAz6TplA0M7X46qlzgZS6J1CN3ZAm24upZOx5ybNA37G70NeWMtvpW2
+         EfMFqBnruaFhv7pGHod15xq0UzJk/KhGPAH6ssGkoYLdiEGoGukCa9GXkJiIpppTa/ov
+         OcTw==
+MIME-Version: 1.0
+X-Received: by 10.224.137.136 with SMTP id w8mr4374393qat.18.1412912555522;
+ Thu, 09 Oct 2014 20:42:35 -0700 (PDT)
+Received: by 10.140.95.118 with HTTP; Thu, 9 Oct 2014 20:42:35 -0700 (PDT)
+In-Reply-To: <CAChPNbeyocR8Brx8dJFEZBdWeSqg9T8CYzoS7dZYSSnZpuh1Wg@mail.gmail.com>
+References: <CAChPNbf9iMbUbBqb_4=gL=aBrUhmYL08+TecJHL=XMyCts12tA@mail.gmail.com>
+	<CAChPNbeyocR8Brx8dJFEZBdWeSqg9T8CYzoS7dZYSSnZpuh1Wg@mail.gmail.com>
+Date: Thu, 9 Oct 2014 23:42:35 -0400
+Message-ID: <CAChPNbdAwcfvhTh-zNX2c=ucDh72+WF05xYvKDfXLUnTWKZ8qA@mail.gmail.com>
+Subject: Re: hidden and ignore files in an archetype?
+From: Maven User <maven.2.user@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Does maven have standard set of exclude patterns?
+
+For giggles, working off the standard ANT exclusion set (because I
+can't find the Maven one anywhere), I created a "CVS" directory and it
+TOO is ignored.
+
+Anyone?
+
+On Thu, Oct 9, 2014 at 11:13 PM, Maven User <maven.2.user@gmail.com> wrote:
+> Strangely, in my archetype-metadata.xml file - if I leave ".gitignore"
+> but on the ACTUAL file - if I strip off the "." - maven seems to find
+> it.
+>
+>
+>
+> On Thu, Oct 9, 2014 at 10:47 PM, Maven User <maven.2.user@gmail.com> wrote:
+>> Hi all -
+>>
+>> I don't seem to be able to include .gitignore in my archetype.
+>>
+>> For testing, I created a FOO file right next to the .gitignore and in
+>> the unfiltered fileset, I configured it to pick up both ".gitignore"
+>> and "FOO" and only FOO shows up in the project generated from the
+>> archetype.
+>>
+>> Is there something really magical I need to include this "hidden" file?
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

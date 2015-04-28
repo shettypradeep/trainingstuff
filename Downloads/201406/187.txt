@@ -1,0 +1,76 @@
+From users-return-136645-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jun 25 16:43:13 2014
+Return-Path: <users-return-136645-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1117210AC4
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 25 Jun 2014 16:43:13 +0000 (UTC)
+Received: (qmail 3613 invoked by uid 500); 25 Jun 2014 16:43:10 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 3540 invoked by uid 500); 25 Jun 2014 16:43:10 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 3528 invoked by uid 99); 25 Jun 2014 16:43:09 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 25 Jun 2014 16:43:09 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of waynefay@gmail.com designates 209.85.160.50 as permitted sender)
+Received: from [209.85.160.50] (HELO mail-pb0-f50.google.com) (209.85.160.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 25 Jun 2014 16:43:04 +0000
+Received: by mail-pb0-f50.google.com with SMTP id rp16so1940620pbb.9
+        for <users@maven.apache.org>; Wed, 25 Jun 2014 09:42:44 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=R/0+0HctvMKJRau4LqCllJVf/3ocPVh0DqCdZLOnwJc=;
+        b=eKPfMKbL4ATeJ4am/nFChKPuq5IXYUDPP2FlNNdIUipMq9HNIfSCQYFq6WwP1anUsA
+         sGbv2ZHt6Nd2KiRAgyOb080dxV1dwb3IVzOxkwgXASW7jtzxc1hLDipf//BD4xB9Hb5o
+         5aBQ/YFZeNZWnT2RyjCG+brRPt5ds7CMcNptzPlf1/c4S8eF2Cmy1fn86XA8xyV4i/Ht
+         wjXeKc1yh1hIXIF9kFKslG/C8uWSZEYtXxhZV3I5pN7qJJ8QUd4ALd6KZQWlz4JdI94m
+         fKue9DlTuEi8TvcmBTrHco68HzpkE9I9rxFpto1aTvGu5rEL8zOi80sN5aWBfSulTPBA
+         IBzg==
+X-Received: by 10.66.142.135 with SMTP id rw7mr13420625pab.71.1403714562433;
+ Wed, 25 Jun 2014 09:42:42 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.66.148.233 with HTTP; Wed, 25 Jun 2014 09:42:22 -0700 (PDT)
+In-Reply-To: <1403687605932-5797476.post@n5.nabble.com>
+References: <1403687605932-5797476.post@n5.nabble.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Wed, 25 Jun 2014 11:42:22 -0500
+Message-ID: <CALy+7U=sKv_461+53_k++1ypt+OW55HreA6yMnve6dvTyzMnEw@mail.gmail.com>
+Subject: Re: Strange error while using Maven
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> 1. Added jar into maven local repo with command like
+> mvn install:install-file -Dfile='C:\ATUReporter_Selenium_testNG_4.6.jar'
+> -DgroupId=atu -DartifactId=atu-reporter-selenium-testng -Dversion=4.6
+> -Dpackaging=jar
+...
+> But while running the automation scripts, maven given me error like
+>
+> ERROR] No plugin found for prefix 'C' in the current project and in the
+> plugin
+
+I think the prefix C error relates to the -Dfile='C:\ATU....' in your
+install command line. Can you perhaps just "cd" to that directory and
+leave off the 'C:\' business entirely, just specify the name of the
+jar file?
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

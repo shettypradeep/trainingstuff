@@ -1,0 +1,137 @@
+From users-return-136336-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue May  6 07:08:17 2014
+Return-Path: <users-return-136336-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EB87E11902
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  6 May 2014 07:08:17 +0000 (UTC)
+Received: (qmail 99300 invoked by uid 500); 6 May 2014 07:07:51 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99090 invoked by uid 500); 6 May 2014 07:07:50 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 98717 invoked by uid 99); 6 May 2014 07:07:49 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 06 May 2014 07:07:49 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.217.178 as permitted sender)
+Received: from [209.85.217.178] (HELO mail-lb0-f178.google.com) (209.85.217.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 06 May 2014 07:07:44 +0000
+Received: by mail-lb0-f178.google.com with SMTP id w7so1631004lbi.37
+        for <users@maven.apache.org>; Tue, 06 May 2014 00:07:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=O8ecMmlNxhqWFZZ3uTuBj4GqczbJNxDLYnX6jGDPeQk=;
+        b=SVzaN71iAsUx7+wfOFPmurdp9SQC0y8bDf5jdRA94I5/9LQmYHoBTQ4/fBn/R9QXtW
+         HdjK6WGmtvfa7Fph3E7tgwKMScWLswWaGFEMqJKTmEdgYXwTQIe98vaPTFy5vQJGI/Lu
+         unlVV7P7mFlk2ohptIhv0F71W4RB/Zuhu0ic5O7EPecOHftDGqnSsVvpaL50DYG7w3Ql
+         YEhFLOFNbOcXPqnmqgcz/iwjFhB+B8rp0otnBxL8NSMcYE+q5mgJjKko/Rw+HzLbEce7
+         l+N6xeVtgxgn0nSk/1inRH9MfpB7+0mT8gNuUIKy7wUOjweiiTtZ3ac6pFmzSb1vjJTw
+         nVfw==
+MIME-Version: 1.0
+X-Received: by 10.112.138.37 with SMTP id qn5mr564456lbb.52.1399360043407;
+ Tue, 06 May 2014 00:07:23 -0700 (PDT)
+Received: by 10.114.48.6 with HTTP; Tue, 6 May 2014 00:07:23 -0700 (PDT)
+In-Reply-To: <5368884B.1050400@landrus.de>
+References: <CAPCjjnFMA33p+MbvbM98Zd-M002c8--Phz=qP43KPBFYA933zw@mail.gmail.com>
+	<CADVp3v_v6FY5EdGfp_YpN_W4v7XPgjbiHdZwCye5zFBfw6VQ3Q@mail.gmail.com>
+	<CAPCjjnHJefP9Y_PvO7tgQCWfq+YXASBSqtKRXbqkSFRgoNKyng@mail.gmail.com>
+	<5368884B.1050400@landrus.de>
+Date: Tue, 6 May 2014 00:07:23 -0700
+Message-ID: <CAPCjjnETY1RrbreWUDt6tWAS_nj=vR0sMFTZqkyC0mm+FSJHMg@mail.gmail.com>
+Subject: Re: use separate mirrors for project dendencies and plugin
+ dependencies ??
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e01160f564d624104f8b5e69d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01160f564d624104f8b5e69d
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Ofcourse, I do have Maven repo manager =CC=A3 nexus at this time), however =
+still
+struggle on how to get only plugin's artifact goto one proxy and others
+goto to another proxy using mirror settings.
+
+Are you able to do so?
+
+-Dan
+
+
+
+On Mon, May 5, 2014 at 11:59 PM, Christian Domsch <mail@landrus.de> wrote:
+
+> Hi Dan,
+>
+> Did you consider using nexus? There you can setup any kind of strange rep=
+o
+> setup your mind can come up with ;-) For your case, create one repo for
+> your project stuff and one repo for your plugin stuff. Create a group for
+> both for easy access and control access by authorization...
+>
+> Christian
+>
+>
+> On 06.05.2014 06:29, Dan Tran wrote:
+>
+>> Thanks Barrie,
+>>
+>> Will see what I can can do.
+>>
+>>
+>> On Mon, May 5, 2014 at 5:04 PM, Barrie Treloar <baerrach@gmail.com>
+>> wrote:
+>>
+>>  On 6 May 2014 09:21, Dan Tran <dantran@gmail.com> wrote:
+>>>
+>>>  for legal purpose ( btw, please dont drill me here), I would like to u=
+se
+>>>> one mirror as a gate way for all of of my project dependencies,and
+>>>>
+>>> another
+>>>
+>>>> mirror as a gate way for all of my plugins and their dependencies
+>>>>
+>>>>
+>>>> is it possible? Posting a settings.xml config here is very much
+>>>>
+>>> appreciated
+>>>
+>>>
+>>> Having not done this, here is some more insane advice.
+>>>
+>>> I'd use three.
+>>> One proxy to proxy the other two proxies.
+>>> All developers point to the master proxy.
+>>> You can then configure the master proxy to refer to the project
+>>> dependencies proxy and another for plugins dependencies proxy.
+>>>
+>>> You might need a more sophisticated maven repository manager that you c=
+an
+>>> restrict what is allowed in the proxies (i.e. it just doesn't go and gr=
+ab
+>>> stuff for you).
+>>>
+>>> You're going to have to do a lot of fiddling to get this to work.
+>>> I'm not convinced it is going to give you what legal thinks it will...
+>>>
+>>> If you could write up what you tried and whether it worked it would be
+>>> helpful for anyone else attempting the same thing...
+>>>
+>>>
+>
+
+--089e01160f564d624104f8b5e69d--
+

@@ -1,0 +1,231 @@
+From users-return-136712-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jul  1 13:17:31 2014
+Return-Path: <users-return-136712-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8CD7810E43
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  1 Jul 2014 13:17:31 +0000 (UTC)
+Received: (qmail 87254 invoked by uid 500); 1 Jul 2014 13:17:29 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 87154 invoked by uid 500); 1 Jul 2014 13:17:29 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 87142 invoked by uid 99); 1 Jul 2014 13:17:29 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 01 Jul 2014 13:17:29 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of christofer.dutz@c-ware.de designates 213.199.154.77 as permitted sender)
+Received: from [213.199.154.77] (HELO emea01-db3-obe.outbound.protection.outlook.com) (213.199.154.77)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 01 Jul 2014 13:17:23 +0000
+Received: from DBXPR05MB237.eurprd05.prod.outlook.com (10.242.143.147) by
+ DBXPR05MB239.eurprd05.prod.outlook.com (10.242.143.153) with Microsoft SMTP
+ Server (TLS) id 15.0.974.11; Tue, 1 Jul 2014 13:17:00 +0000
+Received: from DBXPR05MB237.eurprd05.prod.outlook.com ([169.254.7.45]) by
+ DBXPR05MB237.eurprd05.prod.outlook.com ([169.254.7.45]) with mapi id
+ 15.00.0974.002; Tue, 1 Jul 2014 13:17:00 +0000
+From: Christofer Dutz <christofer.dutz@c-ware.de>
+To: Maven Users List <users@maven.apache.org>
+Subject: AW: AW: AW: Artifact with different sets of dependencies switched by
+ profiles
+Thread-Topic: AW: AW: Artifact with different sets of dependencies switched by
+ profiles
+Thread-Index: Ac+S/i4PpFj16q45SeelsLfOpzwBrQAEuYoAAAEGI1AACbdtAAAO40JAAAk1AAkAXQhiTAAHCvaAAAB5qWg=
+Date: Tue, 1 Jul 2014 13:16:59 +0000
+Message-ID: <1404220619344.56299@c-ware.de>
+References: <fa95de47ea5e47d195c63717af3b2d02@DBXPR05MB237.eurprd05.prod.outlook.com>
+	<CA+nPnMxBQptj9OS+8FLjBoodbq-qgDzLVVxnKoYqqXgsRfx28w@mail.gmail.com>
+	<a060f35add5844a8a5a166043cb65765@DBXPR05MB237.eurprd05.prod.outlook.com>
+	<53AF701E.7080507@artifact-software.com>
+	<272be8c3cbaa4f808acd0adb4ae9135d@DBXPR05MB237.eurprd05.prod.outlook.com>
+	<lop3j3$tui$1@ger.gmane.org>
+	<1404207725651.70752@c-ware.de>,<CA+nPnMx=vhR=RDNM-5Zop1c3g6UWLOpsxuMYcWRj6VVDei7MBQ@mail.gmail.com>
+In-Reply-To: <CA+nPnMx=vhR=RDNM-5Zop1c3g6UWLOpsxuMYcWRj6VVDei7MBQ@mail.gmail.com>
+Accept-Language: de-DE, en-US
+Content-Language: de-DE
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [193.99.42.56]
+x-microsoft-antispam: BCL:0;PCL:0;RULEID:
+x-forefront-prvs: 02596AB7DA
+x-forefront-antispam-report: SFV:NSPM;SFS:(6009001)(189002)(199002)(51704005)(252514010)(24454002)(105586002)(74482001)(77096002)(92726001)(85306003)(95666004)(64706001)(106356001)(107886001)(107046002)(83072002)(2656002)(229853001)(74662001)(87936001)(85852003)(86362001)(76176999)(20776003)(36756003)(99396002)(79102001)(77982001)(93886003)(19580395003)(19580405001)(101416001)(83322001)(4396001)(81542001)(46102001)(66066001)(21056001)(50986999)(81342001)(54356999)(75402002);DIR:OUT;SFP:;SCL:1;SRVR:DBXPR05MB239;H:DBXPR05MB237.eurprd05.prod.outlook.com;FPR:;MLV:sfv;PTR:InfoNoRecords;MX:1;LANG:en;
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-OriginatorOrg: c-ware.de
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+So the only option I have, is to generate different pom artifacts and I can=
+ choose the "profile" by selecing different pom artifacts? There is no othe=
+r option?=0A=
+=0A=
+Chris=0A=
+=0A=
+=0A=
+________________________________________=0A=
+Von: Stephen Connolly <stephen.alan.connolly@gmail.com>=0A=
+Gesendet: Dienstag, 1. Juli 2014 15:02=0A=
+An: Maven Users List=0A=
+Cc: joerg.schaible@gmx.de=0A=
+Betreff: Re: AW: AW: Artifact with different sets of dependencies switched =
+by profiles=0A=
+=0A=
+And you are going to have the exact same set of issues as with profiles.=0A=
+=0A=
+Maven 3 does not re-interpolate the poms of dependencies IIRC... or at=0A=
+least it is not supposed to... so you only get to control the variables=0A=
+from the parent pom and any inherited dependencies/dependencyManagement not=
+=0A=
+from the transitive dependencies of your pom=0A=
+=0A=
+=0A=
+On 1 July 2014 10:42, Christofer Dutz <christofer.dutz@c-ware.de> wrote:=0A=
+=0A=
+> Hey ... now that looks promissing :-)=0A=
+>=0A=
+> I'll give that a spin as soon as I have time.=0A=
+>=0A=
+> I didn't know that you could use variables in the scope (But I think=0A=
+> that's just some old info probably stored in my brain ages ago).=0A=
+>=0A=
+> Chris=0A=
+>=0A=
+>=0A=
+> ________________________________________=0A=
+> Von: J=F6rg Schaible <joerg.schaible@gmx.de>=0A=
+> Gesendet: Sonntag, 29. Juni 2014 15:16=0A=
+> An: users@maven.apache.org=0A=
+> Betreff: Re: AW: AW: Artifact with different sets of dependencies switche=
+d=0A=
+> by profiles=0A=
+>=0A=
+> Hi Christoper,=0A=
+>=0A=
+> Christofer Dutz wrote:=0A=
+>=0A=
+> > Hi Ron,=0A=
+> >=0A=
+> > I think you got what I'm trying to do a little wrong. It's not two=0A=
+> > different set of dependencies, it's two different ways of linking the=
+=0A=
+> same=0A=
+> > set of libraries. If I were to translate this into java, imagine that t=
+he=0A=
+> > default way an application was built would be to include all Classes=0A=
+> > needed by the application to be bundled in the application Jar (The=0A=
+> > classes not needed aren't included). Now in modular applications I am=
+=0A=
+> able=0A=
+> > to switch to something exactly the same as in Java ... no code is=0A=
+> included=0A=
+> > in the Application jar, but the referenced libraries are deployed in=0A=
+> > parallel to the application jar, so the JVM can pull them in as needed=
+=0A=
+> (In=0A=
+> > Flex this type is called rsl (runtime shared library).=0A=
+> >=0A=
+> > So in principal I have the same set of dependencies, but in the=0A=
+> > rsl-linking type these dependencies have an additional "scope=3Drsl"=0A=
+> > setting. Up until now there was only one pom with the default set of=0A=
+> > dependencies. If the users wanted to utilize rsl linking they would hav=
+e=0A=
+> > to manually add each dependency and set that's scope to rsl. I would li=
+ke=0A=
+> > to make it easier for users to switch.=0A=
+> >=0A=
+> > So the profiles is bad, the pom with classifier doesn't work ... I woul=
+d=0A=
+> > really like to avoid to have something like an "flramework" artifact an=
+d=0A=
+> > one "framework-rsl" for the rsl linking.=0A=
+>=0A=
+> What's the default value for the scope? "compile"? Then you can do all yo=
+u=0A=
+> need with properties. You might use a profile, but it is not necessary:=
+=0A=
+>=0A=
+> Declare your dependencies just like before (either in depMgmt or directly=
+):=0A=
+>=0A=
+> =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D %< =3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=0A=
+>  <dependency>=0A=
+>    <groupId>org.apache.flex.framework</groupId>=0A=
+>    <artifactId>spark</artifactId>=0A=
+>    <version>4.12.1.20140427</version>=0A=
+>    <type>swc</type>=0A=
+>    <scope>${flexmojo.scope}</scope>=0A=
+>  </dependency>=0A=
+>  ...=0A=
+>  <properties>=0A=
+>    <flexmojo.scope>compile</flexmojo.scope>=0A=
+>  </properties>=0A=
+> =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D %< =3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=0A=
+>=0A=
+> Then you can simply redefine "flexmojo.scope" from command line. This wil=
+l=0A=
+> also affect inherited dependencies, if they are declared in the same way =
+in=0A=
+> the repository or if you delcare them in a common parent with a=0A=
+> dependencyManagement section. You might even overwrite the property in a=
+=0A=
+> profile:=0A=
+>=0A=
+> =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D %< =3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=0A=
+>  <profile>=0A=
+>    <id>rsl</id>=0A=
+>    <properties>=0A=
+>      <flexmojo.scope>rsl</flexmojo.scope>=0A=
+>    </properties>=0A=
+>  <profile>=0A=
+> =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D %< =3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=0A=
+>=0A=
+> Unfortunately, I don't know nothing about flexmojo. If it works like in t=
+he=0A=
+> world of C where I can use the same libraries (.lib files) to link an=0A=
+> application either static or dynamically (then requiring runtime libs as=
+=0A=
+> well), then it is possible to do this. Therefore is is fine for an projec=
+t=0A=
+> creating such an application at the end of a build chain.=0A=
+>=0A=
+> However, if the libraries differ if build with rsl or not, then you will=
+=0A=
+> create a very bad user experience, because - just as Stephen already said=
+ -=0A=
+> the build process will use whatever it finds in the local repository, it=
+=0A=
+> cannot separate between artifacts built with rsl or without. Your users=
+=0A=
+> might get a wild mix during build time.=0A=
+>=0A=
+> Cheers,=0A=
+> J=F6rg=0A=
+>=0A=
+>=0A=
+> ---------------------------------------------------------------------=0A=
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org=0A=
+> For additional commands, e-mail: users-help@maven.apache.org=0A=
+>=0A=
+>=0A=
+> ---------------------------------------------------------------------=0A=
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org=0A=
+> For additional commands, e-mail: users-help@maven.apache.org=0A=
+>=0A=
+>=0A=
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,121 @@
+From users-return-136746-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jul  8 12:56:22 2014
+Return-Path: <users-return-136746-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3F8D411BD3
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  8 Jul 2014 12:56:22 +0000 (UTC)
+Received: (qmail 34151 invoked by uid 500); 8 Jul 2014 12:56:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 34072 invoked by uid 500); 8 Jul 2014 12:56:20 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 34060 invoked by uid 99); 8 Jul 2014 12:56:20 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 08 Jul 2014 12:56:20 +0000
+X-ASF-Spam-Status: No, hits=-2.3 required=5.0
+	tests=RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of Ruben.Fragoso@ca.com designates 74.125.149.153 as permitted sender)
+Received: from [74.125.149.153] (HELO na3sys009aog125.obsmtp.com) (74.125.149.153)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 08 Jul 2014 12:56:14 +0000
+Received: from USILMS191.ca.com ([141.202.246.45]) (using TLSv1) by na3sys009aob125.postini.com ([74.125.148.12]) with SMTP
+	ID DSNKU7vqWbD1RssvgtT5FN2ZapynlTUd4HZu@postini.com; Tue, 08 Jul 2014 05:55:53 PDT
+Received: from USILMS173.ca.com (141.202.6.23) by USILMS191.ca.com
+ (141.202.246.45) with Microsoft SMTP Server (TLS) id 14.3.146.0; Tue, 8 Jul
+ 2014 08:55:52 -0400
+Received: from USILMS111B.ca.com ([169.254.8.206]) by usilms173.ca.com
+ ([141.202.6.23]) with mapi id 14.03.0146.000; Tue, 8 Jul 2014 08:55:52 -0400
+From: "Fragoso, Ruben" <Ruben.Fragoso@ca.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: RE: Adding Classifiers when building
+Thread-Topic: Adding Classifiers when building
+Thread-Index: Ac+ahVPjcUN3TiF9T/SwMzu0/RJ1FAARv7mAAAgiHcA=
+Date: Tue, 8 Jul 2014 12:55:51 +0000
+Message-ID: <9DD4E486F30F2E45AE6097D587E646D9958016@usilms111b.ca.com>
+References: <9DD4E486F30F2E45AE6097D587E646D9957E7A@usilms111b.ca.com>
+ <0D79FEAB-D5D6-4249-9948-241CCDA6E5AB@takari.io>
+In-Reply-To: <0D79FEAB-D5D6-4249-9948-241CCDA6E5AB@takari.io>
+Accept-Language: pt-PT, en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [130.119.141.82]
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Thank you Jason,
+
+Yes, this was feeling counter-intuitive, that is why I asking this. Thank y=
+ou All
+
+Regards
+
+Ruben Fragoso
+
+
+
+-----Original Message-----
+From: Jason van Zyl [mailto:jason@takari.io]=20
+Sent: Tuesday, July 08, 2014 2:48 PM
+To: Maven Users List
+Subject: Re: Adding Classifiers when building
+
+This is a bad practice and runs counter to continuous delivery which is com=
+monly accepted as a good thing.
+
+You always want to build in such a way that anything being built can be use=
+d as a release without any further transformation.
+
+On Jul 8, 2014, at 4:21 AM, Fragoso, Ruben <Ruben.Fragoso@ca.com> wrote:
+
+> Hello Everyone
+>=20
+> I would like to know if it is possible to add classifiers while building =
+as a maven parameter, for example if I want to add the classifier "dev" to =
+an artifact, when building.
+>=20
+> Thank you in Advance, hope to hear from you.
+>=20
+> Best Regards
+> Ruben Fragoso
+>=20
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+http://twitter.com/takari_io
+---------------------------------------------------------
+
+I never make the mistake of arguing with people for whose opinions I have n=
+o respect.
+
+-- Edward Gibbon
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

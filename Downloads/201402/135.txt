@@ -1,0 +1,107 @@
+From users-return-135614-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 26 17:58:12 2014
+Return-Path: <users-return-135614-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 54ACD10ED7
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Feb 2014 17:58:12 +0000 (UTC)
+Received: (qmail 56991 invoked by uid 500); 26 Feb 2014 17:57:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 56470 invoked by uid 500); 26 Feb 2014 17:56:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 54488 invoked by uid 99); 26 Feb 2014 17:55:17 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Feb 2014 17:55:17 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [195.8.117.5] (HELO mail1.trendhosting.net) (195.8.117.5)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Feb 2014 17:55:11 +0000
+Received: from localhost (localhost [127.0.0.1])
+	by mail1.trendhosting.net (Postfix) with ESMTP id 52707150FB
+	for <users@maven.apache.org>; Wed, 26 Feb 2014 17:54:50 +0000 (GMT)
+Received: from mail1.trendhosting.net ([127.0.0.1])
+	by localhost (thp003.trendhosting.net [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id R2VBjUk7Hkrc for <users@maven.apache.org>;
+	Wed, 26 Feb 2014 17:54:48 +0000 (GMT)
+Message-ID: <530E2A68.8000203@pocock.com.au>
+Date: Wed, 26 Feb 2014 18:54:48 +0100
+From: Daniel Pocock <daniel@pocock.com.au>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:17.0) Gecko/20131103 Icedove/17.0.10
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Google Summer of Code - Java opportunity, mentors needed
+References: <530C66D6.2010602@pocock.com.au> <CALhtWkdAmrk07gcM+kdyDTbd7TuiAGutTbw=O_3jPmTz30=R4g@mail.gmail.com> <5629A6219DB3E544AB84388D90149787479C9535@xmb-aln-x03.cisco.com> <CALhtWkf9XQ9UpW-8Ez2peJtnXwXu+4Xy1eMHYXjGMka7kU0bjw@mail.gmail.com> <5629A6219DB3E544AB84388D90149787479C9693@xmb-aln-x03.cisco.com>
+In-Reply-To: <5629A6219DB3E544AB84388D90149787479C9693@xmb-aln-x03.cisco.com>
+X-Enigmail-Version: 1.5.1
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+
+
+On 26/02/14 17:17, James Nord (jnord) wrote:
+>>> Nowhere in that was the sources jar mentioned - yet you seemed to have
+>> jumped directly to a solution and then said can’t be done.
+>>
+>> No, I discussed the two paths from the POM: -sources and <scm/>
+> 
+> My mistake, sorry.
+> 
+>>> There is a critical need for this inside businesses as well as Debian (how do
+>> we know that "org.foobar:baz:1.2.3:jar" is MIT as it claims and doesn’t
+>> contain some GPL Code.
+>>
+>> Which is a fine reason to contribute it Maven 4 where the POM could contain
+>> the necessary metadata to enable it.
+> 
+> This shouldn't prohibit something using what exists now.
+> 
+> One commercial company has done something for some subset of artifacts - which may have been entirely human process/mixed or automated.
+> 
+
+
+Just to clarify some aspects of this:
+
+- there is no expectation that the project will build 100% of artifacts
+that are available in the Central Repository - just being able to build
+20% of them would still be helpful
+
+- it is expected that some projects will need manual clues to build -
+for example, if some project contains two binary JARs in github, and if
+they don't have clues about where to find source, the system will
+display a report (including the names of classes in the JARs) and the
+user will be able to tell it where to look and then the automated stuff
+continues.  It will always keep trying to go as far as it can
+automatically and then display a list of all things that need manual
+help so the user can address them all in a batch.
+
+- I wasn't anticipating a dependency on -source JARs, although the
+toolkit that I am proposing may well try to build from them if it has
+nothing else (but without any expectation that they will build)
+
+- automatically submitting the packages to Debian is probably out of the
+question for now.  However, the feedback from such a system would make
+it much easier for a Debian user to create packages in their local
+repository.  It would also make it easier for Debian Developers (or
+Ubuntu or Fedora developers) to look at bigger Java projects with
+multiple JARs and decide if they are suitable for official uploads to a
+distribution.  It would do some of the leg work for us (stripping out
+binary artifacts and building the re-packaged source tarballs that we
+need sometimes) and then we would still put in the finishing touches
+manually to make a package that is official.
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

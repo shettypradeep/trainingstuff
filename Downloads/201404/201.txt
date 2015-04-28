@@ -1,0 +1,194 @@
+From users-return-136171-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Apr 17 14:24:57 2014
+Return-Path: <users-return-136171-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3DD5210B1C
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 17 Apr 2014 14:24:57 +0000 (UTC)
+Received: (qmail 68100 invoked by uid 500); 17 Apr 2014 14:24:50 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 67988 invoked by uid 500); 17 Apr 2014 14:24:50 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 67980 invoked by uid 99); 17 Apr 2014 14:24:50 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 17 Apr 2014 14:24:50 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mcculls@gmail.com designates 74.125.82.176 as permitted sender)
+Received: from [74.125.82.176] (HELO mail-we0-f176.google.com) (74.125.82.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 17 Apr 2014 14:24:45 +0000
+Received: by mail-we0-f176.google.com with SMTP id x48so509277wes.35
+        for <users@maven.apache.org>; Thu, 17 Apr 2014 07:24:24 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=content-type:mime-version:subject:from:in-reply-to:date
+         :content-transfer-encoding:message-id:references:to;
+        bh=GIr54qp2fqFzJ0LG177dVzrE1lfjB84IC5wuNIWiwKE=;
+        b=Lbev1A2Rwsy6n/Sk0Q0qYzy28ChriFKUicN/45fF+AmGA3Id8u3q7yBYtcrwPudGpd
+         KpkS9vbw7Q4yCmhdIgIeHw9x1Y6mBoXppBb3v1tQkcNojJ87s4hDAGJHzDZnEA27M5bM
+         OFSO4bXaemN9ZuK7+gY1IQEHEDEnz2fyMB77KXleLrIFfoNMFR01xt1aajfsFsPx8BR0
+         HaTNeHbQiq+WZpTMhq0zxYiewQ9CqGMs+OCshz7vt9Y1nGzXhGjm4E9Gz9nJrQjUz35s
+         al1zcC9mzjUkD1o8PU6VManJMKCSy9Z03gav9HH/9XweRYV7kfstMLpAWgUu7L2C9dMk
+         Sc8Q==
+X-Received: by 10.180.92.69 with SMTP id ck5mr1706542wib.15.1397744664783;
+        Thu, 17 Apr 2014 07:24:24 -0700 (PDT)
+Received: from tulloch.home (host217-42-202-195.range217-42.btcentralplus.com. [217.42.202.195])
+        by mx.google.com with ESMTPSA id ea8sm5158059wib.11.2014.04.17.07.24.24
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Thu, 17 Apr 2014 07:24:24 -0700 (PDT)
+Content-Type: text/plain; charset=windows-1252
+Mime-Version: 1.0 (Mac OS X Mail 7.2 \(1874\))
+Subject: Re: Class loader issues after Maven 3.1.0
+From: Stuart McCulloch <mcculls@gmail.com>
+In-Reply-To: <CAMomwMpE-EKvLhU+fnuhjtBmvO+O0=xSRxveFk0odx-Li-TLqQ@mail.gmail.com>
+Date: Thu, 17 Apr 2014 15:24:22 +0100
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <261E0ABE-356B-4D5D-9CFA-51338194F4B8@gmail.com>
+References: <CAMomwMpRHgtE3Vhpt=aAqkfRY8WvhHq7xNPKnSGs3_-tAvMcog@mail.gmail.com> <72A774AB-FCEA-419B-8691-BBD71DF1FB66@gmail.com> <CAMomwMpE-EKvLhU+fnuhjtBmvO+O0=xSRxveFk0odx-Li-TLqQ@mail.gmail.com>
+To: Maven Users List <users@maven.apache.org>
+X-Mailer: Apple Mail (2.1874)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 17 Apr 2014, at 15:15, Martin Grigorov <mgrigorov@apache.org> wrote:
+
+> Thanks, Stuart!
+>=20
+> I can confirm that the issue is still there in 3.2.1.
+> Is there an open issue at http://jira.codehaus.org/browse/MNG that I =
+can
+> follow ?
+
+I don=92t believe so, suggest you open a new issue and refer to that =
+maven-dev discussion.
+
+> Martin Grigorov
+> Wicket Training and Consulting
+>=20
+> On Thu, Apr 17, 2014 at 5:12 PM, Stuart McCulloch <mcculls@gmail.com> =
+wrote:
+>=20
+>> See
+>> =
+http://mail-archives.apache.org/mod_mbox/maven-dev/201402.mbox/%3cA70F13EF=
+-38E2-49A8-B696-B5E59209226A@gmail.com%3efor why this is happening
+>>=20
+>> AFAICT neither of the suggested solutions mentioned in the above =
+email
+>> have been applied to DefaultClassRealmManager, so I believe this is =
+still
+>> an issue in Maven 3.2.1
+>>=20
+>> On 17 Apr 2014, at 14:57, Martin Grigorov <mgrigorov@apache.org> =
+wrote:
+>>=20
+>>> Hi,
+>>>=20
+>>> We have troubles use 'mvn jetty:run' for
+>>> https://github.com/apache/wicket/tree/master/wicket-examples after
+>>> upgrading to Maven 3.1.0+.
+>>>=20
+>>> It fails with:
+>>>=20
+>>> 2014-04-17 16:22:57.160:WARN:oejuc.AbstractLifeCycle:FAILED
+>>> org.mortbay.jetty.plugin.JettyServer@44e5b006: =
+java.lang.LinkageError:
+>>> loader constraint violation: when resolving overridden method
+>>>=20
+>> =
+"org.jboss.weld.Weld.select(Ljavax/enterprise/util/TypeLiteral;[Ljava/lang=
+/annotation/Annotation;)Ljavax/enterprise/inject/Instance;"
+>>> the class loader (instance of =
+org/eclipse/jetty/webapp/WebAppClassLoader)
+>>> of the current class, org/jboss/weld/Weld, and its superclass loader
+>>> (instance of org/codehaus/plexus/classworlds/realm/ClassRealm), have
+>>> different Class objects for the type
+>>> tion/Annotation;)Ljavax/enterprise/inject/Instance; used in the =
+signature
+>>> java.lang.LinkageError: loader constraint violation: when resolving
+>>> overridden method
+>>>=20
+>> =
+"org.jboss.weld.Weld.select(Ljavax/enterprise/util/TypeLiteral;[Ljava/lang=
+/annotation/Annotation;)Ljavax/enterprise/inject/Instance;"
+>>> the class loader (instance of =
+org/eclipse/jetty/webapp/WebAppClassLoader)
+>>> of the current class, org/jboss/weld/Weld, and its superclass loader
+>>> (instance of org/codehaus/plexus/classworlds/realm/ClassRealm), have
+>>> different Class objects for the type
+>>> tion/Annotation;)Ljavax/enterprise/inject/Instance; used in the =
+signature
+>>> at
+>>>=20
+>> =
+org.jboss.weld.servlet.StaticWeldProvider$WeldSingleton.<clinit>(StaticWel=
+dProvider.java:29)
+>>> at
+>>>=20
+>> =
+org.jboss.weld.servlet.StaticWeldProvider.getCDI(StaticWeldProvider.java:4=
+9)
+>>> at javax.enterprise.inject.spi.CDI.current(CDI.java:60)
+>>> at
+>>>=20
+>> =
+org.jboss.weld.servlet.WeldInitialListener.contextInitialized(WeldInitialL=
+istener.java:85)
+>>> at
+>>>=20
+>> =
+org.jboss.weld.servlet.api.helpers.ForwardingServletListener.contextInitia=
+lized(ForwardingServletListener.java:34)
+>>> at
+>>>=20
+>> =
+org.jboss.weld.environment.servlet.Listener.contextInitialized(Listener.ja=
+va:171)
+>>> at
+>>>=20
+>> =
+org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandle=
+r.java:733)
+>>> ...
+>>>=20
+>>> The issue is not new. We just noticed that when using 3.0.5 it runs =
+fine
+>> so
+>>> it should be some change in Maven itself.
+>>>=20
+>>> I've found that another user had the same issue:
+>>> http://stackoverflow.com/a/18168215/497381
+>>>=20
+>>> How to reproduce:
+>>> 1) git clone https://github.com/apache/wicket.git
+>>> 2) mvn install (just to have all dependencies)
+>>> 3) cd wicket-examples
+>>> 4) mvn jetty:run (fails with 3.1.0+)
+>>>=20
+>>> Thanks!
+>>>=20
+>>>=20
+>>> Martin Grigorov
+>>> Wicket Training and Consulting
+>>=20
+>>=20
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>=20
+>>=20
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

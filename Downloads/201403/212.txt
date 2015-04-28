@@ -1,0 +1,93 @@
+From users-return-136019-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Mar 29 23:15:32 2014
+Return-Path: <users-return-136019-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0D399106AE
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 29 Mar 2014 23:15:32 +0000 (UTC)
+Received: (qmail 73339 invoked by uid 500); 29 Mar 2014 23:15:28 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 73209 invoked by uid 500); 29 Mar 2014 23:15:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 73201 invoked by uid 99); 29 Mar 2014 23:15:27 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 29 Mar 2014 23:15:27 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.214.172] (HELO mail-ob0-f172.google.com) (209.85.214.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 29 Mar 2014 23:15:20 +0000
+Received: by mail-ob0-f172.google.com with SMTP id wm4so7609553obc.17
+        for <users@maven.apache.org>; Sat, 29 Mar 2014 16:14:58 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to:cc
+         :content-type;
+        bh=d/6TxlyrfOt1nj3RBLIFCzdrpWVry/8fArZYO3PAuoM=;
+        b=NKhVmX8aIwHwHeyvOh7NAaGgxi7jynf5ZaKyYMBRlACar5hLhYWIt4X0WS6+dP+1Hc
+         RaTX/IW4buaEuNQpiDyHosje4K+U+ps76w9gRhmGG6VAqRAJbNNQ+Ax4Bt6U6K0HrVMc
+         OJ/awpRDRTA7T0+1oq+ZwZ+DaxT1s4ijHuVjhFcKNsSlvNA7FhTbzTSH5pw58vTO3WnV
+         lsHOnUIvf8RiDwMqv2iKkmAOqqRkO4R915tV2jfrOVja/JZj95hIuL3HofuUGqYxKTqB
+         1Y30r3vToPrWn4v1bx3pnUz3PI4XSsCu8sSRbK8Wu3ULw/Rtq/1cp8Q3SyHIiVRkaAcd
+         qzpQ==
+X-Gm-Message-State: ALoCoQlXlAmLllXImYNN2Xi0VYpjKJpnNzhAqucGiWjA5uyFQ/GOM5VTF2dm7Y9Ms1SheoNOA1d5
+MIME-Version: 1.0
+X-Received: by 10.182.10.5 with SMTP id e5mr13743847obb.28.1396134897990; Sat,
+ 29 Mar 2014 16:14:57 -0700 (PDT)
+Received: by 10.182.12.66 with HTTP; Sat, 29 Mar 2014 16:14:57 -0700 (PDT)
+Date: Sat, 29 Mar 2014 16:14:57 -0700
+Message-ID: <CADOO-JyWmwCZ=B+9isiKYb+Tmi-znNmVOjujdjHaqKqh0F7TZQ@mail.gmail.com>
+Subject: first step in getting started tutorial broken
+From: Brendan Miller <catphive@catphive.net>
+To: users@maven.apache.org
+Cc: issues@maven.apache.org
+Content-Type: multipart/alternative; boundary=f46d0447a051a7538f04f5c6fcba
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d0447a051a7538f04f5c6fcba
+Content-Type: text/plain; charset=ISO-8859-1
+
+In the main tutorial located here:
+http://maven.apache.org/guides/getting-started/index.html
+
+The very first step fails:
+
+mvn archetype:generate \
+  -DarchetypeGroupId=org.apache.maven.archetypes \
+  -DgroupId=com.mycompany.app \
+  -DartifactId=my-app
+
+
+With this error message:
+
+
+[INFO] Generating project in Interactive mode
+[INFO] No archetype defined. Using maven-archetype-quickstart
+(org.apache.maven.archetypes:maven-archetype-quickstart:1.0)
+Choose archetype:
+
+
+Could someone either:
+
+1. Explain why this doesn't work and how to fix it.
+
+2. Fix the tutorial so that it does work.
+
+
+It's disconcerting if the very first introductory docs for a project are broken.
+
+
+Thanks,
+
+Brendan Miller
+
+--f46d0447a051a7538f04f5c6fcba--
+

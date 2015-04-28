@@ -1,0 +1,74 @@
+From users-return-135059-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan  9 19:07:20 2014
+Return-Path: <users-return-135059-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CC5D110FFC
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  9 Jan 2014 19:07:20 +0000 (UTC)
+Received: (qmail 14399 invoked by uid 500); 9 Jan 2014 19:07:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 14330 invoked by uid 500); 9 Jan 2014 19:07:04 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 14311 invoked by uid 99); 9 Jan 2014 19:07:02 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Jan 2014 19:07:02 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.160.50 as permitted sender)
+Received: from [209.85.160.50] (HELO mail-pb0-f50.google.com) (209.85.160.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Jan 2014 19:06:56 +0000
+Received: by mail-pb0-f50.google.com with SMTP id rr13so3405421pbb.37
+        for <users@maven.apache.org>; Thu, 09 Jan 2014 11:06:35 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=nQWEXICV7xkUETKdDOokpDw1wajf1BAUXO9cDvbVqeA=;
+        b=m40Q96ugVmAXv7zT6IJ8IRIyl09YKor00FxTHlxNvxQweokf8h6kpor1xVB7w7p3ia
+         UsDJQkEdUDkfKMA8pK4JrQpXllD40gq46RCH/Wnc5VYdlHEusO38Cp75m62pyBjfOMpq
+         YUnAOMusXc2QpztIZr3qE+nU9Z8nZOd/zQogQ39NEcFZanTd3yfrwOtiZL5IHtU7Zo0A
+         lzcG6Db+YfNmeW8xZJHnylO4JxLbbkMfoI/dO/irWKfBPBMH/eV04/oIWg1I7+PA1cgg
+         445o2PYsPHlOLH3WlhwJX8G9DsvNP8g2TCxcDIMrPykHV5uERpp0fMsIyY/tto8y7aq4
+         BxTg==
+X-Received: by 10.66.102.39 with SMTP id fl7mr5482960pab.43.1389294394804;
+ Thu, 09 Jan 2014 11:06:34 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Thu, 9 Jan 2014 11:06:10 -0800 (PST)
+In-Reply-To: <1389291276238-5781045.post@n5.nabble.com>
+References: <1389289785604-5781041.post@n5.nabble.com> <CALy+7UkOEawTgvAX42QZ8aiN5KPmMtMTyPKgBLCkw40ULV7PMg@mail.gmail.com>
+ <1389291276238-5781045.post@n5.nabble.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Thu, 9 Jan 2014 13:06:10 -0600
+Message-ID: <CALy+7UnmUGfondP_tPOiDuAqkjCeZ0+0LnYzaDiXVZ7Cqw=KJA@mail.gmail.com>
+Subject: Re: Can't set Class-Path in jar using external manifest file
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> I have tried Java 1.6.0_32 and 1.7.0_09.  They both behave the same.
+
+Try this:
+create a jar file that you know works with Maven
+test to be sure it works
+unzip the file
+edit the file by hand to swap those 2 lines
+zip the file back up, rename to .jar etc
+test with JVM
+
+Just remove Maven entirely from the equation. Does this work or not?
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

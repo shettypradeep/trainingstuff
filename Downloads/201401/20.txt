@@ -1,0 +1,71 @@
+From users-return-135279-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 28 21:02:21 2014
+Return-Path: <users-return-135279-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8A5B7106EB
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 28 Jan 2014 21:02:21 +0000 (UTC)
+Received: (qmail 73903 invoked by uid 500); 28 Jan 2014 21:02:16 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 73800 invoked by uid 500); 28 Jan 2014 21:02:16 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 73786 invoked by uid 99); 28 Jan 2014 21:02:16 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 21:02:16 +0000
+Received: from localhost (HELO robertscholte) (127.0.0.1)
+  (smtp-auth username rfscholte, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 21:02:15 +0000
+Content-Type: text/plain; charset=iso-8859-15; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Maven 3.1.1. and Windows 8
+References: <CABSFZHCGMbteC-cJY0JAFD3Hin7fCsRa_M7v_zcX153sBkrpGg@mail.gmail.com> <CALy+7U=G+VZtwhUYub8KdfLNQ_j7Aru=zD-SjFQ+qYbnDbF3og@mail.gmail.com> <CABSFZHDCgg078LqwVi9y-fkTz3Hcs+17SF5HADPM79=RLPYuaQ@mail.gmail.com> <CALy+7Umo3prtGVWo5Rjm1ANOrcqDj-jXOnZFyyME1AHJpQod1Q@mail.gmail.com> <CABSFZHBh4595+O+T+vNM-A6E688ktBo1uNh8-fuzq1t6CHty+w@mail.gmail.com> <CALy+7U=Bp99CEHy3H9kO+0G+tpr=7fwm6iaGJKE5bUeP5UyrQQ@mail.gmail.com>
+Date: Tue, 28 Jan 2014 22:02:14 +0100
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.xae0p0qjkdkhrr@robertscholte>
+In-Reply-To: <CALy+7U=Bp99CEHy3H9kO+0G+tpr=7fwm6iaGJKE5bUeP5UyrQQ@mail.gmail.com>
+User-Agent: Opera Mail/12.16 (Win32)
+
+Or type the following:
+
+set MAVEN_BATCH_ECHO=on
+mvn -v
+
+Now you'll see every executed line. It would be nice if you could return  
+the failing line(s).
+One possibility is that Windows 8 is not recognized.
+
+Robert
+
+Op Tue, 28 Jan 2014 21:52:36 +0100 schreef Wayne Fay <waynefay@gmail.com>:
+
+>> Java command works, mvn triggers the Windows error, also via console. It
+>> looks to me like a  compatibility issue.
+>
+> The batch file is just a shell script that automatically runs a series
+> of commands.
+>
+> Open the mvn.bat file in Notepad.
+> Copy and paste the contents one line at a time into the command line.
+> It will break on a specific line.
+> Tell us which line breaks.
+>
+> Wayne
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

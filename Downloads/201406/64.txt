@@ -1,0 +1,116 @@
+From users-return-136524-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jun  4 19:09:33 2014
+Return-Path: <users-return-136524-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B4B0C102D1
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  4 Jun 2014 19:09:33 +0000 (UTC)
+Received: (qmail 25198 invoked by uid 500); 4 Jun 2014 19:09:32 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 25107 invoked by uid 500); 4 Jun 2014 19:09:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 25097 invoked by uid 99); 4 Jun 2014 19:09:32 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 04 Jun 2014 19:09:32 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of jim.garrison@nwea.org designates 165.212.64.23 as permitted sender)
+Received: from [165.212.64.23] (HELO gwo5.mbox.net) (165.212.64.23)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 04 Jun 2014 19:09:26 +0000
+Received: from gwo5.mbox.net (localhost [127.0.0.1])
+	by gwo5.mbox.net (Postfix) with ESMTP id 3gkKRP63Dxz1FTfcV
+	for <users@maven.apache.org>; Wed,  4 Jun 2014 19:09:05 +0000 (UTC)
+X-USANET-Received: from gwo5.mbox.net [127.0.0.1] by gwo5.mbox.net via mtad (C8.MAIN.3.82G) 
+	with ESMTP id 633sFDTJB8832Mo5; Wed, 04 Jun 2014 19:09:01 -0000
+X-USANET-Routed: 5 gwsout-gwsd Q:gwsd
+X-USANET-Routed: 3 gwsout-vs Q:bmvirus
+X-USANET-GWS2-Tenant: nwea.org
+X-USANET-GWS2-Tagid: NWEA
+Received: from S1P5HUB3.EXCHPROD.USA.NET [165.212.120.254] by gwo5.mbox.net via smtad (C8.MAIN.3.96E) 
+	with ESMTPS id XID020sFDTJB8231Xo5; Wed, 04 Jun 2014 19:09:01 -0000
+X-USANET-Source: 165.212.120.254 OUT  jim.garrison@nwea.org S1P5HUB3.EXCHPROD.USA.NET TLS
+X-USANET-MsgId: XID020sFDTJB8231Xo5
+Received: from S1P5DAG3C.EXCHPROD.USA.NET ([169.254.3.187]) by
+ S1P5HUB3.EXCHPROD.USA.NET ([10.120.223.33]) with mapi id 14.03.0181.006; Wed,
+ 4 Jun 2014 19:08:58 +0000
+From: Jim Garrison <jim.garrison@nwea.org>
+To: Maven Users List <users@maven.apache.org>
+Subject: RE: Controlling order of plugin execution
+Thread-Topic: Controlling order of plugin execution
+Thread-Index: Ac9/X6Z/NCzFD5puS9aAU48tOhMVbQArK/iIAACw94AABdMBcA==
+Date: Wed, 4 Jun 2014 19:08:57 +0000
+Message-ID: <0C723FEB5B4E5642B25B451BA57E2730A29E09E0@S1P5DAG3C.EXCHPROD.USA.NET>
+References: <0C723FEB5B4E5642B25B451BA57E2730A29DFF4A@S1P5DAG3C.EXCHPROD.USA.NET>
+	<CABLGb9wseqSagrFtUvNgc1aREcsAx=PLKdQD_5-rLAFSAOLTWA@mail.gmail.com>
+	<CAPCjjnFTmb9aZO6a9W6SpmzUH5U=JaUT9qkpQ=mViabkQszOxQ@mail.gmail.com>
+	<CABLGb9z40sOaRgcbmQUcxAYDcakGfUJ40QTdTes+uq9bLcDvqQ@mail.gmail.com>
+	<1401896835575-5794892.post@n5.nabble.com>
+ <CA+nPnMxrQp4N34xnHQgPMS6F1jjiJUCMzmsyT2ZnOoiwaWrRpA@mail.gmail.com>
+In-Reply-To: <CA+nPnMxrQp4N34xnHQgPMS6F1jjiJUCMzmsyT2ZnOoiwaWrRpA@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [70.98.171.2]
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+PiAtLS0tLU9yaWdpbmFsIE1lc3NhZ2UtLS0tLQ0KPiBGcm9tOiBTdGVwaGVuIENvbm5vbGx5IFtt
+YWlsdG86c3RlcGhlbi5hbGFuLmNvbm5vbGx5QGdtYWlsLmNvbV0NCj4gU2VudDogV2VkbmVzZGF5
+LCBKdW5lIDA0LCAyMDE0IDk6MDggQU0NCj4gVG86IE1hdmVuIFVzZXJzIExpc3QNCj4gU3ViamVj
+dDogUmU6IENvbnRyb2xsaW5nIG9yZGVyIG9mIHBsdWdpbiBleGVjdXRpb24NCj4gDQo+IFRoYXQn
+cyB1c3VhbGx5IGEgc2lnbiB0aGF0IHlvdSBoYXZlIHdhbmRlcmVkIG9mZiBUaGUgTWF2ZW4gV2F5
+4oSiDQo+IA0KPiBUaGVyZSBhcmUgd2F5cyBiYWNrIG9udG8gdGhlIGJsZXNzZWQgcGF0aC4uLiB0
+aGV5IHR5cGljYWxseSBpbnZvbHZlDQo+IHdyaXRpbmcNCj4gYSBwbHVnaW4NCj4gDQo+IA0KPiBP
+biA0IEp1bmUgMjAxNCAxNjo0NywgamhnbndlYSA8amltLmdhcnJpc29uQG53ZWEub3JnPiB3cm90
+ZToNCj4gDQo+ID4gUGF1bCBCZW5lZGljdCB3cm90ZQ0KPiA+ID4gSSBhZ3JlZSB3aXRoIERhbi4g
+TGFzdCBJIGNoZWNrLCBJSVJDLCB0aGUgb3JkZXIgb2Ygb3BlcmF0aW9ucyBvZg0KPiBwbHVnaW5z
+DQo+ID4gPiBpcw0KPiA+ID4gZGVmaW5lZCBieSB0aGVpciBzZXF1ZW50aWFsIG9yZGVyIGluIHRo
+ZSBQT00uIEhvd2V2ZXIsIEkgYWxzbyBmaW5kDQo+IHRoaXMgYQ0KPiA+ID4gYml0IHByb2JsZW1h
+dGljIHdpdGggaW5oZXJpdGFuY2UgLS0gSSBkb24ndCBrbm93IG9mZiB0aGUgdG9wIG9mIG15DQo+
+IGhlYWQNCj4gPiA+IHdoYXQgaGFwcGVucyB0aGVuLg0KPiA+DQo+ID4gT3JkZXJpbmcgYXBwbGll
+cyBvbmx5IGZvciBleGVjdXRpb25zIG9mIGEgc2luZ2xlIHBsdWdpbi4gIElmIHlvdQ0KPiBuZWVk
+IHRvDQo+ID4gaW50ZXJsZWF2ZSBleGVjdXRpb25zIG9mIHR3byBvciBtb3JlIHBsdWdpbnMgeW91
+J3JlIG91dCBvZiBsdWNrLg0KPiBTYXkgeW91DQo+ID4gaGF2ZSB0d28gcGx1Z2lucywgZXhlYy1t
+YXZlbiBhbmQgbWF2ZW4tc3FsLCBhbmQgd2FudCB0byBydW4NCj4gPg0KPiA+ICAgICBleGVjLW1h
+dmVuIEExDQo+ID4gICAgIG1hdmVuLXNxbCBCMQ0KPiA+ICAgICBleGVjLW1hdmVuIEEyDQo+ID4g
+ICAgIG1hdmVuLXNxbCBCMg0KPiA+DQo+ID4gQTEgYW5kIEEyIHdpbGwgcnVuIGluIHRoYXQgb3Jk
+ZXIsIGFuZCAoQjEsIEIyKSB3aWxsIGJlIG9yZGVyZWQsIGJ1dA0KPiB5b3UNCj4gPiBjYW4ndCBj
+b250cm9sIHdoaWNoIHNldCAoQSBvciBCKSBydW5zIGZpcnN0IHdpdGhvdXQgaG9ycmlibHkgYWJ1
+c2luZw0KPiB0aGUNCj4gPiBwaGFzZSBiaW5kaW5ncy4gIEFuZCwgaWYgeW91IGhhdmUgYSBtb3Jl
+IGNvbXBsZXggc2VxdWVuY2Ugd2l0aCAzDQo+IHBsdWdpbnMNCj4gPiBhbmQgbXVsdGlwbGUgZXhl
+Y3V0aW9ucyBvZiBlYWNoLCB0aGVyZSBhcmVuJ3QgZW5vdWdoIGF2YWlsYWJsZQ0KPiBwaGFzZXMg
+dG8NCj4gPiBzdWNjZXNzZnVsbHkgb3JkZXIgZXZlcnl0aGluZy4NCj4gPg0KPiA+IEl0IHNob3Vs
+ZCBiZSBwb3NzaWJsZSB0byBiaW5kIG11bHRpcGxlIHBsdWdpbiBleGVjdXRpb25zLCBvZg0KPiBE
+SUZGRVJFTlQNCj4gPiBwbHVnaW5zLCB0byBhIHNpbmdsZSBwaGFzZSBhbmQgZGV0ZXJtaW5pc3Rp
+Y2FsbHkgc3BlY2lmeSB0aGUNCj4gZXhlY3V0aW9uDQo+ID4gb3JkZXIuDQoNClNvcnJ5LCBJIGRp
+c2FncmVlLiAgT25lIGFsdGVybmF0aXZlIGlzIHRvIHVzZSBhbnRydW4sIGJ1dCB0aGF0IHNlZW1z
+IGxpa2UgZ29pbmcgYmFja3dhcmRzLiAgSSdtIHJlYWxseSBjdXJpb3VzIHdoeSB0aGVyZSdzIGEg
+c3Ryb25nIHBoaWxvc29waGljYWwgb2JqZWN0aW9uIHRvIHJlcXVlc3RpbmcgdGhpcyBlbmhhbmNl
+bWVudC4gIA0KDQpJcyBpdCB1bnJlYXNvbmFibGUgdG8gc3VnZ2VzdCB0aGF0ICJUaGUgTWF2ZW4g
+V2F5IiBpcyBub3QgcGVyZmVjdCBhbmQgbWlnaHQgbmVlZCBzb21lIGFkanVzdG1lbnRzIHRvIGhh
+bmRsZSBjb21tb24gdXNlLWNhc2VzIHRoZSBvcmlnaW5hbCBkZXNpZ25lcnMgZGlkbid0IGZvcmVz
+ZWU/DQoNCklzIG15IGdvYWwgb2YgdXNpbmcgTWF2ZW4gdG8gYXV0b21hdGUgQ0kvQ0QsIHdoaWNo
+IGNhbiBpbnZvbHZlIGNvbmZpZ3VyaW5nIGV4dGVybmFsIHJlc291cmNlcyBieSBydW5uaW5nIHZh
+cmlvdXMgcGx1Z2lucyBpbiBhIHNwZWNpZmljIHNlcXVlbmNlLCBzb21laG93IGluIHZpb2xhdGlv
+biBvZiAidGhlIE1hdmVuIHdheSI/ICANCg0KQ29uc2lkZXIgdGhlIHBocmFzZSAiLi4ueW91IGhh
+dmUgd2FuZGVyZWQgb2ZmIFRoZSBNYXZlbiBXYXnihKIiLiAgSSBjYW4ndCB0ZWxsIGlmIHlvdSBp
+bnRlbmRlZCB0aGlzIGlyb25pY2FsbHkgb3Igc2VyaW91c2x5LiAgSWYgaXQncyB0aGUgbGF0dGVy
+LCBpdCBzZWVtcyBsaWtlIHlvdSdyZSBzYXlpbmcgaXMgIk1hdmVuIGlzIHBlcmZlY3QuIElmIE1h
+dmVuIGRvZXNuJ3QgaGFuZGxlIHlvdXIgdXNlLWNhc2UsIHRoZW4geW91ciB1c2UtY2FzZSBpcyBp
+bnZhbGlkIi4gIElzIHRoYXQgdHJ1ZT8NCg==
+DQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0NClRvIHVuc3Vic2NyaWJlLCBlLW1haWw6IHVzZXJzLXVuc3Vi
+c2NyaWJlQG1hdmVuLmFwYWNoZS5vcmcNCkZvciBhZGRpdGlvbmFsIGNvbW1hbmRzLCBlLW1h
+aWw6IHVzZXJzLWhlbHBAbWF2ZW4uYXBhY2hlLm9yZw0K
+

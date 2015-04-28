@@ -1,0 +1,134 @@
+From users-return-135587-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb 24 14:35:17 2014
+Return-Path: <users-return-135587-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 27638102F9
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 24 Feb 2014 14:35:17 +0000 (UTC)
+Received: (qmail 32732 invoked by uid 500); 24 Feb 2014 14:35:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 32673 invoked by uid 500); 24 Feb 2014 14:35:12 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 32660 invoked by uid 99); 24 Feb 2014 14:35:12 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Feb 2014 14:35:12 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of adrien.rivard@gmail.com designates 209.85.220.180 as permitted sender)
+Received: from [209.85.220.180] (HELO mail-vc0-f180.google.com) (209.85.220.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Feb 2014 14:35:05 +0000
+Received: by mail-vc0-f180.google.com with SMTP id ks9so5689529vcb.25
+        for <users@maven.apache.org>; Mon, 24 Feb 2014 06:34:44 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=QGHuxQGJDZ8eecor/E2mV8Q/PXCs1QfpYRFH9r9syoY=;
+        b=NFW9Xm00lZCKRnydC+NRDzBf9YltKdPC2aORnpeJyTQq4wZIDscTJvO/fD/ukbmp5i
+         7U/OViH4M9GxxmFXKl3OP2KW57jWc1pa516u2SvXVHZ6i9Vc/VHi9AEBhSEKZKJsqLR/
+         /Dg//3hOgmOQbkUhVx4FrIhma36r5Tyt6Iyt1wpV6tfhe9eT9W9MNqlF8FVBnPz7fb2z
+         Onb0jY+Es3AjuPZgSXFKCq5JBu1+YxC47GLQ7k9M3bj5dPrauAS+IboUnNqfGEvaPy30
+         wRc2QP6ht39n7WgRFOW1Gw6dMVXm6pzi6RFx5WpLVJtnUOdk6Z+V9A4AtSPI9AR+gRfa
+         k7Zw==
+MIME-Version: 1.0
+X-Received: by 10.52.117.115 with SMTP id kd19mr10689227vdb.15.1393252484663;
+ Mon, 24 Feb 2014 06:34:44 -0800 (PST)
+Received: by 10.220.140.13 with HTTP; Mon, 24 Feb 2014 06:34:44 -0800 (PST)
+In-Reply-To: <CAPzuzUe6WhV4gNL3UceuCqJ6CoY0=6cAadn8Tw_CQf1uVF-hMQ@mail.gmail.com>
+References: <CAPzuzUeqS4dAdp+ESOQXWOafoyRT=Nm7phPTozUVJXwiCcye+w@mail.gmail.com>
+	<CANWgJS5hvhXhjLfHsF5-L7H3rUV=bPXC9V1FfG2w4WALJ0YdMg@mail.gmail.com>
+	<CAPzuzUe6WhV4gNL3UceuCqJ6CoY0=6cAadn8Tw_CQf1uVF-hMQ@mail.gmail.com>
+Date: Mon, 24 Feb 2014 15:34:44 +0100
+Message-ID: <CAPCUOdHy6SKeyE+B9EMr2pV2AYq2jC8mMUupkgph1K=WWWnXQQ@mail.gmail.com>
+Subject: Re: Where the binnary of mvn knows which mojo do i want to execute?
+From: Adrien Rivard <adrien.rivard@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=bcaec547c7dd6e4cbc04f327dff7
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--bcaec547c7dd6e4cbc04f327dff7
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+Eval method will not help understanding maven much, it is just a script
+that pass some arguments to a main java.
+
+You should find more information on what get executed here :
+https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
+
+You should also take a look at some of the maven books :
+https://maven.apache.org/articles.html
+
+
+
+
+On Mon, Feb 24, 2014 at 3:16 PM, enrique bernal ruiz
+<kbernalruiz@gmail.com>wrote:
+
+> Hello! And thank you so much for your help.
+> I am working(starting) with it, and i am trying to understand it. What mvn
+> does when i call mvn run for example, i mean, I have a collection of mvn
+> plugins and what i want to know is, where mvn knows that i am calling a mvn
+> plugin in: mvn run for example. How mvn knows i am adding a parameter like
+> run and where mvn identifies that run is a parameter added to it.
+> And if it possible a brief explanation of the eval method, it would be
+> great!
+>
+> Sorry abour my english.
+>
+> Thanks again.
+>
+>
+>
+> 2014-02-24 14:42 GMT+01:00 Baptiste Mathus <ml@batmat.net>:
+>
+> > What are you trying to do actually? Plugin development? Understanding
+> Maven
+> > to patch it? Just want to use it and stuck somewhere?
+> >
+> >
+> > 2014-02-24 13:25 GMT+01:00 enrique bernal ruiz <kbernalruiz@gmail.com>:
+> >
+> > > I am novice using mvn and having a look to /usr/bin/mvn, I can see the
+> > eval
+> > > method, but I can not understand where the mojo is called.
+> > > Please can anyone explain how the eval method works?
+> > > I would be very pleased if someone could help me.
+> > >
+> > > ////////////////////That is my eval
+> > > method/////////////////////////////////////
+> > >
+> > > eval "${JAVACMD}" \
+> > >   ${MAVEN_OPTS} \
+> > >   -classpath "${CLASSWORLDS_JAR}" \
+> > >   "-Dclassworlds.conf=${M2_HOME}/bin/m2.conf" \
+> > >   "-Dmaven.home=${M2_HOME}"  \
+> > >   "-Dos.arch=`uname -m`" \
+> > >   ${CLASSWORLDS_LAUNCHER} $(${QUIET_FLAG} && echo \-q)
+> $(${OFFLINE_FLAG}
+> > &&
+> > > echo \-o) ${QUOTED_ARGS} ${MAVEN_ARGS}
+> > >
+> > > --
+> > > Baptiste <Batmat> MATHUS - http://batmat.net
+> > > Sauvez un arbre,
+> > > Mangez un castor ! nbsp;!
+> >
+>
+
+
+
+-- 
+Adrien Rivard
+
+--bcaec547c7dd6e4cbc04f327dff7--
+

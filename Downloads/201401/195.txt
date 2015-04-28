@@ -1,0 +1,178 @@
+From users-return-134948-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Jan  5 16:32:43 2014
+Return-Path: <users-return-134948-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 206C7101ED
+	for <apmail-maven-users-archive@www.apache.org>; Sun,  5 Jan 2014 16:32:43 +0000 (UTC)
+Received: (qmail 90257 invoked by uid 500); 5 Jan 2014 16:32:29 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 90211 invoked by uid 500); 5 Jan 2014 16:32:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 90199 invoked by uid 99); 5 Jan 2014 16:32:26 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 05 Jan 2014 16:32:26 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bimargulies@gmail.com designates 209.85.214.41 as permitted sender)
+Received: from [209.85.214.41] (HELO mail-bk0-f41.google.com) (209.85.214.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 05 Jan 2014 16:32:22 +0000
+Received: by mail-bk0-f41.google.com with SMTP id v15so5487957bkz.0
+        for <users@maven.apache.org>; Sun, 05 Jan 2014 08:32:01 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type:content-transfer-encoding;
+        bh=eyFFfU7X2DmWsSMTXHFnNCo2uOlEDor2xI3+2VzrFbU=;
+        b=eX2Uq//trHHIRBrh+P+9ZzJgDz/uir3jNWjZZnwK2AtdWUdIlJKFWRNDTAbzdyP/5J
+         vG+sSdvsSNcS8K9S3QiExw7e4qnomKeN32cx+Y1M8v1YJVITswX0vKSo3AgSAc+rZAn+
+         GJrqMDEx805+eP9qOFpJGHHpCzb2WIkpULC2Uwn80/IYp6S/mM360kVJKAQViq2IPq3q
+         uy9qjyVhpai7ydcsLfM+80fASvj78EbQ6DX8XrYn7KQAkEQy8NtOQXlTFRRBzIkm0uUL
+         sGpkMITTjZKDDLkAflIuI5hoB55a+78QtgQa0tE8dPgkrHC4ZVsDAzpbCzU1tuKvzkrX
+         5tGQ==
+MIME-Version: 1.0
+X-Received: by 10.205.16.69 with SMTP id px5mr32650280bkb.9.1388939520950;
+ Sun, 05 Jan 2014 08:32:00 -0800 (PST)
+Received: by 10.204.62.6 with HTTP; Sun, 5 Jan 2014 08:32:00 -0800 (PST)
+In-Reply-To: <22D87C23-9935-4888-A55A-E9BE99C4BC6D@natusoft.se>
+References: <80577B10-8927-4E40-9E41-5B69DBC66977@natusoft.se>
+	<54D3CE24C875604ABE7E6722C0EB885416340C9206@QUIPSY1.Quipsy.local>
+	<22D87C23-9935-4888-A55A-E9BE99C4BC6D@natusoft.se>
+Date: Sun, 5 Jan 2014 11:32:00 -0500
+Message-ID: <CALhtWkfpWowYaf85ONSrJLVvjC83FbdYs92ZieRvMHpYZfK3nA@mail.gmail.com>
+Subject: Re: Maven Central Opinion
+From: Benson Margulies <bimargulies@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Read section 7b of the page you link, it addresses your desires
+directly. I quote:
+
+You don't have to go through steps 7.a.1. through 7.a.3. if your
+artifacts have already been released or if you've generated your
+artifacts using something other than Maven.  The steps below allow you
+to skip using the maven-release-plugin entirely.  You can either use
+the maven-gpg-plugin to sign and deploy your artifacts or upload a
+staging bundle.
+
+On Sun, Jan 5, 2014 at 11:29 AM, Tommy Svensson <tommy@natusoft.se> wrote:
+> Well, I guess I have my answer, I am alone :-).
+>
+> Many people are telling me that both the sonatype super pom and SNAPSHOTs=
+ are optional. I obviously have been reading the wrong instructions. This i=
+s the instructions I've followed:
+>
+>         https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+R=
+epository+Usage+Guide
+>
+> Are there better, clearer instructions somewhere else ? One of the "mvn r=
+elease:*" commands (dont rember which ) failed if I did not have a SNAPSHOT=
+ version and told me the problem was that I did not have a SNAPSHOT version=
+. So is the above page completely wrong ? Are there other "mvn release:*" g=
+oals to run ?
+>
+> I also don't buy the argument that release complexity gives better qualit=
+y.
+>
+> Many of the responses to my mail have also indicated that the update of m=
+y github repository is a totally obvious thing. I simply do not accept that=
+. When I update my repository and what I update it with is my and only my d=
+ecision! I went around this problem by making a copy repository before goin=
+g through the release steps, and then deleted the copy afterwards, keeping =
+my original intact. It was already in the state I wanted it before releasin=
+g to maven central. The only thing I want to release to maven central is bi=
+naries! My repository should not be touched. So if there is no way around t=
+hat happening I guess I have released my first and last code to maven centr=
+al.
+>
+> Anyhow, my question have been answered very clearly.
+>
+> Tommy
+>
+>
+> 5 jan 2014 kl. 16:18 skrev Markus Karg <karg@quipsy.de>:
+>
+>> I uploaded lots of not-even-Mavenized prebuilt JARs to Maven Central and=
+ can tell you that you simply misunderstood these terms as "essential" requ=
+irements -- in fact most of them are only "best practices". You do neither =
+need to have the Sonatype POM, it will just make things easier, nor do you =
+have to use SNAPSHOTs. You can simply upload a prebuilt JAR file. The only =
+"hard" requirements are a "good" POM, signing the JAR with GPG, uploading i=
+t to the OSS nexus instance, then closing and releasing it. This it at-most=
+ simple and done in minutes. If you need help, feel free to contact me at m=
+arkus@headcrashing.eu, I can guide you.
+>>
+>> -----Original Message-----
+>> From: Tommy Svensson [mailto:tommy@natusoft.se]
+>> Sent: Sonntag, 5. Januar 2014 14:15
+>> To: Maven Users List
+>> Subject: Maven Central Opinion
+>>
+>> I was asked to submit one of my opensource tools at github to maven cent=
+ral. This turned out to be a rather complex procedure.
+>>
+>> Sonatype puts the following requirements on anyone wanting to submit to =
+maven central:
+>>
+>> - You are forced to set a Sonatype pom as parent of your project and thu=
+s inherit things you have no control over.
+>> - You are forced to have a SNAPSHOT version even if you have no use for =
+such.
+>> - You are forced at submission time to select a new version for your sof=
+tware even if you have no idea if it will be a minor, bugfix or new functio=
+nality at this point in time.
+>> - Your public repository (github, etc) which you are forced to point out=
+ in your pom are no longer yours to decide over. It will be updated during =
+the submission process.
+>> - After running 3 different mvn commands you also need to login to Sonat=
+ypes nexus server and "release" the artifacts before the become available.
+>>
+>> The idea of the maven repository that has grown larger than maven itself=
+ is a completely brilliant idea. It takes open source to a new level where =
+anyone can just depend on other open source code and automatically download=
+ it on build. This is really good for the open source world (well, at least=
+ the Java/JVM part of it) . The fact that the release process to this centr=
+al repository is far too complex, I see as a really great problem, inhibiti=
+ng the easy sharing of open source work. I have often found open source too=
+ls and frameworks that are not available in maven central, and that is beca=
+use not everyone is willing to put up with this, which now also includes my=
+self. As I see it, either this procedure needs to be changed to provide a t=
+rivial release of binary artifacts without affecting your poms, or there ne=
+ed to be an alternative open repository providing ease of release, where it=
+ is trivial for anyone to share their binaries for easy access by others. I=
+'m wondering if I'm alone in this view or if there are others who agree wit=
+h me ?
+>>
+>> Tommy Svensson
+>>
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

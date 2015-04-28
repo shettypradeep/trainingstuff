@@ -1,0 +1,124 @@
+From users-return-136654-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jun 26 00:14:04 2014
+Return-Path: <users-return-136654-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A011411EF1
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 26 Jun 2014 00:14:04 +0000 (UTC)
+Received: (qmail 55169 invoked by uid 500); 26 Jun 2014 00:14:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 55085 invoked by uid 500); 26 Jun 2014 00:14:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 55073 invoked by uid 99); 26 Jun 2014 00:14:02 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 26 Jun 2014 00:14:02 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.217.176 as permitted sender)
+Received: from [209.85.217.176] (HELO mail-lb0-f176.google.com) (209.85.217.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 26 Jun 2014 00:13:58 +0000
+Received: by mail-lb0-f176.google.com with SMTP id w7so2403563lbi.35
+        for <users@maven.apache.org>; Wed, 25 Jun 2014 17:13:37 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=B05w1LUVQy+I4ZkEJ6XbfKrnxYx9eDXWwtSaESFgX1Y=;
+        b=pkDMGxNcbrIjDOa9VQvNp/rXpBJM7RjVtZAqW8Hwaq68TyDP+zNRY0Ur9DRW6csPVc
+         IZ6L7kML5GidYOed98SxvSt9KV+1IrE5eg+VxleLmaGoiQMwSt17SXOgFyAP/1jp7RdM
+         UOqX/HgA09UQJOHs2s7e5UBUkE0vZ9L5acaQPvfQRpFxEtRj+57DnZYKN7CO0Q0uHzaX
+         htUUGdyQGY3XhkSd3OEGt5wCDZhw0E4onpCZD5HNVt3/zudisoO9aAySgYUGPHVE0dmE
+         sYpzjwm2T3vLLwnD7hobkgPnqn6F+KTuCHxCx/V8xCNY/C5ilHUPXSfK1qmltL49oF/g
+         aE5Q==
+MIME-Version: 1.0
+X-Received: by 10.152.20.71 with SMTP id l7mr8428132lae.4.1403741616950; Wed,
+ 25 Jun 2014 17:13:36 -0700 (PDT)
+Received: by 10.114.194.100 with HTTP; Wed, 25 Jun 2014 17:13:36 -0700 (PDT)
+In-Reply-To: <CAPCjjnE5te5Ogtq2sf+G_w=YbGTtjnjzH4wNP-zbWu_wM6dTLg@mail.gmail.com>
+References: <CAPCjjnE5te5Ogtq2sf+G_w=YbGTtjnjzH4wNP-zbWu_wM6dTLg@mail.gmail.com>
+Date: Wed, 25 Jun 2014 17:13:36 -0700
+Message-ID: <CAPCjjnHz-ss28yhGdWqKp=uDKiZaeod3NYPA-2sU6greZkFjaw@mail.gmail.com>
+Subject: Re: Perforce SCM Provider using P4Java - Seeking for feedback
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e01493e1c6f552304fcb210f0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01493e1c6f552304fcb210f0
+Content-Type: text/plain; charset=UTF-8
+
+I now have snapshots deploy at
+
+https://oss.sonatype.org/content/repositories/snapshots/com/perforce/p4maven/
+
+the provider and its documentation ( site jar )  is at
+
+https://oss.sonatype.org/content/repositories/snapshots/com/perforce/p4maven/p4maven-provider
+
+the source tar ball is at
+
+*https://oss.sonatype.org/content/repositories/snapshots/com/perforce/p4maven/p4maven
+<https://oss.sonatype.org/content/repositories/snapshots/com/perforce/p4maven/p4maven>*
+
+
+*Thanks*
+
+*-Dan*
+
+
+On Tue, Jun 24, 2014 at 2:34 PM, Dan Tran <dantran@gmail.com> wrote:
+
+>
+> Hi
+>
+> I am seeking for help from Maven with Perforce SCM community to test out
+> p4maven scm provider
+> which is being refactor ( very close to completion) with the following
+> improvements
+>
+>     * Auto discover the existing Perforce client that manages the checked
+> out Maven source tree.
+>       User is no longer required to configure the client name via Java
+> system properties
+>
+>     * Generated clients are auto destroyed after each JVM session.( ie
+> auto cleanup)
+>
+>     * Full integration with Release plugin. User now can release Maven
+> project with Perforce SCM using one command ( mvn -B release:preare
+> release:perform)
+>
+>     * Comply with Maven SCM Technology Compatibility Kit (TCK)
+>
+>     * Added Lots of Maven Plugin Integration Tests.
+>
+>
+> The source is at workshop.perforce.com:1666://guest/dantran/p4maven
+>
+> the webview is
+> https://swarm.workshop.perforce.com/files/guest/dantran/p4maven
+>
+>
+> Your feedback are very much appreciated.
+>
+> -Dan
+>
+> PS: I am in the process working perforce opensource to deploy p4maven
+> Sonatype snapshot repo.
+>
+>
+>
+>
+>
+>
+
+--089e01493e1c6f552304fcb210f0--
+

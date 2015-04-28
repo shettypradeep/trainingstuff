@@ -1,0 +1,67 @@
+From users-return-135347-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Feb  4 14:22:56 2014
+Return-Path: <users-return-135347-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9F22310B55
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  4 Feb 2014 14:22:56 +0000 (UTC)
+Received: (qmail 20188 invoked by uid 500); 4 Feb 2014 14:22:49 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 19643 invoked by uid 500); 4 Feb 2014 14:22:42 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 19619 invoked by uid 99); 4 Feb 2014 14:22:40 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 04 Feb 2014 14:22:40 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.220.53 as permitted sender)
+Received: from [209.85.220.53] (HELO mail-pa0-f53.google.com) (209.85.220.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 04 Feb 2014 14:22:33 +0000
+Received: by mail-pa0-f53.google.com with SMTP id lj1so8496096pab.12
+        for <users@maven.apache.org>; Tue, 04 Feb 2014 06:22:12 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=k/t87STWKzwSa5Pof7l7eQO55vfH5iKDyRGjq/bnreE=;
+        b=EOQwh/ah/LwpuFGdvtcLspiAmPulk4wVhRGFIDyBC+pKG5S9Y8U56juG5ikm80dvv6
+         hfwBcORkqdJ0eXLhMdklGeS0uNGSq20PtThm34MnQNETDgNkCFCwYQTfxKkyrs07oX/j
+         2/sX+X17Dh7niFkZjRyg2D2dWQYxlIg1tcoyojTyF8gTPPMwzbAwWaYrCe0j4t4Ht6Tk
+         ulBiW8EWM7Q3FQtF7w+nW/yNIg9M3sviUub+EwznL+VuayzPJF0TekwPMCYE7IpaLi3N
+         2/DuAxeggYd07TZUHvKLnd2gA0/J/JOza5R/UvKeRdLs5O3Wiw/KmZSvnD03jV5ewmwt
+         2pwg==
+X-Received: by 10.69.20.11 with SMTP id gy11mr44326347pbd.64.1391523731224;
+ Tue, 04 Feb 2014 06:22:11 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Tue, 4 Feb 2014 06:21:50 -0800 (PST)
+In-Reply-To: <CAM=FskkAogkO2_N8gCpH6q+W6wHNgk-5K4yRA9yP1Zexj-aX=g@mail.gmail.com>
+References: <CAM=FskkAogkO2_N8gCpH6q+W6wHNgk-5K4yRA9yP1Zexj-aX=g@mail.gmail.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Tue, 4 Feb 2014 08:21:50 -0600
+Message-ID: <CALy+7UmVg6joDWuiRYBYA7kOpkownWPSvkxMoNVuPrU=9iczng@mail.gmail.com>
+Subject: Re: Maven antrun: pass maven properties to ant
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+>    - outputDirectory, indicates where the generation happens? or the war is
+>    generated in project.build.directory and then copied to the indicated
+>    directory.
+
+Best way to know for sure is to simply give it a try on a dev machine.
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,102 @@
+From users-return-136358-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed May 14 20:08:30 2014
+Return-Path: <users-return-136358-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1018611A4E
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 14 May 2014 20:08:30 +0000 (UTC)
+Received: (qmail 91672 invoked by uid 500); 14 May 2014 18:21:50 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 91588 invoked by uid 500); 14 May 2014 18:21:50 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 91580 invoked by uid 99); 14 May 2014 18:21:50 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 14 May 2014 18:21:50 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.215.48 as permitted sender)
+Received: from [209.85.215.48] (HELO mail-la0-f48.google.com) (209.85.215.48)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 14 May 2014 18:21:46 +0000
+Received: by mail-la0-f48.google.com with SMTP id mc6so1730734lab.7
+        for <users@maven.apache.org>; Wed, 14 May 2014 11:21:24 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=496OQN4Eumgk4/WZkgyt21VIUILv5sFxRUuifAqeBCY=;
+        b=nt/VQ4Jp08C8jd9p8VoA0plq/0TS4kvXMbhBfKuADAPYxmu1s/BVk9+Zwqjn41YZDr
+         ccVYwTx7QdkPMSZOpIfynpJ4PZyeSuN2Fq9u624yQeQSVF8Cu8uHvkH3Dm7+YlFhu+0F
+         3Tei/NbIk1yQ/mNnW39++23+DbMPuvZSeYD97XH4iCZ3xVZ/4Xh1VvSqjJ+M1iyckWmx
+         IuE/F/3vveLicBRjE0TKyL6J2AVJh4M7PRWPfpFV++pEqLM7UqDGZsPK44dSzAxM+ZvD
+         fn55N5ZFXH10H13C1UdaTMYFZJDlNyyOfIAvdBvdOf1QnGOH6k5HM2AorPZwXioaC6ED
+         KVOg==
+MIME-Version: 1.0
+X-Received: by 10.112.118.236 with SMTP id kp12mr2519818lbb.56.1400091684717;
+ Wed, 14 May 2014 11:21:24 -0700 (PDT)
+Received: by 10.114.48.6 with HTTP; Wed, 14 May 2014 11:21:24 -0700 (PDT)
+In-Reply-To: <CAPCjjnH=uM0WJRcqVbMf-kzjXXD2CzTLbU_C4dMjKteiZHu5_w@mail.gmail.com>
+References: <1400078487964-5793054.post@n5.nabble.com>
+	<CAPCjjnH=uM0WJRcqVbMf-kzjXXD2CzTLbU_C4dMjKteiZHu5_w@mail.gmail.com>
+Date: Wed, 14 May 2014 11:21:24 -0700
+Message-ID: <CAPCjjnGuasMzFMYKRc+i6Frk8R+ODcR+__G4VD=nWhkY2L51sg@mail.gmail.com>
+Subject: Re: Version in Mojo
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=e89a8f6472cb8549b204f9603f2f
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--e89a8f6472cb8549b204f9603f2f
+Content-Type: text/plain; charset=UTF-8
+
+or you can get your plugin build to dump the version into a resource file
+and read it at mojo exec time
+
+
+
+On Wed, May 14, 2014 at 11:19 AM, Dan Tran <dantran@gmail.com> wrote:
+
+> Your plugin manifest has that info ( look under your jar/META-INF)
+>
+> -D
+>
+>
+> On Wed, May 14, 2014 at 7:41 AM, DenisDasKind <bltomov@abv.bg> wrote:
+>
+>> Hi,
+>>
+>> i'm new to maven, and now i have the following problem. I have a custom
+>> Mojo, and the Mojo should print the own version stored in the pom.xml of
+>> this mojo. And now i have trouble to get this version. I have tried the
+>> project.version, but this is always the version of the pom, that calls my
+>> Mojo. A easy way, will be when the version is hardcoded, but this is not
+>> the
+>> best way, becausae each time when the version is changed (release) i must
+>> change it manually.
+>> Is there a better way to get this version?
+>>
+>> Thank you in advance!
+>>
+>>
+>>
+>> --
+>> View this message in context:
+>> http://maven.40175.n5.nabble.com/Version-in-Mojo-tp5793054.html
+>> Sent from the Maven - Users mailing list archive at Nabble.com.
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+>
+
+--e89a8f6472cb8549b204f9603f2f--
+

@@ -1,0 +1,86 @@
+From users-return-135113-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 14 00:25:31 2014
+Return-Path: <users-return-135113-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B36BC10330
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 14 Jan 2014 00:25:31 +0000 (UTC)
+Received: (qmail 20681 invoked by uid 500); 14 Jan 2014 00:25:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 20643 invoked by uid 500); 14 Jan 2014 00:25:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 20635 invoked by uid 99); 14 Jan 2014 00:25:02 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 00:25:02 +0000
+X-ASF-Spam-Status: No, hits=-2.3 required=5.0
+	tests=RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [209.65.160.92] (HELO nbfkord-smmo05.seg.att.com) (209.65.160.92)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 00:24:54 +0000
+Received: from unknown [144.160.112.28] (EHLO tlpi048.enaf.dadc.sbc.com)
+	by nbfkord-smmo05.seg.att.com(mxl_mta-7.2.1-0) over TLS secured channel
+	with ESMTP id 0c384d25.0.670043.00-2339.1878836.nbfkord-smmo05.seg.att.com (envelope-from <dk068x@att.com>);
+	Tue, 14 Jan 2014 00:24:33 +0000 (UTC)
+X-MXL-Hash: 52d483c14caa6ba7-0d8e5748cdd24f46a77260918c3249aadaca1e92
+Received: from enaf.dadc.sbc.com (localhost.localdomain [127.0.0.1])
+	by tlpi048.enaf.dadc.sbc.com (8.14.5/8.14.5) with ESMTP id s0E0OWPk019969
+	for <users@maven.apache.org>; Mon, 13 Jan 2014 18:24:32 -0600
+Received: from dalint03.pst.cso.att.com (dalint03.pst.cso.att.com [135.31.133.161])
+	by tlpi048.enaf.dadc.sbc.com (8.14.5/8.14.5) with ESMTP id s0E0OUfn019953
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <users@maven.apache.org>; Mon, 13 Jan 2014 18:24:30 -0600
+Received: from WABOTH9MSGHUB8E.ITServices.sbc.com (WABOTH9MSGHUB8E.itservices.sbc.com [135.163.35.85]) by dalint03.pst.cso.att.com (RSA Interceptor) for <users@maven.apache.org>; Tue, 14 Jan 2014 00:24:19 GMT
+Received: from WABOTH9MSGUSR8C.ITServices.sbc.com ([135.163.35.214]) by
+ WABOTH9MSGHUB8E.ITServices.sbc.com ([135.163.35.85]) with mapi id
+ 14.03.0174.001; Mon, 13 Jan 2014 16:24:19 -0800
+From: "KARR, DAVID" <dk068x@att.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: Is it possible to deliberately have two dependencies with the same
+ groupid, artifactid, and packaging, but different version?
+Thread-Topic: Is it possible to deliberately have two dependencies with the
+ same groupid, artifactid, and packaging, but different version?
+Thread-Index: Ac8Qvn4eU5RSLRmwTSGQH9i5k3aoKw==
+Date: Tue, 14 Jan 2014 00:24:14 +0000
+Message-ID: <B8D164BED956C5439875951895CB4B221882805C@WABOTH9MSGUSR8C.ITServices.sbc.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [135.163.34.4]
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-RSA-Inspected: yes
+X-RSA-Classifications: public
+X-AnalysisOut: [v=2.0 cv=Y/9PRGiN c=1 sm=1 a=srMsL6ituuWTYeky9Bs9mA==:17 a]
+X-AnalysisOut: [=wIb6qehleIcA:10 a=ofMgfj31e3cA:10 a=YnP4VLJI-BoA:10 a=BLc]
+X-AnalysisOut: [eEmwcHowA:10 a=kj9zAlcOel0A:10 a=zQP7CpKOAAAA:8 a=XIqpo32R]
+X-AnalysisOut: [AAAA:8 a=TrrMlRCed5kA:10 a=n2IXaxs5V5NsAbx_gpcA:9 a=CjuIK1]
+X-AnalysisOut: [q_8ugA:10 a=0WWUHroBzx8A:10 a=3L82HyFwemkA:10]
+X-Spam: [F=0.2000000000; CM=0.500; S=0.200(2010122901)]
+X-MAIL-FROM: <dk068x@att.com>
+X-SOURCE-IP: [144.160.112.28]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I have a situation where it would be convenient for my pom to have two depe=
+ndencies that are almost identical, only being different by the version.  T=
+he makeup of the artifact is such that it would be safe (and intended) to u=
+se both of them.  The Java package used in each is similar, but different. =
+ The package will vary along with the version number.
+
+Will dependency resolution and the EAR plugin (and any other mechanism that=
+ lists dependencies) have any trouble with this?
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,86 @@
+From users-return-136864-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 24 02:36:05 2014
+Return-Path: <users-return-136864-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 68D461123C
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 24 Jul 2014 02:36:05 +0000 (UTC)
+Received: (qmail 55858 invoked by uid 500); 24 Jul 2014 02:36:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 55775 invoked by uid 500); 24 Jul 2014 02:36:02 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 55761 invoked by uid 99); 24 Jul 2014 02:36:02 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 02:36:02 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of baerrach@gmail.com designates 209.85.220.171 as permitted sender)
+Received: from [209.85.220.171] (HELO mail-vc0-f171.google.com) (209.85.220.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 02:35:58 +0000
+Received: by mail-vc0-f171.google.com with SMTP id hq11so3872399vcb.2
+        for <users@maven.apache.org>; Wed, 23 Jul 2014 19:35:37 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=yo1iRARieRW35eTEV9eYCTPJOe/5oMxYNWrKczfHjHM=;
+        b=JEyPLVdv2bdJx/vjPMjAfmWKH1sHsdpSRzLmCI0dUMN+euX04I+nr4/nRWhoJbDzJu
+         jJmlkk9ST+NFXixt1mOk7SEsFXj0VLF4J5f+mThldoxpyJEGaV4xivKzPcYqAHYYBQ+u
+         U0GHIDnW03FzAfKVpEB4q3THqu4gv2PgKLJFaWNfFOZMQhg3QPC1IMnqmPCDALW7qbf6
+         RggOLakDnjdRb3BQW0n5FMMvw0bmM6LiYzDqqZgCxeQmJTIsF580o1tEC40umXvog5D3
+         lspB0VUJ7fz2kY6FA5K4/AYZ1zlAuuHPnAeyd26Ns8+mTaVqLc7jFV+wrxEo+ME/cGrY
+         m4ug==
+MIME-Version: 1.0
+X-Received: by 10.52.7.163 with SMTP id k3mr6533190vda.58.1406169337186; Wed,
+ 23 Jul 2014 19:35:37 -0700 (PDT)
+Received: by 10.58.84.231 with HTTP; Wed, 23 Jul 2014 19:35:37 -0700 (PDT)
+In-Reply-To: <53CFD6D8.5030200@linagora.com>
+References: <53CFD6D8.5030200@linagora.com>
+Date: Thu, 24 Jul 2014 12:05:37 +0930
+Message-ID: <CADVp3v_y6nY7RVVkkAmeXUuuwTq1ZQ873mFUL4oOjUEdFneFxQ@mail.gmail.com>
+Subject: Re: testing-harness plugin: LocalRepositoryManager is not set
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=bcaec50164afd651b304fee74f6b
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--bcaec50164afd651b304fee74f6b
+Content-Type: text/plain; charset=UTF-8
+
+On 24 July 2014 01:08, Vincent Zurczak <vincent.zurczak@linagora.com> wrote:
+
+>
+> Hi,
+>
+> I am not sure this is the right mailing-list.
+> Maybe I should have posted to the dev list. Anyway...
+>
+> I have started working on new Maven plug-in last week and I have set up
+> unit tests using the testing-harness plugin.
+> I have problems with Maven injected fields, such as the Maven project.
+>
+>>
+Here will do, the devs are on both.
+
+(and you will have to wait for someone with more knowledge about using the
+testing harnesses)
+
+Back when I was trying to use them you had a choice of 3, I think its not
+down to one but I dont know if the documentation on how to set it up and
+use it is readily available.
+
+When you get your answers, would you add to the knowledge base?
+It is always good to get fresh eyes on these things as the people who
+already know what's going on make assumptions that someone just starting
+out need to know about.
+
+--bcaec50164afd651b304fee74f6b--
+

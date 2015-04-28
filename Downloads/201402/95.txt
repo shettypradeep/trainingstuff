@@ -1,0 +1,88 @@
+From users-return-135576-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 20 14:31:49 2014
+Return-Path: <users-return-135576-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D60441145B
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 20 Feb 2014 14:31:49 +0000 (UTC)
+Received: (qmail 77189 invoked by uid 500); 20 Feb 2014 14:31:43 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 77132 invoked by uid 500); 20 Feb 2014 14:31:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 77115 invoked by uid 99); 20 Feb 2014 14:31:42 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Feb 2014 14:31:42 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of waynefay@gmail.com designates 209.85.220.46 as permitted sender)
+Received: from [209.85.220.46] (HELO mail-pa0-f46.google.com) (209.85.220.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Feb 2014 14:31:37 +0000
+Received: by mail-pa0-f46.google.com with SMTP id rd3so1969233pab.5
+        for <users@maven.apache.org>; Thu, 20 Feb 2014 06:31:16 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=yV0pgARnrGTq+5JyBkVQPLxiGYeSoW3avg7pKyMWqA8=;
+        b=Y41VQ/aAy5mxXk8QZlafe2H6bH8brlyZT9Ko9chqvc1yVXlPJP2+ovadtvxR1Lpm35
+         1BaqIuVHDl8/z2YHm2IzNArUShzU/ArbzeGc29bCZtB3dAXiIFBjjCGSu+rUsqXiGjil
+         Vcmw6ql7u3TC+m9h/7f5wV/8EHWJ7N7d2p6wbFbU2kYs8aTw3MO1+WbJtbyyld2k0YX+
+         BIS045GyzqG3CVhFeaobp639Kw3lE24mZ8MnuIoVSgw/KuDm/zZ55PcSPlLU/AZNJdSY
+         VI31l/EdLE79m+0asc+IOaSbFpMWiFcC/Ddowuqxi+HQu3Try3v/c3qTNJb/uH1EttXZ
+         8F9g==
+X-Received: by 10.66.102.39 with SMTP id fl7mr2333314pab.43.1392906676642;
+ Thu, 20 Feb 2014 06:31:16 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Thu, 20 Feb 2014 06:30:56 -0800 (PST)
+In-Reply-To: <1392861493863-5785441.post@n5.nabble.com>
+References: <CAPg65qhXj4b9VsK2eKd4VTpf3ghWMn603GWz_JFQX4C0HSPPww@mail.gmail.com>
+ <52FE29B7.20407@artifact-software.com> <1392392192345-5784856.post@n5.nabble.com>
+ <52FE659D.1000809@artifact-software.com> <1392437696526-5784947.post@n5.nabble.com>
+ <CA+nPnMw10XjXqb4Y7-uuG13tptPKh40mPpiWkO53GQtmFr4R8g@mail.gmail.com>
+ <CAPg65qjd50aQ7Z62Gbv7A-Q6kTT7S0H8rfSuj=dy-KVh5Fu9Jw@mail.gmail.com>
+ <CALy+7UmOyvYLxHQk-v9q9P+LQrtUcCa9BruRmk_W-bMkDuUXGQ@mail.gmail.com> <1392861493863-5785441.post@n5.nabble.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Thu, 20 Feb 2014 08:30:56 -0600
+Message-ID: <CALy+7U=LTDT1j+K60pAaAHO7Qs6t33kN8SCKt34vzVpiOOphEQ@mail.gmail.com>
+Subject: Re: Why does Maven fail to compile my project occasionally?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> It's because my code depends some other modules which I didn't put it into
+> pom.xml explicitly. And I'm adding them into the corresponding pom.xml.
+> Thank you for directing me back to the right track!
+
+Glad you sorted that out! :)
+
+> However, I'm curious that I succeed to compile the project after several
+> compilation failure. How does it happen? I've passed the parameter 'clean
+> install -Dmaven.test.skip=true --update-snapshots --batch-mode --fail-fast
+> --debug -Dmaven.compiler.forceJavacCompilerUse=true
+> -Dmaven.compiler.verbose=true' to Maven, but it doesn't get the same error
+> when I compile the project the second time. And it mislead me to blame Maven
+
+I rarely use any parameters as you have done here. Can you try a
+simple "mvn clean install" and see how that goes? Also -U and -X may
+be useful shortcuts for you to know about.
+
+And I agree with Stephen and Ron - Eclipse sometimes does helpful
+things which produce hard to explain results. I would suggest either
+using Eclipse or Maven CLI but not both simultaneously on the same
+project (close Eclipse & just use Maven CLI, or just use Eclipse).
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

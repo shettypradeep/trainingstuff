@@ -1,0 +1,110 @@
+From users-return-137479-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Oct  7 23:44:32 2014
+Return-Path: <users-return-137479-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1D9FF1784E
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  7 Oct 2014 23:44:32 +0000 (UTC)
+Received: (qmail 10930 invoked by uid 500); 7 Oct 2014 23:44:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 10848 invoked by uid 500); 7 Oct 2014 23:44:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 10837 invoked by uid 99); 7 Oct 2014 23:44:29 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 07 Oct 2014 23:44:29 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of khmarbaise@gmx.de designates 212.227.15.15 as permitted sender)
+Received: from [212.227.15.15] (HELO mout.gmx.net) (212.227.15.15)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 07 Oct 2014 23:44:03 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([217.247.52.94]) by mail.gmx.com
+ (mrgmx003) with ESMTPSA (Nemesis) id 0MEnjW-1XR8iO1u9q-00Fx5F for
+ <users@maven.apache.org>; Wed, 08 Oct 2014 01:44:02 +0200
+Message-ID: <54347AC2.3010903@gmx.de>
+Date: Wed, 08 Oct 2014 01:44:02 +0200
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Best practice for integration tests (vs unit tests)
+References: <CAAZU44kqoyDw-8BcffSADVxkoEnUVXaOtuKO134UD71B9O0CWw@mail.gmail.com>
+In-Reply-To: <CAAZU44kqoyDw-8BcffSADVxkoEnUVXaOtuKO134UD71B9O0CWw@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
+X-Provags-ID:  V03:K0:CpdUANbeOvNTmjxIscjW5p6JVgiAU7twPgFwLlmkcPvBMMk35JX
+ 652W002JBZpivSRPVrSFM12ch5UaK0U7D9tHvcSL35nYVT/v+KYLFYzFZVLxVmzu5kp7HWv
+ vTjYo/5OHbyqYi/4QHQlOgUHemGVQhMZLlDMuzBiIM+Qj1y6OoLQG2rFNLX3hsHLhMBbX6o
+ xeLeR9Y+ChQ3O9AAlZuPg==
+X-UI-Out-Filterresults: notjunk:1;
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Kevin,
+
+
+the best suggestion i can give is simply make a separate module where 
+the integration tests should be moved to...
+
+
+This has the advantage having different location for them, cause they 
+are more than unit tests which is expressed by using a separate module 
+furthermore you have the configuration for the integration test within a 
+separate module which is more flexible this includes the configuration 
+of maven-failsafe-plugin as well.
+
+maven-failsafe-plugin should be used cause it supports a different 
+naming schema for your integration tests (*IT.java see docs of 
+maven-failsafe-plugin) and you can check the results of the integration 
+tests via maven-failsafe-plugin:verify separately...and break the build 
+if you like...
+
+Apart from the above integration tests should run at an other phase 
+(pre-integration-test,integration-test, post-integration) and NOT in 
+test phase...which is handled by maven-failsafe-plugin (see docs 
+http://maven.apache.org/surefire/maven-failsafe-plugin/usage.html)
+
+So if you like to run your unit tests parallel you can configure the 
+maven-surefire-plugin which does not influence your integration tests...
+
+
+I would also suggest to put the integration tests into src/test/java 
+within the separated module....
+
+Kind regards
+Karl-Heinz Marbaise
+
+On 10/8/14 1:28 AM, Kevin Burton wrote:
+> Right now I have an overlap of unit and integration tests and I want to
+> tear out my integration tests and keep them separate.  This way our unit
+> tests execute fast and integration testing takes a bit longer.
+>
+> … and now I’m trying to figure out the best strategy for that.
+>
+> Reading this:
+>
+> http://docs.codehaus.org/display/MAVENUSER/Maven+and+Integration+Testing
+>
+> seems to not solve the problem.
+>
+> Seems to me the easiest would be to just have src/main/integration-tests
+>
+> … but would I have to use failsafe or surefire?  I’m not sure why I would
+> need another plugin for this.
+>
+> Maybe someone can enlightenment me with some maven wisdom?
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

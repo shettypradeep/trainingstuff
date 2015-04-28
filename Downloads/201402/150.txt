@@ -1,0 +1,181 @@
+From users-return-135634-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 27 18:14:09 2014
+Return-Path: <users-return-135634-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2D71610EDF
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 27 Feb 2014 18:14:09 +0000 (UTC)
+Received: (qmail 9771 invoked by uid 500); 27 Feb 2014 18:14:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 9704 invoked by uid 500); 27 Feb 2014 18:14:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9696 invoked by uid 99); 27 Feb 2014 18:14:03 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Feb 2014 18:14:03 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [212.82.96.186] (HELO nm13-vm7.bullet.mail.ir2.yahoo.com) (212.82.96.186)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Feb 2014 18:13:56 +0000
+Received: from [212.82.98.48] by nm13.bullet.mail.ir2.yahoo.com with NNFMP; 27 Feb 2014 18:13:36 -0000
+Received: from [212.82.98.80] by tm1.bullet.mail.ir2.yahoo.com with NNFMP; 27 Feb 2014 18:13:36 -0000
+Received: from [127.0.0.1] by omp1017.mail.ir2.yahoo.com with NNFMP; 27 Feb 2014 18:13:36 -0000
+X-Yahoo-Newman-Property: ymail-3
+X-Yahoo-Newman-Id: 152239.26209.bm@omp1017.mail.ir2.yahoo.com
+Received: (qmail 85483 invoked by uid 60001); 27 Feb 2014 18:13:36 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.de; s=s1024; t=1393524815; bh=FbCAySvRWfE40Nz3ScCgTJFjlEpFcDDAvuI4gHRhYzA=; h=X-YMail-OSG:Received:X-Rocket-MIMEInfo:X-Mailer:References:Message-ID:Date:From:Reply-To:Subject:To:In-Reply-To:MIME-Version:Content-Type; b=uVVOPuMwHtDRpVmZOmBDV3PsjgyHPwsYtaFvBNe5xAlMH3ir+ceLNkdJ7gGi4oYhe6v5pLVxSC+SUn719IKX9SQkK/fQGfVFYQ3m/eIz2d0S/peQMNQKD2LO/3+yQR5ZMmOm7jCgNWpz2f74E4O0DpGLHu1hPG1AdlI2GAIumfc=
+DomainKey-Signature:a=rsa-sha1; q=dns; c=nofws;
+  s=s1024; d=yahoo.de;
+  h=X-YMail-OSG:Received:X-Rocket-MIMEInfo:X-Mailer:References:Message-ID:Date:From:Reply-To:Subject:To:In-Reply-To:MIME-Version:Content-Type;
+  b=Y+bJnGUgzHSbDDKWCLsuAkVN8LAj3tehE8T0BZlHNFW/1MWnPKY0+mOvpbyM1JBf3hRWstCfQKWCsFLJB53dU2zJBixY4wlZEkTyuhN+olEjvEbiQb7yqgT6IOqoTbuWc/CQHrF4sIGUUou51KMe+TdKNUNpJmYzv/GDX4tjzLA=;
+X-YMail-OSG: ZYez14QVM1mSwTw24MX4UB3SyX0CtUsiOS7k2qt5nnyDPeb
+ ARD0rGXRT1iMzv3LcBsfp_IVKUVyl8UIYkvcK_GKVoZgnGCN_2LuEoJ.bXTo
+ dEZVjQ84r1IKaIw72iE5DzH4tLV.gkR.Dcn3aqGCzxOyZpij4Cpu_nZYq.uh
+ smajupRLUXdcsVXEVIaNA1wkAaQkSaMw_VQXPc284lizrfXnF6CCEYns5Sxd
+ Y7fmeg50fKwFdCl3HvtGVsDVgBUxu6WBQUboYsPcRAR2lIGe_mmHV41OpiZi
+ vPfv8eUzjondRrF0jQsvfy8NBQwj5DvHRqxc1h6jCA.9rZG0jwwOInBniciY
+ GmNNPguTeLiVJDoplYksMdLDB1.K4DJx4WJZoCK7owuJiAKvMxE7LbHutKjZ
+ nrZBxYp4NBgAjsjEgNs9vT3pImXOuRSvvTAlY5HhD2w8ov4PzlZGgzJr5aW4
+ IoFVAPsYfoIEW9sATR8CQoqBdSPoLJyS0PoFNPzLEpDdSSSKqXWLRnZgg.gA
+ RzVflo88RGpTO1DFlwERqdGTay_NSyZeaLLHs.1hPjEJnKNK5PPxUepkIQ57
+ WWZ0g0o4vrCHVTQj1Pb2yKZK1Gu3aFu_T0wr9KH7WBZl0K3ZolVIpIXaqTl8
+ AIHWoCAXeGJ8lsNNaouXWEMqoCzvKP.5M4y9rqpjCD4L.sEWO2AcRroIzWRC
+ sejsMk2bBPO3F8NihDokvU2sFUJs8m5.Mjr5DL34dy61KHS.ke2rbCz.8JKk
+ c4J2.vCu4Dv0kwzTUToAi7fCcw7arHCtrQDqFt3BmfqEnMyyU3xy0DnWu6HS
+ SC.STx0QOQIZi6bXpDLYysXwwjsjCaYRSwQ9BUI2DBSsbuPn1AvIqe7Tq48V
+ OYadfSvI4AdZBJ0phLXeKg0F7y3B5Po_Uo7B5ChOVJLcrddjk4McvmMagSw-
+ -
+Received: from [84.113.120.125] by web28906.mail.ir2.yahoo.com via HTTP; Thu, 27 Feb 2014 18:13:35 GMT
+X-Rocket-MIMEInfo: 002.001,CgpKU0YgYnkgZGVmYXVsdCBsb2FkcyB0aGUgcmVzb3VyY2VzIGZyb20gdGhlIGxvY2FsIFdBUiBjbGFzc3BhdGggb25seS4gQnV0IHlvdSBjYW4gZWFzaWx5IHdyaXRlIHlvdXIgb3duIFJlc291cmNlUmVzb2x2ZXIgd2hpY2ggcGlja3MgdGhlIHN0dWZmIGZyb20gdGhlIENsYXNzUGF0aCBhcyB3ZWxsLgoKQW4gZXhhbXBsZSBjYW4gYmUgZm91bmQgaGVyZToKaHR0cDovL29jcHNvZnQub3JnL29wZW5zb3VyY2UvY3JlYXRlLWNvbW1vbi1mYWNlbGV0cy1qYXIvClNlZSBDdXN0b21SZXNvdXJjZVJlc29sdmVyLgoBMAEBAQE-
+X-Mailer: YahooMailWebService/0.8.177.636
+References: <20140227092431.205ec8f6@linux-du93.site>	<CAB7wfMqriOJptgWdX+SOt0HAXgXAWKnuLiKSNXqKSEhCZs0hfQ@mail.gmail.com>	<20140227170531.6c38285c@linux-du93.site>	<CAHTRnezVoc=hiDxHMEVJz1HP1Xx2DKcFbxW0_TUeEwUR4Wyyqg@mail.gmail.com>	<20140227171404.321aef96@linux-du93.site>	<CAHTRneycD+yQQby5pQJ8nBf1hSahH=mTS=2VrVUDwOipkkizxg@mail.gmail.com>	<20140227172637.797e2808@linux-du93.site>	<CAHTRnexnK5ECtJbRAw8+MBU=Yh_wAs5uWVttL1nkoHAvs2SB+Q@mail.gmail.com> <CAB7wfMr6RR8UukD6vZddi03U0R=99=M_xe32ALviOVWDcSfHPg@mail.gmail.com>
+Message-ID: <1393524815.74175.YahooMailNeo@web28906.mail.ir2.yahoo.com>
+Date: Thu, 27 Feb 2014 18:13:35 +0000 (GMT)
+From: Mark Struberg <struberg@yahoo.de>
+Reply-To: Mark Struberg <struberg@yahoo.de>
+Subject: Re: Are skinny WARs still recommended?
+To: Maven Users List <users@maven.apache.org>
+In-Reply-To: <CAB7wfMr6RR8UukD6vZddi03U0R=99=M_xe32ALviOVWDcSfHPg@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+
+
+JSF by default loads the resources from the local WAR classpath only. But you can easily write your own ResourceResolver which picks the stuff from the ClassPath as well.
+
+An example can be found here:
+http://ocpsoft.org/opensource/create-common-facelets-jar/
+See CustomResourceResolver.
+
+
+LieGrue,
+strub
+
+
+On Thursday, 27 February 2014, 18:40, Simon Lessard <simon.lessard.3@gmail.com> wrote:
+
+Hi,
+>
+>From a pure JSF point of view, you could also add a
+>WEB-INF/faces-config.xml file in your project that redefine all OmniFaces
+>artifact that are annotated. It's a super poor man solution/ugly hack as
+>you might have to alter the file with every OmniFaces releases, but would
+>allow you to have the OmniFaces JAR in the EAR while still have everything
+>it provides available. I agree with Antonio's suggestion to ask for a
+>library split within OmniFaces as a more future-proof solution.
+>
+>
+>Regards,
+>
+>
+>
+>On Thu, Feb 27, 2014 at 5:31 PM, Antonio Petrelli <
+>antonio.petrelli@gmail.com> wrote:
+>
+>> 2014-02-27 17:26 GMT+01:00 Martin Hoeller <martin@xss.co.at>:
+>>
+>> > On 27 Feb 2014, Antonio Petrelli wrote:
+>> >
+>> > > 2014-02-27 17:14 GMT+01:00 Martin Hoeller <martin@xss.co.at>:
+>> > >
+>> > > > On 27 Feb 2014, Antonio Petrelli wrote:
+>> > > >
+>> > > > > 2014-02-27 17:05 GMT+01:00 Martin Hoeller <martin@xss.co.at>:
+>> > > > >
+>> > > > > > I have another concrete example with a single WAR where OmniFaces
+>> > is a
+>> > > > > > dependency by the WAR and by some EJB JAR, both contained in the
+>> > EAR.
+>> > > > The
+>> > > > > > OmniFaces JAR goes in the EARs lib folder and thus OmniFaces ist
+>> > not
+>> > > > > > fully usable without workarounds. See also my question on
+>> > > > StackOverflow:
+>> > > > > >
+>> > > > > >
+>> > > >
+>> >
+>> http://stackoverflow.com/questions/22046464/how-to-correctly-use-omnifaces-in-an-ear
+>> > > > > >
+>> > > > > >
+>> > > > > Hi,
+>> > > > > the real question is: why do you want to use a JSF-specific library
+>> > > > inside
+>> > > > > an EJB?
+>> > > >
+>> > > > OmniFaces is a JSF library but not UI component focused like
+>> RichFaces.
+>> > > > It hast some really nice classes like BeanManager that could be
+>> useful
+>> > > > outside a JSF application.
+>> > > >
+>> > >
+>> > > If it's really BeanManager or few classes that you need, I suggest to
+>> use
+>> > > the Shade plugin, to create an artifact with one (or few) classes,
+>> > possibly
+>> > > moved to another package:
+>> > >
+>> >
+>> http://maven.apache.org/plugins/maven-shade-plugin/examples/class-relocation.html
+>> >
+>> > I was already thinking of this :)
+>> >
+>> > However, I felt like there would be something wrong with this approach,
+>> as
+>> > I usually just need to declare a dependency when I want to use a library.
+>> > Not repackage it and include the classes twice in the EAR.
+>> >
+>>
+>> In fact what I proposed is a workaround. Probably you could collaborate
+>> with OmniFaces to split the library into a "common" jar and a JSF-specific
+>> jar, so that the common can be safely put in the EAR.
+>>
+>> Antonio
+>>
+>
+>
+>
+>-- 
+>*Simon Lessard*, ADF Architect
+>*CMA* *SYSTeMS*
+>*( +33(0) 6 79 37 39 85 (France)*
+>
+>
+>
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

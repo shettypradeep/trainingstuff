@@ -1,0 +1,78 @@
+From users-return-136465-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri May 30 03:32:30 2014
+Return-Path: <users-return-136465-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 76E27100B4
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 30 May 2014 03:32:30 +0000 (UTC)
+Received: (qmail 96164 invoked by uid 500); 30 May 2014 03:32:29 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 96085 invoked by uid 500); 30 May 2014 03:32:29 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 96077 invoked by uid 99); 30 May 2014 03:32:29 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 30 May 2014 03:32:29 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dxxvi@yahoo.com designates 98.138.120.50 as permitted sender)
+Received: from [98.138.120.50] (HELO nm43.bullet.mail.ne1.yahoo.com) (98.138.120.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 30 May 2014 03:32:22 +0000
+Received: from [127.0.0.1] by nm43.bullet.mail.ne1.yahoo.com with NNFMP; 30 May 2014 03:31:58 -0000
+Received: from [98.138.226.176] by nm43.bullet.mail.ne1.yahoo.com with NNFMP; 30 May 2014 03:28:58 -0000
+Received: from [98.138.101.173] by tm11.bullet.mail.ne1.yahoo.com with NNFMP; 30 May 2014 03:28:58 -0000
+Received: from [127.0.0.1] by omp1084.mail.ne1.yahoo.com with NNFMP; 30 May 2014 03:28:58 -0000
+X-Yahoo-Newman-Property: ymail-4
+X-Yahoo-Newman-Id: 613578.35887.bm@omp1084.mail.ne1.yahoo.com
+Received: (qmail 65434 invoked by uid 60001); 30 May 2014 03:28:58 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s1024; t=1401420538; bh=a9g6AjV4TnNfhkFD0ZnY7M1yWlETWkQrEha1Qp80wFI=; h=Message-ID:Date:From:Reply-To:Subject:To:MIME-Version:Content-Type; b=qB7xdL24PNtvm/Uez28klNdLjFpVc2Sm3wkRXqEsymEH1WXXkDZJNZvmZ6qmvfawfrXuxoIOaPrSHZa154+kmYjVGvi2usUJUf2IAVfwfLbmjEzZdtjn+PnCisjLA3Rn4X7Tq+oQ8miKQEv7yXLJlt1ZLkYIJrA14x9oeJ0jBcg=
+X-YMail-OSG: V1xWRH8VM1ms6TE4L4_79L4.rwpzuAn3pcZorX06lb7_FRB
+ tMFnK_5YcMy8ayuet69pG3q4WpAqvqHpv4bHzMEdy9H8dLcKAhBQqkX0p3V5
+ 7qEE.3pE5xUPJe7S8O0wCGnGGXdapS0kxFH4CGHrF923Bi54PkjiF5akuA0X
+ vcQZouPMu1IPgeBaR_tLi0vsNJZYgXik4MtenpmYhML9Yre25We9tA.E6Nhg
+ 3C4souaibp7UvwskcEcxpDcW2yoXGiX7u1NN9pwo4lWgwg1_HGsc4.._U0xY
+ Uozl8TeiiY9UiTxoXbFMpz28DK0QHCK47_Dg.Ej6CLWt3UPBsgmxH6vNONGY
+ lB5iUirUIZUOib9X2cW_vfGcGQoG95yRF.P0hKyQctC8WhTurjaKK3cnLtQm
+ ZfB8uTXr6y.zzZRfZEX1pStlD7yXvLKAo9F_0wV8Tl.6whlzqHEgPV3rBFT7
+ 0WZC3lBby0fjo3uhjcZaNRbnTfG.7bDByOJphWY7S96zVIee8Ig6JINGJ_oI
+ oV3jdKjBNBqI6jFVajnRJ3WGavIr_rr0sKrN1FDZPblkNNrwCjSnNeA--
+Received: from [69.116.16.226] by web122602.mail.ne1.yahoo.com via HTTP; Thu, 29 May 2014 20:28:58 PDT
+X-Rocket-MIMEInfo: 002.001,SGkgQWxsLAoKSSBoYXZlIGEgbXVsdGktbW9kdWxlIHByb2plY3QgaW4gdGhlIC9ob21lL21lL3Byb2plY3RzL2dyYW5kZmF0aGVyIGxpa2UgdGhpczoKCmdyYW5kZmF0aGVyCsKgwqDCoMKgIHwKwqDCoMKgwqAgfC0tLS0gcG9tLnhtbArCoMKgwqDCoCB8CsKgwqDCoMKgIHwtLS0tIGZhdGhlcgrCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoCB8CsKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgIHwtLS0tIHBvbS54bWwKwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqAgfArCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqABMAEBAQE-
+X-Mailer: YahooMailWebService/0.8.188.663
+Message-ID: <1401420538.41978.YahooMailNeo@web122602.mail.ne1.yahoo.com>
+Date: Thu, 29 May 2014 20:28:58 -0700 (PDT)
+From: Thai Dang Vu <dxxvi@yahoo.com>
+Reply-To: Thai Dang Vu <dxxvi@yahoo.com>
+Subject: How to move the <directory> of a multi-module project?
+To: Maven Users List <users@maven.apache.org>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="971470827-364654455-1401420538=:41978"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--971470827-364654455-1401420538=:41978
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hi All,=0A=0AI have a multi-module project in the /home/me/projects/grandfa=
+ther like this:=0A=0Agrandfather=0A=A0=A0=A0=A0 |=0A=A0=A0=A0=A0 |---- pom.=
+xml=0A=A0=A0=A0=A0 |=0A=A0=A0=A0=A0 |---- father=0A=A0=A0=A0=A0=A0=A0=A0=A0=
+=A0=A0=A0=A0=A0 |=0A=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0 |---- pom.xml=
+=0A=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0 |=0A=A0=A0=A0=A0=A0=A0=A0=A0=A0=
+=A0=A0=A0=A0 |---- son=0A=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=
+=A0=A0=A0=A0 |=0A=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=
+=A0 |---- pom.xml=0A=0AIf I build that project, I will have these target di=
+rectories: /home/me/projects/grandfather/target, /home/me/projects/grandfat=
+her/father/target and /home/me/projects/grandfather/father/son/target. =0A=
+=0A=0AIs there anyway to modify only 1 pom.xml (it doesn't matter if it is =
+grandfather's or father's or son's) so that the target directories are /tmp=
+/grandfather/target, /tmp/grandfather/father/target and /tmp/grandfather/fa=
+ther/son/target?=0A=0ARegards.
+--971470827-364654455-1401420538=:41978--
+

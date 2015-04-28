@@ -1,0 +1,250 @@
+From users-return-135335-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb  3 17:40:00 2014
+Return-Path: <users-return-135335-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E46D6101CF
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  3 Feb 2014 17:40:00 +0000 (UTC)
+Received: (qmail 32242 invoked by uid 500); 3 Feb 2014 17:39:57 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 32180 invoked by uid 500); 3 Feb 2014 17:39:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 32172 invoked by uid 99); 3 Feb 2014 17:39:56 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 03 Feb 2014 17:39:56 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ctrueden.wisc@gmail.com designates 209.85.212.53 as permitted sender)
+Received: from [209.85.212.53] (HELO mail-vb0-f53.google.com) (209.85.212.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 03 Feb 2014 17:39:53 +0000
+Received: by mail-vb0-f53.google.com with SMTP id p17so4820574vbe.40
+        for <users@maven.apache.org>; Mon, 03 Feb 2014 09:39:32 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=zFxP/SnAIVpZo6D9LLS1g4uKzx4I48LPZYOwjhMkjJg=;
+        b=U3v01hYcD90OUIHx4EocS6+DVL/pxIC46BCP3+wrPj663p9Jn56WNlTloHwFY4dpBf
+         nJjGIMOK0TVTLt3tXOR7sbLlnY/1xSiLIpckBK2+M3RYc+KEE5pBWz8nWziU+BXjW52U
+         ByLL+YiefrInOX/9f9c6R7MbSyYhL7RROhcMl9jVrLdDI3JwfDc+eXjSX0+0Hm1E1O9y
+         5TdzFXUJO2/h4U1UgbzrSM/ZZGrRnJVUDx10wkwicjBNeusmiF40aWmBG41AbFlMMqM/
+         F/oCFo+Hou+7zstw5bFso5QAq69YwrHqc+3SuSx/SHiV+Lt9tUl2m5F6TRm/UnHCHewi
+         yJ9g==
+X-Received: by 10.53.13.44 with SMTP id ev12mr24760976vdd.17.1391449171940;
+ Mon, 03 Feb 2014 09:39:31 -0800 (PST)
+MIME-Version: 1.0
+Sender: ctrueden.wisc@gmail.com
+Received: by 10.58.34.198 with HTTP; Mon, 3 Feb 2014 09:39:01 -0800 (PST)
+In-Reply-To: <CAKDUN1swy7w7bjj12f7kffY=d-fD=eOThpz-tLgMg7dfBjaC_g@mail.gmail.com>
+References: <CAOonohfsbrJ-7pxsEYFhLJvzb9KS+V6tnM0Je46Ep3m8YLFWSg@mail.gmail.com>
+ <CAKDUN1vjCWVKV8BQZkjAW4Xb96z_41mhRmP=TNzLHxaX=YdCGg@mail.gmail.com>
+ <CAOonohc6YwtXH-LtEHv3PGnv57cQ0YjWUvcTp9VZ1+Bj8DN7sQ@mail.gmail.com>
+ <CAKDUN1v-0t+DhVnYi3CXFa_0UBs+KXXnR3jeDWqaETFQOO8r=Q@mail.gmail.com>
+ <CAOonoheiu4EWX6p_g=FJHkRHqmBaG+PJoFbeS=7M9nh+DQhA5g@mail.gmail.com> <CAKDUN1swy7w7bjj12f7kffY=d-fD=eOThpz-tLgMg7dfBjaC_g@mail.gmail.com>
+From: Curtis Rueden <ctrueden@wisc.edu>
+Date: Mon, 3 Feb 2014 11:39:01 -0600
+X-Google-Sender-Auth: O8_wjstz911JsQqJKy9q5YjgXBM
+Message-ID: <CADN69y=Z8psWea1bgSozguQZJtLW+-Wd0eJqVsTC9SfRM42ifw@mail.gmail.com>
+Subject: Re: dependency management across projects
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1135f1809dda6604f1840123
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1135f1809dda6604f1840123
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi everyone,
+
+> > The very point I am trying to make here is
+> > "how do you manage that manual BOM on a daily basis".
+>
+> There is no automatic solution for this that I know of.
+
+Maybe not exactly what you are looking for, but sort of similar:
+
+My group uses a script [1] to automatically bump the version of our parent
+POM [2].
+
+In that parent POM, we declare many version properties, plugin
+configuration in pluginManagement, etc., and we like to keep all our
+projects across various Git repositories using the newest available version
+of the parent, to minimize version clashes when mixing and matching
+libraries.
+
+We set up a parameterized Jenkins job [3] to run the parent bump for us,
+which provides checkboxes for all the downstream projects so the bump can
+be controlled individually.
+
+It's not perfect but it does save a lot of manual maintenance.
+
+Regards,
+Curtis
+
+[1]
+https://github.com/scijava/scijava-scripts/blob/a0fc8006741e0216c74c82866fd1bb1a7d364d55/bump-pom-scijava.sh
+[2]
+https://github.com/scijava/pom-scijava/blob/0de0676f7731b98baa89379dc8b92f8b26a5d086/pom.xml
+[3] http://jenkins.imagej.net/view/SciJava/job/Bump-POM-SciJava/
+
+
+On Mon, Feb 3, 2014 at 1:21 AM, Anders Hammar <anders@hammar.net> wrote:
+
+> >
+> > > The release of the BOM would be that release of "a single coherent
+> unit"
+> > > then. It would specify the (marketing) version of the "platform" P.
+> > > For example, P v1.0.0 will include v1.2.3 of SP1 (sub-product 1),
+> v1.4.3
+> > of
+> > > SP2, etc.
+> >
+> > Isn't it what I just write in my original post? (without mentioning the
+> > BOM)
+> >
+>
+> I believe so, yes. The key thing in my "solution" is the BOM. And the BOM
+> will keep the appropriate version of the the sub-products together.
+>
+>
+>
+> > The very point I am trying to make here is
+> > "how do you manage that manual BOM on a daily basis". Each sub-project
+> has
+> > its own release cycle and we cannot force the versions it has to use for
+> a
+> > specific branch. For instance, the product might state that the
+> dependency
+> > D should be 2.2.0 (because that's the latest or the one that people
+> > generally use) but for backward compatibility reason SP2 has to use
+> 1.8.0.
+> >
+>
+> There is no automatic solution for this that I know of. I suppose that
+> tolls could be created, but keep in mind that in the end, "for backward
+> compatibility reason SP2 has to use 1.8.0" is normally a human decision.
+>
+> /Anders
+>
+>
+> >
+> > Creating manually the first BOM for P v1.0.0 isn't a problem: i've
+> created
+> > a set of tools that I am happy to share once they are fully ready. But
+> > maintaining that BOM in the long run is more of a challenge (because we
+> > can't force the sub-projects to use those versions so we have to monitor
+> > what happens in each sub-project to take the appropriate version at the
+> > product level).
+> >
+> > Thanks again for the feedback!
+> >
+> > S.
+> >
+> >
+> > >
+> > > /Anders
+> > >
+> > >
+> > > >
+> > > >
+> > > > >
+> > > > >
+> > > > > There is also the possibility of creating a "grouping pom", which
+> > lists
+> > > > all
+> > > > > artifacts as dependencies. You would then declare a dependency to
+> > that
+> > > > > grouping pom and get all deps magically sucked in. However, this is
+> > not
+> > > > > really the "Maven way" in my opinion as you wouldn't specify your
+> > > direct
+> > > > > deps bu sort of relly on transitive deps. There are some fans of
+> this
+> > > > > approach though here on this list.
+> > > > >
+> > > > >
+> > > > > > 2. Build configs that *force* each sub-project to run with the
+> list
+> > > of
+> > > > > > dependencies for the project (to ensure all tests pass, etc).
+> This
+> > is
+> > > > to
+> > > > > be
+> > > > > > used alongside the regular build job for validation purpose
+> > > > > >
+> > > > >
+> > > > > Maybe some enforcer rule?
+> > > > >
+> > > >
+> > > > Like I said, this is to be used alongside the regular build job. So
+> my
+> > > SP4
+> > > > 1.2.0-SNAPSHOT is building with a set of dependencies on its own and
+> I
+> > > want
+> > > > to validate that with the dependencies of the target release for P,
+> it
+> > is
+> > > > also working just fine. It may just be the same ideally or slightly
+> > > > different (or not slightly at all which requires an explicit
+> > validation).
+> > > >
+> > > > So I need to be able to swap those versions for validation purposes
+> and
+> > > run
+> > > > the build with that.
+> > > >
+> > > > S.
+> > > >
+> > > >
+> > > >
+> > > > >
+> > > > > /Anders
+> > > > >
+> > > > >
+> > > > > >
+> > > > > > I started to look at this and my first trial was to generate a
+> > report
+> > > > > with
+> > > > > > all the dependencies of each project and build a consolidated
+> > report
+> > > > > that I
+> > > > > > can match against the candidates. This would help manage the
+> first
+> > > goal
+> > > > > as
+> > > > > > if a dependency gets added, removed or updated, the global
+> > > > > > dependencyManagement has to be impacted manually (do we upgrade
+> or
+> > > not,
+> > > > > > etc).
+> > > > > >
+> > > > > > For the second part, it's not easy to force a dependency change
+> in
+> > > > Maven,
+> > > > > > especially if the version has been specified at the project
+> level.
+> > > > > >
+> > > > > > Thanks for reading that far. If you have any idea or know any
+> > > > > organisation
+> > > > > > that tried to implement that, I'd be interested
+> > > > > >
+> > > > > > Thanks!
+> > > > > > S.
+> > > > > >
+> > > > >
+> > > >
+> > >
+> >
+>
+
+--001a1135f1809dda6604f1840123--
+

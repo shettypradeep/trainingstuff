@@ -1,0 +1,69 @@
+From users-return-135489-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb 14 14:03:18 2014
+Return-Path: <users-return-135489-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9653B10740
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 14 Feb 2014 14:03:18 +0000 (UTC)
+Received: (qmail 38339 invoked by uid 500); 14 Feb 2014 14:03:14 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 37817 invoked by uid 500); 14 Feb 2014 14:03:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 37807 invoked by uid 99); 14 Feb 2014 14:03:10 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 14:03:10 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 14:03:05 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <bltomov@abv.bg>)
+	id 1WEJLo-00032d-1g
+	for users@maven.apache.org; Fri, 14 Feb 2014 06:02:44 -0800
+Date: Fri, 14 Feb 2014 06:02:44 -0800 (PST)
+From: DenisDasKind <bltomov@abv.bg>
+To: users@maven.apache.org
+Message-ID: <1392386564045-5784848.post@n5.nabble.com>
+Subject: Prevent installing archives to local repository
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi everybody,
+
+one of my project create multiple jar and zip files during the build life
+cycle, and each archive was created with the maven assembly plugin. And now
+i see, that some of the files are installing to the local repository and
+some not. The files that i need are installed to the repository, but there
+is also a file that should not be installed. My question is how maven
+install plugin detect which file should be installed and which not, and is
+there a possibility to control this process and define that a specific file
+shouldn't be installed.
+
+Thank you in advance!
+
+Regards,
+DenisDasKind
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Prevent-installing-archives-to-local-repository-tp5784848.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

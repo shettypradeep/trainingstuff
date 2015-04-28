@@ -1,0 +1,234 @@
+From users-return-135947-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 26 16:35:04 2014
+Return-Path: <users-return-135947-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5181510E32
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Mar 2014 16:35:04 +0000 (UTC)
+Received: (qmail 61283 invoked by uid 500); 26 Mar 2014 16:34:59 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 60913 invoked by uid 500); 26 Mar 2014 16:34:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 60845 invoked by uid 99); 26 Mar 2014 16:34:52 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Mar 2014 16:34:52 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,WEIRD_PORT
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ctrueden.wisc@gmail.com designates 209.85.220.174 as permitted sender)
+Received: from [209.85.220.174] (HELO mail-vc0-f174.google.com) (209.85.220.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Mar 2014 16:34:47 +0000
+Received: by mail-vc0-f174.google.com with SMTP id ld13so2665224vcb.5
+        for <users@maven.apache.org>; Wed, 26 Mar 2014 09:34:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=ozgKraxvNw41gj+NnwNRTfKN7+nhSEoMsrHvWZaa0v4=;
+        b=RVv6dx5UdkvEhov8ttRTLgv7sDBTF8YR5fL9Aovy+I7cM1mJJTUcS0E0QX4idf++OM
+         fwa/OHZwnzGT3efbU5UjqxrkV8EGyDqsBEdt4AYMjH+DM5RiU0sD5Ft6FMXPgk4NlBne
+         E6zbk3iOKr58MD89aW2+X+OMS+9u/eVr9rUQut6JnoS8isu3vEVDkxPAXhGo8FyfNhnJ
+         Tqrf/BXSJqN4G2L9Y1Lbpxs/HdMjN8i3u4mWle+pTS1vGAohB6i8YW+VA437SLUhKnXb
+         dQNKGgZ1lwwfovqwAQsQygfpQuUB2D5fTFz8TXBPQg5lTZPVHsOQZjIjlIkWJVDZ/muG
+         5Gow==
+X-Received: by 10.52.166.103 with SMTP id zf7mr1778503vdb.30.1395851665620;
+ Wed, 26 Mar 2014 09:34:25 -0700 (PDT)
+MIME-Version: 1.0
+Sender: ctrueden.wisc@gmail.com
+Received: by 10.58.34.198 with HTTP; Wed, 26 Mar 2014 09:33:54 -0700 (PDT)
+In-Reply-To: <20140326154718.BC57A43409CE@dd34514.kasserver.com>
+References: <E9DAAECA-C429-40FC-9B89-18D819971EC6@takari.io>
+ <CF574330.16C0%richard.mauri@sap.com> <96D42AF5-2A3A-4393-B07E-7F95653B585A@takari.io>
+ <20140325234221.0409F4340534@dd34514.kasserver.com> <5332578E.4040002@gmail.com>
+ <20140326154718.BC57A43409CE@dd34514.kasserver.com>
+From: Curtis Rueden <ctrueden@wisc.edu>
+Date: Wed, 26 Mar 2014 11:33:54 -0500
+X-Google-Sender-Auth: bY0o9ehJSiTj7k0nwhAsebID_WA
+Message-ID: <CADN69y=YPc_kGza_eeTvcrzjgmR08FCTDaLByKjxEBchq4jZ1A@mail.gmail.com>
+Subject: Re: Updated documentation for Central Repository
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c2c102b0473804f5850a63
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c2c102b0473804f5850a63
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi Manfred,
+
+Thank you very much to all involved in updating this valuable documentation!
+
+> The Maven docs details usage of things like the Nexus Staging Maven
+> Plugin for command line based release (no more logging into the UI)
+> and a whole lot of other things.
+
+We use the nexus-staging-maven-plugin's option "autoReleaseAfterClose" set
+to true, which is an excellent feature. We simply didn't know about it for
+quite some time [1]. Perhaps that excellent option could also be mentioned
+somewhere? We have found it simpler than needing to run the
+"nexus-staging:release" goal manually every time.
+
+Regards,
+Curtis
+
+[1] https://issues.sonatype.org/browse/NEXUS-6280
+
+
+On Wed, Mar 26, 2014 at 10:47 AM, Manfred Moser <manfred@mosabuam.com>wrote:
+
+> I would always deploy to OSSRH and just proxy it back in. However opinions
+> differ and I will therefore add these instructions on a new page about
+> further tips and tricks for Maven users.
+>
+> Thanks for the contribution.
+>
+> manfred
+>
+> Eric Kolotyluk wrote on 25.03.2014 21:29:
+>
+> >
+> > On 3/25/2014 4:42 PM, Manfred Moser wrote:
+> >> Hello everyone!
+> >>
+> >> We have updated the documentation for publishing artifacts to the
+> Central
+> >> Repository via the free Sonatype Open Source Repository Hosting (OSSRH)
+> and
+> >> added more documents about status, getting help and more and put it all
+> >> together on a brand new website.
+> >>
+> >> Please look at the announcement blog post at
+> >>
+> >> http://blog.sonatype.com/2014/03/a-home-for-the-central-repository/
+> >>
+> >> and the actual new website at http://central.sonatype.org/
+> >>
+> >> Specifically the instructions for Apache Maven are at
+> >>
+> >> http://central.sonatype.org/pages/apache-maven.html
+> >>
+> >> but I would like to encourage you all to have a look at the rest of the
+> site
+> >> as well.
+> >>
+> >> The Maven docs details usage of things like the Nexus Staging Maven
+> Plugin for
+> >> command line based release (no more logging into the UI) and a whole
+> lot of
+> >> other things.
+> >>
+> >> We are hoping you find this all useful and get some great feedback and
+> >> recommendations for improvements from you.
+> >>
+> >> Looking forward to continue to improve the site going forward.
+> >>
+> >> Jason, Joel, Manfred and others
+> >> Sonatype Ops Team - @sonatype_ops
+> >>
+> >>
+> >>
+> >>
+> >>
+> >>
+> >> ---------------------------------------------------------------------
+> >> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> >> For additional commands, e-mail: users-help@maven.apache.org
+> >>
+> > In the Maven section, I was hoping to see some discussion like...
+> >
+> > *Local Repository Manager vs Sonatype OSS*
+> >
+> > You may be in a situation that you have a local or corporate Repository
+> > Manager that you use as part of your daily software development process,
+> > and you only want to use the Sonatype OSS Repository Manager on
+> > occasion. You can can configure this in your settings.xml like this:
+> >
+> >   <profile>
+> >     <id>local-repository</id>
+> >     <properties>
+> > <altReleaseDeploymentRepository>local-nexus::default::
+> http://localhost:8081/nexus/content/repositories/releases/
+> </altReleaseDeploymentRepository>
+> > <altSnapshotDeploymentRepository>local-nexus::default::
+> http://localhost:8081/nexus/content/repositories/snapshots/
+> </altSnapshotDeploymentRepository>
+> >     </properties>
+> > </profile>
+> >
+> >   <activeProfiles>
+> > <activeProfile>local-repository</activeProfile>
+> >   </activeProfiles>
+> >
+> >   <servers>
+> >     <server>
+> >       <id>local-nexus</id>
+> >       <username>deployment</username>
+> >       <password>/secret/</password>
+> >     </server>
+> >     <server>
+> >       <id>sonatype-nexus-snapshots</id>
+> >       <username>/username/</username>
+> >       <password>/secret/</password>
+> >     </server>
+> >     <server>
+> >       <id>sonatype-nexus-staging</id>
+> >       <username>/username/</username>
+> >       <password>/secret/</password>
+> >     </server>
+> >   </servers>
+> >
+> > Normally when you run deploy, your artifacts will go to 'local-nexus'
+> > (or whatever you configure), but when you want to use the Sonatype OSS
+> > repository, you can just use
+> >
+> >   mvn deploy -P!local-repository
+> >
+> > and Maven will deploy according to the <distributionManagement> defined
+> in
+> >
+> >   <parent>
+> >     <groupId>org.sonatype.oss</groupId>
+> >     <artifactId>oss-parent</artifactId>
+> >     <version>7</version>
+> >   </parent>
+> >
+> > The benefit of this method is that you do not have to put any local or
+> > unnecessary corporate information in the pom.xml you are distributing
+> > with your project.
+> >
+> > Warning: some older versions of the maven-deploy-plugin do not support
+> > this properly, so use the latest version, for example, in your pom.xml:
+> >
+> >   <build>
+> >     <pluginManagement>
+> >       <plugins>
+> >         <plugin>
+> >           <!--
+> >             Bugs in older versions prevent altReleaseDeploymentRepository
+> >             and altSnapshotDeploymentRepository from working correctly
+> > https://maven.apache.org/plugins/maven-deploy-plugin/deploy-mojo.html
+> >            -->
+> > <artifactId>maven-deploy-plugin</artifactId>
+> >           <version>2.8.1</version>
+> >         </plugin>
+> >     </pluginManagement>
+> >     . . .
+> >   </build>
+> >
+> >
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a11c2c102b0473804f5850a63--
+

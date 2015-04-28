@@ -1,0 +1,86 @@
+From users-return-137196-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep  5 00:30:50 2014
+Return-Path: <users-return-137196-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2760411BEE
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  5 Sep 2014 00:30:50 +0000 (UTC)
+Received: (qmail 9118 invoked by uid 500); 5 Sep 2014 00:30:48 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 9029 invoked by uid 500); 5 Sep 2014 00:30:48 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9017 invoked by uid 99); 5 Sep 2014 00:30:47 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 05 Sep 2014 00:30:47 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.215.51 as permitted sender)
+Received: from [209.85.215.51] (HELO mail-la0-f51.google.com) (209.85.215.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 05 Sep 2014 00:30:22 +0000
+Received: by mail-la0-f51.google.com with SMTP id gi9so1240362lab.10
+        for <users@maven.apache.org>; Thu, 04 Sep 2014 17:30:21 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=c7+HyD9ljC6arxQ+2ThXgXUHswhGVXllOgnvlTrqw8U=;
+        b=WnUOOI/W5pGVJDO06fSjBBddKqVwaG7unYRvUraRfhN0Q3d/xuRYtc8QFPuR8NWtUh
+         aJUQUGmlKBBgaYDrzWre9LjH2s0C2jZ9C0mo60e54mfpyZz1Q9aHpFMjW5eVV9DZM67e
+         I4OgPPmV6FGlZz0PkClxRrWu2u6fZlqKnYdvGbDFs6hJ5sms7pfVuav/XdM321b6mCON
+         EMufPfYSmPYNU8y60HNE/fvgDV2KoFDRTJIC4+pWaY4oUNetor9xjB2gEC3bVGDGTFtt
+         sipcI0roG0Fpg5LYFUZcmomXy6kjQ6iZ7ZSyY12+eFgypQqsjiEsAtdSnfhy3yNBuz1M
+         tPdA==
+MIME-Version: 1.0
+X-Received: by 10.112.199.232 with SMTP id jn8mr7673793lbc.30.1409877021548;
+ Thu, 04 Sep 2014 17:30:21 -0700 (PDT)
+Received: by 10.114.27.103 with HTTP; Thu, 4 Sep 2014 17:30:21 -0700 (PDT)
+In-Reply-To: <CAAZU44kh7ySaPzmvjjgVJMXLFpHO=7LvfKm7sBar7gVsFwoN=w@mail.gmail.com>
+References: <CAAZU44kh7ySaPzmvjjgVJMXLFpHO=7LvfKm7sBar7gVsFwoN=w@mail.gmail.com>
+Date: Thu, 4 Sep 2014 17:30:21 -0700
+Message-ID: <CAPCjjnGQoF0wrTc438zS4PRGp_ETr4t3H69cq+EQ11iSNtVS0A@mail.gmail.com>
+Subject: Re: packaging site/doxia content into another multi-module?
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c2b6ce0be55f050246931b
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c2b6ce0be55f050246931b
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+you may be able to execute a site:jar execution deploy and consume by your
+web module
+
+
+On Thu, Sep 4, 2014 at 5:04 PM, Kevin Burton <burton@spinn3r.com> wrote:
+
+> I have a multi-module maven build.
+>
+> In module A I have a site that I generate from doxia which is my products
+> documentation.
+>
+> I have another mobile B, that hosts my console / web app and I want the
+> docs to be packaged here and served from a static Jetty container.
+>
+> What are my options here?
+>
+> --
+>
+> Founder/CEO Spinn3r.com
+> Location: *San Francisco, CA*
+> blog: http://burtonator.wordpress.com
+> =E2=80=A6 or check out my Google+ profile
+> <https://plus.google.com/102718274791889610666/posts>
+> <http://spinn3r.com>
+>
+
+--001a11c2b6ce0be55f050246931b--
+

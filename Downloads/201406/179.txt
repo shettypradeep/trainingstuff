@@ -1,0 +1,106 @@
+From users-return-136670-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jun 27 11:21:51 2014
+Return-Path: <users-return-136670-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CD0CA117AD
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 27 Jun 2014 11:21:51 +0000 (UTC)
+Received: (qmail 78751 invoked by uid 500); 27 Jun 2014 11:21:50 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 78667 invoked by uid 500); 27 Jun 2014 11:21:50 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 78654 invoked by uid 99); 27 Jun 2014 11:21:49 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 27 Jun 2014 11:21:49 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.213.171] (HELO mail-ig0-f171.google.com) (209.85.213.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 27 Jun 2014 11:21:41 +0000
+Received: by mail-ig0-f171.google.com with SMTP id h18so1834391igc.10
+        for <users@maven.apache.org>; Fri, 27 Jun 2014 04:21:20 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:content-type:message-id:mime-version
+         :subject:date:references:to:in-reply-to;
+        bh=DLOfJi0P2gr3Ade4FPjMYL7HisDdmD6x0j8orDsCJTs=;
+        b=j/gk3xXi0IU4ebrNslUCv0XcL/zXWifNRMWdS0sXqflZ8lDlcP8q9NfZKHEPAmMee1
+         ZqV+wj7tplGVQvcygfhK+Axszi6ql56uJE6LeyENx44uE+8ig727fWLBOnqUmpLKOSt+
+         B8ShWCrlyRQf1PqfpcJwGhx5mPQ5d8Aqlw0GTWNZ/1ZJsODpL1TfhuGNLXMu1n0AqNBb
+         u4qh5PFbzBgz3YYfRwbFvfIzOYkxwHrdRtlUngVscVmNQVFzBCA9a1qw46qWWagsvXYO
+         oWdrhUF+CyAR5d037OgWWbjeIxdkUFaExWikSnkxT1Z8k3p2dJDUhbuTGK9qI1vuYNuG
+         eS4g==
+X-Gm-Message-State: ALoCoQkCJhsv7PQvlLNarXSeup4diE7o4uooVRPhsnpViR1DjV/xBu0bMEomwz2L3np65+mqC08b
+X-Received: by 10.50.111.161 with SMTP id ij1mr11561641igb.12.1403868080825;
+        Fri, 27 Jun 2014 04:21:20 -0700 (PDT)
+Received: from [10.0.1.11] (192-0-154-177.cpe.teksavvy.com. [192.0.154.177])
+        by mx.google.com with ESMTPSA id g3sm12857681igc.11.2014.06.27.04.21.20
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 27 Jun 2014 04:21:20 -0700 (PDT)
+From: Jason van Zyl <jason@takari.io>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_8E7408E4-5DD0-4A9B-B1B8-F600D5BA4149"
+Message-Id: <2643E10B-03A2-47F6-8AC6-A8E91BE4CBEE@takari.io>
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.2\))
+Subject: Re: M2E and Eclipse Luna ?
+Date: Fri, 27 Jun 2014 07:21:19 -0400
+References: <CAPCjjnF2sBjXVNfVTGorFZzE6Qp8JJan2nm8ZbSWR2ZQJOg-iw@mail.gmail.com>
+To: Maven Users List <users@maven.apache.org>
+In-Reply-To: <CAPCjjnF2sBjXVNfVTGorFZzE6Qp8JJan2nm8ZbSWR2ZQJOg-iw@mail.gmail.com>
+X-Mailer: Apple Mail (2.1878.2)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_8E7408E4-5DD0-4A9B-B1B8-F600D5BA4149
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+What exactly are you seeing? I have several plugins using the =
+"maven-plugin" packaging and they appear fine.
+
+On Jun 26, 2014, at 11:15 PM, Dan Tran <dantran@gmail.com> wrote:
+
+> I just try the latest eclipse and try to build exec-mojo-plugin at =
+MOJO,
+> looks like m2e does not recognize maven-plugin-plugin
+>=20
+> Any one else seeing this?
+>=20
+> Thanks
+>=20
+> -D
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+http://twitter.com/takari_io
+---------------------------------------------------------
+
+Selfish deeds are the shortest path to self destruction.
+
+ -- The Seven Samuari, Akira Kurosawa
+
+
+
+
+
+
+
+
+
+
+--Apple-Mail=_8E7408E4-5DD0-4A9B-B1B8-F600D5BA4149--
+

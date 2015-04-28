@@ -1,0 +1,115 @@
+From users-return-136683-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jun 27 19:58:44 2014
+Return-Path: <users-return-136683-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8E94C11D7E
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 27 Jun 2014 19:58:44 +0000 (UTC)
+Received: (qmail 19052 invoked by uid 500); 27 Jun 2014 19:58:42 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 18956 invoked by uid 500); 27 Jun 2014 19:58:42 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 18945 invoked by uid 99); 27 Jun 2014 19:58:42 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 27 Jun 2014 19:58:42 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL,WEIRD_PORT
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [209.85.213.174] (HELO mail-ig0-f174.google.com) (209.85.213.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 27 Jun 2014 19:58:39 +0000
+Received: by mail-ig0-f174.google.com with SMTP id l13so2381660iga.1
+        for <users@maven.apache.org>; Fri, 27 Jun 2014 12:58:14 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:content-type:message-id:mime-version
+         :subject:date:references:to:in-reply-to;
+        bh=ppsa4QWt5Xup/X8i+Q13HY4gY3XXqKFwZRoXN4qDwsQ=;
+        b=LqlRKiA9ps+XwIOCf/XK8UqMmu7CbVE3/X5D1AC2ufpaomSM3hXz9JRfFAtkPhb10i
+         7fvMmLxCNs3fRcY3LG3Tbk9PqmZlMt+kNX4gBc6Zaoj3Vh9XNjnK7LpF/1zdZ5NEln4k
+         SiN+g++WUZaVR6Sj8OQnFygCrSDlKkgaWbylvMgKOF7Ok5U2/gCxaU7WI0a6m5LkqMbk
+         KWqQ/wb70Q5QGghI9YF7ng4tLeZ6ZshxTj8SQ9DnmCn6Jp6Tqn2uPu8mgwr1msndnHoB
+         /wlxf3biQo9X7SZOPHsy19VXbFkpNOhib4BP5ITxLrFwU9wUl7JGhUVES1bZVi6z6yAT
+         o6Jg==
+X-Gm-Message-State: ALoCoQmfmwDiyl2Y11jNuzufYWiHGdoCTaLuZHf7DIEKkNYaEF+Kma6r6t+TKYLGmveQHHTMESAA
+X-Received: by 10.43.13.132 with SMTP id pm4mr22730831icb.6.1403899094320;
+        Fri, 27 Jun 2014 12:58:14 -0700 (PDT)
+Received: from [10.0.1.11] (192-0-154-177.cpe.teksavvy.com. [192.0.154.177])
+        by mx.google.com with ESMTPSA id aj4sm29704igd.5.2014.06.27.12.58.13
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 27 Jun 2014 12:58:13 -0700 (PDT)
+From: Jason van Zyl <jason@takari.io>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_65A94272-C303-4113-BC2C-91B09A64C1C6"
+Message-Id: <043CE8D4-20B1-4AAE-AA75-DB895F660BFC@takari.io>
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.2\))
+Subject: Re: M2E and Eclipse Luna ?
+Date: Fri, 27 Jun 2014 15:58:12 -0400
+References: <CAPCjjnF2sBjXVNfVTGorFZzE6Qp8JJan2nm8ZbSWR2ZQJOg-iw@mail.gmail.com> <2643E10B-03A2-47F6-8AC6-A8E91BE4CBEE@takari.io> <CAPCjjnG0mrmEWxO5_emjMQTQA9tWAGeb2H0oWP0TSwA+wSp=4A@mail.gmail.com> <AAB6A84D-5F96-4A34-8526-6DFA00C18645@takari.io> <0C723FEB5B4E5642B25B451BA57E2730A2A0DFAD@S1P5DAG3C.EXCHPROD.USA.NET>
+To: Maven Users List <users@maven.apache.org>
+In-Reply-To: <0C723FEB5B4E5642B25B451BA57E2730A2A0DFAD@S1P5DAG3C.EXCHPROD.USA.NET>
+X-Mailer: Apple Mail (2.1878.2)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_65A94272-C303-4113-BC2C-91B09A64C1C6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+Those are all update sites, walk into the respective extra to the =
+version you want and each version has an update site.
+
+On Jun 27, 2014, at 3:07 PM, Jim Garrison <jim.garrison@nwea.org> wrote:
+
+>> -----Original Message-----
+>> From: Jason van Zyl
+>> Sent: Friday, June 27, 2014 11:50 AM
+>> To: Maven Users List
+>> Subject: Re: M2E and Eclipse Luna ?
+>>=20
+>> All the extras now live as separate installable units here:
+>>=20
+>> http://repository.takari.io:8081/nexus/content/sites/m2e.extras/
+>> =09
+>=20
+> That seems to be a Maven repo.  Is there an equivalent Eclipse update =
+site?=20
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>=20
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+http://twitter.com/takari_io
+---------------------------------------------------------
+
+We know what we are, but know not what we may be.
+
+  -- Shakespeare
+
+
+
+
+
+
+
+
+
+
+--Apple-Mail=_65A94272-C303-4113-BC2C-91B09A64C1C6--
+

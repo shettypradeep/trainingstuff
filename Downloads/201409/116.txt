@@ -1,0 +1,100 @@
+From users-return-137421-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Sep 30 19:53:40 2014
+Return-Path: <users-return-137421-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B0EE0175BC
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 30 Sep 2014 19:53:40 +0000 (UTC)
+Received: (qmail 85742 invoked by uid 500); 30 Sep 2014 19:53:39 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 85660 invoked by uid 500); 30 Sep 2014 19:53:39 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 85642 invoked by uid 99); 30 Sep 2014 19:53:38 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 30 Sep 2014 19:53:38 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of jeremy.long@gmail.com designates 74.125.82.41 as permitted sender)
+Received: from [74.125.82.41] (HELO mail-wg0-f41.google.com) (74.125.82.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 30 Sep 2014 19:53:34 +0000
+Received: by mail-wg0-f41.google.com with SMTP id k14so16394580wgh.24
+        for <users@maven.apache.org>; Tue, 30 Sep 2014 12:53:13 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=OkqLpCKH+0HjWGW67OMBXsPm+uy2P6r0+kK6FLwMFjQ=;
+        b=ZaJsy9YrS0vPw2fMUgzATpWOsQ4BQmdf1lRE3kAVM3/2qTdTbcVYOF0DkjBqjI24IZ
+         f3n7/0QBUBLj+STNUnEBnZ7gUiyJhnXL6Wd78hsOjICbyv8ettzvRfcJhR7q/V0BjP70
+         Ry45iSnSq/95QhTfeEOL7rcDw1Bpsy3S0D1H6Og5xl5C03bM1Sm7/2YktAkSLfH7Eq6d
+         Msa0CfZiMF6y8KrpHMAUwQ1D9xEUSw7eBE2OYMjDBAG4KHw9yHWLcf4PAq2jdxp359LD
+         /if1GA8jwOmZSWRYSAp83A3xageZfdkAKiPXECT4jIaSyVdFFlp3c6vstMYStE2LM5WZ
+         SY/A==
+MIME-Version: 1.0
+X-Received: by 10.194.232.232 with SMTP id tr8mr53190538wjc.21.1412106792502;
+ Tue, 30 Sep 2014 12:53:12 -0700 (PDT)
+Received: by 10.194.165.102 with HTTP; Tue, 30 Sep 2014 12:53:12 -0700 (PDT)
+Received: by 10.194.165.102 with HTTP; Tue, 30 Sep 2014 12:53:12 -0700 (PDT)
+In-Reply-To: <402AE8E1D2FBB84ABE4AB494310DC4A96352595D73@TUS1XCHEVSPIN33.SYMC.SYMANTEC.COM>
+References: <402AE8E1D2FBB84ABE4AB494310DC4A96352595D73@TUS1XCHEVSPIN33.SYMC.SYMANTEC.COM>
+Date: Tue, 30 Sep 2014 15:53:12 -0400
+Message-ID: <CAKAumBFkHyu4AwMr=RALW-t_vA-mbd-19w3yg4YnEPZ-sFOhzA@mail.gmail.com>
+Subject: Re: Maven, Dependencies and Vulnerabilities
+From: Jeremy Long <jeremy.long@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1135eb34c089f105044dbbd8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1135eb34c089f105044dbbd8
+Content-Type: text/plain; charset=UTF-8
+
+There are commercial solutions (sonatype, contrast, blackduck, palamida,
+etc.) and FOSS solutions (dependency-check, victims, retire.js, etc.) to
+identify and report on known vulnerabilities. I would recommend looking at
+these solutions (note, I am the main contributed to dependency-check).
+
+A better solution for the POM modification would be to add a CPE
+identifier. This would also be a great entry for a jar file's manifest. CPE
+identifiers can be requested even if there are no known CVEs, but the CPE
+can be used to lookup the related CVEs.
+
+-jeremy
+@ctxt
+On Sep 30, 2014 2:45 PM, "David Dillard" <ddillard@symantec.com> wrote:
+
+> Hi,
+>
+> I've been working on an internal presentation on how letting Maven's
+> dependency mediation feature select versions of transitive dependencies can
+> introduce vulnerabilities into a product and how to deal with that
+> problem.  Unfortunately, it's a very manual process and I was thinking that
+> perhaps changes could be made to Maven that would provide better
+> automation.  To that end I'm wondering if the team has ever considered
+> adding a section to the POM that would list significant changes in that
+> release.  This would include a list of vulnerabilities fixed (e.g.
+> CVE-XXXX-YYYY) or serious bugs fixed.  Each one could include a known set
+> of versions affected (ala how CVEs work today) thus allowing tooling to
+> say: the version of artifact XYZ you're using has a known vulnerability,
+> would you like to upgrade to this new version with that vuln fixed?
+>
+> On a related note, has a different dependency mediation system ever been
+> considered (as an option), e.g. latest version or latest version on a
+> branch?
+>
+>
+> Thanks,
+>
+> David
+>
+>
+
+--001a1135eb34c089f105044dbbd8--
+

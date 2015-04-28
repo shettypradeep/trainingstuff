@@ -1,0 +1,120 @@
+From users-return-136087-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Apr  5 01:01:04 2014
+Return-Path: <users-return-136087-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8146210D3F
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  5 Apr 2014 01:01:04 +0000 (UTC)
+Received: (qmail 68336 invoked by uid 500); 5 Apr 2014 01:01:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 68199 invoked by uid 500); 5 Apr 2014 01:00:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 68191 invoked by uid 99); 5 Apr 2014 01:00:59 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 05 Apr 2014 01:00:59 +0000
+X-ASF-Spam-Status: No, hits=4.8 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS,SUBJ_ALL_CAPS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mgainty@hotmail.com designates 65.55.116.27 as permitted sender)
+Received: from [65.55.116.27] (HELO blu0-omc1-s16.blu0.hotmail.com) (65.55.116.27)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 05 Apr 2014 01:00:54 +0000
+Received: from BLU172-W11 ([65.55.116.7]) by blu0-omc1-s16.blu0.hotmail.com with Microsoft SMTPSVC(6.0.3790.4675);
+	 Fri, 4 Apr 2014 18:00:33 -0700
+X-TMN: [TVn2D8XeNpcV+I2IUU+1YA+MzAsVf45J]
+X-Originating-Email: [mgainty@hotmail.com]
+Message-ID: <BLU172-W11E0FB8B609266EDF1F6DDAE6E0@phx.gbl>
+Content-Type: multipart/alternative;
+	boundary="_b59305b0-9fb9-45b1-849b-8aaa599d6f44_"
+From: Martin Gainty <mgainty@hotmail.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: RE: USER LIBRARIES
+Date: Fri, 4 Apr 2014 21:00:33 -0400
+Importance: Normal
+In-Reply-To: <1396609104039-5790481.post@n5.nabble.com>
+References: <1396609104039-5790481.post@n5.nabble.com>
+MIME-Version: 1.0
+X-OriginalArrivalTime: 05 Apr 2014 01:00:33.0472 (UTC) FILETIME=[727F1400:01CF506A]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_b59305b0-9fb9-45b1-849b-8aaa599d6f44_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Dan-
+
+lib entries in Eclipse generated .classpath will give your version/artifact=
+ for your dependencies:
+
+<?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<classpath>
+    <classpathentry kind=3D"src" path=3D"src"/>
+    <classpathentry kind=3D"src" path=3D"tools"/>
+    <classpathentry kind=3D"con" path=3D"org.eclipse.jdt.launching.JRE_CONT=
+AINER"/>
+    <classpathentry kind=3D"var" path=3D"JUNIT_HOME/junit.jar"/>
+    <classpathentry exported=3D"true" kind=3D"lib" path=3D"/mmisFramework/l=
+ib/1.1-myfaces-api.jar"/>
+    <classpathentry exported=3D"true" kind=3D"lib" path=3D"/mmisFramework/l=
+ib/1.2-myfaces-impl.jar"/>
+.......
+</classpath>
+
+HTH
+Martin=20
+______________________________________________=20
+Verzicht und Vertraulichkeitanmerkung/Note de d=E9ni et de confidentialit=
+=E9
+=20
+Diese Nachricht ist vertraulich. Sollten Sie nicht der vorgesehene Empfaeng=
+er sein=2C so bitten wir hoeflich um eine Mitteilung. Jede unbefugte Weiter=
+leitung oder Fertigung einer Kopie ist unzulaessig. Diese Nachricht dient l=
+ediglich dem Austausch von Informationen und entfaltet keine rechtliche Bin=
+dungswirkung. Aufgrund der leichten Manipulierbarkeit von E-Mails koennen w=
+ir keine Haftung fuer den Inhalt uebernehmen.
+Ce message est confidentiel et peut =EAtre privil=E9gi=E9. Si vous n'=EAtes=
+ pas le destinataire pr=E9vu=2C nous te demandons avec bont=E9 que pour sat=
+isfaire informez l'exp=E9diteur. N'importe quelle diffusion non autoris=E9e=
+ ou la copie de ceci est interdite. Ce message sert =E0 l'information seule=
+ment et n'aura pas n'importe quel effet l=E9galement obligatoire. =C9tant d=
+onn=E9 que les email peuvent facilement =EAtre sujets =E0 la manipulation=
+=2C nous ne pouvons accepter aucune responsabilit=E9 pour le contenu fourni=
+.
+
+
+> Date: Fri=2C 4 Apr 2014 03:58:24 -0700
+> From: baylon.daniel@hotmail.com
+> To: users@maven.apache.org
+> Subject: USER LIBRARIES
+>=20
+> Hello=2C
+>=20
+> Is there a chance that instead of managing the dependencies=2C I will jus=
+t add
+> the USER LIBRARY I have created on Eclipse?
+>=20
+> Best Regards=2C
+>=20
+> Dan
+>=20
+>=20
+>=20
+> --
+> View this message in context: http://maven.40175.n5.nabble.com/USER-LIBRA=
+RIES-tp5790481.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe=2C e-mail: users-unsubscribe@maven.apache.org
+> For additional commands=2C e-mail: users-help@maven.apache.org
+>=20
+ 		 	   		  =
+
+--_b59305b0-9fb9-45b1-849b-8aaa599d6f44_--
+

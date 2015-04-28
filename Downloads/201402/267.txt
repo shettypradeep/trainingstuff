@@ -1,0 +1,143 @@
+From users-return-135595-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb 24 21:03:26 2014
+Return-Path: <users-return-135595-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id AB042105E4
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 24 Feb 2014 21:03:26 +0000 (UTC)
+Received: (qmail 26636 invoked by uid 500); 24 Feb 2014 21:03:22 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 26557 invoked by uid 500); 24 Feb 2014 21:03:22 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 26549 invoked by uid 99); 24 Feb 2014 21:03:22 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Feb 2014 21:03:22 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mfriedenhagen@gmail.com designates 209.85.214.172 as permitted sender)
+Received: from [209.85.214.172] (HELO mail-ob0-f172.google.com) (209.85.214.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Feb 2014 21:03:16 +0000
+Received: by mail-ob0-f172.google.com with SMTP id gq1so1127506obb.3
+        for <users@maven.apache.org>; Mon, 24 Feb 2014 13:02:55 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=s+QtDehPHI3QwuLq5Q+rUPUBsZGZ/9bNyJGZc5DbAJ4=;
+        b=d0IMdP60pznIMcN1M9rsrxUWZ2E8g4SapJg6TqGmaXwthjMQloHDmn+7eg9NAAVk4Z
+         eX7a6l5A6uzK6oKHgR6f4daKr+JhUiC4IxRPYh69askREfpkb7BaDj3vw0GxzVG8qjt6
+         PNmUoJkieLrGlDDEI63/1BsVUmse9JDEQ4FJ0I/wLocqUc/o8UV/r9bOEdKvND86Jhhp
+         +xLaXUuQVpg+GDLlG3ux3hS5R29XFEyoB1pkgudoKRObFui+WryCXSzuexQxeQFPA7m2
+         6LlXGgh+PwNXJhiTm5V7WLqsMMKtbxY1eaD6IYklr6DcJTbXn/ZUunfkXPtTCHrqTq22
+         OXzA==
+X-Received: by 10.182.2.42 with SMTP id 10mr2916506obr.73.1393275775382; Mon,
+ 24 Feb 2014 13:02:55 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.24.227 with HTTP; Mon, 24 Feb 2014 13:02:15 -0800 (PST)
+In-Reply-To: <CAK8jvqyPGML0+jr+8Ja3F0oucDYqPRxYCiqgmBdNVy=r=t1Jdg@mail.gmail.com>
+References: <CAPCjjnGHMv1eaTL9vzJqOB2P+_sWbK+XO0nH8Q-BiTuCBCHYfA@mail.gmail.com>
+ <530BAA4C.3070303@gmx.de> <CAPCjjnETe-8zHk9GQgmq-QxPH1kstS5cUAz4tOCAXhh5iP0oMA@mail.gmail.com>
+ <CAK8jvqyPGML0+jr+8Ja3F0oucDYqPRxYCiqgmBdNVy=r=t1Jdg@mail.gmail.com>
+From: Mirko Friedenhagen <mfriedenhagen@gmail.com>
+Date: Mon, 24 Feb 2014 22:02:15 +0100
+Message-ID: <CAK8jvqzj7rPSiSCU5UTp84ba6r=W_Y8567VBdOKsiFZSUi9H-w@mail.gmail.com>
+Subject: Re: about https://jira.codehaus.org/browse/MNG-5576 (Allow continuous
+ delivery friendly versions)
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello,
+
+I now removed "-SNAPSHOT" from the version strings, what I get now when running:
+env revision=123456 mvn321 clean install
+is:
+Installing /Users/mirko/workspace/foss/testlink-junit/pom.xml to
+/Software/nobackup/m2repo/net/oneandone/testlinkjunit/tljunit-parent/3.0.3-123456/tljunit-parent-3.0.3-123456.pom
+
+and, which is really bad, when inspecting
+tljunit-parent-3.0.3-123456.pom, the <version> is still
+3.0.3-${revision}!
+
+Regards Mirko
+--
+http://illegalstateexception.blogspot.com/
+https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+https://bitbucket.org/mfriedenhagen/
+
+
+On Mon, Feb 24, 2014 at 9:51 PM, Mirko Friedenhagen
+<mfriedenhagen@gmail.com> wrote:
+> Hello,
+>
+> I now tried running `env revision=123456 mvn321 release:prepare`, but
+> this does not work as release:prepare does not seem to use the
+> information from the environment, I get:
+> --- snip ---
+> There are still some remaining snapshot dependencies.
+> : Do you want to resolve them now? (yes/no) no: : no
+> --- snap ---
+> and release:prepare about:
+> --- snip ---
+> [ERROR] Failed to execute goal
+> org.apache.maven.plugins:maven-release-plugin:2.4.2:prepare
+> (default-cli) on project tljunit-parent: Can't release project due to
+> non released dependencies :
+> [ERROR] net.oneandone.testlinkjunit:tljunit-parent:pom:3.0.3-${revision}-SNAPSHOT
+> [ERROR] in project 'tljunit surefire RunListeners'
+> (net.oneandone.testlinkjunit:tljunit-surefire:jar:3.0.3-123456-SNAPSHOT)
+>  [ERROR] -> [Help 1]
+> --- snap ---
+> Regards Mirko
+> --
+> http://illegalstateexception.blogspot.com/
+> https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+> https://bitbucket.org/mfriedenhagen/
+>
+>
+> On Mon, Feb 24, 2014 at 9:31 PM, Dan Tran <dantran@gmail.com> wrote:
+>> Thanks, that helps
+>>
+>> -D
+>>
+>>
+>> On Mon, Feb 24, 2014 at 12:23 PM, Karl Heinz Marbaise <khmarbaise@gmx.de>wrote:
+>>
+>>> Hi Dan,
+>>>
+>>> now you can write on your GAV definition a thing like:
+>>>
+>>> <groupId>...</groupId>
+>>> <artifactId>...</artifactId>
+>>> <version>1.0-${revision}-SNAPSHOT</version>
+>>>
+>>> and via command line you can now do the following:
+>>>
+>>> mvn -Drevision=3456 clean test
+>>>
+>>> If you done that via Maven 3.1.1 you get a warning with Maven 3.2.1 you
+>>> don't.
+>>>
+>>> Kind regard
+>>> Karl-Heinz Marbaise
+>>>
+>>>
+>>> ---------------------------------------------------------------------
+>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>
+>>>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

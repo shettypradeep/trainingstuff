@@ -1,0 +1,90 @@
+From users-return-136377-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri May 16 18:57:51 2014
+Return-Path: <users-return-136377-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9FEB1114F0
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 16 May 2014 18:57:51 +0000 (UTC)
+Received: (qmail 42420 invoked by uid 500); 16 May 2014 15:43:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 85731 invoked by uid 500); 16 May 2014 15:18:25 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 77106 invoked by uid 99); 16 May 2014 15:18:17 -0000
+Received: from Unknown (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 16 May 2014 15:18:17 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of delbd@meteo.be designates 193.190.230.20 as permitted sender)
+Received: from [193.190.230.20] (HELO smtp2.oma.be) (193.190.230.20)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 16 May 2014 15:18:12 +0000
+Received: from zimbra-me.oma.be (zimbra-me.oma.be [193.190.249.146])
+	by smtp2.oma.be (8.14.3/8.14.3/SuSE Linux 0.8) with ESMTP id s4GFHn8D013539
+	for <users@maven.apache.org>; Fri, 16 May 2014 15:17:49 GMT
+Received: from localhost (localhost [127.0.0.1])
+	by zimbra-me.oma.be (Postfix) with ESMTP id A1F83C1D58
+	for <users@maven.apache.org>; Fri, 16 May 2014 17:17:49 +0200 (CEST)
+Received: from zimbra-me.oma.be ([127.0.0.1])
+	by localhost (zimbra-me.oma.be [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id JHyF4wLXNDu7 for <users@maven.apache.org>;
+	Fri, 16 May 2014 17:17:49 +0200 (CEST)
+Received: from zimbra-me.oma.be (localhost [127.0.0.1])
+	by zimbra-me.oma.be (Postfix) with ESMTP id 717F8C1ABB
+	for <users@maven.apache.org>; Fri, 16 May 2014 17:17:49 +0200 (CEST)
+Received: from zimbra-me.oma.be (zimbra-me.oma.be [193.190.249.146])
+	by zimbra-me.oma.be (Postfix) with ESMTP id 59755C1185
+	for <users@maven.apache.org>; Fri, 16 May 2014 17:17:49 +0200 (CEST)
+Date: Fri, 16 May 2014 17:17:48 +0200 (CEST)
+From: David Delbecq <delbd@meteo.be>
+To: users@maven.apache.org
+Message-ID: <138114149.1386640.1400253468944.JavaMail.zimbra@meteo.be>
+In-Reply-To: <1579981368.965380.1399559220322.JavaMail.zimbra@meteo.be>
+Subject: How to put inline image in doxia generate doc
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1386639_370550407.1400253468943"
+X-Originating-IP: [83.134.6.68]
+X-Mailer: Zimbra 8.0.5_GA_5839 (ZimbraWebClient - GC32 (Win)/8.0.5_GA_5839)
+Thread-Topic: How to put inline image in doxia generate doc
+Thread-Index: khtUvFtmw3P/DYnB6HtdWBQEX15IUw==
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+------=_Part_1386639_370550407.1400253468943
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Hello, 
+
+i am trying to transfert documentation for an application, which is written using a .odt file, to some doxia process, so i can be sure pdf is the lastest version in the build. 
+
+However, i am facing a surprisingly basic problem: i can't find out how to include an inline image. That is, i can put image before, or after a paragraph, but i can't put it inside a paragraph. I tried xhtml, apt, confluence, twiki, xdoc and markdown. 
+
+Here are my results: 
+apt -> there is no way to make an inline image in apt 
+confluence -> while the language allows it, and the eclipse confluence parser shows it properly, the image tag is not read by doxia and the wiki code appear as is on the final document. image is properly recognized when inside a paragraph 
+twiki -> didn't find a way to make an inline image 
+markdown -> image tag is recognized inline, but everything after the tag, in same paragraph, is ignored. 
+xhtml -> while verbose, this language does allow inline image. Unfortunately, all inline image are showed above paragraph in the resulting pdf, not inline. 
+xdoc -> the parser just doesn't kick in, doxia think it's a docbook and messes everything 
+
+So, my question is simple: how can i put an inline image in a doxia document. Which markup language must i use, and what is the process? 
+
+Best result i got so far was with xhtml, and it looked like this in pdf, 
+http://i.imgur.com/82mL281.png 
+
+when it should have looked about like this (original open office document): 
+http://i.imgur.com/UEDuQf1.png 
+
+
+David Delbecq 
+
+
+------=_Part_1386639_370550407.1400253468943--
+

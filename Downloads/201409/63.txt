@@ -1,0 +1,77 @@
+From users-return-137384-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 26 21:13:31 2014
+Return-Path: <users-return-137384-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C97F5177A5
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 26 Sep 2014 21:13:31 +0000 (UTC)
+Received: (qmail 9371 invoked by uid 500); 26 Sep 2014 21:13:28 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 9108 invoked by uid 500); 26 Sep 2014 21:13:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9094 invoked by uid 99); 26 Sep 2014 21:13:27 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 26 Sep 2014 21:13:27 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of khmarbaise@gmx.de designates 212.227.15.19 as permitted sender)
+Received: from [212.227.15.19] (HELO mout.gmx.net) (212.227.15.19)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 26 Sep 2014 21:13:21 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([217.247.21.59]) by mail.gmx.com
+ (mrgmx002) with ESMTPSA (Nemesis) id 0MK17F-1XWFNW3Lqn-001TiF for
+ <users@maven.apache.org>; Fri, 26 Sep 2014 23:12:59 +0200
+Message-ID: <5425D6DD.5050609@gmx.de>
+Date: Fri, 26 Sep 2014 23:13:01 +0200
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Maven Setup Problem
+References: <9222FD6351126B4E83C740E25087FC610CDD1BEFC7@MBVCMS1.ad.co.pierce.wa.us>
+In-Reply-To: <9222FD6351126B4E83C740E25087FC610CDD1BEFC7@MBVCMS1.ad.co.pierce.wa.us>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:zMKZxJUjQS1VQPrmD4YRgA4CVEQ4ZDncCrqiXo4xDDof5EQo1e2
+ YpBsdKkQChRWs5F+BzMC9Iiklrc2eCox4fIyA/P7y1hXO0en6RN+AHK+Nm4fIXDSmcoiUtE
+ tgMsgsu8tGp7BSlVo16oDE9Y0A6afS1LKulFTR4a5DWnpMgfHG/pHEwl8Zxy39SFLK81vT/
+ fdzV14u2X3ETvfGMsmpyg==
+X-UI-Out-Filterresults: notjunk:1;
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Doug,
+
+On 9/26/14 5:27 PM, Doug Johnson wrote:
+> <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+>            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>            xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+>                                http://maven.apache.org/xsd/settings-1.0.0.xsd">
+>    <localRepository>c:/Documents and Settings/djohns2/.m2/repository<localRepository/>
+
+
+If this really is what you are using i would suggest to check the end 
+tag of localRepository cause an end tag should look like this:
+
+<localRepository>....</localRepository>
+
+
+>    <interactiveMode/>
+>    <usePluginRegistry/>
+>    <offline/>
+
+Kind regards
+Karl-Heinz Marbaise
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

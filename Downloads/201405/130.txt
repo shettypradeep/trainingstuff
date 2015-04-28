@@ -1,0 +1,91 @@
+From users-return-136300-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu May  1 08:20:22 2014
+Return-Path: <users-return-136300-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F0D6511353
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  1 May 2014 08:20:21 +0000 (UTC)
+Received: (qmail 84755 invoked by uid 500); 1 May 2014 08:20:16 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 84662 invoked by uid 500); 1 May 2014 08:20:08 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 84654 invoked by uid 99); 1 May 2014 08:20:07 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 01 May 2014 08:20:07 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of rickard.von.essen@gmail.com designates 209.85.220.45 as permitted sender)
+Received: from [209.85.220.45] (HELO mail-pa0-f45.google.com) (209.85.220.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 01 May 2014 08:20:03 +0000
+Received: by mail-pa0-f45.google.com with SMTP id kq14so3267844pab.32
+        for <users@maven.apache.org>; Thu, 01 May 2014 01:19:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:from:date:message-id:subject:to:content-type;
+        bh=UsLY/FH1SDlL0GGUKaoEieDx+FwPvwjMxTjRaTOiEuQ=;
+        b=CTygGPxsng+Sc+451Um/M+A9OXJXJQtzN894jn98rmpFRmkZGV0mgFXVuy2ItnROT6
+         JzjMKG4vU3HaxT7TADe++3Y0liPz0sncopcEU9BOcOP2QrkgT2ie29fuS1PfiC5UQbQD
+         Ua57CdDwcbQZBmPZbRmz+kukiqAACZ/M20ls/yX0uK5KVu23mT+xO8bdmRtXQACyHuYs
+         ov/ebuwEPAxQQtb1JrAehFvloKZt2qorpT1FpHph59QGzAlNBFbJSJpHq817xsrC9Jlm
+         k32MXMIH/PIpL27rsRDlNkh83T8hqocuvvksNxkMglQsE4wx+xDctW18y3/RkKQzUF0k
+         SeuA==
+X-Received: by 10.66.122.36 with SMTP id lp4mr18374838pab.82.1398932379934;
+ Thu, 01 May 2014 01:19:39 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.70.129.102 with HTTP; Thu, 1 May 2014 01:19:19 -0700 (PDT)
+From: Rickard von Essen <rickard.von.essen@gmail.com>
+Date: Thu, 1 May 2014 10:19:19 +0200
+Message-ID: <CALz9Rt9i6YTqhmF4Xnu-hxc0f7XM-gpEtO1gg770m65xxyUQfw@mail.gmail.com>
+Subject: [ANN] rpm-maven-plugin 2.1-alpha-4 Released
+To: announce@mojo.codehaus.org, 
+	"dev@mojo.codehaus.org" <dev@mojo.codehaus.org>, user@mojo.codehaus.org, users@maven.apache.org
+Content-Type: multipart/alternative; boundary=047d7b2e45ba92269f04f8525341
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b2e45ba92269f04f8525341
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+The Mojo team is pleased to announce the release of the rpm-maven-plugin
+version 2.1-alpha-4.
+
+The RPM Maven Plugin allows artifacts from one or more projects to be
+packaged in an RPM for distribution. In addition to project artifacts, the
+RPM can contain other resources to be installed with the artifacts and
+scripts to be run while the package is being installed and removed. This
+plugin does not support the full range of features available to RPMs. In
+particular, source RPMs can not be generated and the spec files which are
+used do not do any build process (the plugin collects the files and
+"installs" them for packaging).
+
+http://mojo.codehaus.org/rpm-maven-plugin/
+
+To get this update, simply specify the version in your project's plugin
+configuration:
+
+<plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>rpm-maven-plugin</artifactId>
+        <version>2.1-alpha-4</version>
+</plugin>
+
+Release Notes:
+http://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=11970&version=19640
+
+Enjoy,
+
+The Mojo team.
+
+Rickard von Essen
+
+--047d7b2e45ba92269f04f8525341--
+

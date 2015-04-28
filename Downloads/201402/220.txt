@@ -1,0 +1,77 @@
+From users-return-135332-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb  3 15:56:55 2014
+Return-Path: <users-return-135332-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9159F10E04
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  3 Feb 2014 15:56:55 +0000 (UTC)
+Received: (qmail 50617 invoked by uid 500); 3 Feb 2014 15:56:50 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 50573 invoked by uid 500); 3 Feb 2014 15:56:49 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 50561 invoked by uid 99); 3 Feb 2014 15:56:48 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 03 Feb 2014 15:56:48 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of simone.tripodi@gmail.com designates 209.85.214.177 as permitted sender)
+Received: from [209.85.214.177] (HELO mail-ob0-f177.google.com) (209.85.214.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 03 Feb 2014 15:56:43 +0000
+Received: by mail-ob0-f177.google.com with SMTP id wp18so7888623obc.8
+        for <users@maven.apache.org>; Mon, 03 Feb 2014 07:56:22 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:date:message-id:subject:from:to:content-type;
+        bh=HQtBDkIYUvGeFSxu5MnDMWPUyGuPAP8U2Bs6M9oEjtc=;
+        b=Oc9JzbRYjRupvjXaqVMVDF1XQA7LH2TnWubBojsWkliVw3sjjASrlVCHV3A6f/KhVm
+         qZNjmCawI61ee9E4Vy7wl3glnHGRw7E+JYsXQqD7kZgaWmZVTj3THETJPAvGo8ZZ7Ceq
+         loBYyoxAxUHxn8mPsX3F6GG4N+y8ZsUldphU5a3KTg3uGU8hV3YC904GmQuXt5d9aQIk
+         iN4zwADjYvwxMrw1aXOhFKfIxIyeR/vOW+V6ysZd/oURFrwNJFQ1Nxc7u0kKkF1cSOYz
+         c9K5Tx5bf6Oswtw47++w7ILo1VwJJVs1Mg8aTxPkaFu7MI1oeJEsQ01LmRFAKl/R8hDP
+         v/4g==
+MIME-Version: 1.0
+X-Received: by 10.182.135.194 with SMTP id pu2mr6865348obb.38.1391442982297;
+ Mon, 03 Feb 2014 07:56:22 -0800 (PST)
+Sender: simone.tripodi@gmail.com
+Received: by 10.60.156.39 with HTTP; Mon, 3 Feb 2014 07:56:22 -0800 (PST)
+Date: Mon, 3 Feb 2014 16:56:22 +0100
+X-Google-Sender-Auth: iYzQ2h_0OR-ftTCfFjpVuhIDQJk
+Message-ID: <CAAqLGLMY9TO6bn9bsQi+Fk3+72HyM9uA7ZvNyVwD4CS8O5TN1g@mail.gmail.com>
+Subject: maven-release-plugin updates modules with wrong versioning
+From: Simone Tripodi <simonetripodi@apache.org>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0122a6c0af665c04f1829051
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0122a6c0af665c04f1829051
+Content-Type: text/plain; charset=UTF-8
+
+Hi all mates,
+
+in Apache Oltu we have a commons modules set[1] which I am trying to cut a
+release, but I am experiencing for the first time a strange issue: when
+installing all modules from /trunk, versions respect what it is specified
+in project.version field in the POM, but when releasing them, all modules
+inherit the version from the parent.
+
+Can I kindly ask you an extra pair of eyes that would help me detecting why
+this is happening?
+
+Many thanks in advance, all the best!
+-Simo
+
+[1] https://svn.apache.org/repos/asf/oltu/trunk/commons/
+
+http://people.apache.org/~simonetripodi/
+http://twitter.com/simonetripodi
+
+--089e0122a6c0af665c04f1829051--
+

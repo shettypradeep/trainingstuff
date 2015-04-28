@@ -1,0 +1,157 @@
+From users-return-135282-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 28 21:57:28 2014
+Return-Path: <users-return-135282-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B8DC510970
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 28 Jan 2014 21:57:28 +0000 (UTC)
+Received: (qmail 95718 invoked by uid 500); 28 Jan 2014 21:57:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 95554 invoked by uid 500); 28 Jan 2014 21:57:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 95546 invoked by uid 99); 28 Jan 2014 21:57:23 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 21:57:23 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of manuel.mastrofini@infoone.it designates 74.125.82.54 as permitted sender)
+Received: from [74.125.82.54] (HELO mail-wg0-f54.google.com) (74.125.82.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 21:57:16 +0000
+Received: by mail-wg0-f54.google.com with SMTP id x13so1938179wgg.33
+        for <users@maven.apache.org>; Tue, 28 Jan 2014 13:56:56 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=infoone.it; s=google;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=uU96UhGcjCkeEPn+xDjZpiAKL5/n1XiIEBeOIulnQ70=;
+        b=STlvB2HGRwfubXdMCbJ2svD8tsYkooyJNwUamMXL9t+hfQ9SLoLS/ITBdwWHaYqJtS
+         3bjOoAqBLlP8m6ea1j9iEizV0vv4nbtiVCP2a3zcSoVN1LEm5AYAcEX7Q5Cd7/5DFUa2
+         j4dYm0rNnwcSZlIxMveHyyaWh9jVUIurAWu1Q=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:content-type;
+        bh=uU96UhGcjCkeEPn+xDjZpiAKL5/n1XiIEBeOIulnQ70=;
+        b=K4FXc9fQy+YouNMttoHmEBqhfNZ7vkk1JMnFTkK0xmK++P5Qw8IFrUfFhU258QBj1W
+         kM0sJBRzQ7sxRxx8Chq03ngt39YiIsWIGxqCvwB4dYnIOSNgmmb9bKAcjKZf/NrnnjQf
+         5rwxhszoFWjsoffqupHrbCi5XyI5tHlHPxUK6c2OZWpottplxJDcRIpUTMZSL0uGOvlF
+         MEkXp+wMmTHTcUIssaIGrVRiuoL81wo3Logort/xmAmun4kEb+pEdTqTpjQkDLQHOg33
+         eXMAup3jv33r4P4wx6YRABsvtXKio+J8N0AaHn+HXl+Jq0i3rC+q0+GjZEsFuW5GREXp
+         AiPQ==
+X-Gm-Message-State: ALoCoQkMq4HF/nM+rj6QCbM3iGwOTzWdEcfR6bgE0N0qJm7FGdmiC0qTYVHgeRwyKSLAOMGNTzo2
+X-Received: by 10.180.97.37 with SMTP id dx5mr3335066wib.53.1390946216319;
+ Tue, 28 Jan 2014 13:56:56 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.180.37.68 with HTTP; Tue, 28 Jan 2014 13:56:16 -0800 (PST)
+In-Reply-To: <CALy+7UkgfkmvXXcuNyV8o3_TZ0fkDUzVGVnNRORgyD=0d7ivkg@mail.gmail.com>
+References: <CABSFZHCGMbteC-cJY0JAFD3Hin7fCsRa_M7v_zcX153sBkrpGg@mail.gmail.com>
+ <CALy+7U=G+VZtwhUYub8KdfLNQ_j7Aru=zD-SjFQ+qYbnDbF3og@mail.gmail.com>
+ <CABSFZHDCgg078LqwVi9y-fkTz3Hcs+17SF5HADPM79=RLPYuaQ@mail.gmail.com>
+ <CALy+7Umo3prtGVWo5Rjm1ANOrcqDj-jXOnZFyyME1AHJpQod1Q@mail.gmail.com>
+ <CABSFZHBh4595+O+T+vNM-A6E688ktBo1uNh8-fuzq1t6CHty+w@mail.gmail.com>
+ <CALy+7U=Bp99CEHy3H9kO+0G+tpr=7fwm6iaGJKE5bUeP5UyrQQ@mail.gmail.com>
+ <op.xae0p0qjkdkhrr@robertscholte> <CALy+7UkgfkmvXXcuNyV8o3_TZ0fkDUzVGVnNRORgyD=0d7ivkg@mail.gmail.com>
+From: Manuel Mastrofini <manuel.mastrofini@infoone.it>
+Date: Tue, 28 Jan 2014 22:56:16 +0100
+Message-ID: <CABSFZHCXEN+tWMxtgJ+-Jd80YGdJEZuORZ4cTEd6hRCUNq8tPA@mail.gmail.com>
+Subject: Re: Maven 3.1.1. and Windows 8
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d041825e02039fa04f10ee709
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d041825e02039fa04f10ee709
+Content-Type: text/plain; charset=ISO-8859-1
+
+Thank you for your contribution.
+
+The failing line is:
+
+.shared.domain."C:\Program Files (x86)\Java\jdk1.7.0_45\bin\java.exe"
+ -classpath
+"D:\apache-maven-3.1.1\bin\..\boot\plexus-classworlds-2.5.1.jar"
+"-Dclassworlds.conf=D:\apache-maven-3.1.1\bin\..\bin\m2.conf"
+"-Dmaven.home=D:\apache-maven-3.1.1\bin\.."
+org.codehaus.plexus.classworlds.launcher.Launcher -v
+
+It is immediately after .shared.domain.set
+CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher
+
+Manuel
+
+
+*Manuel Mastrofini*
+*Sistemi e Processi, Direttore di Divisione*
+
+www.infoone.it
+*Sede operativa*: Via Vicinale dei Colli 22, 00040 Rocca di Papa (RM)
+*Contatto diretto: +39 328 88 95 334*
+
+
+On Tue, Jan 28, 2014 at 10:19 PM, Wayne Fay <waynefay@gmail.com> wrote:
+
+> Thanks Robert! Learn something new every day...
+>
+> I agree it is fairly likely that we simply do not "expect" Win8 thus
+> some additional configuration or modification is necessary to permit
+> Maven to run.
+>
+> Wayne
+>
+> On Tue, Jan 28, 2014 at 3:02 PM, Robert Scholte <rfscholte@apache.org>
+> wrote:
+> > Or type the following:
+> >
+> > set MAVEN_BATCH_ECHO=on
+> > mvn -v
+> >
+> > Now you'll see every executed line. It would be nice if you could return
+> the
+> > failing line(s).
+> > One possibility is that Windows 8 is not recognized.
+> >
+> > Robert
+> >
+> > Op Tue, 28 Jan 2014 21:52:36 +0100 schreef Wayne Fay <waynefay@gmail.com
+> >:
+> >
+> >>> Java command works, mvn triggers the Windows error, also via console.
+> It
+> >>> looks to me like a  compatibility issue.
+> >>
+> >>
+> >> The batch file is just a shell script that automatically runs a series
+> >> of commands.
+> >>
+> >> Open the mvn.bat file in Notepad.
+> >> Copy and paste the contents one line at a time into the command line.
+> >> It will break on a specific line.
+> >> Tell us which line breaks.
+> >>
+> >> Wayne
+> >>
+> >> ---------------------------------------------------------------------
+> >> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> >> For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--f46d041825e02039fa04f10ee709--
+

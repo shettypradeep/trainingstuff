@@ -1,0 +1,162 @@
+From users-return-134975-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan  6 15:53:50 2014
+Return-Path: <users-return-134975-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C3608103E4
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  6 Jan 2014 15:53:50 +0000 (UTC)
+Received: (qmail 7897 invoked by uid 500); 6 Jan 2014 15:53:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 7801 invoked by uid 500); 6 Jan 2014 15:53:34 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 7790 invoked by uid 99); 6 Jan 2014 15:53:32 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 15:53:32 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 15:53:28 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 422E56A7916
+	for <users@maven.apache.org>; Mon,  6 Jan 2014 10:53:05 -0500 (EST)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id ceCeRaJf5HJR for <users@maven.apache.org>;
+	Mon,  6 Jan 2014 10:52:43 -0500 (EST)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 919F36A76F2
+	for <users@maven.apache.org>; Mon,  6 Jan 2014 10:52:43 -0500 (EST)
+Message-ID: <52CAD149.4090809@artifact-software.com>
+Date: Mon, 06 Jan 2014 10:52:41 -0500
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: rwheeler@artifact-software.com
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.2.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Maven Central Opinion
+References: <80577B10-8927-4E40-9E41-5B69DBC66977@natusoft.se> <21CDF2FA-C0D3-4CF0-9144-FA5FD9260834@gmail.com> <CF7B81B6-429B-4406-850A-4DF3A842F798@natusoft.se>
+In-Reply-To: <CF7B81B6-429B-4406-850A-4DF3A842F798@natusoft.se>
+Content-Type: text/plain; charset=windows-1252; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I am assuming that you are putting this in Central so I can easily use 
+it without having to worry about the effect on my build process or 
+without having to get into your sources and dependencies to build my app 
+and I have appropriate license agreements included so I know what I am 
+incorporating into my app.
+
+In that case, I would like you to follow the Maven "Best Practices" for 
+deploying to Central.
+
+Using the Release plug-in may save you some steps if you do not already 
+have a private repo for releasing software internally.
+It seems to me that if you are already "releasing" to your own repo 
+prior to trying to upload it to Central, you are probably going to find 
+that the Release plug-in is not the "best practice".
+We would be in the same situation if we ever decided to put some of our 
+utilities into Maven Central. We have already done the release and our 
+SCM is in the state in which we want it.
+We would probably have to look at our parent POM/child POM structure to 
+be sure that it met Maven Central requirements.
+
+I think that you did the right thing by raising your concerns here and I 
+think that you got some very good advice and concrete suggestions.
+
+This is a very good group that is usually well-mannered when approached 
+in the way that you did.
+You were very clear about what you wanted to do and you raised very 
+specified issues that you wanted to discuss.
+You also reacted to the advice in a positive way that encouraged a 
+factual discussion rather than a personal attack.
+
+Ron
+
+On 06/01/2014 7:49 AM, Tommy Svensson wrote:
+> Hello again,
+>
+> OK, I suspected that I get a lot of replies on this :-).
+>
+>  From experience in other forums I also expected to have people tell me to go screw myself, but that has not happened. There are apparently only professionals here! That said, there some very good replies and explanations but also some I do react to.
+>
+> I'll start with the latter. The arguments about quality I just don't buy. We are only talking poms here. Whatever is in the poms says nothing about the quality of the software itself. What is really bothering me however is the argument that if you don't have your things in the way we think they should be, you are not serious enough. It hasn't been said straight out but implied. The word that pops into my head here is "Moralizing"! I take my work very seriously and I take my open source work even more seriously (since in that case I'm allowed the time for it :-)). That if I have one file that is not up to someones liking I'm not taking releasing of my software seriously is just absurd.
+> _______
+>
+>  From one of the replies:
+>> As I said in a previous message, deploying to the remote repo is just a
+>> matter of "mvn deploy", using either the maven-deploy-plugin (by default)
+>> or the nexus-staging-maven-plugin.
+> That is good, that is how easy it should be!
+>
+>> You'll have to configure the GPG plugin to sign your artifacts though, as
+>> it's a requirement to deploy to Central.
+> No problem!
+>
+> I'm going to go though the documentation again and solve the "easy" way to do it :-).  And If I can't find a page that explains this clearly I will create such! I have gotten very much information here to go on.
+>
+> Someone also pointed out that local webserver repositories are good enough for "small" projects. I basically agree with that. I only considered maven central since someone asked me. But it is easier to have things in central and not have to add multiple repository specifications in your pom/settings. OK, you can use nexus to merge several repositories into one and then use that. But if submission to central can be made easy then it is worth to do it. Software does not have to be large apache projects to be useful. There are some truly useful software out there that comes from single individuals.
+> ________
+>
+> Here is my view of how I would want a maven repository to be:
+>
+> - No requirements of javadoc or sources. If you want to include those, no problem, but if you don't  it is up to you. Personally I like to have sources available in the repository for the third party software I'm using so I would also submit sources to my software, but that is entirely up to me.
+>
+> - Tags on submitted software (not required - can be empty).
+>
+> - Searchable data in addition to group and artifact:
+>    - Tags
+>    - Descriptions
+>
+> - A browsable (navigable) web gui, not just searches.
+>
+> - A standardized documentation zip containing PDFs and/or markdown.
+>
+> - Quality indication:
+>    - The possibility to star artifacts just like you can star repos in github. Also for group level.
+>    - Download statistics (filtered on ip-address, multiple downloads from the same ip-address only count as one).
+>    - A quality value based on these two as sorting order for search results.
+>
+> - When an artifact or group is selected in the web gui the following should be displayed:
+>    - Dependency tags for the artifact (obviously :-))
+>    - Pom information like description, web url, developers, scm url, etc.
+>    - Stars and download stats.
+>    - Any submitted docs.
+>
+> With so much software available in one place it would be very nice to have it more searchable and on more useful criteria, and also to have the ability to get more details on the software at the same place.
+>
+> Tommy
+>
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

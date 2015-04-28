@@ -1,0 +1,100 @@
+From users-return-136168-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Apr 17 13:57:48 2014
+Return-Path: <users-return-136168-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9FB32109F1
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 17 Apr 2014 13:57:48 +0000 (UTC)
+Received: (qmail 98385 invoked by uid 500); 17 Apr 2014 13:57:44 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 98191 invoked by uid 500); 17 Apr 2014 13:57:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 98179 invoked by uid 99); 17 Apr 2014 13:57:44 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 17 Apr 2014 13:57:44 +0000
+Received: from localhost (HELO mail-wg0-f49.google.com) (127.0.0.1)
+  (smtp-auth username mgrigorov, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Thu, 17 Apr 2014 13:57:43 +0000
+Received: by mail-wg0-f49.google.com with SMTP id a1so472480wgh.8
+        for <users@maven.apache.org>; Thu, 17 Apr 2014 06:57:42 -0700 (PDT)
+X-Received: by 10.195.13.76 with SMTP id ew12mr671504wjd.80.1397743062321;
+ Thu, 17 Apr 2014 06:57:42 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.216.105.74 with HTTP; Thu, 17 Apr 2014 06:57:02 -0700 (PDT)
+From: Martin Grigorov <mgrigorov@apache.org>
+Date: Thu, 17 Apr 2014 16:57:02 +0300
+Message-ID: <CAMomwMpRHgtE3Vhpt=aAqkfRY8WvhHq7xNPKnSGs3_-tAvMcog@mail.gmail.com>
+Subject: Class loader issues after Maven 3.1.0
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=047d7bd91b54b791ee04f73d6ace
+
+--047d7bd91b54b791ee04f73d6ace
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+We have troubles use 'mvn jetty:run' for
+https://github.com/apache/wicket/tree/master/wicket-examples after
+upgrading to Maven 3.1.0+.
+
+It fails with:
+
+2014-04-17 16:22:57.160:WARN:oejuc.AbstractLifeCycle:FAILED
+org.mortbay.jetty.plugin.JettyServer@44e5b006: java.lang.LinkageError:
+loader constraint violation: when resolving overridden method
+"org.jboss.weld.Weld.select(Ljavax/enterprise/util/TypeLiteral;[Ljava/lang/annotation/Annotation;)Ljavax/enterprise/inject/Instance;"
+the class loader (instance of org/eclipse/jetty/webapp/WebAppClassLoader)
+of the current class, org/jboss/weld/Weld, and its superclass loader
+(instance of org/codehaus/plexus/classworlds/realm/ClassRealm), have
+different Class objects for the type
+tion/Annotation;)Ljavax/enterprise/inject/Instance; used in the signature
+java.lang.LinkageError: loader constraint violation: when resolving
+overridden method
+"org.jboss.weld.Weld.select(Ljavax/enterprise/util/TypeLiteral;[Ljava/lang/annotation/Annotation;)Ljavax/enterprise/inject/Instance;"
+the class loader (instance of org/eclipse/jetty/webapp/WebAppClassLoader)
+of the current class, org/jboss/weld/Weld, and its superclass loader
+(instance of org/codehaus/plexus/classworlds/realm/ClassRealm), have
+different Class objects for the type
+tion/Annotation;)Ljavax/enterprise/inject/Instance; used in the signature
+ at
+org.jboss.weld.servlet.StaticWeldProvider$WeldSingleton.<clinit>(StaticWeldProvider.java:29)
+at
+org.jboss.weld.servlet.StaticWeldProvider.getCDI(StaticWeldProvider.java:49)
+ at javax.enterprise.inject.spi.CDI.current(CDI.java:60)
+at
+org.jboss.weld.servlet.WeldInitialListener.contextInitialized(WeldInitialListener.java:85)
+ at
+org.jboss.weld.servlet.api.helpers.ForwardingServletListener.contextInitialized(ForwardingServletListener.java:34)
+at
+org.jboss.weld.environment.servlet.Listener.contextInitialized(Listener.java:171)
+ at
+org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:733)
+...
+
+The issue is not new. We just noticed that when using 3.0.5 it runs fine so
+it should be some change in Maven itself.
+
+I've found that another user had the same issue:
+http://stackoverflow.com/a/18168215/497381
+
+How to reproduce:
+1) git clone https://github.com/apache/wicket.git
+2) mvn install (just to have all dependencies)
+3) cd wicket-examples
+4) mvn jetty:run (fails with 3.1.0+)
+
+Thanks!
+
+
+Martin Grigorov
+Wicket Training and Consulting
+
+--047d7bd91b54b791ee04f73d6ace--
+

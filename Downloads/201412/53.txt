@@ -1,0 +1,117 @@
+From users-return-137917-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Dec  4 13:15:31 2014
+Return-Path: <users-return-137917-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 75F75C7F1
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  4 Dec 2014 13:15:31 +0000 (UTC)
+Received: (qmail 59318 invoked by uid 500); 4 Dec 2014 13:15:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 59060 invoked by uid 500); 4 Dec 2014 13:15:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 77286 invoked by uid 99); 3 Dec 2014 18:28:42 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 03 Dec 2014 18:28:42 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.192.173 as permitted sender)
+Received: from [209.85.192.173] (HELO mail-pd0-f173.google.com) (209.85.192.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 03 Dec 2014 18:28:36 +0000
+Received: by mail-pd0-f173.google.com with SMTP id ft15so15881917pdb.18
+        for <users@maven.apache.org>; Wed, 03 Dec 2014 10:28:15 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject
+         :content-type:content-transfer-encoding;
+        bh=F9OAewSfAvBIaELXdqY++X62Q974NM1TDG64UDY32qA=;
+        b=MkVJ8bmjRYlDFHM1Y20T7fzmSJerpnmUa9xSL/jsm7TGX6pmYxTKh6BadjzbnyfIfk
+         vV+9PgfpcOj/085vxofzScgKqzfJG/Q6Idv3kRecgrVrKbJLR1BkM7VZyHjeIchzmYXM
+         +LHqxU1yb7kOXewpmeiryD2g9KBvGFYf2EvRUllzo+WnBoV1xHyv6c0Zj1D/N/uuM7JG
+         zrwPKwVnIv1uTiu7tIbajV6gN42cokTlssf64EZnxcY4jSx9fQAC1z5rVj/jCvC/qyJS
+         6vi0pUUd3FYp9SuwPzVQ3GZOtMWijOCM20OCN8ufljSqfPeb2JuI+Jgs7Fc3REVXHeeO
+         3Hbg==
+X-Received: by 10.70.90.80 with SMTP id bu16mr11573243pdb.44.1417631295546;
+        Wed, 03 Dec 2014 10:28:15 -0800 (PST)
+Received: from [192.168.100.168] (S010620cf30ce24d0.vc.shawcable.net. [50.67.177.229])
+        by mx.google.com with ESMTPSA id b2sm15524819pdp.27.2014.12.03.10.28.13
+        for <users@maven.apache.org>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 03 Dec 2014 10:28:14 -0800 (PST)
+Message-ID: <547F563A.5020604@gmail.com>
+Date: Wed, 03 Dec 2014 10:28:10 -0800
+From: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Thunderbird/31.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: org.apache.maven.plugins.shade.resource.AppendingTransformer
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Here is part of my POM
+
+           <plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+             <artifactId>maven-shade-plugin</artifactId>
+             <executions>
+               <execution>
+                 <phase>package</phase>
+                 <goals>
+                   <goal>shade</goal>
+                 </goals>
+                 <configuration>
+<shadedArtifactAttached>true</shadedArtifactAttached>
+<shadedClassifierName>allinone</shadedClassifierName>
+                    <artifactSet>
+                      <includes>
+                        <include>*:*</include>
+                      </includes>
+                    </artifactSet>
+                  <transformer 
+implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                    <resource>application.conf</resource>
+                  </transformer>
+                  <transformer 
+implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                    <resource>reference.conf</resource>
+                  </transformer>
+                   <transformers>
+                     <transformer 
+implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                       <manifestEntries>
+                         <!-- 
+<Main-Class>platform3.AccountService.ServiceKernel</Main-Class> -->
+<Main-Class>akka.Main</Main-Class>
+                       </manifestEntries>
+                     </transformer>
+                   </transformers>
+                 </configuration>
+               </execution>
+             </executions>
+           </plugin>
+
+But when I look at application.conf and reference.conf in the JAR file, 
+there is nothing appended to them. Clearly the AppendingTransformer is 
+not working because I can see other application.conf and reference.conf 
+files in the included jars.
+
+The ManifestResourceTransformer is working correctly, so I am not sure 
+what is wrong with AppendingTransformer?
+
+Does anyone have any idea on what the problem may be?
+
+Cheers, Eric
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,93 @@
+From users-return-137461-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Oct  5 22:48:32 2014
+Return-Path: <users-return-137461-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C4FEC17741
+	for <apmail-maven-users-archive@www.apache.org>; Sun,  5 Oct 2014 22:48:32 +0000 (UTC)
+Received: (qmail 68120 invoked by uid 500); 5 Oct 2014 22:48:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 68051 invoked by uid 500); 5 Oct 2014 22:48:31 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 68039 invoked by uid 99); 5 Oct 2014 22:48:30 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 05 Oct 2014 22:48:30 +0000
+X-ASF-Spam-Status: No, hits=2.8 required=5.0
+	tests=FREEMAIL_REPLY,HTML_FONT_FACE_BAD,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mr.austinwhyte@gmail.com designates 209.85.192.182 as permitted sender)
+Received: from [209.85.192.182] (HELO mail-pd0-f182.google.com) (209.85.192.182)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 05 Oct 2014 22:48:24 +0000
+Received: by mail-pd0-f182.google.com with SMTP id y10so2321804pdj.27
+        for <users@maven.apache.org>; Sun, 05 Oct 2014 15:48:04 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:mime-version:from:to:subject:importance:date:in-reply-to
+         :references:content-type;
+        bh=bUOgCVTEGAu3w/ighL52Y27pxY+uSZGcvCEAUdmuSJU=;
+        b=l+zABQC5Bu5UGRzILbUEzgCQfAMLGPGePC3ENZwAFOIa8wjFyC0s1AKJvg0Eh4OD7b
+         vhUWksQstXVxdJX86ZbwbsXN7efYaOiRDkDmjSHVRB2a6gKxxLNF+CmbjE+9XJcH9RhK
+         WNlG70SSunNBOiqPWn4PIb8yeyLDE/mjvQ3dbUP/XkjOlXk/fNVFe5fqvmFjLSPrplvW
+         mocAeXwkcaqnPcxQeH14BK7R85y6acr4yHhiDxh6FqtkxLfKw64x9KHymgURYfC95tnS
+         oofHBMp6yIINeQ9G9umuwD9MlU3DdHJ6paJt9P7H3Ke4E0DPzQglVb/Oz3hsbgoYM76k
+         NySQ==
+X-Received: by 10.68.201.138 with SMTP id ka10mr21136355pbc.23.1412549284593;
+        Sun, 05 Oct 2014 15:48:04 -0700 (PDT)
+Received: from TARDIS (c-50-131-39-196.hsd1.ca.comcast.net. [50.131.39.196])
+        by mx.google.com with ESMTPSA id xf9sm11830945pab.2.2014.10.05.15.48.03
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Sun, 05 Oct 2014 15:48:04 -0700 (PDT)
+Message-ID: <5431caa4.e99f420a.2398.4255@mx.google.com>
+MIME-Version: 1.0
+From: <mr.austinwhyte@gmail.com>
+To: =?utf-8?Q?Maven_Users_List?= <users@maven.apache.org>
+Subject: =?utf-8?Q?Re:_Wagon-FTP_Help?=
+Importance: Normal
+Date: Sun, 5 Oct 2014 22:46:54 +0000
+In-Reply-To:
+ <CAPCjjnHR2zQhKrBOi8+R+ZRBAThb2=-=dnN7bPcM8tEQVHa+jw@mail.gmail.com>
+References:
+ <5431c7c9.4f66460a.1313.ffffc640@mx.google.com>,<CAPCjjnHR2zQhKrBOi8+R+ZRBAThb2=-=dnN7bPcM8tEQVHa+jw@mail.gmail.com>
+Content-Type: multipart/alternative;
+	boundary="_79BD02E9-8E0D-4924-855A-C1D232953AD2_"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_79BD02E9-8E0D-4924-855A-C1D232953AD2_
+Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="utf-8"
+
+T2theSwgSSB0cmllZCBydW5uaW5nIHdhZ29uOnVwZGF0ZS1tYXZlbi0zICBhbmQgdGhlbiBkZXBs
+b3lpbmcgYWdhaW4gYnV0IHRoYXQgc3RpbGwgZGlkbid0IHdvcmsuIEl0IGZhaWxlZCB3aXRoIHRo
+ZSBzYW1lIGVycm9yLg0KDQoNCg0KDQoNCg0KLSBBdXN0aW4NCg0KDQoNCg0KDQpGcm9tOiBEYW4g
+VHJhbg0KU2VudDog4oCOU3VuZGF54oCOLCDigI5PY3RvYmVy4oCOIOKAjjXigI4sIOKAjjIwMTQg
+4oCOM+KAjjrigI4zOOKAjiDigI5QTQ0KVG86IE1hdmVuIFVzZXJzIExpc3QNCg0KDQoNCg0KDQpU
+aGlzIG1heSBoZWxwICBodHRwOi8vbW9qby5jb2RlaGF1cy5vcmcvd2Fnb24tbWF2ZW4tcGx1Z2lu
+L3VzYWdlLmh0bWwNCg0KT24gU3VuLCBPY3QgNSwgMjAxNCBhdCAzOjI3IFBNLCA8bXIuYXVzdGlu
+d2h5dGVAZ21haWwuY29tPiB3cm90ZToNCg0KPiBIZWxsbyBjb21tdW5pdHksDQo+DQo+DQo+IE92
+ZXIgdGhlIGxhc3QgaG91ciBvciBzbywgSeKAmXZlIGJlZW4gbG9va2luZyBmb3Igd2F5cyB0byBo
+b3N0IGEgcHJpdmF0ZQ0KPiByZXBvc2l0b3J5LiBJIGhhdmUgcmVzb2x2ZWQgb24gdXNpbmcgbXkg
+d2Vic2VydmVyIGFuZCB1cGxvYWRpbmcgdmlhIEZUUC4gSQ0KPiBnb3QgdGhhdCBwYXJ0IHdvcmtp
+bmcgYnV0IG5vdyBJ4oCZbSBoYXZpbmcgYW4gaXNzdWUgZGVwbG95aW5nIGEgM3JkLXBhcnR5IGph
+cg0KPiB0byBpdC4gSeKAmW0gZGVwbG95aW5nIGl0IHZpYSBpbnZva2luZyB0aGUgZm9sbG93aW5n
+IGNvbW1hbmQ6DQo+DQo+DQo+DQo+DQo+DQo+IG12biBkZXBsb3k6ZGVwbG95LWZpbGUgLURncm91
+cElkPXNvbWUudmVyc2lvbiAtRHZlcnNpb249MS4wLURwYWNrYWdpbmc9amFyDQo+IC1EZmlsZT1t
+eS1maWxlLmphciAtRHJlcG9zaXRvcnlJZD1tYXZlbi1teS1yZXBvDQo+IC1EYXJ0aWZhY3RJZD1t
+eS1hcnRpZmFjdC1EdXJsPWZ0cDovL21hdmVuLm15c2l0ZS5jb20NCj4NCj4NCj4gSSBoYXZlIHRo
+ZSBsYXRlc3QgdmVyc2lvbiBvZiBXYWdvbi1GVFAgaW5zdGFsbGVkIHRvICVNMl9IT01FJVxsaWIg
+YW5kDQo+IHdoZW5ldmVyIEkgdHJ5IHRvIGRlcGxveSwgaXQgZmFpbHMuIEhlcmUgaXMgdGhlIG91
+dHB1dCBpbiBkZWJ1ZyBtb2RlOg0KPiBodHRwOi8vcGFzdGViaW4uY29tL3BmZVh4VmJZIChJdHMg
+a2luZGEgbG9uZykuDQo+DQo+DQo+IEZyb20gd2hhdCBJIHNlZSwgaXRzIG1pc3NpbmcgdGhlIGFw
+YWNoZSBjb21tb25zIGxpYnJhcnkgYnV0IEkgZG9u4oCZdCBoYXZlDQo+IGFueSBpZGVhIGhvdyB0
+byBpbnN0YWxsIGl0Lg0KPg0KPg0KPg0KPg0KPiAtIEF1c3Rpbg==
+
+--_79BD02E9-8E0D-4924-855A-C1D232953AD2_--
+
+

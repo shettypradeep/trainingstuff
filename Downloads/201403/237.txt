@@ -1,0 +1,85 @@
+From users-return-135872-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 19 23:56:04 2014
+Return-Path: <users-return-135872-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9DB4A10FC6
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 19 Mar 2014 23:56:04 +0000 (UTC)
+Received: (qmail 3527 invoked by uid 500); 19 Mar 2014 23:56:01 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 3439 invoked by uid 500); 19 Mar 2014 23:56:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 3431 invoked by uid 99); 19 Mar 2014 23:56:00 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Mar 2014 23:56:00 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.212.173] (HELO mail-wi0-f173.google.com) (209.85.212.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Mar 2014 23:55:53 +0000
+Received: by mail-wi0-f173.google.com with SMTP id f8so5639990wiw.6
+        for <users@maven.apache.org>; Wed, 19 Mar 2014 16:55:31 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to:cc
+         :content-type;
+        bh=paum9KED0pCYxmXX8B8X/u4cUefTcKrajVYfRQhWRc8=;
+        b=jr5WLokXOi+A0nLkpbViwYuxYG/GYDFe785KwdLWYkNw+XrZeIGTPbNM1TJuaikHf4
+         uAqbkV4lyodiN9+Rk5UuXHZq1O1vzSLRMvidhwTR+GTW2YD1YZvQ1Ebc+FRC/asuUQ/Y
+         J3ZzKcJmZmDBfvwxn/+0UDNVOW82v9bzWQ7cLR8h0/a4nJxO3DhNCV/O7Bg+BxAuNcXR
+         p/CKjlmomIreXhJGwEzTSX+hy4EA+gqUlq+HBIsVzlfpBdV5NYAXkkRr1tbZ1tkJcNyE
+         xanUoPibVF2i4Icm8qCdOmiMCbRT7z2WETKuKNKBuCu8uEPJVjkPcXCI6nZLh8zCVelu
+         n6Pw==
+X-Gm-Message-State: ALoCoQlNCzlCeDkXqk2VQkJamBw7Mc8H5fEgO9HIwoojm1J1x3lUcrNZ51/p9Q3ecoi0a08dICDw
+MIME-Version: 1.0
+X-Received: by 10.180.102.97 with SMTP id fn1mr21774488wib.15.1395273331802;
+ Wed, 19 Mar 2014 16:55:31 -0700 (PDT)
+Received: by 10.216.235.4 with HTTP; Wed, 19 Mar 2014 16:55:31 -0700 (PDT)
+X-Originating-IP: [130.76.64.115]
+Date: Thu, 20 Mar 2014 09:55:31 +1000
+Message-ID: <CAEBcyzqJae+F0zRek1ug9xkyQEOu0k+OcYwTK2UPRbSWyv6hhw@mail.gmail.com>
+Subject: maven-dependency-tree reactor resolution
+From: William Ferguson <william.ferguson@xandar.com.au>
+To: Maven Users List <users@maven.apache.org>
+Cc: Manfred Moser <mosabua@gmail.com>
+Content-Type: multipart/alternative; boundary=f46d0444ef1d4ec4af04f4fe63b1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d0444ef1d4ec4af04f4fe63b1
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi,
+
+I have a plugin that uses the maven-dependency-tree component to resolve
+project dependencies in a LifeCycleParticipant. (We need early access to
+deps because we need to modify the compile classpath).
+
+But I'm finding that with a clean repository, in a multi-module project
+with modules X and Y-depends-on-X that the DependencyGraphBuilder is
+throwing a DependencyGraphBuilderException when trying to resolve
+Y-depends-on-X. It says that it cannot find X.
+
+So it appears that the maven-dependency-tree is only using information from
+the repository and not the reactor.
+
+Is that expected?
+Is there anyway that I can get MDT to resolve from the reactor?
+Is there another approach that I should be taking to ensure that resolution
+looks in the reactor?
+
+NB I need to support both maven 3.0 and 3.1 which is why we are using MDT
+to provide a level of abstraction above the 2 differing Aether
+implementations.
+
+William
+
+--f46d0444ef1d4ec4af04f4fe63b1--
+

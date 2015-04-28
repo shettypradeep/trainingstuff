@@ -1,0 +1,77 @@
+From users-return-138017-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Dec 15 13:13:34 2014
+Return-Path: <users-return-138017-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 81C549BED
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 15 Dec 2014 13:13:34 +0000 (UTC)
+Received: (qmail 97970 invoked by uid 500); 15 Dec 2014 13:13:33 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 97871 invoked by uid 500); 15 Dec 2014 13:13:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 97854 invoked by uid 99); 15 Dec 2014 13:13:31 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 15 Dec 2014 13:13:31 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [212.227.17.13] (HELO mout.kundenserver.de) (212.227.17.13)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 15 Dec 2014 13:13:25 +0000
+Received: from [192.168.100.71] ([212.94.34.202]) by mrelayeu.kundenserver.de
+ (mreue104) with ESMTPSA (Nemesis) id 0LcOxi-1XYLhe0iGM-00jmf9 for
+ <users@maven.apache.org>; Mon, 15 Dec 2014 14:13:04 +0100
+Message-ID: <548EDE5F.6070707@landrus.de>
+Date: Mon, 15 Dec 2014 14:13:03 +0100
+From: Christian Domsch <mail@landrus.de>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:31.0) Gecko/20100101 Thunderbird/31.3.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Installing only javadocs
+References: <1418648803.86231.ezmlm@maven.apache.org>
+In-Reply-To: <1418648803.86231.ezmlm@maven.apache.org>
+Content-Type: text/plain; charset=windows-1252; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:NTx1Lu6OMJJxEHLCwXKeXIsWxMwIP4VACBafhLEfsQaz2ReR6ON
+ pK0BMozuhp3ykzb2kmhVs4Uil9q6wf3CTdVfjpE27Ifaz+G9sgMucXjtg7xC9BKd2ffUTAU
+ chnFqRfgdz66gsTbNpTo8xjXyRXX/5yUNtd4AWcZBFXmfSYbU+Mj1FcrDro+bEOaHOuWS7x
+ KxHdsU+3k5gqFasz6dHPA==
+X-UI-Out-Filterresults: notjunk:1;
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+I have a continuous integration setup where the build is setup in two 
+steps. First all modules are built and deployed. After that a second 
+build is triggered that takes those artifacts and builds installers from 
+that.
+
+Because of performance reasons and they are only needed for the 
+installers, any javadoc jars are only being built in the second step. 
+Now I want to install these jars into the local repo as well. A call to 
+javadoc:jar only creates those jars, not copy them over to the local repo.
+
+I do not want to run mvn install, as that would run the complete build 
+again. Now, I looked at the documentation of maven-javadoc-plugin and 
+the maven-install-plugin but I couldnt find a way to only install the 
+javadocs. (something like mvn javadoc:jar javadoc:install, if such a 
+goal would exist).
+
+Is there a way to achieve that or am I on the wrong track?
+
+Greetings,
+
+Christian
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

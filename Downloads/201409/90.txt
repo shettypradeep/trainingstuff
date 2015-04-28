@@ -1,0 +1,109 @@
+From users-return-137211-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Sep  8 14:05:55 2014
+Return-Path: <users-return-137211-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 418B711962
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  8 Sep 2014 14:05:55 +0000 (UTC)
+Received: (qmail 56110 invoked by uid 500); 8 Sep 2014 14:05:53 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 56028 invoked by uid 500); 8 Sep 2014 14:05:53 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 56017 invoked by uid 99); 8 Sep 2014 14:05:53 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 08 Sep 2014 14:05:53 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mgainty@hotmail.com designates 65.55.116.48 as permitted sender)
+Received: from [65.55.116.48] (HELO BLU004-OMC1S37.hotmail.com) (65.55.116.48)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 08 Sep 2014 14:05:27 +0000
+Received: from BLU172-W37 ([65.55.116.8]) by BLU004-OMC1S37.hotmail.com with Microsoft SMTPSVC(7.5.7601.22724);
+	 Mon, 8 Sep 2014 07:05:26 -0700
+X-TMN: [u9Cs4zet21021Nf66pt60g3M2HXMtAOs]
+X-Originating-Email: [mgainty@hotmail.com]
+Message-ID: <BLU172-W370488B4A11034F46C0B0DAEC10@phx.gbl>
+Content-Type: multipart/alternative;
+	boundary="_918e84f8-9a1b-4482-9dd6-c46615f231c2_"
+From: Martin Gainty <mgainty@hotmail.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: RE: js-sequence-diagrams would make a really cool addition to
+ doxia...
+Date: Mon, 8 Sep 2014 10:05:25 -0400
+Importance: Normal
+In-Reply-To:
+ <CAAZU44k1puFQBQDVhWE0EsQu7uTPxWzNSg+FDqc7qvLUi35hVQ@mail.gmail.com>
+References:
+ <CAAZU44k1puFQBQDVhWE0EsQu7uTPxWzNSg+FDqc7qvLUi35hVQ@mail.gmail.com>
+MIME-Version: 1.0
+X-OriginalArrivalTime: 08 Sep 2014 14:05:26.0242 (UTC) FILETIME=[F06A8420:01CFCB6D]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_918e84f8-9a1b-4482-9dd6-c46615f231c2_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+
+
+
+
+> From: burton@spinn3r.com
+> Date: Sat=2C 6 Sep 2014 15:20:42 -0700
+> Subject: js-sequence-diagrams would make a really cool addition to doxia.=
+..
+> To: users@maven.apache.org
+>=20
+> I just got this working with doxia:
+>=20
+> http://bramp.github.io/js-sequence-diagrams/
+>=20
+> Sequence diagrams are great for documenting protocol interaction.
+>=20
+> I use them very often but one of the problems is updating the document wh=
+en
+> the protocol changes.
+>=20
+> With text sequence diagrams you can do that easily=85
+>=20
+> Here=92s an example:
+>=20
+> Andrew->China: Says Hello
+> Note right of China: China thinks\nabout it
+> China-->Andrew: How are you?
+> Andrew->>China: I am good thanks!
+>=20
+> =85 and that can be rendered into an image for every page load.
+>=20
+> I have it working in my doxia by just updating <head> and then using a <d=
+iv
+> class=3D=91diagram=92>
+>=20
+> and then:
+>=20
+> $( document ).ready(function() {
+>     $(".diagram").sequenceDiagram({theme: 'hand'})=3B
+> } )=3BMG>it would be great if we could incorporate the Sequence Diagram i=
+nto JavadocMG>could we see the JS function sequenceDiagram
+MG>could we see the CSS assignment for hand?
+MG>Thanks Burton!
+>=20
+>=20
+> --=20
+>=20
+> Founder/CEO Spinn3r.com
+> Location: *San Francisco=2C CA*
+> blog: http://burtonator.wordpress.com
+> =85 or check out my Google+ profile
+> <https://plus.google.com/102718274791889610666/posts>
+> <http://spinn3r.com>
+ 		 	   		  =
+
+--_918e84f8-9a1b-4482-9dd6-c46615f231c2_--
+

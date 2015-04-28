@@ -1,0 +1,72 @@
+From users-return-135592-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb 24 20:39:05 2014
+Return-Path: <users-return-135592-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5BFC91049F
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 24 Feb 2014 20:39:05 +0000 (UTC)
+Received: (qmail 50265 invoked by uid 500); 24 Feb 2014 20:39:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 50137 invoked by uid 500); 24 Feb 2014 20:38:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 50127 invoked by uid 99); 24 Feb 2014 20:38:59 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Feb 2014 20:38:59 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of baerrach@gmail.com designates 209.85.128.182 as permitted sender)
+Received: from [209.85.128.182] (HELO mail-ve0-f182.google.com) (209.85.128.182)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Feb 2014 20:38:52 +0000
+Received: by mail-ve0-f182.google.com with SMTP id jy13so6413571veb.13
+        for <users@maven.apache.org>; Mon, 24 Feb 2014 12:38:31 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=8PlkA1YWTjSILptmNzUIW9DgA8GEaj5FOxb25yBqp/s=;
+        b=dQhvXh+vLgjrmRMlBSozt+FpibNh3FXIRs8WHI4OuSFFY+ShxAYl5OUr2klwBqaB3x
+         3JxYdDOSwa/x1YPRoM1krLaIeqECMWz2wEyoyHulI1JNtyhzIHmqD4dBy3xvTH2Me6/f
+         X9vX1k8LRj4Kh2hFQDue/0EDvH4DEhUl7HOc9YNu4xfeEH02u93QZ9hmQIZHw+ql6Npv
+         IX5aTCFLa3ph3/HQbHSOn9FO89E6vJ8gHkQasKPH4LSmYStv6Mbh2n1+Nk7rz3xWTkGV
+         9DU//zRmkgOgwfwBd8MtdAH2Pqvy+BhFAC99LxiCX1YOqd8ttr5PKwPacNPVZXndtJKK
+         UGgg==
+MIME-Version: 1.0
+X-Received: by 10.52.23.68 with SMTP id k4mr11841412vdf.24.1393274311639; Mon,
+ 24 Feb 2014 12:38:31 -0800 (PST)
+Received: by 10.58.48.131 with HTTP; Mon, 24 Feb 2014 12:38:31 -0800 (PST)
+In-Reply-To: <CAPzuzUe6WhV4gNL3UceuCqJ6CoY0=6cAadn8Tw_CQf1uVF-hMQ@mail.gmail.com>
+References: <CAPzuzUeqS4dAdp+ESOQXWOafoyRT=Nm7phPTozUVJXwiCcye+w@mail.gmail.com>
+	<CANWgJS5hvhXhjLfHsF5-L7H3rUV=bPXC9V1FfG2w4WALJ0YdMg@mail.gmail.com>
+	<CAPzuzUe6WhV4gNL3UceuCqJ6CoY0=6cAadn8Tw_CQf1uVF-hMQ@mail.gmail.com>
+Date: Tue, 25 Feb 2014 07:08:31 +1030
+Message-ID: <CADVp3v_hopuQzgkeCd12Pq3+D-N+fU87o80F9d7k+g-ky2RTTA@mail.gmail.com>
+Subject: Re: Where the binnary of mvn knows which mojo do i want to execute?
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=ISO-8859-1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 25 February 2014 00:46, enrique bernal ruiz <kbernalruiz@gmail.com> wrote:
+> Hello! And thank you so much for your help.
+> I am working(starting) with it, and i am trying to understand it. What mvn
+> does when i call mvn run for example, i mean, I have a collection of mvn
+
+
+Please have a look at the freely available books at
+http://maven.apache.org/articles.html
+
+Some of these may be in a language more native to you than English.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

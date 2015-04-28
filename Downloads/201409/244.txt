@@ -1,0 +1,79 @@
+From users-return-137419-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Sep 30 18:52:21 2014
+Return-Path: <users-return-137419-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6A95317397
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 30 Sep 2014 18:52:21 +0000 (UTC)
+Received: (qmail 19436 invoked by uid 500); 30 Sep 2014 18:52:17 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 19340 invoked by uid 500); 30 Sep 2014 18:52:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 19328 invoked by uid 99); 30 Sep 2014 18:52:16 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 30 Sep 2014 18:52:16 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ljnelson@gmail.com designates 209.85.216.49 as permitted sender)
+Received: from [209.85.216.49] (HELO mail-qa0-f49.google.com) (209.85.216.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 30 Sep 2014 18:51:51 +0000
+Received: by mail-qa0-f49.google.com with SMTP id k15so48730qaq.22
+        for <users@maven.apache.org>; Tue, 30 Sep 2014 11:51:50 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=JZmZl3J3WmGLPa66Fnm69P3OHBqKZZP5/2Wi/cparuY=;
+        b=jr/YxUzzcw5fl6RmbwUdFLK38fZ0BPxzYYPPfNMzOU6OJkDoNNIjU0up6wZ6Qz4bSb
+         knILamqXbACEgaBjlwC4OVMS9ZDnHZvnKSbcYdRznGaBW3EKwm3QgWSUImDIQ8iOKGw7
+         hYYmjpqJKoUPN41lpOUSYCNpJlihzrnfBU/HT3HEWXUFKbzN1bFUEk/kBTDmiUn0JH7X
+         C6hYuwaQog3zkp86a9mvgtK9vRbg0Ip5xesIYCSz8tCmM/xuVN29dvEnWhRdedOXYQ1Z
+         hD79Q+N3R7I+49BFkFFnuKBTJtc9m2GKXfAgxew4WRWCKlz3qAGGHOG0jpzEqiwsT2/2
+         YSiQ==
+MIME-Version: 1.0
+X-Received: by 10.140.92.98 with SMTP id a89mr418493qge.85.1412103110491; Tue,
+ 30 Sep 2014 11:51:50 -0700 (PDT)
+Received: by 10.96.194.135 with HTTP; Tue, 30 Sep 2014 11:51:50 -0700 (PDT)
+In-Reply-To: <CA+nPnMz3wDcTQjNPCj2oQKB5b9KSritZ-aFC+bx_AC0dVPV7ow@mail.gmail.com>
+References: <CA+Awg+J-ogQKF-D+TWQTVrAq5ib8hhFxAPk-+mOF062Hpr8J0A@mail.gmail.com>
+	<CAKDUN1vd7anOeV1H=hcAC_oA1y+GZ4rrb-p=aZA5jqsJ_yFZXQ@mail.gmail.com>
+	<CA+Awg+L_R0k69Uo2JCWNo0zCV6nde3PVVQE3pWBA72x+K+4W5Q@mail.gmail.com>
+	<CA+nPnMz3wDcTQjNPCj2oQKB5b9KSritZ-aFC+bx_AC0dVPV7ow@mail.gmail.com>
+Date: Tue, 30 Sep 2014 11:51:50 -0700
+Message-ID: <CAHNdxumSCv8sowVUfYkdSqZEod8SbKSsOa0Ktn6tyW3Ef1AfBw@mail.gmail.com>
+Subject: Re: Can I alter packaging with Maven?
+From: Laird Nelson <ljnelson@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11394d6049886b05044ce0a1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11394d6049886b05044ce0a1
+Content-Type: text/plain; charset=UTF-8
+
+On Tue, Sep 30, 2014 at 11:03 AM, Stephen Connolly <
+stephen.alan.connolly@gmail.com> wrote:
+
+> In short, do not use the way Jenkins abuses maven as a way to learn how to
+> use maven...
+>
+
+Is there a laundry list of abuses somewhere?  I've always been made faintly
+queasy by the Jenkins Maven job but it sounds like you have a good
+collection of evils it is perpetrating.  Where can I read about those evils?
+
+Best,
+Laird
+
+-- 
+http://about.me/lairdnelson
+
+--001a11394d6049886b05044ce0a1--
+

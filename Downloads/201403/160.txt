@@ -1,0 +1,119 @@
+From users-return-135720-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar  6 14:35:22 2014
+Return-Path: <users-return-135720-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5768F105E2
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  6 Mar 2014 14:35:22 +0000 (UTC)
+Received: (qmail 5657 invoked by uid 500); 6 Mar 2014 14:35:18 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 5599 invoked by uid 500); 6 Mar 2014 14:35:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 5571 invoked by uid 99); 6 Mar 2014 14:35:16 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 14:35:16 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bmathus@gmail.com designates 74.125.83.45 as permitted sender)
+Received: from [74.125.83.45] (HELO mail-ee0-f45.google.com) (74.125.83.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 14:35:09 +0000
+Received: by mail-ee0-f45.google.com with SMTP id d17so1139440eek.18
+        for <users@maven.apache.org>; Thu, 06 Mar 2014 06:34:48 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=CONRzGDEZg/3usG1wbw3bXBUNAWEJaqicMC2vwNO5lI=;
+        b=Hrd7srhlkVip5EAkYaPyrvPvoqyyZiAEmoJMU7DxFiu5mBVoEBdvNZej2yuubq64Xe
+         g66ITJxExFRf0R9GdeYoj4RpeWPYQZOJJliubGDYz12rSJqzMRJTSNUbRQy5QcoDyFMU
+         joI+pl6sJjd0oEzhYjQ34evcv5Nmf4ySrS8AFHgn5aNRx5RN8N9bvj/ImWyTX59RJZj9
+         nEy58bWU+jRYY+n3DTijZCCehx/m9UYbbIWuE6a8taP3Frrvy/6y+Dn2BlBeAEXiIzUH
+         r0RxRf2TCsLZWZfYjsqJ2B4VZnCWrCBPkJ2twxFN20whgfwHODEguEd0Oj7AJOrGU6IE
+         pqpA==
+MIME-Version: 1.0
+X-Received: by 10.15.81.197 with SMTP id x45mr12966646eey.28.1394116488910;
+ Thu, 06 Mar 2014 06:34:48 -0800 (PST)
+Sender: bmathus@gmail.com
+Received: by 10.14.224.198 with HTTP; Thu, 6 Mar 2014 06:34:48 -0800 (PST)
+Received: by 10.14.224.198 with HTTP; Thu, 6 Mar 2014 06:34:48 -0800 (PST)
+In-Reply-To: <28f1526b-7d4d-46da-b304-9cee5e3becf1@googlegroups.com>
+References: <28f1526b-7d4d-46da-b304-9cee5e3becf1@googlegroups.com>
+Date: Thu, 6 Mar 2014 15:34:48 +0100
+X-Google-Sender-Auth: ssVYh7GLZFshZ3DrUZOEuzD7v7A
+Message-ID: <CANWgJS41He9zmzG81SB6+-vLdfpZrrgAYz06Z9F+Y+xS_QHvtw@mail.gmail.com>
+Subject: Re: Maven Release Plugin throws Authentication Required error
+From: Baptiste Mathus <bmathus@batmat.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e016354a018dcde04f3f10aeb
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e016354a018dcde04f3f10aeb
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+First try do to that without using Jenkins at all. This is a pure maven
+configuration thing. You just seem to be missing the  authentication part
+(see username and password parameters maybe).
+
+When you manage to release some dummy versions of your project, then and
+only then try doing it from Jenkins or any other automated system.
+
+Cheers
+Le 6 mars 2014 15:14, "D Vijay" <vijayd1508@gmail.com> a =C3=A9crit :
+
+> Dear All,
+>
+>
+> I need help in configuring the Maven Release plugin. I am trying to
+> configure the plugin in Jenkins job. I am getting authentication exceptio=
+n.
+> For invoking maven release plugin do we need to have svn client from wher=
+e
+> we are invoking the release? PFA the errors & the configuration that I us=
+ed
+> for this.
+>
+> My requirement is to configure maven release plugin as follows:
+>
+> 1. My current version is at 1.0.0-SNAPSHOT and once testing is done and
+> ready for movement to production the maven release plugin will be invoked
+> from Jenkins job to move the code from branch to trunk.
+> 2. The configuration has to check out the source from branch, update all
+> the POMs to version 1.0.0, tag the source code and check in the code at
+> trunk location. The tags folder will contain the tagged version at 1.0.0
+> (as best practice we need to change the version from 1.0.0-SNAPSHOT to
+> 1.0.0 once the product is ready for production, right? or while moving to
+> UAT itself it should be done?).
+> 3. Also, the next snapshot version will be updated to 1.0.1-SNAPSHOT(whic=
+h
+> is configurable in release plugin) and checked in at branch level for the
+> next development.
+>
+> I am able to configure this, but somehow it is not working. I am getting
+> authentication exception.
+> svn: Authentication required for '<https://server-mydomain.com:443<https:=
+//server-mydomain.com/>
+> >'.
+>
+>
+> Thank you,
+>
+> Vijay.
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+--089e016354a018dcde04f3f10aeb--
+

@@ -1,0 +1,79 @@
+From users-return-135898-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Mar 22 21:52:59 2014
+Return-Path: <users-return-135898-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D878110E11
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 22 Mar 2014 21:52:59 +0000 (UTC)
+Received: (qmail 58303 invoked by uid 500); 22 Mar 2014 21:52:53 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 57485 invoked by uid 500); 22 Mar 2014 21:52:48 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 57469 invoked by uid 99); 22 Mar 2014 21:52:48 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 22 Mar 2014 21:52:48 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of khmarbaise@gmx.de designates 212.227.17.21 as permitted sender)
+Received: from [212.227.17.21] (HELO mout.gmx.net) (212.227.17.21)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 22 Mar 2014 21:52:41 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([217.247.38.242]) by
+ mail.gmx.com (mrgmx101) with ESMTPSA (Nemesis) id 0MCggg-1WIABK2VZy-009PxK;
+ Sat, 22 Mar 2014 22:52:20 +0100
+Message-ID: <532E0616.60404@gmx.de>
+Date: Sat, 22 Mar 2014 22:52:22 +0100
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: Maven Developers List <dev@maven.apache.org>
+CC: users@maven.apache.org
+Subject: [VOTE] Retire Maven Reactor Plugin
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:UfDgEiqjIE0aZ45Q1J0+gwV+n4K9FGMULgV3WqqTcjggX6AuB46
+ jK5iOCSbj30YKGwTWorqNxto4pCNg7A9SCwdls36LJeCAWOCl+XKvBxBtGt0/5SIvpIWVv0
+ oRW3aPPwti9Uguven0XgI8AF59PGvRu2ftne7fl7miTadt5yyzoXemIVus5bLXCwD7NTU30
+ gg0Tw0l0AjAgmZnZzmtIw==
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+based on the decision we have made on the 18. february 2014 to define 
+End Of Life of Maven 2 http://maven.apache.org/maven-2.x-eol.html
+
+I would suggest to retire the Maven Reactor Plugin.
+The last release has been made on 23rd of september 2008 version 1.0.
+
+Apart from that the complete functionality is now part of Maven 3.
+
+I therefor propose that we retire maven-foo-plugin.
+
+If this vote is successful I will make one final release of the plugin, 
+making it clear on the plugin site that it has been retired. After that 
+the source code will be moved into the "retired" area in Subversion.
+
+The process for retiring a plugin is described here:
+http://maven.apache.org/developers/retirement-plan-plugins.html
+
+The vote is open for 72 hours.
+
+[ ] +1 Yes, it's about time
+[ ] -1 No, because...
+
+Kind regards
+Karl-Heinz Marbaise
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,133 @@
+From users-return-137462-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Oct  5 22:50:50 2014
+Return-Path: <users-return-137462-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4D91817750
+	for <apmail-maven-users-archive@www.apache.org>; Sun,  5 Oct 2014 22:50:50 +0000 (UTC)
+Received: (qmail 71224 invoked by uid 500); 5 Oct 2014 22:50:49 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 71130 invoked by uid 500); 5 Oct 2014 22:50:49 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 71078 invoked by uid 99); 5 Oct 2014 22:50:48 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 05 Oct 2014 22:50:48 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.217.173 as permitted sender)
+Received: from [209.85.217.173] (HELO mail-lb0-f173.google.com) (209.85.217.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 05 Oct 2014 22:50:21 +0000
+Received: by mail-lb0-f173.google.com with SMTP id 10so3364734lbg.18
+        for <users@maven.apache.org>; Sun, 05 Oct 2014 15:50:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=LAR4ijBEwZZwk1aQcREH+qnVeOoeMuwfK4VTaWQDcXw=;
+        b=w2hwh2GCGuHVJNWUxhEcGaA5h636JekNSIavxp/0Ng2EYnItOzXjdp/imWNnW39ZlA
+         SEs/wE42g9pjMNuIn9wVgviTzMsJVvKd8jK8Znvcofrpsi7thUVQZjV6+i/XpbsTmciP
+         GaxGWCo5sS+abBDUci3WxA36rRTG8PAjKtHL+sCPU//3Y7CM+mKzJ929bgBCdBO/Ctc3
+         LtYXuH8wLJ2f5Nlbo5D1s88Rr9Pc2hPdPC2JwSKkcg7znWSokBFQhKe5NVMQgSXeKext
+         VsXlz4m9oQR/DuC69Zt+XppS5+GgghoLx0hswwCvv5B1AD+YenEe7r3qCieTUHhCJKwj
+         2VLA==
+MIME-Version: 1.0
+X-Received: by 10.152.4.98 with SMTP id j2mr5220346laj.77.1412549420567; Sun,
+ 05 Oct 2014 15:50:20 -0700 (PDT)
+Received: by 10.114.63.205 with HTTP; Sun, 5 Oct 2014 15:50:20 -0700 (PDT)
+In-Reply-To: <5431caa4.e99f420a.2398.4255@mx.google.com>
+References: <5431c7c9.4f66460a.1313.ffffc640@mx.google.com>
+	<CAPCjjnHR2zQhKrBOi8+R+ZRBAThb2=-=dnN7bPcM8tEQVHa+jw@mail.gmail.com>
+	<5431caa4.e99f420a.2398.4255@mx.google.com>
+Date: Sun, 5 Oct 2014 15:50:20 -0700
+Message-ID: <CAPCjjnFu5TrfSsbxATJPvHrMhxj5PxFZJZH0VSPpFqt_RPC29g@mail.gmail.com>
+Subject: Re: Wagon-FTP Help
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0141ab4470d2510504b4cad6
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0141ab4470d2510504b4cad6
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+i mean you need to manually copy a couple of dependecy file for ftp wagon,
+that doc mention it
+
+
+On Sun, Oct 5, 2014 at 3:46 PM, <mr.austinwhyte@gmail.com> wrote:
+
+> Okay, I tried running wagon:update-maven-3  and then deploying again but
+> that still didn't work. It failed with the same error.
+>
+>
+>
+>
+>
+>
+> - Austin
+>
+>
+>
+>
+>
+> From: Dan Tran
+> Sent: =E2=80=8ESunday=E2=80=8E, =E2=80=8EOctober=E2=80=8E =E2=80=8E5=E2=
+=80=8E, =E2=80=8E2014 =E2=80=8E3=E2=80=8E:=E2=80=8E38=E2=80=8E =E2=80=8EPM
+> To: Maven Users List
+>
+>
+>
+>
+>
+> This may help  http://mojo.codehaus.org/wagon-maven-plugin/usage.html
+>
+> On Sun, Oct 5, 2014 at 3:27 PM, <mr.austinwhyte@gmail.com> wrote:
+>
+> > Hello community,
+> >
+> >
+> > Over the last hour or so, I=E2=80=99ve been looking for ways to host a =
+private
+> > repository. I have resolved on using my webserver and uploading via FTP=
+.
+> I
+> > got that part working but now I=E2=80=99m having an issue deploying a 3=
+rd-party
+> jar
+> > to it. I=E2=80=99m deploying it via invoking the following command:
+> >
+> >
+> >
+> >
+> >
+> > mvn deploy:deploy-file -DgroupId=3Dsome.version
+> -Dversion=3D1.0-Dpackaging=3Djar
+> > -Dfile=3Dmy-file.jar -DrepositoryId=3Dmaven-my-repo
+> > -DartifactId=3Dmy-artifact-Durl=3Dftp://maven.mysite.com
+> >
+> >
+> > I have the latest version of Wagon-FTP installed to %M2_HOME%\lib and
+> > whenever I try to deploy, it fails. Here is the output in debug mode:
+> > http://pastebin.com/pfeXxVbY (Its kinda long).
+> >
+> >
+> > From what I see, its missing the apache commons library but I don=E2=80=
+=99t have
+> > any idea how to install it.
+> >
+> >
+> >
+> >
+> > - Austin
+>
+
+--089e0141ab4470d2510504b4cad6--
+

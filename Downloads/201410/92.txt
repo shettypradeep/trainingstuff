@@ -1,0 +1,155 @@
+From users-return-137488-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Oct  8 09:25:09 2014
+Return-Path: <users-return-137488-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0804717AC1
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  8 Oct 2014 09:25:09 +0000 (UTC)
+Received: (qmail 96974 invoked by uid 500); 8 Oct 2014 09:25:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 96883 invoked by uid 500); 8 Oct 2014 09:25:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 96871 invoked by uid 99); 8 Oct 2014 09:25:07 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Oct 2014 09:25:07 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,WEIRD_PORT
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of anders.g.hammar@gmail.com designates 74.125.82.46 as permitted sender)
+Received: from [74.125.82.46] (HELO mail-wg0-f46.google.com) (74.125.82.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Oct 2014 09:25:03 +0000
+Received: by mail-wg0-f46.google.com with SMTP id l18so11172171wgh.5
+        for <users@maven.apache.org>; Wed, 08 Oct 2014 02:24:41 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=vbplfTi34dsJj5hTAMCzta0leQHZtA1TRgXC/6KIsqc=;
+        b=cCDhtRLq2MhxMgtMrxgjnRStU3x3t/EVjCoZa7J6VLOHeN/dJu7XY8oLlh7kxfrh15
+         P2PdzDmuziah/0QEUTkhZsyWr1Tvl5cdWuEQFumZImebsJ82MjucHqomUq9mN6dBizWJ
+         X11pLaw+uVfn9m56ACQTwPo63nSO7UcktA8JcTkhHQQgJZdwkWpOrWRekf9ifmUM+vXw
+         Jj9gIH/ODBqxWvIIpRcKi3BJKQdtv3sN8MlT6u3B1A2CFQ2ssYROL3LdZrBgZpXj3K2v
+         Z9BRxi5uqN65QKAi3qq8vjyg474dCFu+Ljtmc0DgJb2jmRfYx9stE8MoXx4p4ocvHjMJ
+         j9Zg==
+MIME-Version: 1.0
+X-Received: by 10.180.75.4 with SMTP id y4mr12336819wiv.47.1412760281872; Wed,
+ 08 Oct 2014 02:24:41 -0700 (PDT)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.176.227 with HTTP; Wed, 8 Oct 2014 02:24:41 -0700 (PDT)
+In-Reply-To: <1412759666132-5808056.post@n5.nabble.com>
+References: <1363963713150-5751512.post@n5.nabble.com>
+	<1412759666132-5808056.post@n5.nabble.com>
+Date: Wed, 8 Oct 2014 11:24:41 +0200
+X-Google-Sender-Auth: GYGsjeNjR9PG7V8bWPr3Hh3oC8A
+Message-ID: <CAKDUN1trtvD_UYDfCS-Ozd0xTHactkE3waLWy710_eKc5rXreg@mail.gmail.com>
+Subject: Re: maven deploy artifacts to Nexus repository
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d043c8208c0fe0e0504e5e29b
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d043c8208c0fe0e0504e5e29b
+Content-Type: text/plain; charset=UTF-8
+
+What's the id defined in the distributionMgmt section? It should map to the
+id for the server creds defined in settings.xml ('nexus').
+
+/Anders
+
+On Wed, Oct 8, 2014 at 11:14 AM, DJViking <sverre.moe@gmail.com> wrote:
+
+> I decided to start using HTTP/HTTPS instead of SCP for uploading and
+> downloading artefacts from my Nexus server.
+> However switching the URL didn't work.
+>
+> I have created a user in Nexus called build.
+> In my settings.xml I have the following configuration taken from
+> http://books.sonatype.com/nexus-book/reference/maven-sect-single-group.html
+>
+>     <server>
+>       <id>nexus</id>
+>       <username>build</username>
+>       <password>XXXXXXXXXXXXXXX</password>
+>     </server>
+>
+>     <mirror>
+>       <id>nexus</id>
+>       <mirrorOf>*</mirrorOf>
+>       <url>http://maven-vm1:8081/nexus/content/groups/public</url>
+>     </mirror>
+>
+>     <profile>
+>       <id>nexus</id>
+>       <repositories>
+>         <repository>
+>           <id>central</id>
+>           <url>http://central</url>
+>           <releases>
+>             <enabled>true</enabled>
+>             <updatePolicy>always</updatePolicy>
+>           </releases>
+>           <snapshots>
+>             <enabled>true</enabled>
+>             <updatePolicy>always</updatePolicy>
+>           </snapshots>
+>         </repository>
+>       </repositories>
+>
+>       <pluginRepositories>
+>         <pluginRepository>
+>           <id>central</id>
+>           <url>http://central</url>
+>           <releases>
+>             <enabled>true</enabled>
+>           </releases>
+>           <snapshots>
+>             <enabled>true</enabled>
+>           </snapshots>
+>         </pluginRepository>
+>       </pluginRepositories>
+>     </profile>
+>
+>   <activeProfiles>
+>     <activeProfile>nexus</activeProfile>
+>   </activeProfiles>
+>
+> In my pom.xml I changed the following in distributionManagement
+> <url>scp://maven-vm1/srv/maven/snapshots</url>
+> to
+> <url>http://maven-vm1:8081/nexus/content/repositories/snapshots</url>
+>
+> Still I cannot get it to upload to Nexus:
+>
+> [ERROR] Failed to execute goal
+> org.apache.maven.plugins:maven-deploy-plugin:2.8.1:deploy (default-deploy)
+> on project MyApp: Failed to deploy artifacts: Could not transfer artifact
+> no.company:MyApp:jar:2.5.1-20141008.085615-1 from/to snapshots
+> (http://maven-vm1:8081/nexus/content/repositories/snapshots): Failed to
+> transfer file:
+>
+> http://maven-vm1:8081/nexus/content/repositories/snapshots/no/company/MyApp/2.5.1-SNAPSHOT/MyApp-2.5.1-20141008.085615-1.jar
+> .
+> Return code is: 401, ReasonPhrase: Unauthorized. -> [Help 1]
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/maven-deploy-artifacts-to-Nexus-repository-tp5751512p5808056.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--f46d043c8208c0fe0e0504e5e29b--
+

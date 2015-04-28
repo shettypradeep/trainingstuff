@@ -1,0 +1,109 @@
+From users-return-135469-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb 14 00:41:23 2014
+Return-Path: <users-return-135469-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D1D4C101AF
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 14 Feb 2014 00:41:23 +0000 (UTC)
+Received: (qmail 39594 invoked by uid 500); 14 Feb 2014 00:41:19 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 39518 invoked by uid 500); 14 Feb 2014 00:41:19 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 39509 invoked by uid 99); 14 Feb 2014 00:41:19 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 00:41:19 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.217.169 as permitted sender)
+Received: from [209.85.217.169] (HELO mail-lb0-f169.google.com) (209.85.217.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 00:41:14 +0000
+Received: by mail-lb0-f169.google.com with SMTP id q8so9006524lbi.28
+        for <users@maven.apache.org>; Thu, 13 Feb 2014 16:40:53 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=iLoFAtObQEhjW9wT2Ro2KS99AeQFQtBhSJHTS99FKH4=;
+        b=OvDuWip3wXH6zO8v/X44PeC3B0ap3mzjsIGIXc1ZFPmmjBKeDBZc74MuoX+GkKFAq2
+         H4w3YWk55rQ/lG3wNTNXOpVmNTBs/maA1HPfZiOXd4IDcHZpKHYWTaCyXj81RzY1bedO
+         Xcziq+S/4AC1SqehamTt7wWy6fS3QlZfSkdgT0tpUt1OTUMyrrkTBtahwLMNX47qoWf/
+         rlDPvld6OzwfzIF7dcpUw7QSjS7cZh6LtuTf9N+NEDFwABFNqE4zs5+0NqeTj7NiYJb2
+         3ml4fXis3en4ponmiowzV5knwjnOlw0CIJiR2WLURt4DG5KOYPiGvDZ6mbjoxIQlEqds
+         N/vg==
+MIME-Version: 1.0
+X-Received: by 10.112.170.234 with SMTP id ap10mr2695243lbc.23.1392338453071;
+ Thu, 13 Feb 2014 16:40:53 -0800 (PST)
+Received: by 10.114.96.161 with HTTP; Thu, 13 Feb 2014 16:40:53 -0800 (PST)
+In-Reply-To: <CAPCjjnEtafhA=iT8sKmx_q1Cjjn+iOGbeBz0qsbDaUKhatkA0Q@mail.gmail.com>
+References: <CAPCjjnEtafhA=iT8sKmx_q1Cjjn+iOGbeBz0qsbDaUKhatkA0Q@mail.gmail.com>
+Date: Thu, 13 Feb 2014 16:40:53 -0800
+Message-ID: <CAPCjjnGW5tnFuEFjiK7O_JbEPBWMU744QWh26bkDLrVDbMGECA@mail.gmail.com>
+Subject: Re: Strange Array configuration for plugin params
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c373ece70b7a04f2530ee6
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c373ece70b7a04f2530ee6
+Content-Type: text/plain; charset=UTF-8
+
+ping :-)
+
+
+On Thu, Feb 13, 2014 at 9:46 AM, Dan Tran <dantran@gmail.com> wrote:
+
+> A contributor for MOJO-2006 [1] uses array configuration at
+>
+> http://maven.apache.org/guides/plugin/guide-java-plugin-development.html( array session)
+>
+> here is the text
+>
+>     /**
+>      * My List.
+>      */
+>     @Parameter
+>     private List myList;
+>
+> <myList>
+>   <param>value1</param>
+>   <param>value2</param>
+> </myList>
+>
+> For details on the mapping of the individual collection elements, see Mapping
+> Lists<http://maven.apache.org/guides/mini/guide-configuring-plugins.html#Mapping_Lists>
+> .
+>
+>
+> However if you drill down to 'Mapping Lists' it has the usual
+> configuration that we are custom-ed to
+>
+>   <animals>
+>     <animal>cat</animal>
+>     <animal>dog</animal>
+>     <animal>aardvark</animal>
+>    </animals>
+>
+> is it there by accident? or the plugin api support both format?
+>
+>
+> Thanks
+>
+>
+> [1] https://jira.codehaus.org/browse/MOJO-2006
+>
+>
+>
+>
+>
+>
+
+--001a11c373ece70b7a04f2530ee6--
+

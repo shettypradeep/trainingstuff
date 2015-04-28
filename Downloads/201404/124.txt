@@ -1,0 +1,108 @@
+From users-return-136166-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr 16 21:26:46 2014
+Return-Path: <users-return-136166-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B4AE210760
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 16 Apr 2014 21:26:46 +0000 (UTC)
+Received: (qmail 32229 invoked by uid 500); 16 Apr 2014 21:26:42 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 32144 invoked by uid 500); 16 Apr 2014 21:26:41 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 32136 invoked by uid 99); 16 Apr 2014 21:26:41 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 16 Apr 2014 21:26:41 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of brian@jaxzin.com designates 209.85.215.41 as permitted sender)
+Received: from [209.85.215.41] (HELO mail-la0-f41.google.com) (209.85.215.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 16 Apr 2014 21:26:37 +0000
+Received: by mail-la0-f41.google.com with SMTP id gl10so8610979lab.14
+        for <users@maven.apache.org>; Wed, 16 Apr 2014 14:26:15 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=jaxzin.com; s=google;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=yijjdKU16T4ZI8EX6qS+TV+VMKL8xpTwr3pdXzxk5dE=;
+        b=GgtfOgP2TFFuU7q3WEoMwxn3oziDaxHq4bO+AP38gu59q1olGhTQGgZGzDYmus+jNC
+         FbnFROzFFUsXPRCiAhoaHx2UatB8bK8HH+XytpRmkJXNh/7PtMhI2IMGktKsm9uZ5nqV
+         gEounnAk6veEcXRyhGCa6It20TzUVWYDvzOEs=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:content-type;
+        bh=yijjdKU16T4ZI8EX6qS+TV+VMKL8xpTwr3pdXzxk5dE=;
+        b=azZGvFYq6rWb2xm7k6KkvT6cktxcsCJYSq3nOfBpqs8spXRFH5q5UOzajcfWo2d1Sf
+         9mmVF56AbydAoF7H5P5mvTnMEQXjYRNk3uKWo978lm2EcV1+oioeEZMSzwQgsI2EI9sL
+         Sey3uef3A2Thrka6c/tC3epNwSvqJyyTJAOsUhdEUAYNpxNGC2+uXVRV1qhVwWR168/E
+         SYUnClDSudQDiR2rwsmMjF8XpBrAdAvexu4m0r9n+2PhQ/KmfQDUL8niXU7itwJKloDu
+         1z9P+c6Yr1pSd4icWZggeeQdZ77EEFhzpDwUWlOSHRjI9WLpNY17TFn3EBguev+6kBar
+         BaQA==
+X-Gm-Message-State: ALoCoQmLwI+3rlyDdGj72d8ldES2u2bWGGdn0JA4Fno+fUggoX7BN1joKOCWlIXIaVWHN2pe08d8
+X-Received: by 10.112.128.131 with SMTP id no3mr2585171lbb.57.1397683574969;
+ Wed, 16 Apr 2014 14:26:14 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.112.129.72 with HTTP; Wed, 16 Apr 2014 14:25:34 -0700 (PDT)
+In-Reply-To: <CAPCjjnEoRh_OeHp8jqrRQnMEy+fDo6ghZU+jRxsBC_RHN70uKg@mail.gmail.com>
+References: <CAPCjjnEoRh_OeHp8jqrRQnMEy+fDo6ghZU+jRxsBC_RHN70uKg@mail.gmail.com>
+From: Brian Jackson <brian@jaxzin.com>
+Date: Wed, 16 Apr 2014 17:25:34 -0400
+Message-ID: <CAMc=qiOT7X9MjzpXA3DRMRkMQcaVSg+AGXx+8-Ok6WVqsF_Chg@mail.gmail.com>
+Subject: Re: Perforce Maven Integration ??
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b3a7f0cfea6ab04f72f90d7
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b3a7f0cfea6ab04f72f90d7
+Content-Type: text/plain; charset=UTF-8
+
+On Tue, Apr 15, 2014 at 10:33 PM, Dan Tran <dantran@gmail.com> wrote:
+
+> Hello,
+>
+> I am currently not able to get Perforce with SSL connection working.  My
+> guess here is both currently built-in perforce provider at maven scm, and
+>  the one from Perforce ( p4maven) are not support this new feature yet
+> which is available around 2012.  ( also the last p4maven release is around
+> 2011 )
+>
+
+Yeah, Perforce (the company) doesn't support the publishing of p4maven to
+Central. I had to do it myself using the Sonatype OSSH Repository.
+
+
+>
+> is Perforce well supported and used with Maven?
+>
+
+Well-supported is debatable since its subjective. Perforce, like many
+commercial product, often get the same level of open source support when
+open source alternatives exist (git, svn).
+
+
+>
+> are there any Maven shops with Perforce which actively using maven release
+> plugin?
+>
+
+Yes, we've been using it for many years to cut releases at ESPN through our
+CI server. Unfortunately we don't use SSL so I can't help you with your
+specific issue.
+
+
+>
+> Thanks
+>
+> -Dan
+>
+
+--047d7b3a7f0cfea6ab04f72f90d7--
+

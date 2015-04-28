@@ -1,0 +1,94 @@
+From users-return-135462-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 13 21:23:52 2014
+Return-Path: <users-return-135462-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5B33B1097B
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 13 Feb 2014 21:23:52 +0000 (UTC)
+Received: (qmail 19320 invoked by uid 500); 13 Feb 2014 21:23:47 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 19189 invoked by uid 500); 13 Feb 2014 21:23:47 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 19181 invoked by uid 99); 13 Feb 2014 21:23:47 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 21:23:47 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of baerrach@gmail.com designates 209.85.212.54 as permitted sender)
+Received: from [209.85.212.54] (HELO mail-vb0-f54.google.com) (209.85.212.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 21:23:41 +0000
+Received: by mail-vb0-f54.google.com with SMTP id w20so8798602vbb.27
+        for <users@maven.apache.org>; Thu, 13 Feb 2014 13:23:20 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=axHZvh96xQ+9yca8HwET60Dm+pZzjhJaTc0xSNx6rQY=;
+        b=qhb2cC94d64cOL8In16Ftv+aoSbq+m8C1KXHW3Tvgomrzd6P7vXOe3L5WykponqmXj
+         +x/qMufUOE9lLl71fv9MnTqYu0Rvgu/NTmiejqINzO4D9fkqc4JloOgZnaN0ToDuM0dU
+         OYHMHTZlqesmqeMi+OTiptvMBHnV+2bpAOOs+1IGUOO5IJAsx9AwEz9vt85UmUNJ0QiZ
+         rgq0xnwCzMYTPN+FeqBYFAPMyMMrhFoEXqEdYw3719KEfyK2YIL/Cu6UkrUN/AXFLBpe
+         Tn/qpclJtdRFA9laIp8GNH4TiFBl6eZ4LvS2P5bPm1v1DcDY7VG9zTFBa4LQLly5HnCk
+         ePmA==
+MIME-Version: 1.0
+X-Received: by 10.220.178.73 with SMTP id bl9mr27605vcb.42.1392326600526; Thu,
+ 13 Feb 2014 13:23:20 -0800 (PST)
+Received: by 10.58.48.131 with HTTP; Thu, 13 Feb 2014 13:23:20 -0800 (PST)
+In-Reply-To: <52FCC0AD.7000302@artifact-software.com>
+References: <52FACAA8.8020905@artifact-software.com>
+	<CADVp3v-8iKp2eNJdwCGKtCxP+Jz31-f8EYWBv6aJSHztfGFKew@mail.gmail.com>
+	<52FB325B.8030306@artifact-software.com>
+	<CADVp3v__nH=PFTov_EEPy8t-hDrnXeamg66uu_L35GhdCop-ZA@mail.gmail.com>
+	<52FB994A.6020307@artifact-software.com>
+	<CADVp3v9JO9GEHS+smo7C7E7Vhnepo8kRJUUz28R=S5OttKJwHQ@mail.gmail.com>
+	<52FCC0AD.7000302@artifact-software.com>
+Date: Fri, 14 Feb 2014 07:53:20 +1030
+Message-ID: <CADVp3v9bHiD6BepJnigS1yH_SiPoVEFuRoTDBAhyGjqPdtGG7w@mail.gmail.com>
+Subject: Re: maven-assembly-plugin:2.4 The following patterns were never
+ triggered in this artifact inclusion filter
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=ISO-8859-1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 13 February 2014 23:25, Ron Wheeler <rwheeler@artifact-software.com> wrote:
+> Good point.
+> After I fixed the spelling, it works fine.
+>
+> Is was a great help to have a second set of eyes to find my stupid mistakes.
+>
+> It would have been nice to have a better error message.
+>
+>
+> [WARNING] The following patterns were never triggered in this artifact
+> inclusion filter:
+> o  'com.artifact-software.taw:taw-localized-iumessage-ws:war'
+> o  'com.artifact-software.taw:taw-dataccess-ws:war'
+>
+> A "file not found" would have been more helpful.
+> I tested to see if the file was not found by adding a deliberate spelling
+> mistake but I drew the wrong conclusion when I got the same error message.
+
+You're welcome to make a patch :)
+
+I dont think it is working with files at the point it is doing all the
+checking, especially if the filter has a * in it.
+
+I guess you could use
+http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#getLevenshteinDistance%28java.lang.CharSequence,%20java.lang.CharSequence%29
+
+And if they are close include a "Did you mean this instead?"
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

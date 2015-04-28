@@ -1,0 +1,151 @@
+From users-return-137377-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Sep 25 19:18:25 2014
+Return-Path: <users-return-137377-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A4D74173D0
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 25 Sep 2014 19:18:25 +0000 (UTC)
+Received: (qmail 52361 invoked by uid 500); 25 Sep 2014 19:18:24 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 52277 invoked by uid 500); 25 Sep 2014 19:18:24 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 52260 invoked by uid 99); 25 Sep 2014 19:18:23 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 25 Sep 2014 19:18:23 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of anders.g.hammar@gmail.com designates 209.85.216.51 as permitted sender)
+Received: from [209.85.216.51] (HELO mail-qa0-f51.google.com) (209.85.216.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 25 Sep 2014 19:17:57 +0000
+Received: by mail-qa0-f51.google.com with SMTP id j7so4775721qaq.38
+        for <users@maven.apache.org>; Thu, 25 Sep 2014 12:17:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=JgPTUmCMkokViUD9oQ3oZtGm8YHqsZIUa8HNPbJJ6p4=;
+        b=G5/YIwSfrhe0Ci74FZSYwovjLY1YK6iPBX7zkUm0Cbyd4spBh8ONO2SQxcYe0ZhpTC
+         fdGOykm3jEQWGdrsoQmL8Mp6weRT4PdueNln+wgofgPz0s01SqPQsWb2VDcHEQgFnpad
+         tt3QqVRfwoHphSIFcXzWp9a8xQFWv6KBSzxjBNQwUehETNMCyUPXcU30RZ5cPb6GCsyA
+         RwMr327rVRoxtNuWU2f3CbEwn1SpzVBix2TtJp54SmsEsSadbpA72OYa6/nqefs0X54D
+         mr5tS/Z+m2UzbJekD1bmAbCXzzTOnLkrltf1i7UTdP+eDQ0s9SseNPrFdukN3PrJsm0K
+         oqdw==
+MIME-Version: 1.0
+X-Received: by 10.224.173.7 with SMTP id n7mr22007273qaz.15.1411672676739;
+ Thu, 25 Sep 2014 12:17:56 -0700 (PDT)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.140.27.245 with HTTP; Thu, 25 Sep 2014 12:17:56 -0700 (PDT)
+In-Reply-To: <55BBB074DE5248439192BCB13699A45651EAEEE5@MSGEXSV21111.ent.wfb.bank.corp>
+References: <67469656-B2F0-46BD-B1E7-58BC69946248@gmail.com>
+	<55BBB074DE5248439192BCB13699A45651EAEEE5@MSGEXSV21111.ent.wfb.bank.corp>
+Date: Thu, 25 Sep 2014 21:17:56 +0200
+X-Google-Sender-Auth: QQydmTqW5NBHemyvv5o0AO0Gn4s
+Message-ID: <CAKDUN1vJ0VogJGmQLwJhEPQ=VAnTh14mD74yFp+w=u0CifVxow@mail.gmail.com>
+Subject: Re: maven-javadoc-plugin 2.10 upgrade breaks build
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b5da6c76fb4240503e8a8ae
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b5da6c76fb4240503e8a8ae
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Yes, unfortunately there is an issue with v2.10. There are several tickets
+created for this and there are people working on it.
+
+/Anders
+
+On Thu, Sep 25, 2014 at 8:09 PM, <cody.a.fyler@wellsfargo.com> wrote:
+
+> I found the same issue and had to roll back to the previous version.
+>
+> Cody Fyler
+> Lending Grid Build Team
+> G=3DLending Grid Builds
+> (515) =E2=80=93 441 - 0814
+>
+> -----Original Message-----
+> From: Steven Schlansker [mailto:stevenschlansker@gmail.com]
+> Sent: Thursday, September 25, 2014 1:02 PM
+> To: Maven Users List
+> Subject: maven-javadoc-plugin 2.10 upgrade breaks build
+>
+> I have a project that under javadoc plugin 2.9.1 works fine:
+>
+> [steven@Anesthetize:~/ot-code/otj-jaxrs](master=E2=86=911|=E2=9C=94)% mvn
+> org.apache.maven.plugins:maven-javadoc-plugin:2.9.1:jar
+> =E2=80=A6
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] BUILD SUCCESS
+> [INFO] =E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=
+=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=
+=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=
+=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=
+=80=94=E2=80=94=E2=80=94=E2=80=94
+>
+> but now fails under 2.10:
+>
+> [steven@Anesthetize:~/ot-code/otj-jaxrs](master=E2=86=911|=E2=9C=94)% mvn
+> org.apache.maven.plugins:maven-javadoc-plugin:2.10:jar
+>
+> 100 warnings
+> [WARNING] Javadoc Warnings
+> [WARNING]
+> /Users/steven/ot-code/otj-jaxrs/shared/src/main/java/com/opentable/jaxrs/=
+exceptions/ExcessivelySizedHttpBodyExceptionMapper.java:18:
+> error: package javax.ws.rs.core does not exist [WARNING] import
+> javax.ws.rs.core.MediaType; [WARNING] ^ [WARNING]
+> /Users/steven/ot-code/otj-jaxrs/shared/src/main/java/com/opentable/jaxrs/=
+exceptions/ExcessivelySizedHttpBodyExceptionMapper.java:19:
+> error: package javax.ws.rs.core does not exist [WARNING] import
+> javax.ws.rs.core.Response; [WARNING] ^ [WARNING]
+> /Users/steven/ot-code/otj-jaxrs/shared/src/main/java/com/opentable/jaxrs/=
+exceptions/ExcessivelySizedHttpBodyExceptionMapper.java:20:
+> error: package javax.ws.rs.core.Response does not exist [WARNING] import
+> javax.ws.rs.core.Response.Status; [WARNING] ^ [WARNING]
+> /Users/steven/ot-code/otj-jaxrs/shared/src/main/java/com/opentable/jaxrs/=
+exceptions/ExcessivelySizedHttpBodyExceptionMapper.java:21:
+> error: package javax.ws.rs.ext does not exist [WARNING] import
+> javax.ws.rs.ext.Provider; [WARNING] ^
+>
+> In fact, it seems that almost all of the dependencies are now reference
+> errors!  With -X I can see that it thinks the jar is available:
+>
+> [DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=3D1,
+> ConflictMarker.markTime=3D0, ConflictMarker.nodeCount=3D31,
+> ConflictIdSorter.graphTime=3D0, ConflictIdSorter.topsortTime=3D0,
+> ConflictIdSorter.conflictIdCount=3D21, ConflictIdSorter.confl
+> ictIdCycleCount=3D0, ConflictResolver.totalTime=3D2,
+> ConflictResolver.conflictItemCount=3D30,
+> DefaultDependencyCollector.collectTime=3D85,
+> DefaultDependencyCollector.transformTime=3D3}
+> [DEBUG] com.opentable.components:otj-jaxrs-shared:jar:1.4.0-SNAPSHOT
+> ...
+> [DEBUG]    javax.ws.rs:javax.ws.rs-api:jar:2.0:compile
+> =E2=80=A6
+>
+> Is anyone else seeing problems like this?  What am I doing wrong?
+> Thanks!
+> Steven
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+--047d7b5da6c76fb4240503e8a8ae--
+

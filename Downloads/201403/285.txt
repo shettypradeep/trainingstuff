@@ -1,0 +1,109 @@
+From users-return-135769-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Mar 11 20:09:46 2014
+Return-Path: <users-return-135769-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CC13010684
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 11 Mar 2014 20:09:46 +0000 (UTC)
+Received: (qmail 67055 invoked by uid 500); 11 Mar 2014 20:09:42 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 66660 invoked by uid 500); 11 Mar 2014 20:09:41 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 66619 invoked by uid 99); 11 Mar 2014 20:09:41 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 11 Mar 2014 20:09:41 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dhoffer6@gmail.com designates 209.85.128.173 as permitted sender)
+Received: from [209.85.128.173] (HELO mail-ve0-f173.google.com) (209.85.128.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 11 Mar 2014 20:09:35 +0000
+Received: by mail-ve0-f173.google.com with SMTP id oy12so8924607veb.4
+        for <users@maven.apache.org>; Tue, 11 Mar 2014 13:09:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=haq+TkOoFTFWvV0ERktFEmkUPASH5T0OYtf1396tKHM=;
+        b=LnonLBmsidOn/7yB+br0qopvUAhrWsUP1T323eUnPY10tpekB9BFVzhN5zAj8oO4bb
+         vB+R/1ccUJrFes1wkiOmns9kER/LrM2olXe4NPrFGvrrsf5XNlUpXvvKX+95IIULdaP3
+         152KLe9QIoVAZCd6TQV8ZXjWsgm8Zcc17B6QBDsACo9hmU2Cm/AwdfMx4nNvYs7feJqJ
+         zbmc1+mofNdrAWoPNhdmFfvU54qrtIsNaWt+GGcpezFIflGvuKAZdA93ueBDhlxIqX9q
+         2+M9Co9lZENENyA7Jc73g9vDezESUdPOtk3R/aTeeQcSFieYm/JLthuWdnQZ7M2/gRMs
+         JwcA==
+MIME-Version: 1.0
+X-Received: by 10.52.37.161 with SMTP id z1mr2504978vdj.29.1394568554635; Tue,
+ 11 Mar 2014 13:09:14 -0700 (PDT)
+Received: by 10.220.226.194 with HTTP; Tue, 11 Mar 2014 13:09:14 -0700 (PDT)
+In-Reply-To: <CALy+7U=OZNWgpabLHvqjfvdYp9FbYLhEpWUf7c7KJw4CFrxK7g@mail.gmail.com>
+References: <CAA8BW8FZTTdwyUu-_HEkoexrkBh8nNe+FTQ3oJTGmBFpi2MaRA@mail.gmail.com>
+	<CALy+7U=OZNWgpabLHvqjfvdYp9FbYLhEpWUf7c7KJw4CFrxK7g@mail.gmail.com>
+Date: Tue, 11 Mar 2014 14:09:14 -0600
+Message-ID: <CAA8BW8Hi+EAGD7=ZhzZhdT7KDGca58ckee=e_1B0iJgzg3FQFQ@mail.gmail.com>
+Subject: Re: How to exclude jar from war overlay
+From: David Hoffer <dhoffer6@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=bcaec51d25b450683704f45a4bf4
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--bcaec51d25b450683704f45a4bf4
+Content-Type: text/plain; charset=UTF-8
+
+In my project I'm dependent on war A that is created by a different group
+so I have no control over the versions of jars in that war.  My project
+uses that war as an overlay (e.g. as my starting point) and I'm creating
+war B, however my project has different version of some of the jars in that
+war.  I want to use my jar versions and not the ones in war A.
+
+If I do nothing and build I get both jar versions in the war (jars that
+were already in A and jars that are in my project).
+
+I would have thought that dependencyManagement should take care of this.
+ E.g. if I specify version g:a:1.0.2 in my project and the overlay has
+g:a:1.0.1
+I want to use g:a:1.0.2 and not g:a:1.0.1.  However it seems that wars do
+not honor dependencyManagement configuration, rather it seems wars are
+treated as 'zip' files with Maven not knowing about their contents?  At
+least as far as dependencies are concerned?
+
+I found that I can use
+<dependentWarExcludes>WEB-INF/lib/something.*</dependentWarExcludes>
+to exclude jars but that means that I have to manually keep this in sync
+with what is already done by dependencyManagement.
+
+-Dave
+
+
+On Tue, Mar 11, 2014 at 1:53 PM, Wayne Fay <waynefay@gmail.com> wrote:
+
+> > I have a war overlay I want to use in my war but need to specify a
+> > different jar version in my final war or remove some unused jars.
+> >  Shouldn't dependencyManagement work for both of these cases?  What's the
+> > approach to handle these two cases?
+>
+> To be clear, are you saying that you want to compile & test with
+> g:a:1.0.1 but then package g:a:1.0.2 in your WAR? And you want to
+> build with g1:a1:1.0.1 and g2:a2:1.0.1 but then keep them out of the
+> WAR when you package it?
+>
+> If so, I don't understand these use cases, please explain things more.
+> If not, please explain with more concrete details/examples -- tell us
+> what you have right now vs what you want.
+>
+> Wayne
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--bcaec51d25b450683704f45a4bf4--
+

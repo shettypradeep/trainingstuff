@@ -1,0 +1,70 @@
+From users-return-136815-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jul 21 21:06:12 2014
+Return-Path: <users-return-136815-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 183F411431
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 21 Jul 2014 21:06:12 +0000 (UTC)
+Received: (qmail 9117 invoked by uid 500); 21 Jul 2014 21:06:10 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 9033 invoked by uid 500); 21 Jul 2014 21:06:10 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9022 invoked by uid 99); 21 Jul 2014 21:06:10 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 21 Jul 2014 21:06:10 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of khmarbaise@gmx.de designates 212.227.17.20 as permitted sender)
+Received: from [212.227.17.20] (HELO mout.gmx.net) (212.227.17.20)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 21 Jul 2014 21:06:03 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([91.35.4.114]) by mail.gmx.com
+ (mrgmx101) with ESMTPSA (Nemesis) id 0LpObx-1Wd2tk3kSj-00f8Kv for
+ <users@maven.apache.org>; Mon, 21 Jul 2014 23:05:42 +0200
+Message-ID: <53CD80A3.6040302@gmx.de>
+Date: Mon, 21 Jul 2014 23:05:39 +0200
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: maven-dependency-plugin unpacking aar format?
+References: <CAA8BW8HFWKNmv_ZTE9wuYQMDJ_FxUzhkXAnW_g3wrVFjovj=cA@mail.gmail.com>
+In-Reply-To: <CAA8BW8HFWKNmv_ZTE9wuYQMDJ_FxUzhkXAnW_g3wrVFjovj=cA@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:hiB3cZmfdR3jbpGejpP4KxKXP6ZgrEBPJ/a+jjKon7yV6aRZxze
+ sV/i/U098TbKW/OGGIdd/3SGn9NZdDPv0hpiOomu3yaBIA2xjtuxKuIt4mnyOMSMv8gopkC
+ g7dZn3zFqKg/q1FJYqwcbyxyaCR/+niL1XLhRuSaaRDvCDF0gHd4ubAOCWz2FaW8tHgdo7g
+ 6xT40hktXmDXFHaoT2FfA==
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+HI David,
+
+
+ > I'm getting the following error trying to unpack some files from an aar.
+>   Is this not supported?  Is there any way to do this?
+>
+> Failed to execute goal
+> org.apache.maven.plugins:maven-dependency-plugin:2.8:unpack-dependencies
+> (unpack-service) on project service: Unknown archiver type: No such
+> archiver: 'aar'. -> [Help 1]
+
+Could you please prepare a example project which reproduces the 
+problem..so i can create a JIRA issue for this...
+
+Kind regards
+Karl-Heinz Marbaise
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

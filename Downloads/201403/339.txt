@@ -1,0 +1,70 @@
+From users-return-135859-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 19 19:56:41 2014
+Return-Path: <users-return-135859-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7957E10475
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 19 Mar 2014 19:56:41 +0000 (UTC)
+Received: (qmail 38405 invoked by uid 500); 19 Mar 2014 19:56:36 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 38338 invoked by uid 500); 19 Mar 2014 19:56:36 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 38330 invoked by uid 99); 19 Mar 2014 19:56:36 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Mar 2014 19:56:36 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.160.42 as permitted sender)
+Received: from [209.85.160.42] (HELO mail-pb0-f42.google.com) (209.85.160.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Mar 2014 19:56:30 +0000
+Received: by mail-pb0-f42.google.com with SMTP id rr13so9440397pbb.29
+        for <users@maven.apache.org>; Wed, 19 Mar 2014 12:56:08 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=OGR3N/Mw4iPzl0p3aWd1bdxQp0JrIDAFX/nu5y0FcAQ=;
+        b=njNvX+i7k8sVZajj5x4TvAPc1c3d9WuNhh+6dvp+IPUdpGpWuWziXyRUnTUzAahl8B
+         c6cvZGH1ZHFP7X/7UqgjUbQwoSFlwJkq+v/RvjByYTOjQGh26G6WMtUGY7B4XS4VuPbH
+         33xQTVZoiq3G/d5/pE32/1g2RWUeRdoDIj139ONTqCmJdO95OuIVc4vc9kqJlaZyLq+W
+         GJEl+Ah7rEeV8yip1maBaz5OYIOff4gDo0giRMLqdBt8VC7gvSWNlk5Xm0T2brzr65p2
+         WQaOYJG3Vh09s0U4j+9U4G7pc6rFQ12F0ceNwdzxUkTEbRFljKFlyIbzZVEWkOTECik4
+         d3EA==
+X-Received: by 10.66.102.39 with SMTP id fl7mr40503741pab.43.1395258968345;
+ Wed, 19 Mar 2014 12:56:08 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Wed, 19 Mar 2014 12:55:38 -0700 (PDT)
+In-Reply-To: <2C1880C49501C246B8BEAD25A7E016AE35BF9E@537983-EXCH1.centro.net>
+References: <2C1880C49501C246B8BEAD25A7E016AE35BF9E@537983-EXCH1.centro.net>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Wed, 19 Mar 2014 14:55:38 -0500
+Message-ID: <CALy+7UmcD8HbRDBaTeMw+sYVyT=7Zr4MSs8_DtP8g4r4n2guBA@mail.gmail.com>
+Subject: Re: excluding classes and including classes in maven
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> I want some help regarding how to exclude some classes and including
+> other classes  in one module.
+>
+> The intuition behind that is we have some mock classes that we want them
+> to replace the original classes when the development profile is active.
+
+To me, this seems like something you would handle in src/test. Why is
+that approach not acceptable in this specific case?
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

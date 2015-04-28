@@ -1,0 +1,87 @@
+From users-return-136141-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 15 01:03:05 2014
+Return-Path: <users-return-136141-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 50D50104A6
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 15 Apr 2014 01:03:05 +0000 (UTC)
+Received: (qmail 87700 invoked by uid 500); 15 Apr 2014 01:02:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 87546 invoked by uid 500); 15 Apr 2014 01:02:42 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 87379 invoked by uid 99); 15 Apr 2014 01:02:39 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Apr 2014 01:02:39 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.192.182 as permitted sender)
+Received: from [209.85.192.182] (HELO mail-pd0-f182.google.com) (209.85.192.182)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Apr 2014 01:02:33 +0000
+Received: by mail-pd0-f182.google.com with SMTP id y10so8710838pdj.41
+        for <users@maven.apache.org>; Mon, 14 Apr 2014 18:02:10 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=sender:message-id:date:from:user-agent:mime-version:to:subject
+         :content-type:content-transfer-encoding;
+        bh=jJwR0ZD+FByfrJY9tVlxHo6IznSZoQtlws6lFeBxgjE=;
+        b=z3XgZ3HVo/rHp7zbI4I1R+2I/ajSvv10h9+l05YSm0s7FkKm3azCiU/bZ796j87Nyr
+         vDjh+8LfWEzKXkiR2S18+evPFkXcoFXnIAMVn5hq7Sho3T/b0iGvi5WL7p1iUBWl50TS
+         52YmKAtvlF77fHQGjWWXAH3PZIv+KL+3vAYrn2s1TITj+k/XFg/WhFhVzkyM/Ntf6fw2
+         3+er11u9VHD63OWweHrpiAkAaTcbhQD24fnRdhkz0mNBUzSIRZATE1Du6pmOY5IvU8Vr
+         oZq2ORX2gL2hy7QyXSon7I2BNTSZF2ortJl+SAuDlBrzg9twtk2q7iwp0/t6P387HGo5
+         buuA==
+X-Received: by 10.66.252.135 with SMTP id zs7mr47359238pac.13.1397523730730;
+        Mon, 14 Apr 2014 18:02:10 -0700 (PDT)
+Received: from [192.168.0.17] (S0106602ad07f9cfa.vc.shawcable.net. [24.85.131.20])
+        by mx.google.com with ESMTPSA id it4sm36473407pbc.39.2014.04.14.18.02.09
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Mon, 14 Apr 2014 18:02:09 -0700 (PDT)
+Sender: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+Message-ID: <534C8512.5030705@kolotyluk.net>
+Date: Mon, 14 Apr 2014 18:02:10 -0700
+From: Eric Kolotyluk <eric@kolotyluk.net>
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: maven users <users@maven.apache.org>
+Subject: Why Is Maven Ignoring My Local Repo?
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I seem to keep running into this problem regularly for things not in 
+Maven Central
+
+[ERROR] Failed to execute goal 
+org.apache.maven.plugins:maven-site-plugin:3.3:site (default-site) on 
+project csharp-windows-elevate: Execution default-site of goal 
+org.apache.maven.plugins:maven-site-plugin:3.3:site failed: Plugin 
+org.apache.maven.plugins:maven-site-plugin:3.3 or one of its 
+dependencies could not be resolved: Could not find artifact 
+net.trajano.wagon:wagon-git:jar:1.0.1-SNAPSHOT in local-nexus 
+(http://localhost:8081/nexus/content/groups/public) -> [Help 1]
+
+I can see the artifact in my local repo, but maven somehow feels, 
+because it cannot find it in my nexus repository, then it does not exist.
+
+The side problem is, even though nexus can see the artifact in its 
+index, it refuses to download it.
+
+Why do maven and nexus work so hard at ignoring artifacts?
+
+Cheers, Eric
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

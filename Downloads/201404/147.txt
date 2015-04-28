@@ -1,0 +1,100 @@
+From users-return-136297-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr 30 23:59:40 2014
+Return-Path: <users-return-136297-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EA0A210905
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 30 Apr 2014 23:59:40 +0000 (UTC)
+Received: (qmail 96356 invoked by uid 500); 30 Apr 2014 23:59:37 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 96226 invoked by uid 500); 30 Apr 2014 23:59:36 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 96217 invoked by uid 99); 30 Apr 2014 23:59:36 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 30 Apr 2014 23:59:35 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of baerrach@gmail.com designates 209.85.128.179 as permitted sender)
+Received: from [209.85.128.179] (HELO mail-ve0-f179.google.com) (209.85.128.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 30 Apr 2014 23:59:30 +0000
+Received: by mail-ve0-f179.google.com with SMTP id oy12so227751veb.38
+        for <users@maven.apache.org>; Wed, 30 Apr 2014 16:59:10 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=qI+sf21bj4TU1W30D5WS6HYPAUknqkPTX3yTr1jHVgY=;
+        b=XNWJtCoYAWkj2L3go6vEo1+4u257a6l/9PSoVTDqXl2cd+AQk3qFjxWloKbps+HxXq
+         LqQCwJXj9cEDqbIuaaO58scNIuVEOSxj+WM8+BDbq5lr9dNtbh8KEEIlj4hbLK0VOqjB
+         Q3zsX+BgGfesm7u0mpk8yM5rgt313l1EBWlq8nij/JT8xzs+KMFozmuBjbYArmAZRk9M
+         8Hac9lsEzqch1Goh7Ob+vFd18XKJzEdpLQwrphORFDaZRy0yG3a5AAHrR+M00GFekfo6
+         z0gJDuO1y/DI1KvUVXJO1BeILCSMisZFMB0bbzI25IQvvy7wIjTWRHUNKboRE7u29vmI
+         oDfQ==
+MIME-Version: 1.0
+X-Received: by 10.52.130.225 with SMTP id oh1mr4847218vdb.8.1398902349889;
+ Wed, 30 Apr 2014 16:59:09 -0700 (PDT)
+Received: by 10.58.197.98 with HTTP; Wed, 30 Apr 2014 16:59:09 -0700 (PDT)
+In-Reply-To: <536168BD.8040200@gmail.com>
+References: <536168BD.8040200@gmail.com>
+Date: Thu, 1 May 2014 09:29:09 +0930
+Message-ID: <CADVp3v-hEWNsKpSFK1LbSx-1ZPw+T2QdoEVT8TCFaQMyfddROQ@mail.gmail.com>
+Subject: Re: Netbeans maven project with invalid POM/classpath problem
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=bcaec520ef3ba4060304f84b557e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--bcaec520ef3ba4060304f84b557e
+Content-Type: text/plain; charset=UTF-8
+
+On 1 May 2014 06:48, Mark <mark.c.e@gmail.com> wrote:
+
+> Browsing the local Maven repository using Netbeans I find the following
+>  if I right-click on the ojdbc 11.2.0 jar and select 'View Details'
+>
+> ------
+> org.apache.maven.project.InvalidProjectModelException: 1 problem was
+> encountered while building the effective model
+> [FATAL] Non-parseable POM C:\Users\mcedward\.m2\
+> repository\com\oracle\ojdbc6\11.2.0\ojdbc6-11.2.0.pom: end tag name
+> </body> must be the same as start tag <meta> from line 142 (position: TEXT
+> seen ...<!-- End of carousel script -->\n</body>... @453:8)  @ line 453,
+> column 8  for project  for project
+>         at org.apache.maven.project.DefaultMavenProjectBuilder.
+> transformError(DefaultMavenProjectBuilder.java:193)
+>         at org.apache.maven.project.DefaultMavenProjectBuilder.
+> buildFromRepository(DefaultMavenProjectBuilder.java:240)
+>         at org.apache.maven.project.DefaultMavenProjectBuilder.
+> buildFromRepository(DefaultMavenProjectBuilder.java:251)
+>         at org.apache.maven.project.DefaultMavenProjectBuilder.
+> buildFromRepository(DefaultMavenProjectBuilder.java:258)
+>         at org.netbeans.modules.maven.repository.ui.
+> ArtifactMultiViewFactory.readMavenProject(ArtifactMultiViewFactory.java:
+> 231)
+>         at org.netbeans.modules.maven.repository.ui.
+> ArtifactMultiViewFactory.access$000(ArtifactMultiViewFactory.java:104)
+>         at org.netbeans.modules.maven.repository.ui.
+> ArtifactMultiViewFactory$1.run(ArtifactMultiViewFactory.java:187)
+>         at org.openide.util.RequestProcessor$Task.run(
+> RequestProcessor.java:1423)
+>         at
+> org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:2033)
+
+
+Have you opened that file in a text editor?
+It looks like malformed xml to me.
+
+How did you install the ojdbc jars?
+These need to be manually installed since they require you to agree to the OTN
+License Agreement.
+
+--bcaec520ef3ba4060304f84b557e--
+

@@ -1,0 +1,65 @@
+From users-return-134936-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Jan  4 16:25:22 2014
+Return-Path: <users-return-134936-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7D1AA10AD9
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  4 Jan 2014 16:25:22 +0000 (UTC)
+Received: (qmail 35658 invoked by uid 500); 4 Jan 2014 16:25:08 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 35594 invoked by uid 500); 4 Jan 2014 16:25:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 35583 invoked by uid 99); 4 Jan 2014 16:25:01 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 04 Jan 2014 16:25:01 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of apache@malkusch.de designates 95.142.67.55 as permitted sender)
+Received: from [95.142.67.55] (HELO malkusch.de) (95.142.67.55)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 04 Jan 2014 16:24:55 +0000
+Received: from apache by malkusch.de with local (Exim 4.80.1)
+	(envelope-from <apache@malkusch.de>)
+	id 1VzU1a-0006B8-Sj
+	for users@maven.apache.org; Sat, 04 Jan 2014 17:24:34 +0100
+To: users@maven.apache.org
+Subject: Re: How to copy unversioned test resources during  =?UTF-8?Q?release=3Aperform=3F?=
+X-PHP-Originating-Script: 1000:rcmail.php
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8;
+ format=flowed
+Content-Transfer-Encoding: 7bit
+Date: Sat, 04 Jan 2014 23:24:34 +0700
+From: Markus Malkusch <markus@malkusch.de>
+In-Reply-To: <op.w856f3t4kdkhrr@robertscholte>
+References: <1769350.PT5TEdQ6WR@laerz> <op.w856f3t4kdkhrr@robertscholte>
+Message-ID: <cee206169e7d39f4a9a5e5e73b6b6b05@malkusch.de>
+X-Sender: markus@malkusch.de
+User-Agent: Roundcube Webmail/0.9.4
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Robert Scholte:
+
+> This is probably not only an issue during a release, but also during
+> standard builds.
+
+It is only a issue during release:perform.
+
+release:perform checks out the tag which release:prepare made and does
+every operation (incl. testing) in this new copy. As the test resources
+are not in the vcs they are missing in the tag and testing fails.
+
+Markus
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

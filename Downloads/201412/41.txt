@@ -1,0 +1,134 @@
+From users-return-137941-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Dec  5 16:12:25 2014
+Return-Path: <users-return-137941-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3D31410E4E
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  5 Dec 2014 16:12:25 +0000 (UTC)
+Received: (qmail 77104 invoked by uid 500); 5 Dec 2014 16:12:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 77024 invoked by uid 500); 5 Dec 2014 16:12:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 76954 invoked by uid 99); 5 Dec 2014 16:12:22 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 05 Dec 2014 16:12:22 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of yarongoldstein10@gmail.com designates 209.85.216.45 as permitted sender)
+Received: from [209.85.216.45] (HELO mail-qa0-f45.google.com) (209.85.216.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 05 Dec 2014 16:12:17 +0000
+Received: by mail-qa0-f45.google.com with SMTP id x12so621142qac.4
+        for <users@maven.apache.org>; Fri, 05 Dec 2014 08:11:57 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :cc:content-type;
+        bh=A93S5WMypuqhUdDyaK6nXGvnMYIXWSpPKKo+P3mhY78=;
+        b=jNK+ns8Y3UJlqPdWwlxGUDnFDbAkM0OU7N995keapSlMO+1/HSSr+s0JoJHH7KgFQZ
+         VKl7o3m1VHV1JljgJSC8gANrjZItzzxPuUB4PegJ5qSgy+Is2LoEAE00wv6psTodtF5W
+         V17JbLx0OBOUiuEwLObNmil2Cxq4gAC1SZwHMOItcqJvhhQlm7RgJTLWlkdJj5UvNgVQ
+         gm9qJtVuJlRu8uH0U0ankfdiyF7yeQJOI79r59wzQBe6NDj1HMBMxUCjImHmcemSzCaU
+         2fRZt0SgKpCtuP5FkNOiaHQbsQNOtcG04tIz0ZQ7+/t/3W6lX2/RAeJRzAAYhqlbeq+r
+         A36w==
+MIME-Version: 1.0
+X-Received: by 10.140.109.135 with SMTP id l7mr25977192qgf.80.1417795916906;
+ Fri, 05 Dec 2014 08:11:56 -0800 (PST)
+Received: by 10.229.102.136 with HTTP; Fri, 5 Dec 2014 08:11:56 -0800 (PST)
+In-Reply-To: <CA+kKrXpX5jsqaA_kWrGp33tbefFbw8Pzw0t+qAL_O3c-t48-pg@mail.gmail.com>
+References: <CA+kKrXo667EknbwvNrkRjWVGTM=WWxiSjeCwk85YvVpYFvXYxg@mail.gmail.com>
+	<CACgCGhqOtevoEwGiEsBLjfXNQN+DCqB7-6vxh4JihtEdEXRWxQ@mail.gmail.com>
+	<CA+kKrXpX5jsqaA_kWrGp33tbefFbw8Pzw0t+qAL_O3c-t48-pg@mail.gmail.com>
+Date: Fri, 5 Dec 2014 18:11:56 +0200
+Message-ID: <CACgCGhqgJ1PWkt_YTC27NvTNpueReZ5iT2wqFipU48bGqQ8BfQ@mail.gmail.com>
+Subject: Re: First copy one file, befo re anything
+From: Yaron Goldstein <yarongoldstein10@gmail.com>
+To: Aitor Iturriondobeitia <laudio.info@gmail.com>
+Cc: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113a4eb2fde5f605097a5517
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113a4eb2fde5f605097a5517
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+You can copy it to any directory of choice.
+One thing to remember is to run it in the validate phase:
+mvn validate install ....
+
+More info here
+http://maven.apache.org/plugins/maven-antrun-plugin/usage.html
+Good luck & Shalom!!
+Yaron
+
+On Fri, Dec 5, 2014 at 6:06 PM, Aitor Iturriondobeitia <
+laudio.info@gmail.com> wrote:
+
+> Thanks
+> I must copy the file to one dir out of the project. The file is Info the
+> project  ($project.base}/Filters and i must to move to c:/Filters
+> Thanks
+>
+> El viernes, 5 de diciembre de 2014, Yaron Goldstein <
+> yarongoldstein10@gmail.com> escribi=C3=B3:
+>
+> Hi.
+>> Use the ant plugin. Here's an example:
+>>
+>> <build>
+>>
+>> <plugin>
+>>
+>> <artifactId>maven-antrun-plugin</artifactId>
+>>
+>> <executions>
+>>
+>>           <execution>
+>>
+>> <phase>validate</phase>
+>>
+>> <goals>
+>>
+>> <goal>run</goal>
+>>
+>> </goals>
+>>
+>> <configuration>
+>>
+>> <tasks>
+>>
+>> <delete file=3D"src/main/resources/config.properties" />
+>>
+>> <copy file=3D"src/main/resources/gold/config.properties"
+>>
+>> tofile=3D"src/main/resources/config.properties" />
+>>
+>> <delete file=3D"src/main/resources/TestData.properties" />
+>>
+>> <copy file=3D"src=D7=A5=D7=A5=D7=A5=D7=A5=D7=A5
+>>
+>> Thanks,
+>>
+>> Yaron
+>> =D7=91=D7=AA=D7=90=D7=A8=D7=99=D7=9A 5 =D7=91=D7=93=D7=A6=D7=9E' 2014 17=
+:13, "Aitor Iturriondobeitia" <
+>> laudio.info@gmail.com> =D7=9B=D7=AA=D7=91:
+>>
+>>> hello
+>>> I must to copy one file before anything,
+>>> This file contains some properties for filtering
+>>> What plugin must i use and how for moving one file to one directory?
+>>> Thanks
+>>>
+>>
+
+--001a113a4eb2fde5f605097a5517--
+

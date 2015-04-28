@@ -1,0 +1,86 @@
+From users-return-135708-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar  6 00:03:07 2014
+Return-Path: <users-return-135708-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BD8461073F
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  6 Mar 2014 00:03:07 +0000 (UTC)
+Received: (qmail 38481 invoked by uid 500); 6 Mar 2014 00:03:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 38321 invoked by uid 500); 6 Mar 2014 00:02:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 38298 invoked by uid 99); 6 Mar 2014 00:02:57 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 00:02:57 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bimargulies@gmail.com designates 209.85.216.176 as permitted sender)
+Received: from [209.85.216.176] (HELO mail-qc0-f176.google.com) (209.85.216.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 00:02:53 +0000
+Received: by mail-qc0-f176.google.com with SMTP id m20so2050575qcx.21
+        for <users@maven.apache.org>; Wed, 05 Mar 2014 16:02:32 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=HcCX9jJQ02vWHDgqGbXaE9FUdpXtXzSVyjM4hXCuTzk=;
+        b=tyvpCJW495XHLmyIHrRZ8y2TH7UAlNLuD5Elal18s6urxyBKbAzqzWPGxmSR+4j/vY
+         OuPg9EiI8k7TbuHcm9/LQxUva3Ho29Xsf4sVhhNYiitp78x2jwvkooXDHlF2OLaf440x
+         1U/erv9IrNoQTsvTDBYpfB5mW4wce6FFcDVyPsu/zWUQB2V5p2PMzdvgzBkMkct+2vvo
+         yYrnzqCEDLHOagrRMDDD7Y4OMyZDP5oyI9oXdfzuVmOpaQnJ9b0830lNQQ6X0wt4CHvw
+         5lfpYyhtsl11VbxeshnBI0MM0kLXumv1ysDwgFT8x+FxSNhFIDZC2yVMZGbOzDfHiKgB
+         /oNQ==
+MIME-Version: 1.0
+X-Received: by 10.224.80.201 with SMTP id u9mr10332677qak.5.1394064152658;
+ Wed, 05 Mar 2014 16:02:32 -0800 (PST)
+Received: by 10.140.84.138 with HTTP; Wed, 5 Mar 2014 16:02:32 -0800 (PST)
+In-Reply-To: <20140305221327.00007eb5.ecki@zusammenkunft.net>
+References: <CALhtWkfTX1yvo+P0toicn8QqkpbDpgiGKyOZi=0SZ7J7x5udNg@mail.gmail.com>
+	<E910D843-42E7-4804-8BE5-D5E5BCEC1076@talios.com>
+	<20140305221327.00007eb5.ecki@zusammenkunft.net>
+Date: Wed, 5 Mar 2014 19:02:32 -0500
+Message-ID: <CALhtWkcY+bbdqea_hB0PS5M3ciSVdaCbt8Gtg=XVwd5R4WbBqg@mail.gmail.com>
+Subject: Re: [ANN] Apache Maven Release 2.5 Released
+From: Benson Margulies <bimargulies@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+The intent was to be the subroutine layer under the plugin. Patches to
+add doc welcome.
+
+On Wed, Mar 5, 2014 at 4:13 PM, Bernd Eckenfels <ecki@zusammenkunft.net> wrote:
+> Am Thu, 06 Mar 2014 10:02:07 +1300
+> schrieb "Mark Derricutt" <mark@talios.com>:
+>> On 6 Mar 2014, at 0:44, Benson Margulies wrote:
+>> > http://maven.apache.org/maven-release/maven-release-manager/
+>>
+>> I don't think I've ever actually come across the
+>> maven-release-manager before - is there any information about
+>> how/what it does - the "introduction" on the project page is
+>> rather.....   hopeless.
+>
+> Sounds like a library used by (only) the maven-release-plugin. (the
+> documentation can be cleaned up to make that more obvious, but I guess
+> renaming the module would help even more)
+>
+> Bernd
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,106 @@
+From users-return-136528-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jun  4 19:52:36 2014
+Return-Path: <users-return-136528-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CB6231056D
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  4 Jun 2014 19:52:36 +0000 (UTC)
+Received: (qmail 31963 invoked by uid 500); 4 Jun 2014 19:52:35 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 31883 invoked by uid 500); 4 Jun 2014 19:52:35 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 31872 invoked by uid 99); 4 Jun 2014 19:52:35 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 04 Jun 2014 19:52:35 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ljnelson@gmail.com designates 209.85.192.47 as permitted sender)
+Received: from [209.85.192.47] (HELO mail-qg0-f47.google.com) (209.85.192.47)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 04 Jun 2014 19:52:32 +0000
+Received: by mail-qg0-f47.google.com with SMTP id j107so16355202qga.20
+        for <users@maven.apache.org>; Wed, 04 Jun 2014 12:52:08 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=b20prhBrzbwOTLDuerYYQJkV0AtXPJDkGjv+KIAhCr0=;
+        b=SYCfgQhw9waxiH5UH0DfbYC2ywDYsBOz94HYsPrqYJtSopyHtEmy+12Vl8fa6eP/8f
+         scVtkgds0nMO/PQQlHvNDlqCxZvawHUkNVEcWqfC931xsH2xTq1xhvlmX9djy3aCm0Bb
+         KLFuU1ANhHUp63hGMSt8/2javUuFLWgum8cfQR/tNL44DgYuLKVxn/eIyvzNG7uhgwYc
+         vp8SSoMBWL3WfYwHa/zYkLfTMb7yRt5Uqcpy5YXn1JH8t01D42IDxBGJoHUW73lDseq5
+         OjbYlqBBrM6ZCrUls2GO/3Vcu8Kx5Ao4NJ8Znau/wQ6xxr2W0D4jRXmEPkx+aHx58kaI
+         ndrA==
+MIME-Version: 1.0
+X-Received: by 10.224.157.17 with SMTP id z17mr9963268qaw.72.1401911528880;
+ Wed, 04 Jun 2014 12:52:08 -0700 (PDT)
+Received: by 10.96.46.137 with HTTP; Wed, 4 Jun 2014 12:52:08 -0700 (PDT)
+In-Reply-To: <0C723FEB5B4E5642B25B451BA57E2730A29E09E0@S1P5DAG3C.EXCHPROD.USA.NET>
+References: <0C723FEB5B4E5642B25B451BA57E2730A29DFF4A@S1P5DAG3C.EXCHPROD.USA.NET>
+	<CABLGb9wseqSagrFtUvNgc1aREcsAx=PLKdQD_5-rLAFSAOLTWA@mail.gmail.com>
+	<CAPCjjnFTmb9aZO6a9W6SpmzUH5U=JaUT9qkpQ=mViabkQszOxQ@mail.gmail.com>
+	<CABLGb9z40sOaRgcbmQUcxAYDcakGfUJ40QTdTes+uq9bLcDvqQ@mail.gmail.com>
+	<1401896835575-5794892.post@n5.nabble.com>
+	<CA+nPnMxrQp4N34xnHQgPMS6F1jjiJUCMzmsyT2ZnOoiwaWrRpA@mail.gmail.com>
+	<0C723FEB5B4E5642B25B451BA57E2730A29E09E0@S1P5DAG3C.EXCHPROD.USA.NET>
+Date: Wed, 4 Jun 2014 12:52:08 -0700
+Message-ID: <CAHNdxukwdf4R8nqAF0XRHquQiT3eegjLtSVSfSCpOx7-X_fWBg@mail.gmail.com>
+Subject: Re: Controlling order of plugin execution
+From: Laird Nelson <ljnelson@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0149caa6af7fce04fb07f6da
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0149caa6af7fce04fb07f6da
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Wed, Jun 4, 2014 at 12:08 PM, Jim Garrison <jim.garrison@nwea.org> wrote=
+:
+
+> Consider the phrase "...you have wandered off The Maven Way=E2=84=A2".  I=
+ can't
+> tell if you intended this ironically or seriously.  If it's the latter, i=
+t
+> seems like you're saying is "Maven is perfect. If Maven doesn't handle yo=
+ur
+> use-case, then your use-case is invalid".  Is that true?
+>
+
+Just observing this conversation.  The so-called Maven Way=E2=84=A2 can pro=
+bably be
+reduced to: favor new plugins over more XML in your pom.xml files.
+
+I think (my interpretation only; this and $4 will get you a cup of coffee)
+this is because at least originally=E2=80=94and for what it's worth it stil=
+l seems
+this way to me=E2=80=94your pom.xml is supposed to be a declarative object =
+model.
+ It's not really a place for stitching together plugin executions.  The
+thinking is (again, for better or worse; don't shoot the messenger) that if
+you have some sequence of events that must take place at a particular point
+in the lifecycle, then encapsulate that sequence of events into a plugin
+and bind it once.
+
+Of course that presupposes a certain amount of ease-of-software-reuse in
+the plugin ecosystem=E2=80=94i.e. that it's brain-dead simple to write a pl=
+ugin
+that combines other plugins=E2=80=94which may or may not actually be true d=
+epending
+on how the to-be-combined plugins were actually authored.
+
+Best,
+Laird
+
+--=20
+http://about.me/lairdnelson
+
+--089e0149caa6af7fce04fb07f6da--
+

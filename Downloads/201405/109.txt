@@ -1,0 +1,67 @@
+From users-return-136447-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon May 26 06:59:00 2014
+Return-Path: <users-return-136447-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 67289CE83
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 26 May 2014 06:59:00 +0000 (UTC)
+Received: (qmail 62480 invoked by uid 500); 26 May 2014 06:58:57 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 62400 invoked by uid 500); 26 May 2014 06:58:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 62362 invoked by uid 99); 26 May 2014 06:58:57 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 26 May 2014 06:58:57 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 26 May 2014 06:58:54 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <bltomov@abv.bg>)
+	id 1Woore-0007q2-Q4
+	for users@maven.apache.org; Sun, 25 May 2014 23:58:30 -0700
+Date: Sun, 25 May 2014 23:58:30 -0700 (PDT)
+From: DenisDasKind <bltomov@abv.bg>
+To: users@maven.apache.org
+Message-ID: <1401087510782-5794091.post@n5.nabble.com>
+Subject: Maven dependency plugin - stripClassifier
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi to all, 
+
+i have the following trouble when using the maven dependency plugin, and
+especially the unpack-dependencies.
+I have 3 different dependencies test1, test2, and tes3, and i would like to
+unpack each dependency into separate folder as example into test1, test2,
+etc.  Therefor i use the option useSubDirectoryPerArtifact, but the problem
+is that this option create a direcory with the artifactId and the
+Classifier. When i set stripClassifier to false, it has no effect.
+If this doesn't work, i can include each artifact manually, but this is not
+a very good solution, when i have 10 dependencies.
+
+Thank you in advance! 
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Maven-dependency-plugin-stripClassifier-tp5794091.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

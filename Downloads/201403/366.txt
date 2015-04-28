@@ -1,0 +1,167 @@
+From users-return-135802-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 13 05:35:03 2014
+Return-Path: <users-return-135802-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 488A810839
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 13 Mar 2014 05:35:03 +0000 (UTC)
+Received: (qmail 65892 invoked by uid 500); 13 Mar 2014 05:34:59 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 65359 invoked by uid 500); 13 Mar 2014 05:34:56 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 64428 invoked by uid 99); 13 Mar 2014 05:34:53 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Mar 2014 05:34:53 +0000
+X-ASF-Spam-Status: No, hits=2.5 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mfriedenhagen@gmail.com designates 209.85.219.46 as permitted sender)
+Received: from [209.85.219.46] (HELO mail-oa0-f46.google.com) (209.85.219.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Mar 2014 05:34:49 +0000
+Received: by mail-oa0-f46.google.com with SMTP id i7so553787oag.5
+        for <users@maven.apache.org>; Wed, 12 Mar 2014 22:34:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=QCC1SRDuZ8zSLPBwYrA8lCDphSPcH5GlPRHAdvrfYgU=;
+        b=Kma22TSUP3gO33Xi05N44aTtyEagMAXicFwx1+8GaZgubMLJEQvzve+L98KABVef7x
+         AljtAXAb6Lt3A2LphHM2cFYPeh9+Dl1S7nMLYVk/OHqJQd4E8PUG4/r+cKaLme5bc69C
+         RYaN9onVPICyKjLQYbEYcyHYSjk8h4UEBlCCHc4qlcq3/U5Kq2cDZKvA5+k1lFIoNWqZ
+         MgWmV2Y8UJcB/vvoaVY+bmvUN9oOc9ZEyVHW9exqponavlfUKcjr9Zm0W1MvAtzSX8zb
+         8Us7Hl1IB4gSS+ViDvdDKypBKfVDHNh9IglH0mWFvYZlQDyEyzXSYhRUQzLBtFymriKi
+         o4Zw==
+MIME-Version: 1.0
+X-Received: by 10.182.102.7 with SMTP id fk7mr83013obb.28.1394688868522; Wed,
+ 12 Mar 2014 22:34:28 -0700 (PDT)
+Received: by 10.182.193.9 with HTTP; Wed, 12 Mar 2014 22:34:28 -0700 (PDT)
+Received: by 10.182.193.9 with HTTP; Wed, 12 Mar 2014 22:34:28 -0700 (PDT)
+In-Reply-To: <CACY-B-mfab_sXwfm3Hm9RzsS-S4xrWjaZ_0xtt4RRcKQqPDH=w@mail.gmail.com>
+References: <CACY-B-ngxim3+f-5DxokhX_VpTWVmZ33UTRQJTej8qHqyMS43w@mail.gmail.com>
+	<CADN69ykhVw86BWRm63WK46SoVp1w3aOxFAyuAb0CCuRQX4opGw@mail.gmail.com>
+	<CACY-B-mfab_sXwfm3Hm9RzsS-S4xrWjaZ_0xtt4RRcKQqPDH=w@mail.gmail.com>
+Date: Thu, 13 Mar 2014 06:34:28 +0100
+Message-ID: <CAK8jvqzM_pGy+HbpCn3JYComZhZ3Kh3wYGF1xmofP7XWsp6THA@mail.gmail.com>
+Subject: Re: list all unique dependencies of multi-module project
+From: Mirko Friedenhagen <mfriedenhagen@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e015369f094a0e304f4764e1c
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e015369f094a0e304f4764e1c
+Content-Type: text/plain; charset=UTF-8
+
+Hello Max,
+
+what about switching this to  a jar project without sources (maybe a readme
+txt as resource), which is not deployed or installed?
+
+Regards
+Mirko
+-- 
+Sent from my mobile
+On Mar 13, 2014 12:24 AM, "Max Calderoni" <max.calderoni@gmail.com> wrote:
+
+> Hi Curtis,
+> thanks for answering. Yes, that was the first thing i tried, like you said,
+> i had done:
+>
+> cd topPomDir
+> mvn dependency:list
+>
+> but that does not print out the same nice report that i see in the
+> "Dependency Management" section of the generated site, which is what i
+> want.
+>
+> So, i did:
+> mvn dependency:list > depsFile.txt
+> cat depsFile.txt | grep "\[INFO\][^:]*:[^:]*:[^:]*:[^:]*:.*" | cut -d] -f2-
+> | sort -u > depsFileSorted.txt
+>
+> to get the unique sorted list, but again, i would have thought there would
+> be a direct way of doing this.
+> In the end, i would like to get the Dependency Management report of the
+> entire project (from the top container pom, like you said) on the generated
+> website.
+> That report does not produce the aggregate list of dependencies: i am not
+> sure what it produces, but that is not it.
+>
+> So i guess the question is how to get that aggregate report into the site
+> generation.
+>
+> With that txt file i create above i get by, but i wished its content got
+> generated automatically for me with the site and displayed in html like the
+> other reports. I am not quite sure why the maven site does not already do
+> that for the top container pom.
+>
+> Max
+>
+>
+> On Wed, Mar 12, 2014 at 1:16 PM, Curtis Rueden <ctrueden@wisc.edu> wrote:
+>
+> > Hi Max,
+> >
+> > You could create a module (in the same build or outside of it) with pom
+> > packaging and which depends on all the modules of your build. Then when
+> you
+> > list its dependencies, you'll get them all (excluding non-transitive ones
+> > such as optional scope deps).
+> >
+> > Regards,
+> > Curtis
+> >
+> >
+> > On Mon, Mar 10, 2014 at 4:31 PM, Max Calderoni <max.calderoni@gmail.com
+> > >wrote:
+> >
+> > > Hi,
+> > > was not able to find a quick way to list a consolidated list of all
+> > > dependencies in your project.
+> > > What i am looking for is something along the lines of dependency:list,
+> or
+> > > dependency:resolve of the maven dependency plugin, but for the entire
+> > > multi-module project.
+> > >
+> > > What i see the maven dependency plugin does is to list by module. For
+> our
+> > > release though, we are not interested in a per-module break-down, we
+> are
+> > > interested in the overall list of unique dependencies, and unique per
+> > GAV,
+> > > classifier, scope.
+> > >
+> > > The only thing i could find is this:
+> > >
+> http://grep.codeconsult.ch/2010/07/08/list-all-your-maven-dependencies/
+> > > but, do i really have to use a script? is there some goal of some
+> plugin
+> > > out there that generates that or a better report for the entire
+> project's
+> > > dependencies for me?
+> > > The report generated in the Dependency Management section of the maven
+> > site
+> > > does it, but again, on a per-module basis.
+> > > Then the next question would be: how do i publish that in my maven
+> site?
+> > >
+> > >
+> > > --
+> > > Max
+> > >
+> >
+>
+>
+>
+> --
+> Max Calderoni
+>
+
+--089e015369f094a0e304f4764e1c--
+

@@ -1,0 +1,162 @@
+From users-return-136697-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Jun 28 18:25:03 2014
+Return-Path: <users-return-136697-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 56B7C11B12
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 28 Jun 2014 18:25:03 +0000 (UTC)
+Received: (qmail 74841 invoked by uid 500); 28 Jun 2014 18:25:01 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 74747 invoked by uid 500); 28 Jun 2014 18:25:01 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74733 invoked by uid 99); 28 Jun 2014 18:25:01 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 28 Jun 2014 18:25:01 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of christofer.dutz@c-ware.de designates 213.199.154.81 as permitted sender)
+Received: from [213.199.154.81] (HELO emea01-db3-obe.outbound.protection.outlook.com) (213.199.154.81)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 28 Jun 2014 18:24:56 +0000
+Received: from DBXPR05MB237.eurprd05.prod.outlook.com (10.242.143.147) by
+ DBXPR05MB239.eurprd05.prod.outlook.com (10.242.143.153) with Microsoft SMTP
+ Server (TLS) id 15.0.969.15; Sat, 28 Jun 2014 18:24:30 +0000
+Received: from DBXPR05MB237.eurprd05.prod.outlook.com ([169.254.7.152]) by
+ DBXPR05MB237.eurprd05.prod.outlook.com ([169.254.7.152]) with mapi id
+ 15.00.0969.007; Sat, 28 Jun 2014 18:24:30 +0000
+From: Christofer Dutz <christofer.dutz@c-ware.de>
+To: "Maven Users List (users@maven.apache.org)" <users@maven.apache.org>
+Subject: Artifact with different sets of dependencies switched by profiles
+Thread-Topic: Artifact with different sets of dependencies switched by
+ profiles
+Thread-Index: Ac+S/i4PpFj16q45SeelsLfOpzwBrQ==
+Date: Sat, 28 Jun 2014 18:24:29 +0000
+Message-ID: <fa95de47ea5e47d195c63717af3b2d02@DBXPR05MB237.eurprd05.prod.outlook.com>
+Accept-Language: de-DE, en-US
+Content-Language: de-DE
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [84.150.108.101]
+x-microsoft-antispam: BCL:0;PCL:0;RULEID:
+x-forefront-prvs: 0256C18696
+x-forefront-antispam-report: SFV:NSPM;SFS:(6009001)(199002)(189002)(107886001)(4396001)(2656002)(107046002)(99396002)(85306003)(87936001)(74316001)(15202345003)(77096002)(95666004)(66066001)(92566001)(54356999)(81342001)(86362001)(106356001)(83322001)(105586002)(50986999)(19580395003)(81542001)(19300405004)(15975445006)(33646001)(74662001)(21056001)(31966008)(16236675004)(83072002)(85852003)(19625215002)(101416001)(20776003)(64706001)(75402002)(76576001)(74482001)(46102001)(79102001)(77982001)(229853001)(24736002)(19627235001);DIR:OUT;SFP:;SCL:1;SRVR:DBXPR05MB239;H:DBXPR05MB237.eurprd05.prod.outlook.com;FPR:;MLV:sfv;PTR:InfoNoRecords;A:1;MX:1;LANG:en;
+Content-Type: multipart/alternative;
+	boundary="_000_fa95de47ea5e47d195c63717af3b2d02DBXPR05MB237eurprd05pro_"
+MIME-Version: 1.0
+X-OriginatorOrg: c-ware.de
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_000_fa95de47ea5e47d195c63717af3b2d02DBXPR05MB237eurprd05pro_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+I am currently working on making the Apache Flex project able to release as=
+ Maven artifacts. For that I have created a tool that mavenizes a Flex SDK =
+by generating poms and copying and renaming the libraries it consists of. A=
+ll is working nicely. In contrast to Java in Flex you can sort of choose to=
+ use static linking (default) or dynamic linking (rsl). In Flexmojos this i=
+s controlled by having a maven scope of "rsl" for dynamically linked librar=
+ies.
+
+Static linking:
+                <dependency>
+                    <groupId>org.apache.flex.framework</groupId>
+                    <artifactId>spark</artifactId>
+                    <version>4.12.1.20140427</version>
+                    <type>swc</type>
+                </dependency>
+
+Dynamic linking:
+                <dependency>
+                    <groupId>org.apache.flex.framework</groupId>
+                    <artifactId>spark</artifactId>
+                    <version>4.12.1.20140427</version>
+                    <type>swc</type>
+                    <scope>rsl</scope>
+                </dependency>
+
+Now I wanted to make it easier for people using Flex so I generated two pro=
+files in my poms. The default one active by default using static linking an=
+d one "flex-rsl" using dynamic linking wherever possible.
+I was thinking of enabling that second profile by setting a property:
+
+<?xml version=3D"1.0" encoding=3D"UTF-8" standalone=3D"no"?>
+<project xmlns=3D"http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.apache.flex</groupId>
+    <artifactId>framework</artifactId>
+    <version>4.12.1.20140427</version>
+    <packaging>pom</packaging>
+
+    <profiles>
+        <profile>
+            <id>default</id>
+
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+
+            <dependencies>
+
+                ... A lot of dependencies ...
+
+            </dependencies>
+        </profile>
+
+        <profile>
+            <id>flex-rsl</id>
+
+            <activation>
+                <property>
+                    <name>flex.framework.scope</name>
+                    <value>rsl</value>
+                </property>
+            </activation>
+
+            <dependencies>
+
+                ... A lot of dependencies ...
+
+            </dependencies>
+        </profile>
+    </profiles>
+</project>
+
+Now I tried activating that second profile by setting that property in the =
+module referencing that pom artifact:
+
+<properties>
+        <flex.version>4.12.1.20140427</flex.version>
+        <!-- Turn on rsl linking of swc dependencies -->
+        <flex.framework.scope>rsl</flex.framework.scope>
+</properties>
+
+<dependencies>
+                <dependency>
+                    <groupId>org.apache.flex</groupId>
+                    <artifactId>framework</artifactId>
+                    <version>${flex.version}</version>
+                    <type>pom</type>
+                </dependency>
+</dependencies>
+
+But it seems this doesn't work ... so my question is ... is it possible to =
+do what I want? If not ... is there a way I could achieve this? After all i=
+t seems classifiers for pom modules don't seem to exist.
+Or am I wrong here and I could simply generate several pom files "framework=
+-4.12.1.20140427.pom" and "framework-4.12.1.20140427-rsl.pom"?
+
+Chris
+
+--_000_fa95de47ea5e47d195c63717af3b2d02DBXPR05MB237eurprd05pro_--
+

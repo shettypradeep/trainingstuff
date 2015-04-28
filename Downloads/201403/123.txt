@@ -1,0 +1,162 @@
+From users-return-135774-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Mar 11 23:25:04 2014
+Return-Path: <users-return-135774-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 85FF110FBA
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 11 Mar 2014 23:25:04 +0000 (UTC)
+Received: (qmail 12449 invoked by uid 500); 11 Mar 2014 23:24:59 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 12300 invoked by uid 500); 11 Mar 2014 23:24:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 62766 invoked by uid 99); 11 Mar 2014 09:31:13 -0000
+X-ASF-Spam-Status: No, hits=-5.8 required=5.0
+	tests=ENV_AND_HDR_SPF_MATCH,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS,USER_IN_DEF_SPF_WL
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mmao@ebay.com designates 216.113.172.65 as permitted sender)
+DomainKey-Signature: s=ebaycorp; d=ebay.com; c=nofws; q=dns;
+  h=X-EBay-Corp:X-IronPort-AV:Received:Received:From:To:CC:
+   Subject:Thread-Topic:Thread-Index:Date:Message-ID:
+   Accept-Language:Content-Language:X-MS-Has-Attach:
+   X-MS-TNEF-Correlator:x-originating-ip:Content-Type:
+   MIME-Version:X-CFilter;
+  b=eMdkDaqTNsbLDsnbJMyhICOLV74oVnErqnMvlv4Uh102drG89qcWqwqx
+   jtzCjrSyQaRqL8JwL5ZgVH1yezqAOXqAlK32IlGXal9k0VScHDTYU5rfD
+   tvdxA5qa5IlHUWCYtj26Rg91bAunMAhfnDI+DoOKmwpW+YrwDIyeWPubo
+   s=;
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=ebay.com; i=@ebay.com; q=dns/txt; s=ebaycorp;
+  t=1394530267; x=1426066267;
+  h=from:to:cc:subject:date:message-id:mime-version;
+  bh=MqAvqLcCsT8cSj3HfsZdTAEcOz8vA4HBm1bKDdIl8VA=;
+  b=ITySzf1f0E4LzQm8ghg9PoXKTniVsSvOg1WLFywVItjoYAOkUZtwS9Xh
+   HCVpjmhZyixCYziICFIKVzzzWtfiZqWqXDQjq3YFFggytvBzGIqReCIr8
+   VlJ+mz0Z04XahHT7nAgWNMd1Lglez1gWASh1VMdOOCaDyFscLp6p1RRGX
+   Y=;
+X-EBay-Corp: Yes
+X-IronPort-AV: E=Sophos;i="4.97,629,1389772800"; 
+   d="scan'208,217";a="195638475"
+From: "Mao, James(Maode)" <mmao@ebay.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+CC: "dev@maven.apache.org" <dev@maven.apache.org>
+Subject: Maven 3.1.1 build issues
+Thread-Topic: Maven 3.1.1 build issues
+Thread-Index: Ac89DItPPV+cQhzSTAOnf7+ZLAD4rw==
+Date: Tue, 11 Mar 2014 09:30:45 +0000
+Message-ID: <87911B8B30550C43B5947BA274E00CB4725349CE@PHX-EXRDA-S21.corp.ebay.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [10.58.61.242]
+Content-Type: multipart/alternative;
+	boundary="_000_87911B8B30550C43B5947BA274E00CB4725349CEPHXEXRDAS21corp_"
+MIME-Version: 1.0
+X-CFilter: Scanned
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_000_87911B8B30550C43B5947BA274E00CB4725349CEPHXEXRDAS21corp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+I run into the following exception, someone suggest to replace the plexus-c=
+lassworlds-2.5.1.jar with version 2.4.
+
+It do solve the problem, my questions is did we fixed this issue? Any new v=
+ersions of  plexus-classworlds can I use?
+
+Exception in thread "pool-1-thread-3" java.lang.LinkageError: org.eclipse.a=
+ether.spi.connector.Transfer$State
+02:21:54           at java.lang.ClassLoader.defineClassImpl(Native Method)
+02:21:54           at java.lang.ClassLoader.defineClass(ClassLoader.java:29=
+5)
+02:21:54           at java.security.SecureClassLoader.defineClass(SecureCla=
+ssLoader.java:143)
+02:21:54           at java.net.URLClassLoader.defineClass(URLClassLoader.ja=
+va:700)
+02:21:54           at java.net.URLClassLoader.access$400(URLClassLoader.jav=
+a:81)
+02:21:54           at java.net.URLClassLoader$ClassFinder.run(URLClassLoade=
+r.java:1148)
+02:21:54           at java.security.AccessController.doPrivileged(AccessCon=
+troller.java:314)
+02:21:54           at java.net.URLClassLoader.findClass(URLClassLoader.java=
+:583)
+02:21:54           at org.codehaus.plexus.classworlds.realm.ClassRealm.load=
+ClassFromSelf(ClassRealm.java:389)
+02:21:54           at org.codehaus.plexus.classworlds.strategy.SelfFirstStr=
+ategy.loadClass(SelfFirstStrategy.java:42)
+02:21:54           at org.codehaus.plexus.classworlds.realm.ClassRealm.unsy=
+nchronizedLoadClass(ClassRealm.java:259)
+02:21:54           at org.codehaus.plexus.classworlds.realm.ClassRealm.load=
+Class(ClassRealm.java:235)
+02:21:54           at org.codehaus.plexus.classworlds.realm.ClassRealm.load=
+Class(ClassRealm.java:227)
+02:21:54           at org.eclipse.aether.spi.connector.Transfer.<init>(Tran=
+sfer.java:44)
+02:21:54           at org.eclipse.aether.spi.connector.MetadataDownload.<in=
+it>(MetadataDownload.java:42)
+02:21:54           at org.eclipse.aether.internal.impl.DefaultMetadataResol=
+ver$ResolveTask.run(DefaultMetadataResolver.java:606)
+02:21:54           at org.eclipse.aether.util.concurrency.RunnableErrorForw=
+arder$1.run(RunnableErrorForwarder.java:67)
+02:21:54           at java.util.concurrent.ThreadPoolExecutor.runWorker(Thr=
+eadPoolExecutor.java:1145)
+02:21:54           at java.util.concurrent.ThreadPoolExecutor$Worker.run(Th=
+readPoolExecutor.java:615)
+02:21:54           at java.lang.Thread.run(Thread.java:780)
+02:21:54  Exception in thread "pool-1-thread-2" java.lang.LinkageError: org=
+.eclipse.aether.util.repository.layout.MavenDefaultLayout
+02:21:54           at java.lang.ClassLoader.defineClassImpl(Native Method)
+02:21:54           at java.lang.ClassLoader.defineClass(ClassLoader.java:29=
+5)
+02:21:54           at java.security.SecureClassLoader.defineClass(SecureCla=
+ssLoader.java:143)
+02:21:54           at java.net.URLClassLoader.defineClass(URLClassLoader.ja=
+va:700)
+02:21:54           at java.net.URLClassLoader.access$400(URLClassLoader.jav=
+a:81)
+02:21:54           at java.net.URLClassLoader$ClassFinder.run(URLClassLoade=
+r.java:1148)
+02:21:54           at java.security.AccessController.doPrivileged(AccessCon=
+troller.java:314)
+02:21:54           at java.net.URLClassLoader.findClass(URLClassLoader.java=
+:583)
+02:21:54           at org.codehaus.plexus.classworlds.realm.ClassRealm.load=
+ClassFromSelf(ClassRealm.java:389)
+02:21:54           at org.codehaus.plexus.classworlds.strategy.SelfFirstStr=
+ategy.loadClass(SelfFirstStrategy.java:42)
+02:21:54           at org.codehaus.plexus.classworlds.realm.ClassRealm.unsy=
+nchronizedLoadClass(ClassRealm.java:259)
+02:21:54           at org.codehaus.plexus.classworlds.realm.ClassRealm.load=
+Class(ClassRealm.java:235)
+02:21:54           at org.codehaus.plexus.classworlds.realm.ClassRealm.load=
+Class(ClassRealm.java:227)
+02:21:54           at org.eclipse.aether.connector.wagon.WagonRepositoryCon=
+nector.<init>(WagonRepositoryConnector.java:114)
+02:21:54           at org.eclipse.aether.connector.wagon.WagonRepositoryCon=
+nectorFactory.newInstance(WagonRepositoryConnectorFactory.java:159)
+02:21:54           at org.eclipse.aether.internal.impl.DefaultRepositoryCon=
+nectorProvider.newRepositoryConnector(DefaultRepositoryConnectorProvider.ja=
+va:139)
+02:21:54           at org.eclipse.aether.internal.impl.DefaultMetadataResol=
+ver$ResolveTask.run(DefaultMetadataResolver.java:613)
+02:21:54           at org.eclipse.aether.util.concurrency.RunnableErrorForw=
+arder$1.run(RunnableErrorForwarder.java:67)
+02:21:54           at java.util.concurrent.ThreadPoolExecutor.runWorker(Thr=
+eadPoolExecutor.java:1145)
+02:21:54           at java.util.concurrent.ThreadPoolExecutor$Worker.run(Th=
+readPoolExecutor.java:615)
+02:21:54           at java.lang.Thread.run(Thread.java:780)
+
+--_000_87911B8B30550C43B5947BA274E00CB4725349CEPHXEXRDAS21corp_--
+

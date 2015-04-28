@@ -1,0 +1,128 @@
+From users-return-135391-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Feb  8 15:22:06 2014
+Return-Path: <users-return-135391-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C0296100F6
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  8 Feb 2014 15:22:06 +0000 (UTC)
+Received: (qmail 79791 invoked by uid 500); 8 Feb 2014 15:22:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 79493 invoked by uid 500); 8 Feb 2014 15:21:53 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 79479 invoked by uid 99); 8 Feb 2014 15:21:51 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 08 Feb 2014 15:21:51 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of gayanper@gmail.com designates 74.125.82.169 as permitted sender)
+Received: from [74.125.82.169] (HELO mail-we0-f169.google.com) (74.125.82.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 08 Feb 2014 15:21:45 +0000
+Received: by mail-we0-f169.google.com with SMTP id t61so3135823wes.28
+        for <users@maven.apache.org>; Sat, 08 Feb 2014 07:21:24 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=FGBPnRg1SqAYbEvPW1Soq35U411Xw7nVVvrIodD5NJ0=;
+        b=pTnu8bUxnc0Bj3FiGqMxtf7/ZBrvMVLHEtTZ/mn0FHQxRSvI2PmXBCsMApME+LyHxn
+         rsZzvwKRznQOnhZneCX78TSME7Y9XefKNtbpprFYP5KnYNX9ea/DxZSNTGQTsj0R8kpZ
+         +FdHKpyviUK0niD5F4FNfDCZhtfZv9BSY0vfVG96JX+KNYljLwCvYGTNKp2mAfsqc0H5
+         rhT3BPlifAO5W/C+AGpYyFwLP/cFeZDj1t6IKcoctV20JjjZ1PIPaj/ky4+pB8F5YwMm
+         41pj5UADhrXBYdo2tF4ykaQB/4jIhHSZ4wXmrQzqQ5J/BrQ7tgpIJSqlzza9jn+fHYls
+         ubwQ==
+MIME-Version: 1.0
+X-Received: by 10.194.219.132 with SMTP id po4mr14936672wjc.7.1391872884720;
+ Sat, 08 Feb 2014 07:21:24 -0800 (PST)
+Received: by 10.194.32.36 with HTTP; Sat, 8 Feb 2014 07:21:24 -0800 (PST)
+In-Reply-To: <CAJJtLVpRdWuNh7O3w2_6ZiBCW0i17htU8_b85pVA57xGicG9Sg@mail.gmail.com>
+References: <CAJJtLVqJg9EmbN_THH4OYpQMGwjK1erButVuSe1i6QgB5wPsOA@mail.gmail.com>
+	<CAJJtLVpRdWuNh7O3w2_6ZiBCW0i17htU8_b85pVA57xGicG9Sg@mail.gmail.com>
+Date: Sat, 8 Feb 2014 20:51:24 +0530
+Message-ID: <CADzOcxpEzSLQ1_0XKvYLkJf9Ahhom+YLpf5FKmiFZpdBOqmHMw@mail.gmail.com>
+Subject: Re: Maven build hangs forever while running TestNG unit tests.
+From: Gayan Perera <gayanper@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c288a2ddc92b04f1e6a8e6
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c288a2ddc92b04f1e6a8e6
+Content-Type: text/plain; charset=ISO-8859-1
+
+Have you tried to use the latest surefire plugin. I had the same problem
+and updating the surefire plugin version to latest solved it.
+
+
+
+On Sat, Feb 8, 2014 at 4:06 PM, Pavlina Temelakieva <
+pavlina.temelakieva@gmail.com> wrote:
+
+> I managed to find the process id and dump the stack trace of the process.
+> Turned out one of my unit tests, which test a producer/consumer kind of
+> scenario is causing the hanging.
+>
+>
+> On Sat, Feb 8, 2014 at 10:15 AM, Pavlina Temelakieva <
+> pavlina.temelakieva@gmail.com> wrote:
+>
+> > Hello everyone,
+> >
+> > I am running maven build on my project and it stuck forever when trying
+> to
+> > run a unit test. I tried disabling the unit test where it used to stuck
+> (by
+> > comment the @Test annotation), but then the build hangs on the Test
+> stage,
+> > without executing a single unit test.
+> > *Output:*
+> > -------------------------------------------------------
+> >  T E S T S
+> > -------------------------------------------------------
+> > Running TestSuite
+> >
+> > I am using:
+> > (mvn -version)
+> > *Output:*
+> > ARCH: lin32
+> > JAVA_HOME: /path/to/jdk-1.7.0_45
+> > Apache Maven 3.0.3 (r1075438; 2011-02-28 19:31:09+0200)
+> > Default locale: en_US, platform encoding: UTF-8
+> > OS name: "linux", version: "2.6.38-8-generic", arch: "i386", family:
+> "unix"
+> > Java version: 1.7.0_45, vendor: Oracle Corporation
+> >
+> > For the unit tests I am using TestNG:
+> >   <plugin>
+> >        <artifactId>maven-surefire-plugin</artifactId>
+> >        <version>2.4.2</version>
+> >    </plugin>
+> >
+> > My current MAVEN_OPTS settings are : -Xmx512m -XX:MaxPermSize=128m
+> > I read somewhere that changing the MaxPermSize will fix the issue, so I
+> > tried increasing MaxPermGenSize to 256m and the issue is still present.
+> > I rebooted and the issue is still present.
+> > I also tried stopping the process with CTRL+Z, but the output doesn't
+> seem
+> > to give me the PID of the process:
+> > *Output:*
+> > [1]+  Stopped                 mvn clean install -pl ../myProject/
+> > Also, the -e, and the -X options doesn't give any additional information
+> > when the hanging is reached.
+> > Note that when I run mvn clean install -DskipTests, the issue doesn't
+> > appear, and the project is built successfully without the unit tests are
+> > executed.
+> >
+> > I really have no clue what causes this hanging. Can you help?
+> >
+> >
+>
+
+--001a11c288a2ddc92b04f1e6a8e6--
+

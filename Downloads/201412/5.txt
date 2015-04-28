@@ -1,0 +1,85 @@
+From users-return-137963-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Dec  9 08:52:20 2014
+Return-Path: <users-return-137963-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 504AC9310
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  9 Dec 2014 08:52:19 +0000 (UTC)
+Received: (qmail 40257 invoked by uid 500); 9 Dec 2014 08:52:16 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 40175 invoked by uid 500); 9 Dec 2014 08:52:16 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 40164 invoked by uid 99); 9 Dec 2014 08:52:15 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Dec 2014 08:52:15 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW
+X-Spam-Check-By: apache.org
+Received-SPF: error (athena.apache.org: local policy)
+Received: from [209.85.216.51] (HELO mail-qa0-f51.google.com) (209.85.216.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Dec 2014 08:52:10 +0000
+Received: by mail-qa0-f51.google.com with SMTP id k15so67355qaq.24
+        for <users@maven.apache.org>; Tue, 09 Dec 2014 00:51:29 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:subject:message-id:in-reply-to
+         :references:mime-version:content-type:content-transfer-encoding;
+        bh=Ow3xTq0hHYPY28FyfitzXNqhopqxiQhv6Rqzi9kPEoU=;
+        b=Nfv+djgawN2Twm12frYrV6BUL8doN7vr+pZXC1gXghUuaX7wqmRVflUoGA60g6bXOT
+         BvYlyFtVx1MRdKDEEfwLPLHi5t5ZOLi7p8UKH5QjQnGDxi+hQmj8FjjecTRwQVrOv+U5
+         XL8gVjwv/U8bh3NP6hbKJ0CUzPMRqUQOBGzKKaMJOyCB+Sc28JvgdFcb/+viq3I8CKU3
+         ZpXmxUHxqSwWjcfFTetzfYYtU+bp0LTDDmJyrsZQkapwnjpsG2BFw21LhEDZam/FmKjg
+         IoEU5N5fSFt3mAxqdnwXbf5jmeKagBfeBTqryo3zs70DdA9CPHmt+q79DmATJ5a0OhKt
+         gpOw==
+X-Gm-Message-State: ALoCoQlKGpwkAdIlLvY+fX0GwJljBolwQ9kYVJ7IvwX1MmQJj95kIhd9d/FQjT/nn7ovJHHHDJZh
+X-Received: by 10.229.174.70 with SMTP id s6mr3282072qcz.7.1418115089372;
+        Tue, 09 Dec 2014 00:51:29 -0800 (PST)
+Received: from localhost (HSI-KBW-134-3-146-104.hsi14.kabel-badenwuerttemberg.de. [134.3.146.104])
+        by mx.google.com with ESMTPSA id k1sm538087qas.12.2014.12.09.00.51.28
+        for <users@maven.apache.org>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 09 Dec 2014 00:51:29 -0800 (PST)
+Date: Tue, 9 Dec 2014 09:51:24 +0100
+From: Bernd Eckenfels <ecki@zusammenkunft.net>
+To: users@maven.apache.org
+Subject: Re: Maven 3.2.3 upgrade
+Message-ID: <20141209095124.00002c05.ecki@zusammenkunft.net>
+In-Reply-To: <m66bph$au$1@ger.gmane.org>
+References: <CAA8BW8EgW9UZ2NVLbrVZCGA8Xo3b5UotS44KUxhRbGjGiwh8gw@mail.gmail.com>
+	<5049531.alCp08zIy1@herve-desktop>
+	<CAA8BW8FSD2Cuw8kAWr9WnP1AWFOuoURkFrO4fCDf-X28aEenLg@mail.gmail.com>
+	<m66bph$au$1@ger.gmane.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Am Tue, 09 Dec 2014 09:27:29 +0100
+schrieb J=F6rg Schaible <joerg.schaible@swisspost.com>:
+
+> > One other issue came up in this upgrade.  We still have branches
+> > that have to stay at 3.0.x.  How can I make the trunk build use
+> > 3.2.3 w/o changing everyone's M2_HOME?  Is there a way to bootstrap
+> > the build so the build picks the specified version of Maven?  E.g.
+> > I want the build to specify the version used not the system.
+>=20
+> Don't set it at all. The mvn shell scripts will automatically do so
+> for their Maven version on-the-fly.
+
+and use a CI Server where you configure the maven path for each job.
+
+Gruss
+Bernd
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

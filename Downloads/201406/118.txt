@@ -1,0 +1,85 @@
+From users-return-136657-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jun 26 12:19:11 2014
+Return-Path: <users-return-136657-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 35BAC1101E
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 26 Jun 2014 12:19:11 +0000 (UTC)
+Received: (qmail 86764 invoked by uid 500); 26 Jun 2014 12:19:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 86683 invoked by uid 500); 26 Jun 2014 12:19:09 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 86670 invoked by uid 99); 26 Jun 2014 12:19:09 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 26 Jun 2014 12:19:09 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.223.178] (HELO mail-ie0-f178.google.com) (209.85.223.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 26 Jun 2014 12:19:03 +0000
+Received: by mail-ie0-f178.google.com with SMTP id rd18so2833663iec.23
+        for <users@maven.apache.org>; Thu, 26 Jun 2014 05:18:32 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:content-type:subject:message-id:date:to
+         :mime-version;
+        bh=lmFfjWnH5/DApGtb2tqInS83t5u6+NDLAlQJK3+ZMqs=;
+        b=BazR55nGgq2UOvlLTWS8r2LO4o07TR2r48bGMlD5JS/Uhj/logfhxA1H6vW4SmvmcP
+         DAooSA/ENNCqOPDUS68w76BzQkk7vnltUtfopKOy8LuwStmgFQAcneI9bbvCJKHrYqGZ
+         xIrfxec6pecZuUXpH4YV0jurvOIjGLtpKSUb/YP4q4TkLsJVWH/uClZNfUBmiGSQcxZn
+         IwdW3O+k89hDN+mzgxsZH7eDvZcD23PaAK1pM5kBbGHWOpQfs1ocqqZgEnrJ3CGdXNvR
+         D/iAoe/cZyZXRpfypaC+Ay2FnWbbmxXQVGQHEdYJ0JgSZKwdLs9DEemdlnBAUszdTaOL
+         MS7g==
+X-Gm-Message-State: ALoCoQkwZLi+rQo3wEKKAMKC++gK+SoN+xkluxyWWUMNWy1uWW6lQF5rCZgR4XIRFHfUClevRkII
+X-Received: by 10.50.176.167 with SMTP id cj7mr3792923igc.44.1403785112660;
+        Thu, 26 Jun 2014 05:18:32 -0700 (PDT)
+Received: from [10.0.1.11] (192-0-154-177.cpe.teksavvy.com. [192.0.154.177])
+        by mx.google.com with ESMTPSA id 2sm3801528igs.17.2014.06.26.05.18.31
+        for <multiple recipients>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Thu, 26 Jun 2014 05:18:32 -0700 (PDT)
+From: Jason van Zyl <jason@takari.io>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_589CC2F9-F487-45B4-8FA6-5707597CC313"
+Subject: [ANN] Apache Maven 3.2.2 Release
+Message-Id: <BF05670C-F811-42E0-ABBE-34A93F78BC72@takari.io>
+Date: Thu, 26 Jun 2014 08:18:30 -0400
+To: Maven Users List <users@maven.apache.org>,
+ announce@maven.apache.org
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.2\))
+X-Mailer: Apple Mail (2.1878.2)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_589CC2F9-F487-45B4-8FA6-5707597CC313
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+Hi!
+
+The Apache Maven Team is pleased to announce the release of 3.2.2
+
+The release notes can be found here:
+http://maven.apache.org/docs/3.2.2/release-notes.html
+
+The release can be downloaded from:
+http://maven.apache.org/download.cgi
+
+Full list of changes can be viewed in JIRA:
+=
+https://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=3D10500&versio=
+n=3D20042
+
+Thanks,
+
+The Maven Team=
+
+--Apple-Mail=_589CC2F9-F487-45B4-8FA6-5707597CC313--
+

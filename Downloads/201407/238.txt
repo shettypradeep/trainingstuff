@@ -1,0 +1,164 @@
+From users-return-136845-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jul 22 20:26:41 2014
+Return-Path: <users-return-136845-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 702A411733
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 22 Jul 2014 20:26:41 +0000 (UTC)
+Received: (qmail 97611 invoked by uid 500); 22 Jul 2014 20:26:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 97486 invoked by uid 500); 22 Jul 2014 20:26:41 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 96345 invoked by uid 99); 22 Jul 2014 20:26:40 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Jul 2014 20:26:40 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=FORGED_YAHOO_RCVD,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of its_toasted@yahoo.com designates 98.138.91.153 as permitted sender)
+Received: from [98.138.91.153] (HELO nm23-vm3.bullet.mail.ne1.yahoo.com) (98.138.91.153)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Jul 2014 20:26:34 +0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s2048; d=yahoo.com;
+	b=UlSd33NZh3pbvfmPhE1b6ERPXn+DmbT5TpVe9FAq/Sv8yGZFTxxME5W08q6hPEn7aRCY0K0Y5z9/1dpsiE9GDjowMwYo8n2IZ+ORpo8+wZo6qEF95OIcxeahE3JI6J84XKflsOGlxcHaWLZaux4PfQwd//RVFfKwYzNRdGp0xuWIDqYkl2Pk2CJ7Ge9+Doujvva9hXqAfKbzbj9jkCHPUMepJ+BNYKTOf8VciM0AxXHWJWe8HRcIJkFPLFEtya6kHftSjQzSXxPt1+Orh3zxqayBXYyd9rwjkXJMRR4KihH+h/qLnUjLBraCN6qdWJyKtAPVBfZePq7FUJh7cGFqRg==;
+Received: from [98.138.226.180] by nm23.bullet.mail.ne1.yahoo.com with NNFMP; 22 Jul 2014 20:26:13 -0000
+Received: from [98.138.226.130] by tm15.bullet.mail.ne1.yahoo.com with NNFMP; 22 Jul 2014 20:26:13 -0000
+Received: from [127.0.0.1] by smtp217.mail.ne1.yahoo.com with NNFMP; 22 Jul 2014 20:26:13 -0000
+X-Yahoo-Newman-Id: 503678.94823.bm@smtp217.mail.ne1.yahoo.com
+X-Yahoo-Newman-Property: ymail-3
+X-YMail-OSG: JzlamjsVM1nhtjP0jAZNZo3mdK0KPm4zjncJYudBrbVOfi.
+ VG2jijJqmxjgzMgary_cp6OWoHcn3L58EGWphRPMeRGNXtybod.3.cOT6CXM
+ z8bg8_t4wZ7nfAbz3g8hhCgKHaBtfwqRYvh6OtM2EgW2YSu.TfdUYduvIFBJ
+ 3jhIbR1gzmgakJPlbE1FIzfwuISrEHSp7sqf1saeCZBDgQc8Wmsagf_baUxn
+ ..3P4v_1bjjCAJf6B7Qr7.y5xXPX.36H5g26SQKVZPzrOB7AHBLo_99.S6Z.
+ I069_rS1nEwdykG.VMNDk4CcNkcEJ57P0x3BY1ffMI1CgQyI9bXYSMBr10zW
+ _cbFJuZcwLT8.Vu4iqXgVlBIDHcblIPRLoQxFH1lnPPJ2xbydWUNAtOhlmI_
+ LSe2CnyiqgUhPTN.NyeH.Ki8TAn0XdF9cL6iIsYvuCFdN17sD1UQrzW9Hrqv
+ zuR_ZslGxuwwdSOc8NOqADpF4_i2Aw.g.bZhiqAYHUVAkjlZbXM7K.nskeSu
+ 0aRilU2zVlwgyMPa6SAKt7c.BbXjmKca5Vl27QAU7Dem.0RcpAcsYBA4Mlp8
+ I5lHH55IUO_1.E49ewq4kWw_HaoovbjvHWw--
+X-Yahoo-SMTP: PKuT8k2swBCeFOHzkGy5rTOUTa2hBxlR
+Message-ID: <53CEC8E0.4030808@yahoo.com>
+Date: Tue, 22 Jul 2014 13:26:08 -0700
+From: Mark Eggers <its_toasted@yahoo.com.INVALID>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Why not a forum
+References: <56545b37196b4c8881714e4d3c9331f7@BVLEXCM022.conoco.net>	<CABLGb9y20sy-hWQbi6kyXmdfv9fj-0B79XnWVK3L3N6WiZ9tNw@mail.gmail.com>	<BLU172-W188811B3D9C18D65EC36A6AEF10@phx.gbl>	<7CD41C80-339B-4C42-BED1-15B5B35520DC@gmail.com>	<53CE9C9B.20904@artifact-software.com>	<48790397-93CA-4AF4-8481-DA542E08CC86@sharp.fm>	<53CEBEDA.100@artifact-software.com>	<CAPkEcwiMGjTU9ME3XSCSy+QjPon76qwK_SFkWT3-mLxYfcLHsQ@mail.gmail.com> <CA+nPnMz_p_TRdJPTCn_N37f=hPnSCuv+MVX8JaNC6Ju5=uzt1Q@mail.gmail.com>
+In-Reply-To: <CA+nPnMz_p_TRdJPTCn_N37f=hPnSCuv+MVX8JaNC6Ju5=uzt1Q@mail.gmail.com>
+X-Enigmail-Version: 1.6
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-Antivirus: avast! (VPS 140722-1, 07/22/2014), Outbound message
+X-Antivirus-Status: Clean
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+And there's gmane with your newsreader of choice (I use Pan).
+
+Thunderbird synched to gmail / yahoo mail work nicely for searches and
+threading as well.
+
+/mde/
+
+On 7/22/2014 1:11 PM, Stephen Connolly wrote:
+> Apache Policy is that if it didn't happen on the mailing list, it
+> didn't happen.
+> 
+> The ASF *is* mailing lists.
+> 
+> If you want a forum-like interface there's Nabble...
+> 
+> GMail does great structuring and search for me.
+> 
+> 
+> On 22 July 2014 21:09, james northrup <northrup.james@gmail.com>
+> wrote:
+> 
+>> bikeshedding
+>> 
+>> 
+>> On Tue, Jul 22, 2014 at 12:43 PM, Ron Wheeler < 
+>> rwheeler@artifact-software.com> wrote:
+>> 
+>>> On 22/07/2014 1:21 PM, Graham Leggett wrote:
+>>> 
+>>>> On 22 Jul 2014, at 7:17 PM, Ron Wheeler
+>>>> <rwheeler@artifact-software.com
+>>> 
+>>>> wrote:
+>>>> 
+>>>> Not true.
+>>>>> You get an e-mail (individual or digest) that you can scan
+>>>>> to see if
+>> you
+>>>>> want to participate in the discussion. No more onerous than
+>>>>> belonging to this group. It also sorts out promotions and
+>>>>> job offers from "real" discussions.
+>>>>> 
+>>>> You mean like a mailing list? :)
+>>>> 
+>>> Yes. that was in response to a specific question.
+>>> 
+>>> 
+>>> 
+>>>> Google does a way better job than any forum search function,
+>>>> and that’s the only meaningful feature in most forum
+>>>> software. Whenever I see a
+>> forum
+>>>> I generally ask “why not just a mailing list�??
+>>>> 
+>>> Better threading. Better connection to profiles. Easy to see
+>>> how active the group is and who belongs. Single sign-on for all
+>>> groups. Maven group already exists with 2800 members.
+>>> 
+>>>> Regards, Graham —
+>>>> 
+>>>> 
+>>>> 
+>>> 
+>>> -- Ron Wheeler President Artifact Software Inc email:
+>>> rwheeler@artifact-software.com skype: ronaldmwheeler phone:
+>>> 866-970-2435, ext 102
+>>> 
+>>> 
+>>> ---------------------------------------------------------------------
+>>>
+>>> 
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>> For additional commands, e-mail: users-help@maven.apache.org
+>>> 
+>>> 
+>> 
+>> 
+>> -- Jim Northrup  *  (408) 837-2270 *
+>> 
+> 
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.13 (MingW32)
+Comment: Using GnuPG with Thunderbird - http://www.enigmail.net/
+
+iQEcBAEBAgAGBQJTzsjgAAoJEEFGbsYNeTwtvZkIAKuvABEsr5YS3P8AMJLcNGXK
+16Pt5WX3ucIfuuF5xX5WgXnfyGBCyIOACOZ7F2/L1gsv5utdFrhlZu3fxnX/UZFJ
+wlZXcxGkOXf96fl9QZDjsaeeAfA7zwmnXnKc9XBPV3mSbgSvauccn70Fahbze+rk
+DEgVoBdQiuweUfYqSeK2tye/OeDPXIu3ckfe5THt/8qT1mQJuJtRt/1/HjTmkdXn
+fkJxrMg22W1Bc8HMVR/LhTr0y8CkNQHm1MXmcb0JtbT24UggPm75LPV4+NTgcFD3
+9u8gSF1a0+ppU/zvLBp+D7ArygP4eLW/59XzKxmakJZf5fUh6jfxLK9O5BT9UCc=
+=bE4m
+-----END PGP SIGNATURE-----
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

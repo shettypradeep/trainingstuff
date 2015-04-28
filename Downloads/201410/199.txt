@@ -1,0 +1,89 @@
+From users-return-137478-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Oct  7 23:29:16 2014
+Return-Path: <users-return-137478-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D42DE177C6
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  7 Oct 2014 23:29:16 +0000 (UTC)
+Received: (qmail 69182 invoked by uid 500); 7 Oct 2014 23:29:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 69087 invoked by uid 500); 7 Oct 2014 23:29:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 69070 invoked by uid 99); 7 Oct 2014 23:29:15 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 07 Oct 2014 23:29:14 +0000
+X-ASF-Spam-Status: No, hits=2.8 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_IMAGE_ONLY_20,HTML_MESSAGE,HTML_SHORT_LINK_IMG_3,RCVD_IN_DNSWL_LOW,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of burtonator2011@gmail.com designates 209.85.217.175 as permitted sender)
+Received: from [209.85.217.175] (HELO mail-lb0-f175.google.com) (209.85.217.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 07 Oct 2014 23:28:49 +0000
+Received: by mail-lb0-f175.google.com with SMTP id u10so6982093lbd.6
+        for <users@maven.apache.org>; Tue, 07 Oct 2014 16:28:49 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:from:date:message-id:subject:to:content-type;
+        bh=xr9ZO1gQEPvu+S2T3D1W9w8sFnLsdjgcS+Ul+hzRsF0=;
+        b=0Fxhw1vB/W9UzT+z3tihf2WsiPsVhbF60RPreVbUrcWx90YcQoYjnXna/rw/t556GX
+         WUqP98K3ZBIQfwGiwi3/cnxAhU8HTTpcQUqCKPd9vJulS8SkrQrMoXGR41qfUsbhbz9l
+         IDPJGvTAohvGz/VzX3tkfNQvpypO96vAq8KwI+6RloDVkzx/HQ1TnXjDmtsoq1jSzsmV
+         JKYv71FJ9UcvCsLA5jPQVdh9dqBkQoIKfUGyw2ZnKaVoUn3Ks7QXhhXMHOaBAluL9HSk
+         nhQJ1tB3n7ztmemRWSPgJrzeKfbNQZHFfuMxcI0JmpIVpDXKaliWgLkSA+1VeuzxR25P
+         x0Bg==
+X-Received: by 10.152.36.130 with SMTP id q2mr501749laj.42.1412724528976; Tue,
+ 07 Oct 2014 16:28:48 -0700 (PDT)
+MIME-Version: 1.0
+Sender: burtonator2011@gmail.com
+Received: by 10.112.210.101 with HTTP; Tue, 7 Oct 2014 16:28:28 -0700 (PDT)
+From: Kevin Burton <burton@spinn3r.com>
+Date: Tue, 7 Oct 2014 16:28:28 -0700
+X-Google-Sender-Auth: QjfNuw_Zxd01OafViLKJgkCD3AI
+Message-ID: <CAAZU44kqoyDw-8BcffSADVxkoEnUVXaOtuKO134UD71B9O0CWw@mail.gmail.com>
+Subject: Best practice for integration tests (vs unit tests)
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0158b5d2b717c80504dd8f65
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0158b5d2b717c80504dd8f65
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Right now I have an overlap of unit and integration tests and I want to
+tear out my integration tests and keep them separate.  This way our unit
+tests execute fast and integration testing takes a bit longer.
+
+=E2=80=A6 and now I=E2=80=99m trying to figure out the best strategy for th=
+at.
+
+Reading this:
+
+http://docs.codehaus.org/display/MAVENUSER/Maven+and+Integration+Testing
+
+seems to not solve the problem.
+
+Seems to me the easiest would be to just have src/main/integration-tests
+
+=E2=80=A6 but would I have to use failsafe or surefire?  I=E2=80=99m not su=
+re why I would
+need another plugin for this.
+
+Maybe someone can enlightenment me with some maven wisdom?
+
+--=20
+
+Founder/CEO Spinn3r.com
+Location: *San Francisco, CA*
+blog: http://burtonator.wordpress.com
+=E2=80=A6 or check out my Google+ profile
+<https://plus.google.com/102718274791889610666/posts>
+<http://spinn3r.com>
+
+--089e0158b5d2b717c80504dd8f65--
+

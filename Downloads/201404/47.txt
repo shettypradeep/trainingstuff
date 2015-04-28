@@ -1,0 +1,251 @@
+From users-return-136201-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr 18 17:26:02 2014
+Return-Path: <users-return-136201-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CD73711A37
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 18 Apr 2014 17:26:02 +0000 (UTC)
+Received: (qmail 93485 invoked by uid 500); 18 Apr 2014 17:25:57 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 93415 invoked by uid 500); 18 Apr 2014 17:25:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 93407 invoked by uid 99); 18 Apr 2014 17:25:56 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Apr 2014 17:25:56 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 74.125.82.180 as permitted sender)
+Received: from [74.125.82.180] (HELO mail-we0-f180.google.com) (74.125.82.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Apr 2014 17:25:51 +0000
+Received: by mail-we0-f180.google.com with SMTP id p61so1795211wes.11
+        for <users@maven.apache.org>; Fri, 18 Apr 2014 10:25:30 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=r3nRMdXy6tfpKcpVa2DbVYifKOeWSb6bld2UIatHfwo=;
+        b=uwGTOTQldACT0vBetEXg8Fah9O9C2oOhiy+ib00+cowUAMg7OJpcnTLDhITXqS64PN
+         4bEa3uyEWnYVKUaGLvVNubNYNJUuOCT1igOWiVmRNgYB4RqJ+EzB5bNoGVX7eQ3pd2Ve
+         C/ElKVLev5371oXZ7K16q1s7ClNW0cISag4VZx3iHoWL+Oo0QgzHx3u88zYgNBHQazNc
+         LLHgeDTY/2jIjoenoui/5saKevMkK2uy94O9F6ABm+xYGSD7QYtkgkSE+JN+P8qISmFv
+         90IVffZUVgHkooZQz4HHFyBBoCD3O9tfMzcZZO5/tF4Adkfd3LPogEUjaQuoJqvTXZr8
+         xSww==
+MIME-Version: 1.0
+X-Received: by 10.194.77.50 with SMTP id p18mr115938wjw.68.1397841929970; Fri,
+ 18 Apr 2014 10:25:29 -0700 (PDT)
+Received: by 10.194.205.233 with HTTP; Fri, 18 Apr 2014 10:25:29 -0700 (PDT)
+In-Reply-To: <CAChPNbfBPz0_tsXN=YjYNrdSFSveSSREzzKgCtZO1+uMgfnNiw@mail.gmail.com>
+References: <CAChPNbexJ3vix-HdFNiKSEQrOYMW+vjxHknCn7-fPp0LsKxLBw@mail.gmail.com>
+	<CAEayHEPxqeWPyCgR1bmoGx-oGxr-TvkRxU4JewuY8aXzt80OHg@mail.gmail.com>
+	<CA+nPnMy691eXxCmxMrc=C1uzZnSwYu0ZxLAhfKSq8HJsUDYKxA@mail.gmail.com>
+	<CAChPNbfdTVUkN63=3C1i94fDKPo9jrOgrBf_zjhWVjJWdUwNGQ@mail.gmail.com>
+	<CAChPNbcuj24zrAwC_1sgSMUxPCfetcK9NZ8xnAY+9ToGQfwGvg@mail.gmail.com>
+	<CAChPNbeR2NdWLcKDhAPJwYsYKurfxmvG+h-BUG58ZFDmAhX0mQ@mail.gmail.com>
+	<CAChPNbfN3=yz-1RkyA3W0j-_t+Z6jK_Ak1bQzh7TN9tbQemD7w@mail.gmail.com>
+	<CAChPNbfBPz0_tsXN=YjYNrdSFSveSSREzzKgCtZO1+uMgfnNiw@mail.gmail.com>
+Date: Fri, 18 Apr 2014 18:25:29 +0100
+Message-ID: <CA+nPnMxZj0zui9QJZy8Vc3CUapPcTonxDSGMFgvH0MHb250xwA@mail.gmail.com>
+Subject: Re: Struggling to release:perform with git and deployer key
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bfcfc62b02b5704f7546f43
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bfcfc62b02b5704f7546f43
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Ahh you should have just said you were doing this on jenkins.... I wrote
+the ssh-agent plugin for this exact use case!
+
+
+On 18 April 2014 18:01, Maven User <maven.2.user@gmail.com> wrote:
+
+> That was it!
+>
+> Ok, so for the record, if you're going to use the credentials plugin,
+> you should also use the ssh-agent plugin to make sure those keys are
+> available to any processes being run by jenkins!
+>
+> On Fri, Apr 18, 2014 at 12:53 PM, Maven User <maven.2.user@gmail.com>
+> wrote:
+> > Annnd this is because I tried to reuse ${artifactId} and that does NOT
+> > match the repo name (for acceptable reasons).
+> >
+> > Changing and retrying...
+> >
+> > On Fri, Apr 18, 2014 at 12:47 PM, Maven User <maven.2.user@gmail.com>
+> wrote:
+> >> Using the ssh-agent jenkins plugin, I'm able to get a bit further -
+> >> now it's complaining the repository doesn't exist:
+> >>
+> >> Unable to commit files
+> >> 00:01:14.796 Provider message:
+> >> 00:01:14.796 The git-push command failed.
+> >> 00:01:14.796 Command output:
+> >> 00:01:14.796 ERROR: Repository not found.
+> >> 00:01:14.796 fatal: The remote end hung up unexpectedly
+> >>
+> >> I'm guessing this is an error in my <scm> tags....
+> >>
+> >>
+> >>
+> >> On Fri, Apr 18, 2014 at 11:55 AM, Maven User <maven.2.user@gmail.com>
+> wrote:
+> >>> Interesting....
+> >>>
+> >>> Running:
+> >>> eval `ssh-agent -s`
+> >>>
+> >>> Then the ssh -T test results in success.
+> >>>
+> >>> But that's only good for the single bash session.
+> >>>
+> >>> Are people running jenkins as normal users versus unprivileged users?
+> >>>
+> >>> On Fri, Apr 18, 2014 at 11:38 AM, Maven User <maven.2.user@gmail.com>
+> wrote:
+> >>>> Stephen - cool - I _do_ have that and am pointing at the file in tha=
+t
+> path.
+> >>>>
+> >>>> Again, I'm using the "managed file" plugin to drop down that private
+> key.
+> >>>>
+> >>>> Strangely, when I run this command:
+> >>>>
+> >>>> ssh -vT git@github.com
+> >>>>
+> >>>> I get back:
+> >>>> ...
+> >>>> debug1: Connection established.
+> >>>> debug1: identity file /srv/jenkins/.ssh/id_rsa type 1
+> >>>> ...
+> >>>> debug1: Authentications that can continue: publickey
+> >>>> debug1: Next authentication method: publickey
+> >>>> debug1: Offering RSA public key: /srv/jenkins/.ssh/id_rsa
+> >>>> debug1: Authentications that can continue: publickey
+> >>>> debug1: Trying private key: /srv/jenkins/.ssh/id_dsa
+> >>>> debug1: Trying private key: /srv/jenkins/.ssh/id_ecdsa
+> >>>> debug1: No more authentication methods to try.
+> >>>> Permission denied (publickey).
+> >>>>
+> >>>> Any more suggestions?
+> >>>>
+> >>>>
+> >>>> On Fri, Apr 18, 2014 at 11:31 AM, Stephen Connolly
+> >>>> <stephen.alan.connolly@gmail.com> wrote:
+> >>>>>     <server>
+> >>>>>
+> >>>>>       <id>...</id>
+> >>>>>
+> >>>>>       <username>...</username>
+> >>>>>
+> >>>>>       <password>...</password>
+> >>>>>
+> >>>>>       <privateKey>/home/.../.ssh/id_rsa</privateKey>
+> >>>>>
+> >>>>>     </server>
+> >>>>>
+> >>>>>
+> >>>>> On 18 April 2014 16:27, Thomas Broyer <t.broyer@gmail.com> wrote:
+> >>>>>
+> >>>>>> I think by default Maven calls the command-line Git, so it uses th=
+e
+> >>>>>> ~/.ssh/id_rsa, and not the configuration from your settings.xml.
+> >>>>>> I have no idea if what you're trying to do is possible with Maven.
+> Maybe
+> >>>>>> the maven-scm-provider-jgit would use the settings.xml
+> configuration, but I
+> >>>>>> have no idea how to configure Maven to use it.
+> >>>>>>
+> >>>>>>
+> >>>>>> On Fri, Apr 18, 2014 at 3:45 PM, Maven User <maven.2.user@gmail.co=
+m
+> >
+> >>>>>> wrote:
+> >>>>>>
+> >>>>>> > Hi all -
+> >>>>>> >
+> >>>>>> > I'm really struggling with this.
+> >>>>>> >
+> >>>>>> > My git push portion of the maven release process just is quittin=
+g
+> with
+> >>>>>> > this:
+> >>>>>> >
+> >>>>>> > 00:01:29.803 Provider message:
+> >>>>>> > 00:01:29.803 The git-push command failed.
+> >>>>>> > 00:01:29.803 Command output:
+> >>>>>> > 00:01:29.803 Permission denied (publickey).
+> >>>>>> > 00:01:29.803 fatal: The remote end hung up unexpectedly
+> >>>>>> > 00:01:29.803
+> >>>>>> > 00:01:29.803 cause : Unable to commit files
+> >>>>>> > 00:01:29.803 Provider message:
+> >>>>>> > 00:01:29.803 The git-push command failed.
+> >>>>>> > 00:01:29.803 Command output:
+> >>>>>> > 00:01:29.803 Permission denied (publickey).
+> >>>>>> > 00:01:29.803 fatal: The remote end hung up unexpectedly
+> >>>>>> >
+> >>>>>> > I have the key stored in Jenkins as a "managed file" (as part of
+> that
+> >>>>>> > plugin).  So the build has an early step where that key is
+> written to
+> >>>>>> > disk.
+> >>>>>> >
+> >>>>>> > Then I've used the settings.xml to specify which key to use
+> (pointing
+> >>>>>> > at that location just above).
+> >>>>>> >
+> >>>>>> >  <server>
+> >>>>>> >       <id>github.com</id>
+> >>>>>> >       <username>someusername</username>
+> >>>>>> >       <privateKey>/srv/jenkins/.ssh/somekeyname</privateKey>
+> >>>>>> >       <filePermissions>664</filePermissions>
+> >>>>>> >       <directoryPermissions>775</directoryPermissions>
+> >>>>>> >       <configuration></configuration>
+> >>>>>> >     </server>
+> >>>>>> >
+> >>>>>> >   <scm>
+> >>>>>> >       <connection>scm:git:git@github.com:
+> >>>>>> > ${companyid}/${project.artifactId}.git</connection>
+> >>>>>> >       <url>scm:git:git@github.com:
+> >>>>>> > ${companyid}/${project.artifactId}.git</url>
+> >>>>>> >       <developerConnection>scm:git:git@github.com:
+> >>>>>> > ${companyid}/${project.artifactId}.git</developerConnection>
+> >>>>>> >       <tag>HEAD</tag>
+> >>>>>> >    </scm>
+> >>>>>> >
+> >>>>>> > What am I doing wrong?
+> >>>>>> >
+> >>>>>> >
+> ---------------------------------------------------------------------
+> >>>>>> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> >>>>>> > For additional commands, e-mail: users-help@maven.apache.org
+> >>>>>> >
+> >>>>>> >
+> >>>>>>
+> >>>>>>
+> >>>>>> --
+> >>>>>> Thomas Broyer
+> >>>>>> /t=C9=94.ma.b=CA=81wa.je/ <http://xn--nna.ma.xn--bwa-xxb.je/> <
+> http://xn--nna.ma.xn--bwa-xxb.je/> <
+> >>>>>> http://xn--nna.ma.xn--bwa-xxb.je/>
+> >>>>>>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7bfcfc62b02b5704f7546f43--
+

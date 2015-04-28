@@ -1,0 +1,88 @@
+From users-return-135948-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 26 17:16:16 2014
+Return-Path: <users-return-135948-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A06F81020D
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Mar 2014 17:16:16 +0000 (UTC)
+Received: (qmail 24648 invoked by uid 500); 26 Mar 2014 17:16:02 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 24189 invoked by uid 500); 26 Mar 2014 17:16:01 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 23375 invoked by uid 99); 26 Mar 2014 17:15:58 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Mar 2014 17:15:58 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stevenschlansker@gmail.com designates 209.85.160.45 as permitted sender)
+Received: from [209.85.160.45] (HELO mail-pb0-f45.google.com) (209.85.160.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Mar 2014 17:15:52 +0000
+Received: by mail-pb0-f45.google.com with SMTP id uo5so2220606pbc.4
+        for <users@maven.apache.org>; Wed, 26 Mar 2014 10:15:30 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=from:content-type:content-transfer-encoding:subject:message-id:date
+         :to:mime-version;
+        bh=z2BJE4wm9Iq4iDnKkz3Kl4EwA6dX1QItqeBqzPrHop4=;
+        b=naWC7wW4KDA/Moiy47BFEcICQfXFxNU6gFpP3RsBZ1tSQmIJPHppQEwmKKmI/kA9Gg
+         XjvALcjIB+1QRUlcMNJvxt0P9oAKZFM73XVjEQgi+J9HqbpVsC5c2wVL9lwSdFUx43Jn
+         UEDHX++hPHD0R/nNvuqVodH/CxSayJzeeebYtiQkTnL1AeH87SZB8CsZ2bIsXTNnQ84R
+         IWbEKcRs9rDVrLw6z/3x6BwRPnNKguI4fV8LI2UCLQSa7jdUOPcG7fsf74uTjAPOem1R
+         ml0eTUMypbFBZF8SMoqZKvvmAcQxAa/hSn+5wuzcuobtP7SEP+WLzYbBOHRGnz5/VLGV
+         cKfg==
+X-Received: by 10.68.197.8 with SMTP id iq8mr88937427pbc.124.1395854130219;
+        Wed, 26 Mar 2014 10:15:30 -0700 (PDT)
+Received: from [10.10.21.169] (otra.opentable.com. [199.16.144.7])
+        by mx.google.com with ESMTPSA id yw3sm60303876pbc.69.2014.03.26.10.15.29
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 26 Mar 2014 10:15:29 -0700 (PDT)
+From: Steven Schlansker <stevenschlansker@gmail.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+Subject: [MNG-5551] Java 8 + Maven status
+Message-Id: <EF451C18-6AF0-4940-A99E-4935A4351088@gmail.com>
+Date: Wed, 26 Mar 2014 10:15:28 -0700
+To: users@maven.apache.org
+Mime-Version: 1.0 (Mac OS X Mail 7.2 \(1874\))
+X-Mailer: Apple Mail (2.1874)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello everyone,
+
+http://jira.codehaus.org/browse/MNG-5551
+
+Java 8 has now been out for a week and Maven is still not really =
+compatible.
+In particular, the maven-shade-plugin and maven-dependency-plugin do not =
+work
+due to an old version of ASM that throws ArrayIndexOutOfBoundsException =
+on Java 8 class files.
+
+http://jira.codehaus.org/browse/MSHADE-166
+http://jira.codehaus.org/browse/MDEP-439
+
+There may be more uses of the broken ASM, these are just the ones I=92ve =
+run into.
+
+Is there any possibility of getting these fixed and released in the near =
+future?  It is frustrating
+to have Maven be broken on a now-considered-production JDK release.
+
+Thanks!
+Steven
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,175 @@
+From users-return-136153-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 15 15:16:37 2014
+Return-Path: <users-return-136153-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7A85311BB4
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 15 Apr 2014 15:16:37 +0000 (UTC)
+Received: (qmail 16102 invoked by uid 500); 15 Apr 2014 14:56:47 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 5317 invoked by uid 500); 15 Apr 2014 14:49:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 12356 invoked by uid 99); 15 Apr 2014 14:16:42 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Apr 2014 14:16:42 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.160.53 as permitted sender)
+Received: from [209.85.160.53] (HELO mail-pb0-f53.google.com) (209.85.160.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Apr 2014 14:16:35 +0000
+Received: by mail-pb0-f53.google.com with SMTP id rp16so9537272pbb.40
+        for <users@maven.apache.org>; Tue, 15 Apr 2014 07:16:15 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type;
+        bh=2dDHGCDs5WYYXLoEbfFFcsnjWbIbsyKu6+ZFz+mli84=;
+        b=YmH78z7/qLbA3ogmKkMEhIZDg7CEaAkvd1wXAgYQeR+HXW7B3IF5QpRFewyldngvjL
+         ILRjTbbqIN6N1bR8RIG8hKKGTPxR5bxKBSPzFGTZO2F3IS2+3pqEYEXgOrXicmIWdGh5
+         cW4bo7DXsQMURGk7hTWe3ij3qlFXq+SISLZbld39YBnkBwfvmRSoKXdUxC+x1sJm+0n8
+         GFPmtel5E9jrQRHRGjaRcLy4nsEaklS4vDSPDBQb/xpHfWQtCiZBysUInmFAMw68JWsq
+         jUmUmOgBR/NI36jSXu84GgOiQLwQDQGoq7qcN8nSoI6Ko1ZR1nm9d5lq5y8VUKkuFK5U
+         c5gg==
+X-Received: by 10.66.190.73 with SMTP id go9mr2308195pac.18.1397571375068;
+        Tue, 15 Apr 2014 07:16:15 -0700 (PDT)
+Received: from [192.168.0.17] (S0106602ad07f9cfa.vc.shawcable.net. [24.85.131.20])
+        by mx.google.com with ESMTPSA id bs17sm68039938pac.28.2014.04.15.07.16.12
+        for <multiple recipients>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Tue, 15 Apr 2014 07:16:14 -0700 (PDT)
+Message-ID: <534D3F2E.9070804@gmail.com>
+Date: Tue, 15 Apr 2014 07:16:14 -0700
+From: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: nexus-user@sonatype.org, maven users <users@maven.apache.org>
+Subject: Re: [nexus-user] Why are alternate repositories so hard to configure
+References: <534CA422.1080408@gmail.com> <8AAE21D1593B4840B3BA95CF1BE5D5CA010FC1FF@NAMAIL01.sapient.com>
+In-Reply-To: <8AAE21D1593B4840B3BA95CF1BE5D5CA010FC1FF@NAMAIL01.sapient.com>
+Content-Type: multipart/alternative;
+ boundary="------------020709030008040206070507"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------020709030008040206070507
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Thanks Frank, I added what you suggested to my settings.xml, but the 
+problem turned out to be that I forgot to add sonatype-oss to the public 
+group.
+
+I have been caught by that problem in the past, as I recall, and a 
+better UI would ask you if you wanted to add a newly created remote repo 
+to public when you created it.
+
+Cheers, Eric
+
+On 4/15/2014 2:19 AM, Frank Mueller wrote:
+
+Do you have anonymous access enabled in you Nexus instance?
+
+You did not have any credentials in your (I assume) settings.xml.
+
+The problem with the apache.org repo might be caused by missing the 
+Pluginrepo configuration. Maybe try something like the following:
+
+-------------------------[snip]------------------------
+
+<profiles>
+
+<profile>
+
+<id>nexus</id>
+
+<activation>
+
+<activeByDefault>true</activeByDefault>
+
+</activation>
+
+<repositories>
+
+<repository>
+
+<id>central</id>
+
+<url>http://central</url>
+
+<releases><enabled>true</enabled></releases>
+
+<snapshots><enabled>true</enabled></snapshots>
+
+</repository>
+
+</repositories>
+
+<pluginRepositories>
+
+<pluginRepository>
+
+<id>central</id>
+
+<url>http://central</url>
+
+<releases><enabled>true</enabled></releases>
+
+<snapshots><enabled>true</enabled></snapshots>
+
+</pluginRepository>
+
+</pluginRepositories>
+
+</profile>
+
+</profiles>
+
+<mirrors>
+
+<mirror>
+
+<id>nexus</id>
+
+<mirrorOf>central</mirrorOf>
+
+<url>https://your.nexus.url/content/groups/public</url>
+
+</mirror>
+
+</mirrors>
+
+-------------------------[snap]------------------------
+
+Regarding the download problems, do you have added the repository to the 
+public group?`
+
+Best regards
+
+
+Frank
+>
+> <mirrors>
+>
+> <mirror>
+>
+> <id>nexus</id>
+>
+> <mirrorOf>central</mirrorOf>
+>
+> <url>https://your.nexus.url/content/groups/public</url>
+>
+> </mirror>
+>
+> </mirrors>
+>
+
+
+--------------020709030008040206070507--
+

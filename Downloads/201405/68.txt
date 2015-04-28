@@ -1,0 +1,63 @@
+From users-return-136330-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon May  5 21:11:44 2014
+Return-Path: <users-return-136330-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D69A311A68
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  5 May 2014 21:11:44 +0000 (UTC)
+Received: (qmail 84239 invoked by uid 500); 5 May 2014 21:11:39 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 84107 invoked by uid 500); 5 May 2014 21:11:38 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 84098 invoked by uid 99); 5 May 2014 21:11:38 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 05 May 2014 21:11:38 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of northrup.james@gmail.com designates 74.125.82.180 as permitted sender)
+Received: from [74.125.82.180] (HELO mail-we0-f180.google.com) (74.125.82.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 05 May 2014 21:11:33 +0000
+Received: by mail-we0-f180.google.com with SMTP id t61so2737399wes.25
+        for <users@maven.apache.org>; Mon, 05 May 2014 14:11:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:from:date:message-id:subject:to:content-type;
+        bh=PgXJA+Wo9ZAk/VFMZ9cKkcb8qYxG/hRnKMPlBMUhEac=;
+        b=fTU/Zrzmno5doKkfFMHz2Z3y46gSTsr6y23wOd5FOv6hfuTA1Sww+gCDqyCV61YNhp
+         Pgt7nNIE9DVRbAC5XfyKmnt8JcoUC17oYV2Q1s4EH8ZaCtmw2Fp2DKO1U+ak/iMv+fZ6
+         ZA6n9TUuJjU/p6GMP15PVZLssAPWYflaHTCgnzE5jdCVs1t3ABRqOw8+KuTL2CnSmgCQ
+         STZzxrTM/++d70Isv5fUZDm+rQegX3SliWWkNK7sBIFSOd2WqXF628G5l+eL6Cq4AjzQ
+         jplxuPxhP4VbdtKiZw30hgW0VrYEz2aPzDJSeaII43zY2gfbMIk5B07ZrN7lO9qcpDwq
+         cW6g==
+X-Received: by 10.180.80.232 with SMTP id u8mr17685208wix.13.1399324271299;
+ Mon, 05 May 2014 14:11:11 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.216.170.6 with HTTP; Mon, 5 May 2014 14:10:51 -0700 (PDT)
+From: james northrup <northrup.james@gmail.com>
+Date: Mon, 5 May 2014 14:10:51 -0700
+Message-ID: <CAPkEcwgoh2zqJCzXkdsJdmfw7+ZkOwnsrtY4fYNSCQhm-8TxWQ@mail.gmail.com>
+Subject: [ERROR] Plugin org.apache.maven.plugins:maven-plugin-plugin:3.3-SNAPSHOT
+ or one of its dependencies could not be resolved: Could not find artifact
+ org.apache.maven.plugins:maven-plugin-plugin:jar:3.3-SNAPSHOT -> [Help 1]
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d044288ca1dd6c504f8ad92b2
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d044288ca1dd6c504f8ad92b2
+Content-Type: text/plain; charset=UTF-8
+
+ i seem to have an incomplete picture of using the latest plugins to solve
+for java 8 plugin bugs.
+
+what repo do these commits come available in?
+
+--f46d044288ca1dd6c504f8ad92b2--
+

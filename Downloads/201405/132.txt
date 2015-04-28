@@ -1,0 +1,105 @@
+From users-return-136396-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon May 19 03:24:29 2014
+Return-Path: <users-return-136396-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6035D11C08
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 19 May 2014 03:24:29 +0000 (UTC)
+Received: (qmail 14987 invoked by uid 500); 19 May 2014 03:24:27 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 14895 invoked by uid 500); 19 May 2014 03:24:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 14887 invoked by uid 99); 19 May 2014 03:24:27 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 19 May 2014 03:24:27 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 19 May 2014 03:24:24 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 19EE06A657E
+	for <users@maven.apache.org>; Sun, 18 May 2014 23:24:00 -0400 (EDT)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id bdev1snnR7lB for <users@maven.apache.org>;
+	Sun, 18 May 2014 23:23:59 -0400 (EDT)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id CEF9B6A657D
+	for <users@maven.apache.org>; Sun, 18 May 2014 23:23:59 -0400 (EDT)
+Message-ID: <5379794D.6030403@artifact-software.com>
+Date: Sun, 18 May 2014 23:23:57 -0400
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: rwheeler@artifact-software.com
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.5.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: M2Eclipse vs. maven-eclipse-plugin: which is preferred?
+References: <CAEayHEN_du-V3D97v-ybWH68vZ9kRm1SqsoBxUrRsT8sQacfnw@mail.gmail.com> <CADVp3v9SwQ4_v1aEruhcD-8FBi9eor6Tc_85rG=r=hZPd7htHA@mail.gmail.com>
+In-Reply-To: <CADVp3v9SwQ4_v1aEruhcD-8FBi9eor6Tc_85rG=r=hZPd7htHA@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+If you just use the Eclipse/STS delivered by the Spring team, you get 
+everything that you need to use Maven without worrying about plug-ins.
+
+Ron
+
+On 15/05/2014 7:50 PM, Barrie Treloar wrote:
+> On 9 May 2014 18:49, Thomas Broyer <t.broyer@gmail.com> wrote:
+>
+>> Hi all,
+>>
+>> Does the Apache Maven Project/Community has an official stance about
+>> whether M2Eclipse or maven-eclipse-plugin is preferred way of importing
+>> Maven projects into Eclipse?
+>>
+>> I thought M2Eclipse was the blessed way, but I cannot find anything
+>> "official" online.
+>> Only that the maven-eclipse-plugin hasn't been updated for a while, but
+>> that could also be a sign that it has no issue and Eclipse offers backwards
+>> compatibility.
+>>
+>> Note: this is not a poll about what you as a developer prefers, I'm looking
+>> for whether there's an official position and which one it is.
+>> Background: I'm in a argument in a code review for an archetype about
+>> whether to include maven-eclipse-plugin configuration within the POM or
+>> not; and any "official" choice would help us avoid "bikeshedding".
+>>
+> There isn't anything really official.
+>
+> The maven-eclipse-plugin doesn't get much love any more these days, but
+> still works fine for some people.
+>
+> However you will probably find the m2eclipse experience better.
+>
+> Other alternatives to consider are other editors.
+> I've never used NetBeans or IntelliJ but others report good experiences.
+>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

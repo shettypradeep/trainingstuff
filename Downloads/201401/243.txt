@@ -1,0 +1,98 @@
+From users-return-135050-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan  9 16:09:53 2014
+Return-Path: <users-return-135050-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id AC35610879
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  9 Jan 2014 16:09:53 +0000 (UTC)
+Received: (qmail 74339 invoked by uid 500); 9 Jan 2014 16:07:42 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 74246 invoked by uid 500); 9 Jan 2014 16:07:39 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74150 invoked by uid 99); 9 Jan 2014 16:07:37 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Jan 2014 16:07:37 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.192.177 as permitted sender)
+Received: from [209.85.192.177] (HELO mail-pd0-f177.google.com) (209.85.192.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Jan 2014 16:07:32 +0000
+Received: by mail-pd0-f177.google.com with SMTP id q10so3332030pdj.36
+        for <users@maven.apache.org>; Thu, 09 Jan 2014 08:07:12 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=n3FpydAkRm0JWMyYw2n1+1qBbiRgwU2pPyOcN0FdQZU=;
+        b=CeBE3lyuppzZvhPZNEvmGIuHDCJosEEM/Hf6JJyZRUDhjRSNbU1LNawb3uH823jlRx
+         QMF2wlrmPZEg1MJrO2/2DiGkajzHtLLKhu3gluF10Le6E/PKtw5Xw7TSiRmo/DO1VKow
+         hK03+dpGMehvSbTl9gIGqt/8UdIur26M7MBcRm6i8ofjDmiXZyU9NDw5AFeAGoHBVLZB
+         J38US9AwuDly4iI7/ZArj28pizGDDawpx/l8hh6/Ft0xXNm3rrWaKXhcAt4gIxPaC9MQ
+         wNh1PFl0+qG6bAsJet1MM4/w2s6TfIZrbIv5mU1qtKTXz9oYIvNBauQXEWxbWIbsD1+6
+         bo1g==
+MIME-Version: 1.0
+X-Received: by 10.66.248.130 with SMTP id ym2mr4645496pac.9.1389283632651;
+ Thu, 09 Jan 2014 08:07:12 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Thu, 9 Jan 2014 08:07:12 -0800 (PST)
+In-Reply-To: <20140109155136.GE14330@IUPUI.Edu>
+References: <CA+nPnMzkumu_925CV+u+D5_wkHjwLCVSRmwMS6JuHvq16zp3Mg@mail.gmail.com>
+	<23db4a359ac8b220e15f373269ebc967.squirrel@www.mosabuam.com>
+	<CA+nPnMy32UXkeOz7-L8SdYymvuOtcVUGgqLca4UGg4MDade1Qg@mail.gmail.com>
+	<03B56DD5-E957-438E-A30E-439C2785032D@apache.org>
+	<781949f830750555c03856e45275c78b.squirrel@www.mosabuam.com>
+	<CA+nPnMw+yPfmovGb-DCxvgvqjUkboddWzBuHEyHZmauYPkiENw@mail.gmail.com>
+	<CA+nPnMzWqgsVuCMaK6FP0QfXDXSLadyUsP+dMeRy9cW73jdarA@mail.gmail.com>
+	<CA+nPnMyY0ST8OV4hfd1=-0vgEuTff8B8ym4iXwjWF16nW=ESHg@mail.gmail.com>
+	<20140109151225.GC14330@IUPUI.Edu>
+	<CADN69ymEmQ7KaZfnOvKLD_A7Pi_GR+DOnA8e=z8J-_hQUF1CPA@mail.gmail.com>
+	<20140109155136.GE14330@IUPUI.Edu>
+Date: Thu, 9 Jan 2014 16:07:12 +0000
+Message-ID: <CA+nPnMzoQOm6M85etBB23EW0Du-ax5VXcq85JgJGF6ftyGHi3Q@mail.gmail.com>
+Subject: Re: New logo?
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b2e15cd6aa25404ef8bcd87
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b2e15cd6aa25404ef8bcd87
+Content-Type: text/plain; charset=ISO-8859-1
+
+The Owl is usually a symbol of wisdom, e.g. the wise owl.
+
+Maven embodies the collective wisdom of how to build software
+
+Hence why I did #5
+
+
+On 9 January 2014 15:51, Mark H. Wood <mwood@iupui.edu> wrote:
+
+> On Thu, Jan 09, 2014 at 09:32:54AM -0600, Curtis Rueden wrote:
+> > All of the logos are OK, but none of them really symbolize anything in
+> > particular about Maven. IMO the best logos encapsulate the purpose of the
+> > project somehow, either overtly, covertly or both.
+>
+> Good point.  I was associating with the name "Maven", looking for a
+> symbol of in-depth understanding of a specialized field.
+>
+> http://en.wiktionary.org/wiki/maven
+>
+> So, what does Maven do?  It passes unique source and object code
+> inputs through a standardized process, guided by an expression of the
+> relationships among those inputs, to assemble a well-specified
+> configuration of runnable code.  What does that look like?
+>
+> --
+> Mark H. Wood, Lead System Programmer   mwood@IUPUI.Edu
+> Machines should not be friendly.  Machines should be obedient.
+>
+
+--047d7b2e15cd6aa25404ef8bcd87--
+

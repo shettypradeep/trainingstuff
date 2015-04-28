@@ -1,0 +1,51 @@
+From users-return-135775-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Mar 11 23:25:56 2014
+Return-Path: <users-return-135775-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 53A0510FBC
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 11 Mar 2014 23:25:56 +0000 (UTC)
+Received: (qmail 14504 invoked by uid 500); 11 Mar 2014 23:25:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 14409 invoked by uid 500); 11 Mar 2014 23:25:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 90506 invoked by uid 99); 11 Mar 2014 13:29:01 -0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of yk.main@gmail.com does not designate 216.139.236.26 as permitted sender)
+Date: Tue, 11 Mar 2014 06:28:36 -0700 (PDT)
+From: yk <yk.main@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1394544516274-5787921.post@n5.nabble.com>
+Subject: Custom maven plugin to count compilation warnings
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi, I'm trying to write a plugin for Maven that would count the number of
+compiler warnings and act in some way if that number is not what it is
+expected to be.
+
+The question is how a custom Maven plugin could find out the number of
+warnings/errors compiler produces?
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Custom-maven-plugin-to-count-compilation-warnings-tp5787921.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,82 @@
+From users-return-136464-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri May 30 02:24:25 2014
+Return-Path: <users-return-136464-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1F1C410F34
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 30 May 2014 02:24:25 +0000 (UTC)
+Received: (qmail 33859 invoked by uid 500); 30 May 2014 02:24:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 33772 invoked by uid 500); 30 May 2014 02:24:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 33764 invoked by uid 99); 30 May 2014 02:24:23 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 30 May 2014 02:24:23 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ljnelson@gmail.com designates 209.85.192.41 as permitted sender)
+Received: from [209.85.192.41] (HELO mail-qg0-f41.google.com) (209.85.192.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 30 May 2014 02:24:20 +0000
+Received: by mail-qg0-f41.google.com with SMTP id j5so3650910qga.0
+        for <users@maven.apache.org>; Thu, 29 May 2014 19:23:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=vaPuJMWSpGHU+715rR41Moosy0qF4kgv7KuB/rkwHKI=;
+        b=GVAYKi4Ujr+37UVJp/vEQqeTcOwi78Oj/Ozv7/YEotskC4ECj+m7qRYx3PGF1FncUw
+         TFvH1Mt4pp7xGGplDCEbjTp+jsgl5/goY2/Chx8FDJ9lJeviKsCREmEHjaqLc1hi8249
+         GF+jIxHcbi9y7WAMiqkaaeD/DO7OPRxAusBgBwpljaqQFjGtPNwwCQXU5YBqtgJa5J84
+         z4dY8EgZp62dtc22nj3rKS2VZRc5z2yVEn7KkbolvRonqddy0F4M7bwFYvX3Ej1xyRkA
+         ehq00J+x//HPhWLn9JH3wf6fHSMWYtbQQ9mDLqfzPVgs6Y1X7goh6GRBq3vvih7PT5RK
+         z+Rg==
+MIME-Version: 1.0
+X-Received: by 10.229.79.2 with SMTP id n2mr16416280qck.11.1401416636309; Thu,
+ 29 May 2014 19:23:56 -0700 (PDT)
+Received: by 10.96.46.137 with HTTP; Thu, 29 May 2014 19:23:56 -0700 (PDT)
+In-Reply-To: <CAHNdxumYEZMrdPwsdB1Ow+q1P1YFPwy0xoB4pGToyuHCCL3T+g@mail.gmail.com>
+References: <CAHNdxunGiSpmRipvkmmhUzcnoW8tm4g6bod0oz+LX4AMO-x-3w@mail.gmail.com>
+	<CAHNdxunNg-9CQS_EV97ROGJtYw9hjZf_9N7sZVO4_UVONFO1WA@mail.gmail.com>
+	<CAHNdxumYEZMrdPwsdB1Ow+q1P1YFPwy0xoB4pGToyuHCCL3T+g@mail.gmail.com>
+Date: Thu, 29 May 2014 22:23:56 -0400
+Message-ID: <CAHNdxu=nrnAXdfQs+wSVEPpV_umuh-x8nYL1okAPD-iJ+fJQtA@mail.gmail.com>
+Subject: Re: Maven release plugin having trouble with transformations?
+From: Laird Nelson <ljnelson@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1133a1a0ca288004fa94bc46
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1133a1a0ca288004fa94bc46
+Content-Type: text/plain; charset=UTF-8
+
+On Thu, May 29, 2014 at 8:48 PM, Laird Nelson <ljnelson@gmail.com> wrote:
+
+> Sure enough, I'm never seeing a git commit operation (with -X turned on).
+>  How can I get commits to start working again?  Am I overlooking an option?
+>
+
+Upgrading the maven-release-plugin version to 2.5 caused commit operations
+to start being issued again and I was (finally) able to perform a release
+in the same way I've been performing them for years prior.
+
+Other readers: do kindly check your own maven-release-plugin version
+stanzas and make sure you're not using version 2.4.2.  When operating the
+Apple git client, commits are never sent and you will release the wrong
+thing with no errors.
+
+Best,
+Laird
+
+-- 
+http://about.me/lairdnelson
+
+--001a1133a1a0ca288004fa94bc46--
+

@@ -1,0 +1,123 @@
+From users-return-135960-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 27 12:29:02 2014
+Return-Path: <users-return-135960-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A751711A68
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 27 Mar 2014 12:29:02 +0000 (UTC)
+Received: (qmail 3920 invoked by uid 500); 27 Mar 2014 12:28:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 3857 invoked by uid 500); 27 Mar 2014 12:28:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 3833 invoked by uid 99); 27 Mar 2014 12:28:55 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Mar 2014 12:28:55 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of gudnabrsam@gmail.com designates 209.85.213.44 as permitted sender)
+Received: from [209.85.213.44] (HELO mail-yh0-f44.google.com) (209.85.213.44)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Mar 2014 12:28:51 +0000
+Received: by mail-yh0-f44.google.com with SMTP id f10so3410524yha.17
+        for <users@maven.apache.org>; Thu, 27 Mar 2014 05:28:31 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:reply-to:in-reply-to:references:date:message-id
+         :subject:from:to:content-type;
+        bh=b0yJYd47NXnmwF8wdNaVpnUMbTukUanoLQnHWpqJoRI=;
+        b=owDmqBGyjRCrCAftz9q3+lcVbRKbjC0n5AQlo+uTUF3vrs6X+fCKPOElZLTwXN7WbC
+         Rj9Ysct+o2JDUn1Lkvk5zZoECJsQppSMBQpYd2BXGgXjvX1Gi45ihqnK1HRjSchhhS1F
+         0V/r6YJ4Rse3PZKVAVnYV4QsJbkZhMn8EFhR0U+sU4UT4rm7/KRKJNjC9n230BZPGZ4x
+         ZuyhGvrlKPXUOqjOPwxtc+KSwjE+Cgo1W7TWEI+rWp+wXe/T32JdrWo+7cvUF2u9ao4W
+         ctMg2jnXiiuzDiWqRjP4e+EvxWThpPs2aMNwUFnUHtnogOsIAUGohED+m0/mRAccIS0b
+         gN7w==
+MIME-Version: 1.0
+X-Received: by 10.236.84.107 with SMTP id r71mr869523yhe.108.1395923311264;
+ Thu, 27 Mar 2014 05:28:31 -0700 (PDT)
+Received: by 10.170.60.77 with HTTP; Thu, 27 Mar 2014 05:28:31 -0700 (PDT)
+Received: by 10.170.60.77 with HTTP; Thu, 27 Mar 2014 05:28:31 -0700 (PDT)
+Reply-To: gudnabrsam@gmail.com
+In-Reply-To: <CAE9L6G2TOPjuyAXbnqBkhU4+pZgHt-8erh9xNYEOhGnxO4zYug@mail.gmail.com>
+References: <EF451C18-6AF0-4940-A99E-4935A4351088@gmail.com>
+	<F4F866F8-E079-4313-AE56-6582E856335C@talios.com>
+	<CAK8jvqwn8wk6sPKc9v3+jkvSnQZNmyezzRBMmMnVhRkDf3zhKQ@mail.gmail.com>
+	<CAE9L6G2TOPjuyAXbnqBkhU4+pZgHt-8erh9xNYEOhGnxO4zYug@mail.gmail.com>
+Date: Thu, 27 Mar 2014 07:28:31 -0500
+Message-ID: <CAE9L6G30_=Ri9TZkUGfV9DXQG_aM_ez0pHm_E-4OSzRax2+9uQ@mail.gmail.com>
+Subject: Re: [MNG-5551] Java 8 + Maven status
+From: Matt Benson <gudnabrsam@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=20cf3010e5571a25ef04f595b9e6
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--20cf3010e5571a25ef04f595b9e6
+Content-Type: text/plain; charset=ISO-8859-1
+
+Oh, good news on the dependency plugin bit--I almost forgot that you had
+mentioned its underlying library having already upgraded its trunk to
+version 4. I was thinking more about jdependency, which supports the shade
+plugin.
+
+Matt
+On Mar 27, 2014 7:22 AM, "Matt Benson" <gudnabrsam@gmail.com> wrote:
+
+> Oh, well... It's no secret that ASM 3, being interface-based, is wholly
+> incompatible with ASM 4, which took the approach of using abstract classes
+> to significantly reduce the amount of code needed to accomplish a given
+> task. ASM 5 claims to be compatible with 4, which is why I, not realizing
+> that the plugins in question were based on ASM 3, suggested that simply
+> "dropping in" the new jar should suffice. The good news is that the upgrade
+> process is not terribly onerous, if only someone steps to do it.
+>
+> Matt
+> On Mar 27, 2014 5:25 AM, "Mirko Friedenhagen" <mfriedenhagen@gmail.com>
+> wrote:
+>
+>> Mark,
+>>
+>> the analyze goal depends on the
+>> org.apache.maven.shared:maven-dependency-analyzer:1.4 which depends on
+>> asm 3.3.1. The trunk already moved to 4.2. I will see what happens
+>> when switching to asm 5 :-)
+>> Regards Mirko
+>> --
+>> http://illegalstateexception.blogspot.com/
+>> https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+>> https://bitbucket.org/mfriedenhagen/
+>>
+>>
+>> On Thu, Mar 27, 2014 at 5:45 AM, Mark Derricutt <mark@talios.com> wrote:
+>> > What version of the maven-dependency-plugin?  I'm using 2.8 fine under
+>> JDK8
+>> > and have been for some time - this is using the `copy-dependencies`
+>> goal and
+>> > nothing else tho...
+>> >
+>> >
+>> >
+>> > On 27 Mar 2014, at 6:15, Steven Schlansker wrote:
+>> >
+>> >> Java 8 has now been out for a week and Maven is still not really
+>> >> compatible.
+>> >> In particular, the maven-shade-plugin and maven-dependency-plugin do
+>> not
+>> >> work
+>> >> due to an old version of ASM that throws
+>> ArrayIndexOutOfBoundsException on
+>> >> Java 8 class files.
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+
+--20cf3010e5571a25ef04f595b9e6--
+

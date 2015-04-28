@@ -1,0 +1,65 @@
+From users-return-136971-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Aug  5 22:06:19 2014
+Return-Path: <users-return-136971-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id AD59B117CA
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  5 Aug 2014 22:06:19 +0000 (UTC)
+Received: (qmail 72200 invoked by uid 500); 5 Aug 2014 22:06:18 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 72137 invoked by uid 500); 5 Aug 2014 22:06:18 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 72125 invoked by uid 99); 5 Aug 2014 22:06:17 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 05 Aug 2014 22:06:17 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mehul.sanghvi@gmail.com designates 74.125.82.169 as permitted sender)
+Received: from [74.125.82.169] (HELO mail-we0-f169.google.com) (74.125.82.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 05 Aug 2014 22:06:10 +0000
+Received: by mail-we0-f169.google.com with SMTP id u56so1721761wes.28
+        for <users@maven.apache.org>; Tue, 05 Aug 2014 15:05:49 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=KIGQ9iAE9DlHwOwr4xvmi3wPaVS1Uw2bZqnSpBCrh08=;
+        b=k90yXTojPTcIv80sLY9L33KpuE1IWPrJyEwS2mJAqBcfXO+enIHDEVfyhHpaOIVt0e
+         heirgvJGPpycV2tcjkrZ0hP7f0aDNetgKUzRPHKRu5q32kKS3Cyv21SHw6M/X2/+bcQj
+         vYCn++GrBc2Z7Uvv3HTAtYr3A7rt0orZD/MOOZQgWveV1f72WPtsOZM8UiPg742jNibC
+         K8fn3IQxu1Hoz1nSVa4GtYCyRzWFMmRzpLxHXXQU3ikBvNmQ38BwxpIbTBzOcNB64YJK
+         aK0UtPI67fQQGIU+Sh9McNsTN5jOySuWiVaGOEvmi+0q4JZbzcxbCz3AvZOWjROC46rG
+         YCKg==
+MIME-Version: 1.0
+X-Received: by 10.180.182.161 with SMTP id ef1mr44994240wic.44.1407276349226;
+ Tue, 05 Aug 2014 15:05:49 -0700 (PDT)
+Received: by 10.217.129.138 with HTTP; Tue, 5 Aug 2014 15:05:49 -0700 (PDT)
+Date: Tue, 5 Aug 2014 18:05:49 -0400
+Message-ID: <CAPo9-A8797sOoVKwuc4W+p=uzzA8qt03ZB5mttnN3V3tUxwB-Q@mail.gmail.com>
+Subject: local repository permissions
+From: Mehul Sanghvi <mehul.sanghvi@gmail.com>
+To: ML Maven Users <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e016346a2e5866704ffe90e51
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e016346a2e5866704ffe90e51
+Content-Type: text/plain; charset=UTF-8
+
+How can I get maven to create directories and files with world writeable
+permissions
+when it is downloading or installing to the local ~/.m2 repository ?
+
+
+-- 
+Mehul N. Sanghvi
+email: mehul.sanghvi@gmail.com
+
+--089e016346a2e5866704ffe90e51--
+

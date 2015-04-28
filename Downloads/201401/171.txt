@@ -1,0 +1,90 @@
+From users-return-135263-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 28 06:56:20 2014
+Return-Path: <users-return-135263-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4D2FB108C1
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 28 Jan 2014 06:56:20 +0000 (UTC)
+Received: (qmail 10785 invoked by uid 500); 28 Jan 2014 06:56:16 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 10522 invoked by uid 500); 28 Jan 2014 06:56:12 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 10514 invoked by uid 99); 28 Jan 2014 06:56:10 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 06:56:10 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [141.35.1.28] (HELO mailout0.rz.uni-jena.de) (141.35.1.28)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 06:56:05 +0000
+Received: from mailsmtp1.rz.uni-jena.de (mailsmtp1.rz.uni-jena.de [141.35.1.18])
+	by mailout0.rz.uni-jena.de (8.14.4/8.14.4) with ESMTP id s0S6thEb004763
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+	for <users@maven.apache.org>; Tue, 28 Jan 2014 07:55:43 +0100
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=uni-jena.de;
+	s=dkim-2013; t=1390892143;
+	bh=rkLhH2SXOEkwY2FEQ+r7tU0B0G90iF8FCgaoIiKqEN4=;
+	h=Message-ID:Date:From:MIME-Version:To:Subject:Content-Type:
+	 Content-Transfer-Encoding;
+	b=eaGjrUgoTWe5ZYlQh35eur3An1HpWYfBt+tzBcetdJ7Yg9vdhEcnSv/YML/NTtUOa
+	 Nwar6QSF/SEI+n0jHm7sLPahXRpFnbx1r1Q6KWM9yqC6irEyhYa8leNYR7Ou7y8FFJ
+	 N8bY4ryOC/YtIJi2UslqLXUdD12BfEUfVwcLtHuT2NRAVx5c3bSfkK/mTZupPfQS/J
+	 l6Fv6UX5O+CpZfafFQUNhPn3MSmS2kILvDv0o0fwYq2cp0/bWXySsXJwo77jYUKZo1
+	 3JpU7Ky3SxiPV/FXJGgo2Ka1M0BsW+Dta52vUa4WT9ReUv/QBgV9QF+QBD45dW96y/
+	 WdMdtY9FrpBsQ==
+Received: from [141.35.20.241] (ulbp2364.thulb.uni-jena.de [141.35.20.241])
+	(authenticated id=m8scth bits=0)
+	by mailsmtp1.rz.uni-jena.de (8.14.4/8.14.4) with ESMTP id s0S6tgpk004183
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-CAMELLIA256-SHA bits=256 verify=NO)
+	for <users@maven.apache.org>; Tue, 28 Jan 2014 07:55:43 +0100
+Message-ID: <52E7546E.6000005@uni-jena.de>
+Date: Tue, 28 Jan 2014 07:55:42 +0100
+From: Thomas Scheffler <thomas.scheffler@uni-jena.de>
+Organization: =?UTF-8?B?RnJpZWRyaWNoLVNjaGlsbGVyLVVuaXZlcnNpdMOkdCBKZW5h?=
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.1.1
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: CLI-SOLR-WebApp integration
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+I want to transform our custom build system to maven and currently I 
+struggle hard. At the moment I have our command line artifact ready 
+(pom-type) which uses appassembler to build shell and batch scripts and 
+uses assembly plugin to produce zip and tar.gz artifacts.
+I am also ready with the webapp artifact which is a deployable war file.
+
+parent
+  |
+  |- common-lib
+  |- cli
+  |- webapp
+
+I want to use Selenium for integration tests on the webapp artifact. To 
+use the webapp artifact I have to call a setup.{sh|bat} file from the 
+cli artifacts. And as webapp and cli uses SOLR for indexing and 
+searching I need to setup this too.
+You see, this is not the easy "enterprise" case from the maven books of 
+sonatype. Does anybody has a simlilar case solved? Any help is really 
+appreciated.
+
+Kind regards
+
+Thomas
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,171 @@
+From users-return-136233-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 22 18:37:56 2014
+Return-Path: <users-return-136233-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 28CBF1108D
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 22 Apr 2014 18:37:56 +0000 (UTC)
+Received: (qmail 34096 invoked by uid 500); 22 Apr 2014 18:37:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 33997 invoked by uid 500); 22 Apr 2014 18:37:51 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 33989 invoked by uid 99); 22 Apr 2014 18:37:51 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Apr 2014 18:37:51 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of anders.g.hammar@gmail.com designates 74.125.82.175 as permitted sender)
+Received: from [74.125.82.175] (HELO mail-we0-f175.google.com) (74.125.82.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Apr 2014 18:37:46 +0000
+Received: by mail-we0-f175.google.com with SMTP id q58so5303210wes.20
+        for <users@maven.apache.org>; Tue, 22 Apr 2014 11:37:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=P/fCJT/KyP9+sXweBdyGaqwiGWYy2lkxoICVxytLljs=;
+        b=D+uV3JTjHY8GGgm1JE5ck48vyiAsQcVtpamBjmJm9hHGIdzT8gcEYYSwAOhLPMhJgW
+         Jq0L+F2XOv4Son+OpgPI2T/GesSP3P/92fSQ7l/r0awZlPFVfXQcfqb5ndOVi78Hyu88
+         QDkEbea00uU0smMXpXFN2/MzLDJS20nf3wMWZ8p8yvAn2pmjNGCnAF6tnWOHq9ibsfm8
+         yuQPqPPz+c6EHZoZKXr1IMwst6nokZPOZaco0in8/xauktSoO1S3kyg9YoL+5orwuFzW
+         yJlIGKRrzy0ny8cVQW/ZkuBPYxfybn0votbFMT9NsuoVqb/tYWh/r/eawnauPC/0lqA+
+         xMAA==
+MIME-Version: 1.0
+X-Received: by 10.194.78.77 with SMTP id z13mr3658362wjw.64.1398191845064;
+ Tue, 22 Apr 2014 11:37:25 -0700 (PDT)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.200.162 with HTTP; Tue, 22 Apr 2014 11:37:24 -0700 (PDT)
+In-Reply-To: <CAAqB__sJZ9WU9vY0pqQqUvBZZJwwut2+B-UxoGbyp2M-a98Obg@mail.gmail.com>
+References: <CAAqB__v0TwN+kuL-QYeVQczhX3t+mmd58StYJMtaytFx0ZjnQA@mail.gmail.com>
+	<CA+nPnMzLSP8AvqNwdjdChgkmF7spcpYzuovQqYQSm5r7aj8wmQ@mail.gmail.com>
+	<CAAqB__sJZ9WU9vY0pqQqUvBZZJwwut2+B-UxoGbyp2M-a98Obg@mail.gmail.com>
+Date: Tue, 22 Apr 2014 20:37:24 +0200
+X-Google-Sender-Auth: 32LzAec-PzHpsOMFlBLGo3Winl4
+Message-ID: <CAKDUN1uqiMUQZK3v3g7NqcrvbYVi5QOL==YsU-FvN5aL+mVedQ@mail.gmail.com>
+Subject: Re: Generating war and Jar from same codebase
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bfcfc9840c51704f7a5e823
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bfcfc9840c51704f7a5e823
+Content-Type: text/plain; charset=UTF-8
+
+> My new maven project structure will be :
+>
+> .
+>  | -- pom.xml (parent pom)
+>  | -- pom-war.xml (inherits from parent, generates a war)
+>  | -- pom-jar.xml (inherits from parent, generates a jar)
+>
+> There are no modules in the project. All poms are going to be in the
+> root path of the project.
+>
+
+Wrong!
+You should create two modules; one for the jar project and one for the war
+project. Follow the Maven standards and you can use any of the many
+examples of this on the Internet.
+I believe we haven't pushed the mantra for some time now, so here it comes:
+Don't fight Maven!
+
+/Anders
+
+
+>
+> 1. Any examples on how to write the parent pom referencing the same
+> codebase for the child poms.
+> Will there be a <module> tag for parent pom.  I understand that the
+> packaging for parent pom will be "pom".
+>
+> 2. The child poms will have <relativePath> in <parent> tag as
+> ./pom.xml. Please correct me if this is wrong.
+>
+> Thanks
+> Narayanan
+>
+>
+>
+>
+>
+> Narayanan
+>
+> On Tue, Apr 22, 2014 at 12:38 AM, Stephen Connolly
+> <stephen.alan.connolly@gmail.com> wrote:
+> > On 22 April 2014 01:18, Narayanan K <knarayanan88@gmail.com> wrote:
+> >
+> >> Hi
+> >>
+> >> We have a default pom file with packaging "war" for our codebase.
+> >>
+> >> From the same code base we also want to generate a normal jar and a
+> >> fat jar with dependencies.
+> >>
+> >> Currently solution that has been implemented is another pom-jar.xml
+> >> file that has the packaging as jar and maven-assembly-plugin to
+> >> generate the jar with dependencies. We use mvn install -f pom-jar.xml.
+> >>
+> >> But we are in a situation where if any new dependency is added to
+> >> pom.xml, we need to add to pom-jar.xml as well as it is the same
+> >> codebase.
+> >>
+> >> To avoid this we thought of couple of solutions -
+> >>
+> >> 1. Add maven-jar-plugin and maven-assembly-plugin to the default pom
+> >> with packaging war - so it generates a war file, a normal jar file and
+> >> fat jar out of the same pom. So we can do away with the pom-jar.xml.
+> >>
+> >> Not sure if this is a good solution. We tried this, but this is
+> >> working well only in maven 3.0.4. The assembly plugin is not working
+> >> well with Maven 2 (which is in our build environment) while generating
+> >> the fat jar.
+> >>
+> >> 2. Have a parent pom and put all the dependencies and plugins in that
+> >> and have 2 child poms in the same codebase with different names
+> >> inherit from parent pom, one that has packaging of war that generates
+> >> war file and the other child pom has packaging jar with maven assembly
+> >> plugin to generate both normal and fat jar. And all new dependencies
+> >> need to be added only to parent pom.
+> >>
+> >> This solution will make us have 3 pom files in codebase, doesnt look
+> >> very elegant,
+> >
+> >
+> > actually depends on your point of view. To me this is the more elegant
+> > solution as you clearly see the relationship between inputs (pom.xml) and
+> > outputs (artifacts, e.g. jars wars, etc)
+> >
+> >
+> >> but will solve our dependency management issues between
+> >> the 2 packaging.
+> >>
+> >>
+> >> Are these good solutions? Is there any other good solution available
+> >> for this scenario ?
+> >>
+> >>
+> >> Regards
+> >> Narayanan
+> >>
+> >> ---------------------------------------------------------------------
+> >> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> >> For additional commands, e-mail: users-help@maven.apache.org
+> >>
+> >>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7bfcfc9840c51704f7a5e823--
+

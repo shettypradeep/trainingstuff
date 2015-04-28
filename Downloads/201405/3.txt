@@ -1,0 +1,149 @@
+From users-return-136387-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat May 17 02:58:25 2014
+Return-Path: <users-return-136387-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9EC1B11966
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 17 May 2014 02:58:25 +0000 (UTC)
+Received: (qmail 51598 invoked by uid 500); 17 May 2014 02:27:02 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 88388 invoked by uid 500); 17 May 2014 02:12:02 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 85049 invoked by uid 99); 17 May 2014 02:09:29 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 17 May 2014 02:09:29 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.215.52 as permitted sender)
+Received: from [209.85.215.52] (HELO mail-la0-f52.google.com) (209.85.215.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 17 May 2014 02:09:26 +0000
+Received: by mail-la0-f52.google.com with SMTP id gl10so2516927lab.39
+        for <users@maven.apache.org>; Fri, 16 May 2014 19:09:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=LIDkDmnRttLMVmvajhAYHMjhMgJMZejqZWCIMrcOddo=;
+        b=Vd8eOvYwNeJu/gF1p5brQG5aMZwB2rlY/53sAzbBadWzRUsRXqZpn6XMAa2lrMLqQe
+         IqZIOcoXxfEdTq7Xx7jil1qcIiwGfqb/+qi0gBaPFQakgz/3vBfTl2elxvenCf6nUgio
+         eXhAH6Fv1ayypfriTFDyk3JbbVRv5LbkKi4E8udaqiDlWlKk+hL2G/fSmwJmoquE8Oq7
+         F6EAqSPoVF+Ia0ZHnllZMyyvYO5YphS4hdL8lFO+qy8p//5bODF7IYt2fOxYGUY7V2BP
+         sN3Lo2p5A4dunVjtg9QmKkypeQnZADNKUKxleJcbXFzQGqEesYouJ2g8hgwvHAU8y/5N
+         kEug==
+MIME-Version: 1.0
+X-Received: by 10.112.219.73 with SMTP id pm9mr4494359lbc.48.1400292543642;
+ Fri, 16 May 2014 19:09:03 -0700 (PDT)
+Received: by 10.114.48.6 with HTTP; Fri, 16 May 2014 19:09:03 -0700 (PDT)
+In-Reply-To: <CAPCjjnF=EM8kExF5_tqm-HD-DH-Mw-2YxYE1RDeqUYX0uXHSvA@mail.gmail.com>
+References: <CAPCjjnHCV0s56hMYAmRWpA3LL99CBVTjvvaKf5Gud4F_mRZ1zg@mail.gmail.com>
+	<CAPCjjnFTqsFAhg6cSAZKuS74QQLyNoPs2KDqO0oLRdTGG7-_-w@mail.gmail.com>
+	<CADN69ynqGoAGWv5Xt9RzZCK-fC8PctGpUqYch=_q08peayWmug@mail.gmail.com>
+	<CAPCjjnF=EM8kExF5_tqm-HD-DH-Mw-2YxYE1RDeqUYX0uXHSvA@mail.gmail.com>
+Date: Fri, 16 May 2014 19:09:03 -0700
+Message-ID: <CAPCjjnFd+6sHC5dAZ4E_yQ6kgwearQtgBr-WHr8UXqDoRJr+AA@mail.gmail.com>
+Subject: Re: http://central.maven.org/maven2/org/eclipse/m2e gone ??
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c3cca2a5434b04f98f03ce
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c3cca2a5434b04f98f03ce
+Content-Type: text/plain; charset=UTF-8
+
+feel like a fool  m2e/lifecycle-mapping is never meant to be at central
+
+http://stackoverflow.com/questions/7409823/m2e-lifecycle-mapping-not-found
+
+
+On Fri, May 16, 2014 at 2:59 PM, Dan Tran <dantran@gmail.com> wrote:
+
+> umm, what worries me why it disappears from maven central which suppose to
+> be a well guarded place?
+>
+> a JIRA case is filed at  https://issues.sonatype.org/browse/CENTRALSRV-74
+>
+> -D
+>
+>
+> On Fri, May 16, 2014 at 1:29 PM, Curtis Rueden <ctrueden@wisc.edu> wrote:
+>
+>> Hi Dan,
+>>
+>> > I am looking for org.eclipse.m2e:lifecycle-mapping:1.0.0
+>> >
+>> > and it is not at maven central any more.
+>>
+>> My team definitely felt the pain of its absence from Central as well.
+>>
+>> To avoid the problem, we use this workaround:
+>>
+>>     <profile>
+>>       <id>only-eclipse</id>
+>>       <activation>
+>>         <property>
+>>           <name>m2e.version</name>
+>>         </property>
+>>       </activation>
+>>       <build>
+>>         <pluginManagement>
+>>           <plugins>
+>>             <!-- This plugin's configuration is used to store Eclipse m2e
+>> settings
+>>                  only. It has no influence on the Maven build itself. -->
+>>             <plugin>
+>>               <groupId>org.eclipse.m2e</groupId>
+>>               <artifactId>lifecycle-mapping</artifactId>
+>>               <version>1.0.0</version>
+>>               <configuration>
+>>                 ...
+>>               </configuration>
+>>             </plugin>
+>>           </plugins>
+>>         </pluginManagement>
+>>       </build>
+>>     </profile>
+>>
+>> Beautiful, right? ;-)
+>>
+>> -Curtis
+>>
+>>
+>> On Fri, May 16, 2014 at 2:48 PM, Dan Tran <dantran@gmail.com> wrote:
+>>
+>> > any one?
+>> >
+>> > http://central.maven.org/maven2/org/eclipse/m2e
+>> >
+>> > Thanks
+>> >
+>> > -D
+>> >
+>> >
+>> > On Thu, May 15, 2014 at 4:34 PM, Dan Tran <dantran@gmail.com> wrote:
+>> >
+>> > > I am looking for org.eclipse.m2e:lifecycle-mapping:1.0.0
+>> > >
+>> > > and it is not at maven central any more.
+>> > >
+>> > > do you see the same thing?
+>> > >
+>> > >
+>> > > Thanks
+>> > >
+>> > > -D
+>> > >
+>> >
+>>
+>
+>
+
+--001a11c3cca2a5434b04f98f03ce--
+

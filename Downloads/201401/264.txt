@@ -1,0 +1,112 @@
+From users-return-134898-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan  2 21:36:42 2014
+Return-Path: <users-return-134898-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6C223105C0
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  2 Jan 2014 21:36:42 +0000 (UTC)
+Received: (qmail 82298 invoked by uid 500); 2 Jan 2014 21:36:39 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 81937 invoked by uid 500); 2 Jan 2014 21:36:39 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 81921 invoked by uid 99); 2 Jan 2014 21:36:39 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Jan 2014 21:36:39 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.192.178 as permitted sender)
+Received: from [209.85.192.178] (HELO mail-pd0-f178.google.com) (209.85.192.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Jan 2014 21:36:32 +0000
+Received: by mail-pd0-f178.google.com with SMTP id y10so14621994pdj.37
+        for <multiple recipients>; Thu, 02 Jan 2014 13:36:11 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :cc:content-type;
+        bh=sxMThB2bWd0xM27XdSYFeWuDVfvUK3ABxBlyxr57myk=;
+        b=drJ2DA7saez3P9OmEUs7cU9lTrKsiqpJ8+zDUu1z5lBjQwcu4rc7TBHcK4NyjlGSvw
+         jkrF43ygyZGLGZ8o5pRsO/CUawDRcMpItxGqrpaIvoL/ZeWT8wn02MHE519g8KjVYfz1
+         hV0b+/efDMLPAc7aZmOfE6bbkNrDMplFgs62n5p1huMia3G5SrQk4T8AoLnaep1DNHs5
+         IC9Ls/q6fnBPhOFH8dOgCxK2Uc5g587re67KLM8HkrkFrA5pGlE9ptMXKhTg7g/a/u47
+         lEe6FaFGJkS8FWWFolfsg3uV6e2HKlGWqaLft4d7+XOVxE837otLV0KsWbuXHp6SkyZL
+         V+Vw==
+MIME-Version: 1.0
+X-Received: by 10.68.190.169 with SMTP id gr9mr90925899pbc.30.1388698570670;
+ Thu, 02 Jan 2014 13:36:10 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Thu, 2 Jan 2014 13:36:10 -0800 (PST)
+In-Reply-To: <A7A9FA9D-7791-4EA1-9C60-46F50A3BA3FF@talios.com>
+References: <CA+nPnMwq2-s+HU=C_gjBehb92KDOePMOd2y9M-gUzmiu6UAnRQ@mail.gmail.com>
+	<CA+nPnMwDQSR7VbdJ82kT_zgnwm_suv-5ecN9XWpbZr2BhHRLTw@mail.gmail.com>
+	<CALhtWkf8NVEF82v_qScYCWQgixUBHM9PbowC_Zuf7bTwtvpMCQ@mail.gmail.com>
+	<37043D9F-E440-4BFE-A62B-A3951168F907@tesla.io>
+	<CA+nPnMxjzbpKyGrbPMughKvLx1bU4_n-EAzoxaekTx2_mq5vEg@mail.gmail.com>
+	<CABLGb9zz=gab_F9UnZh9_0Rai5M2FGf=jNQHJ43HsCYt7Wmp3g@mail.gmail.com>
+	<CA+nPnMxc8hL09_sgVhk_jWKXFVn8_C3f7wxfQ5_NCbrUAKBsLg@mail.gmail.com>
+	<CAArU9iY_K1FmkFX1cx3ebQr13JVKCJYkr9HG3ifjVRnVU38D+Q@mail.gmail.com>
+	<520234cfeea2a93ffe5524c84bb1435a.squirrel@www.mosabuam.com>
+	<CABLGb9w0QWFtHTkz7xWhUgj8T4TXUJjxJFs8Q-BYe0qG88RnRg@mail.gmail.com>
+	<CA+nPnMzkumu_925CV+u+D5_wkHjwLCVSRmwMS6JuHvq16zp3Mg@mail.gmail.com>
+	<23db4a359ac8b220e15f373269ebc967.squirrel@www.mosabuam.com>
+	<CA+nPnMy32UXkeOz7-L8SdYymvuOtcVUGgqLca4UGg4MDade1Qg@mail.gmail.com>
+	<03B56DD5-E957-438E-A30E-439C2785032D@apache.org>
+	<781949f830750555c03856e45275c78b.squirrel@www.mosabuam.com>
+	<CA+nPnMw+yPfmovGb-DCxvgvqjUkboddWzBuHEyHZmauYPkiENw@mail.gmail.com>
+	<CA+nPnMzWqgsVuCMaK6FP0QfXDXSLadyUsP+dMeRy9cW73jdarA@mail.gmail.com>
+	<CA+nPnMyY0ST8OV4hfd1=-0vgEuTff8B8ym4iXwjWF16nW=ESHg@mail.gmail.com>
+	<CA+nPnMwwTCbHO64+axugaBXbttarKr86iembz57RNM_iAr_b7w@mail.gmail.com>
+	<A7A9FA9D-7791-4EA1-9C60-46F50A3BA3FF@talios.com>
+Date: Thu, 2 Jan 2014 21:36:10 +0000
+Message-ID: <CA+nPnMy0eBAW_nqfvcd_tbM4gN1sArbW7+3S1WSZpPfwxc_ZxA@mail.gmail.com>
+Subject: Re: New logo?
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Cc: Maven Developers List <dev@maven.apache.org>
+Content-Type: multipart/alternative; boundary=e89a8ff1c46201493e04ef03951f
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--e89a8ff1c46201493e04ef03951f
+Content-Type: text/plain; charset=ISO-8859-1
+
+Well our current "icon" is somebody's arse behind a laptop... Which with a
+cleaner site looks a tad odd
+
+With the old header bar it was fine though
+
+I have no issue changing the font or colouring, but I think an actual icon
+or emblem is something good to have.
+
+There was some effort to pick a new font, and I would be happy to see
+examples with a different font... My typographic skills are not near the
+level of my poor sketching skills, so I have been hoping somebody else
+could tackle the lettering
+
+
+On Thursday, 2 January 2014, Mark Derricutt wrote:
+
+> Is it me or are a lot of these purely changing the icon, not the "logo".
+>
+> i.e. is the "logo" inclusive of the "mAven" name ( side question - why is
+> the A always a different colour, historic Ant reference? )
+>
+> On 3 Jan 2014, at 2:18, Stephen Connolly wrote:
+>
+> > As 9 is particularly problematic I have sketched -14 which is not a
+> direct
+> > copy of a silhouette. This still has the issue w.r.t. other marks called
+> > maven using a silhouetted raven...
+>
+
+
+-- 
+Sent from my phone
+
+--e89a8ff1c46201493e04ef03951f--
+

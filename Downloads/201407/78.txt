@@ -1,0 +1,87 @@
+From users-return-136950-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 31 13:01:00 2014
+Return-Path: <users-return-136950-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2B950117E4
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 31 Jul 2014 13:01:00 +0000 (UTC)
+Received: (qmail 6690 invoked by uid 500); 31 Jul 2014 13:00:57 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 6610 invoked by uid 500); 31 Jul 2014 13:00:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 6599 invoked by uid 99); 31 Jul 2014 13:00:57 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 31 Jul 2014 13:00:57 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of minfrin@sharp.fm designates 80.168.143.5 as permitted sender)
+Received: from [80.168.143.5] (HELO monica.sharp.fm) (80.168.143.5)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 31 Jul 2014 13:00:53 +0000
+Received: from [10.100.174.98] (unknown [84.233.131.98])
+	(using TLSv1 with cipher AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: minfrin@sharp.fm)
+	by monica.sharp.fm (Postfix) with ESMTPSA id B677580E72
+	for <users@maven.apache.org>; Thu, 31 Jul 2014 14:00:23 +0100 (BST)
+Content-Type: text/plain; charset=windows-1252
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.6\))
+Subject: Re: How to avoid unzip of large test data on each "mvn test"
+From: Graham Leggett <minfrin@sharp.fm>
+In-Reply-To: <1406811333126-5801435.post@n5.nabble.com>
+Date: Thu, 31 Jul 2014 15:00:18 +0200
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <F84CA094-FAE6-4FF7-8AD7-6070504DBE02@sharp.fm>
+References: <1406811333126-5801435.post@n5.nabble.com>
+To: Maven Users List <users@maven.apache.org>
+X-Mailer: Apple Mail (2.1878.6)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 31 Jul 2014, at 2:55 PM, Francois MAROT <francois.marot@gmail.com> =
+wrote:
+
+> I'm in the process of switching to Maven for a large ANT project and =
+have a
+> question regarding my test data.
+> I'd like those data to be versionned and stored in the Maven repo. But
+> currently those data are huge (let's say a 1-2 gigabytes once zipped). =
+So I
+> imagine that if stored in the repo, each time I will run "mvn test" =
+Maven
+> will have to unzip this big zip. It will take a lot of time...
+> Is there a best practise about it ?
+> Is there a way to store the data already unzipped somewhere and have =
+mvn
+> test unzip the archive only if the version has changed ?
+> Any idea ?
+>=20
+> Fran=E7ois
+>=20
+> PS: currently, the existing test code rely on the data being manually
+> unzipped once and for all at a hardcoded location on the disk :/ . =
+Those
+> test data are currently not versionned (with all the related =
+problems).
+
+Sounds like you want to treat this set of tests as integration tests, =
+and then run them as required, rather than on every build.
+
+Any way to make these files smaller?
+
+Regards,
+Graham
+=97
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

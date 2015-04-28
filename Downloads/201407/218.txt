@@ -1,0 +1,101 @@
+From users-return-136868-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 24 11:28:59 2014
+Return-Path: <users-return-136868-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CD97B11EE8
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 24 Jul 2014 11:28:59 +0000 (UTC)
+Received: (qmail 1398 invoked by uid 500); 24 Jul 2014 11:28:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 1321 invoked by uid 500); 24 Jul 2014 11:28:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 1303 invoked by uid 99); 24 Jul 2014 11:28:57 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 11:28:57 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of khmarbaise@gmx.de designates 212.227.17.20 as permitted sender)
+Received: from [212.227.17.20] (HELO mout.gmx.net) (212.227.17.20)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 11:28:54 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([91.35.61.175]) by mail.gmx.com
+ (mrgmx101) with ESMTPSA (Nemesis) id 0M3NEK-1WJGyB2OYq-00r0Ui for
+ <users@maven.apache.org>; Thu, 24 Jul 2014 13:28:27 +0200
+Message-ID: <53D0EDDD.9030407@gmx.de>
+Date: Thu, 24 Jul 2014 13:28:29 +0200
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Upload 3rd party jars retaining original names
+References: <5F274ED30832C44A8778291D0DD82A7A36F7D2@ev002.EVANS6.local>
+In-Reply-To: <5F274ED30832C44A8778291D0DD82A7A36F7D2@ev002.EVANS6.local>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:h1EVL2Yysp0UYnQ8SgrZZEuUA59CHkbnmPrqvw94IC8Lj1yP6uN
+ xRT4Tdtf3wLhx4FYriFo0Wxzmpe3hxE8NRtuRx6hGAD75MaeVgicf0Z0YbafuSGxPOyaY+0
+ ier+u5HbR3BW7BSSlgcl/2AkN0bKNavUaLJ8rcJ9IULDAwqu5lYFXeg/uGF/LdHXri3IBua
+ gGajw93lVPjlhz8irBJvw==
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi David,
+
+
+ > Is it possible to put a bunch of 3rd party jars into a Maven repository
+> so that they can be accessed by a project using their original names?
+
+What do you mean by original names? As they were in Ant? More or simple 
+answer to this is no, cause Maven has it's rules how artifacts are 
+stored in a repository.
+
+
+>
+> I am developing against a 3rd party software package that includes about
+> a dozen supporting jar files. I am trying to upload these jars into a
+> Maven repository such that I can put a dependency in my development
+> project that puts all of the original jars on my classpath. I have
+> tried:
+>
+> * insert jars individually (and as a collection) using Nexus console but
+> the stored jar is named {artifactId}-{version}
+This is the rule as artifacts are stored in a repository...
+
+>
+> * create jar projects with various source structures but, again, the
+> stored jar is named {artifactId}-{version}
+The sources structure is not related to the naming rules, cause you 
+should think about how would other consume those artifacts if they do 
+not follow a naming rule...big example see Maven Central....
+
+>
+> * create a jar project containing an assembly: I can make the 3rd party
+> jars visible with their original names but, yet again, they are put into
+> in a jar named {artifactId}-{version}.
+>
+> Context is that I'm just beginning to try and replace historical
+> Ant/Eclipse projects with Maven/Eclipse. I've read through "Maven The
+> Definitive Guide" and Googled as much as I can but I'm at a stage where
+> I'm not even sure I'm asking sensible questions.  If there's a "how to"
+> document around (with worked examples rather than isolated XML
+> fragments) that would be great.  If I'm missing the point of Maven and
+> trying to implement an Ant concept that would be good to know too.
+
+You have to follow the naming rule and change other projects to consume 
+those artifacts with the appropriate naming rules....
+
+Kind regards
+Karl-Heinz Marbaise
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

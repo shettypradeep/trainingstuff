@@ -1,0 +1,93 @@
+From users-return-135259-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan 27 18:44:03 2014
+Return-Path: <users-return-135259-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C7BA110BB7
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 27 Jan 2014 18:44:03 +0000 (UTC)
+Received: (qmail 65194 invoked by uid 500); 27 Jan 2014 18:43:57 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 65104 invoked by uid 500); 27 Jan 2014 18:43:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 65094 invoked by uid 99); 27 Jan 2014 18:43:56 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 27 Jan 2014 18:43:56 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [74.125.83.53] (HELO mail-ee0-f53.google.com) (74.125.83.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 27 Jan 2014 18:43:52 +0000
+Received: by mail-ee0-f53.google.com with SMTP id t10so2440626eei.40
+        for <users@maven.apache.org>; Mon, 27 Jan 2014 10:43:30 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to
+         :content-type;
+        bh=2uoDl0u9hjnVHpE3/PNlxmxBVc+yai4GBk1u0hwrnF8=;
+        b=Du55La/RHZEYH2sWtXrz1Dzmw8t3viC/X7lQPyWqLhyuBew4I28fhjIG951cEpKTJw
+         cNLefTZG9ZeSzSt/sFCMPF4ay8jzVRNl9lHEfj5udbo+MCKpY1jIBGiDweosKh/Go9dS
+         WQkC/cPst8JpuPPXfvIHx9OW7db4yJhk1WsEo4YMKLNfD4RdLc/eDoV2eyyeoU0IcR1e
+         aCDcYI+e7rY5ep9Kl7ZSfnDPtZC9PoHZJ05bw+VQQr2cn7mre3fUBzgaV4AHIUJ2z+je
+         gZ/Tg4lHGaV1/DBeH7y7Ij1UTOmdsn51Cgrd9Tm3vsjTTwNjlMG0IeTl4BacTIN+pY6C
+         BEyQ==
+X-Gm-Message-State: ALoCoQk51jLairHPno3hVON4wlU7hrjHL8nLlEzz2Cd1CfZzfAqcnDktDX3q/HU38WnEuF1IDvep
+MIME-Version: 1.0
+X-Received: by 10.14.241.142 with SMTP id g14mr26658257eer.40.1390848210859;
+ Mon, 27 Jan 2014 10:43:30 -0800 (PST)
+Received: by 10.14.71.72 with HTTP; Mon, 27 Jan 2014 10:43:30 -0800 (PST)
+Date: Mon, 27 Jan 2014 13:43:30 -0500
+Message-ID: <CAC7GPxacdi4JqmC0+gc6BvJJgEvEr8=koyMU1Hy4HkpiWM6FFA@mail.gmail.com>
+Subject: Configure settings.xml to ignore missing profiles?
+From: Andrew Pennebaker <apennebaker@42six.com>
+To: Maven Users <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1132f64a8b8c7b04f0f815a8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1132f64a8b8c7b04f0f815a8
+Content-Type: text/plain; charset=ISO-8859-1
+
+I recently learned how to define multiple profiles in my pom.xml files, and
+activate certain ones by name in my ~/.m2/settings.xml. This helps me with
+complex Maven-Thrift builds, where I want a `mvn generate-sources` locally,
+but my manager doesn't want the remote, continuous integration build to
+require the thrift compiler. For the most part, this works wonderfully.
+
+However, I also work on Maven projects that have nothing to do with Thrift,
+so their pom.xml files don't define a "thrift" profile. For these projects,
+when I run Maven commands (e.g. `mvn test`), Maven spits out a warning:
+
+$ mvn test
+...
+[INFO]
+------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO]
+------------------------------------------------------------------------
+[INFO] Total time: 2.189s
+[INFO] Finished at: Mon Jan 27 13:36:35 EST 2014
+[INFO] Final Memory: 14M/81M
+[INFO]
+------------------------------------------------------------------------
+[WARNING] The requested profile "thrift" could not be activated because it
+does not exist.
+
+I would prefer to hide this warning, by configuring my settings.xml so that
+Maven attempts to activate a "thrift" profile, but silently ignores it when
+missing. Is such a configuration possible?
+
+-- 
+Cheers,
+
+Andrew Pennebaker
+apennebaker@42six.com
+
+--001a1132f64a8b8c7b04f0f815a8--
+

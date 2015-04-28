@@ -1,0 +1,182 @@
+From users-return-135313-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jan 31 11:03:50 2014
+Return-Path: <users-return-135313-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4D663101D8
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 31 Jan 2014 11:03:50 +0000 (UTC)
+Received: (qmail 24421 invoked by uid 500); 31 Jan 2014 11:03:47 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 23707 invoked by uid 500); 31 Jan 2014 11:03:45 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 23699 invoked by uid 99); 31 Jan 2014 11:03:44 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 31 Jan 2014 11:03:44 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of anders.g.hammar@gmail.com designates 74.125.82.46 as permitted sender)
+Received: from [74.125.82.46] (HELO mail-wg0-f46.google.com) (74.125.82.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 31 Jan 2014 11:03:39 +0000
+Received: by mail-wg0-f46.google.com with SMTP id x12so8343884wgg.1
+        for <users@maven.apache.org>; Fri, 31 Jan 2014 03:03:18 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=ByRK6JD/HINuQv+nl8ieSBNdQFOzVU9RG87h7P6Flw8=;
+        b=k8naM1cvUgzO6Gr6kGS2u1K/x4py3Zsqmp836JDFEAW1AQYHrBNbu/PTIkuHJDAD5w
+         k8qQ+XRs4wFt7mAQeEhZwlUtoaBHAv3R9ZJ8JKA77HI7Nq6vHYD/SoipgDQcrgPT3UBX
+         58a9yR5P4cMBUvW7l5Ad8OBQZZfu53S0M+/JQCKVsP4/M/6eNJv8nIEA35LIhVsIRiBW
+         pJru9rAKkkhufPvaJtEsU+SYdxXkT/owzjL9H+RQteKQKf5r3QMZKwhOWKaJuSvQ0qk+
+         qKvidnzKhmvFSdwDod7tUPz7ANld6IaQBq1kR9l8gu0LhHaqGWA9cHaKqg9jgekod3RJ
+         LHQA==
+MIME-Version: 1.0
+X-Received: by 10.180.92.169 with SMTP id cn9mr12949696wib.35.1391166198048;
+ Fri, 31 Jan 2014 03:03:18 -0800 (PST)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.137.100 with HTTP; Fri, 31 Jan 2014 03:03:17 -0800 (PST)
+In-Reply-To: <1391165652682-5782890.post@n5.nabble.com>
+References: <1391165652682-5782890.post@n5.nabble.com>
+Date: Fri, 31 Jan 2014 12:03:17 +0100
+X-Google-Sender-Auth: 2phYxK2mJfwr9rY_SMj0OXbXW0w
+Message-ID: <CAKDUN1vB1VArCQjT=QCiNPG659Tp=dwiya+sHHuiUZrDsi_Lqw@mail.gmail.com>
+Subject: Re: local artifact use error
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d0435c0680eee1904f1421f52
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d0435c0680eee1904f1421f52
+Content-Type: text/plain; charset=ISO-8859-1
+
+You've specified the groupId as com.sourceforge.code, not org.sourceforge.code.
+Change in your pom and it should work.
+
+/Anders
+
+
+On Fri, Jan 31, 2014 at 11:54 AM, cyrduf <cyrduf@free.fr> wrote:
+
+> Hi,
+>
+> I use the following command to install a JAR in local repository:
+>
+> mvn install:install-file -Dfile=c:\{module}-{version}.jar
+> -DgroupId=com.sourceforge.code
+> -DartifactId={module} -Dversion={version} -Dpackaging=jar
+> -DgeneratePom=true
+>
+> and its seems to work fine:
+>
+> $ mvn install:install-file
+> -Dfile=C:\\Eclipse\\K2\\W\\covana_old\\lib\\recoder_0.97.jar
+> -DgroupId=com.sourceforge.code -DartifactId=recoder -Dversion=0.97
+> -Dpackaging=jar -DgeneratePom=true
+> [INFO] Scanning for projects...
+> [INFO]
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] Building covana 1.0-SNAPSHOT
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO]
+> [INFO] --- maven-install-plugin:2.4:install-file (default-cli) @ covana ---
+> [INFO] Installing C:\Eclipse\K2\W\covana_old\lib\recoder_0.97.jar to
+>
+> d:\Profiles\xxxx\.m2\repository\com\sourceforge\code\recoder\0.97\recoder-0.97.jar
+> [INFO] Installing C:\cygwin\tmp\mvninstall4213701695268682729.pom to
+>
+> d:\Profiles\xxxx\.m2\repository\com\sourceforge\code\recoder\0.97\recoder-0.97.pom
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] BUILD SUCCESS
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] Total time: 0.610s
+> [INFO] Finished at: Fri Jan 31 11:45:55 CET 2014
+> [INFO] Final Memory: 6M/121M
+> [INFO]
+> ------------------------------------------------------------------------
+>
+> I add the dependency in my project POM file:
+>
+>     <dependency>
+>         <groupId>org.sourceforge.code</groupId>
+>         <artifactId>recoder</artifactId>
+>         <version>0.97</version>
+>     </dependency>
+>
+> But when I launch mvn clean package command it's KO searching central
+> update
+> of my local module...
+> The -offline or -U options doesn't change anything
+>
+> $ mvn clean package
+> [INFO] Scanning for projects...
+> [INFO]
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] Building covana 1.0-SNAPSHOT
+> [INFO]
+> ------------------------------------------------------------------------
+> [WARNING] The POM for org.sourceforge.code:recoder:jar:0.97 is missing, no
+> dependency information available
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] BUILD FAILURE
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] Total time: 1.008s
+> [INFO] Finished at: Fri Jan 31 11:48:50 CET 2014
+> [INFO] Final Memory: 7M/153M
+> [INFO]
+> ------------------------------------------------------------------------
+> [ERROR] Failed to execute goal on project covana: Could not resolve
+> dependencies for project core:covana:jar:1.0-SNAPSHOT: Failure to find
+> org.sourceforge.code:recoder:jar:0.97 in
+> http://repo.maven.apache.org/maven2
+> was cached in the local repository, resolution will not be reattempted
+> until
+> the update interval of central has elapsed or updates are forced -> [Help
+> 1]
+> [ERROR]
+> [ERROR] To see the full stack trace of the errors, re-run Maven with the -e
+> switch.
+> [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+> [ERROR]
+> [ERROR] For more information about the errors and possible solutions,
+> please
+> read the following articles:
+> [ERROR] [Help 1]
+>
+> http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+>
+> Can you help me to use local repository and configure it?
+> Regards
+>
+>
+>
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/local-artifact-use-error-tp5782890.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--f46d0435c0680eee1904f1421f52--
+

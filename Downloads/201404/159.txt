@@ -1,0 +1,114 @@
+From users-return-136273-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 29 06:44:28 2014
+Return-Path: <users-return-136273-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BC3E410C43
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 29 Apr 2014 06:44:28 +0000 (UTC)
+Received: (qmail 83881 invoked by uid 500); 29 Apr 2014 06:44:24 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 83304 invoked by uid 500); 29 Apr 2014 06:44:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 83295 invoked by uid 99); 29 Apr 2014 06:44:13 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 29 Apr 2014 06:44:13 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of gcjtmu-turbine-maven-user-846@m.gmane.org designates 80.91.229.3 as permitted sender)
+Received: from [80.91.229.3] (HELO plane.gmane.org) (80.91.229.3)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 29 Apr 2014 06:44:07 +0000
+Received: from list by plane.gmane.org with local (Exim 4.69)
+	(envelope-from <gcjtmu-turbine-maven-user-846@m.gmane.org>)
+	id 1Wf1lY-0004Gy-G0
+	for users@maven.apache.org; Tue, 29 Apr 2014 08:43:44 +0200
+Received: from mail.scalaris.com ([62.154.225.82])
+        by main.gmane.org with esmtp (Gmexim 0.1 (Debian))
+        id 1AlnuQ-0007hv-00
+        for <users@maven.apache.org>; Tue, 29 Apr 2014 08:43:44 +0200
+Received: from joerg.schaible by mail.scalaris.com with local (Gmexim 0.1 (Debian))
+        id 1AlnuQ-0007hv-00
+        for <users@maven.apache.org>; Tue, 29 Apr 2014 08:43:44 +0200
+X-Injected-Via-Gmane: http://gmane.org/
+To: users@maven.apache.org
+From: =?UTF-8?B?SsO2cmc=?= Schaible <joerg.schaible@swisspost.com>
+Subject: Re: Maven Jar Plugin - Testjar: includes together with skipIfEmpty
+Date: Tue, 29 Apr 2014 08:43:30 +0200
+Organization: Swiss Post Solutions
+Lines: 52
+Message-ID: <ljnhmi$fuv$1@ger.gmane.org>
+References: <CAA9S6i5K=5ot4Kw3JeKpg_0z3FG3CPqWyD-j4_jA08_WTGiqVg@mail.gmail.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8Bit
+X-Complaints-To: usenet@ger.gmane.org
+X-Gmane-NNTP-Posting-Host: mail.scalaris.com
+User-Agent: KNode/4.11.5
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Nick,
+
+Nick Stolwijk wrote:
+
+> Hi Folks,
+> 
+> I found a little curiosity in the maven jar plugin.
+> 
+> if you specify includes and the skipIfEmpty property a jar is still
+> created and attached while it only has a pom file in it. I would have
+> expected that the creation of the jar was skipped if no files where
+> selected by my includes property.
+
+Well, since the default includes the pom, the jar is not empty.
+
+> My usecase: I only want to generate the tests jar when there are
+> builders in the module, so other modules can use those builders in
+> their tests. I don't want to package all tests, to prevent developers
+> to create dependencies on these tests.
+> 
+> My configuration:
+> 
+>             <plugin>
+>                 <artifactId>maven-jar-plugin</artifactId>
+>                 <executions>
+>                     <execution>
+>                         <goals>
+>                             <goal>test-jar</goal>
+>                         </goals>
+>                         <configuration>
+>                             <skipIfEmpty>true</skipIfEmpty>
+>                             <includes>
+>                                 <include>**/*Builder.class</include>
+>                             </includes>
+>                         </configuration>
+>                     </execution>
+>                 </executions>
+>             </plugin>
+
+Configure the archiver to skip the Maven descriptor:
+
+================== %< ==================
+ <configuration>
+   <archive>
+     <addMavenDescriptor>false</addMavenDescriptor>
+   </archive>
+ </configuration>
+================== %< ==================
+
+
+Cheers,
+Jörg
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

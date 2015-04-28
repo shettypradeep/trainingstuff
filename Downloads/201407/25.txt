@@ -1,0 +1,135 @@
+From users-return-136739-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jul  7 21:32:23 2014
+Return-Path: <users-return-136739-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CD69511F41
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  7 Jul 2014 21:32:23 +0000 (UTC)
+Received: (qmail 69103 invoked by uid 500); 7 Jul 2014 21:32:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 69020 invoked by uid 500); 7 Jul 2014 21:32:20 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 69006 invoked by uid 99); 7 Jul 2014 21:32:20 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 07 Jul 2014 21:32:20 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of northrup.james@gmail.com designates 74.125.82.51 as permitted sender)
+Received: from [74.125.82.51] (HELO mail-wg0-f51.google.com) (74.125.82.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 07 Jul 2014 21:32:14 +0000
+Received: by mail-wg0-f51.google.com with SMTP id y10so268004wgg.10
+        for <users@maven.apache.org>; Mon, 07 Jul 2014 14:31:53 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=WUxnDhhd4MpPFdlLkkBkSxNudKRi6Zxxs0ryA7Wh2MU=;
+        b=OPeJ3+XZSa2Y+VN96lBx9Yr8+NshAtJ+WVG8266n3r3ktlldDIawjn+aBfOBuoD8lZ
+         sHY109bR8Y4jOq4NHz9OefEXe1CDfxK1xnJC74cKtg+1HLW2PpVq5KmduXs37BNFZzaE
+         vjehgO3/4zUOpXSAqBItZ9XBdOOuOvxKfU+iV9Qbq4LgFZw5jy8DDC54THKX/Mxuxdyr
+         ZeSXKeXF30emUJN9StN0hw4L7sngSx9QYDxgJQYHqXsHsFVmyOadQidD8C/l61qFxtRr
+         1tVCKBSRjxyS/f112djkiemmUwnVWXtfgUAbbUZiNZXqFBdoCV+qvm+KAdbgq4ko/14P
+         Wv5w==
+X-Received: by 10.180.183.167 with SMTP id en7mr80012993wic.6.1404768712894;
+ Mon, 07 Jul 2014 14:31:52 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.216.82.73 with HTTP; Mon, 7 Jul 2014 14:31:31 -0700 (PDT)
+In-Reply-To: <CAGYyBghR5pw-0daFZLEfMMXsAoYKuwmoJZxO3+Uy79yjb-oJ9A@mail.gmail.com>
+References: <CAGYyBggemkhNybaU9ZkPvtoT2DWCvjg3M7kuZNJajqzzdbn2RA@mail.gmail.com>
+ <CAPkEcwibsDow-b+GLbC2Q12CeZ39jvOn5XbSdcXY4ZOWmANsYA@mail.gmail.com> <CAGYyBghR5pw-0daFZLEfMMXsAoYKuwmoJZxO3+Uy79yjb-oJ9A@mail.gmail.com>
+From: james northrup <northrup.james@gmail.com>
+Date: Mon, 7 Jul 2014 14:31:31 -0700
+Message-ID: <CAPkEcwiWrLQLpC47hs3jsXXu7kX8T-+szcbcfoGZqp2sZZns-w@mail.gmail.com>
+Subject: Re: Running maven shade on a preexisting jar
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c239d41fb09e04fda134e8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c239d41fb09e04fda134e8
+Content-Type: text/plain; charset=UTF-8
+
+shade is a uber jar plugin.  there are 3 uber jar plugins that matter,
+shade, maven-assembly, and proguard.
+
+for beginners:
+all of them work more or less by merging a project into a  single new jar
+just reading the pom dependencies.
+
+maven assembly does the least work.  good for quick jobs
+
+shade-plugin sometimes does a good job but imho if it works once you are
+buying into a false sense of security and will be bitten as you grow a
+project.
+
+proguard is industrial strength and imho returns the best result for
+investing in rtfm.
+
+all of the above have a special configs to do parts and pieces.  a
+beginner's mistake would be to pursue that course of action.  don't.  make
+a simple uber-jar project with one output jar combined from all of the
+input jars, and learn how to exclude collisions.
+
+if you have  some proprietary jar with no source spend some time with jad
+to make source and refactor your packages to do the above, "simple"
+uber-jar
+
+
+On Mon, Jul 7, 2014 at 2:15 PM, Robert James <srobertjames@gmail.com> wrote:
+
+> How do I run Maven Shade on a standalone jar (ie with no sources to
+> build from)? Please realize that I'm a beginner to Maven.
+>
+> On 7/7/14, james northrup <northrup.james@gmail.com> wrote:
+> > hi shade can possibly juxtapose jar deps diffrently from one build to the
+> > next in my experience. if you think you are having collisions you should
+> > probably do 2 things
+> >
+> > 1) use <exclude> on the older jar from the older <dependency> to avoid
+> the
+> > collision
+> > 2) see if proguard fixes what shade breaks, if shade stays broken after
+> #1.
+> >  it's pretty intense
+> >
+> >
+> > On Mon, Jul 7, 2014 at 12:21 PM, Robert James <srobertjames@gmail.com>
+> > wrote:
+> >
+> >> I have a jar that I need to shade - that is, change the name of many
+> >> of the internal classes (to avoid conflicts with another jar) except
+> >> for a few classes which remain exposed.  The jar is already built,
+> >> source is not at hand.  How can I use maven shade to shade that jar?
+> >>
+> >> (Disclaimer: I'm a maven neophyte)
+> >>
+> >> ---------------------------------------------------------------------
+> >> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> >> For additional commands, e-mail: users-help@maven.apache.org
+> >>
+> >>
+> >
+> >
+> > --
+> > Jim Northrup  *  (408) 837-2270 *
+> >
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Jim Northrup  *  (408) 837-2270 *
+
+--001a11c239d41fb09e04fda134e8--
+

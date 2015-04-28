@@ -1,0 +1,80 @@
+From users-return-137401-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Sep 28 11:29:25 2014
+Return-Path: <users-return-137401-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 750B2173CD
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 28 Sep 2014 11:29:25 +0000 (UTC)
+Received: (qmail 80404 invoked by uid 500); 28 Sep 2014 11:29:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 80184 invoked by uid 500); 28 Sep 2014 11:29:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 80153 invoked by uid 99); 28 Sep 2014 11:29:23 -0000
+Received: from mail-relay.apache.org (HELO mail-relay.apache.org) (140.211.11.15)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 28 Sep 2014 11:29:23 +0000
+Received: from mail-lb0-f169.google.com (mail-lb0-f169.google.com [209.85.217.169])
+	by mail-relay.apache.org (ASF Mail Server at mail-relay.apache.org) with ESMTPSA id 3B5FF1A04BB;
+	Sun, 28 Sep 2014 11:29:18 +0000 (UTC)
+Received: by mail-lb0-f169.google.com with SMTP id u10so3091664lbd.14
+        for <multiple recipients>; Sun, 28 Sep 2014 04:29:18 -0700 (PDT)
+X-Received: by 10.152.4.194 with SMTP id m2mr32658408lam.63.1411903758902;
+ Sun, 28 Sep 2014 04:29:18 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.25.216.211 with HTTP; Sun, 28 Sep 2014 04:28:38 -0700 (PDT)
+From: Mirko Friedenhagen <mfriedenhagen@apache.org>
+Date: Sun, 28 Sep 2014 13:28:38 +0200
+Message-ID: <CAK8jvqzKSWL4CZ+H7iNishoX2s0vwGi+W3tx80HSZPQwJfTPkw@mail.gmail.com>
+Subject: [ANN] Apache Maven Changes Plugin 2.11 Released
+To: announce@maven.apache.org, Maven Users List <users@maven.apache.org>
+Cc: Maven Developers List <dev@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+
+The Maven team is pleased to announce the release of the Apache Maven
+Changes Plugin, version 2.11
+
+Creates a release history for inclusion into the site and assists in
+generating an announcement mail.
+
+http://maven.apache.org/plugins/maven-changes-plugin/
+
+You should specify the version in your project's plugin configuration:
+
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-changes-plugin</artifactId>
+  <version>2.11</version>
+</plugin>
+
+
+Release Notes - Apache Maven Changes Plugin - Version 2.11
+
+Task
+* [MCHANGES-343] Update maven-reporting-impl to 2.3
+* [MCHANGES-342] Removed dependency
+plexus-container-default:1.0-alpha-9-stable-1
+* [MCHANGES-341] Externalize JIRA server timeout values to the
+configuration section
+* [MCHANGES-338] Remove redundant anchors set on headings
+* [MCHANGES-337] Improve language style in model and report generator
+* [MCHANGES-336] Enum value for type "remove" is missing
+* [MCHANGES-334] RestJiraDownloader doesn't honor proxy settings
+* [MCHANGES-307] Check for whitespace on fixVersionIds and statusIds
+* [MCHANGES-269] Move anchor location in changes.xml to header
+
+
+Enjoy,
+
+-The Maven team
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

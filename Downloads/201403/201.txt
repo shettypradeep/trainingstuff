@@ -1,0 +1,80 @@
+From users-return-135967-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 27 17:53:05 2014
+Return-Path: <users-return-135967-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BFF6010C1E
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 27 Mar 2014 17:53:05 +0000 (UTC)
+Received: (qmail 2156 invoked by uid 500); 27 Mar 2014 17:52:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 1660 invoked by uid 500); 27 Mar 2014 17:52:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 1620 invoked by uid 99); 27 Mar 2014 17:52:55 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Mar 2014 17:52:55 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of douglass.doug@gmail.com designates 209.85.192.48 as permitted sender)
+Received: from [209.85.192.48] (HELO mail-qg0-f48.google.com) (209.85.192.48)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Mar 2014 17:52:49 +0000
+Received: by mail-qg0-f48.google.com with SMTP id j107so3179228qga.7
+        for <users@maven.apache.org>; Thu, 27 Mar 2014 10:52:27 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=0q+/IYhMczI5ZbsLzgNeUp0yNTHkMBln4qpnbgszpF4=;
+        b=T7CYEewvW9of5HmDInjT+hS1HF+M7vgFmkrZv4oFSCfdNdotu6K6CSDJj0IlFye1kp
+         q1LxlVnK5bNX9sZpbrGefDnNLY73lzDdkH9H6rMhb8cYGQDmC6vdMdQFIZqXZqSFLCbt
+         3LmhZTHctmIAA1+eTlIUAC+Va2zm2qL0eI62NqMPw6jifWHfSpNJSCKEBRQ9iPAjfT8U
+         UrMpnaeWaymf8qL73D42iydWLj4WojYM3tWR/wDP9kbV+y1mJknjOpxKMrEoL2baNev7
+         h/I8ctMDGsdin1MYJiwsnUltlG5E6N3wrtPakw4IWy5VhqghWIIeO9Pqub9l2a9Fnk6M
+         LfbQ==
+MIME-Version: 1.0
+X-Received: by 10.140.48.77 with SMTP id n71mr3648140qga.90.1395942747738;
+ Thu, 27 Mar 2014 10:52:27 -0700 (PDT)
+Received: by 10.224.104.2 with HTTP; Thu, 27 Mar 2014 10:52:27 -0700 (PDT)
+In-Reply-To: <CALy+7UmG40qZqaAK1A6G1Gj7bwsYM2tGceuWG3SJgOBixXu=-A@mail.gmail.com>
+References: <CAGSyEuAkJtsN2UoQZVBS1QFHOgA7R5uXXEmDhEmTsUoy_mAAmA@mail.gmail.com>
+	<CALy+7UmG40qZqaAK1A6G1Gj7bwsYM2tGceuWG3SJgOBixXu=-A@mail.gmail.com>
+Date: Thu, 27 Mar 2014 11:52:27 -0600
+Message-ID: <CAFRBt-Q0GbNo5uk4kjzipptCFmehqnTn=SNUbXFzohcOFrSS5g@mail.gmail.com>
+Subject: Re: Why is "mvn archetype:generate" so low?
+From: Doug Douglass <douglass.doug@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113523309b44fe04f59a3fe9
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113523309b44fe04f59a3fe9
+Content-Type: text/plain; charset=UTF-8
+
+On Thu, Mar 27, 2014 at 8:39 AM, Wayne Fay <waynefay@gmail.com> wrote:
+
+> > [INFO] Generating project in Batch mode.
+> > *It hangs here for hours! *
+> >
+> > what's going on here? why it hangs?
+>
+> Hopefully the silence is deafening for you on this one.
+
+
+Try running the command without -B, perhaps there is some interactive input
+required.
+
+Add -X to the command to see the debug output.
+
+To paraphrase Wayne, it's hard for us to know what the problem is without
+more details.
+
+Doug
+
+--001a113523309b44fe04f59a3fe9--
+

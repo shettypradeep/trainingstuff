@@ -1,0 +1,116 @@
+From users-return-135031-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan  8 22:36:48 2014
+Return-Path: <users-return-135031-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C2A5A10789
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  8 Jan 2014 22:36:48 +0000 (UTC)
+Received: (qmail 19457 invoked by uid 500); 8 Jan 2014 22:36:46 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 19313 invoked by uid 500); 8 Jan 2014 22:36:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 19305 invoked by uid 99); 8 Jan 2014 22:36:46 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 22:36:46 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [206.46.173.11] (HELO vms173011pub.verizon.net) (206.46.173.11)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 22:36:40 +0000
+Received: from gold-family.us ([unknown] [98.114.1.155])
+ by vms173011.mailsrvcs.net
+ (Sun Java(tm) System Messaging Server 7u2-7.02 32bit (built Apr 16 2009))
+ with ESMTPA id <0MZ3009F5TFZZC10@vms173011.mailsrvcs.net> for
+ users@maven.apache.org; Wed, 08 Jan 2014 16:36:00 -0600 (CST)
+Received: from durendal.home (durendal.home [192.168.1.8])
+	by gold-family.us (Postfix) with ESMTP id 98DEB11F9486	for
+ <users@maven.apache.org>; Wed, 08 Jan 2014 17:50:40 -0500 (EST)
+From: Russell Gold <russ@gold-family.us>
+Content-type: multipart/alternative;
+ boundary="Apple-Mail=_A75B12A4-EFD3-40AA-AE8F-07775A9259A5"
+Message-id: <F207B612-71F0-46B8-BECE-233292EB76B8@gold-family.us>
+MIME-version: 1.0 (Mac OS X Mail 7.1 \(1827\))
+Subject: Re: Maven install phase - Access is denied
+Date: Wed, 08 Jan 2014 17:35:56 -0500
+References: <1389155385482-5780920.post@n5.nabble.com>
+ <05F2D212-47B4-45E7-B1BC-934C1185C795@gold-family.us>
+ <1389209934062-5780950.post@n5.nabble.com>
+ <CAEayHEPPyTrRaAkf_b0GuYQbV4rzRrL9FNSEAPKCU9xa8J8qsA@mail.gmail.com>
+ <1389216826662-5780969.post@n5.nabble.com>
+To: Maven Users List <users@maven.apache.org>
+In-reply-to: <1389216826662-5780969.post@n5.nabble.com>
+X-Mailer: Apple Mail (2.1827)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_A75B12A4-EFD3-40AA-AE8F-07775A9259A5
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+I suspect it has to do with your customization of the install goal:
+
+> 			<plugin>
+> 				=
+<groupId>org.apache.maven.plugins</groupId>
+>          		<artifactId>maven-install-plugin</artifactId>
+>          		<version>2.5.1</version>
+>          		<configuration>
+>          			=
+<file>certloader-custom-action.jar</file>
+>          			=
+<file>certloader-custom-action-sources.jar</file>
+>          		</configuration>
+> 			</plugin>
+
+It looks as though your customization is telling it to install something =
+that would not be installed by default.
+
+On Jan 8, 2014, at 4:33 PM, andre999 <andre999@hotmail.com> wrote:
+
+> That's the problem. I do not know how to order maven install NOT to =
+read the
+> directory and not to create repository. Maven install reads the
+> "install4j\certImport" folder and this is where it fails. How can I =
+make
+> maven not to read (skip) this "install4j\certImport" folder?
+>=20
+> Thanks
+>=20
+>=20
+>=20
+> --
+> View this message in context: =
+http://maven.40175.n5.nabble.com/Maven-install-phase-Access-is-denied-tp57=
+80920p5780969.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>=20
+
+-----------------
+Author, Getting Started with Apache Maven =
+<http://www.packtpub.com/getting-started-with-apache-maven/video>
+
+Come read my webnovel, Take a Lemon <http://www.takealemon.com>,=20
+and listen to the Misfile radio play =
+<http://www.fuzzyfacetheater.com/misfile/>!
+
+
+
+
+
+
+
+
+--Apple-Mail=_A75B12A4-EFD3-40AA-AE8F-07775A9259A5--
+

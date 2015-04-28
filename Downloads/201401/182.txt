@@ -1,0 +1,104 @@
+From users-return-135219-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan 20 20:22:21 2014
+Return-Path: <users-return-135219-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B8F2510FA6
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 20 Jan 2014 20:22:21 +0000 (UTC)
+Received: (qmail 51869 invoked by uid 500); 20 Jan 2014 20:22:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 51737 invoked by uid 500); 20 Jan 2014 20:22:14 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 51722 invoked by uid 99); 20 Jan 2014 20:22:14 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Jan 2014 20:22:14 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ljnelson@gmail.com designates 209.85.216.50 as permitted sender)
+Received: from [209.85.216.50] (HELO mail-qa0-f50.google.com) (209.85.216.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Jan 2014 20:22:10 +0000
+Received: by mail-qa0-f50.google.com with SMTP id cm18so5844876qab.23
+        for <users@maven.apache.org>; Mon, 20 Jan 2014 12:21:49 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=4kP9g2IUQ7S2fnw0kTjVFGLTMM8G7gPujbCODlja4D4=;
+        b=QVAsPDyXokqT9wYBidQ2OMrHSyIJOqsOeN8Ln31xE3d65EfQmMwdGYSnDnErY0dCxV
+         pyBE/3lSDZMyDqvQbqqhk2o2rfX+6uAz83x+vOcUvfwh8szKFfS8T5iOHtvlHqYVlPAE
+         KTn6Ks0/twffp+naZC6/6WMGJ/HvWQQBbhn0n75n+TTXe2jxlJWNJmIWZspo11qAEBCX
+         +6gSPZh4cSx7m8g6F8Vb7mczctljjvotxEbGTrqxyqdm97xN9tOdwI6sQl4zzQxqgDw8
+         H692PQfq5X6dzP19LACLw1soVm5wPTUvfA3acd2CwOqPqeHnzp4DiDwzwM46m/idO0dG
+         ou2A==
+MIME-Version: 1.0
+X-Received: by 10.140.83.112 with SMTP id i103mr29757161qgd.100.1390249309508;
+ Mon, 20 Jan 2014 12:21:49 -0800 (PST)
+Received: by 10.96.169.200 with HTTP; Mon, 20 Jan 2014 12:21:49 -0800 (PST)
+In-Reply-To: <CAL2vA_ODuW=48CCtfh42TG+ojvAEMWAFUNtAu4PACEZor7oeVw@mail.gmail.com>
+References: <CAL2vA_ODuW=48CCtfh42TG+ojvAEMWAFUNtAu4PACEZor7oeVw@mail.gmail.com>
+Date: Mon, 20 Jan 2014 12:21:49 -0800
+Message-ID: <CAHNdxunpGWLKfdOnnw5_EkzdDdM8XyeEpq0Q29UXBy7VXTrhdA@mail.gmail.com>
+Subject: Re: maven plugin compatibility with 3.0.X and 3.1.X and Aether
+From: Laird Nelson <ljnelson@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c12c603e195504f06ca479
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c12c603e195504f06ca479
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Mon, Jan 20, 2014 at 10:37 AM, Stephen More <stephen.more@gmail.com>wrot=
+e:
+
+> I am working on a maven plugin that needs to work with both 3.0.X and 3.1=
+.X
+> and Aether ( org.sonatype.aether vs org.eclipse.aether) . What is
+> recommended, one or two separate plugins ? Has anyone already created a
+> utility that will work with either ?
+>
+
+I just went through this.  It's not very well documented.  If you're doing
+dependency resolution, you might gain some insight from my considerable
+pain; see
+https://github.com/ljnelson/maven-artifacts/blob/master/src/main/java/com/e=
+dugility/maven/Artifacts.java#L138to
+get started.
+
+Briefly, the DependencyGraphBuilder component can be injected into your
+plugin, and it does the dirty work of hiding how dependencies are
+discovered.  Here's the javadoc:
+http://maven.apache.org/shared/maven-dependency-tree/apidocs/org/apache/mav=
+en/shared/dependency/graph/DependencyGraphBuilder.html
+
+Similarly, the ArtifactResolver component=E2=80=94while it lives in the
+maven-compat project, and while it consists of lots of deprecated
+methods=E2=80=94has one undeprecated method for resolving an artifact in an
+Eclipse/Sonatype-independent manner.  I found that by leveraging these two
+components I could make my plugin work properly without having to rely on
+either Aether :-).  Here's the javadoc:
+http://maven.apache.org/maven-compat/apidocs/org/apache/maven/artifact/reso=
+lver/ArtifactResolver.html
+You want this method (undocumented; you'll need to dig into the
+DefaultArtifactResolver source code to figure out what things can be null,
+what can't, etc. etc.):
+http://maven.apache.org/ref/3.1.1/maven-compat/apidocs/org/apache/maven/art=
+ifact/resolver/ArtifactResolver.html#resolve(org.apache.maven.artifact.reso=
+lver.ArtifactResolutionRequest)
+
+Best,
+Laird
+
+--=20
+http://about.me/lairdnelson
+
+--001a11c12c603e195504f06ca479--
+

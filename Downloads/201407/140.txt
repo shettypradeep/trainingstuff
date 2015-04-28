@@ -1,0 +1,87 @@
+From users-return-136782-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jul 16 18:23:44 2014
+Return-Path: <users-return-136782-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1590A105EF
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 16 Jul 2014 18:23:44 +0000 (UTC)
+Received: (qmail 29480 invoked by uid 500); 16 Jul 2014 18:23:42 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 29397 invoked by uid 500); 16 Jul 2014 18:23:42 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 29386 invoked by uid 99); 16 Jul 2014 18:23:42 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 16 Jul 2014 18:23:42 +0000
+Received: from localhost (HELO robertscholte) (127.0.0.1)
+  (smtp-auth username rfscholte, mechanism login)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Wed, 16 Jul 2014 18:23:41 +0000
+Content-Type: text/plain; charset=iso-8859-15; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: move data from pom to class or class to pom
+References: <OF1F05DF42.E00CE028-ON85257D17.0063A305-85257D17.00648730@belden.com>
+Date: Wed, 16 Jul 2014 20:23:36 +0200
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.xi3r1mi3kdkhrr@robertscholte>
+In-Reply-To: <OF1F05DF42.E00CE028-ON85257D17.0063A305-85257D17.00648730@belden.com>
+User-Agent: Opera Mail/12.17 (Win32)
+
+http://mojo.codehaus.org/templating-maven-plugin/ is probably the best  
+matching solution for you.
+
+thanks,
+Robert
+
+Op Wed, 16 Jul 2014 20:18:01 +0200 schreef <Alejandro.Endo@miranda.com>:
+
+> I have a java class that has a constant in it (static final String). This
+> string is a version number, e.g. "1.3.2-test". I need to have this same
+> value in a maven plugin configuration (the jaxb plugin) so I am  
+> wondering,
+> is it better to keep the actual declaration in the code and somehow tell
+> maven to take it from the code, or is it better to declare it in the pom
+> and tell java to take the literal value to define the constant from the
+> pom??
+>
+> I don't know how to do either so I would also like to hear some ideas. I
+> am hoping i don't have to use resource filtering since having a source
+> file as a resource is kind of problematic to me. It has to be ONLY that
+> file that gets filtered, it would need to be in a non-standard location
+> not src/main/java (maybe this is not true), and in general, it seems to  
+> me
+> that treating source code as resource is counter-intuitive
+>
+> Has anyone else solved this issue with the DRY principle across behaviour
+> and build system?
+>
+> The short background is that maven generates an XML schema via jaxb and
+> this schema file is then made available at runtime via a service
+>
+> Thank you,
+>
+> Alejandro Endo | Software Designer/Concepteur de logiciels
+>
+>
+> DISCLAIMER:
+> Privileged and/or Confidential information may be contained in this
+> message. If you are not the addressee of this message, you may not
+> copy, use or deliver this message to anyone. In such event, you
+> should destroy the message and kindly notify the sender by reply
+> e-mail. It is understood that opinions or conclusions that do not
+> relate to the official business of the company are neither given
+> nor endorsed by the company.
+> Thank You.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

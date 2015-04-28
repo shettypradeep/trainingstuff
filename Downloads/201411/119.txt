@@ -1,0 +1,114 @@
+From users-return-137807-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Nov 25 01:22:38 2014
+Return-Path: <users-return-137807-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2ACE710A91
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 25 Nov 2014 01:22:38 +0000 (UTC)
+Received: (qmail 77729 invoked by uid 500); 25 Nov 2014 01:22:36 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 77633 invoked by uid 500); 25 Nov 2014 01:22:36 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 77619 invoked by uid 99); 25 Nov 2014 01:22:36 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Nov 2014 01:22:36 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of pgribnau@informatica.com designates 207.46.100.126 as permitted sender)
+Received: from [207.46.100.126] (HELO na01-by2-obe.outbound.protection.outlook.com) (207.46.100.126)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Nov 2014 01:22:28 +0000
+Received: from BN3PR0301MB0836.namprd03.prod.outlook.com (25.160.154.146) by
+ BN3PR0301MB0833.namprd03.prod.outlook.com (25.160.154.143) with Microsoft
+ SMTP Server (TLS) id 15.1.26.15; Tue, 25 Nov 2014 01:21:45 +0000
+Received: from BN3PR0301MB0836.namprd03.prod.outlook.com ([25.160.154.146]) by
+ BN3PR0301MB0836.namprd03.prod.outlook.com ([25.160.154.146]) with mapi id
+ 15.01.0026.003; Tue, 25 Nov 2014 01:21:45 +0000
+From: "Gribnau, Phillip" <pgribnau@informatica.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: Linux Command Line System Property Issue
+Thread-Topic: Linux Command Line System Property Issue
+Thread-Index: AdAIS5UPpy9SuGUkQymYA+TCJXwhhw==
+Date: Tue, 25 Nov 2014 01:21:45 +0000
+Message-ID: <BN3PR0301MB083682B7D7D2057D2FC9D7FACE730@BN3PR0301MB0836.namprd03.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [4.31.199.226]
+x-microsoft-antispam: BCL:0;PCL:0;RULEID:;SRVR:BN3PR0301MB0833;
+x-exchange-antispam-report-test: UriScan:;
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:;SRVR:BN3PR0301MB0833;
+x-forefront-prvs: 040655413E
+x-forefront-antispam-report: SFV:NSPM;SFS:(10019020)(6009001)(199003)(164054003)(53754006)(189002)(50986999)(2501002)(2656002)(54206007)(86362001)(101416001)(54356999)(54606007)(21056001)(76576001)(97736003)(92566001)(15975445006)(19609705001)(16236675004)(92726001)(4396001)(19625215002)(33656002)(31966008)(74316001)(46102003)(19580395003)(110136001)(106356001)(66066001)(122556002)(450100001)(77156002)(62966003)(77096003)(107046002)(107886001)(87936001)(120916001)(20776003)(99286002)(229853001)(2351001)(19300405004)(95666004)(64706001)(105586002)(99396003)(40100003)(15202345003);DIR:OUT;SFP:1102;SCL:1;SRVR:BN3PR0301MB0833;H:BN3PR0301MB0836.namprd03.prod.outlook.com;FPR:;SPF:None;MLV:sfv;PTR:InfoNoRecords;A:1;MX:1;LANG:en;
+Content-Type: multipart/alternative;
+	boundary="_000_BN3PR0301MB083682B7D7D2057D2FC9D7FACE730BN3PR0301MB0836_"
+MIME-Version: 1.0
+X-OriginatorOrg: informatica.com
+X-MS-Exchange-CrossPremises-AuthAs: Internal
+X-MS-Exchange-CrossPremises-AuthMechanism: 03
+X-MS-Exchange-CrossPremises-AuthSource: BN3PR0301MB0836.namprd03.prod.outlook.com
+X-MS-Exchange-CrossPremises-SCL: 1
+X-MS-Exchange-CrossPremises-messagesource: StoreDriver
+X-MS-Exchange-CrossPremises-BCC:
+X-MS-Exchange-CrossPremises-originalclientipaddress: 4.31.199.226
+X-MS-Exchange-CrossPremises-avstamp-service: 1.0
+X-MS-Exchange-CrossPremises-antispam-scancontext: DIR:Originating;SFV:NSPM;SKIP:0;
+X-MS-Exchange-CrossPremises-journaled-to-recipients: Automated-365-00cb7d@journalloma.liveoffice.com+journal@transparentsecurity.com+local-informaticaOffice365@journalloma.liveoffice.com
+X-MS-Exchange-CrossPremises-processed-by-journaling: Journal Agent
+X-OrganizationHeadersPreserved: BN3PR0301MB0833.namprd03.prod.outlook.com
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_000_BN3PR0301MB083682B7D7D2057D2FC9D7FACE730BN3PR0301MB0836_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Everyone,
+
+I am having trouble passing in a value via the command line on bash in linu=
+x, but I have it working correctly on windows.
+
+On the command line, if I pass in the following:
+-DmavenArgLine=3D"arg1 arg2"
+
+The error on linux is: Unknown lifecycle phase "arg2"
+Windows is able to interpret this correctly and show "arg1 arg2" in the out=
+put, verified by using the following plugin:
+
+<plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <configuration>
+              <tasks>
+                <echo>${mavenArgLine}</echo>
+              </tasks>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+
+My need is that the value of mavenArgLine has to be given from the command =
+line as the value can differ from different environments. Is there a way to=
+ pass in the value of mavenArgLine in linux with spaces?
+
+
+Thanks,
+Phillip
+
+
+--_000_BN3PR0301MB083682B7D7D2057D2FC9D7FACE730BN3PR0301MB0836_--
+

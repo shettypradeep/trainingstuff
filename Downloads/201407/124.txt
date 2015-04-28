@@ -1,0 +1,440 @@
+From users-return-136871-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 24 13:02:34 2014
+Return-Path: <users-return-136871-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id AD342110F3
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 24 Jul 2014 13:02:34 +0000 (UTC)
+Received: (qmail 14307 invoked by uid 500); 24 Jul 2014 13:02:32 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 14223 invoked by uid 500); 24 Jul 2014 13:02:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 14211 invoked by uid 99); 24 Jul 2014 13:02:32 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 13:02:32 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of vincent.zurczak@linagora.com designates 109.197.180.137 as permitted sender)
+Received: from [109.197.180.137] (HELO alderaan.linagora.com) (109.197.180.137)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 13:02:30 +0000
+Received: from [192.168.1.15] (dra38-8-78-244-5-202.fbx.proxad.net [78.244.5.202])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(No client certificate requested)
+	by alderaan.linagora.com (Postfix) with ESMTPSA id DE9F1737
+	for <users@maven.apache.org>; Thu, 24 Jul 2014 14:53:33 +0200 (CEST)
+Message-ID: <53D103CD.5060201@linagora.com>
+Date: Thu, 24 Jul 2014 15:02:05 +0200
+From: Vincent Zurczak <vincent.zurczak@linagora.com>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: testing-harness plugin: LocalRepositoryManager is not set
+References: <53CFD6D8.5030200@linagora.com>
+In-Reply-To: <53CFD6D8.5030200@linagora.com>
+Content-Type: multipart/alternative;
+ boundary="------------040309030406050500030903"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------040309030406050500030903
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 8bit
+
+Hi,
+
+Le 23/07/2014 20:29, Karl Heinz Marbaise a écrit :
+> my assumption is to use the maven-compat artifact in your project 
+
+Actually, I already had this artifact in my dependencies. ;)
+Your answer gave me the idea to try without, but it was worst.
+
+
+
+Le 23/07/2014 22:06, Martin Gainty a écrit :
+> MG>woops localRepositoryManager was never set! ...this should help out
+> @Override
+> public  void  initialize()  throws  InitializationException
+> {
+>      RepositorySystem  repositorySystem;
+>      try  {
+>          repositorySystem=  this.plexusComponentManager.getPlexus().lookup(RepositorySystem.class);
+>      }  catch  (ComponentLookupException  e)  {
+>          throw  new  InitializationException("Failed to lookup RepositorySystem",  e);
+>      }
+>
+>      LocalRepository  localRepo=  new  LocalRepository(this.aetherConfiguration.getLocalRepository());
+>      this.localRepositoryManager=  repositorySystem.newLocalRepositoryManager(localRepo);
+> }
+
+I have tried to set the local repository manager by hand.
+I sub-classed MojoRule and overrode the readMavenProject( File ) method 
+to set my local repository...
+
+
+> @Override
+> public MavenProject readMavenProject( File basedir ) throws Exception {
+>
+>         // New
+>         DefaultRepositorySystemSession repositorySession = new 
+> DefaultRepositorySystemSession();
+>         RepositorySystem repositorySystem;
+>         try {
+>             repositorySystem = getContainer().lookup( 
+> RepositorySystem.class );
+>
+>         } catch (ComponentLookupException e) {
+>             throw new InitializationException("Failed to lookup 
+> RepositorySystem", e);
+>         }
+>
+>         LocalRepository localRepo = new LocalRepository( new File( 
+> "/home/vzurczak/.m2/repository" ));
+>         LocalRepositoryManager localRepositoryManager = 
+> repositorySystem.newLocalRepositoryManager( repositorySession, 
+> localRepo );
+>         // New
+>
+>         File pom = new File( basedir, "pom.xml" );
+>         MavenExecutionRequest request = new 
+> DefaultMavenExecutionRequest();
+>         request.setBaseDirectory( basedir );
+>         ProjectBuildingRequest configuration = 
+> request.getProjectBuildingRequest();
+>
+>         // Fix
+>         repositorySession.setLocalRepositoryManager( 
+> localRepositoryManager );
+>         configuration.setRepositorySession( repositorySession );
+>         // Fix
+>
+>         MavenProject project = lookup( ProjectBuilder.class ).build( 
+> pom, configuration ).getProject();
+>         Assert.assertNotNull( project );
+>         return project;
+> }
+
+However, when I run my tests, my plug-in is not found.
+
+
+> [ERROR] Unresolveable build extension: Plugin 
+> net.roboconf:roboconf-maven-plugin:1.0-SNAPSHOT or one of its 
+> dependencies could not be resolved: Failed to read artifact descriptor 
+> for net.roboconf:roboconf-maven-plugin:jar:1.0-SNAPSHOT @
+
+So, setting the usual local repo ignores the plugin under test.
+I don't know if I could add my target directory as some sort of special 
+repo.
+On the other hand, maybe I am not using the testing-harness plugin 
+correctly. :|
+
+For the curious, the project is here. [0]
+You can comment the things related to the roboconf-core module (in the 
+POM and in the validate mojo).
+
+
+
+Le 24/07/2014 04:35, Barrie Treloar a écrit :
+> Back when I was trying to use them you had a choice of 3, I think its 
+> not down to one but I dont know if the documentation on how to set it 
+> up and use it is readily available. When you get your answers, would 
+> you add to the knowledge base? It is always good to get fresh eyes on 
+> these things as the people who already know what's going on make 
+> assumptions that someone just starting out need to know about. 
+
+Sure. I could help to update the documentation... once it works. :)
+Is forking https://github.com/apache/maven-plugin-testing and submitting 
+a pull request the best way to propose a patch?
+
+Best regards,
+
+                         Vincent.
+
+
+
+[ 0 ] : https://github.com/roboconf/roboconf-maven-plugin
+
+
+-- 
+Vincent Zurczak
+Linagora: www.linagora.com <http://www.linagora.com/>
+
+Twitter <https://twitter.com/VincentZurczak> Vincent Zurczak @ LinkedIn 
+<http://fr.linkedin.com/pub/vincent-zurczak/18/b35/6a7> My Skype ID 
+<callto://vincent.zurczak> My English blog <http://vzurczak.wordpress.com>
+
+--------------040309030406050500030903
+Content-Type: multipart/related;
+ boundary="------------040809030402050406020200"
+
+
+--------------040809030402050406020200
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+    <meta content="text/html; charset=ISO-8859-1"
+      http-equiv="Content-Type">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+    Hi,<br>
+    <br>
+    Le 23/07/2014 20:29, Karl Heinz Marbaise a &eacute;crit&nbsp;:<br>
+    <blockquote cite="mid:53CFFEF6.7070601@gmx.de" type="cite">my
+      assumption is to use the maven-compat artifact in your project
+    </blockquote>
+    <br>
+    Actually, I already had this artifact in my dependencies. ;)<br>
+    Your answer gave me the idea to try without, but it was worst.<br>
+    <br>
+    <br>
+    <br>
+    <div class="moz-cite-prefix">Le 23/07/2014 22:06, Martin Gainty a
+      &eacute;crit&nbsp;:<br>
+    </div>
+    <blockquote cite="mid:BLU172-W13808394301216EBA6F0C2AEFE0@phx.gbl"
+      type="cite">
+      <div dir="ltr">MG&gt;woops localRepositoryManager was never set!
+        ...this should help out<br>
+        <div>
+          <pre class="prettyprint"><span class="lit">@Override</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> initialize</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">throws</span><span class="pln"> </span><span class="typ">InitializationException</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="typ">RepositorySystem</span><span class="pln"> repositorySystem</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        repositorySystem </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">plexusComponentManager</span><span class="pun">.</span><span class="pln">getPlexus</span><span class="pun">().</span><span class="pln">lookup</span><span class="pun">(</span><span class="typ">RepositorySystem</span><span class="pun">.</span><span class="kwd">class</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">(</span><span class="highlight"><span class="typ">ComponentLookupException</span></span><span class="pln"> e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">throw</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">InitializationException</span><span class="pun">(</span><span class="str">"Failed to lookup RepositorySystem"</span><span class="pun">,</span><span class="pln"> e</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="typ">LocalRepository</span><span class="pln"> localRepo </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">LocalRepository</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">aetherConfiguration</span><span class="pun">.</span><span class="pln">getLocalRepository</span><span class="pun">());</span><span class="pln">
+    </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">localRepositoryManager </span><span class="pun">=</span><span class="pln"> repositorySystem</span><span class="pun">.</span><span class="pln">newLocalRepositoryManager</span><span class="pun">(</span><span class="pln">localRepo</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span>
+</pre>
+        </div>
+      </div>
+    </blockquote>
+    <br>
+    I have tried to set the local repository manager by hand.<br>
+    I sub-classed MojoRule and overrode the readMavenProject( File )
+    method to set my local repository...<br>
+    <br>
+    <br>
+    <blockquote type="cite">@Override<br>
+      public MavenProject readMavenProject( File basedir ) throws
+      Exception {<br>
+      <br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// New<br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;DefaultRepositorySystemSession repositorySession = new
+      DefaultRepositorySystemSession();<br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;RepositorySystem repositorySystem;<br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;try {<br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;repositorySystem = getContainer().lookup(
+      RepositorySystem.class );<br>
+      <br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;} catch (ComponentLookupException e) {<br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;throw new InitializationException("Failed to lookup
+      RepositorySystem", e);<br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br>
+      <br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;LocalRepository localRepo = new LocalRepository( new File(
+      "/home/vzurczak/.m2/repository" ));<br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;LocalRepositoryManager localRepositoryManager =
+      repositorySystem.newLocalRepositoryManager( repositorySession,
+      localRepo );<br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// New<br>
+      <br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;File pom = new File( basedir, "pom.xml" );<br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;MavenExecutionRequest request = new
+      DefaultMavenExecutionRequest();<br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;request.setBaseDirectory( basedir );<br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;ProjectBuildingRequest configuration =
+      request.getProjectBuildingRequest();<br>
+      <br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// Fix<br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;repositorySession.setLocalRepositoryManager(
+      localRepositoryManager );<br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;configuration.setRepositorySession( repositorySession );<br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// Fix<br>
+      <br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;MavenProject project = lookup( ProjectBuilder.class
+      ).build( pom, configuration ).getProject();<br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Assert.assertNotNull( project );<br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return project;<br>
+      }</blockquote>
+    <br>
+    However, when I run my tests, my plug-in is not found.<br>
+    <br>
+    <br>
+    <blockquote type="cite">[ERROR] Unresolveable build extension:
+      Plugin net.roboconf:roboconf-maven-plugin:1.0-SNAPSHOT or one of
+      its dependencies could not be resolved: Failed to read artifact
+      descriptor for net.roboconf:roboconf-maven-plugin:jar:1.0-SNAPSHOT
+      @ <br>
+    </blockquote>
+    <br>
+    So, setting the usual local repo ignores the plugin under test.<br>
+    I don't know if I could add my target directory as some sort of
+    special repo.<br>
+    On the other hand, maybe I am not using the testing-harness plugin
+    correctly. :|<br>
+    <br>
+    For the curious, the project is here. [0]<br>
+    You can comment the things related to the roboconf-core module (in
+    the POM and in the validate mojo).<br>
+    <br>
+    <br>
+    <br>
+    <div class="moz-cite-prefix">Le 24/07/2014 04:35, Barrie Treloar a
+      &eacute;crit&nbsp;:<br>
+    </div>
+    <blockquote
+cite="mid:CADVp3v_y6nY7RVVkkAmeXUuuwTq1ZQ873mFUL4oOjUEdFneFxQ@mail.gmail.com"
+      type="cite">
+      Back when I was trying to use them you had a choice of 3, I think
+      its not
+      down to one but I dont know if the documentation on how to set it
+      up and
+      use it is readily available.
+      When you get your answers, would you add to the knowledge base?
+      It is always good to get fresh eyes on these things as the people
+      who
+      already know what's going on make assumptions that someone just
+      starting
+      out need to know about.
+    </blockquote>
+    <br>
+    Sure. I could help to update the documentation... once it works. :)<br>
+    Is forking <a class="moz-txt-link-freetext" href="https://github.com/apache/maven-plugin-testing">https://github.com/apache/maven-plugin-testing</a> and
+    submitting a pull request the best way to propose a patch?<br>
+    <br>
+    Best regards,<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vincent.<br>
+    <br>
+    <br>
+    <br>
+    [ 0 ] : <a class="moz-txt-link-freetext" href="https://github.com/roboconf/roboconf-maven-plugin">https://github.com/roboconf/roboconf-maven-plugin</a><br>
+    <br>
+    <br>
+    <div class="moz-signature">-- <br>
+      <meta http-equiv="content-type" content="text/html;
+        charset=ISO-8859-1">
+      <title></title>
+      Vincent Zurczak<br>
+      Linagora: <a href="http://www.linagora.com/">www.linagora.com</a><br>
+      <br>
+      <a href="https://twitter.com/VincentZurczak"><img alt="Twitter"
+          title="Vincent Zurczak @ Twitter"
+          src="cid:part2.07030601.06070904@linagora.com" height="16"
+          border="0" width="16"></a> <a
+        href="http://fr.linkedin.com/pub/vincent-zurczak/18/b35/6a7"><img
+          alt="Vincent Zurczak @ LinkedIn"
+          src="cid:part4.02090803.07020908@linagora.com" height="16"
+          border="0" width="16"></a>&nbsp;<a href="callto://vincent.zurczak"><img
+          alt="My Skype ID"
+          src="cid:part6.09010208.03090903@linagora.com" height="16"
+          border="0" width="16"></a> <a
+        href="http://vzurczak.wordpress.com"><img alt="My English blog"
+          src="cid:part8.03010200.07080407@linagora.com" height="16"
+          border="0" width="16"></a><br>
+    </div>
+  </body>
+</html>
+
+--------------040809030402050406020200
+Content-Type: image/png;
+ name="twitter_16.png"
+Content-Transfer-Encoding: base64
+Content-ID: <part2.07030601.06070904@linagora.com>
+Content-Disposition: inline;
+ filename="twitter_16.png"
+
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAALEgAACxIB0t1+/AAAABV0RVh0Q3JlYXRpb24gVGltZQA2LzI0LzA59sFr4wAAABx0
+RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNAay06AAAAG5SURBVDiNlZNLaxRBEMf/
+0106O240iQm+NiEJepAlgRiDT/TgHvQD+IW8xQ/jyZNgCCSH9SDEQEIuYnzGFTLrPmCHmZ6u
+8rAy0x02YgqKbqqrfv2vajp41YovWZZ1gSziFBYg2NUqaFBq7caV8Gy9FoUI/rNYAPxI0sVW
+mm1QylLXWmE/SU4jAJOakLLUKbeCo9wUB+tv3mOreYBH9xfQeLp6IuAoN8itQBkGWEpv7sSo
+TNXQ3Im9+Cg3DJBhhoUUZIrOF6sbH2WGGWRYwE4eVSrF/uXaa6/g7uoMHjduOQABZVZgpSTo
+sARUazc8wIePXTx8UuZmVv4qcJJcBcft2Z0ZL3ekAhfw4vmcB/jW62MgxxRkzD7AaWHz0yGm
+L0+WBE2AC2AGGesPsToWIc2HgbfvvoPNr+Ls5nwFy7fnyxaGCsR7rqXZCNs/h52OzfpD/Nxv
+YwmuAgGllvF7kGM8IgDA9ekE6swF7McBstyrx4OFq2AZAAC6SY7UMoi0ir92sqlrAkxEGm2l
+MTfew71aFTpQHuBLt4e+EDqJxWE3A2kV07lQrXQSu73XSi769/37c1VD1Z6I9MofNyroYTib
+O14AAAAASUVORK5CYII=
+--------------040809030402050406020200
+Content-Type: image/png;
+ name="linkedin_16.png"
+Content-Transfer-Encoding: base64
+Content-ID: <part4.02090803.07020908@linagora.com>
+Content-Disposition: inline;
+ filename="linkedin_16.png"
+
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAALEgAACxIB0t1+/AAAABV0RVh0Q3JlYXRpb24gVGltZQA2LzI0LzA59sFr4wAAABx0
+RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNAay06AAAAHJSURBVDiNlZE/aBRREMZ/
+u3nnZe9yilEwjaKFCEIIESOsYGMVUMHKRqxs7Kxsgp22acXCYGMTxEI4i3QBwUPxD2KhGOHg
+xCJg9HJusvtm3t2zSLzsGv9cvubNzPfN8M284NLcwijlkboPTcwOEPRcA5ucNxKU64dqlfjI
+vhGCYLBm76G5ksQt0boR9TFAo/V1JwYYqw4j6mMjorTaCQDLbxsAHJj4/zatdoKIYsQKoiUA
+ns3eAODc3OJALsQKRlJFKq5IiMOlawCYqIrvOnTtByaqEJbKW7pUMWIdol0Axq/dBmD0+BRj
+2cZNmt9XKK23OXn0IB8+N+lU9rOrtnfTgcOotYgOA/Du7k0A4tk68zNXAbjz5ClXzk5RizY0
+1+895sWqAqDWEopVRLt9F0Ahvnh6st8McPnMRF8vVgk1E0Qdoi43YCt+8Pwj47ce8fDlJwBO
+HTvc12smhCr6zwGLS8uIOu43lgq8qENFMSrCkGz/hV94/+Vb4c3zKoJxYlEtDsjnv3P5mhOL
+Uaf4TkKYO9Tf1snXemmGc0pQvTDzKhgqnwj37CaIom3iP8GnKb3VDr5rXxvns2kyWfDryeRA
+3ZsIQv8G05v+CelaEnZPj2+7AAAAAElFTkSuQmCC
+--------------040809030402050406020200
+Content-Type: image/png;
+ name="skype_16.png"
+Content-Transfer-Encoding: base64
+Content-ID: <part6.09010208.03090903@linagora.com>
+Content-Disposition: inline;
+ filename="skype_16.png"
+
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAALEgAACxIB0t1+/AAAABV0RVh0Q3JlYXRpb24gVGltZQA2LzI0LzA59sFr4wAAABx0
+RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNAay06AAAAImSURBVDiNlZJNS1RRGMd/
+93rmjuO8NjY2KRYqlCCVoIg7Y6Boo4SbNq2CPkDQIugFCaJNX6GdH6BV6CYoojeDNMxekMKF
+4sw0MDP3Xqd7zp1zWzjccdqkDzyLc87/+b88HOPm8/VemTqxpGPJSY5QZsP+aNWLV4Tdk1se
+601NjGdMjEMOB8BqNTX5xdfLohFJTETMgKWSfxQDDHYbNCKJCeEpzabbqd0o1flTcQh0sG83
+0kVPPo2VioWYTTfAUxrhqQCvGYQPXrHG/GCU2cIQPRETgLLr83SlzFrZJ5JNtLEqwPR8jaeD
+sK+PxLh2PhsOA+TigjsXT3Ipb3VgPV9jSqXxmu2eHc2Eqvfe/ObxZ5tfbhOAsYF4B1Yqjdgn
+aEc4qDqVFXzYqnN3o0RhrJfXroHXbO9LKo1QSiMPEKxVfS5kBABzoxnmWo5ebNZ5+7OKzKRD
+rFIaY2SxGOT7rfAyUa5x+XScqeE048cECdFWLDk+8ytOeN7dkQgl2xEMHbAwfZy4ZbLwcodi
+tJvxnMWDc0n64oK+hOiIq6TuJEgKg+lTcQCeFPIsrlbYq7pAEgDnn30pqRG+r5GtD1ORAc+2
+Pa4ORBnKRrlf6O9Y7KOveyEWwPdbDpyaTyTRBcCtTzZbbpMbwzGSrfzbDc3tVZt3FdVWd5oo
+qTFSD99/M5L5s1bOQrRI/le+00SWJYG9+13o2vqMVvqVtPvOHGq6VYYq/TD3Nmb+AvtXIrG4
+DTNHAAAAAElFTkSuQmCC
+--------------040809030402050406020200
+Content-Type: image/png;
+ name="wordpress_16.png"
+Content-Transfer-Encoding: base64
+Content-ID: <part8.03010200.07080407@linagora.com>
+Content-Disposition: inline;
+ filename="wordpress_16.png"
+
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAALEgAACxIB0t1+/AAAABV0RVh0Q3JlYXRpb24gVGltZQA2LzI0LzA59sFr4wAAABx0
+RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNAay06AAAAJoSURBVDiNlZBBSxtRFIXP
+m84kIwMZJyEpSFZJjVhIqxiVYEFrjRJodlkIoaK4sEIgf6Iu7A+oFpqtvyAyKu6MMzZisBu3
+EQzuKsGV5N3J7UbHtlCoB97i8c4597tPvJmaCjNzDUAWT5MrhHivSilrAwMD2Xg8DiHEfyWZ
+Ge12O3t9fV1TJVEWAJrN5pPGx2IxSKKseJVOs67r/oOiKBgfH8fq6ipej4wAAH6cn6NareL0
+9BS9Xs/33t3dQbwcHvYLgsEgvmxtYeQ++LfqR0eoVCp/FKiSCM+IAADfqlUkk8l/Yn/a2IC8
+9wKAJIJCRCAiRKNRlEolHB4e+oZcLofl5WX/Pjg4CCLC5OQkHnKKRwSSEp83N/E8FsP3kxM/
+8HZmBs7xMW5vbwEAqVQKJCU+rq2BpIT3O8FYJoMPS0vY29vzCxzHARHh4OAAANDr9TA7O4ux
+TOaRgDzP32t+fh4/b26wv7+PdruN1uUlUkNDcBwHAGDbNt7Nzfn7k+c9EjQaDcTjcUxMTMC2
+bdi2jVwuh5WVFezu7uLq6gqtVgsLCwtoNBo+AUKhEEciES4Wi8zMvLOzw4lEgkdHR7ler3On
+0+FEIsHT09NcLpeZmblYLHIkEuFQKMQwDINN02TLsth1Xe50OmyaJqfTaX7Q+vo6m6bJtVqN
+Xddly7LYNE02DIMVz/MgpUS320WhUMDFxQUWFxeRz+f9z8zn8zAMA+FwGIVCAd1uF1JKeJ4H
+aKp6pmkaBzSNg4EA9+k6v0gm+ev2tk9wXK+z1d/PfbrOwUCAA5rGmqaxpqpnUBQlKoRoCiH4
+iaepKEr0F9OjVdvxxAkGAAAAAElFTkSuQmCC
+--------------040809030402050406020200--
+
+--------------040309030406050500030903--
+

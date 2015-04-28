@@ -1,0 +1,88 @@
+From users-return-136682-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jun 27 19:35:14 2014
+Return-Path: <users-return-136682-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A29AC11C70
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 27 Jun 2014 19:35:14 +0000 (UTC)
+Received: (qmail 62625 invoked by uid 500); 27 Jun 2014 19:35:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 62547 invoked by uid 500); 27 Jun 2014 19:35:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 62535 invoked by uid 99); 27 Jun 2014 19:35:12 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 27 Jun 2014 19:35:12 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of khmarbaise@gmx.de designates 212.227.17.21 as permitted sender)
+Received: from [212.227.17.21] (HELO mout.gmx.net) (212.227.17.21)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 27 Jun 2014 19:35:10 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([217.247.1.130]) by mail.gmx.com
+ (mrgmx102) with ESMTPSA (Nemesis) id 0MeMOx-1XJX8z0UrH-00QCzb for
+ <users@maven.apache.org>; Fri, 27 Jun 2014 21:34:46 +0200
+Message-ID: <53ADA2DC.9070607@gmx.de>
+Date: Fri, 27 Jun 2014 18:59:08 +0200
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: M2E and Eclipse Luna ?
+References: <CAPCjjnF2sBjXVNfVTGorFZzE6Qp8JJan2nm8ZbSWR2ZQJOg-iw@mail.gmail.com>	<2643E10B-03A2-47F6-8AC6-A8E91BE4CBEE@takari.io> <CAPCjjnG0mrmEWxO5_emjMQTQA9tWAGeb2H0oWP0TSwA+wSp=4A@mail.gmail.com> <0C723FEB5B4E5642B25B451BA57E2730A2A0DE4F@S1P5DAG3C.EXCHPROD.USA.NET>
+In-Reply-To: <0C723FEB5B4E5642B25B451BA57E2730A2A0DE4F@S1P5DAG3C.EXCHPROD.USA.NET>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:9r5UE81M1rDRx5FRUsPNqDratAfCD/JAR8gr7HKmn58tTX5b7y2
+ ihkn6EbQrZ4IADFOMUG0dg35HSUgnj+rR9p59XhI2RafIQimo6Xa+dZ3qj11bdURDncU9dU
+ gJms7loAKZv3ytIeCqhmxV3ZM8o5ivRefW1FrfGoZzhEL/u95kkjUfHJX7mxjw5Pg3K0GUr
+ u6c3nUiAVUzELH0u8bedQ==
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Jim,
+
+first be aware than in Luna the internal Maven is Maven 3.2.1 so i would 
+check if this is the same as you use on command line or in Kepler which 
+is not the case cause in Kepler is was 3.0.4...
+
+So it might be caused by that...
+
+Have you checked if you get warnings on command at the start of the build ?
+
+
+Kind regards
+Karl-Heinz Marbaise
+
+On 6/27/14 6:49 PM, Jim Garrison wrote:
+>> -----Original Message-----
+>> From: Dan Tran
+>> Sent: Friday, June 27, 2014 9:42 AM
+>> My apology,  should have been clearer
+>>
+>> I installed Eclipse Luna and
+>> https://repository.sonatype.org/content/repositories/forge-sites/m2e-
+>> extras/0.15.0/N/0.15.0.201206251206
+>>
+>> the message at the pom is "Plugin execution not covered by lifecycle
+>> configuration: org.apache.maven.plugins:maven-plugin-
+>> plugin:3.2:descriptor
+>> (execution: default-descriptor, phase: process-classes)"
+>
+> I am also seeing weirdness with Luna. My project works under Kepler but in Luna I get
+>
+> MojoFailureException: Artifact[jar:org.mongodb:mongo-java-driver] has 2 candidates, please provide a classifier.	pom.xml	/etl_app_ear	line 1	Maven Java EE Configuration Problem
+>
+> But there is no problem in the repository with mongo-java-driver.  I can just "delete" this error marker but it reappears every time I do a clean build.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

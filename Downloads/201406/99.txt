@@ -1,0 +1,116 @@
+From users-return-136508-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jun  3 18:32:39 2014
+Return-Path: <users-return-136508-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C34BB10FF4
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  3 Jun 2014 18:32:39 +0000 (UTC)
+Received: (qmail 45503 invoked by uid 500); 3 Jun 2014 18:32:38 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 45411 invoked by uid 500); 3 Jun 2014 18:32:37 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 45400 invoked by uid 99); 3 Jun 2014 18:32:37 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 03 Jun 2014 18:32:37 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mehul.sanghvi@gmail.com designates 209.85.212.172 as permitted sender)
+Received: from [209.85.212.172] (HELO mail-wi0-f172.google.com) (209.85.212.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 03 Jun 2014 18:32:34 +0000
+Received: by mail-wi0-f172.google.com with SMTP id hi2so6993081wib.11
+        for <users@maven.apache.org>; Tue, 03 Jun 2014 11:32:09 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=1DwqTSMAJhUjYxyVg7yfbvfsymlLpLGWZIPT/RAgXvk=;
+        b=nrOoY/5fjiamFw15wl3XVEvlOPg6wOW/EPsUqIBB+hNvLdXGcqSMlksbv5a3tCsHxR
+         YLgfUBXToXsmX5mAauNP5LlzA/lDg7t84YlI1M0hJUx2pb7zB12wC74rNweVmhN4ZTcQ
+         5+hYkUnkeXgYpE16WqLQsopLj0vns8BM8Is/I4JAYiteDN3s45FaeNHP/wzbAddzyDE9
+         zqxGiFDkTFrghzMRI7XPABjVFjAlEv9mgKjptamteOr6SbroCJOVpEzQwhWTHMSlyh+V
+         WYlILDAhpqSQz8cSai64XPUY3OfI0u62PNdhe1neo6ypm03VLZ/3ohYi9yIA+TESyBqZ
+         8PFw==
+MIME-Version: 1.0
+X-Received: by 10.194.184.179 with SMTP id ev19mr18966114wjc.85.1401820329324;
+ Tue, 03 Jun 2014 11:32:09 -0700 (PDT)
+Received: by 10.217.40.136 with HTTP; Tue, 3 Jun 2014 11:32:09 -0700 (PDT)
+In-Reply-To: <DB868287-1453-4702-9EE0-796EF8D375A3@Kriegisch.name>
+References: <CAPo9-A8n50JK4W0fwivPAd-of4s_cZ58FHBAWSud+Gw8R-dHgg@mail.gmail.com>
+	<DB868287-1453-4702-9EE0-796EF8D375A3@Kriegisch.name>
+Date: Tue, 3 Jun 2014 14:32:09 -0400
+Message-ID: <CAPo9-A-zXFW00Ja9u=Ogrxfkj+rVJY=1CucionuPJs4OEQCbdQ@mail.gmail.com>
+Subject: Re: Maven repository management systems
+From: Mehul Sanghvi <mehul.sanghvi@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b87371ec4b90f04faf2ba8c
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b87371ec4b90f04faf2ba8c
+Content-Type: text/plain; charset=UTF-8
+
+Points well taken.  No offence taken. :)
+
+
+On Tue, Jun 3, 2014 at 1:49 PM, Alexander Kriegisch <
+Alexander@kriegisch.name> wrote:
+
+> With all due respect: Can you ask in an even more general way? You do not
+> expect someone to write a full review and comparison of those systems plus
+> migration guide for you, do you? For such general information there are web
+> search engines and tutorials.
+>
+> Constructive hint: Maybe if you explain which concrete problems or
+> shortcomings you see in Nexus OSS, why you consider migration and what you
+> want to achieve with the migration, someone will be glad to help you.
+>
+> I do not mean to be rude, but this is not a very smart way to ask a
+> question on any mailing list.
+> --
+> Alexander Kriegisch
+>
+>
+> > Am 03.06.2014 um 18:55 schrieb Mehul Sanghvi <mehul.sanghvi@gmail.com>:
+> >
+> > Currently we are using Nexus OSS version.  I am leaning toward Archiva,
+> but
+> > there is also
+> > Artifactory.
+> >
+> >
+> > What is involved if we were to migrate from Nexus to one of the others ?
+> > Do the repository URLs
+> > change ?   Or the layout ?
+> >
+> > What do people recommend ?  Why ?
+> >
+> >
+> > cheers,
+> >
+> >      mehul
+> >
+> >
+> > --
+> > Mehul N. Sanghvi
+> > email: mehul.sanghvi@gmail.com
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Mehul N. Sanghvi
+email: mehul.sanghvi@gmail.com
+
+--047d7b87371ec4b90f04faf2ba8c--
+

@@ -1,0 +1,88 @@
+From users-return-136332-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue May  6 00:05:32 2014
+Return-Path: <users-return-136332-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3541111F97
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  6 May 2014 00:05:32 +0000 (UTC)
+Received: (qmail 87130 invoked by uid 500); 6 May 2014 00:05:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 86925 invoked by uid 500); 6 May 2014 00:05:25 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 86917 invoked by uid 99); 6 May 2014 00:05:25 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 06 May 2014 00:05:25 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of baerrach@gmail.com designates 209.85.220.177 as permitted sender)
+Received: from [209.85.220.177] (HELO mail-vc0-f177.google.com) (209.85.220.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 06 May 2014 00:05:17 +0000
+Received: by mail-vc0-f177.google.com with SMTP id if11so66382vcb.36
+        for <users@maven.apache.org>; Mon, 05 May 2014 17:04:57 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=O4HjxnE2JKdDmJZcev5ygpoCUdvMyt+QH9rgmo6DrpU=;
+        b=Ad+0uv5ehIk6UouhfEEtjb42nRxvGGCFjkJImiGd3nw34ko9p3j0xq8WHe+hF6xBir
+         S9qbPaYJ9coP90a3pMr9QngPRJpBPxuijtkC9d4+DwJ4PFaR+sgZtl6vXfizuSFjpcYH
+         Zxt0swHEa85J2WMcM9cAM7ftymTdPuusz/8gFK55ta284mtxI0qs7PrFec7/iybg1JOZ
+         xySifmg/O6IeXOmwkSOwcov4mtQj2Us3cyBlWk85AvOj6a58Plvf/HdRqsXlc9p31T03
+         qpSOmBDPRMyMQBUNClltjfvxvExAQKL/2s0g5JASKsBr+j5U8CmSr0T0KreXhLCooKeg
+         IbTg==
+MIME-Version: 1.0
+X-Received: by 10.221.26.10 with SMTP id rk10mr30519856vcb.0.1399334697108;
+ Mon, 05 May 2014 17:04:57 -0700 (PDT)
+Received: by 10.58.197.98 with HTTP; Mon, 5 May 2014 17:04:57 -0700 (PDT)
+In-Reply-To: <CAPCjjnFMA33p+MbvbM98Zd-M002c8--Phz=qP43KPBFYA933zw@mail.gmail.com>
+References: <CAPCjjnFMA33p+MbvbM98Zd-M002c8--Phz=qP43KPBFYA933zw@mail.gmail.com>
+Date: Tue, 6 May 2014 09:34:57 +0930
+Message-ID: <CADVp3v_v6FY5EdGfp_YpN_W4v7XPgjbiHdZwCye5zFBfw6VQ3Q@mail.gmail.com>
+Subject: Re: use separate mirrors for project dendencies and plugin
+ dependencies ??
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11339ae48b09b504f8afff78
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11339ae48b09b504f8afff78
+Content-Type: text/plain; charset=UTF-8
+
+On 6 May 2014 09:21, Dan Tran <dantran@gmail.com> wrote:
+
+> for legal purpose ( btw, please dont drill me here), I would like to use
+> one mirror as a gate way for all of of my project dependencies,and another
+> mirror as a gate way for all of my plugins and their dependencies
+>
+>
+> is it possible? Posting a settings.xml config here is very much appreciated
+
+
+Having not done this, here is some more insane advice.
+
+I'd use three.
+One proxy to proxy the other two proxies.
+All developers point to the master proxy.
+You can then configure the master proxy to refer to the project
+dependencies proxy and another for plugins dependencies proxy.
+
+You might need a more sophisticated maven repository manager that you can
+restrict what is allowed in the proxies (i.e. it just doesn't go and grab
+stuff for you).
+
+You're going to have to do a lot of fiddling to get this to work.
+I'm not convinced it is going to give you what legal thinks it will...
+
+If you could write up what you tried and whether it worked it would be
+helpful for anyone else attempting the same thing...
+
+--001a11339ae48b09b504f8afff78--
+

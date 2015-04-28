@@ -1,0 +1,102 @@
+From users-return-136165-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr 16 21:00:52 2014
+Return-Path: <users-return-136165-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 35B031066B
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 16 Apr 2014 21:00:52 +0000 (UTC)
+Received: (qmail 76533 invoked by uid 500); 16 Apr 2014 21:00:42 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 76315 invoked by uid 500); 16 Apr 2014 21:00:41 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 76156 invoked by uid 99); 16 Apr 2014 21:00:40 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 16 Apr 2014 21:00:40 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.212.182 as permitted sender)
+Received: from [209.85.212.182] (HELO mail-wi0-f182.google.com) (209.85.212.182)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 16 Apr 2014 21:00:36 +0000
+Received: by mail-wi0-f182.google.com with SMTP id d1so2023499wiv.9
+        for <users@maven.apache.org>; Wed, 16 Apr 2014 14:00:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=fQYS7cThxv60m3Yeeoq880Z//3RlDxQOcQIwuLXIZJE=;
+        b=tcOZhri2D/yTwPtUFxwknDrS5Mk6svIhPoz7gRxpTSNAuAXTkD2vRiBfpeUS7wMwEy
+         +JUR31Jef+AaEp8yS3rGOEJqRhMkAc+jfq7hAH49sDt5cJHSEGVlUoWAXXTbByIKDM2P
+         pFY88fvCXnfOKzw+wK7qaqKOR/Q8GQZdjnC42GQgegmLG6lDb+ESeMZiO+ZlGJg7D3HP
+         1xq6DA+nohJQcMkeQUec0TIQEREApabzgx4D0rIBkxxXD+IrjZCALqhd8cQ2Pqt60tQX
+         vqOmo4B+t/0q3uZaPENgDw1oQAKg4B+by46+ERM3tVKsiTYULEzWAgj5goekw0wgeDpj
+         +M4g==
+MIME-Version: 1.0
+X-Received: by 10.180.82.7 with SMTP id e7mr9299053wiy.6.1397682014338; Wed,
+ 16 Apr 2014 14:00:14 -0700 (PDT)
+Received: by 10.194.205.233 with HTTP; Wed, 16 Apr 2014 14:00:14 -0700 (PDT)
+In-Reply-To: <20140416205004.91504816020@nike.apache.org>
+References: <20140416192551.96C28541@athena.apache.org>
+	<CA+nPnMw=UXrRPgL4yGP0MPYkbeZ7SEV7As3mz4fk7=nag9UhMQ@mail.gmail.com>
+	<20140416205004.91504816020@nike.apache.org>
+Date: Wed, 16 Apr 2014 22:00:14 +0100
+Message-ID: <CA+nPnMy4323uS9PkL5XON3XyEBLia7YfnLNM7EKurfdjYwJkmg@mail.gmail.com>
+Subject: Re: Generated content in generated sites (!)
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d04428802f9441c04f72f3373
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d04428802f9441c04f72f3373
+Content-Type: text/plain; charset=UTF-8
+
+On Wednesday, 16 April 2014, <org.apache.maven.user@io7m.com> wrote:
+
+> On Wed, 16 Apr 2014 20:39:40 +0100
+> Stephen Connolly <stephen.alan.connolly@gmail.com <javascript:;>> wrote:
+>
+> > On Wednesday, 16 April 2014, <org.apache.maven.user@io7m.com<javascript:;>>
+> wrote:
+>
+> > > I'm not averse to writing a custom plugin, but I'd rather not if it's
+> > > not actually required.
+> >
+> >
+> > If you want it applied uniformly, write a plugin. That is the use case
+> for
+> > a plugin (doing the same thing the same way on many projects)
+>
+> Right.
+>
+> Am I correct in thinking that this falls under the umbrella of a
+> reporting plugin?
+>
+> I'm not sure if there's a more direct (plugin) route to insert arbitrary
+> content into a site.
+
+
+If you are contributing to the site-plugin generated site... That's a
+reporting plugin
+
+
+> R
+> M
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org <javascript:;>
+> For additional commands, e-mail: users-help@maven.apache.org<javascript:;>
+>
+>
+
+-- 
+Sent from my phone
+
+--f46d04428802f9441c04f72f3373--
+

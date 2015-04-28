@@ -1,0 +1,551 @@
+From users-return-136829-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jul 22 15:14:43 2014
+Return-Path: <users-return-136829-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F0E4D11784
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 22 Jul 2014 15:14:43 +0000 (UTC)
+Received: (qmail 61650 invoked by uid 500); 22 Jul 2014 15:14:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 61557 invoked by uid 500); 22 Jul 2014 15:14:41 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 61208 invoked by uid 99); 22 Jul 2014 15:14:40 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Jul 2014 15:14:40 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dhoffer6@gmail.com designates 209.85.220.170 as permitted sender)
+Received: from [209.85.220.170] (HELO mail-vc0-f170.google.com) (209.85.220.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Jul 2014 15:14:36 +0000
+Received: by mail-vc0-f170.google.com with SMTP id lf12so15254117vcb.15
+        for <users@maven.apache.org>; Tue, 22 Jul 2014 08:14:13 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=08jnM3EdTc/POf8QzJj5T+cbfikP2T07hLyX1wE4Jbc=;
+        b=i2ZJlmVVh602dCxDgKmRxUrBeLJu2VqMXh0nkgqOqv2fVwRaklh1OsOLbiZOreGSE8
+         +8jIc4ghLQnZe5Pl7BXGTd+UMwN784S0G1Y94zlJqgpY0LLZheSqkeCeM2hxnUfXLTfR
+         NwrPNtISt+x2y7CMmT/g3Ky7P7CvchN73CFAxPhJAjD4hnij3jJb82e+fkvGBXmJmQAp
+         xCERaCBpLUYRP3lpemYSvV+w2suIkawGomHkld+QJDnlxC3onrABmoQaXvkq1EN5tQb7
+         ce6pnpEBxBjKhyfS0SVjXJqRi4LNrHjno/Q9LfYiOFKj2wiB6kYDA59jN+P6feWg4/zS
+         KKKQ==
+MIME-Version: 1.0
+X-Received: by 10.221.68.135 with SMTP id xy7mr15671221vcb.65.1406042052309;
+ Tue, 22 Jul 2014 08:14:12 -0700 (PDT)
+Received: by 10.220.109.1 with HTTP; Tue, 22 Jul 2014 08:14:12 -0700 (PDT)
+In-Reply-To: <CAEBcyzr8NLEKZtNeBO9Lcx4p7S_qMPX8FTuucnGzkTU8WeA9pA@mail.gmail.com>
+References: <CAA8BW8HFWKNmv_ZTE9wuYQMDJ_FxUzhkXAnW_g3wrVFjovj=cA@mail.gmail.com>
+	<53CD80A3.6040302@gmx.de>
+	<CAA8BW8FDv2vZhEg5OSOFkyWuRvUAt_Z_tYx7iV80MuQLEx2fcw@mail.gmail.com>
+	<CAEBcyzq7aznBgKfVH6DzyzWnVmSwTs3zpfrsOZY1xTUnfqaF6g@mail.gmail.com>
+	<BLU172-W40C66356CCF5989329FB7BAEF00@phx.gbl>
+	<CAEBcyzpv85QdvChGKJXDkq1i8dQ3coF_hJuibOYkxfaGwcUvpA@mail.gmail.com>
+	<CAA8BW8GoweJbtwFQZG3Rhshzo+-Zr5=MyeFJ9TqT8mvKhQ+A0g@mail.gmail.com>
+	<CAEBcyzpsG2dDB36aqZ3tVm7Gk=gKpvLq-qXRNzAEx=P8sEVXiA@mail.gmail.com>
+	<61201C6A-08F4-4AEF-A592-81447C4B4DB7@fortysix.ch>
+	<CAEBcyzr8NLEKZtNeBO9Lcx4p7S_qMPX8FTuucnGzkTU8WeA9pA@mail.gmail.com>
+Date: Tue, 22 Jul 2014 09:14:12 -0600
+Message-ID: <CAA8BW8E2CSL_T0tbmT=0HU9Ery8aHRq5W=gCN=u5=r4ZLEZ+YQ@mail.gmail.com>
+Subject: Re: maven-dependency-plugin unpacking aar format?
+From: David Hoffer <dhoffer6@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11337854113a5304fec9addd
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11337854113a5304fec9addd
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+No that's not correct for any maven project I've worked on...we use the MDP
+extensively to unpack.  We use the MAP too but generally that's to create
+some new artifact.
+
+Here is the instructions on the MAP site:
+
+assembly:unpackDeprecated. Use
+org.apache.maven.plugins:maven-dependency-plugin goal: unpack or
+unpack-dependencies instead.
+
+I guess my point is...it doesn't matter to me what the plugin is
+called...but the plugin that supports unpack today which is MDP should
+support AAR too.
+
+
+
+
+
+On Tue, Jul 22, 2014 at 9:08 AM, William Ferguson <
+william.ferguson@xandar.com.au> wrote:
+
+> MDP =3D maven-dependency-plugin
+>
+> @domi yes you would normally use something like the maven-assembly-plugin
+> to disassemble (unpack) an archive.
+>
+>
+> On Wed, Jul 23, 2014 at 12:49 AM, domi <domi@fortysix.ch> wrote:
+>
+> > I think to recall a thread on the dev list about plans to remove the
+> > unpack goal from the dependency plugin, but I can=E2=80=99t find it any=
+more=E2=80=A6
+> > regards Domi
+> >
+> > On 22.07.2014, at 16:29, William Ferguson <
+> william.ferguson@xandar.com.au>
+> > wrote:
+> >
+> > > I totally agree that it makes sense for the dependency plugin to unpa=
+ck
+> > the
+> > > AAR just like all other archives.
+> > >
+> > > I just don't understand why you need the MDP to do so.
+> > >
+> > >
+> > > On Tue, Jul 22, 2014 at 10:58 PM, David Hoffer <dhoffer6@gmail.com>
+> > wrote:
+> > >
+> > >> No that was just an example so I could create a sample project.  Don=
+'t
+> > read
+> > >> too much into this.  They are just AAR dependencies (in my case they
+> > come
+> > >> from our build not public).  The maven dependency plugin should hand=
+le
+> > >> these no different than it handles jars/etc.
+> > >>
+> > >>
+> > >>
+> > >>
+> > >> On Mon, Jul 21, 2014 at 11:32 PM, William Ferguson <
+> > >> william.ferguson@xandar.com.au> wrote:
+> > >>
+> > >>> So an Android library is packaging WSDL inside itself and is
+> expecting
+> > >> you
+> > >>> to use it at build time?
+> > >>>
+> > >>>
+> > >>> On Tue, Jul 22, 2014 at 8:53 AM, Martin Gainty <mgainty@hotmail.com=
+>
+> > >>> wrote:
+> > >>>
+> > >>>> Here is an aar straight from Axis version example:
+> > >>>>
+> > >>>> //layout of version.aar:
+> > >>>>
+> > >>>>   created: META-INF/
+> > >>>>  inflated: META-INF/MANIFEST.MF
+> > >>>>   created: sample/
+> > >>>>   created: sample/axisversion/
+> > >>>>  inflated: sample/axisversion/Version.class
+> > >>>>  inflated: META-INF/services.xml
+> > >>>>
+> > >>>>
+> > >>>> //org.apache.axis2.deployment.DeploymentEngine axis code used to
+> > >>>> populateService with .aar contents:
+> > >>>>
+> > >>>>    protected ArrayList populateService(AxisServiceGroup
+> serviceGroup,
+> > >>>>                                        URL servicesURL,
+> > >>>>                                        String serviceName) throws
+> > >>>> DeploymentException {
+> > >>>>        try {
+> > >>>>            serviceGroup.setServiceGroupName(serviceName);
+> > >>>>            ClassLoader serviceClassLoader =3D Utils.createClassLoa=
+der(
+> > >>>>                    new URL[]{servicesURL},
+> > >>>>                    axisConfig.getServiceClassLoader(),
+> > >>>>                    true,
+> > >>>>                    (File)
+> > >>>>
+> > >>
+> > axisConfig.getParameterValue(Constants.Configuration.ARTIFACTS_TEMP_DIR=
+),
+> > >>>>                    axisConfig.isChildFirstClassLoading());
+> > >>>>            String metainf =3D "meta-inf";
+> > >>>>
+> > >> serviceGroup.setServiceGroupClassLoader(serviceClassLoader);
+> > >>>>            //processing wsdl.list
+> > >>>>            InputStream wsdlfilesStream =3D
+> > >>>>
+> > >>>> serviceClassLoader.getResourceAsStream("meta-inf/wsdl.list");
+> > >>>>            if (wsdlfilesStream =3D=3D null) {
+> > >>>>                wsdlfilesStream =3D
+> > >>>> serviceClassLoader.getResourceAsStream("META-INF/wsdl.list");
+> > >>>>                if (wsdlfilesStream !=3D null) {
+> > >>>>                    metainf =3D "META-INF";
+> > >>>>                }
+> > >>>>            }
+> > >>>>            HashMap servicesMap =3D new HashMap();
+> > >>>>            if (wsdlfilesStream !=3D null) {
+> > >>>>                ArchiveReader reader =3D new ArchiveReader();
+> > >>>>                BufferedReader input =3D new BufferedReader(new
+> > >>>> InputStreamReader(wsdlfilesStream));
+> > >>>>                String line;
+> > >>>>                while ((line =3D input.readLine()) !=3D null) {
+> > >>>>                    line =3D line.trim();
+> > >>>>                    if (line.length() > 0 && line.charAt(0) !=3D '#=
+') {
+> > >>>>                        line =3D metainf + "/" + line;
+> > >>>>                        try {
+> > >>>>                            List services =3D
+> > >>> reader.getAxisServiceFromWsdl(
+> > >>>>
+> > >>>> serviceClassLoader.getResourceAsStream(line),
+> > >>>>                                    serviceClassLoader, line);
+> > >>>>                            if (services !=3D null) {
+> > >>>>                                for (Object service : services) {
+> > >>>>                                    AxisService axisService =3D
+> > >>>> (AxisService) service;
+> > >>>>
+> > >>> servicesMap.put(axisService.getName(),
+> > >>>> axisService);
+> > >>>>                                }
+> > >>>>                            }
+> > >>>>
+> > >>>>                        } catch (Exception e) {
+> > >>>>                            throw new DeploymentException(e);
+> > >>>>                        }
+> > >>>>                    }
+> > >>>>                }
+> > >>>>            }
+> > >>>>            InputStream servicexmlStream =3D
+> > >>>>
+> > >>>> serviceClassLoader.getResourceAsStream("META-INF/services.xml");
+> > >>>>            if (servicexmlStream =3D=3D null) {
+> > >>>>                servicexmlStream =3D
+> > >>>> serviceClassLoader.getResourceAsStream("meta-inf/services.xml");
+> > >>>>            } else {
+> > >>>>                metainf =3D "META-INF";
+> > >>>>            }
+> > >>>>            if (servicexmlStream =3D=3D null) {
+> > >>>>                throw new DeploymentException(
+> > >>>>
+> > >>>> Messages.getMessage(DeploymentErrorMsgs.SERVICE_XML_NOT_FOUND,
+> > >>>>                                servicesURL.toString()));
+> > >>>>            }
+> > >>>>            DescriptionBuilder builder =3D new
+> > >>>> DescriptionBuilder(servicexmlStream, configContext);
+> > >>>>            OMElement rootElement =3D builder.buildOM();
+> > >>>>            String elementName =3D rootElement.getLocalName();
+> > >>>>
+> > >>>>            if (TAG_SERVICE.equals(elementName)) {
+> > >>>>                AxisService axisService =3D null;
+> > >>>>                String wsdlLocation =3D "META-INF/service.wsdl";
+> > >>>>                InputStream wsdlStream =3D
+> > >>>>
+> > >>>> serviceClassLoader.getResourceAsStream(wsdlLocation);
+> > >>>>                URL wsdlURL =3D serviceClassLoader.getResource(meta=
+inf
+> +
+> > >>>> "/service.wsdl");
+> > >>>>                if (wsdlStream =3D=3D null) {
+> > >>>>                    wsdlLocation =3D "META-INF/" + serviceName +
+> ".wsdl";
+> > >>>>                    wsdlStream =3D serviceClassLoader
+> > >>>>                            .getResourceAsStream(wsdlLocation);
+> > >>>>                    wsdlURL =3D
+> > >>> serviceClassLoader.getResource(wsdlLocation);
+> > >>>>                }
+> > >>>>                if (wsdlStream !=3D null) {
+> > >>>>                    WSDL11ToAxisServiceBuilder
+> wsdl2AxisServiceBuilder
+> > >> =3D
+> > >>>>                            new
+> WSDL11ToAxisServiceBuilder(wsdlStream,
+> > >>>> null, null);
+> > >>>>                    File file =3D Utils.toFile(servicesURL);
+> > >>>>                    if (file !=3D null && file.exists()) {
+> > >>>>
+>  wsdl2AxisServiceBuilder.setCustomWSDLResolver(
+> > >>>>                                new AARBasedWSDLLocator(wsdlLocatio=
+n,
+> > >>>> file, wsdlStream));
+> > >>>>                        wsdl2AxisServiceBuilder.setCustomResolver(
+> > >>>>                                new AARFileBasedURIResolver(file));
+> > >>>>                    }
+> > >>>>                    if (wsdlURL !=3D null) {
+> > >>>>
+> > >>>> wsdl2AxisServiceBuilder.setDocumentBaseUri(wsdlURL.toString());
+> > >>>>                    }
+> > >>>>                    axisService =3D
+> > >>>> wsdl2AxisServiceBuilder.populateService();
+> > >>>>                    axisService.setWsdlFound(true);
+> > >>>>                    axisService.setCustomWsdl(true);
+> > >>>>                    axisService.setName(serviceName);
+> > >>>>                }
+> > >>>>                if (axisService =3D=3D null) {
+> > >>>>                    axisService =3D new AxisService(serviceName);
+> > >>>>                }
+> > >>>>
+> > >>>>                axisService.setParent(serviceGroup);
+> > >>>>                axisService.setClassLoader(serviceClassLoader);
+> > >>>>
+> > >>>>                ServiceBuilder serviceBuilder =3D new
+> > >>>> ServiceBuilder(configContext, axisService);
+> > >>>>                AxisService service =3D
+> > >>>> serviceBuilder.populateService(rootElement);
+> > >>>>
+> > >>>>                ArrayList serviceList =3D new ArrayList();
+> > >>>>                serviceList.add(service);
+> > >>>>                return serviceList;
+> > >>>>            } else if (TAG_SERVICE_GROUP.equals(elementName)) {
+> > >>>>                ServiceGroupBuilder groupBuilder =3D new
+> > >>>> ServiceGroupBuilder(rootElement, servicesMap,
+> > >>>>                        configContext);
+> > >>>>                ArrayList servicList =3D
+> > >>>> groupBuilder.populateServiceGroup(serviceGroup);
+> > >>>>                Iterator serviceIterator =3D servicList.iterator();
+> > >>>>                while (serviceIterator.hasNext()) {
+> > >>>>                    AxisService axisService =3D (AxisService)
+> > >>>> serviceIterator.next();
+> > >>>>                    String wsdlLocation =3D "META-INF/service.wsdl"=
+;
+> > >>>>                    InputStream wsdlStream =3D
+> > >>>>
+> > >>>> serviceClassLoader.getResourceAsStream(wsdlLocation);
+> > >>>>                    URL wsdlURL =3D
+> > >>>> serviceClassLoader.getResource(wsdlLocation);
+> > >>>>                    if (wsdlStream =3D=3D null) {
+> > >>>>                        wsdlLocation =3D "META-INF/" + serviceName =
++
+> > >>> ".wsdl";
+> > >>>>                        wsdlStream =3D serviceClassLoader
+> > >>>>                                .getResourceAsStream(wsdlLocation);
+> > >>>>                        wsdlURL =3D
+> > >>>>
+> > >>>> serviceClassLoader.getResource(wsdlLocation);
+> > >>>>                    }
+> > >>>>                    if (wsdlStream !=3D null) {
+> > >>>>                        WSDL11ToAxisServiceBuilder
+> > >>> wsdl2AxisServiceBuilder
+> > >>>> =3D
+> > >>>>                                new
+> > >>> WSDL11ToAxisServiceBuilder(wsdlStream,
+> > >>>> axisService);
+> > >>>>                        File file =3D Utils.toFile(servicesURL);
+> > >>>>                        if (file !=3D null && file.exists()) {
+> > >>>>
+> > >>> wsdl2AxisServiceBuilder.setCustomWSDLResolver(
+> > >>>>                                    new
+> > >> AARBasedWSDLLocator(wsdlLocation,
+> > >>>> file, wsdlStream));
+> > >>>>
+>  wsdl2AxisServiceBuilder.setCustomResolver(
+> > >>>>                                    new
+> AARFileBasedURIResolver(file));
+> > >>>>                        }
+> > >>>>                        if (wsdlURL !=3D null) {
+> > >>>>
+> > >>>> wsdl2AxisServiceBuilder.setDocumentBaseUri(wsdlURL.toString());
+> > >>>>                        }
+> > >>>>                        axisService =3D
+> > >>>> wsdl2AxisServiceBuilder.populateService();
+> > >>>>                        axisService.setWsdlFound(true);
+> > >>>>                        axisService.setCustomWsdl(true);
+> > >>>>                        // Set the default message receiver for the
+> > >>>> operations that were
+> > >>>>                        // not listed in the services.xml
+> > >>>>                        Iterator operations =3D
+> > >>> axisService.getOperations();
+> > >>>>                        while (operations.hasNext()) {
+> > >>>>                            AxisOperation operation =3D (AxisOperat=
+ion)
+> > >>>> operations.next();
+> > >>>>                            if (operation.getMessageReceiver() =3D=
+=3D
+> > >> null) {
+> > >>>>
+> > >>>> operation.setMessageReceiver(loadDefaultMessageReceiver(
+> > >>>>
+> > >>>> operation.getMessageExchangePattern(), axisService));
+> > >>>>                            }
+> > >>>>                        }
+> > >>>>                    }
+> > >>>>                }
+> > >>>>                return servicList;
+> > >>>>            }
+> > >>>>        } catch (IOException e) {
+> > >>>>            throw new DeploymentException(e);
+> > >>>>        } catch (XMLStreamException e) {
+> > >>>>            throw new DeploymentException(e);
+> > >>>>        }
+> > >>>>        return null;
+> > >>>>    }
+> > >>>>
+> > >>>> does this answer your question?
+> > >>>> Martin
+> > >>>> ______________
+> > >>>>
+> > >>>>
+> > >>>>> Date: Tue, 22 Jul 2014 07:56:55 +1000
+> > >>>>> Subject: Re: maven-dependency-plugin unpacking aar format?
+> > >>>>> From: william.ferguson@xandar.com.au
+> > >>>>> To: users@maven.apache.org
+> > >>>>>
+> > >>>>> David, what the use case for unpacking the AAR?
+> > >>>>>
+> > >>>>>
+> > >>>>> William
+> > >>>>>
+> > >>>>>
+> > >>>>> On Tue, Jul 22, 2014 at 7:27 AM, David Hoffer <dhoffer6@gmail.com=
+>
+> > >>>> wrote:
+> > >>>>>
+> > >>>>>> Here is a simplified project showing my use-case, I hope this
+> > >> helps.
+> > >>>> Note
+> > >>>>>> I'm using unpack-dependencies as the aar is a module in the same
+> > >>>> project;
+> > >>>>>> however I assume the same problem exists with unpack, if that's
+> the
+> > >>>> case
+> > >>>>>> that would make the test project even simpler.
+> > >>>>>>
+> > >>>>>> <?xml version=3D"1.0" encoding=3D"UTF-8"?>
+> > >>>>>>
+> > >>>>>> <project xmlns=3D"http://maven.apache.org/POM/4.0.0" xmlns:xsi=
+=3D"
+> > >>>>>> http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=3D=
+"
+> > >>>>>> http://maven.apache.org/POM/4.0.0
+> > >>>>>> http://maven.apache.org/xsd/maven-4.0.0.xsd">
+> > >>>>>>
+> > >>>>>>    <modelVersion>4.0.0</modelVersion>
+> > >>>>>>
+> > >>>>>>    <groupId>com.company.project</groupId>
+> > >>>>>>    <artifactId>service</artifactId>
+> > >>>>>>    <version>1.0-SNAPSHOT</version>
+> > >>>>>>
+> > >>>>>>    <packaging>pom</packaging>
+> > >>>>>>
+> > >>>>>>    <dependencies>
+> > >>>>>>        <!--note: maven-dependency-plug fails reporting that aar =
+is
+> > >>> not
+> > >>>>>> supported-->
+> > >>>>>>        <dependency>
+> > >>>>>>            <groupId>com.company.project</groupId>
+> > >>>>>>            <artifactId>axis-service</artifactId>
+> > >>>>>>            <type>aar</type>
+> > >>>>>>            <version>1.0-SNAPSHOT</version>
+> > >>>>>>        </dependency>
+> > >>>>>>        <!--note: I assume it will have the same problem unpackin=
+g
+> > >> a
+> > >>>> public
+> > >>>>>> artifact such as this-->
+> > >>>>>>        <dependency>
+> > >>>>>>            <groupId>com.helpshift</groupId>
+> > >>>>>>            <artifactId>android-aar</artifactId>
+> > >>>>>>            <version>3.4.2</version>
+> > >>>>>>            <type>aar</type>
+> > >>>>>>        </dependency>
+> > >>>>>>    </dependencies>
+> > >>>>>>
+> > >>>>>>    <build>
+> > >>>>>>        <plugins>
+> > >>>>>>            <plugin>
+> > >>>>>>                <groupId>org.apache.maven.plugins</groupId>
+> > >>>>>>                <artifactId>maven-dependency-plugin</artifactId>
+> > >>>>>>                <executions>
+> > >>>>>>                    <execution>
+> > >>>>>>                        <id>unpack-axis-service</id>
+> > >>>>>>                        <phase>generate-resources</phase>
+> > >>>>>>                        <goals>
+> > >>>>>>                            <goal>unpack-dependencies</goal>
+> > >>>>>>                        </goals>
+> > >>>>>>                        <configuration>
+> > >>>>>>
+> > >>>>>> <includeArtifactIds>axis-service</includeArtifactIds>
+> > >>>>>>
+> > >>>>>>
+> > >>>>>>
+> > >>>>
+> > >>>
+> > >>
+> >
+> <outputDirectory>${project.build.directory}/generated-resources/axis</out=
+putDirectory>
+> > >>>>>>
+> > >>> <overWriteReleases>true</overWriteReleases>
+> > >>>>>>
+> > >>>> <overWriteSnapshots>true</overWriteSnapshots>
+> > >>>>>>
+> > >>>>>> <includes>META-INF/*.wsdl,META-INF/schema/**/*.xsd</includes>
+> > >>>>>>                        </configuration>
+> > >>>>>>                    </execution>
+> > >>>>>>                </executions>
+> > >>>>>>            </plugin>
+> > >>>>>>        </plugins>
+> > >>>>>>    </build>
+> > >>>>>>
+> > >>>>>> </project>
+> > >>>>>>
+> > >>>>>>
+> > >>>>>>
+> > >>>>>> On Mon, Jul 21, 2014 at 3:05 PM, Karl Heinz Marbaise <
+> > >>>> khmarbaise@gmx.de>
+> > >>>>>> wrote:
+> > >>>>>>
+> > >>>>>>> HI David,
+> > >>>>>>>
+> > >>>>>>>
+> > >>>>>>>
+> > >>>>>>>> I'm getting the following error trying to unpack some files
+> > >> from
+> > >>> an
+> > >>>>>> aar.
+> > >>>>>>>
+> > >>>>>>>>  Is this not supported?  Is there any way to do this?
+> > >>>>>>>>
+> > >>>>>>>> Failed to execute goal
+> > >>>>>>>>
+> > >>>>
+> > >>
+> org.apache.maven.plugins:maven-dependency-plugin:2.8:unpack-dependencies
+> > >>>>>>>> (unpack-service) on project service: Unknown archiver type: No
+> > >>> such
+> > >>>>>>>> archiver: 'aar'. -> [Help 1]
+> > >>>>>>>>
+> > >>>>>>>
+> > >>>>>>> Could you please prepare a example project which reproduces the
+> > >>>>>>> problem..so i can create a JIRA issue for this...
+> > >>>>>>>
+> > >>>>>>> Kind regards
+> > >>>>>>> Karl-Heinz Marbaise
+> > >>>>>>>
+> > >>>>>>>
+> > >>> -------------------------------------------------------------------=
+--
+> > >>>>>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > >>>>>>> For additional commands, e-mail: users-help@maven.apache.org
+> > >>>>>>>
+> > >>>>>>>
+> > >>>>>>
+> > >>>>
+> > >>>>
+> > >>>
+> > >>
+> >
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+>
+
+--001a11337854113a5304fec9addd--
+

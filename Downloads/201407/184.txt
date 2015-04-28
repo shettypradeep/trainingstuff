@@ -1,0 +1,54 @@
+From users-return-136726-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul  3 19:39:36 2014
+Return-Path: <users-return-136726-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 05967113E3
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  3 Jul 2014 19:39:36 +0000 (UTC)
+Received: (qmail 5702 invoked by uid 500); 3 Jul 2014 19:39:33 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 5612 invoked by uid 500); 3 Jul 2014 19:39:33 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 5601 invoked by uid 99); 3 Jul 2014 19:39:33 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 03 Jul 2014 19:39:33 +0000
+Received: from localhost (HELO [192.168.1.6]) (127.0.0.1)
+  (smtp-auth username michaelo, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Thu, 03 Jul 2014 19:39:33 +0000
+Message-ID: <53B5B174.70403@apache.org>
+Date: Thu, 03 Jul 2014 21:39:32 +0200
+From: Michael Osipov <michaelo@apache.org>
+User-Agent: Mozilla/5.0 (Windows NT 5.1; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Plugin to invoke SQLLDR
+References: <1403817169379-5797813.post@n5.nabble.com>
+In-Reply-To: <1403817169379-5797813.post@n5.nabble.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Am 2014-06-26 23:12, schrieb hanuman:
+> Hi All,
+>
+> I am planning to invoke SQLLDR from in the POM.xml.
+> any idea which plugin we can use to invoke the same?
+
+The best approach here is use Antrun Plugin or Exec. Externalize the 
+password and do NOT pass as command line arg better yet -- use Oracle 
+Wallet.
+
+Michael
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,69 @@
+From users-return-136120-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Apr 10 14:25:25 2014
+Return-Path: <users-return-136120-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E434E10FA7
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 10 Apr 2014 14:25:25 +0000 (UTC)
+Received: (qmail 266 invoked by uid 500); 10 Apr 2014 14:25:21 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99674 invoked by uid 500); 10 Apr 2014 14:25:20 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99665 invoked by uid 99); 10 Apr 2014 14:25:19 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 10 Apr 2014 14:25:19 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.160.50 as permitted sender)
+Received: from [209.85.160.50] (HELO mail-pb0-f50.google.com) (209.85.160.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 10 Apr 2014 14:25:14 +0000
+Received: by mail-pb0-f50.google.com with SMTP id md12so4028822pbc.37
+        for <users@maven.apache.org>; Thu, 10 Apr 2014 07:24:51 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=aLpoA1zDBDfOmOm3NJghVqVHDNvVaqbhEopVUPyG1l8=;
+        b=owG+n4rWtBKd38A9MHv+XG3OuZGPCRg/Fj+GcWDiJXWa+lO1c2ZkDiMq8OzYXibSSi
+         Zj5AJpgvowJWLz/4v0asH3CS2NiZr/tZ2xEKNUDWac/k0HLUnLw9h7XL1BN1LUniEKz7
+         +6N8hbQ52b7PiEd38naxXziETta81lUlswMDgdudK9k0iLSOyrEC7MUjzbjjhL/xDMRu
+         C3KqAwcKGR7ULl6YAzgVolBh7ip7lge8U+9gMOUZNO6h06YSCS1BILxbzoYDkqFRs6bj
+         FICZTXgGlrGC4iP8gTo5cUOb3NgtBit866k7J0xFhiRs7xAIcA77Nth/UgzLV6k7x0q/
+         4zEw==
+X-Received: by 10.68.252.165 with SMTP id zt5mr20200428pbc.17.1397139891169;
+ Thu, 10 Apr 2014 07:24:51 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.66.148.35 with HTTP; Thu, 10 Apr 2014 07:24:31 -0700 (PDT)
+In-Reply-To: <1397134307645-5790843.post@n5.nabble.com>
+References: <1397129785627-5790839.post@n5.nabble.com> <CAEayHENv5N+fPxbbgyVdNYQHu_jjsQSenoLQVDqHmZNbXOpzFg@mail.gmail.com>
+ <1397134307645-5790843.post@n5.nabble.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Thu, 10 Apr 2014 09:24:31 -0500
+Message-ID: <CALy+7UnJoufzW1yJJ+Ei3tP_dboWv9Son-WQMrBWwYNG_TntDA@mail.gmail.com>
+Subject: Re: Hot deployment using jetty 8 and maven
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> However, it would be great to execute "mvn process-classes" automatically
+> anytime maven sees there have been source files changed.
+
+This is just not a feature that Maven natively supports. You can get
+similar functionality out of your IDE. Or maybe your IDE can use an
+"on save" trigger to kick Maven to run process-classes?
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

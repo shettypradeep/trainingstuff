@@ -1,0 +1,101 @@
+From users-return-137201-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep  5 10:19:39 2014
+Return-Path: <users-return-137201-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 00C6011A14
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  5 Sep 2014 10:19:39 +0000 (UTC)
+Received: (qmail 15237 invoked by uid 500); 5 Sep 2014 10:19:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 15146 invoked by uid 500); 5 Sep 2014 10:19:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 93531 invoked by uid 99); 3 Sep 2014 07:23:18 -0000
+X-ASF-Spam-Status: No, hits=3.9 required=5.0
+	tests=HTML_MESSAGE,MSGID_MULTIPLE_AT,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+From: "Sylvain Roulet" <sylvain.roulet@eloquant.com>
+To: <users@maven.apache.org>
+Subject: Maven release plugin fail during javadoc generation
+Date: Wed, 3 Sep 2014 09:22:33 +0200
+Message-ID: <000001cfc747$dc1123f0$94336bd0$@roulet@eloquant.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0001_01CFC758.9F99F3F0"
+X-Mailer: Microsoft Office Outlook 12.0
+Thread-Index: Ac/GxcvSrDB3RvlZReODBuxYuU2EAg==
+Content-Language: fr
+X-Antivirus: avast! (VPS 140902-1, 02/09/2014), Outbound message
+X-Antivirus-Status: Clean
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+------=_NextPart_000_0001_01CFC758.9F99F3F0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Hello all, 
+
+ 
+
+I've a project since several years and I had not problem to build it.
+
+I recently installed JDK1.7 on my Windows 7 and now my build fail during mvn
+release:perform !
+
+ 
+
+The build fail saying "unmappable character for encoding utf-8".
+
+That's true as my source file are encoded in ISO-8859-1.
+
+ 
+
+So I've added <encoding> ISO-8859-1</encoding> => no change
+
+I try to use env variable : JAVA_TOOL_OPTIONS = -Dfile.encoding=ISO-8859-1
+=> no change
+
+<skip>true</skip> to not generate javadoc => no change...
+
+... 
+
+and a lot of other tests
+
+ 
+
+I finally realized that the option file generated in the folder
+/target/checkout/target/apidocs
+
+contains options saying that encoding is UTF-8 !
+
+ 
+
+I don't think it is a maven javadoc plugin problem as if I run mvn
+javadoc:javadoc, I runs successfully !
+
+ 
+
+Finnaly if I use JDK 1.6 it runs perfectly... But that's not what I want to
+do.
+
+ 
+
+Does any one have any idea why options are not taking into account when
+maven release:perform is executed
+
+ 
+
+Thanks
+
+
+------=_NextPart_000_0001_01CFC758.9F99F3F0--
+
+

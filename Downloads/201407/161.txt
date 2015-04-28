@@ -1,0 +1,139 @@
+From users-return-136793-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 17 17:35:38 2014
+Return-Path: <users-return-136793-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DF21D1173D
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 17 Jul 2014 17:35:37 +0000 (UTC)
+Received: (qmail 99731 invoked by uid 500); 17 Jul 2014 17:35:36 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99651 invoked by uid 500); 17 Jul 2014 17:35:36 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99634 invoked by uid 99); 17 Jul 2014 17:35:35 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 17 Jul 2014 17:35:35 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ctrueden.wisc@gmail.com designates 209.85.220.179 as permitted sender)
+Received: from [209.85.220.179] (HELO mail-vc0-f179.google.com) (209.85.220.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 17 Jul 2014 17:35:33 +0000
+Received: by mail-vc0-f179.google.com with SMTP id hq11so3732758vcb.24
+        for <users@maven.apache.org>; Thu, 17 Jul 2014 10:35:08 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=o/GjVVkbWwWAzDClr9VnG+FG9i6vBgLBMIixvJkfIQY=;
+        b=VkXvZv/rrLlKrAcuYUhlk2Edsxjmt51a6/PG2iDV4HNtzHhPKCf+BkS2e5j+VdaLxN
+         Td45YCPpVZQs/PjiTy3CuxXeX3vDJVNNRsH8umUAFs7MuVlH94tvMqt7FCkuWz/y2SZ4
+         cVPWDalFLuWYTuY2++qV4diy3oNORLA/koQ40MuDDbpkstVpjqhhOXVJDvzGsWJdOsYN
+         9jmzPKTkqzvvsa5ZDZy7fdCdwcZ8tgdwgxH6E9cK8cN0h1udkWFF93cH+YGprATkwxSl
+         mxmCwLFYMvqSdji8BYC39BFtfaUX0r+lR6+Z6hYfI6cG7Voym7fb7MV/bFQaDW/0yoZr
+         vLjw==
+X-Received: by 10.221.68.135 with SMTP id xy7mr16432741vcb.65.1405618508726;
+ Thu, 17 Jul 2014 10:35:08 -0700 (PDT)
+MIME-Version: 1.0
+Sender: ctrueden.wisc@gmail.com
+Received: by 10.58.114.101 with HTTP; Thu, 17 Jul 2014 10:34:38 -0700 (PDT)
+In-Reply-To: <53C7E94E.1010302@gmx.de>
+References: <OF1F05DF42.E00CE028-ON85257D17.0063A305-85257D17.00648730@belden.com>
+ <CADN69ymG8f7j19xuCtUqdXx8yJoLYgaNGuHiyrQcUApdhcUJxA@mail.gmail.com>
+ <OFB1EFD901.4439AF23-ON85257D17.00661468-85257D17.0066DE86@belden.com>
+ <lq83h1$9or$1@ger.gmane.org> <53C7E94E.1010302@gmx.de>
+From: Curtis Rueden <ctrueden@wisc.edu>
+Date: Thu, 17 Jul 2014 12:34:38 -0500
+X-Google-Sender-Auth: LBxBXFKrsgFH5MkfY0gEYb42CX4
+Message-ID: <CADN69ynu=ahY-Z9SaGZddsFVu_5TJgrxQqipPba9AWRuVYHEdA@mail.gmail.com>
+Subject: Re: move data from pom to class or class to pom
+To: Maven Users List <users@maven.apache.org>, info@soebes.de
+Content-Type: multipart/alternative; boundary=001a11337854e708a904fe670f9e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11337854e708a904fe670f9e
+Content-Type: text/plain; charset=UTF-8
+
+Hi all,
+
+> Best and simple solution...which i wrote longer time a go a blog about
+>
+http://blog.soebes.de/blog/2014/01/02/version-information-into-your-appas-with-maven/
+
+I agree with Karl: I think it is much nicer to use the maven-jar-plugin to
+add the version to the JAR manifest, and just read it out of there, using
+the options:
+
+  <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+  <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+
+That's not to say that code generation with Maven isn't awesome though.
+Codehaus deserves major kudos for the buildhelper-maven-plugin, especially
+since it is supported by M2E as well!
+
+In one my projects, we combine this with the groovy-maven-plugin and Apache
+Velocity to auto-generate many classes from templates in a loop.
+https://github.com/imagej/imagej-ops/blob/master/pom.xml#L190-L231
+
+I considered improving the velocity-maven-plugin [1] to support this sort
+of thing (reusing the same template to generate a list of classes), but the
+groovy approach is easy and works just fine.
+
+Now we just need an official Maven page about how to do this, since AFAICT
+all the existing blog posts and SO questions don't explain it very clearly.
+
+Great stuff,
+Curtis
+
+[1] https://code.google.com/p/velocity-maven-plugin/
+
+
+On Thu, Jul 17, 2014 at 10:18 AM, Karl Heinz Marbaise <khmarbaise@gmx.de>
+wrote:
+
+> Hi,
+>
+>
+> > Move the Java code that should contain the version into an own directory
+>
+>> tree (e.g. src/main/java-templates). Replace the version string with an
+>> expression (e.g. "${project.version}") and use the copy-resources goal of
+>> the resources plugin to filter the file into a target driectory tree (e.g.
+>> target/generated-sources). Bind the goal to the generate-sources phase.
+>> Then
+>> use additionally the build-helper plugin to add target/generated-sources
+>> as
+>> additional source directory and you're done.
+>>
+>
+> Best solution was already mentoined by Robert Scholte by using the
+> templating-maven-plugin which exactly supports that scenario without
+> supplemental addition of target/generated-sources folder by
+> build-helpr-maven-plugin etc.
+>
+> Just simply create the template files in src/main/java-templates/ use the
+> expressions etc. no need for supplemental configuration of
+> maven-resources-plugin etc.
+>
+> Best and simple solution...which i wrote longer time a go a blog about
+> http://blog.soebes.de/blog/2014/01/02/version-information-into-your-appas-
+> with-maven/
+>
+> Kind regards
+> Karl-Heinz Marbaise
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a11337854e708a904fe670f9e--
+

@@ -1,0 +1,209 @@
+From users-return-137797-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Nov 22 17:56:28 2014
+Return-Path: <users-return-137797-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F279810702
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 22 Nov 2014 17:56:27 +0000 (UTC)
+Received: (qmail 36095 invoked by uid 500); 22 Nov 2014 17:56:26 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 36011 invoked by uid 500); 22 Nov 2014 17:56:26 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 36000 invoked by uid 99); 22 Nov 2014 17:56:26 -0000
+Received: from mail-relay.apache.org (HELO mail-relay.apache.org) (140.211.11.15)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 22 Nov 2014 17:56:26 +0000
+Received: from mail-qa0-f50.google.com (mail-qa0-f50.google.com [209.85.216.50])
+	by mail-relay.apache.org (ASF Mail Server at mail-relay.apache.org) with ESMTPSA id 139091A048C
+	for <users@maven.apache.org>; Sat, 22 Nov 2014 17:56:19 +0000 (UTC)
+Received: by mail-qa0-f50.google.com with SMTP id w8so4867629qac.9
+        for <users@maven.apache.org>; Sat, 22 Nov 2014 09:56:23 -0800 (PST)
+MIME-Version: 1.0
+X-Received: by 10.140.96.203 with SMTP id k69mr16018180qge.33.1416678983641;
+ Sat, 22 Nov 2014 09:56:23 -0800 (PST)
+Received: by 10.96.209.13 with HTTP; Sat, 22 Nov 2014 09:56:23 -0800 (PST)
+In-Reply-To: <CA+kKrXpBpoT1VNkniCfpEPE8Up27=pxztHg8qyLobMgf8wSCoQ@mail.gmail.com>
+References: <CA+kKrXpBpoT1VNkniCfpEPE8Up27=pxztHg8qyLobMgf8wSCoQ@mail.gmail.com>
+Date: Sat, 22 Nov 2014 11:56:23 -0600
+Message-ID: <CABLGb9zVeGEWdOBv_0RuttbmAb3OnnpQetC0FHQN6KO=Y9Wyxg@mail.gmail.com>
+Subject: Re: i cannot add to my jar the xml files (help me please)
+From: Paul Benedict <pbenedict@apache.org>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113a4dd694b20005087647f2
+
+--001a113a4dd694b20005087647f2
+Content-Type: text/plain; charset=UTF-8
+
+Get your XML and XSLT files out of src/main/java -- and you're filtering
+that directory too. Put them in src/main/resources
+
+
+Cheers,
+Paul
+
+On Sat, Nov 22, 2014 at 11:47 AM, Aitor Iturriondobeitia <
+laudio.info@gmail.com> wrote:
+
+> hello
+> i have one problem and i am working two days an o dont solve it
+> y have into may app (jar) several xml fiels into one dir.
+> when i install the the project, the jar file doesn't constains the xml
+> files. can you help me please?
+> the files are into src/main/java/es.midomain/ernesto/security/templates ans
+> are xml files
+>
+> my pom is this:
+> <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="
+> http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+> http://maven.apache.org/POM/4.0.0
+> http://maven.apache.org/xsd/maven-4.0.0.xsd">
+>   <modelVersion>4.0.0</modelVersion>
+>   <artifactId>Classes</artifactId>
+>   <name>Classes</name>
+>   <description>clasess</description>
+>     <build>
+>         <filters>
+>
+> <filter>${maven.filters.generic.path}/Filters.properties</filter>
+>         </filters>
+>         <resources>
+>             <resource>
+>                 <directory>${basedir}</directory>
+>                 <filtering>false</filtering>
+>                 <includes>
+>                     <include>myfiles/**/*.*</include>
+>                 </includes>
+>             </resource>
+>             <resource>
+>                 <directory>src/main/java/</directory>
+>                 <filtering>true</filtering>
+>                 <includes>
+>                     <include>**/*.xml</include>
+>                     <include>**/*.xslt</include>
+>                 </includes>
+>             </resource>
+>         </resources>
+>         <plugins>
+> <plugin>
+> <artifactId>maven-compiler-plugin</artifactId>
+> <version>3.1</version>
+> <configuration>
+> <source>${jdk.compilation.version}</source>
+> <target>${jdk.compilation.version}</target>
+> <encoding>${charSetEnconding}</encoding>
+> </configuration>
+> </plugin>
+>             <plugin>
+>                 <artifactId>maven-resources-plugin</artifactId>
+>                 <version>2.6</version>
+>                 <executions>
+>                     <execution>
+>                         <id>copy-resources</id>
+>                         <phase>validate</phase>
+>                         <goals>
+>                             <goal>copy-resources</goal>
+>                         </goals>
+>                         <configuration>
+>
+> <outputDirectory>${basedir}/config</outputDirectory>
+>                             <resources>
+>                                 <resource>
+>
+> <directory>${basedir}/configTemplates</directory>
+>                                     <filtering>true</filtering>
+>                                 </resource>
+>                             </resources>
+>                         </configuration>
+>                     </execution>
+>                     <execution>
+> <id>copy-resources</id>
+> <phase>validate</phase>
+> <goals>
+> <goal>copy-resources</goal>
+> </goals>
+> <configuration>
+> <outputDirectory>target</outputDirectory>
+> <resources>
+> <resource>
+> <directory>${basedir}/src/main/java</directory>
+> <filtering>false</filtering>
+> <excludes>
+> <exclude>**/*.java</exclude>
+> </excludes>
+> </resource>
+> </resources>
+> </configuration>
+> </execution>
+>                 </executions>
+>             </plugin>
+>         </plugins>
+>         <pluginManagement>
+>             <plugins>
+>                 <plugin>
+>                     <groupId>org.eclipse.m2e</groupId>
+>                     <artifactId>lifecycle-mapping</artifactId>
+>                     <version>1.0.0</version>
+>                     <configuration>
+>                         <lifecycleMappingMetadata>
+>                             <pluginExecutions>
+>                                 <pluginExecution>
+>                                     <pluginExecutionFilter>
+>
+> <groupId>org.apache.maven.plugins</groupId>
+>
+> <artifactId>maven-dependency-plugin</artifactId>
+>
+> <versionRange>[1.0.0,)</versionRange>
+>                                         <goals>
+>                                             <goal>copy-dependencies</goal>
+>                                         </goals>
+>                                     </pluginExecutionFilter>
+>                                     <action>
+>                                         <ignore />
+>                                     </action>
+>                                 </pluginExecution>
+>                             </pluginExecutions>
+>                         </lifecycleMappingMetadata>
+>                     </configuration>
+>                 </plugin>
+>             </plugins>
+>         </pluginManagement>
+>     </build>
+>     <dependencies>
+> <dependency>
+> <groupId>postgresql</groupId>
+> <artifactId>postgresql</artifactId>
+> <version>9.1-901.jdbc4</version>
+> </dependency>
+> <dependency>
+>             <groupId>commons-lang</groupId>
+>             <artifactId>commons-lang</artifactId>
+>             <version>2.6</version>
+>         </dependency>
+>         <dependency>
+> <groupId>commons-codec</groupId>
+> <artifactId>commons-codec</artifactId>
+> <version>1.5</version>
+> </dependency>
+> <dependency>
+> <groupId>javax.ejb</groupId>
+> <artifactId>ejb-api</artifactId>
+> <version>3.0</version>
+> </dependency>
+> <dependency>
+> <groupId>javax.transaction</groupId>
+> <artifactId>jta</artifactId>
+> <version>1.1</version>
+> </dependency>
+>     </dependencies>
+> </project>
+>
+
+--001a113a4dd694b20005087647f2--
+

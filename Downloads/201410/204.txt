@@ -1,0 +1,124 @@
+From users-return-137660-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Oct 30 05:43:46 2014
+Return-Path: <users-return-137660-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 31645172AA
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 30 Oct 2014 05:43:46 +0000 (UTC)
+Received: (qmail 44406 invoked by uid 500); 30 Oct 2014 05:43:44 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 44325 invoked by uid 500); 30 Oct 2014 05:43:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 44313 invoked by uid 99); 30 Oct 2014 05:43:44 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 30 Oct 2014 05:43:44 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of philip584521@gmail.com designates 74.125.82.49 as permitted sender)
+Received: from [74.125.82.49] (HELO mail-wg0-f49.google.com) (74.125.82.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 30 Oct 2014 05:43:18 +0000
+Received: by mail-wg0-f49.google.com with SMTP id x13so4798446wgg.8
+        for <users@maven.apache.org>; Wed, 29 Oct 2014 22:43:18 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=LyYAoSRqW0YgW6HZZVHkGYpngqDy7hIGTY11+WNYBaU=;
+        b=MgPylIa/fpTcBCcvh66Kx1rELFtS7RJlTSuCu02nnv9ykMy1QZHKYuowlRAjwLmAec
+         PahraAy5YFIzbXGZNTVK+3W/NMbhCUkUBcHkhpaBK09s0MyqJwuJozkdsq7Pj+rTglSq
+         QgauFxxqcnl8AX6tP4kf3XcHE9ESIZ9V8qszJU3ztAzXWZf2NE/DBZ2fSBtV26qKAPgO
+         uVUtRL5L12MIIQxPntEf27j7HtRb4Q1U7160pjDQm4x7N6Ov00AK80+pzo5J+tEY2Vsm
+         rqK1S9IYk/0Kqhc7yAsdTZiFVbt+J4pQ6T3x0XOvUIzGGKM+QFwKJTxktWBzSitDEumk
+         XErw==
+MIME-Version: 1.0
+X-Received: by 10.180.88.162 with SMTP id bh2mr17587464wib.77.1414647798011;
+ Wed, 29 Oct 2014 22:43:18 -0700 (PDT)
+Received: by 10.216.237.130 with HTTP; Wed, 29 Oct 2014 22:43:17 -0700 (PDT)
+In-Reply-To: <CADVp3v_Mb2z_qkYGjOFiFxFUw+iwNU=N-m60-4-g6Ym-dodhsw@mail.gmail.com>
+References: <CAE8kHEwi-wqWygidE88k+SkM9zvoRyTro2GFEFmsW-ypkpSSiw@mail.gmail.com>
+	<CADVp3v9Y+HTn-JPuYz_jAd3yoayW+xN0YyZZ5Gwof5=_fd9bEQ@mail.gmail.com>
+	<CAE8kHEy7hsUUZx9webzFgELY1HsdZrVYvbr_j34BxB1kn-boHg@mail.gmail.com>
+	<CADN69yn6Hp-e4faHw5SQK4uN1Lj1r_X5XZogC_yUdEcCv2NKmQ@mail.gmail.com>
+	<CADVp3v_Mb2z_qkYGjOFiFxFUw+iwNU=N-m60-4-g6Ym-dodhsw@mail.gmail.com>
+Date: Thu, 30 Oct 2014 13:43:17 +0800
+Message-ID: <CAE8kHEx9GJoHBwMAy4G3vh=nzkKnLZ3JnAh7L15ZQeOMrcXz2w@mail.gmail.com>
+Subject: Re: [pre-verify over deploy]
+From: Fay Wong <philip584521@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d04426c587b9b8705069d5bc9
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d04426c587b9b8705069d5bc9
+Content-Type: text/plain; charset=UTF-8
+
+2014-10-30 6:15 GMT+08:00 Barrie Treloar <baerrach@gmail.com>:
+
+> On 30 October 2014 08:38, Curtis Rueden <ctrueden@wisc.edu> wrote:
+>
+> > Hi Fay,
+> >
+> > > Could i define a intermediate repository, everytime they deploy,
+> > > jenkins will verify it.
+> >
+> > Why not have Jenkins do your deploys? I.e.: make it so that only Jenkins
+> > has deploy permission to your remote repository. So your devs can no
+> longer
+> > run "mvn deploy" from the CLI and expect it to work, but instead just
+> push
+> > to master (or whatever integration branch) and then Jenkins runs the
+> build.
+> >
+> > Once Jenkins does your deploys, you can set up your jobs to test for more
+> > stringent conditions before actually doing the deploy. E.g.:
+> >
+> > $ git clean -fdx
+> > $ mvn clean install
+> > $ bin/verify-artifacts.sh
+> > $ mvn deploy
+> >
+> > And "verify-artifacts.sh" does whatever further programmatic testing you
+> > need.
+> >
+> > OTOH, in many cases, you don't need a shell script -- often times, you
+> can
+> > get what you need using Maven plugins like Surefire, Failsafe, and
+> > Enforcer. If you go that route, it might be enough so that devs running
+> > "mvn deploy" won't deploy bad stuff to the repo by default (unless they
+> are
+> > aggressive enough to run e.g. "mvn -DskipTests deploy" which would be
+> > pretty bold).
+> >
+> > Regards,
+> > Curtis
+>
+>
+> Whether its Jenkins, or a developer, you've still pushed a release that
+> could break the build.
+>
+> This is where you need some isolation available to your workflow.
+>
+> Stuff breaks - it happens, Fay needs to determine how they want to deal
+> with it.
+>
+
+>>This is where you need some isolation available to your workflow.
+Yes. Some other human engineering way(such as buys the first round of beer)
+maybe can't solve this issue. I do need some defensive isolation to prevent
+some guy from blocking others' develop process.
+
+>>Why not have Jenkins do your deploys?
+Maybe there's another process constraint i forget to mention:
+The integration of source code & bytecode(the build output) follow
+different flow and can't keep sync with each other.
+If they keep sync with each other, Jenkins can do the right work.
+
+--f46d04426c587b9b8705069d5bc9--
+

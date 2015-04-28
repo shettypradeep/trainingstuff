@@ -1,0 +1,86 @@
+From users-return-135901-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Mar 23 23:34:06 2014
+Return-Path: <users-return-135901-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 295A710C2A
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 23 Mar 2014 23:34:06 +0000 (UTC)
+Received: (qmail 69784 invoked by uid 500); 23 Mar 2014 23:34:02 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 69708 invoked by uid 500); 23 Mar 2014 23:34:02 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9886 invoked by uid 99); 22 Mar 2014 12:01:03 -0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Date: Sat, 22 Mar 2014 05:00:36 -0700 (PDT)
+From: ghostwolf59 <martin.cedervall@commerce.wa.gov.au>
+To: users@maven.apache.org
+Message-ID: <1395489636665-5789050.post@n5.nabble.com>
+Subject: centralized settings.xml vs local question
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+I am a strong advocate of maven & Archiva where I administer our departments
+archiva & svn and site server server where we use maven to build/release
+stuff.
+
+I don't claim to be an expert in the field (but I am not completely dumb
+either when it comes to this :) - so if my question is silly please don't
+knock me to bad :)
+
+The way we currently go about setting up new developers centers around the
+following...
+
+Each developer ensure they configure their client to point to a set maven
+release (currently 3.0.4) 
+
+Each developer will then have a unique personal account created in archiva
+giving them the appropriate access to release or not
+
+As part of this I manually encrypt this archiva user psw using mvn
+--encrypt-password <arg>
+where I create a tailored settings.xml where I add the encrypted password to
+each repo they are meant to have release access to (all developers can
+access resources to do local builds as guest - but only authorized users can
+do official releases *(prod state) )
+
+The problem I have with this is 1. many settings.xml to manage 2. problems
+or global changes may affect every single developer resulting in that I need
+to roll out new settings.xml to each developers.
+
+My simply question is ... Can this be centralized somehow meaning that the
+clients settings.xml somehow refers to groups located on the remote archiva
+server
+
+If this were possible I would cut down the maintenance and remove the hassle
+of distributing tailored settings.xml when people come on board.
+
+I can not accept a scenario where each developer uses the same global
+credentials
+
+cheers
+ 
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/centralized-settings-xml-vs-local-question-tp5789050.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,119 @@
+From users-return-137855-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Nov 26 14:31:41 2014
+Return-Path: <users-return-137855-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D38D0CDC9
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Nov 2014 14:31:41 +0000 (UTC)
+Received: (qmail 62511 invoked by uid 500); 26 Nov 2014 14:31:34 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 62372 invoked by uid 500); 26 Nov 2014 14:31:34 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 61960 invoked by uid 99); 26 Nov 2014 14:31:33 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Nov 2014 14:31:33 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [88.116.248.50] (HELO sartre.xss.co.at) (88.116.248.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Nov 2014 14:31:08 +0000
+Received: from goethe.intern.xss.co.at (goethe.intern.xss.co.at [192.168.162.10])
+	by sartre.xss.co.at (8.14.3/8.14.3) with ESMTP id sAQEV7Gs025305
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK)
+	for <users@maven.apache.org>; Wed, 26 Nov 2014 15:31:07 +0100
+Received: from dyn251.intern.xss.co.at (dyn251.intern.xss.co.at [192.168.162.251])
+	by goethe.intern.xss.co.at (8.13.8/8.13.8) with ESMTP id sAQEV6fL015119
+	(version=TLSv1/SSLv3 cipher=AES128-SHA bits=128 verify=NO)
+	for <users@maven.apache.org>; Wed, 26 Nov 2014 15:31:07 +0100
+Date: Wed, 26 Nov 2014 15:31:02 +0100
+From: Martin Hoeller <martin@xss.co.at>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Bug? maven-ear-plugin 2.9.1 behaves different to 2.9
+Message-ID: <20141126153102.511a9b53@dyn251.intern.xss.co.at>
+X-Mailer: Claws Mail 3.10.1 (GTK+ 2.24.23; x86_64-suse-linux-gnu)
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha1;
+ boundary="Sig_/tamAUkksZv07wTWug6LxEYt"; protocol="application/pgp-signature"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Sig_/tamAUkksZv07wTWug6LxEYt
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: quoted-printable
+
+Hi!
+
+I'm using the maven-ear-plugin to create an EAR with a skinny WAR. This
+worked fine till I did an update from version 2.9 to version 2.9.1.
+
+The actual problem is quite hard to explain, so I'll try and start with
+an abstract and provide details below.
+
+The problem is, the skinny WAR contains a lot more JARs than it should,
+but not all that are in the original WAR artifact. So it seems the
+m-ear-p does build a skinny WAR but the decisions what JARs to pack
+into the WAR are wrong. Changing the used m-ear-p back to version 2.9
+fixes the problem, so this is definitely a regression in v2.9.1.
+
+The really strange thing is, this does not happen always! It only
+happens when I build my project the first time a day and a
+recent version of dependency of the project was not locally installed
+but was obtained from our local nexus. So it seems version information
+(or timestamps as all versions are SNAPSHOTs) of the dependencies
+matters.
+
+A concrete example to make this more clear:
+
+* My Project E is the EAR.
+* E depends on an artifact W, a WAR.
+* E and W have a common dependency D which is also a project of mine.
+* E, W and D are all built by a CI-server (jenkins) and SNAPSHOTs
+  are deployed to nexus during the night.
+
+In the WAR there is D.jar packaged in WEB-INF/lib.
+In the EAR there is D.jar packaged in lib/ and the skinny WAR should no
+longer contain D.jar.
+
+With  m-ear-p 2.9 this worked as expected. With version 2.9.1 when I
+build E with "mvn clean install" and D was not locally installed
+earlier this day, the skinny WAR is not skinny. It contains D.jar!
+Thus, D.jar is located twice in the EAR which is a bug.
+
+As soon as I do a "mvn clean install" for D, the building of E
+starts to work and the WAR is skinny again... till a nightly deploy
+provides a newer SNAPSHOT of D.
+
+Any ideas what could be wrong here?
+
+I'd be happy to provide a sample project but I'm not sure how to
+provide this as it also seems to depend on the infrastructure.
+
+TIA,
+- martin
+
+PS: I reported a (maybe) related issue half a year ago without any
+    feedback. Not sure if this could provide some extra info:
+    http://maven.40175.n5.nabble.com/bug-in-maven-ear-plugin-with-skinny-wa=
+r-td5792646.html
+
+--Sig_/tamAUkksZv07wTWug6LxEYt
+Content-Type: application/pgp-signature; name=signature.asc
+Content-Disposition: attachment; filename=signature.asc
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.22 (GNU/Linux)
+
+iEYEARECAAYFAlR15CkACgkQYJf22JPx7tlm+QCfffVCCcBTxsP9L5VRQt1iul33
+gckAoKDH+gOUrmup/zyMFV6oqny4HtKp
+=aw8L
+-----END PGP SIGNATURE-----
+
+--Sig_/tamAUkksZv07wTWug6LxEYt--
+

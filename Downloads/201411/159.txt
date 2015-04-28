@@ -1,0 +1,100 @@
+From users-return-137755-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Nov 16 19:46:05 2014
+Return-Path: <users-return-137755-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 07D6710CC4
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 16 Nov 2014 19:46:05 +0000 (UTC)
+Received: (qmail 65913 invoked by uid 500); 16 Nov 2014 19:46:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 65831 invoked by uid 500); 16 Nov 2014 19:46:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 65819 invoked by uid 99); 16 Nov 2014 19:46:02 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 16 Nov 2014 19:46:02 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.192.47] (HELO mail-qg0-f47.google.com) (209.85.192.47)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 16 Nov 2014 19:45:57 +0000
+Received: by mail-qg0-f47.google.com with SMTP id z60so1699584qgd.34
+        for <users@maven.apache.org>; Sun, 16 Nov 2014 11:44:06 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:subject:message-id:in-reply-to
+         :references:mime-version:content-type:content-transfer-encoding;
+        bh=fSei4gluhATsrQHAknE3ggtl2sS7LoJwJ+QksqaK+qg=;
+        b=i36fVdhOThIYgkfjA/K1JSZ6tBg5ggxQk3g0xxl+Ol8+fqoePu8DQDlLpDibcw5eQS
+         FNy0qW4Rlj/rXnAB4YJUgG6ZnYlAQhQmRgRUzMQ1qppl+FlCdrX0epp1kTbme9Ymf1rt
+         fv1VcTrYNU3QUFXxP8XQKmP8BDQ+bSIksVTKGrM93ib7MvCpOW+p0liDPMODWlC4zDb1
+         yLe1rqi2c7N4diTcNJjBZGr7YI2hZS6/Y/cfeC1/muGXEd6rDeWXkrTn8SlplNxL9du6
+         jMxOJs/XZpljy9DIS4tVlnYRKjY8zzs0KfrGtDHRG1JrfGfrbuKcWhuG6Y+VmIL23Vcx
+         HCLw==
+X-Gm-Message-State: ALoCoQkEE9/FkGS5itczkcdfxZYnZGTcBeI06mpuXuWToyK+A3jbIp/MiueR+nFfVyoXjCWblx06
+X-Received: by 10.140.19.9 with SMTP id 9mr28206499qgg.98.1416167046447;
+        Sun, 16 Nov 2014 11:44:06 -0800 (PST)
+Received: from localhost (HSI-KBW-134-3-146-104.hsi14.kabel-badenwuerttemberg.de. [134.3.146.104])
+        by mx.google.com with ESMTPSA id a97sm32403706qge.13.2014.11.16.11.44.05
+        for <users@maven.apache.org>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 16 Nov 2014 11:44:06 -0800 (PST)
+Date: Sun, 16 Nov 2014 20:44:00 +0100
+From: Bernd Eckenfels <ecki@zusammenkunft.net>
+To: users@maven.apache.org
+Subject: Re: Sorting javadoc output by importance of documentation and
+ length of docs?
+Message-ID: <20141116204400.00004941.ecki@zusammenkunft.net>
+In-Reply-To: <CAAZU44k8XqAWsKCbnYuXVTrvXcaKYNT7pnVP8Xi6Fj6oZDYWqw@mail.gmail.com>
+References: <CAAZU44k8XqAWsKCbnYuXVTrvXcaKYNT7pnVP8Xi6Fj6oZDYWqw@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello,
+
+just another viewpoint: put your overview documents with a large number
+of @links into the package description. This is the best you can do
+with Javadoc. It is not rerally a good replacement for colaterals like
+Tutorials or Walk-Throughs (and sample code).
+
+Gruss
+Bernd
+
+
+Am Sun, 16 Nov 2014 11:28:22
+-0800 schrieb Kevin Burton <burton@spinn3r.com>:
+
+> This is slightly off topic so I apologize.
+>=20
+> Javadoc is great for the developer but the main problem is that
+> important documents can be hidden in a sea of classes.
+>=20
+> My Javadoc tends to have say 20-40 important documents on the design
+> of a system but the rest of the Javadoc just tends to have an
+> overview.
+>=20
+> I=E2=80=99d like a way to organize it more as a book, maybe even by the
+> length of the documentation instead of being organized as a table of
+> contents.
+>=20
+> This way my ops guys and other members of the team can find the
+> documentation they=E2=80=99re looking for and not necessarily how a speci=
+fic
+> component behaves.
+>=20
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

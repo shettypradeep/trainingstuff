@@ -1,0 +1,77 @@
+From users-return-136414-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed May 21 16:45:50 2014
+Return-Path: <users-return-136414-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D805411C77
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 21 May 2014 16:45:50 +0000 (UTC)
+Received: (qmail 49214 invoked by uid 500); 21 May 2014 16:45:49 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 49123 invoked by uid 500); 21 May 2014 16:45:49 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 49115 invoked by uid 99); 21 May 2014 16:45:49 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 21 May 2014 16:45:49 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of keeganwitt@gmail.com designates 209.85.219.44 as permitted sender)
+Received: from [209.85.219.44] (HELO mail-oa0-f44.google.com) (209.85.219.44)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 21 May 2014 16:45:44 +0000
+Received: by mail-oa0-f44.google.com with SMTP id o6so2572594oag.31
+        for <users@maven.apache.org>; Wed, 21 May 2014 09:45:24 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=1miXcMYoL2lKtZjBmRhO8drBRShQrmVFblJFco+akt4=;
+        b=r6J4ClasAuO6OPdntwh0RHUTNG2WKymSLBS06044UCgQRnA5XXSnm11tGozqfnD2JA
+         m8DuOBYy9rxeTOoPshSJ/q92ejpAI6oxnnBmXfj+s8Qq2j6r/0PelL64GN//PE7A5nLs
+         MRyoMU3fgQMviGDAMJFP3/N723xtc1lxDRR7ZPDEkigFLOdSC3KTz1oiBcNvfyyhs/uX
+         rNr5MWb9Fc7PppaqhPzgdvYfpwn/lqcB4/N0/7lsEP2qYW9NhInYXO+aPlP2+eVWcPgL
+         /5GyIHVuNk1knenfTJ6w1qbBvRO6tlk1Ul211EprOCB7TGtSiykfVFOg711AbGvInna0
+         GS5Q==
+X-Received: by 10.60.51.136 with SMTP id k8mr52327106oeo.33.1400690724387;
+ Wed, 21 May 2014 09:45:24 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.76.178.65 with HTTP; Wed, 21 May 2014 09:45:04 -0700 (PDT)
+In-Reply-To: <CAL2qGUHp9XZrjHcRwTkDhKwNi_+3Eh6hDDFJyT0BJwjY5Kok4A@mail.gmail.com>
+References: <CAL2qGUHp9XZrjHcRwTkDhKwNi_+3Eh6hDDFJyT0BJwjY5Kok4A@mail.gmail.com>
+From: Keegan Witt <keeganwitt@gmail.com>
+Date: Wed, 21 May 2014 12:45:04 -0400
+Message-ID: <CAL2qGUFty3nvPjTo3r2-cDfXYH6T1giAGfQ7Yrgb1qo2_sssyA@mail.gmail.com>
+Subject: Re: Multithreaded Invoker Builds
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a11c32b2011472204f9ebb977
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c32b2011472204f9ebb977
+Content-Type: text/plain; charset=UTF-8
+
+Actually, after reading the code a bit, I'm 90% sure this isn't supported
+and I'm not misinterpreting the purpose of invoker.parallelThreads.  I've
+opened a Jira for this (http://jira.codehaus.org/browse/MINVOKER-165).  If
+I get a chance, I might see if I can put a patch together.
+
+-Keegan
+
+
+On Wed, May 21, 2014 at 10:00 AM, Keegan Witt <keeganwitt@gmail.com> wrote:
+
+> Is there a way to have Invoker run a test with more than one thread (i.e.
+> the -T option)?  My understanding is that the 'invoker.parallelThreads'
+> option is to run Invoker itself in parallel across test poms, but that each
+> individual test pom is still single threaded.  Or am I misunderstanding?
+>
+> -Keegan
+>
+
+--001a11c32b2011472204f9ebb977--
+

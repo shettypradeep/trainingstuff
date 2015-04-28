@@ -1,0 +1,219 @@
+From users-return-135703-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar  5 21:57:12 2014
+Return-Path: <users-return-135703-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 10233100FD
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  5 Mar 2014 21:57:12 +0000 (UTC)
+Received: (qmail 43285 invoked by uid 500); 5 Mar 2014 21:57:08 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 43134 invoked by uid 500); 5 Mar 2014 21:57:08 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 43126 invoked by uid 99); 5 Mar 2014 21:57:08 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Mar 2014 21:57:08 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of t.broyer@gmail.com designates 209.85.216.52 as permitted sender)
+Received: from [209.85.216.52] (HELO mail-qa0-f52.google.com) (209.85.216.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Mar 2014 21:57:01 +0000
+Received: by mail-qa0-f52.google.com with SMTP id m5so1626443qaj.39
+        for <users@maven.apache.org>; Wed, 05 Mar 2014 13:56:40 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :cc:content-type;
+        bh=TZfgkANEtfxUTeRpspql+rhPRScRfugvSPlDY3/DlGU=;
+        b=THIFhxBbGi9yh17csTacQwaodRNKi72rb1Ynq93pSOC0nSWxXT9JC2+4iaI90FW76E
+         aRANBDNPGPPhJvCeabj9PkXIo9WULeWbVYh5xitPOQ8/oC3fdNMg8hpI2dNWQBLmErsh
+         kgKxacd/9K3cS8kpVAx69i2ZHq6BSS7mlNnr0RRO8yjxbV9dQQRnp+EoyppbqOAFS33N
+         /gmIw/3/de+dI2EjoaU3Toh3H2yR3YZ99CRMpw38Z6/9+ewXWZP1F22O9/Lb2EnyTy4U
+         ZtGa2+qKk2DrLe5FwaewTb1MAljVpNTvpdUQRUOI70MM72eIEVrVXsHaPeHQDxjao4gX
+         CvLw==
+MIME-Version: 1.0
+X-Received: by 10.140.29.139 with SMTP id b11mr8908133qgb.48.1394056600807;
+ Wed, 05 Mar 2014 13:56:40 -0800 (PST)
+Received: by 10.140.95.194 with HTTP; Wed, 5 Mar 2014 13:56:40 -0800 (PST)
+Received: by 10.140.95.194 with HTTP; Wed, 5 Mar 2014 13:56:40 -0800 (PST)
+In-Reply-To: <531787D5.8090601@renci.org>
+References: <531787D5.8090601@renci.org>
+Date: Wed, 5 Mar 2014 22:56:40 +0100
+Message-ID: <CAEayHEPoFj-cQgGmwo0HTikx=DMYBuNbPqp-5OpA4qatzEQHog@mail.gmail.com>
+Subject: Re: Using github as a maven repo
+From: Thomas Broyer <t.broyer@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Cc: Howard Lander <howard@renci.org>
+Content-Type: multipart/alternative; boundary=001a113a76ca7cf18304f3e31873
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113a76ca7cf18304f3e31873
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+>From the point of view of Git, you're bloating your repo forcing everyone
+to download all the JARs when they clone your repo.
+
+>From the point of view of GitHub, they don't want you to do that and might
+very well break it in the future. At least use gh-pages, but that doesn't
+solve the Git issue.
+
+>From the point of view of Maven, repos are a pain for users of your libs,
+because each repo will be checked for each dependency. What seemed like a
+good idea was badly executed and didn't work well in practice. Please stick
+to Central or possibly Bintray.
+Le 5 mars 2014 21:24, "Howard" <howard@renci.org> a =C3=A9crit :
+
+> Hi all
+>
+> I should preface this all by saying that I am not an experienced maven
+> user, though I would not describe myself as a complete newbie, so I won't
+> be too surprised if I am just doing something stupid here.  Please let me
+> know if this is the wrong group for this type of question.
+>
+> I've got a project where we are keeping all of our code on GitHub. The
+> project name is DataBridge Because this is an National Science Foundation
+> funded Open Source project I thought it might make sense to store the jar
+> files we produce in a maven repository on GitHub. I found this web page
+>
+> http://stackoverflow.com/questions/14013644/hosting-a-
+> maven-repository-on-github
+>
+> and followed the instructions for one project that produces one jar.  It
+> seems to have worked great for putting the jar file up on Github. The
+> problem is occurring when I try to download the jar as an artifact in
+> another pom for another project that depends on it. I can download the ja=
+r
+> and it's pom using wget at the following addresses:
+>
+> wget https://github.com/HowardLander/DataBridge/blob/
+> mvn-repo/org/renci/databridge-util/1.0-BETA/databridge-util-1.0-BETA.jar
+> wget https://github.com/HowardLander/DataBridge/blob/
+> mvn-repo/org/renci/databridge-util/1.0-BETA/databridge-util-1.0-BETA.pom
+>
+> but I don't seem to be able to find the magic to get maven to grab them.
+> I'm thinking the problem is that I have the repository set incorrectly.
+>  It's set to
+>
+>   <repositories>
+>     <repository>
+>         <id>github</id>
+> <url>https://github.com/HowardLander/DataBridge/blob/mvn-repo</url>
+>         <snapshots>
+>             <enabled>true</enabled>
+>             <updatePolicy>always</updatePolicy>
+>         </snapshots>
+>     </repository>
+>   </repositories>
+>
+> Here's what I get from mvn -e compile
+>
+> howard@databridge.renci.org:/projects/databridge/howard/
+> DataBridge/network/BigData/XMLSim $ mvn -e compile
+> [INFO] Error stacktraces are turned on.
+> [INFO] Scanning for projects...
+> [INFO]
+> [INFO] ------------------------------------------------------------
+> ------------
+> [INFO] Building XMLTest 1
+> [INFO] ------------------------------------------------------------
+> ------------
+> Downloading: https://github.com/HowardLander/DataBridge/blob/
+> mvn-repo/org/renci/databridge-util/databridge-util/1.0-BETA/
+> databridge-util-1.0-BETA.pom
+> [WARNING] The POM for org.renci.databridge-util:databridge-util:jar:1.0-B=
+ETA
+> is missing, no dependency information available
+> Downloading: https://github.com/HowardLander/DataBridge/blob/
+> mvn-repo/org/renci/databridge-util/databridge-util/1.0-BETA/
+> databridge-util-1.0-BETA.jar
+> [INFO] ------------------------------------------------------------
+> ------------
+> [INFO] BUILD FAILURE
+> [INFO] ------------------------------------------------------------
+> ------------
+> [INFO] Total time: 1.593s
+> [INFO] Finished at: Wed Mar 05 11:56:41 EST 2014
+> [INFO] Final Memory: 4M/15M
+> [INFO] ------------------------------------------------------------
+> ------------
+> [ERROR] Failed to execute goal on project XMLTest: Could not resolve
+> dependencies for project com.RENCI.app:XMLTest:jar:1: Could not find
+> artifact org.renci.databridge-util:databridge-util:jar:1.0-BETA in github
+> (https://github.com/HowardLander/DataBridge/blob/mvn-repo) -> [Help 1]
+> org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute
+> goal on project XMLTest: Could not resolve dependencies for project
+> com.RENCI.app:XMLTest:jar:1: Could not find artifact
+> org.renci.databridge-util:databridge-util:jar:1.0-BETA in github (
+> https://github.com/HowardLander/DataBridge/blob/mvn-repo)
+>
+> That seems fairly clear: it can't find https://github.com/
+> HowardLander/DataBridge/blob/mvn-repo/org/renci/databridge-
+> util/1.0-BETA/databridge-util-1.0-BETA.jar. Any suggestions?
+>
+> For reference here's the part of the pom that is trying to download the
+>  jar:
+>
+>    <dependency>
+>       <groupId>org.renci.databridge-util</groupId>
+>       <artifactId>databridge-util</artifactId>
+>       <version>1.0-BETA</version>
+>     </dependency>
+>
+> The jar in question is part of the databridge-util project.  Here's the
+> jar that pushes (successfully as far as I can tell) the jar and it's
+> related artifacts to the github.
+>
+>       <plugin>
+>           <groupId>com.github.github</groupId>
+>           <artifactId>site-maven-plugin</artifactId>
+>           <version>0.8</version>
+>           <configuration>
+>               <message>Maven artifacts for ${project.version}</message>
+>  <!-- git commit message -->
+> <noJekyll>true</noJekyll> <!-- disable webpage processing -->
+> <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+> <!-- matches distribution management repository url above -->
+> <branch>refs/heads/mvn-repo</branch> <!-- remote branch name -->
+> <includes><include>**/*</include></includes>
+> <repositoryName>DataBridge</repositoryName>      <!-- github repo name --=
+>
+> <repositoryOwner>HowardLander</repositoryOwner> <!-- github username  -->
+>           </configuration>
+>           <executions>
+>             <!-- run site-maven-plugin's 'site' target as part of the
+> build's normal 'deploy' phase -->
+>             <execution>
+>               <goals>
+>                 <goal>site</goal>
+>               </goals>
+>               <phase>deploy</phase>
+>             </execution>
+>           </executions>
+>       </plugin>
+>
+> Thanks much
+> Howard Lander
+>
+> --
+> Howard Lander <mailto:howard@renci.org>
+> Senior Research Software Developer
+> Renaissance Computing Institute (RENCI) <http://www.renci.org>
+> The University of North Carolina at Chapel Hill
+> Duke University
+> North Carolina State University
+> 100 Europa Drive
+> Suite 540
+> Chapel Hill, NC 27517
+> 919-445-9651
+>
+
+--001a113a76ca7cf18304f3e31873--
+

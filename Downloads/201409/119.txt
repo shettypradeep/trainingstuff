@@ -1,0 +1,90 @@
+From users-return-137381-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 26 19:39:05 2014
+Return-Path: <users-return-137381-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EA23617473
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 26 Sep 2014 19:39:04 +0000 (UTC)
+Received: (qmail 82801 invoked by uid 500); 26 Sep 2014 19:38:57 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 82723 invoked by uid 500); 26 Sep 2014 19:38:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 82528 invoked by uid 99); 26 Sep 2014 19:38:57 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 26 Sep 2014 19:38:57 +0000
+X-ASF-Spam-Status: No, hits=3.1 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_IMAGE_ONLY_16,HTML_MESSAGE,HTML_SHORT_LINK_IMG_2,RCVD_IN_DNSWL_LOW,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of burtonator2011@gmail.com designates 209.85.213.171 as permitted sender)
+Received: from [209.85.213.171] (HELO mail-ig0-f171.google.com) (209.85.213.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 26 Sep 2014 19:38:52 +0000
+Received: by mail-ig0-f171.google.com with SMTP id h3so8184igd.10
+        for <users@maven.apache.org>; Fri, 26 Sep 2014 12:38:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:from:date:message-id:subject:to:content-type;
+        bh=Dv8WWwsH1neB6/j2EcimsqOAtgNYMiItR6PoG4wRl6I=;
+        b=chNfF7id/CdGrok6wO7K40CGhFStpO7PXYLU9gzQapCHvdZJh0d+P69F9E+2ij8fob
+         v5mI1MRgucd1xkBWpAze/kXW/v//e97KOHWDY68tAwte5GI/9xQrBI7NurccVhngCW4x
+         kT9mlg9wRXqFjzkmXQ3/GHA6szHo5wrNMszJswGq/uOQ7Udbw1mFIbahHrWZTXZ60nOP
+         ymRGI5dXQQC5nGcA372LOgP906MtkXQYwWVNk7TQIp8heXVYE8k/bjDtpXTgHsXLe/xR
+         KlDhAjI7Zc8kT45Zsuz7Q0XfTiPrEDo8EI23Hs40gj8fI7iwO9sq64oJKkiSHr/oHjaC
+         //TQ==
+X-Received: by 10.42.87.207 with SMTP id z15mr29699738icl.8.1411760312296;
+ Fri, 26 Sep 2014 12:38:32 -0700 (PDT)
+MIME-Version: 1.0
+Sender: burtonator2011@gmail.com
+Received: by 10.50.25.233 with HTTP; Fri, 26 Sep 2014 12:38:12 -0700 (PDT)
+From: Kevin Burton <burton@spinn3r.com>
+Date: Fri, 26 Sep 2014 12:38:12 -0700
+X-Google-Sender-Auth: TBKpnlJhra4z8j8xZH9HajH8xIc
+Message-ID: <CAAZU44kc8QXRDuC_DJQsGd3q_+fOcMGyT_MLWOtG+zehS4n5Aw@mail.gmail.com>
+Subject: Maven site:deploy hosting providers??
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=20cf302235a3ec2ad30503fd0f9f
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--20cf302235a3ec2ad30503fd0f9f
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I don=E2=80=99t want to necessarily host our own repositories.
+
+They=E2=80=99re just static file repositories.
+
+Are there any hosting providers out there that support dav, SCP or HTTP PUT
+that would work with wagon?
+
+Required features are:
+
+- SSL
+
+- redundant copies on multiple servers (CDN)
+
+- dav/scp/ftp/ upload.. anything supported by wagon.
+
+- HTTP auth
+
+- domain masking
+
+=E2=80=A6 I just want something easy to setup and then never worry about it=
+ again.
+
+--=20
+
+Founder/CEO Spinn3r.com
+Location: *San Francisco, CA*
+blog: http://burtonator.wordpress.com
+=E2=80=A6 or check out my Google+ profile
+<https://plus.google.com/102718274791889610666/posts>
+<http://spinn3r.com>
+
+--20cf302235a3ec2ad30503fd0f9f--
+

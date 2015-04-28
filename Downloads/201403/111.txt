@@ -1,0 +1,122 @@
+From users-return-135864-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 19 20:40:00 2014
+Return-Path: <users-return-135864-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 81EB4106BF
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 19 Mar 2014 20:40:00 +0000 (UTC)
+Received: (qmail 40842 invoked by uid 500); 19 Mar 2014 20:39:39 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 40759 invoked by uid 500); 19 Mar 2014 20:39:38 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 40750 invoked by uid 99); 19 Mar 2014 20:39:38 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Mar 2014 20:39:38 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,WEIRD_PORT
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of sslavic@gmail.com designates 209.85.160.170 as permitted sender)
+Received: from [209.85.160.170] (HELO mail-yk0-f170.google.com) (209.85.160.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Mar 2014 20:39:32 +0000
+Received: by mail-yk0-f170.google.com with SMTP id 9so24638149ykp.1
+        for <users@maven.apache.org>; Wed, 19 Mar 2014 13:39:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=V4fV7T0LAGWBQwzTigTLhOrfvU5yd0YARy1JNRrA5Bw=;
+        b=phN7ye1RTMKxJ65hfAwFMaeURD2HufFqeUFkCsBvr5DF1shp+wYyseevmveBt84ff/
+         8AEZ6MH/gygNpWIdMfPaEE18I0bKPkjros3dOdF/V/VmfxwND9Xo/pYakU6xtRFLumLb
+         8+2rMAYFe4/PT+450eUwsiJtQOPPDTsTWFGkFPMTo2+EgwlwqxUM3RvyOux5OQBXjCle
+         Lri2vlVPB7LcOZ0SMWk+U94kMp6lDmyJANUPOIjHAVpTn+ty4sJouxEpghkcln0nChHF
+         0Z5eM5mmVpaQtYnMa74V+vITBMisNa30/ZlbBZd1GEROPdSmhKNVxqmpoETJQ+PnoB9Y
+         9r3w==
+MIME-Version: 1.0
+X-Received: by 10.236.83.194 with SMTP id q42mr29491821yhe.56.1395261551406;
+ Wed, 19 Mar 2014 13:39:11 -0700 (PDT)
+Received: by 10.170.208.68 with HTTP; Wed, 19 Mar 2014 13:39:11 -0700 (PDT)
+In-Reply-To: <5329FCAC.2050705@gmail.com>
+References: <5329FCAC.2050705@gmail.com>
+Date: Wed, 19 Mar 2014 21:39:11 +0100
+Message-ID: <CAAUywg-0poAG=fjBD9FeeteMKz7Y9yEkO=gHr6rUqcPX_BBbdA@mail.gmail.com>
+Subject: Re: Open Source Best Practices with Maven - distributionManagement
+From: =?UTF-8?Q?Stevo_Slavi=C4=87?= <sslavic@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=20cf3010eafb23f57b04f4fba5f7
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--20cf3010eafb23f57b04f4fba5f7
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hello Eric,
+
+I'd consider using Sonatype OSS with Sonatype OSS parent pom and everything
+that goes along (see more details at
+https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository+Usage+Guide)
+For OSS development maybe use private (and not local) Nexus as proxy only,
+with mirrors defined in local settings.xml, but publish both snapshots and
+releases to Sonatype OSS repositories which get synced to Maven Central.
+Why run Nexus on local machine? To control dependencies and their metada
+for yourself only? Still looks as overkill to me, if you're the sole user
+and plan on developing OSS. You already have local repository, and you
+should have same experience as your OSS users (so no custom local metadata
+of dependencies, depend only on stuff available on Maven Central, with
+metadata as it is published on Maven Central).
+
+Kind regards,
+Stevo Slavic
+
+
+On Wed, Mar 19, 2014 at 9:23 PM, Eric Kolotyluk <eric.kolotyluk@gmail.com>wrote:
+
+> Does anyone know of any good documentation on 'Open Source Best Practices
+> with Maven'
+>
+> For example, in my POM, I want to set up
+>
+>   <distributionManagement>
+> <downloadUrl>http://localhost:8081/nexus/content/groups/public
+> </downloadUrl>
+>     <repository>
+>       <uniqueVersion>false</uniqueVersion>
+>       <id>nexus-kolotyluk</id>
+>       <name>Local Release Repository</name>
+> <url>http://localhost:8081/nexus/content/repositories/releases</url>
+>       <layout>default</layout>
+>     </repository>
+>     <snapshotRepository>
+>       <id>nexus-kolotyluk</id>
+>       <name>Local Snapshot Repository</name>
+> <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+>       <layout>default</layout>
+>     </snapshotRepository>
+>   </distributionManagement>
+>
+> But that is my local repository on my development computer.
+>
+> If I want to push my project to Maven Central some day, I don't think I
+> want this in my POM.
+>
+> Should I put this in a parent POM, or inside a <profile> of my
+> settings.xml file?
+>
+> If I put it in a parent POM, then I need to push that to Maven Central
+> too, so that does not sound like a good idea.
+>
+> Cheer, Eric
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--20cf3010eafb23f57b04f4fba5f7--
+

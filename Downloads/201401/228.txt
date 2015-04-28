@@ -1,0 +1,73 @@
+From users-return-135201-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Jan 19 16:24:43 2014
+Return-Path: <users-return-135201-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 77B18101C8
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 19 Jan 2014 16:24:43 +0000 (UTC)
+Received: (qmail 36404 invoked by uid 500); 19 Jan 2014 16:24:39 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 36329 invoked by uid 500); 19 Jan 2014 16:24:39 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 36318 invoked by uid 99); 19 Jan 2014 16:24:39 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 19 Jan 2014 16:24:39 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of minfrin@sharp.fm designates 174.143.229.200 as permitted sender)
+Received: from [174.143.229.200] (HELO chandler.sharp.fm) (174.143.229.200)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 19 Jan 2014 16:24:32 +0000
+Received: from chandler.sharp.fm (localhost [127.0.0.1])
+	by chandler.sharp.fm (Postfix) with ESMTP id D76C983631
+	for <users@maven.apache.org>; Sun, 19 Jan 2014 10:24:11 -0600 (CST)
+Received: from [192.168.88.207] (pepperpotdsl.claranet.co.uk [217.158.253.219])
+	(using TLSv1 with cipher AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	(Authenticated sender: minfrin@sharp.fm)
+	by chandler.sharp.fm (Postfix) with ESMTP id 688D28362F
+	for <users@maven.apache.org>; Sun, 19 Jan 2014 10:24:11 -0600 (CST)
+Content-Type: text/plain; charset=iso-8859-1
+Mime-Version: 1.0 (Mac OS X Mail 6.6 \(1510\))
+Subject: Re: Property that indicates a snapshot or release build?
+From: Graham Leggett <minfrin@sharp.fm>
+In-Reply-To: <CAKDUN1t-ism44GmiyJbSLGgbRo-KbYzvCczL5VkdV64v0_aiZA@mail.gmail.com>
+Date: Sun, 19 Jan 2014 18:24:10 +0200
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <566B2F0C-4C4F-485A-8701-FD79D8D4DE8D@sharp.fm>
+References: <95BFD26B-850F-4C59-BDF6-1F65E2C11ED9@sharp.fm> <CAKDUN1vZy-xEiznhofJAwxR0KZg2uHYdZmcdgO4ddeEZ3YqGvQ@mail.gmail.com> <4EF87FBF-C360-42AC-87E1-7A5BDAE0336E@sharp.fm> <CAKDUN1t-ism44GmiyJbSLGgbRo-KbYzvCczL5VkdV64v0_aiZA@mail.gmail.com>
+To: "Maven Users List" <users@maven.apache.org>
+X-Mailer: Apple Mail (2.1510)
+X-Virus-Scanned: ClamAV using ClamSMTP
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 19 Jan 2014, at 6:20 PM, Anders Hammar <anders@hammar.net> wrote:
+
+> Don't understand. You need to, through code, get hold of the artifact
+> objects.
+
+I am trying to get access to this from a property.
+
+What I need is a property that I can embed in a path inside the pom. If =
+the artefact is a release, the property is one value, while if the =
+artefact is a snapshot, the property is another. The project.version =
+property comes achingly close, but won't work for me because it will =
+change on every release.
+
+Regards,
+Graham
+--
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

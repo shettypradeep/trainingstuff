@@ -1,0 +1,274 @@
+From users-return-135440-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 13 08:48:20 2014
+Return-Path: <users-return-135440-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5915110A1E
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 13 Feb 2014 08:48:20 +0000 (UTC)
+Received: (qmail 22628 invoked by uid 500); 13 Feb 2014 08:48:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 21416 invoked by uid 500); 13 Feb 2014 08:47:56 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 21145 invoked by uid 99); 13 Feb 2014 08:47:51 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 08:47:51 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bmathus@gmail.com designates 209.85.215.178 as permitted sender)
+Received: from [209.85.215.178] (HELO mail-ea0-f178.google.com) (209.85.215.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 08:47:47 +0000
+Received: by mail-ea0-f178.google.com with SMTP id a15so4902026eae.37
+        for <users@maven.apache.org>; Thu, 13 Feb 2014 00:47:26 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=eNOyJBeE11P7BewFydB9p7fybslvt37tw21b9/O5jsk=;
+        b=E5CWhfWDqBVsjcmkDI4cHDjqqJ+gSuBWVr1SWD3F65DWQTwX7OTVzWuCF6PoXNCs4+
+         U+vTnSjpDtnNgk5EF2qTO0D62rP52L1q3O55O09qJ+czrZkLjh65DayGvRZG3goWtH0U
+         VW3WhPGkIjjeMG8ciuen31/RyqsHlY5mQAjDkmBkbWhfXe3fkALohmFzowKvo6hxt0ND
+         iMdMRcih8iIg/KM2VYp8hS0zkKcA9g+0XvS81j40NAZ50nXiQQ01cY8YRGyRhJl+xaK7
+         ByfWwk9FbGh/nk6KlsXhsafIg5vtbSAzNV5hGBmiC3Svj6hdmeIDP/BEODTlFqza9ld+
+         NMtg==
+X-Received: by 10.15.41.14 with SMTP id r14mr443202eev.78.1392281246240; Thu,
+ 13 Feb 2014 00:47:26 -0800 (PST)
+MIME-Version: 1.0
+Sender: bmathus@gmail.com
+Received: by 10.14.224.198 with HTTP; Thu, 13 Feb 2014 00:47:06 -0800 (PST)
+In-Reply-To: <7AFDDD6F-AC2B-4D54-A161-1A71618D308D@berthonneau.com>
+References: <9e5201cf2831$52f17c60$f8d47520$@berthonneau.com>
+ <CABLGb9yyWxO8om2YE2Y-3v0RwLgB4RmY6cG9UK330DY4UVGHpQ@mail.gmail.com>
+ <008101cf2834$fcf8d4d0$f6ea7e70$@berthonneau.com> <CAFBdXRp0KqmGHnDjjD3=_U94nh4HNo1zWrV5KNVRRxDeVSBjoQ@mail.gmail.com>
+ <CAK8jvqytpdu2aa11qOrBjZhvjBShf97scfSVc4yRNnGQ9GVK_g@mail.gmail.com>
+ <52FBF4F1.8090701@artifact-software.com> <7AFDDD6F-AC2B-4D54-A161-1A71618D308D@berthonneau.com>
+From: Baptiste Mathus <ml@batmat.net>
+Date: Thu, 13 Feb 2014 09:47:06 +0100
+X-Google-Sender-Auth: 5GAoXjt4Fz6dhpMgv-E2J2QsLW8
+Message-ID: <CANWgJS77s=fR+YUem5k9UCTr0GVgV_60vgYe9+f_rddGxrGT=Q@mail.gmail.com>
+Subject: Re: Code coverage with debug logs: 100% branch coverage not possible?...
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e016814f01c151204f245bdb0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e016814f01c151204f245bdb0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+My first feeling is that not much time should be spent on that issue,
+logging isn't going to take a lot of points of percentage down, having ~95%
+would already be great (but maybe you already have).
+
+Anyway, on the other hand, if what you want is to get code coverage, why
+not just enable the ALL logging level when recording code coverage and go
+ahead?
+
+Then, if the verbosity if an issue, simply plug something like an existing
+or custom no-op/Null appender [1]? That might sound the simplest solution,
+isn't it?
+
+[1]
+https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/varia/NullApp=
+ender.html
+
+My 2 cents
+
+
+2014-02-13 7:13 GMT+01:00 Beno=C3=AEt Berthonneau <benoit@berthonneau.com>:
+
+> Ron, Mirko, Kevin,
+>
+> Thanks for your feedback : you're right with Slf4j implementation.
+> Unfortunately, it is not. It is a home made logger interface implemented =
+by
+> Log4j.
+>
+> Beno=C3=AEt
+>
+> > Le 12 f=C3=A9vr. 2014 =C3=A0 23:25, Ron Wheeler <rwheeler@artifact-soft=
+ware.com>
+> a =C3=A9crit :
+> >
+> >
+> >
+> > Not really a Maven issue but if you do your logging like this:
+> >
+> > package com.myco.testapp;
+> > import org.slf4j.Logger;
+> > import org.slf4j.LoggerFactory;
+> >
+> > public class MyClass{
+> >            private Logger
+> _logger=3DLoggerFactory.getLogger(this.getClass());
+> >
+> >      logger.debug(=E2=80=9Cblah {} in the loop that contains {}=E2=80=
+=9D, i, max);
+> >
+> > }
+> >
+> > You can sort out the enabling of logs and destination of your logging b=
+y
+> severity and class(I think by package as well) in the log configuration a=
+t
+> run-time.
+> >
+> > Ron
+> >
+> >> On 12/02/2014 4:20 PM, Mirko Friedenhagen wrote:
+> >> Hello Benoit,
+> >>
+> >> Kevin is right, using slf4j[0] one would use sth. like:
+> >>
+> >> logger.debug(=E2=80=9Cblah {} in the loop that contains {}=E2=80=9D, i=
+, max);
+> >>
+> >> No need for iffing :-).
+> >>
+> >> [0] http://www.slf4j.org/manual.html
+> >> Regards Mirko
+> >> --
+> >> http://illegalstateexception.blogspot.com/
+> >> https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+> >> https://bitbucket.org/mfriedenhagen/
+> >>
+> >>
+> >>> On Wed, Feb 12, 2014 at 10:10 PM, Kevin Krumwiede <kjkrum@gmail.com>
+> wrote:
+> >>> It does matter which implementation.  The main reason it was
+> recommended to
+> >>> check the logging level was because string concatenation can be
+> expensive,
+> >>> and you want to avoid doing it for a message that won't be logged.
+>  But if
+> >>> you're using a logging API like slf4j that uses parameter replacement
+> >>> tokens in the message string, if the message isn't logged, the
+> replacement
+> >>> won't be performed and the call will be cheap.
+> >>> On Feb 12, 2014 1:57 PM, "Beno=C3=AEt Berthonneau" <benoit@berthonnea=
+u.com>
+> >>> wrote:
+> >>>
+> >>>> Hi Paul,
+> >>>>
+> >>>>
+> >>>>
+> >>>> Don't think that I could play with exclusions. Here is an example :
+> >>>>
+> >>>>
+> >>>>
+> >>>> *A Unit Test :*
+> >>>>
+> >>>>
+> >>>>
+> >>>> *The tested class with ALL traces activated:*
+> >>>>
+> >>>>
+> >>>>
+> >>>> *And the same tested class with INFO traces activated:*
+> >>>>
+> >>>>
+> >>>>
+> >>>>
+> >>>>
+> >>>> -----Message d'origine-----
+> >>>> De : paulus.benedictus@gmail.com [mailto:paulus.benedictus@gmail.com=
+]
+> De
+> >>>> la part de Paul Benedict
+> >>>> Envoy=C3=A9 : mercredi 12 f=C3=A9vrier 2014 21:36
+> >>>> =C3=80 : Maven Users List
+> >>>> Objet : Re: Code coverage with debug logs: 100% branch coverage not
+> >>>> possible?...
+> >>>>
+> >>>>
+> >>>>
+> >>>> IIRC, there should be an option in Emma/Cobertura that allows you to
+> >>>> exclude coverage on certain classes. So if you can exclude your log4=
+j
+> >>>> classes (you don't really want to test your logging, do you?), then
+> you
+> >>>> should be able to raise your percentage.
+> >>>>
+> >>>>
+> >>>>
+> >>>>
+> >>>>
+> >>>> On Wed, Feb 12, 2014 at 2:30 PM, Beno=C3=AEt Berthonneau
+> >>>>
+> >>>> <benoit@berthonneau.com>wrote:
+> >>>>
+> >>>>
+> >>>>
+> >>>>> Hi all,
+> >>>>> I need your opinion/way to tackle the following problem:
+> >>>>> In many projects we use a Logger (doesn't matter which
+> >>>>> implementation). It is often recommend to test if the debug level i=
+s
+> >>>>> activated before logging a debug trace like the following:
+> >>>>> if (logger.isDebugEnabled()) {
+> >>>>>     logger.debug("blah " + i + " in the loop that contains " + max)=
+;
+> >>>>> }
+> >>>>> Now when you run unit tests on this kind of code you need to make a
+> >>>> choice:
+> >>>>
+> >>>>> run tests with INFO level or run tests with ALL traces activated. I
+> >>>>> choose the second option in order to:
+> >>>>> *         Check that debug traces doesn't throw unwanted exception
+> (like
+> >>>>> NPE)
+> >>>>> *         Have a better code coverage in term of covered lines
+> >>>>> But in term of branches coverage we could never have a 100% :(
+> >>>>> To me the only way to cover this is to run the tests suite 2 times:
+> >>>>> one with INFO traces configured, and another one with ALL traces
+> >>>>> activated.
+> >>>>> Did you face this issue and how did you solve it ?
+> >>>>> Thanks,
+> >>>>> Beno=C3=AEt.
+> >>>>
+> >>>>
+> >>>>
+> >>>>
+> >>>> --
+> >>>>
+> >>>> Cheers,
+> >>>>
+> >>>> Paul
+> >> ---------------------------------------------------------------------
+> >> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> >> For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+> > --
+> > Ron Wheeler
+> > President
+> > Artifact Software Inc
+> > email: rwheeler@artifact-software.com
+> > skype: ronaldmwheeler
+> > phone: 866-970-2435, ext 102
+> >
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+> --
+> Baptiste <Batmat> MATHUS - http://batmat.net
+> Sauvez un arbre,
+> Mangez un castor ! nbsp;! <users-help@maven.apache.org>
+>
+
+--089e016814f01c151204f245bdb0--
+

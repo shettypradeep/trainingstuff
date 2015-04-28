@@ -1,0 +1,111 @@
+From users-return-137327-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 19 17:09:04 2014
+Return-Path: <users-return-137327-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 34F5C1142D
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 19 Sep 2014 17:09:04 +0000 (UTC)
+Received: (qmail 44353 invoked by uid 500); 19 Sep 2014 17:08:57 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 44276 invoked by uid 500); 19 Sep 2014 17:08:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 44264 invoked by uid 99); 19 Sep 2014 17:08:57 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 19 Sep 2014 17:08:57 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ctrueden.wisc@gmail.com designates 209.85.223.177 as permitted sender)
+Received: from [209.85.223.177] (HELO mail-ie0-f177.google.com) (209.85.223.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 19 Sep 2014 17:08:52 +0000
+Received: by mail-ie0-f177.google.com with SMTP id x19so3879417ier.22
+        for <users@maven.apache.org>; Fri, 19 Sep 2014 10:08:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=H40kt0KHw0pNEQw/heLKr/4pfqD9e0JOsTJqfHNvwQM=;
+        b=Hu1HkivTAZdhRHm71V2PxiRBx63mTN3mPzH/R21cfXaMdYeJbnr38UR/oZhYKd5Hi0
+         En/CVhJ7B021tzsQiqszeXhyPhqVpUuwJZj3oKkRFXiGnhDhV2ajh2xSLvrhbMdeh4Vr
+         OdvxUHfBPYeFIOAyVetp9JHkOukhjWneox5MKP2OPZep12J1iB5kqYJVor8+fafHeo4R
+         CaDg346zPrToRUPfB7sQXL/8ywp1lDfVs2Ep7ZPFip6s2RqvXBof56wgAi12a4JnRS2m
+         BVPnYwwvf7R5vDLTLJLGeuH3Qdgw2v6yhJMZy+22R4ufNU32YFhhDVFhRoq0+WOh3ugk
+         3mtA==
+X-Received: by 10.50.103.106 with SMTP id fv10mr58201476igb.40.1411146512250;
+ Fri, 19 Sep 2014 10:08:32 -0700 (PDT)
+MIME-Version: 1.0
+Sender: ctrueden.wisc@gmail.com
+Received: by 10.107.43.7 with HTTP; Fri, 19 Sep 2014 10:08:01 -0700 (PDT)
+In-Reply-To: <CAAZU44mmd5XNEbZaTMFt+UaixE19MXtAf5bSMTm9hB1Rt4yZ1Q@mail.gmail.com>
+References: <CAAZU44mmd5XNEbZaTMFt+UaixE19MXtAf5bSMTm9hB1Rt4yZ1Q@mail.gmail.com>
+From: Curtis Rueden <ctrueden@wisc.edu>
+Date: Fri, 19 Sep 2014 12:08:01 -0500
+X-Google-Sender-Auth: 7LPYFuMey6ESNRHxBCoyCJIj82I
+Message-ID: <CADN69ykruM0o3QPhBjW-wfcET+aTSTdvYkZiw9vtem_gFB-r3Q@mail.gmail.com>
+Subject: Re: retrying flakey tests?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b3a8a5e96bef305036e26f5
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b3a8a5e96bef305036e26f5
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi Kevin,
+
+> Is there a way to retry a flakey test?
+
+In general I agree with Martin Todorov that tests should be small and
+atomic, and flakiness is a sign of larger problems. However, I also agree
+with you that sometimes flaky tests are a reality: my group has run into
+this with behavior of the JVM garbage collector differing on Windows, for
+example, in a rather nondeterministic way. In that case, retrying tests
+~5-10 times was a good solution for us.
+
+But rather than configuring Surefire or Failsafe to do this, I'd suggest
+(if possible) to write it into the test itself. Put the test in a for loop,
+and then assert at the end that numSuccesses > 0 or whatever. You then also
+issue a warning if numSuccesses !=3D numAttempts, as you requested. In shor=
+t:
+it gives you the flexibility you need.
+
+Regards,
+Curtis
+
+On Fri, Sep 19, 2014 at 11:24 AM, Kevin Burton <burton@spinn3r.com> wrote:
+
+> Is there a way to retry a flakey test?
+>
+> I=E2=80=99d basically like to have a flag that retries a failing test 2 o=
+r 3 times.
+>
+> Flakey and non deterministic tests are a fact of life in more complicated
+> systems.
+>
+> The main problem being that they are impossible to setup again because
+> they=E2=80=99re usually race conditions.
+>
+> If I could just retry the test a second time , that would solve this issu=
+e.
+>
+> Would be nice to have the build warned that the test is failing though..
+>
+> --
+>
+> Founder/CEO Spinn3r.com
+> Location: *San Francisco, CA*
+> blog: http://burtonator.wordpress.com
+> =E2=80=A6 or check out my Google+ profile
+> <https://plus.google.com/102718274791889610666/posts>
+> <http://spinn3r.com>
+>
+
+--047d7b3a8a5e96bef305036e26f5--
+

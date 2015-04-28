@@ -1,0 +1,64 @@
+From users-return-136655-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jun 26 00:45:43 2014
+Return-Path: <users-return-136655-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2C9F111FCE
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 26 Jun 2014 00:45:43 +0000 (UTC)
+Received: (qmail 94590 invoked by uid 500); 26 Jun 2014 00:45:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 94503 invoked by uid 500); 26 Jun 2014 00:45:41 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9478 invoked by uid 99); 25 Jun 2014 11:06:01 -0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of kristiyanm@gmail.com designates 209.85.217.170 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:from:date:message-id:subject:to:content-type;
+        bh=bQu98pFb6W4pwbwWByQx1ToH5TxJ7xP2B9SnUI0BMW4=;
+        b=zCFmBlYs2mr8Wp6jTK622zPbgrKSR4qIE0EE35KIrY8Nq1jrr56bKq1AWROgr9arjF
+         kkBDkL9ox8iNyFy0H6a9Rr/WTndR+RXeA6ijEr3FJ1XvWUfuo/TnDNEDhOeLDMyLZByy
+         NthkuQCM3Pztf8q81+kNcZ1bQH4g/Vxc/QwxI4v33Jn3vR6F29gBwU/AfnA59zDkg4BS
+         EFvThpR0IA/6dGa5AUGxCAdDjYgo3gF1BTchUW8uFspVAQ7JcxUxnZOzheD4on0c3//J
+         YWfC82CfY+to2979YpOIlbl0MCPqfxq34h6F0nr4W7TqNpVG5MLOadZDyHGYIvXrXu9+
+         tWzQ==
+X-Received: by 10.112.151.164 with SMTP id ur4mr3479008lbb.13.1403694335925;
+ Wed, 25 Jun 2014 04:05:35 -0700 (PDT)
+MIME-Version: 1.0
+From: Kristiyan Marinov <kristiyanm@gmail.com>
+Date: Wed, 25 Jun 2014 14:04:55 +0300
+Message-ID: <CAP+_B-hXEQAN5JrjgUZzVNkQQyBPDqT=8dWw+8+uep2=5A5ZNw@mail.gmail.com>
+Subject: Corrupted download mirror?
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=047d7beb9ff44424a104fca70e01
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7beb9ff44424a104fca70e01
+Content-Type: text/plain; charset=UTF-8
+
+Hi all,
+
+I had to download a few different Maven versions today and noticed that
+each time I downloaded a binary distribution from the
+http://apache.igor.onlinedirect.bg/ mirror Google Chrome rejected it as a
+malicious file. Switching the mirror to http://apache.cbox.biz/ produced no
+such complaints from Chrome.
+
+Has anyone else noticed such issues? Could there be something wrong with
+the mirror?
+
+
+Cheers,
+Kristiyan
+
+--047d7beb9ff44424a104fca70e01--
+

@@ -1,0 +1,89 @@
+From users-return-135598-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Feb 25 07:27:33 2014
+Return-Path: <users-return-135598-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4042210C13
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 25 Feb 2014 07:27:33 +0000 (UTC)
+Received: (qmail 37509 invoked by uid 500); 25 Feb 2014 07:27:29 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 36732 invoked by uid 500); 25 Feb 2014 07:27:19 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 36717 invoked by uid 99); 25 Feb 2014 07:27:15 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Feb 2014 07:27:15 +0000
+X-ASF-Spam-Status: No, hits=-2.3 required=5.0
+	tests=RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of tim.t.wu@ericsson.com designates 193.180.251.37 as permitted sender)
+Received: from [193.180.251.37] (HELO mailgw2.ericsson.se) (193.180.251.37)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Feb 2014 07:27:06 +0000
+X-AuditID: c1b4fb25-b7f038e000005d01-38-530c45b5d520
+Received: from ESGSCHC001.ericsson.se (Unknown_Domain [153.88.253.124])
+	by mailgw2.ericsson.se (Symantec Mail Security) with SMTP id FF.89.23809.5B54C035; Tue, 25 Feb 2014 08:26:46 +0100 (CET)
+Received: from ESGSCMB101.ericsson.se ([169.254.1.55]) by
+ ESGSCHC001.ericsson.se ([10.0.18.117]) with mapi id 14.02.0387.000; Tue, 25
+ Feb 2014 15:26:41 +0800
+From: Tim Wu T <tim.t.wu@ericsson.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: RE: Rule for maven plugin inheritance
+Thread-Topic: Rule for maven plugin inheritance
+Thread-Index: Ac8xnaLCGMhNbrjKRHSNsF90J19P/v//mS0A//7eqoA=
+Date: Tue, 25 Feb 2014 07:26:40 +0000
+Message-ID: <75F3A2D98EDE2545BDC06B5B6C1CEC516DF1E8AB@ESGSCMB101.ericsson.se>
+References: <75F3A2D98EDE2545BDC06B5B6C1CEC516DF1E827@ESGSCMB101.ericsson.se>
+ <CALy+7UnCodtMYVM+cS_1tpa0B9=dQJTCKj8OacZ7r0YBifE9yQ@mail.gmail.com>
+In-Reply-To: <CALy+7UnCodtMYVM+cS_1tpa0B9=dQJTCKj8OacZ7r0YBifE9yQ@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [146.11.116.6]
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFtrCLMWRmVeSWpSXmKPExsUyM+Jvje42V55gg/ZZYhaPtl5ndGD0aH8q
+	FMAYxWWTkpqTWZZapG+XwJVxel18wTGeih9Tz7E1MM7h6WLk5JAQMJGY9mUdI4QtJnHh3nq2
+	LkYuDiGBQ4wSDyd+gHIWMkpM+TCFBaSKTUBN4uOVjawgtoiArsTDi0+YQWxhAT2Jx233WCDi
+	+hIPp11kh7CtJFZ/2Qq2gUVAVWLLgm4mEJtXwFfixqMDUAumMEpM+LMVbCinQKDEgQWtbCA2
+	I9BJ30+tAWtgFhCXuPVkPhPEqQISS/acZ4awRSVePv7HCmErSEzfcA9oGQdQvabE+l36EK2K
+	ElO6H7JD7BWUODnzCcsERtFZSKbOQuiYhaRjFpKOBYwsqxjZcxMzc9LLjTYxAkP+4JbfqjsY
+	75wTOcQozcGiJM774a1zkJBAemJJanZqakFqUXxRaU5q8SFGJg5OqQbGprt26X8t2HlYmZ4a
+	HjfZfKXHf/2XJGaDlxIuPvtkT9WknDvUKPJ1Q90DkVny/3VKYmf1iXLPWN+44HVa3fU/m5m9
+	Ti3o33D2x+vNwWe8/pn6rN7MGHXCxKTcTnvRwetvL75cFO1R/+Nwh9Wr3ogLNdE1Bvxaac9q
+	zC1SytfxLgs0SWYMv6CrxFKckWioxVxUnAgAdEG0NEcCAAA=
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+SGkgV2F5bmUsDQoNClRoYW5rcywgd2lsbCB0cnkgdG9kYXkuDQoNCkJyLA0KVGltDQoNCi0tLS0t
+T3JpZ2luYWwgTWVzc2FnZS0tLS0tDQpGcm9tOiBXYXluZSBGYXkgW21haWx0bzp3YXluZWZheUBn
+bWFpbC5jb21dIA0KU2VudDogZGVuIDI0IGZlYnJ1YXJpIDIwMTQgMjM6MTENClRvOiBNYXZlbiBV
+c2VycyBMaXN0DQpTdWJqZWN0OiBSZTogUnVsZSBmb3IgbWF2ZW4gcGx1Z2luIGluaGVyaXRhbmNl
+DQoNCj4gQXQgZmlyc3QsIEkgZGVmaW5lIHR3byBtYXZlbiBqYXZhIGRvYyBwbHVnaW4gaW5zaWRl
+IHRoZSByZXBvcnRpbmcgdGFnIA0KPiBhbmQgdXNlZCB0byBnZW5lcmF0ZSBkaWZmZXJlbnQgdHlw
+ZSBvZiBqYXZhZG9jLCBvbmUgZm9yIHN0YW5kYXJkIGphdmFkb2MgYW5kIGZvciBjdXN0b21pemUg
+b25lLg0KDQpGWUk6IEkgZG9uJ3QgdXNlIG11Y2ggb2YgdGhlIHJlcG9ydGluZyBmdW5jdGlvbmFs
+aXR5IGluIE1hdmVuLCBqdXN0IHRoZSBiYXNpY3MuDQoNCj4gTGF0ZXIsIEkgd2FudCB0byBtb3Zl
+IHRob3NlIHR3byBqYXZhZG9jIHBsdWcgaW4gaW50byB0aGUgcGFyZW50IHBvbSwgSSANCj4gZG9u
+J3QgdXNlIHRoZSBwbHVnaW5FbGVtZW50LCBqdXN0IHdhbnQgYWxsIG9mIG91ciBzdWIgcHJvamVj
+dCBjb3VsZCB1c2UgaXQgZGlyZWN0bHkuDQoNCkdlbmVyYWxseSBzcGVha2luZywgeW91IGRvbid0
+IGluY2x1ZGUgYSBwbHVnaW4gdHdpY2UgaW4geW91ciBwb20sIHlvdSBzaG91bGQgaW5jbHVkZSBp
+dCBvbmNlIGFuZCB1c2UgPGV4ZWN1dGlvbnM+IG9yIDxyZXBvcnRTZXRzPiB0byBwcm92aWRlIGRp
+ZmZlcmVudCBjb25maWd1cmF0aW9ucyBmb3IgdGhlIHZhcmlvdXMgZXhlY3V0aW9ucyB5b3UgcmVx
+dWlyZS4gUmVhZCBtb3JlIG9ubGluZToNCmh0dHBzOi8vbWF2ZW4uYXBhY2hlLm9yZy9wbHVnaW5z
+L21hdmVuLXNpdGUtcGx1Z2luL2V4YW1wbGVzL2NvbmZpZ3VyaW5nLXJlcG9ydHMuaHRtbA0KDQpX
+YXluZQ0KDQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tLS0NClRvIHVuc3Vic2NyaWJlLCBlLW1haWw6IHVzZXJzLXVuc3Vi
+c2NyaWJlQG1hdmVuLmFwYWNoZS5vcmcNCkZvciBhZGRpdGlvbmFsIGNvbW1hbmRzLCBlLW1haWw6
+IHVzZXJzLWhlbHBAbWF2ZW4uYXBhY2hlLm9yZw0KDQo=
+DQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0NClRvIHVuc3Vic2NyaWJlLCBlLW1haWw6IHVzZXJzLXVuc3Vi
+c2NyaWJlQG1hdmVuLmFwYWNoZS5vcmcNCkZvciBhZGRpdGlvbmFsIGNvbW1hbmRzLCBlLW1h
+aWw6IHVzZXJzLWhlbHBAbWF2ZW4uYXBhY2hlLm9yZw0K
+

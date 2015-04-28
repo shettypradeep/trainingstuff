@@ -1,0 +1,246 @@
+From users-return-135434-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 12 21:21:31 2014
+Return-Path: <users-return-135434-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6D769104DE
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 12 Feb 2014 21:21:31 +0000 (UTC)
+Received: (qmail 5296 invoked by uid 500); 12 Feb 2014 21:21:27 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 5238 invoked by uid 500); 12 Feb 2014 21:21:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 5230 invoked by uid 99); 12 Feb 2014 21:21:27 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Feb 2014 21:21:27 +0000
+X-ASF-Spam-Status: No, hits=0.3 required=5.0
+	tests=FREEMAIL_REPLY,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mfriedenhagen@gmail.com designates 209.85.219.46 as permitted sender)
+Received: from [209.85.219.46] (HELO mail-oa0-f46.google.com) (209.85.219.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Feb 2014 21:21:23 +0000
+Received: by mail-oa0-f46.google.com with SMTP id n16so11591104oag.19
+        for <users@maven.apache.org>; Wed, 12 Feb 2014 13:21:03 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type:content-transfer-encoding;
+        bh=D7Av+DXVgdcRmXcVmO1fwEhyykODFPIWsUvsSsAK5RE=;
+        b=COZIbBpcE0/hZg2Q/MohQjv2emeZfQxaJkH5nq1mdgxZNmNvYgc/81i4C/gvCfyqCn
+         Ljm7Vcv7Wnz+th4ym2yWhiEuVpzZIYkxkPBizisJ2ggsPMsjIU9vo5vDhR5F54DtlEub
+         CzEFb9MZFH+wV+f00SwETXvd2Mdg3e1mxwoCvTIOV+f3WYg1sLHQlTVffGmr+k4ktzNw
+         Vn15VDh2eiZ2nk5HrV0FZsQ5G94DhqZHpRRq8XUIKkxxHMEcUksUR4bGIwwTpztIygPh
+         sS/YQui+9AEGFSZLeAM7pjfnIDzsYOMn3lA2v8XLLyCrFxuW5CEQETwZ5jz/ppt1Gy+7
+         AJBw==
+X-Received: by 10.60.92.202 with SMTP id co10mr63204oeb.73.1392240062868; Wed,
+ 12 Feb 2014 13:21:02 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.24.227 with HTTP; Wed, 12 Feb 2014 13:20:22 -0800 (PST)
+In-Reply-To: <CAFBdXRp0KqmGHnDjjD3=_U94nh4HNo1zWrV5KNVRRxDeVSBjoQ@mail.gmail.com>
+References: <9e5201cf2831$52f17c60$f8d47520$@berthonneau.com>
+ <CABLGb9yyWxO8om2YE2Y-3v0RwLgB4RmY6cG9UK330DY4UVGHpQ@mail.gmail.com>
+ <008101cf2834$fcf8d4d0$f6ea7e70$@berthonneau.com> <CAFBdXRp0KqmGHnDjjD3=_U94nh4HNo1zWrV5KNVRRxDeVSBjoQ@mail.gmail.com>
+From: Mirko Friedenhagen <mfriedenhagen@gmail.com>
+Date: Wed, 12 Feb 2014 22:20:22 +0100
+Message-ID: <CAK8jvqytpdu2aa11qOrBjZhvjBShf97scfSVc4yRNnGQ9GVK_g@mail.gmail.com>
+Subject: Re: Code coverage with debug logs: 100% branch coverage not possible?...
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello Benoit,
+
+Kevin is right, using slf4j[0] one would use sth. like:
+
+logger.debug(=E2=80=9Cblah {} in the loop that contains {}=E2=80=9D, i, max=
+);
+
+No need for iffing :-).
+
+[0] http://www.slf4j.org/manual.html
+Regards Mirko
+--
+http://illegalstateexception.blogspot.com/
+https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+https://bitbucket.org/mfriedenhagen/
+
+
+On Wed, Feb 12, 2014 at 10:10 PM, Kevin Krumwiede <kjkrum@gmail.com> wrote:
+> It does matter which implementation.  The main reason it was recommended =
+to
+> check the logging level was because string concatenation can be expensive=
+,
+> and you want to avoid doing it for a message that won't be logged.  But i=
+f
+> you're using a logging API like slf4j that uses parameter replacement
+> tokens in the message string, if the message isn't logged, the replacemen=
+t
+> won't be performed and the call will be cheap.
+> On Feb 12, 2014 1:57 PM, "Beno=C3=AEt Berthonneau" <benoit@berthonneau.co=
+m>
+> wrote:
+>
+>> Hi Paul,
+>>
+>>
+>>
+>> Don't think that I could play with exclusions. Here is an example :
+>>
+>>
+>>
+>> *A Unit Test :*
+>>
+>>
+>>
+>> *The tested class with ALL traces activated:*
+>>
+>>
+>>
+>> *And the same tested class with INFO traces activated:*
+>>
+>>
+>>
+>>
+>>
+>> -----Message d'origine-----
+>> De : paulus.benedictus@gmail.com [mailto:paulus.benedictus@gmail.com] De
+>> la part de Paul Benedict
+>> Envoy=C3=A9 : mercredi 12 f=C3=A9vrier 2014 21:36
+>> =C3=80 : Maven Users List
+>> Objet : Re: Code coverage with debug logs: 100% branch coverage not
+>> possible?...
+>>
+>>
+>>
+>> IIRC, there should be an option in Emma/Cobertura that allows you to
+>> exclude coverage on certain classes. So if you can exclude your log4j
+>> classes (you don't really want to test your logging, do you?), then you
+>> should be able to raise your percentage.
+>>
+>>
+>>
+>>
+>>
+>> On Wed, Feb 12, 2014 at 2:30 PM, Beno=C3=AEt Berthonneau
+>>
+>> <benoit@berthonneau.com>wrote:
+>>
+>>
+>>
+>> > Hi all,
+>>
+>> >
+>>
+>> >
+>>
+>> >
+>>
+>> > I need your opinion/way to tackle the following problem:
+>>
+>> >
+>>
+>> > In many projects we use a Logger (doesn't matter which
+>>
+>> > implementation). It is often recommend to test if the debug level is
+>>
+>> > activated before logging a debug trace like the following:
+>>
+>> >
+>>
+>> > if (logger.isDebugEnabled()) {
+>>
+>> >
+>>
+>> >     logger.debug("blah " + i + " in the loop that contains " + max);
+>>
+>> >
+>>
+>> > }
+>>
+>> >
+>>
+>> >
+>>
+>> >
+>>
+>> > Now when you run unit tests on this kind of code you need to make a
+>> choice:
+>>
+>> > run tests with INFO level or run tests with ALL traces activated. I
+>>
+>> > choose the second option in order to:
+>>
+>> >
+>>
+>> > *         Check that debug traces doesn't throw unwanted exception (li=
+ke
+>>
+>> > NPE)
+>>
+>> >
+>>
+>> > *         Have a better code coverage in term of covered lines
+>>
+>> >
+>>
+>> >
+>>
+>> >
+>>
+>> > But in term of branches coverage we could never have a 100% :(
+>>
+>> >
+>>
+>> >
+>>
+>> >
+>>
+>> > To me the only way to cover this is to run the tests suite 2 times:
+>>
+>> > one with INFO traces configured, and another one with ALL traces
+>>
+>> > activated.
+>>
+>> >
+>>
+>> > Did you face this issue and how did you solve it ?
+>>
+>> >
+>>
+>> >
+>>
+>> >
+>>
+>> > Thanks,
+>>
+>> >
+>>
+>> > Beno=C3=AEt.
+>>
+>> >
+>>
+>> >
+>>
+>>
+>>
+>>
+>>
+>> --
+>>
+>> Cheers,
+>>
+>> Paul
+>>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

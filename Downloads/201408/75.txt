@@ -1,0 +1,88 @@
+From users-return-137152-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Aug 29 04:17:07 2014
+Return-Path: <users-return-137152-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 841E11106B
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 29 Aug 2014 04:17:07 +0000 (UTC)
+Received: (qmail 30318 invoked by uid 500); 29 Aug 2014 04:17:05 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 30230 invoked by uid 500); 29 Aug 2014 04:17:05 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 30213 invoked by uid 99); 29 Aug 2014 04:17:04 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 29 Aug 2014 04:17:04 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.220.41] (HELO mail-pa0-f41.google.com) (209.85.220.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 29 Aug 2014 04:16:58 +0000
+Received: by mail-pa0-f41.google.com with SMTP id lj1so5336400pab.28
+        for <users@maven.apache.org>; Thu, 28 Aug 2014 21:16:37 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:to:subject:date:message-id:in-reply-to
+         :references:mime-version:content-type:content-transfer-encoding;
+        bh=yYwg3cFzNzAt+/m3JVVjDoghsasOl9EutWFrskcTgC4=;
+        b=m0SaA7HYp2WWFpE/r3JfHVZCRoUl46PStBNJWCVqe6YXD/RSYG7GikBpJwjABmD687
+         aFAs41dz9xGhAB7WJvTuhf5syjDf6MXspIPv6wTC6sH76y4QChtsQufsVrTOClyEz3+f
+         wuDE8fw7UBQm85/e1WsnxAaje6u6XrYSfbJ6vqLmv4RMo3/RCFkgVqHrmtkU46Is2VsY
+         kBJ30cgWEe40ZB0ck1yuxldyYU5D+6HQa1rSSDScPemKgF/4H9IKCbpuzjwqjCgdN/1j
+         8Myrnrgt6OiI6sMvfkS+E4OxLqK46cWOinwYkRdYm0EumAIy8LpaZRtRtbsuLTq2Fc7M
+         Rj+A==
+X-Gm-Message-State: ALoCoQlEZNJXUqXc8ukpGtLE5Cvfh//lYWkJgI+eeuVX1iY55XrJdwfsr/x6lJWy+o8gYNKGYOjO
+X-Received: by 10.70.128.137 with SMTP id no9mr7257954pdb.143.1409285796807;
+        Thu, 28 Aug 2014 21:16:36 -0700 (PDT)
+Received: from [10.0.0.142] (akl.smx.co.nz. [203.84.135.120])
+        by mx.google.com with ESMTPSA id j9sm7967059pdr.77.2014.08.28.21.16.34
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Thu, 28 Aug 2014 21:16:35 -0700 (PDT)
+From: "Mark Derricutt" <mark@talios.com>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: maven 3.1.1 crashes on GC overhead limit exceeded with millions
+ of org.eclipse.aether.graph.DefaultDependencyNode
+Date: Fri, 29 Aug 2014 16:16:24 +1200
+Message-ID: <4A3BC17B-943C-481A-B9AA-935FCB6B29D3@talios.com>
+In-Reply-To: <58F0D57CFF6C411685A878A05542A18A@gmail.com>
+References: <3C8773DCAF2F48179EE39D482559C6CB@gmail.com>
+ <4AEC4DAA-5750-44E6-A84F-F8D480CF78AE@gmail.com>
+ <58F0D57CFF6C411685A878A05542A18A@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 8bit
+X-Mailer: MailMate (1.8r4447)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Sounds exactly like the problem I've been having locally on our 
+integration tests, only in that instance its lots of version ranges ( 
+using SNAPSHOTs ) that have transitive ranges (also using SNAPSHOTs ).
+
+Maven would just "lock up", altho it's really just taking a LOOOOOOOONG 
+time walking the combinatorial explosion of dependencies. We didn't get 
+your ultimate result tho.
+
+Here's hoping that new aether update works like a charm.
+
+On 29 Aug 2014, at 14:29, Juven Xu wrote:
+
+> The background is, i’m helping migrating a huge project from maven2 
+> to maven3, and I noticed this project is using dozens of SNAPSHOT 
+> dependencies, and more than hundred  transitive SNAPSHOT dependencies, 
+> after updating most of the SNAPSHOT direct dependencies to RELEASE 
+> dependencies, the crash issue is mitigated a lot, but build is still 
+> slow, but at least it can pass.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

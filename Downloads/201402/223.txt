@@ -1,0 +1,105 @@
+From users-return-135515-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Feb 16 08:43:41 2014
+Return-Path: <users-return-135515-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C273C10D5D
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 16 Feb 2014 08:43:41 +0000 (UTC)
+Received: (qmail 31339 invoked by uid 500); 16 Feb 2014 08:43:38 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 30601 invoked by uid 500); 16 Feb 2014 08:43:36 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 30593 invoked by uid 99); 16 Feb 2014 08:43:35 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 16 Feb 2014 08:43:35 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [81.169.146.163] (HELO mo4-p00-ob.smtp.rzone.de) (81.169.146.163)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 16 Feb 2014 08:43:30 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1392540189; l=1170;
+	s=domk; d=apconsult.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=ZnYLMU0lNmDYjdQVsUxCUhasTsY=;
+	b=FrxtEY2uNlB4lv7ZHSNKi/SQ8D5mBw/MhfAl2mVfKxMmTa0nk7v6UbRknD6UlEehJNr
+	5F60szOFG4sSLATqzAxk5wbHODezoF2fldqBLPjJTZ9FcQuVNIqs15boz5suF3DjGAQnu
+	E/OLonpzX5r1SGI8CRlal0KaC0iCL8QRSpg=
+X-RZG-AUTH: :KG0SfETmd/55bSarYSJgwI+Iuho+dmriAESeqkyNCY6u2StSfNt+8Kuz4Sjl/3K+Ozfe5A==
+X-RZG-CLASS-ID: mo00
+Received: from [192.168.179.52] (pD9E02C8F.dip0.t-ipconnect.de [217.224.44.143])
+	by smtp.strato.de (RZmta 32.26 DYNA|AUTH)
+	with ESMTPSA id D025cfq1G8h84Tu
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(Client did not present a certificate);
+	Sun, 16 Feb 2014 09:43:08 +0100 (CET)
+Message-ID: <53007A1C.8060902@apconsult.de>
+Date: Sun, 16 Feb 2014 09:43:08 +0100
+From: David Law <m2eclipse@apconsult.de>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Looking for org.apache.poi 3.10-FINAL
+References: <530078F7.4060903@apconsult.de>
+In-Reply-To: <530078F7.4060903@apconsult.de>
+X-Forwarded-Message-Id: <530078F7.4060903@apconsult.de>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+I'm new to maven & thought I'd try it out on the recently checked-in:
+org.apache.poi    3.10-FINAL
+
+I'm using m2eclipse standard config with Eclipse Kepler.  Repo defaults to:
+http://repo.maven.apache.org/maven2
+
+The Problem:
+m2eclipse does not know the  org.apache.poi  3.10-FINAL  artifact.
+
+Now, I guess the problem could be any combination of:
+a) me  b) POI  c) maven  d) m2eclipse  e) eclipse?
+
+QUESTION) Can anyone help to localise it?
+
+Here's what I've found out so far:
+
+0) repo is: http://repo.maven.apache.org/maven2
+
+1) org.apache.poi  3.10-FINAL was committed @ 09-Feb-2014 11:50
+
+2) as of now repo Timestamp is: 09-Feb-2014 13:50
+(nexus.index.timestamp=20140209134945.568 +0000)
+(found in
+http://repo.maven.apache.org/maven2/.index/nexus-maven-repository-index.properties)
+
+3) -> so repo has been reindexed since org.apache.poi  3.10-FINAL commit
+(6 days ago).
+
+4) exit eclipse
+
+5) deleted the index
+C:\...\Eclipse\workspace\.metadata\.plugins\org.eclipse.m2e.core\nexus
+
+6) start eclipse -> "updating index"
+
+7) org.apache.poi  3.10-FINAL is still not there (that is: "here") in my
+list of artifacts
+
+All the best,
+DaveLaw
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,126 @@
+From users-return-137592-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Oct 19 17:12:23 2014
+Return-Path: <users-return-137592-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CAF68179FA
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 19 Oct 2014 17:12:23 +0000 (UTC)
+Received: (qmail 58909 invoked by uid 500); 19 Oct 2014 17:12:22 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 58823 invoked by uid 500); 19 Oct 2014 17:12:22 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 58812 invoked by uid 99); 19 Oct 2014 17:12:22 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 19 Oct 2014 17:12:22 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [209.85.192.49] (HELO mail-qg0-f49.google.com) (209.85.192.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 19 Oct 2014 17:11:55 +0000
+Received: by mail-qg0-f49.google.com with SMTP id e89so2532785qgf.36
+        for <users@maven.apache.org>; Sun, 19 Oct 2014 10:11:54 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:subject:message-id:in-reply-to
+         :references:mime-version:content-type:content-transfer-encoding;
+        bh=cT7pirbqtReXhxzcjnf4X8rOEAC2ZXwP4DV4Ne1zWqg=;
+        b=G1ai/MiZeKDFYT+ljtGvUVvNSrVCvxJ0Wgjc2NWPyc3L/uvzEwq16WlXZljOqvFvPG
+         ohy/Trt70U3H8nbd6BhSsGTICncSUIRzeNbI6YDOZZNRZkcNHW9+dXYyO0m53z9xfv94
+         ImqL0MlNOBqX2gqY2mC1N1mTd7epx9srWsUIuleKA7TPuvwyI1zuLaJExdd/fbdyuqFt
+         O34ZRrclYSid1RUeURJvcD5KuoFYj9QW3n2qeXsyeMojbkgksgxLK//Lm8fpR9gkLno9
+         YCDfbEB0m8AFVrOo5c9Ai71PuqwbTN6hGw/+ieVfa3Z6ruwc4vhujz+MNOXvZktyICHs
+         kYVA==
+X-Gm-Message-State: ALoCoQkaune7XDm4iSOePw4HEuS8fdKReJ9uld4O/50PHimxajdqW+HhF0iJAz0b8pltfOiCPDeg
+X-Received: by 10.140.98.164 with SMTP id o33mr27125809qge.25.1413738714258;
+        Sun, 19 Oct 2014 10:11:54 -0700 (PDT)
+Received: from localhost (HSI-KBW-109-193-068-033.hsi7.kabel-badenwuerttemberg.de. [109.193.68.33])
+        by mx.google.com with ESMTPSA id i1sm5781476qaz.28.2014.10.19.10.11.53
+        for <users@maven.apache.org>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 19 Oct 2014 10:11:54 -0700 (PDT)
+Date: Sun, 19 Oct 2014 19:11:50 +0200
+From: Bernd Eckenfels <ecki@zusammenkunft.net>
+To: users@maven.apache.org
+Subject: Re: generate maven dependency difference between two Jenkins builds
+Message-ID: <20141019191150.0000284c.ecki@zusammenkunft.net>
+In-Reply-To: <CACGLCJYLsVKLNLwGZxeXmdNg_04FDvux8LGjcLKDL5MR+=FAZw@mail.gmail.com>
+References: <CACGLCJak6BzD1qnd3WWQmDYHjxcxpFrVL+jCqnim2TYZ5=jciw@mail.gmail.com>
+	<20141019181952.0000769c.ecki@zusammenkunft.net>
+	<CACGLCJYLsVKLNLwGZxeXmdNg_04FDvux8LGjcLKDL5MR+=FAZw@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Ah another thing, I always wished there is an option to archive the
+effective POM instead of the tear downed POM with the
+maven-archiver (addMavenDesciptor).
+
+Especially when the effective pom also contains the resolved snapshot
+timestamps (which it currently not does).
+
+Speaking of effective pom, you can create and archive it, then you have
+at least all expressions and profiles locked down.
+
+Gruss
+Bernd
+
+Am Sun, 19 Oct 2014 22:17:45 +0530
+schrieb Irfan Sayed <irfu.sayed@gmail.com>:
+
+> thanks bernd.
+> anyone has any other suggestions please?
+> 
+> regards
+> 
+> 
+> On Sun, Oct 19, 2014 at 9:49 PM, Bernd Eckenfels
+> <ecki@zusammenkunft.net> wrote:
+> 
+> > Hello,
+> >
+> > I dont have a good method for that (especially not if all
+> > dependencies arent fully version-specified. You can use and add
+> > dependencies:list as a target to the maven build, then the resolved
+> > list will be printed in the build log. This list can change
+> > depending on what is available at build time.
+> >
+> > Gruss
+> > Bernd
+> >
+> >   Am Sun, 19 Oct 2014 20:57:29 +0530
+> > schrieb Irfan Sayed <irfu.sayed@gmail.com>:
+> >
+> > > hello,
+> > >
+> > > we have java project and using maven to build the same. we are
+> > > using Jenkins. in Jenkins ,  we can generate the delta of source
+> > > code changes between two builds.
+> > > in the same way, do we have any way wherein , we can generate the
+> > > delta of maven dependencies changed between two builds.
+> > >
+> > > please suggest
+> > >
+> > > regards
+> > >
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+> 
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

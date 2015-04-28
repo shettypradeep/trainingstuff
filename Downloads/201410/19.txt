@@ -1,0 +1,104 @@
+From users-return-137652-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Oct 29 15:14:40 2014
+Return-Path: <users-return-137652-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6996B17BE1
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 29 Oct 2014 15:14:40 +0000 (UTC)
+Received: (qmail 35768 invoked by uid 500); 29 Oct 2014 15:14:38 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 35679 invoked by uid 500); 29 Oct 2014 15:14:38 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 35668 invoked by uid 99); 29 Oct 2014 15:14:38 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Oct 2014 15:14:38 +0000
+X-ASF-Spam-Status: No, hits=0.3 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (nike.apache.org: transitioning domain of jeroen@lable.org does not designate 209.85.192.53 as permitted sender)
+Received: from [209.85.192.53] (HELO mail-qg0-f53.google.com) (209.85.192.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Oct 2014 15:14:11 +0000
+Received: by mail-qg0-f53.google.com with SMTP id z107so2370395qgd.26
+        for <users@maven.apache.org>; Wed, 29 Oct 2014 08:14:09 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to
+         :content-type;
+        bh=4t+AADKSAkBC68v4k+3SJgUNt69D4pS9g61rt0cn9v8=;
+        b=WJpgJ1eoe/lyZpIM+4yIvPIbXuDau2sdCJjzHVpk4ASJwYPxnFrhkaRcZtKiW39gbV
+         HS0T3i4pzf/L8vF4i+c+zV7u+KHX3fjmV7h7g3/aWvKciRoAeYfXUXIIUVmu4HamNIne
+         Gomyhm1kC4IHTOJFRSvtFNH9mClJWizvpvvMt+F3/VJ4Tbi5Lg10P3ZsILo32rrbD3WI
+         03TjyT9QBbcBo8xqKUBLeBSiHkPOUZ2od8m0M0syIJceZdqigrvBOgALsPqX8dnkpBZe
+         x3gG1mTixVFUfQEYUexKe2X5Ap0u9F3B1ZjD6NZoXwh6a0i1KaDCQLlxu33dygA7JfTz
+         uaWg==
+X-Gm-Message-State: ALoCoQnFpUZe+nId+0laxL8jRQw+Zi0+PsIfxqHZPINvlchkKa/GzZQMETSuU01m82QWPlPhqTwB
+MIME-Version: 1.0
+X-Received: by 10.224.40.70 with SMTP id j6mr12079382qae.21.1414595649521;
+ Wed, 29 Oct 2014 08:14:09 -0700 (PDT)
+Received: by 10.140.30.7 with HTTP; Wed, 29 Oct 2014 08:14:09 -0700 (PDT)
+X-Originating-IP: [145.53.65.21]
+Date: Wed, 29 Oct 2014 16:14:09 +0100
+Message-ID: <CAPJcxA-xz9LnOvJiBXQE_-3p7O1DOTjNFLzLRjE6pJguG71=NQ@mail.gmail.com>
+Subject: Client-side SSL certifcates and Maven
+From: Jeroen Hoek <jeroen@lable.org>
+To: users@maven.apache.org
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello,
+
+I am trying to get Maven (3.2.2) to work with an instance of Archiva
+hosted behind a webserver secured with client-side SSL certificates.
+
+I have followed the guide at
+https://maven.apache.org/guides/mini/guide-repository-ssl.html, and
+imported the server-side SSL certificate into a Java .jks file. The
+client-side certificate is a PKCS12 file, which works correctly in
+Firefox and Chromium.
+
+I have a simple project that depends on an artifact hosted on my
+Archiva server. When client-side SSL verification is disabled on the
+server, `mvn clean install` works as expected, and the dependency is
+downloaded.
+
+But it doesn't work when I activate client-side SSL verification, and
+try the following command:
+
+mvn clean install -Djavax.net.debug=ssl
+-Djavax.net.ssl.trustStore=PATH_TO_TRUSTDB.jks
+-Djavax.net.ssl.trustStorePassword=****************
+-Djavax.net.ssl.keyStore=PATH_TO_MY_CERT.p12
+-Djavax.net.ssl.keyStoreType=pkcs12
+-Djavax.net.ssl.keyStorePassword=****************
+
+>From what I can see in the output, my .p12 file is read by Maven at
+the start, as is the trust-store, but it fails to complete requests to
+the Archiva server, although TLS handshaking appears to work, so the
+server-side certificate is trusted and accepted. The server throws the
+"400: No required SSL certificate was sent" error message you get when
+trying to talk to it without a client-side SSL certificate installed.
+In the server log I am indeed seeing HTTP GET requests from Maven
+without any client-side SSL certificate, whereas GETs by a browser do
+show access with the valid certificate there.
+
+Any idea why Maven isn't using the client-side SSL certificate passed
+via -Djavax.net.ssl.keyStoreType? Is there some configuration option I
+am overlooking?
+
+Kind regards,
+
+Jeroen Hoek
+Lable
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

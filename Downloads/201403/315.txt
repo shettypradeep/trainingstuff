@@ -1,0 +1,81 @@
+From users-return-135676-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Mar  4 04:36:17 2014
+Return-Path: <users-return-135676-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 702CC10028
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  4 Mar 2014 04:36:17 +0000 (UTC)
+Received: (qmail 2686 invoked by uid 500); 4 Mar 2014 04:36:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 2587 invoked by uid 500); 4 Mar 2014 04:36:12 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 16691 invoked by uid 99); 3 Mar 2014 12:44:42 -0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Message-ID: <5314791D.90506@pocock.pro>
+Date: Mon, 03 Mar 2014 13:44:13 +0100
+From: Daniel Pocock <daniel@pocock.pro>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:17.0) Gecko/20131103 Icedove/17.0.10
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Google Summer of Code - Java opportunity, mentors needed
+References: <530C66D6.2010602@pocock.com.au>,<CALhtWkdAmrk07gcM+kdyDTbd7TuiAGutTbw=O_3jPmTz30=R4g@mail.gmail.com>,<5629A6219DB3E544AB84388D90149787479C9535@xmb-aln-x03.cisco.com>,<CALhtWkf9XQ9UpW-8Ez2peJtnXwXu+4Xy1eMHYXjGMka7kU0bjw@mail.gmail.com>,<5629A6219DB3E544AB84388D90149787479C9693@xmb-aln-x03.cisco.com> <BLU172-W4066FDEA39D63E4A373642AE830@phx.gbl>
+In-Reply-To: <BLU172-W4066FDEA39D63E4A373642AE830@phx.gbl>
+X-Enigmail-Version: 1.5.1
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: 8bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 27/02/14 02:21, Martin Gainty wrote:
+>   
+>
+>
+>> From: jnord@cisco.com
+>> To: users@maven.apache.org
+>> Subject: RE: Google Summer of Code - Java opportunity, mentors needed
+>> Date: Wed, 26 Feb 2014 16:17:29 +0000
+>>
+>>>> Nowhere in that was the sources jar mentioned - yet you seemed to have
+>>> jumped directly to a solution and then said can’t be done.
+>>>
+>>> No, I discussed the two paths from the POM: -sources and <scm/>
+>> My mistake, sorry.
+>>
+>>>> There is a critical need for this inside businesses as well as Debian (how do
+>>> we know that "org.foobar:baz:1.2.3:jar" is MIT as it claims and doesn’t
+>>> contain some GPL Code.
+>>>
+>>> Which is a fine reason to contribute it Maven 4 where the POM could contain
+>>> the necessary metadata to enable it.
+>> This shouldn't prohibit something using what exists now.
+>>
+>> One commercial company has done something for some subset of artifacts - which may have been entirely human process/mixed or automated.
+> MG>How will the aggrgeator mechanism aggreate for this subset of artifacts  
+> MG>Scope?
+> MG>Classifier?
+>
+> MG>With regards to GPLartifacts could'nt we find the necessary violations with Sonatype CLM
+> MG>(No plug for Sonatype intended)
+
+
+I've put up more details of how this project could be broken down into
+discrete tasks:
+
+http://danielpocock.com/automatically-and-recursively-building-java-projects
+
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

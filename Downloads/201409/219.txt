@@ -1,0 +1,209 @@
+From users-return-137268-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 12 17:42:44 2014
+Return-Path: <users-return-137268-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 521C61114D
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 12 Sep 2014 17:42:44 +0000 (UTC)
+Received: (qmail 48493 invoked by uid 500); 12 Sep 2014 17:42:42 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 48413 invoked by uid 500); 12 Sep 2014 17:42:42 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 48401 invoked by uid 99); 12 Sep 2014 17:42:42 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 17:42:42 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of burtonator2011@gmail.com designates 209.85.217.171 as permitted sender)
+Received: from [209.85.217.171] (HELO mail-lb0-f171.google.com) (209.85.217.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 17:42:16 +0000
+Received: by mail-lb0-f171.google.com with SMTP id 10so1364050lbg.30
+        for <users@maven.apache.org>; Fri, 12 Sep 2014 10:42:15 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=c08RTlI8eh7NGmdsXw1hmcgRfxI2yAG8ClQeFc3CvIQ=;
+        b=K5K9TyZjCTHNfS3Dw24XDntc4o75KCsekNQrR1AQ7/qUYRgcopqkoM925EiiCFJD/D
+         PKre7okH3bB68vBLstTiVq83zZoqtiRHa0A3zbSjbHXdNKcGHHG/dnB81/a3+hLx7Gef
+         rnyGmpMON8QOu288UaPF4BK1Mql9txhoeViOgo34kt2fB3weKx+aJ1zdZtFwnjH3WZpr
+         yXhWPDDXjgVrRVhNTS85cuAkhMHtQ+PK0q3QqQu80IzV6GmINiaAjPdSx+JG8DCXgoUc
+         B126QsDDDatRB9hNp/xt2dgub/ALOc2zxdi02kPBbY0d2UC/KMv7cnznP+V0N2izfOD5
+         W86g==
+X-Received: by 10.152.9.37 with SMTP id w5mr10616775laa.28.1410543735600; Fri,
+ 12 Sep 2014 10:42:15 -0700 (PDT)
+MIME-Version: 1.0
+Sender: burtonator2011@gmail.com
+Received: by 10.112.210.137 with HTTP; Fri, 12 Sep 2014 10:41:55 -0700 (PDT)
+In-Reply-To: <D0387953.16A6A%Robert.Puncel@jpl.nasa.gov>
+References: <CAAZU44kFZ0cNGa_qOXf6Wj_LRRM18LE3v0xKMLZ0+Z44ZffpFg@mail.gmail.com>
+ <CADN69ynJnF10Lofgw6cPRTNz-OyWXHPH0oqTDyzf5xyXP_RKXA@mail.gmail.com>
+ <CAAZU44njJwOz7hbKAeUyE3fY6ygCDJiA5Qa0FeNOT58fJTS=tA@mail.gmail.com>
+ <CAAZU44m6VFKf4nDiitwc9WLHZcczhjBYtm4RaGo-pf_buf-7bw@mail.gmail.com> <D0387953.16A6A%Robert.Puncel@jpl.nasa.gov>
+From: Kevin Burton <burton@spinn3r.com>
+Date: Fri, 12 Sep 2014 10:41:55 -0700
+X-Google-Sender-Auth: gkFskNq9xyn12CKt5GfUdP6lUiE
+Message-ID: <CAAZU44mCi2pgYVZbm9ZvS6x+OocaEDmGw6an38EY0JmHdUuZNQ@mail.gmail.com>
+Subject: Re: Tell maven to not have the parent pom as a dependency?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e014946f44cfab10502e1ce09
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e014946f44cfab10502e1ce09
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Thanks=E2=80=A6
+
+I just want to bump the version number on the release.
+
+I was using the auto increment fork of the versions number to make it
+easier=E2=80=A6 but I can use the versions plugin manually.
+
+I mean the general use case is I have about 20 modules and mildly complex
+inheritance and I don=E2=80=99t want to have to update 30-40 places when I =
+bump a
+version number :-(
+
+
+On Fri, Sep 12, 2014 at 10:22 AM, Puncel, Robert (393J) <
+Robert.Puncel@jpl.nasa.gov> wrote:
+
+> You mentioned you were using the versions plugin and it wasn=C2=B9t worki=
+ng-
+> did you use it before? Can you describe your use case in terms of the
+> command line you are using, and what versions you want to upgrade?
+>
+> On 9/12/14, 10:16 AM, "Kevin Burton" <burton@spinn3r.com> wrote:
+>
+> >OK=C5=A0 so this definitely works and the aggregation model compiles my =
+module.
+> >
+> >But I need a way to bump the version number because I have complex
+> >dependencies and updating 10 places every time I change the project
+> >version
+> >isn=C2=B9t going to be fun.
+> >
+> >
+> >On Fri, Sep 12, 2014 at 10:03 AM, Kevin Burton <burton@spinn3r.com>
+> wrote:
+> >
+> >> > In other words, you can keep using your toplevel pom.xml as an
+> >> _aggregator_
+> >> without it being the _parent_ of your OSS module.
+> >>
+> >> Ha.  That works.  But the versions plugin now won=C2=B9t update the ve=
+rsion
+> >>of
+> >> the sub-module=C5=A0
+> >>
+> >> This is super fun! :)
+> >>
+> >>
+> >> On Fri, Sep 12, 2014 at 9:33 AM, Curtis Rueden <ctrueden@wisc.edu>
+> >>wrote:
+> >>
+> >>> Hi Kevin,
+> >>>
+> >>> > I want to post this to a public repo=C5=A0 it=C2=B9s open source.
+> >>> >
+> >>> > The problem is that the parent module is not OSS.
+> >>>
+> >>> Child modules of a multi-module build do not need to use the toplevel
+> >>> module as parent.
+> >>>
+> >>> In other words, you can keep using your toplevel pom.xml as an
+> >>> _aggregator_
+> >>> without it being the _parent_ of your OSS module.
+> >>>
+> >>>
+> >>>
+> http://rostislav-matl.blogspot.com/2011/12/maven-aggregator-vs-parent.ht
+> >>>ml
+> >>>
+> >>> Regards,
+> >>> Curtis
+> >>>
+> >>> On Thu, Sep 11, 2014 at 10:25 PM, Kevin Burton <burton@spinn3r.com>
+> >>> wrote:
+> >>>
+> >>> > I have an OSS module in a multi-module maven project.
+> >>> >
+> >>> > I want to post this to a public repo=C5=A0 it=C2=B9s open source.
+> >>> >
+> >>> > The problem is that the parent module is not OSS.
+> >>> >
+> >>> > When I setup a <dependency> it pulls in my OSS module just fine, bu=
+t
+> >>> then
+> >>> > it tries to pull down the parent module, which isn=C2=B9t in the re=
+po, and
+> >>> > breaks.
+> >>> >
+> >>> > The parent pom isn=C2=B9t really a dependency=C5=A0 so I=C2=B9d lik=
+e it to not need
+> >>>it
+> >>> >
+> >>> > is this possible?
+> >>> >
+> >>> > --
+> >>> >
+> >>> > Founder/CEO Spinn3r.com
+> >>> > Location: *San Francisco, CA*
+> >>> > blog: http://burtonator.wordpress.com
+> >>> > =C5=A0 or check out my Google+ profile
+> >>> > <https://plus.google.com/102718274791889610666/posts>
+> >>> > <http://spinn3r.com>
+> >>> >
+> >>>
+> >>
+> >>
+> >>
+> >> --
+> >>
+> >> Founder/CEO Spinn3r.com
+> >> Location: *San Francisco, CA*
+> >> blog: http://burtonator.wordpress.com
+> >> =C5=A0 or check out my Google+ profile
+> >> <https://plus.google.com/102718274791889610666/posts>
+> >> <http://spinn3r.com>
+> >>
+> >>
+> >
+> >
+> >--
+> >
+> >Founder/CEO Spinn3r.com
+> >Location: *San Francisco, CA*
+> >blog: http://burtonator.wordpress.com
+> >=C5=A0 or check out my Google+ profile
+> ><https://plus.google.com/102718274791889610666/posts>
+> ><http://spinn3r.com>
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+--=20
+
+Founder/CEO Spinn3r.com
+Location: *San Francisco, CA*
+blog: http://burtonator.wordpress.com
+=E2=80=A6 or check out my Google+ profile
+<https://plus.google.com/102718274791889610666/posts>
+<http://spinn3r.com>
+
+--089e014946f44cfab10502e1ce09--
+

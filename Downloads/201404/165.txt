@@ -1,0 +1,134 @@
+From users-return-136159-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 15 22:44:02 2014
+Return-Path: <users-return-136159-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7C4BA11FBF
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 15 Apr 2014 22:44:02 +0000 (UTC)
+Received: (qmail 80389 invoked by uid 500); 15 Apr 2014 22:43:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 80253 invoked by uid 500); 15 Apr 2014 22:43:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 66153 invoked by uid 99); 15 Apr 2014 22:34:32 -0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: 216.145.54.172 is neither permitted nor denied by domain of knar@yahoo-inc.com)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=yahoo-inc.com;
+	s=cobra; t=1397601203;
+	bh=MMsPNWEFvBAR3V1CowjM5MFR7W/8OI2Fpiu3wuKuRSo=;
+	h=From:To:Subject:Date;
+	b=H79znMoqNxhHUoI7ib1LA+g+654TWNgpnjFlbwhBJYVSh04RxdJJb7h8tz1aBrBUW
+	 9+1VzLsa3KHS+7m8AqIJvPm1hl6o8unrgTonreuYsvGnu8vV5EBVZ6W8qCwTfP2Wp7
+	 94gxeTmxYf3k/opeCBEw8XHViqODcxHABeCZvPGM=
+From: Narayanan Krishnamoorthy <knar@yahoo-inc.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: Generating Incorrect fat jar using maven-assembly-plugin in maven 2
+ with war packaging
+Thread-Topic: Generating Incorrect fat jar using maven-assembly-plugin in
+ maven 2 with war packaging
+Thread-Index: AQHPWPq1hyMaHjzz5kmiL05EREYmDg==
+Date: Tue, 15 Apr 2014 22:33:22 +0000
+Message-ID: <CF719BC3.23809%knar@yahoo-inc.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+user-agent: Microsoft-MacOutlook/14.3.9.131030
+x-originating-ip: [10.73.208.136]
+Content-Type: multipart/alternative;
+	boundary="_000_CF719BC323809knaryahooinccom_"
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_000_CF719BC323809knaryahooinccom_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+Hi all,
+
+I have a default pom file in our codebase that has "war" packaging.
+
+We wanted to also generate a normal jar file (lean) and a fat jar with depe=
+ndencies along with the war file in our build using the same pom.xml.
+
+$ mvn -version
+Apache Maven 2.2.1 (r801777; 2009-08-06 12:16:01-0700)
+Java version: 1.7.0_45
+Java home: /Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/=
+jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "mac os x" version: "10.8.5" arch: "x86_64" Family: "mac"
+
+We added the following plugins - maven=96assembly-plugin to generate the fa=
+r jar and maven-jar-plugin to generate the lean jar.
+
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef=
+>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>assembly-all</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <executions>
+              <execution>
+                  <id>make-a-jar</id>
+                  <phase>compile</phase>
+                  <goals>
+                      <goal>jar</goal>
+                  </goals>
+              </execution>
+          </executions>
+      </plugin>
+
+On mvn clean install,
+It is generating all the 3 files : war, lean jar and far jar.
+
+But the problem is the jar-with-dependencies (fat jar) generated is getting=
+ built in the wrong way. Its size becomes double that of the same jar built=
+ by using Maven 3.0.4 (yes, I tried upgrading the maven to 3.0.4 to test an=
+d everything is good
+With maven 3).
+
+The problem is only with maven 2 and to me it looks like since the overall =
+packaging phase of the pom is war , it is generating a wrong fat jar using =
+the maven-assembly-plugin.  Many src classes are missing from the fat jar.
+
+Anyone faced this issue with maven 2 and war packaging. Maven 3.0.4 is just=
+ fine while generating the fat jar.
+
+Does maven-assembly-plugin have some restrictions with maven 2 and war pack=
+aging ?
+
+Is there an alternate plugin to generate a jar with dependencies other than=
+ maven-assembly-plugin ?
+
+Thanks in advance
+Narayanan
+
+
+--_000_CF719BC323809knaryahooinccom_--
+

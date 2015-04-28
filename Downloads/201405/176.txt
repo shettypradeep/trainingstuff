@@ -1,0 +1,85 @@
+From users-return-136341-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue May 13 08:02:20 2014
+Return-Path: <users-return-136341-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 05D251173B
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 13 May 2014 08:02:20 +0000 (UTC)
+Received: (qmail 76732 invoked by uid 500); 12 May 2014 16:02:19 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 76653 invoked by uid 500); 12 May 2014 16:02:19 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 76645 invoked by uid 99); 12 May 2014 16:02:19 -0000
+Received: from Unknown (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 12 May 2014 16:02:19 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ndimiduk@gmail.com designates 209.85.128.181 as permitted sender)
+Received: from [209.85.128.181] (HELO mail-ve0-f181.google.com) (209.85.128.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 12 May 2014 16:02:15 +0000
+Received: by mail-ve0-f181.google.com with SMTP id pa12so8964574veb.26
+        for <users@maven.apache.org>; Mon, 12 May 2014 09:01:51 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:from:date:message-id:subject:to:content-type;
+        bh=1OYevxFovhwW8KBLUBloE/kA1OdCuDU2K9gihuV8MM8=;
+        b=Jxx8GykTsYZJJB2KW6ZGqbhAzXsYB/IfKg8nDFrVTEYzzydzYOJKtne1MAGoZkh3tI
+         FuL0RdXBPXIXJYHnTsZBE4QTy9mOCpCSgg3dQW3QUs68BnrrxHh25lezsSR/PPQlQC2R
+         BFgQK/VTEHwaeJ004GQaftY6WL7/KVISlqSVBvEAzld93zi+kjCqdn4ZypWaK9ce7p/P
+         wC9nGA8vqjM2AaIiS52AxXCsG9EbzxCJxjvsxNmZslzeMnKOXyj/kdjrNFqeLv/JliB7
+         m0wrt6tCYZR6ftujG4/jLVFDXSuCzPGBRbF6lPTc3HH4d2WZDk31I+7j0pdh9n4Bdad5
+         9oFQ==
+X-Received: by 10.220.92.193 with SMTP id s1mr1810311vcm.34.1399910511890;
+ Mon, 12 May 2014 09:01:51 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.58.227.162 with HTTP; Mon, 12 May 2014 09:01:31 -0700 (PDT)
+From: Nick Dimiduk <ndimiduk@gmail.com>
+Date: Mon, 12 May 2014 09:01:31 -0700
+Message-ID: <CANZa=GsRaWf9t-QpBi4tA4jMjUtHGLJEMQM_idBNSU1RdPLYyg@mail.gmail.com>
+Subject: Shading all modules in a project
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a11c1ea10c757dd04f93610b9
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c1ea10c757dd04f93610b9
+Content-Type: text/plain; charset=UTF-8
+
+Hello,
+
+Over in Apache HBase, we have an interesting problem that I'm hoping the
+shade plugin can help us solve. It all started with a performance
+enhancement to reduce garbage by creating a subclass of a protobuf type
+[0]. It works fine for us most of the time. However, when using this code
+from a Hadoop mapreduce job, things get strange. Due to the permissions on
+the parent object and the way Hadoop uses "fat" jars, we now have
+classloader troubles [1]. We were able to work around the issue by
+documenting the required classpath constructions. However, this is not
+possible for all users. This is where the shade plugin comes in.
+
+I gave shade a shot [2], though I admit I'm not terribly familiar with it,
+nor the inner workings of maven. As far as I can tell, the trouble is the
+plugin invocation is limited to the single module in our multi-module
+project. I think what's happening is shade is doing what I want for the
+hbase-protocol module, but I also need it to do bytecode rewriting for the
+modules that consume this module as well. Luckily, this detail is not part
+of our public API so it should be transparent to our users.
+
+My patch is posted on [2]. Any pointers/advice is greatly appreciated.
+
+Thanks in advance,
+Nick
+
+[0]: https://issues.apache.org/jira/browse/HBASE-9867
+[1]: https://issues.apache.org/jira/browse/HBASE-10304
+[2]: https://issues.apache.org/jira/browse/HBASE-11118
+
+--001a11c1ea10c757dd04f93610b9--
+

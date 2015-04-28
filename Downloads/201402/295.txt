@@ -1,0 +1,77 @@
+From users-return-135636-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 27 21:49:43 2014
+Return-Path: <users-return-135636-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A061510838
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 27 Feb 2014 21:49:43 +0000 (UTC)
+Received: (qmail 24699 invoked by uid 500); 27 Feb 2014 21:49:36 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 24577 invoked by uid 500); 27 Feb 2014 21:49:36 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 24568 invoked by uid 99); 27 Feb 2014 21:49:35 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Feb 2014 21:49:35 +0000
+Received: from localhost (HELO mail-oa0-f45.google.com) (127.0.0.1)
+  (smtp-auth username olamy, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Feb 2014 21:49:35 +0000
+Received: by mail-oa0-f45.google.com with SMTP id i11so3165191oag.18
+        for <users@maven.apache.org>; Thu, 27 Feb 2014 13:49:34 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=ENnyoWJwYr8cFRU9bugjF83FD6wXjA0GKuxvzBk0g18=;
+        b=Xjd1SUuZ6PDfWg6sCtJ8tjSgzk6g3opIlpOdiZ4ppIu61WWoaE2GQhcf0iznPA13E1
+         U84nyneZ/REYdqobrNKzspGZMZ+7lWgmmaJZzIlZU62HvB2GYEBEqN4JEfPuQpC0Wzy4
+         6w/Zv6Sl9WeH12JfNCIqP4mUWiYTJUuEg1NQ/G8uXMz+Hl2+qRKD7LA59Wgn3UZ7/RL7
+         jkhRKiA8DElyb5Bs5f6mvVHE5ZFSBpaOcKAufth/LMGmog5RcrxIfSwQAdokE4Xwd9Yn
+         GoQEG5H8761lm31kykGRVfOCtKc6t5vaJuKztrvlJxUF7NMq/CJnAt8RYInIyC1rvbuD
+         qhpQ==
+MIME-Version: 1.0
+X-Received: by 10.60.44.232 with SMTP id h8mr14055778oem.54.1393537774851;
+ Thu, 27 Feb 2014 13:49:34 -0800 (PST)
+Received: by 10.182.69.101 with HTTP; Thu, 27 Feb 2014 13:49:34 -0800 (PST)
+Received: by 10.182.69.101 with HTTP; Thu, 27 Feb 2014 13:49:34 -0800 (PST)
+In-Reply-To: <BLU172-W2782D91A04B5B09B341930AE830@phx.gbl>
+References: <BLU172-W2782D91A04B5B09B341930AE830@phx.gbl>
+Date: Fri, 28 Feb 2014 08:49:34 +1100
+Message-ID: <CAPoyBqSA51ypHScrFU8LAnvuX_5aLsBDr4VtBHxbXXr-HEsmXA@mail.gmail.com>
+Subject: Re: Jenkins REST-API
+From: Olivier Lamy <olamy@apache.org>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11330c9e0d1f2904f36a4c2b
+
+--001a11330c9e0d1f2904f36a4c2b
+Content-Type: text/plain; charset=ISO-8859-1
+
+Maybe use jenkins mailing list :-)
+
+--
+Olivier
+On Feb 28, 2014 7:52 AM, "Martin Gainty" <mgainty@hotmail.com> wrote:
+
+> anyone know how to use Jenkins REST-API to create a test Jenkins job?
+>
+>
+> wget --verbose --auth-no-challenge --http-user=jenkins
+> --header='Content-type: application/xml; charset=ISO-8859-1'
+> --http-password=CHANGEME -O /dev/null --post-file=C:/Nexus/config.xml
+> http://localhost:8080/createItem?name=test
+>
+>
+> Thanks!
+> Martin
+> ______________________________________________
+>
+>
+
+--001a11330c9e0d1f2904f36a4c2b--
+

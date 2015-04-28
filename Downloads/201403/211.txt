@@ -1,0 +1,171 @@
+From users-return-135969-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 27 19:38:07 2014
+Return-Path: <users-return-135969-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A5726101A1
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 27 Mar 2014 19:38:07 +0000 (UTC)
+Received: (qmail 88800 invoked by uid 500); 27 Mar 2014 19:38:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 88248 invoked by uid 500); 27 Mar 2014 19:38:01 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 88221 invoked by uid 99); 27 Mar 2014 19:37:59 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Mar 2014 19:37:59 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stevenschlansker@gmail.com designates 209.85.220.45 as permitted sender)
+Received: from [209.85.220.45] (HELO mail-pa0-f45.google.com) (209.85.220.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Mar 2014 19:37:55 +0000
+Received: by mail-pa0-f45.google.com with SMTP id kl14so3938124pab.32
+        for <users@maven.apache.org>; Thu, 27 Mar 2014 12:37:35 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=content-type:mime-version:subject:from:in-reply-to:date:cc
+         :content-transfer-encoding:message-id:references:to;
+        bh=+uy16+nI6YFa9+52lYXS7WqhcoK5htsH49bu5ogDkbw=;
+        b=YQlGjA1CSQM7ti51P0SYdX6gP6SsSd0Lk0RYNaLKsg+5N3L5X4I5t2W+k8UG/15PMT
+         pjVqHeLuMSGpxgYjYAAotyr194K/7TXmKbQ8PVIe7WCMIjgHim8kso0toVjkGgYZlBYe
+         P1XObrhDSZja2cYqDiBv+tWaO8neDcE4CAF5iOk+Lo8hRRgpwjuxOyNemz92JKG3Y3A6
+         BkjWX5d/nRNzdXJZ+or2jz0k5p68wynNCWGp4IkVKfN479C/Dam5ctg3b4fFHfSTOIPP
+         9sHOjHbr/AqjyLPRsqijBep35ITapbgv9cbL4rvtp2u6WOFBFKIYke6ak64j+66wsCb8
+         9LIw==
+X-Received: by 10.66.232.40 with SMTP id tl8mr3708680pac.137.1395949055118;
+        Thu, 27 Mar 2014 12:37:35 -0700 (PDT)
+Received: from [10.45.96.226] ([156.39.128.195])
+        by mx.google.com with ESMTPSA id ha2sm12719139pbb.8.2014.03.27.12.37.31
+        for <multiple recipients>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Thu, 27 Mar 2014 12:37:32 -0700 (PDT)
+Content-Type: text/plain; charset=us-ascii
+Mime-Version: 1.0 (Mac OS X Mail 7.2 \(1874\))
+Subject: Re: [MNG-5551] Java 8 + Maven status
+From: Steven Schlansker <stevenschlansker@gmail.com>
+In-Reply-To: <CAK8jvqxUCgcrD5E3GvP_aOdEDKBw=Ng4Q8PHdbXzfc7-zFKYgA@mail.gmail.com>
+Date: Thu, 27 Mar 2014 12:37:29 -0700
+Cc: gudnabrsam@gmail.com
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <72F85A01-FB88-46BB-BAFF-7EF9800BFF2A@gmail.com>
+References: <EF451C18-6AF0-4940-A99E-4935A4351088@gmail.com> <F4F866F8-E079-4313-AE56-6582E856335C@talios.com> <CAK8jvqwn8wk6sPKc9v3+jkvSnQZNmyezzRBMmMnVhRkDf3zhKQ@mail.gmail.com> <CAE9L6G2TOPjuyAXbnqBkhU4+pZgHt-8erh9xNYEOhGnxO4zYug@mail.gmail.com> <CAE9L6G30_=Ri9TZkUGfV9DXQG_aM_ez0pHm_E-4OSzRax2+9uQ@mail.gmail.com> <CAK8jvqxUCgcrD5E3GvP_aOdEDKBw=Ng4Q8PHdbXzfc7-zFKYgA@mail.gmail.com>
+To: Maven Users List <users@maven.apache.org>
+X-Mailer: Apple Mail (2.1874)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Here is a reproduction case:
+
+https://github.com/stevenschlansker/mdep-439-analyze-java8
+
+On Mar 27, 2014, at 10:26 AM, Mirko Friedenhagen =
+<mfriedenhagen@gmail.com> wrote:
+
+> Steven, I can not reproduce that maven-dependency-plugin:analyze:2.8
+> fails with JDK8. I have created a small library with a Lambda (call it
+> L) and ran dependency:analyze without probems. I installed this
+> library and made a new component depend on L and ran
+> dependency:analyze successfully again. As stated in MDEP-439[1], can
+> you or someone else provide a sample? Otherwise I will close this bug.
+>=20
+> [1] http://jira.codehaus.org/browse/MDEP-439
+> Regards Mirko
+> --
+> http://illegalstateexception.blogspot.com/
+> https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+> https://bitbucket.org/mfriedenhagen/
+>=20
+>=20
+> On Thu, Mar 27, 2014 at 1:28 PM, Matt Benson <gudnabrsam@gmail.com> =
+wrote:
+>> Oh, good news on the dependency plugin bit--I almost forgot that you =
+had
+>> mentioned its underlying library having already upgraded its trunk to
+>> version 4. I was thinking more about jdependency, which supports the =
+shade
+>> plugin.
+>>=20
+>> Matt
+>> On Mar 27, 2014 7:22 AM, "Matt Benson" <gudnabrsam@gmail.com> wrote:
+>>=20
+>>> Oh, well... It's no secret that ASM 3, being interface-based, is =
+wholly
+>>> incompatible with ASM 4, which took the approach of using abstract =
+classes
+>>> to significantly reduce the amount of code needed to accomplish a =
+given
+>>> task. ASM 5 claims to be compatible with 4, which is why I, not =
+realizing
+>>> that the plugins in question were based on ASM 3, suggested that =
+simply
+>>> "dropping in" the new jar should suffice. The good news is that the =
+upgrade
+>>> process is not terribly onerous, if only someone steps to do it.
+>>>=20
+>>> Matt
+>>> On Mar 27, 2014 5:25 AM, "Mirko Friedenhagen" =
+<mfriedenhagen@gmail.com>
+>>> wrote:
+>>>=20
+>>>> Mark,
+>>>>=20
+>>>> the analyze goal depends on the
+>>>> org.apache.maven.shared:maven-dependency-analyzer:1.4 which depends =
+on
+>>>> asm 3.3.1. The trunk already moved to 4.2. I will see what happens
+>>>> when switching to asm 5 :-)
+>>>> Regards Mirko
+>>>> --
+>>>> http://illegalstateexception.blogspot.com/
+>>>> https://github.com/mfriedenhagen/ =
+(http://osrc.dfm.io/mfriedenhagen)
+>>>> https://bitbucket.org/mfriedenhagen/
+>>>>=20
+>>>>=20
+>>>> On Thu, Mar 27, 2014 at 5:45 AM, Mark Derricutt <mark@talios.com> =
+wrote:
+>>>>> What version of the maven-dependency-plugin?  I'm using 2.8 fine =
+under
+>>>> JDK8
+>>>>> and have been for some time - this is using the =
+`copy-dependencies`
+>>>> goal and
+>>>>> nothing else tho...
+>>>>>=20
+>>>>>=20
+>>>>>=20
+>>>>> On 27 Mar 2014, at 6:15, Steven Schlansker wrote:
+>>>>>=20
+>>>>>> Java 8 has now been out for a week and Maven is still not really
+>>>>>> compatible.
+>>>>>> In particular, the maven-shade-plugin and maven-dependency-plugin =
+do
+>>>> not
+>>>>>> work
+>>>>>> due to an old version of ASM that throws
+>>>> ArrayIndexOutOfBoundsException on
+>>>>>> Java 8 class files.
+>>>>=20
+>>>> =
+---------------------------------------------------------------------
+>>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>>=20
+>>>>=20
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>=20
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

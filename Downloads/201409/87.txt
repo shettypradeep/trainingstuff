@@ -1,0 +1,69 @@
+From users-return-137179-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Sep  2 06:40:56 2014
+Return-Path: <users-return-137179-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F2353113B8
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  2 Sep 2014 06:40:55 +0000 (UTC)
+Received: (qmail 79942 invoked by uid 500); 2 Sep 2014 06:40:48 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 79725 invoked by uid 500); 2 Sep 2014 06:40:48 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 79693 invoked by uid 99); 2 Sep 2014 06:40:48 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 02 Sep 2014 06:40:48 +0000
+Received: by minotaur.apache.org (Postfix, from userid 6004)
+	id C199C113B4; Tue,  2 Sep 2014 06:40:47 +0000 (UTC)
+To: announce@maven.apache.org
+Subject: [ANN] Apache Maven Install Plugin Version 2.5.2 Released
+Cc: users@maven.apache.org,dev@maven.apache.org
+Message-Id: <20140902064047.C199C113B4@minotaur.apache.org>
+Date: Tue,  2 Sep 2014 06:40:46 +0000 (UTC)
+From: khmarbaise@apache.org (Karl Heinz Marbaise)
+
+The Apache Maven team is pleased to announce the release of the 
+Apache Maven Install Plugin, version 2.5.2
+
+The Install Plugin is used during the install phase to add artifact(s) to the
+local repository. The Install Plugin uses the information in the POM (groupId,
+artifactId, version) to determine the proper location for the artifact within
+the local repository.
+
+http://maven.apache.org/plugins/maven-install-plugin
+
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-install-plugin</artifactId>
+  <version>2.5.2</version>
+</plugin>
+
+Release Notes - Apache Maven Install Version 2.5.2
+
+Bugs:
+
+ * [MINSTALL-100] - Update description for installAtEnd param
+ * [MINSTALL-103] - Concurrency problem with installAtEnd in parallel builds
+
+Improvements:
+
+ * [MINSTALL-106] - MavenProject/MavenSession Injection as a paremeter instead as a component.
+ * [MINSTALL-107] - Upgrade to Maven 2.2.1 compatiblity
+
+Enjoy,
+
+-The Apache Maven team
+
+Karl-Heinz Marbaise
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

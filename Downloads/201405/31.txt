@@ -1,0 +1,76 @@
+From users-return-136331-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon May  5 23:52:15 2014
+Return-Path: <users-return-136331-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D9E3311F3B
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  5 May 2014 23:52:15 +0000 (UTC)
+Received: (qmail 70313 invoked by uid 500); 5 May 2014 23:51:59 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 70249 invoked by uid 500); 5 May 2014 23:51:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 70239 invoked by uid 99); 5 May 2014 23:51:58 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 05 May 2014 23:51:58 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.217.177 as permitted sender)
+Received: from [209.85.217.177] (HELO mail-lb0-f177.google.com) (209.85.217.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 05 May 2014 23:51:54 +0000
+Received: by mail-lb0-f177.google.com with SMTP id z11so5702099lbi.22
+        for <users@maven.apache.org>; Mon, 05 May 2014 16:51:31 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=/IjDx7FfyieNpqOYsY/kze+5ClmQ/g+8QPZSuGVad/4=;
+        b=lGTv0eadaaJfXIrks/0gpHMRJRdTBwv++88Gl0eFjnHi4uO6g6R5tZhHrASWeFuzM5
+         QeH0TJS4uCBgrp2usDYQwqSyFzxzO1R5cyUGQbJa4MTlz2fi6E7tAmYEShi1ukxLTn4d
+         lPzOWionKYs2XdZYjORcNB4LnBP8BXtrHGN8U1cEBxGAJph5coX+rmUox2dM8wNXgMod
+         I55rYeSz9/BW6l2cgmVE3s2v+T+xkj7M927XpdhPvRy7At0A7DzoiLReBTrFqplwGgwl
+         kUeIJNvmfGxXz8+RWQAiFScp5mpErNZHFFf7Kfmca6/ykBIIhwHZRrcmQJhL2xcKWNZM
+         6/SQ==
+MIME-Version: 1.0
+X-Received: by 10.112.147.36 with SMTP id th4mr4125651lbb.32.1399333891295;
+ Mon, 05 May 2014 16:51:31 -0700 (PDT)
+Received: by 10.114.48.6 with HTTP; Mon, 5 May 2014 16:51:31 -0700 (PDT)
+Date: Mon, 5 May 2014 16:51:31 -0700
+Message-ID: <CAPCjjnFMA33p+MbvbM98Zd-M002c8--Phz=qP43KPBFYA933zw@mail.gmail.com>
+Subject: use separate mirrors for project dendencies and plugin dependencies ??
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b3a866683508e04f8afcf76
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b3a866683508e04f8afcf76
+Content-Type: text/plain; charset=UTF-8
+
+for legal purpose ( btw, please dont drill me here), I would like to use
+one mirror as a gate way for all of of my project dependencies,and another
+mirror as a gate way for all of my plugins and their dependencies
+
+
+is it possible? Posting a settings.xml config here is very much appreciated
+
+
+Thanks
+
+-D
+
+BTW
+
+as documented, I am currently  able to get both type of artifacts to use
+the same mirror to my repo manager
+
+http://maven.apache.org/guides/mini/guide-mirror-settings.html does not
+seem to support what I am looking for
+
+--047d7b3a866683508e04f8afcf76--
+

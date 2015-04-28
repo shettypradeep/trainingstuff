@@ -1,0 +1,144 @@
+From users-return-135132-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 14 13:21:48 2014
+Return-Path: <users-return-135132-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 68BA110B69
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 14 Jan 2014 13:21:48 +0000 (UTC)
+Received: (qmail 37642 invoked by uid 500); 14 Jan 2014 13:21:44 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 37490 invoked by uid 500); 14 Jan 2014 13:21:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 37482 invoked by uid 99); 14 Jan 2014 13:21:44 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 13:21:43 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bmathus@gmail.com designates 209.85.215.174 as permitted sender)
+Received: from [209.85.215.174] (HELO mail-ea0-f174.google.com) (209.85.215.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 13:21:37 +0000
+Received: by mail-ea0-f174.google.com with SMTP id b10so3937504eae.33
+        for <users@maven.apache.org>; Tue, 14 Jan 2014 05:21:17 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=qGcy/uMCeewc4H68PPSULESbyIIXfol/znyTeGoY5wU=;
+        b=DY9TmQ6tCUkZPDhzqLlthHzg3rRz7eFUjew+YYR05jxHNdk7deIFL23CHclvIHAlRm
+         n3l/XmDgV9yrg6vIos86VbWSUdKvzl4afPYUAH5ncMb8GC6YFSVepRoC6wFwe4RsJWcB
+         C+gXMB49JgIdrFkhv+e8dqn1l2PSbMfvrKSsalFmTpHtFR8pRtjzmx5shFFg0fH3YxW9
+         LMLrKPGhgKH+I7mmLJYb/icOZ+qwuNWxpvmNHq8RgI758f31wTus2l10kZm0E6Oihfap
+         f8COFb1yc35ght3D9/ulNbPNYN4nPig91pkBK+w26BDJdYURQo++j/X/uUiPtfjF6DVm
+         9QeQ==
+X-Received: by 10.14.209.129 with SMTP id s1mr2145250eeo.21.1389705677216;
+ Tue, 14 Jan 2014 05:21:17 -0800 (PST)
+MIME-Version: 1.0
+Sender: bmathus@gmail.com
+Received: by 10.15.34.75 with HTTP; Tue, 14 Jan 2014 05:20:57 -0800 (PST)
+In-Reply-To: <CAHNdxunR=4EmD2RZOxLiP7YCL-zZypancovmPCh+64oCbHykBA@mail.gmail.com>
+References: <CAHNdxunR=4EmD2RZOxLiP7YCL-zZypancovmPCh+64oCbHykBA@mail.gmail.com>
+From: Baptiste Mathus <ml@batmat.net>
+Date: Tue, 14 Jan 2014 14:20:57 +0100
+X-Google-Sender-Auth: aYXmVA96s_Wkk1UCJYbbD5qYg1s
+Message-ID: <CANWgJS6ni2e+xR_zi0yBTqyeaANLWjesbdmc-xO-oX9ew63BDQ@mail.gmail.com>
+Subject: Re: During plugin development, what is the context classloader set to?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b603a783ba1af04efee11ad
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b603a783ba1af04efee11ad
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+ClassWorlds is your friend if you need to do classloader fine-tuning.
+
+For example (taken in an old poc, so this should be adapted to use
+annotations etc.), something along the following would create a classpath
+with test scope elements.
+
+...
+public class SomeMojo extends AbstractMojo
+{
+        /**
+         * @parameter expression="${project.testClasspathElements}"
+         */
+        private
+List<http://www.google.com/search?sitesearch=java.sun.com&q=allinurl%3Aj2se%2F1+5+0%2Fdocs%2Fapi+List>
+<String <http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html>>
+ testProjectArtifacts;
+...
+        protected
+ClassLoader<http://java.sun.com/j2se/1.5.0/docs/api/java/lang/ClassLoader.html>
+ getClassLoader()
+        {
+                try
+                {
+                        ClassWorld world = new ClassWorld();
+                        ClassRealm realm = world.newRealm("project");
+                        for
+(String<http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html>
+artifact
+: testProjectArtifacts)
+                        {
+                                getLog().debug("Constituent : " + artifact);
+                                realm.addConstituent(new
+File<http://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html>
+(artifact).toURL());
+                        }
+                        return realm.getClassLoader();
+                }
+                catch
+(Exception<http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Exception.html>
+ e)
+                {
+                        throw new
+RuntimeException<http://java.sun.com/j2se/1.5.0/docs/api/java/lang/RuntimeException.html>
+("WTF", e);
+                }
+        }
+
+HTH
+
+
+2014/1/8 Laird Nelson <ljnelson@gmail.com>
+
+> I have a plugin that I'm writing that needs to do two things during the
+> course of its execution:
+> Load a resource from the current project's classpath
+> Load a resource from its own guts
+>
+> This is a fallback kind of thing: if the plugin can't find anything
+> appropriate on the project classpath, then and only then do I want it to
+> examine its own .jar file for the resource in question.
+>
+> My hunch is that there are probably already two classloaders set up for
+> just this purpose.
+>
+> I am guessing (haven't tried yet) that the project classpath is probably
+> visible to Thread.currentThread().getContextClassLoader().  Is that right?
+>
+> I'm also guessing (haven't tried yet) that from within my mojo
+> this.getClass().getClassLoader() will return me a ClassLoader that is set
+> up to be able to see my mojo's innards.  Is that right?
+>
+> Best,
+> Laird
+>
+> --
+> http://about.me/lairdnelson
+>
+> --
+> Baptiste <Batmat> MATHUS - http://batmat.net
+> Sauvez un arbre,
+> Mangez un castor ! nbsp;! <http://about.me/lairdnelson>
+
+--047d7b603a783ba1af04efee11ad--
+

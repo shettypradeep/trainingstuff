@@ -1,0 +1,95 @@
+From users-return-135186-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan 16 20:50:36 2014
+Return-Path: <users-return-135186-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9F556101DB
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 16 Jan 2014 20:50:36 +0000 (UTC)
+Received: (qmail 40823 invoked by uid 500); 16 Jan 2014 20:50:32 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 40702 invoked by uid 500); 16 Jan 2014 20:50:31 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 40694 invoked by uid 99); 16 Jan 2014 20:50:31 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 16 Jan 2014 20:50:31 +0000
+Received: from localhost (HELO robertscholte) (127.0.0.1)
+  (smtp-auth username rfscholte, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Thu, 16 Jan 2014 20:50:31 +0000
+Content-Type: text/plain; charset=iso-8859-15; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Perforce and Maven Release process help...
+References: <CAPJK9=JBrBYnS-hHqrLVj-Obp8Dw4GeiFJaYLd-+KvbmoFyLCw@mail.gmail.com>
+Date: Thu, 16 Jan 2014 21:50:29 +0100
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.w9sr6faakdkhrr@robertscholte>
+In-Reply-To: <CAPJK9=JBrBYnS-hHqrLVj-Obp8Dw4GeiFJaYLd-+KvbmoFyLCw@mail.gmail.com>
+User-Agent: Opera Mail/12.16 (Win32)
+
+Hi,
+
+the maven-release-plugin uses the scm-api[1] to do the tagging and  
+committing.
+The implementation for perforce can be found at  
+http://maven.apache.org/scm/maven-scm-providers/maven-scm-provider-perforce/index.html
+Also I would try to run Maven with an additional -X (or --debug) to switch  
+to debug logging.
+This should show the commands executed by the scm-provider for perforce.
+
+Robert
+
+[1] http://maven.apache.org/scm/maven-scm-api/index.html
+
+Op Thu, 16 Jan 2014 01:22:40 +0100 schreef Jeff <predatorvi@gmail.com>:
+
+> I'm stuck.  I don't normally use Perforce. I don't know why the Maven
+> release process doesn't work with Perforce.
+>
+> I can pull and build the source.  When I use the Jenkins Maven Release
+> plugin, I give it my personal credentials.  My user owns the  
+> Jenkins_master
+> work space I created.  It is the same user used to check out the source
+> initially.
+>
+> The error I get is:
+>
+> [ERROR] Failed to execute goal
+> org.apache.maven.plugins:maven-release-plugin:2.3.2:prepare
+> (default-cli) on project webpulse-parent-pom: Error writing POM:
+> /home/tomcat7/.jenkins/jobs/my-parent-pom/workspace/pom.xml
+> (Permission denied) -> [Help 1]
+>
+>
+> I thought it was because it was read-only but after adding the 'allwrite'
+> option, I get the error:
+>
+> [INFO] Checking in modified POMs...
+>
+> [ERROR] CommandLineException Exit code: 1 - Error in change  
+> specification.
+>
+>
+> Can't include file(s) not already opened.
+>
+> Open new files with p4 add, p4 edit, etc.
+>
+>
+> Doesn't the Maven Perforce connector do a 'p4 edit' before trying to
+> change/submit the POM?
+>
+> What am I doing wrong?
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

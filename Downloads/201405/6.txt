@@ -1,0 +1,109 @@
+From users-return-136428-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu May 22 20:24:07 2014
+Return-Path: <users-return-136428-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4079511884
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 22 May 2014 20:24:07 +0000 (UTC)
+Received: (qmail 99393 invoked by uid 500); 22 May 2014 20:24:05 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99299 invoked by uid 500); 22 May 2014 20:24:05 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99291 invoked by uid 99); 22 May 2014 20:24:05 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 22 May 2014 20:24:05 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of jsonlee.ft@gmail.com designates 209.85.215.50 as permitted sender)
+Received: from [209.85.215.50] (HELO mail-la0-f50.google.com) (209.85.215.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 22 May 2014 20:24:02 +0000
+Received: by mail-la0-f50.google.com with SMTP id b8so3084885lan.23
+        for <users@maven.apache.org>; Thu, 22 May 2014 13:23:38 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=lf2HFEWI0n6SU2mtDVHPkaqYu9DuyB8k9+t1xyQBbls=;
+        b=mroJZioFDmr+zBeBsyeZs+qgvrH5z+iFCOiewXaD117OQYjYKvy92kbKTQIKYsw5ws
+         te1oVMIdPD7aZhEX0Naoy4aDLUm/K06ZSVyOAnd7ZO/jKPhFmzXD/ZnS6cyLF8evnVv7
+         Pjai1Vq367/yKtaqCcz0LH+FkV7fBC22hsWGpGvySJWDt8bAoc4mvFtMiJSXdOLpdlVB
+         7TA1RAWT/qwKrELJm74g0kqPUhynGWsKC6msXtjd38hDwk/jcwx9i0QM+MnGINoE6XZj
+         ENXPCInQXx6Ym2nfXTEjfU0RnLTs4XtsTEaDjXjHGoeYFuoEHkEeN0qzfiSmyk08BOBE
+         dFcA==
+MIME-Version: 1.0
+X-Received: by 10.112.41.101 with SMTP id e5mr60649lbl.46.1400790218483; Thu,
+ 22 May 2014 13:23:38 -0700 (PDT)
+Received: by 10.112.48.105 with HTTP; Thu, 22 May 2014 13:23:38 -0700 (PDT)
+Date: Fri, 23 May 2014 04:23:38 +0800
+Message-ID: <CAG6=6-Tovniq=xziG_juz=rovewFNh3Sg8V+Li7WYV1_9XjFJQ@mail.gmail.com>
+Subject: No tests were executed!
+From: lee json <jsonlee.ft@gmail.com>
+To: users@maven.apache.org
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I encounter a problem that testing doesn't get executed. Searching on
+the internet, people say that ceoms from old junit version suppressing
+the newer one. Checking with -X some plugin looks suspicious.
+
+- maven-antrun-plugin:1.6:run (save-version)
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]          junit:junit:jar:3.8.1:compile
+[DEBUG]          classworlds:classworlds:jar:1.1-alpha-2:compile
+
+- maven-remote-resources-plugin:1.1:process
+[DEBUG]    org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9:compile
+[DEBUG]       junit:junit:jar:3.8.1:compile
+[DEBUG]    velocity:velocity-dep:jar:1.4:compile
+
+
+-  maven-resources-plugin:2.4:resources (default-resources)
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]          junit:junit:jar:3.8.1:compile
+
+- maven-scala-plugin:2.15.0:compile (default)
+[DEBUG] org.scala-tools:maven-scala-plugin:jar:2.15.0:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.2.1:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.2.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]          junit:junit:jar:3.8.1:compile
+
+- gmaven-plugin:1.2:execute (default)
+[DEBUG]    org.codehaus.gmaven.runtime:gmaven-runtime-loader:jar:1.2:compile
+[DEBUG]       org.codehaus.gmaven.feature:gmaven-feature-support:jar:1.2:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:1.2-alpha-13:compile
+[DEBUG]          junit:junit:jar:3.8.2:compile (version managed from 3.8.1)
+
+I tried to add tag excluding junit with old version in those plugins
+
+    <dependency>
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus-container-default</artifactId>
+      <version>1.0-alpha-9-stable-1</version>
+      <exclusions>
+        <exclusion>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+but does not working.
+
+Is there any place I can check for finding the possible root cause? Or
+what additional tag need to be added for fixing this problem?
+
+Thanks.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,128 @@
+From users-return-135296-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan 29 16:35:47 2014
+Return-Path: <users-return-135296-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5106310C42
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 29 Jan 2014 16:35:47 +0000 (UTC)
+Received: (qmail 10639 invoked by uid 500); 29 Jan 2014 16:35:43 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 10503 invoked by uid 500); 29 Jan 2014 16:35:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 10495 invoked by uid 99); 29 Jan 2014 16:35:43 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Jan 2014 16:35:43 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [74.125.83.51] (HELO mail-ee0-f51.google.com) (74.125.83.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Jan 2014 16:35:37 +0000
+Received: by mail-ee0-f51.google.com with SMTP id b57so1019526eek.24
+        for <users@maven.apache.org>; Wed, 29 Jan 2014 08:35:16 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=P7aHRPfN9sPbstYUnIDi4KvLEaVDPhw6vhwlLLXr3lE=;
+        b=QDZan6r7po31aAI1AvmLoPOvi5U5QA54kSPtVbN3nS0CMvcVP6wz5RDH0pmmVkG2Bl
+         k+f40CdKNOrWsG71AqPH6AidJu2LHGs/91W4m6q/phSghUZOXBqVnNcgyldP9AkRGNZj
+         D5vQSUdsQGnlTHeVhD1QjhnhAGW5dQ+K4WmQO5gdb3cyMBLZXdN9vIywAJVgya3lSvqT
+         U1wB1+tCFpbGaUq3eyE8EvOwtZzyITQnOiD+EGmvs06WzYqR+mN+LQkH1icZ0NllOQk0
+         kcy0m+NKZNmfBKwuXlLWOJMrKwwrVCB9M4VaOZb9ALpozPGA5vFkNATbviehKUK1F5t0
+         rn6A==
+X-Gm-Message-State: ALoCoQmg7yFSup0WbVPALPg47xQ00DvbM6dSXB7MuJDuFmKmxGWPl22HDb8/geRlPxjoKUP7nSyV
+MIME-Version: 1.0
+X-Received: by 10.14.241.142 with SMTP id g14mr10850162eer.40.1391013310374;
+ Wed, 29 Jan 2014 08:35:10 -0800 (PST)
+Received: by 10.14.71.72 with HTTP; Wed, 29 Jan 2014 08:35:10 -0800 (PST)
+In-Reply-To: <CAPCUOdF57GnWaHsrwCN0KbfjmVy8KCUTsU=H359G5sL5m+48HA@mail.gmail.com>
+References: <CAC7GPxZMMO-OiWW49P2-d6NCCp8saMQ2rQmTcBcFVUUNBUnHmw@mail.gmail.com>
+	<CAPCUOdF57GnWaHsrwCN0KbfjmVy8KCUTsU=H359G5sL5m+48HA@mail.gmail.com>
+Date: Wed, 29 Jan 2014 11:35:10 -0500
+Message-ID: <CAC7GPxZwh-YW-AY-q8R1S0Qxog0+8Quu1iHg1GH9co2h-r0Tsw@mail.gmail.com>
+Subject: Re: Can't exclude org.mortbay.jetty:servlet-api from cobertura dependency
+From: Andrew Pennebaker <apennebaker@42six.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1132f64a3e371204f11e8678
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1132f64a3e371204f11e8678
+Content-Type: text/plain; charset=ISO-8859-1
+
+Thanks! I'll try that.
+
+Oddly, mvn dependency:tree wasn't displaying the artifactId correctly.
+
+
+On Wed, Jan 29, 2014 at 4:45 AM, Adrien Rivard <adrien.rivard@gmail.com>wrote:
+
+> Hi,
+>
+> Try with <artifactId>servlet-api-2.5</artifactId>
+>
+> spec version is in the artifactId.
+>
+>
+>
+> On Tue, Jan 28, 2014 at 6:52 PM, Andrew Pennebaker <apennebaker@42six.com
+> >wrote:
+>
+> > I want to use Cobertura for code coverage, but its dependencies are
+> > interfering with my XML parsing and Jetty serving. I'm able to resolve
+> most
+> > of these by using <exclusion>'s, but Maven is somehow *still* putting one
+> > dependency in particular, jetty servlet-api, on the CLASSPATH.
+> >
+> > pom.xml:
+> >
+> > ...
+> >   <dependencies>
+> >     <dependency>
+> >       <groupId>net.sourceforge.cobertura</groupId>
+> >       <artifactId>cobertura</artifactId>
+> >       <version>2.0.3</version>
+> >       <exclusions>
+> >         <exclusion>
+> >           <groupId>org.mortbay.jetty</groupId>
+> >           <artifactId>servlet-api</artifactId>
+> >         </exclusion>
+> >       </exclusions>
+> >     </dependency>
+> >   </dependencies>
+> > ...
+> >
+> > As confirmed by `mvn dependency:tree`, cobertura is still bringing
+> jetty's
+> > servlet-api onto the CLASSPATH. Am I doing something wrong?
+> >
+> > --
+> > Cheers,
+> >
+> > Andrew Pennebaker
+> > apennebaker@42six.com
+> >
+>
+>
+>
+> --
+> Adrien Rivard
+>
+
+
+
+-- 
+Cheers,
+
+Andrew Pennebaker
+apennebaker@42six.com
+
+--001a1132f64a3e371204f11e8678--
+

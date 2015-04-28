@@ -1,0 +1,173 @@
+From users-return-135307-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan 30 16:14:21 2014
+Return-Path: <users-return-135307-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C1E9E10D0C
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 30 Jan 2014 16:14:21 +0000 (UTC)
+Received: (qmail 50628 invoked by uid 500); 30 Jan 2014 16:14:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 49663 invoked by uid 500); 30 Jan 2014 16:14:14 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 49598 invoked by uid 99); 30 Jan 2014 16:14:11 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 30 Jan 2014 16:14:11 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of khmarbaise@gmx.de designates 212.227.17.22 as permitted sender)
+Received: from [212.227.17.22] (HELO mout.gmx.net) (212.227.17.22)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 30 Jan 2014 16:14:04 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([88.128.80.7]) by mail.gmx.com
+ (mrgmx002) with ESMTPSA (Nemesis) id 0MVui8-1VkZxP3v2m-00X6O5 for
+ <users@maven.apache.org>; Thu, 30 Jan 2014 17:13:44 +0100
+Message-ID: <52EA7A34.4040904@gmx.de>
+Date: Thu, 30 Jan 2014 17:13:40 +0100
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.2.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: maven-enforcer-plugin problems with test dependency in multi
+ module project
+References: <trinity-0b389549-c055-4c46-bc14-f0fd4de6c290-1391071763589@3capp-gmx-bs09>
+In-Reply-To: <trinity-0b389549-c055-4c46-bc14-f0fd4de6c290-1391071763589@3capp-gmx-bs09>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
+X-Provags-ID:  V03:K0:Wsdb3T8UL3Z50RIKUUYldAP7hkft9Fr5ihquK69HBQWNRmtqaAG
+ wIlt5ciiBnC6XMIEymu88sSbBcdqLv8ODYe/Kdh8rg46bAbIpYos4seJrjXWcZ1yOOXC550
+ Roz7f5QNhA36nC5mcvh7ybPa4LwlKXwqsEzCp1gNWdR6iv/WeznmVraEnCqUUIKDKExKdgv
+ pcbNYD6XpbYZ4jFHGmctQ==
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+based on the error message you have a dependency on your test-jar 
+project but you defined the dependency a little bit wrong:
+
+test:test-child:jar:1.0.0: Failure to find test:test-parent:jar:tests:1.0.0
+
+This shows that you have defined a dependency in the test-parent but 
+like this:
+
+  <dependencies>
+     <dependency>
+       <groupId>test</groupId>
+       <artifactId>test-parent</artifactId>
+       <version>1.0-SNAPSHOT</version>
+      <scope>test</scope>
+     </dependency>
+  </dependencies>
+
+BUT you have to give the type in this case like this:
+
+  <dependencies>
+     <dependency>
+       <groupId>test</groupId>
+       <artifactId>test-parent</artifactId>
+       <version>1.0-SNAPSHOT</version>
+      <type>test-jar</type>
+      <scope>test</scope>
+     </dependency>
+  </dependencies>
+
+Best test is to comment out the maven-enforcer-rule and try to build 
+your project just from the parent via
+
+
+mvn clean package
+
+I assume in your case without the above fix your project will not build.
+If it will you need to clean out your local repository first and retry it...
+
+
+Kind regards
+Karl Heinz Marbaise
+
+ > Hi,
+>
+> I have a multi-module-project with one module that implements classes for testing (test-parent) and another module (test-child) that uses theses classes. There is a dependency in test scope from the test-child to the test-parent.
+> (See article http://stackoverflow.com/questions/1725476/maven-test-dependency-in-multi-module-project and http://maven.apache.org/guides/mini/guide-attached-tests.html[http://maven.apache.org/guides/mini/guide-attached-tests.html])
+> The pom of the depending test-child contains the following code:
+>
+> <dependencies>
+>    <dependency>
+>      <groupId>test</groupId>
+>      <artifactId>test-parent</artifactId>
+>      <version>1.0-SNAPSHOT</version>
+>      <type>test-jar</type>
+>      <scope>test</scope>
+>    </dependency>
+> </dependencies>
+>
+> The test-parent module that contains the derived classes contains the following code:
+>
+> <plugins>
+>    <plugin>
+>      <artifactId>maven-jar-plugin</artifactId>
+>      <version>2.2</version>
+>      <executions>
+>        <execution>
+>          <goals>
+>            <goal>test-jar</goal>
+>          </goals>
+>          <phase>test-compile</phase>
+>        </execution>
+>      </executions>
+>    </plugin>
+> </plugins>
+>
+> In a parent pom the maven-enforcer-plugin is included and the RequireReleaseDeps rule is added to the list of rules. While running the Maven goal â€œcompileâ€?  the project compilation of the test-child fails with the following message:
+> [ERROR] Failed to execute goal org.apache.maven.plugins:maven-enforcer-plugin:1.3.1:enforce (default) on project test-child: Execution default of goal org.apache.maven.plugins:maven-enforcer-plugin:1.3.1:enforce failed: org.apache.maven.shared.dependency.graph.DependencyGraphBuilderException: Could not resolve dependencies for project test:test-child:jar:1.0.0: Failure to find test:test-parent:jar:tests:1.0.0
+> It seems that Maven checks the dependencies of type and scope â€œtestâ€? in the compile phase. In the case the test-jar is build in the test-compile and is not present yet. This leads to the error.
+> If I remove the RequireReleaseDeps from the rules it works fine.
+> Here is the simplified config of the maven-enforcer-plugin:
+>
+> <pluginManagement>
+>    <plugins>
+>      <plugin>
+>        <groupId>org.apache.maven.plugins</groupId>
+>        <artifactId>maven-enforcer-plugin</artifactId>
+>        <version>${maven-enforcer-plugin.version}</version>
+>        <inherited>true</inherited>
+>        <executions>
+>          <execution>
+>            <goals><goal>enforce</goal></goals>
+>          </execution>
+>        </executions>
+>        <configuration>
+>          <!-- <skip/> -->
+>          <rules>
+>            <requireReleaseDeps>
+>              <onlyWhenRelease>false</onlyWhenRelease>
+>            </requireReleaseDeps>
+>            <requireMavenVersion>
+>              <version>[3.0.4,]</version>
+>            </requireMavenVersion>
+>          </rules>
+>          <fail>${maven-enforcer-plugin.fail}</fail>
+>        </configuration>
+>      </plugin>
+>    </plugins>
+> </pluginManagement>
+>    <plugins>
+>      <plugin>
+>         <groupId>org.apache.maven.plugins</groupId>
+>        <artifactId>maven-enforcer-plugin</artifactId>
+>      </plugin>
+>    </plugins>
+> </build>
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

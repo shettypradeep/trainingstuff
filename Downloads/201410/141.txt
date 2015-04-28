@@ -1,0 +1,113 @@
+From users-return-137576-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Oct 17 12:20:53 2014
+Return-Path: <users-return-137576-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D453217902
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 17 Oct 2014 12:20:53 +0000 (UTC)
+Received: (qmail 97990 invoked by uid 500); 17 Oct 2014 12:20:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 97906 invoked by uid 500); 17 Oct 2014 12:20:52 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 97895 invoked by uid 99); 17 Oct 2014 12:20:51 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 17 Oct 2014 12:20:51 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of christofer.dutz@c-ware.de designates 157.55.234.107 as permitted sender)
+Received: from [157.55.234.107] (HELO emea01-db3-obe.outbound.protection.outlook.com) (157.55.234.107)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 17 Oct 2014 12:20:45 +0000
+Received: from AMSPR05MB0611.eurprd05.prod.outlook.com (10.242.15.149) by
+ AMSPR05MB0610.eurprd05.prod.outlook.com (10.242.15.148) with Microsoft SMTP
+ Server (TLS) id 15.0.1054.13; Fri, 17 Oct 2014 12:20:22 +0000
+Received: from AMSPR05MB0611.eurprd05.prod.outlook.com ([10.242.15.149]) by
+ AMSPR05MB0611.eurprd05.prod.outlook.com ([10.242.15.149]) with mapi id
+ 15.00.1054.004; Fri, 17 Oct 2014 12:20:22 +0000
+From: Christofer Dutz <christofer.dutz@c-ware.de>
+To: Maven Users List <users@maven.apache.org>
+Subject: Strange Dependency problem after switching to Maven 3.1.1
+Thread-Topic: Strange Dependency problem after switching to Maven 3.1.1
+Thread-Index: AQHP6gMrdmVV6BMAdUCscz/aCf3jDg==
+Date: Fri, 17 Oct 2014 12:20:21 +0000
+Message-ID: <1413548420515.75258@c-ware.de>
+Accept-Language: de-DE, en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-ms-exchange-transport-fromentityheader: Hosted
+x-originating-ip: [217.110.228.68]
+x-microsoft-antispam: BCL:0;PCL:0;RULEID:;SRVR:AMSPR05MB0610;
+x-exchange-antispam-report-test: UriScan:;
+x-forefront-prvs: 0367A50BB1
+x-forefront-antispam-report: SFV:NSPM;SFS:(10019020)(6009001)(189002)(199003)(92726001)(92566001)(107046002)(74482002)(229853001)(97736003)(36756003)(75402003)(86362001)(122556002)(31966008)(85306004)(107886001)(20776003)(85852003)(64706001)(87936001)(19627405001)(117636001)(66066001)(2656002)(4396001)(46102003)(110136001)(95666004)(50986999)(16236675004)(120916001)(99396003)(19625215002)(101416001)(21056001)(19580395003)(106356001)(54356999)(105586002)(106116001)(40100003)(276003);DIR:OUT;SFP:1102;SCL:1;SRVR:AMSPR05MB0610;H:AMSPR05MB0611.eurprd05.prod.outlook.com;FPR:;MLV:sfv;PTR:InfoNoRecords;MX:1;A:1;LANG:en;
+Content-Type: multipart/alternative;
+	boundary="_000_141354842051575258cwarede_"
+MIME-Version: 1.0
+X-OriginatorOrg: c-ware.de
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_000_141354842051575258cwarede_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+
+I'm currently working on updating the Flexmojos plugin to support newer Mav=
+en versions. Now I'm having a strange problem:
+
+
+Flexmojos defines Flex dependencies as type "swc" for flex libraries and "r=
+b.swc" for resource bundles. Furthermore we have a scope "rsl" (runtime sha=
+red library) which sort of turns the default static linking to dynamic link=
+ing.
+
+
+So assume I have an artifact A and B of type "swc" that has one "rb.swc" de=
+pendency to its corresponding resource bundle.
+
+
+In my project I now add one dependency to A with scope "rsl" and one depend=
+ency to B with the default "compile" scope.
+
+
+In Maven 3.0.5 I can see the MavenProjects.artifacts list containing
+
+
+A:swc:rsl
+
+A:rb.swc:compile
+
+B:swc:compile
+
+B:rb.swc:compile
+
+
+In Maven 3.1.1 this however is:
+
+
+A:swc:rsl
+
+A:rb.swc:runtime
+
+B:swc:compile
+
+B:rb.swc:compile
+
+
+Why does the scope of the transitive dependencies switch to "runtime" in Ma=
+ven 3.1.1?
+
+
+Chris
+
+--_000_141354842051575258cwarede_--
+

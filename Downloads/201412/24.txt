@@ -1,0 +1,228 @@
+From users-return-138085-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Dec 25 10:26:26 2014
+Return-Path: <users-return-138085-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 159B5C98D
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 25 Dec 2014 10:26:26 +0000 (UTC)
+Received: (qmail 91691 invoked by uid 500); 25 Dec 2014 10:26:17 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 91607 invoked by uid 500); 25 Dec 2014 10:26:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 88793 invoked by uid 99); 25 Dec 2014 10:26:14 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 25 Dec 2014 10:26:14 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of venkat.architect@gmail.com designates 209.85.220.181 as permitted sender)
+Received: from [209.85.220.181] (HELO mail-vc0-f181.google.com) (209.85.220.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 25 Dec 2014 10:25:47 +0000
+Received: by mail-vc0-f181.google.com with SMTP id le20so3482944vcb.12
+        for <users@maven.apache.org>; Thu, 25 Dec 2014 02:25:00 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=0LjkJ2prpzce4C7Z5MVq/RO7GKbV+YN5xiPJN7jV+uA=;
+        b=gp4qkEifpRZtbIGz+9lAhTRpYQAnwGI1zN51Ypt9y70NP5jjWd4Wzt6Kgh2es1CuU3
+         XBt19ifY0Cg5TG6+/Dn3Rl2H11AED2dzNYLNtEMb8knu1xMWSK14bWheT8XdsEk7lK9Y
+         fkY7qflnp3wMg9XV+729oBvYSUYH1irMZGlMu1KGMs6BvhS4vejLRSfQ8SAP/Qvq7Bh6
+         GhufQ+7D3IcS6E3PHsKa0fejDG+9ayYYoWLaOFYP+KOuPRDKdv2c/C0b1J80ouEDXeVJ
+         LGaW+F0qOqdykeqnXIXgaJMa5g/x2THt3IHOF9QpqB23whBfO9nwgpbkE3Ux3Deq4e4l
+         t4ig==
+MIME-Version: 1.0
+X-Received: by 10.221.68.135 with SMTP id xy7mr17035734vcb.41.1419503100691;
+ Thu, 25 Dec 2014 02:25:00 -0800 (PST)
+Received: by 10.52.56.101 with HTTP; Thu, 25 Dec 2014 02:25:00 -0800 (PST)
+Date: Thu, 25 Dec 2014 15:55:00 +0530
+Message-ID: <CAErxogGUy9A6J-ggJwGpPYYm8T9yh05Lfi+_YF_KssqNOZdrcA@mail.gmail.com>
+Subject: Compilation failing for AuthenticatedURL (no suitable constructor
+ found) Hadoop 2.6.0
+From: Venkat Ramakrishnan <venkat.architect@gmail.com>
+To: Maven Users List <users@maven.apache.org>, user@hadoop.apache.org
+Content-Type: multipart/mixed; boundary=001a11337854132037050b07d29a
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11337854132037050b07d29a
+Content-Type: multipart/alternative; boundary=001a11337854132031050b07d298
+
+--001a11337854132031050b07d298
+Content-Type: text/plain; charset=UTF-8
+
+Hello all,
+
+The following error is encountered while compiling hadoop-auth-examples
+with WhoClient.java file. What should be done?
+
+Source file attached.
+
+Thanks,
+Venkat.
+
+[ERROR] Failed to execute goal
+org.apache.maven.plugins:maven-compiler-plugin:2.5.1:compile
+(default-compile) on project hadoop-auth-examples: Compilation failure
+[ERROR]
+D:\h\hadoop-2.6.0-src\hadoop-common-project\hadoop-auth-examples\src\main\java\org\apache\hadoop\security\authentication\examples\WhoClient.java:[36,31]
+error: no suitable constructor found for AuthenticatedURL(no arguments)
+[ERROR] -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute
+goal org.apache.maven.plugins:maven-compiler-plugin:2.5.1:compile
+(default-compile) on project hadoop-auth-examples: Compilation failure
+D:\h\hadoop-2.6.0-src\hadoop-common-project\hadoop-auth-examples\src\main\java\org\apache\hadoop\security\authentication\examples\WhoClient.java:[36,31]
+error: no suitable constructor found for AuthenticatedURL(no arguments)
+
+at
+org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+at
+org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+at
+org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+at
+org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)
+at
+org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)
+at
+org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+at
+org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:120)
+at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:347)
+at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:154)
+at org.apache.maven.cli.MavenCli.execute(MavenCli.java:582)
+at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:214)
+at org.apache.maven.cli.MavenCli.main(MavenCli.java:158)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:483)
+at
+org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+at
+org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+at
+org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: org.apache.maven.plugin.CompilationFailureException: Compilation
+failure
+D:\h\hadoop-2.6.0-src\hadoop-common-project\hadoop-auth-examples\src\main\java\org\apache\hadoop\security\authentication\examples\WhoClient.java:[36,31]
+error: no suitable constructor found for AuthenticatedURL(no arguments)
+
+at
+org.apache.maven.plugin.AbstractCompilerMojo.execute(AbstractCompilerMojo.java:729)
+at org.apache.maven.plugin.CompilerMojo.execute(CompilerMojo.java:128)
+at
+org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:132)
+at
+org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+... 19 more
+[ERROR]
+[ERROR]
+[ERROR] For more information about the errors and possible solutions,
+please read the following articles:
+[ERROR] [Help 1]
+http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR]
+[ERROR] After correcting the problems, you can resume the build with the
+command
+[ERROR]   mvn <goals> -rf :hadoop-auth-examples
+
+--001a11337854132031050b07d298
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hello all,<div><br></div><div>The following error is encou=
+ntered while compiling hadoop-auth-examples</div><div>with WhoClient.java f=
+ile. What should be done?</div><div><br></div><div>Source file attached.<br=
+><br>Thanks,<br></div><div>Venkat.</div><div><br></div><div><div>[ERROR] Fa=
+iled to execute goal org.apache.maven.plugins:maven-compiler-plugin:2.5.1:c=
+ompile (default-compile) on project hadoop-auth-examples: Compilation failu=
+re</div><div>[ERROR] D:\h\hadoop-2.6.0-src\hadoop-common-project\hadoop-aut=
+h-examples\src\main\java\org\apache\hadoop\security\authentication\examples=
+\WhoClient.java:[36,31] error: no suitable constructor found for Authentica=
+tedURL(no arguments)</div><div>[ERROR] -&gt; [Help 1]</div><div>org.apache.=
+maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apa=
+che.maven.plugins:maven-compiler-plugin:2.5.1:compile (default-compile) on =
+project hadoop-auth-examples: Compilation failure</div><div>D:\h\hadoop-2.6=
+.0-src\hadoop-common-project\hadoop-auth-examples\src\main\java\org\apache\=
+hadoop\security\authentication\examples\WhoClient.java:[36,31] error: no su=
+itable constructor found for AuthenticatedURL(no arguments)</div><div><br><=
+/div><div><span class=3D"" style=3D"white-space:pre">	</span>at org.apache.=
+maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)</div><=
+div><span class=3D"" style=3D"white-space:pre">	</span>at org.apache.maven.=
+lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)</div><div><s=
+pan class=3D"" style=3D"white-space:pre">	</span>at org.apache.maven.lifecy=
+cle.internal.MojoExecutor.execute(MojoExecutor.java:145)</div><div><span cl=
+ass=3D"" style=3D"white-space:pre">	</span>at org.apache.maven.lifecycle.in=
+ternal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)=
+</div><div><span class=3D"" style=3D"white-space:pre">	</span>at org.apache=
+.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModu=
+leBuilder.java:80)</div><div><span class=3D"" style=3D"white-space:pre">	</=
+span>at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleTh=
+readedBuilder.build(SingleThreadedBuilder.java:51)</div><div><span class=3D=
+"" style=3D"white-space:pre">	</span>at org.apache.maven.lifecycle.internal=
+.LifecycleStarter.execute(LifecycleStarter.java:120)</div><div><span class=
+=3D"" style=3D"white-space:pre">	</span>at org.apache.maven.DefaultMaven.do=
+Execute(DefaultMaven.java:347)</div><div><span class=3D"" style=3D"white-sp=
+ace:pre">	</span>at org.apache.maven.DefaultMaven.execute(DefaultMaven.java=
+:154)</div><div><span class=3D"" style=3D"white-space:pre">	</span>at org.a=
+pache.maven.cli.MavenCli.execute(MavenCli.java:582)</div><div><span class=
+=3D"" style=3D"white-space:pre">	</span>at org.apache.maven.cli.MavenCli.do=
+Main(MavenCli.java:214)</div><div><span class=3D"" style=3D"white-space:pre=
+">	</span>at org.apache.maven.cli.MavenCli.main(MavenCli.java:158)</div><di=
+v><span class=3D"" style=3D"white-space:pre">	</span>at sun.reflect.NativeM=
+ethodAccessorImpl.invoke0(Native Method)</div><div><span class=3D"" style=
+=3D"white-space:pre">	</span>at sun.reflect.NativeMethodAccessorImpl.invoke=
+(NativeMethodAccessorImpl.java:62)</div><div><span class=3D"" style=3D"whit=
+e-space:pre">	</span>at sun.reflect.DelegatingMethodAccessorImpl.invoke(Del=
+egatingMethodAccessorImpl.java:43)</div><div><span class=3D"" style=3D"whit=
+e-space:pre">	</span>at java.lang.reflect.Method.invoke(Method.java:483)</d=
+iv><div><span class=3D"" style=3D"white-space:pre">	</span>at org.codehaus.=
+plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)</div=
+><div><span class=3D"" style=3D"white-space:pre">	</span>at org.codehaus.pl=
+exus.classworlds.launcher.Launcher.launch(Launcher.java:229)</div><div><spa=
+n class=3D"" style=3D"white-space:pre">	</span>at org.codehaus.plexus.class=
+worlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)</div><div><spa=
+n class=3D"" style=3D"white-space:pre">	</span>at org.codehaus.plexus.class=
+worlds.launcher.Launcher.main(Launcher.java:356)</div><div>Caused by: org.a=
+pache.maven.plugin.CompilationFailureException: Compilation failure</div><d=
+iv>D:\h\hadoop-2.6.0-src\hadoop-common-project\hadoop-auth-examples\src\mai=
+n\java\org\apache\hadoop\security\authentication\examples\WhoClient.java:[3=
+6,31] error: no suitable constructor found for AuthenticatedURL(no argument=
+s)</div><div><br></div><div><span class=3D"" style=3D"white-space:pre">	</s=
+pan>at org.apache.maven.plugin.AbstractCompilerMojo.execute(AbstractCompile=
+rMojo.java:729)</div><div><span class=3D"" style=3D"white-space:pre">	</spa=
+n>at org.apache.maven.plugin.CompilerMojo.execute(CompilerMojo.java:128)</d=
+iv><div><span class=3D"" style=3D"white-space:pre">	</span>at org.apache.ma=
+ven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.=
+java:132)</div><div><span class=3D"" style=3D"white-space:pre">	</span>at o=
+rg.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:2=
+08)</div><div><span class=3D"" style=3D"white-space:pre">	</span>... 19 mor=
+e</div><div>[ERROR]=C2=A0</div><div>[ERROR]=C2=A0</div><div>[ERROR] For mor=
+e information about the errors and possible solutions, please read the foll=
+owing articles:</div><div>[ERROR] [Help 1] <a href=3D"http://cwiki.apache.o=
+rg/confluence/display/MAVEN/MojoFailureException">http://cwiki.apache.org/c=
+onfluence/display/MAVEN/MojoFailureException</a></div><div>[ERROR]=C2=A0</d=
+iv><div>[ERROR] After correcting the problems, you can resume the build wit=
+h the command</div><div>[ERROR] =C2=A0 mvn &lt;goals&gt; -rf :hadoop-auth-e=
+xamples</div></div><div><br></div></div>
+
+--001a11337854132031050b07d298--
+
+--001a11337854132037050b07d29a
+Content-Type: text/plain; charset=us-ascii
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+--001a11337854132037050b07d29a--
+

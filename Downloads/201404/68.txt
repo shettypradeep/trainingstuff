@@ -1,0 +1,157 @@
+From users-return-136257-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Apr 24 20:01:06 2014
+Return-Path: <users-return-136257-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B3EBB11C0E
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 24 Apr 2014 20:01:06 +0000 (UTC)
+Received: (qmail 65851 invoked by uid 500); 24 Apr 2014 20:00:37 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 65738 invoked by uid 500); 24 Apr 2014 20:00:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 65050 invoked by uid 99); 24 Apr 2014 20:00:00 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Apr 2014 20:00:00 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=AC_DIV_BONANZA,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of paulus.benedictus@gmail.com designates 209.85.192.53 as permitted sender)
+Received: from [209.85.192.53] (HELO mail-qg0-f53.google.com) (209.85.192.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Apr 2014 19:59:55 +0000
+Received: by mail-qg0-f53.google.com with SMTP id f51so3090691qge.12
+        for <users@maven.apache.org>; Thu, 24 Apr 2014 12:59:33 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=iJRTvIqYz7EDxLZ827pINZsr1TZS6ObmOwZkOWlQ4zQ=;
+        b=lSeQhDZmxakdG4HJWe25TVqxqxKJuSLVyuyMw+SoDSertUymgg5pYSO2PwEvSazaDS
+         7XfOKT71sI8+F+XjBkC6pEOyJ4lc1gTjL7VWgEXLSyEMvFFU5LXovvZ7gJ2+6AkEPpst
+         Vw2wYk84wMmSgLUn9GyB86nSX2ca1glG9mdQr5f2Ct/5dx9zb0Fo1+ZLCqxXZWPXk8a5
+         iF0A1T9N3QONj6XWt5UbS1mLLJg2fFpnW3OHed068fyrJ2g9rMAIzD/XLa2Zhk5hnnqS
+         4M1AudhVCzVXijeNu0hccgs1I4FmxqxrxW6Ik3e2fag+H/LPYbBb1LBwKOscVflujkUd
+         SA2A==
+MIME-Version: 1.0
+X-Received: by 10.140.100.203 with SMTP id s69mr5601637qge.106.1398369573212;
+ Thu, 24 Apr 2014 12:59:33 -0700 (PDT)
+Sender: paulus.benedictus@gmail.com
+Received: by 10.96.193.100 with HTTP; Thu, 24 Apr 2014 12:59:33 -0700 (PDT)
+In-Reply-To: <CABLGb9zuZ6zntFYuxb+yKifFXbf=9rc85mf1kTCMEz70-_u0+A@mail.gmail.com>
+References: <CABLGb9ytr0RwVfzr5J7a-HStazKFcGaMefqUdEdO9FqGpvdhkQ@mail.gmail.com>
+	<CABLGb9zuZ6zntFYuxb+yKifFXbf=9rc85mf1kTCMEz70-_u0+A@mail.gmail.com>
+Date: Thu, 24 Apr 2014 14:59:33 -0500
+X-Google-Sender-Auth: JKKzegGloL6A0zLhHgKbdYXXbps
+Message-ID: <CABLGb9yf6bNeKqRV3QBzPRE2bi_8SwH+mH+pYxR3GXqoaRNCsA@mail.gmail.com>
+Subject: Re: Problem with filtering web resources
+From: Paul Benedict <pbenedict@apache.org>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a1134f860ad275704f7cf49da
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1134f860ad275704f7cf49da
+Content-Type: text/plain; charset=UTF-8
+
+OK, I solved this. I've seen others on the web who complained of similar
+issues -- and the JIRA tickets may be related -- but here's the answer for
+posterity:
+
+The <filters>/<filter> tags need to be in the <configuration> of the
+maven-war-plugin and NOT your <build>. The former is for your web
+resources; the latter for your normal resources. That's not obvious if your
+glancing through many examples but that's how you solve this.
+
+Example:
+<build>
+   <plugins>
+     <plugin>
+       <artifactId>maven-war-plugin</artifactId>
+       <configuration>
+         <filters>
+           <filter>src/main/filters/dev.properties</filter>
+        </filters>
+        <webResources>
+          <resource>
+            <directory>src/main/webapp/WEB-INF</directory>
+            <filtering>true</filtering>
+            <include>jboss-web.xml</include>
+            <targetPath>WEB-INF</targetPath>
+          </resource>
+.....
+</build>
+
+Cheers,
+Paul
+
+
+On Thu, Apr 24, 2014 at 2:17 PM, Paul Benedict <pbenedict@apache.org> wrote:
+
+> I think my problem is regarding these open issues:
+>
+> http://jira.codehaus.org/browse/MWAR-301
+> http://jira.codehaus.org/browse/MWAR-305
+>
+> I did a "debug dump" of my build and noticed that my filters are
+> definitely not being included in the list of available properties.
+>
+> Unless someone else can give advice on how to make this work (does anyone
+> else here filter web resources?), I'll simply have to use the normal
+> <resources> tag and target the output at WEB-INF.
+>
+> Paul
+>
+>
+>
+> On Thu, Apr 24, 2014 at 1:37 PM, Paul Benedict <pbenedict@apache.org>wrote:
+>
+>> I am trying to filter my jboss-web.xml but am having problems. For sure,
+>> the file is getting processed because ${project.version} is substituted
+>> just fine, but any of my custom properties are not. It doesn't seem that
+>> the war plugin is paying attention to my list of filters.
+>>
+>> <build>
+>>   <filters>
+>>     <filter>src/main/filters/dev.properties</filter>
+>>    </filters>
+>>    <plugins>
+>>      <plugin>
+>>        <artifactId>maven-war-plugin</artifactId>
+>>        <configuration>
+>>         <webResources>
+>>           <resource>
+>>             <directory>src/main/webapp/WEB-INF</directory>
+>>             <filtering>true</filtering>
+>>             <include>jboss-web.xml</include>
+>>             <targetPath>WEB-INF</targetPath>
+>>           </resource>
+>> .....
+>> </build>
+>>
+>> What's missing/wrong in my config?
+>>
+>> --
+>> Cheers,
+>> Paul
+>>
+>
+>
+>
+> --
+> Cheers,
+> Paul
+>
+
+
+
+-- 
+Cheers,
+Paul
+
+--001a1134f860ad275704f7cf49da--
+

@@ -1,0 +1,122 @@
+From users-return-137542-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Oct 13 06:15:22 2014
+Return-Path: <users-return-137542-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6A77A175B9
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 13 Oct 2014 06:15:22 +0000 (UTC)
+Received: (qmail 37638 invoked by uid 500); 13 Oct 2014 06:15:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 37537 invoked by uid 500); 13 Oct 2014 06:15:20 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 37521 invoked by uid 99); 13 Oct 2014 06:15:20 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 13 Oct 2014 06:15:19 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of khmarbaise@gmx.de designates 212.227.17.22 as permitted sender)
+Received: from [212.227.17.22] (HELO mout.gmx.net) (212.227.17.22)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 13 Oct 2014 06:14:53 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([109.44.0.139]) by mail.gmx.com
+ (mrgmx101) with ESMTPSA (Nemesis) id 0LtmK9-1YMPdJ3JFF-0118iu for
+ <users@maven.apache.org>; Mon, 13 Oct 2014 08:14:53 +0200
+Message-ID: <543B6DDF.9000506@gmx.de>
+Date: Mon, 13 Oct 2014 08:14:55 +0200
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Request for functionality in maven-assembly-plugin - ignoreProjectBuildFilters
+References: <CAPdv7QxNAERSQmNBnjSDiSG_i5kzvzfzAH+HhGCTWnn5a7rnbg@mail.gmail.com>
+In-Reply-To: <CAPdv7QxNAERSQmNBnjSDiSG_i5kzvzfzAH+HhGCTWnn5a7rnbg@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:gHjFRB59H9FaOX+kcVizBxJeuiWFPpfZ9+RyxftPRPUwGDMR7zt
+ HP8VAJM4knuloNRralv0aPDKCDuBkmMf8o7DEpeMQqRQPggxTKqmcrw6kukv68Mm/EfSDEu
+ TdEw3QDVI3kkEBDP91il7bCU7tTKg4/stNhUnzfpc8EvegCPd3tcGMaCrlDp0cWS2NDbbZt
+ Ns423LUD7cdh1r6ytJ30w==
+X-UI-Out-Filterresults: notjunk:1;
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Tony,
+
+I have taken a look into your patch...looks ok...
+
+This looks like a usefull enhancement so I will integrate your patch...
+
+I have created an appropriate JIRA entry:
+
+http://jira.codehaus.org/browse/MASSEMBLY-717
+
+Kind regards
+Karl Heinz Marbaise
+
+
+On 10/13/14 1:09 AM, Tony Jewell wrote:
+> Hi,
+>
+> We hit an issue when using maven-assembly-plugin:2.4.1.
+>
+> We were using filters in assemblies to filter config property files
+> according to the assembly we were producing - thus targetting our
+> various environments.
+>
+> In the Project Build we defined test filter sources for tests and
+> running in the IDE.
+>
+> Unfortunately, the default action in maven-assembly-plugin is to include
+> all ${project.build.filters} - before the filters defined in the
+> Assembly configuration. This meant all our assemblies had the Test configs.
+>
+> I have attached an example project that displays the issue and a patch
+> to the current trunk maven-assembly-plugin:2.4.2-SNAPSHOT.
+>
+> A snippet from sample pom.xml showing the proposed new
+> ignoreProjectBuildFilters config boolean usage is:
+>
+>            <plugin>
+>                <groupId>org.apache.maven.plugins</groupId>
+>                <artifactId>maven-assembly-plugin</artifactId>
+>                <version>${maven-assembly-plugin.version}</version>
+>                <executions>
+>                    <execution>
+>                        <id>prod-assemble</id>
+>                        <phase>package</phase>
+>                        <goals><goal>single</goal></goals>
+>                        <configuration>
+>                            <!-- Do not include the Filters as defined in
+> the Project Build -->
+>
+> <includeProjectBuildFilters>false</includeProjectBuildFilters>
+>                            <filters>
+>
+> <filter>src/main/filters/prod.properties</filter>
+>                            </filters>
+>                            <descriptors>
+>
+> <descriptors>src/main/assemblies/prod-assemble.xml</descriptors>
+>                            </descriptors>
+>                        </configuration>
+>                    </execution>
+>                </executions>
+>            </plugin>
+>
+> Thanks,
+>
+> Tony Jewell
+> Cregganna Computer Consultants Ltd
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

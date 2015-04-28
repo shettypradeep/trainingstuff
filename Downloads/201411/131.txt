@@ -1,0 +1,95 @@
+From users-return-137886-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Nov 30 12:52:49 2014
+Return-Path: <users-return-137886-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A3526C743
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 30 Nov 2014 12:52:49 +0000 (UTC)
+Received: (qmail 13216 invoked by uid 500); 30 Nov 2014 12:52:48 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 13134 invoked by uid 500); 30 Nov 2014 12:52:48 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 13116 invoked by uid 99); 30 Nov 2014 12:52:47 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 30 Nov 2014 12:52:47 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bimargulies@gmail.com designates 209.85.214.171 as permitted sender)
+Received: from [209.85.214.171] (HELO mail-ob0-f171.google.com) (209.85.214.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 30 Nov 2014 12:52:21 +0000
+Received: by mail-ob0-f171.google.com with SMTP id uz6so6774416obc.16
+        for <users@maven.apache.org>; Sun, 30 Nov 2014 04:52:20 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=auWoHw0cjcRR85kIKCdaW3dMrbS7ZRvHAW76jI65tOc=;
+        b=TU4AyI5rB9mb/fyGAzu+qdwRFLIBvC0FQKJcHwP48TMPJsrtWzN9LKKrumBIScjQN7
+         kD47IXg+qZzoA0JPy95oenMzfa6WOjYtF2QpdephVH80+YCsD6r/Pj5wwI45FNvWX/jV
+         Myl8m1EaAYUnRJlNhLdzVpM3RI7XbwwEYNU1S9JU3/DMAjEMC8ec89bO4UVCNssfz7J/
+         dMhIsApy7+G7IS5slCtK7I/StSBD41uw/GAxwtNe3eIn/xiElQqnctBXG4krgbpIkiPg
+         aaEMU6cfX00M17MA1sy/3DHDOVXmjjJF7Z3DSYAoPtMRt262flDvUkn2oxGRKP54Py0T
+         WV0Q==
+MIME-Version: 1.0
+X-Received: by 10.202.90.213 with SMTP id o204mr25043210oib.62.1417351940161;
+ Sun, 30 Nov 2014 04:52:20 -0800 (PST)
+Received: by 10.202.1.70 with HTTP; Sun, 30 Nov 2014 04:52:20 -0800 (PST)
+In-Reply-To: <46b88b5354ce4ec3a8ef5307adcb4381@AMSPR05MB0611.eurprd05.prod.outlook.com>
+References: <4D781E28644D7B46878137FBCBC852F01269EB@gf0vswex001p.corp.int>
+	<op.xp1p28hrkdkhrr@robertscholte.dynamic.ziggo.nl>
+	<46b88b5354ce4ec3a8ef5307adcb4381@AMSPR05MB0611.eurprd05.prod.outlook.com>
+Date: Sun, 30 Nov 2014 07:52:20 -0500
+Message-ID: <CALhtWkfwxNPgoxpHfXik-Y2H4XgH=DR5TpQA6h80eA5MqzbhZA@mail.gmail.com>
+Subject: Re: Problems with the release plugin
+From: Benson Margulies <bimargulies@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I'm going to attempt a summary here.
+
+The release plugin has a requirement. It must be true that you can go
+to the SCM, checkout a brand new copy of the tree rooted at the <scm/>
+element, _change the versions_ in the pom(s), and run a build as
+configured by the profiles and goals. If that's not true, the release
+process will fail, and possibly leave you with a manual cleanup in the
+SCM. There are many ways to set up a build that seems just fine but
+fails this test.
+
+The top of this thread is a plea for a 'dry run' that is a perfect
+simulation of this, so that users can flush this out before it bites
+them, and that it should not be hard to ask for this.
+
+It seems to me that it should not be hard, in a typical automated
+build system (Jenkins, etc.) to set up a build that does exactly this.
+Checkout a clean tree, run the maven-versions-plugin to set a dummy
+version, and run a build, with profiles and goals to match the
+eventual release. Eat one of these apples every day, and you won't be
+visiting the maven doctor so often.
+
+It seems to me that it should also not be terribly hard to make this a
+feature of the maven-release-plugin.
+
+As a further wrinkle, there's the question of tag management, which
+might be seen as interrelated to the lengthy threads here and
+elsewhere about never, ever, deleting a tag. I wonder about yet
+another m-r-p parameter: a staging SCM URL, distinct from the <scm/>
+stock identifiers. m-r-p would pull from <scm/> but push to this other
+place. Then, a human could decide if the release is real, and, if so,
+push the commits and tag to the real, immutable, repo. I'm not
+qualifier to judge whether this can work for anything other than git,
+but git sure is popular.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

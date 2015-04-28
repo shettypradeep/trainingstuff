@@ -1,0 +1,148 @@
+From users-return-135670-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Mar  3 11:42:23 2014
+Return-Path: <users-return-135670-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 374871092B
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  3 Mar 2014 11:42:23 +0000 (UTC)
+Received: (qmail 18464 invoked by uid 500); 3 Mar 2014 11:42:17 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 18266 invoked by uid 500); 3 Mar 2014 11:42:04 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 16816 invoked by uid 99); 3 Mar 2014 11:41:59 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 03 Mar 2014 11:41:59 +0000
+X-ASF-Spam-Status: No, hits=3.4 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (nike.apache.org: transitioning domain of poroto20@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 03 Mar 2014 11:41:53 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <poroto20@gmail.com>)
+	id 1WKRFT-0002XF-Vr
+	for users@maven.apache.org; Mon, 03 Mar 2014 03:41:31 -0800
+Date: Mon, 3 Mar 2014 03:41:31 -0800 (PST)
+From: poroto20 <poroto20@gmail.com>
+To: users@maven.apache.org
+Message-ID: <CABt1HWqqXbQnj05nodqNtz6Ky6ZGZ9hRyXi1hNSsUVQg4pEr5g@mail.gmail.com>
+In-Reply-To: <20140228125300.639cda52@linux-du93.site>
+References: <1393581801993-5786736.post@n5.nabble.com> <20140228125300.639cda52@linux-du93.site>
+Subject: Re: Maven copies 3 jars in lib folder (skinny war) for no reason
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_471660_23086819.1393846891982"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+------=_Part_471660_23086819.1393846891982
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Hi Martin,
+
+Thank you for your help.
+
+I still cannot understand why those three jars are copied there. Two of
+them they are not in the dependency tree at all, so the war should not need
+them, and the other one (seam) is a depedency of other 4 artifacts, which
+means that is also referenced from ouside the war so it should be on the
+EAR lib.
+
+Thanks
+
+
+On 28 February 2014 11:54, Martin Hoeller [via Maven] <
+ml-node+s40175n5786755h0@n5.nabble.com> wrote:
+
+> Hi!
+>
+> This topic was just discussed yesterday:
+>
+> http://maven.40175.n5.nabble.com/Are-skinny-WARs-still-recommended-td5786626.html
+>
+> On 28 Feb 2014, poroto20 wrote:
+>
+> > I have one EAR project and I am trying to have a skinny war. It seems to
+> be
+> > working ok but for some reason it keeps copying 3 dependencies into
+> war/lib
+> > folder, which are commons-logging-1.0.4.jar, commons-codec-1.4.jar and
+> > jboss-seam-2.2.1.Final.jar.
+>
+> The only dependencies to these artifacts seem to come from the WAR. So
+> the m-ear-p needs not to extract them to the EAR.
+>
+> > I the EAR's pom I added `<skinnyWars>true</skinnyWars>`.
+>
+> That's correct!
+>
+> > I made sure I added
+> > exclusions for those three jars, or they are `scope=provided`. I also
+> added
+> > `<packagingExcludes>**/*.jar</packagingExcludes>` in the WAR's pom file.
+>
+> You don't need to do anything in the WAR. The m-ear-p repackages the WAR,
+> so it's entirely the responsibility of the m-ear-p.
+>
+> > I really can't understand maven's logic to create the war (or to copy
+> those
+> > jars).
+>
+> The m-ear-p tries to extract all JARs that are also referenced from
+> outside the WAR to the EARs lib folder, so they can be reused by other
+> modules in the EAR.
+>
+> Artifacts that are only used by the WAR should remain in the WAR.
+>
+> Artifacts that are JSF libraries (like RichFaces, OmniFaces, etc.) should
+> also stay in the WAR because otherwise JSF won't scan them for
+> initialization. See the link above for more details.
+>
+> > 1) When I run maven only for the WAR project, the WAR has no jars in
+> /lib
+> > folder
+>
+> Yes, but that's something completely different! The WAR will get
+> re-packages by the m-ear-p if you configure skinnyWars for the m-ear-p.
+>
+> > 2) But when I run maven for all the projects (including the EAR) it
+> copies
+> > those 3 jars in the war file.
+> >
+> > What am I doing wrong? Why is different the WAR created with maven
+> inside
+> > the WAR project then for all projects (including EAR)? Please help
+>
+> hth,
+> - martin
+>
+> *signature.asc* (205 bytes) Download Attachment<http://maven.40175.n5.nabble.com/attachment/5786755/0/signature.asc>
+>
+>
+> ------------------------------
+>  If you reply to this email, your message will be added to the discussion
+> below:
+>
+> http://maven.40175.n5.nabble.com/Maven-copies-3-jars-in-lib-folder-skinny-war-for-no-reason-tp5786736p5786755.html
+>  To unsubscribe from Maven copies 3 jars in lib folder (skinny war) for no
+> reason, click here<http://maven.40175.n5.nabble.com/template/NamlServlet.jtp?macro=unsubscribe_by_code&node=5786736&code=cG9yb3RvMjBAZ21haWwuY29tfDU3ODY3MzZ8LTEwOTA5NDE0ODI=>
+> .
+> NAML<http://maven.40175.n5.nabble.com/template/NamlServlet.jtp?macro=macro_viewer&id=instant_html%21nabble%3Aemail.naml&base=nabble.naml.namespaces.BasicNamespace-nabble.view.web.template.NabbleNamespace-nabble.view.web.template.NodeNamespace&breadcrumbs=notify_subscribers%21nabble%3Aemail.naml-instant_emails%21nabble%3Aemail.naml-send_instant_email%21nabble%3Aemail.naml>
+>
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Maven-copies-3-jars-in-lib-folder-skinny-war-for-no-reason-tp5786736p5786900.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+------=_Part_471660_23086819.1393846891982--
+

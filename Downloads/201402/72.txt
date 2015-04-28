@@ -1,0 +1,102 @@
+From users-return-135423-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 12 13:57:19 2014
+Return-Path: <users-return-135423-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3E5C310FB1
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 12 Feb 2014 13:57:19 +0000 (UTC)
+Received: (qmail 12729 invoked by uid 500); 12 Feb 2014 13:57:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 12384 invoked by uid 500); 12 Feb 2014 13:57:14 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 12376 invoked by uid 99); 12 Feb 2014 13:57:14 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Feb 2014 13:57:14 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of baerrach@gmail.com designates 209.85.220.178 as permitted sender)
+Received: from [209.85.220.178] (HELO mail-vc0-f178.google.com) (209.85.220.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Feb 2014 13:57:08 +0000
+Received: by mail-vc0-f178.google.com with SMTP id ik5so6957567vcb.23
+        for <users@maven.apache.org>; Wed, 12 Feb 2014 05:56:48 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=AyN3g8fjNNSke8mCsNJsc6nwHvDknFuiqeLKhk+j0jA=;
+        b=w7Do2q7xg48E2uMp8yFtuAN6BwxXBWHQReE6+SDxSshoCY5J4MZRDxd+gG+8Px+wkB
+         Lq0f3p2fRu9qT8PPvb4NVGMI6XmrUf15BQGhT7WvOkI+fKO63paMScSl95yrRz9cEfjP
+         wfW2x/r+CVXy5apvsHK61TaFrjcOcwmw0wpIFv+bIS6pjlyUOo/i7g8Lfz4GNw4YR93z
+         /PN/wk+3UTpKLB1HLjcPGNMqzmv9kmgpfi3hwRQRG+tlrT2F59jZ1XQKVxbEjE8jYAZL
+         8m6dvLrk0n78LnaGmXdcpNWQfVM3zkXF6V1rZ3IFOw5YZ1LQR1FchRUd/2a4Cp3U3z/s
+         D0YA==
+MIME-Version: 1.0
+X-Received: by 10.220.98.143 with SMTP id q15mr177693vcn.38.1392213408219;
+ Wed, 12 Feb 2014 05:56:48 -0800 (PST)
+Received: by 10.58.48.131 with HTTP; Wed, 12 Feb 2014 05:56:48 -0800 (PST)
+In-Reply-To: <52FB325B.8030306@artifact-software.com>
+References: <52FACAA8.8020905@artifact-software.com>
+	<CADVp3v-8iKp2eNJdwCGKtCxP+Jz31-f8EYWBv6aJSHztfGFKew@mail.gmail.com>
+	<52FB325B.8030306@artifact-software.com>
+Date: Thu, 13 Feb 2014 00:26:48 +1030
+Message-ID: <CADVp3v__nH=PFTov_EEPy8t-hDrnXeamg66uu_L35GhdCop-ZA@mail.gmail.com>
+Subject: Re: maven-assembly-plugin:2.4 The following patterns were never
+ triggered in this artifact inclusion filter
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=ISO-8859-1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+>> >From
+>> http://maven.apache.org/plugins/maven-assembly-plugin/examples/single/including-and-excluding-artifacts.html
+>> I think the shortened form assumes a "jar" classifier.
+>> I'm guessing from your assembly name "webapps-tar.xml" that these might be
+>> wars?
+>> Have you tried using the long form of the dependency conflict id?
+>
+> I am not sure what you mean by this.
+> The dependency specification in the pom has the right type.
+> I tried adding the version and type in the assembly file and just got an
+> error message with a more specific file name.
+
+http://maven.apache.org/plugins/maven-assembly-plugin/examples/single/including-and-excluding-artifacts.html
+defines the spec for "dependency conflict id" and it does not include
+version.
+
+It is either
+* short form = groupId:artifactId
+* long form = groupId:artifactId:type:classifier
+
+Can you paste in your pom values for the dependency, as well as the
+snippet from your assembly file.
+
+I'm suggesting that you may not be able to use
+<include>com.artifact-software.taw:taw-localized-iumessage-ws</include>
+but instead need
+<include>com.artifact-software.taw:taw-localized-iumessage-ws:war:</include>
+
+> I have not specified a specific phase but I assume that the plug-in is being
+> triggered since the error comes from the plug-in.
+>
+> I did read the docs but there is no example showing including of specific
+> dependencies.
+
+http://maven.apache.org/plugins/maven-assembly-plugin/examples/multimodule/module-binary-inclusion-simple.html
+Has the example you want to look at.
+It has the assembly descriptior, the pom that describes the plugin
+management, and the actual pom that defines the dependencies and
+invokes the assembly plugin.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

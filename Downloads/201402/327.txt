@@ -1,0 +1,146 @@
+From users-return-135524-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Feb 16 13:37:32 2014
+Return-Path: <users-return-135524-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C23811024C
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 16 Feb 2014 13:37:32 +0000 (UTC)
+Received: (qmail 90090 invoked by uid 500); 16 Feb 2014 13:37:28 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 90025 invoked by uid 500); 16 Feb 2014 13:37:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 90017 invoked by uid 99); 16 Feb 2014 13:37:27 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 16 Feb 2014 13:37:27 +0000
+X-ASF-Spam-Status: No, hits=3.2 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mgainty@hotmail.com designates 65.55.116.46 as permitted sender)
+Received: from [65.55.116.46] (HELO blu0-omc1-s35.blu0.hotmail.com) (65.55.116.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 16 Feb 2014 13:37:23 +0000
+Received: from BLU172-W27 ([65.55.116.9]) by blu0-omc1-s35.blu0.hotmail.com with Microsoft SMTPSVC(6.0.3790.4675);
+	 Sun, 16 Feb 2014 05:37:03 -0800
+X-TMN: [OpzhjgtyRbFxAKvCtNoP4FNL5EacSTRf]
+X-Originating-Email: [mgainty@hotmail.com]
+Message-ID: <BLU172-W27415474202C097A9ABB59AE9E0@phx.gbl>
+Content-Type: multipart/alternative;
+	boundary="_9c83ea42-677f-4c0b-9856-987130b32c09_"
+From: Martin Gainty <mgainty@hotmail.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: RE: Looking for org.apache.poi 3.10-FINAL
+Date: Sun, 16 Feb 2014 08:37:01 -0500
+Importance: Normal
+In-Reply-To:
+ <CAK8jvqwWUYV2PinvQ3EFcFjMUEewZ-3VEMdE4ykm+xLpk437Bg@mail.gmail.com>
+References:
+ <530078F7.4060903@apconsult.de>,<53007A1C.8060902@apconsult.de>,<CAK8jvqwWUYV2PinvQ3EFcFjMUEewZ-3VEMdE4ykm+xLpk437Bg@mail.gmail.com>
+MIME-Version: 1.0
+X-OriginalArrivalTime: 16 Feb 2014 13:37:03.0152 (UTC) FILETIME=[2D069B00:01CF2B1C]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_9c83ea42-677f-4c0b-9856-987130b32c09_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+
+
+ =20
+
+
+> Date: Sun=2C 16 Feb 2014 10:49:48 +0100
+> Subject: Re: Looking for org.apache.poi 3.10-FINAL
+> From: mfriedenhagen@gmail.com
+> To: users@maven.apache.org
+>=20
+> David=2C
+>=20
+> just guessing:
+> - indexing takes it's time=2C there are only two hours difference between=
+ the
+> commit (??l and end of indexing.
+> - commit (tag creation)=2C artifact creation (jar build)=2C deployment (u=
+pload
+> to staging)=2C promotion (move of staged to released) and synchronization
+> from oss.sonatype.org to repo1 add delays :-)
+>=20
+> Regards
+> Mirko
+> --=20
+> Sent from my mobile
+> On Feb 16=2C 2014 9:43 AM=2C "David Law" <m2eclipse@apconsult.de> wrote:
+>=20
+> > Hi=2C
+> >
+> > I'm new to maven & thought I'd try it out on the recently checked-in:
+> > org.apache.poi 3.10-FINAL
+> >
+> > I'm using m2eclipse standard config with Eclipse Kepler. Repo defaults =
+to:
+> > http://repo.maven.apache.org/maven2
+> >
+> > The Problem:
+> > m2eclipse does not know the org.apache.poi 3.10-FINAL artifact.
+> >
+> > Now=2C I guess the problem could be any combination of:
+> > a) me b) POI c) maven d) m2eclipse e) eclipse?
+> >
+> > QUESTION) Can anyone help to localise it?
+> >
+> > Here's what I've found out so far:
+> >
+> > 0) repo is: http://repo.maven.apache.org/maven2
+> >
+> > 1) org.apache.poi 3.10-FINAL was committed @ 09-Feb-2014 11:50
+> >
+> > 2) as of now repo Timestamp is: 09-Feb-2014 13:50
+> > (nexus.index.timestamp=3D20140209134945.568 +0000)
+> > (found in
+> > http://repo.maven.apache.org/maven2/.index/nexus-maven-
+> > repository-index.properties)
+> >
+> > 3) -> so repo has been reindexed since org.apache.poi 3.10-FINAL commit
+> > (6 days ago).
+> >
+> > 4) exit eclipse
+> >
+> > 5) deleted the index
+> > C:\...\Eclipse\workspace\.metadata\.plugins\org.eclipse.m2e.core\nexus
+> >
+> > 6) start eclipse -> "updating index"
+> >
+> > 7) org.apache.poi 3.10-FINAL is still not there (that is: "here") in my
+> > list of artifacts
+> >
+> > All the best=2C
+> > DaveLaw
+MG>I think whats happening is when you say add repository ..Eclipse assumes=
+ you want to add a CVS repo
+MG>(where repo.maven.apache.org is not a a CVS repo)
+MG>I was able to coax Exlipse to add repo host =3D central.maven.org=20
+MG>as far as authentication to central.maven.org I tried=20
+MG>1)ssh ...no=20
+MG>2)pserver..no
+MG>3)pserverssh2..no
+MG>4)ext..no
+MG>since the built in hooks to IBM repositories seem to confine to one of t=
+he 4 authentication schemes=20
+MG>to a *known* CVS repo maybe use IDEA instead?
+MG>Martin-
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe=2C e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands=2C e-mail: users-help@maven.apache.org
+> >
+> >
+ 		 	   		  =
+
+--_9c83ea42-677f-4c0b-9856-987130b32c09_--
+

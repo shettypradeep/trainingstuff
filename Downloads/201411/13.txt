@@ -1,0 +1,94 @@
+From users-return-137851-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Nov 26 08:28:01 2014
+Return-Path: <users-return-137851-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 94A4610FC6
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Nov 2014 08:28:01 +0000 (UTC)
+Received: (qmail 29260 invoked by uid 500); 26 Nov 2014 08:27:53 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 29157 invoked by uid 500); 26 Nov 2014 08:27:53 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 29126 invoked by uid 99); 26 Nov 2014 08:27:53 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Nov 2014 08:27:53 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.214.173 as permitted sender)
+Received: from [209.85.214.173] (HELO mail-ob0-f173.google.com) (209.85.214.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Nov 2014 08:27:27 +0000
+Received: by mail-ob0-f173.google.com with SMTP id uy5so1824885obc.4
+        for <multiple recipients>; Wed, 26 Nov 2014 00:25:56 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :cc:content-type;
+        bh=ih7qynsoy5mmut4KTmw4OHhC+QmtK3EvLK3LhYWmtLs=;
+        b=Z9QzxrJcsafYBBcJR+mRiV+Wk925h5pwvuFfN4f1WtC2DG328BXELzj2P3RAplJHNJ
+         i0mY8JsCHkGccCFxYrh+WHchXxpPQrnp7VbS8WX8eG2RcQqFK9vhtLde0G55xPRnkkqj
+         x0z7+BMC/qnAvIDfdnQlBsQqQsp1v0nofB/zmQnPcjbNAx2fIgRdT2R5gHVpHUXi0Amw
+         dTzXwutNuSpzopyAZolyt8yiHKV/KG4VY96HmrcI8AK7luK+Iffd6Ib31SEBjpRvg+4P
+         9UFma3bkJapMFFMC7BwPoPMPuRS5jK0dEaL4fwNFbWYIuzOTaGMZIvXFO4HGZ3ee44Ul
+         BWMg==
+MIME-Version: 1.0
+X-Received: by 10.60.98.33 with SMTP id ef1mr18353771oeb.62.1416990356557;
+ Wed, 26 Nov 2014 00:25:56 -0800 (PST)
+Received: by 10.60.37.103 with HTTP; Wed, 26 Nov 2014 00:25:56 -0800 (PST)
+In-Reply-To: <27787066.HVpgGQPOu3@herve-desktop>
+References: <27787066.HVpgGQPOu3@herve-desktop>
+Date: Wed, 26 Nov 2014 08:25:56 +0000
+Message-ID: <CA+nPnMxeLc+A78BeOjQY+D4bktJm6fty-w+-T=DzehnNVrD3qw@mail.gmail.com>
+Subject: Re: [LOGO] site with Fluido skin and owl logo
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Developers List <dev@maven.apache.org>
+Cc: "users@maven.apache.org" <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0115edcada773d0508bec688
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0115edcada773d0508bec688
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+If the vote is successful I'll commit the SVG originals, and we can slice
+and dice, eg maybe keep the owl out of the top bar, add an owl favicon, and
+rework the overly busy front page.
+
+I also think we should remove the side-bars (and perhaps switch to a top
+bar menu) as they hinder mobile accessibility. We can use hopscotch to let
+people know where the stuff is, much like clicking the "Take a tour" button
+on the junit.org site revamp I did.
+
+On Wednesday, 26 November 2014, Herv=C3=A9 BOUTEMY <herve.boutemy@free.fr> =
+wrote:
+
+> I created a branch in svn to test in my own browser
+> https://svn.apache.org/repos/asf/maven/site/branches/fluido/
+>
+> and here is the "mvn site" result:
+> http://people.apache.org/~hboutemy/site-fluido-owl/
+>
+> HTH
+>
+> Regards,
+>
+> Herv=C3=A9
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: dev-unsubscribe@maven.apache.org <javascript:;>
+> For additional commands, e-mail: dev-help@maven.apache.org <javascript:;>
+>
+>
+
+--=20
+Sent from my phone
+
+--089e0115edcada773d0508bec688--
+

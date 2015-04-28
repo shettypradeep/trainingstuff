@@ -1,0 +1,104 @@
+From users-return-137510-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Oct  9 17:48:50 2014
+Return-Path: <users-return-137510-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DB6F51764C
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  9 Oct 2014 17:48:49 +0000 (UTC)
+Received: (qmail 27705 invoked by uid 500); 9 Oct 2014 17:48:48 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 27624 invoked by uid 500); 9 Oct 2014 17:48:48 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 27611 invoked by uid 99); 9 Oct 2014 17:48:47 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Oct 2014 17:48:47 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.213.179] (HELO mail-ig0-f179.google.com) (209.85.213.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Oct 2014 17:48:43 +0000
+Received: by mail-ig0-f179.google.com with SMTP id h18so5113198igc.0
+        for <users@maven.apache.org>; Thu, 09 Oct 2014 10:48:22 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=NXn6uZyw/XOCZKwqhtSHcqt5Lua/m9tEeATtiwndtHw=;
+        b=UWzozIbvioKaB08gX80qPF0EgOuY8Fua5REF/gXYy5sNp7TKTqQu20hO0/UYnbuj9w
+         bLMRqG4D/ndA6DeIGfkBwXFy1cUEVb4sZU9/2P36FY0cg1Y5xYqlA5BmIMu72GJGMdv2
+         8QriZjZWoNv6oHsFFWF5RrWovlI34MUmH1JkDIDGKP6zPymL/4TaFRka96NSm7bSRKWn
+         pCYjjfznPwBLR2FDxXeQLBskgXJaykIcdZ1+4kxL1BnquBWvaafybCv0ogcnw+3YW+6J
+         BDopZcGGnrAIomoqySVofdsUoxwCoz3so0zp9Jhz0UVuAN3wcBUCn2vetaTPKcRSkQ/j
+         IPrA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:sender:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=NXn6uZyw/XOCZKwqhtSHcqt5Lua/m9tEeATtiwndtHw=;
+        b=eS7d6XQsXk5+o0KoM0oUe0q2JXC5eSHOmxCemq45GFGio59F7aZlYMCvirRmgad92V
+         DAPLIv37LA2SK8P1/BpxdaBCt4PW9M3Ql9bde2eyPS036vkSkQRYzaaR9/NkYD0sppRK
+         2hSLbVFZ7DGjS3e3mHrFlN+HfDOTENa63lSen/Oug9KvUli3sT1YtUNcM2pWj5jFSon/
+         ENQT3mJud77Yw4JY7Ne+QT0h2sZok0BKuWKw4a9nbc7wU+bnU7B5awpgqpIseGwS5QF4
+         7FKoMEClG9mKPbF0PE0VjWI5QcLmC6mtmsJUjxe6Lq/CFNu23eR/Bl1ouxB3oJfKdgpY
+         3PCg==
+X-Gm-Message-State: ALoCoQmhvNhA14s+0i7Z8aAFTBaVeJykRqTQwSms+LEii7HcmQIZoQA+QLrlR43rrCyM8HTv3bAo
+MIME-Version: 1.0
+X-Received: by 10.50.43.136 with SMTP id w8mr11688071igl.33.1412876902431;
+ Thu, 09 Oct 2014 10:48:22 -0700 (PDT)
+Sender: kristian.rosenvold@zenior.no
+Received: by 10.50.7.10 with HTTP; Thu, 9 Oct 2014 10:48:22 -0700 (PDT)
+In-Reply-To: <1412866277383-5808264.post@n5.nabble.com>
+References: <1412793888704-5808128.post@n5.nabble.com>
+	<m141i8$8q2$1@ger.gmane.org>
+	<1412795469876-5808146.post@n5.nabble.com>
+	<CAJZRQKz=jn+WgKe=zoNG4sshCy25uoYveg3kc6MbCZAW=okUNQ@mail.gmail.com>
+	<1412866277383-5808264.post@n5.nabble.com>
+Date: Thu, 9 Oct 2014 19:48:22 +0200
+X-Google-Sender-Auth: lJjjZBp8yljl4ussliIBh8qycr0
+Message-ID: <CAJZRQKwNQ_bKHrycTDrbSB7aGTFemuyhTpNARinN+WpCkLK-mw@mail.gmail.com>
+Subject: Re: Why do running modules in parallel take longer to execute than
+ running them in sequence?
+From: Kristian Rosenvold <kristian.rosenvold@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I suggest you set forkCount to 1 on surefire/failsafe, which will run
+all the tests in separate VMs and *also* actually make the "argLine"
+command work. Currently, you are not using 4GB for your tests.
+
+Kristian
+
+
+2014-10-09 16:51 GMT+02:00 laredotornado-3 <laredotornado@gmail.com>:
+>> I suspect you're simply trashing your os or the VM. Look at
+> disk/memory usage indicators OS level
+>
+> Is there any way to get the modules I'm running in parallel to use different
+> heaps or VMs so they are not stepping on each other?  I allocated 4 GB of
+> memory and my JUnit tests aren't doing taht much.
+>
+>
+>
+> --
+> View this message in context: http://maven.40175.n5.nabble.com/Why-do-running-modules-in-parallel-take-longer-to-execute-than-running-them-in-sequence-tp5808128p5808264.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

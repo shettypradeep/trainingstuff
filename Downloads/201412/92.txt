@@ -1,0 +1,1044 @@
+From users-return-137902-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Dec  1 20:34:21 2014
+Return-Path: <users-return-137902-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1F00B101D8
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  1 Dec 2014 20:34:21 +0000 (UTC)
+Received: (qmail 99069 invoked by uid 500); 1 Dec 2014 20:34:19 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 98978 invoked by uid 500); 1 Dec 2014 20:34:18 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 98967 invoked by uid 99); 1 Dec 2014 20:34:18 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 01 Dec 2014 20:34:18 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 01 Dec 2014 20:34:14 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 4D86F6A6580
+	for <users@maven.apache.org>; Mon,  1 Dec 2014 15:33:51 -0500 (EST)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 1sf7T_o4wzlx for <users@maven.apache.org>;
+	Mon,  1 Dec 2014 15:33:50 -0500 (EST)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id D04936A657F
+	for <users@maven.apache.org>; Mon,  1 Dec 2014 15:33:50 -0500 (EST)
+Message-ID: <547CD0AC.4040804@artifact-software.com>
+Date: Mon, 01 Dec 2014 15:33:48 -0500
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: Maven Users List <users@maven.apache.org>
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: What dos it mean: [WARNING ] Skipping because it does not denote
+ a directory
+References: <CANR22PzRB9gzuDbRy0KPgQL3rEMUtxOnkN1ZV2cyrpc_bomvnw@mail.gmail.com>	<20141126220536.00001939.ecki@zusammenkunft.net> <CANR22PwNjO-=7k4FH5_ReOfOj5QrfrAWyChwuxotWHN163GLOw@mail.gmail.com>
+In-Reply-To: <CANR22PwNjO-=7k4FH5_ReOfOj5QrfrAWyChwuxotWHN163GLOw@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+It looks more like a Spring problem with a bean definition.
+
+It looks like you have configured something that is looking for a 
+resource bundle that you have not provided.
+
+In your build section you do not mention any resources that you want 
+included in your war.
+
+When you look  at the deployed war, do you see the resource bundles?
+
+Ron
+
+On 01/12/2014 2:52 PM, Deme Carv wrote:
+> Firstly, thank you for your answers.
+> 1 - Spring Tool Suite is Eclipse with some plugins to work with Spring. 2 -
+> The path is correct and there are jars downloaded via maven.
+> I believe if someone can give me possibilities for this message it will be
+> very usefull.
+> I placed the pom below and the entire log:
+>
+> <modelVersion>4.0.0</modelVersion>
+>
+>    <groupId>MHE_original</groupId>
+>
+>    <artifactId>MHE_original</artifactId>
+>
+>    <version>0.0.1-SNAPSHOT</version>
+>
+>    <packaging>war</packaging>
+>
+>         <name>MHE *Maven* *Webapp*</name>
+>
+>         <url>http://maven.apache.org</url>
+>
+>
+>         <properties>
+>
+>                <spring.version>4.1.2.RELEASE</spring.version>
+>
+>
+>
+>                <java-version>1.6</java-version>
+>
+>                <!--
+> org.springframework-version>4.0.0.RELEASE</org.springframework-version-->
+>
+>                <org.aspectj-version>1.7.4</org.aspectj-version>
+>
+>                <org.slf4j-version>1.7.5</org.slf4j-version>
+>
+>                <jackson.databind-version>2.2.3</jackson.databind-version>
+>
+>         </properties>
+>
+>
+>
+>         <dependencies>
+>
+>
+>
+>                <dependency>
+>
+>                       <groupId>org.apache.httpcomponents</groupId>
+>
+>                       <artifactId>*httpclient*</artifactId>
+>
+>                       <version>4.1.1</version>
+>
+>                </dependency>
+>
+>
+>
+>                <dependency>
+>
+>                       <groupId>javax.servlet</groupId>
+>
+>                       <artifactId>*servlet*-*api*</artifactId>
+>
+>                       <version>2.5</version>
+>
+>                </dependency>
+>
+>                <dependency>
+>
+>                    <groupId>org.codehaus.jackson</groupId>
+>
+>                    <artifactId>*jackson*-*mapper*-*asl*</artifactId>
+>
+>                    <version>1.9.12</version>
+>
+>                </dependency>
+>
+>
+>
+>                <dependency>
+>
+>                       <groupId>org.springframework</groupId>
+>
+>                       <artifactId>spring-core</artifactId>
+>
+>                       <version>${spring.version}</version>
+>
+>                </dependency>
+>
+>
+>
+>                <dependency>
+>
+>                       <groupId>org.springframework</groupId>
+>
+>                       <artifactId>spring-web</artifactId>
+>
+>                       <version>${spring.version}</version>
+>
+>                </dependency>
+>
+>
+>
+>                <dependency>
+>
+>                       <groupId>org.springframework</groupId>
+>
+>                       <artifactId>spring-*webmvc*</artifactId>
+>
+>                       <version>${spring.version}</version>
+>
+>                </dependency>
+>
+>
+>
+>                <dependency>
+>
+>                       <groupId>org.springframework</groupId>
+>
+>                       <artifactId>spring-context</artifactId>
+>
+>                       <version>${spring.version}</version>
+>
+>                </dependency>
+>
+>
+>
+>
+>
+>         </dependencies>
+>
+>
+>
+>    <build>
+>
+>      <sourceDirectory>*src*</sourceDirectory>
+>
+>      <resources>
+>
+>        <resource>
+>
+>          <directory>*src*</directory>
+>
+>          <excludes>
+>
+>            <exclude>**/*.java</exclude>
+>
+>          </excludes>
+>
+>        </resource>
+>
+>      </resources>
+>
+>      <plugins>
+>
+>        <plugin>
+>
+>          <artifactId>*maven*-compiler-*plugin*</artifactId>
+>
+>          <version>3.1</version>
+>
+>          <configuration>
+>
+>            <source>1.6</source>
+>
+>            <target>1.6</target>
+>
+>          </configuration>
+>
+>        </plugin>
+>
+>        <plugin>
+>
+>          <artifactId>*maven*-war-*plugin*</artifactId>
+>
+>          <version>2.4</version>
+>
+>          <configuration>
+>
+>            <warSourceDirectory>WebContent</warSourceDirectory>
+>
+>          </configuration>
+>
+>        </plugin>
+>
+>      </plugins>
+>
+>    </build>
+>
+>
+> ------
+>
+> ********************************************************************************
+>
+> product = WebSphere Application Server 8.5.5.3
+> (wlp-1.0.6.cl50320140731-0257)
+>
+> wlp.install.dir = C:/IBMliberty/
+>
+> java.home = C:\Program Files\Java\jdk1.6.0_45\jre
+>
+> java.version = 1.6.0_45
+>
+> java.runtime = Java(TM) SE Runtime Environment (1.6.0_45-b06)
+>
+> os = Windows 7 (6.1; amd64) (en_US)
+>
+> ********************************************************************************
+>
+> [11/26/14 14:20:44:301 CST] 00000001
+> com.ibm.ws.logging.internal.TraceSpecification               I TRAS0018I:
+> The trace state has been changed. The new trace state is *=info.
+>
+> [11/26/14 14:20:44:326 CST] 00000001
+> com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I:
+> The server defaultServer has been launched.
+>
+> [11/26/14 14:20:49:151 CST] 00000001
+> com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I:
+> The kernel started after 5.375 seconds
+>
+> [11/26/14 14:20:49:270 CST] 00000018
+> com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I:
+> Feature update started.
+>
+> [11/26/14 14:20:56:450 CST] 00000011
+> com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I:
+> Monitoring dropins for applications.
+>
+> [11/26/14 14:20:57:386 CST] 0000001c
+> com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I:
+> TCP Channel defaultHttpEndpoint has been started and is now listening for
+> requests on host 127.0.0.1  (IPv4: 127.0.0.1) port 8080.
+>
+> [11/26/14 14:21:01:192 CST] 00000018
+> com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I:
+> Feature update completed in 12.117 seconds.
+>
+> [11/26/14 14:21:01:193 CST] 00000018
+> com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I:
+> The server defaultServer is ready to run a smarter planet.
+>
+> [11/26/14 14:24:05:977 CST] 00000016
+> com.ibm.ws.config.xml.internal.ConfigRefresher               A CWWKG0016I:
+> Starting server configuration update.
+>
+> [11/26/14 14:24:08:618 CST] 00000022
+> com.ibm.ws.config.xml.internal.ConfigRefresher               A CWWKG0017I:
+> The server configuration was successfully updated in 2.639 seconds.
+>
+> [11/26/14 14:24:08:618 CST] 00000022
+> com.ibm.ws.app.manager.AppMessageHelper                      W CWWKZ0014W:
+> The application MHE_original could not be started as it could not be found
+> at location MHE.war.
+>
+> [11/26/14 14:24:10:828 CST] 00000018
+> com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I:
+> Starting application MHE_original.
+>
+> [11/26/14 14:24:13:298 CST] 00000018
+> com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I:
+> Loading Web Module: MHE.
+>
+> [11/26/14 14:24:13:298 CST] 00000018 com.ibm.ws.webcontainer
+>                         I SRVE0250I: Web Module MHE has been bound to
+> default_host.
+>
+> [11/26/14 14:24:13:298 CST] 00000018
+> com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I:
+> Web application available (default_host): http://localhost:8080/MHE2/
+>
+> [11/26/14 14:24:13:439 CST] 00000018
+> com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I:
+> Application MHE_original started in 2.486 seconds.
+>
+> [11/26/14 14:25:22:460 CST] 0000002b com.ibm.ws.session.WASSessionCore
+>                         I SESN8501I: The session manager did not find a
+> persistent storage location; HttpSession objects will be stored in the
+> local application server's memory.
+>
+> [11/26/14 14:25:22:491 CST] 0000002b com.ibm.ws.session.WASSessionCore
+>                         I SESN0176I: A new session context will be created
+> for application key default_host/MHE2
+>
+> [11/26/14 14:25:22:538 CST] 0000002b com.ibm.ws.util
+>                         I SESN0172I: The session manager is using the Java
+> default SecureRandom implementation for session ID generation.
+>
+> [11/26/14 14:25:33:994 CST] 0000002b com.ibm.ws.webcontainer.webapp
+>                        I SRVE0292I: Servlet Message - [MHE]:.No Spring
+> WebApplicationInitializer types detected on classpath
+>
+> [11/26/14 14:25:34:619 CST] 0000002b com.ibm.ws.webcontainer.webapp
+>                        I SRVE0292I: Servlet Message - [MHE]:.Initializing
+> Spring root WebApplicationContext
+>
+> [11/26/14 14:25:34:619 CST] 0000002b
+> org.springframework.web.context.ContextLoader                I Root
+> WebApplicationContext: initialization started
+>
+> [11/26/14 14:25:34:947 CST] 0000002b
+> springframework.web.context.support.XmlWebApplicationContext I Refreshing
+> Root WebApplicationContext: startup date [Wed Nov 26 14:25:34 CST 2014];
+> root of context hierarchy
+>
+> [11/26/14 14:25:35:072 CST] 0000002b
+> rg.springframework.beans.factory.xml.XmlBeanDefinitionReader I Loading XML
+> bean definitions from ServletContext resource
+> [/WEB-INF/applicationContext.xml]
+>
+> [11/26/14 14:25:35:919 CST] 0000002b
+> g.springframework.beans.factory.config.PropertiesFactoryBean I Loading
+> properties file from class path resource [restServices.properties]
+>
+> [11/26/14 14:25:36:122 CST] 0000002b
+> org.springframework.web.context.ContextLoader                I Root
+> WebApplicationContext: initialization completed in 1503 ms
+>
+> [11/26/14 14:25:36:169 CST] 0000002b com.ibm.ws.webcontainer.webapp
+>                        I SRVE0292I: Servlet Message - [MHE]:.Initializing
+> Spring FrameworkServlet 'mvc-dispatcher'
+>
+> [11/26/14 14:25:36:169 CST] 0000002b
+> org.springframework.web.servlet.DispatcherServlet            I
+> FrameworkServlet 'mvc-dispatcher': initialization started
+>
+> [11/26/14 14:25:36:169 CST] 0000002b
+> springframework.web.context.support.XmlWebApplicationContext I Refreshing
+> WebApplicationContext for namespace 'mvc-dispatcher-servlet': startup date
+> [Wed Nov 26 14:25:36 CST 2014]; parent: Root WebApplicationContext
+>
+> [11/26/14 14:25:36:169 CST] 0000002b
+> rg.springframework.beans.factory.xml.XmlBeanDefinitionReader I Loading XML
+> bean definitions from ServletContext resource
+> [/WEB-INF/mvc-dispatcher-servlet.xml]
+>
+> [11/26/14 14:25:37:060 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Cannot
+> search for matching files underneath URL
+> [bundleresource://96.fwk1553324600/] because it does not correspond to a
+> directory in the file system
+>
+> java.io.FileNotFoundException: URL [bundleresource://96.fwk1553324600/]
+> cannot be resolved to absolute file path because it does not reside in the
+> file system: bundleresource://96.fwk1553324600/
+>
+> at org.springframework.util.ResourceUtils.getFile(ResourceUtils.java:212)
+>
+> at
+> org.springframework.core.io.AbstractFileResolvingResource.getFile(AbstractFileResolvingResource.java:52)
+>
+> at org.springframework.core.io.UrlResource.getFile(UrlResource.java:212)
+>
+> at
+> org.springframework.core.io.support.PathMatchingResourcePatternResolver.doFindPathMatchingFileResources(PathMatchingResourcePatternResolver.java:598)
+>
+> at
+> org.springframework.web.context.support.ServletContextResourcePatternResolver.doFindPathMatchingFileResources(ServletContextResourcePatternResolver.java:92)
+>
+> at
+> org.springframework.core.io.support.PathMatchingResourcePatternResolver.findPathMatchingResources(PathMatchingResourcePatternResolver.java:419)
+>
+> at
+> org.springframework.core.io.support.PathMatchingResourcePatternResolver.getResources(PathMatchingResourcePatternResolver.java:273)
+>
+> at
+> org.springframework.context.support.AbstractApplicationContext.getResources(AbstractApplicationContext.java:1159)
+>
+> at
+> org.springframework.core.io.support.ResourceArrayPropertyEditor.setValue(ResourceArrayPropertyEditor.java:159)
+>
+> at
+> org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:387)
+>
+> at
+> org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:195)
+>
+> at
+> org.springframework.beans.BeanWrapperImpl.convertIfNecessary(BeanWrapperImpl.java:460)
+>
+> at
+> org.springframework.beans.BeanWrapperImpl.convertForProperty(BeanWrapperImpl.java:511)
+>
+> at
+> org.springframework.beans.BeanWrapperImpl.convertForProperty(BeanWrapperImpl.java:505)
+>
+> at
+> org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.convertForProperty(AbstractAutowireCapableBeanFactory.java:1517)
+>
+> at
+> org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1476)
+>
+> at
+> org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1216)
+>
+> at
+> org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+>
+> at
+> org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+>
+> at
+> org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+>
+> at
+> org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+>
+> at
+> org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+>
+> at
+> org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+>
+> at
+> org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:150)
+>
+> at
+> org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:606)
+>
+> at
+> org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:462)
+>
+> at
+> org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:663)
+>
+> at
+> org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:629)
+>
+> at
+> org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:677)
+>
+> at
+> org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:548)
+>
+> at
+> org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+>
+> at
+> org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+>
+> at javax.servlet.GenericServlet.init(GenericServlet.java:161)
+>
+> at
+> com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:325)
+>
+> at
+> com.ibm.ws.webcontainer.servlet.ServletWrapper.loadOnStartupCheck(ServletWrapper.java:1410)
+>
+> at
+> com.ibm.ws.webcontainer.webapp.WebApp.doLoadOnStartupActions(WebApp.java:1095)
+>
+> at
+> com.ibm.ws.webcontainer.webapp.WebApp.commonInitializationFinally(WebApp.java:1063)
+>
+> at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:969)
+>
+> at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:6092)
+>
+> at
+> com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApp(DynamicVirtualHost.java:440)
+>
+> at
+> com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.createRunnableHandler(DynamicVirtualHost.java:252)
+>
+> at
+> com.ibm.ws.http.internal.VirtualHostImpl.discriminate(VirtualHostImpl.java:458)
+>
+> at
+> com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:203)
+>
+> at
+> com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:448)
+>
+> at
+> com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:382)
+>
+> at
+> com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:282)
+>
+> at
+> com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:253)
+>
+> at
+> com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:174)
+>
+> at
+> com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:83)
+>
+> at
+> com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:502)
+>
+> at
+> com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:559)
+>
+> at
+> com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:908)
+>
+> at
+> com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:991)
+>
+> at
+> java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+>
+> at
+> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+>
+> at java.lang.Thread.run(Thread.java:662)
+>
+>
+> [11/26/14 14:25:37:078 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Cannot
+> search for matching files underneath URL
+> [bundleresource://95.fwk1553324600/] because it does not correspond to a
+> directory in the file system
+>
+> java.io.FileNotFoundException: URL [bundleresource://95.fwk1553324600/]
+> cannot be resolved to absolute file path because it does not reside in the
+> file system: bundleresource://95.fwk1553324600/
+>
+> at org.springframework.util.ResourceUtils.getFile(ResourceUtils.java:212)
+>
+> at
+> org.springframework.core.io.AbstractFileResolvingResource.getFile(AbstractFileResolvingResource.java:52)
+>
+> at org.springframework.core.io.UrlResource.getFile(UrlResource.java:212)
+>
+> at
+> org.springframework.core.io.support.PathMatchingResourcePatternResolver.doFindPathMatchingFileResources(PathMatchingResourcePatternResolver.java:598)
+>
+> at
+> org.springframework.web.context.support.ServletContextResourcePatternResolver.doFindPathMatchingFileResources(ServletContextResourcePatternResolver.java:92)
+>
+> at
+> org.springframework.core.io.support.PathMatchingResourcePatternResolver.findPathMatchingResources(PathMatchingResourcePatternResolver.java:419)
+>
+> at
+> org.springframework.core.io.support.PathMatchingResourcePatternResolver.getResources(PathMatchingResourcePatternResolver.java:273)
+>
+> at
+> org.springframework.context.support.AbstractApplicationContext.getResources(AbstractApplicationContext.java:1159)
+>
+> at
+> org.springframework.core.io.support.ResourceArrayPropertyEditor.setValue(ResourceArrayPropertyEditor.java:159)
+>
+> at
+> org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:387)
+>
+> at
+> org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:195)
+>
+> at
+> org.springframework.beans.BeanWrapperImpl.convertIfNecessary(BeanWrapperImpl.java:460)
+>
+> at
+> org.springframework.beans.BeanWrapperImpl.convertForProperty(BeanWrapperImpl.java:511)
+>
+> at
+> org.springframework.beans.BeanWrapperImpl.convertForProperty(BeanWrapperImpl.java:505)
+>
+> at
+> org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.convertForProperty(AbstractAutowireCapableBeanFactory.java:1517)
+>
+> at
+> org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1476)
+>
+> at
+> org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1216)
+>
+> at
+> org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+>
+> at
+> org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+>
+> at
+> org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+>
+> at
+> org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+>
+> at
+> org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+>
+> at
+> org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+>
+> at
+> org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:150)
+>
+> at
+> org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:606)
+>
+> at
+> org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:462)
+>
+> at
+> org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:663)
+>
+> at
+> org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:629)
+>
+> at
+> org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:677)
+>
+> at
+> org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:548)
+>
+> at
+> org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489)
+>
+> at
+> org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+>
+> at javax.servlet.GenericServlet.init(GenericServlet.java:161)
+>
+> at
+> com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:325)
+>
+> at
+> com.ibm.ws.webcontainer.servlet.ServletWrapper.loadOnStartupCheck(ServletWrapper.java:1410)
+>
+> at
+> com.ibm.ws.webcontainer.webapp.WebApp.doLoadOnStartupActions(WebApp.java:1095)
+>
+> at
+> com.ibm.ws.webcontainer.webapp.WebApp.commonInitializationFinally(WebApp.java:1063)
+>
+> at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:969)
+>
+> at com.ibm.ws.webcontainer.webapp.WebApp.initialize(WebApp.java:6092)
+>
+> at
+> com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.startWebApp(DynamicVirtualHost.java:440)
+>
+> at
+> com.ibm.ws.webcontainer.osgi.DynamicVirtualHost.createRunnableHandler(DynamicVirtualHost.java:252)
+>
+> at
+> com.ibm.ws.http.internal.VirtualHostImpl.discriminate(VirtualHostImpl.java:458)
+>
+> at
+> com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:203)
+>
+> at
+> com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:448)
+>
+> at
+> com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:382)
+>
+> at
+> com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:282)
+>
+> at
+> com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:253)
+>
+> at
+> com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:174)
+>
+> at
+> com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:83)
+>
+> at
+> com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:502)
+>
+> at
+> com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:559)
+>
+> at
+> com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:908)
+>
+> at
+> com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:991)
+>
+> at
+> java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+>
+> at
+> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+>
+> at java.lang.Thread.run(Thread.java:662)
+>
+>
+> [11/26/14 14:25:37:085 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\STS\ws\MHE_original\WebContent\WEB-INF\lib\db2java.jar] because it does
+> not denote a directory
+>
+> [11/26/14 14:25:37:086 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\STS\ws\MHE_original\WebContent\WEB-INF\lib\jeapCore-03.02.1.2.jar]
+> because it does not denote a directory
+>
+> [11/26/14 14:25:37:102 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\STS\ws\MHE_original\WebContent\WEB-INF\lib\upload.jar] because it does
+> not denote a directory
+>
+> [11/26/14 14:25:37:102 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\Users\e049447\.m2\repository\org\apache\httpcomponents\httpclient\4.1.1\httpclient-4.1.1.jar]
+> because it does not denote a directory
+>
+> [11/26/14 14:25:37:102 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\Users\e049447\.m2\repository\org\apache\httpcomponents\httpcore\4.1\httpcore-4.1.jar]
+> because it does not denote a directory
+>
+> [11/26/14 14:25:37:102 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\Users\e049447\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar]
+> because it does not denote a directory
+>
+> [11/26/14 14:25:37:102 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\Users\e049447\.m2\repository\commons-codec\commons-codec\1.4\commons-codec-1.4.jar]
+> because it does not denote a directory
+>
+> [11/26/14 14:25:37:102 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\Users\e049447\.m2\repository\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar]
+> because it does not denote a directory
+>
+> [11/26/14 14:25:37:102 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\Users\e049447\.m2\repository\org\codehaus\jackson\jackson-mapper-asl\1.9.12\jackson-mapper-asl-1.9.12.jar]
+> because it does not denote a directory
+>
+> [11/26/14 14:25:37:102 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\Users\e049447\.m2\repository\org\codehaus\jackson\jackson-core-asl\1.9.12\jackson-core-asl-1.9.12.jar]
+> because it does not denote a directory
+>
+> [11/26/14 14:25:37:102 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\Users\e049447\.m2\repository\org\springframework\spring-core\4.1.2.RELEASE\spring-core-4.1.2.RELEASE.jar]
+> because it does not denote a directory
+>
+> [11/26/14 14:25:37:102 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\Users\e049447\.m2\repository\org\springframework\spring-web\4.1.2.RELEASE\spring-web-4.1.2.RELEASE.jar]
+> because it does not denote a directory
+>
+> [11/26/14 14:25:37:102 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\Users\e049447\.m2\repository\org\springframework\spring-aop\4.1.2.RELEASE\spring-aop-4.1.2.RELEASE.jar]
+> because it does not denote a directory
+>
+> [11/26/14 14:25:37:102 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\Users\e049447\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar]
+> because it does not denote a directory
+>
+> [11/26/14 14:25:37:102 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\Users\e049447\.m2\repository\org\springframework\spring-beans\4.1.2.RELEASE\spring-beans-4.1.2.RELEASE.jar]
+> because it does not denote a directory
+>
+> [11/26/14 14:25:37:102 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\Users\e049447\.m2\repository\org\springframework\spring-webmvc\4.1.2.RELEASE\spring-webmvc-4.1.2.RELEASE.jar]
+> because it does not denote a directory
+>
+> [11/26/14 14:25:37:102 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\Users\e049447\.m2\repository\org\springframework\spring-expression\4.1.2.RELEASE\spring-expression-4.1.2.RELEASE.jar]
+> because it does not denote a directory
+>
+> [11/26/14 14:25:37:102 CST] 0000002b
+> ramework.core.io.support.PathMatchingResourcePatternResolver W Skipping
+> [C:\Users\e049447\.m2\repository\org\springframework\spring-context\4.1.2.RELEASE\spring-context-4.1.2.RELEASE.jar]
+> because it does not denote a directory
+>
+> [11/26/14 14:25:37:118 CST] 0000002b
+> framework.beans.factory.config.PropertyPlaceholderConfigurer I Loading
+> properties file from file
+> [C:\STS\ws\MHE_original\WebContent\WEB-INF\classes\environment.properties]
+>
+> [11/26/14 14:25:37:118 CST] 0000002b
+> framework.beans.factory.config.PropertyPlaceholderConfigurer I Loading
+> properties file from file
+> [C:\STS\ws\MHE_original\WebContent\WEB-INF\classes\extended.properties]
+>
+> [11/26/14 14:25:37:118 CST] 0000002b
+> framework.beans.factory.config.PropertyPlaceholderConfigurer I Loading
+> properties file from file
+> [C:\STS\ws\MHE_original\WebContent\WEB-INF\classes\restServices.properties]
+>
+> [11/26/14 14:26:57:225 CST] 0000002b SystemOut
+>                         O pchttp://localhost:8080/MHE2/log/display/last
+>
+> [11/26/14 14:26:57:475 CST] 0000002b
+> b.servlet.mvc.method.annotation.RequestMappingHandlerMapping I Mapped
+> "{[/log/display/last],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}"
+> onto public java.util.ArrayList<java.lang.String>
+> com.myApp.mhe.common.controller.Lo_Controller.getFirst(com.myApp.mhe.log.domain.Mas60010)
+>
+> [11/26/14 14:26:58:209 CST] 0000002b
+> b.servlet.mvc.method.annotation.RequestMappingHandlerAdapter I Looking for
+> @ControllerAdvice: WebApplicationContext for namespace
+> 'mvc-dispatcher-servlet': startup date [Wed Nov 26 14:25:36 CST 2014];
+> parent: Root WebApplicationContext
+>
+> [11/26/14 14:26:58:459 CST] 0000002b
+> b.servlet.mvc.method.annotation.RequestMappingHandlerAdapter I Looking for
+> @ControllerAdvice: WebApplicationContext for namespace
+> 'mvc-dispatcher-servlet': startup date [Wed Nov 26 14:25:36 CST 2014];
+> parent: Root WebApplicationContext
+>
+> [11/26/14 14:26:58:616 CST] 0000002b
+> .springframework.web.servlet.handler.SimpleUrlHandlerMapping I Mapped URL
+> path [/**] onto handler
+> 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+>
+> [11/26/14 14:26:58:678 CST] 0000002b
+> org.springframework.web.servlet.DispatcherServlet            I
+> FrameworkServlet 'mvc-dispatcher': initialization completed in 82509 ms
+>
+> [11/26/14 14:26:58:678 CST] 0000002b com.ibm.ws.webcontainer.servlet
+>                         I SRVE0242I: [MHE_original] [/MHE2]
+> [mvc-dispatcher]: Initialization successful.
+>
+> [11/26/14 14:27:07:544 CST] 0000001a com.ibm.ws.webcontainer.servlet
+>                         I SRVE0242I: [MHE_original] [/MHE2]
+> [Mhe_ControllerServlet]: Initialization successful.
+>
+> [11/26/14 14:27:08:669 CST] 0000001a
+> com.ibm.ws.recoverylog.spi.RecoveryDirectorImpl              I CWRLS0010I:
+> Performing recovery processing for local WebSphere server
+> (Cell\Node\Server).
+>
+> [11/26/14 14:27:08:954 CST] 0000001a
+> com.ibm.ws.recoverylog.spi.RecoveryDirectorImpl              I CWRLS0012I:
+> All persistent services have been directed to perform recovery processing
+> for this WebSphere server (Cell\Node\Server).
+>
+> [11/26/14 14:27:08:975 CST] 00000032 com.ibm.tx.jta.impl.RecoveryManager
+>                         I WTRN0135I: Transaction service recovering no
+> transactions.
+>
+> [11/26/14 14:27:30:485 CST] 0000001a
+> com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I:
+> An FFDC Incident has been created:
+> "com.ibm.db2.jcc.am.DisconnectNonTransientConnectionException:
+> [jcc][t4][2043][11550][4.13.80] Exception java.net.ConnectException: Error
+> opening socket to server cpufip/172.19.241.133 on port 446 with message:
+> Connection timed out: connect. ERRORCODE=-4499, SQLSTATE=08001
+> com.ibm.ws.rsadapter.spi.WSRdbDataSource.getConnectionUsingDS 1372" at
+> ffdc_14.11.26_14.27.30.0.log
+>
+> [11/26/14 14:27:30:738 CST] 0000001a
+> com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I:
+> An FFDC Incident has been created:
+> "com.ibm.ws.rsadapter.exceptions.DataStoreAdapterException: DSRA8100E:
+> Unable to get a Connection from the DataSource.
+> com.ibm.ejs.j2c.poolmanager.FreePool.createManagedConnectionWithMCWrapper
+> 199" at ffdc_14.11.26_14.27.30.1.log
+>
+> [11/26/14 14:27:30:745 CST] 0000001a
+> com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I:
+> An FFDC Incident has been created:
+> "javax.resource.spi.ResourceAllocationException: DSRA8100E: Unable to get a
+> Connection from the DataSource.
+> com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource.getConnection 299" at
+> ffdc_14.11.26_14.27.30.2.log
+>
+> [11/26/14 14:27:30:746 CST] 0000001a SystemOut
+>                         O Problem in getting connection - jdbc/mhe
+>
+> [11/26/14 14:27:30:746 CST] 0000001a SystemOut
+>                         O Problem in creating the prepareCallableStatement
+> in ProcedureHandler :java.lang.NullPointerException
+>
+> [11/26/14 14:27:32:703 CST] 0000001a com.ibm.ws.webcontainer.servlet
+>                         I SRVE0242I: [MHE_original] [/MHE2] [/error.jsp]:
+> Initialization successful.
+>
+> [11/26/14 14:27:42:214 CST] 0000002b SystemOut
+>                         O Problem in getting connection - jdbc/mhe
+>
+> [11/26/14 14:27:42:214 CST] 0000002b SystemOut
+>                         O Problem in creating the prepareCallableStatement
+> in ProcedureHandler :java.lang.NullPointerException
+>
+> [11/26/14 14:28:35:610 CST] 00000022
+> com.ibm.ws.rsadapter.spi.InternalGenericDataStoreHelper      I DSRA8203I:
+> Database product name : DB2
+>
+> [11/26/14 14:28:35:610 CST] 00000022
+> com.ibm.ws.rsadapter.spi.InternalGenericDataStoreHelper      I DSRA8204I:
+> Database product version : DSN10015
+>
+> [11/26/14 14:28:35:610 CST] 00000022
+> com.ibm.ws.rsadapter.spi.InternalGenericDataStoreHelper      I DSRA8205I:
+> JDBC driver name  : IBM Data Server Driver for JDBC and SQLJ
+>
+> [11/26/14 14:28:35:610 CST] 00000022
+> com.ibm.ws.rsadapter.spi.InternalGenericDataStoreHelper      I DSRA8206I:
+> JDBC driver version  : 4.13.80
+>
+> [11/26/14 14:28:36:542 CST] 00000022 com.ibm.ws.webcontainer.servlet
+>                         I SRVE0242I: [MHE_original] [/MHE2] [Tr_Servlet]:
+> Initialization successful.
+>
+> [11/26/14 14:28:38:139 CST] 00000022 com.ibm.ws.webcontainer.servlet
+>                         I SRVE0242I: [MHE_original] [/MHE2]
+> [/transaction/tr_display.jsp]: Initialization successful.
+>
+> [11/26/14 14:28:38:440 CST] 00000022 com.ibm.ws.webcontainer.servlet
+>                         I SRVE0242I: [MHE_original] [/MHE2]
+> [/transaction/tr_header.jsp]: Initialization successful.
+>
+> [11/26/14 14:28:39:965 CST] 00000022 com.ibm.ws.webcontainer.servlet
+>                         I SRVE0242I: [MHE_original] [/MHE2]
+> [/transaction/tr_status.jsp]: Initialization successful.
+>
+> [11/26/14 14:28:42:779 CST] 00000022 com.ibm.ws.webcontainer.servlet
+>                         I SRVE0242I: [MHE_original] [/MHE2] [Gr_Servlet]:
+> Initialization successful.
+>
+> [11/26/14 14:28:43:513 CST] 00000022 com.ibm.ws.webcontainer.servlet
+>                         I SRVE0242I: [MHE_original] [/MHE2]
+> [/group/gr_display.jsp]: Initialization successful.
+>
+> [11/26/14 14:28:44:267 CST] 00000022 com.ibm.ws.webcontainer.servlet
+>                         I SRVE0242I: [MHE_original] [/MHE2]
+> [/group/gr_header.jsp]: Initialization successful.
+>
+> [11/26/14 14:28:44:697 CST] 00000022 com.ibm.ws.webcontainer.servlet
+>                         I SRVE0242I: [MHE_original] [/MHE2]
+> [/group/gr_status.jsp]: Initialization successful.
+>
+>
+>
+>
+> On Wed, Nov 26, 2014 at 7:05 PM, Bernd Eckenfels <ecki@zusammenkunft.net>
+> wrote:
+>
+>> Am Wed, 26 Nov 2014 18:55:54 -0200
+>> schrieb Deme Carv <demecarv@gmail.com>:
+>>
+>>> My application is working perfectly but I have been facing a lot of
+>>> Warning in Spring Tool Suite like:
+>>>
+>>> [WARNING ] Skipping
+>>>
+>> [C:\Users\e049447\.m2\repository\org\apache\httpcomponents\httpcore\4.1\httpcore-4.1.jar]
+>>> because it does not denote a directory
+>>>
+>>> What does it mean? I can see the jars in the correct place and I can
+>>> run the code which depends on httpcore normally.
+>> The path above, is it a file or a directory or not existing at all?
+>> What is "Spring Tool Suite"? What maven goal did you run to get this
+>> warning? What plugin was running before the line?
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

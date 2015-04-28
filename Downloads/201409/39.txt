@@ -1,0 +1,192 @@
+From users-return-137293-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Sep 15 22:05:27 2014
+Return-Path: <users-return-137293-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EB87C111C7
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 15 Sep 2014 22:05:27 +0000 (UTC)
+Received: (qmail 33869 invoked by uid 500); 15 Sep 2014 22:05:26 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 33787 invoked by uid 500); 15 Sep 2014 22:05:26 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 47910 invoked by uid 99); 15 Sep 2014 13:49:54 -0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of shailesh.mangal@gmail.com designates 209.85.212.174 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :cc:content-type;
+        bh=T7gLwwUU2+LXfGYq6gw67OQE8QFzNvgV5F6kNjemPSE=;
+        b=S4qrl1naFNFwVZemqtTLzlqCwqHHa92Szx7hEahyyTIRzpmrnJ+bV2UdSvltA/ctzA
+         8uJgmj4Ct8nwIzHF+Ooo/rJTrQmJbgdMhGr9USZ2aDthgpSQVCcS18LErQJVjEmZKzOY
+         h1CRlzT0P7Fdula9c+TvN8nSEEZB1q5GSPVeVxTJMauU5E2ZmB20Up9SNHlc13MJlNI6
+         bdvUOSY/CdbKVbSyrPhamSzOJvBG4kdXTmZ/J+dgj9sXT5uizJuWdQLXKbbzf4hkZc+W
+         r8P1vuvB8ckldBm85ExQ8+LUKasLfvUbco6Gowspz/Bnm65muE7QoJ5ZR/2CfDmZ/Ptf
+         KCdQ==
+MIME-Version: 1.0
+X-Received: by 10.194.191.135 with SMTP id gy7mr32877485wjc.39.1410788968054;
+ Mon, 15 Sep 2014 06:49:28 -0700 (PDT)
+In-Reply-To: <CAJuJAHcB7cqvbkLJL7JcQOakvwr_nRMciD66sHZLo9MKDWNUeA@mail.gmail.com>
+References: <CAJuJAHcB7cqvbkLJL7JcQOakvwr_nRMciD66sHZLo9MKDWNUeA@mail.gmail.com>
+Date: Mon, 15 Sep 2014 06:49:28 -0700
+Message-ID: <CADepXvdVPmHze6=xo5dd9GOnCegt76eh2gLxO8mv7y1jMKLoCA@mail.gmail.com>
+Subject: Re: Classpath issue in custom maven plugin
+From: shailesh mangal <shailesh.mangal@gmail.com>
+To: Kavita Gupta <kavita.gpt1984@gmail.com>
+Cc: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=047d7bae47b04b44fc05031ae701
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bae47b04b44fc05031ae701
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Limitation perhaps comes from OSGi where each bundle has its own class
+loader. Did u try to run it from command line?
+On Sep 15, 2014 6:36 AM, "Kavita Gupta" <kavita.gpt1984@gmail.com> wrote:
+
+>
+> Hi!
+>
+> I have created my own custom maven plugin(api-docs) for developing apiary
+> blueprint. While triggering my custom plugin using m2Eclipse I am getting=
+ a
+> classpath issue that classPath.getresources is fetching resources from
+> plexus jar, while when I debug the swagger plugin (which I am taking as a
+> reference) it is picking up the resources from rt.jar. In swagger I am
+> getting web/target/classes in URLS but in my custom project I am not
+> getting the  web/target/classes in URLS. Code snippet is:
+>
+>         ClassLoader classLoader =3D
+> Thread.currentThread().getContextClassLoader();
+>
+>
+> System.out.println(classLoader.getResources("com/abc/service/rest/resourc=
+e"));
+>
+>         assert classLoader !=3D null;
+>
+>         String path =3D packageName.replace('.', '/');
+>
+>         Enumeration<URL> resources =3D classLoader.getResources(path);
+>
+>
+> My custom plugin's dependency tree is attached(apidocsTree.txt). I have
+> integrated it in my other project i.e web. Here is the web pom
+> configuration for the plugin.
+>
+> <plugin>
+>
+>           <groupId>com.thed</groupId>
+>
+>           <artifactId>api-docs</artifactId>
+>
+>           <version>1.0-SNAPSHOT</version>
+>
+>           <configuration>
+>
+>                 <packageName>com.thed.service.rest.resource</packageName>
+>
+>     <vmFile>apiary.vm</vmFile>
+>
+>
+> <outputFileName>${basedir}/target/apiary.apib</outputFileName>
+>
+>   </configuration>
+>
+>          <executions>
+>
+> <execution>
+>
+>                     <phase>prepare-package</phase>
+>
+>                     <goals>
+>
+>                         <goal>generateApiDocs</goal>
+>
+>                     </goals>
+>
+>                 </execution>
+>
+> </executions>
+>
+>  </plugin>
+>
+>
+>
+> I am taking swagger-plugin as a reference. Its dependency tree is attache=
+d
+> as swaggerTree.txt. Its configuration in web is:
+>
+> <plugin>
+>
+>    <groupId>com.github.kongchen</groupId>
+>
+>    <artifactId>swagger-maven-plugin</artifactId>
+>
+>    <version>1.0-SNAPSHOT</version>
+>
+>     <configuration>
+>
+>         <apiSources>
+>
+>         <apiSource>
+>
+>                <apiPackage>com.thed.service.rest.resource</apiPackage>
+>
+>                <apiVersion>v1</apiVersion>
+>
+>                <basePath>http://localhost:8080/flex/services/rest/latest
+> </basePath>
+>
+>
+>  <outputTemplate>${basedir}/src/site/docs/template/rest/zephyr_html.musta=
+che</outputTemplate>
+>
+>
+>  <outputPath>${basedir}/src/main/webapp/data/rest-doc.html</outputPath>
+>
+>         </apiSource>
+>
+>   </apiSources>
+>
+>   </configuration>
+>
+>   <executions>
+>
+>   <execution>
+>
+>            <phase>prepare-package</phase>
+>
+>             <goals>
+>
+>                  <goal>generate</goal>
+>
+>              </goals>
+>
+>     </execution>
+>
+>   </executions>
+>
+> </plugin>
+>
+>
+> Please provide me the input to solve this classpath issue.
+> =E2=80=8B
+>
+> --
+> Thanks,
+> Kavita Gupta Agarwal
+>
+
+--047d7bae47b04b44fc05031ae701--
+

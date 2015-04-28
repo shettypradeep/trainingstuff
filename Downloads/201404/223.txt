@@ -1,0 +1,77 @@
+From users-return-136041-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr  1 06:29:56 2014
+Return-Path: <users-return-136041-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D069810066
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  1 Apr 2014 06:29:56 +0000 (UTC)
+Received: (qmail 75574 invoked by uid 500); 1 Apr 2014 06:29:53 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 74842 invoked by uid 500); 1 Apr 2014 06:29:50 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74824 invoked by uid 99); 1 Apr 2014 06:29:48 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 01 Apr 2014 06:29:48 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of st.ferstl@gmail.com designates 209.85.219.46 as permitted sender)
+Received: from [209.85.219.46] (HELO mail-oa0-f46.google.com) (209.85.219.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 01 Apr 2014 06:29:43 +0000
+Received: by mail-oa0-f46.google.com with SMTP id i7so10490923oag.5
+        for <users@maven.apache.org>; Mon, 31 Mar 2014 23:29:21 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=CFIkor0Ha5lXqz/YOithWXCpnlEJFEyCMRJrUyi69Io=;
+        b=YCiO3Y1vtrvkKgamfOjWv44xddSiv5M7q2s/R2gMOIiLWOmP3/IztQPWuNTdbGgHtA
+         Swmsmq7gPgeZMsBYnYbokH/oQZ5GTO57h2iS/FieNSKGSBbyywVDEdBnUsdIUjtwgHJC
+         gUxfUD9r9MGmFbIv5Y6j5XpaGMpH0MBR5tZN4w0wjsSdKHj2YG1HRt6Hqz96UHHLNMwJ
+         +n5qSl9xvXBUtmk9ZzIF7a+V9WGcYhAAR8Sqjb/WazQuSAKGTJ8fdv8FFayBDxTdILwW
+         a+MZRP697zZMxIoryNNHEAjetQ47o3jKSdnooTli47+aXTvAQZGPjJukvqVvM0G/tKaA
+         psWA==
+MIME-Version: 1.0
+X-Received: by 10.60.227.10 with SMTP id rw10mr274467oec.51.1396333761088;
+ Mon, 31 Mar 2014 23:29:21 -0700 (PDT)
+Received: by 10.76.180.138 with HTTP; Mon, 31 Mar 2014 23:29:20 -0700 (PDT)
+Date: Tue, 1 Apr 2014 08:29:20 +0200
+Message-ID: <CAMtaDYTowgW5bXSeQp+xQ7BywKAvWuiYNg0HFm-6znK1RBFu1A@mail.gmail.com>
+Subject: DependencyTreeBuilder vs. DependencyGraphBuilder
+From: Stefan Ferstl <st.ferstl@gmail.com>
+To: users@maven.apache.org
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I'm using the org.apache.maven.shared:dependency-tree library to
+gather dependency information on my projects. In order to get
+additional information about version conflicts, I prefer to use
+DependencyTreeBuilder instead of DependencyGraphBuilder. However, the
+Javadoc of DependencyTreeBuilder says:
+
+"Notice that it doesn't fail with Maven 3, but when Maven 2 and Maven
+3 don't calculate the same transitive dependency result, the tree
+calculated with this component is consistent with Maven 2 even if run
+with Maven 3 (see MSHARED-167)"
+
+The issue MSHARED-167 [1] was closed in June 2012. So may
+DependencyTreeBuilder still produce different results than
+DependencyGraphBuilder or is this not an issue anymore?
+
+
+Cheers,
+Stefan
+
+[1] https://jira.codehaus.org/browse/MSHARED-167
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

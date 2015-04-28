@@ -1,0 +1,109 @@
+From users-return-137939-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Dec  5 16:00:19 2014
+Return-Path: <users-return-137939-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1878410DAB
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  5 Dec 2014 16:00:19 +0000 (UTC)
+Received: (qmail 37076 invoked by uid 500); 5 Dec 2014 16:00:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 36986 invoked by uid 500); 5 Dec 2014 16:00:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 35881 invoked by uid 99); 5 Dec 2014 16:00:11 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 05 Dec 2014 16:00:11 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of yarongoldstein10@gmail.com designates 209.85.192.50 as permitted sender)
+Received: from [209.85.192.50] (HELO mail-qg0-f50.google.com) (209.85.192.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 05 Dec 2014 16:00:06 +0000
+Received: by mail-qg0-f50.google.com with SMTP id i50so630146qgf.23
+        for <users@maven.apache.org>; Fri, 05 Dec 2014 07:58:15 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=Ix/3gA6SYSmNGElhNea9XXs84lbaMCRDaCz8awLx6Os=;
+        b=cHdAI4ZRHaTDfgPAOYnRPDAaMjYzD82Jk4Jruc39lctV4HogOHqt9FvYfOW7nG5/9N
+         ZCH7jq81UuU4LG9vMmFzCk0vl437nkobabhOY3bI5zyhUL3qLbwLyxgPNQ30Sqv1Dm/I
+         0Zdw6oCbGxQymbwXhA27UYsNbIwvL53PiOd58sQAed7tvJpxSTG/5pR/usA64Cunk86t
+         iiv6CCpOWzFDXNemVm3QEo1Hs7Fh+YDeDO7B0AJcW+sUkjdY2A+sHlfOFJjKklLDRCy4
+         QJ7w7jvUQkbiPrUzUOKFtHc0sM/TH/H37PvhLuhH9zbPGtOs6cnzYN3i+Zi2dWC+fE7P
+         zpRA==
+MIME-Version: 1.0
+X-Received: by 10.224.89.69 with SMTP id d5mr26768334qam.84.1417795095696;
+ Fri, 05 Dec 2014 07:58:15 -0800 (PST)
+Received: by 10.229.102.136 with HTTP; Fri, 5 Dec 2014 07:58:15 -0800 (PST)
+In-Reply-To: <CA+kKrXo667EknbwvNrkRjWVGTM=WWxiSjeCwk85YvVpYFvXYxg@mail.gmail.com>
+References: <CA+kKrXo667EknbwvNrkRjWVGTM=WWxiSjeCwk85YvVpYFvXYxg@mail.gmail.com>
+Date: Fri, 5 Dec 2014 17:58:15 +0200
+Message-ID: <CACgCGhqOtevoEwGiEsBLjfXNQN+DCqB7-6vxh4JihtEdEXRWxQ@mail.gmail.com>
+Subject: Re: First copy one file, befo re anything
+From: Yaron Goldstein <yarongoldstein10@gmail.com>
+To: Maven Users List <users@maven.apache.org>, laudio.info@gmail.com
+Content-Type: multipart/alternative; boundary=001a11c3d2840b1c4105097a25cc
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c3d2840b1c4105097a25cc
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi.
+Use the ant plugin. Here's an example:
+
+<build>
+
+<plugin>
+
+<artifactId>maven-antrun-plugin</artifactId>
+
+<executions>
+
+          <execution>
+
+<phase>validate</phase>
+
+<goals>
+
+<goal>run</goal>
+
+</goals>
+
+<configuration>
+
+<tasks>
+
+<delete file=3D"src/main/resources/config.properties" />
+
+<copy file=3D"src/main/resources/gold/config.properties"
+
+tofile=3D"src/main/resources/config.properties" />
+
+<delete file=3D"src/main/resources/TestData.properties" />
+
+<copy file=3D"src=D7=A5=D7=A5=D7=A5=D7=A5=D7=A5
+
+Thanks,
+
+Yaron
+=D7=91=D7=AA=D7=90=D7=A8=D7=99=D7=9A 5 =D7=91=D7=93=D7=A6=D7=9E' 2014 17:13=
+, "Aitor Iturriondobeitia" <laudio.info@gmail.com>
+=D7=9B=D7=AA=D7=91:
+
+> hello
+> I must to copy one file before anything,
+> This file contains some properties for filtering
+> What plugin must i use and how for moving one file to one directory?
+> Thanks
+>
+
+--001a11c3d2840b1c4105097a25cc--
+

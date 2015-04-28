@@ -1,0 +1,87 @@
+From users-return-136244-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr 23 05:47:16 2014
+Return-Path: <users-return-136244-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 31076106B8
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 23 Apr 2014 05:47:16 +0000 (UTC)
+Received: (qmail 59080 invoked by uid 500); 23 Apr 2014 05:47:11 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 58805 invoked by uid 500); 23 Apr 2014 05:47:10 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 58795 invoked by uid 99); 23 Apr 2014 05:47:09 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 23 Apr 2014 05:47:09 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of anders.g.hammar@gmail.com designates 74.125.82.181 as permitted sender)
+Received: from [74.125.82.181] (HELO mail-we0-f181.google.com) (74.125.82.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 23 Apr 2014 05:47:04 +0000
+Received: by mail-we0-f181.google.com with SMTP id q58so364031wes.40
+        for <users@maven.apache.org>; Tue, 22 Apr 2014 22:46:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=h5E3wKb0zebHFJE8AvNt8/QB1DVy0kSoMHEM8xWSI/U=;
+        b=uMgR9gcBMkWtN+4bzadhNlI5jwyYtYm2IDuBzw7SIKfmqCCO5z6jbYVGvSXrKug/pW
+         psMreqB+cDuprY8uGoymWjbZWohaLIXeoNdZtq2p31ljgGRHiWwm8tgdXRYk+KcY4g8S
+         Y9V7Z5DueYAwrW9GL3M+8tykSldA58NPGbqjnWG7xC8XiUS603ejFdk/jeZinySEpYo1
+         /WU3TSzW/n2QPQd6Ay3nzt+aA+kuCzZKu9DR/cRgkGySQS6/rmH65jGMBFLY5sZohqoj
+         oVwF7BHglO/dTpoVWhXmCmW6v0c6sRohDAK2yGYxVPw5FsnVDHHckLXQssNt6utv9UqE
+         4ldA==
+MIME-Version: 1.0
+X-Received: by 10.180.228.42 with SMTP id sf10mr105533wic.33.1398232002145;
+ Tue, 22 Apr 2014 22:46:42 -0700 (PDT)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.200.162 with HTTP; Tue, 22 Apr 2014 22:46:41 -0700 (PDT)
+Received: by 10.194.200.162 with HTTP; Tue, 22 Apr 2014 22:46:41 -0700 (PDT)
+In-Reply-To: <CABLGb9zEyrty0Mqd9r6-7mSjXssJmRHxCTpmqrVZPv3a=wPdSw@mail.gmail.com>
+References: <CABLGb9zEyrty0Mqd9r6-7mSjXssJmRHxCTpmqrVZPv3a=wPdSw@mail.gmail.com>
+Date: Wed, 23 Apr 2014 07:46:41 +0200
+X-Google-Sender-Auth: uQBa1zVuMl44DIYneagKaA7xxDs
+Message-ID: <CAKDUN1ufT9T-hF5U71Rz4Qyxij_DuA=j4aj5yZMKS=XtKhX=9A@mail.gmail.com>
+Subject: Re: Trouble downloading a dependency
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1135e8f2cd334904f7af4132
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1135e8f2cd334904f7af4132
+Content-Type: text/plain; charset=UTF-8
+
+Web proxy not configured for Maven?
+
+/Anders (mobile)
+Den 23 apr 2014 05:10 skrev "Paul Benedict" <pbenedict@apache.org>:
+
+> Output from Maven...
+> Downloading:
+>
+> http://repo1.maven.org/maven2/org/jboss/spec/javax/ejb/jboss-ejb-api_3.2_spec/1.0.0.Final/jboss-ejb-api_3.2_spec-1.0.0.Final.pom
+>
+> ...and then this error:
+> "connect: Address is invalid on local machine, or port is not valid on
+> remote machine"
+>
+> I don't understand the error. If I paste the URL into my browser, the POM
+> exists. I even turned off my antivirus/firewall to make sure nothing was
+> blocking Java -- and still the same result.
+>
+> Any clues what could be causing this?
+>
+> --
+> Cheers,
+> Paul
+>
+
+--001a1135e8f2cd334904f7af4132--
+

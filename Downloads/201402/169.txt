@@ -1,0 +1,235 @@
+From users-return-135532-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Feb 16 18:10:49 2014
+Return-Path: <users-return-135532-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BD9AC106E4
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 16 Feb 2014 18:10:49 +0000 (UTC)
+Received: (qmail 83545 invoked by uid 500); 16 Feb 2014 18:10:44 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 83420 invoked by uid 500); 16 Feb 2014 18:10:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 83412 invoked by uid 99); 16 Feb 2014 18:10:44 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 16 Feb 2014 18:10:44 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.220.47 as permitted sender)
+Received: from [209.85.220.47] (HELO mail-pa0-f47.google.com) (209.85.220.47)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 16 Feb 2014 18:10:40 +0000
+Received: by mail-pa0-f47.google.com with SMTP id kp14so14323957pab.34
+        for <users@maven.apache.org>; Sun, 16 Feb 2014 10:10:20 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=BpNE8nQyEDPhbU3KC+EU8BVXqW1Spa752IhzGV6kjSw=;
+        b=ZQ+iI7TwMVwbJjohJsA4mQSyi3sdp9eQTbfBKC8oG/J045y5XfsbPbIdw3BzHoxxdZ
+         RGhnk4k2GQwpzUJep2BOiEKLxizCXEF9iJv4EUCEy9h1+lz4QzayzAVplHQAe3P7eIyY
+         QzCFRu/z4V2QUKyTJoo+lruxJZUtxdsYRvD+JphxG8XUQX7b00/kQsTsvfyrPsz0EpDE
+         /0QxbBX5rx2rTPMduG69JQZWKkdol6zG4EnkQ4d0QMKfXKrN7vgWagPZfXwMSbpd+YtY
+         9zCxSr6TCx9sgHCi2qIs2GjT1/yJoCIfG4nO7q6kncdLNY04JBM465cQjaw5nSg6FZCn
+         tQrg==
+MIME-Version: 1.0
+X-Received: by 10.68.224.195 with SMTP id re3mr21816235pbc.93.1392574219829;
+ Sun, 16 Feb 2014 10:10:19 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Sun, 16 Feb 2014 10:10:19 -0800 (PST)
+In-Reply-To: <5300E538.4070009@apconsult.de>
+References: <530078F7.4060903@apconsult.de>
+	<53007A1C.8060902@apconsult.de>
+	<CAK8jvqwWUYV2PinvQ3EFcFjMUEewZ-3VEMdE4ykm+xLpk437Bg@mail.gmail.com>
+	<53009385.8040401@apconsult.de>
+	<CAMr6Z4kRvBO9LduJkdU9iYnCoEPcMxxCAAt9up=PFKTRucto-A@mail.gmail.com>
+	<5300CCFD.4070204@apconsult.de>
+	<CAMr6Z4mTkpaAXLsGZYQH2eYRxDJAKcuyBDZx1oQM0ZGZdJZejQ@mail.gmail.com>
+	<5300E538.4070009@apconsult.de>
+Date: Sun, 16 Feb 2014 18:10:19 +0000
+Message-ID: <CA+nPnMwkjdt-RbBvfdAmq_EcNcX3W1Vm2rbPNUyDuakUb9CwgQ@mail.gmail.com>
+Subject: Re: Looking for org.apache.poi 3.10-FINAL
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=e89a8ff24a9bb2486b04f289f315
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--e89a8ff24a9bb2486b04f289f315
+Content-Type: text/plain; charset=ISO-8859-1
+
+On Sunday, 16 February 2014, David Law <m2eclipse@apconsult.de> wrote:
+
+> Hi Stuart,
+>
+> thanks once again!  The only person to supply useful information.
+>
+> I checked the Nexus Index Timestamp from the repo this morning 05:39 CET
+> and:
+> nexus.index.timestamp=20140209134945.568 +0000
+> Over 6 days old!!
+>
+> Just checked it again and:
+> nexus.index.timestamp=20140216125157.106 +0000
+>
+> And, not surprisingly, my m2eclipse can now find the artifact.
+>
+> So that means maven central took over 6 days to index this content.
+> That is quite incredible!
+>
+>
+I would suggest you take this issue up with Sonatype, who maintain central
+and it's indexing
+
+Also before completely blaming Sonatype I would suggest you find out
+exactly when POI released the staging repo on repository.a.o as it only
+gets synced to central IIRC up to 8h after being promoted on the ASF nexus
+instance
+
+This is in my opinion a bug, or at least a fundamental design error.
+>
+> Thank you once again.
+>
+> All the best,
+> DaveLaw
+>
+>
+> On 16.02.2014 16:20, Stuart McCulloch wrote:
+>
+>> On 16 February 2014 14:36, David Law <m2eclipse@apconsult.de> wrote:
+>>
+>>  Hi Stuart,
+>>>
+>>> thanks for that very useful information.
+>>> Are you using the default repo?
+>>> (http://repo.maven.apache.org/maven2)
+>>>
+>>>  I switch depending what workspace I'm using, as I have a corporate repo
+>> as
+>> well as a local nexus instance (enabled to download remote indexes)
+>>
+>> But I just tried from a fresh installation with the default repo to
+>> confirm
+>> and it is in the latest index with nexus.index.timestamp=
+>> 20140216125157.106
+>>
+>>
+>>  All the best,
+>>> DaveLaw
+>>>
+>>> On 16.02.2014 14:36, Stuart McCulloch wrote:
+>>>
+>>>  On 16 February 2014 10:31, David Law <m2eclipse@apconsult.de> wrote:
+>>>>
+>>>>   Hi Mirko,
+>>>>
+>>>>> I think though 6 days!!! should be adequate for that.
+>>>>> In fact, I think 6 minutes should be adequate.
+>>>>>
+>>>>> So I really need someone to explain how I can move forward with this
+>>>>> issue.
+>>>>>
+>>>>>   FWIW, I did a search today for org.apache.poi:poi in my local m2e
+>>>>>
+>>>> and 3.10-FINAL appeared - so it's definitely in the index from the 15th
+>>>> (which is the index downloaded on my local computer according to the
+>>>> file
+>>>> under .metadata/.plugins/org.eclipse.m2e.core/nexus), but not sure when
+>>>> it
+>>>> was indexed...
+>>>>
+>>>> You could always post a question on
+>>>> https://issues.sonatype.org/browse/MVNCENTRAL if you want a definitive
+>>>> answer of what happened, when, and why.
+>>>>
+>>>> All the best,
+>>>>
+>>>>  DaveLaw
+>>>>>
+>>>>>
+>>>>> On 16.02.2014 10:49, Mirko Friedenhagen wrote:
+>>>>>
+>>>>>   David,
+>>>>>
+>>>>>> just guessing:
+>>>>>> - indexing takes it's time, there are only two hours difference
+>>>>>> between
+>>>>>> the
+>>>>>> commit (??l and end of indexing.
+>>>>>> - commit (tag creation), artifact creation (jar build), deployment
+>>>>>> (upload
+>>>>>> to staging),  promotion (move of staged to released) and
+>>>>>> synchronization
+>>>>>> from oss.sonatype.org to repo1 add delays :-)
+>>>>>>
+>>>>>> Regards
+>>>>>> Mirko
+>>>>>>
+>>>>>>   On 16.02.2014 09:43, David Law wrote:
+>>>>>>
+>>>>>   Hi,
+>>>>>
+>>>>>> I'm new to maven & thought I'd try it out on the recently checked-in:
+>>>>>> org.apache.poi    3.10-FINAL
+>>>>>>
+>>>>>> I'm using m2eclipse standard config with Eclipse Kepler.  Repo
+>>>>>> defaults
+>>>>>> to:
+>>>>>> http://repo.maven.apache.org/maven2
+>>>>>>
+>>>>>> The Problem:
+>>>>>> m2eclipse does not know the  org.apache.poi  3.10-FINAL  artifact.
+>>>>>>
+>>>>>> Now, I guess the problem could be any combination of:
+>>>>>> a) me  b) POI  c) maven  d) m2eclipse  e) eclipse?
+>>>>>>
+>>>>>> QUESTION) Can anyone help to localise it?
+>>>>>>
+>>>>>> Here's what I've found out so far:
+>>>>>>
+>>>>>> 0) repo is: http://repo.maven.apache.org/maven2
+>>>>>>
+>>>>>> 1) org.apache.poi  3.10-FINAL was committed @ 09-Feb-2014 11:50
+>>>>>>
+>>>>>> 2) as of now repo Timestamp is: 09-Feb-2014 13:50
+>>>>>> (nexus.index.timestamp=20140209134945.568 +0000)
+>>>>>> (found in
+>>>>>> http://repo.maven.apache.org/maven2/.index/nexus-maven-
+>>>>>> repository-index.properties)
+>>>>>>
+>>>>>> 3) -> so repo has been reindexed since org.apache.poi 3.10-FINAL
+>>>>>> commit
+>>>>>> (6 days ago).
+>>>>>>
+>>>>>> 4) exit eclipse
+>>>>>>
+>>>>>> 5) deleted the index
+>>>>>> C:\...\Eclipse\workspace\.metadata\.plugins\org.eclipse.
+>>>>>> m2e.core\nexus
+>>>>>>
+>>>>>> 6) start eclipse -> "updating index"
+>>>>>>
+>>>>>> 7) org.apache.poi  3.10-FINAL is still not there (that is: "here") in
+>>>>>> my
+>>>>>> list of artifacts
+>>>>>>
+>>>>>> All the best,
+>>>>>> DaveLaw
+>>>>>>
+>>>>>>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+-- 
+Sent from my phone
+
+--e89a8ff24a9bb2486b04f289f315--
+

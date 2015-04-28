@@ -1,0 +1,58 @@
+From users-return-137662-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Oct 30 22:41:30 2014
+Return-Path: <users-return-137662-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4D91017A02
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 30 Oct 2014 22:41:30 +0000 (UTC)
+Received: (qmail 70908 invoked by uid 500); 30 Oct 2014 22:41:24 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 70815 invoked by uid 500); 30 Oct 2014 22:41:24 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 69570 invoked by uid 99); 30 Oct 2014 22:41:23 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 30 Oct 2014 22:41:23 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [85.13.151.183] (HELO dd34514.kasserver.com) (85.13.151.183)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 30 Oct 2014 22:40:56 +0000
+Received: from dd34514.kasserver.com (dd0801.kasserver.com [85.13.143.205])
+	by dd34514.kasserver.com (Postfix) with ESMTPSA id 1F4784340585
+	for <users@maven.apache.org>; Thu, 30 Oct 2014 23:40:56 +0100 (CET)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+X-SenderIP: 24.68.152.10
+User-Agent: ALL-INKL Webmail 2.11
+In-Reply-To: <CAAZU44mh-BJoKhoaSr-c62t3N_nCAvqO5APJ-_bjXpvODEgfDw@mail.gmail.com>
+References: <CAAZU44mmd5XNEbZaTMFt+UaixE19MXtAf5bSMTm9hB1Rt4yZ1Q@mail.gmail.com> <CADN69ykruM0o3QPhBjW-wfcET+aTSTdvYkZiw9vtem_gFB-r3Q@mail.gmail.com> <CANnZoJszHeTjS9OHbPPyyh_-B3EGLv0AOci3Soq9TWW1O7EQNA@mail.gmail.com><CAAZU44mh-BJoKhoaSr-c62t3N_nCAvqO5APJ-_bjXpvODEgfDw@mail.gmail.com>
+Subject: Enforcing valid dependency version
+From: "Manfred Moser" <manfred@mosabuam.com>
+To: users@maven.apache.org
+Message-Id: <20141030224056.1F4784340585@dd34514.kasserver.com>
+Date: Thu, 30 Oct 2014 23:40:56 +0100 (CET)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi!
+
+Just a quick heads up that a new deployment rule for the Central Repository will block the Ivy sub-revision range syntax soon. This will enforce correction of these pom files for new releases and therefore enable consumption by Maven and other tools again.
+
+Details at 
+http://central.sonatype.org/articles/2014/Oct/28/enforcing-valid-dependency-versions/
+
+Manfred
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

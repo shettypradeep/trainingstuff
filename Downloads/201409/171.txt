@@ -1,0 +1,171 @@
+From users-return-137366-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Sep 24 19:48:56 2014
+Return-Path: <users-return-137366-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0957D114AE
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 24 Sep 2014 19:48:56 +0000 (UTC)
+Received: (qmail 21782 invoked by uid 500); 24 Sep 2014 19:48:54 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 21666 invoked by uid 500); 24 Sep 2014 19:48:54 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 23365 invoked by uid 99); 23 Sep 2014 20:34:47 -0000
+X-ASF-Spam-Status: No, hits=1.9 required=5.0
+	tests=FORGED_YAHOO_RCVD,FREEMAIL_ENVFROM_END_DIGIT,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: 216.139.236.26 is neither permitted nor denied by domain of bnpatel10@yahoo.com)
+Date: Tue, 23 Sep 2014 13:34:22 -0700 (PDT)
+From: bobpat <bnpatel10@yahoo.com>
+To: users@maven.apache.org
+Message-ID: <1411504462713-5806318.post@n5.nabble.com>
+Subject: Jenkins via Maven deploy to Nexus snapshot repository issue
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi, 
+      We have project that use ant script and build ear. I have created pom
+and setting.xml to deploy at nexus snapshot repository. It's working, but it
+deploy/copy only META-INF folder to nexus repo. It doesn't deploy/copy war
+folder. The ear is 18 MB, but in nexus snapshot repo has 2.2 kb. Would you
+let me know what is the issue here? 
+
+Thanks, 
+Bob 
+
+------------------------------------------------- 
+ClaimServiceEAR: 
+
+clean: 
+   [delete] Deleting directory
+/var/lib/jenkins/jobs/Zur-18-ClaimswebService-build/workspace/ClaimServiceEAR/build 
+    [mkdir] Created dir:
+/var/lib/jenkins/jobs/Zur-18-ClaimswebService-build/workspace/ClaimServiceEAR/build 
+
+copy: 
+     [copy] Copying 1 file to
+/var/lib/jenkins/jobs/Zur-18-ClaimswebService-build/workspace/ClaimServiceEAR/build 
+
+buildEar: 
+      [jar] Building jar:
+/var/lib/jenkins/jobs/Zur-18-ClaimswebService-build/workspace/ClaimServiceEAR/build/ClaimsService.ear 
+
+BUILD SUCCESSFUL 
+Total time: 10 seconds 
+[workspace] $ /bin/sh -xe /tmp/hudson8209605888787588565.sh 
++ cd
+/var/lib/jenkins/jobs/Zur-18-ClaimswebService-build/workspace/ClaimService 
++ /maven/apache-maven-3.0.5/bin/mvn -e -s settings.xml deploy 
+log4j:WARN No appenders could be found for logger (Sisu). 
+log4j:WARN Please initialize the log4j system properly. 
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for
+more info. 
+[INFO] Error stacktraces are turned on. 
+[INFO] Scanning for projects... 
+[INFO]                                                                         
+[INFO]
+------------------------------------------------------------------------ 
+[INFO] Building claimservice 1.0-SNAPSHOT 
+[INFO]
+------------------------------------------------------------------------ 
+[INFO] 
+[INFO] --- maven-ear-plugin:2.6:generate-application-xml
+(default-generate-application-xml) @ claimservice --- 
+[INFO] Generating application.xml 
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.3:resources (default-resources) @
+claimservice --- 
+[INFO] Using 'UTF-8' encoding to copy filtered resources. 
+[INFO] skip non existing resourceDirectory
+/var/lib/jenkins/jobs/Zur-18-ClaimswebService-build/workspace/ClaimService/src/main/resources 
+[INFO] 
+[INFO] --- maven-ear-plugin:2.6:ear (default-ear) @ claimservice --- 
+[INFO] Could not find manifest file:
+/var/lib/jenkins/jobs/Zur-18-ClaimswebService-build/workspace/ClaimService/target/claimservice-1.0-SNAPSHOT/META-INF/MANIFEST.MF
+- Generating one 
+[INFO] Building jar:
+/var/lib/jenkins/jobs/Zur-18-ClaimswebService-build/workspace/ClaimService/target/claimservice-1.0-SNAPSHOT.ear 
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @
+claimservice --- 
+[INFO] Installing
+/var/lib/jenkins/jobs/Zur-18-ClaimswebService-build/workspace/ClaimService/target/claimservice-1.0-SNAPSHOT.ear
+to
+/var/lib/jenkins/.m2/repository/com/xxxx/claimservice/1.0-SNAPSHOT/claimservice-1.0-SNAPSHOT.ear 
+[INFO] Installing
+/var/lib/jenkins/jobs/Zur-18-ClaimswebService-build/workspace/ClaimService/pom.xml
+to
+/var/lib/jenkins/.m2/repository/com/xxxxx/claimservice/1.0-SNAPSHOT/claimservice-1.0-SNAPSHOT.pom 
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.7:deploy (default-deploy) @ claimservice
+--- 
+Downloading:
+http://xxx.xx.xxx.xxx:8081/content/repositories/snapshots/com/xxxxx/claimservice/1.0-SNAPSHOT/maven-metadata.xml
+769/769 B   
+            
+Downloaded:
+http://xxx.xx.xxx.xxx:8081/content/repositories/snapshots/com/xxxxx/claimservice/1.0-SNAPSHOT/maven-metadata.xml
+(769 B at 5.3 KB/sec) 
+Uploading: 
+http://xxx.xx.xxx.xxx:8081/content/repositories/snapshots/com/xxxxx/claimservice/1.0-SNAPSHOT/claimservice-1.0-20140922.162539-92.ear
+2/3 KB       
+3/3 KB   
+          
+Uploaded: 
+http://xxx.xx.xxx.xxx:8081/content/repositories/snapshots/com/xxxxx/claimservice/1.0-SNAPSHOT/claimservice-1.0-20140922.162539-92.ear
+(3 KB at 38.1 KB/sec) 
+Uploading: 
+http://xxx.xx.xxx.xxx:8081/content/repositories/snapshots/com/xxxxx/claimservice/1.0-SNAPSHOT/claimservice-1.0-20140922.162539-92.pom
+2/2 KB   
+          
+Uploaded: 
+http://xxx.xx.xxx.xxx:8081/content/repositories/snapshots/com/xxxxx/claimservice/1.0-SNAPSHOT/claimservice-1.0-20140922.162539-92.pom
+(2 KB at 47.8 KB/sec) 
+Downloading: 
+http://xxx.xx.xxx.xxx:8081/content/repositories/snapshots/com/xxxxx/claimservice/maven-metadata.xml
+280/280 B   
+            
+Downloaded: 
+http://xxx.xx.xxx.xxx:8081/content/repositories/snapshots/com/xxxxx/claimservice/maven-metadata.xml
+(280 B at 14.4 KB/sec) 
+Uploading: 
+http://xxx.xx.xxx.xxx:8081/content/repositories/snapshots/com/xxxxx/claimservice/1.0-SNAPSHOT/maven-metadata.xml
+769/769 B   
+            
+Uploaded: 
+http://xxx.xx.xxx.xxx:8081/content/repositories/snapshots/com/xxxxx/claimservice/1.0-SNAPSHOT/maven-metadata.xml
+(769 B at 25.9 KB/sec) 
+Uploading: 
+http://xxx.xx.xxx.xxx:8081/content/repositories/snapshots/com/xxxxx/claimservice/maven-metadata.xml
+280/280 B   
+            
+Uploaded: 
+http://xxx.xx.xxx.xxx:8081/content/repositories/snapshots/com/xxxxx/claimservice/maven-metadata.xml
+(280 B at 10.5 KB/sec) 
+[INFO]
+------------------------------------------------------------------------ 
+[INFO] BUILD SUCCESS 
+[INFO]
+------------------------------------------------------------------------ 
+[INFO] Total time: 1.760s 
+[INFO] Finished at: Mon Sep 22 12:25:39 EDT 2014 
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Jenkins-via-Maven-deploy-to-Nexus-snapshot-repository-issue-tp5806318.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

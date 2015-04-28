@@ -1,0 +1,160 @@
+From users-return-136817-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jul 21 21:28:14 2014
+Return-Path: <users-return-136817-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3A342115C7
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 21 Jul 2014 21:28:14 +0000 (UTC)
+Received: (qmail 89096 invoked by uid 500); 21 Jul 2014 21:28:12 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 89007 invoked by uid 500); 21 Jul 2014 21:28:12 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 88993 invoked by uid 99); 21 Jul 2014 21:28:12 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 21 Jul 2014 21:28:12 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dhoffer6@gmail.com designates 209.85.220.179 as permitted sender)
+Received: from [209.85.220.179] (HELO mail-vc0-f179.google.com) (209.85.220.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 21 Jul 2014 21:28:07 +0000
+Received: by mail-vc0-f179.google.com with SMTP id hq11so11919653vcb.10
+        for <users@maven.apache.org>; Mon, 21 Jul 2014 14:27:47 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=r6tqf1aEo30s+y+voPPNuKj4/nCkF76xl+IIr1G27aA=;
+        b=zwQ89alXM2iQBXvijbrGPIsVJcoMeKz47jOIc/rzhpgDl2EpSsQH7bEjtdE6339Aen
+         FzDlWye7aAGeYF7Hh0f/nr0TEEiQwZ+yEAalWrmfeCJriuvNO/dfC9NQOM6HD/gBOrY/
+         sA+TxIBYh2CmKw4rjOnn/roX4xogQcXibR1U9fgpDWUGcwYyplv+mgS7pIMvblczdd8x
+         Xvcdcn+Pa+LF9EmNuC2i+dzCdLiG+jq1W0aVA7D/X7K8VRRJcb4/HKCrqbPqAE7Zbh9d
+         72dSSmZy5oR4ZvdEIhSd5JLdkloG81uMFjaWUgu10i23blLiL/bqDvr/8E0bX2GKdWDY
+         86Yg==
+MIME-Version: 1.0
+X-Received: by 10.221.68.135 with SMTP id xy7mr8245354vcb.65.1405978067251;
+ Mon, 21 Jul 2014 14:27:47 -0700 (PDT)
+Received: by 10.220.109.1 with HTTP; Mon, 21 Jul 2014 14:27:47 -0700 (PDT)
+In-Reply-To: <53CD80A3.6040302@gmx.de>
+References: <CAA8BW8HFWKNmv_ZTE9wuYQMDJ_FxUzhkXAnW_g3wrVFjovj=cA@mail.gmail.com>
+	<53CD80A3.6040302@gmx.de>
+Date: Mon, 21 Jul 2014 15:27:47 -0600
+Message-ID: <CAA8BW8FDv2vZhEg5OSOFkyWuRvUAt_Z_tYx7iV80MuQLEx2fcw@mail.gmail.com>
+Subject: Re: maven-dependency-plugin unpacking aar format?
+From: David Hoffer <dhoffer6@gmail.com>
+To: Maven Users List <users@maven.apache.org>, info@soebes.de
+Content-Type: multipart/alternative; boundary=001a1133785442b8d704febac7c1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1133785442b8d704febac7c1
+Content-Type: text/plain; charset=UTF-8
+
+Here is a simplified project showing my use-case, I hope this helps.  Note
+I'm using unpack-dependencies as the aar is a module in the same project;
+however I assume the same problem exists with unpack, if that's the case
+that would make the test project even simpler.
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="
+http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+http://maven.apache.org/POM/4.0.0
+http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.company.project</groupId>
+    <artifactId>service</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <dependencies>
+        <!--note: maven-dependency-plug fails reporting that aar is not
+supported-->
+        <dependency>
+            <groupId>com.company.project</groupId>
+            <artifactId>axis-service</artifactId>
+            <type>aar</type>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--note: I assume it will have the same problem unpacking a public
+artifact such as this-->
+        <dependency>
+            <groupId>com.helpshift</groupId>
+            <artifactId>android-aar</artifactId>
+            <version>3.4.2</version>
+            <type>aar</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack-axis-service</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>unpack-dependencies</goal>
+                        </goals>
+                        <configuration>
+
+<includeArtifactIds>axis-service</includeArtifactIds>
+
+<outputDirectory>${project.build.directory}/generated-resources/axis</outputDirectory>
+                            <overWriteReleases>true</overWriteReleases>
+                            <overWriteSnapshots>true</overWriteSnapshots>
+
+<includes>META-INF/*.wsdl,META-INF/schema/**/*.xsd</includes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+
+
+
+On Mon, Jul 21, 2014 at 3:05 PM, Karl Heinz Marbaise <khmarbaise@gmx.de>
+wrote:
+
+> HI David,
+>
+>
+>
+> > I'm getting the following error trying to unpack some files from an aar.
+>
+>>   Is this not supported?  Is there any way to do this?
+>>
+>> Failed to execute goal
+>> org.apache.maven.plugins:maven-dependency-plugin:2.8:unpack-dependencies
+>> (unpack-service) on project service: Unknown archiver type: No such
+>> archiver: 'aar'. -> [Help 1]
+>>
+>
+> Could you please prepare a example project which reproduces the
+> problem..so i can create a JIRA issue for this...
+>
+> Kind regards
+> Karl-Heinz Marbaise
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a1133785442b8d704febac7c1--
+

@@ -1,0 +1,119 @@
+From users-return-137853-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Nov 26 11:27:29 2014
+Return-Path: <users-return-137853-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 339BBC61D
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Nov 2014 11:27:29 +0000 (UTC)
+Received: (qmail 51594 invoked by uid 500); 26 Nov 2014 11:27:27 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 51511 invoked by uid 500); 26 Nov 2014 11:27:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 51500 invoked by uid 99); 26 Nov 2014 11:27:27 -0000
+Received: from mail-relay.apache.org (HELO mail-relay.apache.org) (140.211.11.15)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Nov 2014 11:27:27 +0000
+Received: from mail-ie0-f182.google.com (mail-ie0-f182.google.com [209.85.223.182])
+	by mail-relay.apache.org (ASF Mail Server at mail-relay.apache.org) with ESMTPSA id BDFE91A037A
+	for <users@maven.apache.org>; Wed, 26 Nov 2014 11:27:15 +0000 (UTC)
+Received: by mail-ie0-f182.google.com with SMTP id x19so2474801ier.13
+        for <users@maven.apache.org>; Wed, 26 Nov 2014 03:27:24 -0800 (PST)
+X-Gm-Message-State: ALoCoQk9NXY2s01YQm0JscJqQH5eJq99Fu8MTcYnyvp32Dv2jP1v+Ez9gLlbrtvJM7XFbQXHje+S
+MIME-Version: 1.0
+X-Received: by 10.50.114.233 with SMTP id jj9mr22782129igb.18.1417001244936;
+ Wed, 26 Nov 2014 03:27:24 -0800 (PST)
+Received: by 10.50.232.180 with HTTP; Wed, 26 Nov 2014 03:27:24 -0800 (PST)
+Date: Wed, 26 Nov 2014 12:27:24 +0100
+Message-ID: <CAJZRQKwyx=7dsNTD6eWxNVGxWM8OQ1opuRHR-gRFcqeVOmWg0w@mail.gmail.com>
+Subject: [ANN] Apache Maven Assembly Plugin 2.5.2 Released
+From: Kristian Rosenvold <krosenvold@apache.org>
+To: announce@maven.apache.org, Maven Developers List <dev@maven.apache.org>, 
+	Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+
+The Apache Maven team is pleased to announce the release of the
+Apache Maven Assembly Plugin, version 2.5.2.
+
+The Assembly Plugin for Maven is primarily intended to allow users to aggregate
+the project output along with its dependencies, modules, site documentation,
+and other files into a single distributable archive.
+
+Most notable for this release are:
+Rewritten duplicate handling strategy, revised documentation. Please
+note that previously documented strategy was mostly wishful thinking,
+the currently documented strategy is hard reality :) See
+http://maven.apache.org/plugins/maven-assembly-plugin/advanced-descriptor-topics.html
+
+http://maven.apache.org/plugins/maven-assembly-plugin/
+
+
+You should specify the version in your project's plugin configuration:
+
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-assembly-plugin</artifactId>
+  <version>2.5.2</version>
+</plugin>
+
+
+Release Notes - Maven Assembly Plugin - Version 2.5.2
+
+
+
+** Bug
+    * [MASSEMBLY-478] - allow overwriting newer files with older files
+contained within fileset
+    * [MASSEMBLY-558] - Assembly does not include runtime-dependency
+if test-dependency with shorter path exists
+    * [MASSEMBLY-565] - jar-with-dependencies: class from the source
+in project does NOT override the class in jar dependency
+    * [MASSEMBLY-569] - The numbering of the items in the FAQ on the
+site is messed up
+    * [MASSEMBLY-580] - dependencySet ignores directoryMode descriptor
+    * [MASSEMBLY-583] - DependencySet elements appear not to be able
+to target the same outputDirectory
+    * [MASSEMBLY-597] - Duplicate files added to archive when present
+in both dependencyset and fileset of the same assembly
+    * [MASSEMBLY-601] -
+http://maven.apache.org/plugins/maven-assembly-plugin/assembly.html
+seems to have the components of a filter element in the wrong order
+    * [MASSEMBLY-609] - Misbehavior on multi-module projects,
+outputDirectory not being interpolated properly
+    * [MASSEMBLY-655] - Archive file resolution does not work as documented
+    * [MASSEMBLY-671] - Cryptic debug warning message needs
+improvement and/or documentation
+    * [MASSEMBLY-725] - Fix phase ordering
+    * [MASSEMBLY-726] - Fix artifact inclusion/exclusion filtering
+    * [MASSEMBLY-728] - Assembly plugin >= 2.5 thinks my group ID is too big
+    * [MASSEMBLY-729] - lineEnding ignored when file is not filtered
+    * [MASSEMBLY-730] - jar-with-dependencies : a file in a dependency
+is overridden by the same file in JDK / JRE
+    * [MASSEMBLY-731] - Assembly plugin bundles symlinks as emtpy
+folders when directoryMode is set on fileset
+    * [MASSEMBLY-732] - baseDirectory is ignored with files entries
+    * [MASSEMBLY-733] - Plugin no longer prepends final name when
+packaging files specified using 'files/file' elements.
+
+
+
+** Improvement
+    * [MASSEMBLY-702] - Add default values for directoryMode / fileMode
+    * [MASSEMBLY-708] - predefined descriptors lack of permission
+definition for unix (directoryMode/fileMode)
+
+
+Enjoy,
+
+-The Apache Maven team
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

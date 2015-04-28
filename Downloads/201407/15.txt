@@ -1,0 +1,204 @@
+From users-return-136711-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jul  1 13:03:13 2014
+Return-Path: <users-return-136711-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5ACA410DC5
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  1 Jul 2014 13:03:11 +0000 (UTC)
+Received: (qmail 48264 invoked by uid 500); 1 Jul 2014 13:03:05 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 48162 invoked by uid 500); 1 Jul 2014 13:03:05 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 48150 invoked by uid 99); 1 Jul 2014 13:03:05 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 01 Jul 2014 13:03:05 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 74.125.82.45 as permitted sender)
+Received: from [74.125.82.45] (HELO mail-wg0-f45.google.com) (74.125.82.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 01 Jul 2014 13:03:03 +0000
+Received: by mail-wg0-f45.google.com with SMTP id l18so9507724wgh.4
+        for <users@maven.apache.org>; Tue, 01 Jul 2014 06:02:33 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :cc:content-type;
+        bh=wssvbrUQExeDOC03C7siyWfyS/zJ0ITyyjx9zoLAxpA=;
+        b=Q95aNuR8qGPkLtsYa4CNnmKoPVqanUuq1KXqmqJsDVR/IlxxDcNGXvXFGyaLrFiD+e
+         IMRLitLQNykyiX2Z5DHvcesLVxCkEcGoPsM6ADkNtTmWvW5KrK4uMw7lPZMOrTRG5Sjx
+         zIC/7e53EX1411gMxfO8IuPhAUkKcfWvOZGf8r79cej2Euo0kFB8tpxtQXhPXEy0ujiP
+         K5q8+GZ1Y6CpdGvhN5smZlUgASmgFgW2LS+gNqdZuoExZH5PXu/CxAw80Hw2zZ+e7BF3
+         c10Q/310r5KyHcqHnkFCn4H8QB+PPUTMo30Yhq5M7q+Ow2C07k2v88qfF5zD7QisTwUl
+         +kzw==
+MIME-Version: 1.0
+X-Received: by 10.180.89.69 with SMTP id bm5mr36807551wib.41.1404219753657;
+ Tue, 01 Jul 2014 06:02:33 -0700 (PDT)
+Received: by 10.194.134.8 with HTTP; Tue, 1 Jul 2014 06:02:33 -0700 (PDT)
+In-Reply-To: <1404207725651.70752@c-ware.de>
+References: <fa95de47ea5e47d195c63717af3b2d02@DBXPR05MB237.eurprd05.prod.outlook.com>
+	<CA+nPnMxBQptj9OS+8FLjBoodbq-qgDzLVVxnKoYqqXgsRfx28w@mail.gmail.com>
+	<a060f35add5844a8a5a166043cb65765@DBXPR05MB237.eurprd05.prod.outlook.com>
+	<53AF701E.7080507@artifact-software.com>
+	<272be8c3cbaa4f808acd0adb4ae9135d@DBXPR05MB237.eurprd05.prod.outlook.com>
+	<lop3j3$tui$1@ger.gmane.org>
+	<1404207725651.70752@c-ware.de>
+Date: Tue, 1 Jul 2014 14:02:33 +0100
+Message-ID: <CA+nPnMx=vhR=RDNM-5Zop1c3g6UWLOpsxuMYcWRj6VVDei7MBQ@mail.gmail.com>
+Subject: Re: AW: AW: Artifact with different sets of dependencies switched by profiles
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Cc: "joerg.schaible@gmx.de" <joerg.schaible@gmx.de>
+Content-Type: multipart/alternative; boundary=14dae9cc9d349a7c8604fd2163a1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--14dae9cc9d349a7c8604fd2163a1
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+And you are going to have the exact same set of issues as with profiles.
+
+Maven 3 does not re-interpolate the poms of dependencies IIRC... or at
+least it is not supposed to... so you only get to control the variables
+from the parent pom and any inherited dependencies/dependencyManagement not
+from the transitive dependencies of your pom
+
+
+On 1 July 2014 10:42, Christofer Dutz <christofer.dutz@c-ware.de> wrote:
+
+> Hey ... now that looks promissing :-)
+>
+> I'll give that a spin as soon as I have time.
+>
+> I didn't know that you could use variables in the scope (But I think
+> that's just some old info probably stored in my brain ages ago).
+>
+> Chris
+>
+>
+> ________________________________________
+> Von: J=C3=B6rg Schaible <joerg.schaible@gmx.de>
+> Gesendet: Sonntag, 29. Juni 2014 15:16
+> An: users@maven.apache.org
+> Betreff: Re: AW: AW: Artifact with different sets of dependencies switche=
+d
+> by profiles
+>
+> Hi Christoper,
+>
+> Christofer Dutz wrote:
+>
+> > Hi Ron,
+> >
+> > I think you got what I'm trying to do a little wrong. It's not two
+> > different set of dependencies, it's two different ways of linking the
+> same
+> > set of libraries. If I were to translate this into java, imagine that t=
+he
+> > default way an application was built would be to include all Classes
+> > needed by the application to be bundled in the application Jar (The
+> > classes not needed aren't included). Now in modular applications I am
+> able
+> > to switch to something exactly the same as in Java ... no code is
+> included
+> > in the Application jar, but the referenced libraries are deployed in
+> > parallel to the application jar, so the JVM can pull them in as needed
+> (In
+> > Flex this type is called rsl (runtime shared library).
+> >
+> > So in principal I have the same set of dependencies, but in the
+> > rsl-linking type these dependencies have an additional "scope=3Drsl"
+> > setting. Up until now there was only one pom with the default set of
+> > dependencies. If the users wanted to utilize rsl linking they would hav=
+e
+> > to manually add each dependency and set that's scope to rsl. I would li=
+ke
+> > to make it easier for users to switch.
+> >
+> > So the profiles is bad, the pom with classifier doesn't work ... I woul=
+d
+> > really like to avoid to have something like an "flramework" artifact an=
+d
+> > one "framework-rsl" for the rsl linking.
+>
+> What's the default value for the scope? "compile"? Then you can do all yo=
+u
+> need with properties. You might use a profile, but it is not necessary:
+>
+> Declare your dependencies just like before (either in depMgmt or directly=
+):
+>
+> =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D %< =3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D
+>  <dependency>
+>    <groupId>org.apache.flex.framework</groupId>
+>    <artifactId>spark</artifactId>
+>    <version>4.12.1.20140427</version>
+>    <type>swc</type>
+>    <scope>${flexmojo.scope}</scope>
+>  </dependency>
+>  ...
+>  <properties>
+>    <flexmojo.scope>compile</flexmojo.scope>
+>  </properties>
+> =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D %< =3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D
+>
+> Then you can simply redefine "flexmojo.scope" from command line. This wil=
+l
+> also affect inherited dependencies, if they are declared in the same way =
+in
+> the repository or if you delcare them in a common parent with a
+> dependencyManagement section. You might even overwrite the property in a
+> profile:
+>
+> =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D %< =3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D
+>  <profile>
+>    <id>rsl</id>
+>    <properties>
+>      <flexmojo.scope>rsl</flexmojo.scope>
+>    </properties>
+>  <profile>
+> =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D %< =3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D
+>
+> Unfortunately, I don't know nothing about flexmojo. If it works like in t=
+he
+> world of C where I can use the same libraries (.lib files) to link an
+> application either static or dynamically (then requiring runtime libs as
+> well), then it is possible to do this. Therefore is is fine for an projec=
+t
+> creating such an application at the end of a build chain.
+>
+> However, if the libraries differ if build with rsl or not, then you will
+> create a very bad user experience, because - just as Stephen already said=
+ -
+> the build process will use whatever it finds in the local repository, it
+> cannot separate between artifacts built with rsl or without. Your users
+> might get a wild mix during build time.
+>
+> Cheers,
+> J=C3=B6rg
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--14dae9cc9d349a7c8604fd2163a1--
+

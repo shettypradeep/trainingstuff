@@ -1,0 +1,94 @@
+From users-return-136137-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Apr 14 11:57:52 2014
+Return-Path: <users-return-136137-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 044EA11819
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 14 Apr 2014 11:57:52 +0000 (UTC)
+Received: (qmail 20980 invoked by uid 500); 14 Apr 2014 11:57:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 20037 invoked by uid 500); 14 Apr 2014 11:57:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 19248 invoked by uid 99); 14 Apr 2014 11:57:43 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 14 Apr 2014 11:57:43 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of t.broyer@gmail.com designates 209.85.215.49 as permitted sender)
+Received: from [209.85.215.49] (HELO mail-la0-f49.google.com) (209.85.215.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 14 Apr 2014 11:57:38 +0000
+Received: by mail-la0-f49.google.com with SMTP id mc6so5556642lab.36
+        for <users@maven.apache.org>; Mon, 14 Apr 2014 04:57:17 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=3RHjVHrsTI5rn/M85yFknfTJq3rsspd1Uv2MOGyc260=;
+        b=ZnV3Dc9r7kGAOEVNtsbwdh/BlV95tWGG3h1C7CqGOK9sBgFHIRhUSQbKnlmTbXdjBZ
+         rekw4LElECYRZnA47EqWfkQ9niIPy+gOsoYtPYYWu+BEhV98jcMkF4wTGHefY9NLEbam
+         XkOTUuSxdgv6uE2B4B7ghDqZyb8WceEQGIt//zMDQ4H6Q+x/qp3U61JHmG9CsoheuTTy
+         OuTxJNn5Z7DxF398Afg6OIbuaRgn2qC8IMdcX0abxxX4JxvUcL3VRZAT619SpNBk1G8T
+         PsQXTaTmiFnv3Qqe3XlGrcB3xsJXbP+FwvObp7lv+Fek2xEhi7WgK2bvVNwggf2FYPKf
+         m6cQ==
+X-Received: by 10.112.131.65 with SMTP id ok1mr1086079lbb.51.1397476637062;
+ Mon, 14 Apr 2014 04:57:17 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.152.128.230 with HTTP; Mon, 14 Apr 2014 04:56:57 -0700 (PDT)
+In-Reply-To: <CALhtWkdOgDGzWc9C+ip+Sr4NL5Hm7USTDV4MgODu2TmSLSO08g@mail.gmail.com>
+References: <CALhtWkdOgDGzWc9C+ip+Sr4NL5Hm7USTDV4MgODu2TmSLSO08g@mail.gmail.com>
+From: Thomas Broyer <t.broyer@gmail.com>
+Date: Mon, 14 Apr 2014 13:56:57 +0200
+Message-ID: <CAEayHENv4YPfdOsbVayNsU9nArMhXZYEOY31pzGZqa9VGCQx_g@mail.gmail.com>
+Subject: Re: Velocity escaping; I can't escape
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b3439e488bbfc04f6ff624f
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b3439e488bbfc04f6ff624f
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Assuming I understand the issue correctly:
+
+#set( $dollar =3D '$' )
+
+then ${dollar}{bt.root.directory:../../../../..}
+
+
+On Mon, Apr 14, 2014 at 1:46 PM, Benson Margulies <bimargulies@gmail.com>wr=
+ote:
+
+> If a markdown file in my site contains
+>
+>  <lib
+> path=3D"${bt.root.directory:../../../../..}/lib/rbl-je-lucene-solr-43-2.2=
+.104.jar"/>
+>
+> velocity explodes.
+>
+> If I add a \ after the $, it does not explode, but the \ remains in
+> the generated HTML.
+>
+> How do I get out of this?
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+--=20
+Thomas Broyer
+/t=C9=94.ma.b=CA=81wa.je/ <http://xn--nna.ma.xn--bwa-xxb.je/>
+
+--047d7b3439e488bbfc04f6ff624f--
+

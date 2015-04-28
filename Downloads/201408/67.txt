@@ -1,0 +1,142 @@
+From users-return-137128-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Aug 27 08:12:05 2014
+Return-Path: <users-return-137128-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9426811FBB
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 27 Aug 2014 08:12:05 +0000 (UTC)
+Received: (qmail 23270 invoked by uid 500); 27 Aug 2014 08:11:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 23172 invoked by uid 500); 27 Aug 2014 08:11:52 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 23159 invoked by uid 99); 27 Aug 2014 08:11:51 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 27 Aug 2014 08:11:51 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FORGED_YAHOO_RCVD,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: 216.139.236.26 is neither permitted nor denied by domain of kkarkalos@yahoo.com)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 27 Aug 2014 08:11:47 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <kkarkalos@yahoo.com>)
+	id 1XMYKE-00052v-Ey
+	for users@maven.apache.org; Wed, 27 Aug 2014 01:11:26 -0700
+Date: Wed, 27 Aug 2014 01:11:26 -0700 (PDT)
+From: tertelos <kkarkalos@yahoo.com>
+To: users@maven.apache.org
+Message-ID: <1409127086441-5803100.post@n5.nabble.com>
+Subject: No test to run, No code to compile
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I have been struggling with this for days and i really want to move on can
+somebody please help me, i am getting the following console output:
+
+T E S T S
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-easyb-plugin:1.4:test (default) @ gameoflife ---
+[INFO] C:\Program Files
+(x86)\Jenkins\jobs\gameoflife-default\workspace\src\test\stories does not
+exists. Skipping easyb testing
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (integration-tests) @ gameoflife
+---
+[INFO] No tests to run.
+[INFO] Surefire report directory: C:\Program Files
+(x86)\Jenkins\jobs\gameoflife-default\workspace\target\surefire-reports
+
+T E S T S
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.6.3.201306030806:report (jacoco-site) @
+gameoflife ---
+[INFO] Skipping JaCoCo for project with packaging type 'pom'
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ gameoflife
+---
+[INFO] Installing C:\Program Files
+(x86)\Jenkins\jobs\gameoflife-default\workspace\pom.xml to
+C:\Windows\system32\config\systemprofile.m2\repository\com\wakaleo\gameoflife\gameoflife\1.0-SNAPSHOT\gameoflife-1.0-SNAPSHOT.pom
+[INFO]
+
+[INFO]
+------------------------------------------------------------------------
+[INFO] Building gameoflife-build 1.0-SNAPSHOT
+[INFO]
+------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ gameoflife-build
+---
+[INFO] Deleting C:\Program Files
+(x86)\Jenkins\jobs\gameoflife-default\workspace\gameoflife-build\target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-versions) @
+gameoflife-build ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @
+gameoflife-build ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.6.3.201306030806:prepare-agent
+(jacoco-initialize) @ gameoflife-build ---
+[INFO] argLine set to
+"-javaagent:C:\Windows\system32\config\systemprofile.m2\repository\org\jacoco\org.jacoco.agent\0.6.3.201306030806\org.jacoco.agent-0.6.3.201306030806-runtime.jar=destfile=C:\Program
+Files
+(x86)\Jenkins\jobs\gameoflife-default\workspace\gameoflife-build\target\jacoco.exec"
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @
+gameoflife-build ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources)
+@ gameoflife-build ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Program Files
+(x86)\Jenkins\jobs\gameoflife-default\workspace\gameoflife-build\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @
+gameoflife-build ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ gameoflife-build
+---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (unit-tests) @ gameoflife-build
+---
+[INFO] No tests to run.
+[INFO] Surefire report directory: C:\Program Files
+(x86)\Jenkins\jobs\gameoflife-default\workspace\gameoflife-build\target\surefire-reports
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/No-test-to-run-No-code-to-compile-tp5803100.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,141 @@
+From users-return-137495-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Oct  8 19:02:09 2014
+Return-Path: <users-return-137495-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E397E176C2
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  8 Oct 2014 19:02:09 +0000 (UTC)
+Received: (qmail 97055 invoked by uid 500); 8 Oct 2014 19:02:08 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 96964 invoked by uid 500); 8 Oct 2014 19:02:08 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 96953 invoked by uid 99); 8 Oct 2014 19:02:07 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Oct 2014 19:02:07 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of gcjtmu-turbine-maven-user-846@m.gmane.org designates 80.91.229.3 as permitted sender)
+Received: from [80.91.229.3] (HELO plane.gmane.org) (80.91.229.3)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Oct 2014 19:01:39 +0000
+Received: from list by plane.gmane.org with local (Exim 4.69)
+	(envelope-from <gcjtmu-turbine-maven-user-846@m.gmane.org>)
+	id 1XbwSR-0005Fd-4z
+	for users@maven.apache.org; Wed, 08 Oct 2014 20:59:31 +0200
+Received: from hsi-kbw-5-56-228-241.hsi17.kabel-badenwuerttemberg.de ([5.56.228.241])
+        by main.gmane.org with esmtp (Gmexim 0.1 (Debian))
+        id 1AlnuQ-0007hv-00
+        for <users@maven.apache.org>; Wed, 08 Oct 2014 20:59:31 +0200
+Received: from joerg.schaible by hsi-kbw-5-56-228-241.hsi17.kabel-badenwuerttemberg.de with local (Gmexim 0.1 (Debian))
+        id 1AlnuQ-0007hv-00
+        for <users@maven.apache.org>; Wed, 08 Oct 2014 20:59:31 +0200
+X-Injected-Via-Gmane: http://gmane.org/
+To: users@maven.apache.org
+From: =?UTF-8?B?SsO2cmc=?= Schaible <joerg.schaible@gmx.de>
+Subject: Re: Why do running modules in parallel take longer to execute than running them in sequence?
+Date: Wed, 08 Oct 2014 20:59:20 +0200
+Lines: 79
+Message-ID: <m141i8$8q2$1@ger.gmane.org>
+References: <1412793888704-5808128.post@n5.nabble.com>
+Reply-To: joerg.schaible@gmx.de
+Mime-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8Bit
+X-Complaints-To: usenet@ger.gmane.org
+X-Gmane-NNTP-Posting-Host: hsi-kbw-5-56-228-241.hsi17.kabel-badenwuerttemberg.de
+User-Agent: KNode/4.12.5
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+laredotornado-3 wrote:
+
+> Hi,
+> 
+> I’m using Maven 3.2.3, Spring 3.2.11.RELEASE, JUnit 4.11, Java 6, and the
+> Surefire/Failsafe 2.17 plugins.  I’m trying to figure out why when running
+> a couple of modules in parallel, it takes much longer than when I run them
+> individually.  I’m trying to figure out ways to speed up my build.  I have
+> this in my parent pom …
+> 
+>         <modules>
+>                 <module>core</module>
+>                 …
+> <module>module-x</module>
+>                 <module>module-y</module>
+>         </modules>
+> 
+> When I run “mvn clean install -T 4�?, modules “module-x�? and “module-y�? run
+> in parallel.  Both have a number of integration tests, all using
+> 
+> @RunWith(SpringJUnit4ClassRunner.class)
+> @ContextConfiguration({ "classpath:test-context.xml" })
+> public class MyServiceIT
+> {
+> 
+> Below are my surefire/failsafe configurations …
+> 
+>                         <plugin>
+>                                 
+<groupId>org.apache.maven.plugins</groupId>
+>                                
+> <artifactId>maven-surefire-plugin</artifactId>
+>                                 <version>2.17</version>
+>                                 <configuration>
+>                                         <reuseForks>true</reuseForks>
+>                                         <argLine>-Xmx2048m
+> -XX:MaxPermSize=512M </argLine>
+>                                        
+> <skipTests>${skipAllTests}</skipTests>
+>                                 </configuration>
+>                         </plugin>
+>                         <plugin>
+>                                 
+<groupId>org.apache.maven.plugins</groupId>
+>                                
+> <artifactId>maven-failsafe-plugin</artifactId>
+>                                 <version>2.17</version>
+>                                 <configuration>
+>                                         <reuseForks>true</reuseForks>
+>                                         <argLine>-Xmx4096m
+> -XX:MaxPermSize=512M </argLine>
+>                                        
+> <skipTests>${skipAllTests}</skipTests>
+>                                 </configuration>
+>                                 <executions>
+>                                         <execution>
+>                                                 <goals>
+>                                                        
+> <goal>integration-test</goal>
+>                                                         
+<goal>verify</goal>
+>                                                 </goals>
+>                                         </execution>
+>                                 </executions>
+>                         </plugin>
+> 
+> When I run the tests in parallel, the modules take 11 minutes and 13
+> minutes, respectively, to run.  However, running them concurrently
+> (without the “-T�? option), they execute in 6 minutes and 9 minutes,
+> respectively. I’m confused about why they take so much longer to run when
+> they both run at the same time and was hoping some folks could suggest
+> some ways I can troubleshoot this further.
+
+How much memory do you have? Your test processes take quite a lot and 
+executing them in parallel might simply activate disk swapping.
+
+- Jörg
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

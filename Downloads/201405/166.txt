@@ -1,0 +1,90 @@
+From users-return-136429-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri May 23 01:45:05 2014
+Return-Path: <users-return-136429-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 81B8210226
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 23 May 2014 01:45:05 +0000 (UTC)
+Received: (qmail 99225 invoked by uid 500); 23 May 2014 01:45:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99146 invoked by uid 500); 23 May 2014 01:45:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99138 invoked by uid 99); 23 May 2014 01:45:03 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 23 May 2014 01:45:03 +0000
+X-ASF-Spam-Status: No, hits=1.2 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (nike.apache.org: transitioning domain of hablutzel1@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 23 May 2014 01:45:00 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <hablutzel1@GMAIL.COM>)
+	id 1WneXE-0008Or-Uk
+	for users@maven.apache.org; Thu, 22 May 2014 18:44:36 -0700
+Date: Thu, 22 May 2014 18:44:36 -0700 (PDT)
+From: hablutzel1 <hablutzel1@GMAIL.COM>
+To: users@maven.apache.org
+Message-ID: <1400809476914-5793777.post@n5.nabble.com>
+In-Reply-To: <AANLkTinKVZ8d_nud4_RCqUUbH6JcsZxzLkK8SK4TyjAR@mail.gmail.com>
+References: <AANLkTim-fD7HvsqqFjVwaCmBrSWFWvx38UaK_fvP7txw@mail.gmail.com> <AANLkTinKVZ8d_nud4_RCqUUbH6JcsZxzLkK8SK4TyjAR@mail.gmail.com>
+Subject: Re: use of plugin and pluginmanagement
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+So there is an error in the official maven documentation at
+http://maven.apache.org/pom.html#Plugin_Management, quoting 
+
+> *If we added these specifications to the plugins element, they would apply
+> only to a single POM.*  
+> However, if we apply them under the pluginManagement element, then this
+> POM and all inheriting POMs that 
+> add the maven-jar-plugin to the build will get the pre-process-classes
+> execution as well. So rather than the 
+> above mess included in every child pom.xml, only the following is
+> required:
+
+It is talking about a plugin configuration, but it is not right to state
+that adding "plugin" specifications to the "plugins" elements would apply
+only *to a single POM*, as adding it to the parent would apply to the parent
+and all the childs inheriting from it.
+
+This is confirmed by Wayne Fay post where he indicates the difference of
+'pluginManagement' over 'plugins':
+
+> The plugins declared in the build section of your parent will be 
+> inherited (and executed) in all of those children poms. In many cases, 
+> you might only want a given plugin to actually be used in a few of 
+> those children, or even just one, and frequently not in the parent. 
+
+I think that the documentation should say something like this in that
+paragraph:
+
+"If we added these specifications to the parent's build/plugins element,
+they would apply to the parent and all the inheriting childs which isn't
+usually the expected behaviour. However, if we apply them under the parent's
+pluginManagement element, then parent's POM and/or inheriting POMs that
+added the maven-jar-plugin to the build as shown below will get the
+pre-process-classes execution."
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/use-of-plugin-and-pluginmanagement-tp3341163p5793777.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

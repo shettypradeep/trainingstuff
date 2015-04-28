@@ -1,0 +1,82 @@
+From users-return-136713-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jul  1 13:44:17 2014
+Return-Path: <users-return-136713-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BA05310F57
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  1 Jul 2014 13:44:17 +0000 (UTC)
+Received: (qmail 58480 invoked by uid 500); 1 Jul 2014 13:44:16 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 58395 invoked by uid 500); 1 Jul 2014 13:44:16 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 58382 invoked by uid 99); 1 Jul 2014 13:44:15 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 01 Jul 2014 13:44:15 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of gcjtmu-turbine-maven-user-846@m.gmane.org designates 80.91.229.3 as permitted sender)
+Received: from [80.91.229.3] (HELO plane.gmane.org) (80.91.229.3)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 01 Jul 2014 13:44:11 +0000
+Received: from list by plane.gmane.org with local (Exim 4.69)
+	(envelope-from <gcjtmu-turbine-maven-user-846@m.gmane.org>)
+	id 1X1yLb-0005Oo-QB
+	for users@maven.apache.org; Tue, 01 Jul 2014 15:43:47 +0200
+Received: from mail.scalaris.com ([62.154.225.82])
+        by main.gmane.org with esmtp (Gmexim 0.1 (Debian))
+        id 1AlnuQ-0007hv-00
+        for <users@maven.apache.org>; Tue, 01 Jul 2014 15:43:47 +0200
+Received: from joerg.schaible by mail.scalaris.com with local (Gmexim 0.1 (Debian))
+        id 1AlnuQ-0007hv-00
+        for <users@maven.apache.org>; Tue, 01 Jul 2014 15:43:47 +0200
+X-Injected-Via-Gmane: http://gmane.org/
+To: users@maven.apache.org
+From: =?UTF-8?B?SsO2cmc=?= Schaible <joerg.schaible@swisspost.com>
+Subject: Re: AW: AW: Artifact with different sets of dependencies switched by profiles
+Date: Tue, 01 Jul 2014 15:43:35 +0200
+Organization: Swiss Post Solutions
+Lines: 20
+Message-ID: <loudu7$d9e$1@ger.gmane.org>
+References: <fa95de47ea5e47d195c63717af3b2d02@DBXPR05MB237.eurprd05.prod.outlook.com> <CA+nPnMxBQptj9OS+8FLjBoodbq-qgDzLVVxnKoYqqXgsRfx28w@mail.gmail.com> <a060f35add5844a8a5a166043cb65765@DBXPR05MB237.eurprd05.prod.outlook.com> <53AF701E.7080507@artifact-software.com> <272be8c3cbaa4f808acd0adb4ae9135d@DBXPR05MB237.eurprd05.prod.outlook.com> <lop3j3$tui$1@ger.gmane.org> <1404207725651.70752@c-ware.de> <CA+nPnMx=vhR=RDNM-5Zop1c3g6UWLOpsxuMYcWRj6VVDei7MBQ@mail.gmail.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8Bit
+X-Complaints-To: usenet@ger.gmane.org
+X-Gmane-NNTP-Posting-Host: mail.scalaris.com
+User-Agent: KNode/4.12.5
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Stephen,
+
+Stephen Connolly wrote:
+
+> And you are going to have the exact same set of issues as with profiles.
+> 
+> Maven 3 does not re-interpolate the poms of dependencies IIRC... or at
+> least it is not supposed to... so you only get to control the variables
+> from the parent pom and any inherited dependencies/dependencyManagement
+> not from the transitive dependencies of your pom
+
+The scope declared in the (inherited) dependencyManagement will overwrite 
+any transitive or local one (if not explicitly declared). And if that scope 
+is defined by a property, you may overwrite this property in the local pom 
+or from command line.
+
+However, if the resulting intermediate artifacts differ, he will run in 
+problems.
+
+- Jörg
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

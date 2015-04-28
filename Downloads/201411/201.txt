@@ -1,0 +1,117 @@
+From users-return-137727-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Nov  8 18:50:38 2014
+Return-Path: <users-return-137727-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 03426174AB
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  8 Nov 2014 18:50:38 +0000 (UTC)
+Received: (qmail 38806 invoked by uid 500); 8 Nov 2014 18:50:36 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 38725 invoked by uid 500); 8 Nov 2014 18:50:36 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 38712 invoked by uid 99); 8 Nov 2014 18:50:36 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 08 Nov 2014 18:50:36 +0000
+X-ASF-Spam-Status: No, hits=2.5 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_IMAGE_ONLY_28,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of burtonator2011@gmail.com designates 209.85.215.48 as permitted sender)
+Received: from [209.85.215.48] (HELO mail-la0-f48.google.com) (209.85.215.48)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 08 Nov 2014 18:50:32 +0000
+Received: by mail-la0-f48.google.com with SMTP id gq15so6060190lab.35
+        for <users@maven.apache.org>; Sat, 08 Nov 2014 10:49:26 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=gfcJw6tSDm31HezrLTAD4BXy+/e+FV7X3N1hXfrk1Vg=;
+        b=jR/Vxm1Xeg0Xdt5lG7SNu81TJZZKbE6p69mqITsn1W8aVGgNWN6UBpS1xoeBEvWGir
+         tyPw+jFSx6jTJ+oCwYuY1Zhya8VE7LXCzvKekrYSPFymvg0jLnrAqR+KJXE1pbM3ByUw
+         7He6ddjEmE4Xz7y0TxFSPXL08AWnRvqoE60h2BpnYonI6SDrztYIUzL62BsCqt2JMRYw
+         rcLPTYMfJVW2spAaRZJ2a/mWuJO+sjEKRnLdnyCtvHArEjbxDpkyjcEybBJO4hm3YV8k
+         Y/9x3kq3TU0m7Wb8Lv9+WYQ3lttWJvFnFLRziUctD5Ix9QEKsWywpSF1F/vSSfcUdTLH
+         6m0g==
+X-Received: by 10.152.42.226 with SMTP id r2mr19057032lal.29.1415472566126;
+ Sat, 08 Nov 2014 10:49:26 -0800 (PST)
+MIME-Version: 1.0
+Sender: burtonator2011@gmail.com
+Received: by 10.112.166.137 with HTTP; Sat, 8 Nov 2014 10:49:04 -0800 (PST)
+In-Reply-To: <CABOR3+zgBNXAjkkRkLOBNA2H2QzSg8M_0uZQxuMYX7sekxD_wQ@mail.gmail.com>
+References: <CAAZU44=T0JtOGSjdBXTbKCDk8P_R68nthLY+7bXJXRDqvAWjEQ@mail.gmail.com>
+ <CABOR3+zgBNXAjkkRkLOBNA2H2QzSg8M_0uZQxuMYX7sekxD_wQ@mail.gmail.com>
+From: Kevin Burton <burton@spinn3r.com>
+Date: Sat, 8 Nov 2014 10:49:04 -0800
+X-Google-Sender-Auth: 75RLD_LMnznEAYKXPL9AdTyiJGs
+Message-ID: <CAAZU44=kC1B5tyB+YSi0SWFY3jhB=vZbhx6WYzkP5TwXvhH0MQ@mail.gmail.com>
+Subject: Re: fetching a tar.gz URL / dependency via HTTP during a build?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c350887e4eb205075d63ff
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c350887e4eb205075d63ff
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+oh .. gotcha.  So I would/could take the tar.gz and put it in a maven
+repo.  I don=E2=80=99t think there is one for the tar.gzs though.
+
+
+
+On Sat, Nov 8, 2014 at 10:45 AM, Bernd <ecki@zusammenkunft.net> wrote:
+
+> You could use the dependency-plugin with copy dependencies to get the
+> binary artifact from a maven repo (if there is one).
+> Am 08.11.2014 19:43 schrieb "Kevin Burton" <burton@spinn3r.com>:
+>
+> > I=E2=80=99m trying to build .debs using jdeb and maven for various proj=
+ects.
+> >
+> > For example, there is no .deb for spark.  So I=E2=80=99m just taking th=
+e tar.gz
+> and
+> > making a deb that installs to /usr/share/apache-spark.
+> >
+> > The problem is I don=E2=80=99t want to put the full binary into git as =
+it=E2=80=99s about
+> > 200MB.
+> >
+> > I=E2=80=99d rather have the build fetch the tar.gz directly from Apache=
+ during
+> the
+> > build, untar it, then build the deb from the output.
+> >
+> > Is there and way to do this or should I just write a bash script which
+> uses
+> > wget to fetch the URL?
+> >
+> > --
+> >
+> > Founder/CEO Spinn3r.com
+> > Location: *San Francisco, CA*
+> > blog: http://burtonator.wordpress.com
+> > =E2=80=A6 or check out my Google+ profile
+> > <https://plus.google.com/102718274791889610666/posts>
+> > <http://spinn3r.com>
+> >
+>
+
+
+
+--=20
+
+Founder/CEO Spinn3r.com
+Location: *San Francisco, CA*
+blog: http://burtonator.wordpress.com
+=E2=80=A6 or check out my Google+ profile
+<https://plus.google.com/102718274791889610666/posts>
+<http://spinn3r.com>
+
+--001a11c350887e4eb205075d63ff--
+

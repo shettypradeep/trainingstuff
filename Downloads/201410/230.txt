@@ -1,0 +1,88 @@
+From users-return-137665-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Oct 31 16:28:14 2014
+Return-Path: <users-return-137665-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E114717AE6
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 31 Oct 2014 16:28:13 +0000 (UTC)
+Received: (qmail 31629 invoked by uid 500); 31 Oct 2014 16:28:12 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 31547 invoked by uid 500); 31 Oct 2014 16:28:12 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 31520 invoked by uid 99); 31 Oct 2014 16:28:11 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 31 Oct 2014 16:28:11 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [209.85.216.43] (HELO mail-qa0-f43.google.com) (209.85.216.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 31 Oct 2014 16:27:44 +0000
+Received: by mail-qa0-f43.google.com with SMTP id j7so5435163qaq.2
+        for <users@maven.apache.org>; Fri, 31 Oct 2014 09:26:57 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:subject:message-id:mime-version
+         :content-type:content-transfer-encoding;
+        bh=+kvZ74bYiSyuZ+qcOGk1JHHVbkQx+rvuXjpj0W8wLSg=;
+        b=SCNpdWpywgVh0AEniOzryQfxXCdWI7CBC4KQzhqIN/F7JXb2uUwgx6rYsu4P2MiQ3z
+         o9z2GpSrcZ8CG4cR408VCQ1nfAZm5KcYxP7scOBCpiTNB0qwGJvVTjpHPxp+Jjp9lpY7
+         h2yGG4flFuClu0KiHqrOb1KZ1rWCfMnO/3xqPqD3S4Yh7S69sHatNdiprSLG1Hg+uGnr
+         VELcruWAELR1B3uugjddzZVeA6VunmLZX+YNWmlmeCTjP7hylX/Ac9qDJBE4Vd1syuLN
+         LFroafKxYyutRS9ZB7mt9KWzbLT4SZzeVBaO++7pPZ5IJL2kh1c0o9eJMBuhtlddiR3T
+         dYbw==
+X-Gm-Message-State: ALoCoQmImlIg91U2PVCVrg9APHAuijuqnbTRTsfTh60NLkVJ5+nYKhNnV6okfrgRMby2MLPyLog9
+X-Received: by 10.224.55.70 with SMTP id t6mr22424409qag.83.1414772817549;
+        Fri, 31 Oct 2014 09:26:57 -0700 (PDT)
+Received: from localhost (HSI-KBW-109-192-117-164.hsi6.kabel-badenwuerttemberg.de. [109.192.117.164])
+        by mx.google.com with ESMTPSA id g14sm9756904qar.46.2014.10.31.09.26.56
+        for <users@maven.apache.org>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 31 Oct 2014 09:26:57 -0700 (PDT)
+Date: Fri, 31 Oct 2014 17:26:52 +0100
+From: Bernd Eckenfels <ecki@zusammenkunft.net>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: maven-release got stuck when tag exists with released version in
+ pom
+Message-ID: <20141031172652.00002dfe.ecki@zusammenkunft.net>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello,
+
+one thing which bites me quite regularly with the maven release plugin
+is the fact, that it will update the POMs to the release version then
+commit them and then tag them. If the tagging fails (especially because
+the tag existed already) then it will leave the head on a released
+version number.
+
+This is in my case a problem as I have to go through a gerrit release
+to change it to a snapshot version to try again.
+
+A good improvement would be to first check the existence of the tag.
+This would not cover all error cases but the most common.
+
+Another option (or in addition to that), a rollback action would be to
+actually commit the updated POM with the old snapshot version again?
+
+(just to warn people, in my case if an integration build is triggert on
+the master which has configured jenkins to deploy (normally the
+snapshots) it will happyly deply the released version).
+
+Gruss
+Bernd
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,81 @@
+From users-return-138087-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Dec 26 12:54:48 2014
+Return-Path: <users-return-138087-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E9A6B104E7
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 26 Dec 2014 12:54:48 +0000 (UTC)
+Received: (qmail 67163 invoked by uid 500); 26 Dec 2014 12:54:43 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 66782 invoked by uid 500); 26 Dec 2014 12:54:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 66751 invoked by uid 99); 26 Dec 2014 12:54:43 -0000
+Received: from eris.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 26 Dec 2014 12:54:43 +0000
+Received: by minotaur.apache.org (Postfix, from userid 6004)
+	id 60007104E2; Fri, 26 Dec 2014 12:54:43 +0000 (UTC)
+To: announce@maven.apache.org
+Subject: [ANN] Apache Maven AntRun Plugin Version 1.8 Released
+Cc: users@maven.apache.org,dev@maven.apache.org
+Message-Id: <20141226125443.60007104E2@minotaur.apache.org>
+Date: Fri, 26 Dec 2014 12:54:41 +0000 (UTC)
+From: khmarbaise@apache.org (Karl Heinz Marbaise)
+
+The Apache Maven team is pleased to announce the release of the 
+Apache Maven AntRun Plugin, version 1.8
+
+This plugin provides the ability to run Ant tasks from within Maven. You can
+even embed your Ant scripts in the POM!
+
+http://maven.apache.org/plugins/maven-antrun-plugin/
+
+You should specify the version in your project's plugin configuration:
+
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-antrun-plugin</artifactId>
+  <version>1.8</version>
+</plugin>
+
+Release Notes - Maven AntRun Plugin - Version 1.8
+
+http://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=11125&version=18043
+
+Bugs:
+
+ * [MANTRUN-98] - multiple input tasks leads to exception
+ * [MANTRUN-175] - Documentation for failOnError is wrong
+
+Improvements:
+
+ * [MANTRUN-191] - Update version of plexus-utils to 3.0.18
+ * [MANTRUN-193] - Upgrade Maven Plugin plugin to 3.3
+
+New Feature:
+
+ * [MANTRUN-190] - Upgrade Ant to 1.9.x
+
+Tasks:
+
+ * [MANTRUN-176] - use maven-plugin-tools' java 5 annotations
+ * [MANTRUN-187] - Make Plugin only 2.2.1 compatible - get rid of Maven 2.0
+ * [MANTRUN-188] - MavenProject/MavenSession Injection as a paremeter instead as a component.
+
+
+Enjoy,
+
+-The Apache Maven team
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

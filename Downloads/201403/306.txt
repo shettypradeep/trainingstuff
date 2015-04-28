@@ -1,0 +1,163 @@
+From users-return-136004-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Mar 28 17:42:04 2014
+Return-Path: <users-return-136004-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BF57C11337
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 28 Mar 2014 17:42:04 +0000 (UTC)
+Received: (qmail 1494 invoked by uid 500); 28 Mar 2014 17:42:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 896 invoked by uid 500); 28 Mar 2014 17:41:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 883 invoked by uid 99); 28 Mar 2014 17:41:55 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 17:41:55 +0000
+Received: from localhost (HELO robertscholte) (127.0.0.1)
+  (smtp-auth username rfscholte, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 17:41:54 +0000
+Content-Type: text/plain; charset=iso-8859-15; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: maven release-plugin 2.5 bug - releasing snapshots...
+References: <1396000799217-5789837.post@n5.nabble.com>
+ <CANWgJS6WiA1b4mew9Y5sHFy0Vpp9iWMidkTaitwKF52vfyo2Pw@mail.gmail.com>
+ <1396005159305-5789843.post@n5.nabble.com>
+ <CA+nPnMxJvqyWcnsWADF00zr+emGdw-kA4fZeSY9duCOj3zs96A@mail.gmail.com>
+ <1396009391638-5789868.post@n5.nabble.com>
+ <CA+nPnMxp6vhW6BaDQ22b5P2pHVVZTAkwpd7NW1PVgfxuzw9gTw@mail.gmail.com>
+ <1396012680124-5789892.post@n5.nabble.com>
+ <CA+nPnMze-q4vuU7o3B2y7_MCS5cUnWaTMHZ=Dku8GyK3UMK08w@mail.gmail.com>
+ <1396015974365-5789916.post@n5.nabble.com> <op.xdfsc72ikdkhrr@robertscholte>
+ <1396023850189-5789928.post@n5.nabble.com>
+Date: Fri, 28 Mar 2014 18:41:52 +0100
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.xdf0r2t7kdkhrr@robertscholte>
+In-Reply-To: <1396023850189-5789928.post@n5.nabble.com>
+User-Agent: Opera Mail/12.16 (Win32)
+
+So if I understand correctly you want to use SNAPSHOTs because:
+- you don't want the artifact to end up in the "releases"-repository yes,  
+because QA needs to be done first
+- SNAPSHOTs are cleaned up automatically, so if QA doesn't accept a  
+release, it's cleaned up for you.
+
+The SNAPSHOT usage here is some kind of workaround if there would only be  
+exactly 1 releases-repository. (assuming you're using a repository manager  
+like Nexus, Artifactory or Archiva [1]).
+However, nowadays repo manager have features to be able to cope with this  
+kind of problems.
+What you are looking for is "staging": a concept where you release your  
+artifacts to the QA-repository. If they accept it, they push it to the  
+next repository, ... until it is pushed to the company-repository, ready  
+to be used by everyone.
+If one of the testing departments doesn't accept a version, the stage is  
+destroyed and the artifact won't be available anymore.
+AFAIK all these repo managers support staging, however for some you have  
+to pay. (Or there are ways to fake staging, i.e. downloading from one repo  
+and uploading to the other...)
+
+The QA should never accept that they test a SNAPSHOT. If they accept it,  
+they should also test the released version, just because it is a new  
+distribution.
+
+Google a bit more for "artifact repository" + "staging", which is a proven  
+concept which seems to match your requirements.
+
+regards,
+Robert
+
+[1] http://maven.apache.org/repository-management.html
+
+
+Op Fri, 28 Mar 2014 17:24:10 +0100 schreef ghostwolf59  
+<martin.cedervall@commerce.wa.gov.au>:
+
+> Fully agree but with a snapshot not should be treated an release.
+>
+> The concept of "official snapshots" along with full site info and branch
+> tagging don't seem wrong where I come from.
+> If a project going through some stringent QA where formal test teams  
+> want to
+> keep track of what they testing against, then I think some kind of "mile
+> stone snapshot" have a place.
+>
+> If on the other hand the only way these projects can keep track of these
+> "mile stones" releases, then it seem that the only option would be to
+> release something "official" - in effect clogging the "official" prod  
+> state
+> repo with non prod state content.
+>
+> I think this bogs down to convenience - maven release process provide a  
+> few
+> steps that makes is fairly simple for developers to deal with and
+> distinguish between snapshot's and formal releases i.e non tagged release
+> without the -SNAPSHOT tag
+>
+> I find it somewhat difficult to understand why earlier versions of the
+> maven-release-plugin allow for this when at the same time the same plugin
+> prevent final releases to refer to -snapshot's ?
+> Fair enough if a line has been drawn between snapshots and formal  
+> release,
+> but the convenience factor seem get lost in the discussion.
+>
+> Exactly what is the rationale behind allowing a snapshot being released
+> without the site info and scm branches being created? - apart from this
+> being a quick release - it's not complete and auditing this release  
+> becomes
+> troublesome lacking scm branch and site info to audit.
+> These snapshots don;t even have to be committed back to your scm, so what
+> happens if test teams sign off on such milestone - at the time this is
+> committed back, the source may have changed.
+>
+> Personally I think it would be better to release a "mile stone" snapshot
+> with full information (such as a scm branch and site info being generated
+> and deployed)
+>
+> If snapshots (as a concept) is problematic then why not open up for a  
+> "mile
+> stone" snapshot concept ?
+> A "mile stone" released into the official releases repo is still not to  
+> be
+> treated as a release so no dependencies should be allowed to exists to
+> snapshot or "mile stone" ref's when you perform an official release.
+>
+> Another point to make is that a snapshot repo can / and will be cleaned  
+> on
+> regular basis - after all a snapshot *or if "mile stone" snapshot is  
+> deemed
+> as short lived resources never meant for prod.
+>
+> Have I got this concept completely wrong or do we need to introduce yet  
+> more
+> layers on what we have at our disposal ?
+>
+> cheers
+>
+>
+>
+>
+>
+> -----
+> good @ being sucked @
+> --
+> View this message in context:  
+> http://maven.40175.n5.nabble.com/maven-release-plugin-2-5-bug-releasing-snapshots-tp5789837p5789928.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,119 @@
+From users-return-136567-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jun 12 18:54:45 2014
+Return-Path: <users-return-136567-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0260E1144F
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 12 Jun 2014 18:54:45 +0000 (UTC)
+Received: (qmail 89696 invoked by uid 500); 12 Jun 2014 18:54:42 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 89613 invoked by uid 500); 12 Jun 2014 18:54:42 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 89540 invoked by uid 99); 12 Jun 2014 18:54:42 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 12 Jun 2014 18:54:42 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 12 Jun 2014 18:54:39 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 32A816A657E
+	for <users@maven.apache.org>; Thu, 12 Jun 2014 14:54:14 -0400 (EDT)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id tcv5fP7QFckB for <users@maven.apache.org>;
+	Thu, 12 Jun 2014 14:54:14 -0400 (EDT)
+Received: from [192.168.33.118] (CPE586d8fdf0440-CM001225d75a4e.cpe.net.cable.rogers.com [99.249.114.189])
+	by smtp.artifact-software.com (Postfix) with ESMTP id E8F0C6A657D
+	for <users@maven.apache.org>; Thu, 12 Jun 2014 14:54:13 -0400 (EDT)
+Message-ID: <5399F753.9010902@artifact-software.com>
+Date: Thu, 12 Jun 2014 14:54:11 -0400
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: rwheeler@artifact-software.com
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.5.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Complex Maven projects - Tutorials? Books?
+References: <3B7A7BDFFD286F49A19A5B35D26E08FB0140EA5E@srvmail2.aurenz.local> <5399F3D1.1060508@apache.org>
+In-Reply-To: <5399F3D1.1060508@apache.org>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 8bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Great advice.
+We depend on Nexus.
+If you are serious about Maven, you need a repo.
+The community version of Nexus is a great benefit to the Maven community.
+
+Ron
+
+On 12/06/2014 2:39 PM, Michael Osipov wrote:
+> Am 2014-06-12 16:46, schrieb Hohl, Gerrit:
+>> Hello everyone, :)
+> [..]
+>> Does someone know a good book or tutorial which handles all of these
+>> issues around Maven and CI/CD in more depth?
+>
+> Hi Gerrit,
+>
+> here is the approach I have been using all the years, I think this is 
+> quite common in companies:
+>
+> 1. Set up a Nexus instance in your company, mirroring Central and with 
+> release/snapshot repos for your company.
+>
+> 1.1 Make sure that Nexus works correctly.
+>
+> 2. Let the CI server deploy SNAPSHOTs of you libraries deploy to your 
+> Nexus instance frequently.
+>
+> 3. Refer to those SNAPSHOTs in your project POMs if you need bleeding 
+> edge. This makes it easier to soak in fixed bugs in deps. If you think 
+> that your lib is stable enough, release to SCM and Nexus.
+>
+> 4. Use the maven-versions-plugin to update your project dependencies 
+> and or fix to a release version.
+>
+> It is perfectly fine to rely on SNAPSHOTs during development but not 
+> when you perform mvn release:prepare release:perform.
+>
+> Gruß,
+>
+> Michael
+>
+> PS: Upgrade your Maven version to a new one if you are able to.
+>
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

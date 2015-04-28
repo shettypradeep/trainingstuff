@@ -1,0 +1,127 @@
+From users-return-135490-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb 14 14:13:16 2014
+Return-Path: <users-return-135490-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2EBEE1076B
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 14 Feb 2014 14:13:16 +0000 (UTC)
+Received: (qmail 52422 invoked by uid 500); 14 Feb 2014 14:13:12 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 52349 invoked by uid 500); 14 Feb 2014 14:13:10 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 52340 invoked by uid 99); 14 Feb 2014 14:13:08 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 14:13:08 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of levskiweng@gmail.com designates 209.85.215.41 as permitted sender)
+Received: from [209.85.215.41] (HELO mail-la0-f41.google.com) (209.85.215.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 14:13:01 +0000
+Received: by mail-la0-f41.google.com with SMTP id mc6so9348450lab.14
+        for <users@maven.apache.org>; Fri, 14 Feb 2014 06:12:40 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=Cu2vN/Iz6wfkHkBonXIRSGqXZHgyh2nxWQgEocgjdvU=;
+        b=erJImAbQe7GMhSFDcZtn5E+wCRRr252IZLXlMXWQeOOzc9yXDOg56oQnfaNTMs8TV/
+         +VLSKUhzCRKQIBPD8nV1HoOkei4SHVzQxU7WnwPPHoMn1a4euwoYxwN9EwnP5ij2dIt/
+         kMoallC8kUOzAbuegPfE8/UY9NVgs123tT61x7ilw47hSER96SsvS+UV2nfMW0EUeCp8
+         LwuXCNTWoy0mLSCzE2aS+YiDXVOFzt5QWYaBdHm7KOj7R8KYCMGqusN1b/d6Gi27F/Uj
+         h/vZlKqq87YsDvlDC4Zgi9XQqqrftj1DNcWJZ5kZG8iVJwXimj8dDGNSHP2z7fjscDxQ
+         r43A==
+MIME-Version: 1.0
+X-Received: by 10.152.3.99 with SMTP id b3mr1477884lab.61.1392387160620; Fri,
+ 14 Feb 2014 06:12:40 -0800 (PST)
+Received: by 10.112.42.100 with HTTP; Fri, 14 Feb 2014 06:12:40 -0800 (PST)
+Date: Fri, 14 Feb 2014 22:12:40 +0800
+Message-ID: <CAPg65qhXj4b9VsK2eKd4VTpf3ghWMn603GWz_JFQX4C0HSPPww@mail.gmail.com>
+Subject: Why does Maven fail to compile my project occasionally?
+From: Levski Weng <levskiweng@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=089e01419fe219423504f25e6661
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01419fe219423504f25e6661
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello, I'm new to Maven. Currently I use Maven 3.1.1 to compile my project
+(using Jenkins). But occasionally, maven report error messages like the
+following:
+
+---- Begin of the console output ----
+...
+
+[INFO] Compiling 132 source files to C:\Program Files
+(x86)\Jenkins\jobs\CDMS-web-server\workspace\src\com.xxx.system\com.xxx.sys=
+tem.devicecenter\target\classes
+
+[INFO] -------------------------------------------------------------[ERROR]
+COMPILATION ERROR : [INFO]
+-------------------------------------------------------------[ERROR]
+\Program Files (x86)\Jenkins\jobs\CDMS-web-server\workspace\src\com.xxx.sys=
+tem\com.xxx.system.devicecenter\src\main\java\com\xxx\system\devicecenter\n=
+etwork\AgentIdResourceMapIpHandle.java:[36,24]
+=E6=89=BE=E4=B8=8D=E5=88=B0=E7=AC=A6=E5=8F=B7Symbol=EF=BC=9A Variable TYPE_=
+AGENT_ID
+Location=EF=BC=9A Class com.xxx.system.common.ResourceTypeDef[ERROR] \Progr=
+am
+Files (x86)\Jenkins\jobs\CDMS-web-server\workspace\src\com.xxx.system\com.x=
+xx.system.devicecenter\src\main\java\com\xxx\system\devicecenter\network\Ag=
+entUuidResourceMapIpHandle.java:[38,24]
+=E6=89=BE=E4=B8=8D=E5=88=B0=E7=AC=A6=E5=8F=B7Symbol=EF=BC=9A Variable TYPE_=
+AGENT_UUID
+Location=EF=BC=9A Class com.xxx.system.common.ResourceTypeDef[ERROR] \Progr=
+am
+Files (x86)\Jenkins\jobs\CDMS-web-server\workspace\src\com.xxx.system\com.x=
+xx.system.devicecenter\src\main\java\com\xxx\system\devicecenter\network\Ag=
+entIdAgentUpdateMapIpHandle.java:[32,24]
+=E6=89=BE=E4=B8=8D=E5=88=B0=E7=AC=A6=E5=8F=B7Symbol=EF=BC=9A Variable TYPE_=
+COMPUTER_ID_FOR_UPDATE
+Location=EF=BC=9A Class com.xxx.system.common.ResourceTypeDef
+[INFO] 3 errors
+[INFO] -------------------------------------------------------------
+...
+
+---- End of the console output ----
+
+However, when I build the Jenkins job again without any modification,
+maven builds the project successfully.
+My code is correct because I could successfully build the whole
+project in Eclipse again and again.
+
+I use the following Maven parameters:
+clean install -Dmaven.test.skip=3Dtrue --update-snapshots --batch-mode
+--fail-fast --debug
+
+I could reproduce the scenario by rebuild the project after deleting
+all the sub-folders and files in the maven local repository:
+
+.repository/com/xxx/
+
+I'm confused about this, and on internet, nobody seems to have the
+same problem.
+
+Any suggestions? Thanks in advanced.
+
+--
+
+Levski Weng
+
+
+
+
+
+--=20
+Levski Weng
+
+--089e01419fe219423504f25e6661--
+

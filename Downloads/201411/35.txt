@@ -1,0 +1,97 @@
+From users-return-137696-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Nov  4 04:52:39 2014
+Return-Path: <users-return-137696-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6025D175CF
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  4 Nov 2014 04:52:39 +0000 (UTC)
+Received: (qmail 28604 invoked by uid 500); 4 Nov 2014 04:52:37 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 28516 invoked by uid 500); 4 Nov 2014 04:52:37 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 28489 invoked by uid 99); 4 Nov 2014 04:52:36 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 04 Nov 2014 04:52:36 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 04 Nov 2014 04:52:32 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 816136A657F
+	for <users@maven.apache.org>; Mon,  3 Nov 2014 23:50:39 -0500 (EST)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 6GqdANU2Lls5 for <users@maven.apache.org>;
+	Mon,  3 Nov 2014 23:50:39 -0500 (EST)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 4A9146A657E
+	for <users@maven.apache.org>; Mon,  3 Nov 2014 23:50:39 -0500 (EST)
+Message-ID: <54585B18.9050504@artifact-software.com>
+Date: Mon, 03 Nov 2014 23:50:32 -0500
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: rwheeler@artifact-software.com
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: explicit dependencies in maven
+References: <CACGLCJY7QXLj8BU08uSAYQfaejsNoO-1YNUJnh6=ANv98fdZYA@mail.gmail.com>
+In-Reply-To: <CACGLCJY7QXLj8BU08uSAYQfaejsNoO-1YNUJnh6=ANv98fdZYA@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Have you scanned the Maven books referenced on the Maven web site? Best 
+starting place.
+
+With a repository (Nexus), people are prevented from deploying the same 
+version twice so you are guaranteed that if you build with version 
+2.3.15 of ourNiceUtility, you will always get the same code. The repo 
+will simply not allow them to overwrite version 2.3.15 once it is 
+deployed into the wild(public).
+
+Beats firing developers but stops them from doing silly things.
+
+
+On 03/11/2014 11:33 PM, Irfan Sayed wrote:
+> hello,
+>
+> is there any good doc/blog which describes the handling of explicit
+> declaration of dependencies.
+> when we build the code, we use certain dependencies , how we can make sure
+> that when we reproduce the same build after the gap of 6 months , same and
+> exact dependencies will be used. ???
+> i know we can have artifactory/nexus , but that does not guarantee the
+> exact version of dependency when developer changes the code and make it
+> public keeping the version same
+>
+> please suggest
+>
+> regards
+>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

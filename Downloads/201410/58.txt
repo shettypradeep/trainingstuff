@@ -1,0 +1,80 @@
+From users-return-137649-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Oct 29 11:29:11 2014
+Return-Path: <users-return-137649-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 66E18174D3
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 29 Oct 2014 11:29:11 +0000 (UTC)
+Received: (qmail 44960 invoked by uid 500); 29 Oct 2014 11:29:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 44871 invoked by uid 500); 29 Oct 2014 11:29:09 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 44851 invoked by uid 99); 29 Oct 2014 11:29:09 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Oct 2014 11:29:09 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of james.mk.green@gmail.com designates 209.85.214.179 as permitted sender)
+Received: from [209.85.214.179] (HELO mail-ob0-f179.google.com) (209.85.214.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Oct 2014 11:28:43 +0000
+Received: by mail-ob0-f179.google.com with SMTP id m8so2174231obr.38
+        for <users@maven.apache.org>; Wed, 29 Oct 2014 04:28:41 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=qikTVWcfiPfIHA8wIc77SNLam/yURIW5KOmWeToHcO8=;
+        b=nAEOvvt5yF2VOOrRGeOEuNuSlOm7nk0iuGIKag8kmctnOcq7W7+9bLHcid+5AJ5HvJ
+         y9z2REsKm0bOK1YN6cu24VYp6KNTgbl7PEyqcLWhIX2/rOEn5fyMG3K/MohKXcCmf+to
+         OUME4alyXhgt/xdFfzZwmkK9NY04XGO7CyQ+GsbVgZZlDhLsQY4HiLquVSgCo348BpsE
+         W4SF7hysvYC0VpbvZm5J22G1U+FTz5dKiiXOIhh8iPcMtbRlkTZWXV9+qqe3tp6CVKtx
+         pH3ER+IzA4oGt5gKV6OO5gAOtcOvDN3FHg6AB4sgP0kZuhuD0N9Hb4xUuhQlVCCsz9EQ
+         HM3A==
+MIME-Version: 1.0
+X-Received: by 10.60.117.230 with SMTP id kh6mr993859oeb.66.1414582121723;
+ Wed, 29 Oct 2014 04:28:41 -0700 (PDT)
+Received: by 10.202.177.213 with HTTP; Wed, 29 Oct 2014 04:28:41 -0700 (PDT)
+Date: Wed, 29 Oct 2014 11:28:41 +0000
+Message-ID: <CAMH6+axLgZdwBKdhirt1-CmatZpGjkCPv7zk_LFQ0g0_u9nWrw@mail.gmail.com>
+Subject: Why does <reporting> exist?
+From: James Green <james.mk.green@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b41cb4cdefb4205068e1010
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b41cb4cdefb4205068e1010
+Content-Type: text/plain; charset=UTF-8
+
+According to:
+
+*
+http://maven.apache.org/plugins/maven-site-plugin/examples/configuring-reports.html
+* http://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html
+* http://mojo.codehaus.org/findbugs-maven-plugin/usage.html
+* http://maven.apache.org/plugins/maven-pmd-plugin/usage.html
+
+and possibly others, I need to add reporting plugins to the <reporting>
+element of my POM.
+
+When I do this and run mvn clean site, I see a lovely web site but none of
+the reports.
+
+If I instead take the plugins from the <reporting> and put them as plugins
+of the maven-site-plugin, they all burst to life. Indeed, I can remove the
+<reporting> element and nothing is apparently lost.
+
+So, can anyone explain what's happening?
+
+Thanks,
+
+James
+
+--047d7b41cb4cdefb4205068e1010--
+

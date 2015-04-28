@@ -1,0 +1,72 @@
+From users-return-137512-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Oct  9 18:54:20 2014
+Return-Path: <users-return-137512-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id ABC691798A
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  9 Oct 2014 18:54:20 +0000 (UTC)
+Received: (qmail 41197 invoked by uid 500); 9 Oct 2014 18:54:18 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 41107 invoked by uid 500); 9 Oct 2014 18:54:18 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 41095 invoked by uid 99); 9 Oct 2014 18:54:18 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Oct 2014 18:54:18 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (nike.apache.org: transitioning domain of laredotornado@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Oct 2014 18:53:52 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <laredotornado@gmail.com>)
+	id 1XcIqV-0004NK-Lu
+	for users@maven.apache.org; Thu, 09 Oct 2014 11:53:51 -0700
+Date: Thu, 9 Oct 2014 11:53:51 -0700 (PDT)
+From: laredotornado-3 <laredotornado@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1412880831672-5808317.post@n5.nabble.com>
+In-Reply-To: <CAHNdxuk4cO9iw0L5qEFei-6J8wNvQj2+cx5nJ976XON=tpuj2Q@mail.gmail.com>
+References: <1412793888704-5808128.post@n5.nabble.com> <m141i8$8q2$1@ger.gmane.org> <1412795469876-5808146.post@n5.nabble.com> <CAJZRQKz=jn+WgKe=zoNG4sshCy25uoYveg3kc6MbCZAW=okUNQ@mail.gmail.com> <1412866277383-5808264.post@n5.nabble.com> <CAJZRQKwNQ_bKHrycTDrbSB7aGTFemuyhTpNARinN+WpCkLK-mw@mail.gmail.com> <CAHNdxuk4cO9iw0L5qEFei-6J8wNvQj2+cx5nJ976XON=tpuj2Q@mail.gmail.com>
+Subject: Re: Why do running modules in parallel take longer to execute than
+ running them in sequence?
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Kristian,
+
+Your 'actually make the "argLine" command work' comment is killing me.  What
+are you talking about?  Everything I have read indicates that the correct
+way to set memory for surefire/failsafe plugins is to have this in the
+configuration -- "<argLine>-Xmx4096m</argLine>".
+
+Laird,
+
+Thanks for your blog post.  I'm actually trying to figure out an efficient
+way to run my two modules in parallel as opposed to the tests within each
+module.  You touch on that with regard to "forkCount" but I haven't yet
+figured out how "forkCount" relates across modules running in parallel.
+
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Why-do-running-modules-in-parallel-take-longer-to-execute-than-running-them-in-sequence-tp5808128p5808317.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

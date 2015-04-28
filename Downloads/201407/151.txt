@@ -1,0 +1,123 @@
+From users-return-136774-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Jul 12 18:06:53 2014
+Return-Path: <users-return-136774-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7646811E23
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 12 Jul 2014 18:06:53 +0000 (UTC)
+Received: (qmail 23674 invoked by uid 500); 12 Jul 2014 18:06:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 23609 invoked by uid 500); 12 Jul 2014 18:06:51 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 23597 invoked by uid 99); 12 Jul 2014 18:06:51 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 12 Jul 2014 18:06:51 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.217.180 as permitted sender)
+Received: from [209.85.217.180] (HELO mail-lb0-f180.google.com) (209.85.217.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 12 Jul 2014 18:06:47 +0000
+Received: by mail-lb0-f180.google.com with SMTP id w7so1748152lbi.25
+        for <users@maven.apache.org>; Sat, 12 Jul 2014 11:06:22 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=mv6ekAM60oyGrKlYRyrq4uP4SpQlJX3m7lEvPoGJa6w=;
+        b=Tg0LGJfkvTnfR82upLe9k5lqM/lbRC+wcAqH5R5b9SYWvqcaVEZ4jFtNMNoxssg7WO
+         jNg1yepPPlfY5qyIuhl51bxKl1DkQiVPDkLMAosKX/2MOFMt8kW4NGovPoehYYQ4n3pj
+         SIatVdXbZnlRwy4jyWB+8TWNkMSCzySozc9ZiYHkSr3hs8PEQriNxgFltCYtA1UVFaeq
+         Ickd9hseGZpSTwnCQpFur89Smu/7a+Y1aigQMcMeJLI3QsyEFe+SDS4GXz7FILef+yyM
+         y8CnNqjYDUX6AVJoGzTmOY5Q5gthPMzH0eEAg5gHi0b2EkUGe08kWWs2mhV/ufX67mUV
+         4zpg==
+MIME-Version: 1.0
+X-Received: by 10.112.164.146 with SMTP id yq18mr5331016lbb.5.1405188382588;
+ Sat, 12 Jul 2014 11:06:22 -0700 (PDT)
+Received: by 10.114.122.194 with HTTP; Sat, 12 Jul 2014 11:06:22 -0700 (PDT)
+In-Reply-To: <CAPCjjnHveboAYm4KKcsDLSE3HYZro8Yti4ZXZ0dYzmp5=+w9xA@mail.gmail.com>
+References: <CAPCjjnHveboAYm4KKcsDLSE3HYZro8Yti4ZXZ0dYzmp5=+w9xA@mail.gmail.com>
+Date: Sat, 12 Jul 2014 11:06:22 -0700
+Message-ID: <CAPCjjnHEHvztUAUUeqF=W78d2qjsjBkKZPdo35X4cSj2ny4uaw@mail.gmail.com>
+Subject: Re: Generate A Maven artifact's dependencies and licenses ( how to
+ instantiate a MavenProject using a giving artifact coordinate)
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1133bd186307fc04fe02ea82
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1133bd186307fc04fe02ea82
+Content-Type: text/plain; charset=UTF-8
+
+I found a solution for this is to start up with my existing MavenProject
+which is very much empty since it is run under standalone command line,
+push the interested artifact into the MavenProject as a dependency
+artifact, after that I can use it with MavenDependencyGraphBuilder
+
+-Dan
+
+
+On Fri, Jul 11, 2014 at 9:55 PM, Dan Tran <dantran@gmail.com> wrote:
+
+>
+> Hello,
+>
+> I have a need to create an spreadsheet ( for legal purpose) containing a
+> Maven artifact, base on a given coordinate,  and all of its transitive
+> dependencies and associated license info
+>
+> There are 2 plugins having this kind of requirements:
+> maven-project-info-report-plugin and license-maven-plugin, both of these
+> projects  have a maven project to work with. ( ie MavenProject )
+>
+> For my case,  I need to  instantiate MavenProject from the provided
+> artifact using ProjectBuilder component, but this gives all kind of problem
+> from stack overflow to NPE
+>
+> here is code
+>
+>     private MavenProject getMavenProjectFromArtifact( Artifact artifact )
+>         throws ProjectBuildingException
+>     {
+>         ProjectBuildingRequest request = new
+> DefaultProjectBuildingRequest();
+>         request.setLocalRepository( localRepository );
+>         request.setPluginArtifactRepositories( pluginArtifactRepositories
+> );
+>         request.setRemoteRepositories( remoteRepositories );
+>         request.setResolveDependencies( true );
+>         request.setResolveVersionRanges( true );
+>
+>
+>         ProjectBuildingResult result = projectBuilder.build( artifact,
+> request );
+>
+>         return result.getProject();
+>     }
+>
+>
+> Am I using the right builder?
+>
+>
+> Any advice to get this working is very much appreciated.
+>
+>
+> Thanks
+>
+> -Dan
+>
+>
+>
+>
+>
+>
+
+--001a1133bd186307fc04fe02ea82--
+

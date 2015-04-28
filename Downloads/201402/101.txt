@@ -1,0 +1,183 @@
+From users-return-135612-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 26 14:43:57 2014
+Return-Path: <users-return-135612-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A008310564
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Feb 2014 14:43:57 +0000 (UTC)
+Received: (qmail 93480 invoked by uid 500); 26 Feb 2014 14:43:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 93339 invoked by uid 500); 26 Feb 2014 14:43:51 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 93327 invoked by uid 99); 26 Feb 2014 14:43:50 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Feb 2014 14:43:50 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bimargulies@gmail.com designates 209.85.216.172 as permitted sender)
+Received: from [209.85.216.172] (HELO mail-qc0-f172.google.com) (209.85.216.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Feb 2014 14:43:46 +0000
+Received: by mail-qc0-f172.google.com with SMTP id w7so1446813qcr.31
+        for <users@maven.apache.org>; Wed, 26 Feb 2014 06:43:26 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type:content-transfer-encoding;
+        bh=J+KY3rfVyL1gE4Iw7q5aYJhkgY0QYfkt8VYiC+EyD5M=;
+        b=MS3PXyY9h2ZIsNY2BhmOZqJsj/G0uM5PJkuzLPbugL4Uc29+0jPb4ynxvxU09McoQQ
+         NFNlw3u4xMxQ0rjBW4xqrkVesqQwKbv56qTmVwpPrRyZJPrcd7SW8hCz79FbPTSs0H3p
+         Wf5maBFdtgN0f06f1/ZlSWVHdU16g6UjHYURUwjJBh4M6sDjifNJyL84AeBEusK/8Zzm
+         Vn1snIqaMs4fEIKln4ds/X27Cmu4hdS3uCGg3s2AGInLkyO1RmKSEMOh4cu+mpYlrucp
+         8bqyrLlUN0QJ/unf5kn/xRqPJPSX2S3+YtOzfNJAj2nTshdtpc02DHm2TdirpoVS6Va9
+         ebsg==
+MIME-Version: 1.0
+X-Received: by 10.224.114.141 with SMTP id e13mr8200166qaq.65.1393425805329;
+ Wed, 26 Feb 2014 06:43:25 -0800 (PST)
+Received: by 10.140.84.138 with HTTP; Wed, 26 Feb 2014 06:43:25 -0800 (PST)
+In-Reply-To: <5629A6219DB3E544AB84388D90149787479C9535@xmb-aln-x03.cisco.com>
+References: <530C66D6.2010602@pocock.com.au>
+	<CALhtWkdAmrk07gcM+kdyDTbd7TuiAGutTbw=O_3jPmTz30=R4g@mail.gmail.com>
+	<5629A6219DB3E544AB84388D90149787479C9535@xmb-aln-x03.cisco.com>
+Date: Wed, 26 Feb 2014 09:43:25 -0500
+Message-ID: <CALhtWkf9XQ9UpW-8Ez2peJtnXwXu+4Xy1eMHYXjGMka7kU0bjw@mail.gmail.com>
+Subject: Re: Google Summer of Code - Java opportunity, mentors needed
+From: Benson Margulies <bimargulies@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On Wed, Feb 26, 2014 at 9:16 AM, James Nord (jnord) <jnord@cisco.com> wrote=
+:
+> Nowhere in that was the sources jar mentioned - yet you seemed to have ju=
+mped directly to a solution and then said can=E2=80=99t be done.
+
+No, I discussed the two paths from the POM: -sources and <scm/>
+
+>
+> There is a critical need for this inside businesses as well as Debian (ho=
+w do we know that "org.foobar:baz:1.2.3:jar" is MIT as it claims and doesn=
+=E2=80=99t contain some GPL Code.
+
+Which is a fine reason to contribute it Maven 4 where the POM could
+contain the necessary metadata to enable it.
+
+> This would not to be to rebuild everything (alla JBoss of old) - but to v=
+alidate that what is being used is infact what we think it is.
+> This reasons for this are (not limited to)
+>  1) make sure the code is not tainted and its licence is what it purports=
+ to be.
+>  2) should the licence allow and the need arise you can have a reasonable=
+ chance of getting to that source and being able to patch it.
+>
+> The end system could use the POM as a starting point to identify a projec=
+t and source (not -sources.jar but svn/git repo...), and as such could cont=
+ribute this to a database, that can be augmented/checked by a human and con=
+sumed by other tools.
+>
+> Right now for example if you looked at some artifacts on Central you woul=
+d find stuff without any sources, or any indication from the POM.  Whilst t=
+he automatic tooling would not help here - the fact that this would likely =
+need a lookup in a db means at least someone could then record that GAV X i=
+s (or appears to be from) from source repo Y at version Z.
+>
+> /James
+>
+>
+>> -----Original Message-----
+>> From: Benson Margulies [mailto:bimargulies@gmail.com]
+>> Sent: 26 February 2014 13:20
+>> To: Maven Users List
+>> Subject: Re: Google Summer of Code - Java opportunity, mentors needed
+>>
+>> I don't believe that this is a viable scheme.
+>>
+>> Maven source artifacts are not generally buildable, but are aimed at IDE=
+s for
+>> debugging visibility. You can't trust the SVM info, and you don't know w=
+hat -
+>> P/-D options were used to make the binary. We would need a new train of
+>> metadata. This will only lead to more of the horrible pattern of distro =
+people
+>> mis-building Maven and Maven artifacts, leading to confused users and bu=
+g
+>> reports when they expect these things to work right. Maven was not
+>> designed to facilitate the Debian pattern. If someone wants to move in t=
+hat
+>> direction, they should join the dev community, watch for work on Maven 4=
+,
+>> and advocate (and volunteer to code) solutions to provide the right
+>> metadata to do this. Thowing an inexperienced student into trying to do =
+this
+>> with Maven 3 in a summer is a recipe for failure.
+>>
+>> On Tue, Feb 25, 2014 at 4:48 AM, Daniel Pocock <daniel@pocock.com.au>
+>> wrote:
+>> >
+>> >
+>> > Hi,
+>> >
+>> > I recently published an idea for discovering the source code of Java
+>> > projects (e.g. by exploring meta data from pom.xml) and trying to
+>> > automatically and recursively build dependencies (including plugins)
+>> > from source
+>> >
+>> >
+>> https://wiki.debian.org/SummerOfCode2014/Projects#SummerOfCode2014.
+>> 2FP
+>> >
+>> rojects.2FRecursively_building_Java_dependencies_from_source.Recursive
+>> > ly_building_Java_dependencies_from_source
+>> >
+>> > This would satisfy various objectives, for example:
+>> >
+>> > - automated construction of Debian/Ubuntu/RPM packages
+>> > - ensuring that non-free components don't creep into the dependency
+>> > tree of projects that aim to be published under a free license
+>> > - ensuring that 100% of dependency code can be passed through code
+>> > quality/security scanning tools (this is a common requirement for
+>> > larger corporations when evaluating whether to use a free software
+>> > project)
+>> >
+>> > I have some plans for how this project could be broken down into
+>> > achievable tasks for a GSoC student but to go ahead it would need at
+>> > least one additional mentor, mainly because Google has accepted the
+>> > Ganglia organisation this year and I am one of the admins for Ganglia.
+>> > The project has been proposed under Debian (mainly as a way of
+>> > enabling the creation of more Debian packages) but it could also be
+>> > completed under another organisation.  Please feel free to email me
+>> > privately if you may be interested.
+>> >
+>> > Regards,
+>> >
+>> > Daniel
+>> >
+>> >
+>> >
+>> > ---------------------------------------------------------------------
+>> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> > For additional commands, e-mail: users-help@maven.apache.org
+>> >
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

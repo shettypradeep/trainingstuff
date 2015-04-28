@@ -1,0 +1,70 @@
+From users-return-135475-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb 14 06:48:48 2014
+Return-Path: <users-return-135475-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E3E8F10A46
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 14 Feb 2014 06:48:47 +0000 (UTC)
+Received: (qmail 29889 invoked by uid 500); 14 Feb 2014 06:48:44 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 29816 invoked by uid 500); 14 Feb 2014 06:48:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 29808 invoked by uid 99); 14 Feb 2014 06:48:42 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 06:48:42 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of waynefay@gmail.com designates 209.85.160.42 as permitted sender)
+Received: from [209.85.160.42] (HELO mail-pb0-f42.google.com) (209.85.160.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 06:48:36 +0000
+Received: by mail-pb0-f42.google.com with SMTP id jt11so11926903pbb.15
+        for <users@maven.apache.org>; Thu, 13 Feb 2014 22:48:16 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=egeBKXKAVu+QkX3hPvvjPFXbjifo3AUzI1ivz/w0nP0=;
+        b=N8u2AF+RNxnRWf0zRH0lEzPt4gRL8eUkJRdOldNOSBQ4+LRz+lQbgrkgf6jGADkhw0
+         nRtq8I+/Wquug6UZw2AOKK++UhjYxXr0dXfXlSzAjihy4xwK+eI++z+cJKvSFemRHto6
+         ZGqVTUA1BdAB24SUVjMWjs+6wpy1nWRJxpYEIyncLhxwe/X+rh/5THQSGH+HnopP4vu3
+         ngcp2+sgYiZoh2EcmeJHWhXd1bQ5vs60kkaMcRRKgAZ+PHeCOq/eC5jDiQPXMtt6m/5F
+         h7djLzC22ISValgBVgaP8FmiysC/nbbJcfywEEOCO9KU0fvBS4F5fB9SC5CM+vionPcL
+         P2xA==
+X-Received: by 10.66.218.234 with SMTP id pj10mr7047769pac.156.1392360496244;
+ Thu, 13 Feb 2014 22:48:16 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Thu, 13 Feb 2014 22:47:56 -0800 (PST)
+In-Reply-To: <1392295782954-5784478.post@n5.nabble.com>
+References: <1392295782954-5784478.post@n5.nabble.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Fri, 14 Feb 2014 00:47:56 -0600
+Message-ID: <CALy+7Unwhm=ZONVayr0zhJk6G3znFTzTiKEU-gui1VFpBjEq_w@mail.gmail.com>
+Subject: Re: How to minimize quantity of profiles in pom.xml file
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> I have a lot of profiles in my module pom. The difference between them is
+> only target URL.
+>
+> Is there any possibility to make one profile with parameters which will be
+> taken from file or any other solution to make one profile instead of many.
+
+Tell us more about what you are building. Why do you need to vary the
+"target URL" as you mention?
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

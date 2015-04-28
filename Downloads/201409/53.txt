@@ -1,0 +1,227 @@
+From users-return-137219-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Sep  9 15:53:24 2014
+Return-Path: <users-return-137219-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B86321190A
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  9 Sep 2014 15:53:24 +0000 (UTC)
+Received: (qmail 38010 invoked by uid 500); 9 Sep 2014 15:53:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 37915 invoked by uid 500); 9 Sep 2014 15:53:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 37899 invoked by uid 99); 9 Sep 2014 15:53:22 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Sep 2014 15:53:22 +0000
+X-ASF-Spam-Status: No, hits=-5.0 required=5.0
+	tests=RCVD_IN_DNSWL_HI,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of John.E.Gregg@wellsfargo.com designates 167.138.239.99 as permitted sender)
+Received: from [167.138.239.99] (HELO mxdcmx02e.wellsfargo.com) (167.138.239.99)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Sep 2014 15:52:55 +0000
+Received: from mxidlv02.wellsfargo.com (mxidlv02.wellsfargo.com [162.101.146.198])
+	by mxdcmx02e.wellsfargo.com (Sentrion-MTA-4.3.1/Sentrion-MTA-4.3.1) with ESMTP id s89Fqg9W014399
+	for <users@maven.apache.org>; Tue, 9 Sep 2014 15:52:51 GMT
+Received: from mxidlv03.wellsfargo.com (mxidlv03.wellsfargo.com [162.101.146.199])
+	by mxidlv02.wellsfargo.com (postmaster@wellsfargo.com) with SMTP id BF.A0.05315.3522F045; Tue,  9 Sep 2014 15:52:51 +0000 (GMT)
+X-AuditID: a26592c6-f79a86d0000014c3-c9-540f2253398f
+Received: from mxicmx01.wellsfargo.com (mxicmx01.wellsfargo.com [162.102.137.58])
+	by mxidlv03.wellsfargo.com (postmaster@wellsfargo.com) with SMTP id 30.FC.26060.3522F045; Tue,  9 Sep 2014 15:52:51 +0000 (GMT)
+Received: from MSGEXSV27121.ent.wfb.bank.corp (msgexsv27121.wellsfargo.com [162.101.144.46])
+	by mxicmx01.wellsfargo.com (Sentrion-MTA-4.3.1/Sentrion-MTA-4.3.1) with ESMTP id s89FqnPj012995
+	for <users@maven.apache.org>; Tue, 9 Sep 2014 15:52:50 GMT
+Received: from MSGEXSV24110.ent.wfb.bank.corp (162.101.230.51) by
+ MSGEXSV27121.ent.wfb.bank.corp (162.101.144.46) with Microsoft SMTP Server
+ (TLS) id 14.3.174.1; Tue, 9 Sep 2014 10:52:49 -0500
+Received: from MSGEXSV21109.ent.wfb.bank.corp ([169.254.1.197]) by
+ MSGEXSV24110.ent.wfb.bank.corp ([162.101.230.51]) with mapi id
+ 14.03.0174.001; Tue, 9 Sep 2014 10:52:49 -0500
+From: <John.E.Gregg@wellsfargo.com>
+To: <users@maven.apache.org>
+Subject: RE: nonProxyHosts not working
+Thread-Topic: nonProxyHosts not working
+Thread-Index: Ac/Li4toAiK54facRyyXYSZWvv873wAe4iiAAAqgIDAADzFvgAAKGliQ
+Date: Tue, 9 Sep 2014 15:52:47 +0000
+Message-ID: <B63D10721FE7744A8FC526A4D9DC3E1E4C4F5159@MSGEXSV21109.ent.wfb.bank.corp>
+References: <B63D10721FE7744A8FC526A4D9DC3E1E4C4F35E1@MSGEXSV21109.ent.wfb.bank.corp>,<CAPoyBqSAS5Q=JBp6S+9SmKWiGM1-rqgjCeMT9=nNpBZoxyZ01g@mail.gmail.com>,<B63D10721FE7744A8FC526A4D9DC3E1E4C4F4F15@MSGEXSV21109.ent.wfb.bank.corp>
+ <BLU172-W254ED235B49DB9C8669CD5AECE0@phx.gbl>
+In-Reply-To: <BLU172-W254ED235B49DB9C8669CD5AECE0@phx.gbl>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [10.91.43.158]
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFrrLIsWRmVeSWpSXmKPExsWyKK3zrG6wEn+IQe9EXYtHW68zOjB6tD8V
+	CmCMUrRJSc3JLEst0rezSaosSCwu1k1OU0jMybFVKikqTVXSt0tQzPi7hqPgiVzFzLmlDYyH
+	JLoYOTkkBEwkrm7rZ4OwxSQu3FsPZHNxCAlcYZR49PE4K0zR/EcXGEFsIYHLjBKLz8VAFP1m
+	lOjef48JwjnCKPH/3yRmCGcLo8S1s8eBWjg42ASUJZ4uDQfpFhGQkTj1bTY7SFhYQE2ibV8u
+	RFhd4vD3fYwQtpvE7S9tLCA2i4CKxKknX8DivAKhEj0ze1khjpjCJLH6F9hITgErib2Hf7KD
+	2IxAH3w/tYYJxGYWEJe49WQ+E8QDAhJL9pxnhrBFJV4+/gf1mILEjCtXmSHqdSQW7P7EBmFr
+	Syxb+JoZYq+gxMmZT1hA3pIQWMQu8evRPxZYcC3fPYUdwpaUOLjiBssERplZSHbPQjJ3FpK5
+	s5DMXcDIsopRPLciMyWnzMBIrzw1J6c4LbEoPV8vOT93EyMo1lMnHdvBuGiJ8yFGAQ5GJR7e
+	GQn/goVYE8uKK3MPMZoCQ2kis5Rocj4woeSVxBuaGFgYW5qYGhmaWpooifNOXcgWIiSQnliS
+	mp2aWpBaFF9UmpNafIiRiYNTqoEx7FRebvQSkRfThJvNLMyDHfT47fu3FfJECmpY7pLcoam9
+	Ytv+b59FhM359gmrek1bI2fzZ4bitk9vp0ie7M7+HLb3d46S/26mRWtuOeQVJaR/f73PLf5u
+	n631v4OKnyYfuhedomLiMMVNPfXxuavvFfYv2DSnUaRDXiKS90yNesTstQ7Viv+VWIozEg21
+	mIuKEwEcr9ef8AIAAA==
+X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFjrEIsWRmVeSWpSXmKPExsWyKK3TSjdYiT/EoO+7oMWjrdcZHRg92p8K
+	BTBGudhkpCampBYppOYl56dk5qXbKnkG++taWJha6hoqKeQl5qbaKkXohrs56br4BOi6uLo5
+	hvqEKCmUJeaUAmUiXYOV9O0SXDL+ruEoeCJXMXNuaQPjIYkuRk4OCQETifmPLjBC2GISF+6t
+	ZwOxhQQuM0osPhfTxcgFZP9mlOjef48JwjnCKPH/3yRmCGcLo8S1s8eB2jk42ASUJZ4uDQfp
+	FhGQkTj1bTY7SFhYQE2ibV8uRFhd4vD3fYwQtpvE7S9tLCA2i4CKxKknX8DivAKhEj0ze1kh
+	jpjCJLH6F9hITgErib2Hf7KD2IxAh34/tYYJxGYWEJe49WQ+E8QDAhJL9pxnhrBFJV4+/scK
+	YStIzLhylRmiXkdiwe5PbBC2tsSyha+ZIfYKSpyc+YRlAqP4LCRjZyFpmYWkZRaSlgWMLKsY
+	xXMrMlNyygyM9cpTc3KK0xKL0vP1kvNzNzGCojZ10vEdjP8nOh9iFOBgVOLhnZHwL1iINbGs
+	uDL3EKMpMAAmMkuJJucDU0NeSbyhiYGFsaWFgbGZpbmRkjjv1IVsIUIC6YklqdmpqQWpRfFF
+	pTmpxYcYmTg4pRoYebj4KtY0TcidGbFWoHfjijtaAjZ3InrfJ/oevPEjuMFeNuOcXsRxh/je
+	U6vsOTgUjQq73pw5xHPegNm4287pkVfuY2a++2s39IqJ350WtuLa5VvPv3dX/bm96XfPgn82
+	qsEioastb4lXbzA09Cm+nL7jc8mcbou7EmkbbKxWZE9K38iZ8CdRiaU4I9FQi7moOBEAHI+8
+	6NUCAAA=
+X-WFB-DLP-DEFAULT: YES
+X-CFilter-Loop: Reflected
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+https://issues.apache.org/jira/browse/MTOMCAT-278
+
+I didn't realize I could create a jira myself.
+
+It's not a blocker for me personally.  I'm not using this version in produc=
+tion yet.  I just use it for side projects.
+
+Thanks
+
+
+
+-----Original Message-----
+From: Martin Gainty [mailto:mgainty@hotmail.com]=20
+Sent: Tuesday, September 09, 2014 10:41 AM
+To: users@maven.apache.org
+Subject: RE: nonProxyHosts not working
+
+Assume you are not running NAT or any other host/port re-assignment this so=
+unds like a blocker.
+
+I did not see the nonProxyHosts listed in tomcat-maven-plugin JIRA?
+
+can you provide a URL for the JIRA/Bugzilla tomcat plugin bug and patch?
+
+
+Thanks,
+Martin=20
+                                                                           =
+                     =20
+
+
+ =20
+
+
+> From: John.E.Gregg@wellsfargo.com
+> To: users@maven.apache.org
+> Subject: RE: nonProxyHosts not working
+> Date: Tue, 9 Sep 2014 13:26:26 +0000
+>=20
+> Yes it was. I submitted a patch to the Tomcat Dev list last night.
+>=20
+> Thanks
+>=20
+> -----Original Message-----
+> From: Olivier Lamy [mailto:olamy@apache.org]=20
+> Sent: Monday, September 08, 2014 10:22 PM
+> To: Maven Users List
+> Subject: Re: nonProxyHosts not working
+>=20
+> sounds more a tomcat maven plugin rather than a maven issue.
+> Can you log an issue here: https://issues.apache.org/jira/browse/MTOMCAT
+>=20
+>=20
+> On 9 September 2014 03:56, <John.E.Gregg@wellsfargo.com> wrote:
+> > All,
+> >
+> > I've tried Maven 3.1.1 and 3.2.3 but can't get nonProxyHosts in setting=
+s.xml to work in some cases. I'm trying to deploy a war to Tomcat using the=
+ Tomcat Maven plugin version 2.3. It works fine if I set active=3Dfalse in =
+the proxy config.
+> >
+> > I think this works:
+> >
+> > <proxies>
+> > <proxy>
+> > <active>true</active>
+> > <protocol>http</protocol>
+> > <host>proxy.mycompany.com</host>
+> > <port>80</port>
+> > <nonProxyHosts>*.mycompany.com</nonProxyHosts>
+> > </proxy>
+> > </proxies>
+> >
+> > This does not:
+> >
+> > <proxies>
+> > <proxy>
+> > <active>true</active>
+> > <protocol>http</protocol>
+> > <host>proxy.mycompany.com</host>
+> > <port>80</port>
+> > <nonProxyHosts>localhost|*.mycompany.com</nonProxyHosts>
+> > </proxy>
+> > </proxies>
+> >
+> > Likewise, using just localhost, my machine name, and commas instead of =
+pipes doesn't work, either. The plugin tries to upload the war to my compan=
+y's proxy, which eventually responds with a 404 "The hostname "localhost" c=
+annot be found. Please check the URL you are trying to reach to verify that=
+ it is spelled correctly."
+> >
+> > This is in the log:
+> >
+> > [INFO] Deploying war to http://localhost:8080/coherence-extend-web
+> > Uploading: http://localhost:8080/manager/text/deploy?path=3D%2Fcoherenc=
+e-extend-web
+> > Uploaded: http://localhost:8080/manager/text/deploy?path=3D%2Fcoherence=
+-extend-web (8409 KB at 3024.7 KB/sec)
+> >
+> > [ERROR] Tomcat return http status error: 404, Reason Phrase: Not Found
+> >
+> > That looks correct except the error isn't quite right because Tomcat is=
+n't even being hit. I get the same error if Tomcat isn't running. It's the =
+proxy server that is returning the error.
+> >
+> > I know everything else is correct because if I set active=3Dfalse, the =
+deploy succeeds.
+> >
+> > Thanks
+> >
+> > John
+> >
+>=20
+>=20
+>=20
+> --=20
+> Olivier Lamy
+> Ecetera: http://ecetera.com.au
+> http://twitter.com/olamy | http://linkedin.com/in/olamy
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>=20
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+ 		 	   		 =20
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

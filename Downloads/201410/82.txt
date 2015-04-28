@@ -1,0 +1,85 @@
+From users-return-137516-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Oct 10 01:42:08 2014
+Return-Path: <users-return-137516-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 298D017A98
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 10 Oct 2014 01:42:08 +0000 (UTC)
+Received: (qmail 71130 invoked by uid 500); 10 Oct 2014 01:42:05 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 71051 invoked by uid 500); 10 Oct 2014 01:42:05 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 70995 invoked by uid 99); 10 Oct 2014 01:42:05 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 10 Oct 2014 01:42:05 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.217.178 as permitted sender)
+Received: from [209.85.217.178] (HELO mail-lb0-f178.google.com) (209.85.217.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 10 Oct 2014 01:41:39 +0000
+Received: by mail-lb0-f178.google.com with SMTP id w7so2208278lbi.23
+        for <users@maven.apache.org>; Thu, 09 Oct 2014 18:41:39 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=oWYUxiqpVNN46u/95nabV0STzVRpBOkFmqEbBVCmC7o=;
+        b=DZoBZq+pfOIKtuKOHmNk0l36tTBr1wzFx97ttkHbMEUcZGRlDV1HHKW5IJ8hBg8JnP
+         qlpvJgF+NpQDfnRNg89O/fVSS5S3w5LgoziXphQWxJCd3cinlK1Lv5/dCtqcfCa0yvoL
+         kT23L2hvtdRTR6FPaeAARhrdx+ar8qFJuCp5TtcHhO5HdFnXGYbzmZn560nfNE1N01q8
+         iv8O6Dok/RzwsuehgK8hecEg30U2BAj1zWqkBadlq+Rxf7PpUBIVqPz4WEbaoacqqMYb
+         fCRxCxRGo5CvAXz7r9LsVmt/0FQQbDi9WbARo8O02rBoSe1/TLy5l+tfeaIXpMo0ipTd
+         eNxA==
+MIME-Version: 1.0
+X-Received: by 10.112.218.6 with SMTP id pc6mr1003870lbc.35.1412905299117;
+ Thu, 09 Oct 2014 18:41:39 -0700 (PDT)
+Received: by 10.114.63.205 with HTTP; Thu, 9 Oct 2014 18:41:39 -0700 (PDT)
+Date: Thu, 9 Oct 2014 18:41:39 -0700
+Message-ID: <CAPCjjnFQ+7+=eqjWmY7WzVKCMJtsCQ+nkH4+sp56Qqw_U+XETQ@mail.gmail.com>
+Subject: Eclipse Luna and M2Extra
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c3c47a748de8050507a649
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c3c47a748de8050507a649
+Content-Type: text/plain; charset=UTF-8
+
+I am try to install m2extra with eclipse luna using
+http://ifedorenko.github.com/m2e-extras/
+
+Is it still a valid updatesite, I am running into dependency issue
+
+error is
+
+Installing com.ifedorenko.m2e.mavendev.feature.feature.group
+0.3.0.201410040035.
+Cannot complete the install because one or more required items could not be
+found.Installation failed.
+
+ Software being installed: Maven Development Tools 0.3.0.201410040035
+(com.ifedorenko.m2e.mavendev.feature.feature.group 0.3.0.201410040035)
+ Missing requirement: Maven Development Tools 0.3.0.201409160039
+(com.ifedorenko.m2e.mavendev 0.3.0.201409160039) requires 'bundle
+org.eclipse.m2e.workspace.cli 0.1.0' but it could not be found
+ Cannot satisfy dependency:
+  From: Maven Development Tools 0.3.0.201410040035
+(com.ifedorenko.m2e.mavendev.feature.feature.group 0.3.0.201410040035)
+  To: com.ifedorenko.m2e.mavendev [0.3.0.201409160039]
+
+
+Any help is very much appreciated
+
+
+
+-Dan
+
+--001a11c3c47a748de8050507a649--
+

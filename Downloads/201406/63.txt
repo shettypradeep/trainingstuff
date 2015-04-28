@@ -1,0 +1,62 @@
+From users-return-136664-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jun 27 00:18:35 2014
+Return-Path: <users-return-136664-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0D7AC119A4
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 27 Jun 2014 00:18:35 +0000 (UTC)
+Received: (qmail 39300 invoked by uid 500); 27 Jun 2014 00:18:33 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 39226 invoked by uid 500); 27 Jun 2014 00:18:33 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 57361 invoked by uid 99); 26 Jun 2014 11:04:33 -0000
+X-ASF-Spam-Status: No, hits=2.4 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of kvartal00@gmail.com designates 209.85.192.67 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=sBtsOqG/rk6UKwXVYomxzURCyT2FD30fssqD83Xbiig=;
+        b=lJn/Qgg7pD6wdJGT5k+AnehpEqSGTrLbQZjbpf1nGryo+n/H38tqb/r3yH8Spx9VkZ
+         cmHz+vlCNQ9ZT/dETLbxVjVxe41oYGlU4dqN/NEQzzIPWXwdoR9CaqrpgRTLOqHpMOwL
+         HmXhxM3u4T2WZeMAkTda6o3/52R629zI1AF2UHF3uT2ijX9lgAtUkD+ksTM9iQNVr3wa
+         CEErqdB/JnBWZdCTJYX0dOl4xtl7oX7mziO1DWPqKR9rGYUB6DGhDeqev4C/QSCfOZlF
+         wab2aSSBAwB+Hu0NugikBWmhm93UUvBDOIiMT4RElpX/JSvYciciS7YY9WW17gIm6LmL
+         HelQ==
+MIME-Version: 1.0
+X-Received: by 10.140.34.195 with SMTP id l61mr19618083qgl.87.1403780647806;
+ Thu, 26 Jun 2014 04:04:07 -0700 (PDT)
+Date: Thu, 26 Jun 2014 14:04:07 +0300
+Message-ID: <CABNWuUWTLP2sgHSXjFDqtxXrd1T8xgVXsiGQfH2sPUgSXhjixQ@mail.gmail.com>
+Subject: How to change snapshot artifacts timezone?
+From: =?UTF-8?Q?Aleksi_Gr=C3=B6nlund?= <kvartal00@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a11c044a4daeb4304fcbb263b
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c044a4daeb4304fcbb263b
+Content-Type: text/plain; charset=UTF-8
+
+I am using Maven version 3.0.4 and Nexus repository where to deploy Maven
+created snapshot artifacts. How I can change snapshots timestamp timezone
+from UTC to Europe/Helsinki ?
+
+I have tried to set timezone with following JAVA_OPTS and MAVEN_OPTS but
+those does not help with this issue. Any ideas?
+
+JAVA_OPTS=-Duser.timezone=Europe/Helsinki
+MAVEN_OPTS=-Duser.timezone=Europe/Helsinki
+
+Br,
+Kvartal00
+
+--001a11c044a4daeb4304fcbb263b--
+

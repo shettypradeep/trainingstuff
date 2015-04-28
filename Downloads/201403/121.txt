@@ -1,0 +1,111 @@
+From users-return-135835-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Mar 15 12:42:40 2014
+Return-Path: <users-return-135835-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id AA07D10CEB
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 15 Mar 2014 12:42:40 +0000 (UTC)
+Received: (qmail 8594 invoked by uid 500); 15 Mar 2014 12:42:36 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 8534 invoked by uid 500); 15 Mar 2014 12:42:35 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 8526 invoked by uid 99); 15 Mar 2014 12:42:35 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 15 Mar 2014 12:42:35 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of anders.g.hammar@gmail.com designates 74.125.82.42 as permitted sender)
+Received: from [74.125.82.42] (HELO mail-wg0-f42.google.com) (74.125.82.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 15 Mar 2014 12:42:31 +0000
+Received: by mail-wg0-f42.google.com with SMTP id y10so3038556wgg.1
+        for <users@maven.apache.org>; Sat, 15 Mar 2014 05:42:10 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=YwhFcLkSz2nIMzXjRjRU0dHBWIgEMR8VA57swalrb34=;
+        b=t58Fa5ZWpwiIPhpkLFjRts/82AJN5ZqqcUt0yF2H4C+c6IpEWzXh0zpPStFPy9lPau
+         iZX9o0huAaigO1u+NsDe8ENgPztk0oe1dMesLh+YLT42nwWzoKXopDTv2dQUsuqC1fh7
+         vZs+2ggzOPXDPUbvFWqjcCWLe710XYj/wbbhCRS14K5Lt1zuIebgXWqU6jWoSpidnPb7
+         9UcyInrW5I/7rJCLGy6u8PB8WUH9aEM9MS/XiJG94mlyyA7jsy6xDkIW8ghpA7KOafRA
+         SOiYdyaWh0okzsnD51tXhW1PJr6SwYarVSdU6deHSQuqhWIXVkciwzdQAqvB6mblhR3F
+         dY1A==
+MIME-Version: 1.0
+X-Received: by 10.180.97.72 with SMTP id dy8mr2300537wib.5.1394887329902; Sat,
+ 15 Mar 2014 05:42:09 -0700 (PDT)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.200.162 with HTTP; Sat, 15 Mar 2014 05:42:09 -0700 (PDT)
+In-Reply-To: <1394749754505-5788281.post@n5.nabble.com>
+References: <1394748612070-5788280.post@n5.nabble.com>
+	<1394749754505-5788281.post@n5.nabble.com>
+Date: Sat, 15 Mar 2014 13:42:09 +0100
+X-Google-Sender-Auth: 8c38xmrcKwPQKtb8brthM6kITH4
+Message-ID: <CAKDUN1t6Kr2Gq8mnftrntxLWS2kNKOhgb7ahcck+0hVyaztgkw@mail.gmail.com>
+Subject: Re: An API incompatibility was encountered while executing
+ org.codehaus.mojo:jaxb2-maven-plugin:1.6:xjc: java.lang.NoSuchMethodError:
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d04430670ccf6b304f4a4836a
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d04430670ccf6b304f4a4836a
+Content-Type: text/plain; charset=ISO-8859-1
+
+Could you try the recently release 1.6 version?
+If it also fails, please file an issue ticket [1] and provide a small
+project that can be used to reproduce the issue.
+
+/Anders
+
+[1] https://jira.codehaus.org/browse/MJAXB
+
+
+On Thu, Mar 13, 2014 at 11:29 PM, blipsman <b_lipsman@yahoo.com> wrote:
+
+> I found solution:
+> To eliminate problem, which was to enforce using  JAXB 2.1 ( which is
+> included in JAVA 6) , but not JAXB 2.2 I have added
+> to the parent POM:
+>
+> *<pluginManagement>
+>         <plugins>
+>             <plugin>
+>                 <groupId>org.codehaus.mojo</groupId>
+>                 <artifactId>jaxb2-maven-plugin</artifactId>
+>                 <version>1.5</version>
+>
+>             </plugin>
+>
+>         </plugins>
+>  </pluginManagement>*
+>
+> fixed the error in POM.xml
+>
+> Still had to use *<target>2.1</target>* to make sure the 2.1 JAXB is used
+> instead of JAXB 2.2
+>
+> Boris
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/An-API-incompatibility-was-encountered-while-executing-org-codehaus-mojo-jaxb2-maven-plugin-1-6-xjc--tp5788280p5788281.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--f46d04430670ccf6b304f4a4836a--
+

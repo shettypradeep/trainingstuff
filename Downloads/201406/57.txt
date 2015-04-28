@@ -1,0 +1,138 @@
+From users-return-136705-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Jun 29 13:17:10 2014
+Return-Path: <users-return-136705-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 62FE511A8A
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 29 Jun 2014 13:17:09 +0000 (UTC)
+Received: (qmail 74617 invoked by uid 500); 29 Jun 2014 13:17:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 74545 invoked by uid 500); 29 Jun 2014 13:17:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74534 invoked by uid 99); 29 Jun 2014 13:16:59 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 29 Jun 2014 13:16:59 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of gcjtmu-turbine-maven-user-846@m.gmane.org designates 80.91.229.3 as permitted sender)
+Received: from [80.91.229.3] (HELO plane.gmane.org) (80.91.229.3)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 29 Jun 2014 13:16:53 +0000
+Received: from list by plane.gmane.org with local (Exim 4.69)
+	(envelope-from <gcjtmu-turbine-maven-user-846@m.gmane.org>)
+	id 1X1Ey6-0004s5-GO
+	for users@maven.apache.org; Sun, 29 Jun 2014 15:16:30 +0200
+Received: from hsi-kbw-095-208-225-126.hsi5.kabel-badenwuerttemberg.de ([95.208.225.126])
+        by main.gmane.org with esmtp (Gmexim 0.1 (Debian))
+        id 1AlnuQ-0007hv-00
+        for <users@maven.apache.org>; Sun, 29 Jun 2014 15:16:30 +0200
+Received: from joerg.schaible by hsi-kbw-095-208-225-126.hsi5.kabel-badenwuerttemberg.de with local (Gmexim 0.1 (Debian))
+        id 1AlnuQ-0007hv-00
+        for <users@maven.apache.org>; Sun, 29 Jun 2014 15:16:30 +0200
+X-Injected-Via-Gmane: http://gmane.org/
+To: users@maven.apache.org
+From: =?UTF-8?B?SsO2cmc=?= Schaible <joerg.schaible@gmx.de>
+Subject: Re: AW: AW: Artifact with different sets of dependencies switched by profiles
+Date: Sun, 29 Jun 2014 15:16:18 +0200
+Lines: 76
+Message-ID: <lop3j3$tui$1@ger.gmane.org>
+References: <fa95de47ea5e47d195c63717af3b2d02@DBXPR05MB237.eurprd05.prod.outlook.com> <CA+nPnMxBQptj9OS+8FLjBoodbq-qgDzLVVxnKoYqqXgsRfx28w@mail.gmail.com> <a060f35add5844a8a5a166043cb65765@DBXPR05MB237.eurprd05.prod.outlook.com> <53AF701E.7080507@artifact-software.com> <272be8c3cbaa4f808acd0adb4ae9135d@DBXPR05MB237.eurprd05.prod.outlook.com>
+Reply-To: joerg.schaible@gmx.de
+Mime-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8Bit
+X-Complaints-To: usenet@ger.gmane.org
+X-Gmane-NNTP-Posting-Host: hsi-kbw-095-208-225-126.hsi5.kabel-badenwuerttemberg.de
+User-Agent: KNode/4.12.5
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Christoper,
+
+Christofer Dutz wrote:
+
+> Hi Ron,
+> 
+> I think you got what I'm trying to do a little wrong. It's not two
+> different set of dependencies, it's two different ways of linking the same
+> set of libraries. If I were to translate this into java, imagine that the
+> default way an application was built would be to include all Classes
+> needed by the application to be bundled in the application Jar (The
+> classes not needed aren't included). Now in modular applications I am able
+> to switch to something exactly the same as in Java ... no code is included
+> in the Application jar, but the referenced libraries are deployed in
+> parallel to the application jar, so the JVM can pull them in as needed (In
+> Flex this type is called rsl (runtime shared library).
+> 
+> So in principal I have the same set of dependencies, but in the
+> rsl-linking type these dependencies have an additional "scope=rsl"
+> setting. Up until now there was only one pom with the default set of
+> dependencies. If the users wanted to utilize rsl linking they would have
+> to manually add each dependency and set that's scope to rsl. I would like
+> to make it easier for users to switch.
+> 
+> So the profiles is bad, the pom with classifier doesn't work ... I would
+> really like to avoid to have something like an "flramework" artifact and
+> one "framework-rsl" for the rsl linking.
+
+What's the default value for the scope? "compile"? Then you can do all you 
+need with properties. You might use a profile, but it is not necessary:
+
+Declare your dependencies just like before (either in depMgmt or directly):
+
+============== %< =================
+ <dependency>
+   <groupId>org.apache.flex.framework</groupId>
+   <artifactId>spark</artifactId>
+   <version>4.12.1.20140427</version>
+   <type>swc</type>
+   <scope>${flexmojo.scope}</scope>
+ </dependency>
+ ...
+ <properties>
+   <flexmojo.scope>compile</flexmojo.scope>
+ </properties>
+============== %< =================
+
+Then you can simply redefine "flexmojo.scope" from command line. This will 
+also affect inherited dependencies, if they are declared in the same way in 
+the repository or if you delcare them in a common parent with a 
+dependencyManagement section. You might even overwrite the property in a 
+profile:
+
+============== %< =================
+ <profile>
+   <id>rsl</id>
+   <properties>
+     <flexmojo.scope>rsl</flexmojo.scope>
+   </properties>
+ <profile>
+============== %< =================
+
+Unfortunately, I don't know nothing about flexmojo. If it works like in the 
+world of C where I can use the same libraries (.lib files) to link an 
+application either static or dynamically (then requiring runtime libs as 
+well), then it is possible to do this. Therefore is is fine for an project 
+creating such an application at the end of a build chain.
+
+However, if the libraries differ if build with rsl or not, then you will 
+create a very bad user experience, because - just as Stephen already said - 
+the build process will use whatever it finds in the local repository, it 
+cannot separate between artifacts built with rsl or without. Your users 
+might get a wild mix during build time.
+
+Cheers,
+Jörg
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

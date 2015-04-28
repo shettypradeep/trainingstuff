@@ -1,0 +1,110 @@
+From users-return-137620-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Oct 22 21:06:50 2014
+Return-Path: <users-return-137620-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E7BE417E49
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 22 Oct 2014 21:06:50 +0000 (UTC)
+Received: (qmail 82990 invoked by uid 500); 22 Oct 2014 21:06:49 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 82901 invoked by uid 500); 22 Oct 2014 21:06:49 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 82872 invoked by uid 99); 22 Oct 2014 21:06:49 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 22 Oct 2014 21:06:49 +0000
+X-ASF-Spam-Status: No, hits=-0.1 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of wsorenson@hubspot.com designates 74.125.149.209 as permitted sender)
+Received: from [74.125.149.209] (HELO mail-ig0-f179.google.com) (74.125.149.209)
+    by apache.org (qpsmtpd/0.29) with SMTP; Wed, 22 Oct 2014 21:06:44 +0000
+Received: from mail-ig0-f179.google.com ([209.85.213.179]) (using TLSv1) by na3sys009aob113.postini.com ([74.125.148.12]) with SMTP
+	ID DSNKVEgcUBUQ7JzqQEsBjI/dnx5PGGUM3IMw@postini.com; Wed, 22 Oct 2014 14:06:24 PDT
+Received: by mail-ig0-f179.google.com with SMTP id h18so254375igc.0
+        for <users@maven.apache.org>; Wed, 22 Oct 2014 14:06:24 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:cc:content-type;
+        bh=qY/mBCqdso0JDoAJl0X+wECiA7CSFKj0GwADCQSO64s=;
+        b=D7W1bpYRiVPXTqtQ8Tdwu7//bgmI7ndC9TqKgxJP/OHwLKIMh56DxLzYVDFTjBHlK9
+         GbTW2h7vTFFjj1CF0sDBstyrUiNFtXH9MWX2Y+nhat/sJqp5KDQeGqWk2x+R6MSPHXpD
+         D7vkzL8zIV9hJRtR5COH5X1+86o8CUngMqzDHd04cvjr28WxjwDfzlE3qk4hWjD2Mot8
+         L6O7s8a9E8TccoMMCchUjflcvOSkJOjWK2euwajpmj7+uNzrK/PgVyJnxpxNtXyY/Xme
+         B5Hflpf3mxGw4tQtIH1NZzbVzG9vz7yCKeMS8/U0/AQP1361sR0UH2RaC01TLNHuF0QJ
+         2cLQ==
+X-Gm-Message-State: ALoCoQklgi0uHWnDKuhClveKkBoXTYCAZTsAr2XNuihhWm1O5qWOUBwTdKi202SwrRcCKbfjtjaqBFGOHgqjeHnBM/pgJuK3fPBYceyPN7vO+qHxSHBLlRcPcJwXuZ9FeDzA54q6nnJYfZWSuZwyKNIoPrOYJ+9p5w==
+X-Received: by 10.50.117.104 with SMTP id kd8mr8103480igb.3.1414011984184;
+        Wed, 22 Oct 2014 14:06:24 -0700 (PDT)
+MIME-Version: 1.0
+X-Received: by 10.50.117.104 with SMTP id kd8mr8103455igb.3.1414011983954;
+ Wed, 22 Oct 2014 14:06:23 -0700 (PDT)
+Received: by 10.107.50.200 with HTTP; Wed, 22 Oct 2014 14:06:23 -0700 (PDT)
+In-Reply-To: <CAJZRQKw9gjAqFLH6JSR29vMrY2FKf_zTtgOxWdGzVnK_HvUc1w@mail.gmail.com>
+References: <CAPbqGzgMJM1c0J8EeXXjSgwRJ7h4mO=VAHqS-V9dW6nO4K33Bw@mail.gmail.com>
+	<CAJZRQKw9gjAqFLH6JSR29vMrY2FKf_zTtgOxWdGzVnK_HvUc1w@mail.gmail.com>
+Date: Wed, 22 Oct 2014 17:06:23 -0400
+Message-ID: <CAPbqGzigacx9vd4TGf3KAE1YABbeX5ZxLpAvsrTyDcmdH9tO4g@mail.gmail.com>
+Subject: Re: Maven occasionally hangs within Surefire
+From: Whitney Sorenson <wsorenson@hubspot.com>
+To: Maven Users List <users@maven.apache.org>
+Cc: Thomas Petr <tpetr@hubspot.com>
+Content-Type: multipart/alternative; boundary=089e01184afe0344890506095202
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01184afe0344890506095202
+Content-Type: text/plain; charset=UTF-8
+
+Ah, here you go:
+
+https://gist.githubusercontent.com/tpetr/1bdd2cfd362f125b4f06/raw/04009f51815f64606c14e7dc87eac9a4259701be/other%20jstack
+
+On Wed, Oct 22, 2014 at 4:56 PM, Kristian Rosenvold <
+kristian.rosenvold@gmail.com> wrote:
+
+> It would be equally interesting to see the jstack of the *other* java
+> process at the same time, since these two processes communicate with
+> each other. It looks like the booted process is waiting for something
+> from the main java launcher...
+>
+> Kristian
+>
+>
+> 2014-10-22 22:43 GMT+02:00 Whitney Sorenson <wsorenson@hubspot.com>:
+> > I'm trying to fix a build issue where Maven hangs running tests. This
+> > happens about 30% of the time on our Travis builds.
+> >
+> > It never happens on our Jenkins cluster, but it happens occasionally on
+> > some of our local machines. We were able to capture a jstack and lsof
+> from
+> > the process after it hung.
+> >
+> > Any tips on how to debug? Relevant captured data is here:
+> >
+> > https://gist.github.com/tpetr/1bdd2cfd362f125b4f06
+> >
+> > I can't file an issue here [1] as I don't have an account.
+> >
+> > Thanks;
+> >
+> > -Whitney
+> >
+> > [1] -
+> >
+> http://jira.codehaus.org/browse/SUREFIRE#selectedTab=com.atlassian.jira.plugin.system.project%3Aissues-panel
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--089e01184afe0344890506095202--
+

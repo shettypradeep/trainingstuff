@@ -1,0 +1,86 @@
+From users-return-136779-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jul 15 15:08:43 2014
+Return-Path: <users-return-136779-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id AF3661183A
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 15 Jul 2014 15:08:43 +0000 (UTC)
+Received: (qmail 43704 invoked by uid 500); 15 Jul 2014 15:08:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 43623 invoked by uid 500); 15 Jul 2014 15:08:41 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 43610 invoked by uid 99); 15 Jul 2014 15:08:40 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Jul 2014 15:08:40 +0000
+X-ASF-Spam-Status: No, hits=0.7 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [212.82.97.59] (HELO nm27-vm8.bullet.mail.ir2.yahoo.com) (212.82.97.59)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Jul 2014 15:08:37 +0000
+Received: from [212.82.98.48] by nm27.bullet.mail.ir2.yahoo.com with NNFMP; 15 Jul 2014 15:08:13 -0000
+Received: from [212.82.98.117] by tm1.bullet.mail.ir2.yahoo.com with NNFMP; 15 Jul 2014 15:08:13 -0000
+Received: from [127.0.0.1] by omp1054.mail.ir2.yahoo.com with NNFMP; 15 Jul 2014 15:08:13 -0000
+X-Yahoo-Newman-Property: ymail-3
+X-Yahoo-Newman-Id: 116789.66205.bm@omp1054.mail.ir2.yahoo.com
+Received: (qmail 3607 invoked by uid 60001); 15 Jul 2014 15:08:13 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.fr; s=s1024; t=1405436893; bh=Wv+U/5ash1fRFBwpKhGTHkiqbW53R7mCJHtTy5yAF4o=; h=Message-ID:Date:From:Reply-To:Subject:To:MIME-Version:Content-Type:Content-Transfer-Encoding; b=sz7j2V0Ue96OAcSH8hy96hR7eyz79br3dek5uJZCpyO5WhnIdHNj76+8A5bD56B8fhqXjpQEUm7GDVZIxAqxQ3F/32m0Aa1wbRx+Rjr9VQvPoEGt+KxBIjHke/uSX3ZUcpIL2H+X1Ko5vpV43YB9vfBEO7aeHfpfiLuKlrQV8uc=
+X-YMail-OSG: .XdsRsgVM1lWf7eVmVbFz.NIka4EiwdtsRxm9mYHsQgs0UK
+ rrCsL5dQ9aUq2vNz.ILQ0bfao8CVzeBeEHDWXlHmU9qDQDJgefW3qi22EtLi
+ 7qo87z56DqGTCYX4s9oJkzrJSUj.gCjt2gcPeSJxitf5v7W.iOQ08I_RDzY4
+ QshdyM_eDIFon53trL7oGVciZIWcEd7gniXdw26q73Ggx_u8Rukn9UaetCAD
+ xbTpi9MC5iKzv0IoYqmf8jUl9av8olLz3NtH.Eso2fFFFuwbrp_g12GzN9jr
+ VSE4YFjZKLgly91vqboQBEYzjzpA95cWpJUHDy.ZLbeiGkzVVGSFzx.s.trT
+ 0NVp4B6GTgrukRrW1TbsPXBPy4kUbYu9pvVKk5O7P2fRTg2ZoEGMTbZ7qanV
+ GwtPtVhFlRYZpDKwwQGhQq.Fmvd5VEtUNXA6YywfIej2lXC.f5cnevMV9A2W
+ Ovg7puC2OSY3EC.uIn9P6_fTRsrNI9J9mjL8uYw7s5tl1XRhj7tAdglaf39K
+ vqBDrvkATb8P9TEMvW4ACuUP0iY1Vb0f4JNcg85bZ4tuu_cofYJew.udRHdh
+ XXzwfs8.P0n29jyw4LeYCGsva6FQmdAnjYVedvQTU_b5FAPaSELJF42s4zoT
+ fNm_YSF4hWvTB5weUSOj0meTEEDqX8tdtvVvlBKk-
+Received: from [88.173.253.228] by web173106.mail.ir2.yahoo.com via HTTP; Tue, 15 Jul 2014 16:08:12 BST
+X-Rocket-MIMEInfo: 002.001,SGksCgpUaGUgTW9qbyB0ZWFtIGlzIHBsZWFzZWQgdG8gYW5ub3VuY2UgdGhlIHJlbGVhc2Ugb2YgdGhlIFNvbmFyUXViZSBNYXZlbiBQbHVnaW4gdmVyc2lvbiAyLjQuIAoKVGhpcyBwbHVnaW4gYWltcyBhdCBydW5uaW5nIFNvbmFyUXViZSBhbmFseXNpcyBmb3IgTWF2ZW4gcHJvamVjdHMuCgpodHRwOi8vbW9qby5jb2RlaGF1cy5vcmcvc29uYXItbWF2ZW4tcGx1Z2luL2luZGV4Lmh0bWwKClRvIGdldCB0aGlzIHVwZGF0ZSwgc2ltcGx5IHNwZWNpZnkgdGhlIHZlcnNpb24gaW4geW91ciBwcm9qZWN0J3MgcGwBMAEBAQE-
+X-Mailer: YahooMailWebService/0.8.194.680
+Message-ID: <1405436892.43876.YahooMailNeo@web173106.mail.ir2.yahoo.com>
+Date: Tue, 15 Jul 2014 16:08:12 +0100
+From: Julien HENRY <henryju@yahoo.fr>
+Reply-To: Julien HENRY <henryju@yahoo.fr>
+Subject: [Announce] Release of SonarQube Maven Plugin 2.4
+To: "announce@mojo.codehaus.org" <announce@mojo.codehaus.org>,
+  "dev@mojo.codehaus.org" <dev@mojo.codehaus.org>,
+  "user@mojo.codehaus.org" <user@mojo.codehaus.org>,
+  "users@maven.apache.org" <users@maven.apache.org>,
+  "user@sonar.codehaus.org" <user@sonar.codehaus.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,=0A=0AThe Mojo team is pleased to announce the release of the SonarQube =
+Maven Plugin version 2.4. =0A=0AThis plugin aims at running SonarQube analy=
+sis for Maven projects.=0A=0Ahttp://mojo.codehaus.org/sonar-maven-plugin/in=
+dex.html=0A=0ATo get this update, simply specify the version in your projec=
+t's plugin configuration: =0A=0A<plugin>=0A=A0=A0=A0=A0=A0=A0=A0 <groupId>o=
+rg.codehaus.mojo</groupId>=0A=A0=A0=A0=A0=A0=A0=A0 <artifactId>sonar-maven-=
+plugin</artifactId>=0A=A0=A0=A0=A0=A0=A0=A0 <version>2.4</version>=0A</plug=
+in>=0A=0ARelease Notes=0A=0A=A0=A0=A0 * [MSONAR-70] - Use every available "=
+sonar.*" property when running an analysis with Maven=0A=A0=A0=A0=A0* [MSON=
+AR-75] - Remove unexisting entries from "sonar.sources" and "sonar.tests" o=
+n projects with packaging=3Dpom=0A=A0=A0=A0=A0* [MSONAR-81] - On "war" modu=
+les the directory containing the web resources ("src/main/webapp" by defaul=
+t) should be automatically added to "sonar.sources" =0A=A0=A0=A0=A0* [MSONA=
+R-82] - By default the "pom.xml" file should be part of "sonar.sources" =0A=
+=A0=A0=A0 * [MSONAR-83] - Populate sonar.libraries=0A=0AEnjoy,=0A=0AThe Moj=
+o team.=0A=0AJulien HENRY 
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

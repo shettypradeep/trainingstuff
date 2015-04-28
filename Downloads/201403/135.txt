@@ -1,0 +1,85 @@
+From users-return-135766-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Mar 11 16:47:25 2014
+Return-Path: <users-return-135766-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2064E10AEB
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 11 Mar 2014 16:47:25 +0000 (UTC)
+Received: (qmail 76598 invoked by uid 500); 11 Mar 2014 16:47:21 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 76387 invoked by uid 500); 11 Mar 2014 16:47:09 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 76368 invoked by uid 99); 11 Mar 2014 16:47:06 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 11 Mar 2014 16:47:06 +0000
+X-ASF-Spam-Status: No, hits=-5.0 required=5.0
+	tests=RCVD_IN_DNSWL_HI,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of richard.mauri@sap.com designates 155.56.66.97 as permitted sender)
+Received: from [155.56.66.97] (HELO smtpgw.sap-ag.de) (155.56.66.97)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 11 Mar 2014 16:47:00 +0000
+From: "Mauri, Richard" <richard.mauri@sap.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: maven won't resolve from central log4j:log4j:1.2.8 through
+ 1.2.15
+Thread-Topic: maven won't resolve from central log4j:log4j:1.2.8 through
+ 1.2.15
+Thread-Index: AQHPOkSj6FlH9DZ8P0mUCy5j0TRdE5rZ3NUAgABJWgCAAG4OAP//sjUAgACBKYCAASRwgA==
+Date: Tue, 11 Mar 2014 16:46:24 +0000
+Message-ID: <CF448BAD.1132%richard.mauri@sap.com>
+References: <CF3F698F.FEB%richard.mauri@sap.com>
+ <CALy+7UkrjBKRZYhYtHQEjePF_k9gQk_1OiQ73Fp1Z_mRTGm3EQ@mail.gmail.com>
+ <CAKDUN1vZq3etVMPG_D5n90w6a43Ksc0GC3pOfP8zedqj6Tm5XQ@mail.gmail.com>
+ <CALy+7UmP+e5r9P9_CwzNLXLtr0Uz9HYE=eJ7G7n7yN4yDPx3yw@mail.gmail.com>
+ <CF4329DB.10B4%richard.mauri@sap.com>
+ <CALy+7UnouTqZ5mUAXSEbFNr=i42mN05LyNfMTLkCN4SJsLu1oA@mail.gmail.com>
+In-Reply-To: <CALy+7UnouTqZ5mUAXSEbFNr=i42mN05LyNfMTLkCN4SJsLu1oA@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+user-agent: Microsoft-MacOutlook/14.3.9.131030
+x-originating-ip: [10.4.150.20]
+Content-Type: text/plain; charset="us-ascii"
+Content-ID: <2EA84CCC90A4A04689F9578222EFF597@exchange.sap.corp>
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Yes Wayne, I rm -rf ~/.m2/repository
+
+Your questioning implies my test case is not reproducible for you; really
+????
+
+On 3/10/14, 9:19 AM, "Wayne Fay" <waynefay@gmail.com> wrote:
+
+>> I am still having trouble.
+>> It certainly should be easy to reproducee no?
+>> It is a trivial settings.xml and pom.xml and mvn dependency:tree goal
+>
+>Have you used "mvn -U" lately?
+>Have you deleted ~/.m2/repository lately? I rarely do this myself, but
+>occasionally we hear this solves problems for some users. I might
+>suggest a slightly more surgical deletion of ~/.m2/repository/log4j
+>rather than the entire repo in this case.
+>
+>Wayne
+>
+>---------------------------------------------------------------------
+>To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>For additional commands, e-mail: users-help@maven.apache.org
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

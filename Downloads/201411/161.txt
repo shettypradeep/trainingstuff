@@ -1,0 +1,126 @@
+From users-return-137730-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Nov  8 19:37:56 2014
+Return-Path: <users-return-137730-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 200741758C
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  8 Nov 2014 19:37:56 +0000 (UTC)
+Received: (qmail 98294 invoked by uid 500); 8 Nov 2014 19:37:54 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 98211 invoked by uid 500); 8 Nov 2014 19:37:54 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 98199 invoked by uid 99); 8 Nov 2014 19:37:54 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 08 Nov 2014 19:37:54 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of khmarbaise@gmx.de designates 212.227.17.21 as permitted sender)
+Received: from [212.227.17.21] (HELO mout.gmx.net) (212.227.17.21)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 08 Nov 2014 19:37:49 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([217.247.52.51]) by mail.gmx.com
+ (mrgmx103) with ESMTPSA (Nemesis) id 0MfmZs-1XQ0dH39Hg-00NAZy; Sat, 08 Nov
+ 2014 20:37:27 +0100
+Message-ID: <545E70F8.3040209@gmx.de>
+Date: Sat, 08 Nov 2014 20:37:28 +0100
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:31.0) Gecko/20100101 Thunderbird/31.2.0
+MIME-Version: 1.0
+To: Kevin Burton <burton@spinn3r.com>, 
+ Maven Users List <users@maven.apache.org>
+Subject: Re: fetching a tar.gz URL / dependency via HTTP during a build?
+References: <CAAZU44=T0JtOGSjdBXTbKCDk8P_R68nthLY+7bXJXRDqvAWjEQ@mail.gmail.com> <545E6845.1090607@gmx.de> <CAAZU44mdCzSDX69HoabnxCZ=6vss53K_GR1qhpd-oEK_ust8Zg@mail.gmail.com>
+In-Reply-To: <CAAZU44mdCzSDX69HoabnxCZ=6vss53K_GR1qhpd-oEK_ust8Zg@mail.gmail.com>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 8bit
+X-Provags-ID:  V03:K0:4+SrbDdOT5EM+wEznhNersOFySfHcJRhSCjVzaqzm3ySydb8NTL
+ Ncds/g9oyji26gPFJM9q8R1LOo3G3qzHzmLpFp+Eks/Pkd0jjnxJh86Wqt6sW3n7/cgsMJv
+ XWhIhZQDckUxdPRoIl1B8h1DhlO4B9aV9H/a4yBN7J/+dxQ7TrkrSfcsBm4iNbhVvF91paK
+ dz0zZUUOUqPlsJ+zXttqA==
+X-UI-Out-Filterresults: notjunk:1;
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Kevin,
+
+
+On 11/8/14 8:19 PM, Kevin Burton wrote:
+> Nice.. it works actually.  the only problem is that it downloads the
+> file every time and it’s 180MB… there’s no way to skip it if the file
+> already exists.  hm..
+
+
+so this sounds like an idea for improvement....
+
+Kind regards
+Karl Heinz Marbaise
+
+
+
+>
+> On Sat, Nov 8, 2014 at 11:00 AM, Karl Heinz Marbaise <khmarbaise@gmx.de
+> <mailto:khmarbaise@gmx.de>> wrote:
+>
+>     Hi Kevin,
+>
+>     to download a an file from somewhere you could use the
+>     wagon-maven-plugin like this:
+>
+>     <plugin>
+>        <groupId>org.codehaus.mojo</__groupId>
+>        <artifactId>wagon-maven-__plugin</artifactId>
+>        <version>1.0-beta-5</version>
+>        <executions>
+>          <execution>
+>            <id>download-test-data</id>
+>            <phase>prepare-package</phase>
+>            <goals>
+>              <goal>download-single</goal>
+>            </goals>
+>            <configuration>
+>              <url>http://archive.apache.__org/dist/abdera/1.1.2/
+>     <http://archive.apache.org/dist/abdera/1.1.2/></url>
+>              <fromFile>apache-abdera-1.1.2-__src.tar.gz</fromFile>
+>              <toDir>${project.build.__directory}/environment/qa</__toDir>
+>            </configuration>
+>          </execution>
+>        </executions>
+>     </plugin>
+>
+>
+>
+>     For unpacking of the tar.gz you
+>     On 11/8/14 7:40 PM, Kevin Burton wrote:
+>
+>         I’m trying to build .debs using jdeb and maven for various projects.
+>
+>         For example, there is no .deb for spark.  So I’m just taking the
+>         tar.gz and
+>         making a deb that installs to /usr/share/apache-spark.
+>
+>         The problem is I don’t want to put the full binary into git as
+>         it’s about
+>         200MB.
+>
+>         I’d rather have the build fetch the tar.gz directly from Apache
+>         during the
+>         build, untar it, then build the deb from the output.
+>
+>         Is there and way to do this or should I just write a bash script
+>         which uses
+>         wget to fetch the URL?
+>
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

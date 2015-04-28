@@ -1,0 +1,114 @@
+From users-return-137561-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Oct 14 08:11:31 2014
+Return-Path: <users-return-137561-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1C8AF17B1D
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 14 Oct 2014 08:11:31 +0000 (UTC)
+Received: (qmail 13291 invoked by uid 500); 14 Oct 2014 08:11:29 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 13211 invoked by uid 500); 14 Oct 2014 08:11:29 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 13199 invoked by uid 99); 14 Oct 2014 08:11:29 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Oct 2014 08:11:29 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of andrei.ivanov@gmail.com designates 209.85.216.171 as permitted sender)
+Received: from [209.85.216.171] (HELO mail-qc0-f171.google.com) (209.85.216.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Oct 2014 08:11:03 +0000
+Received: by mail-qc0-f171.google.com with SMTP id i17so6251961qcy.16
+        for <users@maven.apache.org>; Tue, 14 Oct 2014 01:11:02 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=yzYhW1DNW0yVCenQ/95/kmynNUBzzphF48jOnRwl7Bc=;
+        b=Vti20h8rzp1BYpe36kmGI9wT5a0xed0LHI+bLK5923moCEuLCDlQ0mdFmohj6ZbBXd
+         Mz8T7rjfByobAoRT/npnLW3ssmGuH2VGKKyib8TlDhxWLf/X7CbpsBW020+Rf403aKIi
+         dPWSZBlXNgHlMhE3oqlSWXzB9zCuSaWHNN0POkvPcyauJCtWWSwjnWzpEHezr7XKEZHG
+         vLRaNMAMA9HguUFEkaShGEtkxuzuC/TfbYdsLi1mxM+D+okON2EvTysM7fjXDw8OPGHd
+         9jUWBrfItBTFcnStegpspATPnuxtnTGhPDGcSfG/j/4L8CNW3z/seLdA7t0SfP9d355U
+         1brg==
+MIME-Version: 1.0
+X-Received: by 10.224.86.68 with SMTP id r4mr6399785qal.55.1413274262550; Tue,
+ 14 Oct 2014 01:11:02 -0700 (PDT)
+Received: by 10.140.224.20 with HTTP; Tue, 14 Oct 2014 01:11:02 -0700 (PDT)
+In-Reply-To: <543C1BBA.2050801@commonjava.org>
+References: <543C1BBA.2050801@commonjava.org>
+Date: Tue, 14 Oct 2014 11:11:02 +0300
+Message-ID: <CAMdR1vVuSRwK4KC=5m1MskqDrvPm_wyL44qk8Eh1PxqcaOs2TA@mail.gmail.com>
+Subject: Re: [ANN] Maven Compiler Plugin 3.2 Released
+From: Andrei Ivanov <andrei.ivanov@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c3ec7a63be1c05055d8e0d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c3ec7a63be1c05055d8e0d
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+Thank you for your work :)
+
+May I direct your attention to http://jira.codehaus.org/browse/MCOMPILER-209
+?
+Seems quite important.
+
+Regards,
+Andrei
+
+
+
+On Mon, Oct 13, 2014 at 9:36 PM, John Casey <jdcasey@commonjava.org> wrote:
+
+> The Maven team is pleased to announce the release of the Apache Maven
+> Compiler Plugin, version 3.2
+>
+> The Compiler Plugin is used to compile the sources of your project.
+>
+> http://maven.apache.org/plugins/maven-compiler-plugin/
+>
+> You should specify the version in your project's plugin configuration:
+>
+> <plugin>
+>   <groupId>org.apache.maven.plugins</groupId>
+>   <artifactId>maven-compiler-plugin</artifactId>
+>   <version>3.2</version>
+> </plugin>
+>
+>
+> Release Notes - Apache Maven Compiler Plugin - Version 3.2
+>
+> Task
+> * [MCOMPILER-232] Fix RAT Report
+> * [MCOMPILER-224] Maven compiler plugin does not properly consume plexus
+> compiler output
+> * [MCOMPILER-220] Fix o.a.m.p.c.CompilerMojoTestCase.testCompilerFork(),
+> which fails when javac is not on the PATH
+> * [MCOMPILER-159] generatedSourcesDirectory should be included in list
+> provided by org.apache.maven.project.MavenProject.
+> getCompileClasspathElements()
+> * [MCOMPILER-157] Maven Compiler Plugin should add to compileSourceRoots
+> for next plugins to consider as source directory for generated files
+>
+>
+> Enjoy,
+>
+> -The Maven team
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a11c3ec7a63be1c05055d8e0d--
+

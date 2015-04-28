@@ -1,0 +1,96 @@
+From users-return-136490-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jun  2 23:27:42 2014
+Return-Path: <users-return-136490-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1F44610BA7
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  2 Jun 2014 23:27:42 +0000 (UTC)
+Received: (qmail 75821 invoked by uid 500); 2 Jun 2014 23:27:40 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 75725 invoked by uid 500); 2 Jun 2014 23:27:40 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 75714 invoked by uid 99); 2 Jun 2014 23:27:40 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 02 Jun 2014 23:27:40 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 74.125.82.48 as permitted sender)
+Received: from [74.125.82.48] (HELO mail-wg0-f48.google.com) (74.125.82.48)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 02 Jun 2014 23:27:36 +0000
+Received: by mail-wg0-f48.google.com with SMTP id k14so5904549wgh.19
+        for <users@maven.apache.org>; Mon, 02 Jun 2014 16:27:13 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=Li0lTKMX+buBnBB5gKvXjUWWa8XxVHZfkP1K7zuGHyI=;
+        b=hiJq7c1rbG3HPHCUdMj9HiMM0A1vwLetcmND7ZD7RwcTbnnqWDhQsKNRwwRX25InEL
+         enw+lVMB5UQXz6OoKFwLjto8cElue8JcmRhfhOyNzA4ba4wapgFMxMZOtmRPyJPUnIOT
+         +bh17Fbo4VFfFS0Fh+DxykEkkVIjg9vc0+Qj5wFXNZY+R0T320FuargyFZjC7LjJ+dec
+         ozmB7lVRp5lOonLnPPsmYH6ghxPoLLpL1m3j9rzJJmbNhnVLhgm22HDnxapzu3abVLGF
+         nWFmoRUVsNa2bH1O/YFwbAkL6PNcFlS6tKMBU3sMOV7QIJBEBd4XnergoKLjpgFyRLOG
+         eiUw==
+MIME-Version: 1.0
+X-Received: by 10.180.126.97 with SMTP id mx1mr26386519wib.29.1401751633569;
+ Mon, 02 Jun 2014 16:27:13 -0700 (PDT)
+Received: by 10.194.137.12 with HTTP; Mon, 2 Jun 2014 16:27:13 -0700 (PDT)
+In-Reply-To: <CAPCjjnHs7t5J6hQNtVXk6AEoHw1xmx1iZsA=FXvP92Duou8Fcw@mail.gmail.com>
+References: <CAPCjjnHs7t5J6hQNtVXk6AEoHw1xmx1iZsA=FXvP92Duou8Fcw@mail.gmail.com>
+Date: Mon, 2 Jun 2014 16:27:13 -0700
+Message-ID: <CAPCjjnEk_+KVVR-Xpnjy659kUojWFL57a1BA-0zerDJ8X9hfXw@mail.gmail.com>
+Subject: Re: Pack with native tar, unpack with maven-dependency-plugin failure
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=e89a8f8389972eb0bf04fae2bced
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--e89a8f8389972eb0bf04fae2bced
+Content-Type: text/plain; charset=UTF-8
+
+I found the root cause of this issue where  I need to force a '-z' option
+during native tar compression.  Without this flag, the output is just a
+normal tar file where native tar is very smart to figure this out. Where
+are plexus-archiver only looks for gz signature and bails out.
+
+Thanks
+
+-Dan
+
+
+On Mon, Jun 2, 2014 at 11:47 AM, Dan Tran <dantran@gmail.com> wrote:
+
+>
+> Hi
+>
+> I have a number of tar.gz artifacts packed with cygwin/linux tar, but
+> maven-dependency-plugin fails to unpack with with the following error (
+> have you seen this)
+>
+> Caused by: java.util.zip.ZipException: Not in GZIP format
+> at java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:164)
+> at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:78)
+>  at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:90)
+> at
+> org.codehaus.plexus.archiver.tar.TarUnArchiver$UntarCompressionMethod.decompress(TarUnArchiver.java:191)
+>  at
+> org.codehaus.plexus.archiver.tar.TarUnArchiver$UntarCompressionMethod.access$000(TarUnArchiver.java:112)
+> at
+> org.codehaus.plexus.archiver.tar.TarUnArchiver.execute(TarUnArchiver.java:86)
+>  ... 26 more
+>
+> Thanks
+>
+> -Dan
+>
+>
+
+--e89a8f8389972eb0bf04fae2bced--
+

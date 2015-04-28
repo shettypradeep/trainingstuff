@@ -1,0 +1,180 @@
+From users-return-136154-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 15 15:16:57 2014
+Return-Path: <users-return-136154-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6615311BCC
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 15 Apr 2014 15:16:57 +0000 (UTC)
+Received: (qmail 18417 invoked by uid 500); 15 Apr 2014 14:58:38 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 5724 invoked by uid 500); 15 Apr 2014 14:50:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 13517 invoked by uid 99); 15 Apr 2014 14:31:55 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Apr 2014 14:31:55 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,WEIRD_PORT
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.220.52 as permitted sender)
+Received: from [209.85.220.52] (HELO mail-pa0-f52.google.com) (209.85.220.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Apr 2014 14:31:51 +0000
+Received: by mail-pa0-f52.google.com with SMTP id rd3so9699786pab.39
+        for <users@maven.apache.org>; Tue, 15 Apr 2014 07:31:30 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type;
+        bh=8uHnxrA0fMylPM96cD/Y0thabGOznTIn2glajaWdh20=;
+        b=Zbr34pYy+rtWJcHXD5XQrR0c3ViRu8XjtCPy+oa9o9zGWEJTZKyE/zwO1Yb1F8QKYW
+         RUljiIy5IGT/buXo4JvWbLXkFS34lDX4rXVbP8pxrrgu5YVqi23bJkBKs2FrFKYmUMlB
+         wkj2ONOafGR68NYVpOV1B2Jct8+tXbl3FHJuRI5UYpTIo3T/ZhI4X9XdTrOHfwzgyDK0
+         Itftil/WLY50COzEhuZtSwbc2uUOroC2smIkuvInrahNiXefvPBF8fOCdeT2aJAp+gWV
+         FOdkYOXf715SMCVFzD2tLNwr5Xv0OmtSRvZ4EzNAUqswObBUc6xjEIzJHoxaMF0DJuht
+         xwOA==
+X-Received: by 10.68.129.169 with SMTP id nx9mr2321479pbb.136.1397572290719;
+        Tue, 15 Apr 2014 07:31:30 -0700 (PDT)
+Received: from [192.168.0.17] (S0106602ad07f9cfa.vc.shawcable.net. [24.85.131.20])
+        by mx.google.com with ESMTPSA id v1sm40790426pbl.1.2014.04.15.07.31.27
+        for <multiple recipients>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Tue, 15 Apr 2014 07:31:28 -0700 (PDT)
+Message-ID: <534D42C1.4070406@gmail.com>
+Date: Tue, 15 Apr 2014 07:31:29 -0700
+From: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: nexus-user@sonatype.org, maven users <users@maven.apache.org>
+Subject: Re: [nexus-user] Why are alternate repositories so hard to configure
+References: <534CA422.1080408@gmail.com> <CAC16qPjeBNVKWj5q8fPKpXLv+j0KQsvgSNBsct3vUGq4UB9y7Q@mail.gmail.com>
+In-Reply-To: <CAC16qPjeBNVKWj5q8fPKpXLv+j0KQsvgSNBsct3vUGq4UB9y7Q@mail.gmail.com>
+Content-Type: multipart/alternative;
+ boundary="------------040904040309030805090507"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------040904040309030805090507
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Hello back :-)
+
+On 4/15/2014 6:50 AM, Peter Lynch wrote:
+> Hello,
+>
+> On Tue, Apr 15, 2014 at 12:14 AM, Eric Kolotyluk 
+> <eric.kolotyluk@gmail.com <mailto:eric.kolotyluk@gmail.com>> wrote:
+>
+>     I have the following
+>
+>     <repositories>
+>     <repository>
+>     <id>sonatype</id>
+>     <name>Sonatype Maven OSS Repository</name>
+>     <releases>
+>     <enabled>true</enabled>
+>     </releases>
+>     <snapshots>
+>     <enabled>true</enabled>
+>     </snapshots>
+>     <url>https://oss.sonatype.org/content/groups/public</url>
+>     </repository>
+>     </repositories>
+>
+>     But when I run maven I get
+>
+>     [ERROR] Failed to execute goal
+>     org.apache.maven.plugins:maven-site-plugin:3.3:site (default-site)
+>     on project csharp-windows-elevate: Execution default-site of goal
+>     org.apache.maven.plugins:maven-site-plugin:3.3:site failed: Plugin
+>     org.apache.maven.plugins:maven-site-plugin:3.3 or one of its
+>     dependencies could not be resolved: Could not find artifact
+>     net.trajano.wagon:wagon-git:jar:1.0.1-SNAPSHOT in apache.snapshots
+>     (http://repository.apache.org/snapshots) -> [Help 1]
+>
+>     /*Why in the world is it looking in
+>     http://repository.apache.org/snapshots ???*/
+>
+>
+> This repository is defined in a pom.xml of a dependency.
+
+Yes, the maven-site-plugin was referencing apache/snapshots in its 
+<dependencyManagement> section. Yet another tangle with 'dependency hell'
+
+>
+>
+>     So, then I configure nexus to mirror
+>     https://oss.sonatype.org/content/groups/public and I add to my
+>     settings.xml
+>
+>       <mirrors>
+>         <mirror>
+>           <id>nexus</id>
+>           <mirrorOf>*</mirrorOf>
+>           <url>http://localhost:8081/nexus/content/groups/public</url>
+>         </mirror>
+>       </mirrors>
+>
+>
+> Good idea.
+>
+>     and then I get
+>
+>     [ERROR] Failed to execute goal
+>     org.apache.maven.plugins:maven-site-plugin:3.3:site (default-site)
+>     on project csharp-windows-elevate: Execution default-site of goal
+>     org.apache.maven.plugins:maven-site-plugin:3.3:site failed: Plugin
+>     org.apache.maven.plugins:maven-site-plugin:3.3 or one of its
+>     dependencies could not be resolved: Could not find artifact
+>     net.trajano.wagon:wagon-git:jar:1.0.1-SNAPSHOT in nexus
+>     (http://localhost:8081/nexus/content/groups/public) -> [Help 1]
+>
+>
+> apache-snapshots is not in the public group by default, although it is 
+> in Nexus as a repository. You can edit the public group members and 
+> add apache-snapshots as a member.
+>
+
+Taking apache-snapshots offline in my Nexus configuration was one of the 
+first things I did, but the problem was stemming from maven-site-plugin.
+
+>
+>
+>     I know this to be a lie because when I go through the nexus UI I
+>     can clearly see the artifact in question in both the nexus index
+>     and storage. However, for some reason, the artifact pom.xml is
+>     neither in the index nor storage. When I go to
+>     https://oss.sonatype.org/content/groups/public/net/trajano/wagon/wagon-git/1.0.1-SNAPSHOT/
+>     I can clearly see the pom.xml with the other files that nexus has
+>     downloaded. /*Why is nexus refusing to download the pom.xml?*/
+>
+>
+> Search indexes have nothing to do with an artifact being able to be 
+> downloaded.
+>
+> In cases like this, these article may help you diagnose:
+>
+> https://support.sonatype.com/entries/21437881-Troubleshooting-Artifact-Download-Failures
+
+In my case, I forgot to add sonatype-oss to the public group in Nexus. A 
+better Nexus GUI would ask the user if they wanted to add a newly 
+created remote repo to the public group. I have been caught by this 
+problem more than once, and the diagnostics around the problem are not 
+very good.
+
+>     /*
+>     */
+>     Cheers, Eric
+>
+>
+>
+>
+
+
+--------------040904040309030805090507--
+

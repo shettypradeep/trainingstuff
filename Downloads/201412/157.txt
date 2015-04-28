@@ -1,0 +1,81 @@
+From users-return-138100-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Dec 31 14:03:32 2014
+Return-Path: <users-return-138100-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5872210AA5
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 31 Dec 2014 14:03:32 +0000 (UTC)
+Received: (qmail 29868 invoked by uid 500); 31 Dec 2014 14:03:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 29793 invoked by uid 500); 31 Dec 2014 14:03:31 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 29779 invoked by uid 99); 31 Dec 2014 14:03:27 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 31 Dec 2014 14:03:27 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW
+X-Spam-Check-By: apache.org
+Received-SPF: error (nike.apache.org: local policy)
+Received: from [209.85.192.48] (HELO mail-qg0-f48.google.com) (209.85.192.48)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 31 Dec 2014 14:03:00 +0000
+Received: by mail-qg0-f48.google.com with SMTP id j5so424049qga.35
+        for <users@maven.apache.org>; Wed, 31 Dec 2014 06:01:53 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:subject:message-id:mime-version
+         :content-type:content-transfer-encoding;
+        bh=n8D3sbEf7cbxXjbyloqSL5Pg7GxFEugycWmhpcbU9Sw=;
+        b=YzzcBSsvLb1lOyTvSild/RlFHSOYEQxzp8I61W3OZ8EdETz6q7vSdM7QPIOxkIzT7M
+         i9afFeNez66kduYDZkDXRKhrpfnvJXTs2I7+igpM47o+hnRY1gA7M9S7ooIN3J9nK/YX
+         LNwlsiJzs9ounQtUI5LXmw0zTXA9ryAytK3N7apBsGuHEwvFS1xXCmBezM7Ih65Zn7TH
+         rrtRDs2ZVqj6zCIN3Sv0OVXedBhlPlsZBtJO2gQamJPSv8cA+9KuSrDHx22a149CwwAY
+         oKWWbsNgc/A48BlFnO33sS6HH8k2/9wk2/6gxfRqFAkrg67Eqc4f7zeDAR9rosKyEGEB
+         F2ZA==
+X-Gm-Message-State: ALoCoQmmWSjxtKzclZ9jwKMdBhWON551OshaDEWuXyjmxTQF2KWT+X7GZbOw3rHqgYNuQkU4xoYW
+X-Received: by 10.224.51.11 with SMTP id b11mr109457886qag.43.1420034513743;
+        Wed, 31 Dec 2014 06:01:53 -0800 (PST)
+Received: from localhost (HSI-KBW-134-3-146-104.hsi14.kabel-badenwuerttemberg.de. [134.3.146.104])
+        by mx.google.com with ESMTPSA id b17sm38543977qah.35.2014.12.31.06.01.53
+        for <users@maven.apache.org>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 31 Dec 2014 06:01:53 -0800 (PST)
+Date: Wed, 31 Dec 2014 15:01:47 +0100
+From: Bernd Eckenfels <ecki@zusammenkunft.net>
+To: users@maven.apache.org
+Subject: command line materialize from GAV
+Message-ID: <20141231150147.000031e3.ecki@zusammenkunft.net>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello,
+
+is there a plugin which can be used from the command line to
+materialize a project similiar to the m2e plugin for eclipse?
+
+i.e. I want to use maven without a pom and without specifying the
+scmURL:
+
+  mvn some:plugin -Dcoordinates=group:artifact:version
+-Ddirectory=artifact
+
+It then should retrieve the POM for g:a:v from the repository, extract
+the scmUrl and Tag from the <scm> section and check it out (similar to
+scm:bootstrap).
+
+Gruss
+Bernd
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

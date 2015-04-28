@@ -1,0 +1,91 @@
+From users-return-137446-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Oct  3 02:06:49 2014
+Return-Path: <users-return-137446-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6195117DDE
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  3 Oct 2014 02:06:49 +0000 (UTC)
+Received: (qmail 78665 invoked by uid 500); 3 Oct 2014 02:06:47 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 78596 invoked by uid 500); 3 Oct 2014 02:06:47 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 78584 invoked by uid 99); 3 Oct 2014 02:06:46 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Oct 2014 02:06:46 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of solomax666@gmail.com designates 209.85.220.52 as permitted sender)
+Received: from [209.85.220.52] (HELO mail-pa0-f52.google.com) (209.85.220.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Oct 2014 02:06:21 +0000
+Received: by mail-pa0-f52.google.com with SMTP id fb1so637058pad.25
+        for <users@maven.apache.org>; Thu, 02 Oct 2014 19:06:19 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=XQ5toy10/Sir3V9KYJIpzWwxIZv8jeTty5n1ap2ze7k=;
+        b=BVbVybqKSS0mU8KNzEleliUBnZ0i5nzXNVpLSog8G7V8/Klhqy1VQKE7OT+MU1ppxU
+         z88hLphRn2C7zYzmc0dKbtdM+CBC6OE/K5k0lGrPD7OBiDCovcymAEaOE5xfeTgAjXgG
+         O/c+EEJT62oVp5oGRuRRRhm1AuwMdrNq6COWVhv9IXCo2grNpGeEcUmoZgxKo3qumfN0
+         URaEXrCdSbz4UULujZmbZtuXD/cJz6RF9xVRz59c/4BmUPS9SQT8IaS1gYctazovznOy
+         taWIghHQBY+7enRFjuLAWBl4z8CWaonDzRxlyYQGfWG8/ORqOfLaaCKwEn1KS5yY4Egn
+         0C3w==
+MIME-Version: 1.0
+X-Received: by 10.68.139.99 with SMTP id qx3mr3614747pbb.103.1412301979554;
+ Thu, 02 Oct 2014 19:06:19 -0700 (PDT)
+Received: by 10.66.160.101 with HTTP; Thu, 2 Oct 2014 19:06:19 -0700 (PDT)
+In-Reply-To: <22D448DD-2765-4B3C-951A-75CFE9E657DE@kathrynhuxtable.org>
+References: <CABLGb9xhKb3CpAa3HiByD+QLrpzh-qoEvyEtbb4N4eGe+6L93Q@mail.gmail.com>
+	<22D448DD-2765-4B3C-951A-75CFE9E657DE@kathrynhuxtable.org>
+Date: Fri, 3 Oct 2014 09:06:19 +0700
+Message-ID: <CAJmbs8gpA+S2j0nHxRtNueOGk9ktqdvSm8gfVX49sFwwde6=MQ@mail.gmail.com>
+Subject: Re: Don't want to repeat plugin version for both build and reporting
+From: Maxim Solodovnik <solomax666@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c308d4ce9ab305047b2d7b
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c308d4ce9ab305047b2d7b
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+we using <pluginManagement> for this
+
+On 3 October 2014 07:24, Kathryn Huxtable <kathryn@kathrynhuxtable.org>
+wrote:
+
+> I=E2=80=99ve always used <properties>, but would it work to use
+> <buildDependencies>? -K
+>
+> On Oct 2, 2014, at 7:02 PM, Paul Benedict <pbenedict@apache.org> wrote:
+>
+> > I use the maven-javadoc-plugin in both <build> and <reporting>. I don't
+> > want to fall back to <properties> to share the plugin version. Is there=
+ a
+> > better way than using <properties>?
+> >
+> > Cheers,
+> > Paul
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+--=20
+WBR
+Maxim aka solomax
+
+--001a11c308d4ce9ab305047b2d7b--
+

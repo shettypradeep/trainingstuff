@@ -1,0 +1,167 @@
+From users-return-137218-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Sep  9 15:41:27 2014
+Return-Path: <users-return-137218-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6C4C211876
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  9 Sep 2014 15:41:27 +0000 (UTC)
+Received: (qmail 96136 invoked by uid 500); 9 Sep 2014 15:41:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 96058 invoked by uid 500); 9 Sep 2014 15:41:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 96047 invoked by uid 99); 9 Sep 2014 15:41:22 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Sep 2014 15:41:22 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mgainty@hotmail.com designates 65.55.116.29 as permitted sender)
+Received: from [65.55.116.29] (HELO BLU004-OMC1S18.hotmail.com) (65.55.116.29)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Sep 2014 15:40:57 +0000
+Received: from BLU172-W25 ([65.55.116.7]) by BLU004-OMC1S18.hotmail.com with Microsoft SMTPSVC(7.5.7601.22724);
+	 Tue, 9 Sep 2014 08:40:56 -0700
+X-TMN: [QzOfezEB/KlnH9chYvrzCmL0zI5gp9my]
+X-Originating-Email: [mgainty@hotmail.com]
+Message-ID: <BLU172-W254ED235B49DB9C8669CD5AECE0@phx.gbl>
+Content-Type: multipart/alternative;
+	boundary="_7488e7bd-e7cb-4461-b430-49e88793d427_"
+From: Martin Gainty <mgainty@hotmail.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: RE: nonProxyHosts not working
+Date: Tue, 9 Sep 2014 11:40:55 -0400
+Importance: Normal
+In-Reply-To:
+ <B63D10721FE7744A8FC526A4D9DC3E1E4C4F4F15@MSGEXSV21109.ent.wfb.bank.corp>
+References:
+ <B63D10721FE7744A8FC526A4D9DC3E1E4C4F35E1@MSGEXSV21109.ent.wfb.bank.corp>,<CAPoyBqSAS5Q=JBp6S+9SmKWiGM1-rqgjCeMT9=nNpBZoxyZ01g@mail.gmail.com>,<B63D10721FE7744A8FC526A4D9DC3E1E4C4F4F15@MSGEXSV21109.ent.wfb.bank.corp>
+MIME-Version: 1.0
+X-OriginalArrivalTime: 09 Sep 2014 15:40:56.0299 (UTC) FILETIME=[723593B0:01CFCC44]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_7488e7bd-e7cb-4461-b430-49e88793d427_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Assume you are not running NAT or any other host/port re-assignment this so=
+unds like a blocker.
+
+I did not see the nonProxyHosts listed in tomcat-maven-plugin JIRA?
+
+can you provide a URL for the JIRA/Bugzilla tomcat plugin bug and patch?
+
+
+Thanks=2C
+Martin=20
+                                                                           =
+                     =20
+
+
+ =20
+
+
+> From: John.E.Gregg@wellsfargo.com
+> To: users@maven.apache.org
+> Subject: RE: nonProxyHosts not working
+> Date: Tue=2C 9 Sep 2014 13:26:26 +0000
+>=20
+> Yes it was. I submitted a patch to the Tomcat Dev list last night.
+>=20
+> Thanks
+>=20
+> -----Original Message-----
+> From: Olivier Lamy [mailto:olamy@apache.org]=20
+> Sent: Monday=2C September 08=2C 2014 10:22 PM
+> To: Maven Users List
+> Subject: Re: nonProxyHosts not working
+>=20
+> sounds more a tomcat maven plugin rather than a maven issue.
+> Can you log an issue here: https://issues.apache.org/jira/browse/MTOMCAT
+>=20
+>=20
+> On 9 September 2014 03:56=2C <John.E.Gregg@wellsfargo.com> wrote:
+> > All=2C
+> >
+> > I've tried Maven 3.1.1 and 3.2.3 but can't get nonProxyHosts in setting=
+s.xml to work in some cases. I'm trying to deploy a war to Tomcat using the=
+ Tomcat Maven plugin version 2.3. It works fine if I set active=3Dfalse in =
+the proxy config.
+> >
+> > I think this works:
+> >
+> > <proxies>
+> > <proxy>
+> > <active>true</active>
+> > <protocol>http</protocol>
+> > <host>proxy.mycompany.com</host>
+> > <port>80</port>
+> > <nonProxyHosts>*.mycompany.com</nonProxyHosts>
+> > </proxy>
+> > </proxies>
+> >
+> > This does not:
+> >
+> > <proxies>
+> > <proxy>
+> > <active>true</active>
+> > <protocol>http</protocol>
+> > <host>proxy.mycompany.com</host>
+> > <port>80</port>
+> > <nonProxyHosts>localhost|*.mycompany.com</nonProxyHosts>
+> > </proxy>
+> > </proxies>
+> >
+> > Likewise=2C using just localhost=2C my machine name=2C and commas inste=
+ad of pipes doesn't work=2C either. The plugin tries to upload the war to m=
+y company's proxy=2C which eventually responds with a 404 "The hostname "lo=
+calhost" cannot be found. Please check the URL you are trying to reach to v=
+erify that it is spelled correctly."
+> >
+> > This is in the log:
+> >
+> > [INFO] Deploying war to http://localhost:8080/coherence-extend-web
+> > Uploading: http://localhost:8080/manager/text/deploy?path=3D%2Fcoherenc=
+e-extend-web
+> > Uploaded: http://localhost:8080/manager/text/deploy?path=3D%2Fcoherence=
+-extend-web (8409 KB at 3024.7 KB/sec)
+> >
+> > [ERROR] Tomcat return http status error: 404=2C Reason Phrase: Not Foun=
+d
+> >
+> > That looks correct except the error isn't quite right because Tomcat is=
+n't even being hit. I get the same error if Tomcat isn't running. It's the =
+proxy server that is returning the error.
+> >
+> > I know everything else is correct because if I set active=3Dfalse=2C th=
+e deploy succeeds.
+> >
+> > Thanks
+> >
+> > John
+> >
+>=20
+>=20
+>=20
+> --=20
+> Olivier Lamy
+> Ecetera: http://ecetera.com.au
+> http://twitter.com/olamy | http://linkedin.com/in/olamy
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe=2C e-mail: users-unsubscribe@maven.apache.org
+> For additional commands=2C e-mail: users-help@maven.apache.org
+>=20
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe=2C e-mail: users-unsubscribe@maven.apache.org
+> For additional commands=2C e-mail: users-help@maven.apache.org
+ 		 	   		  =
+
+--_7488e7bd-e7cb-4461-b430-49e88793d427_--
+

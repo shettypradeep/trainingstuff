@@ -1,0 +1,171 @@
+From users-return-135402-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb 10 20:53:34 2014
+Return-Path: <users-return-135402-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 275D510232
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 10 Feb 2014 20:53:34 +0000 (UTC)
+Received: (qmail 6741 invoked by uid 500); 10 Feb 2014 20:53:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 6636 invoked by uid 500); 10 Feb 2014 20:53:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 6628 invoked by uid 99); 10 Feb 2014 20:53:29 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 10 Feb 2014 20:53:29 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 10 Feb 2014 20:53:25 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 2C0FDFEC045
+	for <users@maven.apache.org>; Mon, 10 Feb 2014 15:53:04 -0500 (EST)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id cJfNe2JnS3du for <users@maven.apache.org>;
+	Mon, 10 Feb 2014 15:52:52 -0500 (EST)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 724F8FEC043
+	for <users@maven.apache.org>; Mon, 10 Feb 2014 15:52:52 -0500 (EST)
+Message-ID: <52F93C1C.1020602@artifact-software.com>
+Date: Mon, 10 Feb 2014 15:52:44 -0500
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: "users@maven.apache.org >> Maven Users List" <users@maven.apache.org>
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: wsimport - catalog
+References: <D8382768F64DA745B6A5CA29EF121E840211C75B1A@EX7T2-SV12.TDBFG.COM>
+In-Reply-To: <D8382768F64DA745B6A5CA29EF121E840211C75B1A@EX7T2-SV12.TDBFG.COM>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 8bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+jaxws-maven-plugin - is there a forum for this plug-in? You might get someone there who knows.
+It is not a Maven question.
+
+
+Ron
+
+On 10/02/2014 3:28 PM, Zmuda, Matt wrote:
+> Hi All,
+>
+> I am trying to generate some web service client code from a WSDL and schemas that I have.
+> One issue I am encountering is that one schema file (xsd) I require is in a separate jar that my client project has a dependency on.
+> I cannot figure out how to reference that file in my pom. I have been lead down the path of looking into defining a catalog (and it seems that how it was done in the and build we use to use) however I can't get this working.
+>
+> Below is what I have.. but not sure if I am on right track or not. Any help is appreciated!
+>
+> The POM Sample
+>
+> <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+>                  <modelVersion>4.0.0</modelVersion>
+>                  <groupId>com.thegroup</groupId>
+>                  <artifactId>com.theclientcode</artifactId>
+>                  <version>0.0.1-SNAPSHOT</version>
+>
+>                  <dependencies>
+>                                  <dependency>
+>                                                  <!-- This dependency contains the schema my wsdl needs -->
+>                                                  <!-- How can I reference it? -->
+>                                                  <groupId>com.mygroup</groupId>
+>                                                  <artifactId>myartifact</artifactId>
+>                                                  <version>1.0</version>
+>                                  </dependency>
+>                  </dependencies>
+>                  <build>
+>                                  <plugins>
+>                                                  <plugin>
+>                                                                  <groupId>org.codehaus.mojo</groupId>
+>                                                                  <artifactId>jaxws-maven-plugin</artifactId>
+>                                                                  <version>1.12</version>
+>                                                                  <executions>
+>                                                                                  <execution>
+>                                                                                                  <goals>
+>                                                                                                                  <goal>wsimport</goal>
+>                                                                                                  </goals>
+>                                                                                  </execution>
+>                                                                  </executions>
+>                                                                  <configuration>
+>                                                                                  <extension>true</extension>
+>                                                                                  <!-- Is this what I should be using? What should be in it??? 0-->
+>                                                                                  <catalog>${basedir}/src/main/resources/META-INF/catalog.xml</catalog>
+>                                                                                  <wsdlDirectory>${basedir}/src/main/resources</wsdlDirectory>
+>                                                                                  <sourceDestDir>${project.build.sourceDirectory}</sourceDestDir>
+>                                                                                  <staleFile>${basedir}/src/jaxws/stale/.staleFlag</staleFile>
+>                                                                                  <wsdlLocation>/META-INF/wsdl/TheWSDL.wsdl</wsdlLocation>
+>                                                                                  <wsdlFiles>
+>                                                                                                  <wsdlFile>/META-INF/wsdl/TheWSDL.wsdl</wsdlFile>
+>                                                                                  </wsdlFiles>
+>                                                                                  <target>2.1</target>
+>
+>                                                                  </configuration>
+>                                                                  <dependencies>
+>                                                                                  <dependency>
+>                                                                                                  <groupId>com.sun.xml.ws</groupId>
+>                                                                                                  <artifactId>jaxws-tools</artifactId>
+>                                                                                                  <version>2.2.0.2</version>
+>                                                                                  </dependency>
+>                                                                  </dependencies>
+>                                                  </plugin>
+>                                  </plugins>
+>                  </build>
+> </project>
+>
+>
+> The catalog.xml Sample:
+>
+> <xmlcatalog id="wsimportcatalog">
+>                  <!--  What is this location relative to? -->
+>                  <entity publicid="file:/com/something/Fault.xsd" location="/../schema/com/something/Fault.xsd"/>
+> </xmlcatalog>
+>
+>
+> Jaxb Bindings for the schema:
+>
+> <jxb:bindings version="1.0"
+>                 xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+>                 xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+>                 xmlns:xs="http://www.w3.org/2001/XMLSchema">
+>
+>                  <jxb:bindings schemaLocation="/com/something/Fault.xsd" node="/xs:schema">
+>                      <jxb:schemaBindings>
+>                        <jxb:package name="com.something.xml">
+>                          <jxb:javadoc><![CDATA[<body>Package level documentation for generated package</body>]]></jxb:javadoc>
+>                        </jxb:package>
+>                      </jxb:schemaBindings>
+>                  </jxb:bindings>
+>
+> </jxb:bindings>
+>
+>
+>
+> NOTICE: Confidential message which may be privileged. Unauthorized use/disclosure prohibited. If received in error, please go to www.td.com/legal for instructions.
+> AVIS : Message confidentiel dont le contenu peut être privilégié. Utilisation/divulgation interdites sans permission. Si reçu par erreur, prière d'aller au www.td.com/francais/avis_juridique pour des instructions.
+>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,78 @@
+From users-return-136480-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jun  2 18:47:39 2014
+Return-Path: <users-return-136480-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E416F11D66
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  2 Jun 2014 18:47:38 +0000 (UTC)
+Received: (qmail 68248 invoked by uid 500); 2 Jun 2014 18:47:37 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 68156 invoked by uid 500); 2 Jun 2014 18:47:37 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 68145 invoked by uid 99); 2 Jun 2014 18:47:37 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 02 Jun 2014 18:47:37 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.212.174 as permitted sender)
+Received: from [209.85.212.174] (HELO mail-wi0-f174.google.com) (209.85.212.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 02 Jun 2014 18:47:32 +0000
+Received: by mail-wi0-f174.google.com with SMTP id r20so5173374wiv.1
+        for <users@maven.apache.org>; Mon, 02 Jun 2014 11:47:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=RtaUrtsgRMp0a+tUYU3wmwsb1EtVlrTj+9VeTxUr4L0=;
+        b=cmUKSrXUn3H17nxZ5jvKsw4GxAM1EDJt+crlZJU+EK2nQNBNfiNbIfAW1FK9wC5EYH
+         QAPy7u+uHE6iXSJ3X8y0/+wDcF545kI5LjqKmY4l0YLGkbVchY/sDAf9DhuH5OxxmXg6
+         zOS/C7lUqUJCGfXzOIVIXBOyE/MBcj08bBObeEaGUu6/jNHR3qrAqYCBsbhlgJHQ3fKk
+         5BLel5gZ9QLIKOR6U33eKDaloe0q65VeaD0KDaMrlmlsASIFB/XG2VJAQ1j4Iyul0bm3
+         OgmoMTvBGEZsq+0hrlnkVlWwIi8wSMYnLypcTGqrcOnNXUXR7ubdtMAgdIcEAVb3RMNw
+         cpMA==
+MIME-Version: 1.0
+X-Received: by 10.180.11.37 with SMTP id n5mr25030495wib.41.1401734829787;
+ Mon, 02 Jun 2014 11:47:09 -0700 (PDT)
+Received: by 10.194.137.12 with HTTP; Mon, 2 Jun 2014 11:47:09 -0700 (PDT)
+Date: Mon, 2 Jun 2014 11:47:09 -0700
+Message-ID: <CAPCjjnHs7t5J6hQNtVXk6AEoHw1xmx1iZsA=FXvP92Duou8Fcw@mail.gmail.com>
+Subject: Pack with native tar, unpack with maven-dependency-plugin failure
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c25b4899531b04faded2f2
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c25b4899531b04faded2f2
+Content-Type: text/plain; charset=UTF-8
+
+Hi
+
+I have a number of tar.gz artifacts packed with cygwin/linux tar, but
+maven-dependency-plugin fails to unpack with with the following error (
+have you seen this)
+
+Caused by: java.util.zip.ZipException: Not in GZIP format
+at java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:164)
+at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:78)
+at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:90)
+at
+org.codehaus.plexus.archiver.tar.TarUnArchiver$UntarCompressionMethod.decompress(TarUnArchiver.java:191)
+at
+org.codehaus.plexus.archiver.tar.TarUnArchiver$UntarCompressionMethod.access$000(TarUnArchiver.java:112)
+at
+org.codehaus.plexus.archiver.tar.TarUnArchiver.execute(TarUnArchiver.java:86)
+... 26 more
+
+Thanks
+
+-Dan
+
+--001a11c25b4899531b04faded2f2--
+

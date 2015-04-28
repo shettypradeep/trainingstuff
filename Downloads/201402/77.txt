@@ -1,0 +1,69 @@
+From users-return-135479-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb 14 08:02:09 2014
+Return-Path: <users-return-135479-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1CB3F10BE5
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 14 Feb 2014 08:02:09 +0000 (UTC)
+Received: (qmail 51206 invoked by uid 500); 14 Feb 2014 08:02:05 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 50853 invoked by uid 500); 14 Feb 2014 08:02:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 50843 invoked by uid 99); 14 Feb 2014 08:02:02 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 08:02:02 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 08:01:57 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <hartnell_g@yahoo.co.uk>)
+	id 1WEDiL-0001rr-0m
+	for users@maven.apache.org; Fri, 14 Feb 2014 00:01:37 -0800
+Date: Fri, 14 Feb 2014 00:01:37 -0800 (PST)
+From: geoffh <hartnell_g@yahoo.co.uk>
+To: users@maven.apache.org
+Message-ID: <1392364897014-5784760.post@n5.nabble.com>
+In-Reply-To: <CADVp3v9GRMY2B8LK6wfZjXH1CCQ=m5emtXAHjHOVSOggJUmrPQ@mail.gmail.com>
+References: <1392106732883-5784035.post@n5.nabble.com> <CAHNdxun4zRCm1mCpnA_q27OYJj0khLpKLpBsGCD0Es4DRn3Qaw@mail.gmail.com> <CADVp3v9wpqkQRA5UyYMTCj6cmN3n-y4G85zgcQ8sOeZewKhnsg@mail.gmail.com> <CAHNdxukgfWP4Rrthk2uMegQU6zToYxMHAvvC1KfAS5J7RqGQtg@mail.gmail.com> <CADVp3v8=TwD9dOCyeU_o0P=GgymOQJMO-JZbv8MEEuarwwDAZA@mail.gmail.com> <1392197606067-5784252.post@n5.nabble.com> <CAPCUOdHEdDn3jVsCQTALv=t-hXWzrcWtvgXCwPxzSU_aadtNLg@mail.gmail.com> <CADVp3v9GRMY2B8LK6wfZjXH1CCQ=m5emtXAHjHOVSOggJUmrPQ@mail.gmail.com>
+Subject: Re: Adding dependency management to parent pom causes errors
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+The problem is resolved
+
+I started with a minimal child pom and ran 
+mvn dependency:analyze
+ - then added dependencies until I had all the relevant dependencies
+
+I no longer get the compile failure
+
+I attempted to identify the differences between the 'good' and 'bad' poms,
+but without success
+
+Thanks to all who replied
+Geoff
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Adding-dependency-management-to-parent-pom-causes-errors-tp5784035p5784760.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

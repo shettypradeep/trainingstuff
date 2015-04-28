@@ -1,0 +1,71 @@
+From users-return-135738-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Mar  9 03:54:22 2014
+Return-Path: <users-return-135738-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C2D7E10D72
+	for <apmail-maven-users-archive@www.apache.org>; Sun,  9 Mar 2014 03:54:22 +0000 (UTC)
+Received: (qmail 81387 invoked by uid 500); 9 Mar 2014 03:54:19 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 81032 invoked by uid 500); 9 Mar 2014 03:54:18 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 81024 invoked by uid 99); 9 Mar 2014 03:54:17 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 09 Mar 2014 03:54:17 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.220.43 as permitted sender)
+Received: from [209.85.220.43] (HELO mail-pa0-f43.google.com) (209.85.220.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 09 Mar 2014 03:54:11 +0000
+Received: by mail-pa0-f43.google.com with SMTP id bj1so5856992pad.30
+        for <users@maven.apache.org>; Sat, 08 Mar 2014 19:53:50 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=DF5R4KEGdHo3AHdFnD62tZjVRn3+oCFY4exRs+GjpX8=;
+        b=FHtRQJmpzOtPmWRiyz6nybErrJb7L+rJVVpsHpta/n0h8PPewLnKMdwjnf1I1VYzv9
+         bSSPjNb0jSm7DQvTBzhu4lx6GxMqMx3VITCK1XUvXcYaan1rWTADiEsgCLsfUsy6E4HK
+         8JkEK6AaZRDUmg5KsiozV85loA2jFWpFWxfK04wS9q0sxOC7R39INsilJdMonKcFnkI8
+         pfGkjao+YiqBBiMsNRJswXhneOPZ5+vCBy2d8s8vlRkffuPmzekLrptyt+rYc77sMbiC
+         /P8+F0OaBsaDbs3qeG/dPOLkoIZK1CT8nyCfIr5nHwYwDXb0RR130teRxBUIYwGpYuFK
+         bdZA==
+X-Received: by 10.68.49.228 with SMTP id x4mr31874465pbn.50.1394337229944;
+ Sat, 08 Mar 2014 19:53:49 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Sat, 8 Mar 2014 19:53:28 -0800 (PST)
+In-Reply-To: <531BCCE8.9090307@gmail.com>
+References: <531BCCE8.9090307@gmail.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Sat, 8 Mar 2014 21:53:28 -0600
+Message-ID: <CALy+7UkojerVeKwTuPvjNkZ8fw7JZtLvdxyAL48BzhUPakLB9Q@mail.gmail.com>
+Subject: Re: Maven Dependency on exe
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> Understandably
+> C:\Users\Eric\.m2\repository\net\kolotyluk\windows\elevate\0.0.1-SNAPSHOT\elevate-0.0.1-SNAPSHOT.exe
+> does not show up on the classpath, but is there some way to pass this
+> information from Maven to the tests so they can find the executable?
+
+What unit test tool are you using? I would start looking there and
+make it work (perhaps even hardcoding some paths etc to start), then
+sort out a way to make it work with Maven once you have it working at
+a basic level.
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

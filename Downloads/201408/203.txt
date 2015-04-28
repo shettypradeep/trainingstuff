@@ -1,0 +1,99 @@
+From users-return-137147-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Aug 28 20:45:30 2014
+Return-Path: <users-return-137147-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8718111128
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 28 Aug 2014 20:45:30 +0000 (UTC)
+Received: (qmail 73736 invoked by uid 500); 28 Aug 2014 20:45:29 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 73661 invoked by uid 500); 28 Aug 2014 20:45:29 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 73650 invoked by uid 99); 28 Aug 2014 20:45:28 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 28 Aug 2014 20:45:28 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of khmarbaise@gmx.de designates 212.227.17.20 as permitted sender)
+Received: from [212.227.17.20] (HELO mout.gmx.net) (212.227.17.20)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 28 Aug 2014 20:45:02 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([5.146.78.30]) by mail.gmx.com
+ (mrgmx102) with ESMTPSA (Nemesis) id 0MOkQc-1XH2IC04Os-0069wy for
+ <users@maven.apache.org>; Thu, 28 Aug 2014 22:45:02 +0200
+Message-ID: <53FF94C8.7070906@gmx.de>
+Date: Thu, 28 Aug 2014 22:44:56 +0200
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: mvn 3.0.5 timeout during deployment
+References: <CAJJaencOdyC+_E1KHDvf2_jL6-_OPLkfFtdWC_YNohHgVT0t8g@mail.gmail.com>
+In-Reply-To: <CAJJaencOdyC+_E1KHDvf2_jL6-_OPLkfFtdWC_YNohHgVT0t8g@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:uugqfEKIBl4HwY6fNFdZNkkZ1HfMC1Q5GzuLBvqP24OUlEYv9ll
+ TTUoXNmjn5uXGq9M324f45FdHofJooGFXO/BC/joX7k+neh1xE2sWOwQz0b/Fq35WisrOFX
+ iurr3k31EEPp2DAzhpgeu+xkK/OQW1xghNjIbCITpa16aMMDjkqSu5XrMgr/5wBY1gd1ZFp
+ gB3cYahWPavzgsueNpaOQ==
+X-UI-Out-Filterresults: notjunk:1;
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+ >
+> How can I increase the default timeout for this operation? After Googling a
+> lot I tried several server configurations in my settings.xml file but with
+> no success:
+>
+>      <server>
+>        <id>server.company.com.snapshots</id>
+>        <username>xxx</username>
+>        <password>xxx</password>
+>        <configuration>
+>          <timeout>600000</timeout>
+>          <httpConfiguration>
+>            <all>
+>              <connectionTimeout>600000</connectionTimeout>
+>              <requestTimeout>600000</requestTimeout>
+>              <idleTimeout>600000</idleTimeout>
+>            </all>
+>          </httpConfiguration>
+>        </configuration>
+>      </server>
+>
+> Thank you in advance for any help! :-)
+>
+> [ERROR] Failed to execute goal at.company.xyz:xyz-maven-plugin:1.2.14.0:deploy
+> (default-deploy) on project project_core: Unable to execute mojo: Failed to
+> deploy artifacts: Could not transfer artifact
+> at.xyz:project_core:jar:2.0.0.0-20140828.135650-6 from/to server.company.com
+> (https://server.company.com/artifactory/axon-snap
+> shot): No response received after 60000 -> [Help 1]
+> org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute
+> goal at.company.xyz:xyz-maven-plugin:1.2.14.0:deploy (default-deploy) on
+> project project_core: Unable to execute mojo
+
+
+can you explain what kind of plugin this is:
+
+goal at.company.xyz:xyz-maven-plugin:1.2.14.0:deploy (default-deploy) on
+
+?
+
+
+Kind regards
+Karl-Heinz Marbaise
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,115 @@
+From users-return-136671-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jun 27 11:23:21 2014
+Return-Path: <users-return-136671-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B5CF7117B9
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 27 Jun 2014 11:23:21 +0000 (UTC)
+Received: (qmail 85949 invoked by uid 500); 27 Jun 2014 11:23:18 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 85864 invoked by uid 500); 27 Jun 2014 11:23:18 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 85853 invoked by uid 99); 27 Jun 2014 11:23:18 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 27 Jun 2014 11:23:18 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.223.169] (HELO mail-ie0-f169.google.com) (209.85.223.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 27 Jun 2014 11:23:10 +0000
+Received: by mail-ie0-f169.google.com with SMTP id at1so4284070iec.0
+        for <users@maven.apache.org>; Fri, 27 Jun 2014 04:22:49 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:content-type:message-id:mime-version
+         :subject:date:references:to:in-reply-to;
+        bh=3Ong4jw5XU5gzaqLgmtnbdRNg/V/bZpXHYa65yy+vEc=;
+        b=YanXq+eMxU01v5BadSCkd+vIJ2ub3HfStDptqW4d/0YD11O4h6xFhH/wHFzHJB/waY
+         E69tQnVq0vMymxVISd91vuZCGVfH0nSkAFOEcYAKhS7QDWZlngqtJ/NzrC88438fBdE0
+         6zNjjnUB3FOmwjpSqi+GhpF6nTUumdyYECx73fc2nxBvGF5VlwUo4a4KiN6nDgsdmAlD
+         Qr/fBU7ZN4Da3DBcmKgt/FBRVGGXqs0oQuayoWQc80Pc+umONnlfcmMWZZmfbBYIHMoQ
+         1v7pFjxN633nW9GgmdhxjdqY6mjZ8jBt6/cp2i55NLJca9FwJwMrkpWep0o+1xYpSIxi
+         U6uA==
+X-Gm-Message-State: ALoCoQkFPju2q4/ZcMqNr6jp2G4TTL7HpdS+HUtII5DZKzM1gPuEEFfrUSKlEW427hXD7eSWiogJ
+X-Received: by 10.50.253.193 with SMTP id ac1mr11406792igd.35.1403868169806;
+        Fri, 27 Jun 2014 04:22:49 -0700 (PDT)
+Received: from [10.0.1.11] (192-0-154-177.cpe.teksavvy.com. [192.0.154.177])
+        by mx.google.com with ESMTPSA id h13sm12871015igq.6.2014.06.27.04.22.49
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 27 Jun 2014 04:22:49 -0700 (PDT)
+From: Jason van Zyl <jason@takari.io>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_C3F28A8C-C19A-4EB4-9627-636714FBC92C"
+Message-Id: <A5746D74-2A15-49BC-B740-A8646C585FA8@takari.io>
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.2\))
+Subject: Re: How to change snapshot artifacts timezone?
+Date: Fri, 27 Jun 2014 07:22:48 -0400
+References: <CABNWuUWTLP2sgHSXjFDqtxXrd1T8xgVXsiGQfH2sPUgSXhjixQ@mail.gmail.com>
+To: Maven Users List <users@maven.apache.org>
+In-Reply-To: <CABNWuUWTLP2sgHSXjFDqtxXrd1T8xgVXsiGQfH2sPUgSXhjixQ@mail.gmail.com>
+X-Mailer: Apple Mail (2.1878.2)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_C3F28A8C-C19A-4EB4-9627-636714FBC92C
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=iso-8859-1
+
+Aleksi,
+
+Ben is write, the code expanding the "-SNAPSHOT" token is hard-coded to =
+UTC and I don't see a reason you would want to change that.
+
+On Jun 26, 2014, at 7:04 AM, Aleksi Gr=F6nlund <kvartal00@gmail.com> =
+wrote:
+
+> I am using Maven version 3.0.4 and Nexus repository where to deploy =
+Maven
+> created snapshot artifacts. How I can change snapshots timestamp =
+timezone
+> from UTC to Europe/Helsinki ?
+>=20
+> I have tried to set timezone with following JAVA_OPTS and MAVEN_OPTS =
+but
+> those does not help with this issue. Any ideas?
+>=20
+> JAVA_OPTS=3D-Duser.timezone=3DEurope/Helsinki
+> MAVEN_OPTS=3D-Duser.timezone=3DEurope/Helsinki
+>=20
+> Br,
+> Kvartal00
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+http://twitter.com/takari_io
+---------------------------------------------------------
+
+We all have problems. How we deal with them is a measure of our worth.
+
+ -- Unknown
+
+
+
+
+
+
+
+
+
+
+--Apple-Mail=_C3F28A8C-C19A-4EB4-9627-636714FBC92C--
+

@@ -1,0 +1,113 @@
+From users-return-135258-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Jan 26 19:38:02 2014
+Return-Path: <users-return-135258-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 87F3710C8D
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 26 Jan 2014 19:38:02 +0000 (UTC)
+Received: (qmail 76911 invoked by uid 500); 26 Jan 2014 19:37:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 76794 invoked by uid 500); 26 Jan 2014 19:37:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 76786 invoked by uid 99); 26 Jan 2014 19:37:57 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 26 Jan 2014 19:37:57 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.160.43 as permitted sender)
+Received: from [209.85.160.43] (HELO mail-pb0-f43.google.com) (209.85.160.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 26 Jan 2014 19:37:51 +0000
+Received: by mail-pb0-f43.google.com with SMTP id md12so5074142pbc.16
+        for <users@maven.apache.org>; Sun, 26 Jan 2014 11:37:30 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=8+KlbiaZPwrvIP2ams0yJheoO+o/LmheOW770PxRdCE=;
+        b=x/7MZezOIR6FKnaLxc3kLsROQbDCgB9UJZxzlb622pjoi8MF3BIM10lPBWOqN26mqF
+         WyKEcb+nPh8HeDNEWqScqxAOXA2CoiMJnljMZcN0YXpEuomzuRc7xkh7FZQ9v2mXgpAQ
+         KMi0PBHFn9B9EGSIEMrRumPIoTXQvLhqeyd/2nSVjVVSVhJ/G62jO1sMka8/8lUxgJHH
+         yuW9ZTabKbofnBYQXZu97irkFgeDqco9FNo0fVefqPW1eNyfhBlVDo3yJGqnmPcEMq73
+         TRsKOSnhj49Cyc9B1AZg0ybj0wBgiK1eQCzX0ZwDa6o9s6+jyzfsWQsNmuQ5y+QmqB3J
+         pZkw==
+MIME-Version: 1.0
+X-Received: by 10.68.108.130 with SMTP id hk2mr26566114pbb.16.1390765050166;
+ Sun, 26 Jan 2014 11:37:30 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Sun, 26 Jan 2014 11:37:30 -0800 (PST)
+In-Reply-To: <5D70C45FFA36DD4385E12C1B60B499F36D3A4CA8@SFO-EXMB-03.silverspringnet.com>
+References: <5D70C45FFA36DD4385E12C1B60B499F36D3A4CA8@SFO-EXMB-03.silverspringnet.com>
+Date: Sun, 26 Jan 2014 19:37:30 +0000
+Message-ID: <CA+nPnMz2dDv7dSWX0Q_HW49_d7PSbtNeD1J3hzNjys7S-8xcJg@mail.gmail.com>
+Subject: Re: Renaming site.xml or using different top-level site.xml for site plugin
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b6dba6cc805eb04f0e4b803
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b6dba6cc805eb04f0e4b803
+Content-Type: text/plain; charset=ISO-8859-1
+
+In a multimodule project you need to attach the site descriptor of parent
+poms to the reactor.
+
+Thus the site descriptor you attach will depend on your profile...
+
+Thus you are in a maven anti-pattern (ie artifacts attached to the reactor
+should not depend on the profiles active at the time)
+
+You will likely have to find a different way, as I believe the rest if the
+maven developers will agree with me that this is a bad plan, and hence
+there will not be support for trying to solve your actual problem with the
+technique that us giving you thus problem
+
+HTH
+
+Stephen
+
+On Friday, 24 January 2014, Benjamin Damm <bdamm@silverspringnet.com> wrote:
+
+> Hello Mavens,
+>
+> Is there a way to rename site.xml to something else?  I want to use the
+> site framework to produce two "trees" of sites, each quite distinct from
+> each other because they are based on two different profiles, and I was
+> hoping, two different site.xml from the superpom at the top.
+>
+> In other words, I'm trying to achieve two trees of sites, each with a
+> different site.xml at the top, but otherwise retaining the same structure
+> (in terms of modules).  I also plan to use profiles to use different
+> site.xml files at the module level; that part works fine already because I
+> can repoint the entire site document structure by using siteDirectory.
+>
+> It's the site.xml at the very top that's giving me trouble.  No matter
+> what I seem to do, I can only have one site.xml at the top of the module
+> hierarchy.  Does anyone know if there's a way around this limitation?
+>  Scouring the source code of the site plugin has so far not revealed
+> anything.
+>
+> Thank you,
+> -Ben
+>
+> --
+> Benjamin Damm
+> Silver Spring Networks
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org <javascript:;>
+> For additional commands, e-mail: users-help@maven.apache.org<javascript:;>
+>
+>
+
+-- 
+Sent from my phone
+
+--047d7b6dba6cc805eb04f0e4b803--
+

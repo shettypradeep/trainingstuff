@@ -1,0 +1,80 @@
+From users-return-135938-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Mar 25 23:42:52 2014
+Return-Path: <users-return-135938-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EA31E10B39
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 25 Mar 2014 23:42:51 +0000 (UTC)
+Received: (qmail 84463 invoked by uid 500); 25 Mar 2014 23:42:48 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 84316 invoked by uid 500); 25 Mar 2014 23:42:48 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 84307 invoked by uid 99); 25 Mar 2014 23:42:48 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Mar 2014 23:42:48 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [85.13.151.183] (HELO dd34514.kasserver.com) (85.13.151.183)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Mar 2014 23:42:43 +0000
+Received: from dd34514.kasserver.com (dd0800.kasserver.com [85.13.143.204])
+	by dd34514.kasserver.com (Postfix) with ESMTPSA id 0409F4340534;
+	Wed, 26 Mar 2014 00:42:21 +0100 (CET)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+X-SenderIP: 24.68.152.10
+User-Agent: ALL-INKL Webmail 2.11
+In-Reply-To: <96D42AF5-2A3A-4393-B07E-7F95653B585A@takari.io>
+References: <E9DAAECA-C429-40FC-9B89-18D819971EC6@takari.io> <CF574330.16C0%richard.mauri@sap.com><96D42AF5-2A3A-4393-B07E-7F95653B585A@takari.io>
+Subject: Updated documentation for Central Repository
+From: "Manfred Moser" <manfred@mosabuam.com>
+To: users@maven.apache.org
+Cc: manfred@sonatype.com
+Message-Id: <20140325234221.0409F4340534@dd34514.kasserver.com>
+Date: Wed, 26 Mar 2014 00:42:21 +0100 (CET)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello everyone!
+
+We have updated the documentation for publishing artifacts to the Central Repository via the free Sonatype Open Source Repository Hosting (OSSRH) and added more documents about status, getting help and more and put it all together on a brand new website.
+
+Please look at the announcement blog post at 
+
+http://blog.sonatype.com/2014/03/a-home-for-the-central-repository/
+
+and the actual new website at http://central.sonatype.org/
+
+Specifically the instructions for Apache Maven are at 
+
+http://central.sonatype.org/pages/apache-maven.html
+
+but I would like to encourage you all to have a look at the rest of the site as well. 
+
+The Maven docs details usage of things like the Nexus Staging Maven Plugin for command line based release (no more logging into the UI) and a whole lot of other things. 
+
+We are hoping you find this all useful and get some great feedback and recommendations for improvements from you.
+
+Looking forward to continue to improve the site going forward.
+
+Jason, Joel, Manfred and others
+Sonatype Ops Team - @sonatype_ops
+
+
+
+
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

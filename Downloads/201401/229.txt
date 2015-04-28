@@ -1,0 +1,129 @@
+From users-return-135022-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan  8 19:14:04 2014
+Return-Path: <users-return-135022-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 465AF10E14
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  8 Jan 2014 19:14:04 +0000 (UTC)
+Received: (qmail 62520 invoked by uid 500); 8 Jan 2014 19:13:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 62472 invoked by uid 500); 8 Jan 2014 19:13:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 62409 invoked by uid 99); 8 Jan 2014 19:12:51 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 19:12:51 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.160.41 as permitted sender)
+Received: from [209.85.160.41] (HELO mail-pb0-f41.google.com) (209.85.160.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 19:12:44 +0000
+Received: by mail-pb0-f41.google.com with SMTP id jt11so1953802pbb.28
+        for <users@maven.apache.org>; Wed, 08 Jan 2014 11:12:23 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=ZCfjKER2ySxzAlICNfvbLHf+cnc7U9BNAOiSNrdvEe4=;
+        b=lQqX0m7XZi1aTeZe0bZ29Hai27FbhnCTQciWXEJlAWywcBsMXfZe9qg1QDZOsmaC69
+         FKfvfUCq6wtrxW8IQKIt9j7r0u6h3E/2OjJdrVOJDfn/lijUT4NCiftJ4l3jvN7fgFTo
+         cSpL4z/IkGqmI5I8PVn25ziXRSpB+59dPI8SBA2+hvl1TFNHD+XCRU/2O8Eu6jheLWYp
+         5/WQnxpobop5UlkCbJc2AiEJQPSKUcge388uJPMYstv7w1+W5IXuEAqnSsFBuPMq2ORI
+         +ZJpKPXbSAH7R27X1Mhaxq+VfTb51ypdUU7tBhOeKJ4TRilxO497ddCTjBL292oP50tU
+         N41w==
+MIME-Version: 1.0
+X-Received: by 10.68.223.9 with SMTP id qq9mr58599425pbc.58.1389208343754;
+ Wed, 08 Jan 2014 11:12:23 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Wed, 8 Jan 2014 11:12:23 -0800 (PST)
+In-Reply-To: <52CC4999.7040704@alishomepage.com>
+References: <52CC4999.7040704@alishomepage.com>
+Date: Wed, 8 Jan 2014 19:12:23 +0000
+Message-ID: <CA+nPnMww+8ixYOeEF+6nLamEOB=a-QAAK6qAokzL79hXPe+NCg@mail.gmail.com>
+Subject: Re: Maven2/Maven3 plugin development: Ensuring only the available
+ parameters are allowed
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b163441d93efc04ef7a4508
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b163441d93efc04ef7a4508
+Content-Type: text/plain; charset=ISO-8859-1
+
+There are valid reasons why a configuration having "invalid" elements may
+be "valid".
+
+Consider the case where
+xpath:/project/build/pluginManagement/plugins/plugin/version specifies the
+*default* version and xpath:/project/build/plugins/plugin/version is
+absent... In this case xpath:/project/build/plugins/plugin/configuration
+applies to any version of the plugin, so somebody invoking a specific
+version of the plugin directly would/should get that configuration... Thus
+an element that does not make sense to the executing version of the plugin
+*may* make sense to a future/older version if the plugin... Hence failing
+because of unknown parameters would be a "bad thing"
+
+You could request the dom node yourself and parse it by hand if you want to
+issue warning though
+
+On Tuesday, 7 January 2014, S. Ali Tokmen wrote:
+
+> Dear Maven users
+>
+> I am one of the owners of Codehaus CARGO, which has a Maven2/Maven3
+> plugin; and would have a question with regards to how parameters are
+> managed.
+>
+> We defined our MOJOs with parameters (you can see
+>
+> http://svn.codehaus.org/cargo/extensions/trunk/maven2/plugin/src/main/java/org/codehaus/cargo/maven2/AbstractCargoMojo.java
+> for example), but what happens is that if a user unwillingly puts a
+> parameter in the wrong place then the plugin execution doesn't stop.
+>
+> As an example, I can write the below POM and build still works (even
+> thought the MOJO has no parameter called "foo"):
+>
+>   <plugin>
+>     <groupId>org.codehaus.cargo</groupId>
+>     <artifactId>cargo-maven2-plugin</artifactId>
+>     <version>1.4.6</version>
+>     <configuration>
+>       <foo>
+>         bar
+>       </foo>
+>     </configuration>
+>   </plugin>
+>
+> Is there any way I can instruct by MOJO to fail if there is an unknown
+> parameter?
+>
+> Please advise
+>
+> Thank you
+>
+> --
+>
+> S. Ali Tokmen
+> http://ali.tokmen.com/
+>
+> My IM, GSM, PGP and other contact details
+> are on http://contact.ali.tokmen.com
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org <javascript:;>
+> For additional commands, e-mail: users-help@maven.apache.org<javascript:;>
+>
+>
+
+-- 
+Sent from my phone
+
+--047d7b163441d93efc04ef7a4508--
+

@@ -1,0 +1,238 @@
+From users-return-136317-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu May  1 20:43:57 2014
+Return-Path: <users-return-136317-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EEA6410EE8
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  1 May 2014 20:43:57 +0000 (UTC)
+Received: (qmail 56256 invoked by uid 500); 1 May 2014 20:43:51 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 56165 invoked by uid 500); 1 May 2014 20:43:50 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 56155 invoked by uid 99); 1 May 2014 20:43:50 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 01 May 2014 20:43:50 +0000
+X-ASF-Spam-Status: No, hits=2.4 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of anthonyclarka2@gmail.com designates 209.85.192.45 as permitted sender)
+Received: from [209.85.192.45] (HELO mail-qg0-f45.google.com) (209.85.192.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 01 May 2014 20:43:46 +0000
+Received: by mail-qg0-f45.google.com with SMTP id a108so3750321qge.4
+        for <users@maven.apache.org>; Thu, 01 May 2014 13:43:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=BQQ6ICjef2jDtJTahEtKSQ0rcfEPvairZHP8D5M8ZOk=;
+        b=gczyYSEkFWyA9+/HnyvXd7hwKNHsq7d7oMOjYksp3Mwt2qAGkIiQArk5rcb68CxSwr
+         zGOSN1GM7nz424dHuyPE6PNWx4spS6GfkcPBNQR/gcqDvxOq3nDbOmniHr+T8kWdf3b6
+         I24SobBK7tPzt/VrwD8NfiVkAF5vtbhWm3LzPDLCQfm/Tn4brvwY0GMWprLlVShbA4WT
+         wndTr7HLm16wZvRVTdqu32cpzCsAotLHxBSVZUzQI+tOr6qxBg4gkUzXgZifJ5Co3bHo
+         WG3JNa51C+fq9an8lYfz8NkXwxoCR/WGjP2zdLwrEHwVdsxqOicxj3BoieweYusmUTZp
+         jMbA==
+MIME-Version: 1.0
+X-Received: by 10.224.166.9 with SMTP id k9mr17092038qay.25.1398977005878;
+ Thu, 01 May 2014 13:43:25 -0700 (PDT)
+Received: by 10.229.160.69 with HTTP; Thu, 1 May 2014 13:43:25 -0700 (PDT)
+In-Reply-To: <CAJZRQKycF-WfOwtJ97Obu1UoV5nj2FzxCTjQwyWND+uA3Any1w@mail.gmail.com>
+References: <CAJGYKdP1gZa=XNV=ua0j_4TUDT+ZODSWN4XAoe1XWckqxr-v9A@mail.gmail.com>
+	<CAJZRQKwHfXKY7VBjah+K1tdcwBxw=VyEH59VL71GyVWci2kr+g@mail.gmail.com>
+	<CAJZRQKycF-WfOwtJ97Obu1UoV5nj2FzxCTjQwyWND+uA3Any1w@mail.gmail.com>
+Date: Thu, 1 May 2014 16:43:25 -0400
+Message-ID: <CAJGYKdN9n9bXLELqZywVMxr2FRgQvguZG6597z3gL3FrqvkscA@mail.gmail.com>
+Subject: Re: dependency plugin fails with >9 threads
+From: Anthony Clark <anthonyclarka2@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c246dc7c076a04f85cb7b6
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c246dc7c076a04f85cb7b6
+Content-Type: text/plain; charset=UTF-8
+
+Many thanks Kristian!
+
+I am currently dealing with another emergency but as soon as that is over I
+will track down the maven plugins directory and make the change.
+
+I'll add the bug in JIRA as soon as I am able.
+
+Thanks again!
+
+Anthony
+
+
+On Thu, May 1, 2014 at 4:08 PM, Kristian Rosenvold <
+kristian.rosenvold@gmail.com> wrote:
+
+> I fixed the problem on trunk in dependency plugin.
+>
+> You should be able to modify the deps in your current version to work
+> around this,
+> but you need to mimic what I did in the actual fix:
+>
+> http://svn.apache.org/viewvc?view=revision&revision=1591759
+>
+> Kristian
+>
+>
+>
+> 2014-05-01 21:25 GMT+02:00 Kristian Rosenvold <
+> kristian.rosenvold@gmail.com>
+> :
+>
+> > It turns out dependency plugin is using an old version of doxia (version
+> > 1.0, latest released is 1.4) that has known thread safety issues. You
+> > *might* be able to work around this by adding the following dependencies
+> to
+> > the dependency-plugin in your pom:
+> >
+> >     <dependency>
+> >       <groupId>org.apache.maven.doxia</groupId>
+> >       <artifactId>doxia-sink-api</artifactId>
+> >       <version>1.4</version>
+> >     </dependency>
+> >     <dependency>
+> >       <groupId>org.apache.maven.doxia</groupId>
+> >       <artifactId>doxia-site-renderer</artifactId>
+> >       <version>1.4</version>
+> >     </dependency>
+> >
+> > See
+> >
+> http://blog.sonatype.com/2008/04/how-to-override-a-plugins-dependency-in-mavenifyou're unfamiliar about how to do this. this might work, but might also
+> > bug out due to some incompatibility between 1.0 and 1.4 of doxia, I did
+> not
+> > try.
+> >
+> >
+> >
+> > Please file an issue under http://jira.codehaus.org/browse/MDEP
+> >
+> >
+> > Kristian
+> >
+> >
+> >
+> > 2014-05-01 16:00 GMT+02:00 Anthony Clark <anthonyclarka2@gmail.com>:
+> >
+> > Hi All,
+> >>
+> >> I'm trying to improve our build by using parallel threads (i.e. mvn -T
+> #)
+> >>
+> >> Unfortunately I'm running into an error when I try to use more than 9
+> >> threads on this 24 core server:
+> >>
+> >> [ERROR] Failed to execute goal
+> >> org.apache.maven.plugins:maven-dependency-plugin:2.8:analyze-report
+> >> (analyze-report)
+> >>  on project enterprise-provided: An error has occurred in Dependency
+> >> Analysis report generation. Could not find the
+> >>  template 'org/apache/maven/doxia/siterenderer/resources/default-site.vm
+> >> ->
+> >> [Help 1]
+> >> org.apache.maven.lifecycle.LifecycleExecutionException: Failed to
+> execute
+> >> goal org.apache.maven.plugins:maven-depen
+> >> dency-plugin:2.8:analyze-report (analyze-report) on project
+> >> enterprise-provided: An error has occurred in Dependenc
+> >> y Analysis report generation.
+> >>         at
+> >>
+> >>
+> org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:216)
+> >>         at
+> >>
+> >>
+> org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+> >>         at
+> >>
+> >>
+> org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+> >>         at
+> >>
+> >>
+> org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:108)
+> >>         at
+> >>
+> >>
+> org.apache.maven.lifecycle.internal.builder.multithreaded.MultiThreadedBuilder$1.call(MultiThreadedBuild
+> >> er.java:188)
+> >>         at
+> >>
+> >>
+> org.apache.maven.lifecycle.internal.builder.multithreaded.MultiThreadedBuilder$1.call(MultiThreadedBuild
+> >> er.java:184)
+> >>         at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+> >>         at
+> >> java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+> >>         at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+> >>         at
+> >>
+> >>
+> java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+> >>         at
+> >>
+> >>
+> java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+> >>         at java.lang.Thread.run(Thread.java:745)
+> >> Caused by: org.apache.maven.plugin.MojoExecutionException: An error has
+> >> occurred in Dependency Analysis report gene
+> >> ration.
+> >>         at
+> >>
+> >>
+> org.apache.maven.reporting.AbstractMavenReport.execute(AbstractMavenReport.java:106)
+> >>         at
+> >>
+> >>
+> org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:133)
+> >>         at
+> >>
+> >>
+> org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+> >>         ... 11 more
+> >> Caused by: org.apache.maven.doxia.siterenderer.RendererException: Could
+> >> not
+> >> find the template
+> >> 'org/apache/maven/doxia/siterenderer/resources/default-site.vm
+> >>         at
+> >>
+> >>
+> org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.processTemplate(DefaultSiteRenderer.java:537)
+> >>         at
+> >>
+> >>
+> org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.writeTemplate(DefaultSiteRenderer.java:508)
+> >>         at
+> >>
+> >>
+> org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.generateDocument(DefaultSiteRenderer.java:485)
+> >>         at
+> >>
+> >>
+> org.apache.maven.reporting.AbstractMavenReport.execute(AbstractMavenReport.java:97)
+> >>         ... 13 more
+> >> [INFO] No sources to compile
+> >>
+> >> Has anyone run into this before?  I searched the JIRA for the dependency
+> >> plugin and didn't find anything related to this.
+> >>
+> >> Thanks,
+> >>
+> >> Anthony Clark (sysadmin tasked with improving a build!)
+> >>
+> >
+> >
+>
+
+--001a11c246dc7c076a04f85cb7b6--
+

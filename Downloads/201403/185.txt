@@ -1,0 +1,91 @@
+From users-return-135949-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 26 17:26:58 2014
+Return-Path: <users-return-135949-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CBBB7102C3
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Mar 2014 17:26:58 +0000 (UTC)
+Received: (qmail 61006 invoked by uid 500); 26 Mar 2014 17:26:55 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 60600 invoked by uid 500); 26 Mar 2014 17:26:53 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 60589 invoked by uid 99); 26 Mar 2014 17:26:52 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Mar 2014 17:26:52 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of gudnabrsam@gmail.com designates 209.85.213.42 as permitted sender)
+Received: from [209.85.213.42] (HELO mail-yh0-f42.google.com) (209.85.213.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Mar 2014 17:26:47 +0000
+Received: by mail-yh0-f42.google.com with SMTP id t59so2438479yho.29
+        for <users@maven.apache.org>; Wed, 26 Mar 2014 10:26:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:reply-to:in-reply-to:references:date:message-id
+         :subject:from:to:content-type;
+        bh=U/1TIBMCCZVxAT8lGICfR765T2Ie4VNjt7lAm34S/JU=;
+        b=M5OA3zFexAV0/ZsLupfquYi7dXgcU/NZpHB4g70DcacIgQ0fz/PO8fkhoLNzPORee3
+         ttpQBrdguF+5MIjc/25g2Nd18wjvdFArI8ugDu6b7ERRB7s1OXJP3Zj7ipcAU1o5T6uP
+         6SUJIiGJpAyHYdI9UgkNHILRbtO5KV2UW6Vk/5RodAKu+nnhSgF2Wo6n6PUErhy2OzwD
+         HKxJoQefmZqWuZfy+4m586kklws38/Fw6tu+r40CtnfWeNZp5PPAcTRaolumwlU4O69P
+         P9vzOCH20PaoS1UjWIm1uWNOcBYR1huQLmVR5tpdwlQFI/RwvkvIJ4IGY4va4n2ecdnV
+         iTiA==
+MIME-Version: 1.0
+X-Received: by 10.236.23.168 with SMTP id v28mr417948yhv.159.1395854786124;
+ Wed, 26 Mar 2014 10:26:26 -0700 (PDT)
+Received: by 10.170.60.77 with HTTP; Wed, 26 Mar 2014 10:26:26 -0700 (PDT)
+Reply-To: gudnabrsam@gmail.com
+In-Reply-To: <EF451C18-6AF0-4940-A99E-4935A4351088@gmail.com>
+References: <EF451C18-6AF0-4940-A99E-4935A4351088@gmail.com>
+Date: Wed, 26 Mar 2014 12:26:26 -0500
+Message-ID: <CAE9L6G1CkhraD6UBD0RTDzg7ZzM2wXsKDV_KaQgrRjp0JRkuJQ@mail.gmail.com>
+Subject: Re: [MNG-5551] Java 8 + Maven status
+From: Matt Benson <gudnabrsam@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=ISO-8859-1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Can't you declare ASM 5.0.1 as a plugin dependency as an interim measure?
+
+Matt
+
+On Wed, Mar 26, 2014 at 12:15 PM, Steven Schlansker
+<stevenschlansker@gmail.com> wrote:
+> Hello everyone,
+>
+> http://jira.codehaus.org/browse/MNG-5551
+>
+> Java 8 has now been out for a week and Maven is still not really compatible.
+> In particular, the maven-shade-plugin and maven-dependency-plugin do not work
+> due to an old version of ASM that throws ArrayIndexOutOfBoundsException on Java 8 class files.
+>
+> http://jira.codehaus.org/browse/MSHADE-166
+> http://jira.codehaus.org/browse/MDEP-439
+>
+> There may be more uses of the broken ASM, these are just the ones I've run into.
+>
+> Is there any possibility of getting these fixed and released in the near future?  It is frustrating
+> to have Maven be broken on a now-considered-production JDK release.
+>
+> Thanks!
+> Steven
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

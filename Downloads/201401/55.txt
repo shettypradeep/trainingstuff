@@ -1,0 +1,86 @@
+From users-return-135015-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan  8 01:03:03 2014
+Return-Path: <users-return-135015-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A5D2D10AF4
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  8 Jan 2014 01:03:03 +0000 (UTC)
+Received: (qmail 34243 invoked by uid 500); 8 Jan 2014 01:03:01 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 34175 invoked by uid 500); 8 Jan 2014 01:03:01 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 34161 invoked by uid 99); 8 Jan 2014 01:03:01 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 01:03:01 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ljnelson@gmail.com designates 209.85.128.53 as permitted sender)
+Received: from [209.85.128.53] (HELO mail-qe0-f53.google.com) (209.85.128.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 01:02:55 +0000
+Received: by mail-qe0-f53.google.com with SMTP id t7so1175258qeb.26
+        for <users@maven.apache.org>; Tue, 07 Jan 2014 17:02:35 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=qh6ZRK1HIduhzhaxma8m8sBJ5LxTFnkjC7yEeHJW1KY=;
+        b=d5hQUC4tfuQrDt1JRMI2TBBQR6MasjIWOalayZZBjhDPqFMztfeKbMw3vVPSUwqTz3
+         nlSWj/TcidnCO6sBFI05vHjhVF4JtfXt/casGcttYCIsxiWYhV0yrvfjXv/FvK44SATK
+         Ud+jSKvSwKTfszLAoOkRPagAQTPa2unbtBXH+Gl/Ypyern1IVrI3GJY77CKcP46lCGc2
+         Qg5na9D0ttdTvdJ3QIZq5kiHsjj7PDWTlR3ycpmBa4bnK0UCk0bYqNnS6zMU9MfUakSN
+         qtql2i+SHkGsUgSL9s5gY2ByJih/hYLhJNMV5pAV5xqRkWhpdEMPx35yf68/tj8esRVk
+         ZlzQ==
+MIME-Version: 1.0
+X-Received: by 10.224.67.137 with SMTP id r9mr194085392qai.8.1389142955037;
+ Tue, 07 Jan 2014 17:02:35 -0800 (PST)
+Received: by 10.96.169.200 with HTTP; Tue, 7 Jan 2014 17:02:34 -0800 (PST)
+In-Reply-To: <BLU172-W373D4888BFB624BFD51BDFAEB40@phx.gbl>
+References: <CAHNdxunwRmqstW5tL6D-G4ga0ASdGAnMWpGOyoE=db8-1_vpqQ@mail.gmail.com>
+	<BLU172-W13ADAF341051B8EC9DB896AEB50@phx.gbl>
+	<CAHNdxu=wYnrOwyAoWgEwdeUpfQvXoTqu7dZsNeBV8ONSC7u0Pw@mail.gmail.com>
+	<BLU172-W373D4888BFB624BFD51BDFAEB40@phx.gbl>
+Date: Tue, 7 Jan 2014 17:02:34 -0800
+Message-ID: <CAHNdxu==eJv-fuX8aAuVvzrhkEAXsy=RV2AFoRZ+XuMtLkZnfw@mail.gmail.com>
+Subject: Re: Topologically sorted list of Artifacts for use by a plugin?
+From: Laird Nelson <ljnelson@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c3d978609bd804ef6b0c3b
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c3d978609bd804ef6b0c3b
+Content-Type: text/plain; charset=UTF-8
+
+On Sun, Jan 5, 2014 at 3:24 PM, Martin Gainty <mgainty@hotmail.com> wrote:
+>
+> MG_01_05>Thanks for taking time to 'think this through'
+>
+
+More thinking and coding.  Here's my final answer:
+https://github.com/ljnelson/maven-artifacts/blob/master/src/main/java/com/edugility/maven/Artifacts.java#L80
+
+That method builds the dependency graph in a way that is friendly to both
+Maven 3.1.1 and Maven 3.0.5, using only non-deprecated classes and methods,
+and using the same dependency graph building and resolution strategy that
+Maven uses internally.  The output is a non-null unmodifiable Collection of
+non-null resolved Artifacts sorted from most standalone to most dependent
+that contains a MavenProject's associated Artifact and all of the Artifacts
+that he depends on.  I'm putting this here in the mailing list for
+posterity; there have been several questions about it (not just mine) and
+so hopefully I've helped someone out.
+
+Best,
+Laird
+
+-- 
+http://about.me/lairdnelson
+
+--001a11c3d978609bd804ef6b0c3b--
+

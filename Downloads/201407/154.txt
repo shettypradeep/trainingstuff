@@ -1,0 +1,88 @@
+From users-return-136880-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 24 17:21:19 2014
+Return-Path: <users-return-136880-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B58D411A91
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 24 Jul 2014 17:21:19 +0000 (UTC)
+Received: (qmail 25296 invoked by uid 500); 24 Jul 2014 17:21:18 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 25229 invoked by uid 500); 24 Jul 2014 17:21:18 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 25212 invoked by uid 99); 24 Jul 2014 17:21:17 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 17:21:17 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of carlspring@gmail.com designates 209.85.217.169 as permitted sender)
+Received: from [209.85.217.169] (HELO mail-lb0-f169.google.com) (209.85.217.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 17:21:13 +0000
+Received: by mail-lb0-f169.google.com with SMTP id s7so2556450lbd.0
+        for <users@maven.apache.org>; Thu, 24 Jul 2014 10:20:51 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=rBDDwqHUpugnlUTfWNAUi9GhMwYlKQuM3bSs0af0X2Y=;
+        b=MasvdTezJyLb6KXRoOHFf/5gTiGLbKsO3RHSShTyyiCF+VyR8zbOUIALtU0f8ciWAf
+         lwoQ6rx3ZBN12nVpsIPzC1hiQNrhDVFao55WtbphCNQEQgJ6ZiwXGhdt9+y48M9U+Wym
+         NNbNqz3pJk9Vla4uvcOCMkHszSaOD+UmU0P0lMxLERcaFYLCxIfcdthn+PxXeiUWN6ja
+         kjaL33G/sv8G0xm49fmDQ5BPec+lPcNF/9NW3iIjxIFzF+loNGKloMrxJ1asByWGXlJO
+         WFQYK9+sKBdNDvtY5eZ0Z+4O/lPFaxeyHv9uMLODbKz6BratmWgw1308P4gvPQDre7kb
+         ypTw==
+X-Received: by 10.152.27.66 with SMTP id r2mr11055798lag.53.1406222451853;
+ Thu, 24 Jul 2014 10:20:51 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.112.180.98 with HTTP; Thu, 24 Jul 2014 10:20:31 -0700 (PDT)
+In-Reply-To: <1406222253494-5800950.post@n5.nabble.com>
+References: <1406221337839-5800947.post@n5.nabble.com> <53d13deb.ca07e00a.61de.ffffd144@mx.google.com>
+ <1406222253494-5800950.post@n5.nabble.com>
+From: Martin Todorov <carlspring@gmail.com>
+Date: Thu, 24 Jul 2014 18:20:31 +0100
+Message-ID: <CANnZoJtg-qAFRNzQr0_FqfMZEHDU1zJBejKWgO5W_UtU0eHuUQ@mail.gmail.com>
+Subject: Re: AW: Conditionally executing a script in profile
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0158c070b7d16b04fef3ad2f
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0158c070b7d16b04fef3ad2f
+Content-Type: text/plain; charset=UTF-8
+
+You cannot conditionally trigger one profile from within the other. You
+will need to have two separate ones.
+
+
+On Thu, Jul 24, 2014 at 6:17 PM, hanuman <hanumannallapati@gmail.com> wrote:
+
+> thanks very much(martin and brend) for your prompt replies .
+>
+> i.e.., can I conditionally invoke a profile within the other profile?
+>                      or
+> create a two profiles and run a separate command for each of them?
+>   ex: mvn -Pcreate-profile1 -e            (to execute script1 and script2
+> .sql)
+>        mvn -Pcreate-profile2 -e            (to execute script3.sql)
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/Conditionally-executing-a-script-in-profile-tp5800947p5800950.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--089e0158c070b7d16b04fef3ad2f--
+

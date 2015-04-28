@@ -1,0 +1,260 @@
+From users-return-137799-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Nov 22 20:22:01 2014
+Return-Path: <users-return-137799-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 51FE7109CD
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 22 Nov 2014 20:22:01 +0000 (UTC)
+Received: (qmail 4198 invoked by uid 500); 22 Nov 2014 20:21:59 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 4103 invoked by uid 500); 22 Nov 2014 20:21:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 4091 invoked by uid 99); 22 Nov 2014 20:21:59 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 22 Nov 2014 20:21:59 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of adrien.rivard@gmail.com designates 209.85.223.170 as permitted sender)
+Received: from [209.85.223.170] (HELO mail-ie0-f170.google.com) (209.85.223.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 22 Nov 2014 20:21:53 +0000
+Received: by mail-ie0-f170.google.com with SMTP id rd18so6898208iec.29
+        for <users@maven.apache.org>; Sat, 22 Nov 2014 12:20:03 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=w8xKMD4eXxn8fZ0wC3QHpddKp2TOtELhxzDdBK3P3eQ=;
+        b=PPOf906HEC7zX5ZCjUS0M7WWwDQQn2e/aE8CizxRTA46OwWgQvjWXqDT52sfYIz8qn
+         FwlqkUapiBWoFnBO7pGKCWpQS87efOcpQaxHxmvFW7pEZgqcFu8T1Bcfw8FPzNa8Vgnh
+         OR0oQiVXsppTVA/VE8wAecWNx+VJQF7RtpKWNkFZEkyQ3B1CG7vqxr2Xpd+mFkwDi6uF
+         zYJR7XVKhRsJwda3yaF7Jp5DPsszfzy7bIqV7FJHr/yREbCWdI+BLZAn1XwHPe3Jfmzn
+         lcM2QNAYBm9vt8WND2on4fDN/69MwdNRTiMa37UGJWAXX76JQo6aHYTWtkFDJ0PHjqbG
+         YlGg==
+MIME-Version: 1.0
+X-Received: by 10.42.176.66 with SMTP id bd2mr7834919icb.84.1416687603045;
+ Sat, 22 Nov 2014 12:20:03 -0800 (PST)
+Received: by 10.42.69.18 with HTTP; Sat, 22 Nov 2014 12:20:02 -0800 (PST)
+In-Reply-To: <CA+kKrXqDKjr3heNFJ1uvdwy40uZ6FFi3ubZ1AVVaLfdAnLD2dQ@mail.gmail.com>
+References: <CA+kKrXpBpoT1VNkniCfpEPE8Up27=pxztHg8qyLobMgf8wSCoQ@mail.gmail.com>
+	<CABLGb9zVeGEWdOBv_0RuttbmAb3OnnpQetC0FHQN6KO=Y9Wyxg@mail.gmail.com>
+	<CA+kKrXqDKjr3heNFJ1uvdwy40uZ6FFi3ubZ1AVVaLfdAnLD2dQ@mail.gmail.com>
+Date: Sat, 22 Nov 2014 21:20:02 +0100
+Message-ID: <CAPCUOdGB4RP0zZkjON3hv=cg3y7hCG=ugpuN21RzFNEMPqa+Aw@mail.gmail.com>
+Subject: Re: i cannot add to my jar the xml files (help me please)
+From: Adrien Rivard <adrien.rivard@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=90e6ba6e8910565f890508784907
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--90e6ba6e8910565f890508784907
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+Your pom seems overly complicated for what you seems to need , normally a
+pom with nearly nothing should put ressources( xml ... ) files of
+ src/main/resources in the jar.
+I would start again with a fresh empty pom and add back the necessary stuff
+you need and see where it broke.
+
+
+On Sat, Nov 22, 2014 at 7:23 PM, Aitor Iturriondobeitia <
+laudio.info@gmail.com> wrote:
+
+> i have put them into src/main/resources
+> (src/main/resources/es/project/classes/utils/security/) and doesn't appers
+> into:
+> myjar.jar\es\project\classes\utils\security\
+> i have the xml files into that directory
+> them doesn't appears into the jar
+>
+> what must i make?
+>
+> Thanks
+>
+> 2014-11-22 18:56 GMT+01:00 Paul Benedict <pbenedict@apache.org>:
+>
+> > Get your XML and XSLT files out of src/main/java -- and you're filtering
+> > that directory too. Put them in src/main/resources
+> >
+> >
+> > Cheers,
+> > Paul
+> >
+> > On Sat, Nov 22, 2014 at 11:47 AM, Aitor Iturriondobeitia <
+> > laudio.info@gmail.com> wrote:
+> >
+> > > hello
+> > > i have one problem and i am working two days an o dont solve it
+> > > y have into may app (jar) several xml fiels into one dir.
+> > > when i install the the project, the jar file doesn't constains the xml
+> > > files. can you help me please?
+> > > the files are into src/main/java/es.midomain/ernesto/security/templates
+> > ans
+> > > are xml files
+> > >
+> > > my pom is this:
+> > > <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="
+> > > http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+> > > http://maven.apache.org/POM/4.0.0
+> > > http://maven.apache.org/xsd/maven-4.0.0.xsd">
+> > >   <modelVersion>4.0.0</modelVersion>
+> > >   <artifactId>Classes</artifactId>
+> > >   <name>Classes</name>
+> > >   <description>clasess</description>
+> > >     <build>
+> > >         <filters>
+> > >
+> > > <filter>${maven.filters.generic.path}/Filters.properties</filter>
+> > >         </filters>
+> > >         <resources>
+> > >             <resource>
+> > >                 <directory>${basedir}</directory>
+> > >                 <filtering>false</filtering>
+> > >                 <includes>
+> > >                     <include>myfiles/**/*.*</include>
+> > >                 </includes>
+> > >             </resource>
+> > >             <resource>
+> > >                 <directory>src/main/java/</directory>
+> > >                 <filtering>true</filtering>
+> > >                 <includes>
+> > >                     <include>**/*.xml</include>
+> > >                     <include>**/*.xslt</include>
+> > >                 </includes>
+> > >             </resource>
+> > >         </resources>
+> > >         <plugins>
+> > > <plugin>
+> > > <artifactId>maven-compiler-plugin</artifactId>
+> > > <version>3.1</version>
+> > > <configuration>
+> > > <source>${jdk.compilation.version}</source>
+> > > <target>${jdk.compilation.version}</target>
+> > > <encoding>${charSetEnconding}</encoding>
+> > > </configuration>
+> > > </plugin>
+> > >             <plugin>
+> > >                 <artifactId>maven-resources-plugin</artifactId>
+> > >                 <version>2.6</version>
+> > >                 <executions>
+> > >                     <execution>
+> > >                         <id>copy-resources</id>
+> > >                         <phase>validate</phase>
+> > >                         <goals>
+> > >                             <goal>copy-resources</goal>
+> > >                         </goals>
+> > >                         <configuration>
+> > >
+> > > <outputDirectory>${basedir}/config</outputDirectory>
+> > >                             <resources>
+> > >                                 <resource>
+> > >
+> > > <directory>${basedir}/configTemplates</directory>
+> > >                                     <filtering>true</filtering>
+> > >                                 </resource>
+> > >                             </resources>
+> > >                         </configuration>
+> > >                     </execution>
+> > >                     <execution>
+> > > <id>copy-resources</id>
+> > > <phase>validate</phase>
+> > > <goals>
+> > > <goal>copy-resources</goal>
+> > > </goals>
+> > > <configuration>
+> > > <outputDirectory>target</outputDirectory>
+> > > <resources>
+> > > <resource>
+> > > <directory>${basedir}/src/main/java</directory>
+> > > <filtering>false</filtering>
+> > > <excludes>
+> > > <exclude>**/*.java</exclude>
+> > > </excludes>
+> > > </resource>
+> > > </resources>
+> > > </configuration>
+> > > </execution>
+> > >                 </executions>
+> > >             </plugin>
+> > >         </plugins>
+> > >         <pluginManagement>
+> > >             <plugins>
+> > >                 <plugin>
+> > >                     <groupId>org.eclipse.m2e</groupId>
+> > >                     <artifactId>lifecycle-mapping</artifactId>
+> > >                     <version>1.0.0</version>
+> > >                     <configuration>
+> > >                         <lifecycleMappingMetadata>
+> > >                             <pluginExecutions>
+> > >                                 <pluginExecution>
+> > >                                     <pluginExecutionFilter>
+> > >
+> > > <groupId>org.apache.maven.plugins</groupId>
+> > >
+> > > <artifactId>maven-dependency-plugin</artifactId>
+> > >
+> > > <versionRange>[1.0.0,)</versionRange>
+> > >                                         <goals>
+> > >
+> >  <goal>copy-dependencies</goal>
+> > >                                         </goals>
+> > >                                     </pluginExecutionFilter>
+> > >                                     <action>
+> > >                                         <ignore />
+> > >                                     </action>
+> > >                                 </pluginExecution>
+> > >                             </pluginExecutions>
+> > >                         </lifecycleMappingMetadata>
+> > >                     </configuration>
+> > >                 </plugin>
+> > >             </plugins>
+> > >         </pluginManagement>
+> > >     </build>
+> > >     <dependencies>
+> > > <dependency>
+> > > <groupId>postgresql</groupId>
+> > > <artifactId>postgresql</artifactId>
+> > > <version>9.1-901.jdbc4</version>
+> > > </dependency>
+> > > <dependency>
+> > >             <groupId>commons-lang</groupId>
+> > >             <artifactId>commons-lang</artifactId>
+> > >             <version>2.6</version>
+> > >         </dependency>
+> > >         <dependency>
+> > > <groupId>commons-codec</groupId>
+> > > <artifactId>commons-codec</artifactId>
+> > > <version>1.5</version>
+> > > </dependency>
+> > > <dependency>
+> > > <groupId>javax.ejb</groupId>
+> > > <artifactId>ejb-api</artifactId>
+> > > <version>3.0</version>
+> > > </dependency>
+> > > <dependency>
+> > > <groupId>javax.transaction</groupId>
+> > > <artifactId>jta</artifactId>
+> > > <version>1.1</version>
+> > > </dependency>
+> > >     </dependencies>
+> > > </project>
+> > >
+> >
+>
+
+
+
+-- 
+Adrien Rivard
+
+--90e6ba6e8910565f890508784907--
+

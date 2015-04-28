@@ -1,0 +1,157 @@
+From users-return-136183-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr 18 09:26:39 2014
+Return-Path: <users-return-136183-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 93359108F8
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 18 Apr 2014 09:26:39 +0000 (UTC)
+Received: (qmail 88514 invoked by uid 500); 18 Apr 2014 09:26:35 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 88036 invoked by uid 500); 18 Apr 2014 09:26:34 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 88028 invoked by uid 99); 18 Apr 2014 09:26:34 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Apr 2014 09:26:34 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of miladyartemis@gmail.com designates 209.85.217.176 as permitted sender)
+Received: from [209.85.217.176] (HELO mail-lb0-f176.google.com) (209.85.217.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Apr 2014 09:26:28 +0000
+Received: by mail-lb0-f176.google.com with SMTP id 10so1196206lbg.21
+        for <users@maven.apache.org>; Fri, 18 Apr 2014 02:26:07 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=pylbmEItuZk5ptZ9SdzmupoDhzFQyW2x+1Xa5mFXHV0=;
+        b=Bt3ckU7TAGsIU85zaflK6hsHXrY/LFRP3QpR3PdwuDXTgt6XV9FgheesUrhE8EAxVD
+         t2VWnCcQff5rC0z0sgvHz3xB/Bu08TFK6VKBPKx9JKdfanj9XYgqoU5BxyDADdMdOBhc
+         7Lddu0UOczsJoPU/UBNSCH3yiIYrvcSfYY4WX0AkrC+3RiE9ccBkJ9wrxwzk7yIqbN0i
+         7uomk8pfst1SVJBPBldhvrDcQoURExXXubt1fHLhKmP5U/MBVDyHlCK2z9ofN5KwJwiZ
+         7OyFozXG5RzUlhE2xz6szf6qpeuwKtaiOEKiplzQm4rPTFjZnda19zQlY+p3ufN/g05n
+         qGPA==
+X-Received: by 10.112.41.227 with SMTP id i3mr1006688lbl.41.1397813167265;
+ Fri, 18 Apr 2014 02:26:07 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.153.2.8 with HTTP; Fri, 18 Apr 2014 02:25:47 -0700 (PDT)
+In-Reply-To: <CAFNq2WcLzK9+b0U19os2JLKwHKB+91m0XS5HB=R1aA2pg5jUHQ@mail.gmail.com>
+References: <CAOSOc=uwBym8BaZhJzn3N4Zrpd=0hmjz7QRxfhTjeHdFRW8TdQ@mail.gmail.com>
+ <CAFNq2WcLzK9+b0U19os2JLKwHKB+91m0XS5HB=R1aA2pg5jUHQ@mail.gmail.com>
+From: Cintia Del Rio <miladyartemis@gmail.com>
+Date: Fri, 18 Apr 2014 19:25:47 +1000
+Message-ID: <CAOSOc=t0bU6XeCzS4gPBCqKYs8Ej8bYEiFZ6vwkx9_mmcBDwPA@mail.gmail.com>
+Subject: Re: dependency plugin automatic version resolution
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113468f04c1c9404f74dbdae
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113468f04c1c9404f74dbdae
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+It makes a lot of sense.
+
+Cheers,
+
+
+On 18 April 2014 19:20, MK Tan <mktany2k@gmail.com> wrote:
+
+> Maven will use the dependency plugin from the super pom.
+> Which you can found at
+> http://maven.apache.org/ref/3.2.1/maven-model-builder/super-pom.html
+>
+>
+>
+> On Fri, Apr 18, 2014 at 5:09 PM, Cintia Del Rio <miladyartemis@gmail.com
+> >wrote:
+>
+> > Hi,
+> >
+> >
+> > I was reading
+> >
+> >
+> http://maven.apache.org/guides/introduction/introduction-to-plugin-resolu=
+tion.html
+> > and
+> >
+> >
+> https://cwiki.apache.org/confluence/display/MAVEN/Maven+3.x+Compatibility=
++Notes#Maven3.xCompatibilityNotes-AutomaticPluginVersionResolution
+> >
+> >
+> > Based on that, I understood that if I call a plugin from CLI without a
+> > version, maven will try to get the latest (and released for maven 3.x)
+> > version available for the running maven.
+> >
+> > I understand as well that some plugins are already bind in a certain
+> > version&lifecycle phases.
+> > http://maven.apache.org/ref/3.0.5/maven-core/lifecycles.html
+> >
+> >
+> > What I don't understand is why dependency:tree is always running versio=
+n
+> > 2.0 (for maven 2.1.0), version 2.1 (for maven 3.0.5) when I don't
+> specify a
+> > version. Maven 3.2.1 will run the latest version, 2.8.
+> > You can see that even the latest version of the plugin requires only
+> maven
+> > > 2.0.9 (
+> >
+> >
+> http://svn.apache.org/viewvc/maven/plugins/tags/maven-dependency-plugin-2=
+.8/pom.xml
+> > ).
+> > I've checked the metadata as well, it looks fine (
+> >
+> >
+> http://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-depend=
+ency-plugin/maven-metadata.xml
+> > ).
+> >
+> >
+> > What lead me to think that some other plugins have the versions
+> "hardcoded"
+> > in maven. Is that correct? Where can I get the list of those plugins?
+> >
+> >
+> > Steps to test:
+> > > mvn archetype:generate -DgroupId=3Dcom.mycompany.app -DartifactId=3Dm=
+y-app
+> > -DarchetypeArtifactId=3Dmaven-archetype-quickstart -DinteractiveMode=3D=
+false
+> > > cd my-app
+> > > mvn dependency:tree
+> >
+> > I removed my maven settings.xml files before testing, so I don't think
+> it's
+> > something local.
+> >
+> > Cheers,
+> >
+> > --
+> >
+> > Cintia Del Rio
+> >
+>
+
+
+
+--=20
+-------
+Sent from TARDIS. Typos might be a timey whyney thingy.
+Enviado da TARDIS, podem existir erros devido =C3=A0 diferen=C3=A7as de esp=
+a=C3=A7o-tempo.
+
+Cintia Del Rio
+
+--001a113468f04c1c9404f74dbdae--
+

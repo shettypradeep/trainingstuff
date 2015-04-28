@@ -1,0 +1,69 @@
+From users-return-136012-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Mar 28 22:52:37 2014
+Return-Path: <users-return-136012-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B009A11C7B
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 28 Mar 2014 22:52:37 +0000 (UTC)
+Received: (qmail 88122 invoked by uid 500); 28 Mar 2014 22:52:32 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 87992 invoked by uid 500); 28 Mar 2014 22:52:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 87939 invoked by uid 99); 28 Mar 2014 22:52:20 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 22:52:20 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of t.broyer@gmail.com designates 209.85.192.47 as permitted sender)
+Received: from [209.85.192.47] (HELO mail-qg0-f47.google.com) (209.85.192.47)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 22:52:16 +0000
+Received: by mail-qg0-f47.google.com with SMTP id 63so5048546qgz.20
+        for <users@maven.apache.org>; Fri, 28 Mar 2014 15:51:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=MQUsXVB/rJFxhGRN9UUYTjqVnO869RVKfOXLJo4OAfQ=;
+        b=kJNTDssgO5g6UEHEWiSQhw8x0H1iyUiN/DyeKujjwxo3uC3N1lwLlK2arriBt0hfV1
+         ZEQgvi54YtzIbWSkdDklIbdKw35Tz/Gu6Szl3FeUoFov5QkjmEERR60FJGh7x2UI0MpP
+         FgLz2Os2vSyjflR9FgmEmerS+yI2g4xmIeUNa2wtyv+kCBbuaNBzKH3v8jDOwM3tJIKd
+         bkyg/uYjIBKd2IfylZxFmcZ7G7S3ih1H5VFvxFuJygNM5/pE4OPVyQny/Bsgp3ITGigL
+         tiWisUl1mDzAvgjy/NCKb8hvWFZmUXNb4uGfoMnx0LLFCAuPTpbZ6ldkBeMcZ1Vnh1db
+         EcBQ==
+MIME-Version: 1.0
+X-Received: by 10.229.179.65 with SMTP id bp1mr12402989qcb.11.1396047115675;
+ Fri, 28 Mar 2014 15:51:55 -0700 (PDT)
+Received: by 10.140.108.101 with HTTP; Fri, 28 Mar 2014 15:51:55 -0700 (PDT)
+Received: by 10.140.108.101 with HTTP; Fri, 28 Mar 2014 15:51:55 -0700 (PDT)
+Date: Fri, 28 Mar 2014 23:51:55 +0100
+Message-ID: <CAEayHEPXOakH0qsmC0mCCntbZu=BNOZ6htiusAjdufq9LH6PCw@mail.gmail.com>
+Subject: Any workaround for SCM-530
+From: Thomas Broyer <t.broyer@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c2c10a6b8adf04f5b28cfe
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c2c10a6b8adf04f5b28cfe
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+I'm importing external test resources as a git submodule (in
+src/test/resources) and that makes release:perform fail because my test
+doesn't find its data. This is because the git clone doesn't check the
+submodules out.
+
+Anyone would know (or imagine) a workaround? (as a last resort, I'll copy
+the files rather then reference them)
+
+http://jira.codehaus.org/browse/SCM-530
+
+--001a11c2c10a6b8adf04f5b28cfe--
+

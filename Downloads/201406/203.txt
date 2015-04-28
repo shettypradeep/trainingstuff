@@ -1,0 +1,102 @@
+From users-return-136487-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jun  2 22:57:54 2014
+Return-Path: <users-return-136487-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D35CD10A9D
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  2 Jun 2014 22:57:54 +0000 (UTC)
+Received: (qmail 17161 invoked by uid 500); 2 Jun 2014 22:57:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 17082 invoked by uid 500); 2 Jun 2014 22:57:52 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 17072 invoked by uid 99); 2 Jun 2014 22:57:52 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 02 Jun 2014 22:57:52 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [85.13.134.252] (HELO dd12814.kasserver.com) (85.13.134.252)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 02 Jun 2014 22:57:49 +0000
+Received: from [192.168.178.45] (p57A14C61.dip0.t-ipconnect.de [87.161.76.97])
+	by dd12814.kasserver.com (Postfix) with ESMTPSA id BF1F011C0D19;
+	Tue,  3 Jun 2014 00:57:25 +0200 (CEST)
+References: <CAPCjjnEO9A_STBkPsLhgHa38ao=9T8wd8mo3mw6+UyqaXuvSvg@mail.gmail.com> <4D1B2C20-D217-4701-B27C-6FAAAA18995C@Kriegisch.name> <CAPCjjnHNMqGNjC=mHSvcTidivHso2PVWREgy3OBdsFR8RshyHQ@mail.gmail.com>
+In-Reply-To: <CAPCjjnHNMqGNjC=mHSvcTidivHso2PVWREgy3OBdsFR8RshyHQ@mail.gmail.com>
+Mime-Version: 1.0 (1.0)
+Content-Type: text/plain;
+	charset=us-ascii
+Message-Id: <8AD1E8C9-4164-4DB9-BDE9-9AA1E9945DA0@Kriegisch.name>
+Content-Transfer-Encoding: quoted-printable
+X-Mailer: iPad Mail (11D201)
+From: Alexander Kriegisch <Alexander@Kriegisch.name>
+Subject: Re: Use native tar to unpack? good/bad idea?
+Date: Tue, 3 Jun 2014 00:57:26 +0200
+To: Maven Users List <users@maven.apache.org>
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Oh, I see, multiple options. Okay, then yes - maintenance nightmare. I think=
+ we should not easily give up Java's idea of platform independence and Maven=
+'s whole point: creating standardised, repeatable builds.
+
+If your idea is a reaction on your latest tar.gz problems, maybe we can find=
+ another solution for it. You have not reacted on my offer to inspect your f=
+iles and see if I have an idea how to fix that in Java. :-)
+--=20
+Alexander Kriegisch
+
+
+> Am 03.06.2014 um 00:48 schrieb Dan Tran <dantran@gmail.com>:
+>=20
+> correct,   I would expect user to install tar.exe or cygwin with tar on
+> windows and activate the option.  By default, it still uses plexus-archive=
+r
+> to unpack
+>=20
+> -D
+>=20
+>=20
+> On Mon, Jun 2, 2014 at 3:42 PM, Alexander Kriegisch <
+> Alexander@kriegisch.name> wrote:
+>=20
+>> Windows does not have tar by default. You need to install Git (incl. Git
+>> Bash), Cygwin, GnuWin32 or similar. I would not expect any user to have t=
+ar
+>> installed at all or if so then in any predictable location or even
+>> reachable via PATH.
+>> --
+>> Alexander Kriegisch
+>>=20
+>>=20
+>>> Am 03.06.2014 um 00:36 schrieb Dan Tran <dantran@gmail.com>:
+>>>=20
+>>> I am think of enhancing maven-dependency-plugin by adding option  to
+>> unpack
+>>> 'tar' like artifact using native tar since it is faster and reserve soft=
+
+>>> links (?)
+>>>=20
+>>> Thoughts? would it be a maintaining night mare??
+>>>=20
+>>> Thanks
+>>>=20
+>>> -Dan
+>>=20
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>=20
+>>=20
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

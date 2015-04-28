@@ -1,0 +1,66 @@
+From users-return-136547-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jun  9 17:42:28 2014
+Return-Path: <users-return-136547-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4713411F0C
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  9 Jun 2014 17:42:28 +0000 (UTC)
+Received: (qmail 62740 invoked by uid 500); 9 Jun 2014 17:42:26 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 62652 invoked by uid 500); 9 Jun 2014 17:42:26 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 62641 invoked by uid 99); 9 Jun 2014 17:42:26 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 09 Jun 2014 17:42:26 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of nestorjb@gmail.com designates 209.85.219.45 as permitted sender)
+Received: from [209.85.219.45] (HELO mail-oa0-f45.google.com) (209.85.219.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 09 Jun 2014 17:42:22 +0000
+Received: by mail-oa0-f45.google.com with SMTP id o6so1067828oag.18
+        for <users@maven.apache.org>; Mon, 09 Jun 2014 10:41:58 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:from:date:message-id:subject:to:content-type;
+        bh=D4iK1BaHbvpAID32Q78UNS9BLjoRhOo2sjmWAaT1dRE=;
+        b=AHIFUUDJ/WPsM2s43RheY2MKzoZFqsgbFVOQHc5n3qnJki3c3gE2xRwgTPufGcErlZ
+         BnPGr2iTULmDI6iYjBbxPyAfKtCd5NOmVtgBNe0H3l5AtoGBzBVl/XJdpvnqUzl/ngN7
+         SC5s+b1jYqsbED0FkUQs3qyQOi1m/+X+XIC+R3fmWKDz+MLSi4y4acgIugvRrnzF2a8Y
+         SLRVipm2TBB/9RLPp7g4T46ce2NDBXnXPrxifDPwkRtz/8o59OmVCcW4TBLfiQm2Ze6m
+         LeuiPCK0dPeRn5BvUjOQkWuZthBtacnmIFvVeLk95pBtfZCglhw3DLJsDrH3smx4S6aU
+         JWTA==
+X-Received: by 10.60.134.239 with SMTP id pn15mr3772218oeb.85.1402335718450;
+ Mon, 09 Jun 2014 10:41:58 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.76.169.33 with HTTP; Mon, 9 Jun 2014 10:41:37 -0700 (PDT)
+From: =?UTF-8?B?TsOpc3RvciBCb3Njw6Fu?= <nestorjb@gmail.com>
+Date: Mon, 9 Jun 2014 13:11:37 -0430
+Message-ID: <CALyLaQJjv+qSq_EkaA8fCxQEW5yu9g4N5Jo5JfSQKZ+upskL9Q@mail.gmail.com>
+Subject: How to create a Mojo that doesn't require the pom.xml file
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b41ce485b3aae04fb6aba1a
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b41ce485b3aae04fb6aba1a
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi
+
+I want to create a Maven Plugin Mojo that doesn't requiere the pom.xml file
+to run like mvn archetype:create. How do I do this?
+
+Regards,
+
+N=C3=A9stor
+
+--047d7b41ce485b3aae04fb6aba1a--
+

@@ -1,0 +1,62 @@
+From users-return-137529-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Oct 10 17:18:16 2014
+Return-Path: <users-return-137529-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 31942178B4
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 10 Oct 2014 17:18:16 +0000 (UTC)
+Received: (qmail 40677 invoked by uid 500); 10 Oct 2014 17:18:14 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 40598 invoked by uid 500); 10 Oct 2014 17:18:14 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 40566 invoked by uid 99); 10 Oct 2014 17:18:13 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 10 Oct 2014 17:18:13 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of jej2003@gmail.com designates 74.125.82.45 as permitted sender)
+Received: from [74.125.82.45] (HELO mail-wg0-f45.google.com) (74.125.82.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 10 Oct 2014 17:18:08 +0000
+Received: by mail-wg0-f45.google.com with SMTP id m15so4526607wgh.16
+        for <users@maven.apache.org>; Fri, 10 Oct 2014 10:17:47 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=gjG377aL2O15FnYB3Os3Rlktrwkhbk/pQ/2qehGXLYU=;
+        b=PdOZTkPrnMjtYkdCY7ggbd7hdcSOd/PlmDA2rISovkefTfWAnSNxp+dO4Zf7ZzuBSN
+         rMjpxnNgWN2ckuiKltekBmv3pIfoQcEV8U1QBxDzU38+pGdaOJUgx5EaMfgKov/z+kyL
+         7joIoOB49R2TyUKNXwlzIx403kh04kOwIes3HJpOEqx2pqEys66Uc/W2nYLKhX+e2ULa
+         fV6zHsJujdf7TxvyAUmLCcCWs2Q99xeoUBK8R/flmmPDUVrHDI9zN9+Y8FuBnKL4kAU5
+         6pzCwMT4ADp23cQ0pEHDrYix3ASuFfysFTbapJ1Gz0f+zLPFiph6EBxhOcULSbxs+nVT
+         Ubdg==
+MIME-Version: 1.0
+X-Received: by 10.180.83.134 with SMTP id q6mr6434080wiy.12.1412961467523;
+ Fri, 10 Oct 2014 10:17:47 -0700 (PDT)
+Received: by 10.216.127.201 with HTTP; Fri, 10 Oct 2014 10:17:47 -0700 (PDT)
+Date: Fri, 10 Oct 2014 13:17:47 -0400
+Message-ID: <CAL3VrCfs7k=31ib9S0pa8SxPGZoKL=47dWxC-UX7Vu_Op21rOg@mail.gmail.com>
+Subject: Different Exclusions based on Scope
+From: Jamie Johnson <jej2003@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=f46d044401925a6658050514ba6f
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d044401925a6658050514ba6f
+Content-Type: text/plain; charset=UTF-8
+
+I have a need to pull in a different set of dependencies for a particular
+artifact depending on the scope.  For compile I need dependency A without
+transitive dependencies, but for Test I need A with transitive
+dependencies.  What is the appropriate way to build a POM file that
+accomplishes this?
+
+--f46d044401925a6658050514ba6f--
+

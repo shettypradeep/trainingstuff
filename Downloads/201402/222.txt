@@ -1,0 +1,91 @@
+From users-return-135613-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 26 16:18:17 2014
+Return-Path: <users-return-135613-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 28EFE10A41
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Feb 2014 16:18:17 +0000 (UTC)
+Received: (qmail 55179 invoked by uid 500); 26 Feb 2014 16:18:06 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 52499 invoked by uid 500); 26 Feb 2014 16:17:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 52462 invoked by uid 99); 26 Feb 2014 16:17:57 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Feb 2014 16:17:57 +0000
+X-ASF-Spam-Status: No, hits=-5.0 required=5.0
+	tests=RCVD_IN_DNSWL_HI,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of jnord@cisco.com designates 173.37.86.74 as permitted sender)
+Received: from [173.37.86.74] (HELO rcdn-iport-3.cisco.com) (173.37.86.74)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Feb 2014 16:17:51 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple;
+  d=cisco.com; i=@cisco.com; l=1024; q=dns/txt; s=iport;
+  t=1393431471; x=1394641071;
+  h=from:to:subject:date:message-id:references:in-reply-to:
+   content-transfer-encoding:mime-version;
+  bh=oT/vSIpJsIyjr/hGGLH2LEicaAe9Fhirz54nwxuU0pw=;
+  b=G6jzdMLLp54N4QqhMm6TF0xb+T6cU+5+d5t2gg6Z66FgK6vDLbZNU55t
+   fQeOF27ygaoHEon/LMKZyThKyycr3J7kP/Du4IijxU8490NWH4tX4+gpd
+   ZsLF+rMF9TDE9kILhtF4a6Eq4f5jIN++pQ82hdClhDIYY9lDyXu8IuTHa
+   g=;
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: AgkFANkSDlOtJV2a/2dsb2JhbABagwaBEoMDvW8YgQIWdIInAQEBAwEjEVUCAQgaAgYgAgICMBUQAgQbE4dWCKg0oHgXgSmMejiCbjWBFASqXoMtgio
+X-IronPort-AV: E=Sophos;i="4.97,548,1389744000"; 
+   d="scan'208";a="306701889"
+Received: from rcdn-core-3.cisco.com ([173.37.93.154])
+  by rcdn-iport-3.cisco.com with ESMTP; 26 Feb 2014 16:17:30 +0000
+Received: from xhc-rcd-x11.cisco.com (xhc-rcd-x11.cisco.com [173.37.183.85])
+	by rcdn-core-3.cisco.com (8.14.5/8.14.5) with ESMTP id s1QGHUv2030048
+	(version=TLSv1/SSLv3 cipher=AES128-SHA bits=128 verify=FAIL)
+	for <users@maven.apache.org>; Wed, 26 Feb 2014 16:17:30 GMT
+Received: from xmb-aln-x03.cisco.com ([169.254.6.138]) by
+ xhc-rcd-x11.cisco.com ([173.37.183.85]) with mapi id 14.03.0123.003; Wed, 26
+ Feb 2014 10:17:30 -0600
+From: "James Nord (jnord)" <jnord@cisco.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: RE: Google Summer of Code - Java opportunity, mentors needed
+Thread-Topic: Google Summer of Code - Java opportunity, mentors needed
+Thread-Index: AQHPMg7CFzl6921IKECIiVSVz/q9R5rHyecA///KQnCAAG6DgP//tS0g
+Date: Wed, 26 Feb 2014 16:17:29 +0000
+Message-ID: <5629A6219DB3E544AB84388D90149787479C9693@xmb-aln-x03.cisco.com>
+References: <530C66D6.2010602@pocock.com.au>
+	<CALhtWkdAmrk07gcM+kdyDTbd7TuiAGutTbw=O_3jPmTz30=R4g@mail.gmail.com>
+	<5629A6219DB3E544AB84388D90149787479C9535@xmb-aln-x03.cisco.com>
+ <CALhtWkf9XQ9UpW-8Ez2peJtnXwXu+4Xy1eMHYXjGMka7kU0bjw@mail.gmail.com>
+In-Reply-To: <CALhtWkf9XQ9UpW-8Ez2peJtnXwXu+4Xy1eMHYXjGMka7kU0bjw@mail.gmail.com>
+Accept-Language: en-GB, en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [10.86.247.26]
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+PiA+IE5vd2hlcmUgaW4gdGhhdCB3YXMgdGhlIHNvdXJjZXMgamFyIG1lbnRpb25lZCAtIHlldCB5
+b3Ugc2VlbWVkIHRvIGhhdmUNCj4ganVtcGVkIGRpcmVjdGx5IHRvIGEgc29sdXRpb24gYW5kIHRo
+ZW4gc2FpZCBjYW7igJl0IGJlIGRvbmUuDQo+IA0KPiBObywgSSBkaXNjdXNzZWQgdGhlIHR3byBw
+YXRocyBmcm9tIHRoZSBQT006IC1zb3VyY2VzIGFuZCA8c2NtLz4NCg0KTXkgbWlzdGFrZSwgc29y
+cnkuDQoNCj4gPiBUaGVyZSBpcyBhIGNyaXRpY2FsIG5lZWQgZm9yIHRoaXMgaW5zaWRlIGJ1c2lu
+ZXNzZXMgYXMgd2VsbCBhcyBEZWJpYW4gKGhvdyBkbw0KPiB3ZSBrbm93IHRoYXQgIm9yZy5mb29i
+YXI6YmF6OjEuMi4zOmphciIgaXMgTUlUIGFzIGl0IGNsYWltcyBhbmQgZG9lc27igJl0DQo+IGNv
+bnRhaW4gc29tZSBHUEwgQ29kZS4NCj4gDQo+IFdoaWNoIGlzIGEgZmluZSByZWFzb24gdG8gY29u
+dHJpYnV0ZSBpdCBNYXZlbiA0IHdoZXJlIHRoZSBQT00gY291bGQgY29udGFpbg0KPiB0aGUgbmVj
+ZXNzYXJ5IG1ldGFkYXRhIHRvIGVuYWJsZSBpdC4NCg0KVGhpcyBzaG91bGRuJ3QgcHJvaGliaXQg
+c29tZXRoaW5nIHVzaW5nIHdoYXQgZXhpc3RzIG5vdy4NCg0KT25lIGNvbW1lcmNpYWwgY29tcGFu
+eSBoYXMgZG9uZSBzb21ldGhpbmcgZm9yIHNvbWUgc3Vic2V0IG9mIGFydGlmYWN0cyAtIHdoaWNo
+IG1heSBoYXZlIGJlZW4gZW50aXJlbHkgaHVtYW4gcHJvY2Vzcy9taXhlZCBvciBhdXRvbWF0ZWQu
+DQoNCg0K
+DQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0NClRvIHVuc3Vic2NyaWJlLCBlLW1haWw6IHVzZXJzLXVuc3Vi
+c2NyaWJlQG1hdmVuLmFwYWNoZS5vcmcNCkZvciBhZGRpdGlvbmFsIGNvbW1hbmRzLCBlLW1h
+aWw6IHVzZXJzLWhlbHBAbWF2ZW4uYXBhY2hlLm9yZw0K
+

@@ -1,0 +1,216 @@
+From users-return-136629-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jun 20 19:33:48 2014
+Return-Path: <users-return-136629-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5EA581120A
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 20 Jun 2014 19:33:48 +0000 (UTC)
+Received: (qmail 36043 invoked by uid 500); 20 Jun 2014 19:33:46 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 35961 invoked by uid 500); 20 Jun 2014 19:33:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 35944 invoked by uid 99); 20 Jun 2014 19:33:46 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 20 Jun 2014 19:33:46 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mfriedenhagen@gmail.com designates 209.85.219.53 as permitted sender)
+Received: from [209.85.219.53] (HELO mail-oa0-f53.google.com) (209.85.219.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 20 Jun 2014 19:33:44 +0000
+Received: by mail-oa0-f53.google.com with SMTP id l6so7904234oag.12
+        for <users@maven.apache.org>; Fri, 20 Jun 2014 12:33:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=lATkPssq0HV4SVVjN58aH7crO2p4ca3dHjgf1kgo7KA=;
+        b=0+TAgUt5yNZsUduNEjO8Zm0vNOxDDG+QamLQJsrL9Hb+X+LnsJZLrp6bTPXvr8b08V
+         JNfOoyIB9D2w/4O7eVztq3/hlTM2uZjrgO3saXv1wIEJpscUknu6QDL09d6Fa8UX6yiC
+         MBE2vJ6I+FgB0d4LgOy6dGecwuJnjGc8tn4wHPQrzJlAIEaKTsVic+rbIOWiYso+Pjrp
+         zDg/kOfPo+arpQNe4sJiBjhHhfkUimvmRiON0Gh2jLmvJhQucFnbbN3jzHGjtT1kcwrV
+         3LP1fSekOLtl0F3U4pCXbCuxkQX228r6w5CQh1shZ05H1eoR2DkZp/f/vJneVcX37BE6
+         TU8g==
+X-Received: by 10.182.72.167 with SMTP id e7mr5685113obv.28.1403292799881;
+ Fri, 20 Jun 2014 12:33:19 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.182.106.193 with HTTP; Fri, 20 Jun 2014 12:32:39 -0700 (PDT)
+In-Reply-To: <53A46632.6030900@artifact-software.com>
+References: <CAK8jvqyWA1V5OQAUi0bFA=72bR_jiXy2smzqh+4n_QR1T8gqOQ@mail.gmail.com>
+ <53A443B2.7080806@artifact-software.com> <CAK8jvqyG-N18567_c1EN+ymxawOGnDKfX0-0j5Xrov=ipnVZMw@mail.gmail.com>
+ <53A46632.6030900@artifact-software.com>
+From: Mirko Friedenhagen <mfriedenhagen@gmail.com>
+Date: Fri, 20 Jun 2014 21:32:39 +0200
+Message-ID: <CAK8jvqzk1FLEXo34KCyFe5bx_p3hE8XmHYV3jm7+0JSg4Fp-tg@mail.gmail.com>
+Subject: Re: Maven plugin which displays the parents of a given project recursively
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Ron,
+
+we have developed some tools which try to guess POM resolutions using
+Python and getting the same resolution resp. interpolations as Maven
+is sometimes hard to do:
+
+* Inheriting POMs do not need to override version and groupId so you
+have to interpolate these from the ancestors.
+* Same for properties which are inherited as well while other elements
+as scm are adding module/artifactIds.
+
+Regards
+Mirko
+Regards Mirko
+--
+http://illegalstateexception.blogspot.com/
+https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+https://bitbucket.org/mfriedenhagen/
+
+
+On Fri, Jun 20, 2014 at 6:49 PM, Ron Wheeler
+<rwheeler@artifact-software.com> wrote:
+> I understand that you have a few (120) repos but once you have made the
+> list, it is easy to maintain.
+> Same as the list of active projects. 1000 is a lot of names to list but you
+> probably can find one already existing or make one through a partially
+> automated process.
+>
+> Otherwise it is a clerical task that you can give to a junior tech.
+>
+> DEPARTMENT_POM ->TEAM_POM -> PROJECT_POM -> MODULE_POM
+> is more interesting but probably not that hard to manage.
+>
+> DEPARTMENT_POM ->TEAM_POM is a small list.
+> You want to eliminate duplicate sub-trees.
+>
+> Just a suggestion for a non-maven solution. That is one of the advantages of
+> using XML in the POM,
+> You are not restricted to using the application for which the files are
+> designed.
+> There are lots of XML tools - both low level and high level that can be
+> applied.
+>
+> Ron
+>
+>
+>
+> On 20/06/2014 11:55 AM, Mirko Friedenhagen wrote:
+>>
+>> Ron,
+>>
+>> * finding all POMs is not that simple in our case as we have at least
+>> 20 SVN repositories with multiple projects and about 100 git
+>> repositories.
+>> * POMs are XML but a lot of projects have at least DEPARTMENT_POM ->
+>> TEAM_POM -> PROJECT_POM -> MODULE_POM relations, so we have to lookup
+>> stuff in Artifactory anyway.
+>> * I think I will implement a goal `display-ancestors` in the
+>> versions-maven-plugin :-).
+>>
+>> Regards
+>> Mirko
+>>
+>>
+>> Regards Mirko
+>> --
+>> http://illegalstateexception.blogspot.com/
+>> https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+>> https://bitbucket.org/mfriedenhagen/
+>>
+>>
+>> On Fri, Jun 20, 2014 at 4:22 PM, Ron Wheeler
+>> <rwheeler@artifact-software.com> wrote:
+>>>
+>>> Good description of the use case that helps.
+>>> You are not very explicit about how you identify the projects to be
+>>> checked
+>>> or where (SCM, staging folder) you want to find them.
+>>>
+>>> Just a thought:
+>>> Couldn't this be accomplished with a batch job that used XSLT or a simple
+>>> Java program with an XML parser to check POMs for outdated references?
+>>> POMs are just XML with a pretty simple structure.
+>>> They always have the same name so finding them in the project is not
+>>> hard.
+>>> You are always looking down the same XPATH(s?) for the version and you
+>>> know
+>>> which one is right.
+>>>
+>>> Is there some magic that Maven includes that is needed here?
+>>>
+>>> Ron
+>>>
+>>>
+>>> On 20/06/2014 8:09 AM, Mirko Friedenhagen wrote:
+>>>>
+>>>> Hello,
+>>>>
+>>>> does anybody know of a plugin which shows the GAV coordinates of the
+>>>> parents of a given project recursively? Or is there any feasible
+>>>> plugin where I could contribute with a goal?
+>>>>
+>>>> My team of 3 is consulting approx. 200 developers in regards of build
+>>>> engineering with ca. 1000 Jenkins jobs and we often see they are using
+>>>> outdated versions of our department POM. Having this information in
+>>>> the console of a Jenkins job would allow to see this without checking
+>>>> the POM.
+>>>>
+>>>> Regards Mirko
+>>>> --
+>>>> http://illegalstateexception.blogspot.com/
+>>>> https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+>>>> https://bitbucket.org/mfriedenhagen/
+>>>>
+>>>> ---------------------------------------------------------------------
+>>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>>
+>>>>
+>>>
+>>> --
+>>> Ron Wheeler
+>>> President
+>>> Artifact Software Inc
+>>> email: rwheeler@artifact-software.com
+>>> skype: ronaldmwheeler
+>>> phone: 866-970-2435, ext 102
+>>>
+>>>
+>>>
+>>> ---------------------------------------------------------------------
+>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+>
+>
+> --
+> Ron Wheeler
+> President
+> Artifact Software Inc
+> email: rwheeler@artifact-software.com
+> skype: ronaldmwheeler
+> phone: 866-970-2435, ext 102
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

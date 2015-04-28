@@ -1,0 +1,212 @@
+From users-return-135549-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb 17 10:18:12 2014
+Return-Path: <users-return-135549-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CFE8A10A10
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 17 Feb 2014 10:18:12 +0000 (UTC)
+Received: (qmail 2066 invoked by uid 500); 17 Feb 2014 10:18:08 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 1920 invoked by uid 500); 17 Feb 2014 10:18:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 72646 invoked by uid 99); 17 Feb 2014 06:40:30 -0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1392619203; l=6748;
+	s=domk; d=apconsult.de;
+	h=Content-Transfer-Encoding:Content-Type:In-Reply-To:References:
+	Subject:To:MIME-Version:From:Date:X-RZG-CLASS-ID:X-RZG-AUTH;
+	bh=JnYOiwuKa9n4FbfEh7uKw1cGHBU=;
+	b=SApaRIm8bWHsG7HF4eBoYOVecQBVuAH4ghHgAkvQNOjCfFsanOY8S0Y74QH3T323GU0
+	sijiob9vxuLnxmj3A/R8mDDJb1ldpiwk0K6/ZcwmnVKucFPLd3E+HXelLPGIajXT4SLMH
+	Pkj1TJ5d4ij/gAqrU6YJLu1L+4SPv3hAnoU=
+X-RZG-AUTH: :KG0SfETmd/55bSarYSJgwI+Iuho+dmriAESeqkyNCY6u2StSfNt+8Kuz4Sjl+nG+K0E7Mw==
+X-RZG-CLASS-ID: mo00
+Message-ID: <5301ADBC.3080909@apconsult.de>
+Date: Mon, 17 Feb 2014 07:35:40 +0100
+From: David Law <David.Law@apconsult.de>
+User-Agent: Mozilla/5.0 (Windows NT 5.1; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Looking for org.apache.poi 3.10-FINAL
+References: <530078F7.4060903@apconsult.de> <53007A1C.8060902@apconsult.de> <CAK8jvqwWUYV2PinvQ3EFcFjMUEewZ-3VEMdE4ykm+xLpk437Bg@mail.gmail.com> <53009385.8040401@apconsult.de> <CAMr6Z4kRvBO9LduJkdU9iYnCoEPcMxxCAAt9up=PFKTRucto-A@mail.gmail.com> <5300CCFD.4070204@apconsult.de> <CAMr6Z4mTkpaAXLsGZYQH2eYRxDJAKcuyBDZx1oQM0ZGZdJZejQ@mail.gmail.com> <5300E538.4070009@apconsult.de> <CA+nPnMwkjdt-RbBvfdAmq_EcNcX3W1Vm2rbPNUyDuakUb9CwgQ@mail.gmail.com> <CALy+7Umw463Pz2O7R3=t+DNZSwSxY=63mQ6uutJEb9UNMhUgvQ@mail.gmail.com> <53013F19.9040803@apconsult.de> <CALy+7Um8POat-fWdQdq7teAAjNGERGKkBcEQTQzr=swXw9gfxg@mail.gmail.com> <53015013.6070005@artifact-software.com>
+In-Reply-To: <53015013.6070005@artifact-software.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Ron, Wayne,
+
+this wasted several days (elapsed) of my time:
+I spent ages trying out options & trying to figure out what I'd done 
+wrong...
+...rebuilding & updating indices, hacking through to
+workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration,
+to set logging to ALL, but even ALL  was somewhat sparse.
+I tried Google & found loads of hits that had nothing to do with it.
+I found nothing at apache maven or maven central or m2eclipse.
+I tried the POI Forum, but it became clear that wasn't the problem.
+
+As Wayne rightly points out "where is the right place to document it?".
+With a complex issue like this with multiple components where do you start?
+But thats all the more reason to document it somewhere...
+
+Right now it seems to me not to be a maven problem as such.
+Its about how maven central creates its indices & how m2e uses them.
+So in theory it needs to be documented in both, correspondingly 
+cross-referenced.
+But as the m2e FAQ is subscription-only it would seem the only place is the
+maven central FAQ.  And its so important, it should be a point in its 
+own right:
+
+"Why can't I see new artifacts in my client (e.g. m2eclipse)?"
+(Tip -> you can get as-yet-unindexed artifacts explicitly...)
+
+And then there's the question, why does m2e use the high-latency index?
+If its performance/server-load, then it could be
+a rethink of the index-structure is necessary.
+Is that a maven issue?
+I have some ideas there...
+
+All the best,
+DaveLaw
+
+On 17/02/2014 00:56, Ron Wheeler wrote:
+> http://stackoverflow.com/questions/10600576/nexus-index-of-maven-central-is-not-up-to-date-new-installation 
+>
+> The problem appears to be well known but is not something that one 
+> expects and it will be hard to know where people are most likely to look.
+>
+> It is not really a Maven problem and as I understand it, if you just 
+> set your dependencies and build, you will not see the problem or be 
+> affected by it.
+> If you are trying to use your own repository's proxy to Maven Central 
+> to quickly find the latest version rather than visiting the website of 
+> the developer of the library, you will have trouble.
+> If you go to directly to searching Maven Central, you will not have 
+> the problem.
+>
+> It seems that you need to separate the problem from the point where 
+> the user will run into it.
+> The most likely place to look for it is in Maven since that is where 
+> one might read documentation about setting up dependencies, even if it 
+> has nothing to do with Maven.
+>
+> http://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies 
+>
+> is probably the most likely place to see a note about browsing Maven 
+> Central
+> It  most likely could go somewhere in this paragraph:
+> <quote>
+> What about dependencies built somewhere else? How do they get into my 
+> local repository? Whenever a project references a dependency that 
+> isn't available in the local repository, Maven will download the 
+> dependency from a remote repository into the local repository. You 
+> probably noticed Maven downloading a lot of things when you built your 
+> very first project (these downloads were dependencies for the various 
+> plugins used to build the project). By default, the remote repository 
+> Maven uses can be found (and browsed) 
+> athttp://repo.maven.apache.org/maven2/. You can also set up your own 
+> remote repository (maybe a central repository for your company) to use 
+> instead of or in addition to the default remote repository. For more 
+> information on repositories you can refer to theIntroduction to 
+> Repositories 
+> <http://maven.apache.org/guides/introduction/introduction-to-repositories.html>.
+>
+> </quote>
+>
+> It would still be an odd notation and might still be hard to find, 
+> given the initial analysis that a new Maven user would have of the 
+> apparent problem.
+>
+> I am not sure what the cost of creating a new index is, but perhaps it 
+> could be done more frequently.
+>
+> I also do not understand how the index is propagated to my proxy for 
+> Maven Central in my Nexus repo but I still don't see the latest POI 
+> either ( my Nexus is very old so perhaps the problem is at my end)
+>
+> Ron
+>
+>
+>
+> On 16/02/2014 6:31 PM, Wayne Fay wrote:
+>> Sure, but which FAQ should this go in - a generic Maven faq, a faq
+>> specific to m2eclipse (bear in mind, this group has zero control over
+>> m2e), or a FAQ related to Central? Or all of those places? Where did
+>> you look (in the Maven website & docs) for such information, prior to
+>> posting your email to this list?
+>>
+>> It may not sound like it but I am genuinely curious where this
+>> information should go to ensure the right people can see/find it when
+>> they need to know such information.
+>>
+>> Wayne
+>>
+>> On Sun, Feb 16, 2014 at 4:43 PM, David Law <m2eclipse@apconsult.de> 
+>> wrote:
+>>> Hi Wayne,
+>>>
+>>> I would suggest someone documents the behaviour in the FAQ
+>>> with a tip that a not-yet-indexed artifact can be proactively retrieved
+>>> by entering its Group Id, Artifact Id & Version.
+>>>
+>>> That way we all save time.
+>>>
+>>> All the best,
+>>> DaveLaw
+>>>
+>>>
+>>> On 16.02.2014 21:52, Wayne Fay wrote:
+>>>>>> thanks once again!  The only person to supply useful information.
+>>>> ...
+>>>>>> Over 6 days old!!
+>>>> ...
+>>>>>> So that means maven central took over 6 days to index this content.
+>>>>>> That is quite incredible!
+>>>> ...
+>>>>>> This is in my opinion a bug, or at least a fundamental design error.
+>>>>
+>>>>> Also before completely blaming Sonatype I would suggest you find out
+>>>> You may also want to lose some of the attitude. No one here is getting
+>>>> paid (by you) to do what we're doing -- in fact Sonatype has spent a
+>>>> considerable amount of money building and maintaining Central over the
+>>>> years. Attacking them (or those on this list) because you couldn't use
+>>>> the latest POI immediately after it was released seems like a bad
+>>>> move. You catch more flies with honey and all that.
+>>>>
+>>>> Wayne
+>>>>
+>>>> ---------------------------------------------------------------------
+>>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>>
+>>>>
+>>>
+>>> ---------------------------------------------------------------------
+>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+>
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

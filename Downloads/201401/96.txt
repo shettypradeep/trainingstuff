@@ -1,0 +1,99 @@
+From users-return-135012-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan  7 23:25:34 2014
+Return-Path: <users-return-135012-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CEB9210744
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  7 Jan 2014 23:25:34 +0000 (UTC)
+Received: (qmail 95964 invoked by uid 500); 7 Jan 2014 23:25:32 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 95850 invoked by uid 500); 7 Jan 2014 23:25:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 95842 invoked by uid 99); 7 Jan 2014 23:25:32 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 07 Jan 2014 23:25:32 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of baerrach@gmail.com designates 209.85.212.52 as permitted sender)
+Received: from [209.85.212.52] (HELO mail-vb0-f52.google.com) (209.85.212.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 07 Jan 2014 23:25:27 +0000
+Received: by mail-vb0-f52.google.com with SMTP id p5so626435vbn.11
+        for <users@maven.apache.org>; Tue, 07 Jan 2014 15:25:06 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=6xDZfm10CxeUPDUhO2AyVlhNqpf5Eg/rbF7R5IIgWvs=;
+        b=c7Hwda+ImnpmKVcoigJx/NgjUCvjfi9yCShw7EEKNYpw5iMleFJr+mJgixvUeWLrcd
+         ZCL2H3ngqxyMl2qCyZbou1rzwitqpSwZy61BT5fH/zKCdIkAA6FuF8UcRpOYdxa1eZ1U
+         ucverLIAyyiokuQb6sdHY5cTH2JusZ5Y/zx8P3iuCrsN4YdzchSypOVja/XdUtly6psm
+         hZ3i3ofQ+seqenW0OdpLGEVP+7TxD1kc8uA93y9BQCpJXImLzcINkTV6mcC+HLq0ffkX
+         cwzQiHfG2I2pS4tu4xXvfpdAXlJ3ZuZrRFyLImyGPMWVmwowU5GWFVZKT4KHI5oB1dz9
+         krSg==
+MIME-Version: 1.0
+X-Received: by 10.52.64.140 with SMTP id o12mr4171675vds.40.1389137106831;
+ Tue, 07 Jan 2014 15:25:06 -0800 (PST)
+Received: by 10.58.48.131 with HTTP; Tue, 7 Jan 2014 15:25:06 -0800 (PST)
+In-Reply-To: <1389133804785-5780906.post@n5.nabble.com>
+References: <1318908458293-4912280.post@n5.nabble.com>
+	<BD63C79E-FB60-4A77-AEF5-9E067F099855@codehaus.org>
+	<1318937525615-4913348.post@n5.nabble.com>
+	<CADVp3v-8sqZbH6_6i7QO_zojNU-k-LauOYe9Mtxr6Az-1xpt2A@mail.gmail.com>
+	<4F35725E.7010209@springdot.org>
+	<CAPoyBqT+Y1Sypaq56EzjdA7-VY+TPLtZGfuVEzufFNVKi0sWsQ@mail.gmail.com>
+	<4F396A25.9040503@springdot.org>
+	<1389133804785-5780906.post@n5.nabble.com>
+Date: Wed, 8 Jan 2014 09:55:06 +1030
+Message-ID: <CADVp3v88yZ90BzQVwvVqz7oeKDBBc5SBOKyZn1SfTKgrsNnSwg@mail.gmail.com>
+Subject: Re: DefaultProjectBuilder ... mavenTools: null [Was: Re:
+ Programmatically get maven properties]
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=ISO-8859-1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 8 January 2014 09:00, juliangeo <julianhernandeze@gmail.com> wrote:
+> Hi!
+>
+> I'm new to Maven and I've been struggling with this for a while. I just need
+> to be able to programmatically build a project from a pom file in order to
+> retrieve its relevant information. I am not using, nor want to, a maven
+> plugin, just need this functionality as part of my application.
+>
+> I've tried the code you successfully got to work but no luck so far. I still
+> get the "mavenTools: null" from the repositoryManager being null. Am I
+> missing something? Should I run this on some kind of special environment?
+>
+> I'd appreciate any help as I'm really lost here.
+[del]
+>>>>> I'd be surprised if that worked.
+>>>>>
+>>>>> Maven makes heavy use of dependency injection via Plexus and chances
+>>>>> are you haven't set up some component that is being used.
+
+Your answer is already here.
+
+You just can't use the classes outside of the Maven environment
+without also setting up all the other dependencies that are needed by
+that class.
+And as noted, this is done by Dependency Injection (via Plexus).
+You will need to look at MavenArtifactRepository and see what other
+objects need to be instantiated and set into it for it to work
+properly.
+
+Your use case is not something others are really trying to do, so you
+are unlikely to find someone with the knowledge to help.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

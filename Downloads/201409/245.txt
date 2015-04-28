@@ -1,0 +1,92 @@
+From users-return-137215-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Sep  8 21:59:09 2014
+Return-Path: <users-return-137215-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A028811229
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  8 Sep 2014 21:59:09 +0000 (UTC)
+Received: (qmail 58634 invoked by uid 500); 8 Sep 2014 21:59:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 58552 invoked by uid 500); 8 Sep 2014 21:59:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 58541 invoked by uid 99); 8 Sep 2014 21:59:07 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 08 Sep 2014 21:59:07 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ott@mirix.org designates 78.46.130.147 as permitted sender)
+Received: from [78.46.130.147] (HELO a.mirix.org) (78.46.130.147)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 08 Sep 2014 21:58:40 +0000
+Received: from [2003:58:a535:1e00:2d60:b6a3:9f7f:f848]
+	by a.mirix.org with esmtpsa (TLS1.0:ECDHE_RSA_AES_128_CBC_SHA1:128)
+	(Exim 4.82_1-5b7a7c0-XX)
+	(envelope-from <ott@mirix.org>)
+	id 1XR6xM-0007Oa-1E
+	for users@maven.apache.org; Mon, 08 Sep 2014 23:58:40 +0200
+Message-ID: <540E26DC.4040306@mirix.org>
+Date: Mon, 08 Sep 2014 23:59:56 +0200
+From: Matthias-Christian Ott <ott@mirix.org>
+User-Agent: Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Build dependencies from source code
+X-Enigmail-Version: 1.6
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+My current understanding is that Maven and Maven repositories are
+primarily used to distribute pre-compiled binaries and to build other
+software against these binaries. I want to build all dependencies of a
+project from source code.
+
+I found that it is possible to publish source code through Maven
+repositories and build dependencies that provide source code via the
+source, dependency and build helper plugins. However, despite some
+technical problems (non-incremental builds, no separate .jar files), it
+seems this is not how Maven is normally used for.
+
+Some Linux distributions also build all software that uses Maven from
+source and have developed their own software to isolate Maven builds and
+build them only with the software which are specified as dependencies in
+the build specification of the package manager. Debian has dpkg helper
+scripts, Fedora has koji and there is also JPackage. It was somewhat
+difficult to integrate Maven with the respective package managers and
+build systems and for example FreeBSD does not compile Java software and
+only uses pre-compiled binaries to avoid these difficulties.
+
+For other operating systems without package managers, especially
+Microsoft Windows and Mac OS X, it is worse. Because all dependencies
+have to be bundled with and updated for each independently installed
+software. This is particularly problematic for security updates.
+
+It seems setting up a build service (similar to koji but
+platform-independent) that tracks new software versions, is aware of
+dependencies between projects and builds all transitive dependencies
+from source code with isolated Maven repositories and bundles all
+dependencies with the original software. In order to track dependencies
+it would be necessary to have adapters that watch and scrap FTP
+directories, RSS and atom feeds and websites for updates, import source
+code archives, build new releases, rebuild dependent software, flag the
+newly build software for testing and approval. While this is certainly
+not impossible, it is also not trivial.
+
+Is anyone aware of a source build system for Maven would meet the
+requirements or at least serve as a foundation for building such system?
+
+Regards,
+Matthias-Christian
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,119 @@
+From users-return-136764-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 10 05:12:40 2014
+Return-Path: <users-return-136764-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C014C11790
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 10 Jul 2014 05:12:40 +0000 (UTC)
+Received: (qmail 56826 invoked by uid 500); 10 Jul 2014 05:12:39 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 56735 invoked by uid 500); 10 Jul 2014 05:12:39 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 56723 invoked by uid 99); 10 Jul 2014 05:12:38 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 10 Jul 2014 05:12:38 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.215.54 as permitted sender)
+Received: from [209.85.215.54] (HELO mail-la0-f54.google.com) (209.85.215.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 10 Jul 2014 05:12:34 +0000
+Received: by mail-la0-f54.google.com with SMTP id mc6so5774062lab.13
+        for <users@maven.apache.org>; Wed, 09 Jul 2014 22:12:13 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=+Ms5FlU2NXnmklUlSUG42Dms6bZAjOCF0gQCWwsjoq4=;
+        b=neMxXB73fPQ/ZtAIvEJiMB8SY7dwOXlpx755pNDfar/CBXJ8OvT5BJdzHpddUCP+WT
+         xqBsp5/cHjXw9eMrGxqNL1QjoMqSdDLYjziRJyFPEm41+WHnsy8aFRXLvEmZpESxSdkV
+         FrvMuyLppEHdrJgzrOmsz9FdVn91z0M2i2egS8lv1Gdrr/ToRRecj9BhV5rmQKvhVq/6
+         3d6S9A4Hgr3AyCfeYqRcJvYZaS6gSAsbDRvMWNQTbR75u1ERb8wIpWb+U7ORoKbigtIo
+         HEw93B0tFoNEk0E6l3sG7drvc2bM5RhEQxTGDot0+qjF4zbvRwjDAGJ/Vu5tzTwgf1ta
+         mg9Q==
+MIME-Version: 1.0
+X-Received: by 10.112.134.40 with SMTP id ph8mr1625667lbb.34.1404969133140;
+ Wed, 09 Jul 2014 22:12:13 -0700 (PDT)
+Received: by 10.114.122.194 with HTTP; Wed, 9 Jul 2014 22:12:13 -0700 (PDT)
+In-Reply-To: <53BE1C49.2090004@mgm-tp.com>
+References: <CAPCjjnFSUedmTAWd-m=mJHJKUE1jwcuaiBaT0G-87b_G_4hb1A@mail.gmail.com>
+	<CAPCjjnE1LGoYhAOHVrO65TghfZXAdTqqrPJs4jv5N0yC0V=A7A@mail.gmail.com>
+	<53BE1C49.2090004@mgm-tp.com>
+Date: Wed, 9 Jul 2014 22:12:13 -0700
+Message-ID: <CAPCjjnH6iOYp9T0fCmS18em-n_yPa71wVf0jT=K9zFtFssJq3A@mail.gmail.com>
+Subject: Re: Extracting a reactor artifact set out of maven repo
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b3a7eac19efdb04fdcfde34
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b3a7eac19efdb04fdcfde34
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Thanks, looks like this one only works for one artifact
+
+-d
+
+On Wednesday, July 9, 2014, Reinhard N=C3=A4gele <reinhard.naegele@mgm-tp.c=
+om>
+wrote:
+
+> Here's one:
+>
+> https://github.com/hcguersoy/nexus-maven-plugin
+>
+> I works but has been discontinued now in favor of a Jenkins plugin.
+>
+> Reinhard
+>
+>
+> Am 10.07.2014 01:15, schrieb Dan Tran:
+>
+>> any one? :-) or it is just me having a need for this?
+>>
+>> Thanks
+>>
+>> -D
+>>
+>>
+>> On Tue, Jul 8, 2014 at 10:24 AM, Dan Tran <dantran@gmail.com> wrote:
+>>
+>>  Hi
+>>>
+>>> My company is doing daily release builds for quite a few components (
+>>> which fill up maven release repo after a while). and we dont use stagin=
+g
+>>> (
+>>> please dont drill me on this ). Eventually one of the build need to be
+>>> promoted to a another repo ( ie RTM). Is there such a plugin what can
+>>> extract the artifact set of a reactor, and move it to another repo.
+>>>
+>>> I think the move/merge into another repo can be done via
+>>> wagon-maven-plugin.  Assume that each component has its own top level
+>>> groupId.
+>>>
+>>>
+>>> Thanks
+>>>
+>>> -Dan
+>>>
+>>>
+>>>
+>>>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7b3a7eac19efdb04fdcfde34--
+

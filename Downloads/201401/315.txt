@@ -1,0 +1,120 @@
+From users-return-135021-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan  8 19:02:40 2014
+Return-Path: <users-return-135021-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 16F1F10D98
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  8 Jan 2014 19:02:40 +0000 (UTC)
+Received: (qmail 36337 invoked by uid 500); 8 Jan 2014 19:00:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 36281 invoked by uid 500); 8 Jan 2014 19:00:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 36261 invoked by uid 99); 8 Jan 2014 19:00:52 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 19:00:52 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of anders.g.hammar@gmail.com designates 74.125.82.170 as permitted sender)
+Received: from [74.125.82.170] (HELO mail-we0-f170.google.com) (74.125.82.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 19:00:47 +0000
+Received: by mail-we0-f170.google.com with SMTP id u57so1639017wes.29
+        for <users@maven.apache.org>; Wed, 08 Jan 2014 11:00:27 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=vFrgLytGsrbMHgNXKXjBjxMGUFNYIpx9n9xbj561dRk=;
+        b=DPd8A101tKqD52Yc7+o/77aZgxGKVjlS8R7CPlCDjN7g/2aTQksbtvHPgharHBlwqX
+         3K006vfv37e0V/POTiyKF/vLH5arSLnBshrTWzIcjZiStdFr3J6JWabu3spMeYIvZqGj
+         r8/dUNiP9Ugxn4uSr4W2prUZzLnoVvMAcbP+3ZQp3JY2qryUPXglaiKwuE17jU23CQlY
+         jg9rzS7H8tQMaWBdX88hPL7DjzEnrOkcnUTulOXJR2nUWMfncmTNUE5i9/Mhu05EdMf2
+         LWcf4CY9I/f0IK0hDiKqHYqvZ1g1OXjb/vOd7WrqNcgZAYrDweiYbur5F+2LpcRS4F8A
+         f4pg==
+MIME-Version: 1.0
+X-Received: by 10.180.160.212 with SMTP id xm20mr22373357wib.33.1389207626948;
+ Wed, 08 Jan 2014 11:00:26 -0800 (PST)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.137.38 with HTTP; Wed, 8 Jan 2014 11:00:26 -0800 (PST)
+In-Reply-To: <52CC4999.7040704@alishomepage.com>
+References: <52CC4999.7040704@alishomepage.com>
+Date: Wed, 8 Jan 2014 20:00:26 +0100
+X-Google-Sender-Auth: PTq0AAKpJEvJbqCkNys6tCjm0Rc
+Message-ID: <CAKDUN1vAc3ha9ZKnxKKiqZtF_9ajYNMFeUzshkVCbu0PCgJfWw@mail.gmail.com>
+Subject: Re: Maven2/Maven3 plugin development: Ensuring only the available
+ parameters are allowed
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b624d341fa68404ef7a1bcd
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b624d341fa68404ef7a1bcd
+Content-Type: text/plain; charset=ISO-8859-1
+
+AFAIK there is no support for this. If you think there should be, please
+file a ticket [1].
+
+/Anders
+
+[1] http://jira.codehaus.org/browse/MNG/
+
+
+On Tue, Jan 7, 2014 at 7:38 PM, S. Ali Tokmen <nospam@alishomepage.com>wrote:
+
+> Dear Maven users
+>
+> I am one of the owners of Codehaus CARGO, which has a Maven2/Maven3
+> plugin; and would have a question with regards to how parameters are
+> managed.
+>
+> We defined our MOJOs with parameters (you can see
+>
+> http://svn.codehaus.org/cargo/extensions/trunk/maven2/plugin/src/main/java/org/codehaus/cargo/maven2/AbstractCargoMojo.java
+> for example), but what happens is that if a user unwillingly puts a
+> parameter in the wrong place then the plugin execution doesn't stop.
+>
+> As an example, I can write the below POM and build still works (even
+> thought the MOJO has no parameter called "foo"):
+>
+>   <plugin>
+>     <groupId>org.codehaus.cargo</groupId>
+>     <artifactId>cargo-maven2-plugin</artifactId>
+>     <version>1.4.6</version>
+>     <configuration>
+>       <foo>
+>         bar
+>       </foo>
+>     </configuration>
+>   </plugin>
+>
+> Is there any way I can instruct by MOJO to fail if there is an unknown
+> parameter?
+>
+> Please advise
+>
+> Thank you
+>
+> --
+>
+> S. Ali Tokmen
+> http://ali.tokmen.com/
+>
+> My IM, GSM, PGP and other contact details
+> are on http://contact.ali.tokmen.com
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7b624d341fa68404ef7a1bcd--
+

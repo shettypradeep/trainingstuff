@@ -1,0 +1,128 @@
+From users-return-137600-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Oct 20 17:49:02 2014
+Return-Path: <users-return-137600-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A237217BBA
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 20 Oct 2014 17:49:02 +0000 (UTC)
+Received: (qmail 61690 invoked by uid 500); 20 Oct 2014 17:49:01 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 61612 invoked by uid 500); 20 Oct 2014 17:49:01 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 61600 invoked by uid 99); 20 Oct 2014 17:49:00 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Oct 2014 17:49:00 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of henning@schmiedehausen.org designates 209.85.213.171 as permitted sender)
+Received: from [209.85.213.171] (HELO mail-ig0-f171.google.com) (209.85.213.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Oct 2014 17:48:35 +0000
+Received: by mail-ig0-f171.google.com with SMTP id h15so5796555igd.16
+        for <users@maven.apache.org>; Mon, 20 Oct 2014 10:48:33 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:cc:content-type;
+        bh=kE2gmPQNodT0iyItgHKMP5mCGm/vHSJ/a5d/uJJSQ2g=;
+        b=JHDre+qhmxiG6oDRtoArVOwrr2dV6++JGTi/klGJpzFWnMcMFsntsdiIEVSYYHZr7J
+         JdiQx9F3G/BsSvBCwI3fZkFhZgEiKofE67p4vksERRWCIO0rUR2mMMKO5judyOCWofzY
+         5QfxR0aVR5fm+CEVOBpHbvPFLJNH64LlQP0kxnaIhBttJPxCy8YriKoLaOE5VvVDY2+Y
+         nVMjjIjTPb84ppsVm65iO+R8+XeTjoFH8N1yMyqYMUee1sfcWNtC35wJk2LK/Rh6SqkA
+         MUZnwH0Ttjzv0N6Vc/jdxK1mUJr3MWFbilIFfDs0t1QDDu1FJ0T2ezVm7aUNznjIQ9mt
+         XvEQ==
+X-Gm-Message-State: ALoCoQnKK2jzovcrQra1xJbLGyYicuPvQc9u/1HXL65VpA2wUqbr28C/0cdnTVrS+Baut+6O1diq
+MIME-Version: 1.0
+X-Received: by 10.107.136.68 with SMTP id k65mr11758368iod.43.1413827313230;
+ Mon, 20 Oct 2014 10:48:33 -0700 (PDT)
+Received: by 10.107.161.85 with HTTP; Mon, 20 Oct 2014 10:48:33 -0700 (PDT)
+In-Reply-To: <B0E50B9B-085F-488B-AC8A-7952451912BA@takari.io>
+References: <CAMH6+azzBnmEt7Vr8pf+DrnfwzE_k8hBgY6LaCdY_BjiHwTCWg@mail.gmail.com>
+	<B0E50B9B-085F-488B-AC8A-7952451912BA@takari.io>
+Date: Mon, 20 Oct 2014 10:48:33 -0700
+Message-ID: <CAGxBM5FQMU1PFYQwPpONmosgUyNc7fn7KGVEMp8mF9i0L8E-Bg@mail.gmail.com>
+Subject: Re: Company-wide checkstyle.xml ?
+From: Henning Schmiedehausen <henning@schmiedehausen.org>
+To: Jason van Zyl <jason@takari.io>
+Cc: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113ecd66c77f5b0505de52a2
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113ecd66c77f5b0505de52a2
+Content-Type: text/plain; charset=UTF-8
+
+There actually is a slightly better way (which is to generate a policy jar,
+which contains the config files for PMD, checkstyle etc) and reference that
+from the POMs.
+
+See https://github.com/kitei/kitei-policy for an example. (kitei-root is
+the base pom and kitei-rules builds the rules jar).
+
+-h
+
+On Mon, Oct 20, 2014 at 8:47 AM, Jason van Zyl <jason@takari.io> wrote:
+
+> The best mechanism I have seen to date for sharing configuration amongst
+> many projects is the Airbase POM in the Airlift project that was developed
+> by Henning (I've cc'd him).
+>
+> Airbase uses PMD but you can probably use a similar technique for
+> Checkstyle. I always point people at the Airbase POM as it's what I
+> consider the best way to configure a Maven build.
+>
+> On Oct 20, 2014, at 10:56 AM, James Green <james.mk.green@gmail.com>
+> wrote:
+>
+> Is there a good practice to achieve this?
+>
+> I have a company-parent POM which has config to deal with site generation
+> and distributionMangement. Everything has this as it's parent.
+>
+> I also have a build-tools JAR that supplies checkstyle.xml. The problem is
+> company-parent depends-on build-tools within the site configuration, yet
+> build-tools requires company-parent to inherit distributionManagement...
+> Yuck.
+>
+> I now note there is an in-line configuration for checkstyle possible. Is
+> this the way forward for our case?
+>
+> Thanks,
+>
+> James
+>
+>
+> Thanks,
+>
+> Jason
+>
+> ----------------------------------------------------------
+> Jason van Zyl
+> Founder,  Apache Maven
+> http://twitter.com/jvanzyl
+> http://twitter.com/takari_io
+> ---------------------------------------------------------
+>
+>
+> What matters is not ideas, but the people who have them. Good people can fix bad ideas, but good ideas can't save bad people.
+>
+>  -- Paul Graham
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+
+--001a113ecd66c77f5b0505de52a2--
+

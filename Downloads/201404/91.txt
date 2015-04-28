@@ -1,0 +1,78 @@
+From users-return-136145-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 15 06:42:46 2014
+Return-Path: <users-return-136145-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1150C10EAB
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 15 Apr 2014 06:42:46 +0000 (UTC)
+Received: (qmail 40499 invoked by uid 500); 15 Apr 2014 06:42:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 40354 invoked by uid 500); 15 Apr 2014 06:42:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 40270 invoked by uid 99); 15 Apr 2014 06:42:26 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Apr 2014 06:42:26 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [141.35.1.28] (HELO mailout0.rz.uni-jena.de) (141.35.1.28)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Apr 2014 06:42:20 +0000
+Received: from mailsmtp1.rz.uni-jena.de (mailsmtp1.rz.uni-jena.de [141.35.1.18])
+	by mailout0.rz.uni-jena.de (8.14.4/8.14.4) with ESMTP id s3F6fw13006650
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+	for <users@maven.apache.org>; Tue, 15 Apr 2014 08:41:58 +0200
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=uni-jena.de;
+	s=dkim-2013; t=1397544118;
+	bh=v26ug4WvYImPAUlCoRZgggeKVwRzEYGL/ymuKsDI5ys=;
+	h=Message-ID:Date:From:MIME-Version:To:Subject:Content-Type:
+	 Content-Transfer-Encoding;
+	b=uvFp357SRzImZKFu+RmLLqNc6e/38HanMgbAUsQ6/scoPy9pAEHr+DVDLR3863PLr
+	 6hFz+kbQNw6iW2x2/a7ghQbL7SoTaa1+wP1K/fh231PpULLXenWmuo7EUujPU182XT
+	 e9vrUKAwuCAnTTeqlwwCjEUuL+TJjY0BosXy5cJdrqfyghuPejkmPdCtbOkrt5HA0o
+	 E6r2jX7fUf/MjP04ku0xNckF7Dq9GyL7WhjjTj7AOaoHfDTlQFRO932nh5bFWx9le3
+	 sHmm8NuOg9G3cPYNiPdW/QslFilUleQpv/y+bLk5X7rqQ824CE30Y2OrNbbQ69klAC
+	 AAlWR8ofSq/iQ==
+Received: from [141.35.20.241] (ulbp2364.thulb.uni-jena.de [141.35.20.241])
+	(authenticated id=m8scth bits=0)
+	by mailsmtp1.rz.uni-jena.de (8.14.4/8.14.4) with ESMTP id s3F6fvZv020254
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES128-SHA bits=128 verify=NO)
+	for <users@maven.apache.org>; Tue, 15 Apr 2014 08:41:58 +0200
+Message-ID: <534CD4B5.2070405@uni-jena.de>
+Date: Tue, 15 Apr 2014 08:41:57 +0200
+From: Thomas Scheffler <thomas.scheffler@uni-jena.de>
+Organization: =?UTF-8?B?RnJpZWRyaWNoLVNjaGlsbGVyLVVuaXZlcnNpdMOkdCBKZW5h?=
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Logging and Cargo plugin
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+I use the cargo-maven2-plugin to start and test my webapp with various 
+servlet containers (jetty 9, tomcat 7 and tomcat 8).
+One thing that disturbs me is that every log line the is printed out by 
+the servlet container gets a "[INFO] [talledLocalContainer] " prefix.
+
+Is there a way to avoid this and simply give out the log message from 
+the servlet container?
+
+kind regards,
+
+Thomas
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

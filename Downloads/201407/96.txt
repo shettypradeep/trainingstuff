@@ -1,0 +1,188 @@
+From users-return-136765-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 10 11:19:22 2014
+Return-Path: <users-return-136765-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A15B01106E
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 10 Jul 2014 11:19:22 +0000 (UTC)
+Received: (qmail 47796 invoked by uid 500); 10 Jul 2014 11:19:21 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 47731 invoked by uid 500); 10 Jul 2014 11:19:21 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 47720 invoked by uid 99); 10 Jul 2014 11:19:20 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 10 Jul 2014 11:19:20 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [194.9.95.112] (HELO s87.loopia.se) (194.9.95.112)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 10 Jul 2014 11:19:15 +0000
+Received: from s87.loopia.se (localhost [127.0.0.1])
+	by s87.loopia.se (Postfix) with ESMTP id 5EBE31CCC246
+	for <users@maven.apache.org>; Thu, 10 Jul 2014 13:18:52 +0200 (CEST)
+X-Virus-Scanned: amavisd-new at outgoing-smtp.loopia.se
+X-Spam-Score: -0.999
+X-Spam-Level:
+Received: from s87.loopia.se ([127.0.0.1])
+	by s87.loopia.se (s87.loopia.se [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id 1j2n7ybC9-dG for <users@maven.apache.org>;
+	Thu, 10 Jul 2014 13:18:51 +0200 (CEST)
+Received: from s498.loopia.se (unknown [172.21.200.96])
+	by s87.loopia.se (Postfix) with ESMTP id A96F51CCCA6C
+	for <users@maven.apache.org>; Thu, 10 Jul 2014 13:18:51 +0200 (CEST)
+Received: from s404.loopia.se (unknown [172.21.200.105])
+	by s498.loopia.se (Postfix) with ESMTP id A6282C52B68
+	for <users@maven.apache.org>; Thu, 10 Jul 2014 13:18:51 +0200 (CEST)
+X-Virus-Scanned: amavisd-new at amavis.loopia.se
+Received: from s498.loopia.se ([172.21.200.105])
+	by s404.loopia.se (s404.loopia.se [172.21.200.134]) (amavisd-new, port 10024)
+	with LMTP id a2XGf-aDgamN for <users@maven.apache.org>;
+	Thu, 10 Jul 2014 13:18:51 +0200 (CEST)
+Received: from mbp3.natusoft.private (c-589771d5.04-92-73746f39.cust.bredbandsbolaget.se [213.113.151.88])
+	(Authenticated sender: tommy@natusoft.se)
+	by s498.loopia.se (Postfix) with ESMTPSA id E2C03C52B23
+	for <users@maven.apache.org>; Thu, 10 Jul 2014 13:18:50 +0200 (CEST)
+From: Tommy Svensson <tommy@natusoft.se>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_9129501A-7E1F-4617-BDF8-A4F99116A58D"
+Subject: How do you report a maven bug ?
+Message-Id: <8A13FD39-4A15-4CBC-AD78-8F0DA6960CD2@natusoft.se>
+Date: Thu, 10 Jul 2014 13:18:49 +0200
+To: Maven Users List <users@maven.apache.org>
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.6\))
+X-Mailer: Apple Mail (2.1878.6)
+X-Virus-Checked: Checked by ClamAV on apache.org
+X-Old-Spam-Flag: NO
+X-Old-Spam-Status: No, score=-0.999 tagged_above=-999 required=15
+	tests=[ALL_TRUSTED=-1, HTML_MESSAGE=0.001] autolearn=disabled
+
+--Apple-Mail=_9129501A-7E1F-4617-BDF8-A4F99116A58D
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=windows-1252
+
+Hello,
+
+I wonder how you report a bug in maven ? I found the following:
+
+	http://jira.codehaus.org/browse/MNG
+
+But that requires a login and there is no =94sing up=94.=20
+
+I get the following when trying to build a maven plugin with version =
+3.2.2:
+
+[ERROR] Failed to execute goal =
+org.apache.maven.plugins:maven-plugin-plugin:3.2:descriptor =
+(default-descriptor) on project markdowndoc-maven-plugin: Execution =
+default-descriptor of goal =
+org.apache.maven.plugins:maven-plugin-plugin:3.2:descriptor failed: 4900 =
+-> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to =
+execute goal org.apache.maven.plugins:maven-plugin-plugin:3.2:descriptor =
+(default-descriptor) on project markdowndoc-maven-plugin: Execution =
+default-descriptor of goal =
+org.apache.maven.plugins:maven-plugin-plugin:3.2:descriptor failed: 4900
+	at =
+org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java=
+:224)
+	at =
+org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java=
+:153)
+	at =
+org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java=
+:145)
+	at =
+org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(Li=
+fecycleModuleBuilder.java:116)
+	at =
+org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(Li=
+fecycleModuleBuilder.java:80)
+	at =
+org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedB=
+uilder.build(SingleThreadedBuilder.java:51)
+	at =
+org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStar=
+ter.java:120)
+	at =
+org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:347)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:154)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:584)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:213)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:157)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at =
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:=
+57)
+	at =
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorIm=
+pl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at =
+org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.=
+java:289)
+	at =
+org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229=
+)
+	at =
+org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launche=
+r.java:415)
+	at =
+org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: org.apache.maven.plugin.PluginExecutionException: Execution =
+default-descriptor of goal =
+org.apache.maven.plugins:maven-plugin-plugin:3.2:descriptor failed: 4900
+	at =
+org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuild=
+PluginManager.java:143)
+	at =
+org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java=
+:208)
+	... 19 more
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 4900
+	at org.objectweb.asm.ClassReader.readClass(Unknown Source)
+	at org.objectweb.asm.ClassReader.accept(Unknown Source)
+	at org.objectweb.asm.ClassReader.accept(Unknown Source)
+	at =
+org.apache.maven.tools.plugin.annotations.scanner.DefaultMojoAnnotationsSc=
+anner.scanFile(DefaultMojoAnnotationsScanner.java:139)
+	at =
+org.apache.maven.tools.plugin.annotations.scanner.DefaultMojoAnnotationsSc=
+anner.scan(DefaultMojoAnnotationsScanner.java:85)
+	at =
+org.apache.maven.tools.plugin.annotations.JavaAnnotationsMojoDescriptorExt=
+ractor.scanAnnotations(JavaAnnotationsMojoDescriptorExtractor.java:125)
+	at =
+org.apache.maven.tools.plugin.annotations.JavaAnnotationsMojoDescriptorExt=
+ractor.execute(JavaAnnotationsMojoDescriptorExtractor.java:104)
+	at =
+org.apache.maven.tools.plugin.scanner.DefaultMojoScanner.populatePluginDes=
+criptor(DefaultMojoScanner.java:108)
+	at =
+org.apache.maven.plugin.plugin.AbstractGeneratorMojo.execute(AbstractGener=
+atorMojo.java:233)
+	at =
+org.apache.maven.plugin.plugin.DescriptorGeneratorMojo.execute(DescriptorG=
+eneratorMojo.java:92)
+	at =
+org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuild=
+PluginManager.java:132)
+	... 20 more
+
+An ArrayIndexOutOfBoundsException looks very much like a bug to me :-). =
+4900 also looks like a very suspicious number! There is only 261 lines =
+in the plugin code, and a total of 11 annotations.
+
+Cheers
+Tommy
+
+
+--Apple-Mail=_9129501A-7E1F-4617-BDF8-A4F99116A58D--
+

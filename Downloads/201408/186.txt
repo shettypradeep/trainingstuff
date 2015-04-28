@@ -1,0 +1,101 @@
+From users-return-136975-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Aug  6 14:32:39 2014
+Return-Path: <users-return-136975-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 770C91142C
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  6 Aug 2014 14:32:39 +0000 (UTC)
+Received: (qmail 3891 invoked by uid 500); 6 Aug 2014 14:32:37 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 3804 invoked by uid 500); 6 Aug 2014 14:32:37 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 3772 invoked by uid 99); 6 Aug 2014 14:32:37 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 06 Aug 2014 14:32:37 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [67.231.152.145] (HELO mx0b-0000bf01.pphosted.com) (67.231.152.145)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 06 Aug 2014 14:32:29 +0000
+Received: from pps.filterd (m0042341 [127.0.0.1])
+	by mx0b-0000bf01.pphosted.com (8.14.5/8.14.5) with SMTP id s76EW6Sa008857
+	for <users@maven.apache.org>; Wed, 6 Aug 2014 09:32:07 -0500
+Received: from np1exhc004.corp.halliburton.com ([34.254.246.203])
+	by mx0b-0000bf01.pphosted.com with ESMTP id 1nkmxqghfa-8
+	(version=TLSv1/SSLv3 cipher=AES128-SHA bits=128 verify=NOT)
+	for <users@maven.apache.org>; Wed, 06 Aug 2014 09:32:06 -0500
+Received: from NP1EXHC006.corp.halliburton.com (34.34.138.69) by
+ NP1EXHC004.corp.halliburton.com (34.34.138.67) with Microsoft SMTP Server
+ (TLS) id 14.3.181.6; Wed, 6 Aug 2014 09:31:37 -0500
+Received: from NP1EXMB033.corp.halliburton.com ([169.254.4.166]) by
+ NP1EXHC006.corp.halliburton.com ([34.34.138.69]) with mapi id 14.03.0181.006;
+ Wed, 6 Aug 2014 09:31:37 -0500
+From: Justin Georgeson <JGeorgeson@lgc.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: RE: Jococo report using Jenkins without the need to configure
+ jacoco-maven-plugin? possible?
+Thread-Topic: Jococo report using Jenkins without the need to configure
+ jacoco-maven-plugin? possible?
+Thread-Index: AQHPsR6Al0X7oC0W3Uq5XvBmnF1WW5vDolUw
+Date: Wed, 6 Aug 2014 14:31:37 +0000
+Message-ID: <F21547B4F425F9428444D12A5127050623873E84@NP1EXMB033.corp.halliburton.com>
+References: <CAPCjjnF9UtAg-wa6mrUuaYHVeSQpfC6yYnGuv+RY8M+83vz4Zg@mail.gmail.com>
+In-Reply-To: <CAPCjjnF9UtAg-wa6mrUuaYHVeSQpfC6yYnGuv+RY8M+83vz4Zg@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-originating-ip: [34.34.116.17]
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+X-HALSTAMP: TRUE
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10432:5.12.52,1.0.27,0.0.0000
+ definitions=2014-08-06_05:2014-08-06,2014-08-06,1970-01-01 signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 kscore.is_bulkscore=0.0709879903066983
+ kscore.compositescore=0 circleOfTrustscore=0
+ compositescore=0.0652767626515575 urlsuspect_oldscore=0.0652767626515575
+ suspectscore=0 recipient_domain_to_sender_totalscore=0 phishscore=0
+ bulkscore=0 kscore.is_spamscore=0 recipient_to_sender_totalscore=0
+ recipient_domain_to_sender_domain_totalscore=0 rbsscore=0.0652767626515575
+ spamscore=0 recipient_to_sender_domain_totalscore=0 urlsuspectscore=0.9
+ adultscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=7.0.1-1402240000 definitions=main-1408060188
+Content-Type: text/plain; charset="utf-8"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+SSBiZWxpZXZlIHlvdSBzdGlsbCBuZWVkIHRvIGNvbmZpZ3VyZSBqYWNvY28tbWF2ZW4tcGx1Z2lu
+IHNvIHRoYXQgeW91ciB0ZXN0cyBhcmUgcnVuIHdpdGggaW5zdHJ1bWVudGF0aW9uLCBidXQgeW91
+IGRvbid0IG5lZWQgdG8gZG8gdGhlIHJlcG9ydGluZyBwYXJ0IHdpdGggbWF2ZW4uIEplbmtpbnMg
+d2lsbCByZWFkIHRoZSAuZXhlYyBmaWxlIHRoYXQgSmFjb2NvIGdlbmVyYXRlcyBkdXJpbmcgdGVz
+dCBleGVjdXRpb24gYW5kIHB1Ymxpc2ggcmVwb3J0cyBmcm9tIHRoYXQuIA0KDQo+IC0tLS0tT3Jp
+Z2luYWwgTWVzc2FnZS0tLS0tDQo+IEZyb206IERhbiBUcmFuIFttYWlsdG86ZGFudHJhbkBnbWFp
+bC5jb21dDQo+IFNlbnQ6IFR1ZXNkYXksIEF1Z3VzdCAwNSwgMjAxNCA5OjMxIFBNDQo+IFRvOiBN
+YXZlbiBVc2VycyBMaXN0DQo+IFN1YmplY3Q6IEpvY29jbyByZXBvcnQgdXNpbmcgSmVua2lucyB3
+aXRob3V0IHRoZSBuZWVkIHRvIGNvbmZpZ3VyZSBqYWNvY28tDQo+IG1hdmVuLXBsdWdpbj8gcG9z
+c2libGU/DQo+IA0KPiBIZWxsbywNCj4gDQo+IEkgaGF2ZSBhbiBpbXByZXNzaW9uIHRoYXQgSSBk
+b250IG5lZWQgYnJpbmcgaW4gamFjb2NvLW1hdmVuLXBsdWdpbiB0byBteQ0KPiBwb21zLCBhbmQg
+anVzdCBoYXZlIEplbmtpbnMgdG8gcnVuIGl0IGF0IHBvc3QgYnVpbGQgYW5kIG1hZ2ljIHdpbGwg
+aGFwcGVuIGF0DQo+IEplbmtpbnMgcGFnZS4NCj4gDQo+IFNvIGZhciwgSSBoYXZlIG5vIGx1Y2sg
+d2l0aCB0aGF0DQo+IA0KPiBBbnkgZ290IHRoaXMgd29ya2luZz8NCj4gDQo+IFRoYW5rcw0KPiAN
+Cj4gLURhbg0KCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KVGhpcyBlLW1haWwsIGluY2x1ZGluZyBhbnkgYXR0YWNo
+ZWQgZmlsZXMsIG1heSBjb250YWluIGNvbmZpZGVudGlhbCBhbmQgcHJpdmlsZWdlZCBpbmZvcm1h
+dGlvbiBmb3IgdGhlIHNvbGUgdXNlIG9mIHRoZSBpbnRlbmRlZCByZWNpcGllbnQuICBBbnkgcmV2
+aWV3LCB1c2UsIGRpc3RyaWJ1dGlvbiwgb3IgZGlzY2xvc3VyZSBieSBvdGhlcnMgaXMgc3RyaWN0
+bHkgcHJvaGliaXRlZC4gIElmIHlvdSBhcmUgbm90IHRoZSBpbnRlbmRlZCByZWNpcGllbnQgKG9y
+IGF1dGhvcml6ZWQgdG8gcmVjZWl2ZSBpbmZvcm1hdGlvbiBmb3IgdGhlIGludGVuZGVkIHJlY2lw
+aWVudCksIHBsZWFzZSBjb250YWN0IHRoZSBzZW5kZXIgYnkgcmVwbHkgZS1tYWlsIGFuZCBkZWxl
+dGUgYWxsIGNvcGllcyBvZiB0aGlzIG1lc3NhZ2UuCg==
+DQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0NClRvIHVuc3Vic2NyaWJlLCBlLW1haWw6IHVzZXJzLXVuc3Vi
+c2NyaWJlQG1hdmVuLmFwYWNoZS5vcmcNCkZvciBhZGRpdGlvbmFsIGNvbW1hbmRzLCBlLW1h
+aWw6IHVzZXJzLWhlbHBAbWF2ZW4uYXBhY2hlLm9yZw0K
+

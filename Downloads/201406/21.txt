@@ -1,0 +1,154 @@
+From users-return-136685-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jun 27 21:08:46 2014
+Return-Path: <users-return-136685-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1D01E11007
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 27 Jun 2014 21:08:46 +0000 (UTC)
+Received: (qmail 82175 invoked by uid 500); 27 Jun 2014 21:08:44 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 82099 invoked by uid 500); 27 Jun 2014 21:08:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 82085 invoked by uid 99); 27 Jun 2014 21:08:44 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 27 Jun 2014 21:08:44 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.215.49 as permitted sender)
+Received: from [209.85.215.49] (HELO mail-la0-f49.google.com) (209.85.215.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 27 Jun 2014 21:08:40 +0000
+Received: by mail-la0-f49.google.com with SMTP id gf5so3366791lab.36
+        for <users@maven.apache.org>; Fri, 27 Jun 2014 14:08:18 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=MkPsewVu7DspfgqqNa7c0u56GesY4TFYoDp14nsujk0=;
+        b=AQ+gcnsuonKrZjbI07HQ8doHsF+tcQUH7TIjE2Wp9uJ1yrU9e7pOF0jhakEPy3qbfi
+         cIZUroyZhJqhzJ4Qk2E8/oE3JUJRq6aV5H0HyvOUovMmmxQzeD1Qr96dzqXlTkE/TwjG
+         QyfBXCbXGx+CfR1s4qJAkt+mjDHSiMR+eWDNBVe3qk0m9k2bwD2Zhk+CqpCMssnJOZ2J
+         dicMPc7deyjzGVu0fcFms4US4FlxwIlQ7Bygwa4jUATfH3a+zRbVyMOLmUOBYyNN5POo
+         arGQlEVu5ijDw3BcQY2drC0rX4DRVejwjeq6RiJ1tjJAhlTz/XqIq+CzdTsYTRxUZztl
+         2RTg==
+MIME-Version: 1.0
+X-Received: by 10.152.37.194 with SMTP id a2mr7791590lak.29.1403903298537;
+ Fri, 27 Jun 2014 14:08:18 -0700 (PDT)
+Received: by 10.114.194.100 with HTTP; Fri, 27 Jun 2014 14:08:18 -0700 (PDT)
+In-Reply-To: <3237868.l6ybQARzIL@herve-desktop>
+References: <CAP+_B-hXEQAN5JrjgUZzVNkQQyBPDqT=8dWw+8+uep2=5A5ZNw@mail.gmail.com>
+	<AE14F028-B1F7-424C-8450-42FFA6439DD6@takari.io>
+	<3237868.l6ybQARzIL@herve-desktop>
+Date: Fri, 27 Jun 2014 14:08:18 -0700
+Message-ID: <CAPCjjnHwLMuR9YPvbJRysL4yiQyhvEzF8YM5eFGT7Cj4647RSg@mail.gmail.com>
+Subject: Re: Corrupted download mirror?
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e013d165668922904fcd7b5b2
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e013d165668922904fcd7b5b2
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I am running into similiar issue where at home, I am not able to download a
+particular artifact ( maven-scm-provider-cvsexe, and release plugin needs
+it )
+
+https://issues.sonatype.org/browse/MVNCENTRAL-446
+
+Could be  CDN issue at my San Jose, CA area with Comcast?
+
+-D
+
+
+On Fri, Jun 27, 2014 at 1:11 PM, Herv=C3=A9 BOUTEMY <herve.boutemy@free.fr>
+wrote:
+
+> Le vendredi 27 juin 2014 07:25:08 Jason van Zyl a =C3=A9crit :
+> > I've never seen those mirrors before. The Apache Maven PMC is a aware o=
+f
+> and
+> > collaborate with Sonatype on the canonical Maven Central and collective=
+ly
+> > we would assert the content is valid. Anything else and you're on your
+> own.
+> > I honestly wouldn't use those mirrors. Maven Central is currently serve=
+d
+> > using a CDN which generally has edges not too far away from you.
+> -1
+>
+> apache.igor.onlinedirect.bg is an official Apache mirror [1]
+> so this is an official source to download Maven
+>
+> I just tried and didn't have any problem: perhaps there was a
+> synchronization
+> issue
+> in any case, you sould take time to check signature to verify nothing has
+> been
+> damaged
+>
+> Regards,
+>
+> Herv=C3=A9
+>
+> [1] http://www.apache.org/mirrors/#bg
+>
+> > On Jun 25, 2014, at 7:04 AM, Kristiyan Marinov <kristiyanm@gmail.com>
+> wrote:
+> > > Hi all,
+> > >
+> > > I had to download a few different Maven versions today and noticed th=
+at
+> > > each time I downloaded a binary distribution from the
+> > > http://apache.igor.onlinedirect.bg/ mirror Google Chrome rejected it
+> as a
+> > > malicious file. Switching the mirror to http://apache.cbox.biz/
+> produced
+> > > no
+> > > such complaints from Chrome.
+> > >
+> > > Has anyone else noticed such issues? Could there be something wrong
+> with
+> > > the mirror?
+> > >
+> > >
+> > > Cheers,
+> > > Kristiyan
+> >
+> > Thanks,
+> >
+> > Jason
+> >
+> > ----------------------------------------------------------
+> > Jason van Zyl
+> > Founder,  Apache Maven
+> > http://twitter.com/jvanzyl
+> > http://twitter.com/takari_io
+> > ---------------------------------------------------------
+> >
+> > Our achievements speak for themselves. What we have to keep track
+> > of are our failures, discouragements and doubts. We tend to forget
+> > the past difficulties, the many false starts, and the painful
+> > groping. We see our past achievements as the end result of a
+> > clean forward thrust, and our present difficulties as
+> > signs of decline and decay.
+> >
+> >  -- Eric Hoffer, Reflections on the Human Condition
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--089e013d165668922904fcd7b5b2--
+

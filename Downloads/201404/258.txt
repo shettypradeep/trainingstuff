@@ -1,0 +1,110 @@
+From users-return-136132-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Apr 14 08:14:35 2014
+Return-Path: <users-return-136132-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9A01C11269
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 14 Apr 2014 08:14:35 +0000 (UTC)
+Received: (qmail 62069 invoked by uid 500); 14 Apr 2014 08:14:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 61953 invoked by uid 500); 14 Apr 2014 08:14:29 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 61892 invoked by uid 99); 14 Apr 2014 08:14:27 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 14 Apr 2014 08:14:26 +0000
+X-ASF-Spam-Status: No, hits=-2.3 required=5.0
+	tests=RCVD_IN_DNSWL_MED,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of prvs=17478d8f5=Ben.Caradoc-Davies@csiro.au designates 150.229.7.38 as permitted sender)
+Received: from [150.229.7.38] (HELO act-MTAout2.csiro.au) (150.229.7.38)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 14 Apr 2014 08:14:21 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=csiro.au; i=@csiro.au; q=dns/txt; s=email;
+  t=1397463262; x=1428999262;
+  h=message-id:date:from:mime-version:to:subject:references:
+   in-reply-to:content-transfer-encoding;
+  bh=qkVGmVapMwtaqZRhgw7PCZbjZ8Rk4X4MNx/8g+oOWSg=;
+  b=vVcO7ZcNqmTO6/34995HrHXvMkm5XFBX+aO9HE8UxFxIiSx+gu7JVtBB
+   Wr0EQLfDZLv+TU5f9fERfR1vfrQ/fiRzJxrCo6wL6gq6KmaDR3WYgzXDR
+   xZwbjps1C3RBFqq;
+X-SBRS: None
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: A+BzLABZmEtT/wCwBSSwhIATAJKcgCNagmUhO1eDELhUhWaBT4EgFnSCJQEBAQQjFRYgChELGAICBRYLAgIJAwIBAgEfJgYIBQIEAQECGQSHRwMRAQyoNZtOF4ZZF4EphUaIBoJvgUkEiVqPB4E2hR6Lb4M+YYE9
+X-IPAS-Result: A+BzLABZmEtT/wCwBSSwhIATAJKcgCNagmUhO1eDELhUhWaBT4EgFnSCJQEBAQQjFRYgChELGAICBRYLAgIJAwIBAgEfJgYIBQIEAQECGQSHRwMRAQyoNZtOF4ZZF4EphUaIBoJvgUkEiVqPB4E2hR6Lb4M+YYE9
+X-IronPort-AV: E=Sophos;i="4.97,855,1389704400"; 
+   d="scan'208";a="112464263"
+Received: from exhtca03-cdc.nexus.csiro.au ([IPv6:2405:b000:601:13::247:23])
+  by act-ironport-int.csiro.au with ESMTP/TLS/AES128-SHA; 14 Apr 2014 18:13:48 +1000
+Received: from EXHTCA05-CDC.nexus.csiro.au (2405:b000:601:13::247:25) by
+ exhtca03-cdc.nexus.csiro.au (2405:b000:601:13::247:23) with Microsoft SMTP
+ Server (TLS) id 14.3.158.1; Mon, 14 Apr 2014 18:13:48 +1000
+Received: from [130.116.145.132] (130.116.145.132) by
+ exhtca05-cdc.nexus.csiro.au (152.83.247.25) with Microsoft SMTP Server (TLS)
+ id 14.3.158.1; Mon, 14 Apr 2014 18:13:47 +1000
+Message-ID: <534B98BB.1090906@csiro.au>
+Date: Mon, 14 Apr 2014 16:13:47 +0800
+From: Ben Caradoc-Davies <Ben.Caradoc-Davies@csiro.au>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Icedove/24.4.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Maven 3.2.1 and java 1.5?
+References: <1397462836887-5791274.post@n5.nabble.com>
+In-Reply-To: <1397462836887-5791274.post@n5.nabble.com>
+Content-Type: text/plain; charset="UTF-8"; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Originating-IP: [130.116.145.132]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+http://maven.apache.org/download.cgi
+"System Requirements
+JDK 	Maven 3.2 requires JDK 1.6 or above, while Maven 3.0/3.1 requires 
+JDK 1.5 or above (this is to execute Maven - it still allows you to 
+build against 1.3 and prior JDK's)"
+
+
+On 14/04/14 16:07, delbert wrote:
+> I need to use java 1.5. But when I run maven 3.2.1 I get:
+>
+> :~$ mvn --version
+> Exception in thread "main" java.lang.UnsupportedClassVersionError: Bad
+> version number in .class file
+> 	at java.lang.ClassLoader.defineClass1(Native Method)
+> 	at java.lang.ClassLoader.defineClass(ClassLoader.java:621)
+> 	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:
+>
+> If I change to java 1.7 it works. I have not been able to find in the
+> release notes for 3.2.1 that java > 1.5 i s required.
+>
+> I can use java 5 and maven 3.1.1 just fine.
+>
+>
+>
+> --
+> View this message in context: http://maven.40175.n5.nabble.com/Maven-3-2-1-and-java-1-5-tp5791274.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+>
+
+-- 
+Ben Caradoc-Davies <Ben.Caradoc-Davies@csiro.au>
+Software Engineer
+CSIRO Earth Science and Resource Engineering
+Australian Resources Research Centre
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

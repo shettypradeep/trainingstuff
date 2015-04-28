@@ -1,0 +1,114 @@
+From users-return-137275-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Sep 13 00:37:29 2014
+Return-Path: <users-return-137275-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 30FDA11034
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 13 Sep 2014 00:37:29 +0000 (UTC)
+Received: (qmail 85133 invoked by uid 500); 13 Sep 2014 00:37:27 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 85058 invoked by uid 500); 13 Sep 2014 00:37:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 85045 invoked by uid 99); 13 Sep 2014 00:37:26 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 13 Sep 2014 00:37:26 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dhoffer6@gmail.com designates 209.85.220.173 as permitted sender)
+Received: from [209.85.220.173] (HELO mail-vc0-f173.google.com) (209.85.220.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 13 Sep 2014 00:37:21 +0000
+Received: by mail-vc0-f173.google.com with SMTP id le20so1459213vcb.4
+        for <users@maven.apache.org>; Fri, 12 Sep 2014 17:37:00 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=dHKjDYzKyyktfOnZIgYfDxcC0VaYcLJc3pxhN41Kic0=;
+        b=Ds/oaX6lforKx1W0ePEiu9bpecLgaoT4eZcBwPEl0Zr8oddBdRwSm1SuBJgpRuX9Aq
+         vsd5BVyKXANnxDQc7ZKK+DqXe8cGH5uhy3xw/tuFvKpKOF7wqkDMzs9rOvQtUw2o95iy
+         yQSvrfNZ1yEbOjhNb3o9yOr+aUk2b4K5/T40NSPgfW8vKxoIk8cdrLzxVGmM3IVXT+iW
+         K5HmFWPWtnO4fTwcwEAD9CvrwuMGEQkHrkTCqY5Ead+xT5SOsQgoZyR5TsRjqiIPf6yj
+         a1JWQIFkQVh4dKmhGj7AW/WPCyK+Ipg30ch5gaIQEN9fgUrvQ31UoV9+B4GXFaHoIx1/
+         bVbQ==
+MIME-Version: 1.0
+X-Received: by 10.52.239.108 with SMTP id vr12mr8245834vdc.30.1410568620581;
+ Fri, 12 Sep 2014 17:37:00 -0700 (PDT)
+Received: by 10.220.131.70 with HTTP; Fri, 12 Sep 2014 17:37:00 -0700 (PDT)
+Date: Fri, 12 Sep 2014 18:37:00 -0600
+Message-ID: <CAA8BW8EuHD_yJegVH2ZDnEiiebjP09N73xTbHTaFat0sO-qGVg@mail.gmail.com>
+Subject: How to modify version used by plugin transitive dependency?
+From: David Hoffer <dhoffer6@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1135f0668faeea0502e79908
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1135f0668faeea0502e79908
+Content-Type: text/plain; charset=UTF-8
+
+I have a case where I to modify the version used by a transitive plugin
+dependency and I'm not sure the best way to do this.
+
+In my use case I have maven-antrun-plugin which has a dependency on
+fmpp-maven-plugin which has a dependency on fmpp which uses version ranges
+to specify its 4 dependencies one of those being freemarker.  I need to fix
+the version of freemarker (and maybe the other 3), how best can I do this?
+
+I'm assuming I can't use my top level pluginManagement section because it's
+not a plugin that I need to mange the version of.  And I'm assuming I can't
+use dependencyManagement for this because it's not a project dependency
+that I need to mange either.
+
+So what I have so far is exclude and then re-include in the plugin config.
+ Is this the right/best way to do this?
+
+<plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <dependencies>
+                            <dependency>
+                                <groupId>ant-contrib</groupId>
+                                <artifactId>ant-contrib</artifactId>
+                                <version>${ant-contrib.version}</version>
+                                <exclusions>
+                                    <exclusion>
+                                        <groupId>ant</groupId>
+                                        <artifactId>ant</artifactId>
+                                    </exclusion>
+                                </exclusions>
+                            </dependency>
+                            <dependency>
+                                <groupId>org.apache.ant</groupId>
+                                <artifactId>ant-nodeps</artifactId>
+                                <version>${ant-nodeps.version}</version>
+                            </dependency>
+                            <dependency>
+
+<groupId>com.googlecode.fmpp-maven-plugin</groupId>
+                                <artifactId>fmpp-maven-plugin</artifactId>
+
+<version>${fmpp-maven-plugin.version}</version>
+                                <exclusions>
+                                    <exclusion>
+                                        <groupId>org.freemarker</groupId>
+                                        <artifactId>freemarker</artifactId>
+                                    </exclusion>
+                                </exclusions>
+                            </dependency>
+                            <dependency>
+                                <groupId>org.freemarker</groupId>
+                                <artifactId>freemarker</artifactId>
+                                <version>${freemarker.version}</version>
+                            </dependency>
+                        </dependencies>
+
+-Dave
+
+--001a1135f0668faeea0502e79908--
+

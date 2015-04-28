@@ -1,0 +1,138 @@
+From users-return-137501-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Oct  9 08:24:13 2014
+Return-Path: <users-return-137501-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 194D717265
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  9 Oct 2014 08:24:13 +0000 (UTC)
+Received: (qmail 2891 invoked by uid 500); 9 Oct 2014 08:23:55 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 2824 invoked by uid 500); 9 Oct 2014 08:23:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 2812 invoked by uid 99); 9 Oct 2014 08:23:54 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Oct 2014 08:23:54 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of robertmarkbram@gmail.com designates 209.85.217.173 as permitted sender)
+Received: from [209.85.217.173] (HELO mail-lb0-f173.google.com) (209.85.217.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Oct 2014 08:23:28 +0000
+Received: by mail-lb0-f173.google.com with SMTP id 10so662668lbg.18
+        for <users@maven.apache.org>; Thu, 09 Oct 2014 01:23:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:from:date:message-id:subject:to:content-type;
+        bh=wPZF4jVTVBf3178RsIwuYHq0foKgY59xe5yJxHegFBk=;
+        b=rh1P5YZ72xAPLWfq67FQcRiTSrSEy2lkjtjtowKe50hhXJHoML0QCGrVfc5n34/zoT
+         VmUJ/4I3h4MFvk1MQUAFtuT1od+MZyLXiLoq9Rx/w+9u8xrwAoR/smFyg4OgFjIZQQqw
+         VxHxM4PQqJOlovkbQkLBO3y4LJ+YET6l2GOV+nHx96CcEtrTGLHZzmYyqOBtVwQy+7V2
+         wUW5sdyTXjhQzMLXRI7I+Qe5BZm3qIAYFzuVoEC4Uu2rFKqxvFVmAdC1pwNHHKE5+bjY
+         1Wwp+61G2PrpNBzIR2Lg2sw8cdc2wf527Hgpc0JvhAOs7qD1Kb/Ccx/NGPEEVmCAIKtt
+         S1WA==
+X-Received: by 10.153.4.11 with SMTP id ca11mr16846046lad.24.1412843007884;
+ Thu, 09 Oct 2014 01:23:27 -0700 (PDT)
+MIME-Version: 1.0
+Sender: robertmarkbram@gmail.com
+Received: by 10.152.43.44 with HTTP; Thu, 9 Oct 2014 01:23:07 -0700 (PDT)
+From: Robert Mark Bram <robertmarkbram+mailing.lists@gmail.com>
+Date: Thu, 9 Oct 2014 19:23:07 +1100
+X-Google-Sender-Auth: _0TK7B2Giwilorn6zYBOFXi4se8
+Message-ID: <CAFDw+_MKcYKPdc9M74-b0=AMwq-kKoWxzhwxjr--nWTpbKH9Kw@mail.gmail.com>
+Subject: What packaging to use for a sub-module that just runs integration tests?
+To: users@maven.apache.org
+Content-Type: text/plain; charset=ISO-8859-1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+My parent POM declares this Selenium project in a profile.
+   <profile>
+      <id>default-build</id>
+      <!-- This profile will be active if another profile isn't triggered -->
+      <activation>
+         <activeByDefault>true</activeByDefault>
+      </activation>
+      <modules>
+         <module>FooProject-Model</module>
+         <module>FooProject-Thermal</module>
+         <module>FooProject-ViewController</module>
+         <module>FooProject-API-V1</module>
+         <module>FooProject-Monitoring</module>
+         <module>FooProject-ADF</module>
+         <module>FooProject-BIRT</module>
+         <module>FooProject-Selenium</module>
+      </modules>
+   </profile>
+
+And the Selenium pom (sub-module) has the following:
+
+Packaging
+   <packaging>jar</packaging>
+
+Depend on the ear being built and deployed from another sub-module project.
+   <dependencies>
+      <dependency>
+         <groupId>${project.groupId}</groupId>
+         <artifactId>FooProject-ADF</artifactId>
+         <version>1.0</version>
+         <type>ear</type>
+      </dependency>
+
+Run integration tests.
+   </dependencies>
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <version>2.17</version>
+            <configuration>
+               <forkMode>once</forkMode>
+            </configuration>
+            <executions>
+               <execution>
+                  <goals>
+                     <goal>integration-test</goal>
+                     <goal>verify</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </plugin>
+      </plugins>
+   </build>
+
+The build (run from parent pom) is failing with this error:
+   [ERROR] Failed to execute goal
+org.apache.maven.plugins:maven-deploy-plugin:2.7:deploy
+(default-deploy) on project FooProject-Selenium: Deployment failed:
+repository element was not specified in the POM inside
+distributionManagement element or in
+-DaltDeploymentRepository=id::layout::url parameter -> [Help 1]
+
+I understand this is because by specifying package as jar, Mavan wants
+to know where I want to put the FooProject-Selenium jar, and of course
+I don't want to generate a jar at all.
+
+I have ready suggestions that I should use the pom packaging statement
+and http://stackoverflow.com/a/8845858/257233 says that if I do that,
+I will have to explicitly call my goals with
+   mvn clean compiler:testCompile surefire:test
+But I don't want this - I need the parent pom to be able to be able to
+co-ordinate the entire build.
+
+So.. what is the best way to deal with this?
+
+Rob
+:)
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

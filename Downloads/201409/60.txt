@@ -1,0 +1,207 @@
+From users-return-137213-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Sep  8 16:42:04 2014
+Return-Path: <users-return-137213-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A6DA311DDF
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  8 Sep 2014 16:42:04 +0000 (UTC)
+Received: (qmail 59214 invoked by uid 500); 8 Sep 2014 16:42:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 59136 invoked by uid 500); 8 Sep 2014 16:42:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 59121 invoked by uid 99); 8 Sep 2014 16:42:02 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 08 Sep 2014 16:42:02 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of hws689@gmail.com designates 209.85.219.44 as permitted sender)
+Received: from [209.85.219.44] (HELO mail-oa0-f44.google.com) (209.85.219.44)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 08 Sep 2014 16:41:58 +0000
+Received: by mail-oa0-f44.google.com with SMTP id o6so10844033oag.17
+        for <users@maven.apache.org>; Mon, 08 Sep 2014 09:41:38 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=fFiFejHc++DL6lqNxtlUMzptWD1EgZO49iKe3gknp+0=;
+        b=JM4YBQrIZ+1n3niSUjjs4ckKZGT+ZDy+DSdHn5W1ssJtOdPc7ZWaKYmNQD4LI0wp6k
+         uxZ68GWaJcS+vbUGEqJWXqDsSZW1BuyTU865qApFAyxd86FLAgm2lciFVL+og/p8lW2p
+         WYj4SOm9BDxkCCHdPZbDu4QSdsa799J7UQvZDFr8lkUANi8O+y4TncHSOdm4J6L4BWY8
+         RiUiszvTyvZvp8NInoA0ub/kJd0WifUqzeiIDhbdtFRh6rXF5Pidg0m+AYBrA1sSrW0S
+         1ggQvGxNKCLmokCImzPG2SZWiMaUYd9Oym8SYNu2tZgYv0p8DyRkve2oryBFrdVcDK5t
+         AZTA==
+MIME-Version: 1.0
+X-Received: by 10.60.59.196 with SMTP id b4mr33536481oer.38.1410194498019;
+ Mon, 08 Sep 2014 09:41:38 -0700 (PDT)
+Received: by 10.202.3.196 with HTTP; Mon, 8 Sep 2014 09:41:37 -0700 (PDT)
+In-Reply-To: <CAORQCTJYC6-J_QAuP11Y=tRDXD3Z80uiR6otPeK5R=wB7MB2cQ@mail.gmail.com>
+References: <CAORQCT+skOVDyKakDVUOTpwgLcskEG=hOphemKSVKALkY2xEOA@mail.gmail.com>
+	<CAPbd=T4opsMjd-hFYs-62akyeh_x5EZDn+OE07cDYxJfM5-9HQ@mail.gmail.com>
+	<CAORQCTJYC6-J_QAuP11Y=tRDXD3Z80uiR6otPeK5R=wB7MB2cQ@mail.gmail.com>
+Date: Mon, 8 Sep 2014 13:41:37 -0300
+Message-ID: <CAG9vi9XrrTT8ovzCefP95xQ+Y+cW5na_O=Jeg77LOF22xQLLbw@mail.gmail.com>
+Subject: Re: tomcat deployment plugin issue
+From: Hilton Wichwski Silva <hws689@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b41bf801e69510502907eb3
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b41bf801e69510502907eb3
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Maybe this can help to configure username/pass:
+http://tomcat.apache.org/maven-plugin-trunk/tomcat7-maven-plugin/deploy-moj=
+o.html
+
+
+2014-09-08 13:38 GMT-03:00 =C3=89rico <ericomtx@gmail.com>:
+
+> Hi
+>
+> please, what would be the seeting for configuring id / pwd using the plug=
+in
+> ?
+>
+> Thks !!
+> =C3=89rico
+>
+> 2014-09-08 0:26 GMT-03:00 Deng Ching-Mallete <oching@apache.org>:
+>
+> > Hi,
+> >
+> > Did you verify if the user has the appropriate role to deploy to the
+> server
+> > (e.g. in ../conf/tomcat-users.xml)? If you already checked this, can yo=
+u
+> > try specifying the username and password in the plugin config instead? =
+It
+> > might also help running it again on debug mode (with -X) so you can tra=
+ce
+> > which credentials are being used.
+> >
+> > Thanks,
+> > Deng
+> >
+> >
+> > On Sun, Sep 7, 2014 at 5:14 AM, =C3=89rico <ericomtx@gmail.com> wrote:
+> >
+> > > Hello
+> > >
+> > > I am trying to deploy a war into my tomcat
+> > >
+> > > when I run mvn:tomcat deploy
+> > >
+> > > I am getting the following error:
+> > >
+> > > [ERROR] Failed to execute goal
+> > > org.codehaus.mojo:tomcat-maven-plugin:1.1:deploy (default-cli) on
+> project
+> > > jsfOS: Cannot invoke Tomcat manager: Server returned HTTP response
+> code:
+> > > 401 for URL: http://localhost:8080/manager/deploy?path=3D%2FjsfOS&war=
+=3D
+> ->
+> > > [Help 1]
+> > >
+> > > my pom.xml is the following :
+> > >
+> > >       <plugin>
+> > >           <artifactId>maven-war-plugin</artifactId>
+> > >           <version>2.1.1</version>
+> > >           <configuration>
+> > >                  <packagingExcludes>WEB-INF/web.xml</packagingExclude=
+s>
+> > >
+> > >           </configuration>
+> > >       </plugin>
+> > >
+> > >       <plugin>
+> > >             <groupId>org.apache.tomcat</groupId>
+> > >             <artifactId>tomcat6-maven-plugin</artifactId>
+> > >             <version>1.1</version>
+> > >             <configuration>
+> > >
+> > >
+> > >
+> >
+> <warFile>${project.build.directory}/${project.build.finalName}.war</warFi=
+le>
+> > >                 <url>http://localhost:8080/manager</url>
+> > >                 <server>tomcat</server>
+> > >                 <path>jsfOS</path>
+> > >             </configuration>
+> > >          </plugin>
+> > >
+> > > my settings.xml :
+> > > ...
+> > >     <servers>
+> > >      <server>
+> > >                 <id>tomcat</id>
+> > >                 <username>ericomtx</username>
+> > >                 <password>kernel26</password>
+> > >         </server>
+> > >       </servers>
+> > > ...
+> > >
+> > > my maven :
+> > > mvn -version
+> > > Apache Maven 3.2.3 (33f8c3e1027c3ddde99d3cdebad2656a31e8fdf4;
+> > > 2014-08-11T17:58:10-03:00)
+> > > Maven home: /Users/ericomtx/development/apache/apache-maven-3.2.3
+> > > Java version: 1.6.0_65, vendor: Apple Inc.
+> > > Java home:
+> > /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+> > > Default locale: en_US, platform encoding: MacRoman
+> > > OS name: "mac os x", version: "10.6.8", arch: "x86_64", family: "mac"
+> > >
+> > >
+> > > I am using a macos 10.6.8
+> > >
+> > > my tomcat dir :
+> > >
+> > > /Users/ericomtx/development/apache
+> > > mac:apache ericomtx$ ls -la
+> > > total 32
+> > > drwxr-x---@  6 ericomtx  staff    204 Aug 31 12:38 .
+> > > drwxrwxrwx  27 ericomtx  staff    918 Aug 31 11:32 ..
+> > > -rw-r-----@  1 ericomtx  staff  15364 Aug 31 16:39 .DS_Store
+> > > drwxr-xr-x@ 14 ericomtx  staff    476 Aug 31 11:11 apache-ant-1.9.4
+> > > drwxr-xr-x@ 10 ericomtx  staff    340 Aug 31 13:12 apache-maven-3.2.3
+> > > drwxrwxrwx@ 13 ericomtx  staff    442 Aug 31 17:21
+> apache-tomcat-6.0.41
+> > >
+> > >
+> > >
+> > > mac:apache-tomcat-6.0.41 ericomtx$ ls -la webapps/
+> > > total 16
+> > > drwxrwxrwx@  8 ericomtx  staff   272 Aug 31 16:22 .
+> > > drwxrwxrwx@ 13 ericomtx  staff   442 Aug 31 17:21 ..
+> > > -rw-r--r--@  1 ericomtx  staff  6148 Aug 31 16:39 .DS_Store
+> > > drwxr-xr-x@ 13 ericomtx  staff   442 Aug 31 16:29 ROOT
+> > > drwxr-xr-x@ 45 ericomtx  staff  1530 May 19 07:50 docs
+> > > drwxr-xr-x@  6 ericomtx  staff   204 May 19 07:50 examples
+> > > drwxrwxrwx@  6 ericomtx  staff   204 May 19 07:50 host-manager
+> > > drwxrwxrwx@  8 ericomtx  staff   272 Aug 31 16:27 manager
+> > >
+> > > please can someone help me out on this ?
+> > >
+> >
+> >
+> >
+> > --
+> > Maria Odea "Deng" Ching-Mallete | oching@apache.org |
+> > http://www.linkedin.com/in/oching
+> >
+>
+
+--047d7b41bf801e69510502907eb3--
+

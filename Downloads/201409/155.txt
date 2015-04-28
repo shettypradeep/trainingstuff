@@ -1,0 +1,101 @@
+From users-return-137340-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Sep 21 21:13:28 2014
+Return-Path: <users-return-137340-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 04E8B114B1
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 21 Sep 2014 21:13:28 +0000 (UTC)
+Received: (qmail 48636 invoked by uid 500); 21 Sep 2014 21:13:24 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 48258 invoked by uid 500); 21 Sep 2014 21:13:24 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 48164 invoked by uid 99); 21 Sep 2014 21:13:23 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 21 Sep 2014 21:13:23 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dennisl.apache@gmail.com designates 209.85.192.177 as permitted sender)
+Received: from [209.85.192.177] (HELO mail-pd0-f177.google.com) (209.85.192.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 21 Sep 2014 21:12:57 +0000
+Received: by mail-pd0-f177.google.com with SMTP id v10so1327590pde.8
+        for <multiple recipients>; Sun, 21 Sep 2014 14:12:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:date:message-id:subject:from:to:cc:content-type;
+        bh=qdKTnNsl1dbUQgQNWQBiDkhMYnyswu3rO29JcG0JEic=;
+        b=CBbm4MvlhjK2Eaa0TmZXXMAi/ZdGrdfN0eNjANjfYLhG39ew5Ly/NWlRw3X7IupP+3
+         ktIQnME3sA8HgvjFzs0JzvGtPnEQPHERcvaJlbskEmxiJaekSam2RB51kxS+48zewgve
+         W7tSfnj4PVJMPaKXf997ORL92zKOOnpfOBtrCKxsX7Qe/YlcdlwR2UVotxmBxPOQKJqA
+         SVT+Cz1bVlvoVbdePGAiHuWVigOlNsF1ojcLh6O3NokftCHp3lI6KkQkPJ19XBCeI9bp
+         QCZxod2P/EpVN1D6qmju/MZM0PEXYvnlOa1wZhJMij4Zi04w1Rny+IXynEiXzmGkjibd
+         EJLw==
+MIME-Version: 1.0
+X-Received: by 10.68.233.68 with SMTP id tu4mr19299432pbc.65.1411333975798;
+ Sun, 21 Sep 2014 14:12:55 -0700 (PDT)
+Sender: dennisl.apache@gmail.com
+Received: by 10.70.125.198 with HTTP; Sun, 21 Sep 2014 14:12:55 -0700 (PDT)
+Date: Sun, 21 Sep 2014 23:12:55 +0200
+X-Google-Sender-Auth: B958gQNHrs9LzE-0CZHWxmz1A4E
+Message-ID: <CA+BhkyOw7eio0Mrh0a4mTBtpj=KbCv3aZay+A6HgYAsPmW_NTg@mail.gmail.com>
+Subject: [ANN] Apache Maven Javadoc Plugin 2.10 Released
+From: Dennis Lundberg <dennisl@apache.org>
+To: announce@maven.apache.org, Maven Users List <users@maven.apache.org>
+Cc: Maven Developers List <dev@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+The Maven team is pleased to announce the release of the Apache Maven
+Javadoc Plugin, version 2.10. This release is focused on Java 8
+compatibility.
+
+The Apache Maven Javadoc Plugin is a plugin that uses the javadoc tool
+for generating javadocs for the specified project.
+
+http://maven.apache.org/plugins/maven-javadoc-plugin/
+
+You should specify the version in your project's plugin configuration:
+
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-javadoc-plugin</artifactId>
+  <version>2.10</version>
+</plugin>
+
+
+Release Notes - Apache Maven Javadoc Plugin - Version 2.10
+
+Task
+* [MJAVADOC-403] MavenProject/MavenSession Injection as a parameter
+instead as a component.
+* [MJAVADOC-398] Classes from build output directory can cause failure
+* [MJAVADOC-395] Add JDK8 support to maven-javadoc-plugin
+* [MJAVADOC-394] javadoc is not found properly by default under
+Oracle's JDK 7+ on Mac OSX
+* [MJAVADOC-386] Documentation links to oracle web site are broken
+* [MJAVADOC-380] Add Maven version used to Created-By entry in manifest
+* [MJAVADOC-376] please add property 'maven.javadoc.classifier'
+* [MJAVADOC-372] Index page should refer to Apache Maven for at least
+the first mention
+* [MJAVADOC-371] Goals missing from overview page
+* [MJAVADOC-369] New goals javadoc-no-fork and test-javadoc-no-fork
+which will not invoke generate-*-sources
+* [MJAVADOC-351] Javadoc:fix fixTags parameter doesn't support 'return' value
+
+
+Enjoy,
+
+-The Maven team
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

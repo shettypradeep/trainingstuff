@@ -1,0 +1,92 @@
+From users-return-135100-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan 13 11:34:12 2014
+Return-Path: <users-return-135100-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 017061091D
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 13 Jan 2014 11:34:12 +0000 (UTC)
+Received: (qmail 91565 invoked by uid 500); 13 Jan 2014 11:28:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 91434 invoked by uid 500); 13 Jan 2014 11:28:24 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 91266 invoked by uid 99); 13 Jan 2014 11:27:54 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 13 Jan 2014 11:27:54 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of anders.g.hammar@gmail.com designates 209.85.212.177 as permitted sender)
+Received: from [209.85.212.177] (HELO mail-wi0-f177.google.com) (209.85.212.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 13 Jan 2014 11:27:49 +0000
+Received: by mail-wi0-f177.google.com with SMTP id hm2so2031160wib.4
+        for <users@maven.apache.org>; Mon, 13 Jan 2014 03:27:28 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:date:message-id:subject:from:to:content-type;
+        bh=Qcmie9PpxzqGxiGF7rJ1Ehxwm9uL5Oa1EKOPG07Bo48=;
+        b=yAYnsZog3UU5xOruRO4pTOKA4RfmbMeDeF67FUPUDr/Qnf8o2NCh0BiQ7U7k16xSCO
+         sXtwi6F+CzSyWiB+NxYHgKQc7aTULXhb38mFsP+1jZu+cWQsRZfhx1t1FILSkTAzDGEY
+         ZnbBEVVB1vAF4A/urfnor9HDoswkNu5crs7n6p7AbliVwMxw0MB3siby/Orm+QwQR65R
+         7bRc1P2wZrfWGYqLFNZTv/v164tY1m6tQ0Hf/4xW7lnzBJyvV8kNdkHPJVIC8AXfmW97
+         ew3LTRwmJiVeFE7N4VElfFH+UsK4qN8PFhaT9GC5lus9IJHCIj03ax489ouvMSwVxHeM
+         bpiQ==
+MIME-Version: 1.0
+X-Received: by 10.180.104.164 with SMTP id gf4mr14500495wib.35.1389612447927;
+ Mon, 13 Jan 2014 03:27:27 -0800 (PST)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.137.38 with HTTP; Mon, 13 Jan 2014 03:27:27 -0800 (PST)
+Date: Mon, 13 Jan 2014 12:27:27 +0100
+X-Google-Sender-Auth: 4UP7Gbr4QFCp6AcAJr-W_On1JXY
+Message-ID: <CAKDUN1vjfPg7iSpYR_WHn0QMCSSq5=uBYRsf4shPDc6Ew9mV_Q@mail.gmail.com>
+Subject: [ANN] Mojo's SQLJ Maven Plugin 1.3 Released
+From: Anders Hammar <anders@hammar.net>
+To: Mojo Developers List <dev@mojo.codehaus.org>, Mojo Users List <user@mojo.codehaus.org>, 
+	announce@mojo.codehaus.org, Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=14dae9cc9f6858bb8504efd85cec
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--14dae9cc9f6858bb8504efd85cec
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi,
+
+The Mojo team is pleased to announce the release of Mojo's SQLJ Maven
+Plugin version 1.3.
+
+http://mojo.codehaus.org/sqlj-maven-plugin/
+
+
+To get this update, simply specify the version in your project's plugin
+configuration:
+
+<plugin>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>sqlj-maven-plugin</artifactId>
+      <version>1.3</version>
+</plugin>
+
+
+Release Notes
+
+** Improvement
+* [MSQLJ-15] - Plugin does not include project dependencies when translating
+
+** Task
+* [MSQLJ-16] - Convert FAQ page to fml format
+
+
+Enjoy,
+
+The Mojo team.
+
+/Anders
+
+--14dae9cc9f6858bb8504efd85cec--
+

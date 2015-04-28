@@ -1,0 +1,118 @@
+From users-return-137448-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Oct  3 17:54:41 2014
+Return-Path: <users-return-137448-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 52A3B17851
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  3 Oct 2014 17:54:41 +0000 (UTC)
+Received: (qmail 34096 invoked by uid 500); 3 Oct 2014 17:54:39 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 34020 invoked by uid 500); 3 Oct 2014 17:54:39 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 34008 invoked by uid 99); 3 Oct 2014 17:54:38 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Oct 2014 17:54:38 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of solomax666@gmail.com designates 209.85.220.45 as permitted sender)
+Received: from [209.85.220.45] (HELO mail-pa0-f45.google.com) (209.85.220.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Oct 2014 17:54:13 +0000
+Received: by mail-pa0-f45.google.com with SMTP id rd3so1896877pab.4
+        for <users@maven.apache.org>; Fri, 03 Oct 2014 10:54:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=cIkCte8IVdFmRlFzIMST5p8ZDBh7DqKdZppg2MUCuHQ=;
+        b=Hmu1oggtGk8cwZeUQaOebQt7QJrVZQ/kBiNrGmtWoZyg8Klr0udDfXmVhxfNFTEKte
+         Wj/UB3t7JoT5cWD5ZBoUECFPJlhbm69je300NicV0ryqZB+069Xgd6e8jJHRijhS7XhR
+         /0d8YgoskEcqlIcBeunuOsSwIocyrhgfwfvs3oGyeT99slupymfLXqn3HuvrQ1B9VUB2
+         CX1Umo0bykqaAgFV5+/Xxg5WrwljakOGWOCJOzZdBuoHd+baM5BB6E6wM9j14XkQKn1I
+         IcalPdU7jijFMEwTVTvvNGmM/OCuDVqma8zA+dyLNDeh7kLXQuF9fzoq39d3kx2fGAsd
+         9IZA==
+MIME-Version: 1.0
+X-Received: by 10.66.66.75 with SMTP id d11mr8571863pat.85.1412358851649; Fri,
+ 03 Oct 2014 10:54:11 -0700 (PDT)
+Received: by 10.66.160.101 with HTTP; Fri, 3 Oct 2014 10:54:11 -0700 (PDT)
+In-Reply-To: <CABLGb9w807+wb2rhN=vLfwZzO+W8h20wzO=+++D_CX2APVptWw@mail.gmail.com>
+References: <CABLGb9xhKb3CpAa3HiByD+QLrpzh-qoEvyEtbb4N4eGe+6L93Q@mail.gmail.com>
+	<22D448DD-2765-4B3C-951A-75CFE9E657DE@kathrynhuxtable.org>
+	<CAJmbs8gpA+S2j0nHxRtNueOGk9ktqdvSm8gfVX49sFwwde6=MQ@mail.gmail.com>
+	<CABLGb9w807+wb2rhN=vLfwZzO+W8h20wzO=+++D_CX2APVptWw@mail.gmail.com>
+Date: Sat, 4 Oct 2014 00:54:11 +0700
+Message-ID: <CAJmbs8hTE_KL=7-HYJ1wMj7k5y7+F68Agtq5yr=HfZWM8K5rag@mail.gmail.com>
+Subject: Re: Don't want to repeat plugin version for both build and reporting
+From: Maxim Solodovnik <solomax666@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11362a8aa5e6940504886b05
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11362a8aa5e6940504886b05
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+just learn something new
+Thanks!
+
+On 4 October 2014 00:46, Paul Benedict <pbenedict@apache.org> wrote:
+
+> <pluginManagement> only affects <plugins> -- it does not affect
+> <reporting>:
+> https://jira.codehaus.org/browse/MNG-3385
+>
+> Cheers,
+> Paul
+>
+> On Thu, Oct 2, 2014 at 9:06 PM, Maxim Solodovnik <solomax666@gmail.com>
+> wrote:
+>
+> > we using <pluginManagement> for this
+> >
+> > On 3 October 2014 07:24, Kathryn Huxtable <kathryn@kathrynhuxtable.org>
+> > wrote:
+> >
+> > > I=E2=80=99ve always used <properties>, but would it work to use
+> > > <buildDependencies>? -K
+> > >
+> > > On Oct 2, 2014, at 7:02 PM, Paul Benedict <pbenedict@apache.org>
+> wrote:
+> > >
+> > > > I use the maven-javadoc-plugin in both <build> and <reporting>. I
+> don't
+> > > > want to fall back to <properties> to share the plugin version. Is
+> > there a
+> > > > better way than using <properties>?
+> > > >
+> > > > Cheers,
+> > > > Paul
+> > >
+> > >
+> > > ---------------------------------------------------------------------
+> > > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > > For additional commands, e-mail: users-help@maven.apache.org
+> > >
+> > >
+> >
+> >
+> > --
+> > WBR
+> > Maxim aka solomax
+> >
+>
+
+
+
+--=20
+WBR
+Maxim aka solomax
+
+--001a11362a8aa5e6940504886b05--
+

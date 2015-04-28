@@ -1,0 +1,116 @@
+From users-return-135810-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 13 09:51:28 2014
+Return-Path: <users-return-135810-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E034F10F81
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 13 Mar 2014 09:51:28 +0000 (UTC)
+Received: (qmail 35402 invoked by uid 500); 13 Mar 2014 09:51:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 32778 invoked by uid 500); 13 Mar 2014 09:51:19 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 29483 invoked by uid 99); 13 Mar 2014 09:51:09 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Mar 2014 09:51:09 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of adrien.rivard@gmail.com designates 209.85.220.174 as permitted sender)
+Received: from [209.85.220.174] (HELO mail-vc0-f174.google.com) (209.85.220.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Mar 2014 09:51:02 +0000
+Received: by mail-vc0-f174.google.com with SMTP id ld13so785019vcb.5
+        for <users@maven.apache.org>; Thu, 13 Mar 2014 02:50:41 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=i+FKBIc6ZD1SZ+WodDZbvB2OAGgWfQRG7pwnQiRZ8Oc=;
+        b=SLuHR2i1FX2f5w0gEfeFWqTuRu5a+wMA6MYTLoAEwfGkhSTjxO3vMI3stU0LvjE5fz
+         jpnkVozorwgYUOv5F876b+38eO/6o01YaC+3VESmFHMcq5ab1xMgS1pWJSR6nr6962P7
+         iSRos9TvbUX1rmWx4fsQaudVzNwA0zr/7NTf3qo59BpM6wrNItjgB6YMHEtjmh8OggGM
+         f55jpsH7cYYa7+8ultzgc8n5/nHfYtVQoJJwZsXFPhlF/VffHvu+s8PTemUZ3WsYI2Z6
+         w/NsVpltLzuqB/e+OePaN+LIw5O56TMdrJdAN7y0i0Z3PhlKbktOIQ6Kal4VZgDh3yd7
+         C5ow==
+MIME-Version: 1.0
+X-Received: by 10.221.55.133 with SMTP id vy5mr597484vcb.17.1394704241352;
+ Thu, 13 Mar 2014 02:50:41 -0700 (PDT)
+Received: by 10.220.140.13 with HTTP; Thu, 13 Mar 2014 02:50:41 -0700 (PDT)
+In-Reply-To: <CA+nPnMy64XQoyn8eNNvp1GSq5WbyD2cO3m+wik=EVsbNBbTrnA@mail.gmail.com>
+References: <CADwPi+HM=Ls83GpRhAVnzMXNoku9cwUEdiSSidARo31KRgje0w@mail.gmail.com>
+	<CA+nPnMy64XQoyn8eNNvp1GSq5WbyD2cO3m+wik=EVsbNBbTrnA@mail.gmail.com>
+Date: Thu, 13 Mar 2014 10:50:41 +0100
+Message-ID: <CAPCUOdEXyhzv3a+hNKQKkUezr91HrP_CAcSBS8pzDKSCbNh9vQ@mail.gmail.com>
+Subject: Re: [Failsafe] How to properly conduct integration tests on
+ executable jar files
+From: Adrien Rivard <adrien.rivard@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113376fedf740504f479e2c4
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113376fedf740504f479e2c4
+Content-Type: text/plain; charset=UTF-8
+
+If you are using Eclipse you could also pass the system property directly
+to the JRE. ( Windows/Preferences/installed JRE/ edit /default VM arguments)
+It require less work than putting it in all run configuration, but all your
+process will have it.
+
+
+
+On Thu, Mar 13, 2014 at 8:56 AM, Stephen Connolly <
+stephen.alan.connolly@gmail.com> wrote:
+
+> You could use test resource filtering to put the path into a resource file
+> on the test classpath.
+>
+> That way the IDE will pick up the same path.
+>
+> On Thursday, 13 March 2014, Alex Karasulu <akarasulu@apache.org> wrote:
+>
+> > Hello,
+> >
+> > I've got a module that builds an executable jar file using the Maven
+> > Assembly Plugin. I'm trying to setup an integration test (in the same
+> > module) that runs this executable jar file as a separate process and
+> > interacts with it. To fire up the executable jar file, my integration
+> test
+> > requires the path to the executable jar file.
+> >
+> > I'm trying to achieve this by passing a property to the integration-test
+> > via system properties. This makes me feel really really dirty though and
+> it
+> > has issues: although the test runs on the CLI it does not in any IDE
+> > without requiring further configuration (i.e. the property has to be
+> > manually added to a run configuration).
+> >
+> > After googling around a bit and reading the documentation there seems to
+> be
+> > no other option for this scenario. In case I'm overlooking something, I
+> > wanted to ask here if there is a better way to start up this executable
+> jar
+> > file or pass in the needed parameters to do so in the integration test?
+> >
+> > --
+> > Best Regards,
+> > -- Alex
+> >
+>
+>
+> --
+> Sent from my phone
+>
+
+
+
+-- 
+Adrien Rivard
+
+--001a113376fedf740504f479e2c4--
+

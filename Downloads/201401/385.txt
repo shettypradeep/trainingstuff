@@ -1,0 +1,129 @@
+From users-return-135007-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan  7 13:25:55 2014
+Return-Path: <users-return-135007-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 28A2E10CE2
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  7 Jan 2014 13:25:55 +0000 (UTC)
+Received: (qmail 45833 invoked by uid 500); 7 Jan 2014 13:25:46 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 45786 invoked by uid 500); 7 Jan 2014 13:25:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 45778 invoked by uid 99); 7 Jan 2014 13:25:42 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 07 Jan 2014 13:25:42 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of patrek@gmail.com designates 209.85.216.52 as permitted sender)
+Received: from [209.85.216.52] (HELO mail-qa0-f52.google.com) (209.85.216.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 07 Jan 2014 13:25:35 +0000
+Received: by mail-qa0-f52.google.com with SMTP id w8so510645qac.11
+        for <users@maven.apache.org>; Tue, 07 Jan 2014 05:25:14 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type:content-transfer-encoding;
+        bh=92780DK+u52ANHgwfQnYOJTgMSucdT4NGusShQoMvaY=;
+        b=Rjy40k0wcjNWaaLPs6sERBi+tTlFMm+4/fOeP56iq1o9oFzbNOndQ5zJXDZ+jh/An4
+         DMFORf8V7jw8FZRa1WDnlnro3mkCoLxWpkfzAVWVe/mmyrDOdMhrOharpmq4klda/1ro
+         lMs1sGQjX1NDH8yOlnQj9qITmje7t8LNwgGEfZFAqljDCwyYwgaBpQVWd0t5P/8nnKPk
+         wD3Pu8RP6OpW8hC1OJx5CPm+PrhmzTEHhJMVE13nryfx1WuU3F9Mi1i2DKYQfSr4pplb
+         km/iUUtnDj7X7lRkH+OmmzZlfgeGiCw8y+qwGS7pbeVNMeE/csIRaLCyivXACojnKbMH
+         cObw==
+X-Received: by 10.224.132.133 with SMTP id b5mr50501868qat.47.1389101114559;
+        Tue, 07 Jan 2014 05:25:14 -0800 (PST)
+Received: from [192.168.64.109] ([65.92.222.9])
+        by mx.google.com with ESMTPSA id m9sm42150725qaz.8.2014.01.07.05.25.12
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Tue, 07 Jan 2014 05:25:13 -0800 (PST)
+Message-ID: <52CC0060.4040300@gmail.com>
+Date: Tue, 07 Jan 2014 08:25:52 -0500
+From: Patrick Turcotte <patrek@gmail.com>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.1.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Misunderstanding modules: "Two or more projects in the reactor
+ have the same identifier"
+References: <1311115485921-4614001.post@n5.nabble.com>	<CADVp3v9s=A2jSYCP10vSS_Or6RvBCZtgFOWmNFxQQ-s2yRLNyg@mail.gmail.com>	<1311120899714-4614151.post@n5.nabble.com>	<CADVp3v_=nJyeZUmcZMc2YmZtABEWENfwpm1BukVqYaO0Wbv0VQ@mail.gmail.com>	<1311123142861-4614201.post@n5.nabble.com>	<CADVp3v96Rz4D_UUOw6it9izLC4EbuHctActE03AOBFRKkH3htQ@mail.gmail.com>	<1389049947844-5780688.post@n5.nabble.com>	<52CB6DB4.4050703@artifact-software.com>	<AA0A1283-9C6B-45A2-9944-F06FF0A006C2@talios.com> <CADVp3v9K2AfKnrmJysmFaLtC2OTFCeqLSKA8XhCdXP=1tKGLOg@mail.gmail.com>
+In-Reply-To: <CADVp3v9K2AfKnrmJysmFaLtC2OTFCeqLSKA8XhCdXP=1tKGLOg@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+
+We are doing something similar with what I call an assembly project.
+
+I have the following structure:
+
+assembly
+   - pom.xml
+   - projectA
+     - pom.xml
+   - projectB
+     - pom.xml
+   - projectC
+     - pom.xml
+   - projectX
+     - pom.xml
+
+Where the assembly's pom.xml contains like:
+
+<packaging>pom</packaging>
+<modules>
+   <module>projectA</module>
+   <module>projectB</module>
+   <module>projectC</module>
+   <module>projectX</module>
+</modules>
+
+And dependencies between projects are set within each module (versions 
+may be in a parent pom)
+
+Then, in my "assembly" project, I do
+mvn install
+
+Or, with multiple windows open, I would do a mvn install for projectA 
+and then switch to projectX and build it.
+
+Hope this helps.
+
+Patrick
+
+On 07/01/14 12:49 AM, Barrie Treloar wrote:
+> On 7 January 2014 15:29, Mark Derricutt <mark@talios.com> wrote:
+>>>> When the project is relatively new and the internally-developed dependency
+>>>> "A" is no where near being mature, nearly every change being made to
+>>>> "Project X" requires a corresponding change to A. At this point in the
+>>>> development cycle (and for many months in the foreseeable future) I actually
+>>>> /do/ need to rebuild A every time I build X.
+>> What I've often done here is create a new workspace area that contains symlinks ( or git submodule checkouts ) of each of the modules I'm working on, and having a simple pom.xml in the top level that sets up a reactor build, then just build that.
+> There was also some talk about automating this step.
+> But its vapourware at the moment.
+>
+> It would work by checking your current pom for any -SNAPSHOT
+> dependencies and then pulling out the source code for those and
+> sitting them in the parent directory.
+> And as you say the parent pom is just a helper that has a bunch of
+> modules to make building things easier - and you would never check
+> that pom into version control.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

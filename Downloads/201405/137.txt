@@ -1,0 +1,119 @@
+From users-return-136435-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri May 23 17:44:52 2014
+Return-Path: <users-return-136435-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 018D811C0A
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 23 May 2014 17:44:52 +0000 (UTC)
+Received: (qmail 69769 invoked by uid 500); 23 May 2014 17:44:50 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 69689 invoked by uid 500); 23 May 2014 17:44:50 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 69681 invoked by uid 99); 23 May 2014 17:44:50 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 23 May 2014 17:44:50 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of gordon.cody@zafin.com designates 209.85.220.177 as permitted sender)
+Received: from [209.85.220.177] (HELO mail-vc0-f177.google.com) (209.85.220.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 23 May 2014 17:44:46 +0000
+Received: by mail-vc0-f177.google.com with SMTP id hq11so840913vcb.8
+        for <users@maven.apache.org>; Fri, 23 May 2014 10:44:25 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to
+         :content-type;
+        bh=QCvrzd3+Zldnw+aM9lF7Pa1L0tvngAx01e7bkAktrUc=;
+        b=MBv6zXxFTg9Q52iKtwhx5+ZtFMWM6wlY2QjjL+kKCtnOqdkTFp7oG9lAZxcLcOL213
+         fQh3Dk3QJb8Bdgi/B3Yeu962m8uVJ7GdNSMtAyad9eVFvPsiD1oqq0lGbnx6xHwWz21G
+         YJz+cQBwwl/+TLEh6X5PelDPDnnqlsc2LPU3IwlXpNtqlOSzqNrWEA571tAxbhrpkHl+
+         m0b/cjbZNlGhiuG/oLhslBSX6Y6ihiQiI8iPJFJRmSxkCh4hRXjDxfwrOt2jBgszivR9
+         io+PZnb3DIgLsz7bqbAbDTi18wmKaTC9BqOoKwk+bAmGjk5TbApNu1yMsddy9sk0Bilr
+         LN7g==
+X-Gm-Message-State: ALoCoQlAtDenEbzllosG60JacEq5mAK6xUNJYcyIfxl/t11xC9pA7/jlYqSvfMcsrpuxKhtfXkYbRs1UFuc6r9lciIKIGOSG8ONtkAuPlynyeXAloutMdhQ=
+MIME-Version: 1.0
+X-Received: by 10.58.188.115 with SMTP id fz19mr2513836vec.40.1400867065368;
+ Fri, 23 May 2014 10:44:25 -0700 (PDT)
+Received: by 10.220.167.130 with HTTP; Fri, 23 May 2014 10:44:25 -0700 (PDT)
+Date: Fri, 23 May 2014 13:44:25 -0400
+Message-ID: <CALN=NUGYpE82sOz7aaSJUHRmrPAS+68EcyZoMJeyUNOEezTkww@mail.gmail.com>
+Subject: unit tests with multiple oracle, db2 etc
+From: Gordon Cody <gordon.cody@zafin.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e012945facf27b604fa14c762
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e012945facf27b604fa14c762
+Content-Type: text/plain; charset=UTF-8
+
+We have to begin running junit tests using more than 1 database type. I am
+wondering how best to run all unit tests using oracle then run all of the
+tests again using db2 then postgres. I figured some of you out there must
+have a similar requirement.
+
+Currently we have test/resources/test-context.xml that contains
+    <bean id="dataSource"
+        class="org.apache.commons.dbcp.BasicDataSource"
+        destroy-method="close" lazy-init="true">
+        <property name="driverClassName"
+value="com.p6spy.engine.spy.P6SpyDriver" />
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:xxxx"
+/>
+        <property name="username" value="xxxxx" />
+        <property name="password" value="xxxxx" />
+        <property name="accessToUnderlyingConnectionAllowed" value="true" />
+        <property name="defaultAutoCommit" value="false" />
+        <property name="maxWait" value="0" />
+        <property name="maxActive" value="-1" />
+    </bean>
+
+There is nothing in the pom.xml explicitly related to unit tests other than
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.2</version>
+        </dependency>
+
+Quick sanity builds are done by our CI system using
+mvn package -e -Dmaen.test.skip=true
+Due to how long the tests take to complete they are only run daily using
+mvn test -e -Dtest=com.zafinlabs.someapp.somemodule.TestSomeProcess
+
+Suggestions please.
+-- 
+Best Regards, Gord Cody
+
+Release Manager  Zafin Labs Americas Inc.
+179 Colonnade Road-Suite 100, Ottawa ON, Canada
+Phone: +1 (613) 216-2504  Fax: +1 (613) 688-1374  Mobile: +1 613-601-2734
+Web: http://zafin.com  Email: gordon.cody@zafin.com
+
+-- 
+Zafin - Canada
+
+-- 
+http://zafin.com
+
+<http://zafin.com/>
+
+------------------------------
+
+Connect with us
+
+ <http://www.youtube.com/user/ZafinGlobal> <http://www.linkedin.com/company/Zafin>
+  <http://twitter.com/Zafin>
+
+News and Events
+
+Zafin among Top 10 FinTech Companies to Watch in 2014: American Banker<http://zafin.com/zafin-among-top-10-fintech-companies-to-watch-in-2014-american-banker/>
+
+--089e012945facf27b604fa14c762--
+

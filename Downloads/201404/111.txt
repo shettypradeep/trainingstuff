@@ -1,0 +1,67 @@
+From users-return-136124-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Apr 10 18:37:33 2014
+Return-Path: <users-return-136124-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B446E1193A
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 10 Apr 2014 18:37:33 +0000 (UTC)
+Received: (qmail 59054 invoked by uid 500); 10 Apr 2014 18:37:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 58825 invoked by uid 500); 10 Apr 2014 18:37:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 58782 invoked by uid 99); 10 Apr 2014 18:37:27 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 10 Apr 2014 18:37:27 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.220.46 as permitted sender)
+Received: from [209.85.220.46] (HELO mail-pa0-f46.google.com) (209.85.220.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 10 Apr 2014 18:37:21 +0000
+Received: by mail-pa0-f46.google.com with SMTP id kx10so4312892pab.19
+        for <users@maven.apache.org>; Thu, 10 Apr 2014 11:36:58 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=sy77ryAsHMtHPgklm0r6NOucgUM1tt524AuJa6wsLFo=;
+        b=Bal91gkMhgTu0eRJ7fMxdV7cTJivd1rmfaD2Vt0TwQ0R563Q7mwlF/vxYwUj/JzqeZ
+         Ttqm2B+p8A2X8HdJuoRuMZR8HevuqOL0D8W//X57s6udJ6WyNLFOtz+Rw2JaoOsiZtU1
+         NMoPUCcXRIwTXZDNXAJ+e2mtxEhZcTewfurfMQHqHa2e9gOB7oSIyAWny1oQZ6KZ/Y6h
+         5gUSGag+O6JEy626wNTDTqATOsjXKZTJSFr7AACw1jLwtAGVukpN7iLnwE0v0E047h9j
+         avAx/+J8DNf57VTiNsqqU1Z+/ZDjf6zIlZTNKktT8OMxhwXH6MxK2cNKDWEt6CvfgcSg
+         cb3w==
+X-Received: by 10.68.134.169 with SMTP id pl9mr21497329pbb.133.1397155018311;
+ Thu, 10 Apr 2014 11:36:58 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.66.148.35 with HTTP; Thu, 10 Apr 2014 11:36:38 -0700 (PDT)
+In-Reply-To: <20140410154053.GF9865@IUPUI.Edu>
+References: <1397129785627-5790839.post@n5.nabble.com> <CAEayHENv5N+fPxbbgyVdNYQHu_jjsQSenoLQVDqHmZNbXOpzFg@mail.gmail.com>
+ <1397134307645-5790843.post@n5.nabble.com> <CALy+7UnJoufzW1yJJ+Ei3tP_dboWv9Son-WQMrBWwYNG_TntDA@mail.gmail.com>
+ <20140410154053.GF9865@IUPUI.Edu>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Thu, 10 Apr 2014 13:36:38 -0500
+Message-ID: <CALy+7Uks+-FHjTVV6buKkEexRS-Y9zT6oL-QGDLWMo__vQD+sg@mail.gmail.com>
+Subject: Re: Hot deployment using jetty 8 and maven
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> monitored by something like Jenkins.  I'd want all those bits anyway.
+
+Agreed... but one step at a time. :)
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,169 @@
+From users-return-135731-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Mar  8 21:31:32 2014
+Return-Path: <users-return-135731-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C68ED1083B
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  8 Mar 2014 21:31:32 +0000 (UTC)
+Received: (qmail 59876 invoked by uid 500); 8 Mar 2014 21:31:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 59772 invoked by uid 500); 8 Mar 2014 21:31:25 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 59763 invoked by uid 99); 8 Mar 2014 21:31:25 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 08 Mar 2014 21:31:25 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of davek1802@gmail.com designates 209.85.217.182 as permitted sender)
+Received: from [209.85.217.182] (HELO mail-lb0-f182.google.com) (209.85.217.182)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 08 Mar 2014 21:31:21 +0000
+Received: by mail-lb0-f182.google.com with SMTP id n15so3802467lbi.27
+        for <users@maven.apache.org>; Sat, 08 Mar 2014 13:30:59 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=3SECkiBQmP3giRjy8ImB4vMlXZSAqioHXts2F4zXF+4=;
+        b=q5Nwep/N63HbLepGOCaYuadMtbq6rJT2bY19HypgxhT1bvAL10Clet9kKwTotCyXhN
+         neJaDTyuhIAguj47em3+wOyL/LRbqm4AV1RAhyLtXOL6Z4HXbsMpayO8Q4NuEosGcTG7
+         MPAqcG6ZLI4o2GYfpicyf4u9w9mWQ/vvsQ6k/v49y5labO+Crp/jrLU4Du2eLakEEZK+
+         PvkBucfGNkwt/8E2k+sxUDkKgOZb9KVZu2meMKKPx9/79/ATPfQ8w2zblaiTpYs2juXN
+         P5Qu0H5k4auna4Osv4zbKIM1bB+4W/OaZUHf8m4qvyKpnKG/RBE8eJGeF5nc0+9ndnuI
+         ucZQ==
+MIME-Version: 1.0
+X-Received: by 10.112.170.234 with SMTP id ap10mr16276493lbc.23.1394314259442;
+ Sat, 08 Mar 2014 13:30:59 -0800 (PST)
+Received: by 10.112.132.5 with HTTP; Sat, 8 Mar 2014 13:30:59 -0800 (PST)
+In-Reply-To: <CAM0K-0Bz_Xg=vEx9QsdQR6TWKHDw=RtGupbzNJSD19szcVs9QA@mail.gmail.com>
+References: <CAM0K-0CzKNaJ89zXuHAiEF1a3QYtybyXUjg0HPQrNVRWz-a9jQ@mail.gmail.com>
+	<CALy+7Uk5usRFLhxLhWyCDAOMpGvWSUBVVOg72XNh1ovbc640OA@mail.gmail.com>
+	<CAM0K-0CbT2Bt_NXu5RjaL2cyWC=sR1qjeRghBGJJMvd+HaCKYg@mail.gmail.com>
+	<CALy+7U=V0ReweVzA5Z3keQ390kHSvcH4KHC2asMO5GoRSOXT5Q@mail.gmail.com>
+	<CAM0K-0Bz_Xg=vEx9QsdQR6TWKHDw=RtGupbzNJSD19szcVs9QA@mail.gmail.com>
+Date: Sat, 8 Mar 2014 13:30:59 -0800
+Message-ID: <CAM0K-0BAJDd5CXhUD65wo1gtkRHQNRmnVjpWC0pw7Pp1nqU+JA@mail.gmail.com>
+Subject: Re: Netbeans 7.4 maven POM for com.oracle:ojdbc6:jar:11.2.0.1 is invalid
+From: Dave Kennedy <davek1802@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c373ec23b39b04f41f162c
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c373ec23b39b04f41f162c
+Content-Type: text/plain; charset=ISO-8859-1
+
+In the log, there is a reference to 'no dependency information available',
+but the POM for com.oracle:ojdbc6:jar:11.2.0.1 exists.
+Any help/suggestions on how to resolve this issue would be appreciated.
+
+Verifying availability of
+C:\Users\david.kennedy\.m2\repository\com\oracle\ojdbc6\11.2.0.1\ojdbc6-11.2.0.1.pom
+from [eclipselink (http://download.eclipse.org/rt/eclipselink/maven.repo/,
+releases+snapshots), central (http://repo.maven.apache.org/maven2,
+releases)]
+
+The POM for com.oracle:ojdbc6:jar:11.2.0.1 is missing, no dependency
+information available
+
+C:\Users\david.kennedy\.m2\repository\com\oracle\ojdbc6\11.2.0.1\ojdbc6-11.2.0.1.pom
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.oracle</groupId>
+    <artifactId>ojdbc6</artifactId>
+    <version>11.2.0.1</version>
+
+    <name>Oracle JDBC Driver</name>
+    <description>Oracle JDBC driver classes for use with
+JDK1.7</description>
+    <url>
+http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/index.html
+</url>
+
+    <licenses>
+        <license>
+            <name>Oracle Technology Network Development and Distribution
+License Terms</name>
+            <url>
+http://www.oracle.com/technology/software/htdocs/distlic.html</url>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>Oracle Corporation</name>
+        <url>http://www.oracle.com</url>
+    </organization>
+</project>
+
+
+On Sat, Mar 8, 2014 at 12:13 PM, Dave Kennedy <davek1802@gmail.com> wrote:
+
+> I'm not sure where I need to add a dependency declaration for the ojdbc
+> driver
+> These are the references to oracle
+> pom.xml
+>         <dependency>
+>
+>             <groupId>com.oracle</groupId>
+>             <artifactId>ojdbc6</artifactId>
+>             <version>11.2.0.1</version>
+>             <scope>provided</scope>
+>         </dependency>
+>
+> src/test/resources/jdbcproperties
+>     jdbc.driverClassName=oracle.jdbc.OracleDriver
+>     jdbc.url=oracle:thin:@database.com:1521:dbname
+>     jdbc.username=name
+>     jdbc.password=pass
+>
+> src/test/resources/testingContext.xml
+>     <bean id="jpaVendorAdapter"
+>
+> class="org.springframework.orm.jpa.vendor.EclipseLinkJpaVendorAdapter"
+>         p:showSql="true"
+>
+> p:databasePlatform="org.eclipse.persistence.platform.database.OraclePlatform"
+> />
+>
+>
+> On Sat, Mar 8, 2014 at 11:55 AM, Wayne Fay <waynefay@gmail.com> wrote:
+>
+>> > I updated the ojdbc6-11.2.0.1.pom file (see below) and the 'invalid'
+>> > message did not appear.
+>>
+>> Good.
+>>
+>> > Now there is an error running JUnit tests: No suitable driver found for
+>> > oracle:thin:@dataserver.com:1521:dbname
+>>
+>> Most likely you are missing a dependency declaration for the ojdbc
+>> driver in the module that threw this error during the JUnit execution.
+>>
+>> > I can PING the database in GlassFish Domain Admin Console and view the
+>> > Tables and data in Netbeans | Services | Databases
+>>
+>> What makes you think this has ANYTHING to do Netbeans or Glassfish...?
+>>
+>> Wayne
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+>
+
+--001a11c373ec23b39b04f41f162c--
+

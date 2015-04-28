@@ -1,0 +1,98 @@
+From users-return-135337-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb  3 20:13:37 2014
+Return-Path: <users-return-135337-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 32F37109E7
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  3 Feb 2014 20:13:37 +0000 (UTC)
+Received: (qmail 54773 invoked by uid 500); 3 Feb 2014 20:13:33 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 54593 invoked by uid 500); 3 Feb 2014 20:13:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 54583 invoked by uid 99); 3 Feb 2014 20:13:32 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 03 Feb 2014 20:13:32 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bmathus@gmail.com designates 74.125.83.52 as permitted sender)
+Received: from [74.125.83.52] (HELO mail-ee0-f52.google.com) (74.125.83.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 03 Feb 2014 20:13:26 +0000
+Received: by mail-ee0-f52.google.com with SMTP id e53so3864992eek.39
+        for <users@maven.apache.org>; Mon, 03 Feb 2014 12:13:06 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=D7o+QWgE9YWjcBg/1B3aVcl/5kAXD9hg1CnnfB0Uxxw=;
+        b=tWpgVLyQfHFgxdfD2M9O3DWejTOar7zx7WS62AerKr7hRye7aIKOwgklCCun2KMYVd
+         yP4d7ojQPsQ3IJrDa8s4eDKytr1Un5b/C7rebLhpkkajomvg7Kuab2JhnxLQDfRWpmop
+         TJhx1WWn24aK2I6GuR9aJ28nZi16qX7eYseYuoFDAYeExzGdk69CrgcdNuaWVFgspdeV
+         CSc1L+InpBew6lonakv9wX84zZjR+DtzqAAYrAckzzBAc56YNlDOFPavNklHoLuDVGLn
+         ERgQeld3YGCxzpppYE/FQKv802bD6mQTIU4M++J4kQm6tROF/QM0thrynjJnJTUGoFtv
+         h5ZQ==
+MIME-Version: 1.0
+X-Received: by 10.14.174.193 with SMTP id x41mr5091406eel.87.1391458386604;
+ Mon, 03 Feb 2014 12:13:06 -0800 (PST)
+Sender: bmathus@gmail.com
+Received: by 10.14.224.198 with HTTP; Mon, 3 Feb 2014 12:13:06 -0800 (PST)
+Received: by 10.14.224.198 with HTTP; Mon, 3 Feb 2014 12:13:06 -0800 (PST)
+In-Reply-To: <000001cf2118$c3238390$496a8ab0$@berthonneau.com>
+References: <000001cf2118$c3238390$496a8ab0$@berthonneau.com>
+Date: Mon, 3 Feb 2014 21:13:06 +0100
+X-Google-Sender-Auth: z-zpLIm0BKX-ns4_JE0CJZWLc9Y
+Message-ID: <CANWgJS5uz_OjbYVEoevirWqMTvvBHt=xAODvmmWBFNPwP=AOXw@mail.gmail.com>
+Subject: Re: Deep dependency analysis
+From: Baptiste Mathus <bmathus@batmat.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b624336da778b04f186269c
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b624336da778b04f186269c
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I'd look at the code behind dependency: analyze
+I guess the improvement by logging the class level usage might be doable.
+
+My 2 cents
+Le 3 f=C3=A9vr. 2014 20:48, "Beno=C3=AEt Berthonneau" <benoit@berthonneau.c=
+om> a
+=C3=A9crit :
+
+> Hi All,
+>
+>
+>
+> Do you know any maven plugin that could say which classes (from
+> dependencies) are used by the maven project (class by class) ?
+>
+> I looked at the maven dependency plugin but doesn=E2=80=99t seem to provi=
+de this
+> kind of deep analysis=E2=80=A6
+>
+>
+>
+> The idea behind my question is to know if a dependency is really useful o=
+r
+> just because of a =E2=80=9Clittle=E2=80=9D API (something like StringUtil=
+ity class) called
+> by only one class=E2=80=A6
+>
+>
+>
+> Thanks,
+>
+> Beno=C3=AEt.
+>
+>
+
+--047d7b624336da778b04f186269c--
+

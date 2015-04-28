@@ -1,0 +1,177 @@
+From users-return-137111-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Aug 22 19:28:31 2014
+Return-Path: <users-return-137111-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5792C112CC
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 22 Aug 2014 19:28:31 +0000 (UTC)
+Received: (qmail 21870 invoked by uid 500); 22 Aug 2014 19:28:29 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 21791 invoked by uid 500); 22 Aug 2014 19:28:29 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 21779 invoked by uid 99); 22 Aug 2014 19:28:28 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 22 Aug 2014 19:28:28 +0000
+X-ASF-Spam-Status: No, hits=2.5 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of greaumaxime@gmail.com designates 74.125.82.179 as permitted sender)
+Received: from [74.125.82.179] (HELO mail-we0-f179.google.com) (74.125.82.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 22 Aug 2014 19:28:03 +0000
+Received: by mail-we0-f179.google.com with SMTP id u57so10889875wes.24
+        for <users@maven.apache.org>; Fri, 22 Aug 2014 12:28:02 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=RQ2+k+We1xlgUOVb9HI50G2O/glqlGJBHbuQMAElLGc=;
+        b=BILtkOak2oPYLALqN7hqlycztk90/7qMoDlprj3nhwDkho0KaGGJh4SJ9YngKk4cc1
+         +xa6x572I1XRAzUUZqsa/BNntXradCbclK9oP7krQQxZ1m4zFni4wEQeF/JLgruUbZOV
+         BmraiNA5TAscocQ6JFoRK4SIoQ/KtTYHgfcJRaw3HpVrKFVhf1mWoxAjSEMd9I+3E5Cg
+         6gO0Va58oNnolIFp2tZN/qc2LubuSfJ21MfPlPn+jTZRddlfkSem3JUfnkvrJRnEelmU
+         l30lcAJfDyJavlWMVK8mbjfb/zj4fUEE3hiir/3HdGM02X77EepAquGVMegQVGFb6T4f
+         WSqw==
+X-Received: by 10.194.92.71 with SMTP id ck7mr6963703wjb.11.1408735682706;
+ Fri, 22 Aug 2014 12:28:02 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.216.73.136 with HTTP; Fri, 22 Aug 2014 12:27:42 -0700 (PDT)
+In-Reply-To: <CA+nPnMxw2PvmhYn3EzOvwwseLSkbD6S-RSq2XKpSjt1vFnZ5zg@mail.gmail.com>
+References: <CACzrW9AHn66P52yVzbTwHGCjjM_r5coUPcF8H44JGwdqu4w_Rw@mail.gmail.com>
+ <CA+nPnMxw2PvmhYn3EzOvwwseLSkbD6S-RSq2XKpSjt1vFnZ5zg@mail.gmail.com>
+From: =?UTF-8?Q?Maxime_Gr=C3=A9au?= <greaumaxime@gmail.com>
+Date: Fri, 22 Aug 2014 21:27:42 +0200
+Message-ID: <CAH7nqBLAEeAb8refmnC86g68GEQOxMUtVHoGRexMuCHpmKF7Bw@mail.gmail.com>
+Subject: Re: Testing jar files instead of class files
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bf0d534f346a305013cd51a
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bf0d534f346a305013cd51a
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+This is exactly what I want to do.
+Is it the bug you are talking about ?
+https://jira.codehaus.org/browse/SUREFIRE-855
+
+Regards
+Maxime Gr=C3=A9au.
+
+
+2013-04-30 13:28 GMT+02:00 Stephen Connolly <stephen.alan.connolly@gmail.co=
+m
+>:
+
+> Well just to put this into context.
+>
+> What you actually want to do is run your second set of tests after the
+> 'package' phase and before the 'install' phase. There is only the 'deploy=
+'
+> phase after the 'install' phase so there would be no scope to run tests
+> after the 'install' phase.
+>
+> If you look at the lifecycle, you will see the handy:
+>
+> 'integration-test'
+> and
+> 'verify'
+>
+> phases.
+>
+> Now use of these phases is slightly different. Because you actually *neve=
+r*
+> want to type "mvn integration-test" and any time you think you do, you
+> should actually type "mvn verify" in its place.
+>
+> The reason for this is that the "pre-integration-test" and
+> "post-integration-test" phases are designed to allow setting up and teari=
+ng
+> down the integration test environment, and, despite their names, the
+> post-integration-test phase is *not* a finally block. So you need to be
+> careful when binding plugins to the integration-test phase that such
+> plugins *never* fail the build...
+>
+> At this point we have the Maven Failsafe Plugin enter the fray... this ha=
+s
+> two goals: failsafe:integration-test and failsafe:verify which, by defaul=
+t,
+> bind to the integration-test and verify phases respectively.
+>
+> The `failsafe:integration-test` goal will run integration tests, but neve=
+r
+> fails the build.
+> The `failsafe:verify` goal will check the results of
+> `failsafe:integration-test` and fail the build if the tests fail.
+>
+> Thus you should be able to add failsafe to the mix by just adding
+>
+> <plugin>
+> <artifactId>maven-failsafe-plugin</artifactId>
+> <executions>
+> <execution>
+> <goals>
+> <goal>integration-test</goal>
+> <goal>verify</goal>
+> </goals>
+> </execution>
+> </executions>
+> </plugin>
+>
+> Now since failsafe is running after the `package` phase, it *should* be
+> using the project artifact in place of target/classes *when* executed aft=
+er
+> the `package` phase... as all plugins should do... *but* I suspect there =
+is
+> a bug in failsafe that causes it to explicitly add target/classes.
+>
+> TL;DR it should be Maven Failsafe Plugin that gives this feature *but* I
+> suspect there is a bug in that plugin that is causing it to use the
+> directory in place of the .jar.
+>
+> Kristian, can you confirm my summary?
+>
+> -Stephen
+>
+>
+> On 30 April 2013 12:11, Stephen Colebourne <scolebourne@joda.org> wrote:
+>
+> > I would like to be able to achieve the following using two command
+> > line invocations:
+> > - build and install jar files using "mvn install"
+> > - run tests again, but against the installed jar files
+> >
+> > The rationale is that the first mvn run will only run "unit" tests
+> > (using test groups in TestNG), whereas the second mvn run would run
+> > all tests, including "slow" and "database" tests. In reality, both
+> > would be run from a CI server rather than a developer desktop.
+> >
+> > Clearly, the first mvn run is easy (I have that working). But I cannot
+> > see a way to run a mvn command that executes the tests against the
+> > installed jar files.
+> >
+> > The project is a multi-module project. Moving tests into a separate
+> > "testing only" project is not an acceptable approach. Running the
+> > slow/database tests as part of a single mvn run is not an acceptable
+> > approach.
+> >
+> > thanks for any thoughts or hyperlinks.
+> > Stephen
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+>
+
+--047d7bf0d534f346a305013cd51a--
+

@@ -1,0 +1,98 @@
+From users-return-138072-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Dec 20 00:38:41 2014
+Return-Path: <users-return-138072-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E396410A23
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 20 Dec 2014 00:38:40 +0000 (UTC)
+Received: (qmail 38791 invoked by uid 500); 20 Dec 2014 00:38:39 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 38701 invoked by uid 500); 20 Dec 2014 00:38:39 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 38681 invoked by uid 99); 20 Dec 2014 00:38:37 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 20 Dec 2014 00:38:37 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW
+X-Spam-Check-By: apache.org
+Received-SPF: error (athena.apache.org: local policy)
+Received: from [209.85.192.54] (HELO mail-qg0-f54.google.com) (209.85.192.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 20 Dec 2014 00:38:33 +0000
+Received: by mail-qg0-f54.google.com with SMTP id l89so1406398qgf.27
+        for <users@maven.apache.org>; Fri, 19 Dec 2014 16:36:22 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:subject:message-id:in-reply-to
+         :references:mime-version:content-type:content-transfer-encoding;
+        bh=xW9BOk6EBFU0VQdemVXPgIrOMIYLiGvDn10JasFmgSM=;
+        b=KZlrtCp9ul0H+qpoa+YtvaSSfeNggf3pEHDuP3vIjWWvw+iZQT+rKLYFK3WrSpcxQ7
+         vhLqtDi3aMiFN2pdGH/t55o7nf2z4m98j4+vWUKaZqqr6gk3aUpRfM5mBbc3jIp6n5Eh
+         D0LN2+3OhzNbb1Xr8n0FWUXGaPrIYZbZ+PCTfebsrpK20fzg3HQM+u4X/yDvTuLT3WvQ
+         IlAadFD4e2avZBYpibaY57WqJBE67jjE5yRkfm4oX+Gza83mCjSRF5cR4/b2dq6tOkne
+         OzsjonkvxrFCLTKHsFgzxuZTmVFjO65Lw27y9lyl3ignf57IQA39ZCEVoauALXXcmVEb
+         q+2A==
+X-Gm-Message-State: ALoCoQlFHdBRG5SDMAjnAcRiE7Nzn3Wy+n+4/SelApzR881eWH6kXjo5eFR1kjoZQ20nYXRA6yZH
+X-Received: by 10.224.80.6 with SMTP id r6mr18464838qak.5.1419035782270;
+        Fri, 19 Dec 2014 16:36:22 -0800 (PST)
+Received: from localhost (HSI-KBW-134-3-146-104.hsi14.kabel-badenwuerttemberg.de. [134.3.146.104])
+        by mx.google.com with ESMTPSA id f105sm10849666qge.1.2014.12.19.16.36.21
+        for <users@maven.apache.org>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 19 Dec 2014 16:36:22 -0800 (PST)
+Date: Sat, 20 Dec 2014 01:36:17 +0100
+From: Bernd Eckenfels <ecki@zusammenkunft.net>
+To: users@maven.apache.org
+Subject: Re: Best way to blacklist repository (maven.glassfish.org in site
+ build)
+Message-ID: <20141220013617.00002885.ecki@zusammenkunft.net>
+In-Reply-To: <20141103021739.0000735c.ecki@zusammenkunft.net>
+References: <20141103021739.0000735c.ecki@zusammenkunft.net>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello,
+
+I have turned the question into a StackOverflow Question, in case you
+want some karma :) 
+
+http://stackoverflow.com/questions/27575822/maven-dependency-report-avoid-delay-and-error-messages-for-glassfish-reposito
+
+Gruss
+Bernd
+
+ Am Mon, 3 Nov 2014 02:17:39 +0100
+schrieb Bernd Eckenfels <ecki@zusammenkunft.net>:
+
+> Hello,
+> 
+> I have more and more projects (OSS and prop) where a lot of time is
+> wasted (especially in site builds) and also the number of error
+> messages or warnings to review increase with the vanished glassfish
+> repository.
+> 
+> The fact this happens is a major annoyance, but I do more
+> wonder on how to cope with it.
+> 
+> Is there an easy settings.xml based way to blacklist those repos, as I
+> cannot modify the already released external POMs which point to it.
+> 
+> (And please in the future do not add repos to your open source POMs!)
+> 
+> Gruss
+> Bernd
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

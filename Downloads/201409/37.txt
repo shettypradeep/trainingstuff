@@ -1,0 +1,64 @@
+From users-return-137288-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Sep 14 22:12:25 2014
+Return-Path: <users-return-137288-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 25EE2118F9
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 14 Sep 2014 22:12:25 +0000 (UTC)
+Received: (qmail 54808 invoked by uid 500); 14 Sep 2014 22:12:22 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 54718 invoked by uid 500); 14 Sep 2014 22:12:21 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9662 invoked by uid 99); 14 Sep 2014 15:58:59 -0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of fbelov@gramant.ru designates 77.105.132.163 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha1; c=simple/simple; d=gramant.ru; s=default;
+	t=1410710313; bh=d47WRD4wkBmjf/tgPaEjyjtseFw=;
+	h=Message-ID:Date:From:MIME-Version:To:Subject:Content-Type:
+	 Content-Transfer-Encoding;
+	b=Mru0XlpGiskh51vDYth9ejq+Zb57rnKVCCYAeubD32DogWfSnQTaGI6vGEIs3WG2W
+	 O15Cffs1byoukq1Ldo6n+b7venkGMD8TOojLwow1BeQtGNqlu4TBhPtFJBtkGKQo4s
+	 qxgrjekrllpCTxxe1EYpblHKnTPtfqGx/85MpCi8=
+Message-ID: <5415BB28.5070703@gramant.ru>
+Date: Sun, 14 Sep 2014 19:58:32 +0400
+From: Fedor Belov <fbelov@gramant.ru>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Problem with maven-deploy-plugin
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Antivirus: avast! (VPS 140914-0, 14.09.2014), Outbound message
+X-Antivirus-Status: Clean
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello. I've got repository protected by SSL located on subdomain: 
+https://abc.mysite.com/
+When I try to upload my artifact (`mvn deploy`) mvn rises an exception:
+
+[ERROR] Failed to execute goal 
+org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy 
+(default-deploy) on project test: Failed to retrieve remote metadata 
+abc.com:test:1.0-SNAPSHOT/maven-metadata.xml: Could not transfer 
+metadata abc.com:test:1.0-SNAPSHOT/maven-metadata.xml from/to 
+myMavenRepo.write (https://abc.mysite.com/efg/): hostname in certificate 
+didn't match: <abc.mysite.com> != <mysite.com> OR <mysite.com> OR 
+<www.mysite.com> -> [Help 1]
+
+Why does it check main domain instead of subdomain? How can I fix this 
+problem?
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

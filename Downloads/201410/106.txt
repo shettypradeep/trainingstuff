@@ -1,0 +1,183 @@
+From users-return-137464-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Oct  5 23:18:54 2014
+Return-Path: <users-return-137464-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 40A4A177C8
+	for <apmail-maven-users-archive@www.apache.org>; Sun,  5 Oct 2014 23:18:54 +0000 (UTC)
+Received: (qmail 93649 invoked by uid 500); 5 Oct 2014 23:18:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 93558 invoked by uid 500); 5 Oct 2014 23:18:52 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 93546 invoked by uid 99); 5 Oct 2014 23:18:52 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 05 Oct 2014 23:18:52 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.215.49 as permitted sender)
+Received: from [209.85.215.49] (HELO mail-la0-f49.google.com) (209.85.215.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 05 Oct 2014 23:18:46 +0000
+Received: by mail-la0-f49.google.com with SMTP id q1so3387136lam.8
+        for <users@maven.apache.org>; Sun, 05 Oct 2014 16:18:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=3vP1FDwQuOqbIaHgATdCdwPm7lHwcuqLY8uydRNYkF0=;
+        b=jQXfw2pPvApLXwcB1DLAUv/ts46MU4DQwE1di55qTnVWx18W5FOfBBa5zhn7UAsaSe
+         x901ueLF+6dVu6QFEB90ZRIsqEErdRgoj+587D7f1rq/jLjBHzjIQ8UMNBOsjDHOrYhz
+         xHk/3gI2iSNVoO53vGi5pjbqxwVpzDgb0JCxtt0QNXqVzDx9V5OPHrl8ie6wCF2fnJJN
+         NxRR+QlS0/cL85NeCYGHB9/FTu/HVbkgPsgZB2yF3eYe6Q4SOhG3gJt/sI0mtIsvDMUh
+         Cj1L5WLehRqJnF1lqw0TRKrblChDqlyG7MI+OF9jJuMg+mwIfWy22mBwxn/oKg//x4SI
+         xaaQ==
+MIME-Version: 1.0
+X-Received: by 10.152.87.10 with SMTP id t10mr21275860laz.22.1412551105340;
+ Sun, 05 Oct 2014 16:18:25 -0700 (PDT)
+Received: by 10.114.63.205 with HTTP; Sun, 5 Oct 2014 16:18:25 -0700 (PDT)
+In-Reply-To: <5431ccfd.86f1420a.4541.4e8e@mx.google.com>
+References: <5431c7c9.4f66460a.1313.ffffc640@mx.google.com>
+	<CAPCjjnHR2zQhKrBOi8+R+ZRBAThb2=-=dnN7bPcM8tEQVHa+jw@mail.gmail.com>
+	<5431caa4.e99f420a.2398.4255@mx.google.com>
+	<CAPCjjnFu5TrfSsbxATJPvHrMhxj5PxFZJZH0VSPpFqt_RPC29g@mail.gmail.com>
+	<5431ccfd.86f1420a.4541.4e8e@mx.google.com>
+Date: Sun, 5 Oct 2014 16:18:25 -0700
+Message-ID: <CAPCjjnE4TF1rgC3xx_jHwt8hhEwF=4qceovk81sq5VCz5NwfwA@mail.gmail.com>
+Subject: Re: Wagon-FTP Help
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c36436dc6b560504b52eab
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c36436dc6b560504b52eab
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+jdk version?
+
+the error is very obvious, maven not able to load and commons-net's
+ftpclient class. Are you sure you have it ?
+
+[ERROR] Failed to execute goal
+org.apache.maven.plugins:maven-deploy-plugin:2.7:deploy-file (default-cli)
+on project standalone-pom: Execution default-cli of goal
+org.apache.maven.plugins:maven-deploy-plugin:2.7:deploy-file failed: An API
+incompatibility was encountered while executing
+org.apache.maven.plugins:maven-deploy-plugin:2.7:deploy-file:
+java.lang.NoSuchMethodError:
+org.apache.commons.net.ftp.FTPClient.setListHiddenFiles(Z)V
+
+-D
+
+On Sun, Oct 5, 2014 at 3:57 PM, <mr.austinwhyte@gmail.com> wrote:
+
+> Sorry, Missed that.
+>
+>
+> It still fails but this time with a slightly different error:
+> http://pastebin.com/Z4FMhAXQ
+>
+>
+>
+>
+>
+>
+> - Austin
+>
+>
+>
+>
+>
+> From: Dan Tran
+> Sent: =E2=80=8ESunday=E2=80=8E, =E2=80=8EOctober=E2=80=8E =E2=80=8E5=E2=
+=80=8E, =E2=80=8E2014 =E2=80=8E3=E2=80=8E:=E2=80=8E50=E2=80=8E =E2=80=8EPM
+> To: Maven Users List
+>
+>
+>
+>
+>
+> i mean you need to manually copy a couple of dependecy file for ftp wagon=
+,
+> that doc mention it
+>
+>
+> On Sun, Oct 5, 2014 at 3:46 PM, <mr.austinwhyte@gmail.com> wrote:
+>
+> > Okay, I tried running wagon:update-maven-3  and then deploying again bu=
+t
+> > that still didn't work. It failed with the same error.
+> >
+> >
+> >
+> >
+> >
+> >
+> > - Austin
+> >
+> >
+> >
+> >
+> >
+> > From: Dan Tran
+> > Sent: =E2=80=8ESunday=E2=80=8E, =E2=80=8EOctober=E2=80=8E =E2=80=8E5=E2=
+=80=8E, =E2=80=8E2014 =E2=80=8E3=E2=80=8E:=E2=80=8E38=E2=80=8E =E2=80=8EPM
+> > To: Maven Users List
+> >
+> >
+> >
+> >
+> >
+> > This may help  http://mojo.codehaus.org/wagon-maven-plugin/usage.html
+> >
+> > On Sun, Oct 5, 2014 at 3:27 PM, <mr.austinwhyte@gmail.com> wrote:
+> >
+> > > Hello community,
+> > >
+> > >
+> > > Over the last hour or so, I=E2=80=99ve been looking for ways to host =
+a private
+> > > repository. I have resolved on using my webserver and uploading via
+> FTP.
+> > I
+> > > got that part working but now I=E2=80=99m having an issue deploying a=
+ 3rd-party
+> > jar
+> > > to it. I=E2=80=99m deploying it via invoking the following command:
+> > >
+> > >
+> > >
+> > >
+> > >
+> > > mvn deploy:deploy-file -DgroupId=3Dsome.version
+> > -Dversion=3D1.0-Dpackaging=3Djar
+> > > -Dfile=3Dmy-file.jar -DrepositoryId=3Dmaven-my-repo
+> > > -DartifactId=3Dmy-artifact-Durl=3Dftp://maven.mysite.com
+> > >
+> > >
+> > > I have the latest version of Wagon-FTP installed to %M2_HOME%\lib and
+> > > whenever I try to deploy, it fails. Here is the output in debug mode:
+> > > http://pastebin.com/pfeXxVbY (Its kinda long).
+> > >
+> > >
+> > > From what I see, its missing the apache commons library but I don=E2=
+=80=99t
+> have
+> > > any idea how to install it.
+> > >
+> > >
+> > >
+> > >
+> > > - Austin
+> >
+>
+
+--001a11c36436dc6b560504b52eab--
+

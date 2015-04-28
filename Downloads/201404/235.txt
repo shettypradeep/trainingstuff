@@ -1,0 +1,107 @@
+From users-return-136227-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 22 15:20:40 2014
+Return-Path: <users-return-136227-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 19238116E8
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 22 Apr 2014 15:20:40 +0000 (UTC)
+Received: (qmail 8564 invoked by uid 500); 22 Apr 2014 15:20:33 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 8489 invoked by uid 500); 22 Apr 2014 15:20:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 8478 invoked by uid 99); 22 Apr 2014 15:20:32 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Apr 2014 15:20:32 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.217.176 as permitted sender)
+Received: from [209.85.217.176] (HELO mail-lb0-f176.google.com) (209.85.217.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Apr 2014 15:20:26 +0000
+Received: by mail-lb0-f176.google.com with SMTP id 10so4402765lbg.21
+        for <users@maven.apache.org>; Tue, 22 Apr 2014 08:20:05 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=pOjWih2277eUE5A703y5c2a1hEo/pCQXXewZVec0uVs=;
+        b=EQtf8o1vdz+/y9Xoqk9WrqA+o5Bf4C09H3OHjWJoYjeaCdQcKK/yL5MABri0Agqo92
+         6BLPc46Mi8wxhUB57bBtBKjwRSimKbmaKShLqLRXOleJZNsLvz7PIjLjnZnpF+/aM7wI
+         NrPtl9GFmiD2EGCWWOUuQGuIS8WglnmJEuUyk7bDbxbXzEyV52w7I4GHXulx6lb1EY0N
+         NQJZyQ5wx3EeN7y4bctNZ2HM7zmzvfL70Rt7FF2tVb4Uhc8g2pIzknpNL8xZqXhy1K+Z
+         YvPt7iF2Owfg0p3cMOlr7NVcPBKidsfUPEMEHtElJV85jQYnm5pU1Smq0kAEyXJqVodc
+         U7ng==
+MIME-Version: 1.0
+X-Received: by 10.112.163.69 with SMTP id yg5mr27529680lbb.14.1398180005294;
+ Tue, 22 Apr 2014 08:20:05 -0700 (PDT)
+Received: by 10.114.48.6 with HTTP; Tue, 22 Apr 2014 08:20:05 -0700 (PDT)
+In-Reply-To: <5A294BB7FFF6F4439E14E7E7509A5B65028ADCE0@HIQQBEXC101.sto.hiq.se>
+References: <5A294BB7FFF6F4439E14E7E7509A5B65028ADCE0@HIQQBEXC101.sto.hiq.se>
+Date: Tue, 22 Apr 2014 08:20:05 -0700
+Message-ID: <CAPCjjnGz8=tYfasm6ShHZoV9sb0eX+cV1JLoW8cMPGu_PNGYDg@mail.gmail.com>
+Subject: Re: can't download jar is my server blacklisted
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0118294e8c369c04f7a326c0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0118294e8c369c04f7a326c0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I am seeing the same error.
+
+I also encounter  similar issue, could you check if you see the same thing
+and add your into the mentioned Jira
+
+http://maven.40175.n5.nabble.com/Strange-maven-central-response-do-you-see-=
+the-same-thing-td5791549.html
+
+Thanks
+
+-Dan
+
+
+On Tue, Apr 22, 2014 at 1:39 AM, Lars Carlsson <Lars.Carlsson@hiq.se> wrote=
+:
+
+> Hi
+> Is my new vps blocked from the maven repo i have tried different mirrors
+> same problem
+>
+>
+> 94.247.169.236 server:
+>
+> ping  repo.maven.apache.org
+> (185.31.17.192)
+>
+> wget
+> http://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resour=
+ces-plugin/2.6/maven-resources-plugin-2.6.jar
+>
+> 2014-04-22 11:24:37 ERROR 404: Not Found.
+>
+>
+> Amazon ec2:
+> ping  repo.maven.apache.org
+> (185.31.17.192)
+> wget
+> http://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resour=
+ces-plugin/2.6/maven-resources-plugin-2.6.jar
+>
+>
+> 2014-04-22 07:18:01 (1.79 MB/s) - =E2=80=98maven-resources-plugin-2.6.jar=
+.1=E2=80=99 saved
+> [29519/29519]
+>
+>
+
+--089e0118294e8c369c04f7a326c0--
+

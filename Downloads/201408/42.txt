@@ -1,0 +1,139 @@
+From users-return-136980-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Aug  7 00:55:39 2014
+Return-Path: <users-return-136980-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BEC4A11DFC
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  7 Aug 2014 00:55:39 +0000 (UTC)
+Received: (qmail 87964 invoked by uid 500); 7 Aug 2014 00:55:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 87810 invoked by uid 500); 7 Aug 2014 00:55:31 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 87207 invoked by uid 99); 7 Aug 2014 00:55:30 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 07 Aug 2014 00:55:30 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.215.41 as permitted sender)
+Received: from [209.85.215.41] (HELO mail-la0-f41.google.com) (209.85.215.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 07 Aug 2014 00:55:26 +0000
+Received: by mail-la0-f41.google.com with SMTP id s18so2972109lam.28
+        for <users@maven.apache.org>; Wed, 06 Aug 2014 17:55:04 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=dAuB2/NgLIBZaVexlpL3f1k6ogGGYSRQ42hQSJIbaSY=;
+        b=lZ299O0YpTIsvvWVCNUtoBNxwjqWgLyCQd2MAwF7CUoZ/sSlzH1QdXUIK5rN62dGL6
+         8Ak3AxXz0FcVxzXu1TT3mWq4UFe9jhudpE3dmh5LAtc89aZn7OqwW1I5vSiZw/wme5bD
+         5ORhE4IjOCUqr2kSSaSnBuf+h2U0NPl14vOBJtTGCbsHmDCfxRC1dNwnxGmX+nzU+bmd
+         9+yzq36J541s7b9YD7/uxvt6CSTvntqHxN5Z0nqu2b/pVmQ2Mzg3LuSQkSKozTTmk6KJ
+         7cQ3iC68Q9bD/o26+Nwl5Vt4QDcyD4Bz+Z+jJxLift6kre4UNwazIRdWKoULslrilkCX
+         aLOA==
+MIME-Version: 1.0
+X-Received: by 10.112.202.106 with SMTP id kh10mr13507594lbc.66.1407372904605;
+ Wed, 06 Aug 2014 17:55:04 -0700 (PDT)
+Received: by 10.114.20.231 with HTTP; Wed, 6 Aug 2014 17:55:04 -0700 (PDT)
+In-Reply-To: <CAFNCU--JZbxuaR2zn34ccYqROrMe+d2yb9kmNdZb=R0QTeZmPw@mail.gmail.com>
+References: <CAPCjjnF9UtAg-wa6mrUuaYHVeSQpfC6yYnGuv+RY8M+83vz4Zg@mail.gmail.com>
+	<F21547B4F425F9428444D12A5127050623873E84@NP1EXMB033.corp.halliburton.com>
+	<CAFNCU--JZbxuaR2zn34ccYqROrMe+d2yb9kmNdZb=R0QTeZmPw@mail.gmail.com>
+Date: Wed, 6 Aug 2014 17:55:04 -0700
+Message-ID: <CAPCjjnFuQ0SMsqBdJH+5dgjRfFEHPCXTpE4iu6iMtMOX0DLw+g@mail.gmail.com>
+Subject: Re: Jococo report using Jenkins without the need to configure
+ jacoco-maven-plugin? possible?
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c36a240bae6404ffff8a9d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c36a240bae6404ffff8a9d
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Now I have a better understanding of jacoco, jenkins, and maven
+integration.  Thank your both.
+
+It works!!!
+
+-D
+
+
+On Wed, Aug 6, 2014 at 7:59 AM, Arnaud H=C3=A9ritier <aheritier@gmail.com> =
+wrote:
+
+> something like this works for me :
+>
+> mvn org.jacoco:jacoco-maven-plugin:0.7.1.201405082137:prepare-agent verif=
+y
+>
+> +
+>
+> sonar runner as post build
+>
+>
+>
+> On Wed, Aug 6, 2014 at 4:31 PM, Justin Georgeson <JGeorgeson@lgc.com>
+> wrote:
+>
+> > I believe you still need to configure jacoco-maven-plugin so that your
+> > tests are run with instrumentation, but you don't need to do the
+> reporting
+> > part with maven. Jenkins will read the .exec file that Jacoco generates
+> > during test execution and publish reports from that.
+> >
+> > > -----Original Message-----
+> > > From: Dan Tran [mailto:dantran@gmail.com]
+> > > Sent: Tuesday, August 05, 2014 9:31 PM
+> > > To: Maven Users List
+> > > Subject: Jococo report using Jenkins without the need to configure
+> > jacoco-
+> > > maven-plugin? possible?
+> > >
+> > > Hello,
+> > >
+> > > I have an impression that I dont need bring in jacoco-maven-plugin to
+> my
+> > > poms, and just have Jenkins to run it at post build and magic will
+> > happen at
+> > > Jenkins page.
+> > >
+> > > So far, I have no luck with that
+> > >
+> > > Any got this working?
+> > >
+> > > Thanks
+> > >
+> > > -Dan
+> >
+> > ----------------------------------------------------------------------
+> > This e-mail, including any attached files, may contain confidential and
+> > privileged information for the sole use of the intended recipient.  Any
+> > review, use, distribution, or disclosure by others is strictly
+> prohibited.
+> >  If you are not the intended recipient (or authorized to receive
+> > information for the intended recipient), please contact the sender by
+> reply
+> > e-mail and delete all copies of this message.
+> >
+>
+>
+>
+> --
+> -----
+> Arnaud H=C3=A9ritier
+> http://aheritier.net
+> Mail/GTalk: aheritier AT gmail DOT com
+> Twitter/Skype : aheritier
+>
+
+--001a11c36a240bae6404ffff8a9d--
+

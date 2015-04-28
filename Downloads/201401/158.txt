@@ -1,0 +1,87 @@
+From users-return-135155-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan 15 07:53:32 2014
+Return-Path: <users-return-135155-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3FD33104AB
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 15 Jan 2014 07:53:32 +0000 (UTC)
+Received: (qmail 86620 invoked by uid 500); 15 Jan 2014 07:53:26 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 86453 invoked by uid 500); 15 Jan 2014 07:53:25 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 86441 invoked by uid 99); 15 Jan 2014 07:53:23 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 15 Jan 2014 07:53:23 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bmathus@gmail.com designates 209.85.215.178 as permitted sender)
+Received: from [209.85.215.178] (HELO mail-ea0-f178.google.com) (209.85.215.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 15 Jan 2014 07:53:19 +0000
+Received: by mail-ea0-f178.google.com with SMTP id d10so258735eaj.23
+        for <users@maven.apache.org>; Tue, 14 Jan 2014 23:52:57 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=qFp4hxC/yHkzUXTwvWkBDPZs/9rPLkoXMz1FuMSnCcI=;
+        b=JRDGfFmnQeZtDuYsbTvZt6OZogURzb+wJRZ/NRQKwNqg5i/gmA+Kc1EwscprigUNde
+         prS92+ZO0KE8vOMla3c8Ebchh9+vZY6p+WtNKVpWKKTxoXdjHDWwgrDG60QpxJSkBWp2
+         CgrbOLWlw26KzVH6hQb+UMi7rk4y0y3NnbINaBAMEhKnAmWsWW6LD2jElfaTxXNyqkLP
+         i+BDedd9/AIKkMgnhpUlQHlWTzXmz2I7/JtOJRcYZSaaucLGsbGwAZZW6MVHhGVzhwYK
+         lOIir0GEB3rAB9ubDtuJi2TISylnf3GAlxSuY5nIasvsLUei23cpCp2H+6ryhWhzhEDO
+         JncA==
+MIME-Version: 1.0
+X-Received: by 10.15.82.67 with SMTP id z43mr1516843eey.60.1389772377704; Tue,
+ 14 Jan 2014 23:52:57 -0800 (PST)
+Sender: bmathus@gmail.com
+Received: by 10.15.34.75 with HTTP; Tue, 14 Jan 2014 23:52:57 -0800 (PST)
+Received: by 10.15.34.75 with HTTP; Tue, 14 Jan 2014 23:52:57 -0800 (PST)
+In-Reply-To: <CAG-F_6=dnj2qOVdChgOLoCVsGcvTgOoWBLf0qH_rfX4f-sFYKA@mail.gmail.com>
+References: <CAG-F_6=dnj2qOVdChgOLoCVsGcvTgOoWBLf0qH_rfX4f-sFYKA@mail.gmail.com>
+Date: Wed, 15 Jan 2014 08:52:57 +0100
+X-Google-Sender-Auth: WgGLPh8qTo9vgWdVgWXO1NtOquM
+Message-ID: <CANWgJS4vqAuR6RbabtJ3afto+oVo5X-w+3zyQF-xRrZJ5QPLHw@mail.gmail.com>
+Subject: Re: Depend on a jar via another pom file
+From: Baptiste Mathus <bmathus@batmat.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e01681a30e4530d04effd98e5
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01681a30e4530d04effd98e5
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Well, what "scope" are used here? Thus is a central element to manage
+transitivity.
+
+Btw, you should never rely on a dependency to get a dependency you're also
+using. You must redeclare it in your own pom. (mvn dependency:analyze can
+also help you here).
+
+Cheers
+Le 8 janv. 2014 16:59, "Omar@Gmail" <omarnetbox@googlemail.com> a =C3=A9cri=
+t :
+
+> I have a maven module (lets call it M) that requires aspectjrt but M
+> already depends on another pom file that has aspectjrt within its
+> dependency tree  like so:
+>
+> M ->  middle pom -> aspectjrt
+>
+> The problem is M would not compile unless I express the aspectjrt
+> dependency directly in the M pom file, why?
+>
+> Is there a way for M to get apsectjrt via the middle pom without directly
+> depending on aspectjrt?
+>
+
+--089e01681a30e4530d04effd98e5--
+

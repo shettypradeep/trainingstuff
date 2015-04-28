@@ -1,0 +1,119 @@
+From users-return-136753-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jul  9 06:29:02 2014
+Return-Path: <users-return-136753-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 09949110F4
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  9 Jul 2014 06:29:02 +0000 (UTC)
+Received: (qmail 6709 invoked by uid 500); 9 Jul 2014 06:29:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 6643 invoked by uid 500); 9 Jul 2014 06:29:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 6631 invoked by uid 99); 9 Jul 2014 06:28:59 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 09 Jul 2014 06:28:59 +0000
+X-ASF-Spam-Status: No, hits=2.9 required=5.0
+	tests=HTML_IMAGE_ONLY_28,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ericcornely@gmail.com designates 209.85.192.41 as permitted sender)
+Received: from [209.85.192.41] (HELO mail-qg0-f41.google.com) (209.85.192.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 09 Jul 2014 06:28:58 +0000
+Received: by mail-qg0-f41.google.com with SMTP id i50so6245246qgf.28
+        for <users@maven.apache.org>; Tue, 08 Jul 2014 23:28:33 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=Pfa4kjcSjVlA2Hkt3uGeNKur+vluMn10SiEZr0xIfIg=;
+        b=ejdtA8hzNVSOsL5QZMRXU97Wg3tF/9Slx+ZfPdL4IIyssSN9lf7KqQ4g+48DuhHhm/
+         E3/4nkjXIN6YhaP8/fEv0rx128VsDAEo5aj5+LJtrozutIFktq3VPCeTROc5Af3gxjSv
+         u0S8039dMTuTTFFzotuDkD9GQ7LUAHTNXbzcfPGNloJCSk0PhsETiPNCP9h7pNJOIEqo
+         cbu0CrQXAgE26knoLavcUrO6Lca4xzTyLzMBH6HE6BHcS4gqMtAMFauHAzcw5NZ2jZPb
+         A81eI7xvjQP4cA8IKrtzHjsi2llKGTyeb9FOltuxBr62s7+oVWEgYQZMb6KFUcJEozaA
+         B55Q==
+MIME-Version: 1.0
+X-Received: by 10.140.34.55 with SMTP id k52mr62629974qgk.13.1404887313268;
+ Tue, 08 Jul 2014 23:28:33 -0700 (PDT)
+Received: by 10.96.123.229 with HTTP; Tue, 8 Jul 2014 23:28:33 -0700 (PDT)
+Date: Wed, 9 Jul 2014 08:28:33 +0200
+Message-ID: <CAJjUpCagi0B8MzKbYfPywezncrhxpM3A+2GPE5P92wZWF+6h1A@mail.gmail.com>
+Subject: Re: Re:
+From: Eric Cornely <ericcornely@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a11c0e85a41c8a004fdbcd1b0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c0e85a41c8a004fdbcd1b0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Thanks a lot, that's a perfect example.
+I would have loved to see it in the documentation about lifecycles.
+
+Kr,
+
+Eric
+
+
+> See my answer here for some of the issues:
+>
+> http://stackoverflow.com/questions/12433120/creating-a-new-phase/12480505=
+#12480505
+>
+>
+> On 7 July 2014 11:34, Eric Cornely <ericcornely@gmail.com> wrote:
+>
+>
+>
+>> Hello,
+>>
+>> I have a few questions about maven lifecycles that you can probably
+>> answer.
+>>
+>> I see many articles about modifying the default lifecycle where people
+>> change the associated plugin goal of a certain phase by an other.
+>>
+>> Would it be possible to create a completely new lifecycle with phases th=
+at
+>> have new names ? like a lifecycle named 'foo' with a 'bar' phase and tha=
+n
+>> I
+>> could run from command line "mvn bar"
+>>
+>> In case it is not possible, how can I bind more than one plugin goal to =
+a
+>> single phase in my extension project components.xml file ? (Is there any
+>> DTD or XSD for component-set ?)
+>>
+>> Kind regards,
+>>
+>> Eric Cornely
+>> -- <http://www.visionitgroup.be>
+>>
+>> Eric Cornely
+>> ericcornely@gmail.com
+>>
+>> Please consider the environment before printing this e-mail
+>>
+>
+
+--=20
+ <http://www.visionitgroup.be>
+
+Eric Cornely
+IT Consultant and Trainer  @ Vision Consulting Group
+Chauss=C3=A9e de Louvain 431 (B=C3=A2t H)
+1380 Lasne
+Mobile : +32 (0)494 25 22 77
+ericcornely@gmail.com
+
+Please consider the environment before printing this e-mail
+
+--001a11c0e85a41c8a004fdbcd1b0--
+

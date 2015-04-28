@@ -1,0 +1,110 @@
+From users-return-135253-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jan 24 17:38:27 2014
+Return-Path: <users-return-135253-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 74B0E1004E
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 24 Jan 2014 17:38:27 +0000 (UTC)
+Received: (qmail 77653 invoked by uid 500); 24 Jan 2014 17:36:05 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 77417 invoked by uid 500); 24 Jan 2014 17:36:01 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 77190 invoked by uid 99); 24 Jan 2014 17:33:52 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 24 Jan 2014 17:33:52 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.215.181] (HELO mail-ea0-f181.google.com) (209.85.215.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 24 Jan 2014 17:33:48 +0000
+Received: by mail-ea0-f181.google.com with SMTP id m10so1129517eaj.40
+        for <users@maven.apache.org>; Fri, 24 Jan 2014 09:33:26 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=HKsprpVwLX/bA5/h6xzZW8fh8oKa7dCsof9AfzqIYgk=;
+        b=B4DwEt8C7tAzMPqwKH9ETetn7jmRo8iIpJiOeshwgqLqmXibX/7My5o7O3rlbnAEBc
+         d81Fy9BCSbteyjHsaSjFM8vTBt6Kir+u16kB8VHu7OKHlMPAQwhulDTOzImypKJgi8is
+         WqBFFh/6xIPBx0GckEtM/sW4PfOt/vw94qQfMmqN17U1VQleFKGTsMAU6+rTatdWVEJL
+         oVETpkQGu5fOYNSBUksIWenl/yQXmI/2yfi2IuCpT+cSj6cQOJIYnSRtsj0qiTk3udgr
+         IGQ42wyNz9xlMPMEGN9g7AwTtDnSCtxyx6Aq8kRSDQr64ksH57Cz1OzwaH+fIOoxsOgY
+         8ekQ==
+X-Gm-Message-State: ALoCoQn8XrvCJkq4TfnlKTCVbp9Z2X0qHb9GYIkGHdvZcpQnC7K38SMbaxjH6bCo/hRnDIym2Y0r
+MIME-Version: 1.0
+X-Received: by 10.15.42.72 with SMTP id t48mr13718315eev.45.1390584806737;
+ Fri, 24 Jan 2014 09:33:26 -0800 (PST)
+Received: by 10.14.71.72 with HTTP; Fri, 24 Jan 2014 09:33:26 -0800 (PST)
+In-Reply-To: <52E29E84.3010309@artifact-software.com>
+References: <CAC7GPxZ65UEz=PErg9f1gYyoELYgVGaWH--op0fabp2U99dURw@mail.gmail.com>
+	<52E29E84.3010309@artifact-software.com>
+Date: Fri, 24 Jan 2014 12:33:26 -0500
+Message-ID: <CAC7GPxY1D4Q+Ya3rSB3g2HyPgAtx9QseKJs2BD59vVMWJch14w@mail.gmail.com>
+Subject: Re: maven v3.0.4 missing, breaking Chocolatey package for Windows users
+From: Andrew Pennebaker <apennebaker@42six.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0160cd1c6f985f04f0bac1ac
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0160cd1c6f985f04f0bac1ac
+Content-Type: text/plain; charset=ISO-8859-1
+
+Excellent! I've informed the Chocolatey guys to switch to that archive.
+
+
+On Fri, Jan 24, 2014 at 12:10 PM, Ron Wheeler <
+rwheeler@artifact-software.com> wrote:
+
+> http://archive.apache.org/dist/maven/binaries/
+>
+>
+>
+> On 24/01/2014 12:01 PM, Andrew Pennebaker wrote:
+>
+>> Apache has a policy of deleting old software packages, breaking many
+>> Chocolatey <https://chocolatey.org/packages/maven> packages. For example,
+>>
+>> `cinst maven` currently 404s due to
+>> http://ftp.unicamp.br/pub/apache/maven/binaries/apache-
+>> maven-3.0.4-bin.zipbeing
+>> removed;
+>> http://ftp.unicamp.br/pub/apache/maven/binaries/ only goes back as far as
+>> 3.0.5.
+>>
+>> I politely request that Apache Maven put v3.0.4 back online. In the mean
+>> time, Chocolatey will try to update to v3.0.5.
+>>
+>>
+>
+> --
+> Ron Wheeler
+> President
+> Artifact Software Inc
+> email: rwheeler@artifact-software.com
+> skype: ronaldmwheeler
+> phone: 866-970-2435, ext 102
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Cheers,
+
+Andrew Pennebaker
+apennebaker@42six.com
+
+--089e0160cd1c6f985f04f0bac1ac--
+

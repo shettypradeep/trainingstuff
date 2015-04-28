@@ -1,0 +1,140 @@
+From users-return-135382-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb  7 14:44:11 2014
+Return-Path: <users-return-135382-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5D0D010800
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  7 Feb 2014 14:44:11 +0000 (UTC)
+Received: (qmail 1671 invoked by uid 500); 7 Feb 2014 14:44:06 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 1567 invoked by uid 500); 7 Feb 2014 14:44:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 1556 invoked by uid 99); 7 Feb 2014 14:44:05 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 07 Feb 2014 14:44:05 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [88.198.41.52] (HELO tux235.hoststar.ch) (88.198.41.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 07 Feb 2014 14:44:00 +0000
+Received: from mail-qa0-f47.google.com (mail-qa0-f47.google.com [209.85.216.47])
+	(authenticated bits=0)
+	by tux235.hoststar.ch (8.13.8/8.12.11) with ESMTP id s17EhYuZ009454
+	(version=TLSv1/SSLv3 cipher=RC4-SHA bits=128 verify=FAIL)
+	for <users@maven.apache.org>; Fri, 7 Feb 2014 15:43:35 +0100
+Received: by mail-qa0-f47.google.com with SMTP id j5so5255860qaq.20
+        for <users@maven.apache.org>; Fri, 07 Feb 2014 06:43:34 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=oEGJaVX89jq4Jdk9D2orL+Wk8QYZjFos4uTSqhC9IJM=;
+        b=MslHTgUuvLqZrL33DLEK0IllkJ1qvZ09gdXgeQUctNk+XCoQIjf3+REuZKqGNfUeKI
+         SHWqcyszJ1i0OHkvSRC753hIStz6662K/Ht2VZSae1PE23p4Sop+I8et09ZF7C29BjUL
+         l649dXSyJMkCvANIcfdq/KBKD5a5AJgD6mX+x5K5za5NuUduECcahdKPro3TPQeJERKR
+         CtITpr1P4QzT/NPVez5KK9roY/KED+IFNY21bjq2XG2pO/FxxAjlKsG3HC/GgAWlqUdK
+         E6SYTbXJWHSwMEXXN2hE4bhDF1vcvCY11QQFDb2pogGYb1EqSFQ+BuDKxSvGi5rjv2Ez
+         kNaQ==
+X-Received: by 10.140.34.207 with SMTP id l73mr21328214qgl.85.1391784214504;
+ Fri, 07 Feb 2014 06:43:34 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.224.182.203 with HTTP; Fri, 7 Feb 2014 06:43:04 -0800 (PST)
+In-Reply-To: <52F4EED5.2040305@artifact-software.com>
+References: <CAJZYdzjdZKS69VX64izc104aeb2m0CZQqcR2BWCbaHp3mginjg@mail.gmail.com>
+ <52F4EED5.2040305@artifact-software.com>
+From: =?ISO-8859-1?Q?Reto_Habl=FCtzel?= <rethab@rethab.ch>
+Date: Fri, 7 Feb 2014 15:43:04 +0100
+Message-ID: <CAJZYdzjLSdYqes9wtokB0U6yvO8DkV1Qt8dqf2s2i_gwuR_uvA@mail.gmail.com>
+Subject: Re: maven-ear-plugin silently overrides libraries
+To: Maven Users List <users@maven.apache.org>, rwheeler@artifact-software.com
+Content-Type: multipart/alternative; boundary=001a11c109c4b5ac6404f1d203cd
+X-Scanned-By: mimedefang-scanned
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c109c4b5ac6404f1d203cd
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Sure, but exclusions don't do the trick if you need both of them, do they?
+I am talking about completely independent libraries that happen to have the
+same artifactId.
+
+Those were actually both libraries of mine and I could obviously fix this
+issue rather simply, but I was just thinking that it would be helpful to
+have at least a warning or something from maven - regardless of the IDE.
+
+- Reto
+
+
+On Fri, Feb 7, 2014 at 3:33 PM, Ron Wheeler
+<rwheeler@artifact-software.com>wrote:
+
+> If your IDE supports Maven (Eclipse/STS for example), you will see the
+> conflict in the dependency hierarchy view and you can fix it with the rig=
+ht
+> exclusions.
+>
+> It is almost always worth a quick look through the dependency hierarchy
+> view if you use a lot of third party libraries.
+> Not everyone updates their dependencies when they build a shareable
+> library.
+> You can sometimes get some pretty old versions of things dragged in with
+> the latest version of otherwise well-written libraries.
+> Exclusions need to be added to get what you want in your artifacts.
+>
+> Ron
+>
+>
+> On 07/02/2014 9:21 AM, Reto Habl=FCtzel wrote:
+>
+>> Hi there,
+>>
+>> I built an ear using the maven-ear-plugin (version 2.6).
+>>
+>> The ear is configured such that it includes two libraries into the lib
+>> folder, both with the same artifactId as well as the same version, but a
+>> different groupId. Now if I simply call 'mvn package' only the first one
+>> is
+>> included, but no warning whatsoever appears. Only once I turn on debuggi=
+ng
+>> (mvn --debug package), I see one subtle message:
+>> [DEBUG] Skipping artifact [jar:com.foo:bar:1.0] as it is already up to
+>> date
+>> at [lib/bar-1.0.jar]
+>>
+>> Wouldn't it make sense to either include the groupId in the filename or =
+at
+>> least make a check (that includes the groupId) beforehand if there are a=
+ny
+>> conflicts?
+>>
+>> Cheers,
+>> Reto
+>>
+>>
+>
+> --
+> Ron Wheeler
+> President
+> Artifact Software Inc
+> email: rwheeler@artifact-software.com
+> skype: ronaldmwheeler
+> phone: 866-970-2435, ext 102
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a11c109c4b5ac6404f1d203cd--
+

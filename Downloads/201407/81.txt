@@ -1,0 +1,203 @@
+From users-return-136723-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul  3 15:53:09 2014
+Return-Path: <users-return-136723-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7BE8211BC9
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  3 Jul 2014 15:53:09 +0000 (UTC)
+Received: (qmail 75336 invoked by uid 500); 3 Jul 2014 15:53:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 75248 invoked by uid 500); 3 Jul 2014 15:53:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 75235 invoked by uid 99); 3 Jul 2014 15:53:07 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 03 Jul 2014 15:53:07 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.212.181 as permitted sender)
+Received: from [209.85.212.181] (HELO mail-wi0-f181.google.com) (209.85.212.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 03 Jul 2014 15:53:04 +0000
+Received: by mail-wi0-f181.google.com with SMTP id n3so2576593wiv.14
+        for <users@maven.apache.org>; Thu, 03 Jul 2014 08:52:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=MgFmU1xBO+N3VGIxvYvV2uF6wC5F/TheQ80YlDd2dSY=;
+        b=EjRRSJe4yrPAQfAymgixAUQZ+z2qfvoi7O75yQfSjCogMgMoWnYXJ5UZHx+gorlBXt
+         hCw6tUiuGatxQsSmQQsYj9rn9A7m1YjlEftuot3hmEE4UjyEKRbqYVzdzebw2jagT7VN
+         kfeTsJdi2Ip5nYWb2DxIWjuu/BO0CG4FU0a5cVQRiVyOgzvjFOeYuaXJtf14nNWsMNLL
+         G63GjptgZksAe3gzKbx0qjWHyavUkRPjd8ee/8DsR93AGxNtHjtQh37cJ7efHBWzlJ9u
+         PuuTdxOGLhAwIj3P1XYSCUmW6/FgPHcbe6omCH4DlOxtvKKE6QW7KW6W4WJcBHxIxbhN
+         eVDA==
+MIME-Version: 1.0
+X-Received: by 10.194.185.113 with SMTP id fb17mr3868632wjc.117.1404402760415;
+ Thu, 03 Jul 2014 08:52:40 -0700 (PDT)
+Received: by 10.194.134.8 with HTTP; Thu, 3 Jul 2014 08:52:40 -0700 (PDT)
+In-Reply-To: <53B56A1F.1080603@cyannetworks.com>
+References: <53B56A1F.1080603@cyannetworks.com>
+Date: Thu, 3 Jul 2014 16:52:40 +0100
+Message-ID: <CA+nPnMw60YFER7XMTRGSb-gwfO_dFBf9z=7_HA_uiHOgrGi1-A@mail.gmail.com>
+Subject: Re: Problem with iso9660-maven-plugin
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bd6bb0ea800d604fd4bff89
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bd6bb0ea800d604fd4bff89
+Content-Type: text/plain; charset=UTF-8
+
+iso9660 limits filenames to 8+3 IIRC.
+
+I have not had any reason to maintain that plugin in quite some time. If
+you have pull requests let me know and I may find some time to investigate,
+but I'm not making any promises given my current time commitments
+
+
+On 3 July 2014 15:35, Roland Asmann <Roland.Asmann@cyannetworks.com> wrote:
+
+> Hi all,
+>
+> I am trying to switch one of our 'projects' to Maven and am running into
+> some problems.
+>
+> The project consists of some shell-scripts (which I want to replace with
+> Maven) and configurations to build an Ubuntu pre-seed Image. What the
+> scripts do in short:
+> - Mount an Ubuntu image
+> - Copy its content to a directory to work in
+> - Add our configurations
+> - Create a new Image
+>
+> I have found a plugin to extract the image without mounting it (getting
+> rid of the need for 'sudo' in our script) and copying the configurations
+> is peanuts any day.
+> To repackage the image, I looked into the iso9660-maven-plugin, which
+> was said to do just that.
+>
+> Now, when I run my project, it always stops with the following error:
+>
+> [ERROR] Failed to execute goal
+> com.github.stephenc.java-iso-tools:iso9660-maven-plugin:2.0.0:iso
+> (default) on project test: Execution default of goal
+> com.github.stephenc.java-iso-tools:iso9660-maven-plugin:2.0.0:iso
+> failed: String index out of range: 41 -> [Help 1]
+> org.apache.maven.lifecycle.LifecycleExecutionException: Failed to
+> execute goal
+> com.github.stephenc.java-iso-tools:iso9660-maven-plugin:2.0.0:iso
+> (default) on project test: Execution default of goal
+> com.github.stephenc.java-iso-tools:iso9660-maven-plugin:2.0.0:iso
+> failed: String index out of range: 41
+>         at
+>
+> org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:225)
+>         at
+>
+> org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+>         at
+>
+> org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+>         at
+>
+> org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+>         at
+>
+> org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+>         at
+>
+> org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+>         at
+>
+> org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+>         at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+>         at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+>         at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+>         at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+>         at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+>         at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+>         at
+>
+> sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+>         at
+>
+> sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+>         at java.lang.reflect.Method.invoke(Method.java:622)
+>         at
+>
+> org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+>         at
+> org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+>         at
+>
+> org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+>         at
+> org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+> Caused by: org.apache.maven.plugin.PluginExecutionException: Execution
+> default of goal
+> com.github.stephenc.java-iso-tools:iso9660-maven-plugin:2.0.0:iso
+> failed: String index out of range: 41
+>         at
+>
+> org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:110)
+>         at
+>
+> org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+>         ... 19 more
+> Caused by: java.lang.StringIndexOutOfBoundsException: String index out
+> of range: 41
+>         at java.lang.String.substring(String.java:1946)
+>         at
+>
+> com.github.stephenc.javaisotools.joliet.impl.JolietNamingConventions.apply(JolietNamingConventions.java:89)
+>         at
+>
+> com.github.stephenc.javaisotools.iso9660.NamingConventions.processDirectory(NamingConventions.java:233)
+>         at
+>
+> com.github.stephenc.javaisotools.iso9660.impl.ISO9660Factory.applyNamingConventions(ISO9660Factory.java:79)
+>         at
+>
+> com.github.stephenc.javaisotools.joliet.impl.JolietHandler.<init>(JolietHandler.java:60)
+>         at
+>
+> com.github.stephenc.javaisotools.iso9660.impl.CreateISO.process(CreateISO.java:52)
+>         at
+>
+> com.github.stephenc.javaisotools.maven.PackageMojo.execute(PackageMojo.java:317)
+>         at
+>
+> org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+>         ... 20 more
+>
+> Looking through the code, it seems the plugin thinks the filename is too
+> long. I added some logging and built a SNAPSHOT version to play with,
+> but I am not quite sure about the calculation of the filename-length.
+> All names that go in are exactly 64 characters long, but the plugin
+> wants to shorten them still.
+>
+> I was hoping that Mr. Connolly could perhaps take another look at it and
+> give me some pointer/update the current version to work correctly.
+>
+> A simple test-case is to just unpack an Ubuntu image (I was testing with
+> 10.04.4 amd64) and try to repackage it.
+>
+> Thanks.
+>
+> Roland
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7bd6bb0ea800d604fd4bff89--
+

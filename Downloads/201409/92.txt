@@ -1,0 +1,130 @@
+From users-return-137375-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Sep 25 18:02:48 2014
+Return-Path: <users-return-137375-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A691C17ED4
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 25 Sep 2014 18:02:48 +0000 (UTC)
+Received: (qmail 33280 invoked by uid 500); 25 Sep 2014 18:02:47 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 33186 invoked by uid 500); 25 Sep 2014 18:02:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 33172 invoked by uid 99); 25 Sep 2014 18:02:46 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 25 Sep 2014 18:02:46 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stevenschlansker@gmail.com designates 209.85.220.43 as permitted sender)
+Received: from [209.85.220.43] (HELO mail-pa0-f43.google.com) (209.85.220.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 25 Sep 2014 18:02:18 +0000
+Received: by mail-pa0-f43.google.com with SMTP id kx10so11548071pab.2
+        for <users@maven.apache.org>; Thu, 25 Sep 2014 11:02:17 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=from:content-type:content-transfer-encoding:subject:message-id:date
+         :to:mime-version;
+        bh=WZw0GJeUpuTxG/wHNqYTlgEqEJAJ/OXS5VA0CArVpRk=;
+        b=KX8uW6Erbgi3b+ngrQitPkOF7tQrUrRhx00otVWA2Ra1HIJzqJdICJWAIOnsz+Q30X
+         zLry6KUCeW7b8JZA5GqCLcZ0nR1Dte0m7CZGwL+wFl6O1r+sKT3JZK+6TM7p1ibJga+R
+         WdmxZIHxNsKW8xkGkUOTn0yPJ3t1306vZcGk4MVpGXxUPxAzZYHl6YVXV9X8H8Gse3BJ
+         krZBw3Gxd6gSowRwIxI3x3dxJvgk+3cu/OhJzLsAcG9Vjp21udtkNfCpRdc0ArmSHkMr
+         A3CgnzlN0dZE2KjKlPNJ06W/bEnWSmQVPcZpip8boe+7LRzJhPmt4gdcK4wNndaL2uBc
+         3Zdg==
+X-Received: by 10.70.129.72 with SMTP id nu8mr30059407pdb.91.1411668136701;
+        Thu, 25 Sep 2014 11:02:16 -0700 (PDT)
+Received: from [10.10.21.81] (otra.opentable.com. [199.16.144.7])
+        by mx.google.com with ESMTPSA id fu3sm2804095pdb.27.2014.09.25.11.02.13
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Thu, 25 Sep 2014 11:02:14 -0700 (PDT)
+From: Steven Schlansker <stevenschlansker@gmail.com>
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Subject: maven-javadoc-plugin 2.10 upgrade breaks build
+Message-Id: <67469656-B2F0-46BD-B1E7-58BC69946248@gmail.com>
+Date: Thu, 25 Sep 2014 11:02:12 -0700
+To: Maven Users List <users@maven.apache.org>
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.6\))
+X-Mailer: Apple Mail (2.1878.6)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I have a project that under javadoc plugin 2.9.1 works fine:
+
+[steven@Anesthetize:~/ot-code/otj-jaxrs](master=E2=86=911|=E2=9C=94)% =
+mvn org.apache.maven.plugins:maven-javadoc-plugin:2.9.1:jar
+=E2=80=A6
+[INFO] =
+------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] =
+=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=
+=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=
+=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=
+=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=80=94=E2=
+=80=94=E2=80=94=E2=80=94
+
+but now fails under 2.10:
+
+[steven@Anesthetize:~/ot-code/otj-jaxrs](master=E2=86=911|=E2=9C=94)% =
+mvn org.apache.maven.plugins:maven-javadoc-plugin:2.10:jar
+
+100 warnings
+[WARNING] Javadoc Warnings
+[WARNING] =
+/Users/steven/ot-code/otj-jaxrs/shared/src/main/java/com/opentable/jaxrs/e=
+xceptions/ExcessivelySizedHttpBodyExceptionMapper.java:18: error: =
+package javax.ws.rs.core does not exist
+[WARNING] import javax.ws.rs.core.MediaType;
+[WARNING] ^
+[WARNING] =
+/Users/steven/ot-code/otj-jaxrs/shared/src/main/java/com/opentable/jaxrs/e=
+xceptions/ExcessivelySizedHttpBodyExceptionMapper.java:19: error: =
+package javax.ws.rs.core does not exist
+[WARNING] import javax.ws.rs.core.Response;
+[WARNING] ^
+[WARNING] =
+/Users/steven/ot-code/otj-jaxrs/shared/src/main/java/com/opentable/jaxrs/e=
+xceptions/ExcessivelySizedHttpBodyExceptionMapper.java:20: error: =
+package javax.ws.rs.core.Response does not exist
+[WARNING] import javax.ws.rs.core.Response.Status;
+[WARNING] ^
+[WARNING] =
+/Users/steven/ot-code/otj-jaxrs/shared/src/main/java/com/opentable/jaxrs/e=
+xceptions/ExcessivelySizedHttpBodyExceptionMapper.java:21: error: =
+package javax.ws.rs.ext does not exist
+[WARNING] import javax.ws.rs.ext.Provider;
+[WARNING] ^
+
+In fact, it seems that almost all of the dependencies are now reference =
+errors!  With -X I can see that it thinks the jar is available:
+
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=3D1, =
+ConflictMarker.markTime=3D0, ConflictMarker.nodeCount=3D31, =
+ConflictIdSorter.graphTime=3D0, ConflictIdSorter.topsortTime=3D0, =
+ConflictIdSorter.conflictIdCount=3D21, ConflictIdSorter.confl
+ictIdCycleCount=3D0, ConflictResolver.totalTime=3D2, =
+ConflictResolver.conflictItemCount=3D30, =
+DefaultDependencyCollector.collectTime=3D85, =
+DefaultDependencyCollector.transformTime=3D3}
+[DEBUG] com.opentable.components:otj-jaxrs-shared:jar:1.4.0-SNAPSHOT
+...
+[DEBUG]    javax.ws.rs:javax.ws.rs-api:jar:2.0:compile
+=E2=80=A6
+
+Is anyone else seeing problems like this?  What am I doing wrong?
+Thanks!
+Steven=
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

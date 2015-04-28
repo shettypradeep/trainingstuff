@@ -1,0 +1,323 @@
+From users-return-137127-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Aug 27 07:35:57 2014
+Return-Path: <users-return-137127-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 262F311ECE
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 27 Aug 2014 07:35:57 +0000 (UTC)
+Received: (qmail 68261 invoked by uid 500); 27 Aug 2014 07:35:54 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 68177 invoked by uid 500); 27 Aug 2014 07:35:54 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 68165 invoked by uid 99); 27 Aug 2014 07:35:54 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 27 Aug 2014 07:35:54 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of juvenshun@gmail.com designates 209.85.192.169 as permitted sender)
+Received: from [209.85.192.169] (HELO mail-pd0-f169.google.com) (209.85.192.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 27 Aug 2014 07:35:27 +0000
+Received: by mail-pd0-f169.google.com with SMTP id y10so24234834pdj.14
+        for <users@maven.apache.org>; Wed, 27 Aug 2014 00:35:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:in-reply-to:references:subject:mime-version
+         :content-type;
+        bh=OjkZ+Ea5C2F8imlllTLBe88kAQ5HxIJ3SlEtQ6mwBHc=;
+        b=onpqG8sz/Jc1zvxAIbeKoCKR5r6sflpjv8nTzzZsNm6s1epQgvKXWjE/E5K9dmmVaM
+         cg2tfkWX1kGt07+2v0pMCFZdcgsdDFQSCtGsv5n1/o+8CSQ+a+467sLFiBGzeAxafEa3
+         Svx8uH42fn+ivWZ8gOJLeVjv1pkjdFw0RtTr/qjaFuGtyltES3efzpPMlFycwq1UDFAS
+         mmg7HjjLBlGrGSb9wzaKU6Dr5/BxVX5Hc7wju8TnlMqDxmXvwKK2lvqkj3mlpz//IRo1
+         CiSJ/Uq2ede8eAdhI9DFCClyzl/eLY8ZQOd5ZrWxB1ge3K9UWGFAq4RlO2ZeV/g9HYBX
+         Wjkw==
+X-Received: by 10.66.236.38 with SMTP id ur6mr2881402pac.49.1409124923686;
+        Wed, 27 Aug 2014 00:35:23 -0700 (PDT)
+Received: from [10.68.173.114] ([202.55.20.10])
+        by mx.google.com with ESMTPSA id iq3sm5560068pbb.71.2014.08.27.00.35.19
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Wed, 27 Aug 2014 00:35:22 -0700 (PDT)
+Date: Wed, 27 Aug 2014 15:35:12 +0800
+From: Juven Xu <juvenshun@gmail.com>
+To: users@maven.apache.org
+Message-ID: <EA9E1E1442A04312938215B1CCD94E24@gmail.com>
+In-Reply-To: <3C8773DCAF2F48179EE39D482559C6CB@gmail.com>
+References: <3C8773DCAF2F48179EE39D482559C6CB@gmail.com>
+Subject: Re: maven 3.1.1 crashes on GC overhead limit exceeded with
+ millions of org.eclipse.aether.graph.DefaultDependencyNode
+X-Mailer: sparrow 1.6.4 (build 1178)
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="53fd8a30_73d4d3c4_ef"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--53fd8a30_73d4d3c4_ef
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+after enabling debug log I got 1.1G log full of lines of this: =20
+
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for sonatype-nexus-snapshots (https://oss.sonatype.org/content/re=
+positories/snapshots).
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for central (http://repo.maven.apache.org/maven2).
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for sonatype-nexus-snapshots (https://oss.sonatype.org/content/re=
+positories/snapshots).
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for central (http://repo.maven.apache.org/maven2).
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for sonatype-nexus-snapshots (https://oss.sonatype.org/content/re=
+positories/snapshots).
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for central (http://repo.maven.apache.org/maven2).
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for apache.snapshots (http://repository.apache.org/snapshots).
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for central (http://repo.maven.apache.org/maven2).
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for apache.snapshots (http://people.apache.org/repo/m2-snapshot-r=
+epository).
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for central (http://repo.maven.apache.org/maven2).
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for sonatype-nexus-snapshots (https://oss.sonatype.org/content/re=
+positories/snapshots).
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for central (http://repo.maven.apache.org/maven2).
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for central (http://repo.maven.apache.org/maven2).
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for central (http://repo.maven.apache.org/maven2).
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for central (http://repo.maven.apache.org/maven2).
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for central (http://repo.maven.apache.org/maven2).
+
+
+and finally:
+
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for central (http://repo.maven.apache.org/maven2).
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for central (http://repo.maven.apache.org/maven2).
+=5BDEBUG=5D Using mirror tbmirror (http://mvnrepo.taobao.ali.com/mvn/repo=
+sitory) for central (http://repo.maven.apache.org/maven2).
+=5BERROR=5D GC overhead limit exceeded -> =5BHelp 1=5D
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+at org.codehaus.plexus.util.xml.Xpp3Dom.<init>(Xpp3Dom.java:123)
+at org.codehaus.plexus.util.xml.Xpp3Dom.<init>(Xpp3Dom.java:97)
+at org.codehaus.plexus.util.xml.Xpp3Dom.<init>(Xpp3Dom.java:123)
+at org.codehaus.plexus.util.xml.Xpp3Dom.<init>(Xpp3Dom.java:97)
+at org.codehaus.plexus.util.xml.Xpp3Dom.<init>(Xpp3Dom.java:123)
+at org.codehaus.plexus.util.xml.Xpp3Dom.<init>(Xpp3Dom.java:97)
+at org.apache.maven.model.ConfigurationContainer.clone(ConfigurationConta=
+iner.java:92)
+at org.apache.maven.model.Plugin.clone(Plugin.java:113)
+at org.apache.maven.model.PluginContainer.clone(PluginContainer.java:63)
+at org.apache.maven.model.PluginConfiguration.clone(PluginConfiguration.j=
+ava:48)
+at org.apache.maven.model.BuildBase.clone(BuildBase.java:113)
+at org.apache.maven.model.Build.clone(Build.java:98)
+at org.apache.maven.model.Model.clone(Model.java:330)
+at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModel=
+Builder.java:274)
+at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.l=
+oadPom(DefaultArtifactDescriptorReader.java:361)
+at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.r=
+eadArtifactDescriptor(DefaultArtifactDescriptorReader.java:217)
+at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(De=
+faultDependencyCollector.java:461)
+at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(De=
+faultDependencyCollector.java:573)
+at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(De=
+faultDependencyCollector.java:573)
+at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(De=
+faultDependencyCollector.java:573)
+at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(De=
+faultDependencyCollector.java:573)
+at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(De=
+faultDependencyCollector.java:573)
+at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(De=
+faultDependencyCollector.java:573)
+at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(De=
+faultDependencyCollector.java:573)
+at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(De=
+faultDependencyCollector.java:573)
+at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(De=
+faultDependencyCollector.java:573)
+at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(De=
+faultDependencyCollector.java:573)
+at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(De=
+faultDependencyCollector.java:573)
+at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(De=
+faultDependencyCollector.java:573)
+at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(De=
+faultDependencyCollector.java:573)
+at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(De=
+faultDependencyCollector.java:573)
+at org.eclipse.aether.internal.impl.DefaultDependencyCollector.process(De=
+faultDependencyCollector.java:573)
+=5BERROR=5D
+=5BERROR=5D
+=5BERROR=5D =46or more information about the errors and possible solution=
+s, please read the following articles:
+=5BERROR=5D =5BHelp 1=5D http://cwiki.apache.org/confluence/display/MAVEN=
+/OutOfMemoryError
+
+
+-- =20
+Juven Xu
+Sent with Sparrow (http://www.sparrowmailapp.com/=3Fsig)
+
+
+On Wednesday, August 27, 2014 at 11:35 AM, Juven Xu wrote:
+
+> maven: 3.1.1 =20
+> jdk: 1.7.0=5F25 Java HotSpot(TM) Server VM (build 23.25-b01, mixed mode=
+)
+> =20
+> the error message is:
+> =20
+> =5BIN=46O=5D Building buy-client 1.1.8-o2o630-SNAPSHOT
+> =5BIN=46O=5D ----------------------------------------------------------=
+-------------- =20
+> =5BWARNING=5D The POM for com.taobao.logistics:logistics-common:jar:2.4=
+.5 is invalid, transitive dependencies (if any) will not be available, en=
+able debug logging for more details =20
+> =5BWARNING=5D The POM for com.taobao.thboss:thboss-common:jar:1.0.2-201=
+31230.121421-32 is invalid, transitive dependencies (if any) will not be =
+available, enable debug logging for more details =20
+> =5BWARNING=5D The POM for com.taobao.hbaseextend:hbase-client:jar:1.0.1=
+-20121211.063750-2 is invalid, transitive dependencies (if any) will not =
+be available, enable debug logging for more details =20
+> =5BWARNING=5D The POM for com.taobao.hbaseextend:hbasetransit-client:ja=
+r:1.0.1-20121211.064048-1 is invalid, transitive dependencies (if any) wi=
+ll not be available, enable debug logging for more details =20
+> =5BWARNING=5D The POM for com.taobao.sharereport:share-report-common:ja=
+r:1.5.1-20121030.080558-17 is invalid, transitive dependencies (if any) w=
+ill not be available, enable debug logging for more details =20
+> =5BWARNING=5D The POM for com.taobao.trade:tradeback-client:jar:1.0.0-2=
+0131118.063752-35 is invalid, transitive dependencies (if any) will not b=
+e available, enable debug logging for more details =20
+> =5BERROR=5D GC overhead limit exceeded -> =5BHelp 1=5D =20
+> =5BERROR=5D =20
+> =5BERROR=5D To see the full stack trace of the errors, re-run Maven wit=
+h the -e switch. =20
+> =5BERROR=5D Re-run Maven using the -X switch to enable full debug loggi=
+ng. =20
+> =5BERROR=5D =20
+> =5BERROR=5D =46or more information about the errors and possible soluti=
+ons, please read the following articles: =20
+> =5BERROR=5D =5BHelp 1=5D http://cwiki.apache.org/confluence/display/MAV=
+EN/OutOfMemoryError
+> =20
+> =20
+> the jvm is full and a log of full gc happening, gc stat:
+> =20
+>   S0     S1     E      O      P     YGC     YGCT    =46GC    =46GCT    =
+ GCT
+>   0.00   0.00 100.00 100.00  67.33     50    5.925    39  101.650  107.=
+575
+>   0.00   0.00 100.00 100.00  67.33     50    5.925    39  101.650  107.=
+575
+>   0.00   0.00 100.00 100.00  67.33     50    5.925    39  101.650  107.=
+575
+>   0.00   0.00 100.00 100.00  67.33     50    5.925    40  104.805  110.=
+730
+>   0.00   0.00 100.00 100.00  67.33     50    5.925    40  104.805  110.=
+730
+>   0.00   0.00 100.00 100.00  67.33     50    5.925    40  104.805  110.=
+730
+>   0.00   0.00 100.00 100.00  67.33     50    5.925    41  107.840  113.=
+765
+>   0.00   0.00 100.00 100.00  67.33     50    5.925    41  107.840  113.=
+765
+>   0.00   0.00 100.00 100.00  67.33     50    5.925    41  107.840  113.=
+765
+>   0.00   0.00 100.00 100.00  67.33     50    5.925    42  110.864  116.=
+788
+>   0.00   0.00 100.00 100.00  67.33     50    5.925    42  110.864  116.=
+788
+>   0.00   0.00 100.00 100.00  67.33     50    5.925    42  110.864  116.=
+788
+>   0.00   0.00  95.86 100.00  67.33     50    5.925    42  114.029  119.=
+954
+>   0.00   0.00 100.00 100.00  67.33     50    5.925    43  114.029  119.=
+954
+>   0.00   0.00 100.00 100.00  67.33     50    5.925    43  114.029  119.=
+954
+>   0.00   0.00 100.00 100.00  67.33     50    5.925    43  114.029  119.=
+954
+>   0.00   0.00 100.00 100.00  67.33     50    5.925    44  117.087  123.=
+011
+> =20
+> and the vm is full of org.eclipse.aether.graph.DefaultDependencyNode
+> =20
+> =24 jmap -histo 4072 =7C head -30
+> =20
+>  num     =23instances         =23bytes  class name
+> ----------------------------------------------
+>    1:       5019593      281097208  org.eclipse.aether.graph.DefaultDep=
+endencyNode
+>    2:       6075641      145815384  java.util.ArrayList
+>    3:       6076588      116705216  =5BLjava.lang.Object;
+>    4:       2375373       76011936  org.eclipse.aether.internal.impl.Da=
+taPool=24GraphKey
+>    5:       2439860       58556640  java.util.HashMap=24Entry
+>    6:        231529       34940048  =5BLjava.util.HashMap=24Entry;
+>    7:        231420       34810936  =5BLorg.eclipse.aether.graph.Exclus=
+ion;
+>    8:        598180       28712640  org.eclipse.aether.repository.Remot=
+eRepository
+>    9:        839969       26879008  java.util.LinkedHashMap=24Entry
+>   10:        597260       15767704  =5BLorg.eclipse.aether.repository.R=
+emoteRepository;
+>   11:        208071       11651976  java.util.LinkedHashMap
+>   12:        597288        9556608  java.util.Arrays=24ArrayList
+>   13:        597269        9556304  java.util.Collections=24Unmodifiabl=
+eRandomAccessList
+>   14:        125479        7259280  =5BC
+>   15:         29099        3530504  <constMethodKlass>
+>   16:        197851        3165616  java.util.Collections=24SingletonLi=
+st
+>   17:        197706        3163296  java.util.HashMap=24KeySet
+>   18:        197476        3159616  java.util.LinkedHashSet
+>   19:        197349        3157584  org.eclipse.aether.util.graph.selec=
+tor.AndDependencySelector
+>   20:        197347        3157552  org.eclipse.aether.util.graph.selec=
+tor.ExclusionDependencySelector
+>   21:        124674        2992176  java.lang.String
+>   22:         29099        2564344  <methodKlass>
+>   23:         54598        2183920  org.eclipse.aether.artifact.Default=
+Artifact
+>   24:          3089        1623136  <constantPoolKlass>
+>   25:         54968        1319232  org.eclipse.aether.graph.Dependency=
+
+>   26:          3089        1237432  <instanceKlassKlass>
+>   27:         23456        1125888  java.util.HashMap
+> =20
+> =24mvn dependency:tree works well
+> =20
+> Sorry i can not paste the full project=E2=80=99s POM for company securi=
+ty reasons, but let me know if any other info I missed.
+> =20
+> Thanks
+> -- =20
+> Juven Xu
+> Sent with Sparrow (http://www.sparrowmailapp.com/=3Fsig)
+> =20
+
+
+--53fd8a30_73d4d3c4_ef--
+
+

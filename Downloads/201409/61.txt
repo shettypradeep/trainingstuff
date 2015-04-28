@@ -1,0 +1,111 @@
+From users-return-137427-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Sep 30 21:18:48 2014
+Return-Path: <users-return-137427-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3B64B178DA
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 30 Sep 2014 21:18:48 +0000 (UTC)
+Received: (qmail 21011 invoked by uid 500); 30 Sep 2014 21:18:46 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 20915 invoked by uid 500); 30 Sep 2014 21:18:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 20903 invoked by uid 99); 30 Sep 2014 21:18:46 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 30 Sep 2014 21:18:46 +0000
+X-ASF-Spam-Status: No, hits=-5.0 required=5.0
+	tests=RCVD_IN_DNSWL_HI,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of jnord@cisco.com designates 173.37.86.74 as permitted sender)
+Received: from [173.37.86.74] (HELO rcdn-iport-3.cisco.com) (173.37.86.74)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 30 Sep 2014 21:18:40 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple;
+  d=cisco.com; i=@cisco.com; l=2718; q=dns/txt; s=iport;
+  t=1412111920; x=1413321520;
+  h=from:to:subject:date:message-id:references:in-reply-to:
+   content-transfer-encoding:mime-version;
+  bh=pbY85UnxKi/QAST/gQjD7JlBT1Fd0Hh/pjRHi3+STTc=;
+  b=kwCJlzupPRRrYLRii2kCQl5s2YPgKnBf+cOmmf2baIAIpN9AkJTiAfvt
+   p6kAX1ZWxHWLjGD1gb8lLorEOJeiJP74EvHgIg5PoRcv0GcBsgJ4y2kDL
+   Iu++K0zU4VE/036dzkj9YpU7Slb1O+X3UtTzo6fBPKU+B1dsUVLBoe1au
+   g=;
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: AhkFAF8dK1StJV2c/2dsb2JhbABgEwEBgnlTW4J+xyAKhAWDSAIZeBYBe4QDAQEBBCMEDRo3BAIBCBEEAQEDAgYdAwICAi8BFAEICAEBBAgHBAEHFQSICQMGCw2oPo5gDIcfAReBLIxfgWIWIgaCcjaBHQWGKokmghqEO4hvlAuDY2wHgUGBAgEBAQ
+X-IronPort-AV: E=Sophos;i="5.04,629,1406592000"; 
+   d="scan'208";a="359630608"
+Received: from rcdn-core-5.cisco.com ([173.37.93.156])
+  by rcdn-iport-3.cisco.com with ESMTP; 30 Sep 2014 21:18:20 +0000
+Received: from xhc-aln-x07.cisco.com (xhc-aln-x07.cisco.com [173.36.12.81])
+	by rcdn-core-5.cisco.com (8.14.5/8.14.5) with ESMTP id s8ULIJrN019671
+	(version=TLSv1/SSLv3 cipher=AES128-SHA bits=128 verify=FAIL)
+	for <users@maven.apache.org>; Tue, 30 Sep 2014 21:18:19 GMT
+Received: from xmb-aln-x03.cisco.com ([169.254.6.21]) by xhc-aln-x07.cisco.com
+ ([173.36.12.81]) with mapi id 14.03.0195.001; Tue, 30 Sep 2014 16:18:18 -0500
+From: "James Nord (jnord)" <jnord@cisco.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: RE: Maven JXR 2.4 site.
+Thread-Topic: Maven JXR 2.4 site.
+Thread-Index: Ac/b//EvLUZVYAy1SQqPr0o+YiTUZAAoal8AAAhaW+AAEIDyQAAFlZCAAAn1opA=
+Date: Tue, 30 Sep 2014 21:18:18 +0000
+Message-ID: <5629A6219DB3E544AB84388D90149787482BBF90@xmb-aln-x03.cisco.com>
+References: <5629A6219DB3E544AB84388D90149787482BB734@xmb-aln-x03.cisco.com>
+ <5629A6219DB3E544AB84388D90149787482BB9F2@xmb-aln-x03.cisco.com>
+ <5629A6219DB3E544AB84388D90149787482BBA20@xmb-aln-x03.cisco.com>
+ <4958350.rdn6ZB66OJ@herve-desktop>
+In-Reply-To: <4958350.rdn6ZB66OJ@herve-desktop>
+Accept-Language: en-GB, en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [10.61.81.175]
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+VGhhbmtzIGFnYWluLg0KDQovSmFtZXMNCg0KPiAtLS0tLU9yaWdpbmFsIE1lc3NhZ2UtLS0tLQ0K
+PiBGcm9tOiBIZXJ2w6kgQk9VVEVNWSBbbWFpbHRvOmhlcnZlLmJvdXRlbXlAZnJlZS5mcl0NCj4g
+U2VudDogMzAgU2VwdGVtYmVyIDIwMTQgMjI6MDANCj4gVG86IE1hdmVuIFVzZXJzIExpc3QNCj4g
+U3ViamVjdDogUmU6IE1hdmVuIEpYUiAyLjQgc2l0ZS4NCj4gDQo+IHVwZGF0ZSBkb25lDQo+IA0K
+PiBSZWdhcmRzLA0KPiANCj4gSGVydsOpDQo+IA0KPiBMZSBtYXJkaSAzMCBzZXB0ZW1icmUgMjAx
+NCAwNzozOTowMCBKYW1lcyBOb3JkIGEgw6ljcml0IDoNCj4gPiBTb3JyeSBkb27igJl0IGtub3cg
+d2hhdCBoYXBwZW5lZCB3aXRoIG15IG1haWxlciB0aGVyZSAtIGhhZG4ndCBmaW5pc2hlZA0KPiA+
+IHdyaXRpbmcgYW5kIHdhc24ndCByZWFkeSBmb3Igc2VuZGluZy4NCj4gDQo+ID4gVGhlIHJlLWRp
+cmVjdCB3b3JrcyAtIGJ1dCBzaG91bGRuJ3QgaXQgcmVkaXJlY3QgdG8gdGhlIHBsdWdpbiBwYWdl
+DQo+ID4gcmF0aGVyIHRoYW4gdGhlIHRvcCBsZXZlbCBqeHIgcGFnZT8NCj4gDQo+ID4gaWUuIFdv
+dWxkIHRoZSByZWRpcmVjdCBub3QgYmUgYmV0dGVyIGFzDQo+ID4gaHR0cDovL21hdmVuLmFwYWNo
+ZS5vcmcvcGx1Z2lucy9tYXZlbi1qeHItcGx1Z2luLyAtPg0KPiA+IGh0dHA6Ly9tYXZlbi5hcGFj
+aGUub3JnL2p4ci9tYXZlbi1qeHItcGx1Z2luLw0KPiANCj4gPiBBbnl3YXkgLSB0aGFua3MgZm9y
+IHNldHRpbmcgdGhpcyB1cCAtIHdpbGwgY2VydGFpbmx5IGhlbHAgbWUgaW4gYSBmZXcNCj4gPiBt
+b250aHMgd2hlbiBJIGZvcmdldCBhYm91dCBpdCBhZ2FpbiA6KQ0KPiANCj4gPiAvSmFtZXMNCj4g
+Pg0KPiA+DQo+ID4gPiA+IEkgaGF2ZSBjcmVhdGVkIGEgcmVkaXJlY3QNCj4gPiA+ID4gaHR0cDov
+L21hdmVuLmFwYWNoZS5vcmcvcGx1Z2lucy9tYXZlbi1qeHItcGx1Z2luLyB0bw0KPiA+ID4gPiBo
+dHRwOi8vbWF2ZW4uYXBhY2hlLm9yZy9qeHIvLi4uLndoaWNoIHNob3VsZCBzb2x2ZSB0aGUgcHJv
+YmxlbS4uLg0KPiA+ID4gPg0KPiA+ID4gPg0KPiA+ID4gPg0KPiA+ID4gPiBjYW4geW91IGNoZWNr
+IHRoaXMuLi4NCj4gPiA+DQo+ID4gPg0KPiA+ID4gVGhlIHJlZGlyZWN0IHdvcmtzIC0gYnV0IGl0
+IHNyZWRpcmVjdCB0byB0aGUgcGx1Z2luIHBhZ2UNCj4gPiA+IChodHRwOi8vbWF2ZW4uYXBhY2hl
+Lm9yZy9qeHIvbWF2ZW4tanhyLXBsdWdpbi8pIHJhdGhlciB0aGFuIHRoZSB0b3ANCj4gPiA+IGxl
+dmVsIGp4cj8NCj4gPiA+DQo+ID4gPiAvSmFtZXMNCj4gPiA+DQo+ID4gPiADQg0KPiA+ID4NCj4g
+S0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tL
+Sw0KPiA+ID4gS0tLS0tLS0tLS0NCIBsgHVsgIFggINyaWCBLCBlLW1haWw0KPiA+ID4NCj4gPiA+
+DQo+ID4gPiAgHVwgXCAgXVsgIFggINyaWCBQG1hdIFsgIFwYWCAZSyDcmSBCICDciBhZGRpdGlvb
+mFsIGCAgW1hbIBwgCBlLW1haWw0KPiA+ID4NCj4gPiA+DQo+ID4gPg0KPiA+ID4gIB1cIFwgIFoZ
+WxwQG1hdIFsgIFwYWCAZSyDcmSBCDQo+ID4NCj4gPg0KPiA+IC0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0KPiA+IFRv
+IHVuc3Vic2NyaWJlLCBlLW1haWw6IHVzZXJzLXVuc3Vic2NyaWJlQG1hdmVuLmFwYWNoZS5vcmcN
+Cj4gPiBGb3IgYWRkaXRpb25hbCBjb21tYW5kcywgZS1tYWlsOiB1c2Vycy1oZWxwQG1hdmVuLmFw
+YWNoZS5vcmcNCj4gDQo+IA0KPiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0NCj4gVG8gdW5zdWJzY3JpYmUsIGUtbWFp
+bDogdXNlcnMtdW5zdWJzY3JpYmVAbWF2ZW4uYXBhY2hlLm9yZw0KPiBGb3IgYWRkaXRpb25hbCBj
+b21tYW5kcywgZS1tYWlsOiB1c2Vycy1oZWxwQG1hdmVuLmFwYWNoZS5vcmcNCg0K
+DQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0NClRvIHVuc3Vic2NyaWJlLCBlLW1haWw6IHVzZXJzLXVuc3Vi
+c2NyaWJlQG1hdmVuLmFwYWNoZS5vcmcNCkZvciBhZGRpdGlvbmFsIGNvbW1hbmRzLCBlLW1h
+aWw6IHVzZXJzLWhlbHBAbWF2ZW4uYXBhY2hlLm9yZw0K
+

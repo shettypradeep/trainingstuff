@@ -1,0 +1,76 @@
+From users-return-135115-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 14 00:49:30 2014
+Return-Path: <users-return-135115-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 79FE310435
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 14 Jan 2014 00:49:30 +0000 (UTC)
+Received: (qmail 43285 invoked by uid 500); 14 Jan 2014 00:48:16 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 42754 invoked by uid 500); 14 Jan 2014 00:48:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 42721 invoked by uid 99); 14 Jan 2014 00:48:09 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 00:48:09 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of baerrach@gmail.com designates 209.85.128.169 as permitted sender)
+Received: from [209.85.128.169] (HELO mail-ve0-f169.google.com) (209.85.128.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 00:48:03 +0000
+Received: by mail-ve0-f169.google.com with SMTP id oz11so987215veb.28
+        for <users@maven.apache.org>; Mon, 13 Jan 2014 16:47:43 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type:content-transfer-encoding;
+        bh=65cb7VXzkHhl4r3L2WhEtSg0/6HuLUy5HMAXn8dzCNg=;
+        b=RGGt11ffLK1mJXoMAvOXTZiuXsZpT4OK6VlBnFWiAYeFGwySUdK+u32XaVm5v6Jkhi
+         /BOfAGz2R0NV4IOmfpWJYv42WdB1j8wxnoXIDaq+eKZPfoL4AdXiOd0Rn+LFdRUu9wW5
+         cKmznuhF9jG/6QilzuFjyCDc2TZg4l63f1og9i/P6w6Oxf+6Nvz7r/q7LPQPSWU57ClO
+         rb1Y4X1HxumrDy2ppR4pFJY330n+W7ouImXpm/ilWIcqR+Ag7SbLuEWjry0NqQ7a3lXw
+         00Ti9Hn5S5vca7w2UlDJTRCG7BXGesYuCAY9TCafe8hwUNg1tJK9+eoQyc+9DBxyzick
+         KWsQ==
+MIME-Version: 1.0
+X-Received: by 10.52.33.84 with SMTP id p20mr4903573vdi.31.1389660463000; Mon,
+ 13 Jan 2014 16:47:43 -0800 (PST)
+Received: by 10.58.48.131 with HTTP; Mon, 13 Jan 2014 16:47:42 -0800 (PST)
+In-Reply-To: <B8D164BED956C5439875951895CB4B221882805C@WABOTH9MSGUSR8C.ITServices.sbc.com>
+References: <B8D164BED956C5439875951895CB4B221882805C@WABOTH9MSGUSR8C.ITServices.sbc.com>
+Date: Tue, 14 Jan 2014 11:17:42 +1030
+Message-ID: <CADVp3v9QAzHx3qZabYLoECy+v0tJx38zywMVJkVvEB=woocPYg@mail.gmail.com>
+Subject: Re: Is it possible to deliberately have two dependencies with the
+ same groupid, artifactid, and packaging, but different version?
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 14 January 2014 10:54, KARR, DAVID <dk068x@att.com> wrote:
+> I have a situation where it would be convenient for my pom to have two de=
+pendencies that are almost identical, only being different by the version. =
+ The makeup of the artifact is such that it would be safe (and intended) to=
+ use both of them.  The Java package used in each is similar, but different=
+.  The package will vary along with the version number.
+>
+> Will dependency resolution and the EAR plugin (and any other mechanism th=
+at lists dependencies) have any trouble with this?
+
+Can you describe why you think this would be convenient?
+Have you looked at classifiers?
+http://stackoverflow.com/questions/8040964/how-to-use-or-abuse-artifact-cla=
+ssifiers-in-maven
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

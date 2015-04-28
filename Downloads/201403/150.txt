@@ -1,0 +1,79 @@
+From users-return-135847-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Mar 18 10:09:04 2014
+Return-Path: <users-return-135847-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A5F6810331
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 18 Mar 2014 10:09:04 +0000 (UTC)
+Received: (qmail 50554 invoked by uid 500); 18 Mar 2014 10:09:01 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 49659 invoked by uid 500); 18 Mar 2014 10:08:54 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 49645 invoked by uid 99); 18 Mar 2014 10:08:52 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 18 Mar 2014 10:08:52 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bmathus@gmail.com designates 74.125.83.51 as permitted sender)
+Received: from [74.125.83.51] (HELO mail-ee0-f51.google.com) (74.125.83.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 18 Mar 2014 10:08:48 +0000
+Received: by mail-ee0-f51.google.com with SMTP id c13so5143997eek.38
+        for <users@maven.apache.org>; Tue, 18 Mar 2014 03:08:27 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:from:date:message-id:subject:to:content-type;
+        bh=32MNsBNjtmEyz37OIUEvGbKGOh1uQ3m+jQs3XJ+bTCg=;
+        b=ovnZL7RpYyfKYLU/R6KodQurUadto559RBQ20GvuIlwjwc0pKEUpqjuIQ7Rt7bXRxI
+         SflrqBVYPn2N5qb+NRLX3CE4dBDQV5xUXT26JvWdQWEOunprPOTg6Meag73wQ/qgWDlK
+         lbZ8/XXYZDhxHONiWcYnvHTQGFZZHJJSjQkrN2CSzfKsPa62sWAF2LxLKAp5eJgg5Uk5
+         1o5veVJCnvveHqIYJm2wzHjPdfswp02fAEfrg1hJs/5+SfKRk+LkIea/uKdLe96x1wIx
+         6n9Un2XeBH5xALncTXz/WZXf8vQ9pMO7Dz/3PVqqj9zBvUS+6qjLrb0CyhQF0cjQmZt3
+         oxfQ==
+X-Received: by 10.14.224.6 with SMTP id w6mr29366830eep.60.1395137307014; Tue,
+ 18 Mar 2014 03:08:27 -0700 (PDT)
+MIME-Version: 1.0
+Sender: bmathus@gmail.com
+Received: by 10.14.225.65 with HTTP; Tue, 18 Mar 2014 03:08:06 -0700 (PDT)
+From: Baptiste Mathus <bmathus@batmat.net>
+Date: Tue, 18 Mar 2014 11:08:06 +0100
+X-Google-Sender-Auth: ZL3HN9u7FQO7gXGfp_KyNmDXnpY
+Message-ID: <CANWgJS5FHkhYjUN0=nzJ3=hasqPM96apN_H6UfXz2Kq4XByiwA@mail.gmail.com>
+Subject: m-invoker-p: only 2 out of 3 ITs executed
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b624a4898fd4e04f4deb7c4
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b624a4898fd4e04f4deb7c4
+Content-Type: text/plain; charset=UTF-8
+
+Hi all,
+
+Had a quick look in JIRA, but didn't find anything obvious.
+
+I have 3 ITs in my src/it folder for my maven plugin. Only 2 get executed.
+The 3rd one executes correctly if I explicitly match it using
+-Dinvoker.test=forgotten-test*
+
+Note that this IT doesn't have a pom.xml at its root, and is
+using invoker.project property.
+
+Haven't had a look in the m-invoker-p code, but if anyone has a hint about
+this, or can point me to an existing JIRA that'd help.
+
+Thanks
+
+-- 
+Baptiste <Batmat> MATHUS - http://batmat.net
+Sauvez un arbre,
+Mangez un castor !
+
+--047d7b624a4898fd4e04f4deb7c4--
+

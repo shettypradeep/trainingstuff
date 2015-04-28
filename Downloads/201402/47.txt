@@ -1,0 +1,143 @@
+From users-return-135419-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 12 08:39:10 2014
+Return-Path: <users-return-135419-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0CF2210612
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 12 Feb 2014 08:39:10 +0000 (UTC)
+Received: (qmail 6046 invoked by uid 500); 12 Feb 2014 08:39:05 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 5273 invoked by uid 500); 12 Feb 2014 08:38:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 5264 invoked by uid 99); 12 Feb 2014 08:38:52 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Feb 2014 08:38:52 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Feb 2014 08:38:46 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id AAA99FEC046
+	for <users@maven.apache.org>; Wed, 12 Feb 2014 03:38:03 -0500 (EST)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id Zw6ZxnlHJME2 for <users@maven.apache.org>;
+	Wed, 12 Feb 2014 03:36:41 -0500 (EST)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 04D50FEC045
+	for <users@maven.apache.org>; Wed, 12 Feb 2014 03:36:36 -0500 (EST)
+Message-ID: <52FB325B.8030306@artifact-software.com>
+Date: Wed, 12 Feb 2014 03:35:39 -0500
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: Maven Users List <users@maven.apache.org>
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: maven-assembly-plugin:2.4 The following patterns were never triggered
+ in this artifact inclusion filter
+References: <52FACAA8.8020905@artifact-software.com> <CADVp3v-8iKp2eNJdwCGKtCxP+Jz31-f8EYWBv6aJSHztfGFKew@mail.gmail.com>
+In-Reply-To: <CADVp3v-8iKp2eNJdwCGKtCxP+Jz31-f8EYWBv6aJSHztfGFKew@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 11/02/2014 9:06 PM, Barrie Treloar wrote:
+> On 12 February 2014 11:43, Ron Wheeler <rwheeler@artifact-software.com> wrote:
+>> I am trying to build a timesaving module that will build tar files to be
+>> installed on a server
+>> I have defined a bunch of dependencies in the pom and want to build 2 tar
+>> files by invoking 2 instances of the plug-in.
+>> In each one I want to specify a list of dependencies to be included from the
+>> repository.
+>>    in the assembly descriptor I have
+>>    dependencySets
+>>      dependencySet
+>>        includes
+>>          include com.artifact-software.taw:taw-localized-iumessage-ws
+>>          include com.artifact-software.taw:taw-dataccess-ws:
+>>
+>> I would like it to take just these 2 modules for this tar file.
+>> There are a lot more dependencies that will go in the second invocation of
+>> the assembly plug-in.
+>>
+>>
+>> This gets the following message
+>>
+>> [INFO] --- maven-assembly-plugin:2.4:single (default) @
+>> taw-webapps-assembler ---
+>> [INFO] Reading assembly descriptor: src/assembly/webapps-tar.xml
+>> [WARNING] The following patterns were never triggered in this artifact
+>> inclusion filter:
+>> o  'com.artifact-software.taw:taw-localized-iumessage-ws'
+>> o  'com.artifact-software.taw:taw-dataccess-ws:'
+>>
+>> [INFO]
+>> ------------------------------------------------------------------------
+>> [INFO] BUILD FAILURE
+>> [INFO]
+>> ------------------------------------------------------------------------
+>> [INFO] Total time: 9.658s
+>> [INFO] Finished at: Tue Feb 11 19:54:13 EST 2014
+>> [INFO] Final Memory: 10M/148M
+>> [INFO]
+>> ------------------------------------------------------------------------
+>> [ERROR] Failed to execute goal
+>> org.apache.maven.plugins:maven-assembly-plugin:2.4:single (default) on
+>> project taw-webapps-assembler: Failed to create
+>> assembly: Error creating assembly archive webapps: You must set at least one
+>> file. -> [Help 1]
+>>
+>> What have I misunderstood about the assembly.
+> I'm assuming you've read the docs.
+>
+> >From http://maven.apache.org/plugins/maven-assembly-plugin/examples/single/including-and-excluding-artifacts.html
+> I think the shortened form assumes a "jar" classifier.
+> I'm guessing from your assembly name "webapps-tar.xml" that these might be wars?
+> Have you tried using the long form of the dependency conflict id?
+I am not sure what you mean by this.
+The dependency specification in the pom has the right type.
+I tried adding the version and type in the assembly file and just got an 
+error message with a more specific file name.
+
+I have not specified a specific phase but I assume that the plug-in is 
+being triggered since the error comes from the plug-in.
+
+I did read the docs but there is no example showing including of 
+specific dependencies.
+
+Ron
+
+
+>
+> >From http://maven.apache.org/plugins/maven-assembly-plugin/examples/multimodule/module-binary-inclusion-simple.html
+> What phase to did you attach the plugin to?
+> It may be possible you haven't bound it to a phase that has resolved
+> the dependencies and so there are none for it to find.
+>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

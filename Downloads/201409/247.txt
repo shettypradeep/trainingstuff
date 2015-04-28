@@ -1,0 +1,116 @@
+From users-return-137216-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Sep  9 03:22:04 2014
+Return-Path: <users-return-137216-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 97ABC1101C
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  9 Sep 2014 03:22:04 +0000 (UTC)
+Received: (qmail 67701 invoked by uid 500); 9 Sep 2014 03:22:02 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 67609 invoked by uid 500); 9 Sep 2014 03:22:02 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 67598 invoked by uid 99); 9 Sep 2014 03:22:02 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Sep 2014 03:22:02 +0000
+Received: from localhost (HELO mail-lb0-f169.google.com) (127.0.0.1)
+  (smtp-auth username olamy, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Sep 2014 03:22:02 +0000
+Received: by mail-lb0-f169.google.com with SMTP id p9so7229829lbv.28
+        for <users@maven.apache.org>; Mon, 08 Sep 2014 20:22:00 -0700 (PDT)
+X-Received: by 10.152.5.40 with SMTP id p8mr33318280lap.32.1410232920179; Mon,
+ 08 Sep 2014 20:22:00 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.25.170.4 with HTTP; Mon, 8 Sep 2014 20:21:39 -0700 (PDT)
+In-Reply-To: <B63D10721FE7744A8FC526A4D9DC3E1E4C4F35E1@MSGEXSV21109.ent.wfb.bank.corp>
+References: <B63D10721FE7744A8FC526A4D9DC3E1E4C4F35E1@MSGEXSV21109.ent.wfb.bank.corp>
+From: Olivier Lamy <olamy@apache.org>
+Date: Tue, 9 Sep 2014 13:21:39 +1000
+Message-ID: <CAPoyBqSAS5Q=JBp6S+9SmKWiGM1-rqgjCeMT9=nNpBZoxyZ01g@mail.gmail.com>
+Subject: Re: nonProxyHosts not working
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+sounds more a tomcat maven plugin rather than a maven issue.
+Can you log an issue here: https://issues.apache.org/jira/browse/MTOMCAT
+
+
+On 9 September 2014 03:56,  <John.E.Gregg@wellsfargo.com> wrote:
+> All,
+>
+> I've tried Maven 3.1.1 and 3.2.3 but can't get nonProxyHosts in settings.=
+xml to work in some cases.  I'm trying to deploy a war to Tomcat using the =
+Tomcat Maven plugin version 2.3.  It works fine if I set active=3Dfalse in =
+the proxy config.
+>
+> I think this works:
+>
+>   <proxies>
+>     <proxy>
+>       <active>true</active>
+>       <protocol>http</protocol>
+>       <host>proxy.mycompany.com</host>
+>       <port>80</port>
+>       <nonProxyHosts>*.mycompany.com</nonProxyHosts>
+>     </proxy>
+>   </proxies>
+>
+> This does not:
+>
+>   <proxies>
+>     <proxy>
+>       <active>true</active>
+>       <protocol>http</protocol>
+>       <host>proxy.mycompany.com</host>
+>       <port>80</port>
+>       <nonProxyHosts>localhost|*.mycompany.com</nonProxyHosts>
+>     </proxy>
+>   </proxies>
+>
+> Likewise, using just localhost, my machine name, and commas instead of pi=
+pes doesn't work, either.  The plugin tries to upload the war to my company=
+'s proxy, which eventually responds with a 404 "The hostname "localhost" ca=
+nnot be found.  Please check the URL you are trying to reach to verify that=
+ it is spelled correctly."
+>
+> This is in the log:
+>
+> [INFO] Deploying war to http://localhost:8080/coherence-extend-web
+> Uploading: http://localhost:8080/manager/text/deploy?path=3D%2Fcoherence-=
+extend-web
+> Uploaded: http://localhost:8080/manager/text/deploy?path=3D%2Fcoherence-e=
+xtend-web (8409 KB at 3024.7 KB/sec)
+>
+> [ERROR] Tomcat return http status error: 404, Reason Phrase: Not Found
+>
+> That looks correct except the error isn't quite right because Tomcat isn'=
+t even being hit.  I get the same error if Tomcat isn't running.  It's the =
+proxy server that is returning the error.
+>
+> I know everything else is correct because if I set active=3Dfalse, the de=
+ploy succeeds.
+>
+> Thanks
+>
+> John
+>
+
+
+
+--=20
+Olivier Lamy
+Ecetera: http://ecetera.com.au
+http://twitter.com/olamy | http://linkedin.com/in/olamy
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

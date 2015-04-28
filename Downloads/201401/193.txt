@@ -1,0 +1,99 @@
+From users-return-134971-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan  6 13:24:04 2014
+Return-Path: <users-return-134971-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F3E3410B0A
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  6 Jan 2014 13:24:03 +0000 (UTC)
+Received: (qmail 55052 invoked by uid 500); 6 Jan 2014 13:23:35 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 54556 invoked by uid 500); 6 Jan 2014 13:23:34 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 54542 invoked by uid 99); 6 Jan 2014 13:23:33 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 13:23:33 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [194.9.94.111] (HELO s87.loopia.se) (194.9.94.111)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 13:23:26 +0000
+Received: from s87.loopia.se (localhost [127.0.0.1])
+	by s87.loopia.se (Postfix) with ESMTP id 2CDA21FA70E5
+	for <users@maven.apache.org>; Mon,  6 Jan 2014 14:23:06 +0100 (CET)
+X-Virus-Scanned: amavisd-new at outgoing-smtp.loopia.se
+X-Spam-Score: 0
+X-Spam-Level:
+Received: from s87.loopia.se ([127.0.0.1])
+	by s87.loopia.se (s87.loopia.se [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id GfjGS2UDEeBX for <users@maven.apache.org>;
+	Mon,  6 Jan 2014 14:23:05 +0100 (CET)
+Received: from s331.loopia.se (mailcluster.loopia.se [194.9.94.72])
+	by s87.loopia.se (Postfix) with ESMTP id CCE861FA70E8
+	for <users@maven.apache.org>; Mon,  6 Jan 2014 14:23:05 +0100 (CET)
+Received: (qmail 56571 invoked from network); 6 Jan 2014 13:23:05 -0000
+Received: from c-0bc2e555.04-92-73746f39.cust.bredbandsbolaget.se (HELO imac.natusoft.private) (tommy@natusoft.se@[85.229.194.11])
+          (envelope-sender <tommy@natusoft.se>)
+          by s331.loopia.se (qmail-ldap-1.03) with AES128-SHA encrypted SMTP
+          for <users@maven.apache.org>; 6 Jan 2014 13:23:05 -0000
+Content-Type: text/plain; charset=iso-8859-1
+Mime-Version: 1.0 (Mac OS X Mail 7.1 \(1827\))
+Subject: Re: Maven Central Opinion
+From: Tommy Svensson <tommy@natusoft.se>
+In-Reply-To: <CAPLpRQL=xJM8D+CPv3FBJJfOuwEN3DFQNY8AeFSyYbpKK+tkdQ@mail.gmail.com>
+Date: Mon, 6 Jan 2014 14:23:04 +0100
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <80ABCFCB-330D-4B3B-9E5A-BBB0ACD206A3@natusoft.se>
+References: <80577B10-8927-4E40-9E41-5B69DBC66977@natusoft.se> <21CDF2FA-C0D3-4CF0-9144-FA5FD9260834@gmail.com> <CF7B81B6-429B-4406-850A-4DF3A842F798@natusoft.se> <CAPLpRQL=xJM8D+CPv3FBJJfOuwEN3DFQNY8AeFSyYbpKK+tkdQ@mail.gmail.com>
+To: Maven Users List <users@maven.apache.org>
+X-Mailer: Apple Mail (2.1827)
+X-Virus-Checked: Checked by ClamAV on apache.org
+X-Old-Spam-Flag: NO
+X-Old-Spam-Status: No, score=0 tagged_above=-999 required=15 tests=[none]
+	autolearn=disabled
+
+
+6 jan 2014 kl. 14:10 skrev Tam=E1s Cserven=E1k <tamas@cservenak.net>:
+
+>>=20
+>> The arguments about quality I just don't buy. We are only talking =
+poms
+>> here. Whatever is in the poms says nothing about the quality of the
+>> software itself.
+>=20
+>=20
+> Quality of metadata. POM serve as "metadata" in this case, so, I'd =
+rather
+> say Central enforces quality of "metadata" (ie. POM properly "filled =
+in",
+> using proper and proven/owned groupId, sane artifactId, etc, minimal =
+set of
+> fields are given, file signatures, checksums are present, no update of
+> already deployed stuff happens [ie. your deploy request would =
+overwrite
+> something in Cenral] etc).
+>=20
+> Still, you can deploy a jar full of zeroes to Central if you wish, all
+> until you use proper GA, the checksums and signatures matches, and POM
+> fulfills minimal requirements :)
+
+And I think that is a good thing! It would be rather stupid to do that, =
+but that is beside the point :-).
+
+>=20
+>=20
+> My 5 cents
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,76 @@
+From users-return-136042-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr  1 07:28:19 2014
+Return-Path: <users-return-136042-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0EFC5101D6
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  1 Apr 2014 07:28:19 +0000 (UTC)
+Received: (qmail 47834 invoked by uid 500); 1 Apr 2014 07:28:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 47331 invoked by uid 500); 1 Apr 2014 07:28:12 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 88493 invoked by uid 99); 1 Apr 2014 06:43:07 -0000
+X-ASF-Spam-Status: No, hits=0.8 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,FROM_STARTS_WITH_NUMS,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of 1983-01-06@gmx.net designates 212.227.17.21 as permitted sender)
+MIME-Version: 1.0
+Message-ID: <trinity-fd092a04-f45c-46ad-bf6b-9df84f171557-1396334558318@3capp-gmx-bs43>
+From: Michael-O <1983-01-06@gmx.net>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Aw: database/users lost after upgrade from archiva 1.3.6 to 2.0.1
+Content-Type: text/plain; charset=UTF-8
+Date: Tue, 1 Apr 2014 08:42:38 +0200
+Importance: normal
+Sensitivity: Normal
+In-Reply-To: <1396330516383-5790266.post@n5.nabble.com>
+References: <1396330516383-5790266.post@n5.nabble.com>
+X-UI-Message-Type: mail
+X-Priority: 3
+X-Provags-ID: V03:K0:pMVHiAcGri22FuWfNTG+DP8bah9Jyyfu3/Wq1KQ9o1Z
+ WIt/tO29I5ef+z+/FZ916gbVSApxhBBEee5kx5wwRnLNaV5V17
+ HDZdpEmb2NWHDV7HOje7LGlse6Z83Fpb9Nq4al6bH5pyBYEaxQ
+ sG9BCW7leHcDxWQWN6sQbg3uN5AFIcPjGXGXuSiFhEv8epIHKX
+ MB8XavOSqdII7RXUgXJRuswVqAu/XRbnCJCLKxPXTX7VEoEN26
+ hdfw/Sm9usOlyxQAsxgqlM+BxG+48bu9Q2cT3YD9t+0rKnnuHq gzE+T8=
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> Hi,
+> I have run into a problem when upgrading Archiva 1.3.6 to v2.0.1
+> 
+> Even though I retained the data/database/users directory, archiva fail to
+> validate accounts.
+> I have tried this a few times now and the problem is the same.
+> 
+> It's running on tomcat-7.0.42
+> Starts up nicely and performs the upgrade - everything looks fine in the
+> logs
+> 
+> However when I try to login as admin it fail to authenticate.
+> I've tried to reset the password - receive the "password reset" email with
+> the link (*actually receives a number of emails each time (up to 4 each time
+> I request a reset) )
+> Follow the link in the email that takes me to the account password reset
+> page where I am prompted for a new password.
+> Enter the new password and then brought to /archiva/index.html#search page
+> (still not logged on)
+> Then try to login using the new password but it's again not recognized.
+> 
+> I downloaded the archiva-2.0.1.war that I installed
+> 
+> Anyone else experiencing this issue? 
+
+This is not Archiva support! 
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

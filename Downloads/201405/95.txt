@@ -1,0 +1,175 @@
+From users-return-136437-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri May 23 21:56:51 2014
+Return-Path: <users-return-136437-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F3ABC1183B
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 23 May 2014 21:56:50 +0000 (UTC)
+Received: (qmail 7273 invoked by uid 500); 23 May 2014 21:56:49 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 7175 invoked by uid 500); 23 May 2014 21:56:49 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 7167 invoked by uid 99); 23 May 2014 21:56:49 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 23 May 2014 21:56:49 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW
+X-Spam-Check-By: apache.org
+Received-SPF: unknown ~allinclude:_spf.google.com (nike.apache.org: encountered unrecognized mechanism during SPF processing of domain of jeff@greenqloud.com)
+Received: from [209.85.219.52] (HELO mail-oa0-f52.google.com) (209.85.219.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 23 May 2014 21:56:46 +0000
+Received: by mail-oa0-f52.google.com with SMTP id eb12so6259681oac.11
+        for <users@maven.apache.org>; Fri, 23 May 2014 14:56:22 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=greenqloud.com; s=google;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=SVre+lxOrEUqKl7hEG5MsDYiBcerOKBucY730lGkjq4=;
+        b=DkgsKk4Q+pm8YCf2bJve+ZeHBhilaUdPj0jX3ztPCGroJakRMAnMGfewvhcl3sKsSA
+         yX+5sRUtDBl9bDm5QdBCzYjqQB8ei11qarKUWGfdKKaYZ89NUwk9Bq0zucqcySbRrBnT
+         w4KclveZ2nMLlHGipcviPs304jntX7lDpvwVA=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=SVre+lxOrEUqKl7hEG5MsDYiBcerOKBucY730lGkjq4=;
+        b=QKFLndLRt0iCSxt81Amqgm8EwveKEy+IufdkrV/qp8p+7RJ4QXdHdicL79AxOd3w2V
+         J4QLgWw8BL4k6yn5s4xXOLV0pLGulU/xD7O02n12m2MLipOlTGLWsIv49xqG6fBvxCDE
+         yXx8VjGYNgQPV26QFHaQ0CovT8KmDNDWQMv919quVciQRXPaP0bE0UNnDI+7arjGCPhC
+         0g8WF1X3XwG70YLRW992ruHgDOyYdavwJ1val5aHz/IEBqOxXS8va4fAkOPjuuQBfv7D
+         uICtrrmsjd3tNW1TMkbXt/dLeLyuXPSWD4Zcsq6CfUY+E1Z6eHvXOVa6iKQ2SYyQG+gu
+         6clw==
+X-Gm-Message-State: ALoCoQmwG2y3xpQ5qfNB76AwfIVmerMWSotuhcuvkc7g98felCCQ/7r8PKqWShzdN6z80hamNcdv
+MIME-Version: 1.0
+X-Received: by 10.60.142.169 with SMTP id rx9mr8164750oeb.1.1400882182194;
+ Fri, 23 May 2014 14:56:22 -0700 (PDT)
+Received: by 10.182.213.74 with HTTP; Fri, 23 May 2014 14:56:22 -0700 (PDT)
+In-Reply-To: <CAPCjjnG9O2y9RKaBNO=E+zWLAyaFRgY4g4+9acg7_QyyTvOe9w@mail.gmail.com>
+References: <CADOTMGEQG5nE5cS_SiA=vanv7ZYXASEFs1hBwUQQR-9pnkQmZg@mail.gmail.com>
+	<CAPCjjnHaeoBtXR0fO83L=xQa_56UasGottTddv=1nG0qpSec-g@mail.gmail.com>
+	<CADOTMGEasW5FN_WfXPKDoaMjCLPmHHwofk3xO5aCkQAX=9o08A@mail.gmail.com>
+	<CAPCjjnG9O2y9RKaBNO=E+zWLAyaFRgY4g4+9acg7_QyyTvOe9w@mail.gmail.com>
+Date: Fri, 23 May 2014 21:56:22 +0000
+Message-ID: <CADOTMGGk_soZai-0M+JyzEzWty1o07uaxJz8Om0WEJi8pPN5Pg@mail.gmail.com>
+Subject: Re: Affecting configuration of a sibling POM
+From: Jeff Hair <jeff@greenqloud.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b1634edd79e0104fa184ca2
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b1634edd79e0104fa184ca2
+Content-Type: text/plain; charset=UTF-8
+
+It is a very specific case, yes. And technically I can change it if I
+really need to. It's an open source project which we are trying to avoid
+making changes to the upstream version in this particular case, because it
+doesn't need to be a jar file for the mainline. We just want to override it
+internally. In the end it's probably just going to be a local patch that we
+keep on our own branch.
+
+Thanks for the help.
+
+
+On Fri, May 23, 2014 at 6:12 PM, Dan Tran <dantran@gmail.com> wrote:
+
+> This sounds weird that you cant change the pom which is a sibling of yours,
+> and I dont want to get into that ...
+>
+> any way, you are stuck, unless you get permission to make that setting
+> configurable
+>
+> -D
+>
+>
+> On Fri, May 23, 2014 at 10:39 AM, Jeff Hair <jeff@greenqloud.com> wrote:
+>
+> > Hi,
+> > That's not it. The only POM I can modify in this situation is my own POM,
+> > which needs to have a dependency on this sibling POM. The problem is that
+> > the sibling POM only generates a .war file, which can't be used as a
+> > dependency. Changing attachClasses to true would fix this of course, but
+> I
+> > can't modify the POM directly. I can however, change the command I use to
+> > build this sibling project, or change anything in my own POM.
+> >
+> > The structure is thus:
+> >
+> > Parent
+> > --- Sibling that generates .war files
+> > --- My project
+> >
+> > I want to make the sibling attach some classes, so I can use it as a
+> > dependency in my own project.
+> >
+> >
+> > On Fri, May 23, 2014 at 4:35 PM, Dan Tran <dantran@gmail.com> wrote:
+> >
+> > > So both projects have attachClasses=true set, and you want to change
+> one
+> > of
+> > > that config at command line?
+> > >
+> > > -D
+> > >
+> > >
+> > > On Fri, May 23, 2014 at 2:40 AM, Jeff Hair <jeff@greenqloud.com>
+> wrote:
+> > >
+> > > > Hi,
+> > > >
+> > > > I have a case where a sibling POM (both POMs have the same parent)
+> > needs
+> > > to
+> > > > have a different configuration plugin for the maven-war plugin.
+> > > > Specifically, I need to put the <attachClasses>true</attachClasses>
+> > > element
+> > > > into the configuration. The problem is that I cannot override or
+> modify
+> > > > this POM. Other acceptable solutions would be to build this
+> particular
+> > > > project with a command-line property or through some kind of
+> aggregated
+> > > > POM, as long as I can specify the option without modifying this POM
+> > > itself.
+> > > >
+> > > > I've scoured the internet for a solution and the only thing I've
+> really
+> > > > found is passing a property in via command line. But this apparently
+> > only
+> > > > works for properties which have an expression defined. attachClasses
+> > does
+> > > > not have this.
+> > > >
+> > >
+> >
+> >
+> >
+> > --
+> > *Jeff Hair*
+> > Core Systems Developer
+> >
+> > Tel: (+354) 415 0200
+> > jeff@greenqloud.com
+> > www.greenqloud.com
+> >
+>
+
+
+
+-- 
+*Jeff Hair*
+Core Systems Developer
+
+Tel: (+354) 415 0200
+jeff@greenqloud.com
+www.greenqloud.com
+
+--047d7b1634edd79e0104fa184ca2--
+

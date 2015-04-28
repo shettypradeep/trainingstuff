@@ -1,0 +1,85 @@
+From users-return-137439-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Oct  2 13:55:34 2014
+Return-Path: <users-return-137439-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E698017EF8
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  2 Oct 2014 13:55:33 +0000 (UTC)
+Received: (qmail 77837 invoked by uid 500); 2 Oct 2014 13:55:32 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 77756 invoked by uid 500); 2 Oct 2014 13:55:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 77743 invoked by uid 99); 2 Oct 2014 13:55:31 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Oct 2014 13:55:31 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dhoffer6@gmail.com designates 209.85.220.180 as permitted sender)
+Received: from [209.85.220.180] (HELO mail-vc0-f180.google.com) (209.85.220.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Oct 2014 13:55:27 +0000
+Received: by mail-vc0-f180.google.com with SMTP id le20so1357592vcb.25
+        for <users@maven.apache.org>; Thu, 02 Oct 2014 06:55:06 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=gpo8RhMVzy/uByTX3Wi/MndhQrcZYDJ/3hif16/qBY4=;
+        b=qcZ3gd6k8F45IK/+nxW9yFbrpCnjyb2pf5oJPwTGr1WA0/Ssr1VSkzJE4RkwmmSCRU
+         MyI4s0ghhOCsZF3CmgZ1PrVo6QA+yXBk/m5o9wetNDHI2J+ud10YKGqazL3Q4PZajm2R
+         HDRumPKq73CLUm+y2PmMYvCLRFwKbNU+BPn0PCY1l19KnCgf2Ps99nhSnq1kCZNCy2zB
+         aqGFsnESQG/DEFApMLNMWPTI9siks43m7vqmPXe9sAQUFh7gjBTv3rBgDjAUx6Oc2l6+
+         +yJCufrHfcRKrSdo1CsaSB6syDzq4JteEsg8miGDSadhOxlxbi92234qXHTjKMQMXJRo
+         Fy8g==
+MIME-Version: 1.0
+X-Received: by 10.52.103.8 with SMTP id fs8mr455452vdb.77.1412258106440; Thu,
+ 02 Oct 2014 06:55:06 -0700 (PDT)
+Received: by 10.220.218.130 with HTTP; Thu, 2 Oct 2014 06:55:06 -0700 (PDT)
+In-Reply-To: <CADVp3v8R1=ig-Dm1+9pjke36GmAkjKuTj1oj5gGfrejWyCucdw@mail.gmail.com>
+References: <CAKMfhWXMVkqCwL6g8Tqj1zm-J5dmK1uB-uK-C4eTZPUb702KWg@mail.gmail.com>
+	<CAPoyBqTLjh-X882aRbPtV9neLMwqKP1tAXji5y=2kJKciDM0Mw@mail.gmail.com>
+	<CADVp3v8R1=ig-Dm1+9pjke36GmAkjKuTj1oj5gGfrejWyCucdw@mail.gmail.com>
+Date: Thu, 2 Oct 2014 07:55:06 -0600
+Message-ID: <CAA8BW8EM0Rku2b2x1Cj_xj-6qDSxOUc-bz5njpFgBtJT6f9SeQ@mail.gmail.com>
+Subject: Re: Need help regarding apache maven
+From: David Hoffer <dhoffer6@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b86ef2ec43178050470f66a
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b86ef2ec43178050470f66a
+Content-Type: text/plain; charset=UTF-8
+
+Right I concur with Barrie, SVN is for your source code not your Maven
+built artifacts.  You need a Maven respository manager, I recommend
+Artifactory (http://www.jfrog.com/open-source/) which is very easy to setup.
+
+-Dave
+
+On Wed, Oct 1, 2014 at 11:48 PM, Barrie Treloar <baerrach@gmail.com> wrote:
+
+> > Uploading:
+> https://sachin/svn/demo/com/kedb/kedb/0.0.1-SNAPSHOT/kedb-0.0.1-20140929.030730-3.jar
+> > Uploading:
+> https://sachin/svn/demo/com/kedb/kedb/0.0.1-SNAPSHOT/kedb-0.0.1-20140929.030730-3.pom
+>
+> Is https://sachin/svn/ your SVN server?
+>
+> You can't get Maven to deploy your artifacts to your SVN server.
+> Or at least if you can, it's not something I would recommend.
+> http://maven.apache.org/wagon/wagon-providers/wagon-scm/usage.html
+> doesn't yet have this documented either.
+>
+> You want to deploy your artifacts into a Maven Repository Manager, see
+> http://maven.apache.org/repository-management.html
+>
+
+--047d7b86ef2ec43178050470f66a--
+

@@ -1,0 +1,80 @@
+From users-return-137031-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Aug 16 06:52:49 2014
+Return-Path: <users-return-137031-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 46465118C1
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 16 Aug 2014 06:52:49 +0000 (UTC)
+Received: (qmail 67841 invoked by uid 500); 16 Aug 2014 06:52:46 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 67749 invoked by uid 500); 16 Aug 2014 06:52:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 67735 invoked by uid 99); 16 Aug 2014 06:52:45 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 16 Aug 2014 06:52:45 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.215.45 as permitted sender)
+Received: from [209.85.215.45] (HELO mail-la0-f45.google.com) (209.85.215.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 16 Aug 2014 06:52:20 +0000
+Received: by mail-la0-f45.google.com with SMTP id ty20so2974543lab.4
+        for <users@maven.apache.org>; Fri, 15 Aug 2014 23:52:19 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=0fxYnbhj186wYW/o3O1eui0aEetECMnE0m2ACzK0dHg=;
+        b=i91v/lh+PxW0+zBkyjh6kz67yVI5vuiqZ0gdjvSHmfcmc/BcKuaexutNqVi4vRVOmt
+         Sk9H6aliN+v+rVXVsbmSNlnBCp3G7KMOOlzSs5/RK32mwOQ/mlkWr0eKk3uVtbJNRGWy
+         HI6QVWB36R8246wegZyMNiqP5MHM9rjMVinjCxjD9XGCGZRP1Rqhu1KuzWd90AF3obST
+         ++8JkKf95WkAnlBxIlhBmf2l/b2LZpXIPED0LP6PzMC8s/eoVcSeaUr+9Lvuh37WY+0n
+         pnO+vqAX8JNklUCMcmTHZTNnAFuL1+x8Y7Cp/8TrE7aFU/biovfse5lz84cphxMNuW4m
+         v10A==
+MIME-Version: 1.0
+X-Received: by 10.152.22.199 with SMTP id g7mr16210411laf.6.1408171939411;
+ Fri, 15 Aug 2014 23:52:19 -0700 (PDT)
+Received: by 10.114.20.231 with HTTP; Fri, 15 Aug 2014 23:52:19 -0700 (PDT)
+In-Reply-To: <CADVp3v9vUh2QrA7mZuctL-QNX_3xBgy0JqxO4jZJ6RL38ASFRA@mail.gmail.com>
+References: <53ED5D2A.3000902@horus.es>
+	<CAPCjjnEZ_6O8tVHk8KhgxUki9dWZVCH8b1w9wOOHTp4+crSJzA@mail.gmail.com>
+	<CALhtWkerU-jQL9_s2dzmfkEBBf9Jkzm+VRWt3PjcDc=pPrJnhA@mail.gmail.com>
+	<53EE18A8.4080205@horus.es>
+	<CAPCjjnHeoHfZmKq=Ug-eL1ywa3i9BzDVyxy+n1p6TNALOEi0FQ@mail.gmail.com>
+	<CADVp3v9vUh2QrA7mZuctL-QNX_3xBgy0JqxO4jZJ6RL38ASFRA@mail.gmail.com>
+Date: Fri, 15 Aug 2014 23:52:19 -0700
+Message-ID: <CAPCjjnGbQ2wm5Q_wNKbdtg7Ca7-HV8rpkBkMyoaVshfosMb47Q@mail.gmail.com>
+Subject: Re: Doxia Eclipse Editor Plugin problem with snippet macro
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0158c3023b3d1b0500b994af
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0158c3023b3d1b0500b994af
+Content-Type: text/plain; charset=UTF-8
+
+Barrie, you are correct.  I missed that totally
+
+
+On Fri, Aug 15, 2014 at 9:18 PM, Barrie Treloar <baerrach@gmail.com> wrote:
+
+> On 16 August 2014 00:49, Dan Tran <dantran@gmail.com> wrote:
+>
+> > Markdown is the way to go, there is a conversion as well [1]
+>
+>
+> How do you use snippets in Markdown?
+> http://daringfireball.net/projects/markdown/syntax doesn't have anything
+> mentioned.
+> Is it under different terminology?
+>
+
+--089e0158c3023b3d1b0500b994af--
+

@@ -1,0 +1,80 @@
+From users-return-136336-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun May 11 04:30:11 2014
+Return-Path: <users-return-136336-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 89D14115EC
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 11 May 2014 04:30:11 +0000 (UTC)
+Received: (qmail 65607 invoked by uid 500); 10 May 2014 23:30:54 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 68710 invoked by uid 500); 10 May 2014 23:24:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 88904 invoked by uid 99); 10 May 2014 23:10:30 -0000
+Received: from Unknown (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 10 May 2014 23:10:30 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of t.broyer@gmail.com designates 209.85.192.51 as permitted sender)
+Received: from [209.85.192.51] (HELO mail-qg0-f51.google.com) (209.85.192.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 09 May 2014 09:20:33 +0000
+Received: by mail-qg0-f51.google.com with SMTP id q107so4063196qgd.24
+        for <users@maven.apache.org>; Fri, 09 May 2014 02:20:10 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:from:date:message-id:subject:to:content-type;
+        bh=VQv6Vnl2IkqfzTQOS6l6B0QXd6RWMUYWXDlGdNrbTVA=;
+        b=UR2S6hA9+dG5sGU32eEhIFisgQQbdw57VL1mJn+4IB7eROtuhdaX711aVNjR0tFFLn
+         s6TD8QQmjjha1/ftdhZT3xvXLrm/ryY7IkUhQ78rFcN4lK0GiR3+PS/TpX6UnHJ/j397
+         tOFZT5hVljAcZBOEFEBaJN2nEtu4fTg3V+EQvo9U8xzyzaKQbsePvNINlnSHF7nhAi8T
+         uq2IegKSCoBrXuF8TALO4yfxbxfTqjeXRGhWO8SZXwMg2ofWC3IIBjmqLVOZLYEbP37p
+         fvdUbHY0OJhmWg3Mqj/kPI/VdnwTKYKIGrzTVDb853Wenmkrw2Uzlkg43Nb0kMSkqzOP
+         C3GQ==
+X-Received: by 10.224.72.66 with SMTP id l2mr12620766qaj.74.1399627210530;
+ Fri, 09 May 2014 02:20:10 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.140.19.83 with HTTP; Fri, 9 May 2014 02:19:50 -0700 (PDT)
+From: Thomas Broyer <t.broyer@gmail.com>
+Date: Fri, 9 May 2014 11:19:50 +0200
+Message-ID: <CAEayHEN_du-V3D97v-ybWH68vZ9kRm1SqsoBxUrRsT8sQacfnw@mail.gmail.com>
+Subject: M2Eclipse vs. maven-eclipse-plugin: which is preferred?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bdc78beb3a6db04f8f41a88
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bdc78beb3a6db04f8f41a88
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi all,
+
+Does the Apache Maven Project/Community has an official stance about
+whether M2Eclipse or maven-eclipse-plugin is preferred way of importing
+Maven projects into Eclipse?
+
+I thought M2Eclipse was the blessed way, but I cannot find anything
+"official" online.
+Only that the maven-eclipse-plugin hasn't been updated for a while, but
+that could also be a sign that it has no issue and Eclipse offers backwards
+compatibility.
+
+Note: this is not a poll about what you as a developer prefers, I'm looking
+for whether there's an official position and which one it is.
+Background: I'm in a argument in a code review for an archetype about
+whether to include maven-eclipse-plugin configuration within the POM or
+not; and any "official" choice would help us avoid "bikeshedding".
+
+
+--=20
+Thomas Broyer
+/t=C9=94.ma.b=CA=81wa.je/ <http://xn--nna.ma.xn--bwa-xxb.je/>
+
+--047d7bdc78beb3a6db04f8f41a88--
+

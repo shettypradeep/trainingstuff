@@ -1,0 +1,131 @@
+From users-return-134893-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan  2 19:38:08 2014
+Return-Path: <users-return-134893-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0178710EA4
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  2 Jan 2014 19:38:08 +0000 (UTC)
+Received: (qmail 87499 invoked by uid 500); 2 Jan 2014 19:38:06 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 87424 invoked by uid 500); 2 Jan 2014 19:38:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 87416 invoked by uid 99); 2 Jan 2014 19:38:06 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Jan 2014 19:38:06 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,NORMAL_HTTP_TO_IP,RCVD_IN_DNSWL_LOW,SPF_PASS,WEIRD_PORT
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ziga.gregoric@gmail.com designates 74.125.82.180 as permitted sender)
+Received: from [74.125.82.180] (HELO mail-we0-f180.google.com) (74.125.82.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Jan 2014 19:38:01 +0000
+Received: by mail-we0-f180.google.com with SMTP id t61so12621918wes.25
+        for <users@maven.apache.org>; Thu, 02 Jan 2014 11:37:40 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=JkRbZAnWDn619qsz35ceeHsZHEyo+9ECDyUL8q1VimU=;
+        b=L3wbwX7KeZ4WVXLyVQdOkYydNbxG5JtTj24MMRS6S5UBkZ3JJlSWn6ZwS1NGE4SbCF
+         UMtXvf4dbwl0BclPnh0A5g2zYrdGgBptSGsh+e+qe0pB4PmiSdSf/5HgcR/wc/WZb0uT
+         evW/CQj8qpfk1sIeVrajYnkqsqHDGzX+I1AYdLiXiiwwc5+Rp/5N6BQ93T+hwYvgLrRM
+         HhNv+VnVakJkqLgEeHh1hrLFVjcRXypt0RlaZXiLeGdrRxlgEorFIrLSYyf4WIlXVivZ
+         zd0AP+cJ2Cj6jHD2mt0SdkBJl/Vi5hzBofEVqPwD+KJ8DCH0S5+7/PDbA/40K3ImUFQe
+         hssQ==
+X-Received: by 10.195.13.164 with SMTP id ez4mr57588803wjd.11.1388691460731;
+ Thu, 02 Jan 2014 11:37:40 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.217.129.6 with HTTP; Thu, 2 Jan 2014 11:37:20 -0800 (PST)
+In-Reply-To: <1388690076592-5779945.post@n5.nabble.com>
+References: <1388681453909-5779909.post@n5.nabble.com> <CALy+7U=PfuiWDK4xEKbL66sM9wAt6tkkUVWdDJ8dB_+H0EaOHQ@mail.gmail.com>
+ <1388690076592-5779945.post@n5.nabble.com>
+From: Ziga GREGORIC <ziga.gregoric@gmail.com>
+Date: Thu, 2 Jan 2014 20:37:20 +0100
+Message-ID: <CABJJssM1XZwoOqyi7PL569-XAbfJT_q+DsfmcfC6qh1L7C-gsQ@mail.gmail.com>
+Subject: Re: Adding the path to the pom file as a variable.
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bb04f68383a5d04ef01ed69
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bb04f68383a5d04ef01ed69
+Content-Type: text/plain; charset=UTF-8
+
+I have to agree with Wayne here - this setup is not easy to understand.
+Since my setup consists of TeamCity and SonarSource, here are my 2 cents.
+
+Is this a maven project?
+Can it be build simply with 'mvn clean install'?
+
+If both answers are yes, than have a:
+- build configuration in TeamCity that builds it using project's pom.xml
+using goal 'mvn clean install' and
+- another build configuration that has a goal 'sonar:sonar' and you're
+done.
+Leave the checkout directory as default and make sure you use the same
+build agent to run both build configurations.
+All sonar specific environment settings can be moved to settings.xml of the
+build agent.
+
+
+
+On Thu, Jan 2, 2014 at 8:14 PM, onlypq <onlypq@gmail.com> wrote:
+
+> Thanks Wayne...
+>
+> In Teamcity I am trying to use maven to run Sonar to analyze a projects.
+> When the projects build I need to execute Sonar in that directory, which
+> the
+> directories are created using a revision number so they will always be
+> different.
+>
+> When the project builds it creates a text file (POMlastbuild3.0.txt) which
+> has the build dir path. I then check out  my pom file into that dir...
+> below is the command line script I run from TeamCity
+>
+> POMPATH=` cat /home/pomfiles/POMlastbuild3.0.txt`
+> export POMPATH
+>
+> svn co https://atl-wdsvn1.abctm.org/svn/Pom/CDM $POMPATH
+>
+> export
+>
+> PATH=/home/teamcity/maven-3.0.3/apache-maven-3.0.3/bin:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+> export M2_HOME=/home/teamcity/apache-maven-3.0.5
+> export PATH=/usr/java/jdk1.6.0_21/bin:$PATH
+> export JAVA_HOME=/usr/java/jdk1.6.0_21
+>
+> mvn sonar:sonar -Dsonar.host.url=http://12.219.180.137:9000
+> -Dsonar.jdbc.url=jdbc:postgresql://12.219.180.137/sonar
+> -Dsonar.jdbc.username=sonar -Dsonar.jdbc.password=sonar1dev
+> -Dmaven.test.failure.ignore=true
+>
+> But when maven runs it looks for the pom in a directory Teamcity created.
+>
+> Do not know if i am doing this correctly, but I think all I need to do is
+> use $POMPATH in the maven command so it can find the pom.
+>
+> Thank you for your help
+>
+>
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/Adding-the-path-to-the-pom-file-as-a-variable-tp5779909p5779945.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7bb04f68383a5d04ef01ed69--
+

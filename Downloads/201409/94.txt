@@ -1,0 +1,90 @@
+From users-return-137244-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Sep 11 19:54:05 2014
+Return-Path: <users-return-137244-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 60B861191C
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 11 Sep 2014 19:54:05 +0000 (UTC)
+Received: (qmail 87673 invoked by uid 500); 11 Sep 2014 19:54:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 87581 invoked by uid 500); 11 Sep 2014 19:54:04 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 87570 invoked by uid 99); 11 Sep 2014 19:54:03 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 11 Sep 2014 19:54:03 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [67.231.152.145] (HELO mx0b-0000bf01.pphosted.com) (67.231.152.145)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 11 Sep 2014 19:53:56 +0000
+Received: from pps.filterd (m0042341 [127.0.0.1])
+	by mx0b-0000bf01.pphosted.com (8.14.5/8.14.5) with SMTP id s8BJqiYe015501
+	for <users@maven.apache.org>; Thu, 11 Sep 2014 14:53:35 -0500
+Received: from np1exhc003.corp.halliburton.com ([34.254.246.202])
+	by mx0b-0000bf01.pphosted.com with ESMTP id 1pbfkn0yqe-2
+	(version=TLSv1/SSLv3 cipher=AES128-SHA bits=128 verify=NOT)
+	for <users@maven.apache.org>; Thu, 11 Sep 2014 14:53:34 -0500
+Received: from NP1EXMB033.corp.halliburton.com ([169.254.4.37]) by
+ NP1EXHC003.corp.halliburton.com ([34.34.137.235]) with mapi id
+ 14.03.0181.006; Thu, 11 Sep 2014 14:53:07 -0500
+From: Justin Georgeson <JGeorgeson@lgc.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: jarsigner plugin: specifying multiple arguments on the CLI
+Thread-Topic: jarsigner plugin: specifying multiple arguments on the CLI
+Thread-Index: Ac/N+PS4wFX6p4ZlRQigg9gBDlmwvQ==
+Date: Thu, 11 Sep 2014 19:53:06 +0000
+Message-ID: <F21547B4F425F9428444D12A51270506238B1EA4@NP1EXMB033.corp.halliburton.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-originating-ip: [34.34.116.17]
+Content-Type: multipart/alternative;
+	boundary="_000_F21547B4F425F9428444D12A51270506238B1EA4NP1EXMB033corph_"
+MIME-Version: 1.0
+X-HALSTAMP: TRUE
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10432:5.12.52,1.0.28,0.0.0000
+ definitions=2014-09-11_07:2014-09-11,2014-09-11,1970-01-01 signatures=0
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0
+ kscore.is_bulkscore=0.000177206480044878 kscore.compositescore=0
+ circleOfTrustscore=0 compositescore=0.0652767626515575
+ urlsuspect_oldscore=0.0652767626515575 suspectscore=0
+ recipient_domain_to_sender_totalscore=0 phishscore=0 bulkscore=0
+ kscore.is_spamscore=0 recipient_to_sender_totalscore=0
+ recipient_domain_to_sender_domain_totalscore=0 rbsscore=0.0652767626515575
+ spamscore=0 recipient_to_sender_domain_totalscore=0 urlsuspectscore=0.9
+ adultscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=7.0.1-1402240000 definitions=main-1409110149
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_000_F21547B4F425F9428444D12A51270506238B1EA4NP1EXMB033corph_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Apologies if this has been answered before. I don't see an entry in the plu=
+gin page's FAQ and find it with a quick Google search. I am behind a proxy =
+so in order to specify a TSA I need to use "-J-Dhttp.proxyHost=3Dhost -J-Dh=
+ttp.proxyPort=3Dport" as arguments. If I use -Djarsigner.arguments=3D"..." =
+then it seems to enclose the whole value in single quotes on the exec'ed ja=
+rsign command, and soe the command fails. If I specify the two arguments in=
+ my pom (as an array), it works. So how do I specify multiple arguments on =
+the command line?
+
+----------------------------------------------------------------------
+This e-mail, including any attached files, may contain confidential and pri=
+vileged information for the sole use of the intended recipient.  Any review=
+, use, distribution, or disclosure by others is strictly prohibited.  If yo=
+u are not the intended recipient (or authorized to receive information for =
+the intended recipient), please contact the sender by reply e-mail and dele=
+te all copies of this message.
+
+--_000_F21547B4F425F9428444D12A51270506238B1EA4NP1EXMB033corph_--
+

@@ -1,0 +1,250 @@
+From users-return-134920-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jan  3 16:33:50 2014
+Return-Path: <users-return-134920-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 551B110A73
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  3 Jan 2014 16:33:50 +0000 (UTC)
+Received: (qmail 75247 invoked by uid 500); 3 Jan 2014 16:33:40 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 75185 invoked by uid 500); 3 Jan 2014 16:33:36 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 75169 invoked by uid 99); 3 Jan 2014 16:33:33 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Jan 2014 16:33:33 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.160.54 as permitted sender)
+Received: from [209.85.160.54] (HELO mail-pb0-f54.google.com) (209.85.160.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Jan 2014 16:33:29 +0000
+Received: by mail-pb0-f54.google.com with SMTP id un15so16005485pbc.27
+        for <multiple recipients>; Fri, 03 Jan 2014 08:33:09 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=N5vM7vXkKNWrSc1RZb96GHt4QcktK0ZAuVLuhT1Gpa4=;
+        b=n8WnJxcTQiJtm4wXi73U7QY5lNwn1tjk4hiuVB8IusJsAaKrC1YDY1H/u181/2NRR/
+         eQf2xH1jQzLVqoLT4dlAf7lP2DcADOCPeudK2OPAnDxkRLrYdj13unalJMSLaqxvO2+S
+         +IRdSFVAT8nKDP07pwG542dQt1j5TG0zcPJOOctANeuZKgcrIA2vm6D++yIIoeJMy3Ax
+         mHlvrCR2SOfT7xWGLHDz1fRmVZ5/9FDj8ZEkaX/qYQNsZ/enlad6r6hhWlqiUr0TMu89
+         b9Xg/NSANCN1ytlrYtAREyVqXQu60U0gqxlLe41LuRFjDqeqA/Z20HbNkO8poWh34Isv
+         hDXA==
+MIME-Version: 1.0
+X-Received: by 10.68.190.169 with SMTP id gr9mr96161575pbc.30.1388766788831;
+ Fri, 03 Jan 2014 08:33:08 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Fri, 3 Jan 2014 08:33:08 -0800 (PST)
+In-Reply-To: <52C6E4D4.1040707@artifact-software.com>
+References: <CA+nPnMzmK+YXL1q=XWd=LZEzR7hoyqtO00wJvO85XyynJ+SmDA@mail.gmail.com>
+	<CA+nPnMz80i1=TFRmqOAgeGViXNrsfFwxZ8SWaHyxLNm+A7mAOw@mail.gmail.com>
+	<op.w83934u7kdkhrr@robertscholte>
+	<CA+nPnMxQ5J_s908SRUzckgfrHHFMRduu5kBBAryv9bQLWsj1gA@mail.gmail.com>
+	<op.w84chhqkkdkhrr@robertscholte>
+	<52C6E4D4.1040707@artifact-software.com>
+Date: Fri, 3 Jan 2014 16:33:08 +0000
+Message-ID: <CA+nPnMwEGmhdU=8TePag8JrfGH7+g+PhH45Sz=GhNPvJ0kOBsQ@mail.gmail.com>
+Subject: Re: New site content
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>, Ron Wheeler <rwheeler@artifact-software.com>, 
+	Maven Developers List <dev@maven.apache.org>
+Content-Type: multipart/alternative; boundary=e89a8ff1c4621fcddf04ef1377f7
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--e89a8ff1c4621fcddf04ef1377f7
+Content-Type: text/plain; charset=ISO-8859-1
+
+FYI here is my current plan for content:
+
+https://cwiki.apache.org/confluence/display/MAVEN/New+Main+Site
+
+
+On 3 January 2014 16:27, Ron Wheeler <rwheeler@artifact-software.com> wrote:
+
+> I agree with Robert's comment.
+> There is a danger that the page will become architecturally elegant and
+> will correctly describe all of the possible uses of Maven but will be too
+> obscure to be useful as a starting point for a new person.
+>
+
+I actually think that the page is near complete from my point of view...
+the remaining content is actually to provide links to pages describing what
+each individual concept is and a link to the next level of depth tutorial.
+
+I what to draw only the outline of what maven does... on the other hand, if
+you can think of an alternative set of content I am only too happy to see
+such suggestions. If you need write access to the wiki, shout out and I'll
+make it so (assuming you are a regular user/dev list contributor)
+
+
+>
+> It is sufficiently difficult to understand the basic concepts in using
+> Maven to create a simple jar with a single POM.
+> You are introducing a lot of new concepts:
+> -Lifecycle
+> -Dependencies
+> -Plug-ins
+> - Project model
+> that a person coming from make or Ant has to grasp.
+>
+> Defining these and the relationships among them in a simple way is
+> sufficiently challenging without trying to abstract a sufficiently general
+> model to handle all of the edge cases.
+>
+> The "Maven way" needs to be explained very simply rather than conceptually
+> complete.
+>
+> Ron
+>
+>
+>
+> On 03/01/2014 11:09 AM, Robert Scholte wrote:
+>
+>> Op Fri, 03 Jan 2014 16:46:33 +0100 schreef Stephen Connolly <
+>> stephen.alan.connolly@gmail.com>:
+>>
+>>  On 3 January 2014 15:17, Robert Scholte <rfscholte@apache.org> wrote:
+>>>
+>>>  Hi,
+>>>>
+>>>> I like the idea of images, however I would avoid a graph to make
+>>>> something
+>>>> clear for new Maven users.
+>>>> Instead I'd prefer a linear model.
+>>>>
+>>>>
+>>> My first draft did not have the graph at the top... perhaps it would be
+>>> better suited at the bottom ;-)
+>>>
+>>>
+>>>
+>>>> I think you should split the current model into pieces:
+>>>>
+>>>> A project model contains:
+>>>> - dependencies
+>>>> - a build plan
+>>>> - other project models ( you can call this the Droste effect[1] )
+>>>>
+>>>>
+>>> I like to think of the project model as not just the root pom.xml but all
+>>> the pom.xml files, so there is only one project model, this should make
+>>> understanding how -pl, -am and -amd switches have their effects
+>>>
+>>>
+>>>
+>> IMO these switches are way too detailed for a 60 sec tutorial. I even
+>> think that a large group of the average Maven users don't know these
+>> switches or use them.
+>>
+>>  - ...
+>>>>
+>>>> There are several build-plans, namely: a build-plan for jar, war, ear,
+>>>> etc.
+>>>> Every build plan has a set of predefined plugins,  which you can adjust
+>>>> (with switches?)
+>>>>
+>>>>
+>>> No there is one and only one build plan. We would have to redefine build
+>>> plan everywhere else to be able to use it like that. There is a lifecycle
+>>> binding for each packaging
+>>>
+>>>
+>>>
+>> Then buildplan is too abstract. With a real world example: the buildplan
+>> for a house and a bike are completely different. Unless you say: you have a
+>> design, some goods, you mix those goods and you have your product.
+>> Not a useful plan IMO.
+>> At least keep the audience in mind: do they need to know the actual
+>> implementation or do they first need to understand the overall process. I
+>> think the latter is more important, even if this conflicts a bit with the
+>> idiom used by experienced Maven users.
+>> What if we call it "build instructions" (per packaging type) ?
+>>
+>>
+>>>> Now, what does Maven do?
+>>>>
+>>>> Maven reads the build plan and executes it. Some steps of the build plan
+>>>> deliver products ( compiled classes, test results, a package)
+>>>>
+>>>> I think the reactor might be confusing at this level.
+>>>>
+>>>>
+>>> I want the 60sec tutorial to be the grand overview, the next tutorial is
+>>> a
+>>> 5 minute one on how a .jar file gets built
+>>>
+>>> Then you have a multi-module webapp tutorial at 10-15min
+>>>
+>>> I want to reference all the core concepts from the 60 second overview
+>>> even
+>>> if only briefly, that way people can come back to the short page and say
+>>> "ahh yes that is where that fits in again"
+>>>
+>>>
+>>>
+>>>> my 2 cents,
+>>>>
+>>>> Robert
+>>>>
+>>>> [1] http://en.wikipedia.org/wiki/Droste_effect
+>>>>
+>>>>
+>>>> Op Fri, 03 Jan 2014 15:41:15 +0100 schreef Stephen Connolly <
+>>>> stephen.alan.connolly@gmail.com>:
+>>>>
+>>>>
+>>>>  Just in case it wasn't clear... I'm looking for comments and feedback
+>>>>
+>>>>>
+>>>>>
+>>>>> On 3 January 2014 14:35, Stephen Connolly
+>>>>> <stephen.alan.connolly@gmail.com>wrote:
+>>>>>
+>>>>>  OK, so to start working on new content I created some pages on the
+>>>>> wiki:
+>>>>>
+>>>>>>
+>>>>>> The first page is a 60 seconds overview of Maven's build process
+>>>>>>
+>>>>>>
+>>>>>> https://cwiki.apache.org/confluence/display/MAVEN/
+>>>>>> Tutorial:+Maven+in+60+seconds
+>>>>>>
+>>>>>> I am using icons because I want to have subsequent pages give more
+>>>>>> detail
+>>>>>> and use the iconography to enable people to see what is being
+>>>>>> discussed
+>>>>>> more easily
+>>>>>>
+>>>>>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+>>
+>
+> --
+> Ron Wheeler
+> President
+> Artifact Software Inc
+> email: rwheeler@artifact-software.com
+> skype: ronaldmwheeler
+> phone: 866-970-2435, ext 102
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--e89a8ff1c4621fcddf04ef1377f7--
+

@@ -1,0 +1,103 @@
+From users-return-135834-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Mar 15 12:32:08 2014
+Return-Path: <users-return-135834-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7B5D810CB6
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 15 Mar 2014 12:32:08 +0000 (UTC)
+Received: (qmail 706 invoked by uid 500); 15 Mar 2014 12:32:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 365 invoked by uid 500); 15 Mar 2014 12:32:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 353 invoked by uid 99); 15 Mar 2014 12:32:02 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 15 Mar 2014 12:32:02 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of anders.g.hammar@gmail.com designates 74.125.82.178 as permitted sender)
+Received: from [74.125.82.178] (HELO mail-we0-f178.google.com) (74.125.82.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 15 Mar 2014 12:31:56 +0000
+Received: by mail-we0-f178.google.com with SMTP id u56so3022648wes.37
+        for <users@maven.apache.org>; Sat, 15 Mar 2014 05:31:36 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=ZNH0boybo5pyt74G7ZIwvN+TQja+kXeJEjyXiUR2BbQ=;
+        b=zzNW7siDRuCNna7Kyd4jJs+/utCpLZShBq6j7fpSsv/vV3YU4QhocpASQkTWViL5N8
+         r0bwQFR5PGtuxctlY3g3CZsy+Onn9t6gm3CRknlqYZBe6+AwY3pem8VXf/QF5iokXQDu
+         1XqV77LkqlcZc9T2R8w4iBz3kAGxnfdSSsEiys3YXRCJsAbYTv77R6qtn0HVmR4efkqO
+         Cm7BR+x9JkrwcEVyvBYjrm/ZcACW4RCLs/Qd8FH5Zzrx2djiyPTiriQrZ+LHXKRB37aI
+         PbtFAHnDf66jdA+wNe21GedBwVjWNU+CO2ATXdlCK5gALzIJ183ZD9ipBJbhdBZ+RLod
+         zP8w==
+MIME-Version: 1.0
+X-Received: by 10.180.163.206 with SMTP id yk14mr2306009wib.5.1394886695930;
+ Sat, 15 Mar 2014 05:31:35 -0700 (PDT)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.200.162 with HTTP; Sat, 15 Mar 2014 05:31:35 -0700 (PDT)
+In-Reply-To: <1394801193231-5788337.post@n5.nabble.com>
+References: <1394801193231-5788337.post@n5.nabble.com>
+Date: Sat, 15 Mar 2014 13:31:35 +0100
+X-Google-Sender-Auth: CRfqtZS8e8IHskH3feHEgfgRnZU
+Message-ID: <CAKDUN1tB8cKxob6NOrj7CgsNbabCwbGsT+2ru_Tcergy_jXj6w@mail.gmail.com>
+Subject: Re: how to only build if version is changed..
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=00248c0d793803537704f4a45efa
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--00248c0d793803537704f4a45efa
+Content-Type: text/plain; charset=ISO-8859-1
+
+The pom on trunk or any branch should *always* specify a SNAPSHOT version.
+
+/Anders
+
+
+On Fri, Mar 14, 2014 at 1:46 PM, richard_senior <richard.senior@gmail.com>wrote:
+
+> Hello,
+>
+> We are using maven, jenkins and nexus for continuous integration.
+>
+> Our trunk branch contains no snapshots, and jenkins is polling the scm and
+> building on any change.
+> However periodically a developer may check things in without upversioning
+> the pom.
+> When they do this the build fails at deploy as nexus will not allow to full
+> release versions with the same number.
+> Which is obviously good... But I would like to fail the build early, before
+> deploy, so that when a developer tries to build
+> the project in their local workspace, they can see that they must change
+> the
+> version number.
+>
+> How would I add a goal to maven that failed, if nexus contains a binary of
+> the project I'm building, at the same version as the pom?
+>
+> I'm guessing I'd need to use the enforcer, and perhaps the maven versions
+> mojo, but I don't know the exact config?
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/how-to-only-build-if-version-is-changed-tp5788337.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--00248c0d793803537704f4a45efa--
+

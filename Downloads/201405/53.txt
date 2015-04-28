@@ -1,0 +1,84 @@
+From users-return-136305-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu May  1 12:33:15 2014
+Return-Path: <users-return-136305-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id AB7D511AFD
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  1 May 2014 12:33:15 +0000 (UTC)
+Received: (qmail 84123 invoked by uid 500); 1 May 2014 12:33:06 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 84031 invoked by uid 500); 1 May 2014 12:33:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 84019 invoked by uid 99); 1 May 2014 12:33:05 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 01 May 2014 12:33:05 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.212.173 as permitted sender)
+Received: from [209.85.212.173] (HELO mail-wi0-f173.google.com) (209.85.212.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 01 May 2014 12:33:00 +0000
+Received: by mail-wi0-f173.google.com with SMTP id bs8so588416wib.12
+        for <users@maven.apache.org>; Thu, 01 May 2014 05:32:38 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=Dt8LxUx6doc2zX71zhorjuEJsTug8rO8HjIoOO7ODL0=;
+        b=eKwSLIDWTGXA/ya9pZp0K56hFcLSqhy5eK4uyltk3bcvdPo5iFy0+Ryfhq8AmVHfkP
+         gBGCkNRIxj3fx51Kca8/P/nvknzg/oLxfZm3Mk/borhVqvJF9kyFQS70TAC2+DOo9MPo
+         oWqGSIrRmsiRkOpftc4Zay9Cm2GG6UggNqZePP/M8I5LP7FE3NJLdzXL3wjRL6BpgFxp
+         GrT7HgomknigJXEKzxMuOgmTC+80X7PEMN8mzX3AHoinYEpmOfZcu6dHvjqRpBaTj/4v
+         2gTKxq9npBxYHoT+3DpatEBMtHpiKi6Reh4kAAtSgwUHFDrdVCG5FG6kgRRezipDSkje
+         m/Xg==
+MIME-Version: 1.0
+X-Received: by 10.180.91.114 with SMTP id cd18mr2096367wib.28.1398947558230;
+ Thu, 01 May 2014 05:32:38 -0700 (PDT)
+Received: by 10.194.205.233 with HTTP; Thu, 1 May 2014 05:32:38 -0700 (PDT)
+In-Reply-To: <CAN5S7Z60axRoNFp79YQK0_2vR3cvmfnQVDszsDWiMk31ezMYbA@mail.gmail.com>
+References: <CAN5S7Z60axRoNFp79YQK0_2vR3cvmfnQVDszsDWiMk31ezMYbA@mail.gmail.com>
+Date: Thu, 1 May 2014 13:32:38 +0100
+Message-ID: <CA+nPnMz_HaKNAW5BZBMUoAZ1dznrYT4YWM8Yx9rWichZWeMoMQ@mail.gmail.com>
+Subject: Re: Spring snapshots
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d043749ad448ee704f855dcf3
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d043749ad448ee704f855dcf3
+Content-Type: text/plain; charset=UTF-8
+
+Most likely somewhere in that spring dependency tree is a version range...
+you could use dependency management to pin that to a non-range version
+
+
+On 1 May 2014 12:58, Alexander Kaiser <alexander.g.kaiser@gmail.com> wrote:
+
+> Hi,
+>
+> I am trying to understand mavens downloading of snapshots (maven 3.0.4,
+> vanilla install)
+>
+> I use only spring RELEASE (3.1.4.RELEASE) builds in my pom and I have no
+> repository definitions in the pom.
+> When I display the dependency tree with mvn dependency:tree I also see that
+> my project has no dependencies on snapshots.
+>
+> Nevertheless, every day, maven pulls in loads of snapshots from the spring
+> snapshot repository.
+>
+> How can I avoid downloading the snapshots?
+>
+> --
+> Alexander
+>
+
+--f46d043749ad448ee704f855dcf3--
+

@@ -1,0 +1,72 @@
+From users-return-137169-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Aug 31 16:58:24 2014
+Return-Path: <users-return-137169-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4C4ED113F1
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 31 Aug 2014 16:58:24 +0000 (UTC)
+Received: (qmail 25048 invoked by uid 500); 31 Aug 2014 16:58:22 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 24966 invoked by uid 500); 31 Aug 2014 16:58:22 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 24945 invoked by uid 99); 31 Aug 2014 16:58:22 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 31 Aug 2014 16:58:22 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bimargulies@gmail.com designates 209.85.218.53 as permitted sender)
+Received: from [209.85.218.53] (HELO mail-oi0-f53.google.com) (209.85.218.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 31 Aug 2014 16:58:16 +0000
+Received: by mail-oi0-f53.google.com with SMTP id i138so2964763oig.12
+        for <users@maven.apache.org>; Sun, 31 Aug 2014 09:57:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=oiumCcYac5fcw+HLLrTSESDe3bTNy/A5X4AmNrLnJsc=;
+        b=YTJjzQJlZFth1nJ95ZW47LG+xenQ5H8EDev7bSZP+zXRkqbpu3F38AlkjGBu9i6Br7
+         PqAZ+3/ZQqyoFvM83xZCqf8IJKcVu/O9oAbV4u/ztugg5fbok0C3EyofjojV9qZ3raXy
+         in+EXbn+6lGjSZsMuClw5WfA8wT/DjRRLKhPu1htNYcIhoj8iK8AS18veao6L2wiIO5s
+         el7QVs1ePxh1JMKdOTBN0PpIYCieGvEFQiy7IyV5v48sLJzkoiE4pn6pXksk8UFx/1h6
+         DkxcqX1ef2lJLEZhwVpshn5U6+LZG3dr+itjDqZcNmdDSTZzqHsGAR+CLwahTozMX23E
+         IdkA==
+MIME-Version: 1.0
+X-Received: by 10.182.87.167 with SMTP id az7mr22034929obb.41.1409504276070;
+ Sun, 31 Aug 2014 09:57:56 -0700 (PDT)
+Received: by 10.202.1.200 with HTTP; Sun, 31 Aug 2014 09:57:56 -0700 (PDT)
+Date: Sun, 31 Aug 2014 12:57:56 -0400
+Message-ID: <CALhtWkfE4BLd_qTzo40LGhZkH8xRuRTWz+2myCgVrP8YpVTEpQ@mail.gmail.com>
+Subject: CD, version numbers, IDE integration
+From: Benson Margulies <bimargulies@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+As of Maven 3.2.x, we have this ability to parameterize a project
+version, or to drop some sort of extension point module into a Maven
+install to take control of versioning.
+
+I'm considering pushing this as an approach. However, I would be
+grateful for some more details about it. Has anyone published anything
+substantive?
+
+In particular, how do people get IDEs to cope with this? I'm pretty
+sure that IntelliJ would be most perplexed by
+<version>${our-version}</version> at the top of a project hierarchy. I
+gave up on Eclipse some time ago, but I'd be nearly as surprised if
+M2E did not suffer digestive distress in the same circumstance. Is the
+practical alternative to put a fixed string in there but use the
+extension mechanism to override it in actual builds?
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

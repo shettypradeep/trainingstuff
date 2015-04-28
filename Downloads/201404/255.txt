@@ -1,0 +1,139 @@
+From users-return-136051-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr  2 12:59:37 2014
+Return-Path: <users-return-136051-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B92BA1049B
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  2 Apr 2014 12:59:37 +0000 (UTC)
+Received: (qmail 9602 invoked by uid 500); 2 Apr 2014 12:59:24 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 9447 invoked by uid 500); 2 Apr 2014 12:59:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9412 invoked by uid 99); 2 Apr 2014 12:59:11 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 02 Apr 2014 12:59:11 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 02 Apr 2014 12:59:06 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id D41BC6A6565
+	for <users@maven.apache.org>; Wed,  2 Apr 2014 08:58:40 -0400 (EDT)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 7tXBIE8ksi6g for <users@maven.apache.org>;
+	Wed,  2 Apr 2014 08:58:36 -0400 (EDT)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 4FDA76A6564
+	for <users@maven.apache.org>; Wed,  2 Apr 2014 08:58:36 -0400 (EDT)
+Message-ID: <533C0978.20302@artifact-software.com>
+Date: Wed, 02 Apr 2014 08:58:32 -0400
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: Maven Users List <users@maven.apache.org>
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: What packaging for Jira excel reports with maven?
+References: <upzcwqf9fe6e.fsf@dod.no> <CAKDUN1sf6xNVUHws7dTjO3q4FsLnC145Z5=zJHVw=9g05Nga9w@mail.gmail.com>
+In-Reply-To: <CAKDUN1sf6xNVUHws7dTjO3q4FsLnC145Z5=zJHVw=9g05Nga9w@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Looks like something that ANT might be good at.
+
+Ron
+On 02/04/2014 6:58 AM, Anders Hammar wrote:
+> I categorize different usage of Maven into two categories:
+> A) As a build tool
+> B) As a utility tool
+>
+> A) would be for example building a Java web application, i.e. using the
+> full build lifecycle of Maven. B) on the other hand is where you just want
+> to do one specific "thing", for example generate Java classes from an xml
+> schema or creating a jar of existing Java classes.
+>
+> So the first question is if your usage would fit into A or B? To narrow
+> things down a little bit, do you want this excel file to be generated as
+> part of the build of your software and then deployed together with that to
+> the repository? If so, it would be A. If you're just trying to find a tool
+> to generate this excel file on demand, we would be in B.
+>
+> My point here is that if you're in category A then Maven is absolutely
+> appropriate. At least if you're building everything else with Maven. But if
+> you're in category B, then Maven is just one of many options you have. I
+> would even go as far as saying that there are simpler solutions, one being
+> a shell script (or Windows batch file) where you just have you Java command
+> with the jar on the classpath and the options to have the excel file
+> generated. Using Maven here would just add an additional dependency (to
+> Maven) which could just complicate things.
+>
+> My two cents,
+> /Anders
+>
+>
+> On Tue, Apr 1, 2014 at 2:05 PM, Steinar Bang <sb@dod.no> wrote:
+>
+>> I have access to a Jar-file that contains code that:
+>>   - Reads an excel file containing a JQL query, the names of the fields
+>>     from the JQL results to include in excel, as well as the sheets that
+>>     are to be populated
+>>   - Talks to Jira, using the Jira REST API, to do the query and extract
+>>     the results
+>>   - Exports a new excel file populated with the query results
+>>
+>> The Jar-file resides in a plexus archive, so I thought that having a
+>> small maven project, containing a pom.xml and the template excel
+>> spreadshet in src/main/resources/ would be a good match.
+>>
+>> The idea was that I could:
+>>   - set the Jar-file containing the excel export code as a dependency
+>>   - use exec-maven-plugin to run the Jar
+>>   - have the output of exec-maven-plugin (an excel file) as the build
+>>     artifact
+>>
+>> But the idea stopped on that I don't know what packaging should be used
+>> for the pom: "jar" didn't seem appropriate, so I tried "pom", but that
+>> doesn't do anything (no target directory created).
+>>
+>> Is maven appropriate for what I'm trying to do? Is there an appropriate
+>> packaging to use?
+>>
+>> Thanks!
+>>
+>>
+>> - Steinar
+>>
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,104 @@
+From users-return-135593-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb 24 20:39:13 2014
+Return-Path: <users-return-135593-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CB551104A0
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 24 Feb 2014 20:39:13 +0000 (UTC)
+Received: (qmail 52225 invoked by uid 500); 24 Feb 2014 20:39:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 52147 invoked by uid 500); 24 Feb 2014 20:39:09 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 52139 invoked by uid 99); 24 Feb 2014 20:39:09 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Feb 2014 20:39:09 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mfriedenhagen@gmail.com designates 209.85.214.181 as permitted sender)
+Received: from [209.85.214.181] (HELO mail-ob0-f181.google.com) (209.85.214.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Feb 2014 20:39:04 +0000
+Received: by mail-ob0-f181.google.com with SMTP id wp4so5810206obc.12
+        for <users@maven.apache.org>; Mon, 24 Feb 2014 12:38:43 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=PAD0UgiP+PzsMuLAe0iDciaB/BckDdp16+hbnRKyhMA=;
+        b=XlE8bvl74XI9C059zip8KBTG26LzDdWhko+GaS9Sx2bx+aAHH7n7gcaKzRpIFPKGco
+         g8SyxXRbjh13BUaX8H5lPuy3BU0meaQ0nVLISpsmGZr8CkPumY/z2fZyvPrIPs4OQlwO
+         WMBFxrslOlE1Mc0mwKq3BBCghyMHwhPlXaypSZpH+eRAeZ5H0qbKm3fplTgbHCWjYZau
+         hnOkQUjTRHk6R1KiT4wwLJPalbb6FpjR30P0qbFFxFi8GSY9H1lmULRhrXO9YNHZDBlL
+         udhz0hKrqAWVEQCVyPMIl29khVzfDnSaASY4XZVzQrUGr5Cv+w4jTf41o6JREiuXNnht
+         Qx/Q==
+X-Received: by 10.60.51.230 with SMTP id n6mr23427564oeo.35.1393274323420;
+ Mon, 24 Feb 2014 12:38:43 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.182.24.227 with HTTP; Mon, 24 Feb 2014 12:38:03 -0800 (PST)
+In-Reply-To: <530BAA4C.3070303@gmx.de>
+References: <CAPCjjnGHMv1eaTL9vzJqOB2P+_sWbK+XO0nH8Q-BiTuCBCHYfA@mail.gmail.com>
+ <530BAA4C.3070303@gmx.de>
+From: Mirko Friedenhagen <mfriedenhagen@gmail.com>
+Date: Mon, 24 Feb 2014 21:38:03 +0100
+Message-ID: <CAK8jvqzcGFm4e=EahNOwCgyBw2xku=iDQz9p_A78JZESAPDqQQ@mail.gmail.com>
+Subject: Re: about https://jira.codehaus.org/browse/MNG-5576 (Allow continuous
+ delivery friendly versions)
+To: Maven Users List <users@maven.apache.org>, info@soebes.de
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello,
+
+I just tried this with a small multimodule pet project, see the mvn321
+branch (https://github.com/1and1/testlink-junit/compare/master...mvn321).
+
+Now giving revision as a property (mvn321 -Drevision=NULL clean
+verify) does *not* work, enforcer complains about being not able to
+resolve the reactor artifacts. You have to put revision into the
+environment, so
+env revision=NULL mvn321 clean verify does the trick.
+
+Regards Mirko
+--
+http://illegalstateexception.blogspot.com/
+https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+https://bitbucket.org/mfriedenhagen/
+
+
+On Mon, Feb 24, 2014 at 9:23 PM, Karl Heinz Marbaise <khmarbaise@gmx.de> wrote:
+> Hi Dan,
+>
+> now you can write on your GAV definition a thing like:
+>
+> <groupId>...</groupId>
+> <artifactId>...</artifactId>
+> <version>1.0-${revision}-SNAPSHOT</version>
+>
+> and via command line you can now do the following:
+>
+> mvn -Drevision=3456 clean test
+>
+> If you done that via Maven 3.1.1 you get a warning with Maven 3.2.1 you
+> don't.
+>
+> Kind regard
+> Karl-Heinz Marbaise
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

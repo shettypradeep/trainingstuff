@@ -1,0 +1,97 @@
+From users-return-135942-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 26 07:36:11 2014
+Return-Path: <users-return-135942-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9EDBA1093C
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Mar 2014 07:36:11 +0000 (UTC)
+Received: (qmail 60756 invoked by uid 500); 26 Mar 2014 07:36:08 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 59924 invoked by uid 500); 26 Mar 2014 07:36:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 59914 invoked by uid 99); 26 Mar 2014 07:36:04 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Mar 2014 07:36:04 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of raofengyun@gmail.com designates 209.85.128.177 as permitted sender)
+Received: from [209.85.128.177] (HELO mail-ve0-f177.google.com) (209.85.128.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Mar 2014 07:35:58 +0000
+Received: by mail-ve0-f177.google.com with SMTP id sa20so1836173veb.8
+        for <users@maven.apache.org>; Wed, 26 Mar 2014 00:35:38 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=MDX09kaxL7Mfz4Eopr1VAA7lJ7O1HK1rwypVL13B6JA=;
+        b=MlsPz+JuyqZhkWaJtlbllEdiKNV/7blu6aHyAaYnzeoY5NJEN+9R5DWZUYNmpQFQvS
+         sjYIcDUIgYjJgQ3t1pTHzknzAhT2GiGFvn6N9hikzRRyGY9os2VhYbL/FXVnT7WdASpd
+         FnH2T2T6OaCzzNIsPTy1shkKwC4u/MOtLo5YRdSmsLcnIT04HCBYlD90uYK++HW9URiS
+         kdAhq86g3J6srwSuokg6eo9UqmEpJ3j2t4wqf+C/7Whnp1auYNCU9hO6sZOl/IieQXXC
+         neZj0hSCCbSN+graEvXifGmfhsQDq82gpd6+xtaCb8d7Hh9wlCEO/ECCbfihPEjAGC4g
+         abCw==
+MIME-Version: 1.0
+X-Received: by 10.221.4.66 with SMTP id ob2mr54857vcb.28.1395819338121; Wed,
+ 26 Mar 2014 00:35:38 -0700 (PDT)
+Received: by 10.220.232.68 with HTTP; Wed, 26 Mar 2014 00:35:38 -0700 (PDT)
+Date: Wed, 26 Mar 2014 15:35:38 +0800
+Message-ID: <CAGSyEuAkJtsN2UoQZVBS1QFHOgA7R5uXXEmDhEmTsUoy_mAAmA@mail.gmail.com>
+Subject: Why is "mvn archetype:generate" so low?
+From: Fengyun RAO <raofengyun@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=089e0122a924d1cbf004f57d8317
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0122a924d1cbf004f57d8317
+Content-Type: text/plain; charset=ISO-8859-1
+
+I try to generate a project in batch mode following:
+http://maven.apache.org/archetype/maven-archetype-plugin/examples/generate-batch.html
+
+Below is the output in the console:
+
+Microsoft Windows [version 6.1.7601]
+X:\Test>mvn archetype:generate -B
+-DarchetypeGroupId=org.apache.maven.archetypes
+ -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.0
+-Dgroup
+Id=com.company -DartifactId=project -Dversion=1.0 -Dpackage=1.5
+[INFO] Scanning for projects...
+[INFO]
+[INFO]
+------------------------------------------------------------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO]
+------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-archetype-plugin:2.2:generate (default-cli) @
+standalone-pom >>
+>
+[INFO]
+[INFO] <<< maven-archetype-plugin:2.2:generate (default-cli) @
+standalone-pom <<
+<
+[INFO]
+[INFO] --- maven-archetype-plugin:2.2:generate (default-cli) @
+standalone-pom --
+-
+[INFO] Generating project in Batch mode.
+*It hangs here for hours! *
+
+what's going on here? why it hangs?
+
+I used IntelliJ IDEA 13.1, and choose to create a new Maven project
+following the
+tool window, it also hangs on "Generating project in Batch mode."
+
+Any suggestions are appreciated.
+
+--089e0122a924d1cbf004f57d8317--
+

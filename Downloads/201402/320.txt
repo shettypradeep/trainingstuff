@@ -1,0 +1,94 @@
+From users-return-135368-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb  6 14:59:00 2014
+Return-Path: <users-return-135368-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0ADA910151
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  6 Feb 2014 14:59:00 +0000 (UTC)
+Received: (qmail 15490 invoked by uid 500); 6 Feb 2014 14:58:56 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 15196 invoked by uid 500); 6 Feb 2014 14:58:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 15180 invoked by uid 99); 6 Feb 2014 14:58:53 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Feb 2014 14:58:53 +0000
+X-ASF-Spam-Status: No, hits=3.2 required=5.0
+	tests=HTML_MESSAGE,SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (nike.apache.org: transitioning domain of jarlathreidy@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Feb 2014 14:58:48 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <jarlathreidy@gmail.com>)
+	id 1WBQPK-0002Yp-VR
+	for users@maven.apache.org; Thu, 06 Feb 2014 06:58:27 -0800
+Date: Thu, 6 Feb 2014 06:58:26 -0800 (PST)
+From: TenLeftFingers <jarlathreidy@gmail.com>
+To: users@maven.apache.org
+Message-ID: <CALDR_3ft+XipmjzWB2fkUMYW7-9mFSG7cH0vCNoyD02M_tSCJA@mail.gmail.com>
+In-Reply-To: <CALy+7Um-FmGhAUGVrOficAsXex+M6FDAvv=hXUvESBT-nZ856g@mail.gmail.com>
+References: <1391622778030-5783294.post@n5.nabble.com> <52F28A38.4090909@yahoo.com> <CALDR_3c9BHW88+OqpeTgxhD7jXt+6if1o=RhBgUC69Fv4q8cCw@mail.gmail.com> <CALy+7U=tEBmO-z7_H01PbzPSw5O=J58kaF0C4nh9wtS2sch0ww@mail.gmail.com> <CALDR_3dMQVN2zCW4zKm+0O1QprxXLCgk7dfbREUgUp2vhwU1Cg@mail.gmail.com> <CALy+7Um-FmGhAUGVrOficAsXex+M6FDAvv=hXUvESBT-nZ856g@mail.gmail.com>
+Subject: Re: Build is successful but can't run?
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_327300_3818317.1391698706532"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+------=_Part_327300_3818317.1391698706532
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Thanks Wayne. As I say, something isn't connecting when I try without the
+maven-assembly-plugin. I may figure it out in the future. Thank you Mark
+also.
+
+
+On Thu, Feb 6, 2014 at 2:43 PM, Wayne Fay [via Maven] <
+ml-node+s40175n5783375h2@n5.nabble.com> wrote:
+
+>  > I added the maven-assembly-plugin as described here:
+> >
+> http://stackoverflow.com/questions/574594/how-can-i-create-an-executable-jar-with-dependencies-using-maven
+> > and now the dependencies are bundled within the jar. Thanks for your
+> help
+>
+> This is a fine approach. I still maintain the exec plugin is a great
+> option for these types of uses - so long as you (the developer) are
+> the one who needs to run the app. If you want to deliver it to a
+> third-party in a single executable jar format, then assembly and other
+> plugins are generally superior.
+>
+> Wayne
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: [hidden email]<http://user/SendEmail.jtp?type=node&node=5783375&i=0>
+> For additional commands, e-mail: [hidden email]<http://user/SendEmail.jtp?type=node&node=5783375&i=1>
+>
+>
+>
+> ------------------------------
+>  If you reply to this email, your message will be added to the discussion
+> below:
+>
+> http://maven.40175.n5.nabble.com/Build-is-successful-but-can-t-run-tp5783294p5783375.html
+>  To unsubscribe from Build is successful but can't run?, click here<http://maven.40175.n5.nabble.com/template/NamlServlet.jtp?macro=unsubscribe_by_code&node=5783294&code=amFybGF0aHJlaWR5QGdtYWlsLmNvbXw1NzgzMjk0fDEyMDg3OTQ0MDQ=>
+> .
+> NAML<http://maven.40175.n5.nabble.com/template/NamlServlet.jtp?macro=macro_viewer&id=instant_html%21nabble%3Aemail.naml&base=nabble.naml.namespaces.BasicNamespace-nabble.view.web.template.NabbleNamespace-nabble.view.web.template.NodeNamespace&breadcrumbs=notify_subscribers%21nabble%3Aemail.naml-instant_emails%21nabble%3Aemail.naml-send_instant_email%21nabble%3Aemail.naml>
+>
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Build-is-successful-but-can-t-run-tp5783294p5783377.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+------=_Part_327300_3818317.1391698706532--
+

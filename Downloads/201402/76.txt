@@ -1,0 +1,120 @@
+From users-return-135503-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Feb 15 15:52:34 2014
+Return-Path: <users-return-135503-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 767F8108AB
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 15 Feb 2014 15:52:34 +0000 (UTC)
+Received: (qmail 56847 invoked by uid 500); 15 Feb 2014 15:52:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 56784 invoked by uid 500); 15 Feb 2014 15:52:29 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 56774 invoked by uid 99); 15 Feb 2014 15:52:27 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 15 Feb 2014 15:52:27 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of t.broyer@gmail.com designates 209.85.216.173 as permitted sender)
+Received: from [209.85.216.173] (HELO mail-qc0-f173.google.com) (209.85.216.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 15 Feb 2014 15:52:22 +0000
+Received: by mail-qc0-f173.google.com with SMTP id i8so21680550qcq.18
+        for <users@maven.apache.org>; Sat, 15 Feb 2014 07:52:02 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=Ylm8SN0yiXopSHU7pM8OWCSSojHmP0NuisqXh/V5hdY=;
+        b=s2UPNqQgpxcNsTADl9f/usnXivaptX6+v4RmfBqGcIkA9hVubqJxBw5+wjszH4DlQZ
+         ckYRQDkH8IFzRgBvCoFkAsY9abHI9bcKNyymsBWhnHM6rRhggcgUR01Ns875mVNF8pIt
+         vhDKIx8M28qm/zV/TsxLKyFJBgiP5R4gBN+JsKPyHpCo025Muo5i0AHB51oYewaQMiNX
+         oF5UBErRamSO03+Tto3GiqGbsoZjhJ93ruN0fbSCi1V29U3i/sQpiGLVBcIz+j1X61Nv
+         hYPbi8Iux1Fj07CQXnWCO0deO8Sl1m7iK5NC04s3a4+bYRHyncgkmFaap2TRPuzz7RNb
+         3BCQ==
+X-Received: by 10.140.102.242 with SMTP id w105mr2271759qge.74.1392479522038;
+ Sat, 15 Feb 2014 07:52:02 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.140.95.244 with HTTP; Sat, 15 Feb 2014 07:51:41 -0800 (PST)
+In-Reply-To: <CANWgJS6fxowEQFnYEovvLBPQcSAz6cCeWabPpt9LvMsLHrVm7A@mail.gmail.com>
+References: <CAPCjjnE3JLMEEmbMGV2xLCqVsSXhYDvFn+uS_99TQ8qfSKB5tA@mail.gmail.com>
+ <CANWgJS6fxowEQFnYEovvLBPQcSAz6cCeWabPpt9LvMsLHrVm7A@mail.gmail.com>
+From: Thomas Broyer <t.broyer@gmail.com>
+Date: Sat, 15 Feb 2014 16:51:41 +0100
+Message-ID: <CAEayHEO=LG639K6tAXkFUk=WK45sRNgmCGRF0EMFY8qs7VO87w@mail.gmail.com>
+Subject: Re: Possible build collision between CI snapshot build and Release build
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c1707e45259604f273e7d2
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c1707e45259604f273e7d2
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Sat, Feb 15, 2014 at 4:18 PM, Baptiste Mathus <bmathus@batmat.net> wrote=
+:
+
+> Hi Dan,
+> Not sure what you mean. You say "CI", are you taking about a specific
+> server? If Jenkins for example, wouldn't it then be more a Jenkins user m=
+l
+> question?
+>
+> And I don't see how a snapshot build could interfere with another build
+> with a release version.
+> Could you give details about your issue so that we can help you?
+>
+
+mvn release:prepare does a first commit with the POM modified with the
+no-SNAPSHOT version, then another commit with the POM modified with the
+"next" SNAPSHOT version.
+If a build is triggered for the first commit and basically does a "mvn
+install" or, worse, a "mvn deploy", then it'll end up deploying your
+release version, the very same that "mvn release:perform" will deploy too
+(very same version information, not necessarily the same artifact: might
+not deploy javadoc and sources for example, or the artifact might be
+slightly different because you have plugins in a profile triggered only on,
+or never on, release builds).
+I think that what Dan referred to as a "CI snapshot build" is the kind of
+build triggered by a commit (which generally builds snapshots).
+
+
+>
+> Cheers
+> Le 15 f=C3=A9vr. 2014 07:01, "Dan Tran" <dantran@gmail.com> a =C3=A9crit =
+:
+>
+> > Hello
+> >
+> >
+> > It is possible that while release:prepare cutting the tag and CI for
+> > snapshot build wakeup at the same time.  Is there a way to prevent this=
+?
+> > like a a profile to fail the build if the version happen to be a releas=
+e
+> > version.  Ie is there a way to detect this in a profile?
+> >
+> > I currently have to keep remind my self to turn off CI snapshot build
+> while
+> > release is in progress, and too many to remember.
+> >
+> > Advice is greatly appreciated
+> >
+> > -Dan
+> >
+>
+
+
+
+--=20
+Thomas Broyer
+/t=C9=94.ma.b=CA=81wa.je/ <http://xn--nna.ma.xn--bwa-xxb.je/>
+
+--001a11c1707e45259604f273e7d2--
+

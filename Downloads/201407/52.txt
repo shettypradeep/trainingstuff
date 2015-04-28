@@ -1,0 +1,225 @@
+From users-return-136890-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jul 25 10:10:32 2014
+Return-Path: <users-return-136890-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CA36D11540
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 25 Jul 2014 10:10:32 +0000 (UTC)
+Received: (qmail 97900 invoked by uid 500); 25 Jul 2014 10:10:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 97818 invoked by uid 500); 25 Jul 2014 10:10:31 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 97807 invoked by uid 99); 25 Jul 2014 10:10:30 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 25 Jul 2014 10:10:30 +0000
+X-ASF-Spam-Status: No, hits=3.8 required=5.0
+	tests=HTML_IMAGE_ONLY_24,HTML_MESSAGE,HTML_SHORT_LINK_IMG_3,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of vincent.zurczak@linagora.com designates 109.197.180.137 as permitted sender)
+Received: from [109.197.180.137] (HELO alderaan.linagora.com) (109.197.180.137)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 25 Jul 2014 10:10:27 +0000
+Received: from [192.168.1.15] (dra38-8-78-244-5-202.fbx.proxad.net [78.244.5.202])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(No client certificate requested)
+	by alderaan.linagora.com (Postfix) with ESMTPSA id 0C323762
+	for <users@maven.apache.org>; Fri, 25 Jul 2014 12:01:26 +0200 (CEST)
+Message-ID: <53D22CF9.80404@linagora.com>
+Date: Fri, 25 Jul 2014 12:10:01 +0200
+From: Vincent Zurczak <vincent.zurczak@linagora.com>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: testing-harness plugin: LocalRepositoryManager is not set
+References: <53CFD6D8.5030200@linagora.com> <53D103CD.5060201@linagora.com>
+In-Reply-To: <53D103CD.5060201@linagora.com>
+Content-Type: multipart/alternative;
+ boundary="------------060004010908060700030302"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------060004010908060700030302
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Hi,
+
+Since I only needed to inject the Maven propject, and rather than use a 
+stub, I decided to inject the Maven project manually in my mojo.
+
+> final MavenProject mvnProject = new MavenProject() ;
+> mvnProject.setFile( baseDir ) ;
+> this.rule.setVariableValueToObject( mojo, "project", mvnProject );
+
+But I would have expected the lookupConfiguredMojo method to do this for me.
+Until I know more about this, I will stick with my workaround.
+
+Regards,
+
+                  Vincent.
+
+-- 
+Vincent Zurczak
+
+Phone: +33 (0) 6 40 28 86 57
+Linagora: www.linagora.com <http://www.linagora.com/>
+
+Twitter <https://twitter.com/VincentZurczak> Vincent Zurczak @ LinkedIn 
+<http://fr.linkedin.com/pub/vincent-zurczak/18/b35/6a7> My Skype ID 
+<callto://vincent.zurczak> My English blog <http://vzurczak.wordpress.com>
+
+--------------060004010908060700030302
+Content-Type: multipart/related;
+ boundary="------------050006050300030806090908"
+
+
+--------------050006050300030806090908
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+    <meta content="text/html; charset=ISO-8859-1"
+      http-equiv="Content-Type">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+    Hi,<br>
+    <br>
+    Since I only needed to inject the Maven propject, and rather than
+    use a stub, I decided to inject the Maven project manually in my
+    mojo.<br>
+    <br>
+    <blockquote type="cite">final MavenProject mvnProject = new
+      MavenProject() ;<br>
+      mvnProject.setFile( baseDir ) ;<br>
+      this.rule.setVariableValueToObject( mojo, "project", mvnProject );</blockquote>
+    <br>
+    But I would have expected the lookupConfiguredMojo method to do this
+    for me.<br>
+    Until I know more about this, I will stick with my workaround.<br>
+    <br>
+    Regards,<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vincent.<br>
+    <br>
+    <div class="moz-signature">-- <br>
+      <meta http-equiv="content-type" content="text/html;
+        charset=ISO-8859-1">
+      <title></title>
+      Vincent Zurczak<br>
+      <br>
+      Phone: +33 (0) 6 40 28 86 57<br>
+      Linagora: <a href="http://www.linagora.com/">www.linagora.com</a><br>
+      <br>
+      <a href="https://twitter.com/VincentZurczak"><img alt="Twitter"
+          title="Vincent Zurczak @ Twitter"
+          src="cid:part2.00060409.04070303@linagora.com" height="16"
+          border="0" width="16"></a> <a
+        href="http://fr.linkedin.com/pub/vincent-zurczak/18/b35/6a7"><img
+          alt="Vincent Zurczak @ LinkedIn"
+          src="cid:part4.05070004.00040408@linagora.com" height="16"
+          border="0" width="16"></a>&nbsp;<a href="callto://vincent.zurczak"><img
+          alt="My Skype ID"
+          src="cid:part6.03060007.00000704@linagora.com" height="16"
+          border="0" width="16"></a> <a
+        href="http://vzurczak.wordpress.com"><img alt="My English blog"
+          src="cid:part8.00040805.06010209@linagora.com" height="16"
+          border="0" width="16"></a><br>
+    </div>
+  </body>
+</html>
+
+--------------050006050300030806090908
+Content-Type: image/png;
+ name="twitter_16.png"
+Content-Transfer-Encoding: base64
+Content-ID: <part2.00060409.04070303@linagora.com>
+Content-Disposition: inline;
+ filename="twitter_16.png"
+
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAALEgAACxIB0t1+/AAAABV0RVh0Q3JlYXRpb24gVGltZQA2LzI0LzA59sFr4wAAABx0
+RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNAay06AAAAG5SURBVDiNlZNLaxRBEMf/
+0106O240iQm+NiEJepAlgRiDT/TgHvQD+IW8xQ/jyZNgCCSH9SDEQEIuYnzGFTLrPmCHmZ6u
+8rAy0x02YgqKbqqrfv2vajp41YovWZZ1gSziFBYg2NUqaFBq7caV8Gy9FoUI/rNYAPxI0sVW
+mm1QylLXWmE/SU4jAJOakLLUKbeCo9wUB+tv3mOreYBH9xfQeLp6IuAoN8itQBkGWEpv7sSo
+TNXQ3Im9+Cg3DJBhhoUUZIrOF6sbH2WGGWRYwE4eVSrF/uXaa6/g7uoMHjduOQABZVZgpSTo
+sARUazc8wIePXTx8UuZmVv4qcJJcBcft2Z0ZL3ekAhfw4vmcB/jW62MgxxRkzD7AaWHz0yGm
+L0+WBE2AC2AGGesPsToWIc2HgbfvvoPNr+Ls5nwFy7fnyxaGCsR7rqXZCNs/h52OzfpD/Nxv
+YwmuAgGllvF7kGM8IgDA9ekE6swF7McBstyrx4OFq2AZAAC6SY7UMoi0ir92sqlrAkxEGm2l
+MTfew71aFTpQHuBLt4e+EDqJxWE3A2kV07lQrXQSu73XSi769/37c1VD1Z6I9MofNyroYTib
+O14AAAAASUVORK5CYII=
+--------------050006050300030806090908
+Content-Type: image/png;
+ name="linkedin_16.png"
+Content-Transfer-Encoding: base64
+Content-ID: <part4.05070004.00040408@linagora.com>
+Content-Disposition: inline;
+ filename="linkedin_16.png"
+
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAALEgAACxIB0t1+/AAAABV0RVh0Q3JlYXRpb24gVGltZQA2LzI0LzA59sFr4wAAABx0
+RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNAay06AAAAHJSURBVDiNlZE/aBRREMZ/
+u3nnZe9yilEwjaKFCEIIESOsYGMVUMHKRqxs7Kxsgp22acXCYGMTxEI4i3QBwUPxD2KhGOHg
+xCJg9HJusvtm3t2zSLzsGv9cvubNzPfN8M284NLcwijlkboPTcwOEPRcA5ucNxKU64dqlfjI
+vhGCYLBm76G5ksQt0boR9TFAo/V1JwYYqw4j6mMjorTaCQDLbxsAHJj4/zatdoKIYsQKoiUA
+ns3eAODc3OJALsQKRlJFKq5IiMOlawCYqIrvOnTtByaqEJbKW7pUMWIdol0Axq/dBmD0+BRj
+2cZNmt9XKK23OXn0IB8+N+lU9rOrtnfTgcOotYgOA/Du7k0A4tk68zNXAbjz5ClXzk5RizY0
+1+895sWqAqDWEopVRLt9F0Ahvnh6st8McPnMRF8vVgk1E0Qdoi43YCt+8Pwj47ce8fDlJwBO
+HTvc12smhCr6zwGLS8uIOu43lgq8qENFMSrCkGz/hV94/+Vb4c3zKoJxYlEtDsjnv3P5mhOL
+Uaf4TkKYO9Tf1snXemmGc0pQvTDzKhgqnwj37CaIom3iP8GnKb3VDr5rXxvns2kyWfDryeRA
+3ZsIQv8G05v+CelaEnZPj2+7AAAAAElFTkSuQmCC
+--------------050006050300030806090908
+Content-Type: image/png;
+ name="skype_16.png"
+Content-Transfer-Encoding: base64
+Content-ID: <part6.03060007.00000704@linagora.com>
+Content-Disposition: inline;
+ filename="skype_16.png"
+
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAALEgAACxIB0t1+/AAAABV0RVh0Q3JlYXRpb24gVGltZQA2LzI0LzA59sFr4wAAABx0
+RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNAay06AAAAImSURBVDiNlZJNS1RRGMd/
+93rmjuO8NjY2KRYqlCCVoIg7Y6Boo4SbNq2CPkDQIugFCaJNX6GdH6BV6CYoojeDNMxekMKF
+4sw0MDP3Xqd7zp1zWzjccdqkDzyLc87/+b88HOPm8/VemTqxpGPJSY5QZsP+aNWLV4Tdk1se
+601NjGdMjEMOB8BqNTX5xdfLohFJTETMgKWSfxQDDHYbNCKJCeEpzabbqd0o1flTcQh0sG83
+0kVPPo2VioWYTTfAUxrhqQCvGYQPXrHG/GCU2cIQPRETgLLr83SlzFrZJ5JNtLEqwPR8jaeD
+sK+PxLh2PhsOA+TigjsXT3Ipb3VgPV9jSqXxmu2eHc2Eqvfe/ObxZ5tfbhOAsYF4B1Yqjdgn
+aEc4qDqVFXzYqnN3o0RhrJfXroHXbO9LKo1QSiMPEKxVfS5kBABzoxnmWo5ebNZ5+7OKzKRD
+rFIaY2SxGOT7rfAyUa5x+XScqeE048cECdFWLDk+8ytOeN7dkQgl2xEMHbAwfZy4ZbLwcodi
+tJvxnMWDc0n64oK+hOiIq6TuJEgKg+lTcQCeFPIsrlbYq7pAEgDnn30pqRG+r5GtD1ORAc+2
+Pa4ORBnKRrlf6O9Y7KOveyEWwPdbDpyaTyTRBcCtTzZbbpMbwzGSrfzbDc3tVZt3FdVWd5oo
+qTFSD99/M5L5s1bOQrRI/le+00SWJYG9+13o2vqMVvqVtPvOHGq6VYYq/TD3Nmb+AvtXIrG4
+DTNHAAAAAElFTkSuQmCC
+--------------050006050300030806090908
+Content-Type: image/png;
+ name="wordpress_16.png"
+Content-Transfer-Encoding: base64
+Content-ID: <part8.00040805.06010209@linagora.com>
+Content-Disposition: inline;
+ filename="wordpress_16.png"
+
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAALEgAACxIB0t1+/AAAABV0RVh0Q3JlYXRpb24gVGltZQA2LzI0LzA59sFr4wAAABx0
+RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNAay06AAAAJoSURBVDiNlZBBSxtRFIXP
+m84kIwMZJyEpSFZJjVhIqxiVYEFrjRJodlkIoaK4sEIgf6Iu7A+oFpqtvyAyKu6MMzZisBu3
+EQzuKsGV5N3J7UbHtlCoB97i8c4597tPvJmaCjNzDUAWT5MrhHivSilrAwMD2Xg8DiHEfyWZ
+Ge12O3t9fV1TJVEWAJrN5pPGx2IxSKKseJVOs67r/oOiKBgfH8fq6ipej4wAAH6cn6NareL0
+9BS9Xs/33t3dQbwcHvYLgsEgvmxtYeQ++LfqR0eoVCp/FKiSCM+IAADfqlUkk8l/Yn/a2IC8
+9wKAJIJCRCAiRKNRlEolHB4e+oZcLofl5WX/Pjg4CCLC5OQkHnKKRwSSEp83N/E8FsP3kxM/
+8HZmBs7xMW5vbwEAqVQKJCU+rq2BpIT3O8FYJoMPS0vY29vzCxzHARHh4OAAANDr9TA7O4ux
+TOaRgDzP32t+fh4/b26wv7+PdruN1uUlUkNDcBwHAGDbNt7Nzfn7k+c9EjQaDcTjcUxMTMC2
+bdi2jVwuh5WVFezu7uLq6gqtVgsLCwtoNBo+AUKhEEciES4Wi8zMvLOzw4lEgkdHR7ler3On
+0+FEIsHT09NcLpeZmblYLHIkEuFQKMQwDINN02TLsth1Xe50OmyaJqfTaX7Q+vo6m6bJtVqN
+Xddly7LYNE02DIMVz/MgpUS320WhUMDFxQUWFxeRz+f9z8zn8zAMA+FwGIVCAd1uF1JKeJ4H
+aKp6pmkaBzSNg4EA9+k6v0gm+ev2tk9wXK+z1d/PfbrOwUCAA5rGmqaxpqpnUBQlKoRoCiH4
+iaepKEr0F9OjVdvxxAkGAAAAAElFTkSuQmCC
+--------------050006050300030806090908--
+
+--------------060004010908060700030302--
+

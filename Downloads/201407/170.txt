@@ -1,0 +1,77 @@
+From users-return-136841-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jul 22 17:41:55 2014
+Return-Path: <users-return-136841-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1A32C11E53
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 22 Jul 2014 17:41:55 +0000 (UTC)
+Received: (qmail 76477 invoked by uid 500); 22 Jul 2014 17:41:53 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 76396 invoked by uid 500); 22 Jul 2014 17:41:53 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 76385 invoked by uid 99); 22 Jul 2014 17:41:53 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Jul 2014 17:41:53 +0000
+Received: from localhost (HELO robertscholte) (127.0.0.1)
+  (smtp-auth username rfscholte, mechanism login)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Jul 2014 17:41:53 +0000
+Content-Type: text/plain; charset=iso-8859-15; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: maven-dependency-plugin unpacking aar format?
+References: <CAA8BW8HFWKNmv_ZTE9wuYQMDJ_FxUzhkXAnW_g3wrVFjovj=cA@mail.gmail.com>
+Date: Tue, 22 Jul 2014 19:41:49 +0200
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.xjet3z06kdkhrr@robertscholte>
+In-Reply-To: <CAA8BW8HFWKNmv_ZTE9wuYQMDJ_FxUzhkXAnW_g3wrVFjovj=cA@mail.gmail.com>
+User-Agent: Opera Mail/12.17 (Win32)
+
+Hi,
+
+to be able to unpack/unarchive Maven must know which Unarchiver should be  
+used for this type. 'aar' is not one of the few default supported types,  
+hence the exception.
+The plugin responsible for packaging the aar-file should also have  
+configured how to unarchive the aar-file.
+In case of dependency:unpack it is quite simple: I would expect that the  
+packaging plugin is configured in the pom.xml with a  
+<extension>true</extension>. This way Maven can find such information.
+
+However, I can imagine that in case of unpack-dependencies the  
+aar-project.pom isn't used to detect the corresponding Unarchiver. Sounds  
+like an improvement to me.
+
+thanks,
+Robert
+
+ps. this is also an interesting usecase for the consumer-pom or the  
+flatten-maven-plugin
+
+
+
+Op Mon, 21 Jul 2014 22:40:18 +0200 schreef David Hoffer  
+<dhoffer6@gmail.com>:
+
+> I'm getting the following error trying to unpack some files from an aar.
+>  Is this not supported?  Is there any way to do this?
+>
+> Failed to execute goal
+> org.apache.maven.plugins:maven-dependency-plugin:2.8:unpack-dependencies
+> (unpack-service) on project service: Unknown archiver type: No such
+> archiver: 'aar'. -> [Help 1]
+>
+> -Dave
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

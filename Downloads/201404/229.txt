@@ -1,0 +1,92 @@
+From users-return-136068-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Apr  3 12:53:35 2014
+Return-Path: <users-return-136068-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EBC9010DDB
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  3 Apr 2014 12:53:34 +0000 (UTC)
+Received: (qmail 76375 invoked by uid 500); 3 Apr 2014 12:53:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 75603 invoked by uid 500); 3 Apr 2014 12:53:29 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 75582 invoked by uid 99); 3 Apr 2014 12:53:27 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 03 Apr 2014 12:53:27 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 03 Apr 2014 12:53:22 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 4A5566A6564
+	for <users@maven.apache.org>; Thu,  3 Apr 2014 08:52:59 -0400 (EDT)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id Y_Na8WK9PKLt for <users@maven.apache.org>;
+	Thu,  3 Apr 2014 08:52:54 -0400 (EDT)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 2FECF6A6562
+	for <users@maven.apache.org>; Thu,  3 Apr 2014 08:52:54 -0400 (EDT)
+Message-ID: <533D59A3.2060507@artifact-software.com>
+Date: Thu, 03 Apr 2014 08:52:51 -0400
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: "users@maven.apache.org >> Maven Users List" <users@maven.apache.org>
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: how to exclude log4j.properties when mvn assembly:single?
+References: <CAFAd71UhYjQ=EVWGBfRpsZBWKVRuYPy-EwTOtiHQQ_b8DjRzPw@mail.gmail.com>
+In-Reply-To: <CAFAd71UhYjQ=EVWGBfRpsZBWKVRuYPy-EwTOtiHQQ_b8DjRzPw@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Why are you using the assembly-plugin?
+You normally don't need it to build jars.
+
+
+
+On 03/04/2014 5:24 AM, Li Li wrote:
+> I want to jar my program with all the dependencies. I have a
+> dependency of hadoop. the log4j.properties is included in my
+> application.
+> how to exclude it?
+> I have tried this but no luck
+>
+> <artifactId>maven-assembly-plugin</artifactId>
+>     <configuration>
+>       <excludes>
+>       <exclude>**/log4j.properties</exclude>
+>       </excludes>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

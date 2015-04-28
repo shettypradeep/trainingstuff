@@ -1,0 +1,93 @@
+From users-return-135464-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 13 21:55:06 2014
+Return-Path: <users-return-135464-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4CA1110AB8
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 13 Feb 2014 21:55:06 +0000 (UTC)
+Received: (qmail 97867 invoked by uid 500); 13 Feb 2014 21:54:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 97784 invoked by uid 500); 13 Feb 2014 21:54:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 97775 invoked by uid 99); 13 Feb 2014 21:54:57 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 21:54:57 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (nike.apache.org: transitioning domain of laredotornado@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 21:54:52 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <laredotornado@gmail.com>)
+	id 1WE4Ep-0007Js-Ld
+	for users@maven.apache.org; Thu, 13 Feb 2014 13:54:31 -0800
+Date: Thu, 13 Feb 2014 13:54:31 -0800 (PST)
+From: laredotornado-3 <laredotornado@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1392328471659-5784691.post@n5.nabble.com>
+In-Reply-To: <CADVp3v-Ys6hx3+nmmnSm2+d_baFbjo0kXLvgy6nZpMG6KvM2VA@mail.gmail.com>
+References: <1392153066705-5784108.post@n5.nabble.com> <CADVp3v_ZQa+69g4wkGo6Zivpat60tPnfpOJKOZ0M3EKXEAvP6g@mail.gmail.com> <20140212135015.GB25862@IUPUI.Edu> <CADVp3v-Ys6hx3+nmmnSm2+d_baFbjo0kXLvgy6nZpMG6KvM2VA@mail.gmail.com>
+Subject: Re: Why is dependency:analyze lying to me?
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+This may fall into the =E2=80=9CHow the hell is Maven supposed to know?=E2=
+=80=9D category,
+but one of the dependencies that dependency:analyze lists when I run it on
+my WAR project is
+
+[WARNING] Unused declared dependencies found:
+=E2=80=A6
+[WARNING]  =20
+org.springframework.security:spring-security-taglibs:jar:3.1.1.RELEASE:comp=
+ile
+
+However, when I comment this out of my pom, a few of my JSPs die with the
+error
+
+=09org.apache.jasper.JasperException: The absolute uri:
+http://www.springframework.org/security/tags cannot be resolved in either
+web.xml or the jar files deployed with this application
+=09
+org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler=
+.java:51)
+=09
+org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:40=
+9)
+=09
+org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:11=
+6)
+
+because the JSP includes this
+
+=09<%@ taglib prefix=3D"sec"
+uri=3D"http://www.springframework.org/security/tags"%>
+
+Anyway, not sure if the plugin can be configured to detect these kind of
+things, but a guy can dream, can=E2=80=99t he??
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Why-is-depen=
+dency-analyze-lying-to-me-tp5784108p5784691.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

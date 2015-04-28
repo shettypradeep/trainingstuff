@@ -1,0 +1,100 @@
+From users-return-137285-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Sep 14 06:34:09 2014
+Return-Path: <users-return-137285-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id ED7BA119AC
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 14 Sep 2014 06:34:08 +0000 (UTC)
+Received: (qmail 93743 invoked by uid 500); 14 Sep 2014 06:34:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 93658 invoked by uid 500); 14 Sep 2014 06:34:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 93646 invoked by uid 99); 14 Sep 2014 06:34:07 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 14 Sep 2014 06:34:07 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.192.173] (HELO mail-pd0-f173.google.com) (209.85.192.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 14 Sep 2014 06:34:02 +0000
+Received: by mail-pd0-f173.google.com with SMTP id ft15so4125347pdb.18
+        for <users@maven.apache.org>; Sat, 13 Sep 2014 23:33:42 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:to:subject:date:message-id:in-reply-to
+         :references:mime-version:content-type:content-transfer-encoding;
+        bh=y3b8wVfg3HPq63e9wtvUJ9KttRmUdKQBuxjkO8nSL+c=;
+        b=dywmZs1O9UcoCM50egJsCwuNOBOyI3evrOJuwlezORWaz8TK5LcTUyMO+Gpl4aBOQ7
+         tCGIf9VNqXWywGQ+agi8vrxexnklIGBOQGjEGzM+6lxxAlQelbkZEKdZs4pCy96JFcjO
+         eZsxXJc+tdHLxvBQ+XF4rjlM6EckjuHbjUXiyutfyKP8+Xg1+0sPX3W95bHMHD/FGbew
+         I8BGCpdqn7DxuFpPtfBmuNWRx1pvy0mkF7uFfIYJQgZKGZj5mqIAL5KEMA3LlU6hWk+s
+         jL4yEo7KAoXRtHoULg5DDjF1o/MEGRjKofu+Z21etigpaeDSA3yLcZ5VWE6eyZMCkj70
+         Ztvw==
+X-Gm-Message-State: ALoCoQnJuHmjoG4LcZA9poEKkim69cgbQUfwWZNySEKxGrl2ivKC1ymSc0XJmkeV9yfgimv8nGKF
+X-Received: by 10.70.38.135 with SMTP id g7mr10715327pdk.100.1410676422391;
+        Sat, 13 Sep 2014 23:33:42 -0700 (PDT)
+Received: from [10.0.62.6] (ip-118-90-125-186.xdsl.xnet.co.nz. [118.90.125.186])
+        by mx.google.com with ESMTPSA id ke2sm7990436pbc.90.2014.09.13.23.33.39
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Sat, 13 Sep 2014 23:33:41 -0700 (PDT)
+From: "Mark Derricutt" <mark@talios.com>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Importing Maven plugins and profiles
+Date: Sun, 14 Sep 2014 18:33:26 +1200
+Message-ID: <348A38A0-E00D-43B4-B361-BDABB0CBC80A@talios.com>
+In-Reply-To: <1410558755104-5804776.post@n5.nabble.com>
+References: <1410558755104-5804776.post@n5.nabble.com>
+MIME-Version: 1.0
+Content-Type: text/plain; format=flowed
+Content-Transfer-Encoding: quoted-printable
+X-Mailer: MailMate (1.8r4489)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+You could do this with the tiles-maven-plugin:
+
+   https://github.com/repaint-io/maven-tiles
+
+We recently forked the old broken plugin and rehomed it under our =
+
+repaint.io banner.
+
+This provides mixins for maven.
+
+On 13 Sep 2014, at 9:52, mavenarch wrote:
+
+> Hi,
+>
+> Is there a way to import plugins and profile from another pom in Maven =
+
+> 3.0
+> as we do for dependencies?
+>
+> thanks & Regards
+>
+>
+>
+> --
+> View this message in context: =
+
+> http://maven.40175.n5.nabble.com/Importing-Maven-plugins-and-profiles-t=
+p5804776.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

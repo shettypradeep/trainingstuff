@@ -1,0 +1,91 @@
+From users-return-135895-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 20 21:38:24 2014
+Return-Path: <users-return-135895-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F30D210E64
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 20 Mar 2014 21:38:23 +0000 (UTC)
+Received: (qmail 67183 invoked by uid 500); 20 Mar 2014 21:38:18 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 67104 invoked by uid 500); 20 Mar 2014 21:38:18 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 67042 invoked by uid 99); 20 Mar 2014 21:38:18 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Mar 2014 21:38:18 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of waynefay@gmail.com designates 209.85.220.43 as permitted sender)
+Received: from [209.85.220.43] (HELO mail-pa0-f43.google.com) (209.85.220.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Mar 2014 21:38:14 +0000
+Received: by mail-pa0-f43.google.com with SMTP id bj1so1530581pad.2
+        for <users@maven.apache.org>; Thu, 20 Mar 2014 14:37:53 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=LNcDkxtEF0MM3PH3KGJkepnOD94bW9M+F4CcbiZZrzs=;
+        b=Z25y/MRsOcV8kfRLd6V7EeVg5A2EdcVgAHHTOXeJEAtLSFHjfysjOkJnATTb7MNZsb
+         aWDXIg2PiFt0o3otO9LqmU/9EruhvPiM0Idptt9itiHI+cgxF14Qml454Yw5eMwXz4Ji
+         u8nb/PSowhLSyPPjEEpB6TeYzh/ThIw8M+LdyZPI32Vdu+AzcKsNmhAxcmYSBKwrSG+Y
+         1IGZWjYS7v+lWIFUYNxTvFZJ4H+sdmG/VoGrQWEJjoCVwzh7w/0grPCTLJDcstTMA7+x
+         ebe9Z21QPO5/Z/pCBdtxbKT5VWWa3SKFRgRnuFOiJ6HIC2qwtAPsQvHnzqsnJhQZoSjI
+         Lcbw==
+X-Received: by 10.68.93.3 with SMTP id cq3mr27312451pbb.145.1395351473846;
+ Thu, 20 Mar 2014 14:37:53 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Thu, 20 Mar 2014 14:37:33 -0700 (PDT)
+In-Reply-To: <1395322237570-5788937.post@n5.nabble.com>
+References: <1395322237570-5788937.post@n5.nabble.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Thu, 20 Mar 2014 16:37:33 -0500
+Message-ID: <CALy+7UmRHr_ngfa053XgLChtOjsf93rdi1P62ikknPEvVvqLZg@mail.gmail.com>
+Subject: Re: The par packaging not working
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Google has more information on the par plugin if you look there. From
+what I can see, the Apache Maven dev team has nothing to do with this
+plugin.
+
+Instead I think you should look at the Codehaus Mojo project, specifically:
+http://mojo.codehaus.org/jboss-packaging-maven-plugin/par-mojo.html
+
+I also found some Github links. Most likely you are going to have to
+build it yourself and "mvn install" it locally to use.
+
+Wayne
+
+On Thu, Mar 20, 2014 at 8:30 AM, lilyevsky <leonidilyevsky@yahoo.com> wrote:
+> The "par" packaging is not working. It is dependent on the
+> org.apache.maven.plugins:maven-par-plugin, but this plugin does not exist.
+> Is it deprecated?
+> I am using the latest maven 3.2.1.
+> How should I make the par package these days? I know this thing is
+> relatively simple: just a collection of jars plus manifest with a few
+> special entries. But I don't want to re-invent the wheel.
+>
+>
+>
+> --
+> View this message in context: http://maven.40175.n5.nabble.com/The-par-packaging-not-working-tp5788937.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

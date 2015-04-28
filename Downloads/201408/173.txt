@@ -1,0 +1,99 @@
+From users-return-137104-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Aug 21 19:14:54 2014
+Return-Path: <users-return-137104-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D1E0A1150E
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 21 Aug 2014 19:14:54 +0000 (UTC)
+Received: (qmail 99177 invoked by uid 500); 21 Aug 2014 19:14:53 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99089 invoked by uid 500); 21 Aug 2014 19:14:53 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99075 invoked by uid 99); 21 Aug 2014 19:14:53 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 21 Aug 2014 19:14:53 +0000
+Received: from localhost (HELO robertscholte) (127.0.0.1)
+  (smtp-auth username rfscholte, mechanism login)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Thu, 21 Aug 2014 19:14:52 +0000
+Content-Type: text/plain; charset=iso-8859-15; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Issue with dependency plugin
+References: <402AE8E1D2FBB84ABE4AB494310DC4A9635021EFAF@TUS1XCHEVSPIN33.SYMC.SYMANTEC.COM>
+Date: Thu, 21 Aug 2014 21:14:45 +0200
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.xkyiev0rkdkhrr@robertscholte>
+In-Reply-To: <402AE8E1D2FBB84ABE4AB494310DC4A9635021EFAF@TUS1XCHEVSPIN33.SYMC.SYMANTEC.COM>
+User-Agent: Opera Mail/12.17 (Win32)
+
+Hi,
+
+be sure you're using the latest version, call
+mvn org.apache.maven.plugins:maven-dependency-plugin:2.8:tree
+
+thanks,
+Robert
+
+Op Thu, 21 Aug 2014 19:29:04 +0200 schreef David Dillard  
+<ddillard@symantec.com>:
+
+> Hi,
+>
+> I've been working with the dependency plugin and I'm seeing something  
+> that I think is wrong, but I'd like someone to confirm it before I file  
+> a bug report.
+>
+> I created a simple pom file which has one dependency for Apache Shiro:
+>
+>   <dependencies>
+>
+>     <dependency>
+>       <groupId>org.apache.shiro</groupId>
+>       <artifactId>shiro-core</artifactId>
+>       <version>1.2.3</version>
+>     </dependency>
+>
+>   </dependencies>
+>
+> And when I run dependency:tree I see:
+>
+> com.symantec.ssg.osrb:dependencytest:jar:1.0
+> \- org.apache.shiro:shiro-core:jar:1.2.3:compile
+>    +- org.slf4j:slf4j-api:jar:1.6.4:compile
+>    \- commons-beanutils:commons-beanutils:jar:1.8.3:compile
+>
+>
+> However, when I set my dependencies to just Apache Commons BeanUtils:
+>
+> <dependencies>
+>
+>     <dependency>
+>       <groupId>commons-beanutils</groupId>
+>       <artifactId>commons-beanutils</artifactId>
+>       <version>1.8.3</version>
+>     </dependency>
+>
+>   </dependencies>
+>
+> And then run dependency:tree I get:
+>
+> com.symantec.ssg.osrb:dependencytest:jar:1.0
+> \- commons-beanutils:commons-beanutils:jar:1.8.3:compile
+>    \- commons-logging:commons-logging:jar:1.1.1:compile
+>
+>
+> So, why don't I see commons-logging under beanutils for Apache Shiro???
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

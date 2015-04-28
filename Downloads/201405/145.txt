@@ -1,0 +1,150 @@
+From users-return-136338-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue May  6 10:30:57 2014
+Return-Path: <users-return-136338-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 00EF2119C6
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  6 May 2014 10:30:57 +0000 (UTC)
+Received: (qmail 43997 invoked by uid 500); 6 May 2014 10:16:16 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 43868 invoked by uid 500); 6 May 2014 10:16:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 43768 invoked by uid 99); 6 May 2014 10:16:14 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 06 May 2014 10:16:14 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of wolf.geldmacher@abacus.ch designates 77.74.4.142 as permitted sender)
+Received: from [77.74.4.142] (HELO postman.abacus.ch) (77.74.4.142)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 06 May 2014 10:16:08 +0000
+Received: from localhost (lena.abanet.ch [77.74.4.230])
+	by postman.abacus.ch (Postfix) with ESMTP id D45E02988B1
+	for <users@maven.apache.org>; Tue,  6 May 2014 12:15:46 +0200 (CEST)
+X-Virus-Scanned: by amavisd-new-2.6.4 (20090625) (Debian) at abacus.ch
+Received: from localhost ([77.74.4.142])
+	by localhost (lena.abanet.ch [77.74.4.230]) (amavisd-new, port 10026)
+	with ESMTP id V-PxJqnUH2Nn for <users@maven.apache.org>;
+	Tue,  6 May 2014 12:15:46 +0200 (CEST)
+X-Virus-Scanned: by amavisd-new-2.4.2 (20060627) (Debian) at abacus.ch
+Received: from postman.abacus.ch ([127.0.0.1])
+	by localhost (postman.abacus.ch [127.0.0.1]) (amavisd-new, port 10026)
+	with LMTP id x4u96Tf9MF7d for <users@maven.apache.org>;
+	Tue,  6 May 2014 12:15:46 +0200 (CEST)
+Received: from [172.25.54.19] (geldmacher-pc.int.abacus.ch [172.25.54.19])
+	by postman.abacus.ch (Postfix) with ESMTP id 831B729885A
+	for <users@maven.apache.org>; Tue,  6 May 2014 12:15:46 +0200 (CEST)
+Message-ID: <5368B651.2010205@abacus.ch>
+Date: Tue, 06 May 2014 12:15:45 +0200
+From: Wolf Geldmacher <wolf.geldmacher@abacus.ch>
+Organization: Abacus Research AG
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.5.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: use separate mirrors for project dendencies and plugin dependencies
+ ??
+References: <CAPCjjnFMA33p+MbvbM98Zd-M002c8--Phz=qP43KPBFYA933zw@mail.gmail.com>	<CADVp3v_v6FY5EdGfp_YpN_W4v7XPgjbiHdZwCye5zFBfw6VQ3Q@mail.gmail.com>	<CAPCjjnHJefP9Y_PvO7tgQCWfq+YXASBSqtKRXbqkSFRgoNKyng@mail.gmail.com>	<5368884B.1050400@landrus.de> <CAPCjjnETY1RrbreWUDt6tWAS_nj=vR0sMFTZqkyC0mm+FSJHMg@mail.gmail.com>
+In-Reply-To: <CAPCjjnETY1RrbreWUDt6tWAS_nj=vR0sMFTZqkyC0mm+FSJHMg@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 06.05.2014 09:07, Dan Tran wrote:
+> Ofcourse, I do have Maven repo manager ̣ nexus at this time), however still
+> struggle on how to get only plugin's artifact goto one proxy and others
+> goto to another proxy using mirror settings.
+>
+> Are you able to do so?
+>
+> -Dan
+I'm none to sure that this would even help at all:
+
+Presumably you are trying to separate artifacts used by plugins during 
+your build (where you might use e.g. GPL licensed modules) from 
+artifacts used as dependencies in your project proper (where using that 
+same GPL licensed modules would make your legal department scream) by 
+separating the repositories used to provide them.
+
+As far as I know/understand all artifacts are downloaded to the same 
+local cache repository (~/.m2/repository), regardless of whether they 
+were required by some plugin or as a dependency of your project.
+
+This makes them available for both purposes and thus obliterates all 
+your efforts of keeping them separate.
+
+Maven Masters: Please correct me if I'm wrong.
+
+Cheers,
+Wolf
+>
+>
+>
+> On Mon, May 5, 2014 at 11:59 PM, Christian Domsch <mail@landrus.de> wrote:
+>
+>> Hi Dan,
+>>
+>> Did you consider using nexus? There you can setup any kind of strange repo
+>> setup your mind can come up with ;-) For your case, create one repo for
+>> your project stuff and one repo for your plugin stuff. Create a group for
+>> both for easy access and control access by authorization...
+>>
+>> Christian
+>>
+>>
+>> On 06.05.2014 06:29, Dan Tran wrote:
+>>
+>>> Thanks Barrie,
+>>>
+>>> Will see what I can can do.
+>>>
+>>>
+>>> On Mon, May 5, 2014 at 5:04 PM, Barrie Treloar <baerrach@gmail.com>
+>>> wrote:
+>>>
+>>>   On 6 May 2014 09:21, Dan Tran <dantran@gmail.com> wrote:
+>>>>   for legal purpose ( btw, please dont drill me here), I would like to use
+>>>>> one mirror as a gate way for all of of my project dependencies,and
+>>>>>
+>>>> another
+>>>>
+>>>>> mirror as a gate way for all of my plugins and their dependencies
+>>>>>
+>>>>>
+>>>>> is it possible? Posting a settings.xml config here is very much
+>>>>>
+>>>> appreciated
+>>>>
+>>>>
+>>>> Having not done this, here is some more insane advice.
+>>>>
+>>>> I'd use three.
+>>>> One proxy to proxy the other two proxies.
+>>>> All developers point to the master proxy.
+>>>> You can then configure the master proxy to refer to the project
+>>>> dependencies proxy and another for plugins dependencies proxy.
+>>>>
+>>>> You might need a more sophisticated maven repository manager that you can
+>>>> restrict what is allowed in the proxies (i.e. it just doesn't go and grab
+>>>> stuff for you).
+>>>>
+>>>> You're going to have to do a lot of fiddling to get this to work.
+>>>> I'm not convinced it is going to give you what legal thinks it will...
+>>>>
+>>>> If you could write up what you tried and whether it worked it would be
+>>>> helpful for anyone else attempting the same thing...
+>>>>
+>>>>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

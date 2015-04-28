@@ -1,0 +1,82 @@
+From users-return-136693-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Jun 28 02:13:43 2014
+Return-Path: <users-return-136693-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9E4EE11C4E
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 28 Jun 2014 02:13:43 +0000 (UTC)
+Received: (qmail 38457 invoked by uid 500); 28 Jun 2014 02:13:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 38376 invoked by uid 500); 28 Jun 2014 02:13:41 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 38359 invoked by uid 99); 28 Jun 2014 02:13:41 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 28 Jun 2014 02:13:41 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of kalle.o.korhonen@gmail.com designates 209.85.219.54 as permitted sender)
+Received: from [209.85.219.54] (HELO mail-oa0-f54.google.com) (209.85.219.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 28 Jun 2014 02:13:36 +0000
+Received: by mail-oa0-f54.google.com with SMTP id eb12so6471734oac.13
+        for <users@maven.apache.org>; Fri, 27 Jun 2014 19:13:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=b4wt1OgAhsM+IAicksDp3bidnaNSTuEPjvhXWRuwwS0=;
+        b=wppAvVjJnrP5Eif2XYFUI3IqWFjQ51bs7TawPJs9h3uciC/tQ04Hten+yflWV1mq9U
+         e79yay8Dwrn5LugayLEuiR26W+XpG9h/2MPbja5+jygsN0BRTA1OQr/dqzeUHlInpJ06
+         rcTj7NPkCYodxMpT7ilk1wW6YBCtEYUT/v7XpmksFGuP3La/izVX85RV8Yxp8PlqBied
+         oT+y5ORSqAFaqqgoknKF037gQXCo7iUWOzd6N80oE8dbkIrWj7lgIJaoyGtMeY5ArhlY
+         3ekUqbyQJvQShkQ82XXTAhAoCMOy1+QrhKsdYIP55uD0vqwcQ1M43aVcNf4BFe8J//OQ
+         bkTg==
+MIME-Version: 1.0
+X-Received: by 10.182.130.198 with SMTP id og6mr27854823obb.2.1403921596213;
+ Fri, 27 Jun 2014 19:13:16 -0700 (PDT)
+Received: by 10.202.10.193 with HTTP; Fri, 27 Jun 2014 19:13:16 -0700 (PDT)
+In-Reply-To: <CAPCjjnGwmZHQ3LeiFjvrxbbjqpmAS1em45V=0LsuFufG_jM7Sg@mail.gmail.com>
+References: <CAPCjjnGwmZHQ3LeiFjvrxbbjqpmAS1em45V=0LsuFufG_jM7Sg@mail.gmail.com>
+Date: Fri, 27 Jun 2014 19:13:16 -0700
+Message-ID: <CA+=EWnDGA7_Cmo8qxXZ3rm9gNWH9AZbKHhmzHXbxoweDbHD8QQ@mail.gmail.com>
+Subject: Re: Any one in Bay Area ( ~San Jose) with Comcast provider having
+ problem accessing http://central.maven.org/maven2/org/apache/maven/scm/maven-scm-provider-cvsexe/
+ ?
+From: Kalle Korhonen <kalle.o.korhonen@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0118335808f16304fcdbf82f
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0118335808f16304fcdbf82f
+Content-Type: text/plain; charset=UTF-8
+
+Works fine for me on Comcast/Bay area.
+
+Kalle
+
+
+On Fri, Jun 27, 2014 at 2:12 PM, Dan Tran <dantran@gmail.com> wrote:
+
+> I am having a problem[1] accessing
+>
+>
+> http://central.maven.org/maven2/org/apache/maven/scm/maven-scm-provider-cvsexe/
+>
+> I think it has something to do with CDN close to bayarea with comcast
+>
+> [1] https://issues.sonatype.org/browse/MVNCENTRAL-446
+>
+> Thanks
+>
+> -Dan
+>
+
+--089e0118335808f16304fcdbf82f--
+

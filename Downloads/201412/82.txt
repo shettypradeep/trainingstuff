@@ -1,0 +1,403 @@
+From users-return-137948-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Dec  6 03:37:17 2014
+Return-Path: <users-return-137948-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CEE34CDF3
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  6 Dec 2014 03:37:17 +0000 (UTC)
+Received: (qmail 29928 invoked by uid 500); 6 Dec 2014 03:37:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 29845 invoked by uid 500); 6 Dec 2014 03:37:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 29833 invoked by uid 99); 6 Dec 2014 03:37:14 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 06 Dec 2014 03:37:14 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 06 Dec 2014 03:37:10 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 63CAF6A6583
+	for <users@maven.apache.org>; Fri,  5 Dec 2014 22:36:18 -0500 (EST)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id miurZOA6mf2s for <users@maven.apache.org>;
+	Fri,  5 Dec 2014 22:36:18 -0500 (EST)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 0F3D16A6582
+	for <users@maven.apache.org>; Fri,  5 Dec 2014 22:36:18 -0500 (EST)
+Message-ID: <548279AD.2000201@artifact-software.com>
+Date: Fri, 05 Dec 2014 22:36:13 -0500
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: rwheeler@artifact-software.com
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Using shaded JAR as a dependency in a WAR module
+References: <5480EE4B.7010001@yahoo.com> <5481376B.9030305@artifact-software.com> <5481E583.9090003@yahoo.com> <54820035.7060009@artifact-software.com> <5482141C.8080503@yahoo.com>
+In-Reply-To: <5482141C.8080503@yahoo.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Great.
+I hope that the discussion was helpful even if you found a better solution.
+
+Ron
+
+On 05/12/2014 3:22 PM, Mark Eggers wrote:
+> -----BEGIN PGP SIGNED MESSAGE-----
+> Hash: SHA1
+>
+> Ron and Stephen,
+>
+> Ron, we cannot use libraries installed into Tomcat's
+> $CATALINA_BASE/lib directory for several reasons. While it's nice from
+> a developer and deployment point of view, we do end up running
+> multiple versions of the WAR file (with different versions of various
+> dependencies) on the same Tomcat. We also release the WAR file, and it
+> would be difficult to require people to modify their server environment.
+>
+> Thanks! I finally figured it out.
+>
+> 1. Issue number 1
+>
+> I was using a POM artifact to aggregate a set of lower level
+> libraries. In order to do this, I had to set the following in the
+> shade plugin:
+>
+> <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
+>
+> This of course makes perfect sense.
+>
+> 2. Issue number 2
+>
+> I needed to set the following:
+>
+> <keepDependenciesWithProvidedScope>true</keepDependenciesWithProvidedScope>
+>
+> Both of these are mentioned (albeit not as clearly as it might be) in
+> the fine documentation here:
+>
+> http://maven.apache.org/plugins/maven-shade-plugin/shade-mojo.html
+>
+> Combining those two creates a JAR with all of the dependency pom.xml
+> files in it, as well as the classes / resources / etc. An examination
+> of the target WAR file shows a nice, clean WEB-INF/lib with managed
+> dependencies all the way down the chain.
+>
+> For those people interested, the dependencies and shade plugin
+> configuration are given below.
+>
+> <dependencies>
+>      <dependency>
+>          <groupId>org.mdeggers</groupId>
+>          <artifactId>Calhost</artifactId>
+>          <version>${calhost.version}</version>
+>      </dependency>
+>      <dependency>
+>          <groupId>org.mdeggers</groupId>
+>          <artifactId>IHomeResources</artifactId>
+>          <version>${ihomeresources.version}</version>
+>          <type>pom</type>
+>      </dependency>
+> </dependencies>
+>
+> <build>
+>      <plugins>
+>          <plugin>
+>              <groupId>org.apache.maven.plugins</groupId>
+>              <artifactId>maven-shade-plugin</artifactId>
+>              <version>2.3</version>
+>              <executions>
+>                  <execution>
+>                      <id>combine</id>
+>                      <phase>package</phase>
+>                      <goals>
+>                          <goal>shade</goal>
+>                      </goals>
+>                      <configuration>
+>
+> <keepDependenciesWithProvidedScope>true</keepDependenciesWithProvidedScope>
+>
+> <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
+>                          <artifactSet>
+>                              <includes>
+>                                  <include>org.mdeggers:*</include>
+>                              </includes>
+>                          </artifactSet>
+>                      </configuration>
+>                  </execution>
+>              </executions>
+>          </plugin>
+>      </plugins>
+> </build>
+>
+> Sorry for the line length.
+>
+> Obviously, if you don't have any transitive dependencies, you won't
+> need the promote line.
+>
+> It works. Hope this is the correct solution.
+>
+> . . . just my two cents
+> /mde/
+>
+> On 12/5/2014 10:57 AM, Ron Wheeler wrote:
+>> Some forums are more concerned about form than content. Everyone
+>> here is pretty focused on solving your problem rather than telling
+>> how to post it.
+>>
+>> If you look at the examples in my post, you will see that the type
+>> is "pom" for dependencies on libraries. We also use "provided"
+>> scope since we install the libraries once rather than include them
+>> with each upload of a war file since they generally don't change.
+>>
+>> We set the content of our libraries (jars and versions) at the
+>> beginning of a release cycle and don't change them for the duration
+>> of the release unless there is an emergency. This gives everyone a
+>> stable environment and once you have the libraries loaded into
+>> Tomcat, in our case, they do not change as the application gets
+>> worked on. This makes the testing go quicker since you are only
+>> replacing the war file that you are working on and the war file
+>> only contains the code that we write.
+>>
+>> I am not sure if this applies to your libraries.
+>>
+>>
+>> Ron
+>>
+>> On 05/12/2014 12:04 PM, Mark Eggers wrote: Ron,
+>>
+>> Thanks for the link. I'm attempting to do this with the shade
+>> plugin. I took a look at the JAR that the shade plugin generates
+>> with my configuration, and it seems to have the pom.xml files from
+>> which it was built, but not the reduced dependency pom.xml (or any
+>> pom.xml from the built / shaded artifact).
+>>
+>> This means that I have not configured the shade plugin properly to
+>> produce an artifact that can be consumed as if it was built
+>> without using the shade plugin.
+>>
+>> The entire list of dependencies for the WAR module:
+>>
+>> <dependencies> <dependency> <groupId>org.mdeggers</groupId>
+>> <artifactId>CoreServer</artifactId>
+>> <version>${coreserver.version}</version> </dependency>
+>> <dependency> <groupId>org.mdeggers</groupId>
+>> <artifactId>CoreClient</artifactId>
+>> <version>${coreclient.version}</version> <type>war</type>
+>> </dependency> <dependency> <groupId>javax.servlet</groupId>
+>> <artifactId>servlet-api</artifactId> <version>2.5</version>
+>> <scope>provided</scope> </dependency> <dependency>
+>> <groupId>javax.servlet.jsp</groupId>
+>> <artifactId>jsp-api</artifactId> <version>2.1</version>
+>> <scope>provided</scope> </dependency> <dependency>
+>> <groupId>org.mdeggers</groupId>
+>> <artifactId>GlobalCalcWeb</artifactId>
+>> <version>${globalweb.version}</version> <type>war</type>
+>> </dependency> <dependency> <groupId>org.mdeggers</groupId>
+>> <artifactId>IHomeWeb</artifactId>
+>> <version>${ihome.version}</version> <type>pom</type> </dependency>
+>> <dependency> <groupId>org.mdeggers</groupId>
+>> <artifactId>IFCResources</artifactId>
+>> <version>1.0-SNAPSHOT</version> </dependency> </dependencies>
+>>
+>> There could be as many as 50 components going into the final WAR
+>> file, so it would be nice to manage them in a more organized
+>> fashion (as well as reduce the clutter in WEB-INF/lib).
+>>
+>> All of the versions with properties have properties defined. The
+>> last dependency is the shaded JAR, and the one that is not behaving
+>> as expected (but probably as built / configured).
+>>
+>> The NetBeans graphical display of the dependencies shows
+>> IFCResources, as well as the three components it was shaded from.
+>>
+>> Sorry for the top-post. It seems to be the norm on this list,
+>> whereas the Tomcat mailing list explicitly mentions replying at the
+>> bottom. I didn't see any mention of posting style on the site. If
+>> posting at the bottom is the encouraged form, I'll be happy to do
+>> so.
+>>
+>> . . . just my two cents /mde/
+>>
+>> On 12/4/2014 8:41 PM, Ron Wheeler wrote:
+>>>>> We do this all the time and it always works.
+>>>>> http://blog.artifact-software.com/tech/?p=121 Aggregation
+>>>>> jars make development simpler and wars smaller
+>>>>>
+>>>>>
+>>>>> Partial dependencies for
+>>>>> org.mdeggers:iforeclosure:1.0-SNAPSHOT:war
+>>>>>
+>>>>> <dependencies> <dependency> <groupId>org.mdeggers</groupId>
+>>>>> <artifactId>IFCResources</artifactId>
+>>>>> <version>1.0-SNAPSHOT</version> </dependency>
+>>>>> </dependencies>
+>>>>>
+>>>>> What are the dependencies for the war file? Partial list is
+>>>>> not much help.
+>>>>>
+>>>>> Ron
+>>>>>
+>>>>>
+>>>>> On 04/12/2014 6:29 PM, Mark Eggers wrote: Folks,
+>>>>>
+>>>>> I admit it, I'm a bit confused (and relatively new to
+>>>>> maven).
+>>>>>
+>>>>> Goal:
+>>>>>
+>>>>> To release a WAR file with a minimal number of JAR files in
+>>>>> WEB-INF/lib.
+>>>>>
+>>>>> Thought:
+>>>>>
+>>>>> 1. Break up the WAR project into a WAR module and a JAR
+>>>>> module 2. Make the WAR module be dependent on the JAR module
+>>>>> 3. Use the Maven shade plugin in the JAR module to create a
+>>>>> shaded JAR 4. Drive the entire project with an agregator
+>>>>> pom.xml
+>>>>>
+>>>>> The JAR module does shade properly, creating a single JAR
+>>>>> with all of the dependencies bundled into a single JAR. It
+>>>>> uses a pom dependency to gather in most of its requirements.
+>>>>> None of the JAR or pom dependencies have further
+>>>>> dependencies, so the resulting JAR is self-contained.
+>>>>>
+>>>>> However, when I build the WAR file and reference the shaded
+>>>>> JAR file as a dependency, I do not get the shaded JAR file
+>>>>> in WEB-INF/lib. Instead, I get all of the dependencies as
+>>>>> individual JAR files in WEB-INF/lib.
+>>>>>
+>>>>> I'm using the following environment (can post my complete
+>>>>> pom.xml files if needed).
+>>>>>
+>>>>> OS:    Fedora Linux 64 bit - latest updates JDK:   1.7.0_72
+>>>>> 64 bit Maven: 3.2.3
+>>>>>
+>>>>> maven-shade-plugin: 2.3 maven-war-plugin:   2.4
+>>>>>
+>>>>> shade configuration and dependencies for
+>>>>> org.mdeggers:IFCResources:1.0-SNAPSHOT
+>>>>>
+>>>>> <properties> <calhost.version>1.0-SNAPSHOT</calhost.version>
+>>>>> <ihomeresources.version>1.0-SNAPSHOT</ihomeresources.version>
+>>>>>
+>>>>>
+> </properties>
+>>>>> <dependencies> <dependency> <groupId>org.mdeggers</groupId>
+>>>>> <artifactId>Calhost</artifactId>
+>>>>> <version>${calhost.version}</version> </dependency>
+>>>>> <dependency> <groupId>org.mdeggers</groupId>
+>>>>> <artifactId>IHomeResources</artifactId>
+>>>>> <version>${ihomeresources.version}</version>
+>>>>> <type>pom</type> </dependency> </dependencies>
+>>>>>
+>>>>> <plugin> <groupId>org.apache.maven.plugins</groupId>
+>>>>> <artifactId>maven-shade-plugin</artifactId>
+>>>>> <version>2.3</version> <executions> <execution>
+>>>>> <id>combine</id> <phase>package</phase> <goals>
+>>>>> <goal>shade</goal> </goals> <configuration> <artifactSet>
+>>>>> <includes> <include>org.mdeggers:*</include> </includes>
+>>>>> </artifactSet> </configuration> </execution> </executions>
+>>>>> </plugin>
+>>>>>
+>>>>> Partial dependencies for
+>>>>> org.mdeggers:iforeclosure:1.0-SNAPSHOT:war
+>>>>>
+>>>>> <dependencies> <dependency> <groupId>org.mdeggers</groupId>
+>>>>> <artifactId>IFCResources</artifactId>
+>>>>> <version>1.0-SNAPSHOT</version> </dependency>
+>>>>> </dependencies>
+>>>>>
+>>>>> Parent pom modules section:
+>>>>>
+>>>>> <modules> <module>IFCResources</module>
+>>>>> <module>iforeclosure</module> </modules>
+>>>>>
+>>>>> I'm obviously missing something here. Thoughts, corrections,
+>>>>> pointers are all appreciated.
+>>>>>
+>>>>> I know, using a shaded JAR as a dependency is probably not
+>>>>> best practice. However, the resulting WAR file is an end
+>>>>> product and the shaded JAR only contains internal components
+>>>>> from other web overlays used to build the final war.
+>>>>>
+>>>>> . . . just my (confused) 2 cents /mde/
+>>>>>> --- This email is free from viruses and malware because
+>>>>>> avast! Antivirus protection is active.
+>>>>>> http://www.avast.com
+>>>>>>
+>>>>>>
+>>>>>> ---------------------------------------------------------------------
+>>>>>>
+>>>>>>
+>>>>>>
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>>>>> For additional commands, e-mail:
+>>>>>> users-help@maven.apache.org
+>>>>>>
+>>>>>>
+>>> --- This email is free from viruses and malware because avast!
+>>> Antivirus protection is active. http://www.avast.com
+>>>
+>>>
+>>> ---------------------------------------------------------------------
+>>>
+>>>
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>
+>>>
+>>
+> -----BEGIN PGP SIGNATURE-----
+> Version: GnuPG v2
+>
+> iQEcBAEBAgAGBQJUghQcAAoJEEFGbsYNeTwtbNMH/1VLcYuJ69g4wUdiwU5R/QyF
+> x7nPawbitoPZgnn8gSb6oktuvDOS6FUFluvWMpa/S7zsHpdMzB+4PRTcRkyX6C3W
+> LsYDryc6IA5LPNW5Xx9baRsVjbgkisf1Jxg+oGWczXeT4aA8wYey3V497vRKxcxM
+> 4aCBDdCAYNL42HmHLXwWEuW7QpiG77O8hJETG1KB2GD4cCoVW/kDrOEpKuqfnsdv
+> 6BLOxfOFLpdbuo1mINla2xxuEAZwrMFDIWGb9bvFprCdK6y2bLoMusl6aE+81bbq
+> K6VYvQa/TX3WE+Pdh87gvlmdeYPoZqf/zDzYNbrH8zN1QyD6YnFiUH3CVop5dHo=
+> =q9XO
+> -----END PGP SIGNATURE-----
+>
+> ---
+> This email is free from viruses and malware because avast! Antivirus protection is active.
+> http://www.avast.com
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

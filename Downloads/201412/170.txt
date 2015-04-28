@@ -1,0 +1,62 @@
+From users-return-138090-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Dec 29 06:51:34 2014
+Return-Path: <users-return-138090-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7A3661081F
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 29 Dec 2014 06:51:33 +0000 (UTC)
+Received: (qmail 62812 invoked by uid 500); 29 Dec 2014 06:51:28 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 62729 invoked by uid 500); 29 Dec 2014 06:51:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 62718 invoked by uid 99); 29 Dec 2014 06:51:27 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 29 Dec 2014 06:51:27 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of andreas.ch.magnusson@gmail.com does not designate 162.253.133.43 as permitted sender)
+Received: from [162.253.133.43] (HELO mwork.nabble.com) (162.253.133.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 29 Dec 2014 06:51:21 +0000
+Received: from msam.nabble.com (unknown [162.253.133.85])
+	by mwork.nabble.com (Postfix) with ESMTP id CC1CDEF3BC7
+	for <users@maven.apache.org>; Sun, 28 Dec 2014 22:50:30 -0800 (PST)
+Date: Sun, 28 Dec 2014 23:50:30 -0700 (MST)
+From: Andreas M <andreas.ch.magnusson@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1419835830681-5821591.post@n5.nabble.com>
+In-Reply-To: <3811306.vtUXWIcAHE@herve-desktop>
+References: <CAA8BW8H4RStyMZSqJybCWSJtyc7WbNHD-ULRYFhyQsNB2+kzdA@mail.gmail.com> <CAKDUN1tikh6zG3dJUP8zNebE+xODA8iyOUJpU6kgwEai9k5bHg@mail.gmail.com> <CAA8BW8FeYBmh2T4mMtTTu_pik1BvA+P=4uuYYhLpuge8o3B4Rg@mail.gmail.com> <CA+nPnMwiRYZ+VXXgb-tB0peFpsenJfoQYTcrq1Q4ucPfx8=Osg@mail.gmail.com> <CAA8BW8H7Uqn59mcVZPjfWib5vRkfNjR-4sV6vA5tndh1W_7qjQ@mail.gmail.com> <CA+nPnMw3wakE5rT0_Zf=d_rBh+1n_H86RhN0nB4mjrX-B1hEKg@mail.gmail.com> <CAA8BW8E2oLLCJz9R8buVsOrR-XcnQdvMBi-htp+q8UffZsCbgw@mail.gmail.com> <3811306.vtUXWIcAHE@herve-desktop>
+Subject: Re: Duplicate plugin declaration warning
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+One such use has already been handled by the tycho-pack200a:normalize and
+tycho-pack200b:pack goals.
+They have to be used before and after jar:sign for pack200 to work, and
+since the warning exists we have two plugins where you naively would expect
+one.
+But that is also the only use-case I've ever seen...
+
+/Andreas
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Duplicate-plugin-declaration-warning-tp5820730p5821591.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

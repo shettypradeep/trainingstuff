@@ -1,0 +1,291 @@
+From users-return-137062-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Aug 18 16:43:51 2014
+Return-Path: <users-return-137062-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4AD5A1149D
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 18 Aug 2014 16:43:51 +0000 (UTC)
+Received: (qmail 28492 invoked by uid 500); 18 Aug 2014 16:43:47 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 28408 invoked by uid 500); 18 Aug 2014 16:43:47 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 28395 invoked by uid 99); 18 Aug 2014 16:43:47 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 18 Aug 2014 16:43:47 +0000
+Received: from localhost (HELO robertscholte) (127.0.0.1)
+  (smtp-auth username rfscholte, mechanism login)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Mon, 18 Aug 2014 16:43:46 +0000
+Content-Type: text/plain; charset=iso-8859-15; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Maven javadoc selective submodules
+References: <1408272702980-5802370.post@n5.nabble.com>
+ <4026808.TYdEW1v9i4@herve-desktop> <1408299223527-5802396.post@n5.nabble.com>
+ <op.xkq1ogk4kdkhrr@robertscholte> <1408303657586-5802398.post@n5.nabble.com>
+ <op.xkr94blskdkhrr@robertscholte> <1408377744478-5802463.post@n5.nabble.com>
+Date: Mon, 18 Aug 2014 18:43:42 +0200
+MIME-Version: 1.0
+Content-Transfer-Encoding: Quoted-Printable
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.xksre4htkdkhrr@robertscholte>
+In-Reply-To: <1408377744478-5802463.post@n5.nabble.com>
+User-Agent: Opera Mail/12.17 (Win32)
+
+It's much easier to execute it as a separate action. In Jenkins-terms: a=
+  =
+
+post-build step, but I believe almost every CI server has an equivalent =
+ =
+
+solution.
+
+If you still want to solve this in the main pom.xml, you could do it wit=
+h  =
+
+the maven-invoker-plugin, though I wouldn't advice it.
+
+Robert
+
+Op Mon, 18 Aug 2014 18:02:24 +0200 schreef robertmvn <forums@calitha.com=
+>:
+
+> Hi,
+>
+> Could I call the pom-javadoc.xml from the main pom.xml?
+> I am just thinking how we can use this from the build server.
+>
+>
+>
+> Robert Scholte-4 wrote
+>> Hi,
+>>
+>> You can't specify this in the pom, but for now it would give you the
+>> desired result.
+>> Since it's not possible with the current version of the javadoc-plugi=
+n,
+>> other options which I can think of:
+>> - add a javadoc-profile or create a pom-javadoc.xml where you specify=
+  =
+
+>> the
+>> required modules.
+>> - reorganize the modules
+>>
+>> I understand that these are all suboptimal solutions, but maybe your =
+ =
+
+>> rare
+>> case needs something like this.
+>>
+>> thanks,
+>> Robert
+>>
+>>
+>> Op Sun, 17 Aug 2014 21:27:37 +0200 schreef robertmvn &lt;
+>
+>> forums@
+>
+>> &gt;:
+>>
+>>> Hi,
+>>>
+>>> How would you specify this in a pom.xml ?
+>>>
+>>>
+>>> Robert Scholte-4 wrote
+>>>> Hi,
+>>>>
+>>>> Did you try it with the -pl (or --projects) argument?
+>>>>
+>>>> Robert
+>>>>
+>>>>
+>>>> Op Sun, 17 Aug 2014 20:13:43 +0200 schreef robertmvn &lt;
+>>>
+>>>> forums@
+>>>
+>>>> &gt;:
+>>>>
+>>>>> Hi,
+>>>>>
+>>>>> It's okay if the aggregate report only executes on the root of a
+>>>>> multi-module build. I just need some option to include only select=
+ed
+>>>>> submodules. Or some other way to include and exclude.
+>>>>>
+>>>>>
+>>>>>
+>>>>> Herv=E9 BOUTEMY wrote
+>>>>>> Hi,
+>>>>>>
+>>>>>> At the moment, the aggregate javadoc report can only execute on t=
+he
+>>>>>> root
+>>>>>> of a
+>>>>>> multi-module build. This is partly a wanted feature to avoid too =
+ =
+
+>>>>>> much
+>>>>>> javadoc
+>>>>>> generation and a workaround against problems with forked lifecycl=
+es:
+>>>>>> see
+>>>>>> MJAVADOC-171 [1]
+>>>>>>
+>>>>>> So this is simply not possible actually.
+>>>>>>
+>>>>>> Regards,
+>>>>>>
+>>>>>> Herv=E9
+>>>>>>
+>>>>>> [1] http://jira.codehaus.org/browse/MJAVADOC-171
+>>>>>>
+>>>>>> Le dimanche 17 ao=FBt 2014 03:51:43 robertmvn a =E9crit :
+>>>>>>> Hi,
+>>>>>>>
+>>>>>>> How do you generate a combined javadoc for a selection of  =
+
+>>>>>>> submodules?
+>>>>>>>
+>>>>>>> I have added the javadoc plugin with the aggregate goal to the  =
+
+>>>>>>> build
+>>>>>>> as
+>>>>>>> specified in
+>>>>>>> http://maven.apache.org/plugins/maven-javadoc-plugin/examples/ag=
+gregate.html
+>>>>>>> but it not generates javadocs for all submodules. I want to be m=
+ore
+>>>>>>> selective.
+>>>>>>>
+>>>>>>> I have tried to set the dependencySourceIncludes or
+>>>>>>> dependencySourceExcludes
+>>>>>>> in the configuration, but it doesn't seem to have any effect.
+>>>>>>>
+>>>>>>> I tried to look at the report sets, but I don't seem to be able =
+to
+>>>>>>> find
+>>>>>>> any
+>>>>>>> configuration documentation about them.
+>>>>>>>
+>>>>>>>
+>>>>>>>
+>>>>>>>
+>>>>>>>
+>>>>>>> --
+>>>>>>> View this message in context:
+>>>>>>> http://maven.40175.n5.nabble.com/Maven-javadoc-selective-submodu=
+les-tp58023
+>>>>>>> 70.html Sent from the Maven - Users mailing list archive at
+>>>>>>> Nabble.com.
+>>>>>>>
+>>>>>>> ----------------------------------------------------------------=
+-----
+>>>>>>> To unsubscribe, e-mail:
+>>>>>
+>>>>>> users-unsubscribe@.apache
+>>>>>
+>>>>>>> For additional commands, e-mail:
+>>>>>
+>>>>>> users-help@.apache
+>>>>>
+>>>>>>
+>>>>>>
+>>>>>> -----------------------------------------------------------------=
+----
+>>>>>> To unsubscribe, e-mail:
+>>>>>
+>>>>>> users-unsubscribe@.apache
+>>>>>
+>>>>>> For additional commands, e-mail:
+>>>>>
+>>>>>> users-help@.apache
+>>>>>
+>>>>>
+>>>>>
+>>>>>
+>>>>>
+>>>>> --
+>>>>> View this message in context:
+>>>>> http://maven.40175.n5.nabble.com/Maven-javadoc-selective-submodule=
+s-tp5802370p5802396.html
+>>>>> Sent from the Maven - Users mailing list archive at Nabble.com.
+>>>>>
+>>>>> ------------------------------------------------------------------=
+---
+>>>>> To unsubscribe, e-mail:
+>>>
+>>>> users-unsubscribe@.apache
+>>>
+>>>>> For additional commands, e-mail:
+>>>
+>>>> users-help@.apache
+>>>
+>>>>
+>>>> -------------------------------------------------------------------=
+--
+>>>> To unsubscribe, e-mail:
+>>>
+>>>> users-unsubscribe@.apache
+>>>
+>>>> For additional commands, e-mail:
+>>>
+>>>> users-help@.apache
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> --
+>>> View this message in context:
+>>> http://maven.40175.n5.nabble.com/Maven-javadoc-selective-submodules-=
+tp5802370p5802398.html
+>>> Sent from the Maven - Users mailing list archive at Nabble.com.
+>>>
+>>> --------------------------------------------------------------------=
+-
+>>> To unsubscribe, e-mail:
+>
+>> users-unsubscribe@.apache
+>
+>>> For additional commands, e-mail:
+>
+>> users-help@.apache
+>
+>>
+>> ---------------------------------------------------------------------=
+
+>> To unsubscribe, e-mail:
+>
+>> users-unsubscribe@.apache
+>
+>> For additional commands, e-mail:
+>
+>> users-help@.apache
+>
+>
+>
+>
+>
+> --
+> View this message in context:  =
+
+> http://maven.40175.n5.nabble.com/Maven-javadoc-selective-submodules-tp=
+5802370p5802463.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

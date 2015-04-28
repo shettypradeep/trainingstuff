@@ -1,0 +1,68 @@
+From users-return-137119-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Aug 26 12:36:50 2014
+Return-Path: <users-return-137119-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 935EF11F4B
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 26 Aug 2014 12:36:50 +0000 (UTC)
+Received: (qmail 36253 invoked by uid 500); 26 Aug 2014 12:36:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 36185 invoked by uid 500); 26 Aug 2014 12:36:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 98219 invoked by uid 99); 26 Aug 2014 11:33:46 -0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of jaromir.hamala@gmail.com designates 209.85.192.45 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:from:date:message-id:subject:to:content-type;
+        bh=fBaO5r2N4xEF1vSA9z0COVZM+hz5hGMeJDOBtue6RZM=;
+        b=AV7WtRuZZq1u+LLVLW+NN8UvT38xXXmmIDK5nVlPzTbci3ncPEbrCdIhp5C8bwVwaA
+         JwEYeKKWf+ntl93V4FKqXDEJ2JUYvf8eyAAU3FiPbVOsyYFnUv3waVPIWDxIqGrNHuUy
+         DMAL3GjO6vHC+LvqcifGRaSSdH8EjqY6gOh31qV8GG13zIWNMopTmR8V9WVaZabLjrku
+         vWn1CCsjk14JYpDg5hhQ7DSM7vU1txWaM/ypJd4V6XoGRKWzqupojbXLw2WTWPFzBttU
+         v66t84gVlV17qsIq1THxobZ/hdhlpKINpVCG1CcsO2ToZVC9AfC+K5/AcnLiaFH/RRWm
+         sk7w==
+X-Received: by 10.140.23.37 with SMTP id 34mr41913509qgo.2.1409052798863; Tue,
+ 26 Aug 2014 04:33:18 -0700 (PDT)
+MIME-Version: 1.0
+From: Jaromir Hamala <jaromir.hamala@gmail.com>
+Date: Tue, 26 Aug 2014 12:32:58 +0100
+Message-ID: <CAMxXA6_1-jMqgwmR_O42bMsAmThRR0U8N-8zmX0G69LsiU2u7g@mail.gmail.com>
+Subject: Different configuration for different categories/groups?
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a11c123468bdc4b050186abf7
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c123468bdc4b050186abf7
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+I'd like to run tests in a category/group "Parallel" in multiple JVMs in
+parallel and other tests in just a single JVM.
+
+I can create multiple profiles, however a single invocation "mvn test"
+should give me a result for all tests. Is it something I can achieve with
+Surefire? My tests use JUnit if that's important.
+
+Thanks a lot for any advice!
+Jaromir
+
+--=20
+=E2=80=9CPerfection is achieved, not when there is nothing more to add, but=
+ when
+there is nothing left to take away.=E2=80=9D
+Antoine de Saint Exup=C3=A9ry
+
+--001a11c123468bdc4b050186abf7--
+

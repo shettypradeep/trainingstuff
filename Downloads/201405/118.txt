@@ -1,0 +1,85 @@
+From users-return-136405-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue May 20 16:18:47 2014
+Return-Path: <users-return-136405-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3BFDC11949
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 20 May 2014 16:18:47 +0000 (UTC)
+Received: (qmail 79738 invoked by uid 500); 20 May 2014 16:18:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 79663 invoked by uid 500); 20 May 2014 16:18:45 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 79655 invoked by uid 99); 20 May 2014 16:18:45 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 20 May 2014 16:18:45 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of khmarbaise@gmx.de designates 212.227.17.20 as permitted sender)
+Received: from [212.227.17.20] (HELO mout.gmx.net) (212.227.17.20)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 20 May 2014 16:18:40 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([176.198.107.140]) by
+ mail.gmx.com (mrgmx101) with ESMTPSA (Nemesis) id 0Lv9lm-1Wv0Ei3xw2-010Lwb
+ for <users@maven.apache.org>; Tue, 20 May 2014 18:18:18 +0200
+Message-ID: <537B804D.7010405@gmx.de>
+Date: Tue, 20 May 2014 18:18:21 +0200
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.5.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: maven-invoker-plugin: running ITs in parallel?
+References: <CANWgJS7vUkpbLTutWEK_0wqkUitYEUG=jo3EHXAEN0_eEiGMVQ@mail.gmail.com>
+In-Reply-To: <CANWgJS7vUkpbLTutWEK_0wqkUitYEUG=jo3EHXAEN0_eEiGMVQ@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:W6a+5WuarZFihtKr3F8QC4U7IGaMwcWPtRkrf5nawOxcLnUl2mc
+ rtyu4ewaH0VxDHLEH9c5Grhkd+RuKZ4A8ypHO1MOhUVtgiy26jfeAhruXBKQ2TSf8ZjqU+O
+ 519lT6Ecac2tyt+APMoHloh0IXEleMy4R99K35XsGjpllexiz12Ax5hZ0wpYD2bXsxfVnux
+ CMgBCbidp7f88F95yyOiQ==
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Baptiste,
+
+I'm working often with maven-invoker and have found an issue with 
+parallelThreads option (http://jira.codehaus.org/browse/MINVOKER-147).
+
+The local shared repos is also a problem.
+
+The should be something like a repo per IT...
+
+Kind regards
+Karl-Heinz Marbaise
+
+ > *TL;DR: does anyone use the parallelThreads option in 
+maven-invoker-plugin?
+> Do you also have issues with concurrent local repository access? If so, how
+> do you solve them?*
+>
+> I've recently come across the parallelThreads option in
+> maven-invoker-plugin. After having tried to use it a few times, I'm
+> currently stuck.
+>
+> It fails randomly, and not surprisingly it seems like it comes from the
+> fact the local-repo is shared between ITs. While downloading from the MRM,
+> there's always one jars that fails to be written to the disk because of a
+> likely concurrent access.
+>
+> My first thought was to try and have a separate localRepository per IT. But
+> I can't find a property or even a workaround to do that.
+>
+> Because filing an issue to m-invoker-p, I wanted to check here if I was
+> missing something.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

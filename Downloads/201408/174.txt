@@ -1,0 +1,137 @@
+From users-return-136961-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Aug  4 17:01:03 2014
+Return-Path: <users-return-136961-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3E35C11647
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  4 Aug 2014 17:01:03 +0000 (UTC)
+Received: (qmail 86422 invoked by uid 500); 4 Aug 2014 17:01:01 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 86346 invoked by uid 500); 4 Aug 2014 17:01:01 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 86331 invoked by uid 99); 4 Aug 2014 17:01:01 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 04 Aug 2014 17:01:01 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=FORGED_YAHOO_RCVD,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of its_toasted@yahoo.com designates 98.138.91.152 as permitted sender)
+Received: from [98.138.91.152] (HELO nm22-vm3.bullet.mail.ne1.yahoo.com) (98.138.91.152)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 04 Aug 2014 17:00:56 +0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s2048; d=yahoo.com;
+	b=lZC1/yLdU9VKf5JJnpzncsXFZ/ycpn6+gWiF/yItXmkp0rvLKuq6K8UZ1IL1ncSJ8Fod5AxsYgSTfteOW3dxrl8/aOiGJpK20u/istZYGfUrlEP6Sq0fSznYIMW4x0p6+oIiH+OXBG51RcPuQz4KdR/McGEByLqACQI2L4p6YEqnkKaSD8+eWYWwjVB7SSwEroEZT4gVLaj/w+LJXrIGQqxYYHxq9VVxdqw7xMLcENkNAswGUYHU5bAXRgQkd4ABU7WoizzEbSooTBYjCR+gP44F0N47mJajUkeW+BiCSR3DTGaF56iIP0CMr8mOMkayDCj7YXE8iE4qS1CiSMOPnQ==;
+Received: from [98.138.100.102] by nm22.bullet.mail.ne1.yahoo.com with NNFMP; 04 Aug 2014 17:00:35 -0000
+Received: from [98.138.226.62] by tm101.bullet.mail.ne1.yahoo.com with NNFMP; 04 Aug 2014 17:00:35 -0000
+Received: from [127.0.0.1] by smtp213.mail.ne1.yahoo.com with NNFMP; 04 Aug 2014 17:00:35 -0000
+X-Yahoo-Newman-Id: 683634.65166.bm@smtp213.mail.ne1.yahoo.com
+X-Yahoo-Newman-Property: ymail-3
+X-YMail-OSG: FyKUNCoVM1nBYadHHlpKeNMNzePKBQz5jNJwf4.U0rQpsFO
+ BT_KUxWk58PypKKA6A3cWXCErPnNcIyGN9FxMpZ7fGZ4EyBbxV3kSknJAezx
+ f8Q5O_tVGSokzK78uTzD5T7bqBQ1ueIq5AxIwo_XDDXt0qBrexdjs3xuTUo_
+ UF2L2uBV6QoPVtKQlIDd2AWXh0hzfLaOu490ESUsan8JwUhZODSP8mZpeWEF
+ UOXi.x_btcX.glK1YWUqcH6MmuZ0cqNB_pA1dvHjY6gae4C4VV_M0ymtaVhG
+ 6TRnBixCCci8QvRKRf1QEwC9nlueOzd1BY7lGlaDs3jPY9xnBc7DH4fQwc3c
+ zOCD.vDfGzOdy17alQIJgLk9K9uLHzedB.y5aApqntvPhB7udYDvaMLTTCgC
+ WB.HaedeKSBwmpdcGxeNrQrsvvtVcCAK9mZTqjiRpHn9_KwrYqccUGU48OeW
+ Mo4Q6pk4jhDUEPZL5xokinX9VIG2.z0GjZBwq_LyywOr9D5BkUCj3RGrLQfU
+ VoSBzbyQ76gXVqz0zjDpseZ44lsk30fLc7gJEr10_5Rmim29dGhxz3YgDzVN
+ WJSLSMISU._qFaldB1nIC9vFfdEyu6SAPm7AZpgnqmGWYP15Up2tDoHQ_icv
+ bmG_ZniEiMRXMq23tF.5gIFs8WqJkORzyIEGCf4HLjIpNIBhViJG4K5BDUEg
+ TVsbiWfPk3gLVxjcFEa8wruvqGrV7lMGa_QHi
+X-Yahoo-SMTP: PKuT8k2swBCeFOHzkGy5rTOUTa2hBxlR
+Message-ID: <53DFBBFE.90104@yahoo.com>
+Date: Mon, 04 Aug 2014 09:59:42 -0700
+From: Mark Eggers <its_toasted@yahoo.com.INVALID>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Thunderbird/31.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: MD5 checksum validation tool [Windows]?
+References: <F21547B4F425F9428444D12A5127050623872FAC@NP1EXMB033.corp.halliburton.com> <CABLGb9xS=z=9rE485FOn_M_Mp1QeMdOyYPmNRy5Pft+6Hsro4g@mail.gmail.com> <F21547B4F425F9428444D12A5127050623872FE2@NP1EXMB033.corp.halliburton.com>
+In-Reply-To: <F21547B4F425F9428444D12A5127050623872FE2@NP1EXMB033.corp.halliburton.com>
+X-Enigmail-Version: 1.6
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+X-Antivirus: avast! (VPS 140804-0, 08/04/2014), Outbound message
+X-Antivirus-Status: Clean
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Justin,
+
+This seems to work. It's marked as beta software, so read and use with
+caution. I just downloaded it and ran it against a download of Apache
+Tomcat. The check worked as expected.
+
+http://www.exactfile.com/
+
+. . . just my two cents
+/mde/
+
+On 8/4/2014 9:41 AM, Justin Georgeson wrote:
+> Thanks Paul. I don't see HashTab as being able to directly read the
+> .md5 file. Users would have to open the .md5 file in a text editor,
+> then copy/paste. And sadly this tiny bit of effort is actually
+> being deemed an undue burden. It literally has to be as simple as
+> double-click the .md5 file and get nice green graphic that says
+> everything is ok. HashCheck is the tool people are wanting to use,
+> but that requires the relative path be included in the md5 file.
+> I've submitted an enhancement request but their last release was in
+> 2009 so I'm not hopeful.
+> 
+>> -----Original Message----- From: paulus.benedictus@gmail.com
+>> [mailto:paulus.benedictus@gmail.com] On Behalf Of Paul Benedict 
+>> Sent: Monday, August 04, 2014 11:18 AM To: Maven Users List 
+>> Subject: Re: MD5 checksum validation tool [Windows]?
+>> 
+>> Yup. I've used HashTab for years. 
+>> http://www.implbits.com/hashtab.aspx
+>> 
+>> 
+>> Cheers, Paul
+>> 
+>> 
+>> On Mon, Aug 4, 2014 at 11:16 AM, Justin Georgeson
+>> <JGeorgeson@lgc.com> wrote:
+>> 
+>>> All the checksum validation tools I've found only seem to
+>>> support files with format produced by the md5sum tool, ie -
+>>> 
+>>> checksum1 relative/path/file1 checksum2 relative/path/to/file2 
+>>> ...
+>>> 
+>>> But Maven publishes sibling files of the same name with ".md5" 
+>>> appended, and no relative path in the file. Does anyone know of
+>>> a tool on Windows (shell extension, standalone GUI) that people
+>>> could use after downloading the artifact (in this particular
+>>> case it's an executable installer) and the md5 file and just
+>>> double-click the md5 file to validate the download (or
+>>> drag/drop the artifact and md5 file)?
+>>> 
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.13 (MingW32)
+Comment: Using GnuPG with Thunderbird - http://www.enigmail.net/
+
+iQEcBAEBAgAGBQJT37v+AAoJEEFGbsYNeTwtp94IAKJtHuPL/glPl3Gxxd9aqvDA
+Hau/0nrphJWPSrKmhGV+K3U9Psh7ZnwA5/SDtFtMo3Oa7seGZ/DPYqxwI3oZXDcM
+7O+20YNvxCiO7fhMg/bcR/HsbqkCreijj2nkeJRKTcTSx0p68GJf/V3Kh9c70ZuA
+RuP3otwcHx2x+Yl7CbumGm+i+ayIkM0SYiArjhjnozAA3xb+Q7HCRuWk/hJREH3T
+nqce0pWx4t71kkBuF+r7clGC5kGm+XdzD+SzlJKoPO6UHFS/Ujql/a/jpqQRI363
+vKdMbpwgZDUEZFGP4TmX6oEV6+oHylQLWWlXCNS9cGfgf2uaBY3uevXSeQh/7SU=
+=/+sR
+-----END PGP SIGNATURE-----
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

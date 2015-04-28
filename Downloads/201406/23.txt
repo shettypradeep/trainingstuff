@@ -1,0 +1,142 @@
+From users-return-136606-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jun 17 20:02:57 2014
+Return-Path: <users-return-136606-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EE86B113C8
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 17 Jun 2014 20:02:57 +0000 (UTC)
+Received: (qmail 91895 invoked by uid 500); 17 Jun 2014 20:02:55 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 91807 invoked by uid 500); 17 Jun 2014 20:02:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 91796 invoked by uid 99); 17 Jun 2014 20:02:55 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 17 Jun 2014 20:02:55 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.213.171] (HELO mail-ig0-f171.google.com) (209.85.213.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 17 Jun 2014 20:02:51 +0000
+Received: by mail-ig0-f171.google.com with SMTP id h18so4567374igc.10
+        for <users@maven.apache.org>; Tue, 17 Jun 2014 13:02:26 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:content-type:message-id:mime-version
+         :subject:date:references:to:in-reply-to;
+        bh=8q1Gzi7mLdIR4+e5S2IwsR/z7+S2JpwQWf/iWfQlrqg=;
+        b=PVMCxA92jpa8/mk60aao2uBVrZsjvinou0srLOOM3NuCtSTp8kEiwivyoUeaWzM5PB
+         uV+81RzGu9znIeP2/gIV3v1PPq+VkMDNotopLtkRrZnP9P+Z3rmBvFJkpDyKEbAqcjRX
+         Hx5WrHZa1hBK7tyLsayOGoVHFAtCVzKOSRNbn6nLEHExw+B4dNy5nazT1cmYns3GnHVA
+         YCB3KiU1D6aSiEupnW3H00tN5T7D1R2XoTkHvdm4ZDHskY/NsEYjWTKvEmnXYc6xmhTI
+         144/aDBDX/U36i5O8lN1dP69Q97WxDkkFWKCo5dcK/c7mpJfkSBFAzeXK3CF4ktyK58k
+         jTpA==
+X-Gm-Message-State: ALoCoQkyJz05WygPmb828Tae2oROyBzTudEPYVVv1Kd/qsny39ND21EkZHlctS+PrcbVjuFUtoyn
+X-Received: by 10.42.80.8 with SMTP id t8mr30029672ick.56.1403035346724;
+        Tue, 17 Jun 2014 13:02:26 -0700 (PDT)
+Received: from [10.0.1.11] (192-0-154-177.cpe.teksavvy.com. [192.0.154.177])
+        by mx.google.com with ESMTPSA id gb7sm98445igd.16.2014.06.17.13.02.25
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Tue, 17 Jun 2014 13:02:26 -0700 (PDT)
+From: Jason van Zyl <jason@takari.io>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_14DDD3AC-B37D-444E-81A2-D507136D989E"
+Message-Id: <46E4EC35-C8AC-4FB5-95EB-59BA9997664A@takari.io>
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.2\))
+Subject: Re: Running plugin with "own" classloader for slf4j in maven 3.2
+Date: Tue, 17 Jun 2014 16:02:24 -0400
+References: <1403033663489-5796426.post@n5.nabble.com>
+To: Maven Users List <users@maven.apache.org>
+In-Reply-To: <1403033663489-5796426.post@n5.nabble.com>
+X-Mailer: Apple Mail (2.1878.2)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_14DDD3AC-B37D-444E-81A2-D507136D989E
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+I've seen 3 people ask about this thus far but making this mechanism =
+configurable for servers that need to run inside Maven is not high on my =
+priority list.
+
+Can you not just fork and then use the runtime as it would be launched =
+in production. Running app servers inside Maven in general I don't think =
+is the best model.
+
+On Jun 17, 2014, at 3:34 PM, alexlehm <alexlehm@gmail.com> wrote:
+
+> Until Maven 3.0.x it was possible to run plugins that use slf4j with a
+> configuration of slf4j chosen by the project files (e.g. slf4j log4j =
+binding
+> or a simplelogging config in the project), since Maven wasn't using =
+slf4j
+> itself. Now in 3.2, the slf4j classes are loaded by Maven and so use =
+the
+> ones that are stored in the lib and config dirs of Maven.
+>=20
+> It is possible to remove the slf4j related files from maven and use =
+other
+> ones instead, but I would prefer it if I could select the binding =
+inside the
+> project. I assume that this requires some kind of classpath change to =
+force
+> the plugin to use a new instance of slf4j and use the files select in =
+the
+> project, but I have no idea how to do that (or if it is possible at =
+all).
+>=20
+> (the plugin I am currently using is vertx-maven-plugin, which =
+basically runs
+> the whole project inside Maven)
+>=20
+>=20
+>=20
+>=20
+>=20
+> --
+> View this message in context: =
+http://maven.40175.n5.nabble.com/Running-plugin-with-own-classloader-for-s=
+lf4j-in-maven-3-2-tp5796426.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>=20
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+http://twitter.com/takari_io
+---------------------------------------------------------
+
+happiness is like a butterfly: the more you chase it, the more it will
+elude you, but if you turn your attention to other things, it will come
+and sit softly on your shoulder ...
+
+-- Thoreau=20
+
+
+
+
+
+
+
+
+
+
+--Apple-Mail=_14DDD3AC-B37D-444E-81A2-D507136D989E--
+

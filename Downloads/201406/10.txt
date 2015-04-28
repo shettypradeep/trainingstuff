@@ -1,0 +1,122 @@
+From users-return-136623-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jun 20 15:30:29 2014
+Return-Path: <users-return-136623-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 413DB118E2
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 20 Jun 2014 15:30:29 +0000 (UTC)
+Received: (qmail 57022 invoked by uid 500); 20 Jun 2014 15:30:27 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 56943 invoked by uid 500); 20 Jun 2014 15:30:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 56927 invoked by uid 99); 20 Jun 2014 15:30:26 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 20 Jun 2014 15:30:26 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.213.169] (HELO mail-ig0-f169.google.com) (209.85.213.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 20 Jun 2014 15:30:21 +0000
+Received: by mail-ig0-f169.google.com with SMTP id c1so877227igq.4
+        for <users@maven.apache.org>; Fri, 20 Jun 2014 08:30:00 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=JgewnFJSV20YnDseHV4iLQ/OUqzZYzbRNinNN16byPs=;
+        b=MK6Aj3Qyq1wSXP33EdtqkQflVuBn2b0b3Oq5dH1E1h9kPCG3X8jXl5jkZ0Z61UhwMx
+         fvK44Or0VWiHgnbVTkpGV9W4IIdO5g98o4/2YdNPUYR39vxsXoKvERKoaMPBQLbgePsQ
+         LAYqu/AbBUtDMvKqDH/jVMC9ysGyj47ULUbwA0VEUuo09kJCjVrvcTwN2nQz28X1BC+t
+         z7re8IeKPf7Ob4f3hPeZVaqQVrr1ObBUSIx73jEgWo/6aITCjc7ohWqrIRvBjOtB7xOp
+         crXw36Hc3KoxbftQwgPVjkgriTukW1VCUV4N28o+K8VxQcJEmsnxLuaRmtRNCypVnosR
+         Kiag==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:sender:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=JgewnFJSV20YnDseHV4iLQ/OUqzZYzbRNinNN16byPs=;
+        b=i9M6opI3SggUzYWn5INL6FZHp3OqERo8mhfks3VWZvz5bTij7UzX9A3+oX/EwI+BtI
+         IDjUiiVBsjen6hOmrGUMrNz2Ci811GEtzqTpu2+eNen+4wS1vQ7dR7FU170ACBDerN/m
+         Z1W0Zq9gAywhzpGBFDneVaya8no2zOvx6y4bBJLexV6W3SM0ES7w+9t7cZbXuZvMGVvK
+         NILXfWB+G4TEBGKbJHCfS5Ir4jsfDyagwNu/V0IGdeDe94MsaaBA9EjvmIstbX4a2Ffs
+         tImEiChSOy4Ayy/g5HEo0r4HMhULJp8QECXea2/46o5Sh22OYM97n515UWmb1uRtdowP
+         KDHQ==
+X-Gm-Message-State: ALoCoQmJC6Ee/6HQ1Xr8MAn43An7b0COOudEBZUpxyXvMew4aoMNDjwRl0ksYhap5GNHliK65ZYJ
+MIME-Version: 1.0
+X-Received: by 10.42.184.196 with SMTP id cl4mr4640100icb.0.1403278200393;
+ Fri, 20 Jun 2014 08:30:00 -0700 (PDT)
+Sender: kristian.rosenvold@zenior.no
+Received: by 10.50.119.97 with HTTP; Fri, 20 Jun 2014 08:30:00 -0700 (PDT)
+In-Reply-To: <CALhtWkccTf1L3g53vCSuiS7UK_JvAS8g2jhYspihaJfSv4y5DA@mail.gmail.com>
+References: <CALhtWkfMsDVh_85DL5MA=ROsenTVfvY6VG6-SOQ=hZxeJxbgZg@mail.gmail.com>
+	<CAJZRQKwmQWh=3CDrpZoNbzp9Kg-KSFD1a3Be_7E-Wj5gV_vWRQ@mail.gmail.com>
+	<CALhtWkccTf1L3g53vCSuiS7UK_JvAS8g2jhYspihaJfSv4y5DA@mail.gmail.com>
+Date: Fri, 20 Jun 2014 17:30:00 +0200
+X-Google-Sender-Auth: hvrOr1RngLb7yls_LKfRz6tdqkg
+Message-ID: <CAJZRQKx+eRX1X6S91kDS8ZzTPfGygS_q+g8D-RBuF9U770HEUg@mail.gmail.com>
+Subject: Re: Curiosities with Surefire 2.19
+From: Kristian Rosenvold <kristian.rosenvold@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Once you switched to parallel you probably switched surefire provider
+to the junit47 provider. There might be some subtle differences in how
+those two providers capture console output; maybe the newer provider
+is better (or worse...)
+
+Kristian
+
+
+2014-06-20 16:23 GMT+02:00 Benson Margulies <bimargulies@gmail.com>:
+> On Fri, Jun 20, 2014 at 7:44 AM, Kristian Rosenvold
+> <kristian.rosenvold@gmail.com> wrote:
+>> 1. This is by choice to avoid mixing results from different classes, so "no".
+>> 2. Does toggeling
+>> http://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html#redirectTestOutputToFile
+>> do the trick ?
+>
+> Yes. I had looked at it, but I somehow convinced myself that if I
+> wasn't using it in before I shouldn't need it now. Thanks.
+>
+>>
+>> Kristian
+>>
+>>
+>> 2014-06-20 13:35 GMT+02:00 Benson Margulies <bimargulies@gmail.com>:
+>>> I've enabled multi-threading.
+>>>
+>>> 1. The 'Running' message does not show up until after the class completes.
+>>>
+>>> 2. My stderr output from Log2J has disappeared.
+>>>
+>>> Are either of these adjustable?
+>>>
+>>> ---------------------------------------------------------------------
+>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

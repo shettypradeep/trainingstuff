@@ -1,0 +1,83 @@
+From users-return-137994-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Dec 12 04:42:33 2014
+Return-Path: <users-return-137994-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1C5039091
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 12 Dec 2014 04:42:33 +0000 (UTC)
+Received: (qmail 28373 invoked by uid 500); 12 Dec 2014 04:42:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 28292 invoked by uid 500); 12 Dec 2014 04:42:31 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 28280 invoked by uid 99); 12 Dec 2014 04:42:30 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Dec 2014 04:42:30 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.217.177 as permitted sender)
+Received: from [209.85.217.177] (HELO mail-lb0-f177.google.com) (209.85.217.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Dec 2014 04:42:26 +0000
+Received: by mail-lb0-f177.google.com with SMTP id b6so5094302lbj.8
+        for <users@maven.apache.org>; Thu, 11 Dec 2014 20:40:35 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=yXsGbBdLD8KUS+kez/RPpBTYLlwcoTU+QH+3zGatYec=;
+        b=qkvUsuRVA73U4qhLkWDH5OYfluCsnCQwFDEe7zZ1AOaiA0qyF5Y56Qm8CCy/IFVSFq
+         H/81picrk2mtWNOvei3Enc8S5qOrTTvK8ThbAvZnTvJg1LeIRZSMKqPY1Qd6aB01TgEn
+         rI909bJ0Q8/oz41I2wqgh6EcBzBsGy/1pMmrzg5dJ892LAbscgDsd/pW/2YJWdyliC1w
+         rlV49zA58Tbb1k4i8Gm5NNeOWJESJuVmdp+nx5apl2k9mDki0XMU5rEztgFIzip65PGQ
+         UR7aeSZG/w+b/t1oCY39AQgeo1SW6fVVIb0SJdkiouAZJ9nQadt6y47k5mimCTuvWOM7
+         2NpQ==
+MIME-Version: 1.0
+X-Received: by 10.112.148.73 with SMTP id tq9mr13372971lbb.37.1418359235140;
+ Thu, 11 Dec 2014 20:40:35 -0800 (PST)
+Received: by 10.114.63.161 with HTTP; Thu, 11 Dec 2014 20:40:35 -0800 (PST)
+In-Reply-To: <CADVp3v8Pt1ttF0QAqhquHn7LYJnJ9sHNuG6wzQUh7QHvEdnDLw@mail.gmail.com>
+References: <CAPCjjnHgtcXTV2wrvj6b=ZAeMoFEScDCctnYdDSBwiJOKLgtxg@mail.gmail.com>
+	<CAPCjjnEaXeiO-GYYc+oKtAx0fYtZAVyrvmPXVZV-jj0agUu9Jg@mail.gmail.com>
+	<CADVp3v8Pt1ttF0QAqhquHn7LYJnJ9sHNuG6wzQUh7QHvEdnDLw@mail.gmail.com>
+Date: Thu, 11 Dec 2014 20:40:35 -0800
+Message-ID: <CAPCjjnEkDUyW4V4VDKK4FgLD63L_Z5LED9sxnBnLO0PBtrc2Og@mail.gmail.com>
+Subject: Re: Maven Repositories settings best practice
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bf0f65e5fe1420509fd7ed9
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bf0f65e5fe1420509fd7ed9
+Content-Type: text/plain; charset=UTF-8
+
+Where is in the official doc, this should land?
+
+Thanks
+
+-D
+
+On Thu, Dec 11, 2014 at 6:52 PM, Barrie Treloar <baerrach@gmail.com> wrote:
+>
+> On 12 December 2014 at 11:53, Dan Tran <dantran@gmail.com> wrote:
+>
+> > I found this
+> >
+> >
+> http://blog.sonatype.com/2009/02/why-putting-repositories-in-your-poms-is-a-bad-idea/#.VIpCmTHF_AQ
+> >
+> > sorry about the noise
+>
+>
+> If you can't find it in the official docs, then feel free to hack up some
+> enhancements.
+>
+
+--047d7bf0f65e5fe1420509fd7ed9--
+

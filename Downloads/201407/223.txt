@@ -1,0 +1,88 @@
+From users-return-136775-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jul 14 17:54:03 2014
+Return-Path: <users-return-136775-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2C22B11C50
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 14 Jul 2014 17:54:03 +0000 (UTC)
+Received: (qmail 71621 invoked by uid 500); 14 Jul 2014 17:54:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 71526 invoked by uid 500); 14 Jul 2014 17:54:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 71502 invoked by uid 99); 14 Jul 2014 17:54:00 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 14 Jul 2014 17:54:00 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ekoifman@hortonworks.com designates 209.85.217.180 as permitted sender)
+Received: from [209.85.217.180] (HELO mail-lb0-f180.google.com) (209.85.217.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 14 Jul 2014 17:53:57 +0000
+Received: by mail-lb0-f180.google.com with SMTP id w7so3151984lbi.11
+        for <users@maven.apache.org>; Mon, 14 Jul 2014 10:53:32 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to
+         :content-type;
+        bh=0fsmRNuiXNJCwIambngBVcAZ9qCs3D/Nb3oB+wVcQqg=;
+        b=NIL6nS5/82pZj1uQ6KNABbCRvTbobZ+6scWBZ4Gi7N2zhewerh1Z26JAHb3adUHcal
+         Qajt2UZaj+Tbrd5QFHS9jhk2waMLzmRS0cWdFqLmeQLSI0ebebc6qz2Y7zwJ6TuD+M7R
+         6KV68jcV82DYPUA6B/CY1mYPSagngIjyytL69jy3TTAmcd1ma2Gd/PpQOaojvCOZp27t
+         hhRbrfXKNdRqTpq3ZPVwupdN9m+8rJsLrjtf3DyZrs2GynaJN76DRqifB3XwZreRMYIT
+         UrLPU95+eNLbuzsM5FD3a1iEFh4uT5NzyDR3PbVIPkDIMScfGwsaAkgSAYIfXFyjuYMw
+         CeCw==
+X-Gm-Message-State: ALoCoQl6OoB7xiKxzsY8BYcvMM866BUl/GaRsZ7DwA0wUeVdyxFhJVfLsmc5MpZzHI2xYMLGR0By61Y/TuPHPQ3XUvXMHKflMhe61xpHYFKhiuwOz/muZ84=
+MIME-Version: 1.0
+X-Received: by 10.112.42.45 with SMTP id k13mr2211331lbl.88.1405360412439;
+ Mon, 14 Jul 2014 10:53:32 -0700 (PDT)
+Received: by 10.113.5.169 with HTTP; Mon, 14 Jul 2014 10:53:32 -0700 (PDT)
+Date: Mon, 14 Jul 2014 10:53:32 -0700
+Message-ID: <CAG0AUg1p76NL4WPPCkBg-U+wXf_TDxotXrzprGp29F-C0_J_Fg@mail.gmail.com>
+Subject: maven shade/artifact naming help
+From: Eugene Koifman <ekoifman@hortonworks.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a113364202a541504fe2af8e7
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113364202a541504fe2af8e7
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+I have an existing multi-module project.  A module A (i.e. artifactId=A)
+uses shade plugin to create an uber jar.  The shade plug in config doesn't
+retain the original (slim) jar so the only artifact produced/published from
+this module is A.jar which is the uber jar.
+
+Now I need to produce a 'slim' jar (lets call it A-core.jar) which only has
+the classes from module A.   Since this was set up several releases ago I
+have to keep A.jar as a fat jar to preserve backwards compatibility.
+
+(I can easily make shade produce A.jar as the thin jar and A-uber.jar (or
+any other name) as the fat jar, but this is not acceptable.)
+
+Is there some way to make shade plug in do that?
+-- 
+
+Thank youm,
+Eugene
+
+-- 
+CONFIDENTIALITY NOTICE
+NOTICE: This message is intended for the use of the individual or entity to 
+which it is addressed and may contain information that is confidential, 
+privileged and exempt from disclosure under applicable law. If the reader 
+of this message is not the intended recipient, you are hereby notified that 
+any printing, copying, dissemination, distribution, disclosure or 
+forwarding of this communication is strictly prohibited. If you have 
+received this communication in error, please contact the sender immediately 
+and delete it from your system. Thank You.
+
+--001a113364202a541504fe2af8e7--
+

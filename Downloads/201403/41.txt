@@ -1,0 +1,165 @@
+From users-return-135681-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Mar  4 14:40:54 2014
+Return-Path: <users-return-135681-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 08B8810335
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  4 Mar 2014 14:40:54 +0000 (UTC)
+Received: (qmail 63786 invoked by uid 500); 4 Mar 2014 14:40:49 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 63686 invoked by uid 500); 4 Mar 2014 14:40:48 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 63666 invoked by uid 99); 4 Mar 2014 14:40:47 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 04 Mar 2014 14:40:47 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [15.217.128.51] (HELO g2t2352.austin.hp.com) (15.217.128.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 04 Mar 2014 14:40:40 +0000
+Received: from G2W4316.americas.hpqcorp.net (g2w4316.austin.hp.com [16.197.9.73])
+	(using TLSv1 with cipher AES128-SHA (128/128 bits))
+	(No client certificate requested)
+	by g2t2352.austin.hp.com (Postfix) with ESMTPS id D0C7220C
+	for <users@maven.apache.org>; Tue,  4 Mar 2014 14:40:16 +0000 (UTC)
+Received: from G1W5782.americas.hpqcorp.net (16.193.26.0) by
+ G2W4316.americas.hpqcorp.net (16.197.9.73) with Microsoft SMTP Server (TLS)
+ id 14.3.123.3; Tue, 4 Mar 2014 14:39:23 +0000
+Received: from G1W3640.americas.hpqcorp.net ([169.254.3.142]) by
+ G1W5782.americas.hpqcorp.net ([16.193.26.0]) with mapi id 14.03.0123.003;
+ Tue, 4 Mar 2014 14:39:24 +0000
+From: "Umashanker, Srividhya" <srividhya.umashanker@hp.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: RE: JJTree with maven-compiler-plugin
+Thread-Topic: JJTree with maven-compiler-plugin
+Thread-Index: Ac82q9rJFkpFCmAGT7WKyj/r8hhRiQBBanKAAAFnGVA=
+Date: Tue, 4 Mar 2014 14:39:22 +0000
+Message-ID: <5D5078F9198B04449B9D74EA9E7F3D580D0B09C6@G1W3640.americas.hpqcorp.net>
+References: <5D5078F9198B04449B9D74EA9E7F3D580D0AF043@G1W3640.americas.hpqcorp.net>
+ <68C9ED0F-694A-4B73-9552-A537609DCCA3@stratuscom.com>
+In-Reply-To: <68C9ED0F-694A-4B73-9552-A537609DCCA3@stratuscom.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [15.217.50.15]
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Thanks for responding back.=20
+I did try this plugin. Looks like this is no longer active. When I integrat=
+ed the plugin with Javacc 5.0, it does not work as expected.
+The jjtree has come up with new changes in the later versions or command li=
+ne arguments, which are not available in the plugin. This causes the source=
+ code to be generated in a wrong folder.
+
+So, we are unable to use the plugin. Is there anyone used this plugin with =
+recent versions of javacc 5.0?
+
+-Vidhya
+
+-----Original Message-----
+From: Greg Trasuk [mailto:trasukg@stratuscom.com]=20
+Sent: Tuesday, March 04, 2014 7:26 PM
+To: Maven Users List
+Subject: Re: JJTree with maven-compiler-plugin
+
+
+Like so...
+
+Put the following in your pom:
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>javacc-maven-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <id>jjtree-javacc</id>
+                        <goals>
+                            <goal>jjtree-javacc</goal>
+                        </goals>
+                        <configuration>
+                            <!-- options for JJTree and JavaCC go here -->
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+       </plugins>
+   </build>
+
+And your ".jjt" files go into "src/main/jjtree.
+
+You can see an example in the "river-container-core" module at https://gith=
+ub.com/trasukg/river-container
+
+Cheers,
+
+Greg Trasuk.
+Open-Source Stream Lead, Web Age Solutions http://www.webagesolutions.com/c=
+ourses/open-source-training
+
+On Mar 3, 2014, at 1:46 AM, Umashanker, Srividhya <srividhya.umashanker@hp.=
+com> wrote:
+
+> I want to compile .jjt files into .java files using maven with javacc/jjt=
+ree.
+>=20
+> The maven-antrun-plugin wiki http://maven.apache.org/plugins/maven-antrun=
+-plugin/usage.html says  :
+>=20
+>=20
+>=20
+> Some Ant expressions have their respective counterparts in Maven. Thus, o=
+ne can simply invoke the corresponding Maven expression instead of using ma=
+ven-antrun-plugin to avoid the unneccessary overhead.
+>=20
+> Ant expression
+>=20
+> Plugin
+>=20
+> JavaCC
+>=20
+> maven-compiler-plugin<http://maven.apache.org/plugins/maven-compiler-p
+> lugin/>
+>=20
+> JJDoc
+>=20
+> maven-compiler-plugin<http://maven.apache.org/plugins/maven-compiler-p
+> lugin/>
+>=20
+> JJTree
+>=20
+> maven-compiler-plugin<http://maven.apache.org/plugins/maven-compiler-p
+> lugin/>
+>=20
+>=20
+>=20
+> Can someone point me to an example on how to use JJtree with maven-compil=
+er-plugin?  Could not find much details on how to use other compilers.
+>=20
+> -Vidhya
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

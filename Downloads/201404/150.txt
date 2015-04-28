@@ -1,0 +1,85 @@
+From users-return-136085-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Apr  5 00:13:52 2014
+Return-Path: <users-return-136085-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B88DD10C2C
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  5 Apr 2014 00:13:52 +0000 (UTC)
+Received: (qmail 10378 invoked by uid 500); 5 Apr 2014 00:13:42 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 10223 invoked by uid 500); 5 Apr 2014 00:13:38 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 10152 invoked by uid 99); 5 Apr 2014 00:13:37 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 05 Apr 2014 00:13:37 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.160.44 as permitted sender)
+Received: from [209.85.160.44] (HELO mail-pb0-f44.google.com) (209.85.160.44)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 05 Apr 2014 00:13:30 +0000
+Received: by mail-pb0-f44.google.com with SMTP id rp16so4134914pbb.17
+        for <users@maven.apache.org>; Fri, 04 Apr 2014 17:13:08 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=sender:message-id:date:from:user-agent:mime-version:to:subject
+         :content-type;
+        bh=qJlQXlbxzvYvZAmf86qcuJf3OWZpma/VKwVDNr/SGfc=;
+        b=W+J5axdjIHecvxdAn3txYhb0qh1lGOSHFM2eAWV1Gs0famKBH0g4Pzt6WeHBkfVnsF
+         pkZUfzT98et5hE2eTgHbCjSeBXrB8WjN5I30ovEaDsbLXn5dWLvm2/iCf7V5F7fI93T1
+         ru3mLuIY3qz7DVZefn2PMzXm9VD+SkEHGhJCnd9/CNdFbIELYPAL/rzI4pyG4NXPhXFz
+         y+NOEliQb7dNBWpYcWsd0SEWck7Mxj/wJyGggJ7tf3je00nrO6mwjBThMYAgq35tN99x
+         Er7WgwNSwU6N08nllhJl4SKxODsXHNZKxWO1DvGKueLyviE2pEl78hjSZQLGQ2SfUl9D
+         GMAQ==
+X-Received: by 10.69.2.2 with SMTP id bk2mr17894807pbd.75.1396656787485;
+        Fri, 04 Apr 2014 17:13:07 -0700 (PDT)
+Received: from [192.168.0.17] (S0106602ad07f9cfa.vc.shawcable.net. [24.85.131.20])
+        by mx.google.com with ESMTPSA id xk3sm20388968pbb.65.2014.04.04.17.13.05
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 04 Apr 2014 17:13:06 -0700 (PDT)
+Sender: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+Message-ID: <533F4A90.90000@kolotyluk.net>
+Date: Fri, 04 Apr 2014 17:13:04 -0700
+From: Eric Kolotyluk <eric@kolotyluk.net>
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: maven users <users@maven.apache.org>
+Subject: Maven Filtering
+Content-Type: multipart/alternative;
+ boundary="------------090500070606030906090204"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------090500070606030906090204
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+
+According to http://maven.apache.org/shared/maven-filtering/ I can define
+
+<properties>
+<projectBuildDirectory>\${project.build.directory}</projectBuildDirectory>
+</properties>
+
+and I should expect to see
+
+${project.build.directory}
+
+when the property projectBuildDirectory is used, but instead I get
+
+\D:\Users\Eric\Software\Project\Repositories\csharp-windows-elevate\target
+
+Am I going insane, is this a bug in Maven, or is the documentation wrong?
+
+Is there some other way to escape the filtering?
+
+Cheers, Eric
+
+--------------090500070606030906090204--
+

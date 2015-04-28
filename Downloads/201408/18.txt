@@ -1,0 +1,131 @@
+From users-return-137118-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Aug 26 07:07:33 2014
+Return-Path: <users-return-137118-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7A7B8114A9
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 26 Aug 2014 07:07:33 +0000 (UTC)
+Received: (qmail 7900 invoked by uid 500); 26 Aug 2014 07:07:32 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 7812 invoked by uid 500); 26 Aug 2014 07:07:31 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 7801 invoked by uid 99); 26 Aug 2014 07:07:31 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 26 Aug 2014 07:07:31 +0000
+X-ASF-Spam-Status: No, hits=1.2 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of himanshu.rawal19@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 26 Aug 2014 07:07:27 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <himanshu.rawal19@gmail.com>)
+	id 1XMAqQ-00089z-O8
+	for users@maven.apache.org; Tue, 26 Aug 2014 00:07:06 -0700
+Date: Tue, 26 Aug 2014 00:07:06 -0700 (PDT)
+From: HimanshuR <himanshu.rawal19@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1409036826733-5802952.post@n5.nabble.com>
+Subject: how to access properties defined in other module pom in maven
+ multimodule project
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+n pom of A.B.C i have defined a property as abc where A B C are modules. Now
+i want to access that property in pom of A.D.F module
+
+
+<properties>
+<A.B.C>${buildNumber}</A.B.C>
+</properties>
+
+<plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>buildnumber-maven-plugin</artifactId>
+            <version>1.3</version>
+            <executions>
+                <execution>
+                <id>buildnumber</id>
+                    <phase>validate</phase>
+                    <goals>
+                        <goal>create</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+            <timestampFormat>{0,date,dd-MM-yyyy HH:mm:ss}</timestampFormat>
+            <doCheck>false</doCheck>
+            <doUpdate>false</doUpdate>
+            <providerImplementations>
+                <svn>javasvn</svn>
+            </providerImplementations>
+            <revisiononscmfailure>
+
+                    
+
+                    <format>Build: #{0} ({1,date})</format>
+
+                    <items>
+
+                        <item>buildNumber\d*</item>
+
+                        <item>timestamp</item>
+
+                    </items>
+
+                </revisiononscmfailure>
+        </configuration>
+        <dependencies>
+            <dependency>
+               
+<groupId>com.google.code.maven-scm-provider-svnjava</groupId>
+                <artifactId>maven-scm-provider-svnjava</artifactId>
+                <version>2.1.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.tmatesoft.svnkit</groupId>
+                <artifactId>svnkit</artifactId>
+                <version>1.8.5</version>
+            </dependency>
+        </dependencies>
+
+        </plugin>
+
+I am using ${A.B.C} as value of version in a dependency in A.D.F module's
+pom.
+
+<dependency>
+        <groupId></groupId>
+        <artifactId></artifactId>
+        <version>${A.B.C}</version>
+        <type>bundle</type>
+    </dependency>
+So it is giving me error: bundle must be a valid version but is ${A.B.C}.
+
+EDIT:
+
+or can i use version of C module in someway as i have defined:
+
+<version>${A.B.C}</version> 
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/how-to-access-properties-defined-in-other-module-pom-in-maven-multimodule-project-tp5802952.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

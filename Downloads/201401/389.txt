@@ -1,0 +1,249 @@
+From users-return-135011-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan  7 22:30:32 2014
+Return-Path: <users-return-135011-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 48763104A6
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  7 Jan 2014 22:30:32 +0000 (UTC)
+Received: (qmail 87940 invoked by uid 500); 7 Jan 2014 22:30:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 87812 invoked by uid 500); 7 Jan 2014 22:30:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 87804 invoked by uid 99); 7 Jan 2014 22:30:30 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 07 Jan 2014 22:30:30 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of julianhernandeze@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 07 Jan 2014 22:30:25 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <julianhernandeze@gmail.com>)
+	id 1W0f9x-00044F-5N
+	for users@maven.apache.org; Tue, 07 Jan 2014 14:30:05 -0800
+Date: Tue, 7 Jan 2014 14:30:05 -0800 (PST)
+From: juliangeo <julianhernandeze@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1389133804785-5780906.post@n5.nabble.com>
+In-Reply-To: <4F396A25.9040503@springdot.org>
+References: <1318908458293-4912280.post@n5.nabble.com> <BD63C79E-FB60-4A77-AEF5-9E067F099855@codehaus.org> <1318937525615-4913348.post@n5.nabble.com> <CADVp3v-8sqZbH6_6i7QO_zojNU-k-LauOYe9Mtxr6Az-1xpt2A@mail.gmail.com> <4F35725E.7010209@springdot.org> <CAPoyBqT+Y1Sypaq56EzjdA7-VY+TPLtZGfuVEzufFNVKi0sWsQ@mail.gmail.com> <4F396A25.9040503@springdot.org>
+Subject: Re: DefaultProjectBuilder ... mavenTools: null [Was: Re:
+ Programmatically get maven properties]
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi! 
+
+I'm new to Maven and I've been struggling with this for a while. I just need
+to be able to programmatically build a project from a pom file in order to
+retrieve its relevant information. I am not using, nor want to, a maven
+plugin, just need this functionality as part of my application.
+
+I've tried the code you successfully got to work but no luck so far. I still
+get the "mavenTools: null" from the repositoryManager being null. Am I
+missing something? Should I run this on some kind of special environment?
+
+I'd appreciate any help as I'm really lost here.
+
+Thanks in advance.
+
+
+Max Spring wrote
+> Yes, having a projectBuilder in the Mojo did the trick.
+> Thank you!
+> The complete working example is down below.
+> -Max
+> 
+> package org.example;
+> 
+> import java.io.File;
+> 
+> import org.apache.maven.model.Model;
+> import org.apache.maven.model.building.ModelBuildingRequest;
+> import org.apache.maven.plugin.AbstractMojo;
+> import org.apache.maven.plugin.MojoExecutionException;
+> import org.apache.maven.project.DefaultProjectBuildingRequest;
+> import org.apache.maven.project.MavenProject;
+> import org.apache.maven.project.ProjectBuilder;
+> import org.apache.maven.project.ProjectBuildingResult;
+> import org.sonatype.aether.RepositorySystemSession;
+> 
+> /**
+>   * run with: mvn $groupId:$artifactId:$version:fetch-pom
+> -DpomFile=$pomFile
+>   *
+>   * @goal fetch-pom
+>   */
+> public class FetchModelMojo extends AbstractMojo{
+> 
+>    /**
+>     * Current repository/network configuration of Maven.
+>     * @parameter default-value="${repositorySystemSession}"
+>     * @readonly
+>     */
+>    private RepositorySystemSession repoSession;
+> 
+>    /**
+>     * @component
+>     */
+>    private ProjectBuilder projectBuilder;
+> 
+>    /**
+>     * @parameter expression="${pomFile}" default-value=""
+>     */
+>    private String pomFile;
+> 
+>    public void execute() throws MojoExecutionException {
+>      try {
+>        DefaultProjectBuildingRequest req = new
+> DefaultProjectBuildingRequest();
+>        req.setRepositorySession(repoSession);
+>       
+> req.setValidationLevel(ModelBuildingRequest.VALIDATION_LEVEL_STRICT);
+>        ProjectBuildingResult res = projectBuilder.build(new
+> File(pomFile),req);
+> 
+>        // do something with the project
+>        MavenProject prj = res.getProject();
+>        System.out.println("prj=" + prj);
+>        Model model = prj.getModel();
+>        System.out.println("id="+model.getId());
+>      } catch (Exception e) {
+>        throw new MojoExecutionException(e.getMessage(), e);
+>      }
+>    }
+> }
+> 
+> 
+> On 02/10/2012 01:19 PM, Olivier Lamy wrote:
+>> Hello,
+>>
+>> You must probably use:
+>>
+>>      /**
+>>       * @component
+>>       */
+>>      private ProjectBuilder projectBuilder;
+>>
+>> 2012/2/10 Max Spring&lt;
+
+> m2spring@
+
+> &gt;:
+>>> I'm running into the same "mavenTools: null" problem, but my code sits
+>>> in a
+>>> Maven 3.0.3 mojo:
+>>>
+>>>   public class MyMojo extends AbstractMojo{
+>>>
+>>>     /** @parameter default-value="${repositorySystemSession}" */
+>>>     private RepositorySystemSession repoSession;
+>>>
+>>>     public void execute() throws MojoExecutionException{
+>>>       DefaultProjectBuilder builder = new DefaultProjectBuilder();
+>>>       DefaultProjectBuildingRequest req = new
+>>> DefaultProjectBuildingRequest();
+>>>       req.setRepositorySession(repoSession);
+>>>       builder.build(new File("my-pom.xml"),req);
+>>>
+>>>       MavenProject prj = req.getProject();
+>>>       Model model = prj.getModel();
+>>>     }
+>>>   }
+>>>
+>>> It barfs with
+>>>
+>>>   Caused by: java.lang.IllegalArgumentException: mavenTools: null
+>>>     at org.apache.maven.project.MavenProject.
+> <init>
+> (MavenProject.java:249)
+>>>     at
+>>> org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:128)
+>>>     at
+>>> org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:102)
+>>>     at MyMojo.execute(MyMojo.java:59)
+>>>
+>>> This is because repositorySystem in DefaultProjectBuilder is null, i.e.
+>>> hasn't been injected:
+>>>
+>>>     @Requirement
+>>>     private RepositorySystem repositorySystem;
+>>>
+>>> How can I get the right repositorySystem injected?
+>>>
+>>> Context:
+>>> I'm essentially trying to do the M2E "Import Project" use case, but
+>>> completely outside of Eclipse.
+>>> I want to populate a workspace using the SCM pointer given by a POM
+>>> fetched
+>>> from the group repository.
+>>>
+>>> Thanks!
+>>> -Max
+>>>
+>>>
+>>> On 10/18/2011 04:59 AM, Barrie Treloar wrote:
+>>>>
+>>>> On Tue, Oct 18, 2011 at 10:02 PM, deusaquilus&lt;
+
+> deusaquilus@
+
+> &gt;
+>>>>   wrote:
+>>>>>
+>>>>> Here's what I'm doing:
+>>>>>
+>>>>> File pom = new File("pom.xml");
+>>>>> DefaultProjectBuildingRequest request = new
+>>>>> DefaultProjectBuildingRequest();
+>>>>> DefaultProjectBuilder builder = new DefaultProjectBuilder();
+>>>>>
+>>>>> String mavenHome = System.getenv("M2_HOME");
+>>>>> ArtifactRepository localRepository = new MavenArtifactRepository(
+>>>>>         "local",
+>>>>>         new File(mavenHome +
+>>>>> "/repository").toURI().toURL().toString(),
+>>>>>         new DefaultRepositoryLayout(),
+>>>>>         new ArtifactRepositoryPolicy(),
+>>>>>         new ArtifactRepositoryPolicy());
+>>>>> request.setLocalRepository(localRepository);
+>>>>> MavenProject project = builder.build(pom, request).getProject();
+>>>>> Properties properties = project.getProperties();
+>>>>>
+>>>>> Trouble is it's giving me errors with "mavenTools: null"
+>>>>
+>>>>
+>>>> I'd be surprised if that worked.
+>>>>
+>>>> Maven makes heavy use of dependency injection via Plexus and chances
+>>>> are you haven't set up some component that is being used.
+>>>>
+>>>> What is your actual use case.  I dont see why you would want to expose
+>>>> Maven properties as a Java properties object...
+>>>>
+>>>> ---------------------------------------------------------------------
+
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Programmatically-get-maven-properties-tp4912280p5780906.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,75 @@
+From users-return-137642-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Oct 29 03:30:54 2014
+Return-Path: <users-return-137642-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id AAEAC177DD
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 29 Oct 2014 03:30:54 +0000 (UTC)
+Received: (qmail 27851 invoked by uid 500); 29 Oct 2014 03:30:53 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 27765 invoked by uid 500); 29 Oct 2014 03:30:53 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 27753 invoked by uid 99); 29 Oct 2014 03:30:52 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Oct 2014 03:30:52 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of philip584521@gmail.com designates 74.125.82.53 as permitted sender)
+Received: from [74.125.82.53] (HELO mail-wg0-f53.google.com) (74.125.82.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Oct 2014 03:30:47 +0000
+Received: by mail-wg0-f53.google.com with SMTP id b13so938037wgh.12
+        for <users@maven.apache.org>; Tue, 28 Oct 2014 20:30:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=Eevj2FGeQ94GQJtQvZC+UqG7OX0FO4Quy842k7hSiC8=;
+        b=uOgrVjcTQfkKKNskj1qgoli5K+VMccKcgHVknDr6/3Q8BtdW9yWmWF2GtqhBtdlOdW
+         /WiWV0FNWY0LjbX0/yyKu8x9KDv77Y2pzMBb80jIV3gDLF0q8hsUyFy3wNMwEZQDzatc
+         xwmLbrL3fzLEFDQ94x8bkQBpkZzNs/DpN7zg9fCWLInqccfgkqgb54VwpS1fJvElCKTg
+         cyyBlqGTFGeZNI2pb8BAOuHKlkc420azHinyZIG75RR0VAy++bgP8ycxVlQ6HPQVYuvk
+         Q5ikZboj34tMEbr71mYyjfQr0EkqO5lcGS3OIU8hTpuAPfh/37/eb8KK5x70M0Ga4pLN
+         Phnw==
+MIME-Version: 1.0
+X-Received: by 10.180.101.200 with SMTP id fi8mr32936114wib.77.1414553426065;
+ Tue, 28 Oct 2014 20:30:26 -0700 (PDT)
+Received: by 10.216.237.130 with HTTP; Tue, 28 Oct 2014 20:30:26 -0700 (PDT)
+Date: Wed, 29 Oct 2014 11:30:26 +0800
+Message-ID: <CAE8kHEwi-wqWygidE88k+SkM9zvoRyTro2GFEFmsW-ypkpSSiw@mail.gmail.com>
+Subject: [pre-verify over deploy]
+From: Fay Wong <philip584521@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=f46d044280b679fef8050687620d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d044280b679fef8050687620d
+Content-Type: text/plain; charset=UTF-8
+
+Hi all,
+
+Is there any solution to pre-verify the deploy before it actually got into
+the repository?
+
+Take this usecase for example:
+
+In a team of 40 developer, every developer will deploy their module at any
+time, once there's a error,
+
+the final output software won't work and blocks other developer's flow.
+
+So is there any pre-verify solution(such as jenkins CI-server) to be
+enforced before the deploy overlapped the previous deploy?
+
+
+Thanks,
+faywong
+
+--f46d044280b679fef8050687620d--
+

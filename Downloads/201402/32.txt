@@ -1,0 +1,75 @@
+From users-return-135424-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 12 13:59:47 2014
+Return-Path: <users-return-135424-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C015110FD6
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 12 Feb 2014 13:59:47 +0000 (UTC)
+Received: (qmail 18159 invoked by uid 500); 12 Feb 2014 13:59:40 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 18012 invoked by uid 500); 12 Feb 2014 13:59:40 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 18004 invoked by uid 99); 12 Feb 2014 13:59:39 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Feb 2014 13:59:39 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of baerrach@gmail.com designates 209.85.220.169 as permitted sender)
+Received: from [209.85.220.169] (HELO mail-vc0-f169.google.com) (209.85.220.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Feb 2014 13:59:35 +0000
+Received: by mail-vc0-f169.google.com with SMTP id hq11so7047611vcb.14
+        for <users@maven.apache.org>; Wed, 12 Feb 2014 05:59:14 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=Uau3mF9rzu7uyQZLcLZQBqtlBEpC3qGwkiRUqnEx7M0=;
+        b=Su0zzx0LDNPYJ5tLC94xudirkQJaDArIBX7h/0NXENpYGH/5eRQ3DIslc+tWkDOh7X
+         JZiszgds8eER/Tqyob0Vir+/+xp0vKz7giyhMxhTBmUTEKtcc94yUFbhM5FG9XumOA9C
+         Cu7IiXoCtOgJEsrLShBpChKQR6NXpAk26OWIBTXT+gJDEeWKu3hN8Rkm5pt08uqgYxUw
+         XMGE8NEpjmsDrmYwQhDKD7snQ2ELZhO8RMKYyEMgCLhMPd9EUH0yy6KWAV39N9ffq7xa
+         jEU4o0Ec79jyhkDPbFhriJq5R3qtwrzEaNRxA3uM3XqOBS8MHhVNj20BWTrwXhNuQxnW
+         A5Tg==
+MIME-Version: 1.0
+X-Received: by 10.52.94.77 with SMTP id da13mr89379vdb.55.1392213554774; Wed,
+ 12 Feb 2014 05:59:14 -0800 (PST)
+Received: by 10.58.48.131 with HTTP; Wed, 12 Feb 2014 05:59:14 -0800 (PST)
+In-Reply-To: <20140212135015.GB25862@IUPUI.Edu>
+References: <1392153066705-5784108.post@n5.nabble.com>
+	<CADVp3v_ZQa+69g4wkGo6Zivpat60tPnfpOJKOZ0M3EKXEAvP6g@mail.gmail.com>
+	<20140212135015.GB25862@IUPUI.Edu>
+Date: Thu, 13 Feb 2014 00:29:14 +1030
+Message-ID: <CADVp3v-Ys6hx3+nmmnSm2+d_baFbjo0kXLvgy6nZpMG6KvM2VA@mail.gmail.com>
+Subject: Re: Why is dependency:analyze lying to me?
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=ISO-8859-1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 13 February 2014 00:20, Mark H. Wood <mwood@iupui.edu> wrote:
+> On Wed, Feb 12, 2014 at 08:11:29AM +1030, Barrie Treloar wrote:
+> [snip]
+>> I think Maven is missing a scope, it needs to break up test into two
+>> phases; testCompile and testRuntime instead of having one scope which
+>> means both.
+[del]
+> Picky terminology tweak:
+
+Yes, my bad.
+I meant break that one scope into two scopes (not phases).
+Much like there are two scopes for compilation (compile and runtime),
+there needs to be two scopes for test (compile and runtime).
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

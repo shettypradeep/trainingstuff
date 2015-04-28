@@ -1,0 +1,199 @@
+From users-return-136517-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jun  3 21:37:27 2014
+Return-Path: <users-return-136517-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 575E7117DC
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  3 Jun 2014 21:37:27 +0000 (UTC)
+Received: (qmail 85159 invoked by uid 500); 3 Jun 2014 21:37:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 85066 invoked by uid 500); 3 Jun 2014 21:37:25 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 85055 invoked by uid 99); 3 Jun 2014 21:37:25 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 03 Jun 2014 21:37:25 +0000
+X-ASF-Spam-Status: No, hits=2.5 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 74.125.82.176 as permitted sender)
+Received: from [74.125.82.176] (HELO mail-we0-f176.google.com) (74.125.82.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 03 Jun 2014 21:37:21 +0000
+Received: by mail-we0-f176.google.com with SMTP id q59so7586465wes.35
+        for <users@maven.apache.org>; Tue, 03 Jun 2014 14:37:00 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=1+nfcs5bvd8OLzJy4lASuO/xPjcNVX9py3YpzZEKwUc=;
+        b=jB8woyeQ+F1vs/ifvnog12hjU6E0OO4v5qqsFxCVhCOkE0kB7CbNFudk+JW/sh8cmn
+         qkJk5QnfNzIbzcgifysVf5h8p2nOVzEcGk+7LKeGJCece4PR6f+cimwyOnWj4KoBM4+5
+         02XecVNNdYKmCTDAit89d/lp8eWQJ64QBdMxpzTbwjx1hYQmeX8ER0KIBNZUx0ag8Z2S
+         R6Wn10VVg+TT121sHTdIuYQpMztYs4l5GyccwN1PzqJPznNFEYASB9xmgEg8AqtODjbd
+         9Vs6Ol+yKvoD+kcYfhcd6yr8gU5uyH2KCK9ZoWNTN6cU8Tw3sHGXoiDY8nq2EDaZq0DM
+         uFwg==
+MIME-Version: 1.0
+X-Received: by 10.180.182.115 with SMTP id ed19mr35982670wic.29.1401831420756;
+ Tue, 03 Jun 2014 14:37:00 -0700 (PDT)
+Received: by 10.194.137.12 with HTTP; Tue, 3 Jun 2014 14:37:00 -0700 (PDT)
+In-Reply-To: <CAHJFET5iSHEfn0_zUwAVb9=qVLPwsyP2GRGg4w3KM5o3QiG3eQ@mail.gmail.com>
+References: <CAPo9-A8n50JK4W0fwivPAd-of4s_cZ58FHBAWSud+Gw8R-dHgg@mail.gmail.com>
+	<DB868287-1453-4702-9EE0-796EF8D375A3@Kriegisch.name>
+	<CAPo9-A-nBYi4Uj_GPW==S95bJLje4KSpbbLEb2x5eUhv1QkVSg@mail.gmail.com>
+	<CAHJFET4Odck3scM4dPEanJF7AQZkS7FO4q11nEOUNs729Gg6xA@mail.gmail.com>
+	<20140603200512.317CE4340D94@dd34514.kasserver.com>
+	<CAHJFET5iSHEfn0_zUwAVb9=qVLPwsyP2GRGg4w3KM5o3QiG3eQ@mail.gmail.com>
+Date: Tue, 3 Jun 2014 14:37:00 -0700
+Message-ID: <CAPCjjnGDK_Amzd1JuS_W9kQD2d_4TQ06ini678Trv9Pk+WKz7Q@mail.gmail.com>
+Subject: Re: Maven repository management systems
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b66f59fde87bc04faf54f26
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b66f59fde87bc04faf54f26
+Content-Type: text/plain; charset=UTF-8
+
+Perhaps Artifactory is cheaper and support repos like NPM?
+
+100$ per seat for nexus professional is way expensive? :-)
+
+-D
+
+
+On Tue, Jun 3, 2014 at 1:10 PM, Glenn Brown <ghbrown60640@gmail.com> wrote:
+
+> My question was what use case was making you think of no longer using
+> nexus?
+>
+>
+> On Tue, Jun 3, 2014 at 3:05 PM, Manfred Moser <manfred@mosabuam.com>
+> wrote:
+>
+> > The majority of developers seem to be using Nexus according to
+> >
+> >
+> >
+> http://zeroturnaround.com/rebellabs/java-tools-and-technologies-landscape-for-2014/
+> >
+> > Slides 2 and 19
+> >
+> > manfred
+> >
+> > PS: I am part of the Nexus team.. but was not involved in that survey.
+> >
+> > Glenn Brown wrote on 03.06.2014 12:22:
+> >
+> > > I would not recommend Archiva. It's intended to be mainly a reference
+> > > implementation of the repository and, personally, i find it's UI to be
+> a
+> > > bit clunky. Whats moving you off Nexus?
+> > >
+> > >
+> > > On Tue, Jun 3, 2014 at 1:40 PM, Mehul Sanghvi <mehul.sanghvi@gmail.com
+> >
+> > > wrote:
+> > >
+> > >> Hit the reply button too quickly on the previous one.
+> > >>
+> > >> I did not expect a full review and comparison of the systems plus a
+> > >> migration guide. I was more looking for gotchas that people may have
+> run
+> > >> into when doing a migration and/or what they took into account when
+> > >> choosing a system.  I will take Dan's suggestion to search the mail
+> > >> archives, and see what I find there, and if I need to, will send out
+> > >> another email
+> > >> and be more specific next time around.
+> > >>
+> > >>
+> > >> cheers,
+> > >>
+> > >>      mehul
+> > >>
+> > >>
+> > >>
+> > >> On Tue, Jun 3, 2014 at 1:49 PM, Alexander Kriegisch <
+> > >> Alexander@kriegisch.name> wrote:
+> > >>
+> > >> > With all due respect: Can you ask in an even more general way? You
+> do
+> > not
+> > >> > expect someone to write a full review and comparison of those
+> systems
+> > >> plus
+> > >> > migration guide for you, do you? For such general information there
+> > are
+> > >> web
+> > >> > search engines and tutorials.
+> > >> >
+> > >> > Constructive hint: Maybe if you explain which concrete problems or
+> > >> > shortcomings you see in Nexus OSS, why you consider migration and
+> what
+> > >> you
+> > >> > want to achieve with the migration, someone will be glad to help
+> you.
+> > >> >
+> > >> > I do not mean to be rude, but this is not a very smart way to ask a
+> > >> > question on any mailing list.
+> > >> > --
+> > >> > Alexander Kriegisch
+> > >> >
+> > >> >
+> > >> > > Am 03.06.2014 um 18:55 schrieb Mehul Sanghvi <
+> > mehul.sanghvi@gmail.com
+> > >> >:
+> > >> > >
+> > >> > > Currently we are using Nexus OSS version.  I am leaning toward
+> > Archiva,
+> > >> > but
+> > >> > > there is also
+> > >> > > Artifactory.
+> > >> > >
+> > >> > >
+> > >> > > What is involved if we were to migrate from Nexus to one of the
+> > others
+> > >> ?
+> > >> > > Do the repository URLs
+> > >> > > change ?   Or the layout ?
+> > >> > >
+> > >> > > What do people recommend ?  Why ?
+> > >> > >
+> > >> > >
+> > >> > > cheers,
+> > >> > >
+> > >> > >      mehul
+> > >> > >
+> > >> > >
+> > >> > > --
+> > >> > > Mehul N. Sanghvi
+> > >> > > email: mehul.sanghvi@gmail.com
+> > >> >
+> > >> >
+> ---------------------------------------------------------------------
+> > >> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > >> > For additional commands, e-mail: users-help@maven.apache.org
+> > >> >
+> > >> >
+> > >>
+> > >>
+> > >> --
+> > >> Mehul N. Sanghvi
+> > >> email: mehul.sanghvi@gmail.com
+> > >>
+> > >
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+>
+
+--047d7b66f59fde87bc04faf54f26--
+

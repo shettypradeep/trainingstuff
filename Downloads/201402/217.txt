@@ -1,0 +1,114 @@
+From users-return-135352-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb  5 13:24:00 2014
+Return-Path: <users-return-135352-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9F22110EBC
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  5 Feb 2014 13:24:00 +0000 (UTC)
+Received: (qmail 77679 invoked by uid 500); 5 Feb 2014 13:23:54 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 77521 invoked by uid 500); 5 Feb 2014 13:23:54 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 77512 invoked by uid 99); 5 Feb 2014 13:23:53 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Feb 2014 13:23:53 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.214.174] (HELO mail-ob0-f174.google.com) (209.85.214.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Feb 2014 13:23:49 +0000
+Received: by mail-ob0-f174.google.com with SMTP id uy5so382319obc.19
+        for <users@maven.apache.org>; Wed, 05 Feb 2014 05:23:28 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:content-type;
+        bh=qxIFxhlcQpR/MkPEPUZ1OXvNgyKBI15ckPfnEDnex5A=;
+        b=IaGpNulANJpB08zxB+dncjtXmkrLcGYZ+oUjl0MhrP7S2SSvIdl8JN9t7xdObk2vGB
+         rumF0HyijF5HVLLanT9sbcEl4Z8R9j/O/Q0lZDtKRPz1YQdvVn5hQmgwzmI7Yv5kn3Uw
+         juj4MkkUHUg9g/MEpCuDM6i1FREadaK5EuGN2L4hg1GxVoKx8pdhqB5+jYZI5guI62xd
+         5/NEptyXSGXTN/HYhqYRFxxn791R0nnafd3JXIJYLN2IPMUPUZb4XSLS+pgTUcVoAmu6
+         YCLWoN1Nz9PVUAgboFVu04+rVM5fpV4sQY+b7cOjmcSgFcgjd9tFRNG+H/8BDJvUPXic
+         2Nkw==
+X-Gm-Message-State: ALoCoQkRiIVaq9z3GZGkXSnutlDAu/3MSEx14Hy1OAmdE5tGEy9n08LJA1QInyUohyHxJno5YqiQ
+X-Received: by 10.60.133.144 with SMTP id pc16mr163883oeb.83.1391606607855;
+ Wed, 05 Feb 2014 05:23:27 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.76.9.201 with HTTP; Wed, 5 Feb 2014 05:23:07 -0800 (PST)
+In-Reply-To: <52F23A26.40804@artifact-software.com>
+References: <CA+9DqaKc2YEQcSBPoxh7r36G40+Z0_fZ+9mCFvoX7Dgis2Bz5w@mail.gmail.com>
+ <52F23A26.40804@artifact-software.com>
+From: Melvyn de Kort <melvyn@mdekort.nl>
+Date: Wed, 5 Feb 2014 14:23:07 +0100
+Message-ID: <CA+9DqaLhQ5tUQt=qsYf2vDM17VZu2FOwaNsty7=8JHbPuvNMLw@mail.gmail.com>
+Subject: Re: Maven multi-module site
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b4728668755d704f1a8a94c
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b4728668755d704f1a8a94c
+Content-Type: text/plain; charset=ISO-8859-1
+
+Our maximum heap size is already 4G, can't increase that any more I'm
+afraid.
+
+Regards,
+
+Melvyn de Kort
+
+
+On Wed, Feb 5, 2014 at 2:18 PM, Ron Wheeler
+<rwheeler@artifact-software.com>wrote:
+
+> On 05/02/2014 4:22 AM, Melvyn de Kort wrote:
+>
+>> Hi all,
+>>
+>> We have a large multi-module project with over 90 submodules.
+>> When we run a mvn site-deploy command, the build will run out of memory.
+>> This used to work, but I guess we reached a threshold.
+>>
+>> Our idea is to split the site command in groups of modules, or maybe build
+>> every module separately.
+>> However, we still want to have an aggregated site in the end.
+>>
+>> Does anybody have experience in how to configure and run such a setup?
+>>
+>> Kind regards,
+>>
+>> Melvyn de Kort
+>>
+>>
+> Have you increased the memory to the max that your virtual memory can
+> support?
+> This does not give you a "better" structure but should solve your current
+> bottleneck.
+> Memory is very cheap. Virtual memory is even cheaper.
+>
+> Ron
+>
+> --
+> Ron Wheeler
+> President
+> Artifact Software Inc
+> email: rwheeler@artifact-software.com
+> skype: ronaldmwheeler
+> phone: 866-970-2435, ext 102
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7b4728668755d704f1a8a94c--
+

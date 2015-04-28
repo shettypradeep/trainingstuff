@@ -1,0 +1,69 @@
+From users-return-136978-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Aug  6 16:35:12 2014
+Return-Path: <users-return-136978-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2752D11898
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  6 Aug 2014 16:35:12 +0000 (UTC)
+Received: (qmail 28530 invoked by uid 500); 6 Aug 2014 16:35:10 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 28453 invoked by uid 500); 6 Aug 2014 16:35:10 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 28439 invoked by uid 99); 6 Aug 2014 16:35:09 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 06 Aug 2014 16:35:09 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of waynefay@gmail.com designates 209.85.192.172 as permitted sender)
+Received: from [209.85.192.172] (HELO mail-pd0-f172.google.com) (209.85.192.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 06 Aug 2014 16:35:04 +0000
+Received: by mail-pd0-f172.google.com with SMTP id ft15so3610106pdb.3
+        for <users@maven.apache.org>; Wed, 06 Aug 2014 09:34:43 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=Yo9sjQCE7fE4VVHDvP6Bt8IPB3iwS3GneBsHEMDUQsE=;
+        b=YFhQ1m0RuZGFzhS5KKIL2dyebqRfXTvsz3oQ8Jlft5gftgjxvzeJYpcWUv4XgYA3EL
+         +mF3DoSRlBdxvSGXCKp3HnqiRsCHn7NT0iacFkiPKgQ6uC/E3kTCUmoR3E/TKf9nmz1a
+         tGtIt9qCrx79wmWh6Zpu2DJIMLcem0vlafR7NDvhk+Y3aZr3Sj8hotqbzqByQeKdtT5m
+         9cyxztxaaZtaxJiIYXGqqJ3Jb30JNNVwJAd7bQv/zCBCFoJCO/vBugx45Xb6PmnbGIUm
+         vJjOUXXTMB+qTfTDRTpJMXEj9dYzUK3ldxSOFKD9kjFZ0nFNw+dMjWEMUNhbY+vVE0Qx
+         FB0Q==
+X-Received: by 10.68.203.132 with SMTP id kq4mr12540705pbc.12.1407342883888;
+ Wed, 06 Aug 2014 09:34:43 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.66.147.131 with HTTP; Wed, 6 Aug 2014 09:34:23 -0700 (PDT)
+In-Reply-To: <CAPo9-A8797sOoVKwuc4W+p=uzzA8qt03ZB5mttnN3V3tUxwB-Q@mail.gmail.com>
+References: <CAPo9-A8797sOoVKwuc4W+p=uzzA8qt03ZB5mttnN3V3tUxwB-Q@mail.gmail.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Wed, 6 Aug 2014 11:34:23 -0500
+Message-ID: <CALy+7UmfYU=+khtDc_wvf4NTQdVqkYJ7Zd-rvy=7Ff5OBSgQow@mail.gmail.com>
+Subject: Re: local repository permissions
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> How can I get maven to create directories and files with world writeable
+> permissions
+> when it is downloading or installing to the local ~/.m2 repository ?
+
+Most likely you are attempting to do something that Maven does not
+want you to do - the ~/.m2 repo is not designed to be shared. Describe
+your use case more.
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

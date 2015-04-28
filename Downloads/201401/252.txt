@@ -1,0 +1,88 @@
+From users-return-135257-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Jan 25 23:08:03 2014
+Return-Path: <users-return-135257-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4497C10A56
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 25 Jan 2014 23:08:03 +0000 (UTC)
+Received: (qmail 73617 invoked by uid 500); 25 Jan 2014 23:07:59 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 73482 invoked by uid 500); 25 Jan 2014 23:07:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 73472 invoked by uid 99); 25 Jan 2014 23:07:59 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 25 Jan 2014 23:07:59 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mfriedenhagen@gmail.com designates 209.85.214.180 as permitted sender)
+Received: from [209.85.214.180] (HELO mail-ob0-f180.google.com) (209.85.214.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 25 Jan 2014 23:07:53 +0000
+Received: by mail-ob0-f180.google.com with SMTP id wp4so5044028obc.39
+        for <users@maven.apache.org>; Sat, 25 Jan 2014 15:07:32 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=dqtbLAGtedl5O47OD27Yw9qER0xp2YDK8fV1vTgFFC0=;
+        b=FA6xAyKXUNL9cuTEW2qbxx7jIELmuRN1Az6XvZLt0fSbPRG9q7ABMc50v6jzeLGNBn
+         r/uDlp/6JnqZEukpSgpTd5gv3xALwDTn+j21Mjfg/bnRV/HRQgXXpccDHn8Q7QHxGcN+
+         M03HkxAmzr8vNWrq4M0kBjGtEutJLNjG8uzaS1nYUB2z1m7QI7nvkCyD+OjA3LH8CPbn
+         fsmjVa6ZHrGgAZOquhVtF6RogDsbtmWMI9h2Jmk92z+KYcolEoeYRFlk+49uTH+1xJEo
+         VijP1tWi3aitsWo6M3J6ZQJQLLPW/j6cX0f5BRdL+c3TzmFBqYDOa0cC3H9kMLmPWn6r
+         NMUg==
+MIME-Version: 1.0
+X-Received: by 10.60.228.135 with SMTP id si7mr15321639oec.4.1390691252606;
+ Sat, 25 Jan 2014 15:07:32 -0800 (PST)
+Received: by 10.182.24.227 with HTTP; Sat, 25 Jan 2014 15:07:32 -0800 (PST)
+Received: by 10.182.24.227 with HTTP; Sat, 25 Jan 2014 15:07:32 -0800 (PST)
+In-Reply-To: <52E43D93.2020903@geekologue.com>
+References: <52E43D93.2020903@geekologue.com>
+Date: Sun, 26 Jan 2014 00:07:32 +0100
+Message-ID: <CAK8jvqy4LrJkUk8jTtAsondDt91mBxCPhN_xefM-RohyhBbs8Q@mail.gmail.com>
+Subject: Re: Document project groupId, artifactId and version in javadocs?
+From: Mirko Friedenhagen <mfriedenhagen@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113639101a9b8c04f0d38ab1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113639101a9b8c04f0d38ab1
+Content-Type: text/plain; charset=UTF-8
+
+Manos,
+
+you might override the doctitle or bottom property of the
+maven-javadoc-plugin .
+
+Regards
+Mirko
+-- 
+Sent from my mobile
+On Jan 25, 2014 11:42 PM, "Manos Batsis" <manos_lists@geekologue.com> wrote:
+
+>
+> Hey, long time.
+>
+> Is there some decently easy way of doing just that? Bonus points for
+> magically applying to every maven build in the universe, now and for ever!
+>
+>
+> Cheers,
+>
+> Manos
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a113639101a9b8c04f0d38ab1--
+

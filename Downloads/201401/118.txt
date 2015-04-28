@@ -1,0 +1,158 @@
+From users-return-134917-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jan  3 16:09:32 2014
+Return-Path: <users-return-134917-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 61FA0109A1
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  3 Jan 2014 16:09:32 +0000 (UTC)
+Received: (qmail 19810 invoked by uid 500); 3 Jan 2014 16:09:19 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 19695 invoked by uid 500); 3 Jan 2014 16:09:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 19627 invoked by uid 99); 3 Jan 2014 16:09:13 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Jan 2014 16:09:13 +0000
+Received: from localhost (HELO robertscholte) (127.0.0.1)
+  (smtp-auth username rfscholte, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Jan 2014 16:09:12 +0000
+Content-Type: text/plain; charset=iso-8859-15; format=flowed; delsp=yes
+To: "Stephen Connolly" <stephen.alan.connolly@gmail.com>, "Maven Developers
+ List" <dev@maven.apache.org>
+Cc: "Maven Users List" <users@maven.apache.org>
+Subject: Re: New site content
+References: <CA+nPnMzmK+YXL1q=XWd=LZEzR7hoyqtO00wJvO85XyynJ+SmDA@mail.gmail.com> <CA+nPnMz80i1=TFRmqOAgeGViXNrsfFwxZ8SWaHyxLNm+A7mAOw@mail.gmail.com> <op.w83934u7kdkhrr@robertscholte> <CA+nPnMxQ5J_s908SRUzckgfrHHFMRduu5kBBAryv9bQLWsj1gA@mail.gmail.com>
+Date: Fri, 03 Jan 2014 17:09:07 +0100
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.w84chhqkkdkhrr@robertscholte>
+In-Reply-To: <CA+nPnMxQ5J_s908SRUzckgfrHHFMRduu5kBBAryv9bQLWsj1gA@mail.gmail.com>
+User-Agent: Opera Mail/12.16 (Win32)
+
+Op Fri, 03 Jan 2014 16:46:33 +0100 schreef Stephen Connolly  
+<stephen.alan.connolly@gmail.com>:
+
+> On 3 January 2014 15:17, Robert Scholte <rfscholte@apache.org> wrote:
+>
+>> Hi,
+>>
+>> I like the idea of images, however I would avoid a graph to make  
+>> something
+>> clear for new Maven users.
+>> Instead I'd prefer a linear model.
+>>
+>
+> My first draft did not have the graph at the top... perhaps it would be
+> better suited at the bottom ;-)
+>
+>
+>>
+>> I think you should split the current model into pieces:
+>>
+>> A project model contains:
+>> - dependencies
+>> - a build plan
+>> - other project models ( you can call this the Droste effect[1] )
+>>
+>
+> I like to think of the project model as not just the root pom.xml but all
+> the pom.xml files, so there is only one project model, this should make
+> understanding how -pl, -am and -amd switches have their effects
+>
+>
+
+IMO these switches are way too detailed for a 60 sec tutorial. I even  
+think that a large group of the average Maven users don't know these  
+switches or use them.
+
+>> - ...
+>>
+>> There are several build-plans, namely: a build-plan for jar, war, ear,  
+>> etc.
+>> Every build plan has a set of predefined plugins,  which you can adjust
+>> (with switches?)
+>>
+>
+> No there is one and only one build plan. We would have to redefine build
+> plan everywhere else to be able to use it like that. There is a lifecycle
+> binding for each packaging
+>
+>
+
+Then buildplan is too abstract. With a real world example: the buildplan  
+for a house and a bike are completely different. Unless you say: you have  
+a design, some goods, you mix those goods and you have your product.
+Not a useful plan IMO.
+At least keep the audience in mind: do they need to know the actual  
+implementation or do they first need to understand the overall process. I  
+think the latter is more important, even if this conflicts a bit with the  
+idiom used by experienced Maven users.
+What if we call it "build instructions" (per packaging type) ?
+
+>>
+>> Now, what does Maven do?
+>>
+>> Maven reads the build plan and executes it. Some steps of the build plan
+>> deliver products ( compiled classes, test results, a package)
+>>
+>> I think the reactor might be confusing at this level.
+>>
+>
+> I want the 60sec tutorial to be the grand overview, the next tutorial is  
+> a
+> 5 minute one on how a .jar file gets built
+>
+> Then you have a multi-module webapp tutorial at 10-15min
+>
+> I want to reference all the core concepts from the 60 second overview  
+> even
+> if only briefly, that way people can come back to the short page and say
+> "ahh yes that is where that fits in again"
+>
+>
+>>
+>> my 2 cents,
+>>
+>> Robert
+>>
+>> [1] http://en.wikipedia.org/wiki/Droste_effect
+>>
+>>
+>> Op Fri, 03 Jan 2014 15:41:15 +0100 schreef Stephen Connolly <
+>> stephen.alan.connolly@gmail.com>:
+>>
+>>
+>>  Just in case it wasn't clear... I'm looking for comments and feedback
+>>>
+>>>
+>>> On 3 January 2014 14:35, Stephen Connolly
+>>> <stephen.alan.connolly@gmail.com>wrote:
+>>>
+>>>  OK, so to start working on new content I created some pages on the  
+>>> wiki:
+>>>>
+>>>> The first page is a 60 seconds overview of Maven's build process
+>>>>
+>>>>
+>>>> https://cwiki.apache.org/confluence/display/MAVEN/
+>>>> Tutorial:+Maven+in+60+seconds
+>>>>
+>>>> I am using icons because I want to have subsequent pages give more  
+>>>> detail
+>>>> and use the iconography to enable people to see what is being  
+>>>> discussed
+>>>> more easily
+>>>>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

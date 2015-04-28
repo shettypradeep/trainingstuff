@@ -1,0 +1,131 @@
+From users-return-135290-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan 29 01:21:00 2014
+Return-Path: <users-return-135290-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CA8BE101D9
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 29 Jan 2014 01:21:00 +0000 (UTC)
+Received: (qmail 23896 invoked by uid 500); 29 Jan 2014 01:20:57 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 23826 invoked by uid 500); 29 Jan 2014 01:20:56 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 23817 invoked by uid 99); 29 Jan 2014 01:20:56 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Jan 2014 01:20:56 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ctrueden.wisc@gmail.com designates 209.85.128.178 as permitted sender)
+Received: from [209.85.128.178] (HELO mail-ve0-f178.google.com) (209.85.128.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Jan 2014 01:20:52 +0000
+Received: by mail-ve0-f178.google.com with SMTP id oy12so803558veb.9
+        for <users@maven.apache.org>; Tue, 28 Jan 2014 17:20:31 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=CHp2ix4WF9L4/b44lBgB0u9hN99FSOLLk46LD7nifbY=;
+        b=UkeZQ9MDmHFoplxPJCsFX8qsdet6pdNYWGF5xaFJIoMTm4fzpNQNOjkLrWQhmBnMR3
+         sUPheJjOwoyPgSXMkZtEMLd4ULsFfX1d91zeDEWWTXJ96Ny9JvG0wAZsBsk8VqHUIL1j
+         csnfdQ/tW9ahSZEjTVWp4zDU9WJi13nxf1Mhf02TdLzSnDGfneUz9aWFtObOWqedbnC+
+         tK7oflgCWqaWsZhdhIxNtmsczlrMtCOuSjLgYIvEuCG9qtCR4WDtZJ4356PE7mnPmBFJ
+         PbgMwxi2nIgnNQOPdWg1hPQvIBLWI/rdr8tN5SOTyBuXpUWl3DLtAFejvTGtQGgF4of/
+         REcQ==
+MIME-Version: 1.0
+X-Received: by 10.52.30.77 with SMTP id q13mr3242794vdh.18.1390958431681; Tue,
+ 28 Jan 2014 17:20:31 -0800 (PST)
+Sender: ctrueden.wisc@gmail.com
+Received: by 10.58.34.198 with HTTP; Tue, 28 Jan 2014 17:20:31 -0800 (PST)
+Received: by 10.58.34.198 with HTTP; Tue, 28 Jan 2014 17:20:31 -0800 (PST)
+In-Reply-To: <58EAA08AF8232344ADDB2E31D4996BFD5483CDFA@SMAPEXCHIDAG3.prod.ad.merc.chicago.cme.com>
+References: <58EAA08AF8232344ADDB2E31D4996BFD5483CDFA@SMAPEXCHIDAG3.prod.ad.merc.chicago.cme.com>
+Date: Tue, 28 Jan 2014 19:20:31 -0600
+X-Google-Sender-Auth: AcUDaAJ23SnU2_1tqpOy9gqMtiU
+Message-ID: <CADN69ykZwpMg-Lx4BS2EN8HEvQwPDmauZT+WVeS=MJL_YWRLTA@mail.gmail.com>
+Subject: Re: dependency plugin strangeness
+From: Curtis Rueden <ctrueden@wisc.edu>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=20cf3077614b37c1d704f111bf79
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--20cf3077614b37c1d704f111bf79
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi Roy,
+
+Can you use a bisect-style debugging approach? Remove half of the modules
+from the build and run dependency:tree again. If it works, add half back in
+again; if not, remove half of what remains. Etc. Then at least you might
+isolate the problem a bit more. It also might make it easier to create a
+minimal test case for bug reporting purposes.
+
+Regards,
+Curtis
+On Jan 28, 2014 4:56 PM, "Lyons, Roy" <Roy.Lyons@cmegroup.com> wrote:
+
+> So, I tried my google-fu first - and in general my google-fu is very very
+> strong...
+>
+> I've been fighting with this multi-module plan for some time now with the
+> developer who is reporting the issue to me.  The issue manifested itself as
+> part of a Sonar failure...  the funny thing is, that the failure was on a
+> dependenct tree resolution that Sonar was doing - so I had him try the
+> dependency plugin and perform a dependency:tree
+>
+> dependency tree failed us...  well, it probably isn't dependency plugin's
+> fault but I am at a loss as to what it is really dying on or why.
+>
+> I would absolutely love it if someone saw this and said "Oh yeah, I know
+> that issue.  Its a real pain.  They have XXX defined incorrectly in their
+> multimodule build so the dependency plugin is in a circular dependency
+> loop" (or something like that).  I have no idea if its a dependency loop,
+> was just an example.
+>
+> I can't share the poms because its all proprietary closed source stuff
+> (and I have to be careful about what is shared).  If this means that I dont
+> have enough info to help, I can live with that - and will continue to plow
+> forwards...  I just wanted to see if theres someone on the list who knows
+> exactly what I should be looking for to help shorten my investigation time.
+>
+> Here's an example of what dependency:tree is complaining about.
+>
+>
+>  mvn dependency:tree -Dverbose=true -DoutputFile=dependencies.txt -e -X
+>
+> urls[38] =
+> file:/C:/Users/thisguysuserid/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar
+> Number of foreign imports: 1
+> import: Entry[import  from realm ClassRealm[maven.api, parent: null]]
+> -----------------------------------------------------
+>
+>         at
+> org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:139)
+>         at
+> org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+>         ... 19 more
+> Caused by: org.apache.maven.plugin.PluginContainerException: An API
+> incompatibility was encountered while executing
+> org.apache.maven.plugins:maven-dependency-plugin:2.8:tree:
+> java.lang.AbstractMethodError:
+> org.apache.maven.shared.dependency.tree.DependencyTreeResolutionListener.manageArtifactSystemPath(Lorg/apache/maven/artifact/Artifact;Lorg/apache/maven/artifact/Artifact;)V
+>
+>
+>
+>
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--20cf3077614b37c1d704f111bf79--
+

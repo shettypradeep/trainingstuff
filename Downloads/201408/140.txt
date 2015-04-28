@@ -1,0 +1,112 @@
+From users-return-137153-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Aug 29 06:29:37 2014
+Return-Path: <users-return-137153-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B89C7112DB
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 29 Aug 2014 06:29:37 +0000 (UTC)
+Received: (qmail 42424 invoked by uid 500); 29 Aug 2014 06:29:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 42337 invoked by uid 500); 29 Aug 2014 06:29:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 42322 invoked by uid 99); 29 Aug 2014 06:29:30 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 29 Aug 2014 06:29:30 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of kopfarzt@gmail.com designates 209.85.223.176 as permitted sender)
+Received: from [209.85.223.176] (HELO mail-ie0-f176.google.com) (209.85.223.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 29 Aug 2014 06:29:05 +0000
+Received: by mail-ie0-f176.google.com with SMTP id x19so2263825ier.21
+        for <users@maven.apache.org>; Thu, 28 Aug 2014 23:29:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=K6o85cHu0gdOjey8ZVFx1yt7ivwEJ0SvvwYND+6LKaY=;
+        b=nxxz3Ndl1vPtqP8mEy0H0m6lKN+hAjhApglK9Z1eXUtnIepho+Qh3ELYVOyEKPZTPI
+         ILCWXwygKPf0M4RNpUeE3R9sr7j5nS9i1B1fRcoCYhjF/ifS8pZnOAIUg/zzJLqG3Oug
+         mTWgEmbqcimKCLT+/JdDIV306LA+8earqzXeSL+pTGtEA43kIIuVVCPzPnJiWkwVpDkG
+         f4VdWoWVysVUz4mPupCIn7nRxWzr9jb4izGcJGvQtPb5TvGc7Vq0wmaZ0zSv8/cOAbcV
+         q45YyWNCKBXCXYPPKr47oHny3UP7ZNKL7bSnFUyf6DwlIcd52rMLHwD4jUNKDogTHOgV
+         PC7w==
+MIME-Version: 1.0
+X-Received: by 10.42.216.198 with SMTP id hj6mr273839icb.65.1409293743684;
+ Thu, 28 Aug 2014 23:29:03 -0700 (PDT)
+Received: by 10.107.41.194 with HTTP; Thu, 28 Aug 2014 23:29:03 -0700 (PDT)
+Received: by 10.107.41.194 with HTTP; Thu, 28 Aug 2014 23:29:03 -0700 (PDT)
+In-Reply-To: <53FF94C8.7070906@gmx.de>
+References: <CAJJaencOdyC+_E1KHDvf2_jL6-_OPLkfFtdWC_YNohHgVT0t8g@mail.gmail.com>
+	<53FF94C8.7070906@gmx.de>
+Date: Fri, 29 Aug 2014 08:29:03 +0200
+Message-ID: <CAJJaeneqRYQnnTcBQZTuN=8LYo4+qoEYEQana-Ng6ksvQnCQ-A@mail.gmail.com>
+Subject: Re: mvn 3.0.5 timeout during deployment
+From: Kopf Arzt <kopfarzt@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=20cf301d436efa02a10501bec48a
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--20cf301d436efa02a10501bec48a
+Content-Type: text/plain; charset=UTF-8
+
+Am 28.08.2014 22:45 schrieb "Karl Heinz Marbaise" <khmarbaise@gmx.de>:
+>> How can I increase the default timeout for this operation? After
+Googling a
+>> lot I tried several server configurations in my settings.xml file but
+with
+>> no success:
+>>
+>>      <server>
+>>        <id>server.company.com.snapshots</id>
+>>        <username>xxx</username>
+>>        <password>xxx</password>
+>>        <configuration>
+>>          <timeout>600000</timeout>
+>>          <httpConfiguration>
+>>            <all>
+>>              <connectionTimeout>600000</connectionTimeout>
+>>              <requestTimeout>600000</requestTimeout>
+>>              <idleTimeout>600000</idleTimeout>
+>>            </all>
+>>          </httpConfiguration>
+>>        </configuration>
+>>      </server>
+>>
+>> Thank you in advance for any help! :-)
+>>
+>> [ERROR] Failed to execute goal at.company.xyz:xyz-maven-plugin:1.2.14.0:
+deploy
+>> (default-deploy) on project project_core: Unable to execute mojo: Failed
+to
+>> deploy artifacts: Could not transfer artifact
+>> at.xyz:project_core:jar:2.0.0.0-20140828.135650-6 from/to
+server.company.com
+>> (https://server.company.com/artifactory/axon-snap
+>> shot): No response received after 60000 -> [Help 1]
+>> org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute
+>> goal at.company.xyz:xyz-maven-plugin:1.2.14.0:deploy (default-deploy) on
+>> project project_core: Unable to execute mojo
+>
+> can you explain what kind of plugin this is:
+>
+> goal at.company.xyz:xyz-maven-plugin:1.2.14.0:deploy (default-deploy) on
+>
+> ?
+
+This plugin integrates Maven with our development environment (generates
+sources, builds packages, I don't know all the details).
+
+Do you think this plugin is the problem? To me it seemed that the actual
+deployment is done by standard Maven modules, so the settings should
+apply(?).
+
+--20cf301d436efa02a10501bec48a--
+

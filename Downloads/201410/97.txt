@@ -1,0 +1,129 @@
+From users-return-137552-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Oct 13 16:48:45 2014
+Return-Path: <users-return-137552-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A491817AE9
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 13 Oct 2014 16:48:45 +0000 (UTC)
+Received: (qmail 15869 invoked by uid 500); 13 Oct 2014 16:48:43 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 15783 invoked by uid 500); 13 Oct 2014 16:48:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 15771 invoked by uid 99); 13 Oct 2014 16:48:43 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 13 Oct 2014 16:48:43 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [209.85.192.47] (HELO mail-qg0-f47.google.com) (209.85.192.47)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 13 Oct 2014 16:48:17 +0000
+Received: by mail-qg0-f47.google.com with SMTP id i50so6955777qgf.20
+        for <users@maven.apache.org>; Mon, 13 Oct 2014 09:48:16 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=UgyPVdwRZKNraqw4I3MBxs9sLIo8p0dvunG1xQSmkoY=;
+        b=Yk2pVp73kvtm1k39hFkrTsXjKuirihofcjwsD0eHDgmtjxKbAGAODP1LtixdLDyWKK
+         ZPOsJpQ0re4Q9JhtuAH+a0ENMrqtpYQbNEhET3mL/5O0g9/VoWX5hyioCzxgXm59P4fz
+         1LYPWRG3T7JyG/bp1N6e9kmkZiin5bbzkuivpaK6usytprX8MkmyfBjubQUvRHp0rNAJ
+         o2ybA8JtJyZYw2tL7dvc+Lgn4DtVTUzOOaE55BSDi1YaHZE9RDTca0u2yWOfqkLsNXvo
+         OdOkD9PCS+mZAq7hO7ChKyc/OLgdeArJXoRYt/BtQUPFR1jQCgxOHtmi0RCLzwA0vA8H
+         ajJw==
+X-Gm-Message-State: ALoCoQnXsE3/aGH9+LANS7hN3Z6qxSiqNQK/w7MmYgjqs8hgaMrCEHoJWeEBdFyFO0ZQVK0kQJ/3
+MIME-Version: 1.0
+X-Received: by 10.140.102.238 with SMTP id w101mr40753581qge.17.1413218895863;
+ Mon, 13 Oct 2014 09:48:15 -0700 (PDT)
+Received: by 10.229.54.4 with HTTP; Mon, 13 Oct 2014 09:48:15 -0700 (PDT)
+In-Reply-To: <CAKAumBFkHyu4AwMr=RALW-t_vA-mbd-19w3yg4YnEPZ-sFOhzA@mail.gmail.com>
+References: <402AE8E1D2FBB84ABE4AB494310DC4A96352595D73@TUS1XCHEVSPIN33.SYMC.SYMANTEC.COM>
+	<CAKAumBFkHyu4AwMr=RALW-t_vA-mbd-19w3yg4YnEPZ-sFOhzA@mail.gmail.com>
+Date: Mon, 13 Oct 2014 18:48:15 +0200
+Message-ID: <CABOR3+xYuyMRfb1_mrXAQ-axgoLxvjPKXig6qbpMQdy-gxxW-w@mail.gmail.com>
+Subject: Re: Maven, Dependencies and Vulnerabilities
+From: Bernd <ecki@zusammenkunft.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c16e34473c8f050550aab1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c16e34473c8f050550aab1
+Content-Type: text/plain; charset=UTF-8
+
+Hello,
+
+instead of requiring everybody to come up with a CPE and add it to the POM,
+I would prefer if Maven Central publishes an approved (and registered)
+naming scheme to form CPEs which point to well known maven artifacts.
+
+cpe:/a:org.maven.central:groupid,artifactid[,classifier]:version
+(or similiar, maybe ask the CPE team about it. alternative would be to have
+a common maven-style repo vendor and include the repoid in the "product")
+
+This would allow incidents and CVEs to unambigously refer to libraries and
+other artifacts.
+
+The Java eco system is really missing good reports based on open source
+components. If you are lucky you find an alert based on a product and can
+guess what underlying open source component was vulnerable. This makes (as
+you know) the life of a scanner pretty hard.
+
+Gruss
+Bernd
+
+
+
+2014-09-30 21:53 GMT+02:00 Jeremy Long <jeremy.long@gmail.com>:
+
+> There are commercial solutions (sonatype, contrast, blackduck, palamida,
+> etc.) and FOSS solutions (dependency-check, victims, retire.js, etc.) to
+> identify and report on known vulnerabilities. I would recommend looking at
+> these solutions (note, I am the main contributed to dependency-check).
+>
+> A better solution for the POM modification would be to add a CPE
+> identifier. This would also be a great entry for a jar file's manifest. CPE
+> identifiers can be requested even if there are no known CVEs, but the CPE
+> can be used to lookup the related CVEs.
+>
+> -jeremy
+> @ctxt
+> On Sep 30, 2014 2:45 PM, "David Dillard" <ddillard@symantec.com> wrote:
+>
+> > Hi,
+> >
+> > I've been working on an internal presentation on how letting Maven's
+> > dependency mediation feature select versions of transitive dependencies
+> can
+> > introduce vulnerabilities into a product and how to deal with that
+> > problem.  Unfortunately, it's a very manual process and I was thinking
+> that
+> > perhaps changes could be made to Maven that would provide better
+> > automation.  To that end I'm wondering if the team has ever considered
+> > adding a section to the POM that would list significant changes in that
+> > release.  This would include a list of vulnerabilities fixed (e.g.
+> > CVE-XXXX-YYYY) or serious bugs fixed.  Each one could include a known set
+> > of versions affected (ala how CVEs work today) thus allowing tooling to
+> > say: the version of artifact XYZ you're using has a known vulnerability,
+> > would you like to upgrade to this new version with that vuln fixed?
+> >
+> > On a related note, has a different dependency mediation system ever been
+> > considered (as an option), e.g. latest version or latest version on a
+> > branch?
+> >
+> >
+> > Thanks,
+> >
+> > David
+> >
+> >
+>
+
+--001a11c16e34473c8f050550aab1--
+

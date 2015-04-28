@@ -1,0 +1,107 @@
+From users-return-135712-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar  6 06:54:03 2014
+Return-Path: <users-return-135712-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2F3CE104DA
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  6 Mar 2014 06:54:03 +0000 (UTC)
+Received: (qmail 80146 invoked by uid 500); 6 Mar 2014 06:53:59 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 80029 invoked by uid 500); 6 Mar 2014 06:53:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 79991 invoked by uid 99); 6 Mar 2014 06:53:54 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 06:53:54 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of t.broyer@gmail.com designates 209.85.216.172 as permitted sender)
+Received: from [209.85.216.172] (HELO mail-qc0-f172.google.com) (209.85.216.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 06:53:49 +0000
+Received: by mail-qc0-f172.google.com with SMTP id i8so2443685qcq.3
+        for <users@maven.apache.org>; Wed, 05 Mar 2014 22:53:29 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=oI08aZc51AXjIRSI08fUV8q8H8fffNRH0A8xVKzq5s4=;
+        b=exYfsTofYZiBFT3lsvlRSZH0IgspHywCQzi3Cp7soRO+syp61wqoUZo09CxEheBTq9
+         pci2zKTk7BKmgY6m2JOKNrpAw8L0P9lsM7oJZzfEL7og3GAXOsiqkDNcDzcHQYwTKyh1
+         SdzeGB6u/1KMQpbHBxIozk+3R7OXxTigcnun7kH1P7aRNdqqBKEgIhic92rN/hk+HOWP
+         DeFfojDf+cUTbhiX1R+Vl6hqbeWOrcYdFfO20qhWeKNjdUPS0ZAw2A80Wl/xvoTeLGYN
+         F6aOFUyIVVC6adZpElr8uHW/AcevhjHr5g854T38aWWMiXjZVhg50aDBfWT6bu+75GvM
+         F67Q==
+MIME-Version: 1.0
+X-Received: by 10.224.114.10 with SMTP id c10mr12052863qaq.19.1394088808631;
+ Wed, 05 Mar 2014 22:53:28 -0800 (PST)
+Received: by 10.140.95.194 with HTTP; Wed, 5 Mar 2014 22:53:28 -0800 (PST)
+Received: by 10.140.95.194 with HTTP; Wed, 5 Mar 2014 22:53:28 -0800 (PST)
+In-Reply-To: <CAPoyBqRCeFGvLpyOgqXOUmZSfbpnz8Rv5zfKtFScn2fo4b+-ww@mail.gmail.com>
+References: <531787D5.8090601@renci.org>
+	<CAEayHEPoFj-cQgGmwo0HTikx=DMYBuNbPqp-5OpA4qatzEQHog@mail.gmail.com>
+	<CADVp3v9Wof14vECGKNq0rDLcU9g_jjbsSapX3b20fgh05Rr0Lg@mail.gmail.com>
+	<CAPoyBqRCeFGvLpyOgqXOUmZSfbpnz8Rv5zfKtFScn2fo4b+-ww@mail.gmail.com>
+Date: Thu, 6 Mar 2014 07:53:28 +0100
+Message-ID: <CAEayHEPR905WB8AyReJrUiVtQ95Dst3QPmdD-9MzKGYC7_NnyQ@mail.gmail.com>
+Subject: Re: Using github as a maven repo
+From: Thomas Broyer <t.broyer@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bf0e65639526004f3ea9837
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bf0e65639526004f3ea9837
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Le 5 mars 2014 23:47, "Olivier Lamy" <olamy@apache.org> a =C3=A9crit :
+>
+> Ideologic POV: Perso I'm very happy to download software from various
+> sources (I believe in linux you can have different sources)
+> So why we should have only ONE "artifacts source"?
+
++1
+
+> Having a sort of routing per groupId is definitely something we need to
+develop.
+
+Maybe have a look at how Ivy does it? ;-)
+
+> NOTE: It's just an idea and ATM don't have time for that.
+>
+>
+> On 6 March 2014 09:34, Barrie Treloar <baerrach@gmail.com> wrote:
+> > I've updated the stackoverflow question
+> >
+http://stackoverflow.com/questions/14013644/hosting-a-maven-repository-on-g=
+ithub
+> > with these answers.
+> > http://stackoverflow.com/a/22210816/552958
+> >
+> > And spammed the best hits on google for similar questions.
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+>
+>
+>
+> --
+> Olivier Lamy
+> Ecetera: http://ecetera.com.au
+> http://twitter.com/olamy | http://linkedin.com/in/olamy
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+--047d7bf0e65639526004f3ea9837--
+

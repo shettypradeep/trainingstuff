@@ -1,0 +1,86 @@
+From users-return-137725-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Nov  8 18:43:00 2014
+Return-Path: <users-return-137725-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 57ADF17495
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  8 Nov 2014 18:43:00 +0000 (UTC)
+Received: (qmail 24230 invoked by uid 500); 8 Nov 2014 18:42:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 24145 invoked by uid 500); 8 Nov 2014 18:42:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 24130 invoked by uid 99); 8 Nov 2014 18:42:58 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 08 Nov 2014 18:42:58 +0000
+X-ASF-Spam-Status: No, hits=3.1 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_IMAGE_ONLY_16,HTML_MESSAGE,HTML_SHORT_LINK_IMG_2,RCVD_IN_DNSWL_LOW,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of burtonator2011@gmail.com designates 209.85.217.180 as permitted sender)
+Received: from [209.85.217.180] (HELO mail-lb0-f180.google.com) (209.85.217.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 08 Nov 2014 18:42:53 +0000
+Received: by mail-lb0-f180.google.com with SMTP id u10so4177697lbd.11
+        for <users@maven.apache.org>; Sat, 08 Nov 2014 10:41:02 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:from:date:message-id:subject:to:content-type;
+        bh=NR5i2542iHQFGLtIvAuC+rZ5n0A6MBU3INE3Kne7WCc=;
+        b=K9pYrnQTqflqUMg0UI6k2mW9xj6vPcIIdZx3iv0BGCTcWEXknd8wMl7e+1lTWOZ/lN
+         45cQQ2BLD7sSCfn1heKyysGCZiLCUDbxdE+/4Iq9x7UsEZnGi2kUl01ZEOMj1S9cEujW
+         7OaBPGJSfoBdRwGHw9gUiH8mpytV0gQEWPJzAiu5ENHEhdKof4LxCfXxjDnZRwyY1K5L
+         wHqHXzmxQK2KVMGaRBg7ovq/8RqFvcs9wpHCysq4J0mdzTOEL5x310X5Pt6TFOw9XRNi
+         FMSIyAHG01qpc/6c325efJmwH/aEPbIYHJU15tjo8a64j4G16wRs+8rlDI+URbVkyAzk
+         /Ytg==
+X-Received: by 10.152.45.98 with SMTP id l2mr4130143lam.85.1415472062377; Sat,
+ 08 Nov 2014 10:41:02 -0800 (PST)
+MIME-Version: 1.0
+Sender: burtonator2011@gmail.com
+Received: by 10.112.166.137 with HTTP; Sat, 8 Nov 2014 10:40:42 -0800 (PST)
+From: Kevin Burton <burton@spinn3r.com>
+Date: Sat, 8 Nov 2014 10:40:42 -0800
+X-Google-Sender-Auth: yYCUf30dS7W2xsAJdlbrQja-iQw
+Message-ID: <CAAZU44=T0JtOGSjdBXTbKCDk8P_R68nthLY+7bXJXRDqvAWjEQ@mail.gmail.com>
+Subject: fetching a tar.gz URL / dependency via HTTP during a build?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c1b57277b32305075d452b
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c1b57277b32305075d452b
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I=E2=80=99m trying to build .debs using jdeb and maven for various projects=
+.
+
+For example, there is no .deb for spark.  So I=E2=80=99m just taking the ta=
+r.gz and
+making a deb that installs to /usr/share/apache-spark.
+
+The problem is I don=E2=80=99t want to put the full binary into git as it=
+=E2=80=99s about
+200MB.
+
+I=E2=80=99d rather have the build fetch the tar.gz directly from Apache dur=
+ing the
+build, untar it, then build the deb from the output.
+
+Is there and way to do this or should I just write a bash script which uses
+wget to fetch the URL?
+
+--=20
+
+Founder/CEO Spinn3r.com
+Location: *San Francisco, CA*
+blog: http://burtonator.wordpress.com
+=E2=80=A6 or check out my Google+ profile
+<https://plus.google.com/102718274791889610666/posts>
+<http://spinn3r.com>
+
+--001a11c1b57277b32305075d452b--
+

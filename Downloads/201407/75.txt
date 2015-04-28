@@ -1,0 +1,118 @@
+From users-return-136942-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jul 29 14:05:22 2014
+Return-Path: <users-return-136942-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A8B5911C65
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 29 Jul 2014 14:05:22 +0000 (UTC)
+Received: (qmail 46821 invoked by uid 500); 29 Jul 2014 14:05:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 46737 invoked by uid 500); 29 Jul 2014 14:05:20 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 46721 invoked by uid 99); 29 Jul 2014 14:05:19 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 29 Jul 2014 14:05:19 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of thomas.larsson@klarna.com designates 209.85.215.45 as permitted sender)
+Received: from [209.85.215.45] (HELO mail-la0-f45.google.com) (209.85.215.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 29 Jul 2014 14:05:15 +0000
+Received: by mail-la0-f45.google.com with SMTP id ty20so6595554lab.32
+        for <users@maven.apache.org>; Tue, 29 Jul 2014 07:04:53 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=Cgod8ivb4+hy/4rZ81WvnMhhSewlJdd8oY6VKCcq4LA=;
+        b=a+GiLQt2nJXQMHhu5NpDDW25PCe0Xgo2zBrsQwHw8Vp4krwTNPXGRWXzga2DvjkLYv
+         kr7mXk4BWMj2Iru3D/PFLH7KVqKWnfELMRD11ca2sLocuzuF/t+cRRD+eGCPkc2c73MJ
+         TC+R50xoFokri3nJAz1qR6mNkG2rUb1pjBiH8JxEVONjoH9QyITJdGOKgzosES5d10CJ
+         NbZA1mSHkI+K+xjliAZf67W6UM4fG+yA1JUj90qY37oEKE4ImwuM59Sxc/W5sjBYPZB/
+         iGeDlv4peuCTnd16NMWXcDyvcPWhxy3Tin+TN3VCYqjo5V+3mqGVpg9ax8bkZfd8s7XP
+         pAdQ==
+X-Gm-Message-State: ALoCoQmFb/oeMQkoAlUa82hPxW1VfJVBqGlvsTs/IRx0C/ojYcGIHJJDnBBJ87fyTmNE/FQIQkqG
+MIME-Version: 1.0
+X-Received: by 10.152.22.65 with SMTP id b1mr2636113laf.86.1406642693090; Tue,
+ 29 Jul 2014 07:04:53 -0700 (PDT)
+Received: by 10.114.18.98 with HTTP; Tue, 29 Jul 2014 07:04:53 -0700 (PDT)
+In-Reply-To: <CALhtWke5UVckkVGRZoA1tQo+dQxCPeBx3Ypeb5uEUpmG7eOZxA@mail.gmail.com>
+References: <CAP4oMn_+dbHEQ+qcg=KWv8T-Ndd-XoKO3iZMPOR8sBoZSvjP7g@mail.gmail.com>
+	<CALhtWke5UVckkVGRZoA1tQo+dQxCPeBx3Ypeb5uEUpmG7eOZxA@mail.gmail.com>
+Date: Tue, 29 Jul 2014 16:04:53 +0200
+Message-ID: <CAP4oMn-LuBxG9tALX61if3e1jAqUHgLArD0jaVj611Vtm0AfEw@mail.gmail.com>
+Subject: Re: Why doesn't wagon ssh look at exit codes instead of error stream content
+From: Thomas Larsson <thomas.larsson@klarna.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0158b92a0c4b1004ff558676
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0158b92a0c4b1004ff558676
+Content-Type: text/plain; charset=UTF-8
+
+Well, the use case is that we perform an integration test of an Apache
+Oozie workflow and one step in this test is to verify that some hive
+databases have been deleted.
+Since the tests are not run locally but on a cluster, we need to execute
+some commands on that cluster over ssh.
+
+An obvious follow-up question is, is there any recommended maven plugin for
+executing ssh commands?
+
+But on a more philosophical level I am also interested in why the Wagon
+code looks like it does.
+
+Best Regards
+Thomas
+
+
+On Tue, Jul 29, 2014 at 3:49 PM, Benson Margulies <bimargulies@gmail.com>
+wrote:
+
+> In my experience, trying to use the wagon-maven-plugin to do anything
+> except move Maven artifacts around is a really exciting experience. If
+> you describe your entire use case perhaps someone can offer another
+> approach?
+>
+> On Tue, Jul 29, 2014 at 9:47 AM, Thomas Larsson
+> <thomas.larsson@klarna.com> wrote:
+> > Hello all,
+> >
+> > I am wondering why it is that
+> > org.apache.maven.wagon.providers.ssh.jsch.AbstractJschWagon is not
+> looking
+> > at non-zero exit codes instead of non-null error streams to determine
+> > whether a command has succeeded or not?
+> >
+> > We have a case where we execute an Apache Hive query over ssh using the
+> > maven wagon plugin, with a command looking something like "hive -e 'show
+> > databases'".
+> > When doing this, hive outputs parts of the result over stderr (which is
+> > very weird I grant) but the command exits with exit code 0, i.e. no
+> error.
+> > However, since wagon (and in extension the wagon-plugin) sees stderr
+> > content, it considers this a failed step.
+> >
+> > I found some TODOs in the code surrounding this but no JIRA Issue.
+> > So I am wondering what the concrete reason is for doing it in this
+> slightly
+> > weird way.
+> >
+> > Best Regards
+> > Thomas
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--089e0158b92a0c4b1004ff558676--
+

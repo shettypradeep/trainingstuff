@@ -1,0 +1,150 @@
+From users-return-135116-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 14 09:26:38 2014
+Return-Path: <users-return-135116-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8DEE610154
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 14 Jan 2014 09:26:38 +0000 (UTC)
+Received: (qmail 60141 invoked by uid 500); 14 Jan 2014 09:24:42 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 59640 invoked by uid 500); 14 Jan 2014 09:24:42 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 59045 invoked by uid 99); 14 Jan 2014 09:24:41 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 09:24:41 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.192.175 as permitted sender)
+Received: from [209.85.192.175] (HELO mail-pd0-f175.google.com) (209.85.192.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 09:24:34 +0000
+Received: by mail-pd0-f175.google.com with SMTP id r10so4556288pdi.20
+        for <users@maven.apache.org>; Tue, 14 Jan 2014 01:24:13 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=VjGFPlfy/SS/hMgRYMUt4z0HKOg9Euvoc2sFOdSugas=;
+        b=WCp79gQYrX+aCP1TzoeWSw12eIFLOzEAxtqK1UmqjlZubGaCba28Wn0U8mP0Q4ubA7
+         LeBhf2mU3NYO/20kSKdRXgdT2EEZ+5qmX9FmGWI/VbNJ+m/SJyIvgMcocOFhF0Lhu/Hs
+         C5RDzL+ouWrgEMnX6jHLSdCVoCKA8f5csqaipGXHKHSjTBCHBBlrEW6uEP8wY929L+uQ
+         E/3FF4nT3DwXsy0fBbm3QxTy4TQAGMZY+LWKdizm2L4l4wH1fFhnJtRT6oSptBphGpdt
+         NN3caCQxUx5VfrzvH8ngWYo9O1Vv9j1hxnpF1dgKwUL42MziCu70kJx1LE8Q4OH2p6tu
+         CfKA==
+MIME-Version: 1.0
+X-Received: by 10.68.223.9 with SMTP id qq9mr598128pbc.58.1389691453533; Tue,
+ 14 Jan 2014 01:24:13 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Tue, 14 Jan 2014 01:24:13 -0800 (PST)
+In-Reply-To: <B8D164BED956C5439875951895CB4B221882805C@WABOTH9MSGUSR8C.ITServices.sbc.com>
+References: <B8D164BED956C5439875951895CB4B221882805C@WABOTH9MSGUSR8C.ITServices.sbc.com>
+Date: Tue, 14 Jan 2014 09:24:13 +0000
+Message-ID: <CA+nPnMxve0voWxfEnLfBO=1RGa1UrRtW0bad7+vWQ9RVr_oadw@mail.gmail.com>
+Subject: Re: Is it possible to deliberately have two dependencies with the
+ same groupid, artifactid, and packaging, but different version?
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b1634416f79c804efeac176
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b1634416f79c804efeac176
+Content-Type: text/plain; charset=ISO-8859-1
+
+I like to consider a G:A as being substitutable along the V access... if
+you change the artifact so that it is not substitutable, then you really
+need to change the G:A part.
+
+Now substitutable does not mean no breaking API changes... it does mean
+that the package name and at least some of the class names are the same.
+
+So a good case in point here is Jackson the JSON serialization library...
+
+There are many versions of Jackson, but when a major breaking change to the
+API was required Tatu changed from org.codehaus.jackson:jackson-core-asl to
+com.fasterxml.jackson.core:jackson-core and also changed the package name
+of the classes.
+
+This was the correct thing to do, IMHO.
+
+They maintained 82 releases of the API without having to refactor in a
+breaking way.
+
+The changes that they needed would break the API, leaving no way for
+existing code to inter-op
+
+As a result, by changing package name and G:A the two versions can
+co-exist...
+
+Now let us consider some other ways that Tatu & Co could have handled this:
+
+* They could have kept the package name the same and changed the G:A. That
+would mean that classes in the package name would not be coming from the
+same jar file, and so with a security manager enabled the "same jar origin
+policy" would mean that at run time you end up getting class conflicts all
+over the place as different classloaders resolve the package name from
+different jar files depending on which class they reference first and the
+order of the jars in the classpath... sounds a lot like hell... let's scrap
+that plan
+
+* They could have changed the package name and kept the G:A. That would
+mean that any fool* using version ranges could now find that their code
+fails to compile. (*only a fool uses version ranges)... that is self
+inflicted hell... also dependencyManagement will overrule versions so if
+somebody uses a dependencyManagement to force a version that will force a
+single version even though the classpath *should* have two versions... plus
+how Maven resolves the dependency tree means that it assumes that for any
+G:A varying the V gives you substitutable artifacts (and if they don't work
+then either `compile` or `test/verify` will fail the build so that's ok)
+
+So the rule of thumb I use is:
+
+* every time you change the package name, change the G:A
+
+* if you are making breaking API changes that are not substitutable, change
+the package name
+
+
+# aside
+
+Is there a use case for dependencies of the same GA but different V?
+
+I think there may be, at least when dealing with non-java resources... and
+Java 9 / OSGi provides a use case also.
+
+For example, you may have a legitimate (if crappy) reason to include two
+versions of jQuery in your web application... one set of pages may use the
+older one during a transition for example.
+
+So in modelVersion 5.0.0, I do think that we should investigate a means of
+flagging that certain types of dependency collection require a single
+unique version resolved for each GA dependency, while other types of
+dependency collection require the set of versions for each GA dependency
+
+
+
+
+On 14 January 2014 00:24, KARR, DAVID <dk068x@att.com> wrote:
+
+> I have a situation where it would be convenient for my pom to have two
+> dependencies that are almost identical, only being different by the
+> version.  The makeup of the artifact is such that it would be safe (and
+> intended) to use both of them.  The Java package used in each is similar,
+> but different.  The package will vary along with the version number.
+>
+> Will dependency resolution and the EAR plugin (and any other mechanism
+> that lists dependencies) have any trouble with this?
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7b1634416f79c804efeac176--
+

@@ -1,0 +1,100 @@
+From users-return-136189-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr 18 13:46:28 2014
+Return-Path: <users-return-136189-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1694110F86
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 18 Apr 2014 13:46:28 +0000 (UTC)
+Received: (qmail 44685 invoked by uid 500); 18 Apr 2014 13:46:24 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 44610 invoked by uid 500); 18 Apr 2014 13:46:24 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 44602 invoked by uid 99); 18 Apr 2014 13:46:24 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Apr 2014 13:46:24 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of maven.2.user@gmail.com designates 209.85.192.47 as permitted sender)
+Received: from [209.85.192.47] (HELO mail-qg0-f47.google.com) (209.85.192.47)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Apr 2014 13:46:19 +0000
+Received: by mail-qg0-f47.google.com with SMTP id i50so1686163qgf.34
+        for <users@maven.apache.org>; Fri, 18 Apr 2014 06:45:59 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=Hko4h4CqjfO4AOgyI2E3I0c3Gmu9X7lUhY67pFxcHyY=;
+        b=WBtkXUmBhgb117xMtSfbtZw7BCKvzaKwaTo5uVDJug4Q+sAnk2REMLFJeMG91uzOJG
+         Nt9eYl81yn/8LchYnJwf5BdmyLpCMqQSTfEqW5LJ5YyhcYK/aFEVVx6WbB/8kbOzJcbB
+         1b9jZMgFiCaP3qP7UBAmRNRymgpgrX6nJbYPfHON4e/Y9wpunXIrsE24tyi7g8ZFwFzN
+         8Df6c41FmMYG22QmzUn+DOZeI4KTSTLULMrxY3ndYAGyhqaN2hju9Ff381DCehWmblgA
+         C7DS4fWwyG7hao2kLR4lPDvwygvgw9GR4R62/XCa9Q6MYkEe34H3e+P7gQwup+3fbPZE
+         JDRw==
+MIME-Version: 1.0
+X-Received: by 10.224.131.132 with SMTP id x4mr2725343qas.97.1397828759162;
+ Fri, 18 Apr 2014 06:45:59 -0700 (PDT)
+Received: by 10.140.106.3 with HTTP; Fri, 18 Apr 2014 06:45:59 -0700 (PDT)
+Date: Fri, 18 Apr 2014 09:45:59 -0400
+Message-ID: <CAChPNbexJ3vix-HdFNiKSEQrOYMW+vjxHknCn7-fPp0LsKxLBw@mail.gmail.com>
+Subject: Struggling to release:perform with git and deployer key
+From: Maven User <maven.2.user@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi all -
+
+I'm really struggling with this.
+
+My git push portion of the maven release process just is quitting with this:
+
+00:01:29.803 Provider message:
+00:01:29.803 The git-push command failed.
+00:01:29.803 Command output:
+00:01:29.803 Permission denied (publickey).
+00:01:29.803 fatal: The remote end hung up unexpectedly
+00:01:29.803
+00:01:29.803 cause : Unable to commit files
+00:01:29.803 Provider message:
+00:01:29.803 The git-push command failed.
+00:01:29.803 Command output:
+00:01:29.803 Permission denied (publickey).
+00:01:29.803 fatal: The remote end hung up unexpectedly
+
+I have the key stored in Jenkins as a "managed file" (as part of that
+plugin).  So the build has an early step where that key is written to
+disk.
+
+Then I've used the settings.xml to specify which key to use (pointing
+at that location just above).
+
+ <server>
+      <id>github.com</id>
+      <username>someusername</username>
+      <privateKey>/srv/jenkins/.ssh/somekeyname</privateKey>
+      <filePermissions>664</filePermissions>
+      <directoryPermissions>775</directoryPermissions>
+      <configuration></configuration>
+    </server>
+
+  <scm>
+      <connection>scm:git:git@github.com:${companyid}/${project.artifactId}.git</connection>
+      <url>scm:git:git@github.com:${companyid}/${project.artifactId}.git</url>
+      <developerConnection>scm:git:git@github.com:${companyid}/${project.artifactId}.git</developerConnection>
+      <tag>HEAD</tag>
+   </scm>
+
+What am I doing wrong?
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

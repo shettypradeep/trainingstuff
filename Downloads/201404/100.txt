@@ -1,0 +1,129 @@
+From users-return-136144-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 15 03:15:17 2014
+Return-Path: <users-return-136144-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 08D7710886
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 15 Apr 2014 03:15:17 +0000 (UTC)
+Received: (qmail 35528 invoked by uid 500); 15 Apr 2014 03:15:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 35076 invoked by uid 500); 15 Apr 2014 03:15:10 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 35068 invoked by uid 99); 15 Apr 2014 03:15:07 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Apr 2014 03:15:07 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS,WEIRD_PORT
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.192.176 as permitted sender)
+Received: from [209.85.192.176] (HELO mail-pd0-f176.google.com) (209.85.192.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Apr 2014 03:15:02 +0000
+Received: by mail-pd0-f176.google.com with SMTP id r10so8825001pdi.7
+        for <users@maven.apache.org>; Mon, 14 Apr 2014 20:14:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject
+         :content-type;
+        bh=RipF8IwYcwqAc0a85egTbIiA2ok1s/XG43jHOwDn06U=;
+        b=cxcLVyLzvzp0zhHfttlAHUMBPXES304QUNpS2nc++3xFfsli1CHn3bQkoCtzA9DwJA
+         M6Jq/hoKp9ufy3XcbiX0N6HK+OKV/vw+76Zv/QiXQy5Z+2Y6p7+/sWNEU4HRANxaTRyU
+         /kWy7oXu5hZ7HER24iYUnOwUxucOsH0bst9u71O8SmVYWKYaJktC/h/+mPwm4KIbUww0
+         V+nmZP9JGgJ1wPVZ806TQBn10a35GsPXbIO5P8cHdLfKtCvOfnbj1nw9q2rFMb1MGDSr
+         WUmiypDaTsO4ZToV7J/pfPD5myRR9C2zStuQcqHz5/e9xpthd9fEwujdEgoNIoI7KNLI
+         fMmw==
+X-Received: by 10.68.132.130 with SMTP id ou2mr47907109pbb.107.1397531682478;
+        Mon, 14 Apr 2014 20:14:42 -0700 (PDT)
+Received: from [192.168.0.17] (S0106602ad07f9cfa.vc.shawcable.net. [24.85.131.20])
+        by mx.google.com with ESMTPSA id di3sm9257748pbc.11.2014.04.14.20.14.40
+        for <multiple recipients>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Mon, 14 Apr 2014 20:14:41 -0700 (PDT)
+Message-ID: <534CA422.1080408@gmail.com>
+Date: Mon, 14 Apr 2014 20:14:42 -0700
+From: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: maven users <users@maven.apache.org>, nexus-user@sonatype.org
+Subject: Why are alternate repositories so hard to configure
+Content-Type: multipart/alternative;
+ boundary="------------060200030706080203080706"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------060200030706080203080706
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+
+I have the following
+
+<repositories>
+<repository>
+<id>sonatype</id>
+<name>Sonatype Maven OSS Repository</name>
+<releases>
+<enabled>true</enabled>
+</releases>
+<snapshots>
+<enabled>true</enabled>
+</snapshots>
+<url>https://oss.sonatype.org/content/groups/public</url>
+</repository>
+</repositories>
+
+But when I run maven I get
+
+[ERROR] Failed to execute goal 
+org.apache.maven.plugins:maven-site-plugin:3.3:site (default-site) on 
+project csharp-windows-elevate: Execution default-site of goal 
+org.apache.maven.plugins:maven-site-plugin:3.3:site failed: Plugin 
+org.apache.maven.plugins:maven-site-plugin:3.3 or one of its 
+dependencies could not be resolved: Could not find artifact 
+net.trajano.wagon:wagon-git:jar:1.0.1-SNAPSHOT in apache.snapshots 
+(http://repository.apache.org/snapshots) -> [Help 1]
+
+/*Why in the world is it looking in 
+http://repository.apache.org/snapshots ???*/
+
+So, then I configure nexus to mirror 
+https://oss.sonatype.org/content/groups/public and I add to my settings.xml
+
+   <mirrors>
+     <mirror>
+       <id>nexus</id>
+       <mirrorOf>*</mirrorOf>
+<url>http://localhost:8081/nexus/content/groups/public</url>
+     </mirror>
+   </mirrors>
+
+and then I get
+
+[ERROR] Failed to execute goal 
+org.apache.maven.plugins:maven-site-plugin:3.3:site (default-site) on 
+project csharp-windows-elevate: Execution default-site of goal 
+org.apache.maven.plugins:maven-site-plugin:3.3:site failed: Plugin 
+org.apache.maven.plugins:maven-site-plugin:3.3 or one of its 
+dependencies could not be resolved: Could not find artifact 
+net.trajano.wagon:wagon-git:jar:1.0.1-SNAPSHOT in nexus 
+(http://localhost:8081/nexus/content/groups/public) -> [Help 1]
+
+I know this to be a lie because when I go through the nexus UI I can 
+clearly see the artifact in question in both the nexus index and 
+storage. However, for some reason, the artifact pom.xml is neither in 
+the index nor storage. When I go to 
+https://oss.sonatype.org/content/groups/public/net/trajano/wagon/wagon-git/1.0.1-SNAPSHOT/ 
+I can clearly see the pom.xml with the other files that nexus has 
+downloaded. /*Why is nexus refusing to download the pom.xml?*//*
+*/
+Cheers, Eric
+
+
+
+
+--------------060200030706080203080706--
+

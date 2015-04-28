@@ -1,0 +1,169 @@
+From users-return-136707-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jul  1 03:54:00 2014
+Return-Path: <users-return-136707-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3D1D111CD4
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  1 Jul 2014 03:54:00 +0000 (UTC)
+Received: (qmail 85059 invoked by uid 500); 1 Jul 2014 03:53:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 84972 invoked by uid 500); 1 Jul 2014 03:53:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 84928 invoked by uid 99); 1 Jul 2014 03:53:58 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 01 Jul 2014 03:53:58 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,WEIRD_PORT
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.217.180 as permitted sender)
+Received: from [209.85.217.180] (HELO mail-lb0-f180.google.com) (209.85.217.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 01 Jul 2014 03:53:54 +0000
+Received: by mail-lb0-f180.google.com with SMTP id w7so6364602lbi.25
+        for <users@maven.apache.org>; Mon, 30 Jun 2014 20:53:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=k6KjXXZSuXap0vAggWfx4gQ46JjTTCd6UqQWkSiXDTo=;
+        b=KfuFkr2nxHcCk/ZJ3phl4akEJ+OibuXHRLJ4yTqADLh0UZZjJnut88ldORuY8dK5WG
+         fgN4sdbUSzvU60Uc/bPSndnPbzN/FKrWD0eHhEzUdefrmh/jTWEqTkTZEY1CuZrvfnfL
+         f2g/Z1PAfFAqYfTlDnL25NxaC7s9EPssoA9/oynr37aQr/7KOq89DbpFnQsYlWgV5nGy
+         eLOk3MLElcG+BOQWlnrEVjg9E19CoUrJAnT8oLI2DIZhq7i1oYqYLKVo0oY4MvZBBG7q
+         rXjdkaCL79B8Lpl+WMkTq2XcHVIrluCjFIczXm3KFQfYjc8vtndBauhxOnoR8x9SVuPe
+         Iymw==
+MIME-Version: 1.0
+X-Received: by 10.152.180.168 with SMTP id dp8mr34409332lac.11.1404186812423;
+ Mon, 30 Jun 2014 20:53:32 -0700 (PDT)
+Received: by 10.114.122.194 with HTTP; Mon, 30 Jun 2014 20:53:32 -0700 (PDT)
+In-Reply-To: <AAB6A84D-5F96-4A34-8526-6DFA00C18645@takari.io>
+References: <CAPCjjnF2sBjXVNfVTGorFZzE6Qp8JJan2nm8ZbSWR2ZQJOg-iw@mail.gmail.com>
+	<2643E10B-03A2-47F6-8AC6-A8E91BE4CBEE@takari.io>
+	<CAPCjjnG0mrmEWxO5_emjMQTQA9tWAGeb2H0oWP0TSwA+wSp=4A@mail.gmail.com>
+	<AAB6A84D-5F96-4A34-8526-6DFA00C18645@takari.io>
+Date: Mon, 30 Jun 2014 20:53:32 -0700
+Message-ID: <CAPCjjnFiMNom8ebGPr9xXZotSvEoe9meZ+AmJUX+DFpJH49ytA@mail.gmail.com>
+Subject: Re: M2E and Eclipse Luna ?
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1134565e27206504fd19b815
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1134565e27206504fd19b815
+Content-Type: text/plain; charset=UTF-8
+
+Hello Jason
+
+which one  can we use to handle maven-plugin-plugin issue at Eclipse Luna?
+
+Possible to configure your nexus to use port 80 so that some of use with
+strict corp firewall policy can access it?
+
+Thanks
+
+-Dan
+
+
+
+
+On Fri, Jun 27, 2014 at 11:49 AM, Jason van Zyl <jason@takari.io> wrote:
+
+> All the extras now live as separate installable units here:
+>
+> http://repository.takari.io:8081/nexus/content/sites/m2e.extras/
+>
+> On Jun 27, 2014, at 12:42 PM, Dan Tran <dantran@gmail.com> wrote:
+>
+> > My apology,  should have been clearer
+> >
+> > I installed Eclipse Luna and
+> >
+> https://repository.sonatype.org/content/repositories/forge-sites/m2e-extras/0.15.0/N/0.15.0.201206251206
+> >
+> > the message at the pom is "Plugin execution not covered by lifecycle
+> > configuration:
+> org.apache.maven.plugins:maven-plugin-plugin:3.2:descriptor
+> > (execution: default-descriptor, phase: process-classes)"
+> >
+> > Thanks
+> >
+> > -D
+> >
+> >
+> >
+> >
+> > On Fri, Jun 27, 2014 at 4:21 AM, Jason van Zyl <jason@takari.io> wrote:
+> >
+> >> What exactly are you seeing? I have several plugins using the
+> >> "maven-plugin" packaging and they appear fine.
+> >>
+> >> On Jun 26, 2014, at 11:15 PM, Dan Tran <dantran@gmail.com> wrote:
+> >>
+> >>> I just try the latest eclipse and try to build exec-mojo-plugin at
+> MOJO,
+> >>> looks like m2e does not recognize maven-plugin-plugin
+> >>>
+> >>> Any one else seeing this?
+> >>>
+> >>> Thanks
+> >>>
+> >>> -D
+> >>
+> >> Thanks,
+> >>
+> >> Jason
+> >>
+> >> ----------------------------------------------------------
+> >> Jason van Zyl
+> >> Founder,  Apache Maven
+> >> http://twitter.com/jvanzyl
+> >> http://twitter.com/takari_io
+> >> ---------------------------------------------------------
+> >>
+> >> Selfish deeds are the shortest path to self destruction.
+> >>
+> >> -- The Seven Samuari, Akira Kurosawa
+> >>
+> >>
+> >>
+> >>
+> >>
+> >>
+> >>
+> >>
+> >>
+> >>
+>
+> Thanks,
+>
+> Jason
+>
+> ----------------------------------------------------------
+> Jason van Zyl
+> Founder,  Apache Maven
+> http://twitter.com/jvanzyl
+> http://twitter.com/takari_io
+> ---------------------------------------------------------
+>
+> Three people can keep a secret provided two of them are dead.
+>
+>  -- Benjamin Franklin
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+
+--001a1134565e27206504fd19b815--
+

@@ -1,0 +1,90 @@
+From users-return-136610-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jun 18 12:05:34 2014
+Return-Path: <users-return-136610-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2715C11FD5
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 18 Jun 2014 12:05:34 +0000 (UTC)
+Received: (qmail 85470 invoked by uid 500); 18 Jun 2014 12:05:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 85392 invoked by uid 500); 18 Jun 2014 12:05:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 94157 invoked by uid 99); 18 Jun 2014 10:36:03 -0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ferrari.marco@gmail.com designates 74.125.82.182 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:from:date:message-id:subject:to:content-type;
+        bh=ZCKTWJf7Ex/DkZCK/OwjobF8ej1xP+CjOQLwFAyMIss=;
+        b=gElugvKupFwmJ+8tEK17myTSpUL8O28GxEhqb82yGBOe48iU6t1Q/8xZ7P6jWOjZ+F
+         siPpXScQoQBS8y4jvZr2F+Gp34ujK8EDXCeN68EwABv7Hov+yvbB0+q96nyiEM+nOZ5L
+         ZCYxulxsXdRsrTtwihL3LzlDABWW8Ow7kiDaycyqqBvB6KGzCgLutdVPTMb0yfGPhpxS
+         Dnx79vJ/9Tnr4T+hskiZCogEwiefAggDx8BYEs6QKGzuFCOwTqQuwmWn8EYP4VFqD/z9
+         rLSFFqeuKC0l4eMb3zGoBtk16fCw1UFHSQRej9Z5tV+U9dHinnS6CldE0IrzbsEcpcTA
+         BLhQ==
+X-Received: by 10.194.11.74 with SMTP id o10mr22106398wjb.82.1403087738448;
+ Wed, 18 Jun 2014 03:35:38 -0700 (PDT)
+MIME-Version: 1.0
+From: Marco Ferrari <ferrari.marco@gmail.com>
+Date: Wed, 18 Jun 2014 12:34:58 +0200
+Message-ID: <CAAkqXppVHtRKbohCTdRHPOQVghyivizGMCxoLoJe9djdAAUFrw@mail.gmail.com>
+Subject: Maven Archetype plugin sourceEncoding
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=047d7b472a103d31a204fc19d2f8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b472a103d31a204fc19d2f8
+Content-Type: text/plain; charset=UTF-8
+
+Dear list,
+I am currently using the Maven Archetype plugin to generate an archetype
+from an existing project.
+
+When I run archetype:create-from-project, I get a couple of warnings:
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @
+maven-archetype-base-archetype ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered
+resources, i.e. build is platform dependent!
+[INFO] Copying 10 resources
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources)
+@ maven-archetype-base-archetype ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered
+resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+
+I have set these properties in the pom of the project I am using to
+generate the archetype:
+
+    <encoding>UTF-8</encoding>
+    <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
+    <project.resources.sourceEncoding>${encoding}</project.resources.sourceEncoding>
+    <archetype.encoding>${encoding}</archetype.encoding>
+
+
+You can see the details in my stackoverflow question:
+http://stackoverflow.com/questions/24144073/why-does-maven-warns-me-about-encoding
+
+The warnings do not show up when running goals from other plugins.
+
+Any ideas about a possible solution?
+
+Thanks.
+
+Regards,
+Marco Ferrari
+Email: ferrari.marco@gmail.com
+Website: http://www.ferrarimarco.info
+
+--047d7b472a103d31a204fc19d2f8--
+

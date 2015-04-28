@@ -1,0 +1,140 @@
+From users-return-136030-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Mar 31 18:46:00 2014
+Return-Path: <users-return-136030-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BCF4A1082F
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 31 Mar 2014 18:46:00 +0000 (UTC)
+Received: (qmail 70735 invoked by uid 500); 31 Mar 2014 18:45:56 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 70429 invoked by uid 500); 31 Mar 2014 18:45:54 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 51876 invoked by uid 99); 31 Mar 2014 09:56:31 -0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+From: Christian Domsch <christian.domsch@assentis.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: Debugging output only for a subproject in a reactor run
+Thread-Topic: Debugging output only for a subproject in a reactor run
+Thread-Index: AQHPTMdrf1NWJqHff0uI8uaWxN3GDQ==
+Date: Mon, 31 Mar 2014 09:56:00 +0000
+Message-ID: <53393BB0.7030100@assentis.com>
+Accept-Language: en-US, de-CH
+Content-Language: en-US
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+user-agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101
+ Thunderbird/24.4.0
+x-originating-ip: [192.168.100.71]
+Content-Type: multipart/signed; protocol="application/pkcs7-signature";
+	micalg=sha1; boundary="------------ms080005000803040905070602"
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------ms080005000803040905070602
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+Hi all,
+
+I have problems with a very specific plugin in our build and want to=20
+enable debugging output only for the subproject in our overall build=20
+setup. The commandline option -X enables debugging for the complete=20
+execution, and I fear this would create too much output and might fail=20
+the build due to memory problems... Now, is there a way to change the=20
+logger during the build to enable debugging just for this one project?=20
+(plugins running in pre and post phases to enable/disable that?)
+
+Thanks,
+Christia
+
+
+
+--------------ms080005000803040905070602
+Content-Type: application/pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+Content-Description: S/MIME Cryptographic Signature
+
+MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIIKXDCC
+BRowggQCoAMCAQICEG0Z6qcZT2ozIuYiMnqqcd4wDQYJKoZIhvcNAQEFBQAwga4xCzAJBgNV
+BAYTAlVTMQswCQYDVQQIEwJVVDEXMBUGA1UEBxMOU2FsdCBMYWtlIENpdHkxHjAcBgNVBAoT
+FVRoZSBVU0VSVFJVU1QgTmV0d29yazEhMB8GA1UECxMYaHR0cDovL3d3dy51c2VydHJ1c3Qu
+Y29tMTYwNAYDVQQDEy1VVE4tVVNFUkZpcnN0LUNsaWVudCBBdXRoZW50aWNhdGlvbiBhbmQg
+RW1haWwwHhcNMTEwNDI4MDAwMDAwWhcNMjAwNTMwMTA0ODM4WjCBkzELMAkGA1UEBhMCR0Ix
+GzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UE
+ChMRQ09NT0RPIENBIExpbWl0ZWQxOTA3BgNVBAMTMENPTU9ETyBDbGllbnQgQXV0aGVudGlj
+YXRpb24gYW5kIFNlY3VyZSBFbWFpbCBDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAJKEhFtLV5jUXi+LpOFAyKNTWF9mZfEyTvefMn1V0HhMVbdClOD5J3EHxcZppLkyxPFA
+GpDMJ1Zifxe1cWmu5SAb5MtjXmDKokH2auGj/7jfH0htZUOMKi4rYzh337EXrMLaggLW1DJq
+1GdvIBOPXDX65VSAr9hxCh03CgJQU2yVHakQFLSZlVkSMf8JotJM3FLb3uJAAVtIaN3FSrTg
+7SQfOq9xXwfjrL8UO7AlcWg99A/WF1hGFYE8aIuLgw9teiFX5jSw2zJ+40rhpVJyZCaRTqWS
+D//gsWD9Gm9oUZljjRqLpcxCm5t9ImPTqaD8zp6Q30QZ9FxbNboW86eb/8ECAwEAAaOCAUsw
+ggFHMB8GA1UdIwQYMBaAFImCZ33EnSZwAEu0UEh83j2uBG59MB0GA1UdDgQWBBR6E04AdFvG
+eGNkJ8Ev4qBbvHnFezAOBgNVHQ8BAf8EBAMCAQYwEgYDVR0TAQH/BAgwBgEB/wIBADARBgNV
+HSAECjAIMAYGBFUdIAAwWAYDVR0fBFEwTzBNoEugSYZHaHR0cDovL2NybC51c2VydHJ1c3Qu
+Y29tL1VUTi1VU0VSRmlyc3QtQ2xpZW50QXV0aGVudGljYXRpb25hbmRFbWFpbC5jcmwwdAYI
+KwYBBQUHAQEEaDBmMD0GCCsGAQUFBzAChjFodHRwOi8vY3J0LnVzZXJ0cnVzdC5jb20vVVRO
+QWRkVHJ1c3RDbGllbnRfQ0EuY3J0MCUGCCsGAQUFBzABhhlodHRwOi8vb2NzcC51c2VydHJ1
+c3QuY29tMA0GCSqGSIb3DQEBBQUAA4IBAQCF1r54V1VtM39EUv5C1QaoAQOAivsNsv1Kv/av
+QUn1G1rF0q0bc24+6SZ85kyYwTAo38v7QjyhJT4KddbQPTmGZtGhm7VNm2+vKGwdr+XqdFqo
+2rHA8XV6L566k3nK/uKRHlZ0sviN0+BDchvtj/1gOSBH+4uvOmVIPJg9pSW/ve9g4EnlFsjr
+P0OD8ODuDcHTzTNfm9C9YGqzO/761Mk6PB/tm/+bSTO+Qik5g+4zaS6CnUVNqGnagBsePdIa
+XXxHmaWbCG0SmYbWXVcHG6cwvktJRLiQfsrReTjrtDP6oDpdJlieYVUYtCHVmdXgQ0BCML7q
+peeU0rD+83X5f27nMIIFOjCCBCKgAwIBAgIPKz7JRTAYzjsD6NeaHoYwMA0GCSqGSIb3DQEB
+BQUAMIGTMQswCQYDVQQGEwJHQjEbMBkGA1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYD
+VQQHEwdTYWxmb3JkMRowGAYDVQQKExFDT01PRE8gQ0EgTGltaXRlZDE5MDcGA1UEAxMwQ09N
+T0RPIENsaWVudCBBdXRoZW50aWNhdGlvbiBhbmQgU2VjdXJlIEVtYWlsIENBMB4XDTEzMDkw
+OTAwMDAwMFoXDTE0MDkwOTIzNTk1OVowLjEsMCoGCSqGSIb3DQEJARYdY2hyaXN0aWFuLmRv
+bXNjaEBhc3NlbnRpcy5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDPjUWM
++aOFJ4m0ukzDXlvIOBC5tEQ4ibevejQmI+U1O40Bpxhj0+e6mJ3bTSpFYHgivWLwP5smKJ9+
+2g37lAjCg3d/SKMfVhgTSkfhwfass/cRhoy2JfQMlQ8/WLXU4JVG3lcFJiXgNYUcvDUWrcvB
+g4lH0y4swF6msy67tAavtIOLvsijrNLWREyLVPtb6Qbtb+GlwpCVDZ1uB6X4nfVBXIQ0QkD4
+5xOHKpSj4WBuwEQ6Oo9q/rt+RpNpaoG0rBqbA/6Npmd/7O6FNpH6e8Bw89VGdUeUlSJl5S2c
+sqe7FDTwSzxHmpfDSfAKF3srFup8fmh5GE/paxrS6GqMAtO1AgMBAAGjggHtMIIB6TAfBgNV
+HSMEGDAWgBR6E04AdFvGeGNkJ8Ev4qBbvHnFezAdBgNVHQ4EFgQUQ8DUoqzKZddIizd0c9Aq
+WuuBXbswDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwIAYDVR0lBBkwFwYIKwYBBQUH
+AwQGCysGAQQBsjEBAwUCMBEGCWCGSAGG+EIBAQQEAwIFIDBGBgNVHSAEPzA9MDsGDCsGAQQB
+sjEBAgEBATArMCkGCCsGAQUFBwIBFh1odHRwczovL3NlY3VyZS5jb21vZG8ubmV0L0NQUzBX
+BgNVHR8EUDBOMEygSqBIhkZodHRwOi8vY3JsLmNvbW9kb2NhLmNvbS9DT01PRE9DbGllbnRB
+dXRoZW50aWNhdGlvbmFuZFNlY3VyZUVtYWlsQ0EuY3JsMIGIBggrBgEFBQcBAQR8MHowUgYI
+KwYBBQUHMAKGRmh0dHA6Ly9jcnQuY29tb2RvY2EuY29tL0NPTU9ET0NsaWVudEF1dGhlbnRp
+Y2F0aW9uYW5kU2VjdXJlRW1haWxDQS5jcnQwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmNv
+bW9kb2NhLmNvbTAoBgNVHREEITAfgR1jaHJpc3RpYW4uZG9tc2NoQGFzc2VudGlzLmNvbTAN
+BgkqhkiG9w0BAQUFAAOCAQEAPtKm/Ur1elpZ6Gj8ixMnNPpjqzhfoThbQw5gWew3NEOZiJcb
+y23QfUbWtZD91RymHODlCf/YDEzVDMwHeKDrQcsZXgeIc3gdQ7UNZ7nAnd+Q1olwPIDeZOyo
+PDDxt0sOc+a6b1Rm7MDUr1G0HPS//y6Jkcn5O4nll6XBk4h1Nr1LB5Nl8mfEJRaKWbl2mCkS
+5HYpjEGScAWNy1p5TJpucJNpg4dEmVTV7XD5puzMFZrXHiyDievfu3wn81ig2UseyHjnWuw+
+7toWaph0H/aJIMDc+DXRKlyLArp3IR3/uoydxqZ6CZR+bxe5cYmnkr1bTrfIPr/b2r/WyyZ9
+zag7ATGCBBYwggQSAgEBMIGnMIGTMQswCQYDVQQGEwJHQjEbMBkGA1UECBMSR3JlYXRlciBN
+YW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYDVQQKExFDT01PRE8gQ0EgTGltaXRl
+ZDE5MDcGA1UEAxMwQ09NT0RPIENsaWVudCBBdXRoZW50aWNhdGlvbiBhbmQgU2VjdXJlIEVt
+YWlsIENBAg8rPslFMBjOOwPo15oehjAwCQYFKw4DAhoFAKCCAkMwGAYJKoZIhvcNAQkDMQsG
+CSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTQwMzMxMDk1NjAwWjAjBgkqhkiG9w0BCQQx
+FgQUTfONcXixEqkFOUSBF51bW56A+xowbAYJKoZIhvcNAQkPMV8wXTALBglghkgBZQMEASow
+CwYJYIZIAWUDBAECMAoGCCqGSIb3DQMHMA4GCCqGSIb3DQMCAgIAgDANBggqhkiG9w0DAgIB
+QDAHBgUrDgMCBzANBggqhkiG9w0DAgIBKDCBuAYJKwYBBAGCNxAEMYGqMIGnMIGTMQswCQYD
+VQQGEwJHQjEbMBkGA1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3Jk
+MRowGAYDVQQKExFDT01PRE8gQ0EgTGltaXRlZDE5MDcGA1UEAxMwQ09NT0RPIENsaWVudCBB
+dXRoZW50aWNhdGlvbiBhbmQgU2VjdXJlIEVtYWlsIENBAg8rPslFMBjOOwPo15oehjAwgboG
+CyqGSIb3DQEJEAILMYGqoIGnMIGTMQswCQYDVQQGEwJHQjEbMBkGA1UECBMSR3JlYXRlciBN
+YW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYDVQQKExFDT01PRE8gQ0EgTGltaXRl
+ZDE5MDcGA1UEAxMwQ09NT0RPIENsaWVudCBBdXRoZW50aWNhdGlvbiBhbmQgU2VjdXJlIEVt
+YWlsIENBAg8rPslFMBjOOwPo15oehjAwDQYJKoZIhvcNAQEBBQAEggEAn31IT4K2LKphcQuR
+mAQ7Fjo/JKSRIJipNQJtuwVjcKPchFuQyVCIOcbZ5YGGlbzSOgJZSVeECTxefsN+xMcD3IGi
+8B2cipX93Bjs4mixY/Cfl5VvfU04mjbCm29vLMLG8VGWBZ+YHXnBuZ0AxOZOmkzZKCNJKrB0
++Jh1WIamIHKtk6K6DRXPfkllLClrYRmbijeHIwZbbHmKgJu63vfxZy2mmSV0QSCXYBeGc5is
+oFbTVi/K4o6Qg1XgD7zB4sH0YdpeHtjqIM489g12GAAWlG2HNgNUkhl7mBZB8Kmn5PjtIY8c
+n/mxEgHsOgtB+9u/2ifyRNRMjoo6PNPPYFozSAAAAAAAAA==
+
+--------------ms080005000803040905070602--
+

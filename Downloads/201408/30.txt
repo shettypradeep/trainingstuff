@@ -1,0 +1,71 @@
+From users-return-137075-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Aug 19 05:50:12 2014
+Return-Path: <users-return-137075-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2FEFC11357
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 19 Aug 2014 05:50:12 +0000 (UTC)
+Received: (qmail 41227 invoked by uid 500); 19 Aug 2014 05:50:10 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 41145 invoked by uid 500); 19 Aug 2014 05:50:10 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 41133 invoked by uid 99); 19 Aug 2014 05:50:10 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 19 Aug 2014 05:50:10 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of baerrach@gmail.com designates 209.85.220.179 as permitted sender)
+Received: from [209.85.220.179] (HELO mail-vc0-f179.google.com) (209.85.220.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 19 Aug 2014 05:49:43 +0000
+Received: by mail-vc0-f179.google.com with SMTP id hq11so6771827vcb.24
+        for <users@maven.apache.org>; Mon, 18 Aug 2014 22:49:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=6JKgZe32G5SHIGQtSvqaG/YYBMruPl2OJCBwOzNRbFc=;
+        b=gA/hajg3nsQwoXAQxEmu34Hqhe6hyL21vhahy7TsBYvPYh34qnuciZumV6WTMFGKy9
+         wbVox3tMC6VKX68TXhThm/mnutO87dwE3Pjqs/0C0b3gRtpX31XR7osz8ocY4EWqDfbX
+         XfHD0etQPaZGO9PdevSM1Jz//M5fHHri8GmuQ5mbjYugCLbxw6pbZHZ/fl13vH6dWAJP
+         vW0diBncbfSoBz/vg8PjjV47dOZlRiIlyEo7UKpHMCPyzx/VgylFW61vepZKw2JoVPC7
+         2Sqf0wDN8pVG4dLSU089PuAytxIQfCF1Asj9qp2BV/6Y8e4hNT1+XIP+U3GiQFboOy8C
+         Jw/g==
+MIME-Version: 1.0
+X-Received: by 10.220.95.132 with SMTP id d4mr9416285vcn.33.1408427381948;
+ Mon, 18 Aug 2014 22:49:41 -0700 (PDT)
+Received: by 10.220.97.146 with HTTP; Mon, 18 Aug 2014 22:49:41 -0700 (PDT)
+In-Reply-To: <CAKDUN1vPea=2W4+y41sU6Gt463nrVqN3CL6bJQAmej6owobJ=w@mail.gmail.com>
+References: <CAPCjjnGKp2A-iDS+vBvjHTF_FX7RL4DeOMhRadMOCoO5pDMHdQ@mail.gmail.com>
+	<53F04794.6000406@artifact-software.com>
+	<CAPCjjnFpu8wZnGq42sEaR3vv-TwRSAecoDKA9JObWQoas8yJvw@mail.gmail.com>
+	<CAPCUOdFgo-RuYjdH5Xym5UVb_viD2LoPXa0NGw3A+jKAZdXCJw@mail.gmail.com>
+	<CAPCjjnFhni9vrkJYJRxJpvLFZ-wu9oG-oO0f73Cyv4R103COvw@mail.gmail.com>
+	<CAKDUN1vPea=2W4+y41sU6Gt463nrVqN3CL6bJQAmej6owobJ=w@mail.gmail.com>
+Date: Tue, 19 Aug 2014 15:19:41 +0930
+Message-ID: <CADVp3v8c_aT-Ofntot6zyiunboUffVM7NAPPTcRVtTF4vNpwZw@mail.gmail.com>
+Subject: Re: Remove old snapshots under local repository
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0158b2f6cb077b0500f50d3e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0158b2f6cb077b0500f50d3e
+Content-Type: text/plain; charset=UTF-8
+
+What's wrong with just blowing away ~/.m2/repository ?
+
+If you have a local Maven Repository Manager it doesn't take very long to
+reseed it.
+(At least less time in aggregate than thinking of ways to prune snapshot
+files in the repository correctly...)
+
+--089e0158b2f6cb077b0500f50d3e--
+

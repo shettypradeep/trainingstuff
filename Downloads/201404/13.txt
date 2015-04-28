@@ -1,0 +1,180 @@
+From users-return-136269-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Apr 27 09:41:19 2014
+Return-Path: <users-return-136269-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DB87311F39
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 27 Apr 2014 09:41:19 +0000 (UTC)
+Received: (qmail 3187 invoked by uid 500); 27 Apr 2014 09:41:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 2708 invoked by uid 500); 27 Apr 2014 09:41:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 2696 invoked by uid 99); 27 Apr 2014 09:41:05 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 27 Apr 2014 09:41:05 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 74.125.82.174 as permitted sender)
+Received: from [74.125.82.174] (HELO mail-we0-f174.google.com) (74.125.82.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 27 Apr 2014 09:41:01 +0000
+Received: by mail-we0-f174.google.com with SMTP id w62so4018143wes.33
+        for <users@maven.apache.org>; Sun, 27 Apr 2014 02:40:39 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=CSdxlSomGJQgrMs2PaqZHFIWhMlwSDW2S+FEKjXHqA8=;
+        b=kAWFVrDPJHwOH9o4VHQKG6U4aObdBGDp+Ll4nTUE0+0TYlc5rrv9hC5pQgJNzzIyoE
+         YXhcvT8HJMbmNpAjuaFmZZ4L0LfulIknsZjHnRAqHJz6dmapBIdQXy2fblqOxMGBlu4H
+         lI1w+WV3Iy2Yz8n8S6Xowxjp7CQAQMRCETQcy+UudcNA+3Lamm2IThEYLjuUzTxfaeDf
+         9oXyj8DWelq2FMMyM3s1cjA3VdEFd8ABij2w0NgyyhWRSdIYGDjINcryWpDA5rfD+qkk
+         n8aZOv0Mxeubx0thpFvxaQ1dqs6z1DD8H5ELD//6sBe3x2IM75oybewDCIh6CYG0i1E0
+         2cKg==
+MIME-Version: 1.0
+X-Received: by 10.180.72.179 with SMTP id e19mr10514978wiv.61.1398591638873;
+ Sun, 27 Apr 2014 02:40:38 -0700 (PDT)
+Received: by 10.194.205.233 with HTTP; Sun, 27 Apr 2014 02:40:38 -0700 (PDT)
+In-Reply-To: <75F3A2D98EDE2545BDC06B5B6C1CEC516DF84A00@ESGSCMB101.ericsson.se>
+References: <75F3A2D98EDE2545BDC06B5B6C1CEC516DF84192@ESGSCMB101.ericsson.se>
+	<CAJZRQKxq1j8JnExT=-BcK-V9D64HhZyQT49Pj-CPAae2s0q8OA@mail.gmail.com>
+	<75F3A2D98EDE2545BDC06B5B6C1CEC516DF849EC@ESGSCMB101.ericsson.se>
+	<75F3A2D98EDE2545BDC06B5B6C1CEC516DF84A00@ESGSCMB101.ericsson.se>
+Date: Sun, 27 Apr 2014 10:40:38 +0100
+Message-ID: <CA+nPnMx4axhGcjjrUdUQRvzD9qxP7TejZKKgEsoAbH5TrOTaWg@mail.gmail.com>
+Subject: Re: Maven sure fire plugin npe problem.
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d043c7ba2d22fc304f802fd25
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d043c7ba2d22fc304f802fd25
+Content-Type: text/plain; charset=UTF-8
+
+You signup for an account on xircles.codehaus.org... Effing jira templating
+does not make it easy to put that notice on the generic login screen so it
+is hard for people to guess... If you go to jira.codehaus.org you can see
+the not to use xircles... But sadly nowhere else :-(
+
+The curse of the spammers forcing a non-jira signup process on the RoW
+
+On Saturday, 26 April 2014, Tim Wu T <tim.t.wu@ericsson.com> wrote:
+
+> Not sure if anyone could show me how to create a TR for this, I don't have
+> a JIRA account.
+>
+> Br,
+> Tim
+>
+> -----Original Message-----
+> From: Tim Wu T [mailto:tim.t.wu@ericsson.com <javascript:;>]
+> Sent: den 26 april 2014 22:53
+> To: Maven Users List
+> Subject: RE: Maven sure fire plugin npe problem.
+>
+> Hi,
+>
+> After detail investigation, I can prove this is a bug of maven surefire
+> plugin, after version 2.12. That means from 2.12~2.17 it met the same
+> problem.
+>
+> The problem will happen in a special condition, you don't met any error
+> during the test case execution time, however, you set the result to fail
+> during IInvokedMethodListener#afterInovation, such as
+> result.setStatus(Fail),
+>
+> Then maven surefire plugin will run ITestListener#onTestFailure method
+> twice and throw a Null pointer exception.
+>
+> Currently, I rollback our plugin version to 2.12 to avoid this type of
+> problem.
+>
+> Br,
+> Tim
+> -----Original Message-----
+> From: kristian.rosenvold@zenior.no [mailto:kristian.rosenvold@zenior.no]
+> On Behalf Of Kristian Rosenvold
+> Sent: den 25 april 2014 07:42
+> To: Maven Users List
+> Subject: Re: Maven sure fire plugin npe problem.
+>
+> It would appear that testng is not reporting the throwable that is cause
+> of the failure. You might want to try a few different testNG versions to
+> see if this is a recently introduced regression.
+>
+> Surefire should probably not NPE on this, but gaining some insight into
+> the root cause is probably a good thing (tm).
+>
+> Kristian
+>
+>
+>
+> 2014-04-24 21:57 GMT+02:00 Tim Wu T <tim.t.wu@ericsson.com>:
+>
+> > Hi everyone,
+> >
+> > I am not sure if some of you met this problem before, we have some
+> > smoke test in Jenkins sever, which will run some test case through
+> > maven sure fire plugin, version is 2.17
+> >
+> > But it will always throw an exception like this:
+> > java.lang.NullPointerException
+> >      at
+> >
+> org.apache.maven.surefire.report.SmartStackTraceParser.<init>(SmartStackTraceParser.java:60)
+> >      at
+> >
+> org.apache.maven.surefire.report.PojoStackTraceWriter.smartTrimmedStackTrace(PojoStackTraceWriter.java:60)
+> >      at
+> >
+> org.apache.maven.surefire.booter.ForkingRunListener.encode(ForkingRunListener.java:328)
+> >      at
+> >
+> org.apache.maven.surefire.booter.ForkingRunListener.encode(ForkingRunListener.java:312)
+> >      at
+> >
+> org.apache.maven.surefire.booter.ForkingRunListener.toString(ForkingRunListener.java:258)
+> >      at
+> >
+> org.apache.maven.surefire.booter.ForkingRunListener.testFailed(ForkingRunListener.java:137)
+> >      at
+> >
+> org.apache.maven.surefire.testng.TestNGReporter.onTestFailure(TestNGReporter.java:105)
+> >      at org.testng.internal.Invoker.runTestListeners(Invoker.java:1901)
+> >      at org.testng.internal.Invoker.runTestListeners(Invoker.java:1885)
+> >      at org.testng.internal.Invoker.invokeMethod(Invoker.java:788)
+> >      at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:907)
+> >      at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1237)
+> >      at
+> >
+> org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+> >      at
+> org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+> >      at org.testng.TestRunner.privateRun(TestRunner.java:767)
+> >      at org.testng.TestRunner.run(TestRunner.java:617)
+> >      at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+> >      at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+> >      at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+> >      at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+> >      at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:51)
+> >      at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:85)
+> >      at org.testng.TestNG.runSuitesSequentially(TestNG.java:1197)
+> >      at org.testng.TestNG.runSuitesLocally(TestNG.java:1122)
+> >      at org.testng.TestNG.run(TestNG.java:1030)
+> >      at
+> > org.apach
+
+
+
+-- 
+Sent from my phone
+
+--f46d043c7ba2d22fc304f802fd25--
+

@@ -1,0 +1,126 @@
+From users-return-137599-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Oct 20 15:48:43 2014
+Return-Path: <users-return-137599-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4803217779
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 20 Oct 2014 15:48:43 +0000 (UTC)
+Received: (qmail 43000 invoked by uid 500); 20 Oct 2014 15:48:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 42910 invoked by uid 500); 20 Oct 2014 15:48:41 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 42899 invoked by uid 99); 20 Oct 2014 15:48:40 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Oct 2014 15:48:40 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [209.85.213.180] (HELO mail-ig0-f180.google.com) (209.85.213.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Oct 2014 15:48:12 +0000
+Received: by mail-ig0-f180.google.com with SMTP id uq10so4825477igb.7
+        for <users@maven.apache.org>; Mon, 20 Oct 2014 08:48:11 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:content-type:mime-version:subject:from
+         :in-reply-to:date:cc:message-id:references:to;
+        bh=6TWxizHPjkey183uQA0I7gV/vvkiHLovF+MJov61cMc=;
+        b=QYvUM/zJUZC1dd0oHHQA41/qVBjRprRYlZvQiSoyM/zRaO1bcNG7Ofcm7ZD30gzcij
+         3yhjvCO9YefVt0MoJe+5rlZ9n+93GZw+0dQVySA1g0WNbkxgXECP8B8ni4BWinxMPwE+
+         +wTrcc7l3hR4lzuL77IqardjyT5LX7xquRy62lkk/57sPuFTTJ5Bog3GSchxjMv7RQz7
+         dXGvtuTLmivAARYtY1ztvk9nwq1mqTEn91HEDi62je1z5hQRJB8tNbe9uJ2J4bDI2DtJ
+         71I49+W9+2fNhW2X6ezkSH7bTeAYSg0t3LhcDwNBzGmlNT9BfHq2LFvqb+7bzreVBOfY
+         1XgA==
+X-Gm-Message-State: ALoCoQknY9MY/g0kkHogEsaABslF6r0iTrTPrn/VpqQ35VuxSnkRZ9MJbt027sQmY/O0MzkI9lw0
+X-Received: by 10.50.23.37 with SMTP id j5mr4053769igf.26.1413820091274;
+        Mon, 20 Oct 2014 08:48:11 -0700 (PDT)
+Received: from [10.0.1.11] (192-0-154-177.cpe.teksavvy.com. [192.0.154.177])
+        by mx.google.com with ESMTPSA id kj6sm3962308igb.6.2014.10.20.08.48.10
+        for <multiple recipients>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Mon, 20 Oct 2014 08:48:10 -0700 (PDT)
+Content-Type: multipart/alternative; boundary="Apple-Mail=_701250F9-76D8-42BA-B333-C3AC2D9E4CEB"
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.6\))
+Subject: Re: Company-wide checkstyle.xml ?
+From: Jason van Zyl <jason@takari.io>
+In-Reply-To: <CAMH6+azzBnmEt7Vr8pf+DrnfwzE_k8hBgY6LaCdY_BjiHwTCWg@mail.gmail.com>
+Date: Mon, 20 Oct 2014 11:47:05 -0400
+Cc: Henning Schmiedehausen <henning@schmiedehausen.org>
+Message-Id: <B0E50B9B-085F-488B-AC8A-7952451912BA@takari.io>
+References: <CAMH6+azzBnmEt7Vr8pf+DrnfwzE_k8hBgY6LaCdY_BjiHwTCWg@mail.gmail.com>
+To: Maven Users List <users@maven.apache.org>
+X-Mailer: Apple Mail (2.1878.6)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_701250F9-76D8-42BA-B333-C3AC2D9E4CEB
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+The best mechanism I have seen to date for sharing configuration amongst =
+many projects is the Airbase POM in the Airlift project that was =
+developed by Henning (I've cc'd him).
+
+Airbase uses PMD but you can probably use a similar technique for =
+Checkstyle. I always point people at the Airbase POM as it's what I =
+consider the best way to configure a Maven build.
+
+On Oct 20, 2014, at 10:56 AM, James Green <james.mk.green@gmail.com> =
+wrote:
+
+> Is there a good practice to achieve this?
+>=20
+> I have a company-parent POM which has config to deal with site =
+generation
+> and distributionMangement. Everything has this as it's parent.
+>=20
+> I also have a build-tools JAR that supplies checkstyle.xml. The =
+problem is
+> company-parent depends-on build-tools within the site configuration, =
+yet
+> build-tools requires company-parent to inherit =
+distributionManagement...
+> Yuck.
+>=20
+> I now note there is an in-line configuration for checkstyle possible. =
+Is
+> this the way forward for our case?
+>=20
+> Thanks,
+>=20
+> James
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+http://twitter.com/takari_io
+---------------------------------------------------------
+
+What matters is not ideas, but the people who have them. Good people can =
+fix bad ideas, but good ideas can't save bad people.=20
+
+ -- Paul Graham
+
+
+
+
+
+
+
+
+
+
+--Apple-Mail=_701250F9-76D8-42BA-B333-C3AC2D9E4CEB--
+

@@ -1,0 +1,130 @@
+From users-return-135261-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 28 00:36:01 2014
+Return-Path: <users-return-135261-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 64D3010E16
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 28 Jan 2014 00:36:01 +0000 (UTC)
+Received: (qmail 17233 invoked by uid 500); 28 Jan 2014 00:35:49 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 17161 invoked by uid 500); 28 Jan 2014 00:35:48 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 17118 invoked by uid 99); 28 Jan 2014 00:35:46 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 00:35:46 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [69.150.27.74] (HELO stlmail1.amdocs.com) (69.150.27.74)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 00:35:40 +0000
+X-AuditID: 0a1a0cd4-f796e6d000001409-c7-52e6fb460f68
+Received: from USSTLDAGFE3.corp.amdocs.com (Unknown_Domain [10.26.49.50])
+	(using TLS with cipher AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	by stlmail1.amdocs.com (Amdocs ESMTP Ready) with SMTP id 2D.D9.05129.64BF6E25; Mon, 27 Jan 2014 18:35:18 -0600 (CST)
+Received: from USSTLDAGBE1.corp.amdocs.com ([fe80::51b3:73bc:1f52:a809]) by
+ USSTLDAGFE3.corp.amdocs.com ([fe80::48a1:c495:2ce:f697%10]) with mapi id
+ 14.03.0158.001; Mon, 27 Jan 2014 18:35:18 -0600
+From: John Dix <John.Dix@amdocs.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: surefire plugin output changes
+Thread-Topic: surefire plugin output changes
+Thread-Index: Ac8bvtSEFw6pAt2WRIC89GkZa1wPwg==
+Date: Tue, 28 Jan 2014 00:35:18 +0000
+Message-ID: <1B8FF9BB83FDCE44AB581D7E394AB90D2A3D9AB5@USSTLDAGBE1.corp.amdocs.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [10.26.49.50]
+Content-Type: text/plain; charset="us-ascii"
+content-transfer-encoding: quoted-printable
+MIME-Version: 1.0
+X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFmpkleLIzCtJLcpLzFFi42LhkjI00nX7/SzI4OESdYtHW68zOjB6tD8V
+	CmCMamC0Sc4vqHTKycxLUShKLiixVUotS60oSSxKdgDijMyyVL3E3JT85GK95PxcJX07m8S8
+	vPySxJJUhZTU4mRbJUewZHxKZnFyTmJmbmqRkkJmiq2SsZJCQU5icmpuah7QyMSCgtS8FCU7
+	LgUMYJPwmSXjxYz3rAUvxCvu3FrI2MDYINLFyMkhIWAicWRDJzuELSZx4d56ti5GLg4hgblM
+	EsuXbmCGcE4wSky7uo4RpIpNQEXizMOXbCC2iICuxMOLT5hBbGEBdYk3Z+dAxXUkzrTPZYGw
+	9SSWt54Ci7MIqEo0rJsGZvMKBEkc/XYTrIYRaPP3U2uYQGxmAXGJW0/mM0FcJCCxZM95Zghb
+	VOLl43+sELa8xKIn06HqdSQW7P7EBmFrSyxb+JoZYr6gxMmZT1gmMArPQjJ2FpKWWUhaZiFp
+	WcDIsopRuLgkJzcxM8cQKWY2MYLjmefKDsbuW1aHGAU4GJV4eHkePwsSYk0sK67MPcQowcGs
+	JMJ7dgpQiDclsbIqtSg/vqg0J7X4EKMP0P8TmaVEk/OBqSavJN7Q2NTI3NDM0NzC0MwUXdjc
+	xMDM1NxISZy3+Mr+ICGBdGBiyE5NLUgtghnHxMEp1cDooVmbv+dO7drp96cFG5xaHqyrmt5W
+	EBp+U+zx+4sBZdN6ixpOZV8vYWrdeMTJcfHNjX9P/mBad2XylH/nVq+U9zM2qXczyV/pzVRd
+	K2zyKltkze2LLnVLdiYXToreH3mqyI5vjR1DoNCrRMZyuYXbvPwXnBB89pkjbnlm/RI78cOT
+	WMVb1q1WYinOSDTUYi4qTgQA1I60oRQDAAA=
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello all,
+
+We have migrated our maven from version 3.0.3 to 3.0.5 and our developers ar=
+e claiming now that they're not seeing the verbosity in the test outputs lik=
+e they did before.
+
+The only see a synopsis and summary of the number of tests run, failed, and=
+ which ones failed. Servers are run in a CentOS 5.3 linux environment within=
+ Jenkins.
+
+I am being told that before this upgrade they had an extremely chatty output=
+ like below. What they haven't been able to confirm for me is whether this c=
+hange happened after we moved from 2.1.0 to 3.0.3 or not as that was before=
+ my time. 
+
+Can anyone please confirm if this output was/is handled by surefire and mayb=
+e a commandline switch in maven got lost, or from somewhere else? The output=
+ as from an old archived log the developer gave me.
+
+
+[INFO ]: com.qpass.payment.multinodeCloud.DeployTest:
+         Connected to Mission Control Server on ::  myWar from getWarUrl =3D=
+ mobilePaymentsApp-amp_i-SNAPSHOT.war
+objname =3D ampait/ampait-control-1.opsdevna3.amdocsdc.net/5666/com.qpass:Ty=
+pe=3DEnvironment
+[INFO ]: com.qpass.payment.multinodeCloud.DeployTest:
+         Test: deployAppWartoSelectedsEnv Result=3D{0}: {<machine-name>=3DSu=
+ccessfull Deployment of WAR file: app} [INFO ]: com.qpass.payment.multinodeC=
+loud.DeployTest:
+         Test:deployAppWar: Time Spent 2 min 24 secs 324 ms myWar from getWa=
+rUrl =3D mobilePaymentExtractsApp-amp_i-SNAPSHOT.war
+[INFO ]: com.qpass.payment.multinodeCloud.DeployTest:
+         Test: deployExtractsWar Result=3D{0}: {ampait-back-1.opsdevna3.amdo=
+csdc.net:8999=3DSuccessfull Deployment of WAR file: extractsApp} [INFO ]: co=
+m.qpass.payment.multinodeCloud.DeployTest:
+         Test:deployExtractsWar: Time Spent 1 min 23 secs 14 ms myWar from g=
+etWarUrl =3D nxtcomSampleApp-amp_i-SNAPSHOT.war
+[INFO ]: com.qpass.payment.multinodeCloud.DeployTest:
+         Test: deployNxtSampleWar Result=3D{0}: {ampait-back-1.opsdevna3.amd=
+ocsdc.net:8999=3DSuccessfull Deployment of WAR file: nxtcomServices} [INFO ]=
+: com.qpass.payment.multinodeCloud.DeployTest:
+         Test:deployNxtSampleWar: Time Spent 47 secs 410 ms myWar from getWa=
+rUrl =3D zmobileSampleApp-amp_i-SNAPSHOT.war
+[INFO ]: com.qpass.payment.multinodeCloud.DeployTest:
+         Test: deployZmobileSampleWar Result=3D{0}: {ampait-back-1.opsdevna3=
+.amdocsdc.net:8999=3DSuccessfull Deployment of WAR file: zmobileServices} [I=
+NFO ]: com.qpass.payment.multinodeCloud.DeployTest:
+         Test:deployZmobileSampleWar: Time Spent 31 secs 400 ms myWar from g=
+etWarUrl =3D mobilePaymentsWebServiceApp-amp_i-SNAPSHOT.war
+[INFO ]: com.qpass.payment.multinodeCloud.DeployTest:
+         Test: deployWebServiceApp Result=3D{0}: {ampait-front-1.opsdevna3.a=
+mdocsdc.net:8999=3DSuccessfull Deployment of WAR file: ROOT} [INFO ]: com.qp=
+ass.payment.multinodeCloud.DeployTest:
+         Test:deployBackWarToSelectedEnv: Time Spent 1 min 33 secs 791 ms my=
+War from getWarUrl =3D paymentsReportingUiApplication-amp_i-SNAPSHOT.war
+
+This message and the information contained herein is proprietary and confide=
+ntial and subject to the Amdocs policy statement,
+you may review at http://www.amdocs.com/email_disclaimer.asp
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

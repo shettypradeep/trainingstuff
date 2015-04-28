@@ -1,0 +1,139 @@
+From users-return-137486-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Oct  8 08:37:57 2014
+Return-Path: <users-return-137486-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5F2CB178C3
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  8 Oct 2014 08:37:57 +0000 (UTC)
+Received: (qmail 89502 invoked by uid 500); 8 Oct 2014 08:37:55 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 89394 invoked by uid 500); 8 Oct 2014 08:37:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 89382 invoked by uid 99); 8 Oct 2014 08:37:54 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Oct 2014 08:37:54 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.218.49 as permitted sender)
+Received: from [209.85.218.49] (HELO mail-oi0-f49.google.com) (209.85.218.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Oct 2014 08:37:29 +0000
+Received: by mail-oi0-f49.google.com with SMTP id a3so3989735oib.22
+        for <users@maven.apache.org>; Wed, 08 Oct 2014 01:37:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=Z4LISEgMDCuotoF/mXnGceunS2F1u9wJ5mrT2QanmPU=;
+        b=s/kfRHxhkvkDatXF/OxOIWJh98pRpu2qk5x6YGiXkdedxc/r7d1D9mmpQM5qMouxRw
+         U1WdRLibnoPcLiaXPkTRvRTeQKk9omlmHOGm9pLNnXxVP37mLnslOhW7xxzWeNuGR3yC
+         glTUCl1NWbNQyBtAV4hGDx+SV057HPBnkh4f0eyfPXWxZdq/D8vYqFTZCwSO5rK7jwX6
+         0SqJbyBgqs9kv2CMN9UANzv3A1rOyUxwrv/a6bfHO6U7UxB0grBFZoj30frozIIFDrf3
+         4qg04DIEKjmjJanfQnyTEwOaZfCjtszBOx6x1eh8000EgY1AmRQgn0eRd2pZQDBwSUXe
+         DMGQ==
+MIME-Version: 1.0
+X-Received: by 10.182.19.135 with SMTP id f7mr10216218obe.40.1412757448357;
+ Wed, 08 Oct 2014 01:37:28 -0700 (PDT)
+Received: by 10.60.116.39 with HTTP; Wed, 8 Oct 2014 01:37:28 -0700 (PDT)
+In-Reply-To: <CAKDUN1ty_9_GX6_oKkMxjRaNH6VPREA5MaNqswq3MLChNVnbHQ@mail.gmail.com>
+References: <CAFDw+_MfUVBB=t_REqDSniErVuw9CXVpfsnmc9Krv=L69ZkZUA@mail.gmail.com>
+	<CA+nPnMyajL-2WYQojVG8RC6LCFeOns-P3TAHJgz+WE09irHoNg@mail.gmail.com>
+	<CAFDw+_O82zhNQ-=Mo4PcfZpK5Uf13b_YvAUEE0ckDj+pXqhxOQ@mail.gmail.com>
+	<CA+nPnMx_F=eDxEKRVyXzBhPELWi6M2z_4Q-KsXkhX68wRPpRug@mail.gmail.com>
+	<CAKDUN1ty_9_GX6_oKkMxjRaNH6VPREA5MaNqswq3MLChNVnbHQ@mail.gmail.com>
+Date: Wed, 8 Oct 2014 09:37:28 +0100
+Message-ID: <CA+nPnMxWaD4Cv62xasW2hdgcOTZzU5y6agO539zLZf8Qx4GjvQ@mail.gmail.com>
+Subject: Re: Running integration tests
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c29966dcfc110504e5395a
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c29966dcfc110504e5395a
+Content-Type: text/plain; charset=UTF-8
+
+Thanks Anders...
+
+It can be hard to look that stuff on the phone...
+
+I remember wanting to have a symmetry with the Surefire patterns of
+Test*.java; *Test.java; *TestCase.java but I couldn't recall what I did for
+the last one!
+
+On 8 October 2014 07:19, Anders Hammar <anders@hammar.net> wrote:
+
+> >
+> > So failsafe will pickup
+> >
+> > ITblahblah.java
+> > BlahblahIT.java
+> >
+> > And a third form that I forget
+> >
+>
+> *ITCase.java
+>
+>
+> http://maven.apache.org/surefire/maven-failsafe-plugin/integration-test-mojo.html#includes
+>
+> /Anders
+>
+>
+> >
+> >
+> > >
+> > >
+> > > > > 3) Run integration tests after compile?
+> > > > > The real reason for question 2 is that I wish to run integration
+> > tests
+> > > > > only after I have deployed the new application to ensure the
+> > > > > integration tests run on the server with the new content. Is there
+> a
+> > > > > way to do this?
+> > >
+> > > > Sounds like you should consult my answer to a related question:
+> > > >
+> > >
+> >
+> http://stackoverflow.com/questions/16935290/maven-deploy-webapp-to-tomcat-before-junit-test/16936585#16936585
+> > >
+> > > OK, this was very helpful too. In this case, I am working with a
+> > > multi-module project and I decided it was best to add our selenium
+> > > tests in a new project to keep them away from other project code. We
+> > > have 13 pom.xml files, not counting the one I am adding. So this is my
+> > > next challenge, to ensure I get this project executing after the
+> > > others have done their job and deployed to the app server.
+> >
+> >
+> > Dependencies will ensure sequencing of modules
+> >
+> >
+> > >
+> > > Why, sometimes I've believed as many as five impossible things before
+> > > after-noon tea. Time for one more before I knock off at 5pm.
+> > >
+> > > Rob
+> > > :)
+> > >
+> > > ---------------------------------------------------------------------
+> > > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > <javascript:;>
+> > > For additional commands, e-mail: users-help@maven.apache.org
+> > > <javascript:;>
+> > >
+> > >
+> >
+> > --
+> > Sent from my phone
+> >
+>
+
+--001a11c29966dcfc110504e5395a--
+

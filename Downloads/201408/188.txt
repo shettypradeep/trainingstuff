@@ -1,0 +1,74 @@
+From users-return-137107-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Aug 22 02:53:31 2014
+Return-Path: <users-return-137107-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 02EE1114E0
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 22 Aug 2014 02:53:31 +0000 (UTC)
+Received: (qmail 43325 invoked by uid 500); 22 Aug 2014 02:53:29 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 43240 invoked by uid 500); 22 Aug 2014 02:53:29 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 43219 invoked by uid 99); 22 Aug 2014 02:53:28 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 22 Aug 2014 02:53:28 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mwnorman@gmail.com designates 209.85.223.181 as permitted sender)
+Received: from [209.85.223.181] (HELO mail-ie0-f181.google.com) (209.85.223.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 22 Aug 2014 02:53:23 +0000
+Received: by mail-ie0-f181.google.com with SMTP id rp18so5558749iec.26
+        for <users@maven.apache.org>; Thu, 21 Aug 2014 19:53:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=qgVGn3gJA99ccn7JtXCDyHFJ8W1OJMj1ZTkO9+UK5+g=;
+        b=OQVjQt9w1eJmhxwqwt57ZV3e9np/wX1d7AFUfCrSoctPv3R5jYnz9M4Ssaf4smHTrN
+         8Adabtsf6nWfEthwYZpLigtY2YBOaO6DHv4b/6ve1HSI1Jus7kwOI/XiVcYSG04N7Dsc
+         W4Nr1zZoNQb5/mT++QFbFNSpfPoHe6nLlSdJWDoITUBDETsTw9jK1hf/v9XTARVLYtny
+         AInVwmCqLFonPKVAcyMDHeXZBPr/ZnvkIdIOLvkz5ntXaWqa3jmoDSvopxPlKUoDIPfG
+         zFUmMx94MrHTimvH2UlvKI+0R2usOxIrQkk9TsLxq5OPWa9dfW+YvREbX8d31MiNSPkC
+         gYKw==
+MIME-Version: 1.0
+X-Received: by 10.50.79.165 with SMTP id k5mr8616350igx.16.1408675983105; Thu,
+ 21 Aug 2014 19:53:03 -0700 (PDT)
+Received: by 10.64.90.81 with HTTP; Thu, 21 Aug 2014 19:53:03 -0700 (PDT)
+Date: Thu, 21 Aug 2014 22:53:03 -0400
+Message-ID: <CAGqeSTGmfwiUY45HExC-oeewNtH7yR5OVcc1AGZsOpYv=mFGog@mail.gmail.com>
+Subject: Debugging duplicate phase executions ...
+From: Michael Norman <mwnorman@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=089e013a032e93a2f705012eefc5
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e013a032e93a2f705012eefc5
+Content-Type: text/plain; charset=UTF-8
+
+I have a simple Maven project (a web-app) that uses the '
+frontend-maven-plugin'
+to handle various Javascript-related chores (installing node, running
+Grunt, Karma etc.)
+
+Unfortunately, the frontend stuff runs twice on a 'mvn clean site' command
+- when
+I turned on debug-output (in Eclipse) I can "see" the reactor list 2 calls
+to the frontend plugin.
+
+Is there any techniques or help anyone can suggest to try to figure out
+what is causing
+the extra execution?
+
+Thanks in advance,
+---
+Mike Norman
+
+--089e013a032e93a2f705012eefc5--
+

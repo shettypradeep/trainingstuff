@@ -1,0 +1,105 @@
+From users-return-135232-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 21 17:03:53 2014
+Return-Path: <users-return-135232-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C0CFA10982
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 21 Jan 2014 17:03:53 +0000 (UTC)
+Received: (qmail 52533 invoked by uid 500); 21 Jan 2014 17:03:50 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 52468 invoked by uid 500); 21 Jan 2014 17:03:49 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 52460 invoked by uid 99); 21 Jan 2014 17:03:49 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 21 Jan 2014 17:03:49 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ctrueden.wisc@gmail.com designates 209.85.220.181 as permitted sender)
+Received: from [209.85.220.181] (HELO mail-vc0-f181.google.com) (209.85.220.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 21 Jan 2014 17:03:43 +0000
+Received: by mail-vc0-f181.google.com with SMTP id ie18so3751083vcb.12
+        for <users@maven.apache.org>; Tue, 21 Jan 2014 09:03:22 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=8g3ulg/AvyVLx5OQDgYB7GgdJ4QGsWTESZSs1Y55zPU=;
+        b=osLexqguxcTUW+juGN7FZHDPKdbGE/x1nH9PPhWemA8+fho9mN0ut65Ij5BWcRBnCw
+         LsybtzdoVi1GXM5XFWGqaAwihIqsoAUfpLySm7dHQgfaIavfGtvl+c7sSCQ/UoS0/mgD
+         8a3PcslWJCt62uU3VKWviy589ZykaiyI5aE6Emu+1CXagq44BSH1O1crDoq9YW8tB12y
+         YzuVcTnmrfVz2W5Q0+yA1sFQmIQCncVVwzUMVzoU83KwuQMTooLtJEL2WDXTCkjA5a7y
+         oP4zsi85mEmPf4RdYVY936uDj4hz+ki8Ne6c2CbB9wYRHImM1EO44hCT7tB5k62oEatW
+         e35g==
+X-Received: by 10.58.100.100 with SMTP id ex4mr6725313veb.2.1390323802463;
+ Tue, 21 Jan 2014 09:03:22 -0800 (PST)
+MIME-Version: 1.0
+Sender: ctrueden.wisc@gmail.com
+Received: by 10.58.34.198 with HTTP; Tue, 21 Jan 2014 09:02:52 -0800 (PST)
+In-Reply-To: <CAG54ima6tyRD1XNQJdcMtB-7dWgVO=rR=_SEjXW4ABgsOeK-Kw@mail.gmail.com>
+References: <CAG54ima6tyRD1XNQJdcMtB-7dWgVO=rR=_SEjXW4ABgsOeK-Kw@mail.gmail.com>
+From: Curtis Rueden <ctrueden@wisc.edu>
+Date: Tue, 21 Jan 2014 11:02:52 -0600
+X-Google-Sender-Auth: idJPTA_2uBXNfNGuhjx4T8fZmJU
+Message-ID: <CADN69y=DYWLm9Q-+htNMJ_iXqj+7C9fLuNhNZHFbBtx4yv5scA@mail.gmail.com>
+Subject: Re: Excluding a submodule from package/install phases.
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b33c7065e621004f07dfc1f
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b33c7065e621004f07dfc1f
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi Todd,
+
+> In our multi-module project we have one module that is only used for
+> development in our IDE. Is there a way to configure this project so
+> that it is always excluded from package phase?
+
+With Eclipse, you can do something similar using profiles:
+
+<profiles>
+  <profile>
+    <id>eclipse</id>
+    <activation>
+      <property>
+        <name>m2e.version</name>
+      </property>
+    </activation>
+    <modules>
+      <module>my-eclipse-specific-module</module>
+    </modules>
+  </profile>
+</profiles>
+
+This excludes the "my-eclipse-specific-module" module completely from the
+command-line build.
+
+If you aren't using Eclipse, perhaps your IDE sets a similar property.
+
+Regards,
+Curtis
+
+
+On Tue, Jan 21, 2014 at 10:52 AM, Todd Chapman <todd@chaka.net> wrote:
+
+> Hello,
+>
+> In our multi-module project we have one module that is only used for
+> development in our IDE. Is there a way to configure this project so that it
+> is always excluded from package phase?
+>
+> Thanks,
+>
+> -Todd
+>
+
+--047d7b33c7065e621004f07dfc1f--
+

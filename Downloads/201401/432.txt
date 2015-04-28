@@ -1,0 +1,92 @@
+From users-return-135301-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan 30 07:10:18 2014
+Return-Path: <users-return-135301-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6792810A18
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 30 Jan 2014 07:10:18 +0000 (UTC)
+Received: (qmail 65462 invoked by uid 500); 30 Jan 2014 07:10:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 64510 invoked by uid 500); 30 Jan 2014 07:09:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 64497 invoked by uid 99); 30 Jan 2014 07:09:56 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 30 Jan 2014 07:09:56 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of anders.g.hammar@gmail.com designates 74.125.82.54 as permitted sender)
+Received: from [74.125.82.54] (HELO mail-wg0-f54.google.com) (74.125.82.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 30 Jan 2014 07:09:50 +0000
+Received: by mail-wg0-f54.google.com with SMTP id x13so5357595wgg.21
+        for <users@maven.apache.org>; Wed, 29 Jan 2014 23:09:30 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=+UdzFllpMFapdGJOhDLkUNhBp4HLNi1tClJRDrle0ig=;
+        b=IKZDrFnqGkmtSGnrmxSEe5zatl7/D+cWOB6G0Wlec/HOiL9vUOPKayjAqN5A5CITza
+         KNThs0F1K8msJAz98iLvjQP1SZ0HokPpt6tz3BjuycD111mh8DhJ/gCfgJxE72R+j+ig
+         S990CnWIK3BcfJaswjIOZgYSK93xbokqZvMFeyvW6yRZLOakAY11i9AX/Wk6xJ5RMQUq
+         5F12slEk3DTPS8Rn9dS5Ut+kXWZXqtFFTL4sh6msTwWGLlSl+VC6p+WFdkiGIFGRC0Er
+         KmxKNjQcL74rXqW49FYLjjLPrVx/q+jqOIYIVS4Bq0QhpxKSTJigOdqmhSM0JNYhhNhA
+         IgCA==
+MIME-Version: 1.0
+X-Received: by 10.180.92.169 with SMTP id cn9mr8291342wib.35.1391065770388;
+ Wed, 29 Jan 2014 23:09:30 -0800 (PST)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.137.100 with HTTP; Wed, 29 Jan 2014 23:09:30 -0800 (PST)
+In-Reply-To: <CAC7GPxazVKeAFkkQgvRET4EfrbULVQQo3mFj8yHMm+XmEkJu=Q@mail.gmail.com>
+References: <CAC7GPxazVKeAFkkQgvRET4EfrbULVQQo3mFj8yHMm+XmEkJu=Q@mail.gmail.com>
+Date: Thu, 30 Jan 2014 08:09:30 +0100
+X-Google-Sender-Auth: NZcwVp_UHvlY3vSO4UKb4B1QaFQ
+Message-ID: <CAKDUN1vOW9s6RJ+d9X4VbVsOLbvYc=5489kNk1wPrjVMbt0x1w@mail.gmail.com>
+Subject: Re: cobertura-maven-plugin not creating .xml file as documented
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d0435c0681a700904f12abd50
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d0435c0681a700904f12abd50
+Content-Type: text/plain; charset=ISO-8859-1
+
+That plugin is maintained by the Codehaus Mojo project. Please file a
+ticket as described here:
+http://mojo.codehaus.org/cobertura-maven-plugin/issue-tracking.html
+
+Attaching a patch to the ticket will increase the likelihood of getting
+this fixed quickly. (It doesn't have to be a patch file, you could just
+state the suggested text change in the ticket itself.)
+
+Thanks for improving the docs!
+
+/Anders
+
+
+On Wed, Jan 29, 2014 at 9:31 PM, Andrew Pennebaker <apennebaker@42six.com>wrote:
+
+> The online documentation<
+> http://mojo.codehaus.org/cobertura-maven-plugin/cobertura-mojo.html>for
+> cobertura-maven-plugin 2.6 says that "coverage.xml" is created if you
+> specify xml format. In reality, this only happens if you specify xml format
+> *and* run `mvn site`. `mvn cobertura:cobertura` never generates this file.
+>
+> Could we amend the documentation to make this more clear (or even better,
+> go ahead and make `mvn cobertura:cobertura` generate this file)?
+>
+> --
+> Cheers,
+>
+> Andrew Pennebaker
+> apennebaker@42six.com
+>
+
+--f46d0435c0681a700904f12abd50--
+

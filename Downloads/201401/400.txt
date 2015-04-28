@@ -1,0 +1,127 @@
+From users-return-134980-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan  6 18:41:00 2014
+Return-Path: <users-return-134980-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DB0C110AEE
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  6 Jan 2014 18:41:00 +0000 (UTC)
+Received: (qmail 84350 invoked by uid 500); 6 Jan 2014 18:40:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 84275 invoked by uid 500); 6 Jan 2014 18:40:41 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 84264 invoked by uid 99); 6 Jan 2014 18:40:40 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 18:40:40 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 74.125.82.182 as permitted sender)
+Received: from [74.125.82.182] (HELO mail-we0-f182.google.com) (74.125.82.182)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 18:40:36 +0000
+Received: by mail-we0-f182.google.com with SMTP id q59so16370878wes.27
+        for <users@maven.apache.org>; Mon, 06 Jan 2014 10:40:15 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=65X31bHhYZioP4+oPBQ+efSRHoNCKIezpDB9mIq1uXI=;
+        b=f4AGjgjxqdKv8G9yWTax4sdPgdrIunk/fFO0QCCKmAN7PGWICLP7yAbbc5Y97Od6pD
+         13LYd49gefdwEL4iK0CfQdkCc9n0KctphQXbsJAa6u6GFN7wfIX0DqQZRrB1FIjOn8bO
+         etuFb9Mvv3KJfmUYwvzNzD2Sq/hz6ACj25qqI4vcyeawgL33lHm7JcIblQ60Oo3pHbC9
+         xbEdDY5onjGX78CRNqf0TKieodHdMVAB+ZSlZpvmCDnX9hQk/4LdzBFpEWe7mEElbAzZ
+         piOPR1hTFcliTdVpWitVc13eQQBIa/m7m/S/DfDl7lLSkm5u+rWEbtM4wRbKfvaYOtuO
+         lgNw==
+MIME-Version: 1.0
+X-Received: by 10.180.149.209 with SMTP id uc17mr13268094wib.61.1389033615386;
+ Mon, 06 Jan 2014 10:40:15 -0800 (PST)
+Received: by 10.194.142.139 with HTTP; Mon, 6 Jan 2014 10:40:15 -0800 (PST)
+In-Reply-To: <6FA7B10B-1AB5-4594-B211-FAFEAF1FADD3@oracle.com>
+References: <58EAA08AF8232344ADDB2E31D4996BFD4BBCC877@SMAPEXCHIDAG3.prod.ad.merc.chicago.cme.com>
+	<6FA7B10B-1AB5-4594-B211-FAFEAF1FADD3@oracle.com>
+Date: Mon, 6 Jan 2014 18:40:15 +0000
+Message-ID: <CA+nPnMxK8uYKS296qisyvorsnatHh3caBHXdPYnD7upadsYkoQ@mail.gmail.com>
+Subject: Re: short and snappy description of what Maven is
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c265fe39f0d004ef5197af
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c265fe39f0d004ef5197af
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+The goal is to put this on the front page so that people know enough to
+decide if they need/want to dig deeper
+
+On Monday, 6 January 2014, Russell Gold wrote:
+
+> Of course, you could say that about Gradle, too. And ant now does have th=
+e
+> ability to use those dependency features.
+>
+> I went through this when creating my video course (not in the sig because
+> this is work email). It=92s not clear to me that you can make a one sente=
+nce
+> description that will provide sufficiently useful information unless
+> something like:
+>
+> "Maven is a build tool which consumes and produces artifacts managed in a
+> repository."
+>
+> But that is not going to help people coming new to the project.
+>
+> I think I am missing the motivation here.Is the target for this
+> description people deciding whether to try Maven? People trying to learn
+> how to use it?
+>
+> On Jan 6, 2014, at 12:43 PM, Lyons, Roy <Roy.Lyons@cmegroup.com<javascrip=
+t:;>>
+> wrote:
+>
+> > on https://cwiki.apache.org/confluence/display/MAVEN/New+Main+Site it
+> says:
+> >
+> > We need a short and snappy description of what Maven is:
+> >
+> > "Apache Maven is a software project management and comprehension tool."
+> >
+> > Is just not an easy to understand description of what Maven is.
+> >
+> >
+> >
+> >
+> > I would like to submit my short description for review.
+> >
+> > "Apache Maven is a convention-over-configuration build tool which has
+> great dependency management features."
+> >
+> > I know that it does more than that - but I feel that at its core, this
+> is what it really is.
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org<javascript:;=
+>
+> > For additional commands, e-mail: users-help@maven.apache.org<javascript=
+:;>
+> >
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org <javascript:;>
+> For additional commands, e-mail: users-help@maven.apache.org<javascript:;=
+>
+>
+>
+
+--=20
+Sent from my phone
+
+--001a11c265fe39f0d004ef5197af--
+

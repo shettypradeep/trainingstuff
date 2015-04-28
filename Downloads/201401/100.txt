@@ -1,0 +1,67 @@
+From users-return-134909-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jan  3 14:36:33 2014
+Return-Path: <users-return-134909-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D1FC4105E3
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  3 Jan 2014 14:36:33 +0000 (UTC)
+Received: (qmail 68110 invoked by uid 500); 3 Jan 2014 14:36:26 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 66957 invoked by uid 500); 3 Jan 2014 14:36:16 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 66941 invoked by uid 99); 3 Jan 2014 14:36:14 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Jan 2014 14:36:14 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.160.44 as permitted sender)
+Received: from [209.85.160.44] (HELO mail-pb0-f44.google.com) (209.85.160.44)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Jan 2014 14:36:08 +0000
+Received: by mail-pb0-f44.google.com with SMTP id rq2so15703434pbb.17
+        for <multiple recipients>; Fri, 03 Jan 2014 06:35:46 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:cc:content-type;
+        bh=3vG3q7epAlps8bMb70Q4+0otGZs4OisEnQSC8g39BH8=;
+        b=sCYzUmsZnxvQbZSgoXbuhVLCz0TxpNMblvoq8PHrRtq92MnzzAFWcuKsueZaTGJDsB
+         d2X3vAiY0+KP1DTrDBiznkj7eCgGUhjvgqzETjqCO3iq5rnZrGPLODDS0Wk60zprPOWo
+         3Mo7afMxbCf4l2JY4p3w9YjZWEAX2XpJo5B5W99wsEj5Kwwd5B+epAcURlDb9ajeraew
+         W+HftmnGgQGnW8LkEt/4DpaKu/Bxmq2mQWli3InwrAVNjM3Wyk0e1MXW1Dj68wJ5c/TM
+         Rq+Af8vNLQVx/Wonnod1Z8GuKBmATcuwxYQv3jCGd8WN+myT/2tb+3SJyRXaQtkUd4h4
+         DiKQ==
+MIME-Version: 1.0
+X-Received: by 10.68.198.68 with SMTP id ja4mr95267227pbc.24.1388759746769;
+ Fri, 03 Jan 2014 06:35:46 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Fri, 3 Jan 2014 06:35:46 -0800 (PST)
+Date: Fri, 3 Jan 2014 14:35:46 +0000
+Message-ID: <CA+nPnMzmK+YXL1q=XWd=LZEzR7hoyqtO00wJvO85XyynJ+SmDA@mail.gmail.com>
+Subject: New site content
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Developers List <dev@maven.apache.org>
+Cc: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bd75faa62785b04ef11d3b6
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bd75faa62785b04ef11d3b6
+Content-Type: text/plain; charset=ISO-8859-1
+
+OK, so to start working on new content I created some pages on the wiki:
+
+The first page is a 60 seconds overview of Maven's build process
+
+https://cwiki.apache.org/confluence/display/MAVEN/Tutorial:+Maven+in+60+seconds
+
+I am using icons because I want to have subsequent pages give more detail
+and use the iconography to enable people to see what is being discussed
+more easily
+
+--047d7bd75faa62785b04ef11d3b6--
+

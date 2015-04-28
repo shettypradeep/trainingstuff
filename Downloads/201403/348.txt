@@ -1,0 +1,93 @@
+From users-return-135672-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Mar  3 13:50:23 2014
+Return-Path: <users-return-135672-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F3A5310D7F
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  3 Mar 2014 13:50:22 +0000 (UTC)
+Received: (qmail 30901 invoked by uid 500); 3 Mar 2014 13:50:18 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 30794 invoked by uid 500); 3 Mar 2014 13:50:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 30741 invoked by uid 99); 3 Mar 2014 13:50:16 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 03 Mar 2014 13:50:16 +0000
+X-ASF-Spam-Status: No, hits=3.4 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (nike.apache.org: transitioning domain of poroto20@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 03 Mar 2014 13:50:10 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <poroto20@gmail.com>)
+	id 1WKTFd-000637-IU
+	for users@maven.apache.org; Mon, 03 Mar 2014 05:49:49 -0800
+Date: Mon, 3 Mar 2014 05:49:49 -0800 (PST)
+From: poroto20 <poroto20@gmail.com>
+To: users@maven.apache.org
+Message-ID: <CABt1HWrj1zXiU6v+WuSxTBU8QDVDRAKpKD3-EL_wLAcKV+DkFQ@mail.gmail.com>
+In-Reply-To: <CALy+7UnBvX8sbimdHzfiE7DMZ27XJvYjQAN6E3=aNxxvs9wXwg@mail.gmail.com>
+References: <1393581801993-5786736.post@n5.nabble.com> <20140228125300.639cda52@linux-du93.site> <CABt1HWqqXbQnj05nodqNtz6Ky6ZGZ9hRyXi1hNSsUVQg4pEr5g@mail.gmail.com> <CALy+7UnBvX8sbimdHzfiE7DMZ27XJvYjQAN6E3=aNxxvs9wXwg@mail.gmail.com>
+Subject: Re: Maven copies 3 jars in lib folder (skinny war) for no reason
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_482228_13423579.1393854589566"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+------=_Part_482228_13423579.1393854589566
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Yes I use clean all the time. Thanks!
+
+
+On 3 March 2014 13:46, Wayne Fay [via Maven] <
+ml-node+s40175n5786907h12@n5.nabble.com> wrote:
+
+> > I still cannot understand why those three jars are copied there. Two of
+> > them they are not in the dependency tree at all, so the war should not
+> need
+> > them, and the other one (seam) is a depedency of other 4 artifacts,
+> which
+> > means that is also referenced from ouside the war so it should be on the
+> > EAR lib.
+>
+> Have you run "mvn clean" recently? If not, they may just be leftovers
+> from previous builds still in the target folder which keeps them in
+> the WAR.
+>
+> Wayne
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: [hidden email]<http://user/SendEmail.jtp?type=node&node=5786907&i=0>
+> For additional commands, e-mail: [hidden email]<http://user/SendEmail.jtp?type=node&node=5786907&i=1>
+>
+>
+>
+> ------------------------------
+>  If you reply to this email, your message will be added to the discussion
+> below:
+>
+> http://maven.40175.n5.nabble.com/Maven-copies-3-jars-in-lib-folder-skinny-war-for-no-reason-tp5786736p5786907.html
+>  To unsubscribe from Maven copies 3 jars in lib folder (skinny war) for no
+> reason, click here<http://maven.40175.n5.nabble.com/template/NamlServlet.jtp?macro=unsubscribe_by_code&node=5786736&code=cG9yb3RvMjBAZ21haWwuY29tfDU3ODY3MzZ8LTEwOTA5NDE0ODI=>
+> .
+> NAML<http://maven.40175.n5.nabble.com/template/NamlServlet.jtp?macro=macro_viewer&id=instant_html%21nabble%3Aemail.naml&base=nabble.naml.namespaces.BasicNamespace-nabble.view.web.template.NabbleNamespace-nabble.view.web.template.NodeNamespace&breadcrumbs=notify_subscribers%21nabble%3Aemail.naml-instant_emails%21nabble%3Aemail.naml-send_instant_email%21nabble%3Aemail.naml>
+>
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Maven-copies-3-jars-in-lib-folder-skinny-war-for-no-reason-tp5786736p5786908.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+------=_Part_482228_13423579.1393854589566--
+

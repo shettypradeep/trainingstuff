@@ -1,0 +1,95 @@
+From users-return-136519-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jun  4 00:20:52 2014
+Return-Path: <users-return-136519-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 292CC11DF1
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  4 Jun 2014 00:20:52 +0000 (UTC)
+Received: (qmail 77817 invoked by uid 500); 4 Jun 2014 00:20:50 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 77720 invoked by uid 500); 4 Jun 2014 00:20:50 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 77709 invoked by uid 99); 4 Jun 2014 00:20:50 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 04 Jun 2014 00:20:50 +0000
+X-ASF-Spam-Status: No, hits=3.2 required=5.0
+	tests=DEAR_SOMETHING,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of baerrach@gmail.com designates 209.85.220.179 as permitted sender)
+Received: from [209.85.220.179] (HELO mail-vc0-f179.google.com) (209.85.220.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 04 Jun 2014 00:20:45 +0000
+Received: by mail-vc0-f179.google.com with SMTP id ij19so3216372vcb.24
+        for <users@maven.apache.org>; Tue, 03 Jun 2014 17:20:24 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=ByGdHMjjlIC2ECLiRL/M7LHKufbOR5X0z0AqQ6v/AkE=;
+        b=ngpkkHneers/s1Bd1AnKyV92L/pWT4BElf48XJkYbEEWdXqI/2DTWN5rpIO4FZo7Ra
+         bQIQMrDhC21E6seLKS467KzGwwiPT4HypK82E5ozh+6HO8YwDR3XTKIMRxr6kOsfT0Uh
+         oNec905HnuYREuzHpnlXC0+zzNj05mbShx2CnN7aVicVf0cTOlRsvnIbl0w62bUluZLJ
+         oVmYse2jCwzLOIeOno1e2F0rYWe0l4gPFAZ7UXAo+X/e89D61TdBwfd7t2ATlqP63LJU
+         q6MSuqeB6Glc6QZK7Nm59gelEIprjPyQFdyo4r3HQXUhdgyHJTBgTn68bqIhXweEMkWR
+         c/mQ==
+MIME-Version: 1.0
+X-Received: by 10.58.229.101 with SMTP id sp5mr5507467vec.42.1401841224611;
+ Tue, 03 Jun 2014 17:20:24 -0700 (PDT)
+Received: by 10.58.127.225 with HTTP; Tue, 3 Jun 2014 17:20:24 -0700 (PDT)
+In-Reply-To: <1401806536.67369.YahooMailNeo@web120203.mail.ne1.yahoo.com>
+References: <1401806536.67369.YahooMailNeo@web120203.mail.ne1.yahoo.com>
+Date: Wed, 4 Jun 2014 09:50:24 +0930
+Message-ID: <CADVp3v9XOLyLUJysMxwTThtRm1DemUJrDzYU+QFEoKNLGNuHxA@mail.gmail.com>
+Subject: Re: Problem with maven
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>, amit dhanani <amit.dhanani@yahoo.com>
+Content-Type: multipart/alternative; boundary=047d7bdc0aa4397d8e04faf79833
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bdc0aa4397d8e04faf79833
+Content-Type: text/plain; charset=UTF-8
+
+On 4 June 2014 00:12, amit dhanani <amit.dhanani@yahoo.com.invalid> wrote:
+
+> Dear Sir,
+>
+> I have installed maven 3. In jenkins it shows error while building.
+>
+
+Did you try building this from the command line?
+You need to make sure you use the same command line that jenkins is doing
+or you will have environmental issues to deal with too.
+It may also help to purge your local ~/.m2/repo cache to mirror having a
+clean environment.
+
+[del]
+
+[workspace] $ /usr/share/maven3/bin/mvn clean install -o
+>
+
+[del]
+
+
+> [ERROR] Plugin org.easyb:maven-easyb-plugin:1.4 or one of its dependencies
+> could not be resolved: Cannot access central (
+> http://repo.maven.apache.org/maven2) in offline mode and the artifact
+> org.easyb:maven-easyb-plugin:jar:1.4 has not been downloaded from it before.
+>
+
+Did you read the error message?
+Your maven invocation is using the -o option.
+    mvn --help
+will show you that -o means --offline Work offline
+
+The error message shows that you have not downloaded this plugin before and
+because you are offline it will not download it for you.
+Maven can't work when it is missing stuff.
+
+--047d7bdc0aa4397d8e04faf79833--
+

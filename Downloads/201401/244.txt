@@ -1,0 +1,180 @@
+From users-return-134959-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Jan  5 23:05:40 2014
+Return-Path: <users-return-134959-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 16324109D9
+	for <apmail-maven-users-archive@www.apache.org>; Sun,  5 Jan 2014 23:05:40 +0000 (UTC)
+Received: (qmail 44865 invoked by uid 500); 5 Jan 2014 23:05:38 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 44790 invoked by uid 500); 5 Jan 2014 23:05:38 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 81048 invoked by uid 99); 5 Jan 2014 14:36:38 -0000
+X-ASF-Spam-Status: No, hits=-2.3 required=5.0
+	tests=RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mcculls@sonatype.com designates 64.18.2.122 as permitted sender)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:content-type:mime-version:subject:from
+         :in-reply-to:date:content-transfer-encoding:message-id:references:to;
+        bh=O1FabyYOBXBYR9yTkh8k0eyuVBjbpBMVY9IqzPvAXRs=;
+        b=PMyQfeaUeSK3KZAS7eKWISzJxECjXWcK0PATeugQ/pal1j8XCT5qRmb3WxxcM1LisG
+         vZWQYiCfuQIPh6uNLBBMxEENDKFjf6OEegtyqCc9zlroxLbTz5W0DhmJ6AkLpavfudbO
+         LbSVfNylpOwXcdyWvPGI7nMhPEIvseLhrORHXup4pSaElIxD+MCH3qaAzpP5on78Ida3
+         3DGznnnHkD+lH4BoORs89oO/21/4lrsO/DpJ4x+LzhpXY3UcHSrwnBmOENLtLmD+QfCO
+         HYzWPkPtZBOsgqhZppe/xc3h5Tjtdp+z0+ZYH0kn7eg318RG1gWQQgi7b2S3PyFoVzcn
+         Meyg==
+X-Gm-Message-State: ALoCoQnkDy78cGEEfuustkiRrZ3FJGwoYb0oJuuTKhCA0XD+afRsWrxJJR9sQxSqtGUkP5TyPM3vecy8kTqNsUEFnbwSJPTx0W0hIGMT2rARY+Ou1yrx96FWihtGMafnBE6vf8I/LefyKFp4UyWlmvpBMGxSLCXIw+XruZFYznDUEi39Nx29NqI=
+X-Received: by 10.180.86.9 with SMTP id l9mr8952833wiz.20.1388932570818;
+        Sun, 05 Jan 2014 06:36:10 -0800 (PST)
+X-Received: by 10.180.86.9 with SMTP id l9mr8952822wiz.20.1388932570582;
+        Sun, 05 Jan 2014 06:36:10 -0800 (PST)
+Content-Type: text/plain; charset=windows-1252
+Mime-Version: 1.0 (Mac OS X Mail 7.1 \(1827\))
+Subject: Re: Maven Central Opinion
+From: Stuart McCulloch <mcculls@sonatype.com>
+In-Reply-To: <80577B10-8927-4E40-9E41-5B69DBC66977@natusoft.se>
+Date: Sun, 5 Jan 2014 14:36:08 +0000
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <21CDF2FA-C0D3-4CF0-9144-FA5FD9260834@gmail.com>
+References: <80577B10-8927-4E40-9E41-5B69DBC66977@natusoft.se>
+To: Maven Users List <users@maven.apache.org>
+X-Mailer: Apple Mail (2.1827)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 5 Jan 2014, at 13:15, Tommy Svensson <tommy@natusoft.se> wrote:
+
+> I was asked to submit one of my opensource tools at github to maven =
+central. This turned out to be a rather complex procedure.
+
+[ disclaimer: I work at Sonatype ]
+
+Any suggestions for improving the process are welcome - most of the =
+requirements below are actually more recommendations / effects of the =
+maven-release-plugin workflow, so maybe we need to clarify this on the =
+wiki.
+
+> Sonatype puts the following requirements on anyone wanting to submit =
+to maven central:
+>=20
+> - You are forced to set a Sonatype pom as parent of your project and =
+thus inherit things you have no control over.=20
+
+The wiki recommends a parent pom with the relevant =
+distributionManagement (so Maven knows where to deploy artifacts) plus =
+some release configuration for adding sources, javadoc, signatures, etc.
+
+You can always use a different parent pom and copy the =
+distributionManagement section across - feel free to ask for help with =
+this, and we can always add a section to the wiki if others would find =
+this useful
+
+> - You are forced to have a SNAPSHOT version even if you have no use =
+for such.
+
+This is the standard Maven release workflow - you don=92t strictly need =
+this if you=92re just uploading releases, just go to the existing tagged =
+release and use =93mvn deploy=94
+
+(you=92ll need override the deploy properties on the command line ie. =
+http://maven.apache.org/plugins/maven-deploy-plugin/deploy-mojo.html#altDe=
+ploymentRepository if your pom doesn=92t point to OSSRH)
+
+> - You are forced at submission time to select a new version for your =
+software even if you have no idea if it will be a minor, bugfix or new =
+functionality at this point in time.=20
+
+As above, you can always deploy an existing release - either with =93mvn =
+deploy=94 or by packaging it up as a bundle and uploading it using the =
+UI:
+
+    =
+https://docs.sonatype.org/display/Repository/Sonatype+OSS+Maven+Repository=
++Usage+Guide#SonatypeOSSMavenRepositoryUsageGuide-UploadStagingBundle
+
+However, once you have released an artifact to central its content =
+should never change
+
+> - Your public repository (github, etc) which you are forced to point =
+out in your pom are no longer yours to decide over. It will be updated =
+during the submission process.=20
+
+That=92s the Maven release plugin - it updates the released pom so it =
+points to the right tagged release, then changes it back for development
+
+Some projects do releases differently by using the versions plugin to =
+update the poms, tagging the release manually, then finally using =93mvn =
+deploy"
+
+> - After running 3 different mvn commands you also need to login to =
+Sonatypes nexus server and =94release=94 the artifacts before the become =
+available.=20
+
+That=92s so you can check the uploaded artifacts before they get =
+distributed to central, mirrors, and from there to developers machines - =
+because once a release is on central its content should never change
+
+If you want to skip this step then you can by configuring the =
+nexus-staging-maven-plugin which can help manage the staging workflow:
+
+    =
+http://books.sonatype.com/nexus-book/reference/staging-sect-deployment.htm=
+l#staging-sect-deployment-nexus-staging-maven-plugin
+
+    <plugin>
+      <groupId>org.sonatype.plugins</groupId>
+      <artifactId>nexus-staging-maven-plugin</artifactId>
+      <extensions>true</extensions>
+      <configuration>
+        <releaseAfterClose>true</releaseAfterClose>
+      </configuration>
+    </plugin>
+
+You can also use this plugin to access the same staging commands =
+available to you through the Nexus UI (or you could even use the =
+underlying REST API if you wish)
+
+Finally depending on your project there are alternative routes to =
+central, such as =
+http://www.apache.org/dev/publishing-maven-artifacts.html for Apache =
+projects, or the new https://bintray.com/ service.=20
+
+> The idea of the maven repository that has grown larger than maven =
+itself is a completely brilliant idea. It takes open source to a new =
+level where anyone can just depend on other open source code and =
+automatically download it on build. This is really good for the open =
+source world (well, at least the Java/JVM part of it) . The fact that =
+the release process to this central repository is far too complex, I see =
+as a really great problem, inhibiting the easy sharing of open source =
+work. I have often found open source tools and frameworks that are not =
+available in maven central, and that is because not everyone is willing =
+to put up with this, which now also includes myself. As I see it, either =
+this procedure needs to be changed to provide a trivial release of =
+binary artifacts without affecting your poms, or there need to be an =
+alternative open repository providing ease of release, where it is =
+trivial for anyone to share their binaries for easy access by others. =
+I=92m wondering if I=92m alone in this view or if there are others who =
+agree with me ?=20
+>=20
+> Tommy Svensson
+>=20
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>=20
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

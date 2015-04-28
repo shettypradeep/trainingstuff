@@ -1,0 +1,122 @@
+From users-return-137112-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Aug 23 06:25:36 2014
+Return-Path: <users-return-137112-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C9EFD11186
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 23 Aug 2014 06:25:36 +0000 (UTC)
+Received: (qmail 5512 invoked by uid 500); 23 Aug 2014 06:25:34 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 5415 invoked by uid 500); 23 Aug 2014 06:25:34 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 5402 invoked by uid 99); 23 Aug 2014 06:25:34 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 23 Aug 2014 06:25:34 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FSL_HELO_BARE_IP_2,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [82.70.143.149] (HELO evans6.me.uk) (82.70.143.149)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 23 Aug 2014 06:25:08 +0000
+Received: from 192.168.201.2 ([192.168.201.2]) by ev002.EVANS6.local ([192.168.201.2]) with Microsoft Exchange Server HTTP-DAV ;
+ Sat, 23 Aug 2014 06:25:07 +0000
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+Subject: Re: Testing jar files instead of class files
+References: <CACzrW9AHn66P52yVzbTwHGCjjM_r5coUPcF8H44JGwdqu4w_Rw@mail.gmail.com> <CA+nPnMxw2PvmhYn3EzOvwwseLSkbD6S-RSq2XKpSjt1vFnZ5zg@mail.gmail.com> <CAH7nqBLAEeAb8refmnC86g68GEQOxMUtVHoGRexMuCHpmKF7Bw@mail.gmail.com>
+From: "David Evans" <david@evans6.me.uk>
+MIME-Version: 1.0 (1.0)
+In-Reply-To: <CAH7nqBLAEeAb8refmnC86g68GEQOxMUtVHoGRexMuCHpmKF7Bw@mail.gmail.com>
+Thread-Topic: Testing jar files instead of class files
+thread-index: Ac++mvu9cwRZzgfUQfejYRjnZOvYGA==
+Message-ID: <6A67CD39-7D96-4F71-A6B7-5BC991C310B5@evans6.me.uk>
+Date: Sat, 23 Aug 2014 07:25:06 +0100
+To: "Maven Users List" <users@maven.apache.org>
+Cc: "Maven Users List" <users@maven.apache.org>
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+DQoNClJlZ2FyZHMNCg0KRC4gRS4gDQoNCj4gT24gMjIgQXVnIDIwMTQsIGF0IDIwOjI4LCBNYXhp
+bWUgR3LDqWF1IDxncmVhdW1heGltZUBnbWFpbC5jb20+IHdyb3RlOg0KPiANCj4gSGVsbG8sDQo+
+IA0KPiBUaGlzIGlzIGV4YWN0bHkgd2hhdCBJIHdhbnQgdG8gZG8uDQo+IElzIGl0IHRoZSBidWcg
+eW91IGFyZSB0YWxraW5nIGFib3V0ID8NCj4gaHR0cHM6Ly9qaXJhLmNvZGVoYXVzLm9yZy9icm93
+c2UvU1VSRUZJUkUtODU1DQo+IA0KPiBSZWdhcmRzDQo+IE1heGltZSBHcsOpYXUuDQo+IA0KPiAN
+Cj4gMjAxMy0wNC0zMCAxMzoyOCBHTVQrMDI6MDAgU3RlcGhlbiBDb25ub2xseSA8c3RlcGhlbi5h
+bGFuLmNvbm5vbGx5QGdtYWlsLmNvbQ0KPj4gOg0KPiANCj4+IFdlbGwganVzdCB0byBwdXQgdGhp
+cyBpbnRvIGNvbnRleHQuDQo+PiANCj4+IFdoYXQgeW91IGFjdHVhbGx5IHdhbnQgdG8gZG8gaXMg
+cnVuIHlvdXIgc2Vjb25kIHNldCBvZiB0ZXN0cyBhZnRlciB0aGUNCj4+ICdwYWNrYWdlJyBwaGFz
+ZSBhbmQgYmVmb3JlIHRoZSAnaW5zdGFsbCcgcGhhc2UuIFRoZXJlIGlzIG9ubHkgdGhlICdkZXBs
+b3knDQo+PiBwaGFzZSBhZnRlciB0aGUgJ2luc3RhbGwnIHBoYXNlIHNvIHRoZXJlIHdvdWxkIGJl
+IG5vIHNjb3BlIHRvIHJ1biB0ZXN0cw0KPj4gYWZ0ZXIgdGhlICdpbnN0YWxsJyBwaGFzZS5hDQo+
+PiANCj4+IElmIHlvdSBsb29rIGF0IHRoZSBsaWZlY3ljbGUsIHlvdSB3aWxsIHNlZSB0aGUgaGFu
+ZHk6DQo+PiANCj4+ICdpbnRlZ3JhdGlvbi10ZXN0Jw0KPj4gYW5kDQo+PiAndmVyaWZ5Jw0KPj4g
+DQo+PiBwaGFzZXMuDQo+PiANCj4+IE5vdyB1c2Ugb2YgdGhlc2UgcGhhc2VzIGlzIHNsaWdodGx5
+IGRpZmZlcmVudC4gQmVjYXVzZSB5b3UgYWN0dWFsbHkgKm5ldmVyKg0KPj4gd2FudCB0byB0eXBl
+ICJtdm4gaW50ZWdyYXRpb24tdGVzdCIgYW5kIGFueSB0aW1lIHlvdSB0aGluayB5b3UgZG8sIHlv
+dQ0KPj4gc2hvdWxkIGFjdHVhbGx5IHR5cGUgIm12biB2ZXJpZnkiIGluIGl0cyBwbGFjZS4NCj4+
+IA0KPj4gVGhlIHJlYXNvbiBmb3IgdGhpcyBpcyB0aGF0IHRoZSAicHJlLWludGVncmF0aW9uLXRl
+c3QiIGFuZA0KPj4gInBvc3QtaW50ZWdyYXRpb24tdGVzdCIgcGhhc2VzIGFyZSBkZXNpZ25lZCB0
+byBhbGxvdyBzZXR0aW5nIHVwIGFuZCB0ZWFyaW5nDQo+PiBkb3duIHRoZSBpbnRlZ3JhdGlvbiB0
+ZXN0IGVudmlyb25tZW50LCBhbmQsIGRlc3BpdGUgdGhlaXIgbmFtZXMsIHRoZQ0KPj4gcG9zdC1p
+bnRlZ3JhdGlvbi10ZXN0IHBoYXNlIGlzICpub3QqIGEgZmluYWxseSBibG9jay4gU28geW91IG5l
+ZWQgdG8gYmUNCj4+IGNhcmVmdWwgd2hlbiBiaW5kaW5nIHBsdWdpbnMgdG8gdGhlIGludGVncmF0
+aW9uLXRlc3QgcGhhc2UgdGhhdCBzdWNoDQo+PiBwbHVnaW5zICpuZXZlciogZmFpbCB0aGUgYnVp
+bGQuLi4NCj4+IA0KPj4gQXQgdGhpcyBwb2ludCB3ZSBoYXZlIHRoZSBNYXZlbiBGYWlsc2FmZSBQ
+bHVnaW4gZW50ZXIgdGhlIGZyYXkuLi4gdGhpcyBoYXMNCj4+IHR3byBnb2FsczogZmFpbHNhZmU6
+aW50ZWdyYXRpb24tdGVzdCBhbmQgZmFpbHNhZmU6dmVyaWZ5IHdoaWNoLCBieSBkZWZhdWx0LA0K
+Pj4gYmluZCB0byB0aGUgaW50ZWdyYXRpb24tdGVzdCBhbmQgdmVyaWZ5IHBoYXNlcyByZXNwZWN0
+aXZlbHkuDQo+PiANCj4+IFRoZSBgZmFpbHNhZmU6aW50ZWdyYXRpb24tdGVzdGAgZ29hbCB3aWxs
+IHJ1biBpbnRlZ3JhdGlvbiB0ZXN0cywgYnV0IG5ldmVyDQo+PiBmYWlscyB0aGUgYnVpbGQuDQo+
+PiBUaGUgYGZhaWxzYWZlOnZlcmlmeWAgZ29hbCB3aWxsIGNoZWNrIHRoZSByZXN1bHRzIG9mDQo+
+PiBgZmFpbHNhZmU6aW50ZWdyYXRpb24tdGVzdGAgYW5kIGZhaWwgdGhlIGJ1aWxkIGlmIHRoZSB0
+ZXN0cyBmYWlsLg0KPj4gDQo+PiBUaHVzIHlvdSBzaG91bGQgYmUgYWJsZSB0byBhZGQgZmFpbHNh
+ZmUgdG8gdGhlIG1peCBieSBqdXN0IGFkZGluZw0KPj4gDQo+PiA8cGx1Z2luPg0KPj4gPGFydGlm
+YWN0SWQ+bWF2ZW4tZmFpbHNhZmUtcGx1Z2luPC9hcnRpZmFjdElkPg0KPj4gPGV4ZWN1dGlvbnM+
+DQo+PiA8ZXhlY3V0aW9uPg0KPj4gPGdvYWxzPg0KPj4gPGdvYWw+aW50ZWdyYXRpb24tdGVzdDwv
+Z29hbD4NCj4+IDxnb2FsPnZlcmlmeTwvZ29hbD4NCj4+IDwvZ29hbHM+DQo+PiA8L2V4ZWN1dGlv
+bj4NCj4+IDwvZXhlY3V0aW9ucz4NCj4+IDwvcGx1Z2luPg0KPj4gDQo+PiBOb3cgc2luY2UgZmFp
+bHNhZmUgaXMgcnVubmluZyBhZnRlciB0aGUgYHBhY2thZ2VgIHBoYXNlLCBpdCAqc2hvdWxkKiBi
+ZQ0KPj4gdXNpbmcgdGhlIHByb2plY3QgYXJ0aWZhY3QgaW4gcGxhY2Ugb2YgdGFyZ2V0L2NsYXNz
+ZXMgKndoZW4qIGV4ZWN1dGVkIGFmdGVyDQo+PiB0aGUgYHBhY2thZ2VgIHBoYXNlLi4uIGFzIGFs
+bCBwbHVnaW5zIHNob3VsZCBkby4uLiAqYnV0KiBJIHN1c3BlY3QgdGhlcmUgaXMNCj4+IGEgYnVn
+IGluIGZhaWxzYWZlIHRoYXQgY2F1c2VzIGl0IHRvIGV4cGxpY2l0bHkgYWRkIHRhcmdldC9jbGFz
+c2VzLg0KPj4gDQo+PiBUTDtEUiBpdCBzaG91bGQgYmUgTWF2ZW4gRmFpbHNhZmUgUGx1Z2luIHRo
+YXQgZ2l2ZXMgdGhpcyBmZWF0dXJlICpidXQqIEkNCj4+IHN1c3BlY3QgdGhlcmUgaXMgYSBidWcg
+aW4gdGhhdCBwbHVnaW4gdGhhdCBpcyBjYXVzaW5nIGl0IHRvIHVzZSB0aGUNCj4+IGRpcmVjdG9y
+eSBpbiBwbGFjZSBvZiB0aGUgLmphci4NCj4+IA0KPj4gS3Jpc3RpYW4sIGNhbiB5b3UgY29uZmly
+bSBteSBzdW1tYXJ5Pw0KPj4gDQo+PiAtU3RlcGhlbg0KPj4gDQo+PiANCj4+PiBPbiAzMCBBcHJp
+bCAyMDEzIDEyOjExLCBTdGVwaGVuIENvbGVib3VybmUgPHNjb2xlYm91cm5lQGpvZGEub3JnPiB3
+cm90ZToNCj4+PiANCj4+PiBJIHdvdWxkIGxpa2UgdG8gYmUgYWJsZSB0byBhY2hpZXZlIHRoZSBm
+b2xsb3dpbmcgdXNpbmcgdHdvIGNvbW1hbmQNCj4+PiBsaW5lIGludm9jYXRpb25zOg0KPj4+IC0g
+YnVpbGQgYW5kIGluc3RhbGwgamFyIGZpbGVzIHVzaW5nICJtdm4gaW5zdGFsbCINCj4+PiAtIHJ1
+biB0ZXN0cyBhZ2FpbiwgYnV0IGFnYWluc3QgdGhlIGluc3RhbGxlZCBqYXIgZmlsZXMNCj4+PiAN
+Cj4+PiBUaGUgcmF0aW9uYWxlIGlzIHRoYXQgdGhlIGZpcnN0IG12biBydW4gd2lsbCBvbmx5IHJ1
+biAidW5pdCIgdGVzdHMNCj4+PiAodXNpbmcgdGVzdCBncm91cHMgaW4gVGVzdE5HKSwgd2hlcmVh
+cyB0aGUgc2Vjb25kIG12biBydW4gd291bGQgcnVuDQo+Pj4gYWxsIHRlc3RzLCBpbmNsdWRpbmcg
+InNsb3ciIGFuZCAiZGF0YWJhc2UiIHRlc3RzLiBJbiByZWFsaXR5LCBib3RoDQo+Pj4gd291bGQg
+YmUgcnVuIGZyb20gYSBDSSBzZXJ2ZXIgcmF0aGVyIHRoYW4gYSBkZXZlbG9wZXIgZGVza3RvcC4N
+Cj4+PiANCj4+PiBDbGVhcmx5LCB0aGUgZmlyc3QgbXZuIHJ1biBpcyBlYXN5IChJIGhhdmUgdGhh
+dCB3b3JraW5nKS4gQnV0IEkgY2Fubm90DQo+Pj4gc2VlIGEgd2F5IHRvIHJ1biBhIG12biBjb21t
+YW5kIHRoYXQgZXhlY3V0ZXMgdGhlIHRlc3RzIGFnYWluc3QgdGhlDQo+Pj4gaW5zdGFsbGVkIGph
+ciBmaWxlcy4NCj4+PiANCj4+PiBUaGUgcHJvamVjdCBpcyBhIG11bHRpLW1vZHVsZSBwcm9qZWN0
+LiBNb3ZpbmcgdGVzdHMgaW50byBhIHNlcGFyYXRlDQo+Pj4gInRlc3Rpbmcgb25seSIgcHJvamVj
+dCBpcyBub3QgYW4gYWNjZXB0YWJsZSBhcHByb2FjaC4gUnVubmluZyB0aGUNCj4+PiBzbG93L2Rh
+dGFiYXNlIHRlc3RzIGFzIHBhcnQgb2YgYSBzaW5nbGUgbXZuIHJ1biBpcyBub3QgYW4gYWNjZXB0
+YWJsZQ0KPj4+IGFwcHJvYWNoLg0KPj4+IA0KPj4+IHRoYW5rcyBmb3IgYW55IHRob3VnaHRzIG9y
+IGh5cGVybGlua3MuDQo+Pj4gU3RlcGhlbg0KPj4+IA0KPj4+IC0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0KPj4+IFRv
+IHVuc3Vic2NyaWJlLCBlLW1haWw6IHVzZXJzLXVuc3Vic2NyaWJlQG1hdmVuLmFwYWNoZS5vcmcN
+Cj4+PiBGb3IgYWRkaXRpb25hbCBjb21tYW5kcywgZS1tYWlsOiB1c2Vycy1oZWxwQG1hdmVuLmFw
+YWNoZS5vcmcNCj4+IA0K
+DQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0NClRvIHVuc3Vic2NyaWJlLCBlLW1haWw6IHVzZXJzLXVuc3Vi
+c2NyaWJlQG1hdmVuLmFwYWNoZS5vcmcNCkZvciBhZGRpdGlvbmFsIGNvbW1hbmRzLCBlLW1h
+aWw6IHVzZXJzLWhlbHBAbWF2ZW4uYXBhY2hlLm9yZw0K
+

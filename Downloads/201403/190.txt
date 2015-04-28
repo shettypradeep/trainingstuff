@@ -1,0 +1,80 @@
+From users-return-135955-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 27 04:46:04 2014
+Return-Path: <users-return-135955-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5882110F29
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 27 Mar 2014 04:46:04 +0000 (UTC)
+Received: (qmail 13239 invoked by uid 500); 27 Mar 2014 04:46:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 12604 invoked by uid 500); 27 Mar 2014 04:45:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 12594 invoked by uid 99); 27 Mar 2014 04:45:56 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Mar 2014 04:45:56 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.192.174] (HELO mail-pd0-f174.google.com) (209.85.192.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Mar 2014 04:45:49 +0000
+Received: by mail-pd0-f174.google.com with SMTP id y13so2797672pdi.5
+        for <users@maven.apache.org>; Wed, 26 Mar 2014 21:45:27 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:to:subject:date:message-id:in-reply-to
+         :references:mime-version:content-type;
+        bh=dYUzeoq48luyxgHXUtQe9O39how++zpKOVkCMibCohw=;
+        b=QzJl8ge0DTZz7MV6fghDqPpinLIaO5b6A5RdVNB+uL2nMLOQJyo+JfAPqNrUOz69/s
+         +lYIGJICAllC+pyO2GeRhDFMsQtezvehIqwOm84oklVVWg6Svs+6rW0RYPuSJVzHYKUc
+         lNrNBTbDdOF1bseE/acEazE/5XzaB70WThCSpZtw99I7Y3CX+DG3/gkFAC1r1NUJkOIl
+         WMVILdo8CN5RQwC0vnKpa5+KEhC7KxW1QQMFkFuMZ2xQlW+MnR9N3Cyu9ANpcxocY/NN
+         yjm9M98E+BEEN9mzpHpnBTEBFEVIBawVkPr+ZzAPJ+ebRcAuI4OjhBIhmSJi69/KzDP7
+         JTYQ==
+X-Gm-Message-State: ALoCoQlFs5TBNcXpGG6LqI0VTSKABJWtyi2p1Z4TBHVT54aRQ1A2HdDoea9GU0t5ZC6/6zBaQvHO
+X-Received: by 10.68.196.137 with SMTP id im9mr89133302pbc.105.1395895527444;
+        Wed, 26 Mar 2014 21:45:27 -0700 (PDT)
+Received: from [10.0.0.142] (akl.smx.co.nz. [203.84.135.120])
+        by mx.google.com with ESMTPSA id jd5sm3032690pbb.18.2014.03.26.21.45.25
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Wed, 26 Mar 2014 21:45:26 -0700 (PDT)
+From: "Mark Derricutt" <mark@talios.com>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: [MNG-5551] Java 8 + Maven status
+Date: Thu, 27 Mar 2014 17:45:21 +1300
+Message-ID: <F4F866F8-E079-4313-AE56-6582E856335C@talios.com>
+In-Reply-To: <EF451C18-6AF0-4940-A99E-4935A4351088@gmail.com>
+References: <EF451C18-6AF0-4940-A99E-4935A4351088@gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="=_MailMate_CD6DB030-8275-4459-A3BF-CA8E797F9FF8_="
+X-Mailer: MailMate (1.7.2r4025)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--=_MailMate_CD6DB030-8275-4459-A3BF-CA8E797F9FF8_=
+Content-Type: text/plain; format=flowed; markup=markdown
+
+What version of the maven-dependency-plugin?  I'm using 2.8 fine under 
+JDK8 and have been for some time - this is using the `copy-dependencies` 
+goal and nothing else tho...
+
+
+On 27 Mar 2014, at 6:15, Steven Schlansker wrote:
+
+> Java 8 has now been out for a week and Maven is still not really 
+> compatible.
+> In particular, the maven-shade-plugin and maven-dependency-plugin do 
+> not work
+> due to an old version of ASM that throws 
+> ArrayIndexOutOfBoundsException on Java 8 class files.
+
+--=_MailMate_CD6DB030-8275-4459-A3BF-CA8E797F9FF8_=--
+

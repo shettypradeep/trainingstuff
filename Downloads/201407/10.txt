@@ -1,0 +1,113 @@
+From users-return-136790-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 17 15:29:46 2014
+Return-Path: <users-return-136790-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5B78D11242
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 17 Jul 2014 15:29:46 +0000 (UTC)
+Received: (qmail 98713 invoked by uid 500); 17 Jul 2014 15:29:44 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 98640 invoked by uid 500); 17 Jul 2014 15:29:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 98628 invoked by uid 99); 17 Jul 2014 15:29:44 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 17 Jul 2014 15:29:44 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of cvgaviao@gmail.com designates 209.85.220.182 as permitted sender)
+Received: from [209.85.220.182] (HELO mail-vc0-f182.google.com) (209.85.220.182)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 17 Jul 2014 15:29:39 +0000
+Received: by mail-vc0-f182.google.com with SMTP id hy4so4983333vcb.13
+        for <users@maven.apache.org>; Thu, 17 Jul 2014 08:29:18 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type:content-transfer-encoding;
+        bh=0mndN2msESlX2v3M+VckAdwfkD0u5IaKXOZ9wDkb+qk=;
+        b=DIiB/rVz6eVxjlDqyLRsVJZyc1DC7fHKy6jezqPbmevhTy/rWbezJ+HHVrn4XX4Sal
+         RVjxx65pZnChH+1DESK7MpCy3+Vdrm4sQ5uPdsGYwuIjA6vRohYUM/1RY4m6e91o+5z3
+         FcDv9IuHpntm77wXPn5LGWMyCppALcbqz1ABfRjqeVZgDJwPO6FaVz7ecwv0DfRm5tOG
+         JI0nBU9H//sq15ok++MGkwKf2GzLSzKhsQLLTyWncGDLa+3klqs5fACOybODw96QHheQ
+         9m7khuLf3XeeQmH45YURGe370U2mvQBurxicQtxTCtF5C+H/DHbmntBtbOdOj1y/fsUc
+         uwfQ==
+X-Received: by 10.221.34.13 with SMTP id sq13mr40961869vcb.16.1405610958126;
+        Thu, 17 Jul 2014 08:29:18 -0700 (PDT)
+Received: from [10.0.1.40] ([177.130.222.169])
+        by mx.google.com with ESMTPSA id fp7sm5329299vdc.21.2014.07.17.08.29.17
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Thu, 17 Jul 2014 08:29:17 -0700 (PDT)
+Message-ID: <53C7EBCB.5080202@gmail.com>
+Date: Thu, 17 Jul 2014 12:29:15 -0300
+From: =?ISO-8859-1?Q?Cristiano_Gavi=E3o?= <cvgaviao@gmail.com>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: [Announce] Release of SonarQube Maven Plugin 2.4
+References: <1405436892.43876.YahooMailNeo@web173106.mail.ir2.yahoo.com>
+In-Reply-To: <1405436892.43876.YahooMailNeo@web173106.mail.ir2.yahoo.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Julien,
+
+I wasn't able to see this version at 
+http://search.maven.org/#search|ga|1|sonar-maven-plugin
+
+could you check, please?
+
+thanks,
+
+Cristiano
+
+On 15-07-2014 12:08, Julien HENRY wrote:
+> Hi,
+>
+> The Mojo team is pleased to announce the release of the SonarQube Maven Plugin version 2.4.
+>
+> This plugin aims at running SonarQube analysis for Maven projects.
+>
+> http://mojo.codehaus.org/sonar-maven-plugin/index.html
+>
+> To get this update, simply specify the version in your project's plugin configuration:
+>
+> <plugin>
+>          <groupId>org.codehaus.mojo</groupId>
+>          <artifactId>sonar-maven-plugin</artifactId>
+>          <version>2.4</version>
+> </plugin>
+>
+> Release Notes
+>
+>      * [MSONAR-70] - Use every available "sonar.*" property when running an analysis with Maven
+>      * [MSONAR-75] - Remove unexisting entries from "sonar.sources" and "sonar.tests" on projects with packaging=pom
+>      * [MSONAR-81] - On "war" modules the directory containing the web resources ("src/main/webapp" by default) should be automatically added to "sonar.sources"
+>      * [MSONAR-82] - By default the "pom.xml" file should be part of "sonar.sources"
+>      * [MSONAR-83] - Populate sonar.libraries
+>
+> Enjoy,
+>
+> The Mojo team.
+>
+> Julien HENRY
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

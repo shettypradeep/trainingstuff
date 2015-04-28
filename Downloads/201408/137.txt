@@ -1,0 +1,160 @@
+From users-return-137008-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Aug 13 05:36:27 2014
+Return-Path: <users-return-137008-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CACF3112F1
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 13 Aug 2014 05:36:27 +0000 (UTC)
+Received: (qmail 53508 invoked by uid 500); 13 Aug 2014 05:36:26 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 53425 invoked by uid 500); 13 Aug 2014 05:36:26 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 53414 invoked by uid 99); 13 Aug 2014 05:36:25 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 13 Aug 2014 05:36:25 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.192.175] (HELO mail-pd0-f175.google.com) (209.85.192.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 13 Aug 2014 05:36:20 +0000
+Received: by mail-pd0-f175.google.com with SMTP id r10so13832737pdi.20
+        for <users@maven.apache.org>; Tue, 12 Aug 2014 22:36:00 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:content-type:subject:date:references:to
+         :message-id:mime-version;
+        bh=IW4M0QCURsEqcuuxE+Usc6tTR/nYVJ7plFsEqBsikxk=;
+        b=GLjoQ6Pwyz+Pcg4r3X8E+w9LI4GstiNHDxDO/S5PklBeYRhZ/9PLYSPINXbaRJkgN7
+         McKXS+Yq7gUzqzhMAE87/QmkEbszZyEVY3kwtsoe3YWN9ikESkCZbMMRtgwbmCUIYQCs
+         1CHePUVGzC3B3WhEI8YlylVjqjgxOT0o1bVBRBHdR0hK+29/Un3i1GRyaTTzy+pYjEYw
+         p224OkJOtOWrZJbmIS2JbH0EIspoEVi+emDNwYIDwI8U5QbbuG9WiWKmHyhSbCFQ4t7g
+         1GCoTZ4aJS9oWcqamc/d86jatJkubOLdxBUkWvz44a3jj6lbn6JKPYXiwZrB+k0T7Smi
+         vhBw==
+X-Gm-Message-State: ALoCoQl4D8B1s8wFJFRk7IHwEpJ8uBX4TLR3RVlDgwiY7jLzHD17vkI5IRVSEzLxCVYmKYvQh6YE
+X-Received: by 10.68.242.202 with SMTP id ws10mr2158190pbc.32.1407908160038;
+        Tue, 12 Aug 2014 22:36:00 -0700 (PDT)
+Received: from [192.168.0.126] ([108.169.4.146])
+        by mx.google.com with ESMTPSA id u2sm765980pbs.42.2014.08.12.22.35.58
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Tue, 12 Aug 2014 22:35:59 -0700 (PDT)
+From: Jason van Zyl <jason@takari.io>
+X-Google-Original-From: Jason van Zyl <jason@maven.org>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_12D84312-ED91-43DE-B9C3-E00916C214A9"
+Subject: Testing Maven 3.2.3
+Date: Tue, 12 Aug 2014 22:35:56 -0700
+References: <6BF365F5-3D65-4592-B407-2DFE1D5D1436@takari.io>
+To: Maven Users List <users@maven.apache.org>
+Message-Id: <A81A759E-1608-4CD3-BC0C-34A86B72C48B@maven.org>
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.2\))
+X-Mailer: Apple Mail (2.1878.2)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_12D84312-ED91-43DE-B9C3-E00916C214A9
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+Hi,
+
+We have staged Maven 3.2.3 and I'd ask that users try and test this =
+version because we have changed to using the HTTPS connection to Maven =
+Central by default. The information for the release can be found below. =
+I encourage users to give this release a spin before we actually release =
+it to ensure the HTTPS connection is working for everyone.
+
+Begin forwarded message:
+
+> From: Jason van Zyl <jason@takari.io>
+> Subject: [VOTE] Maven 3.2.3 Release
+> Date: August 11, 2014 at 2:19:34 PM PDT
+> To: Maven Developers List <dev@maven.apache.org>
+> Reply-To: "Maven Developers List" <dev@maven.apache.org>
+>=20
+> Hi,
+>=20
+> Time to release Maven 3.2.3!
+>=20
+> This release contains the important change of switching to HTTPS =
+transport by default! Please test this release with your builds!
+>=20
+> Here is a link to Jira with 9 issues resolved:
+> =
+https://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=3D10500&versio=
+n=3D20443
+>=20
+> Staging repo:
+> https://repository.apache.org/content/repositories/maven-1046/
+>=20
+> The distributable binaries and sources for testing can be found here:
+> =
+https://repository.apache.org/content/repositories/maven-1046/org/apache/m=
+aven/apache-maven/3.2.3/
+>=20
+> Specifically the zip, tarball, and source archives can be found here:
+> =
+https://repository.apache.org/content/repositories/maven-1046/org/apache/m=
+aven/apache-maven/3.2.3/apache-maven-3.2.3-bin.zip
+> =
+https://repository.apache.org/content/repositories/maven-1046/org/apache/m=
+aven/apache-maven/3.2.3/apache-maven-3.2.3-bin.tar.gz
+> =
+https://repository.apache.org/content/repositories/maven-1046/org/apache/m=
+aven/apache-maven/3.2.3/apache-maven-3.2.3-src.zip
+> =
+https://repository.apache.org/content/repositories/maven-1046/org/apache/m=
+aven/apache-maven/3.2.3/apache-maven-3.2.3-src.tar.gz
+>=20
+> Source release checksum(s):
+> apache-maven-3.2.3-src.zip sha1: =
+8607b9922d21078133f31ed8523ebae90a871d1f
+>=20
+> Staging site:
+> http://people.apache.org/~jvanzyl/maven-3.2.3/
+>=20
+> Vote open for 72 hours.
+>=20
+> [ ] +1
+> [ ] +0
+> [ ] -1
+>=20
+> Thanks,
+>=20
+> The Maven Team
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+http://twitter.com/takari_io
+---------------------------------------------------------
+
+In short, man creates for himself a new religion of a rational
+and technical order to justify his work and to be justified in it.
+
+  -- Jacques Ellul, The Technological Society
+
+
+
+--Apple-Mail=_12D84312-ED91-43DE-B9C3-E00916C214A9--
+

@@ -1,0 +1,106 @@
+From users-return-137355-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Sep 23 14:55:20 2014
+Return-Path: <users-return-137355-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EE7E511FC3
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 23 Sep 2014 14:55:20 +0000 (UTC)
+Received: (qmail 15523 invoked by uid 500); 23 Sep 2014 14:28:54 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 5456 invoked by uid 500); 23 Sep 2014 14:28:45 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 730 invoked by uid 99); 23 Sep 2014 13:57:19 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 23 Sep 2014 13:57:19 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of james.mk.green@gmail.com designates 209.85.218.43 as permitted sender)
+Received: from [209.85.218.43] (HELO mail-oi0-f43.google.com) (209.85.218.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 23 Sep 2014 13:57:15 +0000
+Received: by mail-oi0-f43.google.com with SMTP id v63so4416610oia.2
+        for <users@maven.apache.org>; Tue, 23 Sep 2014 06:56:50 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=Bwwc0FN4vCRkVVDvWLlXsPiOkXhzBIJnzcwOtspwNH4=;
+        b=pvyBPOQxikMHc3soA1YGsTFVoPdlxNzf8ycRKsROSDicZx1p/LUBMLwmzw/jbhN5sQ
+         sRtwe68wQEhAn+vlHfIAdv3bFlNBaitb12oKqfyjmwEf5nVa+1+rd8EJGKcU/PO70B0C
+         TMh5sJaqnUa/pFHaWXAtjyElkZ+LR1Gb3yu11V8brybiOkxCfnzWZBDTPWkTrKwqjWeJ
+         A+7cOOUHXZ+5Cq+f5s26hQnLdLIAu4sMxQQlCkdo/B2fJGvQSev5IeUoJjpUsTS+XSC1
+         EmdxXiAN3nPdwIWh6Iy2FVyD3B94D/QEFV40L+NXH4i3cYySOMZ7b+mWneREiAvVLHJO
+         +tUg==
+MIME-Version: 1.0
+X-Received: by 10.60.145.143 with SMTP id su15mr26822185oeb.58.1411480607878;
+ Tue, 23 Sep 2014 06:56:47 -0700 (PDT)
+Received: by 10.202.215.84 with HTTP; Tue, 23 Sep 2014 06:56:47 -0700 (PDT)
+In-Reply-To: <CADN69y=FBRcT9y5NmGkJ1e0sTw5r8SmYgfAf70ZRBE+mQ8Acrg@mail.gmail.com>
+References: <CAKuK4uH7S5Z54van32ExnPu+_d8bP9BA-Vz-4BTK2QQ5My_KHQ@mail.gmail.com>
+	<CADN69y=zCBy+XJs9V338GTr1FP9y30NVbfOU09SUKcjM6Masxg@mail.gmail.com>
+	<CAMH6+axK==g5Gk26muHO1FKaKiRxdS=Ut70jP60sSda-8brRsg@mail.gmail.com>
+	<CA+nPnMzYQmLcMz08GvYgFf4EDA9Ab_9w+veBokjUn-uiXnGZsw@mail.gmail.com>
+	<CADN69y=FBRcT9y5NmGkJ1e0sTw5r8SmYgfAf70ZRBE+mQ8Acrg@mail.gmail.com>
+Date: Tue, 23 Sep 2014 14:56:47 +0100
+Message-ID: <CAMH6+awnfFY6P+iKABaxo+tsqCT3Ju6Xm-m31N8vc5nzNJ5YhQ@mail.gmail.com>
+Subject: Re: usage with Jenkins
+From: James Green <james.mk.green@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b5d48823d75d00503bbf071
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b5d48823d75d00503bbf071
+Content-Type: text/plain; charset=UTF-8
+
+News to me. Ironically I'm just setting up a new Jenkins job so tried the
+freeform style - I can no longer see "Deploy artifacts to Maven repository"
+as a post-build action.
+
+Dare I ask what I'm missing having chosen the full-fat option..?
+
+On 23 September 2014 14:02, Curtis Rueden <ctrueden@wisc.edu> wrote:
+
+> The Maven style build will also lock you in to a small subset of Jenkins's
+> usual features. And when you eventually need a feature not available with a
+> Maven-style build, there is no conversion path from Maven-style to
+> Freestyle -- you have to recreate the job (losing the build history etc.).
+>
+> -Curtis
+> On Sep 23, 2014 7:33 AM, "Stephen Connolly" <
+> stephen.alan.connolly@gmail.com>
+> wrote:
+>
+> > Freestyle does not mess with your build and change it from building the
+> way
+> > maven intends. Google "stephen's java adventures Jenkins maven considered
+> > evil" for a more detailed discussion
+> >
+> > On Tuesday, 23 September 2014, James Green <james.mk.green@gmail.com>
+> > wrote:
+> >
+> > > On 23 September 2014 02:23, Curtis Rueden <ctrueden@wisc.edu
+> > > <javascript:;>> wrote:
+> > > >
+> > > >
+> > > > Also, stay away from the Jenkins "Maven" style job. Freestyle is more
+> > > > flexible and less buggy.
+> > > >
+> > >
+> > > Based on ..?
+> > >
+> >
+> >
+> > --
+> > Sent from my phone
+> >
+>
+
+--047d7b5d48823d75d00503bbf071--
+

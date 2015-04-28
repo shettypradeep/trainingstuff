@@ -1,0 +1,89 @@
+From users-return-137090-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Aug 20 02:12:16 2014
+Return-Path: <users-return-137090-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 355461105D
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 20 Aug 2014 02:12:16 +0000 (UTC)
+Received: (qmail 42627 invoked by uid 500); 20 Aug 2014 02:12:14 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 42556 invoked by uid 500); 20 Aug 2014 02:12:14 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 42544 invoked by uid 99); 20 Aug 2014 02:12:13 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 20 Aug 2014 02:12:13 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.215.49 as permitted sender)
+Received: from [209.85.215.49] (HELO mail-la0-f49.google.com) (209.85.215.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 20 Aug 2014 02:12:09 +0000
+Received: by mail-la0-f49.google.com with SMTP id hz20so6440081lab.8
+        for <users@maven.apache.org>; Tue, 19 Aug 2014 19:11:48 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=sgS6SA4QNg7I88VNSGbGVSiww7Gm8DIV9aubp5JYxEI=;
+        b=RTj9p1/PhhvbaJPQcO/ej8WZ/D5oQjDI7oja1FW0xMb5zrAy/g/+8JzylQLsgqX8jL
+         VSXmfxRBB7Q1uGDaoHWwR/eD4yCnlsslor1XlfoSzLlABkTDiMGuAvqzoJ6ZE5fHul94
+         0e+BFJzAZRf0B67buvgfiSKo+rK7NUMTaM+q4frqN/5Uhqkvh71tci13qnyMcGou2WeT
+         xI6I2MYeCoGYcMUdNQOg6q9lskqLHnDDq2LN5WHsYFTbGXlPjMfd9nQ7n/im0hgjRy0p
+         kfZ4H0mR0JFJnS8B70YKqo6mMinv80CQprUXlbqv63LF3d1fXMhrHH+7Wu8ybkSh8bho
+         Odgw==
+MIME-Version: 1.0
+X-Received: by 10.112.235.42 with SMTP id uj10mr37728179lbc.80.1408500708162;
+ Tue, 19 Aug 2014 19:11:48 -0700 (PDT)
+Received: by 10.114.20.231 with HTTP; Tue, 19 Aug 2014 19:11:48 -0700 (PDT)
+In-Reply-To: <E9BDF3F0-B7E9-48C3-AE52-9203DA6D1285@talios.com>
+References: <CAPCjjnGKp2A-iDS+vBvjHTF_FX7RL4DeOMhRadMOCoO5pDMHdQ@mail.gmail.com>
+	<53F04794.6000406@artifact-software.com>
+	<CAPCjjnFpu8wZnGq42sEaR3vv-TwRSAecoDKA9JObWQoas8yJvw@mail.gmail.com>
+	<CAPCUOdFgo-RuYjdH5Xym5UVb_viD2LoPXa0NGw3A+jKAZdXCJw@mail.gmail.com>
+	<CAPCjjnFhni9vrkJYJRxJpvLFZ-wu9oG-oO0f73Cyv4R103COvw@mail.gmail.com>
+	<CAKDUN1vPea=2W4+y41sU6Gt463nrVqN3CL6bJQAmej6owobJ=w@mail.gmail.com>
+	<CADVp3v8c_aT-Ofntot6zyiunboUffVM7NAPPTcRVtTF4vNpwZw@mail.gmail.com>
+	<53F34BEA.6090002@artifact-software.com>
+	<CAPCjjnEtsvCmW2BM7+JAEsfQ1AXEruy92nSz3wrGrL=zzZzaAA@mail.gmail.com>
+	<E9BDF3F0-B7E9-48C3-AE52-9203DA6D1285@talios.com>
+Date: Tue, 19 Aug 2014 19:11:48 -0700
+Message-ID: <CAPCjjnFQYWpUppBOgK-dSgsBH8tvDXQ2_T6A+5R+SjzwL=jaXw@mail.gmail.com>
+Subject: Re: Remove old snapshots under local repository
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c3c60a60434905010620db
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c3c60a60434905010620db
+Content-Type: text/plain; charset=UTF-8
+
+the problem here is I have to enter artifactId, am I missing any thing?
+specially for a developer who is very clueless about Maven
+
+-D
+
+
+On Tue, Aug 19, 2014 at 7:09 PM, Mark Derricutt <mark@talios.com> wrote:
+
+> So not using the dependency plugin like I suggested?
+>
+> On 20 Aug 2014, at 10:14, Dan Tran wrote:
+>
+> > After all consideration.  I use Ron's advice and create a internal plugin
+> > to clean it up.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a11c3c60a60434905010620db--
+

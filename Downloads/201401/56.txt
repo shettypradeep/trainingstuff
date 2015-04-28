@@ -1,0 +1,85 @@
+From users-return-135254-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jan 24 23:43:00 2014
+Return-Path: <users-return-135254-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 47F621019E
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 24 Jan 2014 23:43:00 +0000 (UTC)
+Received: (qmail 13656 invoked by uid 500); 24 Jan 2014 23:42:56 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 13514 invoked by uid 500); 24 Jan 2014 23:42:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 13506 invoked by uid 99); 24 Jan 2014 23:42:55 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 24 Jan 2014 23:42:55 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bdamm@silverspringnet.com designates 74.121.22.25 as permitted sender)
+Received: from [74.121.22.25] (HELO it-ipcorp-01.silverspringnet.com) (74.121.22.25)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 24 Jan 2014 23:42:50 +0000
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: Ap8EAA354lIKOQxz/2dsb2JhbABahBq8QoEedIInBTpRASoUQiYBBBvRFReOW4NcgRQEogOLb4Iq
+X-IronPort-AV: E=Sophos;i="4.95,715,1384329600"; 
+   d="scan'208";a="5464551"
+Received: from sfo-barrlb-01.silverspringnet.com (HELO mail.silverspringnet.com) ([10.57.12.115])
+  by it-ipcorp-01.silverspringnet.com with ESMTP/TLS/AES128-SHA; 24 Jan 2014 15:42:29 -0800
+Received: from SFO-EXMB-03.silverspringnet.com ([fe80::e877:a0b0:2e8d:1b57])
+ by SFO-EXCA-02.silverspringnet.com ([::1]) with mapi id 14.02.0318.004; Fri,
+ 24 Jan 2014 15:42:29 -0800
+From: Benjamin Damm <bdamm@silverspringnet.com>
+To: Maven Users <users@maven.apache.org>
+Subject: Renaming site.xml or using different top-level site.xml for site
+ plugin
+Thread-Topic: Renaming site.xml or using different top-level site.xml for
+ site plugin
+Thread-Index: Ac8ZXFPQzGdATWavSdasgL0hlUt5ng==
+Date: Fri, 24 Jan 2014 23:42:29 +0000
+Message-ID: <5D70C45FFA36DD4385E12C1B60B499F36D3A4CA8@SFO-EXMB-03.silverspringnet.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [10.57.12.115]
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello Mavens,
+
+Is there a way to rename site.xml to something else?  I want to use the sit=
+e framework to produce two "trees" of sites, each quite distinct from each =
+other because they are based on two different profiles, and I was hoping, t=
+wo different site.xml from the superpom at the top.
+
+In other words, I'm trying to achieve two trees of sites, each with a diffe=
+rent site.xml at the top, but otherwise retaining the same structure (in te=
+rms of modules).  I also plan to use profiles to use different site.xml fil=
+es at the module level; that part works fine already because I can repoint =
+the entire site document structure by using siteDirectory.
+
+It's the site.xml at the very top that's giving me trouble.  No matter what=
+ I seem to do, I can only have one site.xml at the top of the module hierar=
+chy.  Does anyone know if there's a way around this limitation?  Scouring t=
+he source code of the site plugin has so far not revealed anything.
+
+Thank you,
+-Ben
+
+--
+Benjamin Damm
+Silver Spring Networks
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

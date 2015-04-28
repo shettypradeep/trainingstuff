@@ -1,0 +1,70 @@
+From users-return-137242-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Sep 11 17:34:33 2014
+Return-Path: <users-return-137242-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 95F35111B2
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 11 Sep 2014 17:34:33 +0000 (UTC)
+Received: (qmail 75458 invoked by uid 500); 11 Sep 2014 17:34:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 75375 invoked by uid 500); 11 Sep 2014 17:34:31 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 75363 invoked by uid 99); 11 Sep 2014 17:34:30 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 11 Sep 2014 17:34:30 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of jieryn@gmail.com designates 209.85.215.53 as permitted sender)
+Received: from [209.85.215.53] (HELO mail-la0-f53.google.com) (209.85.215.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 11 Sep 2014 17:34:26 +0000
+Received: by mail-la0-f53.google.com with SMTP id ge10so6347654lab.12
+        for <users@maven.apache.org>; Thu, 11 Sep 2014 10:34:04 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=hDhCdCJz0Vggi7BPmvrQENBWdHSB3Zl8A87Oxj3DPQ0=;
+        b=gLRDOIk3GBvCKaFQ89ENXfKyvD5zrIAquynvoZjA9arAMpNoJHSe0YDqFVc2WM4auN
+         El6PHewITa6hojjUtbV+fY9oAEPm6EiEA9E3K+ZwMl97e4rluvHhkFef11zxgMx0tyUf
+         C12710M1k8t8zhsfoJ5nyQGWtUH3XcGHLTC+6vN2XxpxQP5amiG+4A+RJr/9XXv6ZWQP
+         UXgugC5VudIdfeZWagjPtd/gyN4GlshwitEYPPWAJQKchiJxKokzVwZHNAQxZfAkl9tC
+         9eLk0iveQ0ibNYd2Lx4D6yHGoqOT8bLzLCwIWk5qTvFnrs1n5VBkadbU4VcsvLCUhIo/
+         fq1w==
+MIME-Version: 1.0
+X-Received: by 10.152.23.42 with SMTP id j10mr2984706laf.82.1410456844774;
+ Thu, 11 Sep 2014 10:34:04 -0700 (PDT)
+Received: by 10.25.88.8 with HTTP; Thu, 11 Sep 2014 10:34:04 -0700 (PDT)
+Date: Thu, 11 Sep 2014 13:34:04 -0400
+Message-ID: <CAArU9iYc_KGC=+vW8BySamAq5Ots76hehs-7yUnNoPi90aSzpg@mail.gmail.com>
+Subject: m-remote-resources-p && mvn 3.2.1 vs mvn 3.2.3
+From: jieryn <jieryn@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+m-remote-resources-p:process has serious bug with excludeTransitive option:
+
+ * with maven 3.2.1 excludeTransitive=false, my build completes in
+about 10 seconds
+ * with maven 3.2.3 excludeTransitive=false, my build dies with OOME
+after about 2 minutes
+ * with maven 3.2.3 excludeTransitive=true, my build completes in
+about 10 seconds
+
+Anyone else seeing this? It looks like it was introduced in v1.5
+because of http://jira.codehaus.org/browse/MRRESOURCES-58 -- look at
+the patch that was applied, the logic behind 'if (
+this.excludeTransitive )' looks to be exactly wrong.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

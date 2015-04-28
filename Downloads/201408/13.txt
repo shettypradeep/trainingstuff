@@ -1,0 +1,71 @@
+From users-return-137038-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Aug 17 10:52:13 2014
+Return-Path: <users-return-137038-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0091411EBE
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 17 Aug 2014 10:52:13 +0000 (UTC)
+Received: (qmail 49345 invoked by uid 500); 17 Aug 2014 10:52:10 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 49257 invoked by uid 500); 17 Aug 2014 10:52:10 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 49246 invoked by uid 99); 17 Aug 2014 10:52:09 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 17 Aug 2014 10:52:09 +0000
+X-ASF-Spam-Status: No, hits=0.7 required=5.0
+	tests=SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: 216.139.236.26 is neither permitted nor denied by domain of forums@calitha.com)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 17 Aug 2014 10:52:05 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <forums@calitha.com>)
+	id 1XIy3r-0006Wh-0Q
+	for users@maven.apache.org; Sun, 17 Aug 2014 03:51:43 -0700
+Date: Sun, 17 Aug 2014 03:51:43 -0700 (PDT)
+From: robertmvn <forums@calitha.com>
+To: users@maven.apache.org
+Message-ID: <1408272702980-5802370.post@n5.nabble.com>
+Subject: Maven javadoc selective submodules
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+How do you generate a combined javadoc for a selection of submodules?
+
+I have added the javadoc plugin with the aggregate goal to the build as
+specified in
+http://maven.apache.org/plugins/maven-javadoc-plugin/examples/aggregate.html
+but it not generates javadocs for all submodules. I want to be more
+selective.
+
+I have tried to set the dependencySourceIncludes or dependencySourceExcludes
+in the configuration, but it doesn't seem to have any effect.
+
+I tried to look at the report sets, but I don't seem to be able to find any
+configuration documentation about them.
+
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Maven-javadoc-selective-submodules-tp5802370.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

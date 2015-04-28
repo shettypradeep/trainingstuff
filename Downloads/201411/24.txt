@@ -1,0 +1,94 @@
+From users-return-137717-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Nov  6 22:03:01 2014
+Return-Path: <users-return-137717-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D3DD517306
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  6 Nov 2014 22:03:01 +0000 (UTC)
+Received: (qmail 47562 invoked by uid 500); 6 Nov 2014 22:03:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 47478 invoked by uid 500); 6 Nov 2014 22:03:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 47466 invoked by uid 99); 6 Nov 2014 22:02:59 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Nov 2014 22:02:59 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of baerrach@gmail.com designates 209.85.220.172 as permitted sender)
+Received: from [209.85.220.172] (HELO mail-vc0-f172.google.com) (209.85.220.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Nov 2014 22:02:55 +0000
+Received: by mail-vc0-f172.google.com with SMTP id le20so1113404vcb.3
+        for <users@maven.apache.org>; Thu, 06 Nov 2014 14:01:50 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=m4WMNEcNikT/YwUJ/lupyxlnILJs1BIvebgyRtdaO24=;
+        b=bKp35QyZA71J+pt1ubkflSTEZUH3pyfpeMVvt14exGP2vK4VR2axK8Ah9eqEkYtvJR
+         an8gfCCbFie+L4EwMOaXDMUHfxnHg+76UBXMAb1xBVcfsJPXvUAJjrlok5VF/H5/T54Z
+         Mg2MDqkJKueoFEvWyrCmtdXOEXL9/adIWQeklEw3Bdv8h4hqlb6FpBiX/VvQpZbp5Wx8
+         7GgxOuEwHkNSywMrDmFwD9T36IL1MdGUsH6PYda+t6tRcQZ7R5iUucDG864U2h3viMeN
+         I3r+L3FB3JmZApGFs4GKydig0inRjIOWsLOI+wUBZx5l+oPoP/kGqRlISiUuKpC4+xRV
+         KoUg==
+MIME-Version: 1.0
+X-Received: by 10.52.170.101 with SMTP id al5mr249286vdc.74.1415311310261;
+ Thu, 06 Nov 2014 14:01:50 -0800 (PST)
+Received: by 10.220.90.76 with HTTP; Thu, 6 Nov 2014 14:01:50 -0800 (PST)
+In-Reply-To: <545B5F4D.70007@gmx.de>
+References: <CACGLCJY7QXLj8BU08uSAYQfaejsNoO-1YNUJnh6=ANv98fdZYA@mail.gmail.com>
+	<54585B18.9050504@artifact-software.com>
+	<CACGLCJaiOy3JyWe5T=ZqkoHrWCk=gPa_4AtJGEyh=ziDwqqUag@mail.gmail.com>
+	<545A755C.7000903@gmx.de>
+	<CADVp3v9ARSFfOk2wivSiehTCUSHUUMJwYWMgiprh+cY-hVjozg@mail.gmail.com>
+	<545B5F4D.70007@gmx.de>
+Date: Fri, 7 Nov 2014 08:31:50 +1030
+Message-ID: <CADVp3v9OPfRxwMoR95-NJQz3bZC0GgkgQmSuD3DM+qDCT2aCZw@mail.gmail.com>
+Subject: Re: explicit dependencies in maven
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>, info@soebes.de
+Content-Type: multipart/alternative; boundary=047d7b86f7d8e51505050737d7ca
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b86f7d8e51505050737d7ca
+Content-Type: text/plain; charset=UTF-8
+
+On 6 November 2014 22:15, Karl Heinz Marbaise <khmarbaise@gmx.de> wrote:
+
+> Hi,
+> On 11/5/14 11:14 PM, Barrie Treloar wrote:
+>
+>> On 6 November 2014 05:37, Karl Heinz Marbaise <khmarbaise@gmx.de> wrote:
+>>
+>>  Hi,
+>>>
+>>> to be clear on that point you should never change released versions.
+>>>
+>>> The idea of releases is that they are immutable.
+>>>
+>>> The scenario you have described should never be done which means:
+>>>
+>>> If you change code than make simply a new version like 1.2 or may be
+>>> better things like 1.1.1 to show it's a bug fix release of 1.1 etc.
+>>>
+>>> You should prevent of doing developers such a thing...
+>>>
+>>
+>>
+>> Read http://semver.org/
+>>
+>
+> Should that change something ? Or do i misunderstand something ?
+
+
+No, just more reading for Irfan.
+
+--047d7b86f7d8e51505050737d7ca--
+

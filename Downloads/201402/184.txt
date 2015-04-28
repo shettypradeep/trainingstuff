@@ -1,0 +1,96 @@
+From users-return-135446-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 13 10:16:13 2014
+Return-Path: <users-return-135446-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1E49A10CC6
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 13 Feb 2014 10:16:13 +0000 (UTC)
+Received: (qmail 483 invoked by uid 500); 13 Feb 2014 10:16:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99774 invoked by uid 500); 13 Feb 2014 10:16:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99764 invoked by uid 99); 13 Feb 2014 10:16:06 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 10:16:06 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of anders.g.hammar@gmail.com designates 209.85.212.182 as permitted sender)
+Received: from [209.85.212.182] (HELO mail-wi0-f182.google.com) (209.85.212.182)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 10:16:01 +0000
+Received: by mail-wi0-f182.google.com with SMTP id f8so8281116wiw.9
+        for <users@maven.apache.org>; Thu, 13 Feb 2014 02:15:40 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=fLmESxFnVivinbk9tZDnWkHMASxX1V2+iYTuawylPPA=;
+        b=Se2KC+gxN4dC2rg4uZ1Gy74iWMNHCsspeIQIZ7ggcNYnA9m3Q1OLhAM9ArAj9tlcoc
+         CMp1mJ5uaD8twP++Ic+WPOTHOiU62Ne5UfmUzynBnPgEuG3x1DK4Is2wLHtL1AUl6Hn8
+         DwpcPd8tEyIyJ/jnV9KP9o2om3SV/N3+tulj4xXEgosy1u3b7OciA7xgEVkMuJaMdyjK
+         ZYQ/6p21lEpuVpaEiIU8p1vqL8X+e+bFsxIptaI4WFWLiiIMaBuDcRyP/SF2DFeyhyR0
+         77ELTdv/0cA3cUAV3AxD71N4tmpwRMq+VbC4+SX85RXBWCt97Jt021Jn0meobrQsqOGj
+         qR0Q==
+MIME-Version: 1.0
+X-Received: by 10.194.79.131 with SMTP id j3mr541273wjx.17.1392286540030; Thu,
+ 13 Feb 2014 02:15:40 -0800 (PST)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.137.100 with HTTP; Thu, 13 Feb 2014 02:15:39 -0800 (PST)
+In-Reply-To: <CAARODriPrUAm6KTf6ppK1xstyVaO9bZ8xkY8swRwF7KcEp+kJw@mail.gmail.com>
+References: <CAARODrivJ_wMZ9dxxsPWTxskHTnEL0O0O=wtNmJDV42aE1TptQ@mail.gmail.com>
+	<CAARODriPrUAm6KTf6ppK1xstyVaO9bZ8xkY8swRwF7KcEp+kJw@mail.gmail.com>
+Date: Thu, 13 Feb 2014 11:15:39 +0100
+X-Google-Sender-Auth: S_fWVjaVYh3maQ8UmHKzv4v4_8Q
+Message-ID: <CAKDUN1v39-sf_dq=8A-1dF2cQyi8v+k_dVqsRJzwHwNsnhUHgQ@mail.gmail.com>
+Subject: Re: Maven deploy plugin 2.8.1 - deploy-file goal - unable to avoid
+ attachedArtifacts from being deployed in execute
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bd6bad4a5062904f246f892
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bd6bad4a5062904f246f892
+Content-Type: text/plain; charset=ISO-8859-1
+
+You need to provide more info on what you're doing! Is the
+deploy:deploy-file bound to the build lifecycle of a project? How?
+
+/Anders
+
+
+On Thu, Feb 13, 2014 at 11:06 AM, Henrik Skriver Rasmussen <
+skriver79@gmail.com> wrote:
+
+> Hi
+>
+> I have a question about the expected behaviour of the deploy:deploy-file
+> goal in the maven deploy plugin 2.8.1 which I am currently using to deploy
+> one file.
+>
+> It surprised me that no matter what I did I kept getting more artifacts
+> deployed that I asked for and the reason is in the
+> org.apache.maven.plugin.deploy.DeployFileMojo.execute line 376 where the
+> attached artifacts are also deployed.
+>
+> Is this intended behaviour and if so how can I avoid this from happening?
+>
+> The goal name deploy-file indicates that one artifact (possible incl.
+> pom/metadata) is to be deployed and not also a throng of other artifacts.
+>
+> I will be happy to provide a patch where this is aspect is removed.
+>
+> Thank you in advance
+>
+> regards
+> Henrik Skriver Rasmussen
+>
+
+--047d7bd6bad4a5062904f246f892--
+

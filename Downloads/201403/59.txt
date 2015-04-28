@@ -1,0 +1,56 @@
+From users-return-135675-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Mar  4 04:34:02 2014
+Return-Path: <users-return-135675-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 00DC110026
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  4 Mar 2014 04:34:02 +0000 (UTC)
+Received: (qmail 692 invoked by uid 500); 4 Mar 2014 04:33:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 303 invoked by uid 500); 4 Mar 2014 04:33:53 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 59237 invoked by uid 99); 3 Mar 2014 22:28:00 -0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of thomas.weise@gmail.com designates 209.85.219.54 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=I5Ki5ll4NvX4jZQl5Je59BX6JpUzVqPADR7R4Bjq37s=;
+        b=SM2QMU9OxjwRP6XbETJ0965bGkD47axWND04WsX6F/nNOFNPr1/cQX/My7xeDdjgBl
+         OyQLgC7+azm6RTMO3/TaazsT3KACJwxrkCX/L+3NZvNpOEfT2imtUX3dsOOsVRqToEnH
+         00ii6mQwWPlqePuGYf+sdH03TMi9Lj+cNF8RWOCwDJwfBMv35HAXihheWIISBYHpdfUR
+         J2upEl0L168YVPvTRD5rTZoWoqZnyMg2PKbbRgGHPm0sLFM0O0mw/hkREgB6eSkKETNq
+         AUD6NK6sN3xPjNHUeaGCBJ9DYN+iKgGwDjz+bnapQ9RTO8D0TIZxCW1B6s2hv9fH3H2R
+         B4yw==
+MIME-Version: 1.0
+X-Received: by 10.60.16.168 with SMTP id h8mr18532039oed.32.1393885652460;
+ Mon, 03 Mar 2014 14:27:32 -0800 (PST)
+Date: Mon, 3 Mar 2014 14:27:32 -0800
+Message-ID: <CA+5xAo3NqYtCjGLHHEWGrtrk5x4GbX=23p6aSDMhceWKwGOCJQ@mail.gmail.com>
+Subject: assembly plugin ignoring fileMode when format=dir
+From: Thomas Weise <thomas.weise@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=089e01293f0e2c374304f3bb4bdb
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01293f0e2c374304f3bb4bdb
+Content-Type: text/plain; charset=ISO-8859-1
+
+The fileMode settings are applied as expected when format is "zip".
+
+For format "dir", file permissions remain unchanged compared to source and
+fileMode is ignored. Is that a bug or intended behavior?
+
+Thanks.
+
+--089e01293f0e2c374304f3bb4bdb--
+

@@ -1,0 +1,120 @@
+From users-return-137831-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Nov 25 18:33:38 2014
+Return-Path: <users-return-137831-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BFBC010F25
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 25 Nov 2014 18:33:38 +0000 (UTC)
+Received: (qmail 15392 invoked by uid 500); 25 Nov 2014 18:33:37 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 15302 invoked by uid 500); 25 Nov 2014 18:33:37 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 15282 invoked by uid 99); 25 Nov 2014 18:33:36 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Nov 2014 18:33:36 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Nov 2014 18:33:11 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 750156A6581
+	for <users@maven.apache.org>; Tue, 25 Nov 2014 13:33:06 -0500 (EST)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id F9YuNOkSzhM7 for <users@maven.apache.org>;
+	Tue, 25 Nov 2014 13:33:06 -0500 (EST)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 320116A6580
+	for <users@maven.apache.org>; Tue, 25 Nov 2014 13:33:06 -0500 (EST)
+Message-ID: <5474CB61.4050608@artifact-software.com>
+Date: Tue, 25 Nov 2014 13:33:05 -0500
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: Maven Users List <users@maven.apache.org>
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Maven use for integration
+References: <OFDF606594.F32EF26E-ON85257D9B.00556FC5-85257D9B.00578296@belden.com>
+In-Reply-To: <OFDF606594.F32EF26E-ON85257D9B.00556FC5-85257D9B.00578296@belden.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Since you are not getting any responses, let me ask some questions to 
+get some more details on the table.
+
+1) Where is the definitive single source of dependency info that you use 
+to create the GAV ids for Nexus? How can a single pom reference 2 
+versions of an artifact?
+
+2) Are you aware of the API for Nexus? Can you use this to get the 
+artifacts once you have the list of artifacts?
+
+Perhaps these answers will stimulate some ideas.
+Ron
+
+On 25/11/2014 10:55 AM, Alejandro.Endo@grassvalley.com wrote:
+> Hello everyone,
+>
+> I wanted to ask what you guys though about using maven as an integration
+> tool. Is it out of the scope of maven? is anyone else doing this? What I
+> mean by integration is that the artifacts are built (also by maven but in
+> other jobs) and deployed to nexus, but I still need to download them all
+> to a server for deployment.
+> The build of this server invokes maven and I hooked to it via a pom that
+> points to some artifacts that serve as an entry point to the dependency
+> graph and then use the dependency:copy-dependencies goal. The point of
+> this was to leverage the dependency information available in poms so I
+> didn't have to keep a list of ALL the artifacts needed (osgi bundles BTW),
+> just of an entry point for maven to crawl the graph and pull everything.
+> The problem I'm encountering that tells me maybe Maven is not meant for
+> this is that I need to pull two artifacts where only the version is
+> different (since in OSGi both can coexist just fine) but maven chooses
+> only one and the other one doesn't get integrated. So, are there ways to
+> force maven to not drop the second version when resolving its model or am
+> I just stretching what maven can do? if so, are there any other tools that
+> leverage pom information to download artifacts from a maven repo? i don't
+> want to have to maintain that dependency information in two different
+> places
+>
+> Thank you,
+>
+> Alejandro Endo | Software Designer/Concepteur de logiciels
+>
+> DISCLAIMER:
+> Privileged and/or Confidential information may be contained in this
+> message. If you are not the addressee of this message, you may not
+> copy, use or deliver this message to anyone. In such event, you
+> should destroy the message and kindly notify the sender by reply
+> e-mail. It is understood that opinions or conclusions that do not
+> relate to the official business of the company are neither given
+> nor endorsed by the company.
+> Thank You.
+>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,142 @@
+From users-return-137647-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Oct 29 09:49:06 2014
+Return-Path: <users-return-137647-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3318A17202
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 29 Oct 2014 09:49:06 +0000 (UTC)
+Received: (qmail 80229 invoked by uid 500); 29 Oct 2014 09:49:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 80147 invoked by uid 500); 29 Oct 2014 09:49:04 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 80135 invoked by uid 99); 29 Oct 2014 09:49:03 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Oct 2014 09:49:03 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.214.175 as permitted sender)
+Received: from [209.85.214.175] (HELO mail-ob0-f175.google.com) (209.85.214.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Oct 2014 09:48:33 +0000
+Received: by mail-ob0-f175.google.com with SMTP id wm4so2067894obc.34
+        for <users@maven.apache.org>; Wed, 29 Oct 2014 02:48:31 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=7e8h2xJJ3eNsTOj9Lw3llQZErhFk1x6A5y0oZzbIyxo=;
+        b=K5ZpoyzJifDb53PyNFvayXPUKCSoh70dUnIN6br1lvpnSjz1RU3cLdmb5sLNmRn3Ez
+         XCTQExXE9+4oFJ9LoEHQoMlNHKTm2Ghw6+HXbHRES6pacydaGStfhXJ5UHPJUgBO0ol1
+         JQRblpOiWSP9+MwOr7vigHQ7aaxc22d1eIfpQIuaNHMcidRBreDj6OVyWC9ZrR13FDNo
+         vcj5CSw5QeWdhbvp9CyjWr0NbBwIiv1d5N7BjDjd8LL3TkOtCoCFiB70GDm2G5YvI3zP
+         itHvDmLk0hICgxvdzSlkZCjvxYZiUqlcGcxl3py4kxUGEpnICjhDHpnT1/HqeGWiRdv9
+         j3gQ==
+MIME-Version: 1.0
+X-Received: by 10.202.208.211 with SMTP id h202mr7408485oig.29.1414576111694;
+ Wed, 29 Oct 2014 02:48:31 -0700 (PDT)
+Received: by 10.60.116.39 with HTTP; Wed, 29 Oct 2014 02:48:31 -0700 (PDT)
+In-Reply-To: <CAE8kHEy7hsUUZx9webzFgELY1HsdZrVYvbr_j34BxB1kn-boHg@mail.gmail.com>
+References: <CAE8kHEwi-wqWygidE88k+SkM9zvoRyTro2GFEFmsW-ypkpSSiw@mail.gmail.com>
+	<CADVp3v9Y+HTn-JPuYz_jAd3yoayW+xN0YyZZ5Gwof5=_fd9bEQ@mail.gmail.com>
+	<CAE8kHEy7hsUUZx9webzFgELY1HsdZrVYvbr_j34BxB1kn-boHg@mail.gmail.com>
+Date: Wed, 29 Oct 2014 09:48:31 +0000
+Message-ID: <CA+nPnMy89DvHGM0yV6kKTjxpOnbbKoO+bOHELx0GE9T6x4fzmQ@mail.gmail.com>
+Subject: Re: [pre-verify over deploy]
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113d2be8a53aff05068caad9
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113d2be8a53aff05068caad9
+Content-Type: text/plain; charset=UTF-8
+
+http://developer-blog.cloudbees.com/2012/12/should-you-deploy-snapshots.html
+
+On 29 October 2014 08:18, Fay Wong <philip584521@gmail.com> wrote:
+
+> Many thanks to Barrie.
+>
+> I think what you have clarified is the normal flow of maven practice.
+>
+> The "deploy" in the context of my previous post means: our developer invoke
+> a "mvn deploy" command to share the output(bytecode) through the repository
+> so as to shorten the build time of whole project(as its code base is too
+> large). Our goal is modular compiling and packaging.
+>
+> Currently my pain is our developer would deploy broken bytecode to our dev
+> repository and broken others work. Could i define a intermediate
+> repository, everytime they deploy, jenkins will verify it. if pass, then
+> depoy it into dev repository, otherwise, revert the intermediate repository
+> to keep sync with dev repository.
+>
+> Is there a easier way to achieve this?
+>
+> 2014-10-29 13:07 GMT+08:00 Barrie Treloar <baerrach@gmail.com>:
+>
+> > On 29 October 2014 14:00, Fay Wong <philip584521@gmail.com> wrote:
+> >
+> > > Hi all,
+> > >
+> > > Is there any solution to pre-verify the deploy before it actually got
+> > into
+> > > the repository?
+> > >
+> > > Take this usecase for example:
+> > >
+> > > In a team of 40 developer, every developer will deploy their module at
+> > any
+> > > time, once there's a error,
+> > >
+> > > the final output software won't work and blocks other developer's flow.
+> > >
+> > > So is there any pre-verify solution(such as jenkins CI-server) to be
+> > > enforced before the deploy overlapped the previous deploy?
+> >
+> >
+> > Not really, this is a process issue.
+> >
+> > You need to decide what is in a state of flux, and then when people
+> should
+> > consume it.
+> >
+> > I'm assuming by "deploy" you mean a released artifact and not a snapshot
+> > one.
+> > Generally, you should not be deploying your snapshots for consumption by
+> > other developers, as snapshots could break at any time and you impact
+> > anyone who depends upon them.
+> > Instead, when a developer needs a snapshot version they check out the
+> code
+> > and building it themselves, then when they need to import new changes
+> they
+> > pull in the changes to the code and rebuild. That way the developer gets
+> to
+> > choose when they will consume potentially breaking changes.
+> >
+> > If these are released artifacts then you have lots of choices on how to
+> do
+> > this.
+> > *) By using your version control system and some form of isolation (e.g.
+> > branches).
+> >    When the new version is released the developer still needs to pull
+> those
+> > changes in, and if there are breaking changes can revert back to the
+> > previous version.
+> > *) Have someone in a QA role validate that the artifact works prior to
+> > promoting that version in you parent pom.
+> >
+> > The act of deploying into your Maven Repository is independent from the
+> > consumption of that artifact, it shouldn't be breaking peoples build
+> until
+> > they start using it.
+> >
+>
+
+--001a113d2be8a53aff05068caad9--
+

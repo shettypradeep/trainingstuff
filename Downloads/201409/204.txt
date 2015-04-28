@@ -1,0 +1,89 @@
+From users-return-137313-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Sep 17 20:52:56 2014
+Return-Path: <users-return-137313-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 748EC11B03
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 17 Sep 2014 20:52:56 +0000 (UTC)
+Received: (qmail 52743 invoked by uid 500); 17 Sep 2014 20:52:54 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 52654 invoked by uid 500); 17 Sep 2014 20:52:54 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 52642 invoked by uid 99); 17 Sep 2014 20:52:54 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 17 Sep 2014 20:52:54 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [85.13.151.183] (HELO dd34514.kasserver.com) (85.13.151.183)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 17 Sep 2014 20:52:26 +0000
+Received: from dd34514.kasserver.com (dd0800.kasserver.com [85.13.143.204])
+	by dd34514.kasserver.com (Postfix) with ESMTPSA id E94EE4340822
+	for <users@maven.apache.org>; Wed, 17 Sep 2014 22:52:24 +0200 (CEST)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+X-SenderIP: 24.68.152.10
+User-Agent: ALL-INKL Webmail 2.11
+In-Reply-To: <20140917202446.ED25A11952@minotaur.apache.org>
+References: <20140917202446.ED25A11952@minotaur.apache.org>
+Subject: Re: [ANN] Apache Maven Shared Component: Maven Dependency Tree Version 2.2 Released
+From: "Manfred Moser" <manfred@mosabuam.com>
+To: users@maven.apache.org
+Message-Id: <20140917205224.E94EE4340822@dd34514.kasserver.com>
+Date: Wed, 17 Sep 2014 22:52:24 +0200 (CEST)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Awesome... the Android Maven Plugin master is using it already ;-)
+
+Karl Heinz Marbaise wrote on 17.09.2014 13:24:
+
+> The Apache Maven team is pleased to announce the release of the 
+> Apache Maven Shared Component: Maven Dependency Tree Version 2.2
+> 
+> http://maven.apache.org/shared/maven-dependency-tree/
+> 
+> Analyzes the dependencies of a project for undeclared or unused artifacts.
+> 
+> <plugin>
+>  <groupId>org.apache.maven.shared</groupId>
+>  <artifactId>maven-dependency-tree</artifactId>
+>  <version>2.2</version>
+> </plugin>
+> 
+> Bugs:
+> 
+> * [MSHARED-326] - Patch that enables all maven-dependency-tree ITs
+> * [MSHARED-336] - Create a method in the DependencyGraphBuilder that accepts
+> the 
+>                   reactor projects to collect unbuilt dependencies
+> 
+> Improvement:
+> 
+> * [MSHARED-349] - Upgrade maven version to 2.2.1
+> 
+> Enjoy,
+> 
+> -The Maven team
+> 
+> Karl-Heinz Marbaise
+> 
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+> 
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

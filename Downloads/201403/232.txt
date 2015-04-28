@@ -1,0 +1,202 @@
+From users-return-135897-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Mar 21 20:11:29 2014
+Return-Path: <users-return-135897-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 315B110AC4
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 21 Mar 2014 20:11:29 +0000 (UTC)
+Received: (qmail 14075 invoked by uid 500); 21 Mar 2014 20:11:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 13994 invoked by uid 500); 21 Mar 2014 20:11:24 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 13985 invoked by uid 99); 21 Mar 2014 20:11:24 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 21 Mar 2014 20:11:24 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.192.171 as permitted sender)
+Received: from [209.85.192.171] (HELO mail-pd0-f171.google.com) (209.85.192.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 21 Mar 2014 20:11:19 +0000
+Received: by mail-pd0-f171.google.com with SMTP id r10so2759883pdi.16
+        for <users@maven.apache.org>; Fri, 21 Mar 2014 13:10:57 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type:content-transfer-encoding;
+        bh=cK8wxZ/XPYIQs5IGohKMPiJo5y6nTzY5ZG2fjkZ2uts=;
+        b=LI7H/OEr4dTbOrPaZGwQG6qPSwAuJRxZn2a8+TjbcV0nDsh9EoJUs8jwD6M0Z9RfRn
+         nAIswfRjxkeDf19JIeI5UufWgCHb3a6yqE+eoz3IvwAt11+sive9NWOtpwqWS93gDg0a
+         d0OJ0pfMj+Mgmph4NpdrFSCN+DZn5OxtxG6pc4qdSM3SALlmUo6cprK3lnS37WNyEjyD
+         oJhSeYmgVCVvteYa5iSDgvNX8DajhuPZhvJ5d0V/A66DN0NQkezOsocQucqyI+J9Fp4v
+         4PHbLuyk+hMljDxhrwirLwLMUQ4ka8KAj3KQCp0fm3MsR4zxtcbB4N+/9t0bcq3uone7
+         Y1Bw==
+X-Received: by 10.66.177.168 with SMTP id cr8mr33696093pac.128.1395432657188;
+        Fri, 21 Mar 2014 13:10:57 -0700 (PDT)
+Received: from [192.168.1.124] ([96.54.182.134])
+        by mx.google.com with ESMTPSA id ug9sm11517375pbc.11.2014.03.21.13.10.55
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 21 Mar 2014 13:10:56 -0700 (PDT)
+Message-ID: <532C9CCE.70404@gmail.com>
+Date: Fri, 21 Mar 2014 13:10:54 -0700
+From: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Forcing Integration Tests Before a Release
+References: <532B4246.9050606@gmail.com> <CAK8jvqxqOQS34dbfjxsJFv4E17bAddK3zKww6syckRPwOv6z6Q@mail.gmail.com>
+In-Reply-To: <CAK8jvqxqOQS34dbfjxsJFv4E17bAddK3zKww6syckRPwOv6z6Q@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Cool, that is what I am looking for. Thanks so much.
+
+Cheers, Eric
+
+On 2014-03-20, 1:50 PM, Mirko Friedenhagen wrote:
+> Eric,
+>
+> when you use the maven-release-plugin a property performRelease is set
+> during release:perform.
+>
+> So define in the pluginManagement section a definition for the
+> maven-failsafe-plugin in your build section:
+>
+> <build>
+>     <pluginManagement>
+>         <plugins>
+>                <plugin>
+>                      <groupId>org.apache.maven.plugins</groupId>
+>                      <artifactId>maven-failsafe-plugin</artifactId>
+>                      <version>2.17</version>
+>                      <executions>
+>                          <execution>
+>                              <id>default-integration-test</id>
+>                              <goals>
+>                                  <goal>integration-test</goal>
+>                              </goals>
+>                          </execution>
+>                          <execution>
+>                              <id>default-verify</id>
+>                              <goals>
+>                                  <goal>verify</goal>
+>                              </goals>
+>                          </execution>
+>                      </executions>
+>                  </plugin>
+>         </plugins>
+>     </pluginManagement>
+> </build>
+>
+> and later on in your pom
+>
+>      <profile>
+>              <id>release-run-failsafe</id>
+>              <activation>
+>                  <property>
+>                      <name>performRelease</name>
+>                      <value>true</value>
+>                  </property>
+>              </activation>
+>              <build>
+>                   <plugins>
+>                      <plugin>
+>                         <groupId>org.apache.maven.plugins</groupId>
+>                         <artifactId>maven-failsafe-plugin</artifactId>
+>                      </plugin>
+>                  </plugins>
+>              </build>
+>      <profile>
+>
+> So only during release:perform your integration tests will be executed
+> and success is verified.
+> Regards Mirko
+> --
+> http://illegalstateexception.blogspot.com/
+> https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+> https://bitbucket.org/mfriedenhagen/
+>
+>
+> On Thu, Mar 20, 2014 at 8:32 PM, Eric Kolotyluk
+> <eric.kolotyluk@gmail.com> wrote:
+>> I am looking for some way to force my integration tests before a release,
+>> without explicitly using a profile.
+>>
+>> For example,
+>>
+>>        <plugin>
+>> <artifactId>maven-release-plugin</artifactId>
+>>          <configuration>
+>>            <preparationGoals>clean verify site</preparationGoals>
+>>          </configuration>
+>>        </plugin>
+>>
+>> But that doesn't work because unless the failsafe plugin is defined, it
+>> won't run the tests.
+>>
+>> I thought of doing something like
+>>
+>>    <profiles>
+>>      <profile>
+>>        <id>run-it</id>
+>>        <activation>
+>>          <file>
+>> <missing>target/failsafe-reports</missing>
+>>          </file>
+>>        </activation>
+>>        <build>
+>>          <plugins>
+>>            <plugin>
+>> <groupId>org.apache.maven.plugins</groupId>
+>> <artifactId>maven-failsafe-plugin</artifactId>
+>>              <version>2.17</version>
+>>              <executions>
+>>                <execution>
+>>                  <goals>
+>>                    <goal>integration-test</goal>
+>>                    <goal>verify</goal>
+>>                  </goals>
+>>                </execution>
+>>              </executions>
+>>            </plugin>
+>>          </plugins>
+>>        </build>
+>>      </profile>
+>>    </profiles>
+>>
+>> But that will cause the integration tests to be run after every clean.
+>>
+>> Is there some way I can trigger the integration tests when doing a release
+>>
+>>     mvn release:prepare
+>>
+>> without having to do
+>>
+>>     mvn release:prepare -P run-it
+>>
+>> Cheers, Eric
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

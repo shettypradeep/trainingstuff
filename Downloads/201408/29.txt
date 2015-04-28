@@ -1,0 +1,108 @@
+From users-return-137037-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Aug 17 06:19:20 2014
+Return-Path: <users-return-137037-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C154911B28
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 17 Aug 2014 06:19:20 +0000 (UTC)
+Received: (qmail 68889 invoked by uid 500); 17 Aug 2014 06:19:19 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 68819 invoked by uid 500); 17 Aug 2014 06:19:19 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 68804 invoked by uid 99); 17 Aug 2014 06:19:18 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 17 Aug 2014 06:19:18 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.215.52 as permitted sender)
+Received: from [209.85.215.52] (HELO mail-la0-f52.google.com) (209.85.215.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 17 Aug 2014 06:18:53 +0000
+Received: by mail-la0-f52.google.com with SMTP id b17so3486305lan.39
+        for <users@maven.apache.org>; Sat, 16 Aug 2014 23:18:52 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=scbHc/CwaCgG9Vf8vIiVsxJJlMGg/LMmpSEXG0gsfv0=;
+        b=0e6YyubPwO37W9IKrcwciOZk1c/Mf6t12CZfNH7gM3sSSc37+G9yBadO3emxg4nHm3
+         FquwdPoIN+o0GCDSDND/Yc3p9tjRM8Ol6zWQS79xP+E33bwRvSC3N55L3qnB2SAZDGw6
+         WL3770bnTrgnLqdRg7oaTBW5219fNRvZJRXnPxMjlq7V0DEYJsZUWngKLzDvQuiBNidn
+         6b/NYmp4zfAIl3qPGHMO+Dz6d584wTlU5JsxHAoALFOG2yP7mryPtDyT4Xne7p3FzV7m
+         a4XbN66+YmZ+t5Dm9o2QRaSEfreSeecyyz2PYzEQWRAg0/MQKAVdw6jil9mOf3ZFWpi+
+         81KQ==
+MIME-Version: 1.0
+X-Received: by 10.152.20.168 with SMTP id o8mr22060932lae.4.1408256332241;
+ Sat, 16 Aug 2014 23:18:52 -0700 (PDT)
+Received: by 10.114.20.231 with HTTP; Sat, 16 Aug 2014 23:18:52 -0700 (PDT)
+In-Reply-To: <53F04794.6000406@artifact-software.com>
+References: <CAPCjjnGKp2A-iDS+vBvjHTF_FX7RL4DeOMhRadMOCoO5pDMHdQ@mail.gmail.com>
+	<53F04794.6000406@artifact-software.com>
+Date: Sat, 16 Aug 2014 23:18:52 -0700
+Message-ID: <CAPCjjnFpu8wZnGq42sEaR3vv-TwRSAecoDKA9JObWQoas8yJvw@mail.gmail.com>
+Subject: Re: Remove old snapshots under local repository
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e014932c06fa1e90500cd3a71
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e014932c06fa1e90500cd3a71
+Content-Type: text/plain; charset=UTF-8
+
+sounds like a good option.
+
+Thanks
+
+-D
+
+
+On Sat, Aug 16, 2014 at 11:11 PM, Ron Wheeler <
+rwheeler@artifact-software.com> wrote:
+
+> On 17/08/2014 1:50 AM, Dan Tran wrote:
+>
+>> Hi I need to find a way to walk into local repository and remove all old
+>> snapshots.
+>>
+>> This is very helpful for developer to clean up his/her local rep.
+>>
+>> how safe it is by blindly remove any file with timestamp format ( ie
+>> xxx-1.0.0-20140816.071953-49.jar)?
+>>
+>> Thanks
+>>
+>> -D
+>>
+>>  Easiest thing to do is to delete the entire organization or project
+> branch (com.mycompany.project.*) from the local repo.
+>
+> This will not likely delete anything of great value or anything that can
+> not be easily retrieved from your company repo.
+>
+>
+> Ron
+>
+> --
+> Ron Wheeler
+> President
+> Artifact Software Inc
+> email: rwheeler@artifact-software.com
+> skype: ronaldmwheeler
+> phone: 866-970-2435, ext 102
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--089e014932c06fa1e90500cd3a71--
+

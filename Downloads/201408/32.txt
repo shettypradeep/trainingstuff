@@ -1,0 +1,114 @@
+From users-return-137088-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Aug 19 22:14:34 2014
+Return-Path: <users-return-137088-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DDB3811876
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 19 Aug 2014 22:14:34 +0000 (UTC)
+Received: (qmail 90203 invoked by uid 500); 19 Aug 2014 22:14:32 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 90114 invoked by uid 500); 19 Aug 2014 22:14:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 90099 invoked by uid 99); 19 Aug 2014 22:14:32 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 19 Aug 2014 22:14:32 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.217.177 as permitted sender)
+Received: from [209.85.217.177] (HELO mail-lb0-f177.google.com) (209.85.217.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 19 Aug 2014 22:14:06 +0000
+Received: by mail-lb0-f177.google.com with SMTP id s7so5856957lbd.8
+        for <users@maven.apache.org>; Tue, 19 Aug 2014 15:14:05 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=jbUO9/cgtGbR/yKQ8/aN6ywaWBdzn3nI+1ZG5+mZxIM=;
+        b=NcUQWLBTvzfql0+m2LWIc7Q7jjiIJOA+GRBJNTFfjgVbWQ2P9kJZL9n6oBClGV2TRj
+         SAl8+q2hnxIrr844SyXfPwlJ1SMpdG+6HssK6SiZYqyYx4np+AzO2Zrwu+gpMdhhjAYA
+         gyuZdm0LMK/MJn1dqBaxqwacOL6CQEvSW0BOetqa+AJQGE05kFR5mOwrzTfgd1wiMtxp
+         w6I3He8IAnRNvQ6KQRVCSlhjX8BdSsVMAH2AuXtmZrOFXXsuRe9mztjF2NtwBTzOwu+J
+         KbqbExjt3UYHwZmxyPzf9W4LXtsOYJ54XLq8WEIO93dz7lypE5K8ozkuYLLqKJiMEonI
+         21ZA==
+MIME-Version: 1.0
+X-Received: by 10.112.24.104 with SMTP id t8mr37346288lbf.46.1408486445332;
+ Tue, 19 Aug 2014 15:14:05 -0700 (PDT)
+Received: by 10.114.20.231 with HTTP; Tue, 19 Aug 2014 15:14:05 -0700 (PDT)
+In-Reply-To: <53F34BEA.6090002@artifact-software.com>
+References: <CAPCjjnGKp2A-iDS+vBvjHTF_FX7RL4DeOMhRadMOCoO5pDMHdQ@mail.gmail.com>
+	<53F04794.6000406@artifact-software.com>
+	<CAPCjjnFpu8wZnGq42sEaR3vv-TwRSAecoDKA9JObWQoas8yJvw@mail.gmail.com>
+	<CAPCUOdFgo-RuYjdH5Xym5UVb_viD2LoPXa0NGw3A+jKAZdXCJw@mail.gmail.com>
+	<CAPCjjnFhni9vrkJYJRxJpvLFZ-wu9oG-oO0f73Cyv4R103COvw@mail.gmail.com>
+	<CAKDUN1vPea=2W4+y41sU6Gt463nrVqN3CL6bJQAmej6owobJ=w@mail.gmail.com>
+	<CADVp3v8c_aT-Ofntot6zyiunboUffVM7NAPPTcRVtTF4vNpwZw@mail.gmail.com>
+	<53F34BEA.6090002@artifact-software.com>
+Date: Tue, 19 Aug 2014 15:14:05 -0700
+Message-ID: <CAPCjjnEtsvCmW2BM7+JAEsfQ1AXEruy92nSz3wrGrL=zzZzaAA@mail.gmail.com>
+Subject: Re: Remove old snapshots under local repository
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113445443ebd4c050102ce9e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113445443ebd4c050102ce9e
+Content-Type: text/plain; charset=UTF-8
+
+After all consideration.  I use Ron's advice and create a internal plugin
+to clean it up.
+
+-D
+
+
+On Tue, Aug 19, 2014 at 6:06 AM, Ron Wheeler <rwheeler@artifact-software.com
+> wrote:
+
+> On 19/08/2014 1:49 AM, Barrie Treloar wrote:
+>
+>> What's wrong with just blowing away ~/.m2/repository ?
+>>
+>> If you have a local Maven Repository Manager it doesn't take very long to
+>> reseed it.
+>> (At least less time in aggregate than thinking of ways to prune snapshot
+>> files in the repository correctly...)
+>>
+>>
+> A few days ago, I suggested just blowing away the organization's
+> sub-folder under .m2/repository.
+> A bit more surgical. Would that work?
+>
+> If you have a corporate repo (and everyone should) it does not take long
+> to repopulate your local repo.
+>
+> Probably a good idea to get rid of the entire local repo every year just
+> get rid of old version that you will never need again.
+> I don't need to carry a 7 year history of log4j on my hard drive.
+>
+>
+> Ron
+>
+> --
+> Ron Wheeler
+> President
+> Artifact Software Inc
+> email: rwheeler@artifact-software.com
+> skype: ronaldmwheeler
+> phone: 866-970-2435, ext 102
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a113445443ebd4c050102ce9e--
+

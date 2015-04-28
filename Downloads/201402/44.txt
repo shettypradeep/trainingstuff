@@ -1,0 +1,114 @@
+From users-return-135568-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 19 15:12:43 2014
+Return-Path: <users-return-135568-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B5C4110DDC
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 19 Feb 2014 15:12:43 +0000 (UTC)
+Received: (qmail 23561 invoked by uid 500); 19 Feb 2014 15:12:38 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 23380 invoked by uid 500); 19 Feb 2014 15:12:33 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 23372 invoked by uid 99); 19 Feb 2014 15:12:31 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Feb 2014 15:12:31 +0000
+X-ASF-Spam-Status: No, hits=-0.1 required=5.0
+	tests=FSL_NEW_HELO_USER,RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ron.bets@oracle.com designates 156.151.31.81 as permitted sender)
+Received: from [156.151.31.81] (HELO userp1040.oracle.com) (156.151.31.81)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Feb 2014 15:12:26 +0000
+Received: from acsinet22.oracle.com (acsinet22.oracle.com [141.146.126.238])
+	by userp1040.oracle.com (Sentrion-MTA-4.3.2/Sentrion-MTA-4.3.2) with ESMTP id s1JFC49C009893
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK)
+	for <users@maven.apache.org>; Wed, 19 Feb 2014 15:12:05 GMT
+Received: from userz7021.oracle.com (userz7021.oracle.com [156.151.31.85])
+	by acsinet22.oracle.com (8.14.4+Sun/8.14.4) with ESMTP id s1JFC3Uk012449
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=FAIL)
+	for <users@maven.apache.org>; Wed, 19 Feb 2014 15:12:04 GMT
+Received: from abhmp0013.oracle.com (abhmp0013.oracle.com [141.146.116.19])
+	by userz7021.oracle.com (8.14.4+Sun/8.14.4) with ESMTP id s1JFC3qF001436
+	for <users@maven.apache.org>; Wed, 19 Feb 2014 15:12:03 GMT
+MIME-Version: 1.0
+Message-ID: <da40d1c7-0e34-4a08-99ae-1ed744925a42@default>
+Date: Wed, 19 Feb 2014 07:12:01 -0800 (PST)
+From: Ron Bets <ron.bets@oracle.com>
+Sender: Ron Bets <ron.bets@oracle.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: RE: OutOfMemory exception when using Maven in ant
+References: <d3ba2155-af84-43be-af76-e71208f42dec@default>
+ <CADVp3v-0A117MrxZy4Xn7Jqw6yhw+5G_7nVsfvXt=KH3+AWYUg@mail.gmail.com>
+In-Reply-To: <CADVp3v-0A117MrxZy4Xn7Jqw6yhw+5G_7nVsfvXt=KH3+AWYUg@mail.gmail.com>
+X-Priority: 3
+X-Mailer: Oracle Beehive Extensions for Outlook 2.0.1.8  (707110) [OL
+ 12.0.6680.5000 (x86)]
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+X-Source-IP: acsinet22.oracle.com [141.146.126.238]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Thanks,
+
+Regarding parameters for the ant tasks, I have looked at the docs on the Ma=
+ven site.  Examples but no reference (if the examples show all there is, th=
+en that's fine - I can always cruise through the sources as well).
+
+The full migration to Maven is underway but it'll be a few months before we=
+'re ready to turn ant off altogether, I think.
+
+Cheers,
+Ron
+
+-----Original Message-----
+From: Barrie Treloar [mailto:baerrach@gmail.com]=20
+Sent: February-18-14 11:18 PM
+To: Maven Users List
+Subject: Re: OutOfMemory exception when using Maven in ant
+
+On 19 February 2014 13:07, Ron Bets <ron.bets@oracle.com> wrote:
+> Thanks for the speedy response.
+>
+> I have run across these types of memory exceptions in the past, but given=
+ that the build had been working correctly until I added the Maven <artifac=
+t:dependencies/> bit, I naturally jumped to the conclusion that there was s=
+omething odd going on.  This was exacerbated when the ant error log actuall=
+y identified the <artifact:dependencies/> as the offending line in the buil=
+d file.  I'll play around with the memory parameters and see what happens.
+>
+> Cheers,
+> Ron
+>
+> Btw, is there a reference for all parameters supported by=20
+> <artifact:dependencies/>?  I have
+
+You mean this one?
+http://maven.apache.org/ant-tasks/examples/dependencies.html
+
+
+I'm afraid the two people who have answered your question really dont use A=
+nt, so we dont know much about what you are doing.
+We use Maven natively rather than Ant with Maven dependency stuff.
+
+I'd recommend looking at the freely available books at http://maven.apache.=
+org/articles.html and seeing whether you want to take the full plunge and m=
+igrate to Maven completely.
+Ant has its place, but for managing the Java software development lifecycle=
+ I'm obviously biased towards Maven :)
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

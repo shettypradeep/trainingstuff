@@ -1,0 +1,82 @@
+From users-return-137966-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Dec  9 14:58:04 2014
+Return-Path: <users-return-137966-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D6ACC1018B
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  9 Dec 2014 14:58:04 +0000 (UTC)
+Received: (qmail 11604 invoked by uid 500); 9 Dec 2014 14:58:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 11517 invoked by uid 500); 9 Dec 2014 14:58:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 11506 invoked by uid 99); 9 Dec 2014 14:58:01 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Dec 2014 14:58:01 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of adriennolarsen@hotmail.fr designates 157.55.0.207 as permitted sender)
+Received: from [157.55.0.207] (HELO DUB004-OMC1S8.hotmail.com) (157.55.0.207)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Dec 2014 14:57:34 +0000
+Received: from DUB131-DS6 ([157.55.0.238]) by DUB004-OMC1S8.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.22751);
+	 Tue, 9 Dec 2014 06:57:12 -0800
+X-TMN: [1xJ1k8Zie9lQreKePjJLIQbOBBxBJvDh]
+X-Originating-Email: [adriennolarsen@hotmail.fr]
+Message-ID: <DUB131-DS65DE5506BC8BD7D1A646AA9650@phx.gbl>
+From: =?iso-8859-1?Q?Adrien_Ruffi=E9?= <adriennolarsen@hotmail.fr>
+To: <users@maven.apache.org>
+Subject: Exclude unit test by parameter
+Date: Tue, 9 Dec 2014 16:01:11 +0100
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0022_01D013C9.5A6A6220"
+X-Mailer: Microsoft Outlook 14.0
+Thread-Index: AdATwJal+3f1aM6kTHSUZl9Ur83fBQ==
+Content-Language: fr
+X-OriginalArrivalTime: 09 Dec 2014 14:57:12.0504 (UTC) FILETIME=[69E57B80:01D013C0]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+------=_NextPart_000_0022_01D013C9.5A6A6220
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hello all,
+
+=20
+
+I Have several test packages, for example com.myapp.test1, =
+com.myapp.test2,
+com.myapp.test3
+
+How I can exclude by parameter one package ? for example:
+
+=20
+
+mvn test =96DskipTests=3Dcom.myapp.test1
+
+Or
+
+mvn test =96Dtest.exclude=3Dcom.myapp.test2
+
+=20
+
+I have try both, and no success =85
+
+=20
+
+Thank and best regards.
+
+=20
+
+Adrien Ruffi=E9
+
+
+------=_NextPart_000_0022_01D013C9.5A6A6220--
+

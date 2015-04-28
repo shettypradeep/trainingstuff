@@ -1,0 +1,92 @@
+From users-return-135198-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Jan 19 16:00:13 2014
+Return-Path: <users-return-135198-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 47C5210155
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 19 Jan 2014 16:00:13 +0000 (UTC)
+Received: (qmail 16413 invoked by uid 500); 19 Jan 2014 16:00:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 16249 invoked by uid 500); 19 Jan 2014 16:00:08 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 16241 invoked by uid 99); 19 Jan 2014 16:00:08 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 19 Jan 2014 16:00:08 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of anders.g.hammar@gmail.com designates 74.125.82.48 as permitted sender)
+Received: from [74.125.82.48] (HELO mail-wg0-f48.google.com) (74.125.82.48)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 19 Jan 2014 16:00:04 +0000
+Received: by mail-wg0-f48.google.com with SMTP id x13so6033595wgg.15
+        for <users@maven.apache.org>; Sun, 19 Jan 2014 07:59:42 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=56pf+5ptf/w/bWh0+EbMo9M5oNwohmuyQC2Z58dT468=;
+        b=BNG8Yeq7gKmUoy73hosX66M1F7/UXMQOgE7r6G+ajNHcjDgd0OzHclzBpZshYqJk5+
+         y1tAs36qfOnktZ6045gvkRKtVEtfDRLpNCCM2B+wfrsZf+AtxIEJzyEoFziC7AUpZlhy
+         D6TfdEGF4+KZTgf7L108KVoegcXuHGv7N9BGPwioV+5YOZeykyV7WygKi3i73I76bKOF
+         rPAlEt+fqJAEtXhVTPXxiRYuqtBsq4JE5+Fqjp8JfRAT8Axee45WFJy75QyXN9zmF5cZ
+         mPgUA/udUR6Gr//xvkkhcdeEOnxyg0/kN8fA2dYPY6HZ3z2MC8YTbBsVL9rzDdKVffli
+         ZU2Q==
+MIME-Version: 1.0
+X-Received: by 10.180.211.141 with SMTP id nc13mr10433952wic.1.1390147182929;
+ Sun, 19 Jan 2014 07:59:42 -0800 (PST)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.137.38 with HTTP; Sun, 19 Jan 2014 07:59:42 -0800 (PST)
+In-Reply-To: <95BFD26B-850F-4C59-BDF6-1F65E2C11ED9@sharp.fm>
+References: <95BFD26B-850F-4C59-BDF6-1F65E2C11ED9@sharp.fm>
+Date: Sun, 19 Jan 2014 16:59:42 +0100
+X-Google-Sender-Auth: iFtsp-RAL4qihOrh4UgtbzFyqAo
+Message-ID: <CAKDUN1vZy-xEiznhofJAwxR0KZg2uHYdZmcdgO4ddeEZ3YqGvQ@mail.gmail.com>
+Subject: Re: Property that indicates a snapshot or release build?
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c3709c062b9b04f054dd11
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c3709c062b9b04f054dd11
+Content-Type: text/plain; charset=ISO-8859-1
+
+Yes, there is methods isSnapshot() and isRelease() if you get the Artifact
+object. See [1].
+
+/Anders
+
+[1] http://maven.apache.org/ref/3.1.1/maven-artifact/apidocs/index.html
+
+
+On Sun, Jan 19, 2014 at 4:43 PM, Graham Leggett <minfrin@sharp.fm> wrote:
+
+> Hi all,
+>
+> Does there exist a property in maven that will indicate in some fashion
+> whether the build is a snapshot build or a release build?
+>
+> I am aware that "-SNAPSHOT" appears in the version number, but that won't
+> do. I'm after a variable that has one of two discrete values, one
+> predictable value if it is a snapshot and another predictable value when it
+> is a release. Does anything like this exist?
+>
+> Regards,
+> Graham
+> --
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a11c3709c062b9b04f054dd11--
+

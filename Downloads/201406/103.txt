@@ -1,0 +1,213 @@
+From users-return-136638-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jun 24 14:39:27 2014
+Return-Path: <users-return-136638-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D9F181162F
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 24 Jun 2014 14:39:27 +0000 (UTC)
+Received: (qmail 32424 invoked by uid 500); 24 Jun 2014 14:39:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 32345 invoked by uid 500); 24 Jun 2014 14:39:25 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 32332 invoked by uid 99); 24 Jun 2014 14:39:25 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 24 Jun 2014 14:39:25 +0000
+X-ASF-Spam-Status: No, hits=2.5 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.212.173 as permitted sender)
+Received: from [209.85.212.173] (HELO mail-wi0-f173.google.com) (209.85.212.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 24 Jun 2014 14:39:23 +0000
+Received: by mail-wi0-f173.google.com with SMTP id cc10so6066938wib.12
+        for <users@maven.apache.org>; Tue, 24 Jun 2014 07:38:59 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=TYYXg1fbOJSNDIZcL5wjFEGrC//GVx2D93LGpmIFccs=;
+        b=j/lfGmdFkwJ/NI5LQ5t+6mX2pfc5BabmE06B6dAw75r1twQsMEJVnyd7b9y9RNAhU0
+         47nXezkb/5R7nqiOAd9QZvlKX8Dxu1veHSB94bydw1GSuCRqKJN1wVHo8lPVQgqIeZk1
+         9yzclq3ecki4cdm4GlypvQBl/326kGJDHa3YQ/xrzWAX4EDLDi/H5uFtOIMm1BhFvOJl
+         MAwg2QSKQBg/DSQcoFevhsjB2xRSDB2k9VftQI6+Ss8N0LbpO7qCTeXM+tABh9vGUG1P
+         w70W/7AH7Bw1o0buis/Th0IlVJ311eITU07AFqMiBl4s9buRTb76i6bDU/7IQkx4av36
+         MnCQ==
+MIME-Version: 1.0
+X-Received: by 10.180.183.167 with SMTP id en7mr34798463wic.6.1403620736643;
+ Tue, 24 Jun 2014 07:38:56 -0700 (PDT)
+Received: by 10.194.134.8 with HTTP; Tue, 24 Jun 2014 07:38:56 -0700 (PDT)
+In-Reply-To: <3B7A7BDFFD286F49A19A5B35D26E08FB0140ED09@srvmail2.aurenz.local>
+References: <3B7A7BDFFD286F49A19A5B35D26E08FB0140EA5D@srvmail2.aurenz.local>
+	<3B7A7BDFFD286F49A19A5B35D26E08FB0140EA61@srvmail2.aurenz.local>
+	<3B7A7BDFFD286F49A19A5B35D26E08FB0140ECE0@srvmail2.aurenz.local>
+	<CADN69y=BHw-72TY9yN64FOFDSFL=kpxE3_fASBeqhNzrfR=+Yw@mail.gmail.com>
+	<3B7A7BDFFD286F49A19A5B35D26E08FB0140ED09@srvmail2.aurenz.local>
+Date: Tue, 24 Jun 2014 15:38:56 +0100
+Message-ID: <CA+nPnMxbPCET=o0KHZV+tKt=gsO4qgzHe-=Q3jxXxA60_uozww@mail.gmail.com>
+Subject: Re: site-deploy using wagon-ssh: User input needed
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c239d468399f04fc95ebde
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c239d468399f04fc95ebde
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+That's the Jenkins home directory not the user home direcory of the user
+account that jenkins is running as
+
+
+On 24 June 2014 15:18, Hohl, Gerrit <g.hohl@aurenz.de> wrote:
+
+> Hello Curtis,
+>
+> thanks for your reply.
+>
+> The Jenkins configuration says that C:\.jenkins is the home directory.
+> So I created a ".ssh" folder there and places the know_hosts in it.
+> But it didn't work.
+>
+> I also started the build enabling the verbose output, like you wrote.
+> That is really very verbose. Also the build process stopped very early, I
+> got a 7 GB log file. ;)
+> Unfortunately I don't see any path there. Only that the uses the proper I=
+D
+> of the server and also uses the credentials which have been configured fo=
+r
+> it. That's all.
+>
+> I go for your suggestion about creating an account at codehaus. I will
+> create a bug ticket there.
+>
+> Thanks again for your mail. :)
+>
+> Regards,
+> Gerrit
+>
+>
+> -----Urspr=C3=BCngliche Nachricht-----
+> Von: ctrueden.wisc@gmail.com [mailto:ctrueden.wisc@gmail.com] Im Auftrag
+> von Curtis Rueden
+> Gesendet: Dienstag, 24. Juni 2014 14:36
+> An: Maven Users List
+> Betreff: Re: site-deploy using wagon-ssh: User input needed
+>
+> Hi Gerrit,
+>
+> > I see in the Jenkins Build log that wagon-ssh keeps asking if it
+> > should trust the connection by showing the SSH RSA fingerprint.
+>
+> Maybe your Jenkins's %USER_HOME% is simply not set as you expect?
+> Apparently [2], Jenkins on Windows defaults to
+> C:\Users\[MY_USER]\.jenkins, so maybe you need to put your known_hosts in
+> C:\Users\[MY_USER]\.jenkins\.ssh\known_hosts in order for it to run
+> properly with Jenkins?
+>
+> > The easiest way would be if I would be able to specify the path of the
+> > known_hosts file in the settings.xml.
+>
+> Looking at the relevant maven-wagon source [1], it is clear there is a
+> bunch of logic for managing a KnownHostsProvider (which controls where th=
+e
+> known_hosts data comes from). So I would be very surprised if this was no=
+t
+> exposed at the Maven level -- i.e., if there was not a way to configure
+> this in the POM somehow.
+>
+> > Unfortunately wagon-ssh also doesn't show at which location it tries
+> > to open the known_hosts file.
+>
+> Did you try with "mvn -X"? That is verbose/debug mode. If it still doesn'=
+t
+> echo the path, please file a JIRA issue for it:
+> https://jira.codehaus.org/browse/WAGON (create account at
+> https://xircles.codehaus.org/signup)
+>
+> > Does no one of you use that wagon-ssh?
+>
+> My group uses wagon-webdav-jackrabbit for artifact deploys, and we aren't
+> deploying our Maven sites properly yet.
+>
+> Regards,
+> Curtis
+>
+> [1]
+>
+> https://github.com/apache/maven-wagon/blob/41336732524e33fa3fdc99f07b6add=
+013b23dfa7/wagon-providers/wagon-ssh/src/main/java/org/apache/maven/wagon/p=
+roviders/ssh/jsch/AbstractJschWagon.java#L89
+>
+> [2] http://stackoverflow.com/q/12689139
+>
+>
+> On Tue, Jun 24, 2014 at 6:42 AM, Hohl, Gerrit <g.hohl@aurenz.de> wrote:
+>
+> > Hello everyone,
+> >
+> > I still having this problem. Does no one of you use that wagon-ssh?
+> > Don't you upload the Maven report on a web server? Or do you use
+> > simply other methods? If there is a better method I would be happy to
+> > know that. :)
+> >
+> > Regards,
+> > Gerrit
+> >
+> >
+> > -----Urspr=C3=BCngliche Nachricht-----
+> > Von: Hohl, Gerrit [mailto:g.hohl@aurenz.de]
+> > Gesendet: Donnerstag, 12. Juni 2014 17:40
+> > An: Maven Users List
+> > Betreff: AW: site-deploy using wagon-ssh: User input needed
+> >
+> > Hello everyone, :)
+> >
+> > okay, I tried a different approach:
+> >
+> > Instead of that <configuration> section in the settings.xml I copied
+> > my local know_hosts file from
+> >         C:\Users\[MY_USER]\.ssh\known_hosts
+> > to the server:
+> >         C:\Windows\system32\config\.ssh\known_hosts
+> > I read in the Internet that this folder is the folder of the system
+> > account which is used e.g. by Tomcat.
+> > And as Jenkins and Maven are executed by Tomcat, they should work on
+> > the same folder.
+> >
+> > Unfortunately I didn't work: I see in the Jenkins Build log that
+> > wagon-ssh keeps asking if it should trust the connection by showing
+> > the SSH RSA fingerprint. Unfortunately wagon-ssh also doesn't show at
+> > which location it tries to open the known_hosts file.
+> >
+> > The easiest way would be if I would be able to specify the path of the
+> > known_hosts file in the settings.xml. But I haven't found anything
+> > about a configuration parameter like that.
+> >
+> > Regards,
+> > Gerrit
+> >
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+--001a11c239d468399f04fc95ebde--
+

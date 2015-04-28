@@ -1,0 +1,127 @@
+From users-return-135653-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb 28 11:53:55 2014
+Return-Path: <users-return-135653-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EB3FA10247
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 28 Feb 2014 11:53:55 +0000 (UTC)
+Received: (qmail 24806 invoked by uid 500); 28 Feb 2014 11:53:40 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 24614 invoked by uid 500); 28 Feb 2014 11:53:37 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 24228 invoked by uid 99); 28 Feb 2014 11:53:30 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Feb 2014 11:53:30 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [88.116.248.50] (HELO sartre.xss.co.at) (88.116.248.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Feb 2014 11:53:26 +0000
+Received: from goethe.intern.xss.co.at (goethe.intern.xss.co.at [192.168.162.10])
+	by sartre.xss.co.at (8.14.3/8.14.3) with ESMTP id s1SBr4HZ019230
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK)
+	for <users@maven.apache.org>; Fri, 28 Feb 2014 12:53:04 +0100
+Received: from linux-du93.site ([10.168.162.10])
+	by goethe.intern.xss.co.at (8.13.8/8.13.8) with ESMTP id s1SBr3KR028061
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES128-SHA bits=128 verify=NO)
+	for <users@maven.apache.org>; Fri, 28 Feb 2014 12:53:04 +0100
+Date: Fri, 28 Feb 2014 12:53:00 +0100
+From: Martin Hoeller <martin@xss.co.at>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Maven copies 3 jars in lib folder (skinny war) for no reason
+Message-ID: <20140228125300.639cda52@linux-du93.site>
+In-Reply-To: <1393581801993-5786736.post@n5.nabble.com>
+References: <1393581801993-5786736.post@n5.nabble.com>
+X-Mailer: Claws Mail 3.7.10 (GTK+ 2.24.7; x86_64-suse-linux-gnu)
+Mime-Version: 1.0
+Content-Type: multipart/signed; micalg=PGP-SHA1;
+ boundary="Sig_/f5j7L8+iQCV4mcrJL_46gnq"; protocol="application/pgp-signature"
+X-Virus-Scanned: clamav-milter 0.98 at mail.intern.xss.co.at
+X-Virus-Status: Clean
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Sig_/f5j7L8+iQCV4mcrJL_46gnq
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: quoted-printable
+
+Hi!
+
+This topic was just discussed yesterday:
+http://maven.40175.n5.nabble.com/Are-skinny-WARs-still-recommended-td578662=
+6.html
+
+On 28 Feb 2014, poroto20 wrote:
+
+> I have one EAR project and I am trying to have a skinny war. It seems to =
+be
+> working ok but for some reason it keeps copying 3 dependencies into war/l=
+ib
+> folder, which are commons-logging-1.0.4.jar, commons-codec-1.4.jar and
+> jboss-seam-2.2.1.Final.jar.
+
+The only dependencies to these artifacts seem to come from the WAR. So
+the m-ear-p needs not to extract them to the EAR.
+
+> I the EAR's pom I added `<skinnyWars>true</skinnyWars>`.
+
+That's correct!
+
+> I made sure I added
+> exclusions for those three jars, or they are `scope=3Dprovided`. I also a=
+dded
+> `<packagingExcludes>**/*.jar</packagingExcludes>` in the WAR's pom file.
+
+You don't need to do anything in the WAR. The m-ear-p repackages the WAR,
+so it's entirely the responsibility of the m-ear-p.
+
+> I really can't understand maven's logic to create the war (or to copy tho=
+se
+> jars).
+
+The m-ear-p tries to extract all JARs that are also referenced from
+outside the WAR to the EARs lib folder, so they can be reused by other
+modules in the EAR.
+
+Artifacts that are only used by the WAR should remain in the WAR.
+
+Artifacts that are JSF libraries (like RichFaces, OmniFaces, etc.) should
+also stay in the WAR because otherwise JSF won't scan them for
+initialization. See the link above for more details.
+
+> 1) When I run maven only for the WAR project, the WAR has no jars in /lib
+> folder
+
+Yes, but that's something completely different! The WAR will get
+re-packages by the m-ear-p if you configure skinnyWars for the m-ear-p.
+
+> 2) But when I run maven for all the projects (including the EAR) it copies
+> those 3 jars in the war file.
+>=20
+> What am I doing wrong? Why is different the WAR created with maven inside
+> the WAR project then for all projects (including EAR)? Please help
+
+hth,
+- martin
+
+--Sig_/f5j7L8+iQCV4mcrJL_46gnq
+Content-Type: application/pgp-signature; name=signature.asc
+Content-Disposition: attachment; filename=signature.asc
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.18 (GNU/Linux)
+
+iEYEARECAAYFAlMQeJ8ACgkQYJf22JPx7tmF9gCgoD38Rh5XrSo8nV9Qt4s0HCIp
+QhwAnjnOMFw9kGdI2GwVDppHHS9vhNDk
+=+jCt
+-----END PGP SIGNATURE-----
+
+--Sig_/f5j7L8+iQCV4mcrJL_46gnq--
+

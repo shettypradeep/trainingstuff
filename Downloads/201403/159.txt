@@ -1,0 +1,85 @@
+From users-return-135689-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar  5 15:13:52 2014
+Return-Path: <users-return-135689-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C40F110CC3
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  5 Mar 2014 15:13:52 +0000 (UTC)
+Received: (qmail 43488 invoked by uid 500); 5 Mar 2014 15:13:47 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 43332 invoked by uid 500); 5 Mar 2014 15:13:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 43270 invoked by uid 99); 5 Mar 2014 15:13:46 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Mar 2014 15:13:46 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of sascha.vogt@gmail.com designates 74.125.83.44 as permitted sender)
+Received: from [74.125.83.44] (HELO mail-ee0-f44.google.com) (74.125.83.44)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Mar 2014 15:13:39 +0000
+Received: by mail-ee0-f44.google.com with SMTP id e49so529888eek.17
+        for <users@maven.apache.org>; Wed, 05 Mar 2014 07:13:19 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type:content-transfer-encoding;
+        bh=n6lieWD2Guo2Aru4tZO1VM3SiqwsKaSXnVUs9jyRgKU=;
+        b=PyeABLBuagsqVO37+mVMNMH1z3Jpigi9xg++BXDompI1Ty7nxXHXONy9L66pAEr2Zo
+         vqIUezYg+3mZAcR/DJi6RH3ycUOLnPga7f9MlqUiWF0zSYdr+Hp9CGUGdkQXYW8Nr/VM
+         S7UfsERqGUrg6ToGo+FunIX468nlG/h5YsH8TIp8BxFxOhET1ccLAewqevL/viUOsfMC
+         zhpMrzzIw/eNuuZmARgawsu/yYLRKjrM7jrBO75TsXOj4neNvaQA55d0zbC3HPrr59mR
+         MhmouK4WTBwnsYevg0dk0Vdbf5K1PbMSMezkXn10OpCmsubT9pYZmYyJQqUWVjwlWzw8
+         IQeA==
+X-Received: by 10.14.205.3 with SMTP id i3mr6242193eeo.23.1394032399319;
+        Wed, 05 Mar 2014 07:13:19 -0800 (PST)
+Received: from [0.0.0.0] (static.81.32.76.144.clients.your-server.de. [144.76.32.81])
+        by mx.google.com with ESMTPSA id i47sm10084722eeg.6.2014.03.05.07.13.17
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 05 Mar 2014 07:13:18 -0800 (PST)
+Message-ID: <53173F0C.5070901@gmail.com>
+Date: Wed, 05 Mar 2014 16:13:16 +0100
+From: Sascha Vogt <sascha.vogt@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Status of MRELEASE-835?
+References: <OFD3817A90.982AA646-ONC1257C92.003F22DE-C1257C92.004FA278@vkb.de>
+In-Reply-To: <OFD3817A90.982AA646-ONC1257C92.003F22DE-C1257C92.004FA278@vkb.de>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Thorsten,
+
+Am 05.03.2014 15:29, schrieb Thorsten Heit:
+> [...] 
+> I just wanted to know what the actual status is? Is there no need for such 
+> a IMHO usable and CI- and/or build-server friendly feature? Is there 
+> anything missing in the issue/patch/description/...?
+> At least a comment such as "I'll look into that" would be nice :-)
+
+>From my POV I can clearly say that this IS something I would like to see
+it in the release plugin :)
+
+You can "work around" it by having a pre-step in the CI / build-server
+using the http://mojo.codehaus.org/versions-maven-plugin/ plugin
+(versions:use-releases / use-next-releases or use-latest-releases). All
+a bit clumsy, but you can make it work.
+
+Greetings
+-Sascha-
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

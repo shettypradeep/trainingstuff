@@ -1,0 +1,69 @@
+From users-return-137445-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Oct  3 00:24:46 2014
+Return-Path: <users-return-137445-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 12C5C17B94
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  3 Oct 2014 00:24:46 +0000 (UTC)
+Received: (qmail 65387 invoked by uid 500); 3 Oct 2014 00:24:44 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 65305 invoked by uid 500); 3 Oct 2014 00:24:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 65288 invoked by uid 99); 3 Oct 2014 00:24:43 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Oct 2014 00:24:43 +0000
+X-ASF-Spam-Status: No, hits=0.7 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [64.142.111.80] (HELO c.mail.sonic.net) (64.142.111.80)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Oct 2014 00:24:37 +0000
+Received: from [192.168.0.13] (64-151-7-213.static.everestkc.net [64.151.7.213])
+	(authenticated bits=0)
+	by c.mail.sonic.net (8.14.9/8.14.9) with ESMTP id s930ODii015366
+	(version=TLSv1/SSLv3 cipher=AES128-SHA bits=128 verify=NOT)
+	for <users@maven.apache.org>; Thu, 2 Oct 2014 17:24:14 -0700
+Content-Type: text/plain; charset=windows-1252
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.6\))
+Subject: Re: Don't want to repeat plugin version for both build and reporting
+From: Kathryn Huxtable <kathryn@kathrynhuxtable.org>
+In-Reply-To: <CABLGb9xhKb3CpAa3HiByD+QLrpzh-qoEvyEtbb4N4eGe+6L93Q@mail.gmail.com>
+Date: Thu, 2 Oct 2014 19:24:12 -0500
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <22D448DD-2765-4B3C-951A-75CFE9E657DE@kathrynhuxtable.org>
+References: <CABLGb9xhKb3CpAa3HiByD+QLrpzh-qoEvyEtbb4N4eGe+6L93Q@mail.gmail.com>
+To: Maven Users List <users@maven.apache.org>
+X-Mailer: Apple Mail (2.1878.6)
+X-Sonic-CAuth: UmFuZG9tSVa2PL9AYNip6igv+OKtJwcCDnrrva6MiPkKxygLWUmUo0rGzVxwpzWB9U7oiOR5iyoHADF9ZSk7m9tOrw8cknBQ
+X-Sonic-ID: C;3OQNmpNK5BGnVIR6lZB5Vg== M;esF5mpNK5BGnVIR6lZB5Vg==
+X-Sonic-Spam-Details: 0.0/5.0 by cerberusd
+X-Virus-Checked: Checked by ClamAV on apache.org
+X-Old-Spam-Flag: No
+
+I=92ve always used <properties>, but would it work to use =
+<buildDependencies>? -K
+
+On Oct 2, 2014, at 7:02 PM, Paul Benedict <pbenedict@apache.org> wrote:
+
+> I use the maven-javadoc-plugin in both <build> and <reporting>. I =
+don't
+> want to fall back to <properties> to share the plugin version. Is =
+there a
+> better way than using <properties>?
+>=20
+> Cheers,
+> Paul
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

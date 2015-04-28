@@ -1,0 +1,84 @@
+From users-return-136122-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Apr 10 15:41:28 2014
+Return-Path: <users-return-136122-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 207F61127A
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 10 Apr 2014 15:41:28 +0000 (UTC)
+Received: (qmail 10426 invoked by uid 500); 10 Apr 2014 15:41:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 9537 invoked by uid 500); 10 Apr 2014 15:41:22 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9528 invoked by uid 99); 10 Apr 2014 15:41:21 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 10 Apr 2014 15:41:21 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [134.68.171.23] (HELO mhw.ulib.iupui.edu) (134.68.171.23)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 10 Apr 2014 15:41:16 +0000
+Received: from mwood by mhw.ulib.iupui.edu with local (Exim 4.80.1)
+	(envelope-from <mwood@IUPUI.Edu>)
+	id 1WYH5x-0000bS-Ke
+	for users@maven.apache.org; Thu, 10 Apr 2014 11:40:53 -0400
+Date: Thu, 10 Apr 2014 11:40:53 -0400
+From: "Mark H. Wood" <mwood@IUPUI.Edu>
+To: users@maven.apache.org
+Subject: Re: Hot deployment using jetty 8 and maven
+Message-ID: <20140410154053.GF9865@IUPUI.Edu>
+Mail-Followup-To: users@maven.apache.org
+References: <1397129785627-5790839.post@n5.nabble.com>
+ <CAEayHENv5N+fPxbbgyVdNYQHu_jjsQSenoLQVDqHmZNbXOpzFg@mail.gmail.com>
+ <1397134307645-5790843.post@n5.nabble.com>
+ <CALy+7UnJoufzW1yJJ+Ei3tP_dboWv9Son-WQMrBWwYNG_TntDA@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha256;
+	protocol="application/pgp-signature"; boundary="ZARJHfwaSJQLOEUz"
+Content-Disposition: inline
+In-Reply-To: <CALy+7UnJoufzW1yJJ+Ei3tP_dboWv9Son-WQMrBWwYNG_TntDA@mail.gmail.com>
+User-Agent: Mutt/1.5.22 (2013-10-16)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--ZARJHfwaSJQLOEUz
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+On Thu, Apr 10, 2014 at 09:24:31AM -0500, Wayne Fay wrote:
+> > However, it would be great to execute "mvn process-classes" automatical=
+ly
+> > anytime maven sees there have been source files changed.
+>=20
+> This is just not a feature that Maven natively supports. You can get
+> similar functionality out of your IDE. Or maybe your IDE can use an
+> "on save" trigger to kick Maven to run process-classes?
+
+If it was mine, I'd check the changes into an SCM, which I'd have
+monitored by something like Jenkins.  I'd want all those bits anyway.
+
+--=20
+Mark H. Wood, Lead System Programmer   mwood@IUPUI.Edu
+Machines should not be friendly.  Machines should be obedient.
+
+--ZARJHfwaSJQLOEUz
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.22 (GNU/Linux)
+
+iEYEAREIAAYFAlNGu4UACgkQs/NR4JuTKG/cdgCgl3VjibRioc6vOQj2ekb27+7W
+UMwAn36F6gw3TIeznPhlcuK0UtA6GRp1
+=aQGG
+-----END PGP SIGNATURE-----
+
+--ZARJHfwaSJQLOEUz--
+

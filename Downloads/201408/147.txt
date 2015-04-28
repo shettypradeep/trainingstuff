@@ -1,0 +1,154 @@
+From users-return-137009-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Aug 13 10:53:26 2014
+Return-Path: <users-return-137009-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 926F8119BF
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 13 Aug 2014 10:53:26 +0000 (UTC)
+Received: (qmail 36841 invoked by uid 500); 13 Aug 2014 10:53:22 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 36755 invoked by uid 500); 13 Aug 2014 10:53:22 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 36739 invoked by uid 99); 13 Aug 2014 10:53:22 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 13 Aug 2014 10:53:22 +0000
+X-ASF-Spam-Status: No, hits=-5.0 required=5.0
+	tests=RCVD_IN_DNSWL_HI,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of jan.sievers@sap.com designates 155.56.66.99 as permitted sender)
+Received: from [155.56.66.99] (HELO smtpgw.sap-ag.de) (155.56.66.99)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 13 Aug 2014 10:53:18 +0000
+From: "Sievers, Jan" <jan.sievers@sap.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: RE: Testing Maven 3.2.3
+Thread-Topic: Testing Maven 3.2.3
+Thread-Index: AQHPtriIceQTFm6PaEWPiyqQl6ymbZvOWtug
+Date: Wed, 13 Aug 2014 10:52:54 +0000
+Message-ID: <F8F18CC0DECD384BAC6FBAD1A7C49A489953FBA2@DEWDFEMB18B.global.corp.sap>
+References: <6BF365F5-3D65-4592-B407-2DFE1D5D1436@takari.io>
+ <A81A759E-1608-4CD3-BC0C-34A86B72C48B@maven.org>
+In-Reply-To: <A81A759E-1608-4CD3-BC0C-34A86B72C48B@maven.org>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [10.21.40.112]
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I can confirm https access to https://repo.maven.apache.org/maven2 works fi=
+ne with staged maven 3.2.3 when building Tycho demo project
+
+http://git.eclipse.org/c/tycho/org.eclipse.tycho-demo.git/tree/itp04-rcp=20
+
+from behind an http(s) proxy.
+
+Regards,
+Jan
+
+-----Original Message-----
+From: Jason van Zyl [mailto:jason@takari.io]=20
+Sent: Mittwoch, 13. August 2014 07:36
+To: Maven Users List
+Subject: Testing Maven 3.2.3
+
+Hi,
+
+We have staged Maven 3.2.3 and I'd ask that users try and test this version=
+ because we have changed to using the HTTPS connection to Maven Central by =
+default. The information for the release can be found below. I encourage us=
+ers to give this release a spin before we actually release it to ensure the=
+ HTTPS connection is working for everyone.
+
+Begin forwarded message:
+
+> From: Jason van Zyl <jason@takari.io>
+> Subject: [VOTE] Maven 3.2.3 Release
+> Date: August 11, 2014 at 2:19:34 PM PDT
+> To: Maven Developers List <dev@maven.apache.org>
+> Reply-To: "Maven Developers List" <dev@maven.apache.org>
+>=20
+> Hi,
+>=20
+> Time to release Maven 3.2.3!
+>=20
+> This release contains the important change of switching to HTTPS transpor=
+t by default! Please test this release with your builds!
+>=20
+> Here is a link to Jira with 9 issues resolved:
+> https://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=3D10500&versi=
+on=3D20443
+>=20
+> Staging repo:
+> https://repository.apache.org/content/repositories/maven-1046/
+>=20
+> The distributable binaries and sources for testing can be found here:
+> https://repository.apache.org/content/repositories/maven-1046/org/apache/=
+maven/apache-maven/3.2.3/
+>=20
+> Specifically the zip, tarball, and source archives can be found here:
+> https://repository.apache.org/content/repositories/maven-1046/org/apache/=
+maven/apache-maven/3.2.3/apache-maven-3.2.3-bin.zip
+> https://repository.apache.org/content/repositories/maven-1046/org/apache/=
+maven/apache-maven/3.2.3/apache-maven-3.2.3-bin.tar.gz
+> https://repository.apache.org/content/repositories/maven-1046/org/apache/=
+maven/apache-maven/3.2.3/apache-maven-3.2.3-src.zip
+> https://repository.apache.org/content/repositories/maven-1046/org/apache/=
+maven/apache-maven/3.2.3/apache-maven-3.2.3-src.tar.gz
+>=20
+> Source release checksum(s):
+> apache-maven-3.2.3-src.zip sha1: 8607b9922d21078133f31ed8523ebae90a871d1f
+>=20
+> Staging site:
+> http://people.apache.org/~jvanzyl/maven-3.2.3/
+>=20
+> Vote open for 72 hours.
+>=20
+> [ ] +1
+> [ ] +0
+> [ ] -1
+>=20
+> Thanks,
+>=20
+> The Maven Team
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+>=20
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+http://twitter.com/takari_io
+---------------------------------------------------------
+
+In short, man creates for himself a new religion of a rational
+and technical order to justify his work and to be justified in it.
+
+  -- Jacques Ellul, The Technological Society
+
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

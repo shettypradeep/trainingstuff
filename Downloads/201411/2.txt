@@ -1,0 +1,104 @@
+From users-return-137758-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Nov 17 11:08:26 2014
+Return-Path: <users-return-137758-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A91F5C433
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 17 Nov 2014 11:08:26 +0000 (UTC)
+Received: (qmail 99601 invoked by uid 500); 17 Nov 2014 11:08:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99505 invoked by uid 500); 17 Nov 2014 11:08:25 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99489 invoked by uid 99); 17 Nov 2014 11:08:25 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 17 Nov 2014 11:08:25 +0000
+Received: from localhost (HELO mail-la0-f44.google.com) (127.0.0.1)
+  (smtp-auth username olamy, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Mon, 17 Nov 2014 11:08:24 +0000
+Received: by mail-la0-f44.google.com with SMTP id hz20so8005874lab.3
+        for <users@maven.apache.org>; Mon, 17 Nov 2014 03:08:23 -0800 (PST)
+X-Received: by 10.152.7.229 with SMTP id m5mr26825550laa.32.1416222503163;
+ Mon, 17 Nov 2014 03:08:23 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.25.158.16 with HTTP; Mon, 17 Nov 2014 03:08:03 -0800 (PST)
+In-Reply-To: <CAPJcxA9Mu1=BEm6ZdjxH366NYST_gOUg09G1A=OMmMyM8xjpNQ@mail.gmail.com>
+References: <CAPoyBqQLjSZ9b6CYAdZyeg0SzcMjqpwKptqsaAsSz4HCdm=RBQ@mail.gmail.com>
+ <CAPJcxA9Mu1=BEm6ZdjxH366NYST_gOUg09G1A=OMmMyM8xjpNQ@mail.gmail.com>
+From: Olivier Lamy <olamy@apache.org>
+Date: Mon, 17 Nov 2014 22:08:03 +1100
+Message-ID: <CAPoyBqTUsncfXko-g83JY0DqQpZVjOTvq06+NBPTv2yQSzhdRw@mail.gmail.com>
+Subject: Re: [ANN] Apache Maven Wagon 2.8
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+Pushed in master.
+
+
+On 17 November 2014 19:51, Jeroen Hoek <jeroen@lable.org> wrote:
+> Hello,
+>
+> Maven Wagon 2.7 (and presumably 2.8) fixes a bug in Maven related to
+> client-side SSL certificates by upgrading its dependencies to a newer
+> version of Apache HttpComponents httpclient. This is great, because it
+> is now possible to use Maven with a private artefact repository
+> secured with two-way SSL verification.
+>
+> However Apache Maven itself still depends on Wagon 2.6, at least in
+> the stable release and on its git master. When might there be a stable
+> Maven release depending on Maven Wagon 2.7 or 2.8?
+>
+> 2014-11-17 1:15 GMT+01:00 Olivier Lamy <olamy@apache.org>:
+>> Hi,
+>> The Apache Maven team is pleased to announce the release of Apache
+>> Maven Wagon 2.8.
+>> Apache Maven Wagon is a transport abstraction that is used in Maven's
+>> artifact and repository handling code.
+>>
+>> Web site: http://maven.apache.org/wagon/
+>>
+>> Release Notes - Maven Wagon - Version 2.8
+>>
+>> ** Bug
+>>     * [WAGON-416] - Lightweight HTTP Wagon doesn't set
+>> Proxy-Authorization header
+>>     * [WAGON-422] - HTTP wagon AuthScope is not definable from settings
+>>
+>>
+>> Have fun
+>> --
+>> The Apache Maven Team
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>
+> Kind regards,
+>
+> Jeroen Hoek
+> Lable
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+
+
+-- 
+Olivier Lamy
+http://twitter.com/olamy | http://linkedin.com/in/olamy
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,148 @@
+From users-return-136193-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr 18 15:32:07 2014
+Return-Path: <users-return-136193-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B93F111314
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 18 Apr 2014 15:32:07 +0000 (UTC)
+Received: (qmail 48894 invoked by uid 500); 18 Apr 2014 15:32:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 48746 invoked by uid 500); 18 Apr 2014 15:32:02 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 48705 invoked by uid 99); 18 Apr 2014 15:31:59 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Apr 2014 15:31:59 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.212.175 as permitted sender)
+Received: from [209.85.212.175] (HELO mail-wi0-f175.google.com) (209.85.212.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Apr 2014 15:31:55 +0000
+Received: by mail-wi0-f175.google.com with SMTP id cc10so836221wib.2
+        for <users@maven.apache.org>; Fri, 18 Apr 2014 08:31:34 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=RxVF1kNbxZV6EKzwwXJ9xy2EdNqLO6vdpwVKQngNgHw=;
+        b=0g5Bj/QAaW9ZxUHzfGx+PwPxJVKdNJHvuULRXxERZh24JYIZXWadKrTdmIVusCoR1q
+         k0VbIXjDs2ePZQxTmZnNPyn3+1VMWwEXZ3h6uxAF8enM2bal1nrR5Bh2MDqCJxUcuPG+
+         QzIX3dlv7ZqemizVe5AY/+IWag+CRtWUSz92e6MMYYcestqavxx5od2aL6Fyif4XlreO
+         eupZ7wJgC6wEumyelWraYhUm/ar1aOm8LHguCtocwm+jEnarOl5FtY7C0IeXbPvUHy3h
+         BPMbfGHn3F3i6zSEnLeUNtQaRh6/pbuC/x29+u5xisNOuYedC57qJLF9SSsyjcQKUnyV
+         SQ0Q==
+MIME-Version: 1.0
+X-Received: by 10.180.89.102 with SMTP id bn6mr2838644wib.28.1397835094751;
+ Fri, 18 Apr 2014 08:31:34 -0700 (PDT)
+Received: by 10.194.205.233 with HTTP; Fri, 18 Apr 2014 08:31:34 -0700 (PDT)
+In-Reply-To: <CAEayHEPxqeWPyCgR1bmoGx-oGxr-TvkRxU4JewuY8aXzt80OHg@mail.gmail.com>
+References: <CAChPNbexJ3vix-HdFNiKSEQrOYMW+vjxHknCn7-fPp0LsKxLBw@mail.gmail.com>
+	<CAEayHEPxqeWPyCgR1bmoGx-oGxr-TvkRxU4JewuY8aXzt80OHg@mail.gmail.com>
+Date: Fri, 18 Apr 2014 16:31:34 +0100
+Message-ID: <CA+nPnMy691eXxCmxMrc=C1uzZnSwYu0ZxLAhfKSq8HJsUDYKxA@mail.gmail.com>
+Subject: Re: Struggling to release:perform with git and deployer key
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d04447e7547016d04f752d81d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d04447e7547016d04f752d81d
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+    <server>
+
+      <id>...</id>
+
+      <username>...</username>
+
+      <password>...</password>
+
+      <privateKey>/home/.../.ssh/id_rsa</privateKey>
+
+    </server>
+
+
+On 18 April 2014 16:27, Thomas Broyer <t.broyer@gmail.com> wrote:
+
+> I think by default Maven calls the command-line Git, so it uses the
+> ~/.ssh/id_rsa, and not the configuration from your settings.xml.
+> I have no idea if what you're trying to do is possible with Maven. Maybe
+> the maven-scm-provider-jgit would use the settings.xml configuration, but=
+ I
+> have no idea how to configure Maven to use it.
+>
+>
+> On Fri, Apr 18, 2014 at 3:45 PM, Maven User <maven.2.user@gmail.com>
+> wrote:
+>
+> > Hi all -
+> >
+> > I'm really struggling with this.
+> >
+> > My git push portion of the maven release process just is quitting with
+> > this:
+> >
+> > 00:01:29.803 Provider message:
+> > 00:01:29.803 The git-push command failed.
+> > 00:01:29.803 Command output:
+> > 00:01:29.803 Permission denied (publickey).
+> > 00:01:29.803 fatal: The remote end hung up unexpectedly
+> > 00:01:29.803
+> > 00:01:29.803 cause : Unable to commit files
+> > 00:01:29.803 Provider message:
+> > 00:01:29.803 The git-push command failed.
+> > 00:01:29.803 Command output:
+> > 00:01:29.803 Permission denied (publickey).
+> > 00:01:29.803 fatal: The remote end hung up unexpectedly
+> >
+> > I have the key stored in Jenkins as a "managed file" (as part of that
+> > plugin).  So the build has an early step where that key is written to
+> > disk.
+> >
+> > Then I've used the settings.xml to specify which key to use (pointing
+> > at that location just above).
+> >
+> >  <server>
+> >       <id>github.com</id>
+> >       <username>someusername</username>
+> >       <privateKey>/srv/jenkins/.ssh/somekeyname</privateKey>
+> >       <filePermissions>664</filePermissions>
+> >       <directoryPermissions>775</directoryPermissions>
+> >       <configuration></configuration>
+> >     </server>
+> >
+> >   <scm>
+> >       <connection>scm:git:git@github.com:
+> > ${companyid}/${project.artifactId}.git</connection>
+> >       <url>scm:git:git@github.com:
+> > ${companyid}/${project.artifactId}.git</url>
+> >       <developerConnection>scm:git:git@github.com:
+> > ${companyid}/${project.artifactId}.git</developerConnection>
+> >       <tag>HEAD</tag>
+> >    </scm>
+> >
+> > What am I doing wrong?
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+>
+>
+> --
+> Thomas Broyer
+> /t=C9=94.ma.b=CA=81wa.je/ <http://xn--nna.ma.xn--bwa-xxb.je/> <
+> http://xn--nna.ma.xn--bwa-xxb.je/>
+>
+
+--f46d04447e7547016d04f752d81d--
+

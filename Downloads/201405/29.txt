@@ -1,0 +1,73 @@
+From users-return-136462-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri May 30 00:48:47 2014
+Return-Path: <users-return-136462-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D50B210CFE
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 30 May 2014 00:48:47 +0000 (UTC)
+Received: (qmail 17069 invoked by uid 500); 30 May 2014 00:48:46 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 16981 invoked by uid 500); 30 May 2014 00:48:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 16973 invoked by uid 99); 30 May 2014 00:48:46 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 30 May 2014 00:48:46 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dhoffer6@gmail.com designates 209.85.220.174 as permitted sender)
+Received: from [209.85.220.174] (HELO mail-vc0-f174.google.com) (209.85.220.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 30 May 2014 00:48:41 +0000
+Received: by mail-vc0-f174.google.com with SMTP id ik5so1095136vcb.33
+        for <users@maven.apache.org>; Thu, 29 May 2014 17:48:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=Vrb0KQkc7TK5k2NuR7l9hW/cePIKGJtzQCHFHzdv+L4=;
+        b=C4ihVC15rMX1COo/l1n41MgX+f3WButlfjdCOQoBFf8LUHOZTLsNNN7wKga8iByiwy
+         9iTE1E5reUE+4d/GTtA/Vga6E/j4u9ZmtUwvxUvhyzuwTcU+AqbJGr5P56WMrkn4yDVQ
+         38N1TtMQgksk+b6+lkRmpOTQv5VnT/6j6DwJApbFBQDM7sxJVCsgl6hKDYJL2KfJ6830
+         WgMXnrx7WVIapS6S+FI+sFKJjtoXNRpluQ+EiZH6djLlDsDAPpbgL73UItJ29fqKZ6p6
+         YX66bEAXI0GtSzW4sZ2Xcdyoi/zxOceAxe2lg7As1KEJbCUUtskqEpDPuMAnrEx4Rgn3
+         2raA==
+MIME-Version: 1.0
+X-Received: by 10.52.12.229 with SMTP id b5mr5204642vdc.52.1401410898327; Thu,
+ 29 May 2014 17:48:18 -0700 (PDT)
+Received: by 10.220.109.1 with HTTP; Thu, 29 May 2014 17:48:18 -0700 (PDT)
+Date: Thu, 29 May 2014 18:48:18 -0600
+Message-ID: <CAA8BW8F+bjPgHHM+qMtUZ5v1AZY68x_8+X3RhgCaD9JxGat37w@mail.gmail.com>
+Subject: maven-ear-plugin fileNameMapping set to no-version breaks skinnyWars
+From: David Hoffer <dhoffer6@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=20cf302efbb2d3688704fa936612
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--20cf302efbb2d3688704fa936612
+Content-Type: text/plain; charset=UTF-8
+
+I have my plugin configured as:
+
+ <plugin>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>2.9</version>
+                <configuration>
+                    <defaultJavaBundleDir>lib/</defaultJavaBundleDir>
+                    <skinnyWars>true</skinnyWars>
+                    <fileNameMapping>no-version</fileNameMapping>
+                </configuration>
+ </plugin>
+
+And the inclusion of  <fileNameMapping>no-version</fileNameMapping> which I
+need, causes all the wars to fat.  How can I fix this?  Is this a known bug?
+
+-Dave
+
+--20cf302efbb2d3688704fa936612--
+

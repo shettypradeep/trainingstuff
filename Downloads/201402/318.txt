@@ -1,0 +1,80 @@
+From users-return-135648-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb 28 07:56:29 2014
+Return-Path: <users-return-135648-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4E41410A13
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 28 Feb 2014 07:56:29 +0000 (UTC)
+Received: (qmail 47377 invoked by uid 500); 28 Feb 2014 07:56:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 46558 invoked by uid 500); 28 Feb 2014 07:56:21 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 46385 invoked by uid 99); 28 Feb 2014 07:56:20 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Feb 2014 07:56:20 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of khmarbaise@gmx.de designates 212.227.17.22 as permitted sender)
+Received: from [212.227.17.22] (HELO mout.gmx.net) (212.227.17.22)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Feb 2014 07:56:12 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([217.247.2.228]) by mail.gmx.com
+ (mrgmx102) with ESMTPSA (Nemesis) id 0LfYqz-1WzZ0j0lCL-00p412 for
+ <users@maven.apache.org>; Fri, 28 Feb 2014 08:55:52 +0100
+Message-ID: <53104109.2010106@gmx.de>
+Date: Fri, 28 Feb 2014 08:55:53 +0100
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Can I generate "pre-signed" 3rd party artifacts?
+References: <BC2718AD26F38C4D9254888DDCE3B19107B18494@gandalf.megabyte.net>
+In-Reply-To: <BC2718AD26F38C4D9254888DDCE3B19107B18494@gandalf.megabyte.net>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:8T2tNmZwbeppwJv9LcqMYSMP2UsFDD+OP3vugo5mOtt+IpWqiPY
+ YlIm5v/Z2e5Kt1waewJelFHcBpJThj9HYi+PZ7HieYEZNEi5vRyuAcYnZh0sov0yOmllZ5p
+ rOyV7vIqa+j6KlRswe0lTeWxQJ7163lSAR8SoWy/Wu/bOUlH3MZ3zjFVJKs+uEnAaxFspl2
+ Q/WDv8EUoFYXhOpuCEoPQ==
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Ramon,
+
+
+what about:
+
+http://maven.apache.org/plugins/maven-jarsigner-plugin/
+
+
+Kind regards
+Karl Heinz Marbaise
+ > I have an application which depends on a large number of 3rd party
+> artifacts, and which uses webstart to launch. Webstart requires all Jars
+> to be signed using the same certificate. Although the
+> webstart-maven-plugin can take care of the signing, there are so many
+> jar files that it takes quite a long time to sign them all every time I
+> build.
+>
+> Since  the 3rd party artifacts rarely change, I'd like to sign them all
+> once, and store them in a local repository and have the projects all
+> depend on the signed versions. Is there any quick way of doing this?
+>
+> I was thinking of something like a maven project for each dependency
+> which pulls in the JAR, signs it then deploys it to my repository using
+> a modified version number
+> (eg, commons.beanutils-1.8.3.jar -> commons.beanutils-1.8.3-signed.jar).
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

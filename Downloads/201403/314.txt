@@ -1,0 +1,54 @@
+From users-return-136031-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Mar 31 18:46:11 2014
+Return-Path: <users-return-136031-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C1D3610832
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 31 Mar 2014 18:46:11 +0000 (UTC)
+Received: (qmail 72468 invoked by uid 500); 31 Mar 2014 18:46:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 72413 invoked by uid 500); 31 Mar 2014 18:46:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 13052 invoked by uid 99); 31 Mar 2014 06:26:58 -0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Date: Sun, 30 Mar 2014 23:26:32 -0700 (PDT)
+From: manmaujin2 <john.jin@oocl.com>
+To: users@maven.apache.org
+Message-ID: <1396247192272-5790174.post@n5.nabble.com>
+Subject: skip deploy maven parent pom to artifactory
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Total the project has 3 layer, the parent root and there are contain two
+major component in the project, i.e. console and server. For each component
+has so many sub component. And I only want to deploy the ear file in sub
+component. So I tried to skip deploying the parent pom to artifactory.
+It is successes but the user cannot download the EAR from the artifactory.
+It shows the cannot find out the parent pom. 
+
+Could anyone tell me is it possible to deploy EAR file to artifactory
+without any parent pom?
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/skip-deploy-maven-parent-pom-to-artifactory-tp5790174.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,88 @@
+From users-return-135014-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan  8 00:00:33 2014
+Return-Path: <users-return-135014-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 19E181088D
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  8 Jan 2014 00:00:33 +0000 (UTC)
+Received: (qmail 41680 invoked by uid 500); 8 Jan 2014 00:00:32 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 41567 invoked by uid 500); 8 Jan 2014 00:00:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 41500 invoked by uid 99); 8 Jan 2014 00:00:32 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 00:00:32 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of waynefay@gmail.com designates 209.85.192.173 as permitted sender)
+Received: from [209.85.192.173] (HELO mail-pd0-f173.google.com) (209.85.192.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 00:00:28 +0000
+Received: by mail-pd0-f173.google.com with SMTP id p10so1025033pdj.4
+        for <users@maven.apache.org>; Tue, 07 Jan 2014 16:00:07 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=tKG4MAzGZ3TLg3vwnlN+r1SkTO0QQyxh3lBE9dYqJ2A=;
+        b=yGTWIW01YVJmOoXK+XQH7A3G9oE+drR1s8Nup8iz9reNKW+Hkdp3WKdVGM0ptDIvQU
+         GeJreAhkZesnPGzuaTdrtrCxM5aexRLfVjGrtb/iHdGn0CBwf3jLKpIDpp7eGbbBloda
+         ScGYYhPqxMtLtxqNaQML20skQ2/Ggz0hnQV7pBcRSUaQklATkstqyafVthdGbR2A5MJH
+         edxYG9bMDrhR00s+hZtp1Y3lUBh91K9E0HyzdOENiKk2hMpazJgfKslTs5Q8GXljUpf8
+         PSJphSDP9Fjmar8ERonA3ejGOyLwzUNg2LYx1SSSxE14NgwWh/WNTweHRu+7XFQZTcqA
+         SDaA==
+X-Received: by 10.68.164.196 with SMTP id ys4mr8202290pbb.37.1389139207687;
+ Tue, 07 Jan 2014 16:00:07 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Tue, 7 Jan 2014 15:59:22 -0800 (PST)
+In-Reply-To: <1389137842326-5780913.post@n5.nabble.com>
+References: <1389041385515-5780640.post@n5.nabble.com> <1389137842326-5780913.post@n5.nabble.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Tue, 7 Jan 2014 17:59:22 -0600
+Message-ID: <CALy+7Uk7fT12fQgcUSzox=CMxpxP-bz+gke==DHzrV2sKtB_Hg@mail.gmail.com>
+Subject: Re: Two Resource Files In Same Dir ... One Having Property Replaced,
+ Another Does Not
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> Here was the difference between the two job files:
+
+Glad you followed up, I was going to ask to see the stuff that you had
+snipped out, thinking you probably had ${...} or @ in it somewhere.
+
+> The fact that there was only one '@' sign threw maven off and caused it to
+> stop replacing subsequent properties in the same file.
+>
+> Do @ signs have some special meaning for maven? It seems like maven does not
+> do any property replacement on text between two @ signs.
+
+Yes, in earlier releases of the maven-resources-plugin, by default the
+@ sign was used as a delimiter. But since version 2.6, this is no
+longer the case. Easiest fix is to specify <version>2.6</version> for
+this plugin in your pom.
+
+Here are some potentially useful links:
+http://maven.apache.org/plugins/maven-resources-plugin/resources-mojo.html
+http://stackoverflow.com/questions/4056140/maven-resource-filtering-implications-of-the-symbol-in-resource-files
+http://stackoverflow.com/questions/7499373/maven-resources-plugin-has-issues-with-filtering-if-there-are-odd-number-of
+http://stackoverflow.com/questions/2315009/override-mavens-default-resource-filter-replacement-pattern
+http://yawperism.blogspot.com/2010/08/maven-filtering-delimiter.html
+
+ Wayne
+
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

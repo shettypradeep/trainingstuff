@@ -1,0 +1,191 @@
+From users-return-137979-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Dec  9 21:13:29 2014
+Return-Path: <users-return-137979-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E1DCA97FB
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  9 Dec 2014 21:13:29 +0000 (UTC)
+Received: (qmail 78837 invoked by uid 500); 9 Dec 2014 21:13:28 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 78751 invoked by uid 500); 9 Dec 2014 21:13:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 78739 invoked by uid 99); 9 Dec 2014 21:13:27 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Dec 2014 21:13:27 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.192.178 as permitted sender)
+Received: from [209.85.192.178] (HELO mail-pd0-f178.google.com) (209.85.192.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Dec 2014 21:13:23 +0000
+Received: by mail-pd0-f178.google.com with SMTP id r10so1303987pdi.23
+        for <users@maven.apache.org>; Tue, 09 Dec 2014 13:12:17 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type:content-transfer-encoding;
+        bh=O+a1Yq/sJlJ+fVBabRsr7/mogiefbp3kzfICUtxIhm4=;
+        b=nDfD1M/usSUOI/EDFavlnZ78uJ14qde34CvS4o98ijRY33e5dNpjMrR/YT5KQJwM5V
+         rdseT5WJXr2+2ZTRhh63cTPRvmGLtj3guocsGXkKvR1voZHPeTCPcZ6sROIt7Or1MJhH
+         Wun4SdbM38TEj/kwdZ2XWKLthRESh1YzohrtEwx2UJF8oKWbmWd6mRnz5trzIWxwOyIH
+         LZCWGG02EBtV0OwVKYIdYNnPev6Z/4eOpXBfJwCwrJwdMFlNQKyV1p4W71OfvTR+Anms
+         m8mufpZGzwq+V+H36y/ZibV8BBk4HF3zk2IV84buDh/KReHZj1oCy9wG2mVGUxrQuOiq
+         jHQA==
+X-Received: by 10.70.50.1 with SMTP id y1mr1051255pdn.12.1418159537557;
+        Tue, 09 Dec 2014 13:12:17 -0800 (PST)
+Received: from [192.168.100.168] (S010620cf30ce24d0.vc.shawcable.net. [50.67.177.229])
+        by mx.google.com with ESMTPSA id x16sm2259564pbt.70.2014.12.09.13.12.15
+        for <users@maven.apache.org>
+        (version=TLSv1.2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 09 Dec 2014 13:12:15 -0800 (PST)
+Message-ID: <548765A9.4070308@gmail.com>
+Date: Tue, 09 Dec 2014 13:12:09 -0800
+From: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Thunderbird/31.3.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: [scala-debate] Emotional Support Group for Typesafe Maven Users
+References: <547F605D.1070802@gmail.com>	<CAE45xcgZ2M0jAZwZ8XSaG4MmWdEAKEkgWhs2+1eDprj2EUx=OQ@mail.gmail.com>	<547F8667.6050408@gmail.com>	<CAKumxByJgU_e8gSgtZ2Pjxehn7YJ5YR4eTBGEx0fr1_Mbx3xZA@mail.gmail.com> <CAP7YuAQgMBqwHHzgNr=Eg8Hn1dOtTh4=UFX=Wun1S8itWSNLDg@mail.gmail.com>
+In-Reply-To: <CAP7YuAQgMBqwHHzgNr=Eg8Hn1dOtTh4=UFX=Wun1S8itWSNLDg@mail.gmail.com>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Ouch, I was afraid someone would say something like that.
+
+Is there some alternative to Play, such that we can migrate existing 
+Play projects to something that is Maven friendly?
+
+Cheers, Eric
+
+On 2014-12-04 5:31 AM, Martijn Verburg wrote:
+> Play *very* firmly wants you to use the activator framework to control your
+> build and deploy - I'd seriously not try and fight against it.  It's one of
+> the reasons we dropped the Play framework for a community project we're
+> working on, that and the constant breaking of APIs etc :-).
+>
+> Cheers,
+> Martijn
+>
+> On 4 December 2014 at 12:58, Jeff Jensen <jeffjensen@upstairstechnology.com>
+> wrote:
+>
+>>> If you want to publish to Maven Central I recommend
+>> https://www.packtpub.com/application-development/
+>> getting-started-apache-maven-video
+>>
+>> In case it helps, I've helped a few deploy to Central and recommend this
+>> (and the other pages on the "Producers" menu); makes it very easy:
+>> http://central.sonatype.org/pages/ossrh-guide.html
+>>
+>>
+>> On Wed, Dec 3, 2014 at 3:53 PM, Eric Kolotyluk <eric.kolotyluk@gmail.com>
+>> wrote:
+>>
+>>> Ha ha ha. Very good :-)
+>>>
+>>> I have published to Maven Central, so I know how daunting this can be at
+>>> first.
+>>>
+>>> If you want to publish to Maven Central I recommend
+>>> https://www.packtpub.com/application-development/
+>>> getting-started-apache-maven-video
+>>>
+>>> Cheers, Eric
+>>>
+>>> On 12/3/2014 11:27 AM, Jon Pretty wrote:
+>>>
+>>>> I can offer you this:
+>>>>
+>>>> http://play.textadventures.co.uk/Play.aspx?id=zv-wer8keey6rnhk4am25q
+>>>>
+>>>> It's a create-your-own-adventure about my experience of trying to
+>> publish
+>>>> a library to Maven Central. It's a couple of years old now, so the
+>>>> landscape might have improved a little in patches.
+>>>>
+>>>> Jon
+>>>>
+>>>>
+>>>> On 3 December 2014 at 19:11, Eric Kolotyluk <eric.kolotyluk@gmail.com
+>>>> <mailto:eric.kolotyluk@gmail.com>> wrote:
+>>>>
+>>>>      Does anyone know of a good emotional support group for people
+>>>>      trying to use Maven with Typesafe projects such as Akka and Play?
+>>>>
+>>>>      I was thinking maybe there could a buddy/sponsor system, such as
+>>>>      used in AA and other self help groups. Maybe there might be group
+>>>>      sessions where people can talk about their trauma, especially by
+>>>>      being constantly invalidated by comments such as "you should use
+>>>>      the simple build tool SBT, cause, well you know, it's simple and
+>>>>      easy to use."
+>>>>
+>>>>      Seriously though, is there a community of people who are
+>>>>      successfully using Maven with Akka an Play projects? I would love
+>>>>      to meet you.
+>>>>
+>>>>      I can see why people who have tried Maven naturally think "oh,
+>>>>      its' too complicated, anyone can write a simple build tool that
+>>>>      does what Maven does." Clearly they do not appreciate what Maven
+>>>>      is or what it does. SBT and Gradle are two great examples of
+>>>>      projects that attempted to do something more simple, but in the
+>>>>      end, really don't measure up.
+>>>>
+>>>>      I personally think the Scala community would be been better served
+>>>>      if more investment was made in developing better Scala build tools
+>>>>      within the Maven framework. More and better plugins for Scala,
+>>>>      Akka, Play, etc.  Better use of
+>>>>
+>>>>      http://books.sonatype.com/mcookbook/reference/sect-
+>>>> scala-script-inline.html
+>>>>      http://books.sonatype.com/mcookbook/reference/ch03s03.html
+>>>>
+>>>>      I don't know if there is a Scala template for writing Maven
+>>>>      plugins (or mojos), but there should be.
+>>>>
+>>>>      The more I use SBT, the less I like it. It is not what I consider
+>>>>      a serious build tool for build engineers, it is a toy or
+>>>>      playground for Scala hackers who thrive on the abstruse. Don't get
+>>>>      me wrong, I love Scala, but creating a build tool around .scala
+>>>>      files just invites the use of chicken tracks and obscure overly
+>>>>      concise cleverness that leads to one WTF experience after another.
+>>>>      /It is actually possible to write Scala code that you can reason
+>>>>      about,/ but it just as easy to write Scala code that resembles
+>>>>      APL, and reasoning about build engineering was clearly not a
+>>>>      priority with the designers of SBT.
+>>>>
+>>>>      The Scala-IDE was a really great approach because it leveraged off
+>>>>      of an existing IDE infrastructure such as Eclipse, rather than
+>>>>      trying to write an IDE from scratch the way SBT does. I wish the
+>>>>      Scala/Typesafe community had taken the same approach with
+>> build-tools.
+>>>>      - Eric
+>>>>      --     You received this message because you are subscribed to the
+>>>> Google
+>>>>      Groups "scala-debate" group.
+>>>>      To unsubscribe from this group and stop receiving emails from it,
+>>>>      send an email to scala-debate+unsubscribe@googlegroups.com
+>>>>      <mailto:scala-debate+unsubscribe@googlegroups.com>.
+>>>>      For more options, visit https://groups.google.com/d/optout.
+>>>>
+>>>>
+>>>>
+>>>>
+>>>> --
+>>>> Jon Pretty | @propensive
+>>>>
+>>>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,90 @@
+From users-return-136869-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 24 12:58:25 2014
+Return-Path: <users-return-136869-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D0B0F110D7
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 24 Jul 2014 12:58:25 +0000 (UTC)
+Received: (qmail 5421 invoked by uid 500); 24 Jul 2014 12:58:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 5338 invoked by uid 500); 24 Jul 2014 12:58:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 5324 invoked by uid 99); 24 Jul 2014 12:58:23 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 12:58:23 +0000
+X-ASF-Spam-Status: No, hits=0.7 required=5.0
+	tests=SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 12:58:17 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <david@evans6.me.uk>)
+	id 1XAIao-00012d-Oh
+	for users@maven.apache.org; Thu, 24 Jul 2014 05:57:54 -0700
+Date: Thu, 24 Jul 2014 05:57:54 -0700 (PDT)
+From: David Evans <david@evans6.me.uk>
+To: users@maven.apache.org
+Message-ID: <1406206674710-5800925.post@n5.nabble.com>
+In-Reply-To: <5F274ED30832C44A8778291D0DD82A7A36F7D2@ev002.EVANS6.local>
+References: <5F274ED30832C44A8778291D0DD82A7A36F7D2@ev002.EVANS6.local>
+Subject: Re: Upload 3rd party jars retaining original names
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Thanks all.  It seems that what I want to do doesn't fit naturally into the
+Maven way of things.
+
+Using the "copy" plugin I can see how I might possibly unpack elements and
+modify my Eclipse classpath in flight but part of the problem with my
+existing Ant deployment is that I've extended it to do the "possible", not
+necessarily considering the "sensible", so I'll not go down that route. Yet.
+
+It's a shame that I can't store the external jars in the Maven repository
+and treat them ) as  "versioned foreign artifacts" because having Maven
+manage them in this way would be brilliant.
+
+Here's what I'm going to try instead:
+
+* I'll carry on with the libraries in my [Perforce] SCM. 
+
+* I can map them to a project folder as I do now (similar to sources,
+resources, etc).
+
+* if I understand this part of Maven dependepencies correctly, I can create
+a parent dependendency that depends on an individual system-scope dependency
+for each of the libraries. This will hopefully get them all onto my Maven
+project classpath without too much fuss.
+
+* use "assembly" to include the jars in my final deployment.
+
+Does this seem the natural and sensible way to manage external jars with
+Maven?
+
+Thanks
+
+David  
+
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Upload-3rd-party-jars-retaining-original-names-tp5800921p5800925.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

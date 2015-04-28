@@ -1,0 +1,123 @@
+From users-return-135274-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 28 19:34:53 2014
+Return-Path: <users-return-135274-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DD0CA1014E
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 28 Jan 2014 19:34:53 +0000 (UTC)
+Received: (qmail 52309 invoked by uid 500); 28 Jan 2014 19:34:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 52179 invoked by uid 500); 28 Jan 2014 19:34:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 52153 invoked by uid 99); 28 Jan 2014 19:34:42 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 19:34:42 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [66.185.162.182] (HELO relay01.goldenhour.net) (66.185.162.182)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 19:34:38 +0000
+Received: from localhost (relay01.goldenhour.com [127.0.0.1])
+	by relay01.goldenhour.net (Postfix) with ESMTP id DE8A8239280
+	for <users@maven.apache.org>; Tue, 28 Jan 2014 11:34:15 -0800 (PST)
+X-Virus-Scanned: amavisd-new at goldenhourdata.net
+Received: from relay01.goldenhour.net ([127.0.0.1])
+	by localhost (relay01.goldenhour.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id bDOgvYA2Noay for <users@maven.apache.org>;
+	Tue, 28 Jan 2014 11:34:15 -0800 (PST)
+Received: from HQ-SMG01 (unknown [192.168.104.30])
+	by relay01.goldenhour.net (Postfix) with ESMTP id B51BD23927D
+	for <users@maven.apache.org>; Tue, 28 Jan 2014 19:34:15 +0000 (UTC)
+Received: from ghex01.hq.ghds.net [192.168.101.20] by HQ-SMG01;Tue, 28 Jan 2014 11:33:44 -0800
+Received: from ghex01.hq.ghds.net ([192.168.101.20]) by ghex01.hq.ghds.net
+ ([192.168.101.20]) with mapi; Tue, 28 Jan 2014 11:34:13 -0800
+From: Scott Klein <Scott.Klein@goldenhour.com>
+To: Maven Users List <users@maven.apache.org>
+Date: Tue, 28 Jan 2014 11:34:49 -0800
+Subject: Deployment to Tomcat (provided jars)
+Thread-Topic: Deployment to Tomcat (provided jars)
+Thread-Index: Ac8cVoi+xCDCfVhtQz20AKP6itpg9gAA+qkg
+Message-ID: <7FB4F0EC1916C84CBA95F6E5A360E40A0117E3D0C18C@ghex01.hq.ghds.net>
+References: <1B8FF9BB83FDCE44AB581D7E394AB90D2A3D9AB5@USSTLDAGBE1.corp.amdocs.com>
+	<1B8FF9BB83FDCE44AB581D7E394AB90D2A3D9B3A@USSTLDAGBE1.corp.amdocs.com>
+	<CA+nPnMxQwbYrBEk_WuikwTMTnyO6jKOuBmn3KKqE+K7PM8c=gQ@mail.gmail.com>
+	<1B8FF9BB83FDCE44AB581D7E394AB90D2A3DB067@USSTLDAGBE1.corp.amdocs.com>
+	<1B8FF9BB83FDCE44AB581D7E394AB90D2A3DB0D2@USSTLDAGBE1.corp.amdocs.com>
+ <CAHNdxumH73y96Ayhi1CgYYdAQVCXdjMqkxWfCdVUkUyUFkn-XQ@mail.gmail.com>
+In-Reply-To: <CAHNdxumH73y96Ayhi1CgYYdAQVCXdjMqkxWfCdVUkUyUFkn-XQ@mail.gmail.com>
+Accept-Language: en-US
+acceptlanguage: en-US
+MIME-Version: 1.0
+Content-Language: en-US
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+SSB3YXMgaG9waW5nIHRoYXQgc29tZW9uZSBjb3VsZCBlaXRoZXIgc2hvdyBtZSBiZXN0IHByYWN0
+aWNlIG9yIGp1c3QgY29tbWVudCBvbiB0aGUgY29ycmVjdG5lc3Mgb2YgbXkgYXBwcm9hY2guDQoN
+CldlIGhhdmUgbXVsdGlwbGUgcHJvamVjdHMgd2hpY2ggcnVuIG9uIG91ciBhcHAgc2VydmVyICh0
+b21jYXQpLiBUaGVyZWZvcmUsIHdlIHdhbnQgb3VyIHByb2plY3RzIHRvIHNoYXJlIGFzIG11Y2gg
+YXMgcG9zc2libGUgd2hlbiBpdCBjb21lcyB0byBwcm92aWRlZCBhcnRpZmFjdHMgaW4gb3JkZXIg
+dG8gcmVkdWNlIG91ciB3YXIgZmlsZSBzaXplIC0gc28gZXZlcnlvbmUgcmVsaWVzIG9uIHRoZSBz
+YW1lIHZlcnNpb24gb2YgZ3VhdmEgZm9yIGV4YW1wbGUsIHdoaWNoIGlzIGRlZmluZWQgaW4gdGhl
+IGRlcGVuZGVuY3kgbWFuYWdlbWVudCBzZWN0aW9uIG9mIG91ciBjb21tb24tcGFyZW50IHBvbS4N
+Cg0KV2UgaGF2ZSBjb25maWd1cmVkIG91ciBhcHAgc2VydmVycyB0byBpbmNsdWRlIGEgMm5kIGxp
+YiBmb2xkZXIgKGNhbGwgaXQgImNvbW1vbi1saWIiKSAtIHRoaXMgaXMgd2hlcmUgd2Ugd2FudCB0
+byBwdXQgYWxsIG9mIG91ciBwcm9qZWN0cyBwcm92aWRlZCBhcnRpZmFjdHMgKGFmdGVyIHdpcGlu
+ZyB0aGUgZmlsZXMgaW4gdGhlIGZvbGRlciBvdXQgLSBoZW5jZSB0aGUgc2VwYXJhdGUgImNvbW1v
+bi1saWIiIGZvbGRlcikuIFRvbWNhdCBpcyBzZXR1cCB0byBpbmNsdWRlIHRoaXMgaW4gaXRzIGNs
+YXNzcGF0aC4NCg0KRm9yIGV4YW1wbGUsIG91ciBuaWdodGx5IGJ1aWxkIHRyaWdnZXIgd291bGQg
+cm0gLWYgYWxsIGphciBmaWxlcyBpbiB0aGUgY29tbW9uLWxpYiBmb2xkZXIsIHRoZW4gUHJvamVj
+dDEgd291bGQgYnVpbGQgYW5kIHB1c2ggYWxsIG9mIGl0cyBwcm92aWRlZCBqYXJzIHVwIHRvIGNv
+bW1vbi1saWIsIGZvbGxvd2VkIGJ5IFByb2plY3QyLCBhbmQgb24sIGFuZCBvbi4gQXQgdGhlIGVu
+ZCBvZiB0aGUgYnVpbGQgeW91IGhhdmUgYSBjb21wbGV0ZWx5IHJlZnJlc2hlZCAiY29tbW9uLWxp
+YiIgZm9sZGVyIHdpdGggYWxsIG9mIHRoZSBwcm92aWRlZCBqYXJzIGZvciBlYWNoIHByb2plY3Qu
+IChPYnZpb3VzbHksIGlmIHRoaXMgd2VyZSB0aGUgImxpdmUiIGNvbW1vbi1saWIgdGhpcyBtaWdo
+dCBiZSBhbiBpc3N1ZSBzbyB3ZSBoYXZlIGEgInN0YWdpbmciIGFyZWEgd2UgYWN0dWFsbHkgZGVw
+bG95IHRvIC0gdGhlbiBpbiBvdXIgdG9tY2F0IHN0YXJ0dXAgc2NyaXB0IHdlIHJlcGxhY2UgdGhl
+ICJsaXZlIiBjb21tb24tbGliIGZpbGVzIHdpdGggdGhvc2UgZnJvbSB0aGUgInN0YWdpbmciIGFy
+ZWEpDQoNCk9idmlvdXNseSwgaWYgd2UgZG8gbm90IGtlZXAgYSB0aWdodCByZWluIG9uIGRlcGVu
+ZGVuY3kgdmVyc2lvbnMgaW4gcHJvamVjdCBwb21zIHRoaXMgY291bGQgdHVybiBpbnRvIGEgbmln
+aHRtYXJlIC0tIGJ1dCBsZXQncyBhc3N1bWUgd2UgY2FuIGRvIHRoYXQuDQoNClNvIGhlcmUgaXMg
+dGhlIGFwcHJvYWNoIEkgYW0gdGFraW5nOg0KMS4gSSB1c2UgdGhlIG1hdmVuLWRlcGVuZGVuY3kt
+cGx1Z2luIHRvIGNvcHkgcHJvdmlkZWQgamFycyBpbnRvICIke3Byb2plY3QuYnVpbGQuZGlyZWN0
+b3J5fVxwcm92aWRlZCIgLSBJIGhhdmUgdGllZCB0aGlzIHRvIDxwaGFzZT5wYWNrYWdlPC9waGFz
+ZT4NCg0KMi4gSSB1c2UgdGhlIG1hdmVuLWFudHJ1bi1wbHVnaW4gdG8gc2NwIGFsbCBmaWxlcyBp
+biB0aGUgIiR7cHJvamVjdC5idWlsZC5kaXJlY3Rvcnl9XHByb3ZpZGVkIiBmb2xkZXIgdXAgdG8g
+b3VyICJjb21tb24tbGliIiBmb2xkZXIgb24gb3VyIGFwcCBzZXJ2ZXIgLSBJIGhhdmUgdGllZCB0
+aGlzIHRvIDxwaGFzZT5kZXBsb3k8cGhhc2U+DQoNCg0KSSBhbSBhZnJhaWQgdGhhdCBtYXliZSBv
+dXIgaG9ycmlibGUgcGFzdCBwcmFjdGljZXMgaGF2ZSBibGluZGVkIG1lIGZyb20gc2VlaW5nIHRo
+ZSBNYXZlbiBiZXN0IHByYWN0aWNlLCBzbyBJIGFtIGxvb2tpbmcgZm9yIGEgcmVhbGl0eSBjaGVj
+ay4gVG8gbWUsIHRoaXMgc2VlbXMgbGlrZSBzb21ldGhpbmcgdGhhdCBwZW9wbGUgd291bGQgbmVl
+ZCB0byBkbyBhbGwgdGhlIHRpbWUgLSBidXQgSSBjYW4ndCBzZWVtIHRvIGZpbmQgYW55dGhpbmcg
+dGhhdCBzcGVjaWZpY2FsbHkgcmVsYXRlcyB0byB0aGlzIGFwcHJvYWNoLg0KDQoNClNpZGUgTm90
+ZTogQXMgSSB3YXMgd3JpdGluZyB0aGlzIEkga2VwdCB0aGlua2luZyAid2h5IG5vdCBqdXN0IGRl
+cGxveSBvdXIgd2FycyB3aXRoIGV2ZXJ5dGhpbmcgdGhhdCB0aGV5IG5lZWQsIHRoYXQgd291bGQg
+YmUgbXVjaCBjbGVhbmVyIGFuZCBtb3JlIHJlcHJvZHVjaWJsZS4gV2Ugc2hvdWxkbid0IGNhcmUg
+YWJvdXQgYXJ0aWZhY3QgKHdhcikgZmlsZSBzaXplIGlmIHRoaXMgaGFwcGVucyBpbiB0aGUgbWlk
+ZGxlIG9mIHRoZSBuaWdodCIuIEhlcmUgaXMgd2hhdCBJIGNhbWUgdXAgd2l0aCAtLSB3ZSBoYXZl
+IG9uZSBqYXIgZmlsZSB0aGF0IHdlIGJ1aWxkIHdoaWNoIGhhcyBhbGwgb2Ygb3VyIGhpYmVybmF0
+ZSBjb2RlIGluIGl0LCBpdCBhbHNvIGdlbmVyYXRlcyBhbGwgb2Ygb3VyIHNoYXJlZCBjb25uZWN0
+aW9ucyBmb3IgYWxsIG9mIG91ciBjb250ZXh0cyAodGhlc2UgYXJlIHNoYXJlZCBzZXNzaW9uIGZh
+Y3RvcmllcykuIFRoaXMgc2luZ2xlIGFydGlmYWN0ICptdXN0KiBiZSBzaGFyZWQgLSB3ZSBzaW1w
+bHkgY2Fubm90IGFsbG93IGVhY2ggd2FyIGZpbGUgdG8gaW5jbHVkZSBpdHMgb3duIGNvcHkgLSBk
+dWUgdG8gc2luZ2xldG9uIHN0eWxlIGJvb3RzdHJhcCBvZiBjb25uZWN0aW9ucy4NCg0KSXMgaXQg
+YmVzdCBwcmFjdGljZSBmb3IgYSB3YXIgdG8gZGVwbG95IHdpdGggYWxsIG9mIGl0cyBkZXBlbmRl
+bmNpZXM/DQoNCg0KVGhhbmtzLCBpbiBhZHZhbmNlDQpzY290dA0KDQoNCg0KDQoNCg0KDQoNCl9f
+X19fX19fX18gSW5mb3JtYXRpb24gZnJvbSBFU0VUIE5PRDMyIEFudGl2aXJ1cywgdmVyc2lvbiBv
+ZiB2aXJ1cyBzaWduYXR1cmUgZGF0YWJhc2UgOTM0OCAoMjAxNDAxMjgpIF9fX19fX19fX18NCg0K
+VGhlIG1lc3NhZ2Ugd2FzIGNoZWNrZWQgYnkgRVNFVCBOT0QzMiBBbnRpdmlydXMuDQoNCmh0dHA6
+Ly93d3cuZXNldC5jb20NCg0K
+DQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0NClRvIHVuc3Vic2NyaWJlLCBlLW1haWw6IHVzZXJzLXVuc3Vi
+c2NyaWJlQG1hdmVuLmFwYWNoZS5vcmcNCkZvciBhZGRpdGlvbmFsIGNvbW1hbmRzLCBlLW1h
+aWw6IHVzZXJzLWhlbHBAbWF2ZW4uYXBhY2hlLm9yZw0K
+

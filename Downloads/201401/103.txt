@@ -1,0 +1,92 @@
+From users-return-135187-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan 16 20:56:31 2014
+Return-Path: <users-return-135187-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7074410215
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 16 Jan 2014 20:56:31 +0000 (UTC)
+Received: (qmail 52818 invoked by uid 500); 16 Jan 2014 20:56:27 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 52725 invoked by uid 500); 16 Jan 2014 20:56:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 52717 invoked by uid 99); 16 Jan 2014 20:56:27 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 16 Jan 2014 20:56:27 +0000
+Received: from localhost (HELO robertscholte) (127.0.0.1)
+  (smtp-auth username rfscholte, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Thu, 16 Jan 2014 20:56:27 +0000
+Content-Type: text/plain; charset=iso-8859-15; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Maven release prepare on jenkins
+References: <DUB112-DS303296C186CE0F8DCA1AA8A9B90@phx.gbl>
+Date: Thu, 16 Jan 2014 21:56:25 +0100
+MIME-Version: 1.0
+Content-Transfer-Encoding: Quoted-Printable
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.w9ssgbslkdkhrr@robertscholte>
+In-Reply-To: <DUB112-DS303296C186CE0F8DCA1AA8A9B90@phx.gbl>
+User-Agent: Opera Mail/12.16 (Win32)
+
+Hi,
+
+Have a look at the documentation:  =
+
+http://maven.apache.org/maven-release/maven-release-plugin/prepare-mojo.=
+html#pushChanges
+Also consider to set localCheckout to true:  =
+
+http://maven.apache.org/maven-release/maven-release-plugin/perform-mojo.=
+html#localCheckout
+
+Robert
+
+Op Thu, 16 Jan 2014 11:11:55 +0100 schreef Adrien Ruffi=E9  =
+
+<adriennolarsen@hotmail.fr>:
+
+> Hello all,
+>
+> I perform following command in my jenkins jobs:
+>
+> /usr/local/apache-maven-3.0.4/bin/mvn -B  =
+
+> -Darguments=3D"-Dmaven.test.skip=3Dtrue" -f  =
+
+> /var/lib/jenkins/workspace/Winter2014-Deploy-Test/pom.xml  =
+
+> release:prepare --batch-mode -Dtag=3DWinter2014/004  =
+
+> -DreleaseVersion=3DWinter2014-004  =
+
+> -DdevelopmentVersion=3DWinter2014-005-SNAPSHOT -Dmaven.test.skip
+>
+> Maven push correctly the new tag like Winter2014/004 on my git repo bu=
+t  =
+
+> it also push a new branch Winter2014 ! I don't need to push a new bran=
+ch  =
+
+> ...
+> Do you know the means to say "don't push a new branch" ?
+>
+> Thank and best regards
+>
+> Adrien Ruffi=E9
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

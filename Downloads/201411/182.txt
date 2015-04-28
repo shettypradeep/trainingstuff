@@ -1,0 +1,72 @@
+From users-return-137695-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Nov  4 04:43:16 2014
+Return-Path: <users-return-137695-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A0273175BE
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  4 Nov 2014 04:43:16 +0000 (UTC)
+Received: (qmail 7457 invoked by uid 500); 4 Nov 2014 04:43:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 7369 invoked by uid 500); 4 Nov 2014 04:43:09 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 7358 invoked by uid 99); 4 Nov 2014 04:43:09 -0000
+Received: from mail-relay.apache.org (HELO mail-relay.apache.org) (140.211.11.15)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 04 Nov 2014 04:43:09 +0000
+Received: from mail-qa0-f48.google.com (mail-qa0-f48.google.com [209.85.216.48])
+	by mail-relay.apache.org (ASF Mail Server at mail-relay.apache.org) with ESMTPSA id E6A461A02B8
+	for <users@maven.apache.org>; Tue,  4 Nov 2014 04:42:25 +0000 (UTC)
+Received: by mail-qa0-f48.google.com with SMTP id x12so9340074qac.21
+        for <users@maven.apache.org>; Mon, 03 Nov 2014 20:43:07 -0800 (PST)
+MIME-Version: 1.0
+X-Received: by 10.140.88.100 with SMTP id s91mr35322014qgd.65.1415076187573;
+ Mon, 03 Nov 2014 20:43:07 -0800 (PST)
+Received: by 10.96.240.77 with HTTP; Mon, 3 Nov 2014 20:43:07 -0800 (PST)
+In-Reply-To: <CACGLCJY7QXLj8BU08uSAYQfaejsNoO-1YNUJnh6=ANv98fdZYA@mail.gmail.com>
+References: <CACGLCJY7QXLj8BU08uSAYQfaejsNoO-1YNUJnh6=ANv98fdZYA@mail.gmail.com>
+Date: Mon, 3 Nov 2014 22:43:07 -0600
+Message-ID: <CABLGb9yrh68e+vfKUxD1rj_cxiXcNEHM+Wa1DHOwzcf1jBbYoQ@mail.gmail.com>
+Subject: Re: explicit dependencies in maven
+From: Paul Benedict <pbenedict@apache.org>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c119907d965905070119cb
+
+--001a11c119907d965905070119cb
+Content-Type: text/plain; charset=UTF-8
+
+Your pom.xml should declare all dependency versions explicitly. And to
+prevent any changes, do not use any snapshots. Furthermore, use
+dependency:analyze on your project to make sure all libraries in use are
+explicitly declared. After you lock them all down, tell your developers not
+to update the pom.xml file. That will ensure it.
+
+
+Cheers,
+Paul
+
+On Mon, Nov 3, 2014 at 10:33 PM, Irfan Sayed <irfu.sayed@gmail.com> wrote:
+
+> hello,
+>
+> is there any good doc/blog which describes the handling of explicit
+> declaration of dependencies.
+> when we build the code, we use certain dependencies , how we can make sure
+> that when we reproduce the same build after the gap of 6 months , same and
+> exact dependencies will be used. ???
+> i know we can have artifactory/nexus , but that does not guarantee the
+> exact version of dependency when developer changes the code and make it
+> public keeping the version same
+>
+> please suggest
+>
+> regards
+>
+
+--001a11c119907d965905070119cb--
+

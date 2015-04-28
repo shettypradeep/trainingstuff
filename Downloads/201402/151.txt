@@ -1,0 +1,76 @@
+From users-return-135640-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb 28 00:03:19 2014
+Return-Path: <users-return-135640-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BFE3910D96
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 28 Feb 2014 00:03:19 +0000 (UTC)
+Received: (qmail 37084 invoked by uid 500); 28 Feb 2014 00:03:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 36934 invoked by uid 500); 28 Feb 2014 00:03:14 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 36925 invoked by uid 99); 28 Feb 2014 00:03:14 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Feb 2014 00:03:14 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.192.170 as permitted sender)
+Received: from [209.85.192.170] (HELO mail-pd0-f170.google.com) (209.85.192.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Feb 2014 00:03:08 +0000
+Received: by mail-pd0-f170.google.com with SMTP id y10so3114062pdj.29
+        for <users@maven.apache.org>; Thu, 27 Feb 2014 16:02:47 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=9rBIGxzjjUP9UfP8n0oxto3t1u/V1TZeI41IJJF+neY=;
+        b=Srw8pEtTfj1L428KgGYlGXcZByBANl9Jdwer5OUZf8oSyn2e7C6ngKU91a8bzOyZ+c
+         R+BdkFrp0W9JKEMl6kpU1vyHiplcORQOpaWd62iIHewzaMojXGIyL3E7C9NSCtgZtMAG
+         Ip2FBiz7yyB79jdAMGrCuc/JNiFStz5j1BJ3rCEXu5jx9F5AQr5JUZYZA8o0CtfnPNZY
+         GDIn3ezblDK6pc+Mk/m5sYpVDGJspxDNeJvoF//zKx1ZDV6rSugBr1A1gl8AvPPc9+wA
+         bq51ENjhudyCvHt2yrK1E3WVAwBvLak+7LSPvXPITWoAaMPGJSPH/GhEOllUohi8TJ2C
+         4sdA==
+X-Received: by 10.66.27.48 with SMTP id q16mr18249708pag.9.1393545766853; Thu,
+ 27 Feb 2014 16:02:46 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Thu, 27 Feb 2014 16:02:03 -0800 (PST)
+In-Reply-To: <BC2718AD26F38C4D9254888DDCE3B19107B18492@gandalf.megabyte.net>
+References: <BC2718AD26F38C4D9254888DDCE3B19107B18492@gandalf.megabyte.net>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Thu, 27 Feb 2014 18:02:03 -0600
+Message-ID: <CALy+7U=_GVLYugE+6vKxSfYJAyD7JOFFESwh-iQCZKvdqyZ_2g@mail.gmail.com>
+Subject: Re: Can I generate "pre-signed" 3rd party artifacts?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> to be signed using the same certificate. Although the
+> webstart-maven-plugin can take care of the signing, there are so many
+> jar files that it takes quite a long time to sign them all every time I
+> build.
+
+Why are you doing this "every time you build"? This seems like the
+kind of thing that should rarely be done locally and instead handled
+by your by your CI server.
+
+> Since  the 3rd party artifacts rarely change, I'd like to sign them all
+> once, and store them in a local repository and have the projects all
+> depend on the signed versions. Is there any quick way of doing this?
+
+I am unaware of any "quick way" to do this.
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

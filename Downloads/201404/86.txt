@@ -1,0 +1,94 @@
+From users-return-136074-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr  4 06:56:06 2014
+Return-Path: <users-return-136074-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 45493103E5
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  4 Apr 2014 06:56:06 +0000 (UTC)
+Received: (qmail 84903 invoked by uid 500); 4 Apr 2014 06:56:02 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 84083 invoked by uid 500); 4 Apr 2014 06:55:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 83276 invoked by uid 99); 4 Apr 2014 06:55:53 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 04 Apr 2014 06:55:53 +0000
+X-ASF-Spam-Status: No, hits=3.2 required=5.0
+	tests=HTML_MESSAGE,SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of eugen.rabii@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 04 Apr 2014 06:55:48 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <eugen.rabii@gmail.com>)
+	id 1WVy2B-0007gr-MY
+	for users@maven.apache.org; Thu, 03 Apr 2014 23:55:27 -0700
+Date: Thu, 3 Apr 2014 23:55:27 -0700 (PDT)
+From: eugene <eugen.rabii@gmail.com>
+To: users@maven.apache.org
+Message-ID: <533E5755.9030007@gmail.com>
+In-Reply-To: <CALy+7U=88Ao5Q4BaJbFM9F7djYEAf-QxmVKeT88GKfFHiCaq4g@mail.gmail.com>
+References: <1396438658817-5790393.post@n5.nabble.com> <CALy+7UmJnmf3GNEEDEzE0-hWPMmNFvtkZ8Ub-zr3CfZO-HanWQ@mail.gmail.com> <1396447740034-5790400.post@n5.nabble.com> <CADN69ymfTp2iwObyCuq1qiPntK5B-v-qozRMYwkz4-XfYxRR3A@mail.gmail.com> <CALy+7U=88Ao5Q4BaJbFM9F7djYEAf-QxmVKeT88GKfFHiCaq4g@mail.gmail.com>
+Subject: Re: Scanning for Projects... before
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_5517_23436660.1396594527690"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+------=_Part_5517_23436660.1396594527690
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+I think we have found one...
+
+We can create a wrapper around MavenCli and replace it in m2.conf...
+
+On 4/2/14, 8:35 PM, Wayne Fay [via Maven] wrote:
+> >> repo unless their are snapshots, right? Well snapshot is not an option
+> >> right now (due to corporate things).
+> >
+> > It is one of Maven's cardinal assumptions that release versions are
+> > immutable. If you need different contents, use either: A) a different
+>
+> As Curtis already mentioned, you are unlikely to find a solution by
+> continuing to head in this direction. Find another approach - most
+> likely one that involves a process running outside of Maven before
+> your build kicks off.
+>
+> Wayne
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: [hidden email] 
+> </user/SendEmail.jtp?type=node&node=5790420&i=0>
+> For additional commands, e-mail: [hidden email] 
+> </user/SendEmail.jtp?type=node&node=5790420&i=1>
+>
+>
+>
+> ------------------------------------------------------------------------
+> If you reply to this email, your message will be added to the 
+> discussion below:
+> http://maven.40175.n5.nabble.com/Scanning-for-Projects-before-tp5790393p5790420.html 
+>
+> To unsubscribe from Scanning for Projects... before, click here 
+> <http://maven.40175.n5.nabble.com/template/NamlServlet.jtp?macro=unsubscribe_by_code&node=5790393&code=ZXVnZW4ucmFiaWlAZ21haWwuY29tfDU3OTAzOTN8MTA1NjEzNjg3MA==>.
+> NAML 
+> <http://maven.40175.n5.nabble.com/template/NamlServlet.jtp?macro=macro_viewer&id=instant_html%21nabble%3Aemail.naml&base=nabble.naml.namespaces.BasicNamespace-nabble.view.web.template.NabbleNamespace-nabble.view.web.template.NodeNamespace&breadcrumbs=notify_subscribers%21nabble%3Aemail.naml-instant_emails%21nabble%3Aemail.naml-send_instant_email%21nabble%3Aemail.naml> 
+>
+
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Scanning-for-Projects-before-tp5790393p5790474.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+------=_Part_5517_23436660.1396594527690--
+

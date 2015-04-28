@@ -1,0 +1,75 @@
+From users-return-135902-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Mar 23 23:35:56 2014
+Return-Path: <users-return-135902-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D7A8510C2E
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 23 Mar 2014 23:35:56 +0000 (UTC)
+Received: (qmail 73339 invoked by uid 500); 23 Mar 2014 23:35:53 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 73269 invoked by uid 500); 23 Mar 2014 23:35:52 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 69014 invoked by uid 99); 21 Mar 2014 21:19:53 -0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to
+         :content-type;
+        bh=DaINKrJj0n8D+3JO6GuJjw2wnKUZ5ghplZ+6fNgTzgk=;
+        b=YLUHeGNVqECAn29Vimf0V2AF+rQis4ad/poKf7YzGKfBSzBYCLRkkuMgx+9MkU2wzi
+         E3NXSwRAbnRQNZ5w67ex+qbJkS78CUhL+Q8dTo9AZNY3PykSAMotBRJzvG5+jlCF/1Fi
+         JQvEYyX3gWflQCnk8UfR4SeU8sYOmWj4mPv5Hj6WrJ2KTq+u9fUZZWcVBWHEkq//fMbN
+         Mif1w3Yama097VFPUjBta/HNEUKKpWUWrg+Zh+xITiVYmdddh1xTfVPSMkPzISt4K3QE
+         lRhUID2pNoBHy+PHRRExJ1WPXGeLX6CtM0VtFvxiF5yXTDsaOFAro6JbAWKWZEThuWKQ
+         7Isg==
+X-Gm-Message-State: ALoCoQnw2/a5FnXSWPqau5IOm5cYi5fR21H1U0ldNoe6ReKclZKSqZTPNh7lBSBaQSvsxxCN0IXJ
+MIME-Version: 1.0
+X-Received: by 10.140.92.201 with SMTP id b67mr5464172qge.58.1395436767209;
+ Fri, 21 Mar 2014 14:19:27 -0700 (PDT)
+X-Originating-IP: [50.196.189.141]
+Date: Fri, 21 Mar 2014 14:19:27 -0700
+Message-ID: <CAL+=QcrEJ5FJ-kTJzZDBSUta7ETp9ExhGiG+g2HmzgEi6goSkQ@mail.gmail.com>
+Subject: search.maven.org is missing results
+From: James Douglas <james@earldouglas.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a113a7b0cd11b2704f5247082
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113a7b0cd11b2704f5247082
+Content-Type: text/plain; charset=ISO-8859-1
+
+I want to be able to find com.earldouglas/xsbt-web-plugin via
+search.maven.org, but am having trouble doing so.
+
+When I search for "xsbt-web-plugin", I only get older results from the
+GroupId com.github.siasia.
+
+http://search.maven.org/#search|ga|1|xsbt-web-plugin
+
+Furthermore, when I search for "com.earldouglas", the set of results is
+missing many entries for the GroupId com.earldouglas:
+
+http://search.maven.org/#search|ga|1|com.earldouglas
+
+This can be verified by "browsing" the "com.earldouglas/" GroupId:
+
+http://search.maven.org/#browse|1101551570
+
+Am I doing something wrong?  Why are so many results apparently missing?
+Note that these artifacts are all hosted on Maven Central.
+
+Thanks!
+James
+
+--001a113a7b0cd11b2704f5247082--
+

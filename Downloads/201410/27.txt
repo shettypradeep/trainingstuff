@@ -1,0 +1,73 @@
+From users-return-137443-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Oct  2 20:38:56 2014
+Return-Path: <users-return-137443-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 160E6172D7
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  2 Oct 2014 20:38:56 +0000 (UTC)
+Received: (qmail 91738 invoked by uid 500); 2 Oct 2014 20:38:53 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 91503 invoked by uid 500); 2 Oct 2014 20:38:53 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 91472 invoked by uid 99); 2 Oct 2014 20:38:52 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Oct 2014 20:38:52 +0000
+Received: by minotaur.apache.org (Postfix, from userid 6004)
+	id AFE08172D4; Thu,  2 Oct 2014 20:38:52 +0000 (UTC)
+To: announce@maven.apache.org
+Subject: [ANN] Apache Maven Resources Plugin Version 2.7 Released
+Cc: users@maven.apache.org,dev@maven.apache.org
+Message-Id: <20141002203852.AFE08172D4@minotaur.apache.org>
+Date: Thu,  2 Oct 2014 20:38:52 +0000 (UTC)
+From: khmarbaise@apache.org (Karl Heinz Marbaise)
+
+The Apache Maven team is pleased to announce the release of the 
+Apache Maven Resources Plugin, version 2.7
+
+The Resources Plugin handles the copying of project resources to the output
+directory. 
+
+http://maven.apache.org/plugins/maven-resources-plugin/
+
+You should specify the version in your project's plugin configuration:
+
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-resources-plugin</artifactId>
+  <version>2.7</version>
+</plugin>
+
+Release Notes - Maven Resources Plugin - Version 2.7
+
+http://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=11145&version=18645
+
+Bug:
+
+ * [MRESOURCES-182] - Example Custom resource filters incorrect
+
+Improvements:
+
+ * [MRESOURCES-177] - Use version 1.2 of maven-filtering to use improvements
+ * [MRESOURCES-180] - Documentation does not use correct versions
+ * [MRESOURCES-181] - MavenProject/MavenSession Injection as a paremeter instead as a component.
+ * [MRESOURCES-183] - Upgrade to Maven 2.2.1 compatiblity
+ * [MRESOURCES-184] - Removing plexus-container-default dependency
+
+Enjoy,
+
+-The Apache Maven team
+
+Karl-Heinz Marbaise
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,99 @@
+From users-return-135300-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan 29 22:58:38 2014
+Return-Path: <users-return-135300-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9CA5410D29
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 29 Jan 2014 22:58:38 +0000 (UTC)
+Received: (qmail 72636 invoked by uid 500); 29 Jan 2014 22:58:32 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 72548 invoked by uid 500); 29 Jan 2014 22:58:31 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 72539 invoked by uid 99); 29 Jan 2014 22:58:31 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Jan 2014 22:58:31 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of pgribnau@informatica.com designates 207.46.163.238 as permitted sender)
+Received: from [207.46.163.238] (HELO na01-by2-obe.outbound.protection.outlook.com) (207.46.163.238)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 29 Jan 2014 22:58:25 +0000
+Received: from BY2PR03MB475.namprd03.prod.outlook.com (10.141.141.150) by
+ BY2PR03MB475.namprd03.prod.outlook.com (10.141.141.150) with Microsoft SMTP
+ Server (TLS) id 15.0.868.8; Wed, 29 Jan 2014 22:58:02 +0000
+Received: from BY2PR03MB475.namprd03.prod.outlook.com ([10.141.141.150]) by
+ BY2PR03MB475.namprd03.prod.outlook.com ([10.141.141.150]) with mapi id
+ 15.00.0868.013; Wed, 29 Jan 2014 22:58:02 +0000
+From: "Gribnau, Phillip" <pgribnau@informatica.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: Maven Plugins: By-Module-Logger and Current Processes Running
+Thread-Topic: Maven Plugins: By-Module-Logger and Current Processes Running
+Thread-Index: Ac8dRFMDDnbNOAzWQ66s0tl91R5D1A==
+Date: Wed, 29 Jan 2014 22:58:02 +0000
+Message-ID: <73e64a3ae3e14accb6ed3e2cfb28425e@BY2PR03MB475.namprd03.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [4.31.199.226]
+x-forefront-prvs: 01068D0A20
+x-forefront-antispam-report: SFV:NSPM;SFS:(10009001)(6009001)(165144002)(189002)(199002)(45074003)(164054003)(53754006)(83322001)(2656002)(76176001)(76786001)(80976001)(56816005)(76796001)(87936001)(76576001)(90146001)(19580395003)(94946001)(69226001)(81342001)(65816001)(81542001)(63696002)(80022001)(16236675002)(66066001)(74876001)(77982001)(74706001)(59766001)(33646001)(79102001)(94316002)(85306002)(15202345003)(87266001)(19300405004)(47446002)(31966008)(74502001)(74662001)(51856001)(85852003)(86362001)(93136001)(93516002)(83072002)(4396001)(92566001)(49866001)(19609705001)(47736001)(15975445006)(54316002)(74366001)(47976001)(81686001)(53806001)(46102001)(76482001)(50986001)(54356001)(56776001)(74316001)(81816001)(24736002);DIR:OUT;SFP:1101;SCL:1;SRVR:BY2PR03MB475;H:BY2PR03MB475.namprd03.prod.outlook.com;CLIP:4.31.199.226;FPR:3CFEC2D8.9632A6C9.81E4374C.84ECDC74.201C1;InfoNoRecordsMX:1;A:1;LANG:en;
+Content-Type: multipart/alternative;
+	boundary="_000_73e64a3ae3e14accb6ed3e2cfb28425eBY2PR03MB475namprd03pro_"
+MIME-Version: 1.0
+X-OriginatorOrg: informatica.com
+X-MS-Exchange-CrossPremises-AuthAs: Internal
+X-MS-Exchange-CrossPremises-AuthMechanism: 03
+X-MS-Exchange-CrossPremises-AuthSource: BY2PR03MB475.namprd03.prod.outlook.com
+X-MS-Exchange-CrossPremises-SCL: 1
+X-MS-Exchange-CrossPremises-messagesource: StoreDriver
+X-MS-Exchange-CrossPremises-BCC:
+X-MS-Exchange-CrossPremises-originalclientipaddress: 4.31.199.226
+X-MS-Exchange-CrossPremises-avstamp-service: 1.0
+X-MS-Exchange-CrossPremises-antispam-scancontext: DIR:Originating;SFV:NSPM;SKIP:0;
+X-MS-Exchange-CrossPremises-journaled-to-recipients: Automated-365-00cb7d@journalloma.liveoffice.com+journal@transparentsecurity.com+local-informaticaOffice365@journalloma.liveoffice.com
+X-MS-Exchange-CrossPremises-processed-by-journaling: Journal Agent
+X-MS-Exchange-CrossPremises-ContentConversionOptions:
+ False;00160000;True;;iso-8859-1
+X-OrganizationHeadersPreserved: BY2PR03MB475.namprd03.prod.outlook.com
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_000_73e64a3ae3e14accb6ed3e2cfb28425eBY2PR03MB475namprd03pro_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Everyone,
+
+I was wondering if anyone knows of some plugins that could do any of the fo=
+llowing:
+
+
+1)      Keep track of the number of threads currently running and what modu=
+les are running
+
+2)      Number of modules remaining to be built in the reactor
+
+3)      A logger that can separate logs of each module instead of consolida=
+ting the entire reactor into 1 log file.
+
+
+The project I'm working on takes a very long time to build and would be hel=
+pful if there was a way to see how much further the build has to go until i=
+t is finished. I had in mind being able to output into the log what the cur=
+rent status of the build is in terms of modules built and remaining. Also, =
+when running a build with multiple threads, the log outputs of one module c=
+an overlap with another modules and can be hard to debug at times. Are ther=
+e any plugins developed that can accomplish any of these?
+
+Thanks,
+Phillip
+
+--_000_73e64a3ae3e14accb6ed3e2cfb28425eBY2PR03MB475namprd03pro_--
+

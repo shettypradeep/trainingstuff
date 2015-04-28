@@ -1,0 +1,89 @@
+From users-return-135183-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan 16 18:54:24 2014
+Return-Path: <users-return-135183-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 02F5C10C1B
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 16 Jan 2014 18:54:24 +0000 (UTC)
+Received: (qmail 36412 invoked by uid 500); 16 Jan 2014 18:54:19 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 36240 invoked by uid 500); 16 Jan 2014 18:54:19 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 36232 invoked by uid 99); 16 Jan 2014 18:54:18 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 16 Jan 2014 18:54:18 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.223.193] (HELO mail-ie0-f193.google.com) (209.85.223.193)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 16 Jan 2014 18:54:12 +0000
+Received: by mail-ie0-f193.google.com with SMTP id x13so1344366ief.0
+        for <users@maven.apache.org>; Thu, 16 Jan 2014 10:53:51 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:content-type:subject:message-id:date:to
+         :mime-version;
+        bh=1PErNH3gOBNKmXGz+gFYwSBf4O5mAzJOuOt39zZOAQI=;
+        b=HpNc9ApB8SdipDjwIvV5sjFg2nLYg8w/ee5hHvRh6MfHJhOqlr8NKo0NUjCrla1BOe
+         w5yUwURovlf8fiBuo5MJMdo/JELCnTJRGJ8zaq/pm3T4gZwyRerrpkeUxPaHnv+AUBEe
+         WiUo2S2a6Me2P/M/75bXEwmvINMfmocmI6BAxaIgdD5qezskGkF1KJSp3WAJ7dt+I7u/
+         r0iX8HjTpamoveD6ntaNSXPa1F51TCyvhDT6iEaW3zRHs96tjxaxC7r1/+Rfr5KsSHWS
+         HxeeG30xjrgM5zT8Sf2yCrH4yBnTvSizkg9QXSoRg7w+ORh9Qvfu6as8/BfXgtXGYGOR
+         Hchw==
+X-Gm-Message-State: ALoCoQn/7vEHL8z+CxR/f8k0qRJOyN/6kAJ3ofNq0s09NgkEOkr6N27SDTEYOgMnhrQ6RyZigE1/
+X-Received: by 10.50.118.39 with SMTP id kj7mr11268461igb.37.1389898431047;
+        Thu, 16 Jan 2014 10:53:51 -0800 (PST)
+Received: from [10.0.1.2] (192-0-155-174.cpe.teksavvy.com. [192.0.155.174])
+        by mx.google.com with ESMTPSA id e2sm1644528igt.2.2014.01.16.10.53.49
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Thu, 16 Jan 2014 10:53:50 -0800 (PST)
+From: Jason van Zyl <jason@takari.io>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_69D05385-4133-495F-A6F5-647DB5CA217D"
+Subject: Maven won't die!
+Message-Id: <9F1BB48E-ED55-4C63-A013-0BD95AB25795@takari.io>
+Date: Thu, 16 Jan 2014 13:53:48 -0500
+To: Maven Users List <users@maven.apache.org>
+Mime-Version: 1.0 (Mac OS X Mail 7.1 \(1827\))
+X-Mailer: Apple Mail (2.1827)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_69D05385-4133-495F-A6F5-647DB5CA217D
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+Sorry I'm responding out of the original thread, but realized I had the =
+wrong account subscribed to the user list. So I'll respond to the few =
+questions here in one thread.
+
+@Dan: Takari is my new company and is not related to Sonatype. I want to =
+focus all my time on the Maven ecosystem.
+
+@George: Has some of the characteristics of a workspace in the IDE but =
+on the command line. I'll try to write something up.
+
+@Jeff: Yes, i think the generations support is path toward real CD for =
+Maven. Snapshots and the release plugin are a PITA.
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+---------------------------------------------------------
+
+
+--Apple-Mail=_69D05385-4133-495F-A6F5-647DB5CA217D--
+

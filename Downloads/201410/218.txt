@@ -1,0 +1,102 @@
+From users-return-137591-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Oct 19 16:48:13 2014
+Return-Path: <users-return-137591-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 19401179A9
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 19 Oct 2014 16:48:13 +0000 (UTC)
+Received: (qmail 43471 invoked by uid 500); 19 Oct 2014 16:48:11 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 43384 invoked by uid 500); 19 Oct 2014 16:48:11 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 43372 invoked by uid 99); 19 Oct 2014 16:48:10 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 19 Oct 2014 16:48:10 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of irfu.sayed@gmail.com designates 209.85.212.180 as permitted sender)
+Received: from [209.85.212.180] (HELO mail-wi0-f180.google.com) (209.85.212.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 19 Oct 2014 16:48:06 +0000
+Received: by mail-wi0-f180.google.com with SMTP id em10so4532231wid.13
+        for <users@maven.apache.org>; Sun, 19 Oct 2014 09:47:45 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=FjBu3c0P7vTV//mi+dC8WKi89kp5WbtqMdZNDjwgywE=;
+        b=rXl8IrgCo6srzbZbdTa5W3WwU0k30CK8owThay8bl9+4VWLFSp8y931nx/QtuGAQ3v
+         VLlfO9wJGRyJU1UFRkTxL50uihXg/fvfwl7+PzSOCKC1lgMbwC7aBEwGVe2SwDrCI804
+         EctPWg0n37hv2lZuFqp5UmrUN1YT4j1J88IpoIa6/UmA1XrjiJawHw/DM0osHjnktd8P
+         zcNgH752h3Vvc3VfLFVvBNtqsrlaLcWgA5ytwrBZR5vmXW0o7Zgf+itAaoVpYBze7jdT
+         ttyVKbvec3FShFTeYlGFpHENTZA0vluXyBrrFZi3VrB4BhCSZFAj3V5Ad3lY1Ty+RbHg
+         TbLg==
+MIME-Version: 1.0
+X-Received: by 10.180.103.233 with SMTP id fz9mr13529968wib.80.1413737265377;
+ Sun, 19 Oct 2014 09:47:45 -0700 (PDT)
+Received: by 10.216.114.72 with HTTP; Sun, 19 Oct 2014 09:47:45 -0700 (PDT)
+In-Reply-To: <20141019181952.0000769c.ecki@zusammenkunft.net>
+References: <CACGLCJak6BzD1qnd3WWQmDYHjxcxpFrVL+jCqnim2TYZ5=jciw@mail.gmail.com>
+	<20141019181952.0000769c.ecki@zusammenkunft.net>
+Date: Sun, 19 Oct 2014 22:17:45 +0530
+Message-ID: <CACGLCJYLsVKLNLwGZxeXmdNg_04FDvux8LGjcLKDL5MR+=FAZw@mail.gmail.com>
+Subject: Re: generate maven dependency difference between two Jenkins builds
+From: Irfan Sayed <irfu.sayed@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d044280ca8237e20505c95be0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d044280ca8237e20505c95be0
+Content-Type: text/plain; charset=UTF-8
+
+thanks bernd.
+anyone has any other suggestions please?
+
+regards
+
+
+On Sun, Oct 19, 2014 at 9:49 PM, Bernd Eckenfels <ecki@zusammenkunft.net>
+wrote:
+
+> Hello,
+>
+> I dont have a good method for that (especially not if all dependencies
+> arent fully version-specified. You can use and add dependencies:list as
+> a target to the maven build, then the resolved list will be printed in
+> the build log. This list can change depending on what is available at
+> build time.
+>
+> Gruss
+> Bernd
+>
+>   Am Sun, 19 Oct 2014 20:57:29 +0530
+> schrieb Irfan Sayed <irfu.sayed@gmail.com>:
+>
+> > hello,
+> >
+> > we have java project and using maven to build the same. we are using
+> > Jenkins. in Jenkins ,  we can generate the delta of source code
+> > changes between two builds.
+> > in the same way, do we have any way wherein , we can generate the
+> > delta of maven dependencies changed between two builds.
+> >
+> > please suggest
+> >
+> > regards
+> >
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--f46d044280ca8237e20505c95be0--
+

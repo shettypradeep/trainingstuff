@@ -1,0 +1,222 @@
+From users-return-135557-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Feb 18 05:49:10 2014
+Return-Path: <users-return-135557-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C84C510289
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 18 Feb 2014 05:49:10 +0000 (UTC)
+Received: (qmail 40938 invoked by uid 500); 18 Feb 2014 05:49:06 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 40520 invoked by uid 500); 18 Feb 2014 05:49:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 40512 invoked by uid 99); 18 Feb 2014 05:48:59 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 18 Feb 2014 05:48:59 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of vektor.knight@gmail.com designates 209.85.217.178 as permitted sender)
+Received: from [209.85.217.178] (HELO mail-lb0-f178.google.com) (209.85.217.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 18 Feb 2014 05:48:55 +0000
+Received: by mail-lb0-f178.google.com with SMTP id u14so12095644lbd.9
+        for <users@maven.apache.org>; Mon, 17 Feb 2014 21:48:33 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=k25QLk2VR6mZCfBvsEMHDpP1VA0eRedy0aMRd+2N+Ns=;
+        b=oiwl+k99EzwlkZKQD5bNrqUJPFJXlUC5Irv7aJZGqD/OhO0yNb117RGiarUjII6AyJ
+         a6hhE+QV7PG3UFPFHV3TjPK7mRJiJG4Yw6v+h5xQpeGIGxZDCi7drsgtyX80qXD0YVVQ
+         eo868vTmGTnneP+yXZKpbz+vppiifosgnOD8fWkN3KfL9QZAkN4h2Gkie1X5ZY8R6AjO
+         t/9dsMZdERvDX1FkONNsIWUaIYFpWk5N2sorcZDj1EJXVkkwTC6Q9p0pciIl+qpIvucB
+         ac3NN4TdmRqyb34WwPvXIIfAEz3zg9IY41l74vAd4OOkhb4raWwzSYYa+frkIf9nMbJY
+         xbYA==
+MIME-Version: 1.0
+X-Received: by 10.152.8.47 with SMTP id o15mr20481712laa.20.1392702513581;
+ Mon, 17 Feb 2014 21:48:33 -0800 (PST)
+Received: by 10.112.170.200 with HTTP; Mon, 17 Feb 2014 21:48:33 -0800 (PST)
+In-Reply-To: <D8382768F64DA745B6A5CA29EF121E840211C75B1A@EX7T2-SV12.TDBFG.COM>
+References: <D8382768F64DA745B6A5CA29EF121E840211C75B1A@EX7T2-SV12.TDBFG.COM>
+Date: Mon, 17 Feb 2014 22:48:33 -0700
+Message-ID: <CAMQUeZRDoZkNm=_98+K4-sGjSYOPeAgr-ioQ67q3phHq-PEG9A@mail.gmail.com>
+Subject: Re: wsimport - catalog
+From: Sartaj Hundal <vektor.knight@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c3640299934104f2a7d228
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c3640299934104f2a7d228
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+You need to "get" the XSD that is 'in' the jar file and then reference that
+retrieval within the XML.
+
+http://stackoverflow.com/questions/9280226/referencing-a-xsd-schema-within-=
+jar-file
+
+Best
+Sartaj
+
+
+On Mon, Feb 10, 2014 at 1:28 PM, Zmuda, Matt <Matt.Zmuda@td.com> wrote:
+
+> Hi All,
+>
+> I am trying to generate some web service client code from a WSDL and
+> schemas that I have.
+> One issue I am encountering is that one schema file (xsd) I require is in
+> a separate jar that my client project has a dependency on.
+> I cannot figure out how to reference that file in my pom. I have been lea=
+d
+> down the path of looking into defining a catalog (and it seems that how i=
+t
+> was done in the and build we use to use) however I can't get this working=
+.
+>
+> Below is what I have.. but not sure if I am on right track or not. Any
+> help is appreciated!
+>
+> The POM Sample
+>
+> <project xmlns=3D"http://maven.apache.org/POM/4.0.0" xmlns:xsi=3D"
+> http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=3D"
+> http://maven.apache.org/POM/4.0.0
+> http://maven.apache.org/xsd/maven-4.0.0.xsd">
+>                 <modelVersion>4.0.0</modelVersion>
+>                 <groupId>com.thegroup</groupId>
+>                 <artifactId>com.theclientcode</artifactId>
+>                 <version>0.0.1-SNAPSHOT</version>
+>
+>                 <dependencies>
+>                                 <dependency>
+>                                                 <!-- This dependency
+> contains the schema my wsdl needs -->
+>                                                 <!-- How can I reference
+> it? -->
+>
+> <groupId>com.mygroup</groupId>
+>
+> <artifactId>myartifact</artifactId>
+>                                                 <version>1.0</version>
+>                                 </dependency>
+>                 </dependencies>
+>                 <build>
+>                                 <plugins>
+>                                                 <plugin>
+>
+> <groupId>org.codehaus.mojo</groupId>
+>
+> <artifactId>jaxws-maven-plugin</artifactId>
+>
+> <version>1.12</version>
+>
+> <executions>
+>
+>       <execution>
+>
+>                       <goals>
+>
+>                                       <goal>wsimport</goal>
+>
+>                       </goals>
+>
+>       </execution>
+>
+> </executions>
+>
+> <configuration>
+>
+>       <extension>true</extension>
+>
+>       <!-- Is this what I should be using? What should be in it??? 0-->
+>
+>       <catalog>${basedir}/src/main/resources/META-INF/catalog.xml</catalo=
+g>
+>
+>       <wsdlDirectory>${basedir}/src/main/resources</wsdlDirectory>
+>
+>       <sourceDestDir>${project.build.sourceDirectory}</sourceDestDir>
+>
+>       <staleFile>${basedir}/src/jaxws/stale/.staleFlag</staleFile>
+>
+>       <wsdlLocation>/META-INF/wsdl/TheWSDL.wsdl</wsdlLocation>
+>
+>       <wsdlFiles>
+>
+>                       <wsdlFile>/META-INF/wsdl/TheWSDL.wsdl</wsdlFile>
+>
+>       </wsdlFiles>
+>
+>       <target>2.1</target>
+>
+>
+> </configuration>
+>
+> <dependencies>
+>
+>       <dependency>
+>
+>                       <groupId>com.sun.xml.ws</groupId>
+>
+>                       <artifactId>jaxws-tools</artifactId>
+>
+>                       <version>2.2.0.2</version>
+>
+>       </dependency>
+>
+> </dependencies>
+>                                                 </plugin>
+>                                 </plugins>
+>                 </build>
+> </project>
+>
+>
+> The catalog.xml Sample:
+>
+> <xmlcatalog id=3D"wsimportcatalog">
+>                 <!--  What is this location relative to? -->
+>                 <entity publicid=3D"file:/com/something/Fault.xsd"
+> location=3D"/../schema/com/something/Fault.xsd"/>
+> </xmlcatalog>
+>
+>
+> Jaxb Bindings for the schema:
+>
+> <jxb:bindings version=3D"1.0"
+>                xmlns:jxb=3D"http://java.sun.com/xml/ns/jaxb"
+>                xmlns:xjc=3D"http://java.sun.com/xml/ns/jaxb/xjc"
+>                xmlns:xs=3D"http://www.w3.org/2001/XMLSchema">
+>
+>                 <jxb:bindings schemaLocation=3D"/com/something/Fault.xsd"
+> node=3D"/xs:schema">
+>                     <jxb:schemaBindings>
+>                       <jxb:package name=3D"com.something.xml">
+>                         <jxb:javadoc><![CDATA[<body>Package level
+> documentation for generated package</body>]]></jxb:javadoc>
+>                       </jxb:package>
+>                     </jxb:schemaBindings>
+>                 </jxb:bindings>
+>
+> </jxb:bindings>
+>
+>
+>
+> NOTICE: Confidential message which may be privileged. Unauthorized
+> use/disclosure prohibited. If received in error, please go to
+> www.td.com/legal for instructions.
+> AVIS : Message confidentiel dont le contenu peut =EAtre privil=E9gi=E9.
+> Utilisation/divulgation interdites sans permission. Si re=E7u par erreur,
+> pri=E8re d'aller au www.td.com/francais/avis_juridique pour des
+> instructions.
+>
+
+--001a11c3640299934104f2a7d228--
+

@@ -1,0 +1,103 @@
+From users-return-137187-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Sep  3 02:34:33 2014
+Return-Path: <users-return-137187-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 09AC611E3E
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  3 Sep 2014 02:34:33 +0000 (UTC)
+Received: (qmail 83367 invoked by uid 500); 3 Sep 2014 02:34:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 83285 invoked by uid 500); 3 Sep 2014 02:34:31 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 83015 invoked by uid 99); 3 Sep 2014 02:34:30 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 03 Sep 2014 02:34:30 +0000
+X-ASF-Spam-Status: No, hits=3.0 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_IMAGE_ONLY_24,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of burtonator2011@gmail.com designates 209.85.215.50 as permitted sender)
+Received: from [209.85.215.50] (HELO mail-la0-f50.google.com) (209.85.215.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 03 Sep 2014 02:34:05 +0000
+Received: by mail-la0-f50.google.com with SMTP id mc6so8885045lab.23
+        for <users@maven.apache.org>; Tue, 02 Sep 2014 19:34:04 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:from:date:message-id:subject:to:content-type;
+        bh=drzkd1JPUXWhrxEbAwulSfy0LINgtBpMmw3H0i0VJXw=;
+        b=QHNeDRzn2HsOkmHvUWBGAoiJHgENlNnPoOTntPkZdr81hLasD7Lz/XGoTJzbrB5K5j
+         g0G7W04tXbLAU+s80Zo2GKdzjR1q9DBavUL7vuWHU7WQgFgXJyAB6nGOagNiCixG3xL9
+         YewDxku5lPK6qatyML/ba8utlE7J+NwA2VBrmFwlCp6C/ERuAcuqW2boK2PNppC28BxX
+         zE6Q9cLKNagZaB8SUxr0Yg9/wU58gwfkdcI4CamGenhCex5Lf4/EvClXgT70pKH0ZtPh
+         t1qRWywRTmZawX1VdZeddK+TB8cCQMULbOucHCt4b7iT1PfTmmgDpZxX/bWVNFa6O/3X
+         7mwQ==
+X-Received: by 10.152.9.100 with SMTP id y4mr10265825laa.26.1409711644066;
+ Tue, 02 Sep 2014 19:34:04 -0700 (PDT)
+MIME-Version: 1.0
+Sender: burtonator2011@gmail.com
+Received: by 10.112.75.10 with HTTP; Tue, 2 Sep 2014 19:33:43 -0700 (PDT)
+From: Kevin Burton <burton@spinn3r.com>
+Date: Tue, 2 Sep 2014 19:33:43 -0700
+X-Google-Sender-Auth: uvivgRk7XCM7hldVFLIUVnSN49w
+Message-ID: <CAAZU44=9_hHGhu=f2FynzVmbEQ6sftcoXJsV1W6wKDF1xR2Wzw@mail.gmail.com>
+Subject: =?UTF-8?Q?Unable_to_create_markdown_doxia=E2=80=A6_files_just_ignore?=
+	=?UTF-8?Q?d=2E?=
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=089e0158b9c8c7c86c0502201147
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0158b9c8c7c86c0502201147
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I=E2=80=99m trying to create a static site using doxia and the markdown plu=
+gin and
+it seems to be failing.
+
+Basically, apt and xdocs works, but markdown doesn=E2=80=99t.
+
+I=E2=80=99m using the markdown plugin:
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.4</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.doxia</groupId>
+                        <artifactId>doxia-module-markdown</artifactId>
+                        <version>1.5</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+=E2=80=A6 and then run
+
+   mvn site
+
+=E2=80=A6 but no markdown files are picked up.
+
+If I use xdocs or apt they work just fine.
+
+I=E2=80=99m placing my files in src/site/markdown and they have .md extensi=
+ons.
+
+=E2=80=A6 anything else I should try?  is there a debug mode?
+
+--=20
+
+Founder/CEO Spinn3r.com
+Location: *San Francisco, CA*
+blog: http://burtonator.wordpress.com
+=E2=80=A6 or check out my Google+ profile
+<https://plus.google.com/102718274791889610666/posts>
+<http://spinn3r.com>
+
+--089e0158b9c8c7c86c0502201147--
+

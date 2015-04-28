@@ -1,0 +1,103 @@
+From users-return-137228-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Sep 10 15:07:53 2014
+Return-Path: <users-return-137228-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5AB26113CC
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 10 Sep 2014 15:07:53 +0000 (UTC)
+Received: (qmail 22350 invoked by uid 500); 10 Sep 2014 15:07:50 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 22268 invoked by uid 500); 10 Sep 2014 15:07:50 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 22256 invoked by uid 99); 10 Sep 2014 15:07:49 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 10 Sep 2014 15:07:49 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of raghurefer@gmail.com designates 209.85.216.174 as permitted sender)
+Received: from [209.85.216.174] (HELO mail-qc0-f174.google.com) (209.85.216.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 10 Sep 2014 15:07:45 +0000
+Received: by mail-qc0-f174.google.com with SMTP id i17so19208462qcy.19
+        for <users@maven.apache.org>; Wed, 10 Sep 2014 08:07:24 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=agqI2Xo5cAPvXIKFQpxfm8RxvzDSoIebaX9P5F3tjyA=;
+        b=S0itsAbJRW1DU5f5mCrs+GSRrOe5HYpgcUIqEzO+9ay3bwlFdTL9sj3B4zg+2pq6NQ
+         QnyGmDf4/f9J/Rg8nu1ZSVWAfR/3H+u/E1an6G890Z8SEbY9mYEf4fG8MzML9CgizcWi
+         K+wG3woJIQ8XQPMfMUj+YNlDikE4rEVEuIlNW4MWXgnJXkt9n0vhYgAnOrs2YP57qCMW
+         cjDRuNPTL1WdQp4m1CXPpE88yxHSupAULRiSG7P1jaAMay/728sWwP+HqD01ksXrwF7Q
+         M124ZTIbyrrmi1AXhDFRcJ1LVqSs3vQACKxcEUNR5KRue79jKB9xUAQts57RnB02geoA
+         PnYg==
+MIME-Version: 1.0
+X-Received: by 10.224.114.74 with SMTP id d10mr60850168qaq.33.1410361644560;
+ Wed, 10 Sep 2014 08:07:24 -0700 (PDT)
+Received: by 10.224.136.74 with HTTP; Wed, 10 Sep 2014 08:07:24 -0700 (PDT)
+In-Reply-To: <0DF8ABE9-F263-4131-A9FC-CA3D17344307@sharp.fm>
+References: <CAEkwH4OH7-TNjR_nptJS=UJR3E7MVzVoGmBcdfPor3WALbu5kg@mail.gmail.com>
+	<0DF8ABE9-F263-4131-A9FC-CA3D17344307@sharp.fm>
+Date: Wed, 10 Sep 2014 10:07:24 -0500
+Message-ID: <CAEkwH4ODwNizMyvDbeEUbkrK3DjVNY9jPugMJdqUDv_87ozuaA@mail.gmail.com>
+Subject: Re: Build once, deploy everywhere
+From: Jan <raghurefer@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bdc1340d44e710502b76886
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bdc1340d44e710502b76886
+Content-Type: text/plain; charset=UTF-8
+
+Thanks All.
+
+My package is not environment specific, and currently i compile and package
+using Maven, and run deployment using Ant, coz when i tried to run maven
+deploy it was using the full life cycle goals again, instead of this is
+there any way to execute just deploy and skip all other goals?
+
+
+On Wed, Sep 10, 2014 at 9:26 AM, Graham Leggett <minfrin@sharp.fm> wrote:
+
+> On 10 Sep 2014, at 10:03, Jan <raghurefer@gmail.com> wrote:
+>
+> > Does anyone using Maven as Build Once and deploy Everywhere method? Like
+> > lets say i don't want to recompile my source code everytime for different
+> > environment DEV,SIT,UAT & PROD. I want to do my compile and package only
+> at
+> > DEV then deploy the artifact to all mentioned environment. Is this
+> possible
+> > using Maven, is there any reference any one could share with me Please.
+>
+> We do this extensively with maven, using the maven release plugin.
+>
+> Our artifacts are in turn installable packages (rpms in our case, but
+> could be deb, whatever) which get published into a yum repository.
+>
+> The code is "promoted" from dev to test to higher environments by hard
+> linking the packages into distinct yum repos, a yum repo for each
+> environment.
+>
+> The release created by the release plugin is built just once and promoted.
+> The rpms are created using the rpm-maven-plugin.
+>
+> Regards,
+> Graham
+> --
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7bdc1340d44e710502b76886--
+

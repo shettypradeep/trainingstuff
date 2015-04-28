@@ -1,0 +1,172 @@
+From users-return-137267-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 12 17:23:02 2014
+Return-Path: <users-return-137267-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9B6D311092
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 12 Sep 2014 17:23:02 +0000 (UTC)
+Received: (qmail 85054 invoked by uid 500); 12 Sep 2014 17:23:01 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 84966 invoked by uid 500); 12 Sep 2014 17:23:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 84951 invoked by uid 99); 12 Sep 2014 17:23:00 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 17:23:00 +0000
+X-ASF-Spam-Status: No, hits=-2.3 required=5.0
+	tests=RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of Robert.Puncel@jpl.nasa.gov designates 128.149.139.105 as permitted sender)
+Received: from [128.149.139.105] (HELO mail.jpl.nasa.gov) (128.149.139.105)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 17:22:34 +0000
+Received: from mail.jpl.nasa.gov (ap-ehub-sp01.jpl.nasa.gov [128.149.137.148])
+	by smtp.jpl.nasa.gov (Sentrion-MTA-4.3.1/Sentrion-MTA-4.3.1) with ESMTP id s8CHLheN005087
+	(using TLSv1/SSLv3 with cipher AES128-SHA (128 bits) verified NO)
+	for <users@maven.apache.org>; Fri, 12 Sep 2014 10:21:51 -0700
+Received: from AP-EMBX-SP20.RES.AD.JPL ([169.254.8.11]) by
+ ap-ehub-sp01.RES.AD.JPL ([169.254.3.216]) with mapi id 14.03.0195.001; Fri,
+ 12 Sep 2014 10:22:28 -0700
+From: "Puncel, Robert (393J)" <Robert.Puncel@jpl.nasa.gov>
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Tell maven to not have the parent pom as a dependency?
+Thread-Topic: Tell maven to not have the parent pom as a dependency?
+Thread-Index: AQHPzjlJpPjnNpmcVki6argQZHoLH5v+J4OAgAAIPwCAAAOwAP//jFkA
+Date: Fri, 12 Sep 2014 17:22:27 +0000
+Message-ID: <D0387953.16A6A%Robert.Puncel@jpl.nasa.gov>
+References: <CAAZU44kFZ0cNGa_qOXf6Wj_LRRM18LE3v0xKMLZ0+Z44ZffpFg@mail.gmail.com>
+ <CADN69ynJnF10Lofgw6cPRTNz-OyWXHPH0oqTDyzf5xyXP_RKXA@mail.gmail.com>
+ <CAAZU44njJwOz7hbKAeUyE3fY6ygCDJiA5Qa0FeNOT58fJTS=tA@mail.gmail.com>
+ <CAAZU44m6VFKf4nDiitwc9WLHZcczhjBYtm4RaGo-pf_buf-7bw@mail.gmail.com>
+In-Reply-To: <CAAZU44m6VFKf4nDiitwc9WLHZcczhjBYtm4RaGo-pf_buf-7bw@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+user-agent: Microsoft-MacOutlook/14.4.4.140807
+x-originating-ip: [128.149.137.113]
+Content-Type: text/plain; charset="Windows-1252"
+Content-ID: <4DD1414EA56EF54B93E8F6268BED687D@ad.jpl>
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-Source-Sender: Robert.Puncel@jpl.nasa.gov
+X-AUTH: Authorized
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+You mentioned you were using the versions plugin and it wasn=B9t working-
+did you use it before? Can you describe your use case in terms of the
+command line you are using, and what versions you want to upgrade?
+
+On 9/12/14, 10:16 AM, "Kevin Burton" <burton@spinn3r.com> wrote:
+
+>OK=8A so this definitely works and the aggregation model compiles my modul=
+e.
+>
+>But I need a way to bump the version number because I have complex
+>dependencies and updating 10 places every time I change the project
+>version
+>isn=B9t going to be fun.
+>
+>
+>On Fri, Sep 12, 2014 at 10:03 AM, Kevin Burton <burton@spinn3r.com> wrote:
+>
+>> > In other words, you can keep using your toplevel pom.xml as an
+>> _aggregator_
+>> without it being the _parent_ of your OSS module.
+>>
+>> Ha.  That works.  But the versions plugin now won=B9t update the version
+>>of
+>> the sub-module=8A
+>>
+>> This is super fun! :)
+>>
+>>
+>> On Fri, Sep 12, 2014 at 9:33 AM, Curtis Rueden <ctrueden@wisc.edu>
+>>wrote:
+>>
+>>> Hi Kevin,
+>>>
+>>> > I want to post this to a public repo=8A it=B9s open source.
+>>> >
+>>> > The problem is that the parent module is not OSS.
+>>>
+>>> Child modules of a multi-module build do not need to use the toplevel
+>>> module as parent.
+>>>
+>>> In other words, you can keep using your toplevel pom.xml as an
+>>> _aggregator_
+>>> without it being the _parent_ of your OSS module.
+>>>
+>>>=20
+>>>http://rostislav-matl.blogspot.com/2011/12/maven-aggregator-vs-parent.ht
+>>>ml
+>>>
+>>> Regards,
+>>> Curtis
+>>>
+>>> On Thu, Sep 11, 2014 at 10:25 PM, Kevin Burton <burton@spinn3r.com>
+>>> wrote:
+>>>
+>>> > I have an OSS module in a multi-module maven project.
+>>> >
+>>> > I want to post this to a public repo=8A it=B9s open source.
+>>> >
+>>> > The problem is that the parent module is not OSS.
+>>> >
+>>> > When I setup a <dependency> it pulls in my OSS module just fine, but
+>>> then
+>>> > it tries to pull down the parent module, which isn=B9t in the repo, a=
+nd
+>>> > breaks.
+>>> >
+>>> > The parent pom isn=B9t really a dependency=8A so I=B9d like it to not=
+ need
+>>>it
+>>> >
+>>> > is this possible?
+>>> >
+>>> > --
+>>> >
+>>> > Founder/CEO Spinn3r.com
+>>> > Location: *San Francisco, CA*
+>>> > blog: http://burtonator.wordpress.com
+>>> > =8A or check out my Google+ profile
+>>> > <https://plus.google.com/102718274791889610666/posts>
+>>> > <http://spinn3r.com>
+>>> >
+>>>
+>>
+>>
+>>
+>> --
+>>
+>> Founder/CEO Spinn3r.com
+>> Location: *San Francisco, CA*
+>> blog: http://burtonator.wordpress.com
+>> =8A or check out my Google+ profile
+>> <https://plus.google.com/102718274791889610666/posts>
+>> <http://spinn3r.com>
+>>
+>>
+>
+>
+>--=20
+>
+>Founder/CEO Spinn3r.com
+>Location: *San Francisco, CA*
+>blog: http://burtonator.wordpress.com
+>=8A or check out my Google+ profile
+><https://plus.google.com/102718274791889610666/posts>
+><http://spinn3r.com>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,95 @@
+From users-return-134901-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan  2 21:46:02 2014
+Return-Path: <users-return-134901-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3B7321066E
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  2 Jan 2014 21:46:02 +0000 (UTC)
+Received: (qmail 12799 invoked by uid 500); 2 Jan 2014 21:45:59 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 12615 invoked by uid 500); 2 Jan 2014 21:45:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 12599 invoked by uid 99); 2 Jan 2014 21:45:59 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Jan 2014 21:45:59 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of paulus.benedictus@gmail.com designates 209.85.216.174 as permitted sender)
+Received: from [209.85.216.174] (HELO mail-qc0-f174.google.com) (209.85.216.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 02 Jan 2014 21:45:53 +0000
+Received: by mail-qc0-f174.google.com with SMTP id n7so14248027qcx.33
+        for <multiple recipients>; Thu, 02 Jan 2014 13:45:32 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:cc:content-type;
+        bh=bH3gUw6KnDvkZF1RQEfaXBWuX6FnbUHhiQvq7TYvnUI=;
+        b=gRbcuxqB1zI5m5826x8z/43Ep2Ka8cupJQl1Ly2pcod+mDpjLBYnN9A7apym2ToYKM
+         qpbSiW4Yp9wKLz5j2RrayxFWBKSnW7WEfhPeHi81T4B5ZOfh7Y/8HtO0mAhvmJVE6gwX
+         O8OTzU3pTCdmwe9/eXzUjAx5hfcSm4bX1mcmOIcxmzl4zXy/OrRoRpF4bFgpmkqdTY0Q
+         i6MzK4UMqEFhbj1ePkoNC+dp7n5bClP3FL5DvKR5Dg3ArRhbkJe8Qunz9yLFS9fdQ+Il
+         MNLNjr1GH5Dm6H3zsyMsdiS+HSLUWYfv2czJbFxBeFDU4XIkvi1P8zsN/RkzGfIhXlD8
+         olyw==
+MIME-Version: 1.0
+X-Received: by 10.224.11.74 with SMTP id s10mr40078527qas.1.1388699132455;
+ Thu, 02 Jan 2014 13:45:32 -0800 (PST)
+Sender: paulus.benedictus@gmail.com
+Received: by 10.96.223.3 with HTTP; Thu, 2 Jan 2014 13:45:32 -0800 (PST)
+In-Reply-To: <CA+nPnMwBL4-4nnh5zHcBzUigbn1GiB1Y9Rqcsp=dbX1XZGP9Sw@mail.gmail.com>
+References: <CA+nPnMwq2-s+HU=C_gjBehb92KDOePMOd2y9M-gUzmiu6UAnRQ@mail.gmail.com>
+	<CA+nPnMwDQSR7VbdJ82kT_zgnwm_suv-5ecN9XWpbZr2BhHRLTw@mail.gmail.com>
+	<CALhtWkf8NVEF82v_qScYCWQgixUBHM9PbowC_Zuf7bTwtvpMCQ@mail.gmail.com>
+	<37043D9F-E440-4BFE-A62B-A3951168F907@tesla.io>
+	<CA+nPnMxjzbpKyGrbPMughKvLx1bU4_n-EAzoxaekTx2_mq5vEg@mail.gmail.com>
+	<CABLGb9zz=gab_F9UnZh9_0Rai5M2FGf=jNQHJ43HsCYt7Wmp3g@mail.gmail.com>
+	<CA+nPnMxc8hL09_sgVhk_jWKXFVn8_C3f7wxfQ5_NCbrUAKBsLg@mail.gmail.com>
+	<CAArU9iY_K1FmkFX1cx3ebQr13JVKCJYkr9HG3ifjVRnVU38D+Q@mail.gmail.com>
+	<520234cfeea2a93ffe5524c84bb1435a.squirrel@www.mosabuam.com>
+	<CABLGb9w0QWFtHTkz7xWhUgj8T4TXUJjxJFs8Q-BYe0qG88RnRg@mail.gmail.com>
+	<CA+nPnMzkumu_925CV+u+D5_wkHjwLCVSRmwMS6JuHvq16zp3Mg@mail.gmail.com>
+	<23db4a359ac8b220e15f373269ebc967.squirrel@www.mosabuam.com>
+	<CA+nPnMy32UXkeOz7-L8SdYymvuOtcVUGgqLca4UGg4MDade1Qg@mail.gmail.com>
+	<03B56DD5-E957-438E-A30E-439C2785032D@apache.org>
+	<781949f830750555c03856e45275c78b.squirrel@www.mosabuam.com>
+	<CA+nPnMw+yPfmovGb-DCxvgvqjUkboddWzBuHEyHZmauYPkiENw@mail.gmail.com>
+	<CA+nPnMzWqgsVuCMaK6FP0QfXDXSLadyUsP+dMeRy9cW73jdarA@mail.gmail.com>
+	<CA+nPnMyY0ST8OV4hfd1=-0vgEuTff8B8ym4iXwjWF16nW=ESHg@mail.gmail.com>
+	<CA+nPnMwwTCbHO64+axugaBXbttarKr86iembz57RNM_iAr_b7w@mail.gmail.com>
+	<58EAA08AF8232344ADDB2E31D4996BFD4BBC326B@SMAPEXCHIDAG3.prod.ad.merc.chicago.cme.com>
+	<CA+nPnMwAYirzveY3GjHMH_+-DcxfxxYquTBzU2XTmDGFDLmuwg@mail.gmail.com>
+	<CAPK0icjXAUmiqw0tQZ6615pmdFdO3r+9=TpB5mTd_X0XcvA1rA@mail.gmail.com>
+	<CA+nPnMws2yobgiC8iQN0pH5DqotB-N8-MoyxyA-6mar-eN1oLQ@mail.gmail.com>
+	<CAPK0iciy5OMVB31Xtf8zrbHiTo8GQtCqqVp=+pn-aghnHf24wQ@mail.gmail.com>
+	<CA+nPnMx+LJfDGqSpJAix=GWs1d4Nxh58m4_hNHCzNrTjgyFSyg@mail.gmail.com>
+	<CAPK0icjxLqekBgp7bNQu0GsQaurKjzkzVwVZ4qkr83dAEhi4tw@mail.gmail.com>
+	<CA+nPnMwBL4-4nnh5zHcBzUigbn1GiB1Y9Rqcsp=dbX1XZGP9Sw@mail.gmail.com>
+Date: Thu, 2 Jan 2014 15:45:32 -0600
+X-Google-Sender-Auth: C-fP3Eo7NfH1nQ_2N5GVGq3JVNA
+Message-ID: <CABLGb9z_4DAa9=HCTyAGaGnrKVQQNkTrx-7GvvCBFYSiJ=khUA@mail.gmail.com>
+Subject: Re: New logo?
+From: Paul Benedict <pbenedict@apache.org>
+To: Maven Developers List <dev@maven.apache.org>
+Cc: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c2bfb47d714304ef03b617
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c2bfb47d714304ef03b617
+Content-Type: text/plain; charset=ISO-8859-1
+
+My suggestion is for someone in the PMC to pay $29 to
+http://www.48hourslogo.com/ and have an extraordinary number of artists
+show you their logo ideas. Buy the one you like and then donate it to
+Apache.
+
+Paul
+
+--001a11c2bfb47d714304ef03b617--
+

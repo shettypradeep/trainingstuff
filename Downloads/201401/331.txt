@@ -1,0 +1,149 @@
+From users-return-134985-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan  6 20:24:37 2014
+Return-Path: <users-return-134985-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5BB3710FD4
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  6 Jan 2014 20:24:37 +0000 (UTC)
+Received: (qmail 50158 invoked by uid 500); 6 Jan 2014 20:24:35 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 50073 invoked by uid 500); 6 Jan 2014 20:24:35 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 50065 invoked by uid 99); 6 Jan 2014 20:24:35 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 20:24:35 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 20:24:31 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id BADC0FEC044
+	for <users@maven.apache.org>; Mon,  6 Jan 2014 15:24:10 -0500 (EST)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id HIzx19E9bnOh for <users@maven.apache.org>;
+	Mon,  6 Jan 2014 15:24:00 -0500 (EST)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id A1554FEC043
+	for <users@maven.apache.org>; Mon,  6 Jan 2014 15:24:00 -0500 (EST)
+Message-ID: <52CB10DF.2050508@artifact-software.com>
+Date: Mon, 06 Jan 2014 15:23:59 -0500
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: Maven Users List <users@maven.apache.org>
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.2.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: short and snappy description of what Maven is
+References: <58EAA08AF8232344ADDB2E31D4996BFD4BBCC877@SMAPEXCHIDAG3.prod.ad.merc.chicago.cme.com> <6FA7B10B-1AB5-4594-B211-FAFEAF1FADD3@oracle.com> <52CB08DB.7040804@artifact-software.com> <CA+nPnMyCoq0U2P26kZVDD8gjCAcsdF_1309xXC2grUQhCoZznQ@mail.gmail.com> <AF45F15B-B613-4C68-B1DE-3AED33816624@oracle.com>
+In-Reply-To: <AF45F15B-B613-4C68-B1DE-3AED33816624@oracle.com>
+Content-Type: text/plain; charset=windows-1252; format=flowed
+Content-Transfer-Encoding: 8bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 06/01/2014 3:08 PM, Russell Gold wrote:
+> Several sentences sounds good. But here’s another question. Comparing Maven to ant is almost too easy in terms of advantages. Is gradle now a serious competitor (I had been working on converting an enormous project to maven, but the architect decided to switch to gradle, so I am particularly sensitive to the issue). I can see some superficial advantages of gradle that might appeal to some projects. Is it better to ignore or address this?
+
+The more that can be said to relate Maven to what the reader already 
+knows or is considering, the more useful the paragraph.
+There is no reason why the following paragraphs could not point deeper 
+into the documentation for comparisons with Ant or Gradle.
+I would suggest that the first paragraph not include links so that the 
+reader can at least get through one clear section before starting to 
+jump around and get carried off into the world of hyperlinks.
+
+Ron
+
+> On Jan 6, 2014, at 3:02 PM, Stephen Connolly <stephen.alan.connolly@gmail.com> wrote:
+>
+>> On Monday, 6 January 2014, Ron Wheeler wrote:
+>>
+>>> I think that the target has to be people deciding whether to try Maven.
+>>> They initially want to know what it does and why it is better than Ant or
+>>> whatever they are using now.
+>>>
+>>> Trying to teach Maven in a single sentence is too much to ask.
+>>>
+>>> "Maven is a build tool which consumes and produces artifacts managed in a
+>>> repository." doesn't sound like it will help build my application.
+>>> At the start, one doesn't have any artifacts or own a repository.
+>>>
+>>> "Apache Maven is a convention-over-configuration build tool which has
+>>> great dependency management features."
+>>
+>> I think we should hint at the descriptive philosophy rather than the
+>> procedural philosophy most tools take
+>>
+>>
+>>> is pretty clear for a single sentence description and it true.
+>>> Maybe we can come up with a follow-up sentence to amplify/explain this one.
+>>> Most programmers or project managers should be able to find the time to
+>>> read 2 or maybe 3 sentences before deciding on a build tool.
+>>> As long as each sentence draws the person deeper into Maven, that would
+>>> work.
+>>
+>> Yes that is the idea
+>>
+>>
+>>> Ron
+>>>
+>>>
+>>> On 06/01/2014 12:57 PM, Russell Gold wrote:
+>>>
+>>>> Of course, you could say that about Gradle, too. And ant now does have
+>>>> the ability to use those dependency features.
+>>>>
+>>>> I went through this when creating my video course (not in the sig because
+>>>> this is work email). It’s not clear to me that you can make a one sentence
+>>>> description that will provide sufficiently useful information unless
+>>>> something like:
+>>>>
+>>>> "Maven is a build tool which consumes and produces artifacts managed in a
+>>>> repository."
+>>>>
+>>>> But that is not going to help people coming new to the project.
+>>>>
+>>>> I think I am missing the motivation here.Is the target for this
+>>>> description people deciding whether to try Maven? People trying to learn
+>>>> how to use it?
+>>>>
+>>>> On Jan 6, 2014, at 12:43 PM, Lyons, Roy <Roy.Lyons@cmegroup.com> wrote:
+>>>>
+>>>> on https://cwiki.apache.org/confluence/display/MAVEN/New+Main+Site it
+>>>>> says:
+>>>>>
+>>>>> We need a short and snappy description of what Maven is:
+>>>>>
+>>>>> "Apache Maven is a software project management and comprehension tool."
+>>>>>
+>>>>> Is just not an easy to understand description of what Maven is.
+>>>>>
+>>>>>
+>>>>>
+>>>>>
+>>>>> I would like to submit my short description for review.
+>>>>>
+>>>>> "Apache Maven is a convention-over-configuration build tool which has
+>>>>> great dependency management features."
+>>>>>
+>>>>> I know that it does more than that - but I feel that at its core, this
+>>>>> is what it really is.
+>>>>>
+>>>>>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

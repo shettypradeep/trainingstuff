@@ -1,0 +1,84 @@
+From users-return-137050-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Aug 18 00:21:54 2014
+Return-Path: <users-return-137050-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A5CFC11AF1
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 18 Aug 2014 00:21:54 +0000 (UTC)
+Received: (qmail 72463 invoked by uid 500); 18 Aug 2014 00:21:53 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 72397 invoked by uid 500); 18 Aug 2014 00:21:53 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 72385 invoked by uid 99); 18 Aug 2014 00:21:52 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 18 Aug 2014 00:21:52 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.217.172 as permitted sender)
+Received: from [209.85.217.172] (HELO mail-lb0-f172.google.com) (209.85.217.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 18 Aug 2014 00:21:27 +0000
+Received: by mail-lb0-f172.google.com with SMTP id z11so3633191lbi.3
+        for <users@maven.apache.org>; Sun, 17 Aug 2014 17:21:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=3dHNs//pdFDWFkL5ZdEP7d9RTli3XtfyUkA2rSJLG5o=;
+        b=YXQeGJDW2BeP+18FvpPQK13Cvmk8pxyAnDZeElCJS5keqygcMsI8ZUnKoMG92K0qJ+
+         ex8Hs3C66WbPkZgrsTY6SBPVGkFqf/ZEWvXOa+yP0nFuVi1KwjhLzh4iHwieKrRlEti1
+         AvnqeGS8tMo4GYktKvdqITNiwZWwGJfmYpGzB0EhEqoIkycOWgLFHSip36DU4UacQpIU
+         y4vyub9/JItg+JVSVN7oc7PklEx5p1uyFVHD7KXbKDebX8FYUI3f4jWPFRFms0jCxcGG
+         sAHX+ZEycUmQWaA27lkJEveONDIXG0O9lJWrdcPXENRdI7lr4OYD24Uw1l3WE3+rocY+
+         JXIQ==
+MIME-Version: 1.0
+X-Received: by 10.152.198.195 with SMTP id je3mr26603059lac.59.1408321286636;
+ Sun, 17 Aug 2014 17:21:26 -0700 (PDT)
+Received: by 10.114.20.231 with HTTP; Sun, 17 Aug 2014 17:21:26 -0700 (PDT)
+In-Reply-To: <CAAsnhpDOE5Rd0EOgizLasqd+cnzVv-z+Q87TQCuT45nmM02Tug@mail.gmail.com>
+References: <CAAsnhpDOE5Rd0EOgizLasqd+cnzVv-z+Q87TQCuT45nmM02Tug@mail.gmail.com>
+Date: Sun, 17 Aug 2014 17:21:26 -0700
+Message-ID: <CAPCjjnHcUNkDqq37mP+txBxSLQ_BsE=8_KNEXVR2JmV2cVkPjw@mail.gmail.com>
+Subject: Re: SSLException with new Maven https
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113474cc05091c0500dc5a31
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113474cc05091c0500dc5a31
+Content-Type: text/plain; charset=UTF-8
+
+I dont think that is the supported url ( yet ). By default maven 3.2.3 uses
+https://repo1.maven.org/maven2
+
+perhaps this is something Sonatype will fix
+
+-D
+
+
+
+
+On Sat, Aug 16, 2014 at 7:38 AM, Ron Pressler <ron@paralleluniverse.co>
+wrote:
+
+> Hi.
+> When accessing maven central using Aether, I get the following exception
+> when I use the https://repo1.maven.apache.org/maven2/ URL:
+>
+>  javax.net.ssl.SSLException: hostname in certificate didn't match: <
+> repo1.maven.apache.org> != <repo.maven.apache.org> OR <
+> repo.maven.apache.org
+> >
+>
+> When using https://repo.maven.apache.org/maven2/ it all works fine.
+>
+
+--001a113474cc05091c0500dc5a31--
+

@@ -1,0 +1,268 @@
+From users-return-135944-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 26 12:00:42 2014
+Return-Path: <users-return-135944-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 73B1F10242
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Mar 2014 12:00:42 +0000 (UTC)
+Received: (qmail 29820 invoked by uid 500); 26 Mar 2014 12:00:37 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 29280 invoked by uid 500); 26 Mar 2014 12:00:35 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 29263 invoked by uid 99); 26 Mar 2014 12:00:33 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Mar 2014 12:00:33 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.212.178] (HELO mail-wi0-f178.google.com) (209.85.212.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Mar 2014 12:00:26 +0000
+Received: by mail-wi0-f178.google.com with SMTP id bs8so1747012wib.11
+        for <users@maven.apache.org>; Wed, 26 Mar 2014 05:00:05 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=8io3UbHww5iZYrBhIr6MQ7bltQGrqLOw6lN8Ca4bIcw=;
+        b=l4PMfwiF70eTiaUZoKeYJmQaJSEL8JiNbeFB9UJlBUBSDSJr3PTbxXW+YxDiwlJ1zd
+         3wlG9F22pyg6zmEAzSHFeqHz+h2bFPn5xhhw5DhvDqgFRuvGiT4lr0zJH9Cu2wVXhgsO
+         QGYX0TdJ+3TYIGhOaNtwWq6v6KAjsFVjT7UiQ3GcIjhy/1Bpuif6OY8JoBfLEQrvG2rt
+         ZJ1N/0UUXfWiILmyCRW4S53zRf/7izHRARHFPhMFRvfECETkYrifKhIjWJPqpODYitlC
+         qsDJQqcxVw+s0IMzdoE6y8D9Qur12vXeQ3Cs+MoI+/J3q9HCYop92ghVD9Chabm7OgUz
+         /XKg==
+X-Gm-Message-State: ALoCoQlKQaSE325R6ssKdgsGsBEntiSjFKtPw+tQOudr+rEjsPP7CRajmkMZw2lER3uwo4X9Hjte
+MIME-Version: 1.0
+X-Received: by 10.180.36.226 with SMTP id t2mr14561277wij.37.1395835204796;
+ Wed, 26 Mar 2014 05:00:04 -0700 (PDT)
+Received: by 10.216.235.4 with HTTP; Wed, 26 Mar 2014 05:00:04 -0700 (PDT)
+X-Originating-IP: [101.165.250.71]
+In-Reply-To: <2427223.9d1ACrsZBS@herve-desktop>
+References: <CAEBcyzqJae+F0zRek1ug9xkyQEOu0k+OcYwTK2UPRbSWyv6hhw@mail.gmail.com>
+	<2028163.7tSRtl3ju6@herve-desktop>
+	<CAEBcyzqf0cyJJA6Mb-0SsdmUEXP=8hBgHO7UE_eiKq0VtZ1pXw@mail.gmail.com>
+	<2427223.9d1ACrsZBS@herve-desktop>
+Date: Wed, 26 Mar 2014 22:00:04 +1000
+Message-ID: <CAEBcyzrs=rPibzAywbJFgP45+SpVx4t7BkyZhnvz7idp+nUv5w@mail.gmail.com>
+Subject: Re: maven-dependency-tree reactor resolution
+From: William Ferguson <william.ferguson@xandar.com.au>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=e89a8f642c9e8c1d5404f5813597
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--e89a8f642c9e8c1d5404f5813597
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Thanks Herve,
+
+I have started down the path of ITs within maven-dep-tree.
+As a first step I have submitted a patch to enable all 3 of the existing
+ITs http://jira.codehaus.org/browse/MSHARED-326
+
+Next step is to ass in new ones to highlight the missing func and then
+hopefully I can fill that space.
+
+William
+
+
+On Tue, Mar 25, 2014 at 12:14 PM, Herv=E9 BOUTEMY <herve.boutemy@free.fr>wr=
+ote:
+
+> you hit the problem I faced when doing magic for multi-Maven versions
+> compatibility: I didn't figure out how to have tests inside the component
+> itself
+> or it would need ITs (through m-invoker-p), but requires to write a plugi=
+n
+> that uses the API then a pom that uses the plugin: too much
+>
+> the way I did it is to use either ITs in maven-dependency-plugin to test
+> modifications in maven-dependency-tree
+>
+> in fact, now that latest maven-dependency-plugin release uses latest mave=
+n-
+> dependency-tree API, it could probably be used inside an IT in maven-
+> dependency-tree: that would ease a lot maven-dependency-tree modification=
+s
+> (it
+> was really a headache last time, checking for every Maven version...)
+>
+> tell me if you need more help
+>
+> Regards,
+>
+> Herv=E9
+>
+> Le mardi 25 mars 2014 09:53:24 William Ferguson a =E9crit :
+> > Herve,
+> >
+> > I'm looking at trying to add this functionality to maven-dependency-tre=
+e
+> > but I want to start with a unit test showing the failure. But there
+> doesn't
+> > seem to be any unit tests for the DependencyGraphBuilder (for any
+> > environment).
+> >
+> > What's the best way to create a unit test that sets up the environment =
+so
+> > that I can explicitly test the Maven3DependencyGraphBuilder and
+> > Maven31DependencyGraphBuilder?
+> >
+> > William
+> >
+> > On Thu, Mar 20, 2014 at 5:36 PM, Herv=E9 BOUTEMY <herve.boutemy@free.fr
+> >wrote:
+> > > I don't really know: that's a precise feature that I didn't sudy
+> > > dependency-tree is used in Maven plugins in contexts where components
+> are
+> > > already installed: so there is not much difference between reactor
+> > > resolution
+> > > and local repository resolution
+> > >
+> > > you're probably right: if reactor resolution is not done, it should b=
+e
+> > > added,
+> > > since that can be something generally expected from the component
+> > >
+> > > Regards,
+> > >
+> > > Herv=E9
+> > >
+> > > Le jeudi 20 mars 2014 17:30:38 William Ferguson a =E9crit :
+> > > > Herve,
+> > > >
+> > > > I didn't think I was asking for any extra flexibility out of
+> > > > dependency-tree that it didn't already give. Are you saying that it
+> > >
+> > > doesn't
+> > >
+> > > > support resolution of projects in the current reactor?
+> > > >
+> > > > William
+> > > >
+> > > > On Thu, Mar 20, 2014 at 5:16 PM, Herv=E9 BOUTEMY <
+> herve.boutemy@free.fr
+> > > >
+> > > >wrote:
+> > > > > maven-dependency-tree offers a really simple API: that's its
+> > > > > objective.
+> > > > > The drawback is that it is not very flexible
+> > > > > The value is that it hides Maven 2, Maven 3.0.x and Maven 3.1.x+
+> > > > > implementations, which are completely different (initial Maven 2 =
+is
+> > >
+> > > made
+> > >
+> > > > > of
+> > > > > listeners, Maven 3 uses Aether and Maven provider, with package
+> > > > > changes
+> > > > > from
+> > > > > Maven 3.0 and 3.1)
+> > > > >
+> > > > > If you need more features, I think you'd better use Aether with
+> Maven
+> > > > > Provider: you can look both at maven-dependency-tree source to
+> start
+> > >
+> > > and
+> > >
+> > > > > Aether examples to better understand Aether API, which is a lot
+> more
+> > > > > flexible<-
+> > > > >
+> > > > > >rich<->complex
+> > > > >
+> > > > > Notice that your initial code will use latest Aether, then your
+> plugin
+> > > > > will
+> > > > > require Maven 3.1.x minimum. If you want compatibility with Maven
+> > > > > 3.0.x
+> > > > > and
+> > > > > 3.1.x+, you'll have to add some reflection magic which might add
+> > > > > complexity (it
+> > > > > was not so easy to do it in maven-dependency-tree)
+> > > > > If you want Maven 2 compatibility, I would personnally not really
+> > >
+> > > think it
+> > >
+> > > > > is
+> > > > > reasonably feasible
+> > > > >
+> > > > > Regards,
+> > > > >
+> > > > > Herv=E9
+> > > > >
+> > > > > Le jeudi 20 mars 2014 09:55:31 William Ferguson a =E9crit :
+> > > > > > Hi,
+> > > > > >
+> > > > > > I have a plugin that uses the maven-dependency-tree component t=
+o
+> > >
+> > > resolve
+> > >
+> > > > > > project dependencies in a LifeCycleParticipant. (We need early
+> > >
+> > > access to
+> > >
+> > > > > > deps because we need to modify the compile classpath).
+> > > > > >
+> > > > > > But I'm finding that with a clean repository, in a multi-module
+> > >
+> > > project
+> > >
+> > > > > > with modules X and Y-depends-on-X that the
+> DependencyGraphBuilder is
+> > > > > > throwing a DependencyGraphBuilderException when trying to resol=
+ve
+> > > > > > Y-depends-on-X. It says that it cannot find X.
+> > > > > >
+> > > > > > So it appears that the maven-dependency-tree is only using
+> > >
+> > > information
+> > >
+> > > > > from
+> > > > >
+> > > > > > the repository and not the reactor.
+> > > > > >
+> > > > > > Is that expected?
+> > > > > > Is there anyway that I can get MDT to resolve from the reactor?
+> > > > > > Is there another approach that I should be taking to ensure tha=
+t
+> > > > >
+> > > > > resolution
+> > > > >
+> > > > > > looks in the reactor?
+> > > > > >
+> > > > > > NB I need to support both maven 3.0 and 3.1 which is why we are
+> > > > > > using
+> > > > > > MDT
+> > > > > > to provide a level of abstraction above the 2 differing Aether
+> > > > > > implementations.
+> > > > > >
+> > > > > > William
+> > > > >
+> > > > >
+> ---------------------------------------------------------------------
+> > > > > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > > > > For additional commands, e-mail: users-help@maven.apache.org
+> > >
+> > > ---------------------------------------------------------------------
+> > > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > > For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--e89a8f642c9e8c1d5404f5813597--
+

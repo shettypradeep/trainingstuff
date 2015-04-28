@@ -1,0 +1,158 @@
+From users-return-137105-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Aug 21 19:24:34 2014
+Return-Path: <users-return-137105-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 781001155E
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 21 Aug 2014 19:24:34 +0000 (UTC)
+Received: (qmail 26819 invoked by uid 500); 21 Aug 2014 19:24:32 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 26714 invoked by uid 500); 21 Aug 2014 19:24:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 26697 invoked by uid 99); 21 Aug 2014 19:24:32 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 21 Aug 2014 19:24:32 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of adrien.rivard@gmail.com designates 209.85.220.177 as permitted sender)
+Received: from [209.85.220.177] (HELO mail-vc0-f177.google.com) (209.85.220.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 21 Aug 2014 19:24:07 +0000
+Received: by mail-vc0-f177.google.com with SMTP id hy4so11274063vcb.36
+        for <users@maven.apache.org>; Thu, 21 Aug 2014 12:24:05 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=hwQtcQCBPwD6C/RU8+i541nvuoO6YQQUpZ5081IjLoM=;
+        b=PaKEA+LFd/RIi71WNQqHPRNxz3K+Ph6tjQfZ98alq8DuW+bwiyhyb+AkFPym2xxU4n
+         9o9wDgYe42BbKW6VtCiROLoo3WLo22vulvG8/UIt1Zc98llsD0J1mls/r8rlDMk9oZmJ
+         SPIZXmTH/qVfOXSYx0CI9VmsY8V+o6/zDOs/01AyB9aXcTp4VkqydpWgOKTdplyHSD8T
+         nTIJcZNX30bsbVjkctQmEGUUL42jspvtKbBMr9RMRbQ7nguY4NJ8zLkAFVUFUTQDtM+L
+         cxA1OC1kBqfv4QgyacVgy0+L3kYrzWPF6uuU6IIV87LdYe581u8ruj2HQM1uXIYg4Nxd
+         3J9g==
+MIME-Version: 1.0
+X-Received: by 10.52.156.100 with SMTP id wd4mr277851vdb.39.1408649045603;
+ Thu, 21 Aug 2014 12:24:05 -0700 (PDT)
+Received: by 10.220.15.200 with HTTP; Thu, 21 Aug 2014 12:24:05 -0700 (PDT)
+In-Reply-To: <op.xkyiev0rkdkhrr@robertscholte>
+References: <402AE8E1D2FBB84ABE4AB494310DC4A9635021EFAF@TUS1XCHEVSPIN33.SYMC.SYMANTEC.COM>
+	<op.xkyiev0rkdkhrr@robertscholte>
+Date: Thu, 21 Aug 2014 21:24:05 +0200
+Message-ID: <CAPCUOdFDtdTGiUbs16hHqVAJvh1NiAGwV1F-GTKgza5qvq1UQw@mail.gmail.com>
+Subject: Re: Issue with dependency plugin
+From: Adrien Rivard <adrien.rivard@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b5d2eb6f9fc01050128a9b3
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b5d2eb6f9fc01050128a9b3
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+commons-logging has been excluded in shiro-root (parent of shiro-core) :
+
+http://search.maven.org/remotecontent?filepath=org/apache/shiro/shiro-root/1.2.3/shiro-root-1.2.3.pom
+
+<dependencyManagement>
+<dependencies>
+...
+<dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>1.8.3</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+
+
+
+
+On Thu, Aug 21, 2014 at 9:14 PM, Robert Scholte <rfscholte@apache.org>
+wrote:
+
+> Hi,
+>
+> be sure you're using the latest version, call
+> mvn org.apache.maven.plugins:maven-dependency-plugin:2.8:tree
+>
+> thanks,
+> Robert
+>
+> Op Thu, 21 Aug 2014 19:29:04 +0200 schreef David Dillard <
+> ddillard@symantec.com>:
+>
+>
+>  Hi,
+>>
+>> I've been working with the dependency plugin and I'm seeing something
+>> that I think is wrong, but I'd like someone to confirm it before I file a
+>> bug report.
+>>
+>> I created a simple pom file which has one dependency for Apache Shiro:
+>>
+>>   <dependencies>
+>>
+>>     <dependency>
+>>       <groupId>org.apache.shiro</groupId>
+>>       <artifactId>shiro-core</artifactId>
+>>       <version>1.2.3</version>
+>>     </dependency>
+>>
+>>   </dependencies>
+>>
+>> And when I run dependency:tree I see:
+>>
+>> com.symantec.ssg.osrb:dependencytest:jar:1.0
+>> \- org.apache.shiro:shiro-core:jar:1.2.3:compile
+>>    +- org.slf4j:slf4j-api:jar:1.6.4:compile
+>>    \- commons-beanutils:commons-beanutils:jar:1.8.3:compile
+>>
+>>
+>> However, when I set my dependencies to just Apache Commons BeanUtils:
+>>
+>> <dependencies>
+>>
+>>     <dependency>
+>>       <groupId>commons-beanutils</groupId>
+>>       <artifactId>commons-beanutils</artifactId>
+>>       <version>1.8.3</version>
+>>     </dependency>
+>>
+>>   </dependencies>
+>>
+>> And then run dependency:tree I get:
+>>
+>> com.symantec.ssg.osrb:dependencytest:jar:1.0
+>> \- commons-beanutils:commons-beanutils:jar:1.8.3:compile
+>>    \- commons-logging:commons-logging:jar:1.1.1:compile
+>>
+>>
+>> So, why don't I see commons-logging under beanutils for Apache Shiro???
+>>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Adrien Rivard
+
+--047d7b5d2eb6f9fc01050128a9b3--
+

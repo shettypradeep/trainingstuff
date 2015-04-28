@@ -1,0 +1,99 @@
+From users-return-137084-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Aug 19 16:22:22 2014
+Return-Path: <users-return-137084-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id AB4F6117F6
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 19 Aug 2014 16:22:22 +0000 (UTC)
+Received: (qmail 7874 invoked by uid 500); 19 Aug 2014 16:22:17 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 7795 invoked by uid 500); 19 Aug 2014 16:22:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 7780 invoked by uid 99); 19 Aug 2014 16:22:17 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 19 Aug 2014 16:22:17 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of pablo.leon@horus.es designates 2.139.157.236 as permitted sender)
+Received: from [2.139.157.236] (HELO correo.horus.es) (2.139.157.236)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 19 Aug 2014 16:22:13 +0000
+Received: from [172.30.250.33] (172.30.250.254) by horus27 (Axigen)
+ with (AES128-SHA encrypted) ESMTPSA id 07D8DF;
+ Tue, 19 Aug 2014 18:21:46 +0200
+Message-ID: <53F37999.2060108@horus.es>
+Date: Tue, 19 Aug 2014 18:21:45 +0200
+From: =?ISO-8859-1?Q?Pablo_Le=F3n?= <pablo.leon@horus.es>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0)
+ Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Doxia Eclipse Editor Plugin problem with snippet macro
+References: <53ED5D2A.3000902@horus.es> <1547306.KN1VFr3cXh@herve-desktop>
+ <CAC8ULPbhx_vEcMHtfY-qjyW5FvEpuXSH9-Wk04T_Sn-=HBqSCQ@mail.gmail.com>
+ <25611769.m9Lm6LLXP4@herve-desktop>
+In-Reply-To: <25611769.m9Lm6LLXP4@herve-desktop>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 8bit
+X-AxigenVirus-Level: 1
+X-AxigenSpam-Level: 2
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I have pasted the markdown example from 
+http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html 
+into an empty .md file in eclipse luna, and I have observed that some 
+markup is correctly shown in the preview page, while other isn't.
+
+I think there are several flavours for markdown syntax. Where can I get 
+a maven compliant markdown file in order to test eclipse luna built-in 
+editor?
+
+Pablo.
+
+El 19/08/2014 17:15, Hervé BOUTEMY escribió:
+> Le mardi 19 août 2014 15:28:40 Robert Munteanu a écrit :
+>> On Sun, Aug 17, 2014 at 8:47 PM, Hervé BOUTEMY <herve.boutemy@free.fr>
+> wrote:
+>>>> , at least for the
+>>>> eclipse+java+maven environment we're using.
+>>> but you're right, I didn't find a good one as Eclipse plugin either
+>>> and even not as native application on Linux
+>> Mylyn Docs should have a good markdown editor, I've used it
+>> occasionally. IIRC it's part of the main Mylyn update site.
+>>
+>>      http://eclipse.org/mylyn
+>>
+>> Robert
+> I just discovered that Eclipse Luna was able to open *.md files without me
+> adding any plugin: and yes, it's WikiText, and the editor seems decent, even
+> if help on markup syntax is missing (I'm not a markdown guru...).
+> And yes, it's Mylyn Docs' WikiText [1]
+>
+> so my comment on Markdown editor on Eclipse is now outdated
+>
+> Thank you Robert for pointing this out
+>
+> Regards,
+>
+> Hervé
+>
+> [1] https://www.eclipse.org/mylyn/new/new-3.9.html#wikitext
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

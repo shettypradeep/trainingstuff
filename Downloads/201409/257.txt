@@ -1,0 +1,84 @@
+From users-return-137318-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Sep 18 13:00:08 2014
+Return-Path: <users-return-137318-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 77CF51172E
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 18 Sep 2014 13:00:08 +0000 (UTC)
+Received: (qmail 10049 invoked by uid 500); 18 Sep 2014 13:00:06 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 9962 invoked by uid 500); 18 Sep 2014 13:00:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9938 invoked by uid 99); 18 Sep 2014 13:00:06 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 18 Sep 2014 13:00:06 +0000
+X-ASF-Spam-Status: No, hits=3.2 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mgainty@hotmail.com designates 65.55.116.45 as permitted sender)
+Received: from [65.55.116.45] (HELO BLU004-OMC1S34.hotmail.com) (65.55.116.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 18 Sep 2014 12:59:39 +0000
+Received: from BLU172-W11 ([65.55.116.8]) by BLU004-OMC1S34.hotmail.com with Microsoft SMTPSVC(7.5.7601.22724);
+	 Thu, 18 Sep 2014 05:59:38 -0700
+X-TMN: [t0r7bIw69o/uw9CchYSXTDOGTxRaOKuU]
+X-Originating-Email: [mgainty@hotmail.com]
+Message-ID: <BLU172-W1137CD6139786562FDE49BAEB70@phx.gbl>
+Content-Type: multipart/alternative;
+	boundary="_96a704c6-c665-4551-8cb2-9286faaabe0a_"
+From: Martin Gainty <mgainty@hotmail.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: RE: Maven sure fire plugin npe problem.
+Date: Thu, 18 Sep 2014 08:59:38 -0400
+Importance: Normal
+In-Reply-To: <1411042321376-5805605.post@n5.nabble.com>
+References:
+ <75F3A2D98EDE2545BDC06B5B6C1CEC516DF84192@ESGSCMB101.ericsson.se>,<1411042321376-5805605.post@n5.nabble.com>
+MIME-Version: 1.0
+X-OriginalArrivalTime: 18 Sep 2014 12:59:38.0773 (UTC) FILETIME=[67AC0C50:01CFD340]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_96a704c6-c665-4551-8cb2-9286faaabe0a_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+
+> Date: Thu=2C 18 Sep 2014 05:12:01 -0700
+> From: yaroslavTir@gmail.com
+> To: users@maven.apache.org
+> Subject: Re: Maven sure fire plugin npe problem.
+>=20
+> Hi all=2C
+> I have the same problem. I also revert surefire plugin to the 2.12 versio=
+n
+> and everything begin to work. Does you found what was wrong? Do I need to
+> send my "non working" example?
+=20
+MG>please file a JIRA and attach a zip including all files from base folder=
+ out
+MG>be mindful that errors from package phase and or TESTS run in /target/su=
+refire-reports must not have ClassNotFoundException=20
+MG>thanks
+>=20
+>=20
+>=20
+> --
+> View this message in context: http://maven.40175.n5.nabble.com/Maven-sure=
+-fire-plugin-npe-problem-tp5791902p5805605.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe=2C e-mail: users-unsubscribe@maven.apache.org
+> For additional commands=2C e-mail: users-help@maven.apache.org
+>=20
+ 		 	   		  =
+
+--_96a704c6-c665-4551-8cb2-9286faaabe0a_--
+

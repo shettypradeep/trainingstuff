@@ -1,0 +1,172 @@
+From users-return-135237-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 21 22:40:23 2014
+Return-Path: <users-return-135237-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1A19B10A65
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 21 Jan 2014 22:40:23 +0000 (UTC)
+Received: (qmail 65462 invoked by uid 500); 21 Jan 2014 22:40:19 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 65390 invoked by uid 500); 21 Jan 2014 22:40:18 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 65382 invoked by uid 99); 21 Jan 2014 22:40:18 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 21 Jan 2014 22:40:18 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ctrueden.wisc@gmail.com designates 209.85.128.177 as permitted sender)
+Received: from [209.85.128.177] (HELO mail-ve0-f177.google.com) (209.85.128.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 21 Jan 2014 22:40:12 +0000
+Received: by mail-ve0-f177.google.com with SMTP id jz11so1974894veb.36
+        for <users@maven.apache.org>; Tue, 21 Jan 2014 14:39:52 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=h1xxh1IcTlnXgWm6NGpyPI6J6gQD0VAbCxuHheccEDo=;
+        b=c5QL1OryCd17LxV9wBqpbrK5mPbcECbbZtb6H5b5eiPtKs+xmyUEJ8VF8thB/nEUBU
+         rQWT1hzNRzAq8cOVnPIG1hu3N8NQwNdQOXMAGlsvWbGTygf3z+z4AvRrS48KCU/grGxa
+         WzsrYwVwbob0vgTS11U60pfVp1GLoYw/7F3cR5ij+DwheorfhKJRqsyt2cG2X+D2bdLm
+         ygAjsTe1naCDTjPrC4mhI43/2posO0TAbr4DIRpZuxYSGU7w9q8A3N+JH8n8gwHMw2KN
+         pbzj9hUa85hNbE9ces91u/vCneO8Hnad8MU+ZLmoyPbFF13l8ckboeLve5rVl13Dp2kG
+         HqSw==
+X-Received: by 10.221.3.70 with SMTP id nx6mr4441vcb.45.1390343992078; Tue, 21
+ Jan 2014 14:39:52 -0800 (PST)
+MIME-Version: 1.0
+Sender: ctrueden.wisc@gmail.com
+Received: by 10.58.34.198 with HTTP; Tue, 21 Jan 2014 14:39:21 -0800 (PST)
+In-Reply-To: <1390296243550-5781977.post@n5.nabble.com>
+References: <1390296243550-5781977.post@n5.nabble.com>
+From: Curtis Rueden <ctrueden@wisc.edu>
+Date: Tue, 21 Jan 2014 16:39:21 -0600
+X-Google-Sender-Auth: l6YcMtipr9rw5-_q8nyK3oDD5yk
+Message-ID: <CADN69y=_xfJLotVi-tiwVKbg1fZ0XOLod5BX71foHojBXc467w@mail.gmail.com>
+Subject: Re: Maven add resource
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e01228ebcc3788004f082af4e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01228ebcc3788004f082af4e
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi PollerJava,
+
+> I would like this additional folder structure: src/main/generated in
+> my Maven project and also in my Eclipse project.
+
+I suggest using M2E rather than the eclipse:eclipse goal.
+
+With a modern "Eclipse for Java Developers" IDE, Maven support is built in,
+and you don't need "eclipse:eclipse" anymore. Just do File > Import >
+Existing Maven Project.
+
+To get generated-sources to work, you may also need to follow the
+directions here:
+http://stackoverflow.com/a/7160614
+
+Regards,
+Curtis
+
+
+On Tue, Jan 21, 2014 at 3:24 AM, PollerJava <max.qu@gmx.at> wrote:
+
+> Hi,
+>
+> I would have a question to Maven and additional resources.
+> I have build a simple Maven project, afterwards I did mvn eclipse:eclipse
+> and than I imported it into Eclipse.
+> This all worked fine.
+> Afterwards I would like to extend the pom.xml (below) in order to have new
+> file structure which is in classpath to the existion one:
+>
+> src/main/java and
+> src/test/java
+>
+> I would like this additional folder structure:
+> src/main/generated in my Maven project and also in my Eclipse project.
+> Therefore I have defined src/main/generated into my pom.
+>
+> My opinion was that if I add it to the pom than it appears at the file
+> system and also in eclipse after a refresh - but this isn't.
+> Does anyone know why this is so and what I'am doing wrong?
+>
+> Thanks a lot and all the best
+> PollerJava
+>
+> <project xmlns="http://maven.apache.org/POM/4.0.0"
+> xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+> http://maven.apache.org/xsd/maven-4.0.0.xsd">
+>       <modelVersion>4.0.0</modelVersion>
+>
+>       <groupId>at.company.app</groupId>
+>       <artifactId>my-project</artifactId>
+>       <packaging>jar</packaging>
+>       <name>my-project</name>
+>       <url>http://maven.apache.org</url>
+>
+>       <parent>
+>         <groupId>at.company.app</groupId>
+>         <artifactId>my-master</artifactId>
+>         <version>1.0-SNAPSHOT</version>
+>         <relativePath>../my-master/pom.xml</relativePath>
+>       </parent>
+>
+>       <properties>
+>         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+>       </properties>
+>
+>       <dependencies>
+>         <dependency>
+>           <groupId>junit</groupId>
+>           <artifactId>junit</artifactId>
+>           <version>3.8.1</version>
+>           <scope>test</scope>
+>         </dependency>
+>       </dependencies>
+>
+>       <build>
+>         <plugins>
+>             <plugin>
+>                 <groupId>org.codehaus.mojo</groupId>
+>                 <artifactId>build-helper-maven-plugin</artifactId>
+>                 <executions>
+>                     <execution>
+>                         <phase>generate-sources</phase>
+>                         <goals><goal>add-source</goal></goals>
+>                         <configuration>
+>                             <sources>
+>                                 <source>src/main/generated</source>
+>                             </sources>
+>                         </configuration>
+>                     </execution>
+>                 </executions>
+>             </plugin>
+>         </plugins>
+>       </build>
+>
+>     </project>
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/Maven-add-resource-tp5781977.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--089e01228ebcc3788004f082af4e--
+

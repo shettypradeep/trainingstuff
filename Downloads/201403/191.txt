@@ -1,0 +1,205 @@
+From users-return-135665-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Mar  1 19:13:15 2014
+Return-Path: <users-return-135665-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4D1AE109AB
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  1 Mar 2014 19:13:15 +0000 (UTC)
+Received: (qmail 34786 invoked by uid 500); 1 Mar 2014 19:13:10 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 34673 invoked by uid 500); 1 Mar 2014 19:13:10 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 34661 invoked by uid 99); 1 Mar 2014 19:13:10 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 01 Mar 2014 19:13:10 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.212.176] (HELO mail-wi0-f176.google.com) (209.85.212.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 01 Mar 2014 19:13:04 +0000
+Received: by mail-wi0-f176.google.com with SMTP id hi5so1936885wib.15
+        for <users@maven.apache.org>; Sat, 01 Mar 2014 11:12:43 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=q/oujizh1vE95ZomGxEbIkDBnYdjCoIZhf9YQtVE3Zo=;
+        b=cQ2zeT86tCUotyxRbgd0OzSRu5zLYLJ+53Q4rqaaz5j2jP7nE+0ZueQhnthxtW5Xsc
+         wRIIPbwzoXSG4gieNaW64/H+2PEljaF3lKMMyIXafKHxE8SXKr9lvoHaTdP9LNsPMyx5
+         fTgeK+Wm1QRuAm0+e7T3jhFNSTPefk7YgN+3LZ4syj288Cc2O9NDilaPAKrQdW4oGOju
+         xlmBGFgM4vDCQO6Bh5V+M3+T2TfzioZVG7c3CuL9rY4Uq+VJjng4T98KtSrKNrDINA6A
+         hvJJ0I82do3PU0hKLlNN57sBsf3PYErl/thMLSYlJiSZzdK757JQZ8N/7gt17+vI1eAg
+         4uMw==
+X-Gm-Message-State: ALoCoQmgyS2herBqcpsA2X01MiXxkdFPhEk8u9ff+sRuOXReVWW/Biu6Q1GZRcpKfcvCFDO4ZODY
+MIME-Version: 1.0
+X-Received: by 10.194.241.132 with SMTP id wi4mr8408827wjc.14.1393701163219;
+ Sat, 01 Mar 2014 11:12:43 -0800 (PST)
+Received: by 10.216.4.69 with HTTP; Sat, 1 Mar 2014 11:12:43 -0800 (PST)
+X-Originating-IP: [101.165.182.12]
+In-Reply-To: <3E4BAFCA-287A-42F4-BCF0-21B8B8B4FA79@gmail.com>
+References: <CAEBcyzqFMx09wypuh4bXUd68FZ+TUegEnpMUs3ffje3DWS=eCg@mail.gmail.com>
+	<3E4BAFCA-287A-42F4-BCF0-21B8B8B4FA79@gmail.com>
+Date: Sun, 2 Mar 2014 05:12:43 +1000
+Message-ID: <CAEBcyzqHw_S+OL0u5bYR_e+MYJT97eVd2j44hrUhX9nt8U88kA@mail.gmail.com>
+Subject: Re: Guice provision error with AbstractMavenLifecycleParticipant
+From: William Ferguson <william.ferguson@xandar.com.au>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e01419fdac1d71804f39056d5
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01419fdac1d71804f39056d5
+Content-Type: text/plain; charset=ISO-8859-1
+
+Thanks for the exceptionally clear explanation Stuart.
+
+I don't think we can just avoid the exception with stubbed implementations
+of the Resolver because the the plugin doesn't use the Resolver directly.
+It asks for an Aether RepositorySystem:
+    @Requirement
+    private RepositorySystem repoSystem;
+
+which is what instantiates the VersionResolver.
+
+
+I'll have another look at maven-dependency-tree but I didn't see a clear
+path towards what we wanted.
+
+
+Could you shed some more light on:
+> Unfortunately adding a direct plugin dependency to the
+maven-aether-provider from 3.1.1 won't help
+> because Maven will filter out this dependency as being supplied from
+Maven core
+
+What's doing the filtering and why?
+What would be need to make it not filter out a maven-core library that is a
+different version of the running Maven instance?
+
+
+William
+
+
+On Fri, Feb 28, 2014 at 12:13 PM, Stuart McCulloch <mcculls@gmail.com>wrote:
+
+> On 28 Feb 2014, at 01:17, William Ferguson <william.ferguson@xandar.com.au>
+> wrote:
+>
+> > As part of the development of the android-maven-plugin we have need to
+> add
+> > in an AbstractMavenLifecycleParticipant so that we can modify the compile
+> > classpath to add artefacts that are contained within a project's
+> > dependencies. Igor provided a lot of the coaching on this.
+> >
+> > The build works fine. Does what is intended.
+> >
+> > But now, when you open a project in intelliJ13 that uses the
+> > android-maven-plugin, IntelliJ declares a problem with the POM that
+> > references our MavenLifecycleParticipant.
+> >
+> > What I'd like help with is:
+> > 1) Is this a problem with the plugin itself. Ie have we defined something
+> > incorrectly.
+> > 2) Is it just a problem with how IntelliJ is parsing a POM that declares
+> > the plugin.
+> >
+> > If it is (1), what do we need to do to fix it?
+> >
+> > However, I suspect it is (2) because similar error messages seem to occur
+> > when plugins designed for Maven 3.1 (and the switch to Eclipse Aether
+> from
+> > Sonatype Aether) are used in a Maven-3.0 environment. I'm thinking that
+> > maybe IntelliJ is using a Maven-3.0 core. But I'm really not sure and
+> would
+> > love some clarity from those who understand what is going on a bit
+> better.
+> > And if it is (2) is there anything we or IntelliJ can do to fix it?
+> >
+> > The plugin itself can be found at:
+> > https://github.com/jayway/maven-android-plugin
+> >
+> > A project showing the failure can be found at:
+> >
+> https://github.com/jayway/maven-android-plugin-samples/tree/master/morseflash/morseflash-app
+> >
+> > And the error message is (visible via flyover in the POM editor window or
+> > in idea.log):
+>
+> I can recreate the same exception on the command-line using the plugin
+> with Maven 3.0.5 (after I removed the 3.1.1 pre-req from the plugin's
+> pom.xml)
+>
+> The issue is that the plugin expects Maven core to supply an
+> implementation of org.eclipse.aether.impl.VersionResolver, namely
+> DefaultVersionResolver from maven-aether-provider.
+>
+> However in Maven 3.0.x the maven-aether-provider module only supplies an
+> implementation of org.sonatype.aether.impl.VersionResolver ... which is why
+> you see that exception :/
+>
+> Unfortunately adding a direct plugin dependency to the
+> maven-aether-provider from 3.1.1 won't help because Maven will filter out
+> this dependency as being supplied from Maven core
+>
+> If you want the plugin to work on both Maven 3.0.x and 3.1.x then you'll
+> either need to use an API common to both (like the shared
+> maven-dependency-tree component) or write two versions of the code that
+> talks to Aether and select the appropriate one at runtime using reflection.
+> But if you just want to avoid the exception when Intellij processes the
+> pom.xml then you could conceivably provide dummy/stubbed @Component
+> implementations of the Eclipse/Aether resolver, with the role set to a
+> non-default value such as "dummy" so that it doesn't interfere with the
+> default implementation provided in Maven 3.1.1
+>
+> > java.lang.RuntimeException: com.google.inject.ProvisionException:
+> > Guice provision errors:
+> >
+> > 1) No implementation for org.eclipse.aether.impl.VersionResolver was
+> bound.
+> >  while locating org.eclipse.aether.internal.impl.DefaultRepositorySystem
+> >  at
+> ClassRealm[extension>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.9.0-rc.1,
+> > parent: sun.misc.Launcher$AppClassLoader@39172e08]
+> >  at
+> ClassRealm[extension>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.9.0-rc.1,
+> > parent: sun.misc.Launcher$AppClassLoader@39172e08]
+> >  while locating org.eclipse.aether.RepositorySystem
+> >  while locating
+> >
+> com.jayway.maven.plugins.android.phase_prebuild.AarMavenLifecycleParticipant
+> >  at
+> ClassRealm[extension>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.9.0-rc.1,
+> > parent: sun.misc.Launcher$AppClassLoader@39172e08]
+> >  at
+> ClassRealm[extension>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.9.0-rc.1,
+> > parent: sun.misc.Launcher$AppClassLoader@39172e08]
+> >  while locating org.apache.maven.AbstractMavenLifecycleParticipant
+> > annotated with
+> @com.google.inject.name.Named(value=AarMavenLifecycleListener)
+> >
+> >
+> > We are tracking this at:
+> > https://code.google.com/p/maven-android-plugin/issues/detail?id=449
+> >
+> >
+> > Any help appreciated.
+> >
+> >
+> > William
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--089e01419fdac1d71804f39056d5--
+

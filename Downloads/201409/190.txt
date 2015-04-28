@@ -1,0 +1,88 @@
+From users-return-137256-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 12 13:26:13 2014
+Return-Path: <users-return-137256-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E6E4B11804
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 12 Sep 2014 13:26:12 +0000 (UTC)
+Received: (qmail 30375 invoked by uid 500); 12 Sep 2014 13:26:11 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 30289 invoked by uid 500); 12 Sep 2014 13:26:11 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 30277 invoked by uid 99); 12 Sep 2014 13:26:10 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 13:26:10 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dhoffer6@gmail.com designates 209.85.220.177 as permitted sender)
+Received: from [209.85.220.177] (HELO mail-vc0-f177.google.com) (209.85.220.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 13:25:44 +0000
+Received: by mail-vc0-f177.google.com with SMTP id la4so651406vcb.22
+        for <users@maven.apache.org>; Fri, 12 Sep 2014 06:25:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=8DCKXJv3HkgjrFXfAe9TuF9uIrrkSEMOsR/XP5DhGsY=;
+        b=Vv+jk1pU5Slhwlv8DR4M9S5/SKFVpkB4RYvNUP+rLUjhGIWL/gSrFwrMXj9DVHrx/p
+         DhyALNNkUEMO7Gb3qcFaqy0JwUaWe88MAn8iRMMNPTK4dPRVLVK9vYJ68O2uaE3uoKfI
+         C/WFb5XkId1PHhimnKHYhtj7cTfV33c6S5FV+RVVEi8Gg1PHvWMdzz/wTX6rQiQdOiOV
+         4MABN8no/DLzkvOjqI4RW7TkQeayAC14I9qybCVW0KTUy+xljPcvk7azJJWo99PuyEM+
+         rcuFy6OgNCvg2AjozyzhKigvDj36mKtd0CDQgSX0CA/NXAPNCwo8i9DjwLGliNfitX3k
+         vVkw==
+MIME-Version: 1.0
+X-Received: by 10.52.228.67 with SMTP id sg3mr5649092vdc.6.1410528342667; Fri,
+ 12 Sep 2014 06:25:42 -0700 (PDT)
+Received: by 10.220.131.70 with HTTP; Fri, 12 Sep 2014 06:25:42 -0700 (PDT)
+In-Reply-To: <CAK2FUK0MPVe-HGA7Pf4111YYGeeXvSAGquVu7ZkomP-dk8-abQ@mail.gmail.com>
+References: <CAA8BW8HGvAKRZXQ_j8pYzJuoNs5X98PTbSK_ohsuuFV1-j2xtQ@mail.gmail.com>
+	<CAK2FUK0MPVe-HGA7Pf4111YYGeeXvSAGquVu7ZkomP-dk8-abQ@mail.gmail.com>
+Date: Fri, 12 Sep 2014 07:25:42 -0600
+Message-ID: <CAA8BW8EONMPHuNLpAQ6z4zk5n5PpzT-c1AEsgw-Vv0AuHP8jvw@mail.gmail.com>
+Subject: Re: maven-surefire-plugin does not fail build if TestNG and JUnit47
+ are used
+From: David Hoffer <dhoffer6@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e01183d4ecf784c0502de38ce
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01183d4ecf784c0502de38ce
+Content-Type: text/plain; charset=UTF-8
+
+I did try 2.17 to see if it would fix the problem but got an additional
+error (I forget what it was) so I reverted it back to 2.10.  I ended up
+just converting the TestNG tests to use JUnit and all works fine now.
+
+-Dave
+
+On Fri, Sep 12, 2014 at 12:38 AM, Andreas Gudian <andreas.gudian@gmail.com>
+wrote:
+
+> Hi,
+>
+> 2.10 is rather old. Could you try it with a more recent version such as
+> 2.17?
+>
+>
+> Am Donnerstag, 11. September 2014 schrieb David Hoffer :
+>
+> > I have a module where maven-surefire-plugin (2.10) is configured to use
+> > TestNG and JUnit47.  The former has several tests that all succeed and
+> the
+> > later has two tests that fail.  However the build succeeds.  How can I
+> > configure surefire so the build fails if either have failures which is
+> the
+> > expected behavior?
+> >
+>
+
+--089e01183d4ecf784c0502de38ce--
+

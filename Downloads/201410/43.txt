@@ -1,0 +1,77 @@
+From users-return-137518-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Oct 10 03:14:26 2014
+Return-Path: <users-return-137518-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F229C17CE1
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 10 Oct 2014 03:14:25 +0000 (UTC)
+Received: (qmail 2328 invoked by uid 500); 10 Oct 2014 03:14:24 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 2254 invoked by uid 500); 10 Oct 2014 03:14:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 2237 invoked by uid 99); 10 Oct 2014 03:14:23 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 10 Oct 2014 03:14:23 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of maven.2.user@gmail.com designates 209.85.216.47 as permitted sender)
+Received: from [209.85.216.47] (HELO mail-qa0-f47.google.com) (209.85.216.47)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 10 Oct 2014 03:13:57 +0000
+Received: by mail-qa0-f47.google.com with SMTP id cm18so1123175qab.34
+        for <users@maven.apache.org>; Thu, 09 Oct 2014 20:13:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=xWYJVELxZ4+W4oxrg5PlhBQ0JosrqN7JoQcdW8M1uVQ=;
+        b=SzTpKIuDhK9wIqb/xI0TzjeGsvqX7WSIwpDTlOCICxthxpGTX9+Zm6if4FOdlV0Q/H
+         OFLaR3LCwRIrmHofW4uD6UyQvzwxK1nBt2WVpjIW2sefwKIDe9p400AbGUaTxYPIj7BY
+         wg2GC/7Y7Q9jhpmZv4bgNw04LMnvwdcQxwKFEUmPt4Vl4yQh+5d+KjqYPZ6jUYpThjB0
+         22kBs4Fu21Je8pngz2f2yHs2xMTZsI9CcZcIm/CEEvkTUaKvevxs2AAHoYSwRAXc27PR
+         ZnKms0VlSKfYl7x3AH9UeMa621LfaoXJcf+SaErRMV13WuANMD89bxdu/IavyrPPIBfP
+         TQhg==
+MIME-Version: 1.0
+X-Received: by 10.224.165.1 with SMTP id g1mr3686957qay.97.1412910835999; Thu,
+ 09 Oct 2014 20:13:55 -0700 (PDT)
+Received: by 10.140.95.118 with HTTP; Thu, 9 Oct 2014 20:13:55 -0700 (PDT)
+In-Reply-To: <CAChPNbf9iMbUbBqb_4=gL=aBrUhmYL08+TecJHL=XMyCts12tA@mail.gmail.com>
+References: <CAChPNbf9iMbUbBqb_4=gL=aBrUhmYL08+TecJHL=XMyCts12tA@mail.gmail.com>
+Date: Thu, 9 Oct 2014 23:13:55 -0400
+Message-ID: <CAChPNbeyocR8Brx8dJFEZBdWeSqg9T8CYzoS7dZYSSnZpuh1Wg@mail.gmail.com>
+Subject: Re: hidden and ignore files in an archetype?
+From: Maven User <maven.2.user@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Strangely, in my archetype-metadata.xml file - if I leave ".gitignore"
+but on the ACTUAL file - if I strip off the "." - maven seems to find
+it.
+
+
+
+On Thu, Oct 9, 2014 at 10:47 PM, Maven User <maven.2.user@gmail.com> wrote:
+> Hi all -
+>
+> I don't seem to be able to include .gitignore in my archetype.
+>
+> For testing, I created a FOO file right next to the .gitignore and in
+> the unfiltered fileset, I configured it to pick up both ".gitignore"
+> and "FOO" and only FOO shows up in the project generated from the
+> archetype.
+>
+> Is there something really magical I need to include this "hidden" file?
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

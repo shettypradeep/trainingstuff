@@ -1,0 +1,121 @@
+From users-return-135716-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar  6 13:09:53 2014
+Return-Path: <users-return-135716-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2A3BF1015E
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  6 Mar 2014 13:09:53 +0000 (UTC)
+Received: (qmail 7310 invoked by uid 500); 6 Mar 2014 13:09:47 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 6480 invoked by uid 500); 6 Mar 2014 13:09:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 6113 invoked by uid 99); 6 Mar 2014 13:09:41 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 13:09:41 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mgainty@hotmail.com designates 65.55.116.40 as permitted sender)
+Received: from [65.55.116.40] (HELO blu0-omc1-s29.blu0.hotmail.com) (65.55.116.40)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 13:09:35 +0000
+Received: from BLU172-W50 ([65.55.116.9]) by blu0-omc1-s29.blu0.hotmail.com with Microsoft SMTPSVC(6.0.3790.4675);
+	 Thu, 6 Mar 2014 05:09:14 -0800
+X-TMN: [jE6C/yp5nLoWJgRiXJi5qhdBI2UFxDJn]
+X-Originating-Email: [mgainty@hotmail.com]
+Message-ID: <BLU172-W501D963B1EF8FEF6E74A08AE880@phx.gbl>
+Content-Type: multipart/alternative;
+	boundary="_060099d2-0ea3-4717-b2a5-f80d86faaa3f_"
+From: Martin Gainty <mgainty@hotmail.com>
+To: "users@maven.apache.org" <users@maven.apache.org>,
+	"suresh.pamidipati@oracle.com" <suresh.pamidipati@oracle.com>
+Subject: RE: Invalid signature file digest for Manifest main attributes
+Date: Thu, 6 Mar 2014 08:09:13 -0500
+Importance: Normal
+In-Reply-To: <c0538b90-2db8-4a95-ba8c-6a8f53697a04@default>
+References: <c0538b90-2db8-4a95-ba8c-6a8f53697a04@default>
+MIME-Version: 1.0
+X-OriginalArrivalTime: 06 Mar 2014 13:09:14.0293 (UTC) FILETIME=[45BE6E50:01CF393D]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_060099d2-0ea3-4717-b2a5-f80d86faaa3f_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Suresh
+
+=20
+
+Your best solution will come from  Oracle Support India
+They are supposed to know this information and will be able to assist you w=
+ith your problem
+Oracle India Support Line number is +91.22.66796200=20
+If  Oracle India is unable to assist you ..we can find a resource on this s=
+ide of the planet to help you
+
+
+Warm Regards
+
+ =20
+
+
+
+> Date: Wed=2C 5 Mar 2014 19:19:44 -0800
+> From: suresh.pamidipati@oracle.com
+> To: users@maven.apache.org
+> Subject: Invalid signature file digest for Manifest main attributes
+>=20
+> Hi=2C
+>=20
+> I am trying to build our project using maven. I have included multiple de=
+pendency jars in pom.xml and I am trying to build distribution jar using as=
+sembly:assembly goal. The command "mvn assembly:assembly" resulted in the b=
+elow error.=20
+>=20
+> [ERROR] Failed to execute goal org.apache.maven.plugins:maven-assembly-pl=
+ugin:2.4:assembly (default-cli) on project my-plugin: Execution default-cli=
+ of goal org.apache.maven.plugins:maven-assembly-plugin:2.4:assembly failed=
+: Invalid signature file digest for Manifest main attributes -> [Help 1]
+>=20
+> Two of the dependency jars when present together was causing this issue. =
+I tried commenting one of them and mvn assembly:assembly command worked fin=
+e. To make it work with both the jars present together=2C I tried by adding=
+ excludes in dependency=2C assembly and even shade plugin configuration in =
+pom.xml to exclude MANIFEST files of one of those two jars as shown below=
+=2C but still the same error exists.
+>=20
+> <configuration>
+> <filters>
+> <filter>
+> <artifact>MyJar1:MyJar1</artifact>
+> <excludes>
+> <exclude>META-INF/*.SF</exclude>
+> <exclude>META-INF/*.DSA</exclude>
+> <exclude>META-INF/*.RSA</exclude>
+> </excludes>
+> </filter>
+> </filters>
+> </configuration>
+>=20
+> Please let me know how to resolve this error. I am not sure if the exclud=
+e statements were being ignored or I am missing some thing here. Any inform=
+ation on this will be really helpful.
+>=20
+> Thanks & Regards=2C
+> Suresh
+>=20
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe=2C e-mail: users-unsubscribe@maven.apache.org
+> For additional commands=2C e-mail: users-help@maven.apache.org
+>=20
+ 		 	   		  =
+
+--_060099d2-0ea3-4717-b2a5-f80d86faaa3f_--
+

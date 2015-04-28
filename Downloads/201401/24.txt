@@ -1,0 +1,128 @@
+From users-return-135019-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan  8 18:44:21 2014
+Return-Path: <users-return-135019-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A3EAC10CC3
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  8 Jan 2014 18:44:21 +0000 (UTC)
+Received: (qmail 76256 invoked by uid 500); 8 Jan 2014 18:43:16 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 75580 invoked by uid 500); 8 Jan 2014 18:42:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 75562 invoked by uid 99); 8 Jan 2014 18:42:43 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 18:42:43 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [206.46.173.13] (HELO vms173013pub.verizon.net) (206.46.173.13)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 18:42:37 +0000
+Received: from gold-family.us ([unknown] [98.114.1.155])
+ by vms173013.mailsrvcs.net
+ (Sun Java(tm) System Messaging Server 7u2-7.02 32bit (built Apr 16 2009))
+ with ESMTPA id <0MZ300A1OILQ0S70@vms173013.mailsrvcs.net> for
+ users@maven.apache.org; Wed, 08 Jan 2014 12:41:53 -0600 (CST)
+Received: from durendal.home (durendal.home [192.168.1.8])
+	by gold-family.us (Postfix) with ESMTP id DA66911F939A	for
+ <users@maven.apache.org>; Wed, 08 Jan 2014 13:56:30 -0500 (EST)
+From: Russell Gold <russ@gold-family.us>
+Content-type: multipart/alternative;
+ boundary="Apple-Mail=_6C59E37C-B7B7-4A15-A308-C62A5E3CC76E"
+Message-id: <05F2D212-47B4-45E7-B1BC-934C1185C795@gold-family.us>
+MIME-version: 1.0 (Mac OS X Mail 7.1 \(1827\))
+Subject: Re: Maven install phase - Access is denied
+Date: Wed, 08 Jan 2014 13:41:48 -0500
+References: <1389155385482-5780920.post@n5.nabble.com>
+To: Maven Users List <users@maven.apache.org>
+In-reply-to: <1389155385482-5780920.post@n5.nabble.com>
+X-Mailer: Apple Mail (2.1827)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_6C59E37C-B7B7-4A15-A308-C62A5E3CC76E
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+Hi Andrew, can you show us the result of doing this when you run the -X =
+switch? It is likely to provide more information about what is going on; =
+a copy of your pom.xml would also be very helpful.
+
+Thanks,
+Russ
+
+On Jan 7, 2014, at 11:29 PM, andre999 <andre999@hotmail.com> wrote:
+
+> Hi all,
+>=20
+> I have a project which maven generates the following output in the =
+target
+> folder;
+> <drive>\projects\mywork\trunk\target\<projectname>.jar
+> <drive>\projects\mywork\trunk\target\<projectname>-sources.jar
+> <drive>\projects\mywork\trunk\target\installer\folder
+>=20
+> The above installer\folder is basically an empty folder which contains
+> subfolders to be part of installer.
+>=20
+>=20
+> I have a Build Error that displays "/Error installing artifact:
+> <drive>\projects\mywork\trunk\target\installer\folder (Access is =
+denied)/"
+> when executing *mvn clean install*.
+>=20
+> The maven copies the =
+<drive>\projects\mywork\trunk\target\<projectname>.jar, =20
+> <drive>\projects\mywork\trunk\target\<projectname>-sources.jar into =
+local
+> repository with success. However the maven attempts to copy the=20
+> <drive>\projects\mywork\trunk\target\installer\folder into the local
+> repository which is not I want to. This cause maven to throw the Build
+> Error.
+>=20
+> How do I prevent maven copying the empty folder into local/remote =
+repository
+> as an artifact?
+>=20
+> Thanks,
+> Andrew
+>=20
+>=20
+>=20
+>=20
+>=20
+> --
+> View this message in context: =
+http://maven.40175.n5.nabble.com/Maven-install-phase-Access-is-denied-tp57=
+80920.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>=20
+
+-----------------
+Author, Getting Started with Apache Maven =
+<http://www.packtpub.com/getting-started-with-apache-maven/video>
+
+Come read my webnovel, Take a Lemon <http://www.takealemon.com>,=20
+and listen to the Misfile radio play =
+<http://www.fuzzyfacetheater.com/misfile/>!
+
+
+
+
+
+
+
+
+--Apple-Mail=_6C59E37C-B7B7-4A15-A308-C62A5E3CC76E--
+

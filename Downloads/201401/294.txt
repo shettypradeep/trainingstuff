@@ -1,0 +1,82 @@
+From users-return-135006-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan  7 13:24:37 2014
+Return-Path: <users-return-135006-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 80AE810CDE
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  7 Jan 2014 13:24:37 +0000 (UTC)
+Received: (qmail 40916 invoked by uid 500); 7 Jan 2014 13:24:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 40775 invoked by uid 500); 7 Jan 2014 13:24:19 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 40764 invoked by uid 99); 7 Jan 2014 13:24:16 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 07 Jan 2014 13:24:16 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of simone.tripodi@gmail.com designates 209.85.219.51 as permitted sender)
+Received: from [209.85.219.51] (HELO mail-oa0-f51.google.com) (209.85.219.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 07 Jan 2014 13:24:10 +0000
+Received: by mail-oa0-f51.google.com with SMTP id m1so135035oag.38
+        for <users@maven.apache.org>; Tue, 07 Jan 2014 05:23:49 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:date:message-id:subject:from:to:content-type;
+        bh=09wGCx39Hn8EukfFPhtS7vH0CIzL3iH7efiDKdxWF+k=;
+        b=zBSBOJafG9x6MxiTqA5+pbNMwRwe0uOTX5qKqd7ru4ULAochlAWpy5U7jGmgfgMAG+
+         ga1GCG/7UPl18/a8JBusqIFJal3aTOUSCQs6LyDQ2RYwjQ+1ypRizjAvRm14+bR+nlxn
+         HFKV+HVdnHSPo2Q/KtYn802fTJafJtMsf45qlCoA0HVyAeCra6d3dO8MteSDPai+hf9h
+         Lhf6MQdMNwjY6+FtwqnWlf/Z4ZTixfQJq/kzDSuWfzUZkwhsQI5z58Yiy3vJ3PW2eYWh
+         I0qQ01l4Y6u8lq72iqkLhtY0tObBNZfIQqyQuUgnU9vQMpAFSoNR2Sxzl4rx1NqwvszU
+         TORQ==
+MIME-Version: 1.0
+X-Received: by 10.60.60.74 with SMTP id f10mr43706684oer.11.1389101029045;
+ Tue, 07 Jan 2014 05:23:49 -0800 (PST)
+Sender: simone.tripodi@gmail.com
+Received: by 10.60.232.229 with HTTP; Tue, 7 Jan 2014 05:23:49 -0800 (PST)
+Date: Tue, 7 Jan 2014 14:23:49 +0100
+X-Google-Sender-Auth: Uq9RZDmfHATGy6DxMSauedT8Oto
+Message-ID: <CAAqLGLNV3Cjr+275PFp5ZY6wxag65cGrF-OLOd_Lr-1ht7FeUA@mail.gmail.com>
+Subject: clarifications on ArtifactRepository#find(Artifact) and ArtifactRepository#findVersions(Artifact)
+From: Simone Tripodi <simonetripodi@apache.org>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e013a009a64bc1004ef61490e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e013a009a64bc1004ef61490e
+Content-Type: text/plain; charset=UTF-8
+
+Hi all mates,
+
+I am having some troubles about how the methods in subject should behave,
+due to the not exhaustive javadoc: given the artifact
+
+com.acme:mycomponent:1.0
+
+when invoking ArtifactRepository#find(Artifact) it always return an
+artifact, even if it doesn';t exist in the target repo; given the artifact
+
+com.acme:mycomponent
+
+when invoking ArtifactRepository#findVersions(Artifact) it always return an
+empty list, even if there are versions deployed o the target repo.
+
+Can you please explain me which is the right way to check if an artifact
+exists on a repo?
+
+Many thanks in advance and happy new year!
+-Simo
+
+http://people.apache.org/~simonetripodi/
+http://twitter.com/simonetripodi
+
+--089e013a009a64bc1004ef61490e--
+

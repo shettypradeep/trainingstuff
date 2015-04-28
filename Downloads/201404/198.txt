@@ -1,0 +1,130 @@
+From users-return-136215-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Apr 21 20:09:04 2014
+Return-Path: <users-return-136215-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DBF1111112
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 21 Apr 2014 20:09:04 +0000 (UTC)
+Received: (qmail 56522 invoked by uid 500); 21 Apr 2014 20:09:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 56350 invoked by uid 500); 21 Apr 2014 20:09:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 56342 invoked by uid 99); 21 Apr 2014 20:09:00 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 21 Apr 2014 20:09:00 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ljnelson@gmail.com designates 209.85.216.42 as permitted sender)
+Received: from [209.85.216.42] (HELO mail-qa0-f42.google.com) (209.85.216.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 21 Apr 2014 20:08:55 +0000
+Received: by mail-qa0-f42.google.com with SMTP id k15so4285621qaq.1
+        for <users@maven.apache.org>; Mon, 21 Apr 2014 13:08:33 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=2qkw1F/DhgoP8XwqJgpNuKS/9XjFS1aD3fMsjjtY4Pk=;
+        b=BExQj7AfUu9+oP3UkR0qqqXGwAuQYtjJ1YVMnrLB2tKfjdJ/JvuvWGhqmauDyLsMGY
+         P1NcZir1wLgBm3FhI2ivGQe3K/EE1HnRzg5CzH62/6CGaAfXG+3uIHnqtpEy28zGoFw+
+         fz6XrczAdFNGrN9xLVFbGa2+M5btZANKgPzS27QgGJCmH/Ha+8asV/RNFCrQp1Lj/HWc
+         4lzz3G03FqqnJ3OqmyHevxpnWmazKbruvWo6CTqIxAS9f/iyrJYl4KQNoxUqtTtZ7sca
+         YGikrgQyYAc0kSGUT/huAzh/EUaaVeLLD+VFCRro1LUKIJLXEl4Mxm65VX6O6tMQL0xj
+         ijng==
+MIME-Version: 1.0
+X-Received: by 10.224.97.69 with SMTP id k5mr44363317qan.8.1398110913140; Mon,
+ 21 Apr 2014 13:08:33 -0700 (PDT)
+Received: by 10.96.33.194 with HTTP; Mon, 21 Apr 2014 13:08:33 -0700 (PDT)
+Date: Mon, 21 Apr 2014 13:08:33 -0700
+Message-ID: <CAHNdxu=sN2Twv6_7_bv0xUMRU3VBA2vu+FxYfkWXspfW9PPu9Q@mail.gmail.com>
+Subject: maven-javadoc-plugin unit tests: require JAVA_HOME?
+From: Laird Nelson <ljnelson@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1133d4e655b77d04f79310c9
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1133d4e655b77d04f79310c9
+Content-Type: text/plain; charset=UTF-8
+
+(Wasn't sure if this belonged on the Maven dev list or on the users list;
+happy to carry the discussion on elsewhere if appropriate.)
+
+I'm doing some Java 8 compatibility work on the maven-javadoc-plugin
+locally and have discovered that the JavadocReportTest test requires a
+JAVA_HOME environment variable to be set for all of its tests to pass.
+
+One exemplary test that easily shows this behavior:
+
+    /**
+     * Test to find the javadoc executable when <code>java.home</code> is
+not in the JDK_HOME. In this case, try to
+     * use the <code>JAVA_HOME</code> environment variable.
+     *
+     * @throws Exception if any
+     */
+    public void testToFindJavadoc()
+        throws Exception
+    {
+        String oldJreHome = System.getProperty( "java.home" );
+        System.setProperty( "java.home", "foo/bar" );
+
+        File testPom = new File( unit,
+"javaHome-test/javaHome-test-plugin-config.xml" );
+        JavadocReport mojo = (JavadocReport) lookupMojo( "javadoc", testPom
+);
+        mojo.execute(); // <-- unhandled IOException when JAVA_HOME is not
+set
+
+        System.setProperty( "java.home", oldJreHome );
+    }
+
+Was this deliberate?  This test will error out if JAVA_HOME is not set
+thanks to AbstractJavadocMojo, which uses it as a fallback:
+
+        //
+----------------------------------------------------------------------
+        // Try to find javadocExe from JAVA_HOME environment variable
+        //
+----------------------------------------------------------------------
+        if ( !javadocExe.exists() || !javadocExe.isFile() )
+        {
+            Properties env = CommandLineUtils.getSystemEnvVars();
+            String javaHome = env.getProperty( "JAVA_HOME" );
+            if ( StringUtils.isEmpty( javaHome ) )
+            {
+                throw new IOException( "The environment variable JAVA_HOME
+is not correctly set." ); // <-- responsible for the test error described
+in this email
+            }
+            if ( ( !new File( javaHome ).getCanonicalFile().exists() ) || (
+new File( javaHome ).getCanonicalFile().isFile() ) )
+            {
+                throw new IOException(
+                    "The environment variable JAVA_HOME=" + javaHome + "
+doesn't exist or is not a valid directory." );
+            }
+
+            javadocExe = new File( javaHome + File.separator + "bin",
+javadocCommand );
+        }
+
+So the test in question deliberately sets the java.home System property to
+a bozo value ("foo/bar"), and then the test errors out because the fallback
+code does not detect a JAVA_HOME environment variable.
+
+Is this worth a bug, or...?
+
+Best,
+Laird
+
+-- 
+http://about.me/lairdnelson
+
+--001a1133d4e655b77d04f79310c9--
+

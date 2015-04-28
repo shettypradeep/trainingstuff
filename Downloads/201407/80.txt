@@ -1,0 +1,263 @@
+From users-return-136807-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jul 18 20:55:26 2014
+Return-Path: <users-return-136807-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E95F1112BC
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 18 Jul 2014 20:55:26 +0000 (UTC)
+Received: (qmail 59900 invoked by uid 500); 18 Jul 2014 20:55:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 59826 invoked by uid 500); 18 Jul 2014 20:55:25 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 59807 invoked by uid 99); 18 Jul 2014 20:55:24 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Jul 2014 20:55:24 +0000
+X-ASF-Spam-Status: No, hits=0.7 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [81.169.146.216] (HELO mo4-p00-ob.smtp.rzone.de) (81.169.146.216)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Jul 2014 20:55:19 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; t=1405716896; l=10384;
+	s=domk; d=j-hohwiller.de;
+	h=Content-Type:In-Reply-To:References:Subject:To:MIME-Version:From:
+	Date;
+	bh=Ra70GTM/jfsYSNdoQNMuU3U0TLs=;
+	b=h5/ffiriuOxvE0sBy9Plz3WlXiKn1WE56ExCTNvmXVIDDTi32Q8lbOFO2b3E5ttkNVm
+	3uWprxhGxtrUhsXxVPR4HXM/+E9nCqYXGGHsOIqHmVQEiTrdQKLyQ+685jBX21B9QhDkb
+	zcI6LQZVGz2Bg7mqGrfc3/Twjt8ZCfG2qIE=
+X-RZG-AUTH: :JmMBZ0eIcbKJR7aGLMhBBT1soiSFCF2VXU3ajFlWruDt0TYMraRTew9sYfWrJ7NW+A==
+X-RZG-CLASS-ID: mo00
+Received: from [192.168.178.43] (p54A04B96.dip0.t-ipconnect.de [84.160.75.150])
+	by smtp.strato.de (RZmta 35.2 DYNA|AUTH)
+	with ESMTPSA id I03835q6IKsuAmr
+	(using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))
+	(Client did not present a certificate)
+	for <users@maven.apache.org>;
+	Fri, 18 Jul 2014 22:54:56 +0200 (CEST)
+Message-ID: <53C989A0.3050509@j-hohwiller.de>
+Date: Fri, 18 Jul 2014 22:54:56 +0200
+From: =?ISO-8859-1?Q?J=F6rg_Hohwiller?= <joerg@j-hohwiller.de>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: *** Spam *** Re: [ANN] flatten-maven-plugin 1.0.0-beta-2 released
+References: <53923139.2080507@j-hohwiller.de> <p06240801cfe3a3ce7461@[10.0.100.199]>
+In-Reply-To: <p06240801cfe3a3ce7461@[10.0.100.199]>
+Content-Type: multipart/signed; protocol="application/pkcs7-signature"; micalg=sha1; boundary="------------ms070009060405070404080703"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------ms070009060405070404080703
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+Hi Russ,
+
+this can only be done programmatically in a plugin/MOJO.
+However, it is very easy: You need to invoke setFile(File) on the=20
+MavenProject:
+             this.project.setFile( flattenedPomFile );
+
+Before I also tried to configure maven-install-plugin and=20
+maven-deploy-plugin to use a different file, but these features have=20
+been removed in the recent versions. Also you would get trouble with=20
+further related plugins such as maven-gpg-plugin.
+
+Both ways are rather a workaround than a solid and well-designed solution=
+=2E
+E.g. see last comment of this issue:
+http://jira.codehaus.org/browse/MOJO-2030
+
+Start a discussion on the maven dev list if you like to. I think maven=20
+needs some re-design here...
+Also the way aggregators work has design issues. But chaning the maven=20
+plugin eco-system is quite of a challange. Maybe in maven 4 one day...
+
+ > Since your 99% there, maybe you could add a parameter to just let me=20
+add my own custom pom?
+ > Or can I just overwrite .flattened-pom.xml with my own?
+
+Would be easy to do. You can also overwrite the generated file but you=20
+have to be in the lifecycle after flatten plugin and right before any=20
+other plugin such as gpg or install.
+
+> I find it is sometimes hard to get "non-religious" answers on the maven=
+ forums.  ;)
+
+Some time ago I had the same problem. Try to change the way you talk=20
+already helped for me :)
+Describe your problem precisely and then ask open questions. Remove all=20
+complaints before you hit "send" ;)
+
+Regards
+   J=F6rg
+
+Am 10.07.2014 04:14, schrieb Russ Tremain:
+> Hi J=F6rg,
+>
+> I'm giving your plugin a spin and I think it really helps!
+>
+> What I wonder is how do you get maven-install and maven-deploy plugins =
+to use ${basedir}/.flattened-pom.xml ?
+>
+> Is there a magic property I can set, or can this only be done programat=
+ically?  Seems tricky, since I want to use the project pom to create the =
+release, and then substitute the release pom for install/deploy.  I can c=
+opy in the distribution pom using maven-resources plugin for the jar, but=
+ install stomps on my custom pom after I create it in target/*.pom.
+>
+> Since your 99% there, maybe you could add a parameter to just let me ad=
+d my own custom pom?  Or can I just overwrite .flattened-pom.xml with my =
+own?
+>
+> Thanks for your hard work..  I find it is sometimes hard to get "non-re=
+ligious" answers on the maven forums.  ;)
+>
+> Cheers,
+> -Russ
+>
+>
+> At 11:23 PM +0200 6/6/14, J=F6rg Hohwiller wrote:
+>> Hi,
+>>
+>> The Mojo team is pleased to announce the release of the flatten-maven-=
+plugin version 1.0.0-beta-2.
+>>
+>> Flatten Maven Plugin generates a flattened version of your pom.xml and=
+ makes maven to install
+>> and deploy this one instead of the original pom.xml.
+>>
+>> http://mojo.codehaus.org/flatten-maven-plugin/
+>>
+>> To get this update, simply specify the version in your project's plugi=
+n configuration:
+>>
+>> <plugin>
+>>         <groupId>org.codehaus.mojo</groupId>
+>>         <artifactId>flatten-maven-plugin</artifactId>
+>>         <version>1.0.0-beta-2</version>
+>> </plugin>
+>>
+>> All you need to do is add the plugin to the plugins in your build sect=
+ion.
+>>
+>> Release Notes
+>> http://jira.codehaus.org/browse/MOJO-2027 ability to preserve develope=
+r information
+>> http://jira.codehaus.org/browse/MOJO-2030 flatten-maven-plugin overrid=
+es basedir and sets it to target/, so src/site/site.xml is not used and a=
+ny documentation beneath src/site is not rendered
+>>
+>> Enjoy,
+>>
+>> The Mojo team.
+>>
+>> J=F6rg
+>>
+>>
+>> Content-Type: application/pkcs7-signature; name=3D"smime.p7s"
+>> Content-Disposition: attachment; filename=3D"smime.p7s"
+>> Content-Description: S/MIME Cryptographic Signature
+>>
+>> Attachment converted: tanami-sys:smime 299.p7s (    /    ) (00680F17)
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+
+
+--------------ms070009060405070404080703
+Content-Type: application/pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+Content-Description: S/MIME Cryptographic Signature
+
+MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIIMgTCC
+BjQwggQcoAMCAQICAR4wDQYJKoZIhvcNAQEFBQAwfTELMAkGA1UEBhMCSUwxFjAUBgNVBAoT
+DVN0YXJ0Q29tIEx0ZC4xKzApBgNVBAsTIlNlY3VyZSBEaWdpdGFsIENlcnRpZmljYXRlIFNp
+Z25pbmcxKTAnBgNVBAMTIFN0YXJ0Q29tIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA3
+MTAyNDIxMDE1NVoXDTE3MTAyNDIxMDE1NVowgYwxCzAJBgNVBAYTAklMMRYwFAYDVQQKEw1T
+dGFydENvbSBMdGQuMSswKQYDVQQLEyJTZWN1cmUgRGlnaXRhbCBDZXJ0aWZpY2F0ZSBTaWdu
+aW5nMTgwNgYDVQQDEy9TdGFydENvbSBDbGFzcyAxIFByaW1hcnkgSW50ZXJtZWRpYXRlIENs
+aWVudCBDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMcJg8zOLdgasSmkLhOr
+lr6KMoOMpohBllVHrdRvEg/q6r8jR+EK75xCGhR8ToREoqe7zM9/UnC6TS2y9UKTpT1v7RSM
+zR0t6ndl0TWBuUr/UXBhPk+Kmy7bI4yW4urC+y7P3/1/X7U8ocb8VpH/Clt+4iq7nirMcNh6
+qJR+xjOhV+VHzQMALuGYn5KZmc1NbJQYclsGkDxDz2UbFqE2+6vIZoL+jb9x4Pa5gNf1TwSD
+kOkikZB1xtB4ZqtXThaABSONdfmv/Z1pua3FYxnCFmdr/+N2JLKutIxMYqQOJebr/f/h5t95
+m4JgrM3Y/w7YX9d7YAL9jvN4SydHsU6n65cCAwEAAaOCAa0wggGpMA8GA1UdEwEB/wQFMAMB
+Af8wDgYDVR0PAQH/BAQDAgEGMB0GA1UdDgQWBBRTcu2SnODaywFcfH6WNU7y1LhRgjAfBgNV
+HSMEGDAWgBROC+8apEBbpRdphzDKNGhD0EGu8jBmBggrBgEFBQcBAQRaMFgwJwYIKwYBBQUH
+MAGGG2h0dHA6Ly9vY3NwLnN0YXJ0c3NsLmNvbS9jYTAtBggrBgEFBQcwAoYhaHR0cDovL3d3
+dy5zdGFydHNzbC5jb20vc2ZzY2EuY3J0MFsGA1UdHwRUMFIwJ6AloCOGIWh0dHA6Ly93d3cu
+c3RhcnRzc2wuY29tL3Nmc2NhLmNybDAnoCWgI4YhaHR0cDovL2NybC5zdGFydHNzbC5jb20v
+c2ZzY2EuY3JsMIGABgNVHSAEeTB3MHUGCysGAQQBgbU3AQIBMGYwLgYIKwYBBQUHAgEWImh0
+dHA6Ly93d3cuc3RhcnRzc2wuY29tL3BvbGljeS5wZGYwNAYIKwYBBQUHAgEWKGh0dHA6Ly93
+d3cuc3RhcnRzc2wuY29tL2ludGVybWVkaWF0ZS5wZGYwDQYJKoZIhvcNAQEFBQADggIBAAqD
+CH14qywGXLhjjF6uHLkjd02hcdh9hrw+VUsv+q1eeQWB21jWj3kJ96AUlPCoEGZ/ynJNScWy
+6QMVQjbbMXltUfO4n4bGGdKo3awPWp61tjAFgraLJgDk+DsSvUD6EowjMTNx25GQgyYJ5RPI
+zKKR9tQW8gGK+2+RHxkUCTbYFnL6kl8Ch507rUdPPipJ9CgJFws3kDS3gOS5WFMxcjO5DwKf
+KSETEPrHh7p5shuuNktvsv6hxHTLhiMKX893gxdT3XLS9OKmCv87vkINQcNEcIIoFWbP9HOR
+z9v3vQwR4e3ksLc2JZOAFK+ssS5XMEoznzpihEP0PLc4dCBYjbvSD7kxgDwZ+Aj8Q9PkbvE9
+sIPP7ON0fz095HdThKjiVJe6vofq+n6b1NBc8XdrQvBmunwxD5nvtTW4vtN6VY7mUCmxsCie
+uoBJ9OlqmsVWQvifIYf40dJPZkk9YgGTzWLpXDSfLSplbY2LL9C9U0ptvjcDjefLTvqSFc7t
+w1sEhF0n/qpA2r0GpvkLRDmcSwVyPvmjFBGqUp/pNy8ZuPGQmHwFi2/14+xeSUDG2bwnsYJQ
+G2EdJCB6luQ57GEnTA/yKZSTKI8dDQa8Sd3zfXb19mOgSF0bBdXbuKhEpuP9wirslFe6fQ1t
+5j5R0xi72MZ8ikMu1RQZKCyDbMwazlHiMIIGRTCCBS2gAwIBAgIDB3MIMA0GCSqGSIb3DQEB
+BQUAMIGMMQswCQYDVQQGEwJJTDEWMBQGA1UEChMNU3RhcnRDb20gTHRkLjErMCkGA1UECxMi
+U2VjdXJlIERpZ2l0YWwgQ2VydGlmaWNhdGUgU2lnbmluZzE4MDYGA1UEAxMvU3RhcnRDb20g
+Q2xhc3MgMSBQcmltYXJ5IEludGVybWVkaWF0ZSBDbGllbnQgQ0EwHhcNMTMwODMxMTEwODQ4
+WhcNMTQwOTAxMTMwNjM3WjBfMRkwFwYDVQQNExBxUDNDNDdYTVFNVjFadGVBMR0wGwYDVQQD
+DBRqb2VyZ0BqLWhvaHdpbGxlci5kZTEjMCEGCSqGSIb3DQEJARYUam9lcmdAai1ob2h3aWxs
+ZXIuZGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCXH0wk15INjRT0/5DCO7x5
+4MYPXFInZKYoYDC3WH1LPzXizPHvnzz2Uep5QmYis+bvpToE1XckOyBBVxJZVUNLTYFWptSK
+wziMgKqXKxp6TlrcZaZbCnaL48Y2RqKYpEJvO9hU5/ECoaxE4J8wcdDB9EdUg05uR2xy/38A
+hmgdpT7gIPqFBjdwYs4FCKNkbDgsQgTzQCqTUmx/7Raf8Th8De8H6eKk8jKbKwPh1u/48fd1
+5zv0zzu+qKVSHGFDYwC+8WEkfAShn9EFoI2Im8HHeG9RMtTb+2j6ckepJDjujovAuai+QgWT
+64oXP15eD6QBUODBAJlF8t7S13pawDVpAgMBAAGjggLaMIIC1jAJBgNVHRMEAjAAMAsGA1Ud
+DwQEAwIEsDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwQwHQYDVR0OBBYEFP4GEF0p
+pC/Qo+Wpn95MtvZdH7BEMB8GA1UdIwQYMBaAFFNy7ZKc4NrLAVx8fpY1TvLUuFGCMB8GA1Ud
+EQQYMBaBFGpvZXJnQGotaG9od2lsbGVyLmRlMIIBTAYDVR0gBIIBQzCCAT8wggE7BgsrBgEE
+AYG1NwECAzCCASowLgYIKwYBBQUHAgEWImh0dHA6Ly93d3cuc3RhcnRzc2wuY29tL3BvbGlj
+eS5wZGYwgfcGCCsGAQUFBwICMIHqMCcWIFN0YXJ0Q29tIENlcnRpZmljYXRpb24gQXV0aG9y
+aXR5MAMCAQEagb5UaGlzIGNlcnRpZmljYXRlIHdhcyBpc3N1ZWQgYWNjb3JkaW5nIHRvIHRo
+ZSBDbGFzcyAxIFZhbGlkYXRpb24gcmVxdWlyZW1lbnRzIG9mIHRoZSBTdGFydENvbSBDQSBw
+b2xpY3ksIHJlbGlhbmNlIG9ubHkgZm9yIHRoZSBpbnRlbmRlZCBwdXJwb3NlIGluIGNvbXBs
+aWFuY2Ugb2YgdGhlIHJlbHlpbmcgcGFydHkgb2JsaWdhdGlvbnMuMDYGA1UdHwQvMC0wK6Ap
+oCeGJWh0dHA6Ly9jcmwuc3RhcnRzc2wuY29tL2NydHUxLWNybC5jcmwwgY4GCCsGAQUFBwEB
+BIGBMH8wOQYIKwYBBQUHMAGGLWh0dHA6Ly9vY3NwLnN0YXJ0c3NsLmNvbS9zdWIvY2xhc3Mx
+L2NsaWVudC9jYTBCBggrBgEFBQcwAoY2aHR0cDovL2FpYS5zdGFydHNzbC5jb20vY2VydHMv
+c3ViLmNsYXNzMS5jbGllbnQuY2EuY3J0MCMGA1UdEgQcMBqGGGh0dHA6Ly93d3cuc3RhcnRz
+c2wuY29tLzANBgkqhkiG9w0BAQUFAAOCAQEAQycR/+HHIhr2dNKQ1NVl1lYYiu81nbNsg66y
+q2EZh98I9pEGhJRn16U70P0hH8VQHOa4WcJIXOFLZ9+xiPGh+YJ1Pueuami+UcI211Mr0yU0
+DgzUIELOXOqrSE6K4x0DdfQvs1wugMHTbmqyYSXULNPzgv3zOyZdJ0rR8hSCs3rnOQDa+fvS
+E8Da/CvGgaUnlR9lI5X1bEFWQDx6koBC+nGqs31UvTuT8otkhJuooGMyA/MM2Xg5dMlXplmP
+GQAxR5n1UXxRrlgs9IVK08ePbY/JQIe6txiCTPAQUasIDmSUARY3qe+bimmD1fDMw/uLXU/E
+UHl7BV6zYNuyZG7J0zGCA90wggPZAgEBMIGUMIGMMQswCQYDVQQGEwJJTDEWMBQGA1UEChMN
+U3RhcnRDb20gTHRkLjErMCkGA1UECxMiU2VjdXJlIERpZ2l0YWwgQ2VydGlmaWNhdGUgU2ln
+bmluZzE4MDYGA1UEAxMvU3RhcnRDb20gQ2xhc3MgMSBQcmltYXJ5IEludGVybWVkaWF0ZSBD
+bGllbnQgQ0ECAwdzCDAJBgUrDgMCGgUAoIICHTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcB
+MBwGCSqGSIb3DQEJBTEPFw0xNDA3MTgyMDU0NTZaMCMGCSqGSIb3DQEJBDEWBBTqcnxZalVH
+VOfPLKiXrHEcC+hfmzBsBgkqhkiG9w0BCQ8xXzBdMAsGCWCGSAFlAwQBKjALBglghkgBZQME
+AQIwCgYIKoZIhvcNAwcwDgYIKoZIhvcNAwICAgCAMA0GCCqGSIb3DQMCAgFAMAcGBSsOAwIH
+MA0GCCqGSIb3DQMCAgEoMIGlBgkrBgEEAYI3EAQxgZcwgZQwgYwxCzAJBgNVBAYTAklMMRYw
+FAYDVQQKEw1TdGFydENvbSBMdGQuMSswKQYDVQQLEyJTZWN1cmUgRGlnaXRhbCBDZXJ0aWZp
+Y2F0ZSBTaWduaW5nMTgwNgYDVQQDEy9TdGFydENvbSBDbGFzcyAxIFByaW1hcnkgSW50ZXJt
+ZWRpYXRlIENsaWVudCBDQQIDB3MIMIGnBgsqhkiG9w0BCRACCzGBl6CBlDCBjDELMAkGA1UE
+BhMCSUwxFjAUBgNVBAoTDVN0YXJ0Q29tIEx0ZC4xKzApBgNVBAsTIlNlY3VyZSBEaWdpdGFs
+IENlcnRpZmljYXRlIFNpZ25pbmcxODA2BgNVBAMTL1N0YXJ0Q29tIENsYXNzIDEgUHJpbWFy
+eSBJbnRlcm1lZGlhdGUgQ2xpZW50IENBAgMHcwgwDQYJKoZIhvcNAQEBBQAEggEAJV7l1mts
+Ye/kkfWNrZioPVnZcEJl72cIvrZylwrWj4uiGW/hyWIAdNoIG42WtZ4v3+zbjZ3EaLqRwMBG
+SOpqHXhyLrPcGZP8CFE49XqV9lqutbAwtKBVnGxIXs4IBN44ld+nE/AN2EK326DIvSgEWPSw
+NDxlL8umCvUmz4337LFZ0ZL8+pgl6bcgBUW/Ynf+BAEVj1ur01UDSyPtOmgixAXAiuw84quE
+a3q68OhTIG75p91iDIAMxMVvHesDC/4mC5rnw2mizTRrYYocnsXHBqxZk0yDNCbsWCnG+QJ0
+rJ5FLM+zLg4tSrCpQjxUWizMui2qN7Gy3GSnPXk2m3dXfgAAAAAAAA==
+--------------ms070009060405070404080703--
+

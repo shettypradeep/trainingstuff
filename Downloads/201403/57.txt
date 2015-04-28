@@ -1,0 +1,83 @@
+From users-return-135905-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Mar 24 07:50:39 2014
+Return-Path: <users-return-135905-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 47D1D1056D
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 24 Mar 2014 07:50:39 +0000 (UTC)
+Received: (qmail 21236 invoked by uid 500); 24 Mar 2014 07:50:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 20411 invoked by uid 500); 24 Mar 2014 07:50:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 20358 invoked by uid 99); 24 Mar 2014 07:50:23 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Mar 2014 07:50:22 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [94.23.103.130] (HELO bihar.codelutin.com) (94.23.103.130)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Mar 2014 07:50:17 +0000
+Received: from localhost (localhost [127.0.0.1])
+	by bihar.codelutin.com (Postfix) with ESMTP id D629F870FD;
+	Mon, 24 Mar 2014 08:49:55 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at codelutin.com
+Received: from bihar.codelutin.com ([127.0.0.1])
+	by localhost (bihar.codelutin.com [127.0.0.1]) (amavisd-new, port 10024)
+	with LMTP id wGOZ+-VF-4RE; Mon, 24 Mar 2014 08:49:51 +0100 (CET)
+Received: from tc.codelutin.home (bunker.codelutin.com [109.190.17.189])
+	by bihar.codelutin.com (Postfix) with ESMTP id 74B2D8708B;
+	Mon, 24 Mar 2014 08:49:51 +0100 (CET)
+Date: Mon, 24 Mar 2014 08:45:00 +0100
+From: Tony Chemit <tchemit@apache.org>
+To: "announce@maven.apache.org" <announce@maven.apache.org>, Maven
+ Developers List <dev@maven.apache.org>, Maven Users List
+ <users@maven.apache.org>
+Subject: [ANN] Apache Maven Shared Utils 0.6 released
+Message-ID: <20140324084500.3a1f8b15@tc.codelutin.home>
+Organization: Code Lutin
+X-Mailer: Claws Mail 3.9.3 (GTK+ 2.24.22; x86_64-unknown-linux-gnu)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+The Apache Maven team is pleased to announce the release of the 
+maven-shared-utils, version 0.6
+
+This project aims to be a functional replacement for
+{{{http://plexus.codehaus.org/plexus-utils}plexus-utils}} in Maven.
+
+It is not a 100% API compatible replacement though but a replacement
+<with improvements>:
+lots of methods got cleaned up, generics got added and we dropped a
+lot of unused code. Although all
+the classes are in different packages from plexus-utils, if the method
+is present it will have the same
+semantics, facilitating easy conversion.
+
+http://maven.apache.org/shared/maven-shared-utils/
+
+Release Notes - Maven Shared Components - Version maven-shared-utils-0.6
+
+** Improvement
+    * [MSHARED-320] - Be able to mask some arguments in the commandLine API
+
+Enjoy,
+
+-The Apache Maven team
+
+tony.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

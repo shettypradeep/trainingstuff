@@ -1,0 +1,156 @@
+From users-return-136529-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jun  4 20:02:30 2014
+Return-Path: <users-return-136529-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3B6731077C
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  4 Jun 2014 20:02:30 +0000 (UTC)
+Received: (qmail 51904 invoked by uid 500); 4 Jun 2014 20:02:28 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 51820 invoked by uid 500); 4 Jun 2014 20:02:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 51809 invoked by uid 99); 4 Jun 2014 20:02:28 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 04 Jun 2014 20:02:28 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 74.125.82.46 as permitted sender)
+Received: from [74.125.82.46] (HELO mail-wg0-f46.google.com) (74.125.82.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 04 Jun 2014 20:02:25 +0000
+Received: by mail-wg0-f46.google.com with SMTP id n12so9072805wgh.29
+        for <users@maven.apache.org>; Wed, 04 Jun 2014 13:02:02 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=Ft71owdpNT/6jtm3AMg5nns35EXOlFC/OFnIfZJ1iEQ=;
+        b=KT+1zNG99rYL+XQIm8hW90qV1cEtNkvqrq8lQEwMVNI66z2Fez7aVvsLgj/AFjeTyi
+         mJBsEZ/nR7EmEVZF4YsecdDjUjx/bsdMeIUQPgT2T5YaN08iAL090TZ4BNo53E/9cnGy
+         dXy5Fexe1QEi+BYb0cCuqEeAXf3n5OwLyNo/WJdyXd/RO0/jFHgfPfMlNhS0YsTySNJN
+         WJt+AjZx7Cxe1ZUrcJp+eErj7b877/hxq1Qy4DcwzZX15wtD4mqyDRd9kN0o0xTNIbBI
+         4ab+4ys+gzIgezA9q8YX+u8/AvxMc2DrWqFxrru7U5DngkPTEFX5eyVFA+JVUePw6eW5
+         nJww==
+MIME-Version: 1.0
+X-Received: by 10.194.77.2 with SMTP id o2mr8538864wjw.68.1401912122220; Wed,
+ 04 Jun 2014 13:02:02 -0700 (PDT)
+Received: by 10.194.94.135 with HTTP; Wed, 4 Jun 2014 13:02:02 -0700 (PDT)
+In-Reply-To: <6EAF4A65-1CA6-43DB-ABD0-50EBB0742373@takari.io>
+References: <0C723FEB5B4E5642B25B451BA57E2730A29DFF4A@S1P5DAG3C.EXCHPROD.USA.NET>
+	<CABLGb9wseqSagrFtUvNgc1aREcsAx=PLKdQD_5-rLAFSAOLTWA@mail.gmail.com>
+	<CAPCjjnFTmb9aZO6a9W6SpmzUH5U=JaUT9qkpQ=mViabkQszOxQ@mail.gmail.com>
+	<CABLGb9z40sOaRgcbmQUcxAYDcakGfUJ40QTdTes+uq9bLcDvqQ@mail.gmail.com>
+	<1401896835575-5794892.post@n5.nabble.com>
+	<CA+nPnMxrQp4N34xnHQgPMS6F1jjiJUCMzmsyT2ZnOoiwaWrRpA@mail.gmail.com>
+	<6EAF4A65-1CA6-43DB-ABD0-50EBB0742373@takari.io>
+Date: Wed, 4 Jun 2014 21:02:02 +0100
+Message-ID: <CA+nPnMwnKYm+QR8bp5pJ0=AiwokwQw+hYPwGo8MzLD1GqOuYEw@mail.gmail.com>
+Subject: Re: Controlling order of plugin execution
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bfced9c0d294304fb081a85
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bfced9c0d294304fb081a85
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Wednesday, 4 June 2014, Jason van Zyl <jason@takari.io> wrote:
+
+> On Jun 4, 2014, at 12:07 PM, Stephen Connolly <
+> stephen.alan.connolly@gmail.com <javascript:;>> wrote:
+>
+> > That's usually a sign that you have wandered off The Maven Way=E2=84=A2
+> >
+>
+> No it's not. They have valid points and the implementation is deficient i=
+n
+> this regard. Everything that's presently here is not immutable. Calling i=
+t
+> "The Maven Way" doesn't make it usable or without flaws. I'm not even sur=
+e
+> where this saying came from but we're not a cult.
+
+
+I use the term "The Maven Way" to mean "the established best practice way
+to build an XYZ"...
+
+So when I say you have wandered off the Maven way, I mean that you are
+encountering fractions because of your choice.
+
+Why have you wandered off the conventional path? Probably because it does
+not fit your needs.
+
+If this is a once off, never to be repeated, thing... Well you can live
+with the hacks you use to make it work...
+
+Otherwise a new plugin with the required packaging type and a mojo to do
+the "complex thing" in one single step is a much better solution...
+
+And now in doing that you have forged a new Maven way... If you contribute
+that way back to the community then our community grows richer because of
+your efforts forging a new oath through the wild jungle.
+
+There are four or five paths established and maintained by the maven
+project:
+
+* simple jar
+* simple war
+* simple ear
+* simple ejb-jar
+* simple rar
+
+Are our paths perfect? Nope... For one our war path is not well adapted to
+modern web application development... But it is still unclear the best path
+to follow for modern war artifacts... I have an open experiment (jszip.org)
+there's the webjars effort, etc
+
+Somebody will find a *great path* for modern war files... Then if they can
+get that into a packaging (bonus if the maven-war-plugin) the community can
+all rejoice in the simplified new path and our poms can return to just
+listing dependencies
+
+
+> > There are ways back onto the blessed path... they typically involve
+> writing
+> > a plugin
+> >
+>
+> Thanks,
+>
+> Jason
+>
+> ----------------------------------------------------------
+> Jason van Zyl
+> Founder,  Apache Maven
+> http://twitter.com/jvanzyl
+> http://twitter.com/takari_io
+> ---------------------------------------------------------
+>
+> I never make the mistake of arguing with people for whose opinions I have
+> no respect.
+>
+> -- Edward Gibbon
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+
+--=20
+Sent from my phone
+
+--047d7bfced9c0d294304fb081a85--
+

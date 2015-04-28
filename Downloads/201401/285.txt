@@ -1,0 +1,123 @@
+From users-return-135164-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan 15 18:27:20 2014
+Return-Path: <users-return-135164-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 603DD10AE5
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 15 Jan 2014 18:27:20 +0000 (UTC)
+Received: (qmail 25215 invoked by uid 500); 15 Jan 2014 18:27:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 25136 invoked by uid 500); 15 Jan 2014 18:27:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 25128 invoked by uid 99); 15 Jan 2014 18:27:15 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 15 Jan 2014 18:27:15 +0000
+X-ASF-Spam-Status: No, hits=1.8 required=5.0
+	tests=HTML_MESSAGE,PLING_QUERY,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [66.111.4.27] (HELO out3-smtp.messagingengine.com) (66.111.4.27)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 15 Jan 2014 18:27:10 +0000
+Received: from compute4.internal (compute4.nyi.mail.srv.osa [10.202.2.44])
+	by gateway1.nyi.mail.srv.osa (Postfix) with ESMTP id 9263521104
+	for <users@maven.apache.org>; Wed, 15 Jan 2014 13:26:48 -0500 (EST)
+Received: from frontend1 ([10.202.2.160])
+  by compute4.internal (MEProxy); Wed, 15 Jan 2014 13:26:49 -0500
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=tesla.io; h=from
+	:content-type:subject:message-id:date:to:mime-version; s=mesmtp;
+	 bh=dyghELAdKWTlL5SiQESYzUrnu3U=; b=VVR5BWJ5MZlQMxDoIcxaK6GUlzq7
+	o7UvcEfOU37uP6NNVh6kAxvuf2mQT/5LRfdxzpIL3Kf66GFrLtz63qpAdoXkhUId
+	NxEdjTvhWfTUIyPbwA+SSQrlBK50PJBukD9BbJ3nOamV3guJ+4/77EfaaXovdpCy
+	jFCbsSKQu29K3xA=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=
+	messagingengine.com; h=from:content-type:subject:message-id:date
+	:to:mime-version; s=smtpout; bh=dyghELAdKWTlL5SiQESYzUrnu3U=; b=
+	pc1ZIzphHORGQAm2yBWnAs7tFWyET6MdfHTGoYlHlyMOBTyEmHNWn2Uf2OhlPszk
+	R0bWia9xBDJhHFBCdZFN12vLyJ0g2FURusveP8QJmSvAbFDha6PnG1csLd2H2S+j
+	XeRw2AxCWk1scDiqLZGEJfq9eErvPsl6h0IY0i51XIA=
+X-Sasl-enc: /SsRlJcXyY1nFFUV69K/Yrjy9KuXry0o/zIdEdvXEKwO 1389810408
+Received: from [10.0.1.2] (unknown [192.0.155.174])
+	by mail.messagingengine.com (Postfix) with ESMTPA id 67211C00E8A
+	for <users@maven.apache.org>; Wed, 15 Jan 2014 13:26:48 -0500 (EST)
+From: Jason van Zyl <jason@tesla.io>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_850BDE0D-4EFF-4CE3-95AD-515305CA3E81"
+Subject: Maven just won't die! -- WTF is Takari?
+Message-Id: <43D77B63-90CF-411D-AEE9-76ED116AD133@tesla.io>
+Date: Wed, 15 Jan 2014 13:26:47 -0500
+To: Maven Users List <users@maven.apache.org>
+Mime-Version: 1.0 (Mac OS X Mail 7.1 \(1827\))
+X-Mailer: Apple Mail (2.1827)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_850BDE0D-4EFF-4CE3-95AD-515305CA3E81
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=windows-1252
+
+Hi,
+
+As some may know, a lot of work has been done at tesla.io on various =
+advanced features in Maven but, unfortunately, not enough work for these =
+features to see the light of day. It wouldn't be surprising if Maven =
+users have no idea what these features are because I've not done a great =
+job at communicating about the work. Some of the work is mine, some of =
+other major contributors, and more recently from key customers.
+
+To make a long story short there's a lot of cool stuff to talk about, =
+and the work as a new venue at takari.io! I'll be giving a webinar next =
+week and here are some of the features I'd like to talk about:
+
+- Polyglot support: Ruby, Groovy, and Scala DSLs. These have all been =
+actively worked on in the recent past, especially the Ruby and Scala =
+DSLs.
+- Full incremental support: the complete Maven lifecycle including an =
+incremental command line compiler based on JDT, all with m2e integration
+- Aggressive parallelization: a new parallelization mode that also =
+optimizes scheduling based on critical path analysis
+- Generations: a new form of continuous delivery for Maven -- Smart =
+delta protocol and no more SNAPHOTs!
+- Shell: long-lived CLI process for Maven
+
+Much of this work is functional, and the new parallelization mode and =
+generations support are actively being used in production. We are still =
+iterating on these specific features but they show a lot of promise. =
+Where all of this code eventually lands is a question for the Maven =
+development community. All of this work was developed outside of Apache, =
+and how easy it is to integrate back into the Maven project remains to =
+be seen. At the very least there is a lot of very interesting work and I =
+wanted to start the dialog because Maven just isn't going to die :-)
+
+So please join us for a webinar, Tuesday, January 21 at 11:30AM EST (UTC =
+-5 hours) to learn more about what we're working on and what we're =
+trying to accomplish.
+
+All registrants will receive access to the recording, so if you can=92t =
+make it =97 you won=92t have to miss out.
+
+Register here: http://goo.gl/vqSvL7
+
+Hope you can make it,
+
+Jason van Zyl
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+---------------------------------------------------------
+
+
+
+
+
+
+
+
+--Apple-Mail=_850BDE0D-4EFF-4CE3-95AD-515305CA3E81--
+

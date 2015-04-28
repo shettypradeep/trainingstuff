@@ -1,0 +1,134 @@
+From users-return-136029-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Mar 31 17:54:16 2014
+Return-Path: <users-return-136029-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 405DD1059E
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 31 Mar 2014 17:54:16 +0000 (UTC)
+Received: (qmail 24739 invoked by uid 500); 31 Mar 2014 17:54:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 24545 invoked by uid 500); 31 Mar 2014 17:54:02 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 24493 invoked by uid 99); 31 Mar 2014 17:53:58 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 31 Mar 2014 17:53:58 +0000
+X-ASF-Spam-Status: No, hits=0.1 required=5.0
+	tests=MISSING_MID,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [50.22.11.58] (HELO bs3-dallas.accountservergroup.com) (50.22.11.58)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 31 Mar 2014 17:53:51 +0000
+Received: from dsl78-143-208-52.in-addr.fast.co.uk ([78.143.208.52]:54704 helo=viper.int.arc7.info)
+	by bs3-dallas.accountservergroup.com with esmtps (TLSv1:AES128-SHA:128)
+	(Exim 4.82)
+	(envelope-from <org.apache.maven.user@io7m.com>)
+	id 1WUgOn-0002eH-Dz
+	for users@maven.apache.org; Mon, 31 Mar 2014 12:53:29 -0500
+Date: Mon, 31 Mar 2014 17:47:43 +0000
+From: <org.apache.maven.user@io7m.com>
+To: users@maven.apache.org
+Subject: Correct way to include aggregated javadocs in subproject assembly?
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-ACL-Warn: {
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - bs3-dallas.accountservergroup.com
+X-AntiAbuse: Original Domain - maven.apache.org
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - io7m.com
+X-Get-Message-Sender-Via: bs3-dallas.accountservergroup.com: acl_c_relayhosts_text_entry: org.apache.maven.user@io7m.com|io7m.com
+X-Virus-Checked: Checked by ClamAV on apache.org
+Message-Id: <20140331175357.E0EC5816018@nike.apache.org>
+
+Hello.
+
+I have the following projects:
+
+  io7m-example/
+    io7m-example-lib1
+    io7m-example-lib2
+    io7m-example-documentation
+
+The io7m-example-documentation project contains documentation written
+in a DocBook-like language which is processed into XHTML at build time
+and then packaged up into a zip file using the assembly plugin. The
+io7m-example-documentation has a dependency on both io7m-example-lib1
+and io7m-example-lib2.
+
+I'd like to include aggregated javadocs from io7m-example-lib1 and
+io7m-example-lib2 in the assembly but am running into walls at every
+step.
+
+Firstly, the javadoc plugin states that the aggregate goal should be
+run as a report. As far as I know, that's not an option here, because
+the output of the goal (the aggregated HTML) needs to be available to
+the assembly plugin that's going to run in the package phase, and
+reports are only going to be run afterwards as part of site generation.
+
+Secondly, the javadoc plugin stubbornly refuses to do anything at all.
+
+I have the following in the io7m-example-documentation project:
+
+      <!-- Produce aggregate dependency javadocs -->
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9.1</version>
+        <executions>
+          <execution>
+            <id>javadoc-aggregate</id>
+            <phase>package</phase>
+            <goals>
+              <goal>aggregate</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/apidocs</outputDirectory>
+              <includeDependencySources>true</includeDependencySources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Produce documentation archive -->
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <descriptors>
+            <descriptor>src/main/assembly/documentation.xml</descriptor>
+          </descriptors>
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+When I run "mvn -C clean package" from the io7m-example, the
+io7m-example-lib1 and io7m-example-lib2 projects are compiled and
+tested. The io7m-example-documentation project is executed and an
+assembly is created, but the javadoc plugin appears to do precisely
+nothing. No ${project.build.directory}/apidocs is created and no
+error is signalled.
+
+Am I doing something obviously wrong here?
+
+M
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

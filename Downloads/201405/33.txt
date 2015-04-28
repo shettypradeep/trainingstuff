@@ -1,0 +1,82 @@
+From users-return-136329-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun May 11 02:16:10 2014
+Return-Path: <users-return-136329-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0F84D11050
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 11 May 2014 02:16:10 +0000 (UTC)
+Received: (qmail 80199 invoked by uid 500); 10 May 2014 22:55:05 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 66527 invoked by uid 500); 10 May 2014 22:54:14 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 51353 invoked by uid 99); 10 May 2014 22:53:11 -0000
+Received: from Unknown (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 10 May 2014 22:53:11 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.214.171] (HELO mail-ob0-f171.google.com) (209.85.214.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 08 May 2014 00:45:42 +0000
+Received: by mail-ob0-f171.google.com with SMTP id wn1so2201165obc.16
+        for <users@maven.apache.org>; Wed, 07 May 2014 17:45:18 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to
+         :content-type;
+        bh=ri9E722qGLC6GgJq41ryaM9TnZWos7Pd4PhBq4awyYQ=;
+        b=QgkW7iGDycLo3Ed4gJhQDoFQoOfkO5CXgHwwyp0pLJf+wcNUCgWBTCPZai8TosqW0Y
+         cRWAWWsqesfPS7bYDgcJRK6FsCr/xNJC12TcIrzBZ0ln5Gli3Lut8oqw/nG0ZRi6fMNm
+         ssBWbhso8iAy9evGpD+mntikewk84LIP7ZGHzHtlfqPmUXuoIh+SunAI5FINe9F0Zh7M
+         dNgOGEimzOXnxmIBGqJOz87ucFZCMLTeSu/bR4prc/HxgL4LD7s8FSAZlQ+wJ8JibGeD
+         LjNtlQq5vR8y9q0jtHfBznNoekVfHjfpJalU7kPQVFLcOPLjvT1godJudL/mar6+JU6W
+         N62A==
+X-Gm-Message-State: ALoCoQnLKBw5+l//7LCXikEMVBvFjzPyMlXZlz/Tg6z3w6jEA8JTBMY0YdBnZm1k1bZs6e4M4pSY
+MIME-Version: 1.0
+X-Received: by 10.182.22.227 with SMTP id h3mr380841obf.36.1399509918593; Wed,
+ 07 May 2014 17:45:18 -0700 (PDT)
+Received: by 10.182.12.66 with HTTP; Wed, 7 May 2014 17:45:18 -0700 (PDT)
+Date: Wed, 7 May 2014 17:45:18 -0700
+Message-ID: <CADOO-JxpC_3RO+1GPqHxoPTy5+4LrusT868h0+0x7BUxZ1ODYA@mail.gmail.com>
+Subject: running integration tests with maven
+From: Brendan Miller <catphive@catphive.net>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a11c2fd6c8ecd4e04f8d8cb04
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c2fd6c8ecd4e04f8d8cb04
+Content-Type: text/plain; charset=UTF-8
+
+I currently have some testng integration tests in a maven project. This is
+causing problems because the tests get picked up and run during the test
+phase, rather than the integration-test phase.
+
+How do I cause tests to be run in the integration test phase rather than
+test? All of my tests in this particular module should be run during
+integration-test.
+
+I don't really see anything in my pom.xml that specifies phase. This is the
+only test specific thing I'm seeing:
+
+<dependency>
+<groupId>org.testng</groupId>
+<artifactId>testng</artifactId>
+<version>${testng.version}</version>
+<scope>compile</scope>
+</dependency>
+
+That by itself seems to be running the  tests in my class BlahTest.java.
+I'm guessing it automatically picks up anything matching Test.java?
+
+Thanks,
+Brendan
+
+--001a11c2fd6c8ecd4e04f8d8cb04--
+

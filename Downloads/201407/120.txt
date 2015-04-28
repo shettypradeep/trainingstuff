@@ -1,0 +1,63 @@
+From users-return-136735-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jul  7 19:22:16 2014
+Return-Path: <users-return-136735-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E257211A88
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  7 Jul 2014 19:22:16 +0000 (UTC)
+Received: (qmail 98053 invoked by uid 500); 7 Jul 2014 19:22:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 97969 invoked by uid 500); 7 Jul 2014 19:22:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 97945 invoked by uid 99); 7 Jul 2014 19:22:14 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 07 Jul 2014 19:22:14 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of srobertjames@gmail.com designates 209.85.212.173 as permitted sender)
+Received: from [209.85.212.173] (HELO mail-wi0-f173.google.com) (209.85.212.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 07 Jul 2014 19:22:09 +0000
+Received: by mail-wi0-f173.google.com with SMTP id cc10so16406467wib.6
+        for <users@maven.apache.org>; Mon, 07 Jul 2014 12:21:48 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=n9NVAjo/kYAiOQL3fcWZJY0jt46pfJV9tGrFVvS9mjE=;
+        b=THESoP82xz90UNgWU+H7tloBM+0IQzw4PFFHjSdbKkW0CaaW7DbUs5oWkuizt/bSSU
+         TIQzvrGNG4TdOBtvxQ26754wa7KeXV6CXKiHn4VrLkUBSUgB81TfVQgCH4esm+UTbaWv
+         nvoT3O4XyEL9Xwlso8cSttXb0Krm0DkiILFSR7Ve4CAn16Z7SmsSjR3dZk55sArZZybN
+         nMLcqN2umIDlAIyLp0PlYHaHfSJS10q02mzH3EH5jffb6UskDAtn6bgaeYvQHJPdnwUQ
+         wFhbkuMHVrYMfptq3YbLBeVK+8pT1lqeFbk38IWsmy5pR0Jf2slpgQzrfH9fL5Iwdbb9
+         t3rw==
+MIME-Version: 1.0
+X-Received: by 10.180.10.98 with SMTP id h2mr39508414wib.29.1404760908458;
+ Mon, 07 Jul 2014 12:21:48 -0700 (PDT)
+Received: by 10.194.61.212 with HTTP; Mon, 7 Jul 2014 12:21:48 -0700 (PDT)
+Date: Mon, 7 Jul 2014 15:21:48 -0400
+Message-ID: <CAGYyBggemkhNybaU9ZkPvtoT2DWCvjg3M7kuZNJajqzzdbn2RA@mail.gmail.com>
+Subject: Running maven shade on a preexisting jar
+From: Robert James <srobertjames@gmail.com>
+To: users@maven.apache.org
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I have a jar that I need to shade - that is, change the name of many
+of the internal classes (to avoid conflicts with another jar) except
+for a few classes which remain exposed.  The jar is already built,
+source is not at hand.  How can I use maven shade to shade that jar?
+
+(Disclaimer: I'm a maven neophyte)
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

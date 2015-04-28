@@ -1,0 +1,112 @@
+From users-return-136745-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jul  8 12:48:07 2014
+Return-Path: <users-return-136745-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6C0DC11BB8
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  8 Jul 2014 12:48:07 +0000 (UTC)
+Received: (qmail 22175 invoked by uid 500); 8 Jul 2014 12:48:05 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 22076 invoked by uid 500); 8 Jul 2014 12:48:05 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 22061 invoked by uid 99); 8 Jul 2014 12:48:05 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 08 Jul 2014 12:48:04 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.213.172] (HELO mail-ig0-f172.google.com) (209.85.213.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 08 Jul 2014 12:47:59 +0000
+Received: by mail-ig0-f172.google.com with SMTP id hn18so608070igb.11
+        for <users@maven.apache.org>; Tue, 08 Jul 2014 05:47:39 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:content-type:message-id:mime-version
+         :subject:date:references:to:in-reply-to;
+        bh=kvN19d0j/Bpbf4Vo0S1KZZolWxI+QoZVwjcElgaRrAg=;
+        b=DeoLRzRkdLtFyOOOUprPPWwLRANjdCDSArjlCvmfN3stx//x/bolYhh1Td/f5uByRz
+         sT3B29Dnqtu+7ajM4dv3LP9gydvKa+RWhkzco+1BSSBWfo5DdTQemqBaHuGNSOSkReUr
+         xgc/YLrOVKr8J3DLYtW9yfEcjM+ThkIQ8t1E9ChxS73PRBxUkDI+TFlFQU+AI3Ef+RKN
+         GZxxVov84k5a4qJ79Ifjc4wMK7LUmuNh/65FGNkzpHB18YDsaMrORyVrJvtX9p/wAaXp
+         0i/Wn2wBQ2KfeiqS16xvjlApv7PoCh8cOvvYq68lNSYhL/hzgkgYfOwconkEg2Oysxd4
+         GzhA==
+X-Gm-Message-State: ALoCoQng/y2WfHJ+Wums7SP/WxkOXJyj0AakDnBbvud7WApOARd5X0+LGMrcYq+/PDoAmdELPcHM
+X-Received: by 10.50.221.99 with SMTP id qd3mr3493908igc.3.1404823659368;
+        Tue, 08 Jul 2014 05:47:39 -0700 (PDT)
+Received: from [10.0.1.11] (192-0-154-177.cpe.teksavvy.com. [192.0.154.177])
+        by mx.google.com with ESMTPSA id tp2sm5172043igb.7.2014.07.08.05.47.38
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Tue, 08 Jul 2014 05:47:38 -0700 (PDT)
+From: Jason van Zyl <jason@takari.io>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_A983EBE2-9B9D-45C5-AC04-43133846EE09"
+Message-Id: <0D79FEAB-D5D6-4249-9948-241CCDA6E5AB@takari.io>
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.2\))
+Subject: Re: Adding Classifiers when building
+Date: Tue, 8 Jul 2014 08:47:37 -0400
+References: <9DD4E486F30F2E45AE6097D587E646D9957E7A@usilms111b.ca.com>
+To: Maven Users List <users@maven.apache.org>
+In-Reply-To: <9DD4E486F30F2E45AE6097D587E646D9957E7A@usilms111b.ca.com>
+X-Mailer: Apple Mail (2.1878.2)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_A983EBE2-9B9D-45C5-AC04-43133846EE09
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+This is a bad practice and runs counter to continuous delivery which is =
+commonly accepted as a good thing.
+
+You always want to build in such a way that anything being built can be =
+used as a release without any further transformation.
+
+On Jul 8, 2014, at 4:21 AM, Fragoso, Ruben <Ruben.Fragoso@ca.com> wrote:
+
+> Hello Everyone
+>=20
+> I would like to know if it is possible to add classifiers while =
+building as a maven parameter, for example if I want to add the =
+classifier "dev" to an artifact, when building.
+>=20
+> Thank you in Advance, hope to hear from you.
+>=20
+> Best Regards
+> Ruben Fragoso
+>=20
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+http://twitter.com/takari_io
+---------------------------------------------------------
+
+I never make the mistake of arguing with people for whose opinions I =
+have no respect.
+
+-- Edward Gibbon
+
+
+
+
+
+
+
+
+
+
+--Apple-Mail=_A983EBE2-9B9D-45C5-AC04-43133846EE09--
+

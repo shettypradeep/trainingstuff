@@ -1,0 +1,94 @@
+From users-return-137676-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Nov  1 22:39:32 2014
+Return-Path: <users-return-137676-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 40E27102B7
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  1 Nov 2014 22:39:32 +0000 (UTC)
+Received: (qmail 72080 invoked by uid 500); 1 Nov 2014 22:39:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 71985 invoked by uid 500); 1 Nov 2014 22:39:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 71974 invoked by uid 99); 1 Nov 2014 22:39:30 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 01 Nov 2014 22:39:30 +0000
+Received: from localhost (HELO robertscholte) (127.0.0.1)
+  (smtp-auth username rfscholte, mechanism login)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Sat, 01 Nov 2014 22:39:30 +0000
+Content-Type: text/plain; charset=iso-8859-15; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: mvn release:branch updating POM incorrectly
+References: <1414770064173-5811978.post@n5.nabble.com>
+ <op.xolqdof7kdkhrr@robertscholte> <1414777891650-5812022.post@n5.nabble.com>
+ <op.xolwdvzzkdkhrr@robertscholte> <1414878320598-5812295.post@n5.nabble.com>
+Date: Sat, 01 Nov 2014 23:39:21 +0100
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.xon3vv1tkdkhrr@robertscholte>
+In-Reply-To: <1414878320598-5812295.post@n5.nabble.com>
+User-Agent: Opera Mail/12.17 (Win32)
+
+"Some of the jars require maven 2 to build, so I cannot use the newest  
+release plugin"
+
+I don't understand this: Maven 2.2.1 is a specific version of Maven2, so  
+that should work.
+I'm not aware of plugins who can be used with Maven 2.0.10, but not with  
+Maven 2.2.1
+
+So start by upgrading Maven and try your builds, it should be a painless  
+upgrade.
+
+Next upgrade the maven-release-plugin in your pom.xml
+
+And no: I don't think there are other plugins which can update the  
+connection url.
+However, if you want to branch with a maven-plugin, you can also use the  
+scm:branch[1]
+
+best,
+Robert
+
+[1] http://maven.apache.org/scm/maven-scm-plugin/branch-mojo.html
+
+
+
+Op Sat, 01 Nov 2014 22:45:20 +0100 schreef Leonie  
+<leonie.kruger@rmb.co.za>:
+
+> Good day Robert,
+>
+> I wondered if you might be aware of a plugin that I can use to update the
+> scm connection? Then I can create the branch with mvn release:branch and
+> after that is complete I can update the connection with another command.  
+> I'm
+> trying to script a release. Some of the jars require maven 2 to build,  
+> so I
+> cannot use the newest release plugin
+>
+> Thanks in advance
+>
+>
+>
+> --
+> View this message in context:  
+> http://maven.40175.n5.nabble.com/mvn-release-branch-updating-POM-incorrectly-tp5811978p5812295.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,66 @@
+From users-return-136814-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jul 21 20:40:46 2014
+Return-Path: <users-return-136814-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5F76F11335
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 21 Jul 2014 20:40:46 +0000 (UTC)
+Received: (qmail 34011 invoked by uid 500); 21 Jul 2014 20:40:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 33940 invoked by uid 500); 21 Jul 2014 20:40:45 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 33928 invoked by uid 99); 21 Jul 2014 20:40:44 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 21 Jul 2014 20:40:44 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dhoffer6@gmail.com designates 209.85.220.169 as permitted sender)
+Received: from [209.85.220.169] (HELO mail-vc0-f169.google.com) (209.85.220.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 21 Jul 2014 20:40:39 +0000
+Received: by mail-vc0-f169.google.com with SMTP id hu12so13460659vcb.28
+        for <users@maven.apache.org>; Mon, 21 Jul 2014 13:40:18 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=NxQ+csMrTvO7ZkdoUjBcpy2nNKpFgL44E80CsxSjKUQ=;
+        b=jc3ot3Uxgw/kgGNr/3MApXPVGE9MDFv/H3LxexhQW8ANfBn55T4kGJ2d/Es0Wc/j3H
+         Bf6MYhleBWxBep/hRdbeU5ZTKYtZgfT/lJ99rUZn9O67JcmnbPlLyI0tvhUiqh6kiQDo
+         Nn1FbG9JUeK3PNoSncJPwy5BIm7eBEGclr/+xHSB5YvYmwoN317yMgHrZSwSSfKJZ7PL
+         zLrJVwzMraCsQ6pk2q8iG80Wv9wHzHlJlJ+lE6X1ru6wpO4+WHTWgh8774yML8c2VyDR
+         aeWP1HAOD13A5QZl1J/pAfLTwb1oi28fDhH9tfkt0GYZRhZ3HnOJax5hEb9C4FjfjV/R
+         aF6Q==
+MIME-Version: 1.0
+X-Received: by 10.220.250.203 with SMTP id mp11mr33303491vcb.2.1405975218268;
+ Mon, 21 Jul 2014 13:40:18 -0700 (PDT)
+Received: by 10.220.109.1 with HTTP; Mon, 21 Jul 2014 13:40:18 -0700 (PDT)
+Date: Mon, 21 Jul 2014 14:40:18 -0600
+Message-ID: <CAA8BW8HFWKNmv_ZTE9wuYQMDJ_FxUzhkXAnW_g3wrVFjovj=cA@mail.gmail.com>
+Subject: maven-dependency-plugin unpacking aar format?
+From: David Hoffer <dhoffer6@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e013d050272b09f04feba1d61
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e013d050272b09f04feba1d61
+Content-Type: text/plain; charset=UTF-8
+
+I'm getting the following error trying to unpack some files from an aar.
+ Is this not supported?  Is there any way to do this?
+
+Failed to execute goal
+org.apache.maven.plugins:maven-dependency-plugin:2.8:unpack-dependencies
+(unpack-service) on project service: Unknown archiver type: No such
+archiver: 'aar'. -> [Help 1]
+
+-Dave
+
+--089e013d050272b09f04feba1d61--
+

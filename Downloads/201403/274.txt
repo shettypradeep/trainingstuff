@@ -1,0 +1,78 @@
+From users-return-135910-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Mar 24 08:41:16 2014
+Return-Path: <users-return-135910-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1D081106AB
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 24 Mar 2014 08:41:16 +0000 (UTC)
+Received: (qmail 90591 invoked by uid 500); 24 Mar 2014 08:41:11 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 89993 invoked by uid 500); 24 Mar 2014 08:41:09 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 89981 invoked by uid 99); 24 Mar 2014 08:41:06 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Mar 2014 08:41:06 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Mar 2014 08:41:00 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <karg@quipsy.de>)
+	id 1WS0Qx-0000KC-FB
+	for users@maven.apache.org; Mon, 24 Mar 2014 01:40:39 -0700
+Date: Mon, 24 Mar 2014 01:40:39 -0700 (PDT)
+From: mkarg <karg@quipsy.de>
+To: users@maven.apache.org
+Message-ID: <1395650439461-5789365.post@n5.nabble.com>
+Subject: multi-module phases sequence
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+We started using multi-module project for the first time and notice strange
+behaviour. We hope that some experienced user can tell us how to proceed.
+
+There is one multi-module project where module 1 is dependend on module 2.
+Module 1 uses assembly plugin in the package phase to produce the final
+artifact (zip file). Modul 2 uses dependency plugin in the generate-source
+phase to unpack that artifact (zip file).
+
+When we execute module 1 only (maven install) and after that module 2 (maven
+compile) all works well.
+
+When we execute the multi-module parent (maven compile) then it fails,
+because the zip will not get bundled then obviously, so module 2 cannot find
+it.
+
+So how to tell maven that in a multi-module project, we want module 1 to run
+up to install but module 2 to run up to compile only? Or is it wanted by
+desing that in a multi-module project we always must run to install phase to
+be sure that module 1 is done before module 2 starts?
+
+We hoped that a multi-module project would solve this automatically, i. e.
+mvn compile on the parent shall notice that it must actuall do install but
+not compile on module 1 as it is a dependency to module 2...!
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/multi-module-phases-sequence-tp5789365.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

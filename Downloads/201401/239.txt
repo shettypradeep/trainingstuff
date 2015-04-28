@@ -1,0 +1,125 @@
+From users-return-135184-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan 16 19:22:03 2014
+Return-Path: <users-return-135184-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5856610D57
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 16 Jan 2014 19:22:03 +0000 (UTC)
+Received: (qmail 5299 invoked by uid 500); 16 Jan 2014 19:21:55 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 5160 invoked by uid 500); 16 Jan 2014 19:21:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 5147 invoked by uid 99); 16 Jan 2014 19:21:54 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 16 Jan 2014 19:21:54 +0000
+X-ASF-Spam-Status: No, hits=0.3 required=5.0
+	tests=PLING_QUERY,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of manfred@simpligility.com designates 69.89.13.14 as permitted sender)
+Received: from [69.89.13.14] (HELO vancouverislandjavausergroup.virtual.vps-host.net) (69.89.13.14)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 16 Jan 2014 19:21:50 +0000
+Received-SPF: pass (vancouverislandjavausergroup.virtual.vps-host.net: domain of manfred@simpligility.com designates 127.0.0.1 as permitted sender) receiver=vancouverislandjavausergroup.virtual.vps-host.net; client-ip=127.0.0.1; helo=vancouverislandjavausergroup.virtual.vps-host.net; envelope-from=manfred@simpligility.com; x-software=spfmilter 0.97 http://www.acme.com/software/spfmilter/ with libspf2-1.0.0;
+Received: from vancouverislandjavausergroup.virtual.vps-host.net (localhost.localdomain [127.0.0.1])
+	by vancouverislandjavausergroup.virtual.vps-host.net (8.14.3/8.14.3) with ESMTP id s0GJLTtN007457
+	for <users@maven.apache.org>; Thu, 16 Jan 2014 14:21:29 -0500
+Received: (from apache@localhost)
+	by vancouverislandjavausergroup.virtual.vps-host.net (8.14.3/8.14.3/Submit) id s0GJLTSx007455;
+	Thu, 16 Jan 2014 14:21:29 -0500
+X-Authentication-Warning: localhost.localdomain: apache set sender to manfred@simpligility.com using -f
+Received: from 24.68.152.10
+        (SquirrelMail authenticated user manfred)
+        by www.mosabuam.com with HTTP;
+        Thu, 16 Jan 2014 14:21:29 -0500
+Message-ID: <a6eced4be7c0f67dc6ecae4a97d77cb8.squirrel@www.mosabuam.com>
+In-Reply-To: <43D77B63-90CF-411D-AEE9-76ED116AD133@tesla.io>
+References: <43D77B63-90CF-411D-AEE9-76ED116AD133@tesla.io>
+Date: Thu, 16 Jan 2014 14:21:29 -0500
+Subject: Re: Maven just won't die! -- WTF is Takari?
+From: "Manfred Moser" <manfred@simpligility.com>
+To: "Maven Users List" <users@maven.apache.org>
+Reply-To: manfred@simpligility.com
+User-Agent: SquirrelMail/1.4.20-1eapps
+MIME-Version: 1.0
+Content-Type: text/plain;charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+X-Priority: 3 (Normal)
+Importance: Normal
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+This is another great sign that there is again lots of innovation and
+exiting development going on in the Maven ecosystem. I am excited to see
+where this will take us all.
+
+Manfred
+
+> Hi,
+>
+> As some may know, a lot of work has been done at tesla.io on various
+> advanced features in Maven but, unfortunately, not enough work for these
+> features to see the light of day. It wouldn't be surprising if Maven users
+> have no idea what these features are because I've not done a great job at
+> communicating about the work. Some of the work is mine, some of other
+> major contributors, and more recently from key customers.
+>
+> To make a long story short there's a lot of cool stuff to talk about, and
+> the work as a new venue at takari.io! I'll be giving a webinar next week
+> and here are some of the features I'd like to talk about:
+>
+> - Polyglot support: Ruby, Groovy, and Scala DSLs. These have all been
+> actively worked on in the recent past, especially the Ruby and Scala DSLs.
+> - Full incremental support: the complete Maven lifecycle including an
+> incremental command line compiler based on JDT, all with m2e integration
+> - Aggressive parallelization: a new parallelization mode that also
+> optimizes scheduling based on critical path analysis
+> - Generations: a new form of continuous delivery for Maven -- Smart delta
+> protocol and no more SNAPHOTs!
+> - Shell: long-lived CLI process for Maven
+>
+> Much of this work is functional, and the new parallelization mode and
+> generations support are actively being used in production. We are still
+> iterating on these specific features but they show a lot of promise. Where
+> all of this code eventually lands is a question for the Maven development
+> community. All of this work was developed outside of Apache, and how easy
+> it is to integrate back into the Maven project remains to be seen. At the
+> very least there is a lot of very interesting work and I wanted to start
+> the dialog because Maven just isn't going to die :-)
+>
+> So please join us for a webinar, Tuesday, January 21 at 11:30AM EST (UTC
+> -5 hours) to learn more about what we're working on and what we're trying
+> to accomplish.
+>
+> All registrants will receive access to the recording, so if you can’t make
+> it — you won’t have to miss out.
+>
+> Register here: http://goo.gl/vqSvL7
+>
+> Hope you can make it,
+>
+> Jason van Zyl
+> ----------------------------------------------------------
+> Jason van Zyl
+> Founder,  Apache Maven
+> http://twitter.com/jvanzyl
+> ---------------------------------------------------------
+>
+>
+>
+>
+>
+>
+>
+>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

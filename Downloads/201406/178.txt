@@ -1,0 +1,68 @@
+From users-return-136609-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jun 17 20:47:35 2014
+Return-Path: <users-return-136609-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 59A9411537
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 17 Jun 2014 20:47:35 +0000 (UTC)
+Received: (qmail 93695 invoked by uid 500); 17 Jun 2014 20:47:33 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 93612 invoked by uid 500); 17 Jun 2014 20:47:33 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 93600 invoked by uid 99); 17 Jun 2014 20:47:33 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 17 Jun 2014 20:47:33 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of alexlehm@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 17 Jun 2014 20:47:28 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <alexlehm@gmail.com>)
+	id 1Wx0Hc-0002TT-Hk
+	for users@maven.apache.org; Tue, 17 Jun 2014 13:47:08 -0700
+Date: Tue, 17 Jun 2014 13:47:08 -0700 (PDT)
+From: alexlehm <alexlehm@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1403038028542-5796493.post@n5.nabble.com>
+In-Reply-To: <46E4EC35-C8AC-4FB5-95EB-59BA9997664A@takari.io>
+References: <1403033663489-5796426.post@n5.nabble.com> <46E4EC35-C8AC-4FB5-95EB-59BA9997664A@takari.io>
+Subject: Re: Running plugin with "own" classloader for slf4j in maven 3.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Thanks, I will take a look how to implement that.
+
+
+I've seen 3 people ask about this thus far but making this mechanism
+configurable for servers that need to run inside Maven is not high on my
+priority list.
+
+Can you not just fork and then use the runtime as it would be launched in
+production. Running app servers inside Maven in general I don't think is the
+best model.
+
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Running-plugin-with-own-classloader-for-slf4j-in-maven-3-2-tp5796426p5796493.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

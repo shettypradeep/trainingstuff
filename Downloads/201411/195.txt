@@ -1,0 +1,98 @@
+From users-return-137767-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Nov 19 13:22:49 2014
+Return-Path: <users-return-137767-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id AE39410C47
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 19 Nov 2014 13:22:49 +0000 (UTC)
+Received: (qmail 71154 invoked by uid 500); 19 Nov 2014 13:22:47 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 71043 invoked by uid 500); 19 Nov 2014 13:22:47 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 71021 invoked by uid 99); 19 Nov 2014 13:22:47 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Nov 2014 13:22:47 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of james.mk.green@gmail.com designates 209.85.217.181 as permitted sender)
+Received: from [209.85.217.181] (HELO mail-lb0-f181.google.com) (209.85.217.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Nov 2014 13:22:21 +0000
+Received: by mail-lb0-f181.google.com with SMTP id l4so448774lbv.40
+        for <users@maven.apache.org>; Wed, 19 Nov 2014 05:22:20 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=LWhISOwE229s5E3rMxW9LcGaYF7MUEnVxTs6+VOfjR4=;
+        b=euDaYzGjWlYx+IOW5gZ7MzlHKbzUzYLoduIJ2Xau5CxEjFwXXNUEAKUDbuegy0TKSu
+         +jkRERGTsoTh//g/S5pQvAZ814KM92zB2WeHhlRzXR3yDmY8Q/qOrSc78KeePNmPmzRO
+         KMMYPa9RYW3ppxAtCKYrlpzA0A0Yh31BMxRegeeJ0+oDYbCp0jugQ/4GdX4jdr6tSA03
+         taVbII7wYvWa0OFVbdskFUE81mPDZjSpi554rGtXGGvzQi9/YorJ2aWNV3S4FgRm0RJ2
+         bACQ+ps6tAYAleZR3XUnLvnG6uoQ+LlVgG1mSxe1rfWQBdRAxuWAkRMLskCqW1tuTVt5
+         2ghg==
+MIME-Version: 1.0
+X-Received: by 10.112.54.162 with SMTP id k2mr5280458lbp.63.1416403340890;
+ Wed, 19 Nov 2014 05:22:20 -0800 (PST)
+Received: by 10.25.10.10 with HTTP; Wed, 19 Nov 2014 05:22:20 -0800 (PST)
+In-Reply-To: <CAAZU44k8XqAWsKCbnYuXVTrvXcaKYNT7pnVP8Xi6Fj6oZDYWqw@mail.gmail.com>
+References: <CAAZU44k8XqAWsKCbnYuXVTrvXcaKYNT7pnVP8Xi6Fj6oZDYWqw@mail.gmail.com>
+Date: Wed, 19 Nov 2014 13:22:20 +0000
+Message-ID: <CAMH6+axKyrs0OPko+NppwjpG0whsaDD=NAznjKvN0j8Wu4R05g@mail.gmail.com>
+Subject: Re: Sorting javadoc output by importance of documentation and length
+ of docs?
+From: James Green <james.mk.green@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c3eeeefe1a4a0508361927
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c3eeeefe1a4a0508361927
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+If your project contains a large number of classes, perhaps for summation
+purposes you could wrap these up into a higher level project with fewer
+classes that expose the essentials with documentation?
+
+Another alternative I'm seeing "out there" is a docs folder alongside src
+that holds information for web site publication. Static site generators can
+then kick in during the build and publish.
+
+On 16 November 2014 19:28, Kevin Burton <burton@spinn3r.com> wrote:
+
+> This is slightly off topic so I apologize.
+>
+> Javadoc is great for the developer but the main problem is that important
+> documents can be hidden in a sea of classes.
+>
+> My Javadoc tends to have say 20-40 important documents on the design of a
+> system but the rest of the Javadoc just tends to have an overview.
+>
+> I=E2=80=99d like a way to organize it more as a book, maybe even by the l=
+ength of
+> the documentation instead of being organized as a table of contents.
+>
+> This way my ops guys and other members of the team can find the
+> documentation they=E2=80=99re looking for and not necessarily how a speci=
+fic
+> component behaves.
+>
+> --
+>
+> Founder/CEO Spinn3r.com
+> Location: *San Francisco, CA*
+> blog: http://burtonator.wordpress.com
+> =E2=80=A6 or check out my Google+ profile
+> <https://plus.google.com/102718274791889610666/posts>
+> <http://spinn3r.com>
+>
+
+--001a11c3eeeefe1a4a0508361927--
+

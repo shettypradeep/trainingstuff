@@ -1,0 +1,101 @@
+From users-return-136213-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Apr 20 22:04:26 2014
+Return-Path: <users-return-136213-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D0872119E3
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 20 Apr 2014 22:04:26 +0000 (UTC)
+Received: (qmail 51464 invoked by uid 500); 20 Apr 2014 22:04:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 51024 invoked by uid 500); 20 Apr 2014 22:04:20 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 50799 invoked by uid 99); 20 Apr 2014 22:04:19 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 20 Apr 2014 22:04:19 +0000
+X-ASF-Spam-Status: No, hits=0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE
+X-Spam-Check-By: apache.org
+Received-SPF: unknown (nike.apache.org: error in processing during lookup of hanasaki@hanaden.com)
+Received: from [204.13.248.72] (HELO mho-02-ewr.mailhop.org) (204.13.248.72)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 20 Apr 2014 22:04:13 +0000
+Received: from [98.156.94.139] (helo=portal.home.hanaden.com)
+	by mho-02-ewr.mailhop.org with esmtpsa (TLSv1:AES128-SHA:128)
+	(Exim 4.72)
+	(envelope-from <hanasaki@hanaden.com>)
+	id 1Wbzq2-000AOa-TR
+	for users@maven.apache.org; Sun, 20 Apr 2014 22:03:50 +0000
+Received: from russia.local ([10.1.1.30])
+	by portal.home.hanaden.com with esmtps (TLS1.0:DHE_RSA_CAMELLIA_256_CBC_SHA1:256)
+	(Exim 4.80)
+	(envelope-from <hanasaki@hanaden.com>)
+	id 1Wbzpy-0006Dx-4v
+	for users@maven.apache.org; Sun, 20 Apr 2014 17:03:49 -0500
+X-Mail-Handler: Dyn Standard SMTP by Dyn
+X-Originating-IP: 98.156.94.139
+X-Report-Abuse-To: abuse@dyndns.com (see http://www.dyndns.com/services/sendlabs/outbound_abuse.html for abuse reporting information)
+X-MHO-User: U2FsdGVkX18eEAIYTozx5HL2hm5fvihOH0sTpN0Yj9s=
+Message-ID: <53544441.8080304@hanaden.com>
+Date: Sun, 20 Apr 2014 17:03:45 -0500
+From: hanasaki <hanasaki@hanaden.com>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:17.0) Gecko/20131103 Icedove/17.0.10
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Spam_score: -2.9
+X-Spam_score_int: -28
+X-Spam_report: Spam detection software, running on the system "firewall.home.hanaden.com", has
+ identified this incoming email as possible spam.  The original message
+ has been attached to this so you can view it (if it isn't spam) or label
+ similar future email.  If you have any questions, see
+ the administrator of that system for details.
+X-Virus-Checked: Checked by ClamAV on apache.org
+ 
+ Content preview:  for the same groupID and artifactID how will the following
+    versions be resolved in a range? The x.y.z is pretty simple based on x.y.z
+    x.y.z-blah x.y.z.blah x.y.z.blah-3 x.y.z.blah-2 x.y.z-blah-3 <= '-' vs '.'
+    x.y.z-blah-2 <= '-' vs '.' [...] 
+ 
+ Content analysis details:   (-2.9 points, 5.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -1.0 ALL_TRUSTED            Passed through trusted hosts only via SMTP
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+                             [score: 0.0000]
+X-SA-Exim-Connect-IP: 10.1.1.30
+X-SA-Exim-Mail-From: hanasaki@hanaden.com
+X-Spam-Checker-Version: SpamAssassin 3.3.2 (2011-06-06) on
+	firewall.home.hanaden.com
+X-Spam-Level: 
+X-Spam-Status: No, score=-0.2 required=5.0 tests=ALL_TRUSTED,BAYES_50
+	autolearn=unavailable version=3.3.2
+Subject: maven version resolution for x.y.z-blah-3  and x.y.z
+X-SA-Exim-Version: 4.2.1 (built Mon, 26 Dec 2011 16:57:07 +0000)
+X-SA-Exim-Scanned: Yes (on portal.home.hanaden.com)
+
+for the same groupID and artifactID how will the following versions be 
+resolved in a range?   The x.y.z is pretty simple based on
+
+x.y.z
+x.y.z-blah
+x.y.z.blah
+x.y.z.blah-3
+x.y.z.blah-2
+x.y.z-blah-3  <= '-' vs '.'
+x.y.z-blah-2  <= '-' vs '.'
+
+Thank you
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

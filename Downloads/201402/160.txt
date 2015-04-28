@@ -1,0 +1,143 @@
+From users-return-135550-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb 17 14:37:25 2014
+Return-Path: <users-return-135550-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id ED11510783
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 17 Feb 2014 14:37:25 +0000 (UTC)
+Received: (qmail 47111 invoked by uid 500); 17 Feb 2014 14:29:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 46971 invoked by uid 500); 17 Feb 2014 14:28:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 46938 invoked by uid 99); 17 Feb 2014 14:28:50 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 17 Feb 2014 14:28:50 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 17 Feb 2014 14:28:46 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 668506A7916
+	for <users@maven.apache.org>; Mon, 17 Feb 2014 09:28:24 -0500 (EST)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 37N2Ga8h_VTI for <users@maven.apache.org>;
+	Mon, 17 Feb 2014 09:28:11 -0500 (EST)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 4CAEE6A76F1
+	for <users@maven.apache.org>; Mon, 17 Feb 2014 09:28:11 -0500 (EST)
+Message-ID: <53021C78.6040702@artifact-software.com>
+Date: Mon, 17 Feb 2014 09:28:08 -0500
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: Maven Users List <users@maven.apache.org>
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Looking for org.apache.poi 3.10-FINAL
+References: <5301ADBC.3080909@apconsult.de> <5301B253.70603@apconsult.de> <CANWgJS5H0vnAC1Tq8gDu4qLGspTNGRPxi1PoBMefTYy3gKaZig@mail.gmail.com>
+In-Reply-To: <CANWgJS5H0vnAC1Tq8gDu4qLGspTNGRPxi1PoBMefTYy3gKaZig@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I don't think that it has anything to do with m2e since the Nexus repo 
+has the same problem proxying Maven Central.
+
+It is not a Maven problem but it is most likely that someone will find 
+the warning if it is added to the discussion of Maven Central in the 
+Maven docs.
+It is unlikely that a Maven user would read the FAQ on Maven Central 
+since once you set up the link in your Repo or (God forbid in your 
+settings.xml), you don't really have any direct contact with Maven Central.
+
+The most likely place that a new person would encounter Maven Central is 
+in that section that I referenced in the Maven site.
+
+We have not had this problem but I occasionally use my Nexus repo to 
+check for the latest version of a utility rather than look at the 
+utility's web site since it is faster when looking up several 
+dependencies at once. I have learned something important in this 
+discussion!!!
+
+Ron
+
+On 17/02/2014 4:07 AM, Baptiste Mathus wrote:
+> 2014-02-17 7:55 GMT+01:00 David Law <m2eclipse@apconsult.de>:
+>
+>> Ron, Wayne,
+>>
+>> this wasted several days (elapsed) of my time:
+>> I spent ages trying out options & trying to figure out what I'd done
+>> wrong...
+>> ...rebuilding & updating indices, hacking through to
+>> workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration,
+>> to set logging to ALL, but even ALL  was somewhat sparse.
+>>
+> M2E is not Maven per-se. When a question is about a particular tool, I'd
+> advice you to try and target the most specific ML/support system:
+> https://eclipse.org/m2e/support/
+>
+>
+>
+>> I tried Google & found loads of hits that had nothing to do with it.
+>> I found nothing at apache maven or maven central or m2eclipse.
+>> I tried the POI Forum, but it became clear that wasn't the problem.
+>>
+>> As Wayne rightly points out "where is the right place to document it?".
+>> With a complex issue like this with multiple components where do you start?
+>> But thats all the more reason to document it somewhere...
+>
+>> Right now it seems to me not to be a maven problem as such.
+>> Its about how maven central creates its indices & how m2e uses them.
+>> So in theory it needs to be documented in both, correspondingly
+>> cross-referenced.
+>> But as the m2e FAQ is subscription-only it would seem the only place is the
+>> maven central FAQ.  And its so important, it should be a point in its
+>> own right:
+>>
+>> "Why can't I see new artifacts in my client (e.g. m2eclipse)?"
+>> (Tip -> you can get as-yet-unindexed artifacts explicitly...blah, blah)
+>>
+> Again, not the best ML to discuss it.
+>
+>
+>> And then there's the question, why does m2e use the high-latency index?
+> If its performance/server-load, then it could be
+>> a rethink of the index-structure is necessary.
+>> Is that a maven issue?
+>> I have some ideas there...
+>>
+> Definitely not Maven related. Maven core has nothing to do with the indexes
+> you describe, doesn't know/need it.
+> It's more an IDE/search engine facility to help people find versions. I
+> personally almost never use those for example.
+>
+> Cheers
+>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,92 @@
+From users-return-137295-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Sep 15 22:05:52 2014
+Return-Path: <users-return-137295-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2C41F111CA
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 15 Sep 2014 22:05:52 +0000 (UTC)
+Received: (qmail 38014 invoked by uid 500); 15 Sep 2014 22:05:50 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 37931 invoked by uid 500); 15 Sep 2014 22:05:50 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 47772 invoked by uid 99); 15 Sep 2014 11:20:06 -0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of jackie.xiao@ebaotech.com designates 117.144.214.250 as permitted sender)
+From: Jackie Xiao <jackie.xiao@ebaotech.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: dependency exclusion with wildward does not work
+Thread-Topic: dependency exclusion with wildward does not work
+Thread-Index: Ac/Q1iO/xK1aOnv+Q9yu+JOwZk07UA==
+Date: Mon, 15 Sep 2014 11:19:33 +0000
+Message-ID: <b874a136637643b4b0380ffe21eceff4@shmbx01.ebaotech.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [172.18.29.133]
+Content-Type: multipart/alternative;
+	boundary="_000_b874a136637643b4b0380ffe21eceff4shmbx01ebaotechcom_"
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_000_b874a136637643b4b0380ffe21eceff4shmbx01ebaotechcom_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Dear
+
+I just started using maven ant task, and one issue I found today was, when =
+the pom contains wildward exclusion, seems the artifacts won't be excluded.
+
+My script snippet below:
+
+Ant:
+<artifact:dependencies filesetId=3D"ls.jar.all">
+  <pom file=3D"ls-jar-all.pom.xml" />
+</artifact:dependencies>
+
+Ls-jar-all.pom.xml:
+<dependency>
+  <groupId>org.apache.cxf</groupId>
+  <artifactId>cxf-bundle</artifactId>
+  <version>2.1</version>
+  <exclusions>
+    <exclusion>
+        <groupId>org.apache.abdera</groupId>
+        <artifactId>*</artifactId>
+</exclusion>
+<exclusion>
+        <groupId>org.apache.geronimo.specs</groupId>
+          <artifactId>*</artifactId>
+      </exclusion>
+</exclusions>
+
+While changing wildcard to individual artifactIds, the exclusion works. (th=
+e wildward pom works when using maven)
+
+Any suggestions, thanks
+
+Thanks
+Best Regards
+
+Jackie Xiao | eAS-CM | eBaoTech | Cell: (+86) 136 4185 4318
+
+This e-mail and any attachments thereto are intended for the sole use of th=
+e recipient(s) named above and may contain confidential and/or privileged m=
+aterial. Any use of the information contained herein (including, but not li=
+mited to, total or partial reproduction, communication, or dissemination in=
+ any form) by persons other than the intended recipient(s) is prohibited. I=
+f you received this in error, please contact the sender immediately and del=
+ete the material from any computer.
+
+--_000_b874a136637643b4b0380ffe21eceff4shmbx01ebaotechcom_--
+

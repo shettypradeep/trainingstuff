@@ -1,0 +1,222 @@
+From users-return-136861-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jul 23 18:29:40 2014
+Return-Path: <users-return-136861-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EB71911187
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 23 Jul 2014 18:29:39 +0000 (UTC)
+Received: (qmail 21180 invoked by uid 500); 23 Jul 2014 18:29:38 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 21105 invoked by uid 500); 23 Jul 2014 18:29:38 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 21086 invoked by uid 99); 23 Jul 2014 18:29:38 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 23 Jul 2014 18:29:38 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of khmarbaise@gmx.de designates 212.227.17.21 as permitted sender)
+Received: from [212.227.17.21] (HELO mout.gmx.net) (212.227.17.21)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 23 Jul 2014 18:29:34 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([91.35.3.200]) by mail.gmx.com
+ (mrgmx102) with ESMTPSA (Nemesis) id 0MYtId-1X4fnp0B5H-00Vjn0 for
+ <users@maven.apache.org>; Wed, 23 Jul 2014 20:29:10 +0200
+Message-ID: <53CFFEF6.7070601@gmx.de>
+Date: Wed, 23 Jul 2014 20:29:10 +0200
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: testing-harness plugin: LocalRepositoryManager is not set
+References: <53CFD6D8.5030200@linagora.com>
+In-Reply-To: <53CFD6D8.5030200@linagora.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Provags-ID:  V03:K0:zWnFwLUoS3ckD3uzqIc1cQ78hgD7W0xqQZFHdQmv9YHW2Rb23WU
+ RcU+GFAPTAKWovDv7axAbMAngOzVmgtx535hYmM9XOY/ySLZq6Y6EDUxsMqkkbu4cPnwYfj
+ XTG0Ya0flFlNXGOZUKmXduROrHgLJprTqIQLQZtC03Vn594Z0IGwmzb3eBJ7fv7XQAeT80I
+ 3irENvjQ0S+aEejDiCqBA==
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+
+my assumption is to use the maven-compat artifact in your project apart 
+from that it would be interesting which kind of plugin do you develop 
+and which intention it has...
+
+Kind regards
+Karl-Heinz Marbaise
+On 7/23/14 5:38 PM, Vincent Zurczak wrote:
+> Hi,
+>
+> I am not sure this is the right mailing-list.
+> Maybe I should have posted to the dev list. Anyway...
+>
+> I have started working on new Maven plug-in last week and I have set up
+> unit tests using the testing-harness plugin.
+> I have problems with Maven injected fields, such as the Maven project.
+>
+> I use the Maven libraries version 3.2.2, and the harness plugin in
+> version 3.2.0.
+> My mojo has an injected field...
+>
+>> @Parameter( defaultValue = "${project}", readonly = true )
+>> private MavenProject project;
+>
+> This field is correctly set when I run the plugin normally.
+> But it is null when I use the harness plugin. Here is the code in my test.
+>
+>> @Rule
+>> public MojoRule rule = new MojoRule();
+>>
+>> @Rule
+>> public TestResources resources = new TestResources();
+>>
+>> @Test( expected = MojoFailureException.class )
+>> public void testWithoutAssertions() throws Exception {
+>>
+>>     File baseDir = this.resources.getBasedir( "project--invalid-app" );
+>>     File pom = new File( baseDir, "pom.xml" );
+>>
+>>     ValidateMojo mojo = (ValidateMojo) this.rule.lookupMojo(
+>> "validate", pom );
+>>     mojo.execute();
+>> }
+>
+> The NPE occurs in the execute method.
+> The documentation indicates we have (or had) to use a stub. [0]
+> So, so far, I guess it makes sense (I guess, because unless you read
+> this page [0], it is not clear on the web site that injected fields will
+> not work).
+>
+> The JIRA entry [1] states we can also use
+> MojoRule#lookupConfiguredMojo() to have a mojo configured with the
+> default settings.
+> But when I use it, that is to say...
+>
+>> ValidateMojo mojo = (ValidateMojo) this.rule.lookupConfiguredMojo(
+>> baseDir, "validate" );
+>> mojo.execute();
+>
+> ... I get the following exception.
+>
+>> java.lang.Exception: Unexpected exception,
+>> expected<org.apache.maven.plugin.MojoFailureException> but
+>> was<java.lang.IllegalArgumentException>
+>>     at
+>> org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:31)
+>>     at
+>> org.apache.maven.plugin.testing.MojoRule$2.evaluate(MojoRule.java:308)
+>>     at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:47)
+>>     at org.junit.rules.RunRules.evaluate(RunRules.java:18)
+>>     at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+>>     at
+>> org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+>>     at
+>> org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+>>     at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+>>     at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+>>     at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+>>     at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+>>     at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+>>     at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+>>     at
+>> org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+>>     at
+>> org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+>>     at
+>> org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+>>     at
+>> org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+>>     at
+>> org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+>>     at
+>> org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+>>
+>> *Caused by: java.lang.IllegalArgumentException: Invalid repository
+>> system session: LocalRepositoryManager is not set.*
+>>     at
+>> org.eclipse.aether.internal.impl.DefaultRepositorySystem.invalidSession(DefaultRepositorySystem.java:497)
+>>     at
+>> org.eclipse.aether.internal.impl.DefaultRepositorySystem.validateSession(DefaultRepositorySystem.java:443)
+>>     at
+>> org.eclipse.aether.internal.impl.DefaultRepositorySystem.collectDependencies(DefaultRepositorySystem.java:316)
+>>     at
+>> org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolve(DefaultPluginDependenciesResolver.java:192)
+>>     at
+>> org.apache.maven.project.DefaultProjectBuildingHelper.resolveExtensionArtifacts(DefaultProjectBuildingHelper.java:380)
+>>     at
+>> org.apache.maven.project.DefaultProjectBuildingHelper.createProjectRealm(DefaultProjectBuildingHelper.java:239)
+>>     at
+>> org.apache.maven.project.DefaultModelBuildingListener.buildExtensionsAssembled(DefaultModelBuildingListener.java:110)
+>>     at
+>> org.apache.maven.model.building.ModelBuildingEventCatapult$1.fire(ModelBuildingEventCatapult.java:43)
+>>     at
+>> org.apache.maven.model.building.DefaultModelBuilder.fireEvent(DefaultModelBuilder.java:1179)
+>>     at
+>> org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:415)
+>>     at
+>> org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:398)
+>>     at
+>> org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:389)
+>>     at
+>> org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:148)
+>>     at
+>> org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:108)
+>>     at
+>> org.apache.maven.plugin.testing.MojoRule.readMavenProject(MojoRule.java:329)
+>>     at
+>> org.apache.maven.plugin.testing.MojoRule.lookupConfiguredMojo(MojoRule.java:352)
+>>     at
+>> net.roboconf.maven.ValidateMojoTest.testValidProjectButInvalidApp(ValidateMojoTest.java:60)
+>>     at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+>>     at
+>> sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+>>     at
+>> sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+>>     at java.lang.reflect.Method.invoke(Method.java:606)
+>>     at
+>> org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+>>     at
+>> org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+>>     at
+>> org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+>>     at
+>> org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+>>     at
+>> org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:22)
+>>     ... 18 more
+>>
+>
+> => Invalid repository system session: LocalRepositoryManager is not set.
+> I have been struggling with this the entire afternoon.
+>
+> Any help would be appreciated.
+> I can submit the sources of the plugin if necessary.
+>
+> Thanks,
+>
+>                 Vincent.
+>
+>
+>
+>
+> [ 0 ] :
+> http://maven.apache.org/plugin-testing/maven-plugin-testing-harness/examples/complex-mojo-parameters.html
+> [ 1 ] : http://jira.codehaus.org/browse/MPLUGINTESTING-23
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

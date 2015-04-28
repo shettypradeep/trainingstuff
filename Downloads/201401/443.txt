@@ -1,0 +1,85 @@
+From users-return-135196-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Jan 19 15:14:33 2014
+Return-Path: <users-return-135196-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2E23C100AF
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 19 Jan 2014 15:14:33 +0000 (UTC)
+Received: (qmail 74201 invoked by uid 500); 19 Jan 2014 15:14:29 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 74142 invoked by uid 500); 19 Jan 2014 15:14:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74134 invoked by uid 99); 19 Jan 2014 15:14:28 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 19 Jan 2014 15:14:28 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of anders.g.hammar@gmail.com designates 74.125.82.169 as permitted sender)
+Received: from [74.125.82.169] (HELO mail-we0-f169.google.com) (74.125.82.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 19 Jan 2014 15:14:24 +0000
+Received: by mail-we0-f169.google.com with SMTP id u57so6235020wes.14
+        for <users@maven.apache.org>; Sun, 19 Jan 2014 07:14:03 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=hlWv1DwrZPeVp3Yag/Wnl4CYIjImC4jbKmcUqwCYfAI=;
+        b=N7K7khHQQV2xuGxtp2JrOjYyHnXboCm/YVnE6cL3S1ZvtWnS7h1GMUICM619SFsRM6
+         MMAISFb3Ba/Pfm2oMZb+H7Tnq+MFOiDtTxKpy+Tt+/d7Or0pmGfkvDaBTokCVSON2d7B
+         0dCEFVM3Hf/K2YFOLfkr83uM54l32mQ24ywdzCtGKoSX6qfCPdiepPLIQa3mmeY3WiFD
+         j9aM6dFqxuHeOd2dfF+vovoXkRO6gZGzdv9+Fx1YbMflAoiCPca30CvL9MLg8NgsyFQ0
+         CTXS4cgPbdIN2HzI4FMdjA/ULRMWE+1c9ZdlfyM0pqlNOAZA4LJ4pagPAvmzAmrVoSMF
+         LamQ==
+MIME-Version: 1.0
+X-Received: by 10.180.104.72 with SMTP id gc8mr6296964wib.5.1390144443196;
+ Sun, 19 Jan 2014 07:14:03 -0800 (PST)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.137.38 with HTTP; Sun, 19 Jan 2014 07:14:03 -0800 (PST)
+In-Reply-To: <CAEBcyzrdQ7qki5FHFb+OsQSpbXU-WUp81rOT1AiPC=nYZzyYDg@mail.gmail.com>
+References: <CAEBcyzrdQ7qki5FHFb+OsQSpbXU-WUp81rOT1AiPC=nYZzyYDg@mail.gmail.com>
+Date: Sun, 19 Jan 2014 16:14:03 +0100
+X-Google-Sender-Auth: tf5dPSsUGOB4hr6EEs4ZXgzKVf0
+Message-ID: <CAKDUN1vbcUmpZo_pCF=3drhF2MdYS0vAAe0hZHviNDf4J138Vw@mail.gmail.com>
+Subject: Re: Adding a classpath element within a Mojo
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d044282c0b92d5c04f05439c9
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d044282c0b92d5c04f05439c9
+Content-Type: text/plain; charset=ISO-8859-1
+
+Do you want to change the classpath of the project or of other mojos?
+
+Don't think either is possible. And if it was, I don't think it's wise. The
+dependencies of the project should be declared and not magically added.
+
+/Anders
+
+
+
+On Sun, Jan 19, 2014 at 1:18 PM, William Ferguson <
+william.ferguson@xandar.com.au> wrote:
+
+> I have a Mojo which needs to add an element to the compile time classpath
+> for future Mojos.
+>
+> I'm struggling to find any doco that points in the right direction.
+>
+> Is it possible?
+> If so, how should I go about it?
+>
+>
+> William
+>
+
+--f46d044282c0b92d5c04f05439c9--
+

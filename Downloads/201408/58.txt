@@ -1,0 +1,109 @@
+From users-return-137025-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Aug 15 06:57:23 2014
+Return-Path: <users-return-137025-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F1CCC112F9
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 15 Aug 2014 06:57:22 +0000 (UTC)
+Received: (qmail 14946 invoked by uid 500); 15 Aug 2014 06:57:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 14861 invoked by uid 500); 15 Aug 2014 06:57:15 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 14842 invoked by uid 99); 15 Aug 2014 06:57:14 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 15 Aug 2014 06:57:14 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.217.176 as permitted sender)
+Received: from [209.85.217.176] (HELO mail-lb0-f176.google.com) (209.85.217.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 15 Aug 2014 06:57:10 +0000
+Received: by mail-lb0-f176.google.com with SMTP id u10so1665894lbd.35
+        for <users@maven.apache.org>; Thu, 14 Aug 2014 23:56:49 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=X0zqv3rHtEPaCbk0GIAAcD50Drd0aV092DEBPLvVIf0=;
+        b=BbJVZtKnSYncX1JgY2KgO01ImAHWWVWBiQXAxuPJLyjYk8T7ju1kOAdKRe0a7sXiWq
+         FLYWxVJngUpqFmSaA5ddYKD6eGVP5osWo2ngnydTLkeRUrRvPgm7mvPgxTSCZ/B87jyg
+         UmlOJGmihCj4JuJs057HROsXiIFrdxlk/Rpr3f+yduzukGCSU4NEZUXNOaC42sonNPvJ
+         JgkuGPSFEi83nGY5FZ/FH6+H6EkaY4wA5lBEj3CeecfvDJ+9hTtR0I2NzCtm02AWXlN9
+         RdB031G8B9kTT50kr3vJI33f16XTwEYDSBmevTi3wFtpKZ92YivyKcMou+bJ0GYn3LLT
+         gHxQ==
+MIME-Version: 1.0
+X-Received: by 10.113.5.41 with SMTP id cj9mr9534893lbd.81.1408085809187; Thu,
+ 14 Aug 2014 23:56:49 -0700 (PDT)
+Received: by 10.114.20.231 with HTTP; Thu, 14 Aug 2014 23:56:49 -0700 (PDT)
+In-Reply-To: <53ED5D2A.3000902@horus.es>
+References: <53ED5D2A.3000902@horus.es>
+Date: Thu, 14 Aug 2014 23:56:49 -0700
+Message-ID: <CAPCjjnEZ_6O8tVHk8KhgxUki9dWZVCH8b1w9wOOHTp4+crSJzA@mail.gmail.com>
+Subject: Re: Doxia Eclipse Editor Plugin problem with snippet macro
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11346c5c78527f0500a586eb
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11346c5c78527f0500a586eb
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Unfortunately, I dont think Doxia for Eclipse is maintained, and it never
+have an official release either
+
+-D
+
+
+On Thu, Aug 14, 2014 at 6:06 PM, Pablo Le=C3=B3n <pablo.leon@horus.es> wrot=
+e:
+
+> Hi,
+>
+> I have been successfully using the Doxia Eclipse Editor Plugin for a few
+> months. But now I'm facing a compatibility problem related to the snippet
+> macro. if I use the following macro:
+>
+>     %{snippet|file=3D${basedir}/src/path/to/file.txt}
+>
+> then the "mvn site" issues the error:
+>
+>     Error during retrieving content skip as ignoreDownloadError activated=
+.
+>
+> If I remove the ${basedir} variable from the macro, the "mvn site" works
+> as expected, but then I get this error in the eclipse IDE:
+>
+>     Doxia Converter Exception: C:\eclipse\install\dir\src\path\to\file.tx=
+t
+> (path not found)
+>
+> I'm unable to specify the path of the snippet file in a compatible manner=
+,
+> I have tried using $basedir, ${basedir} and ${project.basedir}, but I
+> always get the same results.
+>
+> Anyone has any suggestion?
+>
+> There are any plans to release an update of the Doxia Eclipse Editor
+> Plugin which uses the same default directory as the "mvn site" command?
+>
+> Regards,
+>
+>                 Pablo.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a11346c5c78527f0500a586eb--
+

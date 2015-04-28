@@ -1,0 +1,109 @@
+From users-return-136594-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jun 16 07:39:15 2014
+Return-Path: <users-return-136594-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9691D11CDD
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 16 Jun 2014 07:39:15 +0000 (UTC)
+Received: (qmail 31405 invoked by uid 500); 16 Jun 2014 07:39:14 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 31323 invoked by uid 500); 16 Jun 2014 07:39:14 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 31311 invoked by uid 99); 16 Jun 2014 07:39:13 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 16 Jun 2014 07:39:13 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of northrup.james@gmail.com designates 74.125.82.171 as permitted sender)
+Received: from [74.125.82.171] (HELO mail-we0-f171.google.com) (74.125.82.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 16 Jun 2014 07:39:11 +0000
+Received: by mail-we0-f171.google.com with SMTP id q58so5279672wes.16
+        for <users@maven.apache.org>; Mon, 16 Jun 2014 00:38:47 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=D1CyVVXPhaMP6l1zvRh7vHl/CAy7nDZAB60KYbJPNQ0=;
+        b=rpsd6JVbqPYOA5UbvXqdtIf5J72lVHAft0bCppA8mMSO79lm3lsTjRPFGxpbYPo3fA
+         NdNFsgnjgOVaOgGka1C4WiwkzLZ8wjpazg+b84tV3AANroeQcxB+fEKCHM/fcOVMWqOO
+         OuljupeNfOl0S8ToArvTbvGw06fmVNHlpIhwj/7Sw1wXNwmd5Rk74IyWC2hXjcjxIBmz
+         ZkvYGbZEJ/929KvsJHrkSL0Sc9gv/1t3hU2MVpB3fnYlBq3ciIYVw3FuFkh26l1gtcmI
+         UIBr1c0EmqeWJHiGkxAN+7wMZV4R2z+5GQTiCf+vH/5xdkagfBZ2inY0Txs/iVvBBW+0
+         YkbA==
+X-Received: by 10.194.92.176 with SMTP id cn16mr25144861wjb.43.1402904327335;
+ Mon, 16 Jun 2014 00:38:47 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.216.160.197 with HTTP; Mon, 16 Jun 2014 00:38:27 -0700 (PDT)
+In-Reply-To: <CAEBcyzpK_1SfJ6gVWBFYVJMxDC3m0Cwvp+FvKeqpV_6puevfQA@mail.gmail.com>
+References: <CAEBcyzpnU08-mCEFDz5yrJD6K8UCcG6jxA6iL7sx4_Avc=Z7fQ@mail.gmail.com>
+ <CAEBcyzpK_1SfJ6gVWBFYVJMxDC3m0Cwvp+FvKeqpV_6puevfQA@mail.gmail.com>
+From: james northrup <northrup.james@gmail.com>
+Date: Mon, 16 Jun 2014 00:38:27 -0700
+Message-ID: <CAPkEcwjNmhvN9ZgW4FKe+wKGwMq+=2=dL9i5xHz6GiXrqYO3uQ@mail.gmail.com>
+Subject: Re: Need to resolve the dependencies for a MavenArtifact
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7beb986e15b82004fbef1e8f
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7beb986e15b82004fbef1e8f
+Content-Type: text/plain; charset=UTF-8
+
+mvn dependency:build-classpath is tricky in my experience but i have at
+least one script in guithub using it to launch a java service withoutr
+maven assembly plugin or untoward grepping.
+
+https://github.com/jnorthrup/RelaxFactory/blob/master/bin/run.sh
+
+
+On Mon, Jun 16, 2014 at 12:21 AM, William Ferguson <
+william.ferguson@xandar.com.au> wrote:
+
+> Anyone?
+>
+>
+> On Sun, Jun 15, 2014 at 12:49 PM, William Ferguson <
+> william.ferguson@xandar.com.au> wrote:
+>
+> > I have a Mojo that needs to work with Maven 3.0.* and 3.1+
+> >
+> > In the Mojo I have an Artifact and I need to resolve it's dependencies.
+> > How can/should I do it?
+> >
+> > If I can resolve the Artifact to a MavenProject then I can use
+> > DependencyGraphBuilder (from maven-dependency-tree) to construct a graph
+> of
+> > the deps. But I'm struggling to make the Artifact to MavenProject
+> > conversion happen.
+> >
+> > I thought that If I could get a URL to the Artifact's POM file then I
+> > could use DefaultMavenRuntime (maven-runtime) to resolve the URL into a
+> > MavenProject. But
+> >
+> >    1. I can't work out how to get a URL to the artifact's POM file (it
+> >    needs to handle both reactor deps and repo deps)
+> >    2. Even with a URL to the POM file, MavenRuntime#getProject) is
+> >    returning null.
+> >
+> > Can someone please point me in the right direction?
+> > Am I even on the right path or is there a much more straight forward way
+> > of getting the dependencies for the Artifact?
+> >
+> > William
+> >
+>
+
+
+
+-- 
+Jim Northrup  *  (408) 837-2270 *
+
+--047d7beb986e15b82004fbef1e8f--
+

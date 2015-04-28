@@ -1,0 +1,181 @@
+From users-return-135154-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan 15 06:10:53 2014
+Return-Path: <users-return-135154-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 429EB1019E
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 15 Jan 2014 06:10:53 +0000 (UTC)
+Received: (qmail 42489 invoked by uid 500); 15 Jan 2014 06:10:49 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 42063 invoked by uid 500); 15 Jan 2014 06:10:38 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 42055 invoked by uid 99); 15 Jan 2014 06:10:34 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 15 Jan 2014 06:10:34 +0000
+X-ASF-Spam-Status: No, hits=-2.3 required=5.0
+	tests=RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [209.65.160.94] (HELO nbfkord-smmo06.seg.att.com) (209.65.160.94)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 15 Jan 2014 06:10:27 +0000
+Received: from unknown [144.160.112.28] (EHLO tlpi048.enaf.dadc.sbc.com)
+	by nbfkord-smmo06.seg.att.com(mxl_mta-7.2.1-0) over TLS secured channel
+	with ESMTP id e3626d25.0.1369439.00-1924.3823139.nbfkord-smmo06.seg.att.com (envelope-from <dk068x@att.com>);
+	Wed, 15 Jan 2014 06:10:06 +0000 (UTC)
+X-MXL-Hash: 52d6263e65b7ee47-640a7751feb9481666fd13c318b72869d7560e10
+Received: from enaf.dadc.sbc.com (localhost.localdomain [127.0.0.1])
+	by tlpi048.enaf.dadc.sbc.com (8.14.5/8.14.5) with ESMTP id s0F6A6AY006290
+	for <users@maven.apache.org>; Wed, 15 Jan 2014 00:10:06 -0600
+Received: from dalint03.pst.cso.att.com (dalint03.pst.cso.att.com [135.31.133.161])
+	by tlpi048.enaf.dadc.sbc.com (8.14.5/8.14.5) with ESMTP id s0F6A3qZ006286
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <users@maven.apache.org>; Wed, 15 Jan 2014 00:10:03 -0600
+Received: from WABOTH9MSGHUB8D.ITServices.sbc.com (WABOTH9MSGHUB8D.itservices.sbc.com [135.163.35.93]) by dalint03.pst.cso.att.com (RSA Interceptor) for <users@maven.apache.org>; Wed, 15 Jan 2014 06:09:53 GMT
+Received: from WABOTH9MSGUSR8C.ITServices.sbc.com ([135.163.35.214]) by
+ WABOTH9MSGHUB8D.ITServices.sbc.com ([135.163.35.93]) with mapi id
+ 14.03.0174.001; Tue, 14 Jan 2014 22:09:52 -0800
+From: "KARR, DAVID" <dk068x@att.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: RE: Is it possible to deliberately have two dependencies with the
+ same groupid, artifactid, and packaging, but different version?
+Thread-Topic: Is it possible to deliberately have two dependencies with the
+ same groupid, artifactid, and packaging, but different version?
+Thread-Index: Ac8Qvn4eU5RSLRmwTSGQH9i5k3aoKwARss4AAA0qdhAAIBQQgAAQF4SQ//+MOQCAABHRoA==
+Date: Wed, 15 Jan 2014 06:09:46 +0000
+Message-ID: <B8D164BED956C5439875951895CB4B221882D340@WABOTH9MSGUSR8C.ITServices.sbc.com>
+References: <B8D164BED956C5439875951895CB4B221882805C@WABOTH9MSGUSR8C.ITServices.sbc.com>
+	<CADVp3v9QAzHx3qZabYLoECy+v0tJx38zywMVJkVvEB=woocPYg@mail.gmail.com>
+	<B8D164BED956C5439875951895CB4B2218828942@WABOTH9MSGUSR8C.ITServices.sbc.com>
+	<CADVp3v_fw-ODTw9_zet-aT4Haj6-AggzbbKE0QFe_C+_bOjbcQ@mail.gmail.com>
+	<B8D164BED956C5439875951895CB4B221882BA71@WABOTH9MSGUSR8C.ITServices.sbc.com>
+ <CA+nPnMzaJOhsa-hFVMZeYrr-koXO+-rADcfZ1NWnKvmTLN8ZEA@mail.gmail.com>
+In-Reply-To: <CA+nPnMzaJOhsa-hFVMZeYrr-koXO+-rADcfZ1NWnKvmTLN8ZEA@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [135.163.34.4]
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-RSA-Inspected: yes
+X-RSA-Classifications: public
+X-AnalysisOut: [v=2.0 cv=MLLXbrll c=1 sm=1 a=srMsL6ituuWTYeky9Bs9mA==:17 a]
+X-AnalysisOut: [=nd66wh5Z8OYA:10 a=ofMgfj31e3cA:10 a=YnP4VLJI-BoA:10 a=BLc]
+X-AnalysisOut: [eEmwcHowA:10 a=kj9zAlcOel0A:10 a=zQP7CpKOAAAA:8 a=XIqpo32R]
+X-AnalysisOut: [AAAA:8 a=fV7pgCVFH1gA:10 a=pGLkceISAAAA:8 a=mV9VRH-2AAAA:8]
+X-AnalysisOut: [ a=hIqKkG8B56UjSYKcIXcA:9 a=CjuIK1q_8ugA:10 a=MSl-tDqOz04A]
+X-AnalysisOut: [:10 a=Hz7IrDYlS0cA:10 a=W41UBrfhLErBannb:21 a=8V1GtD8YQyD1]
+X-AnalysisOut: [j3Xn:21]
+X-Spam: [F=0.2000000000; CM=0.500; S=0.200(2010122901)]
+X-MAIL-FROM: <dk068x@att.com>
+X-SOURCE-IP: [144.160.112.28]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> -----Original Message-----
+> From: Stephen Connolly [mailto:stephen.alan.connolly@gmail.com]
+> Sent: Tuesday, January 14, 2014 3:10 PM
+> To: Maven Users List
+> Subject: Re: Is it possible to deliberately have two dependencies with th=
+e
+> same groupid, artifactid, and packaging, but different version?
+>=20
+> On 14 January 2014 22:49, KARR, DAVID <dk068x@att.com> wrote:
+>=20
+> > > -----Original Message-----
+> > > From: Barrie Treloar [mailto:baerrach@gmail.com]
+> > > Sent: Tuesday, January 14, 2014 2:23 PM
+> > > To: Maven Users List
+> > > Subject: Re: Is it possible to deliberately have two dependencies wit=
+h
+> > the
+> > > same groupid, artifactid, and packaging, but different version?
+> > >
+> > > On 15 January 2014 01:40, KARR, DAVID <dk068x@att.com> wrote:
+> > > > Again, I didn't want to debate whether this is "convenient", I just
+> > wanted
+> > > to know if Maven dependency resolution and things like the EAR plugin
+> > will
+> > > have any trouble incorporating multiple dependencies with the same G:=
+A,
+> > but
+> > > different version.
+> > >
+> > > David, you've been on the list long enough to see the term "If you
+> > > fight Maven you will lose".
+> > > That way pain lies.
+> >
+> > I haven't heard anyone confirm conclusively that this will not work, so=
+ up
+> > to now it appears to just be an opinion that there's something wrong wi=
+th
+> > this approach.
+> >
+>=20
+> Perhaps I just wasn't clear enough...
+>=20
+> Maven will resolve any list of dependencies so that there is a single
+> unique version of any GA.
+>=20
+> Where you have a maven does not bomb out when you double list a dependenc=
+y,
+> you will get a single version.
+>=20
+> The correct parsing behaviour that Maven *should* follow is:
+>=20
+> * If the double dependency is in a project *being built* then fail the bu=
+ild
+>=20
+> * If the double dependency is in a dependency of the project being built,
+> then resolve to single version.
+>=20
+> AFAIK the only unknown I am aware of is whether the first case applies, b=
+ut
+> in all cases that I am aware of you will only see one version of any GA
+
+Ok, thanks for clarifying.
+
+I guess I'll plan on putting the version number into the artifact id string=
+ so the G:A will vary.
+=20
+> > I've also been writing software long enough to know that reality often
+> > makes theory irrelevant.
+> >
+> > > You will have much more joy solving the problem in a way that Maven h=
+elps
+> > > you.
+> > >
+> > > Does any of Stephen's response help out?
+> >
+> > I believe that's a different situation.
+> >
+> > There will be a new version of this artifact every single month such th=
+at
+> > multiple versions of the same artifact can and will be used at the same
+> > time (very soon we will be using 6 at the same time).  It doesn't make
+> > sense to me to define a new group id or artifact id every month,
+> > considering the only difference between two names (and their contents) =
+will
+> > simply be a number, representing its version number.  If the only
+> > difference is the version, then it should be reflected in the version
+> > number, as that's the primary difference between them.
+> >
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,103 @@
+From users-return-137762-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Nov 17 22:09:22 2014
+Return-Path: <users-return-137762-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0E9F410163
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 17 Nov 2014 22:09:22 +0000 (UTC)
+Received: (qmail 24104 invoked by uid 500); 17 Nov 2014 22:09:21 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 23716 invoked by uid 500); 17 Nov 2014 22:09:21 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 23693 invoked by uid 99); 17 Nov 2014 22:09:21 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 17 Nov 2014 22:09:21 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of khmarbaise@gmx.de designates 212.227.17.21 as permitted sender)
+Received: from [212.227.17.21] (HELO mout.gmx.net) (212.227.17.21)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 17 Nov 2014 22:08:55 +0000
+Received: from Karl-Heinzs-MacBook-Pro.local ([62.109.82.157]) by mail.gmx.com
+ (mrgmx103) with ESMTPSA (Nemesis) id 0LmJsk-1YPHGI14d8-00ZxnR; Mon, 17 Nov
+ 2014 23:08:44 +0100
+Message-ID: <546A71E9.6050508@gmx.de>
+Date: Mon, 17 Nov 2014 23:08:41 +0100
+From: Karl Heinz Marbaise <khmarbaise@gmx.de>
+Reply-To: info@soebes.de
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:31.0) Gecko/20100101 Thunderbird/31.2.0
+MIME-Version: 1.0
+To: sebb <sebbaz@gmail.com>
+CC: dev@maven.apache.org, users@maven.apache.org
+Subject: Re: [ANN] Apache Common POM Version 16 Released
+References: <20141117195725.4936B10A46@minotaur.apache.org> <CAOGo0VbZ55J8Jf=ek0jEOOEBEJnUhAT79sFpa46e62PCRJP3xg@mail.gmail.com>
+In-Reply-To: <CAOGo0VbZ55J8Jf=ek0jEOOEBEJnUhAT79sFpa46e62PCRJP3xg@mail.gmail.com>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 8bit
+X-Provags-ID:  V03:K0:nz3OtUOGo58V6zB7PKxOY+SmkaBpFROmxpTNsXG4dLPiEeZUEp5
+ M9axV4NNT8TLbGTuwUMcdzww/on76C5ZOT3NRSQBpu0naY2rAIabJXXXZD/8e88LPihH7Jl
+ Yt4MzAcPSk1lepbNoc63A/7dWXuOizIu1b0vGP0FrYya0ow8nfDrBXiSoxW+QBEWfhmt3Mc
+ AEox7IARQTV3D31xthn6Q==
+X-UI-Out-Filterresults: notjunk:1;
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+On 11/17/14 9:59 PM, sebb wrote:
+> On 17 November 2014 19:57, Karl Heinz Marbaise <khmarbaise@apache.org> wrote:
+>> The Apache Maven team is pleased to announce the release of the
+>> Apache Common POM, version 16.
+>>
+>> This POM (org.apache:apache) configures common Maven settings for
+>> projects to use ASF infrastructure.
+>>
+>> Documentation live at: http://maven.apache.org/poms/asf.
+>>
+>> To use this parent, you should specify the version in your project's
+>> plugin configuration:
+>>
+>> <parent>
+>>    <groupId>org.apache</groupId>
+>>    <artifactId>apache</artifactId>
+>>    <version>16</version>
+>> </parent>
+>>
+>> Changes since previous release:
+>>
+>> http://svn.apache.org/viewvc/maven/pom/tags/apache-16/pom.xml?view=markup
+>
+> The above URL is wrong; it does NOT show the differences.
+
+Unfortunately you are right...here is the correct one:
+
+http://svn.apache.org/viewvc/maven/pom/tags/apache-16/pom.xml?r1=HEAD&r2=1627336&diff_format=h
+
+sorry...
+
+>
+>> Enjoy,
+>>
+>> -The Apache Maven team
+>
+
+
+Mit freundlichem Gruß
+Karl-Heinz Marbaise
+-- 
+SoftwareEntwicklung Beratung Schulung    Tel.: +49 (0) 2405 / 415 893
+Dipl.Ing.(FH) Karl-Heinz Marbaise        ICQ#: 135949029
+Hauptstrasse 177                         USt.IdNr: DE191347579
+52146 Würselen                           http://www.soebes.de
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,117 @@
+From users-return-137326-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 19 17:03:16 2014
+Return-Path: <users-return-137326-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 400231139B
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 19 Sep 2014 17:03:16 +0000 (UTC)
+Received: (qmail 18743 invoked by uid 500); 19 Sep 2014 17:03:14 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 18652 invoked by uid 500); 19 Sep 2014 17:03:14 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 18624 invoked by uid 99); 19 Sep 2014 17:03:14 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 19 Sep 2014 17:03:14 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of carlspring@gmail.com designates 209.85.215.48 as permitted sender)
+Received: from [209.85.215.48] (HELO mail-la0-f48.google.com) (209.85.215.48)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 19 Sep 2014 17:02:48 +0000
+Received: by mail-la0-f48.google.com with SMTP id ty20so3485660lab.21
+        for <users@maven.apache.org>; Fri, 19 Sep 2014 10:02:47 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=XlzPSSin/1bf9e1zwU+tgZwiumg68SxPKpz9OMoBOVY=;
+        b=g32Auuz4rDApBNQTr1VbCQ1018/8H7Fu6d1hjNJaHTxUnOSBPbFoXYbtW82AMf08w+
+         kT2Gs7wwHO3yqsLw+ZzZH1EctwQnexfjd0nBpDro/6MBePRHucQ26/PhJV0l6K8KXbWB
+         HGo6pbGOqUUsWgurkEHNLCOTYkBtZwP5Da9HoUvQBcI5izGG47hIddizT1sjlXwdysfo
+         bC+4DQWTxlu+F25SW+dKHGRrPq/y6wS2LPP8CJJQWtvwF8DCYuYnXaWvXgSmIo+LRtMO
+         PrHNjSZ+LmxYYmq25JX23YgjisE4V1ZYuy90zewberBawYdsQQY01Y6UWFKOP9Xe6ifY
+         e6hA==
+X-Received: by 10.152.22.200 with SMTP id g8mr8102472laf.1.1411146167803; Fri,
+ 19 Sep 2014 10:02:47 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.112.85.99 with HTTP; Fri, 19 Sep 2014 10:02:27 -0700 (PDT)
+In-Reply-To: <CAAZU44mmd5XNEbZaTMFt+UaixE19MXtAf5bSMTm9hB1Rt4yZ1Q@mail.gmail.com>
+References: <CAAZU44mmd5XNEbZaTMFt+UaixE19MXtAf5bSMTm9hB1Rt4yZ1Q@mail.gmail.com>
+From: Martin Todorov <carlspring@gmail.com>
+Date: Fri, 19 Sep 2014 18:02:27 +0100
+Message-ID: <CANnZoJtVCUnDYvD-bJvCGNR5A8VLeRpPt--RBrE442r+rRhpBg@mail.gmail.com>
+Subject: Re: retrying flakey tests?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0158c31a0ee5dc05036e12d4
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0158c31a0ee5dc05036e12d4
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi Kevin,
+
+I can't see an option in the maven-surefire-plugin, but even if there was
+one, I would seriously not recommend it.
+If a test case fails non-deterministically, this means it's design is
+flawed. Test cases should either produce their own resources, or use such
+that haven't been generated/modified by other tests (which would be
+expected to have executed before them). Make sure you can easily create
+isolated sets of test resources. Create a base test class for that, if you
+have to. Alter your API and adjust it so that you can have an easy entry
+point from your tests. Do whatever you can to simplify the actual
+requirements in order for the test to be able to execute independently from
+the rest of the tests.
+
+I have worked with rather large systems with hundreds of modules and I can
+clearly say that it is exactly in these kinds of environments where you
+should be extremely precise with your tests. If a developer doesn't want to
+fix/debug the test, as it's "flakey", then you have much more serious
+problems than finding out how to retry a test case. Race conditions are
+something that should be taken seriously.
+
+Just my 5 pence worth of advice; I hope it's worth something to you.
+Kind regards,
+
+Martin Todorov
+
+
+
+
+On Fri, Sep 19, 2014 at 5:24 PM, Kevin Burton <burton@spinn3r.com> wrote:
+
+> Is there a way to retry a flakey test?
+>
+> I=E2=80=99d basically like to have a flag that retries a failing test 2 o=
+r 3 times.
+>
+> Flakey and non deterministic tests are a fact of life in more complicated
+> systems.
+>
+> The main problem being that they are impossible to setup again because
+> they=E2=80=99re usually race conditions.
+>
+> If I could just retry the test a second time , that would solve this issu=
+e.
+>
+> Would be nice to have the build warned that the test is failing though..
+>
+> --
+>
+> Founder/CEO Spinn3r.com
+> Location: *San Francisco, CA*
+> blog: http://burtonator.wordpress.com
+> =E2=80=A6 or check out my Google+ profile
+> <https://plus.google.com/102718274791889610666/posts>
+> <http://spinn3r.com>
+>
+
+--089e0158c31a0ee5dc05036e12d4--
+

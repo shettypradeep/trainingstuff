@@ -1,0 +1,123 @@
+From users-return-136810-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Jul 20 03:28:39 2014
+Return-Path: <users-return-136810-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C23D711BE4
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 20 Jul 2014 03:28:39 +0000 (UTC)
+Received: (qmail 61537 invoked by uid 500); 20 Jul 2014 03:28:38 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 61466 invoked by uid 500); 20 Jul 2014 03:28:38 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 61452 invoked by uid 99); 20 Jul 2014 03:28:37 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 20 Jul 2014 03:28:37 +0000
+Received: from localhost (HELO mail-oa0-f51.google.com) (127.0.0.1)
+  (smtp-auth username olamy, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Sun, 20 Jul 2014 03:28:37 +0000
+Received: by mail-oa0-f51.google.com with SMTP id o6so5742932oag.10
+        for <users@maven.apache.org>; Sat, 19 Jul 2014 20:28:36 -0700 (PDT)
+X-Received: by 10.60.176.225 with SMTP id cl1mr22705811oec.36.1405826916684;
+ Sat, 19 Jul 2014 20:28:36 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.182.124.168 with HTTP; Sat, 19 Jul 2014 20:28:16 -0700 (PDT)
+From: Olivier Lamy <olamy@apache.org>
+Date: Sun, 20 Jul 2014 13:28:16 +1000
+Message-ID: <CAPoyBqTMjfqFwCq2xhrVW23yRvnod6_xnDVxcdF6aptLCP_3Eg@mail.gmail.com>
+Subject: [ANN] Apache Archiva 2.1.0
+To: announce@apache.org, users@archiva.apache.org, 
+	Maven Users List <users@maven.apache.org>
+Cc: dev@archiva.apache.org
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+The Apache Archiva team would like to announce the release of Archiva
+2.1.0. Archiva is available for download from the web site (
+http://archiva.apache.org )
+
+Archiva is an application for managing one or more remote
+repositories, including administration, artifact handling, browsing
+and searching.
+
+If you have any questions, please consult:
+
+the web site: http://archiva.apache.org/
+the archiva-user mailing list: http://archiva.apache.org/mail-lists.html
+
+New in Archiva 2.1.0
+
+Apache Archiva 2.1.0 is a bugs fix release:
+
+NOTE: jdk 1.7 is now prerequisite with Apache Archiva 1.7
+
+Compatibility Changes
+
+If upgrading from earlier versions of Archiva, the list of libraries
+in wrapper.conf has changed. If you have customized your copy of
+wrapper.conf, please update it for compatibility with the version
+distributed with the current release.
+As the database storage has been removed, you can remove the JNDI
+entry for jdbc/archiva. After upgrading from a previous version, you
+will have to run a full scan to populate the new JCR Repository. This
+will be done on first start of Archiva.
+
+Refer to the Upgrading Archiva guide for more information.
+
+Release Notes
+
+The Archiva 2.1.0 features set can be seen in the feature tour.
+
+Changes in Archiva 2.1.0
+
+Released: 20th July 2014
+
+Improvement
+
+[MRM-1210] - Dependency tree should include the artifact type
+[MRM-1558] - Please provide some UI element which shows degraded
+and/or badly connected remote repository
+[MRM-1802] - Find a cache solution for browsing part (especially root browsing)
+[MRM-1829] - Change default value of of AysncLogger strategy for log4j async
+[MRM-1834] - Add limit to index search query to prevent unnecessary calculations
+[MRM-1836] - Make search limit (maxCount) configurable via UI
+[MRM-1843] - provide mechanism to obtain the latest version of an artifact
+
+Bug
+
+[MRM-887] - Start script has no valid "uname" option
+[MRM-1809] - Users - Manage section sort by name doesn't work as expected
+[MRM-1812] - Users - Manage section needs Sort by User Name, Sort by
+Full Name, and Sort by Email buttons
+[MRM-1813] - Users - Manage section filters don't seem to work
+[MRM-1823] - java 1.7 as prerequisite
+[MRM-1824] - metadata storage using Cassandra
+[MRM-1825] - MD5 hashes are for wrong file name
+[MRM-1826] - Force Internet Explorer into Standards Mode
+[MRM-1830] - Charset applied to binary repository HTTP responses
+[MRM-1833] - Nullpointer when browsing artifacts which have
+dependencies with scope "import"
+[MRM-1837] - DefaultArchivaConfiguration holds references to classes
+[MRM-1841] - "Remember me" not working
+[MRM-1842] - Remove per default log4j2 Async Logging
+[MRM-1846] - Regression in 2.0.1 : uniqueVersion false not supported
+[MRM-1849] - Unable to download -SNAPSHOT jars after 2.0.1 Upgrade
+
+
+
+Have fun!
+-- 
+The Apache Archiva Team
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,82 @@
+From users-return-136690-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Jun 28 01:43:04 2014
+Return-Path: <users-return-136690-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 06444118F6
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 28 Jun 2014 01:43:03 +0000 (UTC)
+Received: (qmail 46039 invoked by uid 500); 28 Jun 2014 01:43:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 45951 invoked by uid 500); 28 Jun 2014 01:43:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 42657 invoked by uid 99); 28 Jun 2014 00:07:27 -0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of yuhanz@gmail.com designates 74.125.82.170 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=opaX3ITiRQtLpjAxKmh4gRwboguhpfFtTH9Am/0WqKo=;
+        b=pyPwaCAoEdLQKWaXp6vCoCv9Esqd5FQRhFuyE18UPeVS2EKDYBWGljSo3S/J09sQHg
+         1G6/rns9W3gjF6c8a2WBRdZO3xMN0/1Kn/C7aEY3ZOktbe80rooAFLst1h1P3oZHK8Fu
+         RdrcuQ5uo/ZwUBWlRjgRV/HP1PYpHwMrnnc3H3Qc9XRWyfdP4gni4AOoaZ+k+0AwC0q8
+         0FNv/RxRG1FS+WCRD9n3uFgVu8QxnpIjNF7sLkU/CCjX+QWeHSt2tFTh7AynYPyWYR4T
+         Sj/vC1cIJlCrz9rIlUHP9FGkXKN3/69PyCWgOI2G0GthP+d2LgWOIalc13vJZxCT09og
+         7R6Q==
+MIME-Version: 1.0
+X-Received: by 10.180.101.98 with SMTP id ff2mr15021116wib.40.1403914020072;
+ Fri, 27 Jun 2014 17:07:00 -0700 (PDT)
+Date: Fri, 27 Jun 2014 17:07:00 -0700
+Message-ID: <CAMF6RJf-itOj3zHw1mABvJQ1xxUBpdN_KbnApQXEAThHUa+dZg@mail.gmail.com>
+Subject: how to specify different file name for pom.xml of a module?
+From: Yuhan Zhang <yuhanz@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=f46d041826227632a204fcda34cb
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d041826227632a204fcda34cb
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi all,
+
+I'd like to keep multiple pom files in the same project with different
+dependencies, so that I could build it with "mvn -f pom_2.xml". however,
+since my project have sub modules, I'd like it to build using the pom_2.xml
+file in module folder, too. but the build  "mvn -f pom_2.xml" always goes
+to pom.xml in the module folder.
+
+Here's how my project is structured:
+
+=E2=94=94=E2=94=80=E2=94=80 my-project
+
+        =E2=94=9C=E2=94=80=E2=94=80 pom.xml
+
+        =E2=94=9C=E2=94=80=E2=94=80 pom_2.xml
+
+    =E2=94=94=E2=94=80=E2=94=80 my-module
+
+        =E2=94=9C=E2=94=80=E2=94=80 pom.xml
+
+        =E2=94=9C=E2=94=80=E2=94=80 pom_2.xml
+
+
+Is there a way to specify in pom_2.xml on the name of the pom file to use
+for module so that the module can also be built with pom_2.xml? or is this
+impossible?
+
+
+Thank you.
+
+Yuhan
+
+--f46d041826227632a204fcda34cb--
+

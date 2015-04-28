@@ -1,0 +1,112 @@
+From users-return-135277-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 28 20:48:19 2014
+Return-Path: <users-return-135277-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3A16810685
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 28 Jan 2014 20:48:19 +0000 (UTC)
+Received: (qmail 49356 invoked by uid 500); 28 Jan 2014 20:48:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 49251 invoked by uid 500); 28 Jan 2014 20:48:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 49240 invoked by uid 99); 28 Jan 2014 20:48:13 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 20:48:13 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of manuel.mastrofini@infoone.it designates 74.125.82.54 as permitted sender)
+Received: from [74.125.82.54] (HELO mail-wg0-f54.google.com) (74.125.82.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 20:48:07 +0000
+Received: by mail-wg0-f54.google.com with SMTP id x13so1802049wgg.33
+        for <users@maven.apache.org>; Tue, 28 Jan 2014 12:47:46 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=infoone.it; s=google;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=9LTmnKtjRgO/SheWkWuUb5T0ys/9LH0M1J2Pr+jFc3Q=;
+        b=TThFUskxOQ/tWjRuA5cCsw6QpGOf91pIz3Ibiwc4n/Kf5oj0FiMSVW8R9fBX3BWhGY
+         rQ2GKMYR9KEimUyW3dYY0cguM0kf1jnB/m4JtLCn9BBYOToWim1Rj8Ez9EAdf4iCG68V
+         G3+2UlsY/oe9D1nkPno4g0KCluY50xM6joki0=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=9LTmnKtjRgO/SheWkWuUb5T0ys/9LH0M1J2Pr+jFc3Q=;
+        b=V8yq8wYf573mNMRakSaiFregnHE3zFuff+0KbqrVL4Y/ZqlxAz871DvWeATi/mOUWE
+         KxjsJ6PIcsG+osT0TLWKaxEE0NSEW7R97g7mv3bS2Zq9k4LQpzTtXy5uhJlNQBaPBBBI
+         jCtGEe0Q3CIdoWfjDoi/FcrUnfAbynTLZwno+da1Sw05fz6lv/+oQ1XCHYCP4Mifo8M7
+         9ks6W5VuqP5yvHowIuCOzWRqOFci61a2EZulg3OmugIZYhohk9kfxlmOYKebJYmC/ueP
+         p0KIC9lQ2241dNNKS05Qplp+sA85OLaTp3efW97G66itV5Atm/Ye4Dfn0OJp+vnAtnIg
+         FpWA==
+X-Gm-Message-State: ALoCoQmUdh+g5djCeId8MySSdmlgDpxnDSiyH8NiqWUGdB/eKmPAnMQwj6sqcZ7VDUC0xelBaU6M
+MIME-Version: 1.0
+X-Received: by 10.194.202.230 with SMTP id kl6mr2444899wjc.9.1390942066220;
+ Tue, 28 Jan 2014 12:47:46 -0800 (PST)
+Received: by 10.180.37.68 with HTTP; Tue, 28 Jan 2014 12:47:46 -0800 (PST)
+Received: by 10.180.37.68 with HTTP; Tue, 28 Jan 2014 12:47:46 -0800 (PST)
+In-Reply-To: <CALy+7Umo3prtGVWo5Rjm1ANOrcqDj-jXOnZFyyME1AHJpQod1Q@mail.gmail.com>
+References: <CABSFZHCGMbteC-cJY0JAFD3Hin7fCsRa_M7v_zcX153sBkrpGg@mail.gmail.com>
+	<CALy+7U=G+VZtwhUYub8KdfLNQ_j7Aru=zD-SjFQ+qYbnDbF3og@mail.gmail.com>
+	<CABSFZHDCgg078LqwVi9y-fkTz3Hcs+17SF5HADPM79=RLPYuaQ@mail.gmail.com>
+	<CALy+7Umo3prtGVWo5Rjm1ANOrcqDj-jXOnZFyyME1AHJpQod1Q@mail.gmail.com>
+Date: Tue, 28 Jan 2014 21:47:46 +0100
+Message-ID: <CABSFZHBh4595+O+T+vNM-A6E688ktBo1uNh8-fuzq1t6CHty+w@mail.gmail.com>
+Subject: Re: Maven 3.1.1. and Windows 8
+From: Manuel Mastrofini <manuel.mastrofini@infoone.it>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b873a10c2b88504f10defed
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b873a10c2b88504f10defed
+Content-Type: text/plain; charset=ISO-8859-1
+
+I guest means that my os is in a different language, but most likely the
+error is the same.
+
+Java command works, mvn triggers the Windows error, also via console. It
+looks to me like a  compatibility issue.
+ Il 28/gen/2014 21:13 "Wayne Fay" <waynefay@gmail.com> ha scritto:
+
+> > I'm not that "experienced" with Maven, but I just tried to run the .bat
+> > file (both via console and via double-click) and it didn't work.
+> > I have just moved to Win 8.1 and I have already configured the
+> environment
+> > variables correctly (I guess).
+>
+> What does "I guess" mean? Go to a new command line window and type
+> "set" - you should see the variables listed there. (It must be new -
+> once you set variables, already-opened windows do not get the
+> variables, only new windows.)
+>
+> > The error I get is something like this
+> http://i.stack.imgur.com/q4LZ9.png
+>
+> Is your error message "exactly like" this one or just "something like"
+> this one? I would expect it to run with no issues from command line
+> (not just double-clicking the .bat file).
+>
+> What happens from command line when you type "java -version"?
+> What happens when you type "mvn.bat"?
+>
+> I have zero experience with Win 8.1 Pro. Most likely you need to find
+> local IT resources to help resolve your issues, but we'll try to
+> support you here as well.
+>
+> Wayne
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7b873a10c2b88504f10defed--
+

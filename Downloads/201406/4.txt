@@ -1,0 +1,62 @@
+From users-return-136615-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jun 20 11:56:48 2014
+Return-Path: <users-return-136615-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2713C111DC
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 20 Jun 2014 11:56:48 +0000 (UTC)
+Received: (qmail 48122 invoked by uid 500); 20 Jun 2014 11:56:46 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 48041 invoked by uid 500); 20 Jun 2014 11:56:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 47970 invoked by uid 99); 20 Jun 2014 11:56:46 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 20 Jun 2014 11:56:46 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bimargulies@gmail.com designates 209.85.214.178 as permitted sender)
+Received: from [209.85.214.178] (HELO mail-ob0-f178.google.com) (209.85.214.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 20 Jun 2014 11:56:41 +0000
+Received: by mail-ob0-f178.google.com with SMTP id wn1so929958obc.23
+        for <users@maven.apache.org>; Fri, 20 Jun 2014 04:56:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=HMJvKenjyN+C9atdSuqwB05xCNtAR/7WwF8YzqLQRD4=;
+        b=gZE+/+vaFf4rYZMCvJbK9FhUFuLcqundmveLydqf/t6eUtKWpS6kjcQ/wCCyedK2C9
+         6E+iAYuWyBDV592O9IUZLQh2EbX8pDPDHSnFwZ3fosvJSk+6sABxeahsfnB4GXqHxmhs
+         JSxN6Qx1mF5Ud201agcWWQ8yZc+aafI2xoZN171Z2nDQKX3LZk/YQd7UT9LNx24/foXg
+         YG3s+4x0S9AxJgJQlMIXwAVCWdaoX6WqKYKFTa4K3p0nGMhWv7zKEeTgfmQL23n71gbC
+         z/vHGbKcLYQYiQbGV/rbSdtmxivf1SQHVP1+6XkT1r01Tva+Xchm4CqJGKNm5G5PacIu
+         1XbA==
+MIME-Version: 1.0
+X-Received: by 10.60.73.97 with SMTP id k1mr2780981oev.54.1403265380601; Fri,
+ 20 Jun 2014 04:56:20 -0700 (PDT)
+Received: by 10.202.69.198 with HTTP; Fri, 20 Jun 2014 04:56:20 -0700 (PDT)
+Date: Fri, 20 Jun 2014 07:56:20 -0400
+Message-ID: <CALhtWkd7c8ZZ_BjJDB27WJwn9tn2boOuw4T4zC22HkdTK8oOzw@mail.gmail.com>
+Subject: Finer control of surefire method parallelism?
+From: Benson Margulies <bimargulies@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I've got some tests that are validating the usage messages of main
+methods. To do this, they go and call System.setOut. Running two of
+these in parallel is, of course, a disaster.
+
+Is there any way to exempt a class from the parallel option?
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,311 @@
+From users-return-135227-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 21 10:18:37 2014
+Return-Path: <users-return-135227-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E628210AA3
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 21 Jan 2014 10:18:37 +0000 (UTC)
+Received: (qmail 73963 invoked by uid 500); 21 Jan 2014 10:18:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 73693 invoked by uid 500); 21 Jan 2014 10:18:22 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 73509 invoked by uid 99); 21 Jan 2014 10:18:21 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 21 Jan 2014 10:18:21 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.220.54 as permitted sender)
+Received: from [209.85.220.54] (HELO mail-pa0-f54.google.com) (209.85.220.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 21 Jan 2014 10:18:14 +0000
+Received: by mail-pa0-f54.google.com with SMTP id fa1so8224436pad.13
+        for <users@maven.apache.org>; Tue, 21 Jan 2014 02:17:53 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=KTqhKci80KGfBGHhYmeK5v9NKuzwoWlbr7BKOfEsg48=;
+        b=oJ6+tzM0n3v8pFofrF5ZV6ZpHKaEmn5BRZF0CEkVI60nSzU7p6cYJmuc0yYLZWWzz+
+         0PNFQWWDX5DEKhBiQ4FjGp98ZLSdx1k8FP7Bg57vT+gYjYpc8cunHjsHqMfXtu4jqkpO
+         DS3ckR0ZzxzKRJH+RhvolAjvFFiJng+1Sredkn4vUMCk5MX101qOsYQH3Guk4YBaAcPE
+         ItN/aMO0js+F456+0mgTDqxjw/3fgB850NrX/is4qrXvC8ieg5n6VmWjnuL3/k2ay+bd
+         ulyuyNeSy8SKOWfbPRVAioY/D0bKporBaVctYaR2Lyz/tIswjfGpBmzkTyyQjyJCtO4g
+         lPWg==
+MIME-Version: 1.0
+X-Received: by 10.66.154.169 with SMTP id vp9mr23500629pab.39.1390299472894;
+ Tue, 21 Jan 2014 02:17:52 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Tue, 21 Jan 2014 02:17:52 -0800 (PST)
+In-Reply-To: <5629A6219DB3E544AB84388D901497873EB5D13B@xmb-aln-x03.cisco.com>
+References: <OF32F0CB51.FB5A4FA2-ON85257C66.005B8339-85257C66.005D4B8C@belden.com>
+	<CA+nPnMz4afCMHpDL_dW2w7KW_F2ozV0=FG+UK2Op0QrzaLJ-7Q@mail.gmail.com>
+	<OF3C618DF9.E418F54A-ON85257C66.0064E4F4-85257C66.006600FF@belden.com>
+	<CA+nPnMzUpoNuR89F1B49tF_3THdMKHuZttyVRYE9jtJpPXNsUA@mail.gmail.com>
+	<OFBB509497.B89B2788-ON85257C66.00679F9D-85257C66.0068978D@belden.com>
+	<CA+nPnMyvOWHVyZWTZY_PZsEHSVSc1fGRVEz3b15d6GU7eitXww@mail.gmail.com>
+	<5629A6219DB3E544AB84388D901497873EB5D13B@xmb-aln-x03.cisco.com>
+Date: Tue, 21 Jan 2014 10:17:52 +0000
+Message-ID: <CA+nPnMyyZWnJ7ZvAQx7YqHDQ1vNABBEV7K=2EiB8CYg0k4zGzA@mail.gmail.com>
+Subject: Re: versions maven plugin
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b6dd00836a06804f07852e8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b6dd00836a06804f07852e8
+Content-Type: text/plain; charset=ISO-8859-1
+
+On 21 January 2014 09:41, James Nord (jnord) <jnord@cisco.com> wrote:
+
+> I wouldn't have normally chimed in here against Stephen (He knows what he
+> is on about) however...
+>
+> IMHO Staging only works with very small teams with dedicated
+> infrastructure (in which case QC generally are ok with a rebuild!).
+> If you have larger teams and share infrastructure (repo manager, CI)
+> across projects (and binaries across teams) then that way will lead to
+> madness.
+>
+> Or to put it another way Staging with any human intervention is evil.
+> Staging without human intervention is doing things too late - you should
+> know before hand that your code is good to go (if you use releases) - and
+> if you are doing things without human intervention then you should know up
+> front that the code is good to go - which means you don't need staging
+> (apart form for an atomic deployment of a multi module build; but there are
+> other ways to do that now).
+>
+> Or to put a contrived (yet realistic) example on this -
+> Consider a shared library Y.  You have no auto testing of it so its only
+> tested inside products (otherwise you know its good to go - and wouldn't
+> release RCs).
+> Library Y is in a stage at version 1.2.3
+> This library is picked up from the stage and placed into a product Z
+> (inside say an RPM)
+>
+
+If you are doing this then you are using staging wrong IMHO. A stage should
+*only* be used for either testing the staged release *or* for where there
+is a synchronized deliverable that must be built from a different machine,
+e.g. the windows .DLL and the linux .so's
+
+The case of Z may be OK as Z may be an arch specific component... but you
+are calling it a product, so if it is a product then you should have closed
+and released the library Y stage *before* you consume from Z
+
+Z is released into a stage
+> The library is picked up in product X (inside say another RPM)
+> QC start testing Z.
+> QC test X and it reveals a bug in Y.  Both stages (Y and X) are dropped
+> QC finish testing Z from the stage and then promote it as its good.
+> The Y developers re-spin 1.2.3...
+>
+
+Well the issue here is that you should only stage the last layer. In this
+example Y cannot be tested on its own, so there is no point spinning RCs,
+etc. You just have to bite the bullet and cut a release. It doesn't matter
+whether you call the release 1.5-RC-1 or 1.5.0 because if you need to
+respin, you'll be bumping another version anyway.
+
+Where staging matters is at the last, publically visible, layer... i.e. Z.
+
+You use staging for Z and just spin version numbers and releases for
+everything else.
+
+If Y and Z are in the same release root... then they both get staged. If
+they are in separate release roots, then Y just bangs out releases and Z
+has staging.
+
+More complex is when both Y and Z are public... i.e. Y is the API client
+that Z uses... well in that case how is a broken 1.5-RC-1 being out there
+any different from a broken 1.5.0... the solution is obvious... you need
+tests that you can trust... get those tests and then apply staging on Y
+
+>
+> Z is released into the field with a verison of Y that doesn't match what's
+> at some point going to be in the repo.
+> The build Z is unreproducible - this is the worst possible situation to be
+> in,
+>
+> Now there are those that say - your staging rules on your MRM should check
+> the dependencies - but now you are at the behest of your MRM.
+> Nexus certainly can't do this without custom effort on your side - and
+> then you will have to intimately have full knowledge of the inside of the
+> build that produced this artifact - what groups on your MRM use, what
+> version of maven.. You can't just unpack and look at the use the
+> dependencies - what about shaded deps.  To do all this work post build is
+> IMHO nigh on impossible.
+>
+>
+> /James
+>
+> > -----Original Message-----
+> > From: Stephen Connolly [mailto:stephen.alan.connolly@gmail.com]
+> > Sent: 20 January 2014 19:40
+> > To: Maven Users List
+> > Subject: Re: versions maven plugin
+> >
+> > Consider staging support on your repo manager
+> >
+> > On Monday, 20 January 2014, <Alejandro.Endo@miranda.com> wrote:
+> >
+> > > I didn't. QA is not happy about rebuilding the system once it's been
+> > > approved so we have to release the RC as approved.
+> > >
+> > > So all our versions are always RC-X-SNAPSHOT or RC-X
+> > >
+> > > Alejandro Endo | Software Designer/Concepteur de logiciels
+> > >
+> > >
+> > >
+> > >
+> > > From:   Stephen Connolly <stephen.alan.connolly@gmail.com
+> > <javascript:;>>
+> > > To:     Maven Users List <users@maven.apache.org <javascript:;>>,
+> > > Date:   2014-01-20 13:50
+> > > Subject:        Re: versions maven plugin
+> > >
+> > >
+> > >
+> > > How did you turn your RC into a released version? (I would do it with
+> > > the release plugin and just verify the SCM changelog is unchanged)
+> > >
+> > > On Monday, 20 January 2014, <Alejandro.Endo@miranda.com
+> > > <javascript:;>>
+> > > wrote:
+> > >
+> > > > Thank you Stephen. Are there any other ways to stabilize my
+> > > > dependencies then?
+> > > >
+> > > > i have > 300 poms all depending on the released+1 development
+> version.
+> > > > This must be a common use-case when using RCs, no? you increase all
+> > > > your versions to your next RC-2-SNAPSHOT as soon as you create your
+> > > > RC-1, but if that RC-1 happens to be released, then all your poms
+> > > > will be
+> > > depending
+> > > > on the SNAPSHOT of an RC-2 that will never be made so you have to
+> > > > "downgrade" your dependency versions
+> > > >
+> > > > Am I doing something out of the ordinary here?
+> > > >
+> > > >
+> > > >
+> > > >
+> > > > Alejandro Endo | Software Designer/Concepteur de logiciels
+> > > >
+> > > >
+> > > >
+> > > > From:   Stephen Connolly <stephen.alan.connolly@gmail.com
+> > <javascript:;><javascript:
+> > > ;>>
+> > > > To:     Maven Users List <users@maven.apache.org
+> > <javascript:;><javascript:;>>,
+> > > > Date:   2014-01-20 12:34
+> > > > Subject:        Re: versions maven plugin
+> > > >
+> > > >
+> > > >
+> > > > v-m-p does not roll back version numbers
+> > > >
+> > > >
+> > > > On 20 January 2014 16:59, <Alejandro.Endo@miranda.com
+> > > > <javascript:;><javascript:;>>
+> > > > wrote:
+> > > >
+> > > > > Not sure if this is the right list for codehaus plugins. If not I
+> > > > > apologize
+> > > > >
+> > > > > I have a pom with this
+> > > > >
+> > > > >         <dependencies>
+> > > > >                 <dependency>
+> > > > >                         <groupId>foo.blah</groupId>
+> > > > >                         <artifactId>bar</artifactId>
+> > > > >                         <version>1.2.0-RC-7-SNAPSHOT</version>
+> > > > >                 </dependency>
+> > > > >         </dependencies>
+> > > > >
+> > > > > I want to run the versions plugin to replace 1.2.0-RC-7-SNAPSHOT
+> > > > > with
+> > > > the
+> > > > > version we actually released of the code, which is 1.2.0-RC-6.
+> > > > > Looking
+> > > > at
+> > > > > the available mojos, it seems like versions:use-latest-releases is
+> > > > > the right one to use. In the matrix here it says that this goal
+> > > > > will
+> > > modify
+> > > > > -SNAPSHOT dependencies. Well, it doesn't. If i instead set the
+> > > > > version
+> > > > to
+> > > > > 1.2.0-RC-3 (no snapshot), the mojo does update the dependency to
+> > > > > 1.2.0-RC-6 so I don't know if this is just the documentation being
+> > > > wrong.
+> > > > > I also tried use-latest-versions without success
+> > > > >
+> > > > > Any idea how to do this? I just want to change the dependencies
+> > > > > (which
+> > > > are
+> > > > > currently SNAPSHOT due to the m-release-p) to the latest released
+> > > > versions
+> > > > >
+> > > > > Thank you,
+> > > > > Alejandro Endo | Software Designer/Concepteur de logiciels
+> > > > >
+> > > > > DISCLAIMER:
+> > > > > Privileged and/or Confidential information may be contained in
+> > > > > this message. If you are not the addressee of this message, you
+> > > > > may not copy, use or deliver this message to anyone. In such
+> > > > > event, you should destroy the message and kindly notify the sender
+> > > > > by reply e-mail. It is understood that opinions or conclusions
+> > > > > that do not relate to the official business of the company are
+> > > > > neither given nor endorsed by the company.
+> > > > > Thank You.
+> > > > >
+> > > >
+> > > >
+> > > > DISCLAIMER:
+> > > > Privileged and/or Confidential information may be contained in this
+> > > > message. If you are not the addressee of this message, you may not
+> > > > copy, use or deliver this message to anyone. In such event, you
+> > > > should destroy the message and kindly notify the sender by reply
+> > > > e-mail. It is understood that opinions or conclusions that do not
+> > > > relate to the official business of the company are neither given nor
+> > > > endorsed by the company.
+> > > > Thank You.
+> > > >
+> > >
+> > >
+> > > --
+> > > Sent from my phone
+> > >
+> > >
+> > > DISCLAIMER:
+> > > Privileged and/or Confidential information may be contained in this
+> > > message. If you are not the addressee of this message, you may not
+> > > copy, use or deliver this message to anyone. In such event, you should
+> > > destroy the message and kindly notify the sender by reply e-mail. It
+> > > is understood that opinions or conclusions that do not relate to the
+> > > official business of the company are neither given nor endorsed by the
+> > > company.
+> > > Thank You.
+> > >
+> >
+> >
+> > --
+> > Sent from my phone
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7b6dd00836a06804f07852e8--
+

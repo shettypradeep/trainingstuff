@@ -1,0 +1,96 @@
+From users-return-135112-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 14 00:20:17 2014
+Return-Path: <users-return-135112-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A159A1031E
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 14 Jan 2014 00:20:17 +0000 (UTC)
+Received: (qmail 13918 invoked by uid 500); 14 Jan 2014 00:20:08 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 13612 invoked by uid 500); 14 Jan 2014 00:20:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 13048 invoked by uid 99); 14 Jan 2014 00:20:05 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 00:20:05 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.212.175] (HELO mail-wi0-f175.google.com) (209.85.212.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Jan 2014 00:20:00 +0000
+Received: by mail-wi0-f175.google.com with SMTP id hr1so36988wib.14
+        for <users@maven.apache.org>; Mon, 13 Jan 2014 16:19:39 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type;
+        bh=+cVM9VPDQXTB/w+hAznvLSk8fwNfLLi3BtcaEonsupQ=;
+        b=eLYrcHBwe5wCMmV27v8/KyYonPZ0Z8jcZgn9we0dwdiAWRsfO+e3NJp5eWiPUA5YJf
+         RdRu8ux3PSZYV/F+bF8i4tVNhlvqSGUB0tjruM/FNeZmOKT3TRula+pr7HE0di+2sfVe
+         jHWmpkmTHAYtp85Jy8jD9dKRztLB8NebBbx4rc+KXGTBrsSb99YpZFcEvCikNeD9Wkw7
+         csK9BeL5Z2zO9M1esD3h7Y2k8lLzCb1nv1539GPz4xSHwHTYb/8q1REfnRUa+z8+1Sa8
+         lZazQZD9nsdgK8y7ndW7y8mgZdBlLhJejv4kld2AtCaIdl2sX3NAD6JRobMM8sm6clZB
+         WITg==
+X-Gm-Message-State: ALoCoQmKl8ZA7L2V7c/o8U3cywGVquRpKGl3eeLkMcsN9HX8vU6ijV4owD+u883uBsmd7Jd/v5K/
+MIME-Version: 1.0
+X-Received: by 10.180.39.43 with SMTP id m11mr17402717wik.8.1389658779446;
+ Mon, 13 Jan 2014 16:19:39 -0800 (PST)
+Received: by 10.180.7.106 with HTTP; Mon, 13 Jan 2014 16:19:39 -0800 (PST)
+In-Reply-To: <CAKDUN1uO9_c_s=4d3XuVz61GP2hLrTuuNxXCQB6nM6KVSx0b+g@mail.gmail.com>
+References: <CAG54imb9m34Q4VsyMoGdp2t4fcPMEfxR-1zpcU6kNWF+vsXwoA@mail.gmail.com>
+	<CAKDUN1uO9_c_s=4d3XuVz61GP2hLrTuuNxXCQB6nM6KVSx0b+g@mail.gmail.com>
+Date: Mon, 13 Jan 2014 19:19:39 -0500
+Message-ID: <CAG54imb_BZ4NBxmJmFqcTsZQuj4+O8D6=JfqzygjAsYyTYkEfQ@mail.gmail.com>
+Subject: Re: Running cleanup code after tests in multi-module project.
+From: Todd Chapman <todd@chaka.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1134cdd8e8832e04efe325cf
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1134cdd8e8832e04efe325cf
+Content-Type: text/plain; charset=UTF-8
+
+Anders,
+
+I agree with you. Unfortunately I inherited this project and there is setup
+required that is identical for each module and is expensive to set up and
+tear down. It will take time to refactor the tests to be less expensive to
+prepare.
+
+In the mean time I'm looking for ways to deal with situation I have now.
+
+Thanks!
+
+-Todd
+
+
+On Mon, Jan 13, 2014 at 2:48 PM, Anders Hammar <anders@hammar.net> wrote:
+
+> IMO each Maven project should be independent, even test projects. So there
+> should be cleanup code in each module.
+>
+>
+> On Fri, Jan 10, 2014 at 10:59 PM, Todd Chapman <todd@chaka.net> wrote:
+>
+> > What is the best way to run cleanup code after testing a multi-module
+> > project?
+> >
+> > Basically, post-integration-test for the entire reactor. Is the best way
+> to
+> > create another module that is last to run in the reactor order?
+> >
+> > Thanks!
+> >
+> > -Todd
+> >
+>
+
+--001a1134cdd8e8832e04efe325cf--
+

@@ -1,0 +1,281 @@
+From users-return-136023-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Mar 30 14:05:30 2014
+Return-Path: <users-return-136023-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EEF811119F
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 30 Mar 2014 14:05:29 +0000 (UTC)
+Received: (qmail 15727 invoked by uid 500); 30 Mar 2014 14:05:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 15086 invoked by uid 500); 30 Mar 2014 14:05:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 15078 invoked by uid 99); 30 Mar 2014 14:05:21 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 30 Mar 2014 14:05:21 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ctrueden.wisc@gmail.com designates 209.85.214.172 as permitted sender)
+Received: from [209.85.214.172] (HELO mail-ob0-f172.google.com) (209.85.214.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 30 Mar 2014 14:05:16 +0000
+Received: by mail-ob0-f172.google.com with SMTP id wm4so8036902obc.17
+        for <users@maven.apache.org>; Sun, 30 Mar 2014 07:04:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=VdDibsGMEJQvN1brtGCSAkmTvAiL+ozLsqDOZ31UpgQ=;
+        b=QGiSBqTZ4NBv/VgJtGT17NzRqINWRRjbs8ULF6sBt08y/L2kkwXr8WQraL5SPNZcKk
+         AB4j13ptuoMVdEQ4anissLQuMMv33Tf/3fEpTt8RoI5SWbrIJ9VkFgGXGTNjuiUvRkmL
+         KRoOs8yeRoVoRlB7RB/RzynnU/Yrwl0vM70FUie1/OMQR7xqR6+0B3px6NKpI7pxomP/
+         CNerKDBWRebrXtdmeDnwm1SXc9OqjkCVVZotvS3pkKTgdNroIh7FCeB1cTBcx9x62AQ+
+         piNhUKdJpY7HBEepSDMqxAD3aVu1zpbIcWAAYytp1vB71yL3pyr9rLOI39qqHlh2tyIA
+         gkcQ==
+X-Received: by 10.60.227.39 with SMTP id rx7mr451357oec.52.1396188296057; Sun,
+ 30 Mar 2014 07:04:56 -0700 (PDT)
+MIME-Version: 1.0
+Sender: ctrueden.wisc@gmail.com
+Received: by 10.60.119.98 with HTTP; Sun, 30 Mar 2014 07:04:25 -0700 (PDT)
+In-Reply-To: <B8BD72DC-4BA8-4519-9860-72BBE04A2E02@Kriegisch.name>
+References: <53358021.6010103@Kriegisch.name> <CAK8jvqxy+wdkOwz89T=p7oMVUn-q1WhNt7GRTqU0ZZ=Z1nqp7w@mail.gmail.com>
+ <CANWgJS4GjG5UqVxDM+k4ayLgN05er0CxX1mw8QcNzfKT=NgE9Q@mail.gmail.com>
+ <20140329103503.3472511C0FD1@dd12814.kasserver.com> <B8BD72DC-4BA8-4519-9860-72BBE04A2E02@Kriegisch.name>
+From: Curtis Rueden <ctrueden@wisc.edu>
+Date: Sun, 30 Mar 2014 09:04:25 -0500
+X-Google-Sender-Auth: u0RDK8tzc9atkY2l0QxpU7somXI
+Message-ID: <CADN69ym4CoU1F8R8Dx=4nqa9P8E0DwUkqVEgtuxhr+f_ePAAuA@mail.gmail.com>
+Subject: Re: Overriding dependency scope
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1136b8066d18de04f5d36b26
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1136b8066d18de04f5d36b26
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hi Alexander,
+
+> One new sub-module now actually also needs groovy-all, but with a
+> compile scope.
+
+There are a few different ways to solve this. Personally I have not had
+good luck trying to alter the scope of a dependency downstream (as Mirko
+suggested might be possible). But of course, one simple and hacky way is to
+change the groovy-all dependency to compile at the root, and then it will
+be available to everything.
+
+Another less hacky possibility would be, as Baptiste suggests, to introduce
+another layer of inheritance, although I would do it as follows:
+
+toplevel
+|-- intermediate-with-test-deps-declared
+   |-- x1
+   |-- x2
+   ...
+   |- xM
+|-- intermediate-with-groovy-all-at-compile-scope
+   |- y1
+   |- y2
+   ...
+   |- yN
+
+Where "x" modules need the groovy-all etc. deps at test scope, and "y"
+modules need groovy-all etc. at compile scope.
+
+In this way, you do not ever need to "override" a dependency scope from one
+level to another level.
+
+Alternately, if you only have a single module that needs groovy-all at
+compile scope, it could just extend the toplevel parent directly instead of
+introducing the "intermediate-with-groovy-all-at-compile-scope" layer. But
+you might find that layer handy later as soon as a second such module comes
+into existence.
+
+A third possibility which might be more elegant in your situation, and
+closer to the infamous "Maven way", is called "import" scope; see:
+http://maven.apache.org/guides/introduction/introduction-to-dependency-mech=
+anism.html#Importing_Dependencies
+
+Regards,
+Curtis
+
+
+On Sun, Mar 30, 2014 at 1:19 AM, Alexander Kriegisch <
+Alexander@kriegisch.name> wrote:
+
+> FYI, this idea did not work. I still need help.
+>
+> Maybe defining a BOM is the way to go, but I would prefer to keep
+> everything in one repo and one project.
+> --
+> Alexander Kriegisch
+>
+>
+> > Am 29.03.2014 um 11:35 schrieb "Alexander Kriegisch" <
+> alexander@kriegisch.name>:
+> >
+> > Baptiste, Mirko,
+> >
+> > thanks for your answers. I was unable to override the scope in a
+> depending POM, I tried several approaches, e.g. redefining
+> "dependencyManagement" in the child POM - to no avail. I have heard about
+> the rule/idiom "dependency mgmt overrides dependency scope" before, but I
+> have not found a comprehensive (i.e. understandable) explanation with
+> concrete examples anywhere.
+> >
+> > Baptiste, how and why would an intermediate POM help me solve this
+> problem? I think it is rather funny to define an intermediate POM for jus=
+t
+> one module needing it. If you could give me an example that would be grea=
+t,
+> maybe then I understand better. My guess is you mean something like this:
+> >
+> >
+> > Parent POM:
+> > ...
+> > <dependencyManagement><dependencies>
+> >  <dependency>
+> >    <groupId>org.codehaus.groovy</groupId>
+> >    <artifactId>groovy-all</artifactId>
+> >    <version>${groovy-all.version}</version>
+> >    <scope>test</scope>
+> >  </dependency>
+> > </dependencies></dependencyManagement>
+> > ...
+> > <dependencies>
+> >  <dependency>
+> >    <groupId>org.codehaus.groovy</groupId>
+> >    <artifactId>groovy-all</artifactId>
+> >  </dependency>
+> > </dependencies>
+> >
+> >
+> > Intermediate POM:
+> > ...
+> > <parent>[my parent POM]</parent>
+> > ...
+> > <dependencyManagement><dependencies>
+> >  <dependency>
+> >    <groupId>org.codehaus.groovy</groupId>
+> >    <artifactId>groovy-all</artifactId>
+> >    <version>${groovy-all.version}</version>
+> >    <scope>compile</scope>
+> >  </dependency>
+> > </dependencies></dependencyManagement>
+> >
+> >
+> > Child POM for module which needs groovy-all during runtime:
+> > ...
+> > <parent>[my intermediate POM]</parent>
+> > ...
+> > <dependencies>
+> >  <dependency>
+> >    <groupId>org.codehaus.groovy</groupId>
+> >    <artifactId>groovy-all</artifactId>
+> >  </dependency>
+> > </dependencies>
+> >
+> >
+> > Is that what you mean? Have you tested it? Does it really work? Please
+> correct my (untested, I am on the road) sketch if it is wrong.
+> >
+> >
+> > Baptiste Mathus schrieb am 28.03.2014 17:45:
+> >
+> >> IIUC, you have a unique parent pom (likely a "corporate pom"), let's c=
+an
+> >> him P. P says scope is test for groovy-all.
+> >>
+> >> You have modules m1, m2... who all inherits P.
+> >>
+> >> In some module mN, you need groovy-all with scope compile.
+> >>
+> >> But m1 actually depends on mN and will crash since the dependency onto
+> >> groovy-all isn't retrieved?
+> >>
+> >> If so, then this is expected. Dependency mgmt overrides the dependenci=
+es
+> >> scope. One possible solution to centralize many redefinitions is to
+> create
+> >> an intermediate parent for those modules where you need groovy-all wit=
+h
+> >> scope compile.
+> >> I think that's what Mirko was proposing.
+> >>
+> >> Does that help?
+> >>
+> >>
+> >> Le 28 mars 2014 15:08, "Mirko Friedenhagen" <mfriedenhagen@gmail.com> =
+a
+> >> =E9crit :
+> >>
+> >>> AFAIK you may override the scope in the inheriting poms. If I remembe=
+r
+> >>> correctly I did this with junit as I needed it for an selenium test
+> >>> project, where I had put base tests beneath src/main (to recite
+> Brecht: oh,
+> >>> don't ask why).
+> >>>
+> >>>
+> >>> On Mar 28, 2014 2:59 PM, "Alexander Kriegisch" <
+> Alexander@kriegisch.name>
+> >>> wrote:
+> >>>
+> >>>> I have a situation as follows:
+> >>>>
+> >>>>  - Multi-module project (~30 modules)
+> >>>>
+> >>>>  - Certain test dependencies (e.g. groovy-all) needed by nearly all
+> >>>>    sub-modules are declared directly with test scope in the parent P=
+OM
+> >>>>    (not just dependencyManagement, but also dependency). I know this
+> is
+> >>>>    considered to be bad practice but it saves a lot of redundant
+> >>>>    dependency duplication.
+> >>>>
+> >>>>  - One new sub-module now actually also needs groovy-all, but with a
+> >>>>    compile scope. So my wish (although seemingly unsupported by Mave=
+n)
+> >>>>    is to override the default scope for this sub-module so as for th=
+e
+> >>>>    dependency to be actually available during runtime.
+> >>>>
+> >>>> How can I do this or work around the need to duplicate my test
+> >>>> dependencies in 30 modules just so as to be able to define the scope
+> for
+> >>>> the new module? AFAIK a POM can only inherit from one POM. But can I
+> >>>> somehow use an "included POM" in my 30 modules in order to be able t=
+o
+> >>>> centrally manage the test dependencies? Sorry if I am explaining thi=
+s
+> >>>> wrong or using incorrect erms, but I am by no means a Maven pro.
+> >>>> Hopefully I was at least able to make my intent clear. I am looking
+> for
+> >>>> good advice beyond lecturing about how I should really, really decla=
+re
+> >>>> everything 30 times in order to do it the Maven way. I am looking fo=
+r
+> >>>> alternatives, am willing to learn and hoping to get constructive
+> answers.
+> >>>>
+> >>>> Thanks you all in advance
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a1136b8066d18de04f5d36b26--
+

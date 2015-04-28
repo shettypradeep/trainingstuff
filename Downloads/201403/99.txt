@@ -1,0 +1,98 @@
+From users-return-135735-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Mar  9 00:35:51 2014
+Return-Path: <users-return-135735-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 92F3C10B58
+	for <apmail-maven-users-archive@www.apache.org>; Sun,  9 Mar 2014 00:35:51 +0000 (UTC)
+Received: (qmail 97305 invoked by uid 500); 9 Mar 2014 00:35:46 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 97227 invoked by uid 500); 9 Mar 2014 00:35:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 97218 invoked by uid 99); 9 Mar 2014 00:35:46 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 09 Mar 2014 00:35:46 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of davek1802@gmail.com designates 209.85.217.170 as permitted sender)
+Received: from [209.85.217.170] (HELO mail-lb0-f170.google.com) (209.85.217.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 09 Mar 2014 00:35:40 +0000
+Received: by mail-lb0-f170.google.com with SMTP id s7so3759639lbd.15
+        for <users@maven.apache.org>; Sat, 08 Mar 2014 16:35:19 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=oSU9DFyUPtwiR3hSuVzET1yNws3N7AoMuDLbjk+r0ns=;
+        b=u02l6BNBG6TfL3BdG8adBhWDfXFhqxl3vaDqod9uOFALbG5SIE/8aRSWWECsolpoB3
+         zb6VzF2J+ZvagLj4tY8o4zZwdwnC3Xr34GPG40addLaqx5ebOrb1y329GElUX9n8iAnq
+         XFTjp9UwHLI1f0upMcmNutUJ27i0BZWzNKYWcajexDeLPyh8TbtlSBUmxbmt3w+aKUdz
+         R6sWMqdEWxRaD2b28jRwX45FXmuue0rkDPaI7ryAObFeblnEA/RNuEHmeV40lQUdA3Zu
+         0tdxEsKcoct/YzAMJTcJmN5fFtMyFflDzkNKg6CvtP+Y0/ihzzR09Ef64SbSEePYW4WX
+         lNfA==
+MIME-Version: 1.0
+X-Received: by 10.112.22.196 with SMTP id g4mr54026lbf.47.1394325319585; Sat,
+ 08 Mar 2014 16:35:19 -0800 (PST)
+Received: by 10.112.132.5 with HTTP; Sat, 8 Mar 2014 16:35:19 -0800 (PST)
+In-Reply-To: <CALy+7Um8izWomCCwpmqyVyaoZDJ7JwpyqMa+XqPG6zqhETyrTw@mail.gmail.com>
+References: <CAM0K-0CzKNaJ89zXuHAiEF1a3QYtybyXUjg0HPQrNVRWz-a9jQ@mail.gmail.com>
+	<CALy+7Uk5usRFLhxLhWyCDAOMpGvWSUBVVOg72XNh1ovbc640OA@mail.gmail.com>
+	<CAM0K-0CbT2Bt_NXu5RjaL2cyWC=sR1qjeRghBGJJMvd+HaCKYg@mail.gmail.com>
+	<CALy+7U=V0ReweVzA5Z3keQ390kHSvcH4KHC2asMO5GoRSOXT5Q@mail.gmail.com>
+	<CAM0K-0Bz_Xg=vEx9QsdQR6TWKHDw=RtGupbzNJSD19szcVs9QA@mail.gmail.com>
+	<CAM0K-0BAJDd5CXhUD65wo1gtkRHQNRmnVjpWC0pw7Pp1nqU+JA@mail.gmail.com>
+	<CALy+7Um8izWomCCwpmqyVyaoZDJ7JwpyqMa+XqPG6zqhETyrTw@mail.gmail.com>
+Date: Sat, 8 Mar 2014 16:35:19 -0800
+Message-ID: <CAM0K-0A1E6DHv5evcF5GGYmTfQfhNCv3Weop2ksaieeMHvaSww@mail.gmail.com>
+Subject: Re: Netbeans 7.4 maven POM for com.oracle:ojdbc6:jar:11.2.0.1 is invalid
+From: Dave Kennedy <davek1802@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=14dae9473ba36013ad04f421a958
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--14dae9473ba36013ad04f421a958
+Content-Type: text/plain; charset=ISO-8859-1
+
+The database and pom are on a remote server,
+and the downloaded POM is not valid: 'modelVersion' is missing.
+
+I don't have control over the server so I cannot change the POM.
+Is there a way to have maven ignore the modelVersion is missing error?
+
+<project>
+    <groupId>com.oracle</groupId>
+    <artifactId>ojdbc6</artifactId>
+    <version>11.2.0.1</version>
+</project>
+
+Downloading:
+http://newco.com/mvn_repository/com/oracle/ojdbc6/11.2.0.1/ojdbc6-11.2.0.1.pom
+Checksum validation failed, no checksums available from the repository for
+http://newco.com/mvn_repository/com/oracle/ojdbc6/11.2.0.1/ojdbc6-11.2.0.1.pom
+
+Downloaded:
+http://newco.com/mvn_repository/com/oracle/ojdbc6/11.2.0.1/ojdbc6-11.2.0.1.pom(114
+B at 0.2 KB/sec)
+Writing resolution tracking file
+.m2\repository\com\oracle\ojdbc6\11.2.0.1\ojdbc6-11.2.0.1.pom.lastUpdated
+Writing resolution tracking file
+.m2\repository\com\oracle\ojdbc6\11.2.0.1\_maven.repositories
+The POM for com.oracle:ojdbc6:jar:11.2.0.1 is invalid, transitive
+dependencies (if any) will not be available: 1 problem was encountered
+while building the effective model for com.oracle:ojdbc6:11.2.0.1
+'modelVersion' is missing.
+
+. . .
+Internal Exception: java.sql.SQLException: No suitable driver found for
+oracle:thin:@newco.com:1521:dbname
+
+--14dae9473ba36013ad04f421a958--
+

@@ -1,0 +1,114 @@
+From users-return-135454-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 13 13:52:03 2014
+Return-Path: <users-return-135454-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EB9C71055E
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 13 Feb 2014 13:52:03 +0000 (UTC)
+Received: (qmail 24267 invoked by uid 500); 13 Feb 2014 13:51:56 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 24161 invoked by uid 500); 13 Feb 2014 13:51:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 24142 invoked by uid 99); 13 Feb 2014 13:51:54 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 13:51:54 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of anders.g.hammar@gmail.com designates 209.85.212.171 as permitted sender)
+Received: from [209.85.212.171] (HELO mail-wi0-f171.google.com) (209.85.212.171)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 13:51:50 +0000
+Received: by mail-wi0-f171.google.com with SMTP id cc10so8607642wib.16
+        for <users@maven.apache.org>; Thu, 13 Feb 2014 05:51:29 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=kci9WO8Vi3SAwnF90CeZhwxUmsuom8ZULyFhFuFsNDI=;
+        b=NtMCFeIc1SNViVf5tUMBidKKcPnta3rcpPIWQ1IiQOsLDO4yWQFn03998r9tqV90n9
+         VqO04beUNgoexhHE/yvGC/yuOMILMd0mx1SBYCfEOboyaWTsxXQSxBP9JanhdbUHfi0I
+         qYtmUh+oKWNBc67svTI2Ax6ruYwIb8OVJxyEWeOaBHon9hXPTMjL3j+qoznX+LJFZHms
+         gxLSJbQGxuuJnbIlrVqDdDs81lGZc8yTR4Q2fWrONIGS22pykB0RGdpPxJx1f0jLj4/f
+         d9AfWx1RPzcgw2BqKWVENhxITK8jJw3RJyQIE1hRy9tQYKy0BNXAKmsV/MawgzjVvT24
+         1z2A==
+MIME-Version: 1.0
+X-Received: by 10.194.186.204 with SMTP id fm12mr1435681wjc.27.1392299488977;
+ Thu, 13 Feb 2014 05:51:28 -0800 (PST)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.194.137.100 with HTTP; Thu, 13 Feb 2014 05:51:28 -0800 (PST)
+In-Reply-To: <52FCC1A6.8020001@artifact-software.com>
+References: <52FCC1A6.8020001@artifact-software.com>
+Date: Thu, 13 Feb 2014 14:51:28 +0100
+X-Google-Sender-Auth: QTGZ83ziro9FZFlz3tCAukAcDFo
+Message-ID: <CAKDUN1sGDbsKJ45RNNUbxmNS1hB-UmYes4-7DNdzbm7HMP-WDw@mail.gmail.com>
+Subject: Re: Multiple assemblies in a pom
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bb04ba676532504f249fcf5
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bb04ba676532504f249fcf5
+Content-Type: text/plain; charset=ISO-8859-1
+
+You should have multiple execution declarations. Not plugin declarations.
+
+/Anders
+
+
+On Thu, Feb 13, 2014 at 1:59 PM, Ron Wheeler <rwheeler@artifact-software.com
+> wrote:
+
+> I am trying to create 3 tar files in a single project.
+> I have 3 invocations of the  maven-assembly-plugin in the pom.
+> It works but gives the warnings shown below.
+>
+> How likely is it that these dire threats of future problems will come
+> about?
+>
+> What is the Best Practice to fix this?
+>
+> Ron
+>
+>
+> [WARNING] Some problems were encountered while building the effective
+> model for com.artifact_software.taw:taw-webapps-assembler:jar:1.0.2
+> [WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but
+> found duplicate declaration of plugin org.apache.maven.plugins:
+> maven-assembly
+> -plugin @ line 77, column 12
+> [WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but
+> found duplicate declaration of plugin org.apache.maven.plugins:
+> maven-assembly
+> -plugin @ line 89, column 12
+> [WARNING]
+> [WARNING] It is highly recommended to fix these problems because they
+> threaten the stability of your build.
+> [WARNING]
+> [WARNING] For this reason, future Maven versions might no longer support
+> building such malformed projects.
+>
+>
+> --
+> Ron Wheeler
+> President
+> Artifact Software Inc
+> email: rwheeler@artifact-software.com
+> skype: ronaldmwheeler
+> phone: 866-970-2435, ext 102
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7bb04ba676532504f249fcf5--
+

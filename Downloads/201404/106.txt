@@ -1,0 +1,101 @@
+From users-return-136218-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 22 00:19:24 2014
+Return-Path: <users-return-136218-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 960AF1189C
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 22 Apr 2014 00:19:24 +0000 (UTC)
+Received: (qmail 51592 invoked by uid 500); 22 Apr 2014 00:19:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 51288 invoked by uid 500); 22 Apr 2014 00:19:20 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 51094 invoked by uid 99); 22 Apr 2014 00:19:19 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Apr 2014 00:19:19 +0000
+X-ASF-Spam-Status: No, hits=-0.5 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of knarayanan88@gmail.com designates 209.85.223.179 as permitted sender)
+Received: from [209.85.223.179] (HELO mail-ie0-f179.google.com) (209.85.223.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Apr 2014 00:19:14 +0000
+Received: by mail-ie0-f179.google.com with SMTP id lx4so4589127iec.10
+        for <users@maven.apache.org>; Mon, 21 Apr 2014 17:18:51 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=Z4/8fQECHi67uOR6g7TGU3n0Rs2W3N6PzRilq/pEEKg=;
+        b=M1pyfqq/M5LHqiGp0Jdwhgusa5qVa48U6nGoRHduFTis9UselQdf6o8Cc6UYqtanBB
+         Jq2GYnoPfd7cqJshl/JsSqWFRzlvEUx5GEy7HOCaOqBV/qMevZoudAmZRmcOZo2eOthP
+         3t2B5eOYJ/ZBcHfdrxLnRe91K9Q8TFSDtSohGyn/4SC+utgoWrjSvg3HE1AWzrVdSzpv
+         l0Mz688N1WSn+zjO3Og1GSEn2leOf/h8kgj9yAuzz0HX4rtdanPucqFFz9IbWQ7yloeP
+         P3gehYsuxUwnoWkg55tUOYFrdwBbfurd8cqyNtFJAv9V3JkbHGf8O95ZzIheEQ35tlu6
+         tcug==
+MIME-Version: 1.0
+X-Received: by 10.50.47.112 with SMTP id c16mr25448299ign.33.1398125931807;
+ Mon, 21 Apr 2014 17:18:51 -0700 (PDT)
+Received: by 10.50.122.37 with HTTP; Mon, 21 Apr 2014 17:18:51 -0700 (PDT)
+Date: Mon, 21 Apr 2014 17:18:51 -0700
+Message-ID: <CAAqB__v0TwN+kuL-QYeVQczhX3t+mmd58StYJMtaytFx0ZjnQA@mail.gmail.com>
+Subject: Generating war and Jar from same codebase
+From: Narayanan K <knarayanan88@gmail.com>
+To: users@maven.apache.org
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi
+
+We have a default pom file with packaging "war" for our codebase.
+
+>From the same code base we also want to generate a normal jar and a
+fat jar with dependencies.
+
+Currently solution that has been implemented is another pom-jar.xml
+file that has the packaging as jar and maven-assembly-plugin to
+generate the jar with dependencies. We use mvn install -f pom-jar.xml.
+
+But we are in a situation where if any new dependency is added to
+pom.xml, we need to add to pom-jar.xml as well as it is the same
+codebase.
+
+To avoid this we thought of couple of solutions -
+
+1. Add maven-jar-plugin and maven-assembly-plugin to the default pom
+with packaging war - so it generates a war file, a normal jar file and
+fat jar out of the same pom. So we can do away with the pom-jar.xml.
+
+Not sure if this is a good solution. We tried this, but this is
+working well only in maven 3.0.4. The assembly plugin is not working
+well with Maven 2 (which is in our build environment) while generating
+the fat jar.
+
+2. Have a parent pom and put all the dependencies and plugins in that
+and have 2 child poms in the same codebase with different names
+inherit from parent pom, one that has packaging of war that generates
+war file and the other child pom has packaging jar with maven assembly
+plugin to generate both normal and fat jar. And all new dependencies
+need to be added only to parent pom.
+
+This solution will make us have 3 pom files in codebase, doesnt look
+very elegant, but will solve our dependency management issues between
+the 2 packaging.
+
+
+Are these good solutions? Is there any other good solution available
+for this scenario ?
+
+
+Regards
+Narayanan
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

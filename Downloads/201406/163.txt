@@ -1,0 +1,160 @@
+From users-return-136566-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jun 12 18:50:57 2014
+Return-Path: <users-return-136566-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8C81611424
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 12 Jun 2014 18:50:57 +0000 (UTC)
+Received: (qmail 77096 invoked by uid 500); 12 Jun 2014 18:50:55 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 77016 invoked by uid 500); 12 Jun 2014 18:50:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 77006 invoked by uid 99); 12 Jun 2014 18:50:55 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 12 Jun 2014 18:50:55 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 12 Jun 2014 18:50:50 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 51B6B6A657E
+	for <users@maven.apache.org>; Thu, 12 Jun 2014 14:50:27 -0400 (EDT)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id tijzHmbd5lmP for <users@maven.apache.org>;
+	Thu, 12 Jun 2014 14:50:27 -0400 (EDT)
+Received: from [192.168.33.118] (CPE586d8fdf0440-CM001225d75a4e.cpe.net.cable.rogers.com [99.249.114.189])
+	by smtp.artifact-software.com (Postfix) with ESMTP id EF0F66A657D
+	for <users@maven.apache.org>; Thu, 12 Jun 2014 14:50:26 -0400 (EDT)
+Message-ID: <5399F670.90205@artifact-software.com>
+Date: Thu, 12 Jun 2014 14:50:24 -0400
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: "users@maven.apache.org >> Maven Users List" <users@maven.apache.org>
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.5.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Complex Maven projects - Tutorials? Books?
+References: <3B7A7BDFFD286F49A19A5B35D26E08FB0140EA5E@srvmail2.aurenz.local>
+In-Reply-To: <3B7A7BDFFD286F49A19A5B35D26E08FB0140EA5E@srvmail2.aurenz.local>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Good questions.
+I have never heard anything negative about SNAPSHOTs from those who use 
+them.
+
+Notice - Free advice:
+- Separate your utilities from your applications. If they have a life of 
+their own, you can manage the dependencies more easily.
+- Test your utilities and libraries separately. Use SNAPSHOTs and a 
+release process that is separate from your application.
+- Have your applications treat your utilities and libraries as if they 
+were written by some other organization.
+- Use dependency management in the parent POM to control versions of 
+utilities. This gives you one place to maintain the versions.
+End of free advice.
+
+Free commentary.
+At the beginning, you are correct, it will be harder to provide a stable 
+environment but that is where SNAPSHOTs are a big help.
+Version 2.1.0-SHAPSHOT of the application depends on version 
+1.0-SNAPSHOT of file-manager-core until file-manager-core stabilizes and 
+becomes version 1.0.  Generally speaking, the application should still 
+be a SNAPSHOT after your utilities become releases since you should be 
+able to stabilize the functionality and finish the testing of the 
+utilities before the same can happen to the application modules.
+End of fee commentary
+
+I think that you will find this advice at least worth the cost and you 
+may get some comments from the smarter and more knowledgeable people 
+here that refines or contradicts my advice.
+
+There is lots of good Maven information freely available and lots of 
+projects that are very complex being developed with Maven.
+Our biggest project had over 70 Maven modules of which 10 where 
+supporting libraries either written by us or aggregated from existing 
+open source projects.
+
+We have some articles describing how we use Maven in our technical blog 
+at http://blog.artifact-software.com/tech.
+Jokes are found at http://blog.artifact-software.com/fun if you need a 
+smile to face the world of Maven.
+
+
+Ron
+
+On 12/06/2014 10:46 AM, Hohl, Gerrit wrote:
+> Hello everyone, :)
+>
+>   
+>
+> I have a question which is not about a specific problem with Maven, but
+> more a general question.
+>
+> I hope it is okay to ask this question here.
+>
+>   
+>
+> We use Maven and Jenkins for about 1.5 years now, I guess. Until now the
+> Maven projects have been very simple and - let's say - very monolithic.
+>
+> But recently we identify more and more internal libraries in our
+> products. Of course we don't want to share this libraries by
+> copy-n-paste between the products - especially as we have Maven.
+>
+> So we started to read books, tutorials on the Internet and so on. But
+> most of them only deal with simple projects. They don't cover e.g.
+> versioning the build process (especially if your build process consists
+> of more than just one step). They also don't cover the problems of
+> developing the libraries while your developing the products which depend
+> on them. Especially at the beginning your libraries will go through a
+> lot of changes. A few name snapshots as a solution, but don't explain
+> how you can work using them, how you can use them in your pom.xml and
+> how you deal with them if you finally switch your product and/or your
+> library from the snapshot state to the release state. A few also say
+> that you shouldn't use snapshots at all because it will result in many
+> problems (e.g. having -SNAPSHOT entries in your pom.xml). Nightly builds
+> or build triggered by the SCM are also an issue here.
+>
+>   
+>
+> Does someone know a good book or tutorial which handles all of these
+> issues around Maven and CI/CD in more depth?
+>
+>   
+>
+>   
+>
+> Regards,
+>
+> Gerrit
+>
+>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

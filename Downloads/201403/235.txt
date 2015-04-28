@@ -1,0 +1,75 @@
+From users-return-135768-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Mar 11 19:54:40 2014
+Return-Path: <users-return-135768-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 224C810583
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 11 Mar 2014 19:54:40 +0000 (UTC)
+Received: (qmail 7111 invoked by uid 500); 11 Mar 2014 19:54:36 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 6313 invoked by uid 500); 11 Mar 2014 19:54:29 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 6244 invoked by uid 99); 11 Mar 2014 19:54:26 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 11 Mar 2014 19:54:26 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.192.182 as permitted sender)
+Received: from [209.85.192.182] (HELO mail-pd0-f182.google.com) (209.85.192.182)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 11 Mar 2014 19:54:20 +0000
+Received: by mail-pd0-f182.google.com with SMTP id g10so20261pdj.13
+        for <users@maven.apache.org>; Tue, 11 Mar 2014 12:53:58 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=DZb6WNCqP+7oGAEFMWiIU0BGv6HAgnQSBHnCN9khK1w=;
+        b=KM3BSVIeZswaEH/bVIb4ZdiKYcJMz05x/aWWgjo6+LHOYv5wLTT3enE8n1nqhlvkVD
+         v0ODLZ4f5H0iFrvSymMG5Qejc6E7jo5FN9ARzdgIeCvfplc4UEcXRtcud8+XpT/ZGUF9
+         MkkVfWa4zjNCYO+ZTXC/og82PPTWYswS1mr2lxzgCj4K2dDX7h/uf7Yxo5/qgD7Qqhn9
+         iw/mZj1F6WSh1c+c1f77c4CjzOVI0/u91XtXLV+cArPU0HdaWxsBEEYSEyYtebZD5GZr
+         2Xf5S85eyD0UCOwG9OgUUVrBN3bPAwHwaXvY9VSBKerYkXFDwyr/mW7K5xZ2ZEfrev1e
+         9AFA==
+X-Received: by 10.66.9.41 with SMTP id w9mr49112701paa.39.1394567638449; Tue,
+ 11 Mar 2014 12:53:58 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Tue, 11 Mar 2014 12:53:38 -0700 (PDT)
+In-Reply-To: <CAA8BW8FZTTdwyUu-_HEkoexrkBh8nNe+FTQ3oJTGmBFpi2MaRA@mail.gmail.com>
+References: <CAA8BW8FZTTdwyUu-_HEkoexrkBh8nNe+FTQ3oJTGmBFpi2MaRA@mail.gmail.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Tue, 11 Mar 2014 14:53:38 -0500
+Message-ID: <CALy+7U=OZNWgpabLHvqjfvdYp9FbYLhEpWUf7c7KJw4CFrxK7g@mail.gmail.com>
+Subject: Re: How to exclude jar from war overlay
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> I have a war overlay I want to use in my war but need to specify a
+> different jar version in my final war or remove some unused jars.
+>  Shouldn't dependencyManagement work for both of these cases?  What's the
+> approach to handle these two cases?
+
+To be clear, are you saying that you want to compile & test with
+g:a:1.0.1 but then package g:a:1.0.2 in your WAR? And you want to
+build with g1:a1:1.0.1 and g2:a2:1.0.1 but then keep them out of the
+WAR when you package it?
+
+If so, I don't understand these use cases, please explain things more.
+If not, please explain with more concrete details/examples -- tell us
+what you have right now vs what you want.
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,152 @@
+From users-return-136388-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat May 17 04:27:40 2014
+Return-Path: <users-return-136388-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5101511AF8
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 17 May 2014 04:27:40 +0000 (UTC)
+Received: (qmail 38672 invoked by uid 500); 17 May 2014 03:57:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 60123 invoked by uid 500); 17 May 2014 03:42:01 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 55825 invoked by uid 99); 17 May 2014 03:29:19 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 17 May 2014 03:29:19 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of mcculls@gmail.com designates 74.125.82.46 as permitted sender)
+Received: from [74.125.82.46] (HELO mail-wg0-f46.google.com) (74.125.82.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 17 May 2014 03:29:12 +0000
+Received: by mail-wg0-f46.google.com with SMTP id n12so5794364wgh.29
+        for <users@maven.apache.org>; Fri, 16 May 2014 20:28:51 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=references:in-reply-to:mime-version:content-transfer-encoding
+         :content-type:message-id:cc:from:subject:date:to;
+        bh=EtalKpJt/B2WrfhyGziIv5YvWykr1lMdChHXOTptgHY=;
+        b=lMXzWAom8y1c53KqX8H81dyKw9EDdALTlzyN9mY8HkOCLPFk/QZEU62zwRBwiG0n0X
+         KBnv2mj7s/k8tCIpbot3+6+Fq+B/CenpgaRE020FuARcfjq80+tNuDLF8mEg5yMzBdd8
+         edEUgRxPk5mrLC89QVtVOJvy6xeszB5klEt6F4wW/sd9eekcsoca8zQ5AVv71FhxQnbd
+         essjBMlp/DlhZYJVHYZJSyH9H+hkksqGBtIJv5Ax5D3Uo6bUR5qF2r2ozo4Af3WchtOS
+         VnQznCEtm2qOav2IX3y3Pu/9vINyobvtgR1Vg0Vz7GC18hcCoTI9dmPxAPyd/qX0WJ+2
+         L+Qg==
+X-Received: by 10.180.189.69 with SMTP id gg5mr1311210wic.52.1400297331348;
+        Fri, 16 May 2014 20:28:51 -0700 (PDT)
+Received: from [192.168.1.67] (host86-180-188-237.range86-180.btcentralplus.com. [86.180.188.237])
+        by mx.google.com with ESMTPSA id em5sm1610007wic.23.2014.05.16.20.28.49
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 16 May 2014 20:28:50 -0700 (PDT)
+References: <CAPCjjnHCV0s56hMYAmRWpA3LL99CBVTjvvaKf5Gud4F_mRZ1zg@mail.gmail.com> <CAPCjjnFTqsFAhg6cSAZKuS74QQLyNoPs2KDqO0oLRdTGG7-_-w@mail.gmail.com> <CADN69ynqGoAGWv5Xt9RzZCK-fC8PctGpUqYch=_q08peayWmug@mail.gmail.com> <CAPCjjnF=EM8kExF5_tqm-HD-DH-Mw-2YxYE1RDeqUYX0uXHSvA@mail.gmail.com>
+In-Reply-To: <CAPCjjnF=EM8kExF5_tqm-HD-DH-Mw-2YxYE1RDeqUYX0uXHSvA@mail.gmail.com>
+Mime-Version: 1.0 (iPod Mail 8C148)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+Message-Id: <FBFCE353-F844-4660-B3EB-F8F9CDBE0624@gmail.com>
+Cc: Maven Users List <users@maven.apache.org>
+X-Mailer: iPod Mail (8C148)
+From: Stuart McCulloch <mcculls@gmail.com>
+Subject: Re: http://central.maven.org/maven2/org/eclipse/m2e gone ??
+Date: Sat, 17 May 2014 04:30:17 +0100
+To: Maven Users List <users@maven.apache.org>
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 16 May 2014, at 22:59, Dan Tran <dantran@gmail.com> wrote:
+
+> umm, what worries me why it disappears from maven central which suppose to=
+
+> be a well guarded place?
+
+It has not disappeared as it was never on central in the first place - it's j=
+ust a placeholder GAV that m2e uses for configuration purposes. You should c=
+ontact the m2e team about deploying a basic stub on central.
+
+> a JIRA case is filed at  https://issues.sonatype.org/browse/CENTRALSRV-74
+>=20
+> -D
+>=20
+>=20
+> On Fri, May 16, 2014 at 1:29 PM, Curtis Rueden <ctrueden@wisc.edu> wrote:
+>=20
+>> Hi Dan,
+>>=20
+>>> I am looking for org.eclipse.m2e:lifecycle-mapping:1.0.0
+>>>=20
+>>> and it is not at maven central any more.
+>>=20
+>> My team definitely felt the pain of its absence from Central as well.
+>>=20
+>> To avoid the problem, we use this workaround:
+>>=20
+>>    <profile>
+>>      <id>only-eclipse</id>
+>>      <activation>
+>>        <property>
+>>          <name>m2e.version</name>
+>>        </property>
+>>      </activation>
+>>      <build>
+>>        <pluginManagement>
+>>          <plugins>
+>>            <!-- This plugin's configuration is used to store Eclipse m2e
+>> settings
+>>                 only. It has no influence on the Maven build itself. -->
+>>            <plugin>
+>>              <groupId>org.eclipse.m2e</groupId>
+>>              <artifactId>lifecycle-mapping</artifactId>
+>>              <version>1.0.0</version>
+>>              <configuration>
+>>                ...
+>>              </configuration>
+>>            </plugin>
+>>          </plugins>
+>>        </pluginManagement>
+>>      </build>
+>>    </profile>
+>>=20
+>> Beautiful, right? ;-)
+>>=20
+>> -Curtis
+>>=20
+>>=20
+>> On Fri, May 16, 2014 at 2:48 PM, Dan Tran <dantran@gmail.com> wrote:
+>>=20
+>>> any one?
+>>>=20
+>>> http://central.maven.org/maven2/org/eclipse/m2e
+>>>=20
+>>> Thanks
+>>>=20
+>>> -D
+>>>=20
+>>>=20
+>>> On Thu, May 15, 2014 at 4:34 PM, Dan Tran <dantran@gmail.com> wrote:
+>>>=20
+>>>> I am looking for org.eclipse.m2e:lifecycle-mapping:1.0.0
+>>>>=20
+>>>> and it is not at maven central any more.
+>>>>=20
+>>>> do you see the same thing?
+>>>>=20
+>>>>=20
+>>>> Thanks
+>>>>=20
+>>>> -D
+>>>>=20
+>>>=20
+>>=20
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

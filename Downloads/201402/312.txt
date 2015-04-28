@@ -1,0 +1,126 @@
+From users-return-135455-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 13 14:57:47 2014
+Return-Path: <users-return-135455-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 59DA910767
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 13 Feb 2014 14:57:47 +0000 (UTC)
+Received: (qmail 25884 invoked by uid 500); 13 Feb 2014 14:57:43 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 25672 invoked by uid 500); 13 Feb 2014 14:57:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 25664 invoked by uid 99); 13 Feb 2014 14:57:42 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 14:57:42 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 13 Feb 2014 14:57:38 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 2DBF06A7916
+	for <users@maven.apache.org>; Thu, 13 Feb 2014 09:57:16 -0500 (EST)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id LzE9ZQy8NQIE for <users@maven.apache.org>;
+	Thu, 13 Feb 2014 09:57:07 -0500 (EST)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 60D2D6A76F2
+	for <users@maven.apache.org>; Thu, 13 Feb 2014 09:57:07 -0500 (EST)
+Message-ID: <52FCDD43.8030304@artifact-software.com>
+Date: Thu, 13 Feb 2014 09:57:07 -0500
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: Maven Users List <users@maven.apache.org>
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Multiple assemblies in a pom
+References: <52FCC1A6.8020001@artifact-software.com> <CAKDUN1sGDbsKJ45RNNUbxmNS1hB-UmYes4-7DNdzbm7HMP-WDw@mail.gmail.com>
+In-Reply-To: <CAKDUN1sGDbsKJ45RNNUbxmNS1hB-UmYes4-7DNdzbm7HMP-WDw@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+One quick Google and two reads of the docs - missed the execution id the 
+first time and it worked like a charm!
+
+Thanks
+Ron
+On 13/02/2014 8:51 AM, Anders Hammar wrote:
+> You should have multiple execution declarations. Not plugin declarations.
+>
+> /Anders
+>
+>
+> On Thu, Feb 13, 2014 at 1:59 PM, Ron Wheeler <rwheeler@artifact-software.com
+>> wrote:
+>> I am trying to create 3 tar files in a single project.
+>> I have 3 invocations of the  maven-assembly-plugin in the pom.
+>> It works but gives the warnings shown below.
+>>
+>> How likely is it that these dire threats of future problems will come
+>> about?
+>>
+>> What is the Best Practice to fix this?
+>>
+>> Ron
+>>
+>>
+>> [WARNING] Some problems were encountered while building the effective
+>> model for com.artifact_software.taw:taw-webapps-assembler:jar:1.0.2
+>> [WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but
+>> found duplicate declaration of plugin org.apache.maven.plugins:
+>> maven-assembly
+>> -plugin @ line 77, column 12
+>> [WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but
+>> found duplicate declaration of plugin org.apache.maven.plugins:
+>> maven-assembly
+>> -plugin @ line 89, column 12
+>> [WARNING]
+>> [WARNING] It is highly recommended to fix these problems because they
+>> threaten the stability of your build.
+>> [WARNING]
+>> [WARNING] For this reason, future Maven versions might no longer support
+>> building such malformed projects.
+>>
+>>
+>> --
+>> Ron Wheeler
+>> President
+>> Artifact Software Inc
+>> email: rwheeler@artifact-software.com
+>> skype: ronaldmwheeler
+>> phone: 866-970-2435, ext 102
+>>
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,243 @@
+From users-return-137270-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 12 18:23:20 2014
+Return-Path: <users-return-137270-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2C608113B5
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 12 Sep 2014 18:23:20 +0000 (UTC)
+Received: (qmail 60612 invoked by uid 500); 12 Sep 2014 18:23:17 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 60536 invoked by uid 500); 12 Sep 2014 18:23:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 60523 invoked by uid 99); 12 Sep 2014 18:23:17 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 18:23:17 +0000
+X-ASF-Spam-Status: No, hits=1.8 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of burtonator2011@gmail.com designates 209.85.215.47 as permitted sender)
+Received: from [209.85.215.47] (HELO mail-la0-f47.google.com) (209.85.215.47)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 18:23:12 +0000
+Received: by mail-la0-f47.google.com with SMTP id mc6so1471396lab.6
+        for <users@maven.apache.org>; Fri, 12 Sep 2014 11:22:51 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:from:date:message-id:subject:to:content-type;
+        bh=pF8FLZfrmPpcc1ko/1Y7ktT9C+d/fK22QYTr3EsPDJ8=;
+        b=zp3dOskENt/W/nV2ALFDT2zh7i/LaV/F1j0JdXkn61FphYSn2HUlsPNedNUqCbH9MV
+         t81RvjqdeSoP0kfKFUJl/g1iMcCWPPP1Iqog6ibaZ1ll7F/aLl4pj5wmIp7Y5ZLtWbt5
+         brOoo3JXOR8f0ubtQvSL8k2dITFnKqWNgSkU2lg0vT45hOaD10fHnp304u4jzL2JRy94
+         bFqgAcX7DW0OteS0eYE4BclKEEFjeMlIugILnY7naeRcwgnDX0PS55KV2KYeM+vHc0go
+         f40mseA92GD7+jGmqUmWlYwq/bcFdooX3raiXsHBGasGDaSo4qkE5FMJvo+BkVR/IPeg
+         lF4w==
+X-Received: by 10.152.3.130 with SMTP id c2mr10953708lac.72.1410546171094;
+ Fri, 12 Sep 2014 11:22:51 -0700 (PDT)
+MIME-Version: 1.0
+Sender: burtonator2011@gmail.com
+Received: by 10.112.210.137 with HTTP; Fri, 12 Sep 2014 11:22:30 -0700 (PDT)
+From: Kevin Burton <burton@spinn3r.com>
+Date: Fri, 12 Sep 2014 11:22:30 -0700
+X-Google-Sender-Auth: Bx7hM4G5WUqa78zAlLrcVkBsbKY
+Message-ID: <CAAZU44=eHA=2xAgPjU_HT9E5TE+XELDUPx+fZrowDO2vwu9oFQ@mail.gmail.com>
+Subject: forking plugin execution?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0149339277aa900502e25fd1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0149339277aa900502e25fd1
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Is it possible to fork plugin execution so that it executes in a separate
+process?
+
+I think doxia+markdown has a threading bug with peg down.
+
+I get the attached exception.
+
+Works fine with default options but -T 8 breaks it.
+
+I assume if I just have the site plugin in a separate proc that it will
+probably work since I won=E2=80=99t have two site builds stepping on each o=
+ther.
+
+
+java.lang.ClassCastException: java.lang.Integer cannot be cast to
+org.pegdown.ast.SuperNode
+
+at org.parboiled.MatcherContext.runMatcher(MatcherContext.java:353)
+
+at org.parboiled.matchers.SequenceMatcher.match(SequenceMatcher.java:46)
+
+at
+org.parboiled.parserunners.BasicParseRunner.match(BasicParseRunner.java:77)
+
+at org.parboiled.MatcherContext.runMatcher(MatcherContext.java:338)
+
+at org.parboiled.matchers.OneOrMoreMatcher.match(OneOrMoreMatcher.java:38)
+
+at
+org.parboiled.parserunners.BasicParseRunner.match(BasicParseRunner.java:77)
+
+at org.parboiled.MatcherContext.runMatcher(MatcherContext.java:338)
+
+at org.parboiled.matchers.SequenceMatcher.match(SequenceMatcher.java:46)
+
+at
+org.parboiled.parserunners.BasicParseRunner.match(BasicParseRunner.java:77)
+
+at org.parboiled.MatcherContext.runMatcher(MatcherContext.java:338)
+
+at org.parboiled.matchers.FirstOfMatcher.match(FirstOfMatcher.java:41)
+
+at
+org.parboiled.parserunners.BasicParseRunner.match(BasicParseRunner.java:77)
+
+at org.parboiled.MatcherContext.runMatcher(MatcherContext.java:338)
+
+at org.parboiled.matchers.SequenceMatcher.match(SequenceMatcher.java:46)
+
+at
+org.parboiled.parserunners.BasicParseRunner.match(BasicParseRunner.java:77)
+
+at org.parboiled.MatcherContext.runMatcher(MatcherContext.java:338)
+
+at org.parboiled.matchers.FirstOfMatcher.match(FirstOfMatcher.java:41)
+
+at
+org.parboiled.parserunners.BasicParseRunner.match(BasicParseRunner.java:77)
+
+at org.parboiled.MatcherContext.runMatcher(MatcherContext.java:338)
+
+at org.parboiled.matchers.SequenceMatcher.match(SequenceMatcher.java:46)
+
+at
+org.parboiled.parserunners.BasicParseRunner.match(BasicParseRunner.java:77)
+
+at org.parboiled.MatcherContext.runMatcher(MatcherContext.java:338)
+
+at org.parboiled.matchers.SequenceMatcher.match(SequenceMatcher.java:46)
+
+at
+org.parboiled.parserunners.BasicParseRunner.match(BasicParseRunner.java:77)
+
+at org.parboiled.MatcherContext.runMatcher(MatcherContext.java:338)
+
+at org.parboiled.matchers.ZeroOrMoreMatcher.match(ZeroOrMoreMatcher.java:39=
+)
+
+at
+org.parboiled.parserunners.BasicParseRunner.match(BasicParseRunner.java:77)
+
+at org.parboiled.MatcherContext.runMatcher(MatcherContext.java:338)
+
+at org.parboiled.matchers.SequenceMatcher.match(SequenceMatcher.java:46)
+
+at
+org.parboiled.parserunners.BasicParseRunner.match(BasicParseRunner.java:77)
+
+at org.parboiled.MatcherContext.runMatcher(MatcherContext.java:338)
+
+at org.parboiled.matchers.SequenceMatcher.match(SequenceMatcher.java:46)
+
+at
+org.parboiled.parserunners.BasicParseRunner.match(BasicParseRunner.java:77)
+
+at org.parboiled.MatcherContext.runMatcher(MatcherContext.java:338)
+
+at org.parboiled.parserunners.BasicParseRunner.run(BasicParseRunner.java:72=
+)
+
+at
+org.parboiled.parserunners.ReportingParseRunner.runBasicMatch(ReportingPars=
+eRunner.java:86)
+
+at
+org.parboiled.parserunners.ReportingParseRunner.run(ReportingParseRunner.ja=
+va:66)
+
+at
+org.parboiled.parserunners.AbstractParseRunner.run(AbstractParseRunner.java=
+:81)
+
+at org.pegdown.Parser.parseToParsingResult(Parser.java:1329)
+
+at org.pegdown.Parser.parseInternal(Parser.java:1316)
+
+at org.pegdown.Parser.parse(Parser.java:78)
+
+at org.pegdown.PegDownProcessor.parseMarkdown(PegDownProcessor.java:137)
+
+at
+org.apache.maven.doxia.module.markdown.MarkdownParser.parse(MarkdownParser.=
+java:170)
+
+at org.apache.maven.doxia.DefaultDoxia.parse(DefaultDoxia.java:65)
+
+at
+org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.renderDocument(Defa=
+ultSiteRenderer.java:398)
+
+at
+org.apache.maven.doxia.siterenderer.DoxiaDocumentRenderer.renderDocument(Do=
+xiaDocumentRenderer.java:51)
+
+at
+org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.renderModule(Defaul=
+tSiteRenderer.java:311)
+
+at
+org.apache.maven.doxia.siterenderer.DefaultSiteRenderer.render(DefaultSiteR=
+enderer.java:129)
+
+at
+org.apache.maven.plugins.site.render.SiteMojo.renderDoxiaDocuments(SiteMojo=
+.java:261)
+
+at
+org.apache.maven.plugins.site.render.SiteMojo.renderLocale(SiteMojo.java:17=
+2)
+
+at org.apache.maven.plugins.site.render.SiteMojo.execute(SiteMojo.java:141)
+
+at
+org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildP=
+luginManager.java:132)
+
+... 14 more
+
+Caused by: java.lang.ClassCastException: java.lang.Integer cannot be cast
+to org.pegdown.ast.SuperNode
+
+at org.pegdown.Parser.addAsChild(Parser.java:1251)
+
+at org.pegdown.Action$mNyPdk1ujbVDZrIU.run(Unknown Source)
+
+at org.parboiled.matchers.ActionMatcher.match(ActionMatcher.java:96)
+
+at
+org.parboiled.parserunners.BasicParseRunner.match(BasicParseRunner.java:77)
+
+at org.parboiled.MatcherContext.runMatcher(MatcherContext.java:338)
+
+... 65 more
+
+
+--=20
+
+Founder/CEO Spinn3r.com
+Location: *San Francisco, CA*
+blog: http://burtonator.wordpress.com
+=E2=80=A6 or check out my Google+ profile
+<https://plus.google.com/102718274791889610666/posts>
+<http://spinn3r.com>
+
+--089e0149339277aa900502e25fd1--
+

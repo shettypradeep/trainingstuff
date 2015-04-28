@@ -1,0 +1,85 @@
+From users-return-135615-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 26 22:35:43 2014
+Return-Path: <users-return-135615-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2AAB410DC5
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Feb 2014 22:35:43 +0000 (UTC)
+Received: (qmail 52390 invoked by uid 500); 26 Feb 2014 22:35:37 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 52131 invoked by uid 500); 26 Feb 2014 22:35:37 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 51896 invoked by uid 99); 26 Feb 2014 22:35:37 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Feb 2014 22:35:37 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.220.41 as permitted sender)
+Received: from [209.85.220.41] (HELO mail-pa0-f41.google.com) (209.85.220.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Feb 2014 22:35:29 +0000
+Received: by mail-pa0-f41.google.com with SMTP id fa1so1597779pad.14
+        for <users@maven.apache.org>; Wed, 26 Feb 2014 14:35:08 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject
+         :content-type:content-transfer-encoding;
+        bh=4O47NlPEB8RGZWUXCHeuQz3PGDpZsxU2lv5LcLkjgBU=;
+        b=Ez4gEprgHwukbH7pBRKJNrIL7eYVqWEaE0YopjOM1Az0ERDBnnJQspMtX5BFSsAaHu
+         qdbiqTcVh44NrXyhEe7TdxuFfU1O9kZ+rWIvbJdah3DTc0ylH2gLqr5EGw/ZJl8UdlYN
+         4gYzxbQAn1UkeOV5A2yGFH/Ptf3r2xqv6cm9u5Z/magf9Rl/mqsk6kB5OrYHxiTefgud
+         uCoCR3QRbWJtdLWg6gKpKN3IIRdcMWaU9u/acjb7r9wuuqYyn/b0zlT1j9BErx/hKqsT
+         kVDYn5ipIv46XhuPmIaPcZj2F9klngyXsrn15YLqQhsrhkGIBSDDvEWKPBNNGTYAEVto
+         Hblw==
+X-Received: by 10.67.5.233 with SMTP id cp9mr11298711pad.147.1393454108273;
+        Wed, 26 Feb 2014 14:35:08 -0800 (PST)
+Received: from [192.168.0.17] (S0106602ad07f9cfa.vc.shawcable.net. [24.85.131.20])
+        by mx.google.com with ESMTPSA id ki3sm6891702pbc.6.2014.02.26.14.35.05
+        for <multiple recipients>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 26 Feb 2014 14:35:07 -0800 (PST)
+Message-ID: <530E6C19.6000503@gmail.com>
+Date: Wed, 26 Feb 2014 14:35:05 -0800
+From: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: maven users <users@maven.apache.org>, findbugs-discuss@cs.umd.edu
+Subject: Findbugs doesn't check unit tests
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I added the following to my POM
+
+   <reporting>
+     <plugins>
+       <plugin>
+         <groupId>org.codehaus.mojo</groupId>
+         <artifactId>findbugs-maven-plugin</artifactId>
+         <version>2.5.3</version>
+         <configuration>
+           <effort>Max</effort>
+           <threshold>Low</threshold>
+         </configuration>
+       </plugin>
+     </plugins>
+   </reporting>
+
+And it works great for my main source, but it does not seem to check my 
+test source. It seems to me it would be useful to run findbugs on test 
+code too. Is there some simple way to configure this?
+
+Cheers, Eric
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

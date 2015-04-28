@@ -1,0 +1,155 @@
+From users-return-136538-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jun  6 08:13:28 2014
+Return-Path: <users-return-136538-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 36C40110FF
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  6 Jun 2014 08:13:28 +0000 (UTC)
+Received: (qmail 19266 invoked by uid 500); 6 Jun 2014 08:13:26 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 19172 invoked by uid 500); 6 Jun 2014 08:13:26 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 19162 invoked by uid 99); 6 Jun 2014 08:13:26 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 06 Jun 2014 08:13:26 +0000
+X-ASF-Spam-Status: No, hits=0.9 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,RCVD_NUMERIC_HELO,SPF_HELO_PASS,SPF_PASS,T_FSL_HELO_BARE_IP_2
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of gcjtmu-turbine-maven-user-846@m.gmane.org designates 80.91.229.3 as permitted sender)
+Received: from [80.91.229.3] (HELO plane.gmane.org) (80.91.229.3)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 06 Jun 2014 08:13:23 +0000
+Received: from list by plane.gmane.org with local (Exim 4.69)
+	(envelope-from <gcjtmu-turbine-maven-user-846@m.gmane.org>)
+	id 1WspGj-0003zy-EA
+	for users@maven.apache.org; Fri, 06 Jun 2014 10:12:57 +0200
+Received: from 155.55.49.12 ([155.55.49.12])
+        by main.gmane.org with esmtp (Gmexim 0.1 (Debian))
+        id 1AlnuQ-0007hv-00
+        for <users@maven.apache.org>; Fri, 06 Jun 2014 10:12:57 +0200
+Received: from sb by 155.55.49.12 with local (Gmexim 0.1 (Debian))
+        id 1AlnuQ-0007hv-00
+        for <users@maven.apache.org>; Fri, 06 Jun 2014 10:12:57 +0200
+X-Injected-Via-Gmane: http://gmane.org/
+Mail-Followup-To: users@maven.apache.org
+To: users@maven.apache.org
+From: Steinar Bang <sb@dod.no>
+Subject: Adding Atlassian repos but keeping maven central?
+Date: Fri, 06 Jun 2014 10:12:56 +0200
+Organization: Probably a good idea
+Lines: 92
+Message-ID: <upzcoay6wj5j.fsf@dod.no>
+Mime-Version: 1.0
+Content-Type: text/plain
+X-Complaints-To: usenet@ger.gmane.org
+X-Gmane-NNTP-Posting-Host: 155.55.49.12
+Mail-Copies-To: never
+User-Agent: Gnus/5.130012 (Ma Gnus v0.12) Emacs/24.3 (windows-nt)
+Cancel-Lock: sha1:02r6MUsCW31ugiFOC7Ak451vvcM=
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+If I add the atlassian repos (the SDK local disk repo and the
+https://maven.atlassian.com/repository/public repo to the settings.xml,
+will maven still fetch dependencies from maven central?
+
+I have tried googling for the behaviour here, and I have tried running 
+ mvn help:active-profiles
+without becoming any wiser:
+ - With atlassian-profile in <activeProfiles> atlassian-profile is
+   listed as the only active profile
+ - With an empty <activeProfiles> element, no active profiles are listed
+ - With no <activeProfiles> element, no active profiles are listed 
+
+Below is my ~/.m2/settings.xml file.
+
+Should I make the atlassian-profile activeByDefault, instead of listing
+it in <activeProfiles>? (the theory being that all activeByDefault
+profiles will be enabled which would include both the one with maven
+central, and atlassian-profile)
+
+Or shouldn't I worry about it, because maven central will always be
+used?
+
+Thanks!
+
+
+- Steinar
+
+My ~/.m2/settings.xml file:
+
+<settings>
+ <profiles>
+  <profile>
+   <id>atlassian-profile</id>
+   <repositories>
+    <repository>
+     <id>atlassian-public</id>
+     <url>https://maven.atlassian.com/repository/public</url>
+     <snapshots>
+      <enabled>true</enabled>
+      <updatePolicy>never</updatePolicy>
+      <checksumPolicy>warn</checksumPolicy>
+     </snapshots>
+     <releases>
+      <enabled>true</enabled>
+      <checksumPolicy>warn</checksumPolicy>
+     </releases>
+    </repository>
+    <repository>
+     <id>atlassian-plugin-sdk</id>
+     <url>file://${env.ATLAS_HOME}/repository</url>
+     <snapshots>
+      <enabled>true</enabled>
+     </snapshots>
+     <releases>
+      <enabled>true</enabled>
+      <checksumPolicy>warn</checksumPolicy>
+     </releases>
+    </repository>
+   </repositories>
+   <pluginRepositories>
+    <pluginRepository>
+     <id>atlassian-public</id>
+     <url>https://maven.atlassian.com/repository/public</url>
+     <snapshots>
+      <enabled>true</enabled>
+      <updatePolicy>never</updatePolicy>
+      <checksumPolicy>warn</checksumPolicy>
+     </snapshots>
+     <releases>
+      <enabled>true</enabled>
+      <checksumPolicy>warn</checksumPolicy>
+     </releases>
+    </pluginRepository>
+    <pluginRepository>
+     <id>atlassian-plugin-sdk</id>
+     <url>file://${env.ATLAS_HOME}/repository</url>
+     <snapshots>
+      <enabled>true</enabled>
+     </snapshots>
+     <releases>
+      <enabled>true</enabled>
+      <checksumPolicy>warn</checksumPolicy>
+     </releases>
+    </pluginRepository>
+   </pluginRepositories>
+  </profile>
+ </profiles>
+ <activeProfiles>
+  <activeProfile>default</activeProfile>
+  <activeProfile>atlassian-profile</activeProfile>
+ </activeProfiles>
+</settings>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,623 @@
+From users-return-136449-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon May 26 09:50:39 2014
+Return-Path: <users-return-136449-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EA0D5F2E0
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 26 May 2014 09:50:39 +0000 (UTC)
+Received: (qmail 70922 invoked by uid 500); 26 May 2014 09:50:38 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 70838 invoked by uid 500); 26 May 2014 09:50:38 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 70830 invoked by uid 99); 26 May 2014 09:50:38 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 26 May 2014 09:50:38 +0000
+X-ASF-Spam-Status: No, hits=-2.8 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_HI,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of christian.pontesegger@infineon.com designates 217.10.52.18 as permitted sender)
+Received: from [217.10.52.18] (HELO smtp2.infineon.com) (217.10.52.18)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 26 May 2014 09:50:32 +0000
+X-SBRS: None
+Received: from unknown (HELO mucxv003.muc.infineon.com) ([172.23.11.20])
+  by smtp2.infineon.com with ESMTP/TLS/ADH-AES256-SHA; 26 May 2014 11:50:10 +0200
+Received: from MUCSE591.eu.infineon.com (mucltm02.eu.infineon.com [172.23.8.249])
+	by mucxv003.muc.infineon.com (Postfix) with ESMTPS
+	for <users@maven.apache.org>; Mon, 26 May 2014 11:50:08 +0200 (CEST)
+Received: from MUCSE502.eu.infineon.com ([169.254.6.96]) by
+ MUCSE591.eu.infineon.com ([172.23.7.80]) with mapi id 14.03.0174.001; Mon, 26
+ May 2014 11:50:06 +0200
+From: <Christian.Pontesegger@infineon.com>
+To: <users@maven.apache.org>
+Subject: javadoc:aggregate reports missing packages
+Thread-Topic: javadoc:aggregate reports missing packages
+Thread-Index: Ac94xtQQ6uMaPtP7QMCV/l54SufvcQ==
+Date: Mon, 26 May 2014 09:50:05 +0000
+Message-ID: <FD33BF4E2A3FCF4DAE839323A2C4EA770F7312DF@MUCSE502.eu.infineon.com>
+Accept-Language: de-DE, en-US
+Content-Language: en-US
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+x-originating-ip: [172.23.8.249]
+Content-Type: multipart/signed; protocol="application/x-pkcs7-signature";
+	micalg=SHA1; boundary="----=_NextPart_000_01E4_01CF78D8.A2A27AA0"
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+------=_NextPart_000_01E4_01CF78D8.A2A27AA0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_001_01E5_01CF78D8.A2A27AA0"
+
+
+------=_NextPart_001_01E5_01CF78D8.A2A27AA0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Hi,
+
+I am trying to build an API documentation for some eclipse plugins.
+Therefore I'd like to run the Javadoc:aggregate goal
+
+My configuration therefore is trivial:
+
+	<build>
+		<plugins>
+			<plugin>
+	
+<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<configuration>
+	
+<reportOutputDirectory>help/api</reportOutputDirectory>
+					<destDir>api</destDir>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+Now maven fails as it cannot resolve lots of eclipse dependencies like:
+
+[ERROR] Failed to execute goal
+org.apache.maven.plugins:maven-javadoc-plugin:2.9.1:aggregate (default-cli)
+on project com.infineon.commontools.releng.jenkins: An error has occurred in
+JavaDocs report generation:
+[ERROR] Exit code: 1 -
+C:\Userdata\Workspaces\SysBox\ebt_common\bundles\com.infineon.tools\src\com\
+infineon\tools\AbstractActivator.java:24: error: package org.eclipse.ui does
+not exist
+[ERROR] import org.eclipse.ui.IMemento;
+[ERROR] ^
+
+I get other errors for libs, where I only have a binary OSGI bundle
+available (which is part of the aggregator pom)
+
+[ERROR] symbol:   class CoreException
+[ERROR] location: class StringTools
+[ERROR]
+C:\Userdata\Workspaces\SysBox\ebt_common\bundles\com.infineon.tools\src\com\
+infineon\tools\hexparser\antlr\HexStringBaseListener.java:4: error: package
+org.antlr.v4.runtime does not exist
+[ERROR] import org.antlr.v4.runtime.ParserRuleContext;
+[ERROR] ^
+
+
+Generally I am happy with the created JavaDoc files. Is there a way to tell
+Javadoc to ignore missing dependencies or to tell maven not to fail here?
+I know there are lots of similar questions asked out there, but I could not
+find a solution to my problem
+
+Thanks
+Christian
+
+
+
+------=_NextPart_001_01E5_01CF78D8.A2A27AA0
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii">
+<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
+14.02.5004.000">
+<TITLE>javadoc:aggregate reports missing packages</TITLE>
+</HEAD>
+<BODY>
+<!-- Converted from text/rtf format -->
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN LANG=3D"de"><FONT =
+FACE=3D"Calibri">Hi,</FONT></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT =
+FACE=3D"Calibri">I am trying to build an API documentation for some =
+eclipse plugins</FONT></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us"><FONT FACE=3D"Calibri">. Therefore I&#8217;d like to run =
+the Javadoc:aggregate goal</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-us"><FONT FACE=3D"Calibri">My =
+configuration therefore is trivial:</FONT></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"> <FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&lt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#3F7F7F" =
+SIZE=3D2 FACE=3D"Consolas">build</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&gt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"> <FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&lt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#3F7F7F" =
+SIZE=3D2 FACE=3D"Consolas">plugins</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&gt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"> <FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&lt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#3F7F7F" =
+SIZE=3D2 FACE=3D"Consolas">plugin</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&gt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"> <FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&lt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#3F7F7F" =
+SIZE=3D2 FACE=3D"Consolas">artifactId</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&gt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"><U></U></SPAN><U><SPAN LANG=3D"en-us"><FONT =
+COLOR=3D"#000000" SIZE=3D2 =
+FACE=3D"Consolas">maven</FONT></SPAN></U><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#000000" =
+SIZE=3D2 FACE=3D"Consolas">-</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"><U></U></SPAN><U><SPAN LANG=3D"en-us"><FONT =
+COLOR=3D"#000000" SIZE=3D2 =
+FACE=3D"Consolas">javadoc</FONT></SPAN></U><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#000000" =
+SIZE=3D2 FACE=3D"Consolas">-</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"><U></U></SPAN><U><SPAN LANG=3D"en-us"><FONT =
+COLOR=3D"#000000" SIZE=3D2 =
+FACE=3D"Consolas">plugin</FONT></SPAN></U><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&lt;/</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#3F7F7F" =
+SIZE=3D2 FACE=3D"Consolas">artifactId</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&gt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"> <FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&lt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#3F7F7F" =
+SIZE=3D2 FACE=3D"Consolas">version</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&gt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#000000" =
+SIZE=3D2 FACE=3D"Consolas">2.9.1</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&lt;/</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#3F7F7F" =
+SIZE=3D2 FACE=3D"Consolas">version</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&gt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"> <FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&lt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#3F7F7F" =
+SIZE=3D2 FACE=3D"Consolas">configuration</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&gt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"> <FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&lt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#3F7F7F" =
+SIZE=3D2 FACE=3D"Consolas">reportOutputDirectory</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&gt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#000000" =
+SIZE=3D2 FACE=3D"Consolas">help/api</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&lt;/</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#3F7F7F" =
+SIZE=3D2 FACE=3D"Consolas">reportOutputDirectory</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&gt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"> <FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&lt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#3F7F7F" =
+SIZE=3D2 FACE=3D"Consolas">destDir</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&gt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#000000" =
+SIZE=3D2 FACE=3D"Consolas">api</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&lt;/</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#3F7F7F" =
+SIZE=3D2 FACE=3D"Consolas">destDir</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&gt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"> <FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&lt;/</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#3F7F7F" =
+SIZE=3D2 FACE=3D"Consolas">configuration</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&gt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"> <FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&lt;/</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#3F7F7F" =
+SIZE=3D2 FACE=3D"Consolas">plugin</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT COLOR=3D"#008080" =
+SIZE=3D2 FACE=3D"Consolas">&gt;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"> =
+<FONT COLOR=3D"#008080" SIZE=3D2 =
+FACE=3D"Consolas">&lt;/</FONT></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"><FONT COLOR=3D"#3F7F7F" =
+SIZE=3D2 FACE=3D"Consolas">plugins</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"><FONT COLOR=3D"#008080" SIZE=3D2 =
+FACE=3D"Consolas">&gt;</FONT></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"> =
+<FONT COLOR=3D"#008080" SIZE=3D2 =
+FACE=3D"Consolas">&lt;/</FONT></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"><FONT COLOR=3D"#3F7F7F" =
+SIZE=3D2 FACE=3D"Consolas">build</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"><FONT COLOR=3D"#008080" SIZE=3D2 =
+FACE=3D"Consolas">&gt;</FONT></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-us"><FONT FACE=3D"Calibri">Now maven fails =
+as it cannot resolve lots of eclipse dependencies</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT FACE=3D"Calibri"> =
+like</FONT></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT =
+FACE=3D"Calibri">:</FONT></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us"><FONT COLOR=3D"#000000" SIZE=3D2 =
+FACE=3D"Consolas">[ERROR] Failed to execute goal =
+org.apache.maven.plugins:maven-javadoc-plugin:2.9.1:aggregate =
+(default-cli) on project com.infineon.commontools.releng.jenkins: An =
+error has occurred in JavaDocs report generation:</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us"><FONT COLOR=3D"#000000" SIZE=3D2 =
+FACE=3D"Consolas">[ERROR] Exit code: 1 - =
+C:\Userdata\Workspaces\SysBox\ebt_common\bundles\com.infineon.tools\src\c=
+om\infineon\tools\AbstractActivator.java:24: error: package =
+org.eclipse.ui does not exist</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us"><FONT COLOR=3D"#000000" SIZE=3D2 =
+FACE=3D"Consolas">[ERROR] import =
+org.eclipse.ui.IMemento;</FONT></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us"><FONT COLOR=3D"#000000" SIZE=3D2 =
+FACE=3D"Consolas">[ERROR] ^</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"><FONT =
+FACE=3D"Calibri">I get other errors for libs, where I only have a binary =
+OSGI bundle available (which is part of the aggregator =
+pom)</FONT></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us"><FONT COLOR=3D"#000000" SIZE=3D2 =
+FACE=3D"Consolas">[ERROR] symbol:&nbsp;&nbsp; class</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"><U></U></SPAN><U><SPAN LANG=3D"en-us"> <FONT =
+COLOR=3D"#000080" SIZE=3D2 =
+FACE=3D"Consolas">CoreException</FONT></SPAN></U><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us"><FONT COLOR=3D"#000000" SIZE=3D2 =
+FACE=3D"Consolas">[ERROR] location: class StringTools</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us"><FONT COLOR=3D"#000000" SIZE=3D2 =
+FACE=3D"Consolas">[ERROR] =
+C:\Userdata\Workspaces\SysBox\ebt_common\bundles\com.infineon.tools\src\c=
+om\infineon\tools\hexparser\antlr\HexStringBaseListener.java:4: error: =
+package org.antlr.v4.runtime does not exist</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us"><FONT COLOR=3D"#000000" SIZE=3D2 =
+FACE=3D"Consolas">[ERROR] import =
+org.antlr.v4.runtime.ParserRuleContext;</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"><FONT COLOR=3D"#000000" =
+SIZE=3D2 FACE=3D"Consolas">[ERROR] ^</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"de-at"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-us"><FONT FACE=3D"Calibri">Generally I am =
+happy with the created JavaDoc files. Is there a way to =
+tell</FONT></SPAN><SPAN LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"> =
+<FONT FACE=3D"Calibri">Javadoc to ignore missing dependencies or to tell =
+maven not to fail here?</FONT></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-us"><FONT FACE=3D"Calibri">I know there =
+are lots of similar questions asked out there, but I could not find a =
+solution to my problem</FONT></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-us"><FONT =
+FACE=3D"Calibri">Thanks</FONT></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"en-us"><FONT =
+FACE=3D"Calibri">Christian</FONT></SPAN><SPAN =
+LANG=3D"de-at"></SPAN><SPAN LANG=3D"en-us"></SPAN></P>
+
+<P DIR=3DLTR><SPAN LANG=3D"de-at"></SPAN><SPAN =
+LANG=3D"en-us"></SPAN></P>
+
+</BODY>
+</HTML>
+------=_NextPart_001_01E5_01CF78D8.A2A27AA0--
+
+------=_NextPart_000_01E4_01CF78D8.A2A27AA0
+Content-Type: application/pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+
+MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIIMWjCCA+4w
+ggLWoAMCAQICEGsk517Bqmu0TbjoYC/BbAIwDQYJKoZIhvcNAQEFBQAwXTELMAkGA1UEBhMCZGUx
+ITAfBgNVBAoTGEluZmluZW9uIFRlY2hub2xvZ2llcyBBRzErMCkGA1UEAxMiSW5maW5lb24gVGVj
+aG5vbG9naWVzIEFHIFJvb3QgQ0EgMjAeFw0xMTA3MjYxMzEyMjBaFw0zNjA3MjYxMzIyMjBaMF0x
+CzAJBgNVBAYTAmRlMSEwHwYDVQQKExhJbmZpbmVvbiBUZWNobm9sb2dpZXMgQUcxKzApBgNVBAMT
+IkluZmluZW9uIFRlY2hub2xvZ2llcyBBRyBSb290IENBIDIwggEiMA0GCSqGSIb3DQEBAQUAA4IB
+DwAwggEKAoIBAQDMQpw2+wMM1Zu9gvlmBJSMi0GGkpvNL+RUfdNatlMGrliwyaCEB+HZzZP9CLys
+cLIglTKWeANzKozlAjE4ubdO/Y1IBmnuJMDW2lI73bZOwR2Y0shwmO1esRd2EyGCtVa9RgKa7HD3
+pEHJAXlu9+IejoYv94lF80E/5jsNMeczlwUV7cF3NwXQKMoRd1BHGtFnwwOqIVELmDC/coQM6UXe
+MlUzYpfVJyqdCiNHU0wPzFNyeDObgDOLNIH222OuRR5wsDvmDiP/6j8QPTBJ71uGWlFE6B7cVvAO
+QXVDCZYLpfQLkNFnG8BElOH7gSzuAiBvQtoERRC1QyZZC2MEValdAgMBAAGjgakwgaYwDgYDVR0P
+AQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYEFDhv1fR35slaIStRFWrWIKsC
+DacVMDwGA1UdHwQ1MDMwMaAvoC2GK2h0dHA6Ly9jcmwuaW5maW5lb24uY29tL3Jvb3RjYTIvcm9v
+dGNhMi5jcmwwEAYJKwYBBAGCNxUBBAMCAQAwEQYDVR0gBAowCDAGBgRVHSAAMA0GCSqGSIb3DQEB
+BQUAA4IBAQCsiCetpToA0t9yFxPkiw1pekvEPPEeOqsMEGa/Xf6JyqZCC0lSAyu9Uo6l6YSCAb73
+f0TjNH0JDNApW2q6556qloVM0almOTirDaM+R8bJzeRg7xHeZriif9QWfA9czBfK6MSDTDULatcH
+mJwNznVQWuRBefTg/txo0OuPvvmbuGVT8hhdEf1fu0rcX7fE1X7zP27opZ3DjMk+ocu9MRk3L+Cw
+ISxiCfo2af0hWLZBTuQPqODjx73waxOAK317QwRC4m84BwUEZ3IR3CfvK3ukk6UQ8Pgl6SmDdzNw
+KGVNo+tNELKtgW125xQ5znatvPJQjYJjhB0XikvWjdKJL48PMIIEIzCCAwugAwIBAgIKYR4k+gAA
+AAAAAjANBgkqhkiG9w0BAQUFADBdMQswCQYDVQQGEwJkZTEhMB8GA1UEChMYSW5maW5lb24gVGVj
+aG5vbG9naWVzIEFHMSswKQYDVQQDEyJJbmZpbmVvbiBUZWNobm9sb2dpZXMgQUcgUm9vdCBDQSAy
+MB4XDTExMDcyNzEyMzIwNVoXDTI2MDcyNzEyNDIwNVowXTELMAkGA1UEBhMCZGUxITAfBgNVBAoT
+GEluZmluZW9uIFRlY2hub2xvZ2llcyBBRzErMCkGA1UEAxMiSW5maW5lb24gVGVjaG5vbG9naWVz
+IEFHIFVzZXIgQ0EgMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKBHZyb03ScBt//g
+4A4cOg5bRHXlpCBOyzJo/X4sMpuxu+47KFkVAIWhUlyhVk4f22+EDos6Ley7/10Pl7VNBuTj0i07
+P5vjTbT/CgshA3mcRb4xqyXZx4Eh/rnMicAlXQ8OUhbg+uBMjBOuvQrhXg2epP6+etKdg6LlXDrD
+edZflpmIGvn8sgGyfbAiH0Wy/HGJngg6dncHacL6hPzGTrhR4bJwTnogxhN7NaDmuU1OxzKjsPc7
+cidAmTtIlGpEfXj162C8GZ6vQjmBjH+ZqEdnz86IPGnUHb4Ifoa/GVzSlH0hPtMmybczi/BAcAQO
+obiKhfCbpNU8/nXhuiQ3kbcCAwEAAaOB5DCB4TALBgNVHQ8EBAMCAYYwHQYDVR0OBBYEFBoYmNi4
+E/3bHsoMirMTA3B3wxeWMB8GA1UdIwQYMBaAFDhv1fR35slaIStRFWrWIKsCDacVMDwGA1UdHwQ1
+MDMwMaAvoC2GK2h0dHA6Ly9jcmwuaW5maW5lb24uY29tL3Jvb3RjYTIvcm9vdGNhMi5jcmwwEgYD
+VR0TAQH/BAgwBgEB/wIBADBABgNVHSAEOTA3MDUGCyqCFABEChQBAQEBMCYwJAYIKwYBBQUHAgEW
+GGh0dHBzOi8vY3BzLmluZmluZW9uLmNvbTANBgkqhkiG9w0BAQUFAAOCAQEAbOjg2haQMCPP0ZcS
+1+hd0teYaBpi2LpwADGVyFAUO2UuPKGxAfYxWf3/v0FNW2IOhNKj8w3f076sKkeSlb6WiZZIe+ao
+kG2H6AimMIlhvv4GGAFHzQLVclXIz9jM7H4fH/wA/gHE4wDE1dvsGVjeM2fEjwTOtNrPzGF9SF1s
+NyJy8a2AZ83b6J6WIN72Jg2KXXQuVsa61/q2C5AAMfXLL4shuWN1JnYO03PBUjYWxqNdcETppKhc
+swaIZJ0MjKDttzuT9IntFeoOYMJx27KGowOqMDbmRoXRGWZahO4m4UkjIo9uzMX7U5EQymoMiVJc
+Ndp3qT5b48QXhmDe7Cmd4DCCBD0wggMloAMCAQICAgFbMA0GCSqGSIb3DQEBBQUAMF0xCzAJBgNV
+BAYTAmRlMSEwHwYDVQQKExhJbmZpbmVvbiBUZWNobm9sb2dpZXMgQUcxKzApBgNVBAMTIkluZmlu
+ZW9uIFRlY2hub2xvZ2llcyBBRyBVc2VyIENBIDIwHhcNMTExMDExMDkxMjQ2WhcNMTYxMDExMDkx
+MjQ2WjCBizELMAkGA1UEBhMCQVQxKTAnBgNVBAoTIEluZmluZW9uIFRlY2hub2xvZ2llcyBBdXN0
+cmlhIEFHMR4wHAYDVQQDExVDaHJpc3RpYW4gUG9udGVzZWdnZXIxMTAvBgkqhkiG9w0BCQEWIkNo
+cmlzdGlhbi5Qb250ZXNlZ2dlckBpbmZpbmVvbi5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQCACGdd/SmoC6/KuQ/ICdNmnP1sURrECaphtoWfvJkfIbuArpNbtrsbc2yJyrqT3fBf
+BxsxmxzzAyVhmxnljf5mC5fXkBGvgHfax9uE5RrGmjt7Ut5db1Bh5PQjXvX0JJ7SUos4cy38EKZ7
+KD2N2kOWkY4u6fdaVMLP3fcovLNI8fSb52GQZ3E3RTteOKEA7dXtpkHmKqSToM5iAgE4/fnTiLSz
+rWL1eSw+CAa1SX6w1dcqRhlB8ykfBYd4WJlZjrkMuZby2IL8EVsNjQVw87Hmj/9ey4OWwUqpI6bo
+Q/tx9gMXflmja5h32hln8A8jD/VWYTBAFJ+A7MKgBa/E8S77AgMBAAGjgdcwgdQwLQYDVR0RBCYw
+JIEiQ2hyaXN0aWFuLlBvbnRlc2VnZ2VyQGluZmluZW9uLmNvbTBABgNVHSAEOTA3MDUGCyqCFABE
+ChQBAQEBMCYwJAYIKwYBBQUHAgEWGGh0dHBzOi8vY3BzLmluZmluZW9uLmNvbTA8BgNVHR8ENTAz
+MDGgL6AthitodHRwOi8vY3JsLmluZmluZW9uLmNvbS91c2VyY2EyL3VzZXJjYTIuY3JsMA4GA1Ud
+DwEB/wQEAwIE8DATBgNVHSUEDDAKBggrBgEFBQcDBDANBgkqhkiG9w0BAQUFAAOCAQEAf/C6dEyt
+cq1Ix7hCk1DR4dlDWtIbQkj4J4hMvpnMC87N8a25JDhQ/YhJZcmgmySuaXv/PmJBrjiXnTn2oiB+
+vUZg5ARbXU+N+xjTS5WSawhpRIat2FLM5Mb3zGKUBYaRzJVdMK0I5J3QCjc7zXbytF6djZoJ5c9D
+par9AGG08RTQHUObFAbvJ2pM2I+EMBNs0xyZKpOaTKQkRUU6cuyUQp03CUk/0mYwDtVFuVE6oO7S
+3JSt2D6txG3MZ2dl2t3Eo7TZvvIqjekwCfwkzPbZX7S4HflzitoTO25aFbLeR5ZbN0UUsCjrlNKa
+EY4dKsEYASU+Wcur/vGNSJEcYPOYWzGCA4MwggN/AgEBMGMwXTELMAkGA1UEBhMCZGUxITAfBgNV
+BAoTGEluZmluZW9uIFRlY2hub2xvZ2llcyBBRzErMCkGA1UEAxMiSW5maW5lb24gVGVjaG5vbG9n
+aWVzIEFHIFVzZXIgQ0EgMgICAVswCQYFKw4DAhoFAKCCAfUwGAYJKoZIhvcNAQkDMQsGCSqGSIb3
+DQEHATAcBgkqhkiG9w0BCQUxDxcNMTQwNTI2MDk1MDA1WjAjBgkqhkiG9w0BCQQxFgQUM2PT+Tbd
+sEU7Mevc5p8xBx1k78UwcgYJKwYBBAGCNxAEMWUwYzBdMQswCQYDVQQGEwJkZTEhMB8GA1UEChMY
+SW5maW5lb24gVGVjaG5vbG9naWVzIEFHMSswKQYDVQQDEyJJbmZpbmVvbiBUZWNobm9sb2dpZXMg
+QUcgVXNlciBDQSAyAgIBWzB0BgsqhkiG9w0BCRACCzFloGMwXTELMAkGA1UEBhMCZGUxITAfBgNV
+BAoTGEluZmluZW9uIFRlY2hub2xvZ2llcyBBRzErMCkGA1UEAxMiSW5maW5lb24gVGVjaG5vbG9n
+aWVzIEFHIFVzZXIgQ0EgMgICAVswgasGCSqGSIb3DQEJDzGBnTCBmjALBglghkgBZQMEASowCwYJ
+YIZIAWUDBAEWMAoGCCqGSIb3DQMHMAsGCWCGSAFlAwQBAjAOBggqhkiG9w0DAgICAIAwBwYFKw4D
+AgcwDQYIKoZIhvcNAwICAUAwDQYIKoZIhvcNAwICASgwBwYFKw4DAhowCwYJYIZIAWUDBAIDMAsG
+CWCGSAFlAwQCAjALBglghkgBZQMEAgEwDQYJKoZIhvcNAQEBBQAEggEAcBKkwmZU+m/CgjD8wQit
+sX0dyQT8YrrjtZ1m+IdHqKAMHp9CSV/TCeZUtAxe7gDZKB/+GUDd5XGKPSfZDRj/8nONS31vSfHY
+qfZgIi2bJEeq7T71HJGtgzOB45hndr8HdqaMYaxpL31yeKTU1A2JzFtlaMiEb6wJznOQwie28wgx
+MEn49iz5CONfSwBGVE8xgAwEJ1a/RZvGRKPXil1jjm2lwP11u6OyXSqug3LVSMcI2/aLyUR8nbGp
+LFpdgRjcGTRe+i+McNPZ/nG7HhiNcx2NED+oPazGKe0WarqD8f9LR/J1D7p1F0TN8+S1d0/B3kVF
+YF2q704mz7QOFJ+PiAAAAAAAAA==
+
+------=_NextPart_000_01E4_01CF78D8.A2A27AA0--
+

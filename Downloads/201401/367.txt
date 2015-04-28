@@ -1,0 +1,75 @@
+From users-return-135165-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan 15 18:52:06 2014
+Return-Path: <users-return-135165-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F0B0710C66
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 15 Jan 2014 18:52:05 +0000 (UTC)
+Received: (qmail 93380 invoked by uid 500); 15 Jan 2014 18:52:01 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 93222 invoked by uid 500); 15 Jan 2014 18:52:01 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 93214 invoked by uid 99); 15 Jan 2014 18:52:00 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 15 Jan 2014 18:52:00 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [212.227.17.12] (HELO mout.web.de) (212.227.17.12)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 15 Jan 2014 18:51:53 +0000
+Received: from scotty.enterprise ([85.127.36.111]) by smtp.web.de (mrweb101)
+ with ESMTPSA (Nemesis) id 0MLxo0-1W0Bdu2UJQ-007o22 for
+ <users@maven.apache.org>; Wed, 15 Jan 2014 19:51:22 +0100
+Received: from [192.168.0.135] (unknown [192.168.0.135])
+	by scotty.enterprise (Postfix) with ESMTP id 77DCF566EE
+	for <users@maven.apache.org>; Wed, 15 Jan 2014 19:51:14 +0100 (CET)
+Message-ID: <52D6D8C4.9080603@web.de>
+Date: Wed, 15 Jan 2014 19:51:48 +0100
+From: Christian Pontesegger <christian.pontesegger@web.de>
+User-Agent: Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20100101 Thunderbird/24.1.1
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: javadoc:aggregate project filter
+Content-Type: multipart/alternative;
+ boundary="------------040406050408000603050602"
+X-Provags-ID:  V03:K0:W99r4W/oquz1ZTvR2mKcb8icN/4Xg9sIlMurhdPV+MhBy666mhS
+ K4qbV4nshq3cm1flAeodOzyD6vcPlbnquFl18Z4Mbzzwhkn1YdVvAr8Q/iqddUzYfqBnSmi
+ NKhRWGft0I07B4hAWrtlfBIQ2taag9uRtqWZWyDIDv64HqB2Ue1lCBDLdMaC6SjZWSrvrcI
+ vTJbwsOXEv9ebAiEFJ5eA==
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------040406050408000603050602
+Content-Type: text/plain; charset=ISO-8859-15; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Hi,
+
+I'd like to create API documentation for an eclipse RCP project. 
+Therefore I use the javadoc:aggregate goal which nicely builds 
+documentation for all my projects.
+
+Now I want to filter some of them. When building with tycho junit tests 
+are typically kept in a separate project. Still the package names for a 
+test class ae the same as for the main class. This seems to be the best 
+practice approach right now.
+
+Currently API documentation for test classes is built too. Is there a 
+way to filter a whole project from the aggregation step?
+
+The only other approach I found was to use the javadoc:javadoc goal and 
+to manually add paths using the sourcepath parameter. For a big project 
+this is an error prone task which I would like to avoid.
+
+regards
+Christian
+
+--------------040406050408000603050602--
+

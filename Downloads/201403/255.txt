@@ -1,0 +1,196 @@
+From users-return-135994-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Mar 28 13:50:35 2014
+Return-Path: <users-return-135994-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4208310751
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 28 Mar 2014 13:50:35 +0000 (UTC)
+Received: (qmail 22823 invoked by uid 500); 28 Mar 2014 13:50:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 22648 invoked by uid 500); 28 Mar 2014 13:50:21 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 22636 invoked by uid 99); 28 Mar 2014 13:50:19 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 13:50:19 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of jnord@cisco.com designates 173.37.142.93 as permitted sender)
+Received: from [173.37.142.93] (HELO alln-iport-6.cisco.com) (173.37.142.93)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 13:50:13 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple;
+  d=cisco.com; i=@cisco.com; l=3933; q=dns/txt; s=iport;
+  t=1396014612; x=1397224212;
+  h=from:to:subject:date:message-id:references:in-reply-to:
+   content-transfer-encoding:mime-version;
+  bh=tFJAaunspolJe88LX1yWy7mmGYWP36aR8xpXwb9qfIk=;
+  b=D8CZaUJM09MmTc7xHF7fLZlyfRp7MjcCzQJba93MxxXHnLBxclVmEYE3
+   rnp28eq4kq8u1tvEVlJdXuQo+M6RXfbHisRuNiujkB+p1xDZE7t6Ha5xt
+   lEcYXFwwB14gGA1Py1hUX2o0kjS6k6+4MCunLLpaYmR1e9mCG3Lkjn1LD
+   4=;
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: AiwFAN58NVOtJXHB/2dsb2JhbABZgwY7V7s2hzWBGhZ0giUBAQEEOhQgFwQCAQgRBAEBCxQJByEQARQJCAIECAcEAQcVBIdEAxENyi0NCoclF4xegWs4BoMegRQElmGDIIs4hUqDMG6BPQ
+X-IronPort-AV: E=Sophos;i="4.97,751,1389744000"; 
+   d="scan'208";a="31165702"
+Received: from rcdn-core2-6.cisco.com ([173.37.113.193])
+  by alln-iport-6.cisco.com with ESMTP; 28 Mar 2014 13:49:51 +0000
+Received: from xhc-aln-x15.cisco.com (xhc-aln-x15.cisco.com [173.36.12.89])
+	by rcdn-core2-6.cisco.com (8.14.5/8.14.5) with ESMTP id s2SDnpVa022705
+	(version=TLSv1/SSLv3 cipher=AES128-SHA bits=128 verify=FAIL)
+	for <users@maven.apache.org>; Fri, 28 Mar 2014 13:49:51 GMT
+Received: from xmb-aln-x03.cisco.com ([169.254.6.56]) by xhc-aln-x15.cisco.com
+ ([173.36.12.89]) with mapi id 14.03.0123.003; Fri, 28 Mar 2014 08:49:50 -0500
+From: "James Nord (jnord)" <jnord@cisco.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: RE: maven release-plugin 2.5 bug - releasing snapshots...
+Thread-Topic: maven release-plugin 2.5 bug - releasing snapshots...
+Thread-Index: AQHPSmyR+LxGYrwhCk6aqPh+g9iIKpr2nw+AgAANLICAAAwoAIAAB42AgAAFuwCAAAmVAIAAA9AA//+wptA=
+Date: Fri, 28 Mar 2014 13:49:50 +0000
+Message-ID: <5629A6219DB3E544AB84388D90149787479D2FA6@xmb-aln-x03.cisco.com>
+References: <1396000799217-5789837.post@n5.nabble.com>
+	<CANWgJS6WiA1b4mew9Y5sHFy0Vpp9iWMidkTaitwKF52vfyo2Pw@mail.gmail.com>
+	<1396005159305-5789843.post@n5.nabble.com>
+	<CA+nPnMxJvqyWcnsWADF00zr+emGdw-kA4fZeSY9duCOj3zs96A@mail.gmail.com>
+	<1396009391638-5789868.post@n5.nabble.com>
+	<CA+nPnMxp6vhW6BaDQ22b5P2pHVVZTAkwpd7NW1PVgfxuzw9gTw@mail.gmail.com>
+	<1396012680124-5789892.post@n5.nabble.com>
+ <CA+nPnMze-q4vuU7o3B2y7_MCS5cUnWaTMHZ=Dku8GyK3UMK08w@mail.gmail.com>
+In-Reply-To: <CA+nPnMze-q4vuU7o3B2y7_MCS5cUnWaTMHZ=Dku8GyK3UMK08w@mail.gmail.com>
+Accept-Language: en-GB, en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [173.38.176.100]
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+shouldn't release:branch still support this still though?
+
+If not that's bad as you will end up with a release version on the head of =
+either the source branch or the new branch (and both should be used for ong=
+oing development so should be snapshots...)
+
+/James
+
+> -----Original Message-----
+> From: Stephen Connolly [mailto:stephen.alan.connolly@gmail.com]
+> Sent: 28 March 2014 13:32
+> To: Maven Users List
+> Subject: Re: maven release-plugin 2.5 bug - releasing snapshots...
+>=20
+> Let me rephrase. The release plugin is designed to make release versions.
+> It is not designed to make -SNAPSHOT versions. It was a bug that it let y=
+ou
+> specify a -SNAPSHOT version as the release version. The bug has been fixe=
+d.
+>=20
+>=20
+> On 28 March 2014 13:18, ghostwolf59
+> <martin.cedervall@commerce.wa.gov.au>wrote:
+>=20
+> > That's a way to general statement to be made  - that also is incorrect =
+  !
+> >
+> > A snapshot is not allowed for final release - but could still be
+> > released into a shapshot repo for test purposes !
+> > The question really bogs down to how much control you'd like to have
+> > against a release snapshot.
+> > Anyone can in effect release a snapshot into the remote archiva
+> > snapshot repo but no scm branch tag would take place and the source
+> > this snapshot was based on would be unknown since uncommitted data
+> > could have been used.
+> >
+> > If you go down the path of controlling this (in selected cases) you'd
+> > like to have full control over the source it represent as well be able
+> > to assess the site info linked to this release.
+> >
+> > A simple mvn deploy would not do these things - it would only promote
+> > a local build into archiva's snapshot repository - with a lot of ???
+> > to follow when it comes to QA, source control etc.
+> >
+> >
+> > I am not trying to do a "*/release/*" as such - it's a legit release
+> > of a
+> > */snapshot/* to be used for test purposed in a highly controlled
+> > manner pending official signoffs - once a signoff is received a proper
+> > release for that version would be performed.
+> >
+> > The final release would never be allowed to be a snapshot - nor would
+> > any snapshot dependencies be allowed but that's a side issue and have
+> > absolutely nothing to do with what I am arguing about.
+> >
+> > The snapshot release would end up in a dedicated snapshot repository
+> > so why you go down this path I don't really understand - bogs down to
+> > how v2.2.2 vs higher versions of the release-plugin behaves.
+> >
+> > I have now done some tests going back in history and it shows that all
+> > versions after *v.2.3.2* (my initial test was on v2.2.2) fails when it
+> > comes to this...
+> >
+> > So it appear that v 2.4 onwards all fail when it comes to this
+> >
+> > Succeeds:
+> > <
+> > http://maven.40175.n5.nabble.com/file/n5789892/release-version-
+> prompt-
+> > v.2.3.2.jpg
+> > >
+> >
+> > Failures;
+> > <
+> > http://maven.40175.n5.nabble.com/file/n5789892/release-version-
+> prompt-
+> > v.2.5-w.version.jpg
+> > >
+> >
+> > <
+> > http://maven.40175.n5.nabble.com/file/n5789892/release-version-
+> prompt-
+> > v.2.4.2.jpg
+> > >
+> >
+> > <
+> > http://maven.40175.n5.nabble.com/file/n5789892/release-version-
+> prompt-
+> > v.2.4.1.jpg
+> > >
+> >
+> > <
+> > http://maven.40175.n5.nabble.com/file/n5789892/release-version-
+> prompt-
+> > v.2.4.jpg
+> > >
+> >
+> >
+> >
+> >
+> >
+> > -----
+> > good @ being sucked @
+> > --
+> > View this message in context:
+> > http://maven.40175.n5.nabble.com/maven-release-plugin-2-5-bug-
+> releasin
+> > g-snapshots-tp5789837p5789892.html
+> > Sent from the Maven - Users mailing list archive at Nabble.com.
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,125 @@
+From users-return-135323-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Feb  1 13:42:11 2014
+Return-Path: <users-return-135323-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8889510B84
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  1 Feb 2014 13:42:11 +0000 (UTC)
+Received: (qmail 44906 invoked by uid 500); 1 Feb 2014 13:42:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 44840 invoked by uid 500); 1 Feb 2014 13:42:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 44832 invoked by uid 99); 1 Feb 2014 13:42:06 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 01 Feb 2014 13:42:06 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of martijnverburg@gmail.com designates 209.85.216.50 as permitted sender)
+Received: from [209.85.216.50] (HELO mail-qa0-f50.google.com) (209.85.216.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 01 Feb 2014 13:42:00 +0000
+Received: by mail-qa0-f50.google.com with SMTP id cm18so7658161qab.23
+        for <users@maven.apache.org>; Sat, 01 Feb 2014 05:41:39 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=XaueQEmzTydElwrnj8owrr/k1cPu8pZAzkmJvYoJ7/U=;
+        b=mhLJV0TWeRSwHL2IMo/G0zMz7wOvnUoONaC50TUG/8DmTs0yU+iD4+j8+H1OHSWeAh
+         oCEVSafKMnD/N1IXoLbkAAUQ+tqrsLQMZ7Ou2VwL/0A/FgS5wKMyfb/4PQQ86l4ptaT1
+         gyqhH5ZyBTlW4KsYWQMt1ZDiGG6NOFc85RnYBTZcG3nsYwsBUrwUp96L2TVE7Z1BY0H1
+         3u1WtcYXJUcU9eHIbnspDzb+m3dlkF9jP7+JeQvtacml66rrJEe/JaCUZg8CLcEw4V02
+         VBO5u3nxnAEFWAfDXQJ0nNWWGE84e3eSDVHFaDSGBzQBY7zZIAfdcX8cVMi3ZljqG1uw
+         Aebw==
+MIME-Version: 1.0
+X-Received: by 10.140.50.131 with SMTP id s3mr3297000qga.12.1391262099332;
+ Sat, 01 Feb 2014 05:41:39 -0800 (PST)
+Received: by 10.229.46.10 with HTTP; Sat, 1 Feb 2014 05:41:39 -0800 (PST)
+In-Reply-To: <F06D8E44-68B1-46F7-89B6-8BAFCC772A2E@talios.com>
+References: <CAOonoheT-YOJB=_-V-DAYfksJisO=Dj_ahNzj5Wb8m7_vfyKLQ@mail.gmail.com>
+	<D6720A04-811C-4495-B307-FD88FF03AF4F@talios.com>
+	<CAOonohcTGT-4r97jQgLCY2qGYRwv2NXKHz1eDYW+oOwbPcb=uw@mail.gmail.com>
+	<BD8A35E1-2835-4D2E-AB83-623ECBA38DA9@talios.com>
+	<CAOonohdipPJMtSaeXe30B5-1C-Xnc06KKWuSw8A+6We=6w7qBA@mail.gmail.com>
+	<F06D8E44-68B1-46F7-89B6-8BAFCC772A2E@talios.com>
+Date: Sat, 1 Feb 2014 14:41:39 +0100
+Message-ID: <CAP7YuAR4HZf-4LXpaYPmfDBAJVXJYVWA=Rh=-qDF_s9HwJgLZQ@mail.gmail.com>
+Subject: Re: Maven process stuck on MacOS with Java8
+From: Martijn Verburg <martijnverburg@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113522963863dc04f15873d0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113522963863dc04f15873d0
+Content-Type: text/plain; charset=UTF-8
+
+Have you tried on 8b126?
+
+Cheers,
+Martijn
+
+
+On 31 January 2014 20:45, Mark Derricutt <mark@talios.com> wrote:
+
+> That's the terminal, not the shell ( bash, zsh, fish, csh etc. ).
+>
+> I was also using iTerm when I had my issue, and now I think about it -
+> since the last beta update/release I've not seen the issue again, but I
+> also changed laptops so can't recall if its only on the new install I've
+> not had the issue.
+>
+> I suspect they're not the same issue tho...  maybe.
+>
+>
+> On 1 Feb 2014, at 0:05, Stephane Nicoll wrote:
+>
+>  Mark,
+>>
+>> I am using iTerm2 (1.0.0.20130622)
+>>
+>> S.
+>>
+>>
+>> On Fri, Jan 31, 2014 at 11:56 AM, Mark Derricutt <mark@talios.com> wrote:
+>>
+>>  You're not by any chance using "fish" as your shell are you?
+>>>
+>>> For awhile some strange bug in fish ( at least on my old machine, along
+>>> with a combination of prompt settings ) would "hang" on the termination
+>>> of
+>>> processes, more often than not maven but also others.  Something about it
+>>> being stuck reading a char from stdin or something - only it wasn't time
+>>> related, sometimes resizes/splitting the terminal would kick it back into
+>>> gear.
+>>>
+>>>
+>>> On 31 Jan 2014, at 23:12, Stephane Nicoll wrote:
+>>>
+>>> I am definitely impatient because looking at that closer, the shell is
+>>> not
+>>>
+>>>> stuck but it takes several seconds to give back hand. Sometimes it's ok,
+>>>> sometimes is 5 sec or so.
+>>>>
+>>>>
+>>> ---------------------------------------------------------------------
+>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>
+>>>
+>>>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a113522963863dc04f15873d0--
+

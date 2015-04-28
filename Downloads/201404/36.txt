@@ -1,0 +1,99 @@
+From users-return-136271-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Apr 28 09:12:38 2014
+Return-Path: <users-return-136271-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DFBD9119BA
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 28 Apr 2014 09:12:37 +0000 (UTC)
+Received: (qmail 44766 invoked by uid 500); 28 Apr 2014 09:12:34 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 44391 invoked by uid 500); 28 Apr 2014 09:12:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 44378 invoked by uid 99); 28 Apr 2014 09:12:31 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 28 Apr 2014 09:12:31 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of nick.stolwijk@gmail.com designates 209.85.212.172 as permitted sender)
+Received: from [209.85.212.172] (HELO mail-wi0-f172.google.com) (209.85.212.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 28 Apr 2014 09:12:26 +0000
+Received: by mail-wi0-f172.google.com with SMTP id hi2so5303162wib.17
+        for <users@maven.apache.org>; Mon, 28 Apr 2014 02:12:05 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=LLo6jKOneclA5XB5A+opb57VRw1Jq82H4XMyzg49J8s=;
+        b=ydcWwj2bGIslDyzbA01w84oZbfzy0kL4f/X07AOnrIkzLmGrW7KoFladk39w+IDnxq
+         E8yrAcc8sIoJ2wsrscUzG4f9GD575PB0N4vSPfzi0J4wP7yqhhAWv/Q/HznyT2G56S2T
+         BV165Wfs/YqCZ5lgyMIJXe/O8C2sF8GynARH2hbwc199W4AV9H0oBivJWrbc54bn7SKS
+         1eEdUeYwD+ijEJ0x7FYSh8bci8NdAEEvbg8FfdH79E+7ndxuMmxJP0P5Bv/FyIqTgrcY
+         OShHtbzyKN/ylx18JEaMrEbQye7rkcuyT6VH3FF6VI0e1i6qzz53vI663zYMwj2xwBmB
+         edlQ==
+MIME-Version: 1.0
+X-Received: by 10.181.11.229 with SMTP id el5mr14496748wid.43.1398676325098;
+ Mon, 28 Apr 2014 02:12:05 -0700 (PDT)
+Received: by 10.216.175.73 with HTTP; Mon, 28 Apr 2014 02:12:05 -0700 (PDT)
+Date: Mon, 28 Apr 2014 11:12:05 +0200
+Message-ID: <CAA9S6i5K=5ot4Kw3JeKpg_0z3FG3CPqWyD-j4_jA08_WTGiqVg@mail.gmail.com>
+Subject: Maven Jar Plugin - Testjar: includes together with skipIfEmpty
+From: Nick Stolwijk <nick.stolwijk@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Folks,
+
+I found a little curiosity in the maven jar plugin.
+
+if you specify includes and the skipIfEmpty property a jar is still
+created and attached while it only has a pom file in it. I would have
+expected that the creation of the jar was skipped if no files where
+selected by my includes property.
+
+My usecase: I only want to generate the tests jar when there are
+builders in the module, so other modules can use those builders in
+their tests. I don't want to package all tests, to prevent developers
+to create dependencies on these tests.
+
+My configuration:
+
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>test-jar</goal>
+                        </goals>
+                        <configuration>
+                            <skipIfEmpty>true</skipIfEmpty>
+                            <includes>
+                                <include>**/*Builder.class</include>
+                            </includes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+With regards,
+
+Nick Stolwijk
+
+~~~ Try to leave this world a little better than you found it and,
+when your turn comes to die, you can die happy in feeling that at any
+rate you have not wasted your time but have done your best ~~~
+
+Lord Baden-Powell
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

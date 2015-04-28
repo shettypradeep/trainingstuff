@@ -1,0 +1,212 @@
+From users-return-135909-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Mar 24 08:14:07 2014
+Return-Path: <users-return-135909-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 647871062E
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 24 Mar 2014 08:14:07 +0000 (UTC)
+Received: (qmail 63372 invoked by uid 500); 24 Mar 2014 08:14:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 63314 invoked by uid 500); 24 Mar 2014 08:14:02 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 63306 invoked by uid 99); 24 Mar 2014 08:14:01 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Mar 2014 08:14:00 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of anders.g.hammar@gmail.com designates 209.85.219.46 as permitted sender)
+Received: from [209.85.219.46] (HELO mail-oa0-f46.google.com) (209.85.219.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Mar 2014 08:13:55 +0000
+Received: by mail-oa0-f46.google.com with SMTP id i7so5389102oag.19
+        for <users@maven.apache.org>; Mon, 24 Mar 2014 01:13:33 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=nQAuY+vk25gq37lxPW5Hsh40Mmp6j4Qhnr8OtgpekzY=;
+        b=m4ujAo2IpXX8gVszrWxVaQSNKInJjSKMjSg8Gef0Z2cVvkTShWVURjZXaFDxGRwCG8
+         M5jfLxcUvk62cpX/5hiHt8ksROdE329nluXbpnYTY9OAu+bhvypXlQzX+4kyxy+A+ahu
+         dtfTc5UmF0TpIkKDLVEL7GoGNgSk0pWlLN7VD7re/m+poBxg1RWQy/NDEjOghCBLNYLN
+         3qD5xFepRRLUi1z1GUn3kOeZowrT1rncJUhsrYfglvKZ0zFeTH9y+rb2ipkETMvCo1Mx
+         1xYnCH5p/AcRs/w+rKmvryqBXmBDTmHz9RFXeHEXZWj9xDGsFiPAQo7MolEE4Ib+Pppd
+         /cxw==
+MIME-Version: 1.0
+X-Received: by 10.182.102.134 with SMTP id fo6mr25238159obb.10.1395648813718;
+ Mon, 24 Mar 2014 01:13:33 -0700 (PDT)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.76.34.136 with HTTP; Mon, 24 Mar 2014 01:13:33 -0700 (PDT)
+In-Reply-To: <CAMLk=nP2-5=Na+nHweV9wjPDS-NUFOij=vKMtgrc9fHzxGPqPQ@mail.gmail.com>
+References: <CAMLk=nP5TeMTAp5yNP8PGZSYSc-LAqLn3UTu3Npz+18L03aN1A@mail.gmail.com>
+	<CANWgJS75c4JPWRStq9p+J21xVyWxgZq1q9fcqdkxLgv+UnwaVg@mail.gmail.com>
+	<CAMLk=nP2-5=Na+nHweV9wjPDS-NUFOij=vKMtgrc9fHzxGPqPQ@mail.gmail.com>
+Date: Mon, 24 Mar 2014 09:13:33 +0100
+X-Google-Sender-Auth: 29i2CbnyGk8ftJSNpqxJxKnF2bY
+Message-ID: <CAKDUN1s0QeSm3_oNyTQjx7U6+Ln0iu0MOgPmCpm8d87fUT5qdA@mail.gmail.com>
+Subject: Re: properties that are not being resolved
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0149c380c5e3fa04f555cf34
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0149c380c5e3fa04f555cf34
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+It doesn't matter which plugin you use to set the property. What does
+matter is when the property substitution takes place. It normally happens
+in the very beginning of the Maven build when the pom is read, before the
+build lifecycle is executed and way before your plugin is executed. So you
+need the plugin (where you use the created property) to do an "extra"
+property substition step as you describe in your code.
+
+/Anders
+
+
+On Mon, Mar 24, 2014 at 9:04 AM, Henrik =D8sterlund Gram <
+henrik.gram@gmail.com> wrote:
+
+> The one at
+> http://mojo.codehaus.org/buildnumber-maven-plugin/create-mojo.html ?  It
+> states in the first couple of lines that it only works with subversion an=
+d
+> I'm using git.
+>
+> Aside from that, I can't really see why it would make a difference; how
+> many ways are there to set properties?  I did establish that the properti=
+es
+> are indeed set as I can print them via the ant-run plugin and via the a
+> modified ear-plugin.
+>
+>
+>
+> On Mon, Mar 24, 2014 at 8:28 AM, Baptiste Mathus <bmathus@batmat.net>
+> wrote:
+>
+> > Hi,
+> > Out of curiosity, why don't you use the seemingly equivalent mojo
+> > buildnumber maven plugin? May not be your issue, but may be the plugin
+> > you're using doesn't create properties in the right way (no offense, ju=
+st
+> > trying to guess)?
+> > My 2 cents
+> > Le 23 mars 2014 22:37, "Henrik =D8sterlund Gram" <henrik.gram@gmail.com=
+> a
+> > =E9crit :
+> >
+> > > I stumbled over some rather strange behaviour regarding properties.  =
+It
+> > > seems properties generated by one plugin are not always resolved for
+> > other
+> > > plugins and I can't figure out why.
+> > >
+> > > I use a plugin to make info about the git branch available in the
+> > > properties so it can be passed to other plugins.  The particular plug=
+in
+> > > does not seem important, but I've included it here for sake of
+> > > completeness:
+> > >
+> > > <plugin>
+> > > <groupId>com.code54.mojo</groupId>
+> > > <artifactId>buildversion-plugin</artifactId>
+> > >  <version>1.0.3</version>
+> > > <configuration>
+> > > <tstamp_format>yyyy.MM.dd HH:mm</tstamp_format>
+> > >  </configuration>
+> > > <executions>
+> > > <execution>
+> > >  <goals>
+> > > <goal>set-properties</goal>
+> > > </goals>
+> > >  </execution>
+> > > </executions>
+> > > </plugin>
+> > >
+> > > But when I referenced the properties set by the plugin in an env entr=
+y
+> > for
+> > > the maven ear plugin, the properties were not resolved at all:
+> > >
+> > > <envEntries>
+> > > <env-entry>
+> > > <description>Middleware build information</description>
+> > >  <env-entry-name>java:app/env/sw-version</env-entry-name>
+> > > <env-entry-type>java.lang.String</env-entry-type>
+> > >  <env-entry-value>${build-commit} @ ${build-tstamp} built on
+> > > ${maven.build.timestamp}</env-entry-value>
+> > > </env-entry>
+> > > </envEntries>
+> > >
+> > > Just to be sure, I used the latest maven and tried both version 2.9 o=
+f
+> > the
+> > > plugin and the latest from the repo with the same result.
+> > >
+> > > The only way I managed to fix this was to patch the maven-ear-plugin
+> > > itself, adding the following code in
+> > GenerateApplicationXmlMojo.execute():
+> > >
+> > > // Fix env variable substitutions
+> > > Properties props =3D project.getProperties();
+> > > PlexusConfiguration[] entries =3D envEntries.getChildren();
+> > > if (entries !=3D null) {
+> > >     for (PlexusConfiguration entry : entries) {
+> > >         if ("env-entry".equals(entry.getName())) {
+> > >             PlexusConfiguration[] envEntryChildren =3D
+> entry.getChildren();
+> > >             if (envEntryChildren !=3D null) {
+> > >                 for (PlexusConfiguration envEntryChild :
+> > envEntryChildren)
+> > > {
+> > >
+> > > envEntryChild.setValue(StrSubstitutor.replace(envEntryChild.getValue(=
+),
+> > > props));
+> > >                 }
+> > >             }
+> > >         }
+> > >     }
+> > > }
+> > >
+> > > Then it worked just fine, but I don't understand why this is necessar=
+y.
+> >  I
+> > > thought whatever called the plugin was supposed to have done the
+> variable
+> > > substitution already.  So clearly the properties were present at the
+> time
+> > > of executing the plugin, but they werent being automaticly substitute=
+d.
+> > >
+> > > To add to the confusion, using ${project.version} in the
+> env-entry-value
+> > > was resolved just fine, but just not the properties coming from anoth=
+er
+> > > plugin despite the plugins being run in the correct order.
+> > >
+> > > To further add to the confusion, I then used maven ant-run plugin,
+> > echoing
+> > > the values of properties which worked just fine (!)
+> > >
+> > > While I solved the problem for me by making a locally patched version
+> of
+> > > the ear plugin, it's not really a solution I favour, so I hope someon=
+e
+> > can
+> > > provide a better and more permanent fix.
+> > >
+> > > Regards,
+> > > Henrik Gram
+> > >
+> >
+>
+
+--089e0149c380c5e3fa04f555cf34--
+

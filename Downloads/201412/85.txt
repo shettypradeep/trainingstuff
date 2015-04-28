@@ -1,0 +1,200 @@
+From users-return-138096-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Dec 30 08:04:29 2014
+Return-Path: <users-return-138096-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B3570C30F
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 30 Dec 2014 08:04:29 +0000 (UTC)
+Received: (qmail 86557 invoked by uid 500); 30 Dec 2014 08:04:28 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 86477 invoked by uid 500); 30 Dec 2014 08:04:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 86455 invoked by uid 99); 30 Dec 2014 08:04:26 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 30 Dec 2014 08:04:26 +0000
+X-ASF-Spam-Status: No, hits=2.5 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waterlx@gmail.com designates 209.85.216.41 as permitted sender)
+Received: from [209.85.216.41] (HELO mail-qa0-f41.google.com) (209.85.216.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 30 Dec 2014 08:04:01 +0000
+Received: by mail-qa0-f41.google.com with SMTP id s7so10085866qap.14
+        for <users@maven.apache.org>; Tue, 30 Dec 2014 00:03:59 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :cc:content-type;
+        bh=TYCanu5bmSn7E6IpXdQzr3HkRggsyItIT5oYd0fPBeg=;
+        b=pw0gM7Vh8hzyfGpyxQuuvBkHZFZQ/v0gjc14WF4F3AzhPgbYhf0qHI+iESSbqmh6ve
+         XnXjSbjJd7av5T2F93BL480d7vRRHcQN5Y7hGnIuxTT0lYvIxzrG/JvRq2aqSkqjS5QX
+         +QEvoKZA/JtQDbP5EdpHoUfboJLWWHMKBF24LJ+Dytu3BtgpF4hULPvR0NCYrnRq29Uv
+         qHVBAITCsWCL+EfLbsnuqrd+v+B99WGyTyho7agcii1/RbqSH/9JvpNjuW8lpwHwLR3I
+         7RIH/hPom+2vxqSiTOvLbr9VXMs41/J+yZgae2HZ0GgOz42i8V9skXUD+jOs/nN2Czia
+         3bOg==
+MIME-Version: 1.0
+X-Received: by 10.140.85.231 with SMTP id n94mr31890032qgd.63.1419926639727;
+ Tue, 30 Dec 2014 00:03:59 -0800 (PST)
+Received: by 10.96.130.164 with HTTP; Tue, 30 Dec 2014 00:03:59 -0800 (PST)
+In-Reply-To: <20141230002327.00003245.ecki@zusammenkunft.net>
+References: <CAPcmo=5tq75JvOq2YJeXfDRiTLQnxbcb6GKJbErT+HsmW=676A@mail.gmail.com>
+	<20141230002327.00003245.ecki@zusammenkunft.net>
+Date: Tue, 30 Dec 2014 16:03:59 +0800
+Message-ID: <CAPcmo=4iv8HfP8krE9g4AuefQUK+mFE_d-gwnjH7capaUS8TDw@mail.gmail.com>
+Subject: Re: Set system property by -Dxxx=xxx vs. in java source file. Why it
+ does not work if setting in java source file ?
+From: =?UTF-8?B?5p2O5ZON?= <waterlx@gmail.com>
+To: Bernd Eckenfels <ecki@zusammenkunft.net>
+Cc: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a11c14db6f7da5a050b6a6e97
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c14db6f7da5a050b6a6e97
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi Bernd,
+
+Thanks for the reply and I found why. As you mentioned, I put the code in a
+wrong place in @BeforeClass, the connection has been started before I can
+set it. THANKS !!
+
+The reason why I would like to set that system property into the java code
+is that only one single @Test needs to set that property. If I set it into
+pom.xml, all tests under that pom.xml will have the property set, right ?
+I checked here -->
+http://maven.apache.org/surefire/maven-surefire-plugin/examples/system-prop=
+erties.html
+It seems we can not specify <systemPropertyVariables> set only for some
+specified java files or tests, right ?
+
+On Tue, Dec 30, 2014 at 7:23 AM, Bernd Eckenfels <ecki@zusammenkunft.net>
+wrote:
+
+> Hello,
+>
+> it does not sound to be related to maven. This is more a surefire/junit
+> thing. I guess you are initialising some JSSE/JCE related object before
+> you can set the system property - and therefore it is ignored. (because
+> some initialiser or just because another test is running before in the
+> same JVM),
+>
+> I would stick with the systemProperty in POM. But if you want to make
+> it programmatically try to squeece it into the setUpBeforeClass() or
+> even having a custom @RunWith runner.
+>
+> BTW: I think the exceptin text is right, the problem is that
+> disableSSLv3 is (Still) true.
+>
+> Greetings
+> Bernd
+>
+>  Am Mon, 29 Dec 2014 18:18:01 +0800
+> schrieb =E6=9D=8E=E5=93=8D <waterlx@gmail.com>:
+>
+> > Hi, I am using IBM JDK 7.1-2.0. Because SSL v3 is disabled by the
+> > JDK, so I need to set com.ibm.jsse2.disableSSLv3 to false to enable
+> > it when running some test cases.
+> >
+> > The project is managed by maven. I tried with:
+> >
+> > 1. mvn xxxx -Dcom.ibm.jsse2.disableSSLv3=3Dfalse, or add
+> > <com.ibm.jsse2.disableSSLv3>false</com.ibm.jsse2.disableSSLv3> into
+> > <systemPropertyVariables> of pom.xml.
+> >
+> >   It works.
+> >
+> > 2. Modify the java source file of the test case
+> >    I used : String
+> > old=3DSystem.setProperty("com.ibm.jsse2.disableSSLv3", "false") and got
+> > the exception:
+> >
+> > Caused by: java.lang.IllegalArgumentException: Only SSLv3 was enabled
+> > while com.ibm.jsse2.disableSSLv3 is set to true (It should be "false"
+> > here, seems a JDK bug, never mind)
+> >         at com.ibm.jsse2.pb.a(pb.java:17)
+> >         at com.ibm.jsse2.pb.<init>(pb.java:7)
+> >         at com.ibm.jsse2.qc.setEnabledProtocols(qc.java:689)
+> >         at
+> >
+> org.apache.flume.source.http.TestHTTPSource$DisabledProtocolsSocketFactor=
+y.createSocket(TestHTTPSource.java:514)
+> > <-- sc.setEnabledProtocols(protocols), sc is an instance of SSLSocket
+> >         at
+> > com.ibm.net.ssl.www2.protocol.https.c.afterConnect(c.java:7) at
+> > com.ibm.net.ssl.www2.protocol.https.d.connect(d.java:9) at
+> >
+> sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnec=
+tion.java:1103)
+> >         at
+> > com.ibm.net.ssl.www2.protocol.https.b.getOutputStream(b.java:84) at
+> >
+> org.apache.flume.source.http.TestHTTPSource.doTestHttps(TestHTTPSource.ja=
+va:392)
+> >         at
+> >
+> org.apache.flume.source.http.TestHTTPSource.testHttpsSSLv3(TestHTTPSource=
+.java:321)
+> >         at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+> >         at
+> >
+> sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java=
+:95)
+> >         at
+> >
+> sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorI=
+mpl.java:56)
+> >         at java.lang.reflect.Method.invoke(Method.java:620)
+> >         at
+> >
+> org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMeth=
+od.java:45)
+> >         at
+> >
+> org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallabl=
+e.java:15)
+> >         at
+> >
+> org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod=
+.java:42)
+> >         at
+> >
+> org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.=
+java:20)
+> >         at
+> >
+> org.junit.internal.runners.statements.ExpectException.evaluate(ExpectExce=
+ption.java:22)
+> >         ... 24 more
+> >
+> >    I printed the value of com.ibm.jsse2.disableSSLv3 before the line
+> > 514 of TestHTTPSource.java,
+> > and com.ibm.jsse2.disableSSLv3 is false, as expected.
+> >
+> >   It seems that com.ibm.jsse2.disableSSLv3=3Dfalse do not take effect
+> > here. Why ???? Is it because the program gets out of
+> > TestHTTPSource.java and get into JDK, or something else, so the
+> > system property does not take effect ??
+> >
+> > THANKS IN ADVANCE !
+> >
+>
+
+
+
+--=20
+
+                                               =E6=9D=8E=E5=93=8D
+
+=E6=89=8B=E6=9C=BA cellphone =EF=BC=9A+86-1368-113-8972
+E-mail             =EF=BC=9Awaterlx@gmail.com
+MSN               =EF=BC=9Awaterlx@hotmail.com
+
+--001a11c14db6f7da5a050b6a6e97--
+

@@ -1,0 +1,132 @@
+From users-return-136872-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 24 13:06:46 2014
+Return-Path: <users-return-136872-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6090A1110C
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 24 Jul 2014 13:06:46 +0000 (UTC)
+Received: (qmail 26043 invoked by uid 500); 24 Jul 2014 13:06:44 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 25960 invoked by uid 500); 24 Jul 2014 13:06:44 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 25948 invoked by uid 99); 24 Jul 2014 13:06:44 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 13:06:43 +0000
+X-ASF-Spam-Status: No, hits=-5.0 required=5.0
+	tests=RCVD_IN_DNSWL_HI,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of cody.a.fyler@wellsfargo.com designates 151.151.26.137 as permitted sender)
+Received: from [151.151.26.137] (HELO mxdcmv01i.wellsfargo.com) (151.151.26.137)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 24 Jul 2014 13:06:38 +0000
+Received: from mxicmi02.wellsfargo.com (mxicmi02.wellsfargo.com [170.13.76.133])
+	by mxdcmv01i.wellsfargo.com (Sentrion-MTA-4.3.1/Sentrion-MTA-4.3.1) with ESMTP id s6OD6CxM012720
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=FAIL)
+	for <users@maven.apache.org>; Thu, 24 Jul 2014 13:06:15 GMT
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=wellsfargo.com;
+	s=2011-05-wfb; t=1406207175;
+	bh=hgkaqhDtfb5QT5PpLA5z6gTHrxX4PE9rSWofripqBlU=;
+	h=From:To:Subject:Date:Message-ID:References:In-Reply-To:
+	 Content-Type:Content-Transfer-Encoding:MIME-Version;
+	b=EW3QHv2cmFY7uTkA5RVXFXMjg/1ZaXPYavDeDctVop4vL/iZOK0r0j2yjemX3KpMQ
+	 J58QlxOKmNEAFBeQIKEExHEKRWm4wzqIoPqfnO1zGKiJG4v/KToqIIFQeakdop5L4F
+	 GlWqQdjlS/YHt8w3AjybUXN6cKNtzqPrrmoK3kbw=
+Received: from MSGEXSV27102.ent.wfb.bank.corp (msgexsv27102.wellsfargo.com [162.101.142.110])
+	by mxicmi02.wellsfargo.com (Sentrion-MTA-4.3.1/Sentrion-MTA-4.3.1) with ESMTP id s6OD6BQ7013592
+	for <users@maven.apache.org>; Thu, 24 Jul 2014 13:06:12 GMT
+Received: from MSGEXSV21111.ent.wfb.bank.corp ([169.254.3.244]) by
+ MSGEXSV27102.ent.wfb.bank.corp ([162.101.142.110]) with mapi id
+ 14.03.0174.001; Thu, 24 Jul 2014 08:06:11 -0500
+From: <cody.a.fyler@wellsfargo.com>
+To: <users@maven.apache.org>
+Subject: RE: Upload 3rd party jars retaining original names
+Thread-Topic: Upload 3rd party jars retaining original names
+Thread-Index: Ac+nMUIXok9k5BNfT06cC40BwSDhvQAN4jUAAAozE7A=
+Date: Thu, 24 Jul 2014 13:06:11 +0000
+Message-ID: <55BBB074DE5248439192BCB13699A45643185051@MSGEXSV21111.ent.wfb.bank.corp>
+References: <5F274ED30832C44A8778291D0DD82A7A36F7D2@ev002.EVANS6.local>
+ <1406206674710-5800925.post@n5.nabble.com>
+In-Reply-To: <1406206674710-5800925.post@n5.nabble.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [10.91.43.153]
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+If you're using ant, why not also use Ivy? Then you can make use of the mav=
+en standard named artifacts.
+
+Cody Fyler
+Lending Grid Build Team
+G=3DLending Grid Builds
+(515) - 441 - 0814
+
+
+-----Original Message-----
+From: David Evans [mailto:david@evans6.me.uk]=20
+Sent: Thursday, July 24, 2014 7:58 AM
+To: users@maven.apache.org
+Subject: Re: Upload 3rd party jars retaining original names
+
+Thanks all.  It seems that what I want to do doesn't fit naturally into the=
+ Maven way of things.
+
+Using the "copy" plugin I can see how I might possibly unpack elements and =
+modify my Eclipse classpath in flight but part of the problem with my exist=
+ing Ant deployment is that I've extended it to do the "possible", not neces=
+sarily considering the "sensible", so I'll not go down that route. Yet.
+
+It's a shame that I can't store the external jars in the Maven repository a=
+nd treat them ) as  "versioned foreign artifacts" because having Maven mana=
+ge them in this way would be brilliant.
+
+Here's what I'm going to try instead:
+
+* I'll carry on with the libraries in my [Perforce] SCM.=20
+
+* I can map them to a project folder as I do now (similar to sources, resou=
+rces, etc).
+
+* if I understand this part of Maven dependepencies correctly, I can create=
+ a parent dependendency that depends on an individual system-scope dependen=
+cy for each of the libraries. This will hopefully get them all onto my Mave=
+n project classpath without too much fuss.
+
+* use "assembly" to include the jars in my final deployment.
+
+Does this seem the natural and sensible way to manage external jars with Ma=
+ven?
+
+Thanks
+
+David =20
+
+
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Upload-3rd-p=
+arty-jars-retaining-original-names-tp5800921p5800925.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

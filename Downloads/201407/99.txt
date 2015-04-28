@@ -1,0 +1,92 @@
+From users-return-136744-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jul  8 08:37:09 2014
+Return-Path: <users-return-136744-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 661EE1107C
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  8 Jul 2014 08:37:09 +0000 (UTC)
+Received: (qmail 96410 invoked by uid 500); 8 Jul 2014 08:37:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 96326 invoked by uid 500); 8 Jul 2014 08:37:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 96293 invoked by uid 99); 8 Jul 2014 08:37:07 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 08 Jul 2014 08:37:07 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.212.182 as permitted sender)
+Received: from [209.85.212.182] (HELO mail-wi0-f182.google.com) (209.85.212.182)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 08 Jul 2014 08:37:04 +0000
+Received: by mail-wi0-f182.google.com with SMTP id bs8so519615wib.15
+        for <users@maven.apache.org>; Tue, 08 Jul 2014 01:36:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=NVrC1dv3qSZM546K4SpERs1xeMxjLPBT0tKP9DRSTuE=;
+        b=M2KnG5jK3JDS3H0NYdJtCr9oR42hfwj0ca+19Z5aAAXp47UKN7w1Y0BwY1ndegTrrz
+         yVfPOCNmpmUhRZe3lwJcTz7Q4n9zujLIGVwpVlI1ZkAKO6au/3DeMbVNQcqFnmXAsfYQ
+         aSWg1w+bBccvIEvkYEwDsiccuo5JUs47Z0fRSbE7RP8oF47rTqFWAeodahR0M9HJJrCq
+         D+VFU4fvl1kVCaEDRNfFxpmiuuySIL/aeGWcKqwJD1Hn0W5OOK5br7xurgigaSYDwiSr
+         cMKArzkiSf6jQGL3bTGCg17JWzr6YwRqyYkvpLcq6UkVawJ9MuOPPmGAV2qUhfaZvYHj
+         el6A==
+MIME-Version: 1.0
+X-Received: by 10.180.206.163 with SMTP id lp3mr2131387wic.72.1404808600225;
+ Tue, 08 Jul 2014 01:36:40 -0700 (PDT)
+Received: by 10.194.134.8 with HTTP; Tue, 8 Jul 2014 01:36:40 -0700 (PDT)
+In-Reply-To: <CA+nPnMxTRvm-fEyKY3XRFGEZiRR3xAMab_=Ng+LrmU+ATHmsLw@mail.gmail.com>
+References: <9DD4E486F30F2E45AE6097D587E646D9957E7A@usilms111b.ca.com>
+	<CA+nPnMxTRvm-fEyKY3XRFGEZiRR3xAMab_=Ng+LrmU+ATHmsLw@mail.gmail.com>
+Date: Tue, 8 Jul 2014 09:36:40 +0100
+Message-ID: <CA+nPnMz=4P39oheKDykXd7DjmxLaqZBfvMbGOpsTfscYT1MfVQ@mail.gmail.com>
+Subject: Re: Adding Classifiers when building
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c38128980eaf04fdaa7d72
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c38128980eaf04fdaa7d72
+Content-Type: text/plain; charset=UTF-8
+
+though it is usually better to stick to the well known qualifiers: alpha,
+beta, rc, milestone, etc
+
+
+On 8 July 2014 09:35, Stephen Connolly <stephen.alan.connolly@gmail.com>
+wrote:
+
+> Classifiers are not for what you think they are for... they are for
+> flagging side artifacts... and in general they should not be used. A good
+> example of a case for side artifacts is the javadocs.jar. You normally do
+> not depend on the javadocs jar, it is a side artifact for IDEs.
+>
+> If you want to flag that a specific build is, e.g. for development use,
+> then just reflect that in the version, i.e. 1.0-dev-1-SNAPSHOT
+>
+>
+> On 8 July 2014 09:21, Fragoso, Ruben <Ruben.Fragoso@ca.com> wrote:
+>
+>> Hello Everyone
+>>
+>> I would like to know if it is possible to add classifiers while building
+>> as a maven parameter, for example if I want to add the classifier "dev" to
+>> an artifact, when building.
+>>
+>> Thank you in Advance, hope to hear from you.
+>>
+>> Best Regards
+>> Ruben Fragoso
+>>
+>>
+>
+
+--001a11c38128980eaf04fdaa7d72--
+

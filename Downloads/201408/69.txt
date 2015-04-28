@@ -1,0 +1,3207 @@
+From users-return-137167-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Aug 30 21:13:25 2014
+Return-Path: <users-return-137167-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3175F11562
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 30 Aug 2014 21:13:25 +0000 (UTC)
+Received: (qmail 7964 invoked by uid 500); 30 Aug 2014 21:13:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 7878 invoked by uid 500); 30 Aug 2014 21:13:23 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 7865 invoked by uid 99); 30 Aug 2014 21:13:22 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 30 Aug 2014 21:13:22 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stefano.fornari@gmail.com designates 74.125.82.46 as permitted sender)
+Received: from [74.125.82.46] (HELO mail-wg0-f46.google.com) (74.125.82.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 30 Aug 2014 21:12:26 +0000
+Received: by mail-wg0-f46.google.com with SMTP id x13so3616587wgg.29
+        for <users@maven.apache.org>; Sat, 30 Aug 2014 14:12:25 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=E+tTfhEE/sHh/VTvlbBU9Bk7F7778HksIfbDXQBYPKw=;
+        b=WerSlI88b151pO/vkRthLGAJ8kXevhhrh8+it9D/aV74Vk0locYnAxQt7x2DGVUsty
+         dHvg86OZYP+v9c5/oDoLHHo3jO6/sfSt2yd6LiFWfcdzg48r1x7SFSQ+1xFdKdvpPNA6
+         LY8xJbCswMqDoTTpmScz45dVIkmb0fyvPedFwNyhWfPqX2jngJzTnCKrzSP+PirSEShc
+         YawmKCFbYFPmxWk7Kb5Z1imqGm1xB474iKviHrS/WlRgzzrmaZmBXKaRlLACseJVvDB8
+         H76AKSp9gPH6Orm5/miMOaTPvz2HxCnwp9U/P3SxMN+fnB8PHJsoesJcjX+yjcIQiyYQ
+         zTBA==
+MIME-Version: 1.0
+X-Received: by 10.194.77.243 with SMTP id v19mr21789992wjw.18.1409433145520;
+ Sat, 30 Aug 2014 14:12:25 -0700 (PDT)
+Received: by 10.217.128.12 with HTTP; Sat, 30 Aug 2014 14:12:25 -0700 (PDT)
+Date: Sat, 30 Aug 2014 23:12:25 +0200
+Message-ID: <CAJ_7fd+dP1o9XMjnTS26LuzygWq77VCMVA9wNAjy9KevTORDWA@mail.gmail.com>
+Subject: release plug in not committing the release version anymore
+From: Stefano Fornari <stefano.fornari@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bfd021af939820501df390d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bfd021af939820501df390d
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi All,
+I realized to day that since a while mvn release:prepare does not check in
+and commit the release pom. From the investigation I've done it seems that
+the pom is actually changed, a tag is correctly created but the changed pom
+never committed. Also I do not see the usual maven generated commit
+comments on git.
+
+I am attaching the entire log, even if I could not find anything
+interesting. Has anyone experienced the same problem? Any hint on how to
+troubleshoot it?
+
+Thanks in advance,
+Ste
+
+cd /home/ste/Projects/https; JAVA_HOME=3D/usr/lib/jvm/jdk1.7.0
+M2_HOME=3D/opt/apache-maven-3.1.1 /opt/apache-maven-3.1.1/bin/mvn --debug
+release:prepare
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar
+Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17
+17:22:22+0200)
+Maven home: /opt/apache-maven-3.1.1
+Java version: 1.7.0_05, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/jdk1.7.0/jre
+Default locale: en_GB, platform encoding: UTF-8
+OS name: "linux", version: "3.13.0-35-generic", arch: "amd64", family:
+"unix"
+Populating class realm maven.ext
+  Included /opt/netbeans-8.0/java/maven-nblib/netbeans-eventspy.jar
+Error stacktraces are turned on.
+Reading global settings from /opt/apache-maven-3.1.1/conf/settings.xml
+Reading user settings from /home/ste/.m2/settings.xml
+Using local repository at /home/ste/.m2/repository
+Using manager EnhancedLocalRepositoryManager with priority 10.0 for
+/home/ste/.m2/repository
+Scanning for projects...
+Extension realms for project ste:https:jar:0.0.5-SNAPSHOT: (none)
+Looking up lifecyle mappings for packaging jar from ClassRealm[maven.ext,
+parent: ClassRealm[plexus.core, parent: null]]
+Resolving plugin prefix release from
+[com.jayway.maven.plugins.android.generation2, org.apache.maven.plugins,
+org.codehaus.mojo]
+Resolved plugin prefix release to
+org.apache.maven.plugins:maven-release-plugin from POM
+ste:https:jar:0.0.5-SNAPSHOT
+=3D=3D=3D REACTOR BUILD PLAN =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D
+Project: ste:https:jar:0.0.5-SNAPSHOT
+Tasks:   [release:prepare]
+Style:   Aggregating
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+------------------------------------------------------------------------
+Building https 0.0.5-SNAPSHOT
+------------------------------------------------------------------------
+Resolving plugin prefix release from
+[com.jayway.maven.plugins.android.generation2, org.apache.maven.plugins,
+org.codehaus.mojo]
+Resolved plugin prefix release to
+org.apache.maven.plugins:maven-release-plugin from POM
+ste:https:jar:0.0.5-SNAPSHOT
+Lifecycle default -> [validate, initialize, generate-sources,
+process-sources, generate-resources, process-resources, compile,
+process-classes, generate-test-sources, process-test-sources,
+generate-test-resources, process-test-resources, test-compile,
+process-test-classes, test, prepare-package, package, pre-integration-test,
+integration-test, post-integration-test, verify, install, deploy]
+Lifecycle clean -> [pre-clean, clean, post-clean]
+Lifecycle site -> [pre-site, site, post-site, site-deploy]
+=3D=3D=3D PROJECT BUILD PLAN =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D
+Project:       ste:https:0.0.5-SNAPSHOT
+Dependencies (collect): []
+Dependencies (resolve): []
+Repositories (dependencies): [central (http://repo.maven.apache.org/maven2,
+releases)]
+Repositories (plugins)     : [central (http://repo.maven.apache.org/maven2,
+releases)]
+-----------------------------------------------------------------------
+Goal:          org.apache.maven.plugins:maven-release-plugin:2.3.2:prepare
+(default-cli)
+Style:         Aggregating
+Configuration: <?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<configuration>
+  <addSchema default-value=3D"true">${addSchema}</addSchema>
+  <allowReleasePluginSnapshot
+default-value=3D"false">${allowReleasePluginSnapshot}</allowReleasePluginSn=
+apshot>
+  <allowTimestampedSnapshots
+default-value=3D"false">${ignoreSnapshots}</allowTimestampedSnapshots>
+  <arguments>${arguments}</arguments>
+  <autoVersionSubmodules
+default-value=3D"false">${autoVersionSubmodules}</autoVersionSubmodules>
+  <basedir default-value=3D"${basedir}"/>
+
+<checkModificationExcludeList>${checkModificationExcludeList}</checkModific=
+ationExcludeList>
+  <commitByProject
+default-value=3D"false">${commitByProject}</commitByProject>
+  <completionGoals default-value=3D"">${completionGoals}</completionGoals>
+  <developmentVersion>${developmentVersion}</developmentVersion>
+  <dryRun default-value=3D"false">${dryRun}</dryRun>
+  <generateReleasePoms
+default-value=3D"false">${generateReleasePoms}</generateReleasePoms>
+  <javaHome default-value=3D"${java.home}"/>
+  <localCheckout default-value=3D"false">${localCheckout}</localCheckout>
+  <localRepoDirectory default-value=3D"${maven.repo.local}"/>
+  <mavenExecutorId
+default-value=3D"invoker">${mavenExecutorId}</mavenExecutorId>
+  <mavenHome default-value=3D"${maven.home}"/>
+  <password>${password}</password>
+  <pomFileName>${pomFileName}</pomFileName>
+  <preparationGoals default-value=3D"clean
+verify">${preparationGoals}</preparationGoals>
+  <project default-value=3D"${project}"/>
+  <pushChanges default-value=3D"true">${pushChanges}</pushChanges>
+  <reactorProjects default-value=3D"${reactorProjects}"/>
+  <releaseVersion>${releaseVersion}</releaseVersion>
+  <remoteTagging default-value=3D"true">${remoteTagging}</remoteTagging>
+  <resume default-value=3D"true">${resume}</resume>
+  <scmCommentPrefix default-value=3D"[maven-release-plugin]
+">${scmCommentPrefix}</scmCommentPrefix>
+  <session default-value=3D"${session}"/>
+  <settings default-value=3D"${settings}"/>
+  <suppressCommitBeforeTag
+default-value=3D"false">${suppressCommitBeforeTag}</suppressCommitBeforeTag=
+>
+  <tag>${tag}</tag>
+  <tagBase>${tagBase}</tagBase>
+  <tagNameFormat default-value=3D"@{project.artifactId}-@
+{project.version}">${tagNameFormat}</tagNameFormat>
+  <updateDependencies
+default-value=3D"true">${updateDependencies}</updateDependencies>
+  <updateWorkingCopyVersions
+default-value=3D"true">${updateWorkingCopyVersions}</updateWorkingCopyVersi=
+ons>
+  <useEditMode default-value=3D"false">${useEditMode}</useEditMode>
+  <username>${username}</username>
+  <waitBeforeTagging
+default-value=3D"0">${waitBeforeTagging}</waitBeforeTagging>
+</configuration>
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+--- maven-release-plugin:2.3.2:prepare (default-cli) @ https ---
+Created new class realm maven.api
+Importing foreign packages into class realm maven.api
+  Imported: org.apache.maven.wagon.events < maven.ext
+  Imported: org.eclipse.aether.impl < maven.ext
+  Imported: org.apache.maven.exception < maven.ext
+  Imported: org.codehaus.plexus.util.xml.Xpp3Dom < maven.ext
+  Imported: org.eclipse.aether.version < maven.ext
+  Imported: org.eclipse.aether.metadata < maven.ext
+  Imported: org.eclipse.aether.collection < maven.ext
+  Imported: org.apache.maven.monitor < maven.ext
+  Imported: org.apache.maven.wagon.repository < maven.ext
+  Imported: org.apache.maven.repository < maven.ext
+  Imported: org.apache.maven.wagon.resource < maven.ext
+  Imported: org.codehaus.plexus.logging < maven.ext
+  Imported: org.apache.maven.profiles < maven.ext
+  Imported: org.apache.maven.classrealm < maven.ext
+  Imported: org.eclipse.aether.artifact < maven.ext
+  Imported: org.apache.maven.execution < maven.ext
+  Imported: org.apache.maven.reporting < maven.ext
+  Imported: org.apache.maven.usability < maven.ext
+  Imported: org.codehaus.plexus.container < maven.ext
+  Imported: org.codehaus.plexus.component < maven.ext
+  Imported: org.eclipse.aether.transfer < maven.ext
+  Imported: org.apache.maven.wagon.authentication < maven.ext
+  Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < maven.ext
+  Imported: org.apache.maven.lifecycle < maven.ext
+  Imported: org.eclipse.aether.* < maven.ext
+  Imported: org.eclipse.aether.graph < maven.ext
+  Imported: org.codehaus.plexus.classworlds < maven.ext
+  Imported: org.eclipse.aether.internal.impl < maven.ext
+  Imported: org.eclipse.aether.repository < maven.ext
+  Imported: org.eclipse.aether.resolution < maven.ext
+  Imported: javax.inject.* < maven.ext
+  Imported: org.apache.maven.settings < maven.ext
+  Imported: org.codehaus.classworlds < maven.ext
+  Imported: org.apache.maven.wagon.* < maven.ext
+  Imported: org.apache.maven.toolchain < maven.ext
+  Imported: org.eclipse.aether.spi < maven.ext
+  Imported: org.apache.maven.wagon.observers < maven.ext
+  Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException <
+maven.ext
+  Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < maven.ext
+  Imported: org.apache.maven.configuration < maven.ext
+  Imported: org.apache.maven.cli < maven.ext
+  Imported: org.codehaus.plexus.context < maven.ext
+  Imported: org.apache.maven.wagon.authorization < maven.ext
+  Imported: org.apache.maven.project < maven.ext
+  Imported: org.eclipse.aether.installation < maven.ext
+  Imported: org.eclipse.aether.deployment < maven.ext
+  Imported: org.codehaus.plexus.lifecycle < maven.ext
+  Imported: org.apache.maven.rtinfo < maven.ext
+  Imported: org.codehaus.plexus.configuration < maven.ext
+  Imported: org.apache.maven.artifact < maven.ext
+  Imported: org.apache.maven.model < maven.ext
+  Imported: org.slf4j.* < maven.ext
+  Imported: javax.enterprise.inject.* < maven.ext
+  Imported: org.apache.maven.* < maven.ext
+  Imported: org.apache.maven.wagon.proxy < maven.ext
+  Imported: org.apache.maven.plugin < maven.ext
+  Imported: org.codehaus.plexus.* < maven.ext
+  Imported: org.codehaus.plexus.personality < maven.ext
+Populating class realm maven.api
+Dependency collection stats: {ConflictMarker.analyzeTime=3D4,
+ConflictMarker.markTime=3D2, ConflictMarker.nodeCount=3D183,
+ConflictIdSorter.graphTime=3D2, ConflictIdSorter.topsortTime=3D1,
+ConflictIdSorter.conflictIdCount=3D65,
+ConflictIdSorter.conflictIdCycleCount=3D0, ConflictResolver.totalTime=3D71,
+ConflictResolver.conflictItemCount=3D173,
+DefaultDependencyCollector.collectTime=3D937,
+DefaultDependencyCollector.transformTime=3D86}
+org.apache.maven.plugins:maven-release-plugin:jar:2.3.2:
+   org.apache.maven:maven-plugin-api:jar:2.2.1:compile
+   org.apache.maven.release:maven-release-manager:jar:2.3.2:compile
+      org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9:compile
+         junit:junit:jar:3.8.1:compile
+      org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-6:compile
+      org.codehaus.plexus:plexus-interpolation:jar:1.14:compile
+      org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+         org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+      org.apache.maven:maven-artifact:jar:2.2.1:compile
+      org.apache.maven:maven-artifact-manager:jar:2.2.1:compile
+         backport-util-concurrent:backport-util-concurrent:jar:3.1:compile
+      org.apache.maven.shared:maven-invoker:jar:2.0.9:compile
+      commons-lang:commons-lang:jar:2.4:compile
+      commons-cli:commons-cli:jar:1.0:compile
+         commons-logging:commons-logging:jar:1.0:compile
+      org.apache.maven.scm:maven-scm-providers-standard:pom:1.7:runtime
+         org.apache.maven.scm:maven-scm-provider-accurev:jar:1.7:runtime
+         org.apache.maven.scm:maven-scm-provider-bazaar:jar:1.7:runtime
+            regexp:regexp:jar:1.3:runtime
+         org.apache.maven.scm:maven-scm-provider-clearcase:jar:1.7:runtime
+         org.apache.maven.scm:maven-scm-provider-cvsexe:jar:1.7:runtime
+
+org.apache.maven.scm:maven-scm-provider-cvs-commons:jar:1.7:runtime
+         org.apache.maven.scm:maven-scm-provider-cvsjava:jar:1.7:runtime
+            org.netbeans.lib:cvsclient:jar:20060125:runtime
+            ch.ethz.ganymed:ganymed-ssh2:jar:build210:runtime
+         org.apache.maven.scm:maven-scm-provider-gitexe:jar:1.7:runtime
+
+org.apache.maven.scm:maven-scm-provider-git-commons:jar:1.7:runtime
+         org.apache.maven.scm:maven-scm-provider-hg:jar:1.7:runtime
+         org.apache.maven.scm:maven-scm-provider-perforce:jar:1.7:runtime
+         org.apache.maven.scm:maven-scm-provider-starteam:jar:1.7:runtime
+         org.apache.maven.scm:maven-scm-provider-svnexe:jar:1.7:runtime
+         org.apache.maven.scm:maven-scm-provider-synergy:jar:1.7:runtime
+         org.apache.maven.scm:maven-scm-provider-vss:jar:1.7:runtime
+         org.apache.maven.scm:maven-scm-provider-tfs:jar:1.7:runtime
+         org.apache.maven.scm:maven-scm-provider-integrity:jar:1.7:runtime
+            com.mks.api:mksapi-jar:jar:4.10.9049:runtime
+            org.codehaus.groovy:groovy-all:jar:1.7.6:runtime
+         org.apache.maven.scm:maven-scm-provider-jazz:jar:1.7:runtime
+      org.apache.maven.scm:maven-scm-manager-plexus:jar:1.7:runtime
+      org.apache.maven.scm:maven-scm-provider-svn-commons:jar:1.7:compile
+      jaxen:jaxen:jar:1.1-beta-8:runtime
+         jdom:jdom:jar:1.0:runtime
+   org.apache.maven:maven-model:jar:2.2.1:compile
+   org.apache.maven:maven-core:jar:2.2.1:compile
+      org.apache.maven:maven-plugin-parameter-documenter:jar:2.2.1:compile
+      org.slf4j:slf4j-jdk14:jar:1.5.6:runtime
+         org.slf4j:slf4j-api:jar:1.5.6:runtime
+      org.slf4j:jcl-over-slf4j:jar:1.5.6:runtime
+      org.apache.maven.reporting:maven-reporting-api:jar:2.2.1:compile
+         org.apache.maven.doxia:doxia-sink-api:jar:1.1:compile
+         org.apache.maven.doxia:doxia-logging-api:jar:1.1:compile
+      org.apache.maven:maven-profile:jar:2.2.1:compile
+      org.apache.maven:maven-repository-metadata:jar:2.2.1:compile
+      org.apache.maven:maven-error-diagnostics:jar:2.2.1:compile
+      org.apache.maven:maven-plugin-descriptor:jar:2.2.1:compile
+      org.apache.maven:maven-monitor:jar:2.2.1:compile
+      classworlds:classworlds:jar:1.1:compile
+   org.apache.maven:maven-project:jar:2.2.1:compile
+      org.apache.maven:maven-plugin-registry:jar:2.2.1:compile
+   org.apache.maven:maven-settings:jar:2.2.1:compile
+   org.apache.maven.scm:maven-scm-api:jar:1.7:compile
+   org.codehaus.plexus:plexus-utils:jar:3.0:compile
+   org.jdom:jdom:jar:1.1:compile
+Created new class realm
+plugin>org.apache.maven.plugins:maven-release-plugin:2.3.2
+Importing foreign packages into class realm
+plugin>org.apache.maven.plugins:maven-release-plugin:2.3.2
+  Imported:  < maven.api
+Populating class realm
+plugin>org.apache.maven.plugins:maven-release-plugin:2.3.2
+  Included: org.apache.maven.plugins:maven-release-plugin:jar:2.3.2
+  Included: org.apache.maven.release:maven-release-manager:jar:2.3.2
+  Included: junit:junit:jar:3.8.1
+  Included: org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-6
+  Included: org.codehaus.plexus:plexus-interpolation:jar:1.14
+  Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+  Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+  Included: backport-util-concurrent:backport-util-concurrent:jar:3.1
+  Included: org.apache.maven.shared:maven-invoker:jar:2.0.9
+  Included: commons-lang:commons-lang:jar:2.4
+  Included: commons-cli:commons-cli:jar:1.0
+  Included: commons-logging:commons-logging:jar:1.0
+  Included: org.apache.maven.scm:maven-scm-providers-standard:pom:1.7
+  Included: org.apache.maven.scm:maven-scm-provider-accurev:jar:1.7
+  Included: org.apache.maven.scm:maven-scm-provider-bazaar:jar:1.7
+  Included: regexp:regexp:jar:1.3
+  Included: org.apache.maven.scm:maven-scm-provider-clearcase:jar:1.7
+  Included: org.apache.maven.scm:maven-scm-provider-cvsexe:jar:1.7
+  Included: org.apache.maven.scm:maven-scm-provider-cvs-commons:jar:1.7
+  Included: org.apache.maven.scm:maven-scm-provider-cvsjava:jar:1.7
+  Included: org.netbeans.lib:cvsclient:jar:20060125
+  Included: ch.ethz.ganymed:ganymed-ssh2:jar:build210
+  Included: org.apache.maven.scm:maven-scm-provider-gitexe:jar:1.7
+  Included: org.apache.maven.scm:maven-scm-provider-git-commons:jar:1.7
+  Included: org.apache.maven.scm:maven-scm-provider-hg:jar:1.7
+  Included: org.apache.maven.scm:maven-scm-provider-perforce:jar:1.7
+  Included: org.apache.maven.scm:maven-scm-provider-starteam:jar:1.7
+  Included: org.apache.maven.scm:maven-scm-provider-svnexe:jar:1.7
+  Included: org.apache.maven.scm:maven-scm-provider-synergy:jar:1.7
+  Included: org.apache.maven.scm:maven-scm-provider-vss:jar:1.7
+  Included: org.apache.maven.scm:maven-scm-provider-tfs:jar:1.7
+  Included: org.apache.maven.scm:maven-scm-provider-integrity:jar:1.7
+  Included: com.mks.api:mksapi-jar:jar:4.10.9049
+  Included: org.codehaus.groovy:groovy-all:jar:1.7.6
+  Included: org.apache.maven.scm:maven-scm-provider-jazz:jar:1.7
+  Included: org.apache.maven.scm:maven-scm-manager-plexus:jar:1.7
+  Included: org.apache.maven.scm:maven-scm-provider-svn-commons:jar:1.7
+  Included: jaxen:jaxen:jar:1.1-beta-8
+  Included: jdom:jdom:jar:1.0
+  Included: org.slf4j:slf4j-jdk14:jar:1.5.6
+  Included: org.slf4j:slf4j-api:jar:1.5.6
+  Included: org.slf4j:jcl-over-slf4j:jar:1.5.6
+  Included: org.apache.maven.reporting:maven-reporting-api:jar:2.2.1
+  Included: org.apache.maven.doxia:doxia-sink-api:jar:1.1
+  Included: org.apache.maven.doxia:doxia-logging-api:jar:1.1
+  Included: org.apache.maven.scm:maven-scm-api:jar:1.7
+  Included: org.codehaus.plexus:plexus-utils:jar:3.0
+  Included: org.jdom:jdom:jar:1.1
+  Excluded: org.apache.maven:maven-plugin-api:jar:2.2.1
+  Excluded: org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9
+  Excluded: org.apache.maven:maven-artifact:jar:2.2.1
+  Excluded: org.apache.maven:maven-artifact-manager:jar:2.2.1
+  Excluded: org.apache.maven:maven-model:jar:2.2.1
+  Excluded: org.apache.maven:maven-core:jar:2.2.1
+  Excluded: org.apache.maven:maven-plugin-parameter-documenter:jar:2.2.1
+  Excluded: org.apache.maven:maven-profile:jar:2.2.1
+  Excluded: org.apache.maven:maven-repository-metadata:jar:2.2.1
+  Excluded: org.apache.maven:maven-error-diagnostics:jar:2.2.1
+  Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.2.1
+  Excluded: org.apache.maven:maven-monitor:jar:2.2.1
+  Excluded: classworlds:classworlds:jar:1.1
+  Excluded: org.apache.maven:maven-project:jar:2.2.1
+  Excluded: org.apache.maven:maven-plugin-registry:jar:2.2.1
+  Excluded: org.apache.maven:maven-settings:jar:2.2.1
+Configuring mojo
+org.apache.maven.plugins:maven-release-plugin:2.3.2:prepare from plugin
+realm
+ClassRealm[plugin>org.apache.maven.plugins:maven-release-plugin:2.3.2,
+parent: sun.misc.Launcher$AppClassLoader@3067e236]
+Configuring mojo
+'org.apache.maven.plugins:maven-release-plugin:2.3.2:prepare' with basic
+configurator -->
+  (f) addSchema =3D true
+  (f) allowReleasePluginSnapshot =3D false
+  (f) allowTimestampedSnapshots =3D false
+  (f) autoVersionSubmodules =3D false
+  (s) basedir =3D /home/ste/Projects/https
+  (f) commitByProject =3D false
+  (f) dryRun =3D false
+  (f) generateReleasePoms =3D false
+  (f) javaHome =3D /usr/lib/jvm/jdk1.7.0/jre
+  (f) localCheckout =3D false
+  (f) mavenExecutorId =3D invoker
+  (f) mavenHome =3D /opt/apache-maven-3.1.1
+  (f) preparationGoals =3D clean verify
+  (f) project =3D MavenProject: ste:https:0.0.5-SNAPSHOT @
+/home/ste/Projects/https/pom.xml
+  (f) pushChanges =3D true
+  (f) reactorProjects =3D [MavenProject: ste:https:0.0.5-SNAPSHOT @
+/home/ste/Projects/https/pom.xml]
+  (f) remoteTagging =3D true
+  (f) resume =3D true
+  (f) scmCommentPrefix =3D [maven-release-plugin]
+  (f) session =3D org.apache.maven.execution.MavenSession@6c05762a
+  (f) settings =3D org.apache.maven.execution.SettingsAdapter@633b3b2e
+  (f) suppressCommitBeforeTag =3D false
+  (f) tagNameFormat =3D @{project.artifactId}-@{project.version}
+  (f) updateDependencies =3D true
+  (f) updateWorkingCopyVersions =3D true
+  (f) useEditMode =3D false
+  (f) waitBeforeTagging =3D 0
+-- end configuration --
+release.properties not found - using empty properties
+Verifying that there are no local modifications...
+  ignoring changes on: **/pom.xml.backup, **/release.properties,
+**/pom.xml.branch, **/pom.xml.next, **/pom.xml.releaseBackup, **/pom.xml.ta=
+g
+Executing: /bin/sh -c cd /home/ste/Projects/https && git status
+Working directory: /home/ste/Projects/https
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    release.properties
+
+nothing added to commit but untracked files present (use "git add" to track=
+)
+Checking dependencies and plugins for snapshots ...
+What is the release version for "https"? (ste:https) 0.0.5: :
+What is SCM release tag or label for "https"? (ste:https) https-0.0.5: :
+What is the new development version for "https"? (ste:https)
+0.0.6-SNAPSHOT: :
+Transforming 'https'...
+Not generating release POMs
+Executing goals 'clean verify'...
+Using ${maven.home} of: '/opt/apache-maven-3.1.1'.
+Executing: /bin/sh -c cd /home/ste/Projects/https &&
+/opt/apache-maven-3.1.1/bin/mvn -X -D
+maven.repo.local=3D/home/ste/.m2/repository -s
+/tmp/release-settings6658160415620190647.xml clean verify
+Maven will be executed in interactive mode, but no input stream has been
+configured for this MavenInvoker instance.
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar
+Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17
+17:22:22+0200)
+Maven home: /opt/apache-maven-3.1.1
+Java version: 1.7.0_05, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/jdk1.7.0/jre
+Default locale: en_GB, platform encoding: UTF-8
+OS name: "linux", version: "3.13.0-35-generic", arch: "amd64", family:
+"unix"
+[INFO] Error stacktraces are turned on.
+[DEBUG] Reading global settings from
+/opt/apache-maven-3.1.1/conf/settings.xml
+[DEBUG] Reading user settings from
+/tmp/release-settings6658160415620190647.xml
+[DEBUG] Using local repository at /home/ste/.m2/repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for
+/home/ste/.m2/repository
+[INFO] Scanning for projects...
+[DEBUG] Extension realms for project ste:https:jar:0.0.5: (none)
+[DEBUG] Looking up lifecyle mappings for packaging jar from
+ClassRealm[plexus.core, parent: null]
+[DEBUG] =3D=3D=3D REACTOR BUILD PLAN
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+[DEBUG] Project: ste:https:jar:0.0.5
+[DEBUG] Tasks:   [clean, verify]
+[DEBUG] Style:   Regular
+[DEBUG]
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+[INFO]
+
+[INFO]
+------------------------------------------------------------------------
+[INFO] Building https 0.0.5
+[INFO]
+------------------------------------------------------------------------
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources,
+process-sources, generate-resources, process-resources, compile,
+process-classes, generate-test-sources, process-test-sources,
+generate-test-resources, process-test-resources, test-compile,
+process-test-classes, test, prepare-package, package, pre-integration-test,
+integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources,
+process-sources, generate-resources, process-resources, compile,
+process-classes, generate-test-sources, process-test-sources,
+generate-test-resources, process-test-resources, test-compile,
+process-test-classes, test, prepare-package, package, pre-integration-test,
+integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources,
+process-sources, generate-resources, process-resources, compile,
+process-classes, generate-test-sources, process-test-sources,
+generate-test-resources, process-test-resources, test-compile,
+process-test-classes, test, prepare-package, package, pre-integration-test,
+integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources,
+process-sources, generate-resources, process-resources, compile,
+process-classes, generate-test-sources, process-test-sources,
+generate-test-resources, process-test-resources, test-compile,
+process-test-classes, test, prepare-package, package, pre-integration-test,
+integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources,
+process-sources, generate-resources, process-resources, compile,
+process-classes, generate-test-sources, process-test-sources,
+generate-test-resources, process-test-resources, test-compile,
+process-test-classes, test, prepare-package, package, pre-integration-test,
+integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources,
+process-sources, generate-resources, process-resources, compile,
+process-classes, generate-test-sources, process-test-sources,
+generate-test-resources, process-test-resources, test-compile,
+process-test-classes, test, prepare-package, package, pre-integration-test,
+integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources,
+process-sources, generate-resources, process-resources, compile,
+process-classes, generate-test-sources, process-test-sources,
+generate-test-resources, process-test-resources, test-compile,
+process-test-classes, test, prepare-package, package, pre-integration-test,
+integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources,
+process-sources, generate-resources, process-resources, compile,
+process-classes, generate-test-sources, process-test-sources,
+generate-test-resources, process-test-resources, test-compile,
+process-test-classes, test, prepare-package, package, pre-integration-test,
+integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources,
+process-sources, generate-resources, process-resources, compile,
+process-classes, generate-test-sources, process-test-sources,
+generate-test-resources, process-test-resources, test-compile,
+process-test-classes, test, prepare-package, package, pre-integration-test,
+integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] =3D=3D=3D PROJECT BUILD PLAN
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+[DEBUG] Project:       ste:https:0.0.5
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [compile, runtime, test]
+[DEBUG] Repositories (dependencies): [central (
+http://repo.maven.apache.org/maven2, releases)]
+[DEBUG] Repositories (plugins)     : [central (
+http://repo.maven.apache.org/maven2, releases)]
+[DEBUG]
+-----------------------------------------------------------------------
+[DEBUG] Goal:
+org.apache.maven.plugins:maven-clean-plugin:2.5:clean (default-clean)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<configuration>
+  <directory default-value=3D"${project.build.directory}"/>
+  <excludeDefaultDirectories
+default-value=3D"false">${clean.excludeDefaultDirectories}</excludeDefaultD=
+irectories>
+  <failOnError default-value=3D"true">${maven.clean.failOnError}</failOnErr=
+or>
+  <followSymLinks
+default-value=3D"false">${clean.followSymLinks}</followSymLinks>
+  <outputDirectory default-value=3D"${project.build.outputDirectory}"/>
+  <reportDirectory default-value=3D"${project.reporting.outputDirectory}"/>
+  <retryOnError
+default-value=3D"true">${maven.clean.retryOnError}</retryOnError>
+  <skip default-value=3D"false">${clean.skip}</skip>
+  <testOutputDirectory
+default-value=3D"${project.build.testOutputDirectory}"/>
+  <verbose>${clean.verbose}</verbose>
+</configuration>
+[DEBUG]
+-----------------------------------------------------------------------
+[DEBUG] Goal:
+org.apache.maven.plugins:maven-resources-plugin:2.6:resources
+(default-resources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<configuration>
+  <buildFilters default-value=3D"${project.build.filters}"/>
+  <encoding
+default-value=3D"${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString>${maven.resources.escapeString}</escapeString>
+  <escapeWindowsPaths
+default-value=3D"true">${maven.resources.escapeWindowsPaths}</escapeWindows=
+Paths>
+  <includeEmptyDirs
+default-value=3D"false">${maven.resources.includeEmptyDirs}</includeEmptyDi=
+rs>
+  <outputDirectory default-value=3D"${project.build.outputDirectory}"/>
+  <overwrite default-value=3D"false">${maven.resources.overwrite}</overwrit=
+e>
+  <project default-value=3D"${project}"/>
+  <resources default-value=3D"${project.resources}"/>
+  <session default-value=3D"${session}"/>
+  <supportMultiLineFiltering
+default-value=3D"false">${maven.resources.supportMultiLineFiltering}</suppo=
+rtMultiLineFiltering>
+  <useBuildFilters default-value=3D"true"/>
+  <useDefaultDelimiters default-value=3D"true"/>
+</configuration>
+[DEBUG]
+-----------------------------------------------------------------------
+[DEBUG] Goal:
+org.apache.maven.plugins:maven-compiler-plugin:2.5.1:compile
+(default-compile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<configuration>
+  <basedir default-value=3D"${basedir}"/>
+  <buildDirectory default-value=3D"${project.build.directory}"/>
+  <classpathElements default-value=3D"${project.compileClasspathElements}"/=
+>
+  <compileSourceRoots default-value=3D"${project.compileSourceRoots}"/>
+  <compilerId
+default-value=3D"javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy
+default-value=3D"${reuseCreated}">${maven.compiler.compilerReuseStrategy}</=
+compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value=3D"true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding
+default-value=3D"${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError
+default-value=3D"true">${maven.compiler.failOnError}</failOnError>
+  <fork default-value=3D"false">${maven.compiler.fork}</fork>
+  <generatedSourcesDirectory
+default-value=3D"${project.build.directory}/generated-sources/annotations"/=
+>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <optimize default-value=3D"false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value=3D"${project.build.outputDirectory}"/>
+  <outputFileName>${project.build.finalName}</outputFileName>
+  <projectArtifact default-value=3D"${project.artifact}"/>
+  <session default-value=3D"${session}"/>
+  <showDeprecation
+default-value=3D"false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings
+default-value=3D"false">${maven.compiler.showWarnings}</showWarnings>
+  <skipMultiThreadWarning
+default-value=3D"${false}">${maven.compiler.skipMultiThreadWarning}</skipMu=
+ltiThreadWarning>
+  <source default-value=3D"1.5">${maven.compiler.source}</source>
+  <staleMillis default-value=3D"0">${lastModGranularityMs}</staleMillis>
+  <target default-value=3D"1.5">${maven.compiler.target}</target>
+  <verbose default-value=3D"false">${maven.compiler.verbose}</verbose>
+</configuration>
+[DEBUG]
+-----------------------------------------------------------------------
+[DEBUG] Goal:
+org.apache.maven.plugins:maven-resources-plugin:2.6:testResources
+(default-testResources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<configuration>
+  <buildFilters default-value=3D"${project.build.filters}"/>
+  <encoding
+default-value=3D"${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString>${maven.resources.escapeString}</escapeString>
+  <escapeWindowsPaths
+default-value=3D"true">${maven.resources.escapeWindowsPaths}</escapeWindows=
+Paths>
+  <includeEmptyDirs
+default-value=3D"false">${maven.resources.includeEmptyDirs}</includeEmptyDi=
+rs>
+  <outputDirectory default-value=3D"${project.build.testOutputDirectory}"/>
+  <overwrite default-value=3D"false">${maven.resources.overwrite}</overwrit=
+e>
+  <project default-value=3D"${project}"/>
+  <resources default-value=3D"${project.testResources}"/>
+  <session default-value=3D"${session}"/>
+  <skip>${maven.test.skip}</skip>
+  <supportMultiLineFiltering
+default-value=3D"false">${maven.resources.supportMultiLineFiltering}</suppo=
+rtMultiLineFiltering>
+  <useBuildFilters default-value=3D"true"/>
+  <useDefaultDelimiters default-value=3D"true"/>
+</configuration>
+[DEBUG]
+-----------------------------------------------------------------------
+[DEBUG] Goal:
+org.apache.maven.plugins:maven-compiler-plugin:2.5.1:testCompile
+(default-testCompile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<configuration>
+  <basedir default-value=3D"${basedir}"/>
+  <buildDirectory default-value=3D"${project.build.directory}"/>
+  <classpathElements default-value=3D"${project.testClasspathElements}"/>
+  <compileSourceRoots default-value=3D"${project.testCompileSourceRoots}"/>
+  <compilerId
+default-value=3D"javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy
+default-value=3D"${reuseCreated}">${maven.compiler.compilerReuseStrategy}</=
+compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value=3D"true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding
+default-value=3D"${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError
+default-value=3D"true">${maven.compiler.failOnError}</failOnError>
+  <fork default-value=3D"false">${maven.compiler.fork}</fork>
+  <generatedTestSourcesDirectory
+default-value=3D"${project.build.directory}/generated-test-sources/test-ann=
+otations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <optimize default-value=3D"false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value=3D"${project.build.testOutputDirectory}"/>
+  <outputFileName>${project.build.finalName}</outputFileName>
+  <session default-value=3D"${session}"/>
+  <showDeprecation
+default-value=3D"false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings
+default-value=3D"false">${maven.compiler.showWarnings}</showWarnings>
+  <skip>${maven.test.skip}</skip>
+  <skipMultiThreadWarning
+default-value=3D"${false}">${maven.compiler.skipMultiThreadWarning}</skipMu=
+ltiThreadWarning>
+  <source default-value=3D"1.5">${maven.compiler.source}</source>
+  <staleMillis default-value=3D"0">${lastModGranularityMs}</staleMillis>
+  <target default-value=3D"1.5">${maven.compiler.target}</target>
+  <testSource>${maven.compiler.testSource}</testSource>
+  <testTarget>${maven.compiler.testTarget}</testTarget>
+  <verbose default-value=3D"false">${maven.compiler.verbose}</verbose>
+</configuration>
+[DEBUG]
+-----------------------------------------------------------------------
+[DEBUG] Goal:
+org.apache.maven.plugins:maven-surefire-plugin:2.14.1:test (default-test)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<configuration>
+  <argLine>${argLine}</argLine>
+  <basedir default-value=3D"${basedir}"/>
+  <childDelegation
+default-value=3D"false">${childDelegation}</childDelegation>
+  <classesDirectory default-value=3D"${project.build.outputDirectory}"/>
+  <debugForkedProcess>${maven.surefire.debug}</debugForkedProcess>
+  <disableXmlReport
+default-value=3D"false">${disableXmlReport}</disableXmlReport>
+  <enableAssertions
+default-value=3D"true">${enableAssertions}</enableAssertions>
+  <excludedGroups>${excludedGroups}</excludedGroups>
+
+<failIfNoSpecifiedTests>${surefire.failIfNoSpecifiedTests}</failIfNoSpecifi=
+edTests>
+  <failIfNoTests>${failIfNoTests}</failIfNoTests>
+  <forkCount default-value=3D"1">${forkCount}</forkCount>
+  <forkMode default-value=3D"once">${forkMode}</forkMode>
+
+<forkedProcessTimeoutInSeconds>${surefire.timeout}</forkedProcessTimeoutInS=
+econds>
+  <groups>${groups}</groups>
+  <includes>
+    <include>**/BG*.java</include>
+    <include>**/BugFree*.java</include>
+    <include>**/*BugFree.java</include>
+    <include>**/*BF.java</include>
+  </includes>
+  <junitArtifactName
+default-value=3D"junit:junit">${junitArtifactName}</junitArtifactName>
+  <jvm>${jvm}</jvm>
+  <localRepository default-value=3D"${localRepository}"/>
+  <objectFactory>${objectFactory}</objectFactory>
+  <parallel>${parallel}</parallel>
+  <parallelMavenExecution default-value=3D"${session.parallel}"/>
+  <perCoreThreadCount
+default-value=3D"true">${perCoreThreadCount}</perCoreThreadCount>
+  <pluginArtifactMap>${plugin.artifactMap}</pluginArtifactMap>
+  <pluginDescriptor default-value=3D"${plugin}"/>
+  <printSummary default-value=3D"true">${surefire.printSummary}</printSumma=
+ry>
+  <projectArtifactMap>${project.artifactMap}</projectArtifactMap>
+  <redirectTestOutputToFile
+default-value=3D"false">${maven.test.redirectTestOutputToFile}</redirectTes=
+tOutputToFile>
+  <remoteRepositories
+default-value=3D"${project.pluginArtifactRepositories}"/>
+  <reportFormat
+default-value=3D"brief">${surefire.reportFormat}</reportFormat>
+  <reportNameSuffix
+default-value=3D"">${surefire.reportNameSuffix}</reportNameSuffix>
+  <reportsDirectory
+default-value=3D"${project.build.directory}/surefire-reports"/>
+  <reuseForks default-value=3D"true">${reuseForks}</reuseForks>
+  <runOrder default-value=3D"filesystem"/>
+  <skip default-value=3D"false">${maven.test.skip}</skip>
+  <skipExec>${maven.test.skip.exec}</skipExec>
+  <skipTests default-value=3D"false">${skipTests}</skipTests>
+  <test>${test}</test>
+  <testClassesDirectory
+default-value=3D"${project.build.testOutputDirectory}"/>
+  <testFailureIgnore
+default-value=3D"false">${maven.test.failure.ignore}</testFailureIgnore>
+  <testNGArtifactName
+default-value=3D"org.testng:testng">${testNGArtifactName}</testNGArtifactNa=
+me>
+  <testSourceDirectory
+default-value=3D"${project.build.testSourceDirectory}"/>
+  <threadCount>${threadCount}</threadCount>
+  <trimStackTrace default-value=3D"true">${trimStackTrace}</trimStackTrace>
+  <useFile default-value=3D"true">${surefire.useFile}</useFile>
+  <useManifestOnlyJar
+default-value=3D"true">${surefire.useManifestOnlyJar}</useManifestOnlyJar>
+  <useSystemClassLoader
+default-value=3D"true">${surefire.useSystemClassLoader}</useSystemClassLoad=
+er>
+  <useUnlimitedThreads
+default-value=3D"false">${useUnlimitedThreads}</useUnlimitedThreads>
+  <workingDirectory>${basedir}</workingDirectory>
+  <project default-value=3D"${project}"/>
+  <session default-value=3D"${session}"/>
+</configuration>
+[DEBUG]
+-----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-jar-plugin:2.4:jar
+(default-jar)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<configuration>
+  <classesDirectory default-value=3D"${project.build.outputDirectory}"/>
+  <defaultManifestFile
+default-value=3D"${project.build.outputDirectory}/META-INF/MANIFEST.MF"/>
+  <finalName
+default-value=3D"${project.build.finalName}">${jar.finalName}</finalName>
+  <forceCreation default-value=3D"false">${jar.forceCreation}</forceCreatio=
+n>
+  <outputDirectory default-value=3D"${project.build.directory}"/>
+  <project default-value=3D"${project}"/>
+  <session default-value=3D"${session}"/>
+  <skipIfEmpty default-value=3D"false">${jar.skipIfEmpty}</skipIfEmpty>
+  <useDefaultManifestFile
+default-value=3D"false">${jar.useDefaultManifestFile}</useDefaultManifestFi=
+le>
+</configuration>
+[DEBUG]
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+[DEBUG] Could not find metadata junit:junit-dep/maven-metadata.xml in local
+(/home/ste/.m2/repository)
+[DEBUG] Skipped remote update check for junit:junit-dep/maven-metadata.xml,
+locally cached metadata up-to-date.
+[DEBUG] Failure to find junit:junit-dep/maven-metadata.xml in
+https://oss.sonatype.org/content/repositories/snapshots was cached in the
+local repository, resolution will not be reattempted until the update
+interval of sonatype-nexus-snapshots has elapsed or updates are forced
+[DEBUG] Could not find metadata commons-io:commons-io/maven-metadata.xml in
+local (/home/ste/.m2/repository)
+[DEBUG] Skipped remote update check for
+commons-io:commons-io/maven-metadata.xml, locally cached metadata
+up-to-date.
+[DEBUG] Failure to find commons-io:commons-io/maven-metadata.xml in
+https://oss.sonatype.org/content/repositories/snapshots was cached in the
+local repository, resolution will not be reattempted until the update
+interval of sonatype-nexus-snapshots has elapsed or updates are forced
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=3D2,
+ConflictMarker.markTime=3D1, ConflictMarker.nodeCount=3D57,
+ConflictIdSorter.graphTime=3D1, ConflictIdSorter.topsortTime=3D1,
+ConflictIdSorter.conflictIdCount=3D31,
+ConflictIdSorter.conflictIdCycleCount=3D0, ConflictResolver.totalTime=3D14,
+ConflictResolver.conflictItemCount=3D53,
+DefaultDependencyCollector.collectTime=3D791,
+DefaultDependencyCollector.transformTime=3D23}
+[DEBUG] ste:https:jar:0.0.5
+[DEBUG]    org.apache.httpcomponents:httpcore:jar:4.3.2:compile
+[DEBUG]    commons-lang:commons-lang:jar:2.6:compile
+[DEBUG]    junit:junit:jar:4.11:test
+[DEBUG]       org.hamcrest:hamcrest-core:jar:1.3:test
+[DEBUG]    org.assertj:assertj-core:jar:1.6.1:test
+[DEBUG]    com.github.stefanbirkner:system-rules:jar:1.6.0:test
+[DEBUG]       commons-io:commons-io:jar:2.4:compile
+[DEBUG]    org.apache.httpcomponents:httpclient:jar:4.2.5:test
+[DEBUG]       commons-logging:commons-logging:jar:1.1.1:compile
+[DEBUG]       commons-codec:commons-codec:jar:1.6:test
+[DEBUG]    com.google.guava:guava:jar:17.0:compile
+[DEBUG]    commons-collections:commons-collections:jar:3.2.1:compile
+[DEBUG]    commons-configuration:commons-configuration:jar:1.10:compile
+[DEBUG]    ste.test:xtest:jar:1.6.2:test
+[DEBUG]       org.beanshell:bsh:jar:2.0b5:compile
+[DEBUG]       org.eclipse.jetty:jetty-server:jar:9.0.0.M4:test
+[DEBUG]
+org.eclipse.jetty.orbit:javax.servlet:jar:3.0.0.v201112011016:test
+[DEBUG]          org.eclipse.jetty:jetty-http:jar:9.0.0.M4:test
+[DEBUG]             org.eclipse.jetty:jetty-util:jar:9.0.0.M4:test
+[DEBUG]          org.eclipse.jetty:jetty-io:jar:9.0.0.M4:test
+[DEBUG]       rhino:js:jar:1.7R2:test
+[DEBUG]       org.skife.url:url-scheme-registry:jar:0.0.1:test
+[DEBUG]          cglib:cglib-nodep:jar:2.2.2:test
+[DEBUG]       org.javassist:javassist:jar:3.18.1-GA:test
+[DEBUG]    ste.web:webtoolkitlib:jar:1.4.0:compile
+[DEBUG]       org.apache.velocity:velocity:jar:1.7:compile
+[DEBUG]
+com.fasterxml.jackson.datatype:jackson-datatype-json-org:jar:2.3.3:compile
+[DEBUG]          com.fasterxml.jackson.core:jackson-core:jar:2.3.3:compile
+[DEBUG]
+com.fasterxml.jackson.core:jackson-databind:jar:2.3.3:compile
+[DEBUG]
+com.fasterxml.jackson.core:jackson-annotations:jar:2.3.0:compile
+[DEBUG]          org.json:json:jar:20090211:compile
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ https ---
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.impl < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.version < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.metadata < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.collection < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.transfer < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer <
+plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.* < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.graph < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.internal.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.repository < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.resolution < plexus.core
+[DEBUG]   Imported: javax.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.spi < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported:
+org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser <
+plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.installation < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.deployment < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.slf4j.* < plexus.core
+[DEBUG]   Imported: javax.enterprise.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG] Populating class realm maven.api
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=3D0,
+ConflictMarker.markTime=3D0, ConflictMarker.nodeCount=3D3,
+ConflictIdSorter.graphTime=3D0, ConflictIdSorter.topsortTime=3D1,
+ConflictIdSorter.conflictIdCount=3D3,
+ConflictIdSorter.conflictIdCycleCount=3D0, ConflictResolver.totalTime=3D0,
+ConflictResolver.conflictItemCount=3D3,
+DefaultDependencyCollector.collectTime=3D17,
+DefaultDependencyCollector.transformTime=3D1}
+[DEBUG] org.apache.maven.plugins:maven-clean-plugin:jar:2.5:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0:compile
+[DEBUG] Created new class realm
+plugin>org.apache.maven.plugins:maven-clean-plugin:2.5
+[DEBUG] Importing foreign packages into class realm
+plugin>org.apache.maven.plugins:maven-clean-plugin:2.5
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm
+plugin>org.apache.maven.plugins:maven-clean-plugin:2.5
+[DEBUG]   Included: org.apache.maven.plugins:maven-clean-plugin:jar:2.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG] Configuring mojo
+org.apache.maven.plugins:maven-clean-plugin:2.5:clean from plugin realm
+ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:2.5, parent:
+sun.misc.Launcher$AppClassLoader@3067e236]
+[DEBUG] Configuring mojo
+'org.apache.maven.plugins:maven-clean-plugin:2.5:clean' with basic
+configurator -->
+[DEBUG]   (f) directory =3D /home/ste/Projects/https/target
+[DEBUG]   (f) excludeDefaultDirectories =3D false
+[DEBUG]   (f) failOnError =3D true
+[DEBUG]   (f) followSymLinks =3D false
+[DEBUG]   (f) outputDirectory =3D /home/ste/Projects/https/target/classes
+[DEBUG]   (f) reportDirectory =3D /home/ste/Projects/https/target/site
+[DEBUG]   (f) retryOnError =3D true
+[DEBUG]   (f) skip =3D false
+[DEBUG]   (f) testOutputDirectory =3D
+/home/ste/Projects/https/target/test-classes
+[DEBUG] -- end configuration --
+[INFO] Deleting /home/ste/Projects/https/target
+[INFO] Deleting directory
+/home/ste/Projects/https/target/generated-test-sources/test-annotations
+[INFO] Deleting directory
+/home/ste/Projects/https/target/generated-test-sources
+[INFO] Deleting file
+/home/ste/Projects/https/target/classes/ste/web/http/HttpServer$HttpKeyMana=
+ger.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/classes/ste/web/http/HttpServer$RequestList=
+enerThread.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/classes/ste/web/http/Constants.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/classes/ste/web/http/HttpServerCLI.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/classes/ste/web/http/HttpSessionService.cla=
+ss
+[INFO] Deleting file
+/home/ste/Projects/https/target/classes/ste/web/http/SessionCache.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/classes/ste/web/http/handlers/FileHandler.c=
+lass
+[INFO] Deleting directory
+/home/ste/Projects/https/target/classes/ste/web/http/handlers
+[INFO] Deleting file
+/home/ste/Projects/https/target/classes/ste/web/http/SSLConfigurationExcept=
+ion.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/classes/ste/web/http/HttpServer$WorkerThrea=
+d.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/classes/ste/web/http/HttpServer.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/classes/ste/web/http/HttpServer$ClientAuthe=
+ntication.class
+[INFO] Deleting directory
+/home/ste/Projects/https/target/classes/ste/web/http
+[INFO] Deleting directory /home/ste/Projects/https/target/classes/ste/web
+[INFO] Deleting directory /home/ste/Projects/https/target/classes/ste
+[INFO] Deleting file
+/home/ste/Projects/https/target/classes/.netbeans_automatic_build
+[INFO] Deleting directory /home/ste/Projects/https/target/classes
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/ste.web.http.BugFreeHttpSe=
+rverAccessLog.txt
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/TEST-ste.web.http.BugFreeS=
+essionCacheThreading.xml
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/TEST-ste.web.http.BugFreeH=
+ttpServerSSL.xml
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/TEST-ste.web.http.BugFreeH=
+ttpServerAccessLog.xml
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/TEST-ste.web.http.BugFreeH=
+ttpServerClientAuthentication.xml
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/TEST-ste.web.http.BugFreeH=
+ttpServerLog.xml
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/ste.web.http.BugFreeHttpSe=
+rverLog.txt
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/ste.web.http.BugFreeHttpSe=
+rverClientAuthentication.txt
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/ste.web.http.BugFreeHttpSe=
+rverStartupLog.txt
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/ste.web.http.BugFreeHttpSe=
+ssionService.txt
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/ste.web.http.BugFreeSessio=
+nCache.txt
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/TEST-ste.web.http.BugFreeH=
+ttpSessionService.xml
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/TEST-ste.web.http.BugFreeH=
+ttpServerStartupWithConfiguration.xml
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/ste.web.http.BugFreeHttpSe=
+rverStartupWithConfiguration.txt
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/ste.web.http.BugFreeSessio=
+nCacheThreading.txt
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/TEST-ste.web.http.BugFreeH=
+ttpServerHandlers.xml
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/ste.web.http.BugFreeHttpSe=
+rverSSL.txt
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/TEST-ste.web.http.BugFreeH=
+ttpServerStartup.xml
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/TEST-ste.web.http.BugFreeH=
+ttpServerSession.xml
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/ste.web.http.BugFreeHttpSe=
+rverHandlers.txt
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/TEST-ste.web.http.BugFreeS=
+essionCache.xml
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/ste.web.http.BugFreeHttpSe=
+rverSession.txt
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/TEST-ste.web.http.BugFreeH=
+ttpServerStartupLog.xml
+[INFO] Deleting file
+/home/ste/Projects/https/target/surefire-reports/ste.web.http.BugFreeHttpSe=
+rverStartup.txt
+[INFO] Deleting directory /home/ste/Projects/https/target/surefire-reports
+[INFO] Deleting file /home/ste/Projects/https/target/ste.https-0.0.4.jar
+[INFO] Deleting file
+/home/ste/Projects/https/target/maven-archiver/pom.properties
+[INFO] Deleting directory /home/ste/Projects/https/target/maven-archiver
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpSessio=
+nService$1.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpServer=
+StartupLog.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpServer=
+Startup.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpSessio=
+nContext.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpServer=
+SSL.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpSessio=
+nService.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpServer=
+StartupWithConfiguration.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpServer=
+ClientAuthentication.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpSessio=
+nService$TestConnection.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpServer=
+Base$1.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeSessionCac=
+heThreading$TestSessionCache.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpServer=
+AccessLog.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpServer=
+Base.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpServer=
+Log$TestConnectionFactory.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpServer=
+Handlers$TestHandler.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeSessionCac=
+heThreading.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpServer=
+Log.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpServer=
+Handlers.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpServer=
+Session.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/handlers/PrintSes=
+sionHandler.class
+[INFO] Deleting directory
+/home/ste/Projects/https/target/test-classes/ste/web/http/handlers
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeSessionCac=
+heThreading$TestTask.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeHttpSessio=
+nService$MessageCondition.class
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/ste/web/http/BugFreeSessionCac=
+he.class
+[INFO] Deleting directory
+/home/ste/Projects/https/target/test-classes/ste/web/http
+[INFO] Deleting directory
+/home/ste/Projects/https/target/test-classes/ste/web
+[INFO] Deleting directory /home/ste/Projects/https/target/test-classes/ste
+[INFO] Deleting file
+/home/ste/Projects/https/target/test-classes/.netbeans_automatic_build
+[INFO] Deleting directory /home/ste/Projects/https/target/test-classes
+[INFO] Deleting directory
+/home/ste/Projects/https/target/generated-sources/annotations
+[INFO] Deleting directory /home/ste/Projects/https/target/generated-sources
+[INFO] Deleting directory /home/ste/Projects/https/target
+[DEBUG] Skipping non-existing directory
+/home/ste/Projects/https/target/classes
+[DEBUG] Skipping non-existing directory
+/home/ste/Projects/https/target/test-classes
+[DEBUG] Skipping non-existing directory /home/ste/Projects/https/target/sit=
+e
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ https
+---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=3D2,
+ConflictMarker.markTime=3D1, ConflictMarker.nodeCount=3D77,
+ConflictIdSorter.graphTime=3D1, ConflictIdSorter.topsortTime=3D1,
+ConflictIdSorter.conflictIdCount=3D26,
+ConflictIdSorter.conflictIdCycleCount=3D0, ConflictResolver.totalTime=3D9,
+ConflictResolver.conflictItemCount=3D74,
+DefaultDependencyCollector.collectTime=3D125,
+DefaultDependencyCollector.transformTime=3D15}
+[DEBUG] org.apache.maven.plugins:maven-resources-plugin:jar:2.6:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-core:jar:2.0.6:compile
+[DEBUG]
+org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6:compile
+[DEBUG]
+org.apache.maven.reporting:maven-reporting-api:jar:2.0.6:compile
+[DEBUG]
+org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.6:compile
+[DEBUG]       commons-cli:commons-cli:jar:1.0:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.6:compile
+[DEBUG]
+org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:compile
+[DEBUG]       classworlds:classworlds:jar:1.1:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-settings:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-model:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-monitor:jar:2.0.6:compile
+[DEBUG]
+org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compi=
+le
+[DEBUG]       junit:junit:jar:3.8.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:2.0.5:compile
+[DEBUG]    org.apache.maven.shared:maven-filtering:jar:1.1:compile
+[DEBUG]       org.sonatype.plexus:plexus-build-api:jar:0.0.4:compile
+[DEBUG]    org.codehaus.plexus:plexus-interpolation:jar:1.13:compile
+[DEBUG] Created new class realm
+plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG] Importing foreign packages into class realm
+plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm
+plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG]   Included: org.apache.maven.plugins:maven-resources-plugin:jar:2.6
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:2.0.=
+6
+[DEBUG]   Included: org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7
+[DEBUG]   Included: commons-cli:commons-cli:jar:1.0
+[DEBUG]   Included:
+org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:2.0.5
+[DEBUG]   Included: org.apache.maven.shared:maven-filtering:jar:1.1
+[DEBUG]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.13
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:2.0.6
+[DEBUG]   Excluded:
+org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.6
+[DEBUG]   Excluded: classworlds:classworlds:jar:1.1
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   Excluded:
+org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG] Configuring mojo
+org.apache.maven.plugins:maven-resources-plugin:2.6:resources from plugin
+realm
+ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:2.6,
+parent: sun.misc.Launcher$AppClassLoader@3067e236]
+[DEBUG] Configuring mojo
+'org.apache.maven.plugins:maven-resources-plugin:2.6:resources' with basic
+configurator -->
+[DEBUG]   (f) buildFilters =3D []
+[DEBUG]   (f) encoding =3D UTF-8
+[DEBUG]   (f) escapeWindowsPaths =3D true
+[DEBUG]   (s) includeEmptyDirs =3D false
+[DEBUG]   (s) outputDirectory =3D /home/ste/Projects/https/target/classes
+[DEBUG]   (s) overwrite =3D false
+[DEBUG]   (f) project =3D MavenProject: ste:https:0.0.5 @
+/home/ste/Projects/https/pom.xml
+[DEBUG]   (s) resources =3D [Resource {targetPath: null, filtering: false,
+FileSet {directory: /home/ste/Projects/https/src/main/resources, PatternSet
+[includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session =3D org.apache.maven.execution.MavenSession@7dd84118
+[DEBUG]   (f) supportMultiLineFiltering =3D false
+[DEBUG]   (f) useBuildFilters =3D true
+[DEBUG]   (s) useDefaultDelimiters =3D true
+[DEBUG] -- end configuration --
+[DEBUG] properties used
+{env.JAVA_TOOL_OPTIONS=3D-javaagent:/usr/share/java/jayatanaag.jar ,
+java.vendor=3DOracle Corporation,
+env.SESSION_MANAGER=3Dlocal/derfel:@/tmp/.ICE-unix/2345,unix/derfel:/tmp/.I=
+CE-unix/2345,
+env.IM_CONFIG_PHASE=3D1, sun.java.launcher=3DSUN_STANDARD,
+env.QT_IM_MODULE=3Dibus, sun.management.compiler=3DHotSpot 64-Bit Tiered
+Compilers, os.name=3DLinux,
+env.UPSTART_SESSION=3Dunix:abstract=3D/com/ubuntu/upstart-session/1000/2219=
+,
+sun.boot.class.path=3D/usr/lib/jvm/jdk1.7.0/jre/lib/resources.jar:/usr/lib/=
+jvm/jdk1.7.0/jre/lib/rt.jar:/usr/lib/jvm/jdk1.7.0/jre/lib/sunrsasign.jar:/u=
+sr/lib/jvm/jdk1.7.0/jre/lib/jsse.jar:/usr/lib/jvm/jdk1.7.0/jre/lib/jce.jar:=
+/usr/lib/jvm/jdk1.7.0/jre/lib/charsets.jar:/usr/lib/jvm/jdk1.7.0/jre/lib/jf=
+r.jar:/usr/lib/jvm/jdk1.7.0/jre/classes,
+env.PWD=3D/home/ste/Projects/https, sun.desktop=3Dgnome, env.LANG=3Den_GB.U=
+TF-8,
+java.vm.specification.vendor=3DOracle Corporation,
+env.XDG_MENU_PREFIX=3Dgnome-, java.runtime.version=3D1.7.0_05-b06,
+env.GTK_IM_MODULE=3Dibus,
+env.DEFAULTS_PATH=3D/usr/share/gconf/ubuntu.default.path,
+env.UPSTART_EVENTS=3Dstarting, env.XDG_VTNR=3D7,
+project.build.sourceEncoding=3DUTF-8, env.DISPLAY=3D:0.0, user.name=3Dste,
+env.QT4_IM_MODULE=3Dxim, env.DBUS_STARTER_BUS_TYPE=3Dsession,
+env._=3D/usr/lib/jvm/jdk1.7.0/bin/java, maven.build.version=3DApache Maven
+3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 17:22:22+0200),
+env.USER=3Dste, env.SHELL=3D/bin/bash, env.DESKTOP_SESSION=3Dubuntu,
+env.XDG_DATA_DIRS=3D/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/u=
+sr/share/,
+env.NLSPATH=3D/usr/dt/lib/nls/msg/%L/%N.cat, env.LC_ADDRESS=3Den_GB.UTF-8,
+maven.repo.local=3D/home/ste/.m2/repository,
+env.PATH=3D/home/ste/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:=
+/sbin:/bin:/usr/games:/usr/local/games,
+env.XDG_CURRENT_DESKTOP=3DUnity, user.language=3Den,
+env.LC_MONETARY=3Den_GB.UTF-8,
+sun.boot.library.path=3D/usr/lib/jvm/jdk1.7.0/jre/lib/amd64,
+classworlds.conf=3D/opt/apache-maven-3.1.1/bin/m2.conf,
+env.TEXTDOMAIN=3Dim-config, env.UPSTART_JOB=3Ddbus, env.SELINUX_INIT=3DYES,
+java.version=3D1.7.0_05, user.timezone=3DEurope/Rome,
+env.DBUS_SESSION_BUS_ADDRESS=3Dunix:abstract=3D/tmp/dbus-IGYzmIogwd,guid=3D=
+3d239abe52971d2097c515a654023393,
+sun.arch.data.model=3D64, env.COMPIZ_CONFIG_PROFILE=3Dubuntu,
+env.SSH_AGENT_PID=3D2291,
+java.endorsed.dirs=3D/usr/lib/jvm/jdk1.7.0/jre/lib/endorsed,
+sun.cpu.isalist=3D, env.LC_PAPER=3Den_GB.UTF-8, sun.jnu.encoding=3DUTF-8,
+file.encoding.pkg=3Dsun.io, env.SHLVL=3D1, file.separator=3D/,
+java.specification.name=3DJava Platform API Specification,
+env.GNOME_DESKTOP_SESSION_ID=3Dthis-is-deprecated, java.class.version=3D51.=
+0,
+env.GDMSESSION=3Dubuntu, org.slf4j.simpleLogger.defaultLogLevel=3Ddebug,
+user.country=3DGB, env.GNOME_KEYRING_PID=3D2217, env.DBUS_DEBUG_OUTPUT=3D1,
+java.home=3D/usr/lib/jvm/jdk1.7.0/jre, java.vm.info=3Dmixed mode,
+env.INSIDE_NAUTILUS_PYTHON=3D, env.LOGNAME=3Dste, os.version=3D3.13.0-35-ge=
+neric,
+maven.compiler.target=3D1.7, path.separator=3D:, java.vm.version=3D23.1-b03=
+,
+env.UPSTART_INSTANCE=3D, env.LANGUAGE=3Den_GB:en,
+env.TEXTDOMAINDIR=3D/usr/share/locale/,
+env.XDG_SESSION_PATH=3D/org/freedesktop/DisplayManager/Session0,
+env.QT_QPA_PLATFORMTHEME=3Dappmenu-qt5, env.LC_TELEPHONE=3Den_GB.UTF-8,
+env.SESSIONTYPE=3Dgnome-session, env.JAVA_HOME=3D/usr/lib/jvm/jdk1.7.0,
+java.awt.printerjob=3Dsun.print.PSPrinterJob,
+sun.io.unicode.encoding=3DUnicodeLittle, awt.toolkit=3Dsun.awt.X11.XToolkit=
+,
+env.XMODIFIERS=3D@im=3Dibus, env.GDM_LANG=3Den_GB,
+env.LC_MEASUREMENT=3Den_GB.UTF-8, user.home=3D/home/ste,
+env.NB_EXEC_MAVEN_PROCESS_UUID=3D26e3a892-1330-4ec4-b42d-d2de65d7875e,
+env.JOB=3Dxsession-init, env.OLDPWD=3D/home/ste/Projects/https,
+java.specification.vendor=3DOracle Corporation,
+env.M2_HOME=3D/opt/apache-maven-3.1.1,
+java.library.path=3D/usr/lib/jvm/jdk1.7.0/jre/lib/amd64:/usr/lib/jvm/jdk1.7=
+.0/jre/lib/i386::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/l=
+ib,
+java.vendor.url=3Dhttp://java.oracle.com/,
+env.GIO_LAUNCHED_DESKTOP_FILE=3D/home/ste/Desktop/netbeans-8.0.desktop,
+java.vm.vendor=3DOracle Corporation, env.XDG_SEAT=3Dseat0,
+maven.home=3D/opt/apache-maven-3.1.1, java.runtime.name=3DJava(TM) SE Runti=
+me
+Environment, env.SSH_AGENT_LAUNCHER=3Dupstart,
+sun.java.command=3Dorg.codehaus.plexus.classworlds.launcher.Launcher -X -D
+maven.repo.local=3D/home/ste/.m2/repository -s
+/tmp/release-settings6658160415620190647.xml clean verify,
+java.class.path=3D/opt/apache-maven-3.1.1/boot/plexus-classworlds-2.5.1.jar=
+:/usr/share/java/jayatanaag.jar,
+env.MAVEN_TERMINATE_CMD=3Don, env.XDG_SESSION_ID=3Dc2, maven.version=3D3.1.=
+1,
+env.UBUNTU_MENUPROXY=3D1, env.XFILESEARCHPATH=3D/usr/dt/app-defaults/%L/Dt,
+java.vm.specification.name=3DJava Virtual Machine Specification,
+java.vm.specification.version=3D1.7, sun.cpu.endian=3Dlittle,
+sun.os.patch.level=3Dunknown, env.HOME=3D/home/ste, java.io.tmpdir=3D/tmp,
+env.XDG_SEAT_PATH=3D/org/freedesktop/DisplayManager/Seat0,
+env.LD_LIBRARY_PATH=3D/usr/lib/jvm/jdk1.7.0/jre/lib/amd64:/usr/lib/jvm/jdk1=
+.7.0/jre/lib/i386:,
+java.vendor.url.bug=3Dhttp://bugreport.sun.com/bugreport/,
+env.SSH_AUTH_SOCK=3D/run/user/1000/keyring-9tK0to/ssh,
+maven.compiler.source=3D1.7, env.CLUTTER_IM_MODULE=3Dxim, os.arch=3Damd64,
+java.awt.graphicsenv=3Dsun.awt.X11GraphicsEnvironment,
+env.DBUS_STARTER_ADDRESS=3Dunix:abstract=3D/tmp/dbus-IGYzmIogwd,guid=3D3d23=
+9abe52971d2097c515a654023393,
+env.INSTANCE=3D,
+java.ext.dirs=3D/usr/lib/jvm/jdk1.7.0/jre/lib/ext:/usr/java/packages/lib/ex=
+t,
+env.XDG_RUNTIME_DIR=3D/run/user/1000, user.dir=3D/home/ste/Projects/https,
+env.XAUTHORITY=3D/home/ste/.Xauthority,
+env.MANDATORY_PATH=3D/usr/share/gconf/ubuntu.mandatory.path,
+env.J2D_PIXMAPS=3Dshared, env.GTK_MODULES=3Doverlay-scrollbar:unity-gtk-mod=
+ule,
+line.separator=3D
+, java.vm.name=3DJava HotSpot(TM) 64-Bit Server VM,
+env.LC_NUMERIC=3Den_GB.UTF-8,
+env.XDG_GREETER_DATA_DIR=3D/var/lib/lightdm-data/ste,
+env.LC_TIME=3Den_GB.UTF-8, file.encoding=3DUTF-8,
+env.LC_IDENTIFICATION=3Den_GB.UTF-8,
+env.GPG_AGENT_INFO=3D/run/user/1000/keyring-9tK0to/gpg:0:1,
+env.GIO_LAUNCHED_DESKTOP_FILE_PID=3D4398, java.specification.version=3D1.7,
+env.GNOME_KEYRING_CONTROL=3D/run/user/1000/keyring-9tK0to,
+env.XDG_CONFIG_DIRS=3D/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg,
+env.LC_NAME=3Den_GB.UTF-8}
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] resource with targetPath null
+directory /home/ste/Projects/https/src/main/resources
+excludes []
+includes []
+[DEBUG] ignoreDelta true
+[INFO] Copying 0 resource
+[DEBUG] no use filter components
+[INFO]
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ https --=
+-
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=3D1,
+ConflictMarker.markTime=3D1, ConflictMarker.nodeCount=3D106,
+ConflictIdSorter.graphTime=3D1, ConflictIdSorter.topsortTime=3D0,
+ConflictIdSorter.conflictIdCount=3D27,
+ConflictIdSorter.conflictIdCycleCount=3D0, ConflictResolver.totalTime=3D7,
+ConflictResolver.conflictItemCount=3D53,
+DefaultDependencyCollector.collectTime=3D139,
+DefaultDependencyCollector.transformTime=3D10}
+[DEBUG] org.apache.maven.plugins:maven-compiler-plugin:jar:2.5.1:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.9:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.9:compile
+[DEBUG]    org.apache.maven:maven-core:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.0.9:compile
+[DEBUG]
+org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-project:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-plugin-registry:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-monitor:jar:2.0.9:compile
+[DEBUG]    org.apache.maven:maven-toolchain:jar:1.0:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-api:jar:1.9.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-manager:jar:1.9.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-javac:jar:1.9.1:runtime
+[DEBUG]
+org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compi=
+le
+[DEBUG]       junit:junit:jar:3.8.1:compile
+[DEBUG]       classworlds:classworlds:jar:1.1-alpha-2:compile
+[DEBUG] Created new class realm
+plugin>org.apache.maven.plugins:maven-compiler-plugin:2.5.1
+[DEBUG] Importing foreign packages into class realm
+plugin>org.apache.maven.plugins:maven-compiler-plugin:2.5.1
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm
+plugin>org.apache.maven.plugins:maven-compiler-plugin:2.5.1
+[DEBUG]   Included: org.apache.maven.plugins:maven-compiler-plugin:jar:2.5.=
+1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-api:jar:1.9.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-manager:jar:1.9.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-javac:jar:1.9.1
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0.9
+[DEBUG]   Excluded:
+org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-monitor:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-toolchain:jar:1.0
+[DEBUG]   Excluded:
+org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   Excluded: classworlds:classworlds:jar:1.1-alpha-2
+[DEBUG] Configuring mojo
+org.apache.maven.plugins:maven-compiler-plugin:2.5.1:compile from plugin
+realm
+ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:2.5.1,
+parent: sun.misc.Launcher$AppClassLoader@3067e236]
+[DEBUG] Configuring mojo
+'org.apache.maven.plugins:maven-compiler-plugin:2.5.1:compile' with basic
+configurator -->
+[DEBUG]   (f) basedir =3D /home/ste/Projects/https
+[DEBUG]   (f) buildDirectory =3D /home/ste/Projects/https/target
+[DEBUG]   (f) classpathElements =3D [/home/ste/Projects/https/target/classe=
+s,
+/home/ste/.m2/repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-=
+4.3.2.jar,
+/home/ste/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar=
+,
+/home/ste/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar,
+/home/ste/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logg=
+ing-1.1.1.jar,
+/home/ste/.m2/repository/com/google/guava/guava/17.0/guava-17.0.jar,
+/home/ste/.m2/repository/commons-collections/commons-collections/3.2.1/comm=
+ons-collections-3.2.1.jar,
+/home/ste/.m2/repository/commons-configuration/commons-configuration/1.10/c=
+ommons-configuration-1.10.jar,
+/home/ste/.m2/repository/org/beanshell/bsh/2.0b5/bsh-2.0b5.jar,
+/home/ste/.m2/repository/ste/web/webtoolkitlib/1.4.0/webtoolkitlib-1.4.0.ja=
+r,
+/home/ste/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar,
+/home/ste/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-js=
+on-org/2.3.3/jackson-datatype-json-org-2.3.3.jar,
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.3.3/jack=
+son-core-2.3.3.jar,
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.3.3/=
+jackson-databind-2.3.3.jar,
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.3=
+.0/jackson-annotations-2.3.0.jar,
+/home/ste/.m2/repository/org/json/json/20090211/json-20090211.jar]
+[DEBUG]   (f) compileSourceRoots =3D [/home/ste/Projects/https/src/main/jav=
+a]
+[DEBUG]   (f) compilerId =3D javac
+[DEBUG]   (f) debug =3D true
+[DEBUG]   (f) encoding =3D UTF-8
+[DEBUG]   (f) failOnError =3D true
+[DEBUG]   (f) fork =3D false
+[DEBUG]   (f) generatedSourcesDirectory =3D
+/home/ste/Projects/https/target/generated-sources/annotations
+[DEBUG]   (f) optimize =3D false
+[DEBUG]   (f) outputDirectory =3D /home/ste/Projects/https/target/classes
+[DEBUG]   (f) outputFileName =3D ste.https-0.0.5
+[DEBUG]   (f) projectArtifact =3D ste:https:jar:0.0.5
+[DEBUG]   (f) session =3D org.apache.maven.execution.MavenSession@7dd84118
+[DEBUG]   (f) showDeprecation =3D false
+[DEBUG]   (f) showWarnings =3D false
+[DEBUG]   (f) source =3D 1.7
+[DEBUG]   (f) staleMillis =3D 0
+[DEBUG]   (f) target =3D 1.7
+[DEBUG]   (f) verbose =3D false
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Source directories: [/home/ste/Projects/https/src/main/java]
+[DEBUG] Classpath: [/home/ste/Projects/https/target/classes
+ /home/ste/.m2/repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore=
+-4.3.2.jar
+ /home/ste/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.ja=
+r
+ /home/ste/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar
+ /home/ste/.m2/repository/commons-logging/commons-logging/1.1.1/commons-log=
+ging-1.1.1.jar
+ /home/ste/.m2/repository/com/google/guava/guava/17.0/guava-17.0.jar
+ /home/ste/.m2/repository/commons-collections/commons-collections/3.2.1/com=
+mons-collections-3.2.1.jar
+ /home/ste/.m2/repository/commons-configuration/commons-configuration/1.10/=
+commons-configuration-1.10.jar
+ /home/ste/.m2/repository/org/beanshell/bsh/2.0b5/bsh-2.0b5.jar
+ /home/ste/.m2/repository/ste/web/webtoolkitlib/1.4.0/webtoolkitlib-1.4.0.j=
+ar
+ /home/ste/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar
+ /home/ste/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-j=
+son-org/2.3.3/jackson-datatype-json-org-2.3.3.jar
+ /home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.3.3/jac=
+kson-core-2.3.3.jar
+ /home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.3.3=
+/jackson-databind-2.3.3.jar
+ /home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.=
+3.0/jackson-annotations-2.3.0.jar
+ /home/ste/.m2/repository/org/json/json/20090211/json-20090211.jar]
+[DEBUG] Output directory: /home/ste/Projects/https/target/classes
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[DEBUG] Classpath:
+[DEBUG]  /home/ste/Projects/https/target/classes
+[DEBUG]
+/home/ste/.m2/repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-=
+4.3.2.jar
+[DEBUG]
+/home/ste/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar
+[DEBUG]
+/home/ste/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar
+[DEBUG]
+/home/ste/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logg=
+ing-1.1.1.jar
+[DEBUG]  /home/ste/.m2/repository/com/google/guava/guava/17.0/guava-17.0.ja=
+r
+[DEBUG]
+/home/ste/.m2/repository/commons-collections/commons-collections/3.2.1/comm=
+ons-collections-3.2.1.jar
+[DEBUG]
+/home/ste/.m2/repository/commons-configuration/commons-configuration/1.10/c=
+ommons-configuration-1.10.jar
+[DEBUG]  /home/ste/.m2/repository/org/beanshell/bsh/2.0b5/bsh-2.0b5.jar
+[DEBUG]
+/home/ste/.m2/repository/ste/web/webtoolkitlib/1.4.0/webtoolkitlib-1.4.0.ja=
+r
+[DEBUG]
+/home/ste/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar
+[DEBUG]
+/home/ste/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-js=
+on-org/2.3.3/jackson-datatype-json-org-2.3.3.jar
+[DEBUG]
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.3.3/jack=
+son-core-2.3.3.jar
+[DEBUG]
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.3.3/=
+jackson-databind-2.3.3.jar
+[DEBUG]
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.3=
+.0/jackson-annotations-2.3.0.jar
+[DEBUG]  /home/ste/.m2/repository/org/json/json/20090211/json-20090211.jar
+[DEBUG] Source roots:
+[DEBUG]  /home/ste/Projects/https/src/main/java
+[DEBUG] Command line options:
+[DEBUG] -d /home/ste/Projects/https/target/classes -classpath
+/home/ste/Projects/https/target/classes:/home/ste/.m2/repository/org/apache=
+/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar:/home/ste/.m2/repository/=
+commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/ste/.m2/repository=
+/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/ste/.m2/repository/comm=
+ons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/home/ste/.m2/r=
+epository/com/google/guava/guava/17.0/guava-17.0.jar:/home/ste/.m2/reposito=
+ry/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.=
+jar:/home/ste/.m2/repository/commons-configuration/commons-configuration/1.=
+10/commons-configuration-1.10.jar:/home/ste/.m2/repository/org/beanshell/bs=
+h/2.0b5/bsh-2.0b5.jar:/home/ste/.m2/repository/ste/web/webtoolkitlib/1.4.0/=
+webtoolkitlib-1.4.0.jar:/home/ste/.m2/repository/org/apache/velocity/veloci=
+ty/1.7/velocity-1.7.jar:/home/ste/.m2/repository/com/fasterxml/jackson/data=
+type/jackson-datatype-json-org/2.3.3/jackson-datatype-json-org-2.3.3.jar:/h=
+ome/ste/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.3.3/jackso=
+n-core-2.3.3.jar:/home/ste/.m2/repository/com/fasterxml/jackson/core/jackso=
+n-databind/2.3.3/jackson-databind-2.3.3.jar:/home/ste/.m2/repository/com/fa=
+sterxml/jackson/core/jackson-annotations/2.3.0/jackson-annotations-2.3.0.ja=
+r:/home/ste/.m2/repository/org/json/json/20090211/json-20090211.jar:
+-sourcepath /home/ste/Projects/https/src/main/java:
+/home/ste/Projects/https/src/main/java/ste/web/http/HttpServerCLI.java
+/home/ste/Projects/https/src/main/java/ste/web/http/HttpSessionService.java
+/home/ste/Projects/https/src/main/java/ste/web/http/HttpServer.java
+/home/ste/Projects/https/src/main/java/ste/web/http/handlers/FileHandler.ja=
+va
+/home/ste/Projects/https/src/main/java/ste/web/http/SessionCache.java
+/home/ste/Projects/https/src/main/java/ste/web/http/Constants.java
+/home/ste/Projects/https/src/main/java/ste/web/http/SSLConfigurationExcepti=
+on.java
+-s /home/ste/Projects/https/target/generated-sources/annotations -g -nowarn
+-target 1.7 -source 1.7 -encoding UTF-8
+[INFO] Compiling 7 source files to /home/ste/Projects/https/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources)
+@ https ---
+[DEBUG] Configuring mojo
+org.apache.maven.plugins:maven-resources-plugin:2.6:testResources from
+plugin realm
+ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:2.6,
+parent: sun.misc.Launcher$AppClassLoader@3067e236]
+[DEBUG] Configuring mojo
+'org.apache.maven.plugins:maven-resources-plugin:2.6:testResources' with
+basic configurator -->
+[DEBUG]   (f) buildFilters =3D []
+[DEBUG]   (f) encoding =3D UTF-8
+[DEBUG]   (f) escapeWindowsPaths =3D true
+[DEBUG]   (s) includeEmptyDirs =3D false
+[DEBUG]   (s) outputDirectory =3D /home/ste/Projects/https/target/test-clas=
+ses
+[DEBUG]   (s) overwrite =3D false
+[DEBUG]   (f) project =3D MavenProject: ste:https:0.0.5 @
+/home/ste/Projects/https/pom.xml
+[DEBUG]   (s) resources =3D [Resource {targetPath: null, filtering: false,
+FileSet {directory: /home/ste/Projects/https/src/test/resources, PatternSet
+[includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session =3D org.apache.maven.execution.MavenSession@7dd84118
+[DEBUG]   (f) supportMultiLineFiltering =3D false
+[DEBUG]   (f) useBuildFilters =3D true
+[DEBUG]   (s) useDefaultDelimiters =3D true
+[DEBUG] -- end configuration --
+[DEBUG] properties used
+{env.JAVA_TOOL_OPTIONS=3D-javaagent:/usr/share/java/jayatanaag.jar ,
+java.vendor=3DOracle Corporation,
+env.SESSION_MANAGER=3Dlocal/derfel:@/tmp/.ICE-unix/2345,unix/derfel:/tmp/.I=
+CE-unix/2345,
+env.IM_CONFIG_PHASE=3D1, sun.java.launcher=3DSUN_STANDARD,
+env.QT_IM_MODULE=3Dibus, sun.management.compiler=3DHotSpot 64-Bit Tiered
+Compilers, os.name=3DLinux,
+env.UPSTART_SESSION=3Dunix:abstract=3D/com/ubuntu/upstart-session/1000/2219=
+,
+sun.boot.class.path=3D/usr/lib/jvm/jdk1.7.0/jre/lib/resources.jar:/usr/lib/=
+jvm/jdk1.7.0/jre/lib/rt.jar:/usr/lib/jvm/jdk1.7.0/jre/lib/sunrsasign.jar:/u=
+sr/lib/jvm/jdk1.7.0/jre/lib/jsse.jar:/usr/lib/jvm/jdk1.7.0/jre/lib/jce.jar:=
+/usr/lib/jvm/jdk1.7.0/jre/lib/charsets.jar:/usr/lib/jvm/jdk1.7.0/jre/lib/jf=
+r.jar:/usr/lib/jvm/jdk1.7.0/jre/classes,
+env.PWD=3D/home/ste/Projects/https, sun.desktop=3Dgnome, env.LANG=3Den_GB.U=
+TF-8,
+java.vm.specification.vendor=3DOracle Corporation,
+env.XDG_MENU_PREFIX=3Dgnome-, java.runtime.version=3D1.7.0_05-b06,
+env.GTK_IM_MODULE=3Dibus,
+env.DEFAULTS_PATH=3D/usr/share/gconf/ubuntu.default.path,
+env.UPSTART_EVENTS=3Dstarting, env.XDG_VTNR=3D7,
+project.build.sourceEncoding=3DUTF-8, env.DISPLAY=3D:0.0, user.name=3Dste,
+env.QT4_IM_MODULE=3Dxim, env.DBUS_STARTER_BUS_TYPE=3Dsession,
+env._=3D/usr/lib/jvm/jdk1.7.0/bin/java, maven.build.version=3DApache Maven
+3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 17:22:22+0200),
+env.USER=3Dste, env.SHELL=3D/bin/bash, env.DESKTOP_SESSION=3Dubuntu,
+env.XDG_DATA_DIRS=3D/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/u=
+sr/share/,
+env.NLSPATH=3D/usr/dt/lib/nls/msg/%L/%N.cat, env.LC_ADDRESS=3Den_GB.UTF-8,
+maven.repo.local=3D/home/ste/.m2/repository,
+env.PATH=3D/home/ste/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:=
+/sbin:/bin:/usr/games:/usr/local/games,
+env.XDG_CURRENT_DESKTOP=3DUnity, user.language=3Den,
+env.LC_MONETARY=3Den_GB.UTF-8,
+sun.boot.library.path=3D/usr/lib/jvm/jdk1.7.0/jre/lib/amd64,
+classworlds.conf=3D/opt/apache-maven-3.1.1/bin/m2.conf,
+env.TEXTDOMAIN=3Dim-config, env.UPSTART_JOB=3Ddbus, env.SELINUX_INIT=3DYES,
+java.version=3D1.7.0_05, user.timezone=3DEurope/Rome,
+env.DBUS_SESSION_BUS_ADDRESS=3Dunix:abstract=3D/tmp/dbus-IGYzmIogwd,guid=3D=
+3d239abe52971d2097c515a654023393,
+sun.arch.data.model=3D64, env.COMPIZ_CONFIG_PROFILE=3Dubuntu,
+env.SSH_AGENT_PID=3D2291,
+java.endorsed.dirs=3D/usr/lib/jvm/jdk1.7.0/jre/lib/endorsed,
+sun.cpu.isalist=3D, env.LC_PAPER=3Den_GB.UTF-8, sun.jnu.encoding=3DUTF-8,
+file.encoding.pkg=3Dsun.io, env.SHLVL=3D1, file.separator=3D/,
+java.specification.name=3DJava Platform API Specification,
+env.GNOME_DESKTOP_SESSION_ID=3Dthis-is-deprecated, java.class.version=3D51.=
+0,
+env.GDMSESSION=3Dubuntu, org.slf4j.simpleLogger.defaultLogLevel=3Ddebug,
+user.country=3DGB, env.GNOME_KEYRING_PID=3D2217, env.DBUS_DEBUG_OUTPUT=3D1,
+java.home=3D/usr/lib/jvm/jdk1.7.0/jre, java.vm.info=3Dmixed mode,
+env.INSIDE_NAUTILUS_PYTHON=3D, env.LOGNAME=3Dste, os.version=3D3.13.0-35-ge=
+neric,
+maven.compiler.target=3D1.7, path.separator=3D:, java.vm.version=3D23.1-b03=
+,
+env.UPSTART_INSTANCE=3D, env.LANGUAGE=3Den_GB:en,
+env.TEXTDOMAINDIR=3D/usr/share/locale/,
+env.XDG_SESSION_PATH=3D/org/freedesktop/DisplayManager/Session0,
+env.QT_QPA_PLATFORMTHEME=3Dappmenu-qt5, env.LC_TELEPHONE=3Den_GB.UTF-8,
+env.SESSIONTYPE=3Dgnome-session, env.JAVA_HOME=3D/usr/lib/jvm/jdk1.7.0,
+java.awt.printerjob=3Dsun.print.PSPrinterJob,
+sun.io.unicode.encoding=3DUnicodeLittle, awt.toolkit=3Dsun.awt.X11.XToolkit=
+,
+env.XMODIFIERS=3D@im=3Dibus, env.GDM_LANG=3Den_GB,
+env.LC_MEASUREMENT=3Den_GB.UTF-8, user.home=3D/home/ste,
+env.NB_EXEC_MAVEN_PROCESS_UUID=3D26e3a892-1330-4ec4-b42d-d2de65d7875e,
+env.JOB=3Dxsession-init, env.OLDPWD=3D/home/ste/Projects/https,
+java.specification.vendor=3DOracle Corporation,
+env.M2_HOME=3D/opt/apache-maven-3.1.1,
+java.library.path=3D/usr/lib/jvm/jdk1.7.0/jre/lib/amd64:/usr/lib/jvm/jdk1.7=
+.0/jre/lib/i386::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/l=
+ib,
+java.vendor.url=3Dhttp://java.oracle.com/,
+env.GIO_LAUNCHED_DESKTOP_FILE=3D/home/ste/Desktop/netbeans-8.0.desktop,
+java.vm.vendor=3DOracle Corporation, env.XDG_SEAT=3Dseat0,
+maven.home=3D/opt/apache-maven-3.1.1, java.runtime.name=3DJava(TM) SE Runti=
+me
+Environment, env.SSH_AGENT_LAUNCHER=3Dupstart,
+sun.java.command=3Dorg.codehaus.plexus.classworlds.launcher.Launcher -X -D
+maven.repo.local=3D/home/ste/.m2/repository -s
+/tmp/release-settings6658160415620190647.xml clean verify,
+java.class.path=3D/opt/apache-maven-3.1.1/boot/plexus-classworlds-2.5.1.jar=
+:/usr/share/java/jayatanaag.jar,
+env.MAVEN_TERMINATE_CMD=3Don, env.XDG_SESSION_ID=3Dc2, maven.version=3D3.1.=
+1,
+env.UBUNTU_MENUPROXY=3D1, env.XFILESEARCHPATH=3D/usr/dt/app-defaults/%L/Dt,
+java.vm.specification.name=3DJava Virtual Machine Specification,
+java.vm.specification.version=3D1.7, sun.cpu.endian=3Dlittle,
+sun.os.patch.level=3Dunknown, env.HOME=3D/home/ste, java.io.tmpdir=3D/tmp,
+env.XDG_SEAT_PATH=3D/org/freedesktop/DisplayManager/Seat0,
+env.LD_LIBRARY_PATH=3D/usr/lib/jvm/jdk1.7.0/jre/lib/amd64:/usr/lib/jvm/jdk1=
+.7.0/jre/lib/i386:,
+java.vendor.url.bug=3Dhttp://bugreport.sun.com/bugreport/,
+env.SSH_AUTH_SOCK=3D/run/user/1000/keyring-9tK0to/ssh,
+maven.compiler.source=3D1.7, env.CLUTTER_IM_MODULE=3Dxim, os.arch=3Damd64,
+java.awt.graphicsenv=3Dsun.awt.X11GraphicsEnvironment,
+env.DBUS_STARTER_ADDRESS=3Dunix:abstract=3D/tmp/dbus-IGYzmIogwd,guid=3D3d23=
+9abe52971d2097c515a654023393,
+env.INSTANCE=3D,
+java.ext.dirs=3D/usr/lib/jvm/jdk1.7.0/jre/lib/ext:/usr/java/packages/lib/ex=
+t,
+env.XDG_RUNTIME_DIR=3D/run/user/1000, user.dir=3D/home/ste/Projects/https,
+env.XAUTHORITY=3D/home/ste/.Xauthority,
+env.MANDATORY_PATH=3D/usr/share/gconf/ubuntu.mandatory.path,
+env.J2D_PIXMAPS=3Dshared, env.GTK_MODULES=3Doverlay-scrollbar:unity-gtk-mod=
+ule,
+line.separator=3D
+, java.vm.name=3DJava HotSpot(TM) 64-Bit Server VM,
+env.LC_NUMERIC=3Den_GB.UTF-8,
+env.XDG_GREETER_DATA_DIR=3D/var/lib/lightdm-data/ste,
+env.LC_TIME=3Den_GB.UTF-8, file.encoding=3DUTF-8,
+env.LC_IDENTIFICATION=3Den_GB.UTF-8,
+env.GPG_AGENT_INFO=3D/run/user/1000/keyring-9tK0to/gpg:0:1,
+env.GIO_LAUNCHED_DESKTOP_FILE_PID=3D4398, java.specification.version=3D1.7,
+env.GNOME_KEYRING_CONTROL=3D/run/user/1000/keyring-9tK0to,
+env.XDG_CONFIG_DIRS=3D/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg,
+env.LC_NAME=3Den_GB.UTF-8}
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] resource with targetPath null
+directory /home/ste/Projects/https/src/test/resources
+excludes []
+includes []
+[INFO] skip non existing resourceDirectory
+/home/ste/Projects/https/src/test/resources
+[DEBUG] no use filter components
+[INFO]
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @
+https ---
+[DEBUG] Configuring mojo
+org.apache.maven.plugins:maven-compiler-plugin:2.5.1:testCompile from
+plugin realm
+ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:2.5.1,
+parent: sun.misc.Launcher$AppClassLoader@3067e236]
+[DEBUG] Configuring mojo
+'org.apache.maven.plugins:maven-compiler-plugin:2.5.1:testCompile' with
+basic configurator -->
+[DEBUG]   (f) basedir =3D /home/ste/Projects/https
+[DEBUG]   (f) buildDirectory =3D /home/ste/Projects/https/target
+[DEBUG]   (f) classpathElements =3D
+[/home/ste/Projects/https/target/test-classes,
+/home/ste/Projects/https/target/classes,
+/home/ste/.m2/repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-=
+4.3.2.jar,
+/home/ste/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar=
+,
+/home/ste/.m2/repository/junit/junit/4.11/junit-4.11.jar,
+/home/ste/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.j=
+ar,
+/home/ste/.m2/repository/org/assertj/assertj-core/1.6.1/assertj-core-1.6.1.=
+jar,
+/home/ste/.m2/repository/com/github/stefanbirkner/system-rules/1.6.0/system=
+-rules-1.6.0.jar,
+/home/ste/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar,
+/home/ste/.m2/repository/org/apache/httpcomponents/httpclient/4.2.5/httpcli=
+ent-4.2.5.jar,
+/home/ste/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logg=
+ing-1.1.1.jar,
+/home/ste/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.=
+jar,
+/home/ste/.m2/repository/com/google/guava/guava/17.0/guava-17.0.jar,
+/home/ste/.m2/repository/commons-collections/commons-collections/3.2.1/comm=
+ons-collections-3.2.1.jar,
+/home/ste/.m2/repository/commons-configuration/commons-configuration/1.10/c=
+ommons-configuration-1.10.jar,
+/home/ste/.m2/repository/ste/test/xtest/1.6.2/xtest-1.6.2.jar,
+/home/ste/.m2/repository/org/beanshell/bsh/2.0b5/bsh-2.0b5.jar,
+/home/ste/.m2/repository/org/eclipse/jetty/jetty-server/9.0.0.M4/jetty-serv=
+er-9.0.0.M4.jar,
+/home/ste/.m2/repository/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v20111=
+2011016/javax.servlet-3.0.0.v201112011016.jar,
+/home/ste/.m2/repository/org/eclipse/jetty/jetty-http/9.0.0.M4/jetty-http-9=
+.0.0.M4.jar,
+/home/ste/.m2/repository/org/eclipse/jetty/jetty-util/9.0.0.M4/jetty-util-9=
+.0.0.M4.jar,
+/home/ste/.m2/repository/org/eclipse/jetty/jetty-io/9.0.0.M4/jetty-io-9.0.0=
+.M4.jar,
+/home/ste/.m2/repository/rhino/js/1.7R2/js-1.7R2.jar,
+/home/ste/.m2/repository/org/skife/url/url-scheme-registry/0.0.1/url-scheme=
+-registry-0.0.1.jar,
+/home/ste/.m2/repository/cglib/cglib-nodep/2.2.2/cglib-nodep-2.2.2.jar,
+/home/ste/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1=
+-GA.jar,
+/home/ste/.m2/repository/ste/web/webtoolkitlib/1.4.0/webtoolkitlib-1.4.0.ja=
+r,
+/home/ste/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar,
+/home/ste/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-js=
+on-org/2.3.3/jackson-datatype-json-org-2.3.3.jar,
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.3.3/jack=
+son-core-2.3.3.jar,
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.3.3/=
+jackson-databind-2.3.3.jar,
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.3=
+.0/jackson-annotations-2.3.0.jar,
+/home/ste/.m2/repository/org/json/json/20090211/json-20090211.jar]
+[DEBUG]   (f) compileSourceRoots =3D [/home/ste/Projects/https/src/test/jav=
+a]
+[DEBUG]   (f) compilerId =3D javac
+[DEBUG]   (f) debug =3D true
+[DEBUG]   (f) encoding =3D UTF-8
+[DEBUG]   (f) failOnError =3D true
+[DEBUG]   (f) fork =3D false
+[DEBUG]   (f) generatedTestSourcesDirectory =3D
+/home/ste/Projects/https/target/generated-test-sources/test-annotations
+[DEBUG]   (f) optimize =3D false
+[DEBUG]   (f) outputDirectory =3D /home/ste/Projects/https/target/test-clas=
+ses
+[DEBUG]   (f) outputFileName =3D ste.https-0.0.5
+[DEBUG]   (f) session =3D org.apache.maven.execution.MavenSession@7dd84118
+[DEBUG]   (f) showDeprecation =3D false
+[DEBUG]   (f) showWarnings =3D false
+[DEBUG]   (f) source =3D 1.7
+[DEBUG]   (f) staleMillis =3D 0
+[DEBUG]   (f) target =3D 1.7
+[DEBUG]   (f) verbose =3D false
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Source directories: [/home/ste/Projects/https/src/test/java]
+[DEBUG] Classpath: [/home/ste/Projects/https/target/test-classes
+ /home/ste/Projects/https/target/classes
+ /home/ste/.m2/repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore=
+-4.3.2.jar
+ /home/ste/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.ja=
+r
+ /home/ste/.m2/repository/junit/junit/4.11/junit-4.11.jar
+ /home/ste/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.=
+jar
+ /home/ste/.m2/repository/org/assertj/assertj-core/1.6.1/assertj-core-1.6.1=
+.jar
+ /home/ste/.m2/repository/com/github/stefanbirkner/system-rules/1.6.0/syste=
+m-rules-1.6.0.jar
+ /home/ste/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar
+ /home/ste/.m2/repository/org/apache/httpcomponents/httpclient/4.2.5/httpcl=
+ient-4.2.5.jar
+ /home/ste/.m2/repository/commons-logging/commons-logging/1.1.1/commons-log=
+ging-1.1.1.jar
+ /home/ste/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6=
+.jar
+ /home/ste/.m2/repository/com/google/guava/guava/17.0/guava-17.0.jar
+ /home/ste/.m2/repository/commons-collections/commons-collections/3.2.1/com=
+mons-collections-3.2.1.jar
+ /home/ste/.m2/repository/commons-configuration/commons-configuration/1.10/=
+commons-configuration-1.10.jar
+ /home/ste/.m2/repository/ste/test/xtest/1.6.2/xtest-1.6.2.jar
+ /home/ste/.m2/repository/org/beanshell/bsh/2.0b5/bsh-2.0b5.jar
+ /home/ste/.m2/repository/org/eclipse/jetty/jetty-server/9.0.0.M4/jetty-ser=
+ver-9.0.0.M4.jar
+ /home/ste/.m2/repository/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v2011=
+12011016/javax.servlet-3.0.0.v201112011016.jar
+ /home/ste/.m2/repository/org/eclipse/jetty/jetty-http/9.0.0.M4/jetty-http-=
+9.0.0.M4.jar
+ /home/ste/.m2/repository/org/eclipse/jetty/jetty-util/9.0.0.M4/jetty-util-=
+9.0.0.M4.jar
+ /home/ste/.m2/repository/org/eclipse/jetty/jetty-io/9.0.0.M4/jetty-io-9.0.=
+0.M4.jar
+ /home/ste/.m2/repository/rhino/js/1.7R2/js-1.7R2.jar
+ /home/ste/.m2/repository/org/skife/url/url-scheme-registry/0.0.1/url-schem=
+e-registry-0.0.1.jar
+ /home/ste/.m2/repository/cglib/cglib-nodep/2.2.2/cglib-nodep-2.2.2.jar
+ /home/ste/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.=
+1-GA.jar
+ /home/ste/.m2/repository/ste/web/webtoolkitlib/1.4.0/webtoolkitlib-1.4.0.j=
+ar
+ /home/ste/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar
+ /home/ste/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-j=
+son-org/2.3.3/jackson-datatype-json-org-2.3.3.jar
+ /home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.3.3/jac=
+kson-core-2.3.3.jar
+ /home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.3.3=
+/jackson-databind-2.3.3.jar
+ /home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.=
+3.0/jackson-annotations-2.3.0.jar
+ /home/ste/.m2/repository/org/json/json/20090211/json-20090211.jar]
+[DEBUG] Output directory: /home/ste/Projects/https/target/test-classes
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[DEBUG] Classpath:
+[DEBUG]  /home/ste/Projects/https/target/test-classes
+[DEBUG]  /home/ste/Projects/https/target/classes
+[DEBUG]
+/home/ste/.m2/repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-=
+4.3.2.jar
+[DEBUG]
+/home/ste/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar
+[DEBUG]  /home/ste/.m2/repository/junit/junit/4.11/junit-4.11.jar
+[DEBUG]
+/home/ste/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.j=
+ar
+[DEBUG]
+/home/ste/.m2/repository/org/assertj/assertj-core/1.6.1/assertj-core-1.6.1.=
+jar
+[DEBUG]
+/home/ste/.m2/repository/com/github/stefanbirkner/system-rules/1.6.0/system=
+-rules-1.6.0.jar
+[DEBUG]
+/home/ste/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar
+[DEBUG]
+/home/ste/.m2/repository/org/apache/httpcomponents/httpclient/4.2.5/httpcli=
+ent-4.2.5.jar
+[DEBUG]
+/home/ste/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logg=
+ing-1.1.1.jar
+[DEBUG]
+/home/ste/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.=
+jar
+[DEBUG]  /home/ste/.m2/repository/com/google/guava/guava/17.0/guava-17.0.ja=
+r
+[DEBUG]
+/home/ste/.m2/repository/commons-collections/commons-collections/3.2.1/comm=
+ons-collections-3.2.1.jar
+[DEBUG]
+/home/ste/.m2/repository/commons-configuration/commons-configuration/1.10/c=
+ommons-configuration-1.10.jar
+[DEBUG]  /home/ste/.m2/repository/ste/test/xtest/1.6.2/xtest-1.6.2.jar
+[DEBUG]  /home/ste/.m2/repository/org/beanshell/bsh/2.0b5/bsh-2.0b5.jar
+[DEBUG]
+/home/ste/.m2/repository/org/eclipse/jetty/jetty-server/9.0.0.M4/jetty-serv=
+er-9.0.0.M4.jar
+[DEBUG]
+/home/ste/.m2/repository/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v20111=
+2011016/javax.servlet-3.0.0.v201112011016.jar
+[DEBUG]
+/home/ste/.m2/repository/org/eclipse/jetty/jetty-http/9.0.0.M4/jetty-http-9=
+.0.0.M4.jar
+[DEBUG]
+/home/ste/.m2/repository/org/eclipse/jetty/jetty-util/9.0.0.M4/jetty-util-9=
+.0.0.M4.jar
+[DEBUG]
+/home/ste/.m2/repository/org/eclipse/jetty/jetty-io/9.0.0.M4/jetty-io-9.0.0=
+.M4.jar
+[DEBUG]  /home/ste/.m2/repository/rhino/js/1.7R2/js-1.7R2.jar
+[DEBUG]
+/home/ste/.m2/repository/org/skife/url/url-scheme-registry/0.0.1/url-scheme=
+-registry-0.0.1.jar
+[DEBUG]
+/home/ste/.m2/repository/cglib/cglib-nodep/2.2.2/cglib-nodep-2.2.2.jar
+[DEBUG]
+/home/ste/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1=
+-GA.jar
+[DEBUG]
+/home/ste/.m2/repository/ste/web/webtoolkitlib/1.4.0/webtoolkitlib-1.4.0.ja=
+r
+[DEBUG]
+/home/ste/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar
+[DEBUG]
+/home/ste/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-js=
+on-org/2.3.3/jackson-datatype-json-org-2.3.3.jar
+[DEBUG]
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.3.3/jack=
+son-core-2.3.3.jar
+[DEBUG]
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.3.3/=
+jackson-databind-2.3.3.jar
+[DEBUG]
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.3=
+.0/jackson-annotations-2.3.0.jar
+[DEBUG]  /home/ste/.m2/repository/org/json/json/20090211/json-20090211.jar
+[DEBUG] Source roots:
+[DEBUG]  /home/ste/Projects/https/src/test/java
+[DEBUG] Command line options:
+[DEBUG] -d /home/ste/Projects/https/target/test-classes -classpath
+/home/ste/Projects/https/target/test-classes:/home/ste/Projects/https/targe=
+t/classes:/home/ste/.m2/repository/org/apache/httpcomponents/httpcore/4.3.2=
+/httpcore-4.3.2.jar:/home/ste/.m2/repository/commons-lang/commons-lang/2.6/=
+commons-lang-2.6.jar:/home/ste/.m2/repository/junit/junit/4.11/junit-4.11.j=
+ar:/home/ste/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.=
+3.jar:/home/ste/.m2/repository/org/assertj/assertj-core/1.6.1/assertj-core-=
+1.6.1.jar:/home/ste/.m2/repository/com/github/stefanbirkner/system-rules/1.=
+6.0/system-rules-1.6.0.jar:/home/ste/.m2/repository/commons-io/commons-io/2=
+.4/commons-io-2.4.jar:/home/ste/.m2/repository/org/apache/httpcomponents/ht=
+tpclient/4.2.5/httpclient-4.2.5.jar:/home/ste/.m2/repository/commons-loggin=
+g/commons-logging/1.1.1/commons-logging-1.1.1.jar:/home/ste/.m2/repository/=
+commons-codec/commons-codec/1.6/commons-codec-1.6.jar:/home/ste/.m2/reposit=
+ory/com/google/guava/guava/17.0/guava-17.0.jar:/home/ste/.m2/repository/com=
+mons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar:/h=
+ome/ste/.m2/repository/commons-configuration/commons-configuration/1.10/com=
+mons-configuration-1.10.jar:/home/ste/.m2/repository/ste/test/xtest/1.6.2/x=
+test-1.6.2.jar:/home/ste/.m2/repository/org/beanshell/bsh/2.0b5/bsh-2.0b5.j=
+ar:/home/ste/.m2/repository/org/eclipse/jetty/jetty-server/9.0.0.M4/jetty-s=
+erver-9.0.0.M4.jar:/home/ste/.m2/repository/org/eclipse/jetty/orbit/javax.s=
+ervlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016.jar:/home/ste/=
+.m2/repository/org/eclipse/jetty/jetty-http/9.0.0.M4/jetty-http-9.0.0.M4.ja=
+r:/home/ste/.m2/repository/org/eclipse/jetty/jetty-util/9.0.0.M4/jetty-util=
+-9.0.0.M4.jar:/home/ste/.m2/repository/org/eclipse/jetty/jetty-io/9.0.0.M4/=
+jetty-io-9.0.0.M4.jar:/home/ste/.m2/repository/rhino/js/1.7R2/js-1.7R2.jar:=
+/home/ste/.m2/repository/org/skife/url/url-scheme-registry/0.0.1/url-scheme=
+-registry-0.0.1.jar:/home/ste/.m2/repository/cglib/cglib-nodep/2.2.2/cglib-=
+nodep-2.2.2.jar:/home/ste/.m2/repository/org/javassist/javassist/3.18.1-GA/=
+javassist-3.18.1-GA.jar:/home/ste/.m2/repository/ste/web/webtoolkitlib/1.4.=
+0/webtoolkitlib-1.4.0.jar:/home/ste/.m2/repository/org/apache/velocity/velo=
+city/1.7/velocity-1.7.jar:/home/ste/.m2/repository/com/fasterxml/jackson/da=
+tatype/jackson-datatype-json-org/2.3.3/jackson-datatype-json-org-2.3.3.jar:=
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.3.3/jack=
+son-core-2.3.3.jar:/home/ste/.m2/repository/com/fasterxml/jackson/core/jack=
+son-databind/2.3.3/jackson-databind-2.3.3.jar:/home/ste/.m2/repository/com/=
+fasterxml/jackson/core/jackson-annotations/2.3.0/jackson-annotations-2.3.0.=
+jar:/home/ste/.m2/repository/org/json/json/20090211/json-20090211.jar:
+-sourcepath /home/ste/Projects/https/src/test/java:
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerStartu=
+pLog.java
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpSessionServi=
+ce.java
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerHandle=
+rs.java
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerStartu=
+pWithConfiguration.java
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSessio=
+n.java
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerClient=
+Authentication.java
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerAccess=
+Log.java
+/home/ste/Projects/https/src/test/java/ste/web/http/handlers/PrintSessionHa=
+ndler.java
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerLog.ja=
+va
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpSessionConte=
+xt.java
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeSessionCacheThre=
+ading.java
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeSessionCache.jav=
+a
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerStartu=
+p.java
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerBase.j=
+ava
+-s /home/ste/Projects/https/target/generated-test-sources/test-annotations
+-g -nowarn -target 1.7 -source 1.7 -encoding UTF-8
+[INFO] Compiling 15 source files to
+/home/ste/Projects/https/target/test-classes
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[47,24]
+AlgorithmId is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[48,24]
+CertificateAlgorithmId is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[49,24]
+CertificateIssuerName is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[50,24]
+CertificateSerialNumber is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[51,24]
+CertificateSubjectName is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[52,24]
+CertificateValidity is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[53,24]
+CertificateVersion is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[54,24]
+CertificateX509Key is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[55,24]
+X500Name is internal proprietary API and may be removed in a future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[56,24]
+X509CertImpl is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[57,24]
+X509CertInfo is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[228,8]
+X509CertInfo is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[228,32]
+X509CertInfo is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[231,8]
+CertificateValidity is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[231,43]
+CertificateValidity is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[233,8]
+X500Name is internal proprietary API and may be removed in a future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[233,29]
+X500Name is internal proprietary API and may be removed in a future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[235,17]
+X509CertInfo is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[236,17]
+X509CertInfo is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[236,49]
+CertificateSerialNumber is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[237,17]
+X509CertInfo is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[237,43]
+CertificateSubjectName is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[238,17]
+X509CertInfo is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[238,42]
+CertificateIssuerName is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[239,17]
+X509CertInfo is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[239,39]
+CertificateX509Key is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[240,17]
+X509CertInfo is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[240,43]
+CertificateVersion is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[240,62]
+CertificateVersion is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[241,8]
+AlgorithmId is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[241,31]
+AlgorithmId is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[241,43]
+AlgorithmId is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[242,17]
+X509CertInfo is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[242,48]
+CertificateAlgorithmId is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[245,8]
+X509CertImpl is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[245,32]
+X509CertImpl is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[249,16]
+AlgorithmId is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[249,38]
+X509CertImpl is internal proprietary API and may be removed in a future
+release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[250,17]
+CertificateAlgorithmId is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[250,53]
+CertificateAlgorithmId is internal proprietary API and may be removed in a
+future release
+[WARNING]
+/home/ste/Projects/https/src/test/java/ste/web/http/BugFreeHttpServerSSL.ja=
+va:[251,19]
+X509CertImpl is internal proprietary API and may be removed in a future
+release
+[INFO]
+[INFO] --- maven-surefire-plugin:2.14.1:test (default-test) @ https ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=3D1,
+ConflictMarker.markTime=3D1, ConflictMarker.nodeCount=3D98,
+ConflictIdSorter.graphTime=3D0, ConflictIdSorter.topsortTime=3D0,
+ConflictIdSorter.conflictIdCount=3D26,
+ConflictIdSorter.conflictIdCycleCount=3D0, ConflictResolver.totalTime=3D5,
+ConflictResolver.conflictItemCount=3D69,
+DefaultDependencyCollector.collectTime=3D54,
+DefaultDependencyCollector.transformTime=3D7}
+[DEBUG] org.apache.maven.plugins:maven-surefire-plugin:jar:2.14.1:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.9:compile
+[DEBUG]
+org.apache.maven.surefire:maven-surefire-common:jar:2.14.1:compile
+[DEBUG]       org.apache.maven.surefire:surefire-booter:jar:2.14.1:compile
+[DEBUG]       org.apache.maven:maven-artifact:jar:2.0.9:compile
+[DEBUG]          org.codehaus.plexus:plexus-utils:jar:1.5.1:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.9:compile
+[DEBUG]
+org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compi=
+le
+[DEBUG]             junit:junit:jar:3.8.1:test
+[DEBUG]       org.apache.maven:maven-project:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-settings:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-profile:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-artifact-manager:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-plugin-registry:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-core:jar:2.0.9:compile
+[DEBUG]
+org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9:compile
+[DEBUG]
+org.apache.maven.reporting:maven-reporting-api:jar:2.0.9:compile
+[DEBUG]
+org.apache.maven:maven-repository-metadata:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-error-diagnostics:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-monitor:jar:2.0.9:compile
+[DEBUG]          classworlds:classworlds:jar:1.1:compile
+[DEBUG]       org.apache.commons:commons-lang3:jar:3.1:compile
+[DEBUG]    org.apache.maven.surefire:surefire-api:jar:2.14.1:compile
+[DEBUG]    org.apache.maven:maven-toolchain:jar:2.0.9:compile
+[DEBUG]
+org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.2:compile
+[DEBUG] Created new class realm
+plugin>org.apache.maven.plugins:maven-surefire-plugin:2.14.1
+[DEBUG] Importing foreign packages into class realm
+plugin>org.apache.maven.plugins:maven-surefire-plugin:2.14.1
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm
+plugin>org.apache.maven.plugins:maven-surefire-plugin:2.14.1
+[DEBUG]   Included:
+org.apache.maven.plugins:maven-surefire-plugin:jar:2.14.1
+[DEBUG]   Included:
+org.apache.maven.surefire:maven-surefire-common:jar:2.14.1
+[DEBUG]   Included: org.apache.maven.surefire:surefire-booter:jar:2.14.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:1.5.1
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:2.0.=
+9
+[DEBUG]   Included: org.apache.commons:commons-lang3:jar:3.1
+[DEBUG]   Included: org.apache.maven.surefire:surefire-api:jar:2.14.1
+[DEBUG]   Included:
+org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.2
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.9
+[DEBUG]   Excluded:
+org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   Excluded: junit:junit:jar:3.8.1
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:2.0.9
+[DEBUG]   Excluded:
+org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-monitor:jar:2.0.9
+[DEBUG]   Excluded: classworlds:classworlds:jar:1.1
+[DEBUG]   Excluded: org.apache.maven:maven-toolchain:jar:2.0.9
+[DEBUG] Configuring mojo
+org.apache.maven.plugins:maven-surefire-plugin:2.14.1:test from plugin
+realm
+ClassRealm[plugin>org.apache.maven.plugins:maven-surefire-plugin:2.14.1,
+parent: sun.misc.Launcher$AppClassLoader@3067e236]
+[DEBUG] Configuring mojo
+'org.apache.maven.plugins:maven-surefire-plugin:2.14.1:test' with basic
+configurator -->
+[DEBUG]   (s) basedir =3D /home/ste/Projects/https
+[DEBUG]   (s) childDelegation =3D false
+[DEBUG]   (s) classesDirectory =3D /home/ste/Projects/https/target/classes
+[DEBUG]   (s) disableXmlReport =3D false
+[DEBUG]   (s) enableAssertions =3D true
+[DEBUG]   (f) forkCount =3D 1
+[DEBUG]   (s) forkMode =3D once
+[DEBUG]   (s) includes =3D [**/BG*.java, **/BugFree*.java, **/*BugFree.java=
+,
+**/*BF.java]
+[DEBUG]   (s) junitArtifactName =3D junit:junit
+[DEBUG]   (s) localRepository =3D        id: local
+      url: file:///home/ste/.m2/repository/
+   layout: none
+
+[DEBUG]   (f) parallelMavenExecution =3D false
+[DEBUG]   (s) perCoreThreadCount =3D true
+[DEBUG]   (s) pluginArtifactMap =3D
+{org.apache.maven.plugins:maven-surefire-plugin=3Dorg.apache.maven.plugins:=
+maven-surefire-plugin:maven-plugin:2.14.1:,
+org.apache.maven.surefire:maven-surefire-common=3Dorg.apache.maven.surefire=
+:maven-surefire-common:jar:2.14.1:compile,
+org.apache.maven.surefire:surefire-booter=3Dorg.apache.maven.surefire:suref=
+ire-booter:jar:2.14.1:compile,
+org.codehaus.plexus:plexus-utils=3Dorg.codehaus.plexus:plexus-utils:jar:1.5=
+.1:compile,
+org.apache.maven.reporting:maven-reporting-api=3Dorg.apache.maven.reporting=
+:maven-reporting-api:jar:2.0.9:compile,
+org.apache.commons:commons-lang3=3Dorg.apache.commons:commons-lang3:jar:3.1=
+:compile,
+org.apache.maven.surefire:surefire-api=3Dorg.apache.maven.surefire:surefire=
+-api:jar:2.14.1:compile,
+org.apache.maven.plugin-tools:maven-plugin-annotations=3Dorg.apache.maven.p=
+lugin-tools:maven-plugin-annotations:jar:3.2:compile}
+[DEBUG]   (f) pluginDescriptor =3D Component Descriptor: role:
+'org.apache.maven.plugin.Mojo', implementation:
+'org.apache.maven.plugin.surefire.SurefirePlugin', role hint:
+'org.apache.maven.plugins:maven-surefire-plugin:2.14.1:test'
+role: 'org.apache.maven.plugin.Mojo', implementation:
+'org.apache.maven.plugin.surefire.HelpMojo', role hint:
+'org.apache.maven.plugins:maven-surefire-plugin:2.14.1:help'
+---
+[DEBUG]   (s) printSummary =3D true
+[DEBUG]   (s) projectArtifactMap =3D
+{org.apache.httpcomponents:httpcore=3Dorg.apache.httpcomponents:httpcore:ja=
+r:4.3.2:compile,
+commons-lang:commons-lang=3Dcommons-lang:commons-lang:jar:2.6:compile,
+junit:junit=3Djunit:junit:jar:4.11:test,
+org.hamcrest:hamcrest-core=3Dorg.hamcrest:hamcrest-core:jar:1.3:test,
+org.assertj:assertj-core=3Dorg.assertj:assertj-core:jar:1.6.1:test,
+com.github.stefanbirkner:system-rules=3Dcom.github.stefanbirkner:system-rul=
+es:jar:1.6.0:test,
+commons-io:commons-io=3Dcommons-io:commons-io:jar:2.4:compile,
+org.apache.httpcomponents:httpclient=3Dorg.apache.httpcomponents:httpclient=
+:jar:4.2.5:test,
+commons-logging:commons-logging=3Dcommons-logging:commons-logging:jar:1.1.1=
+:compile,
+commons-codec:commons-codec=3Dcommons-codec:commons-codec:jar:1.6:test,
+com.google.guava:guava=3Dcom.google.guava:guava:jar:17.0:compile,
+commons-collections:commons-collections=3Dcommons-collections:commons-colle=
+ctions:jar:3.2.1:compile,
+commons-configuration:commons-configuration=3Dcommons-configuration:commons=
+-configuration:jar:1.10:compile,
+ste.test:xtest=3Dste.test:xtest:jar:1.6.2:test,
+org.beanshell:bsh=3Dorg.beanshell:bsh:jar:2.0b5:compile,
+org.eclipse.jetty:jetty-server=3Dorg.eclipse.jetty:jetty-server:jar:9.0.0.M=
+4:test,
+org.eclipse.jetty.orbit:javax.servlet=3Dorg.eclipse.jetty.orbit:javax.servl=
+et:jar:3.0.0.v201112011016:test,
+org.eclipse.jetty:jetty-http=3Dorg.eclipse.jetty:jetty-http:jar:9.0.0.M4:te=
+st,
+org.eclipse.jetty:jetty-util=3Dorg.eclipse.jetty:jetty-util:jar:9.0.0.M4:te=
+st,
+org.eclipse.jetty:jetty-io=3Dorg.eclipse.jetty:jetty-io:jar:9.0.0.M4:test,
+rhino:js=3Drhino:js:jar:1.7R2:test,
+org.skife.url:url-scheme-registry=3Dorg.skife.url:url-scheme-registry:jar:0=
+.0.1:test,
+cglib:cglib-nodep=3Dcglib:cglib-nodep:jar:2.2.2:test,
+org.javassist:javassist=3Dorg.javassist:javassist:jar:3.18.1-GA:test,
+ste.web:webtoolkitlib=3Dste.web:webtoolkitlib:jar:1.4.0:compile,
+org.apache.velocity:velocity=3Dorg.apache.velocity:velocity:jar:1.7:compile=
+,
+com.fasterxml.jackson.datatype:jackson-datatype-json-org=3Dcom.fasterxml.ja=
+ckson.datatype:jackson-datatype-json-org:jar:2.3.3:compile,
+com.fasterxml.jackson.core:jackson-core=3Dcom.fasterxml.jackson.core:jackso=
+n-core:jar:2.3.3:compile,
+com.fasterxml.jackson.core:jackson-databind=3Dcom.fasterxml.jackson.core:ja=
+ckson-databind:jar:2.3.3:compile,
+com.fasterxml.jackson.core:jackson-annotations=3Dcom.fasterxml.jackson.core=
+:jackson-annotations:jar:2.3.0:compile,
+org.json:json=3Dorg.json:json:jar:20090211:compile}
+[DEBUG]   (s) redirectTestOutputToFile =3D false
+[DEBUG]   (s) remoteRepositories =3D [       id: central
+      url: http://repo.maven.apache.org/maven2
+   layout: default
+snapshots: [enabled =3D> false, update =3D> daily]
+ releases: [enabled =3D> true, update =3D> never]
+]
+[DEBUG]   (s) reportFormat =3D brief
+[DEBUG]   (s) reportsDirectory =3D
+/home/ste/Projects/https/target/surefire-reports
+[DEBUG]   (f) reuseForks =3D true
+[DEBUG]   (s) runOrder =3D filesystem
+[DEBUG]   (s) skip =3D false
+[DEBUG]   (s) skipTests =3D false
+[DEBUG]   (s) testClassesDirectory =3D
+/home/ste/Projects/https/target/test-classes
+[DEBUG]   (s) testFailureIgnore =3D false
+[DEBUG]   (s) testNGArtifactName =3D org.testng:testng
+[DEBUG]   (s) testSourceDirectory =3D /home/ste/Projects/https/src/test/jav=
+a
+[DEBUG]   (s) trimStackTrace =3D true
+[DEBUG]   (s) useFile =3D true
+[DEBUG]   (s) useManifestOnlyJar =3D true
+[DEBUG]   (s) useSystemClassLoader =3D true
+[DEBUG]   (s) useUnlimitedThreads =3D false
+[DEBUG]   (s) workingDirectory =3D /home/ste/Projects/https
+[DEBUG]   (s) project =3D MavenProject: ste:https:0.0.5 @
+/home/ste/Projects/https/pom.xml
+[DEBUG]   (s) session =3D org.apache.maven.execution.MavenSession@7dd84118
+[DEBUG] -- end configuration --
+[INFO] Surefire report directory:
+/home/ste/Projects/https/target/surefire-reports
+[DEBUG] Setting system property [user.dir]=3D[/home/ste/Projects/https]
+[DEBUG] Setting system property
+[maven.repo.local]=3D[/home/ste/.m2/repository]
+[DEBUG] Setting system property [localRepository]=3D[/home/ste/.m2/reposito=
+ry]
+[DEBUG] Setting system property [basedir]=3D[/home/ste/Projects/https]
+[DEBUG] dummy:dummy:jar:1.0 (selected for null)
+[DEBUG]   org.apache.maven.surefire:surefire-booter:jar:2.14.1:compile
+(selected for compile)
+[DEBUG]     org.apache.maven.surefire:surefire-api:jar:2.14.1:compile
+(selected for compile)
+[DEBUG] Adding to surefire booter test classpath:
+/home/ste/.m2/repository/org/apache/maven/surefire/surefire-booter/2.14.1/s=
+urefire-booter-2.14.1.jar
+Scope: compile
+[DEBUG] Adding to surefire booter test classpath:
+/home/ste/.m2/repository/org/apache/maven/surefire/surefire-api/2.14.1/sure=
+fire-api-2.14.1.jar
+Scope: compile
+[DEBUG] Using JVM: /usr/lib/jvm/jdk1.7.0/jre/bin/java
+[DEBUG] dummy:dummy:jar:1.0 (selected for null)
+[DEBUG]   org.apache.maven.surefire:surefire-junit4:jar:2.14.1:test
+(selected for test)
+[DEBUG]     org.apache.maven.surefire:surefire-api:jar:2.14.1:test
+(selected for test)
+[DEBUG] Adding to surefire test classpath:
+/home/ste/.m2/repository/org/apache/maven/surefire/surefire-junit4/2.14.1/s=
+urefire-junit4-2.14.1.jar
+Scope: test
+[DEBUG] Adding to surefire test classpath:
+/home/ste/.m2/repository/org/apache/maven/surefire/surefire-api/2.14.1/sure=
+fire-api-2.14.1.jar
+Scope: test
+[DEBUG] test classpath:  /home/ste/Projects/https/target/test-classes
+/home/ste/Projects/https/target/classes
+/home/ste/.m2/repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-=
+4.3.2.jar
+/home/ste/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar
+/home/ste/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/home/ste/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.j=
+ar
+/home/ste/.m2/repository/org/assertj/assertj-core/1.6.1/assertj-core-1.6.1.=
+jar
+/home/ste/.m2/repository/com/github/stefanbirkner/system-rules/1.6.0/system=
+-rules-1.6.0.jar
+/home/ste/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar
+/home/ste/.m2/repository/org/apache/httpcomponents/httpclient/4.2.5/httpcli=
+ent-4.2.5.jar
+/home/ste/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logg=
+ing-1.1.1.jar
+/home/ste/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.=
+jar
+/home/ste/.m2/repository/com/google/guava/guava/17.0/guava-17.0.jar
+/home/ste/.m2/repository/commons-collections/commons-collections/3.2.1/comm=
+ons-collections-3.2.1.jar
+/home/ste/.m2/repository/commons-configuration/commons-configuration/1.10/c=
+ommons-configuration-1.10.jar
+/home/ste/.m2/repository/ste/test/xtest/1.6.2/xtest-1.6.2.jar
+/home/ste/.m2/repository/org/beanshell/bsh/2.0b5/bsh-2.0b5.jar
+/home/ste/.m2/repository/org/eclipse/jetty/jetty-server/9.0.0.M4/jetty-serv=
+er-9.0.0.M4.jar
+/home/ste/.m2/repository/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v20111=
+2011016/javax.servlet-3.0.0.v201112011016.jar
+/home/ste/.m2/repository/org/eclipse/jetty/jetty-http/9.0.0.M4/jetty-http-9=
+.0.0.M4.jar
+/home/ste/.m2/repository/org/eclipse/jetty/jetty-util/9.0.0.M4/jetty-util-9=
+.0.0.M4.jar
+/home/ste/.m2/repository/org/eclipse/jetty/jetty-io/9.0.0.M4/jetty-io-9.0.0=
+.M4.jar
+/home/ste/.m2/repository/rhino/js/1.7R2/js-1.7R2.jar
+/home/ste/.m2/repository/org/skife/url/url-scheme-registry/0.0.1/url-scheme=
+-registry-0.0.1.jar
+/home/ste/.m2/repository/cglib/cglib-nodep/2.2.2/cglib-nodep-2.2.2.jar
+/home/ste/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1=
+-GA.jar
+/home/ste/.m2/repository/ste/web/webtoolkitlib/1.4.0/webtoolkitlib-1.4.0.ja=
+r
+/home/ste/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar
+/home/ste/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-js=
+on-org/2.3.3/jackson-datatype-json-org-2.3.3.jar
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.3.3/jack=
+son-core-2.3.3.jar
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.3.3/=
+jackson-databind-2.3.3.jar
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.3=
+.0/jackson-annotations-2.3.0.jar
+/home/ste/.m2/repository/org/json/json/20090211/json-20090211.jar
+[DEBUG] provider classpath:
+/home/ste/.m2/repository/org/apache/maven/surefire/surefire-junit4/2.14.1/s=
+urefire-junit4-2.14.1.jar
+/home/ste/.m2/repository/org/apache/maven/surefire/surefire-api/2.14.1/sure=
+fire-api-2.14.1.jar
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+[DEBUG] boot classpath:
+/home/ste/.m2/repository/org/apache/maven/surefire/surefire-booter/2.14.1/s=
+urefire-booter-2.14.1.jar
+/home/ste/.m2/repository/org/apache/maven/surefire/surefire-api/2.14.1/sure=
+fire-api-2.14.1.jar
+/home/ste/Projects/https/target/test-classes
+/home/ste/Projects/https/target/classes
+/home/ste/.m2/repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-=
+4.3.2.jar
+/home/ste/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar
+/home/ste/.m2/repository/junit/junit/4.11/junit-4.11.jar
+/home/ste/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.j=
+ar
+/home/ste/.m2/repository/org/assertj/assertj-core/1.6.1/assertj-core-1.6.1.=
+jar
+/home/ste/.m2/repository/com/github/stefanbirkner/system-rules/1.6.0/system=
+-rules-1.6.0.jar
+/home/ste/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar
+/home/ste/.m2/repository/org/apache/httpcomponents/httpclient/4.2.5/httpcli=
+ent-4.2.5.jar
+/home/ste/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logg=
+ing-1.1.1.jar
+/home/ste/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.=
+jar
+/home/ste/.m2/repository/com/google/guava/guava/17.0/guava-17.0.jar
+/home/ste/.m2/repository/commons-collections/commons-collections/3.2.1/comm=
+ons-collections-3.2.1.jar
+/home/ste/.m2/repository/commons-configuration/commons-configuration/1.10/c=
+ommons-configuration-1.10.jar
+/home/ste/.m2/repository/ste/test/xtest/1.6.2/xtest-1.6.2.jar
+/home/ste/.m2/repository/org/beanshell/bsh/2.0b5/bsh-2.0b5.jar
+/home/ste/.m2/repository/org/eclipse/jetty/jetty-server/9.0.0.M4/jetty-serv=
+er-9.0.0.M4.jar
+/home/ste/.m2/repository/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v20111=
+2011016/javax.servlet-3.0.0.v201112011016.jar
+/home/ste/.m2/repository/org/eclipse/jetty/jetty-http/9.0.0.M4/jetty-http-9=
+.0.0.M4.jar
+/home/ste/.m2/repository/org/eclipse/jetty/jetty-util/9.0.0.M4/jetty-util-9=
+.0.0.M4.jar
+/home/ste/.m2/repository/org/eclipse/jetty/jetty-io/9.0.0.M4/jetty-io-9.0.0=
+.M4.jar
+/home/ste/.m2/repository/rhino/js/1.7R2/js-1.7R2.jar
+/home/ste/.m2/repository/org/skife/url/url-scheme-registry/0.0.1/url-scheme=
+-registry-0.0.1.jar
+/home/ste/.m2/repository/cglib/cglib-nodep/2.2.2/cglib-nodep-2.2.2.jar
+/home/ste/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1=
+-GA.jar
+/home/ste/.m2/repository/ste/web/webtoolkitlib/1.4.0/webtoolkitlib-1.4.0.ja=
+r
+/home/ste/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar
+/home/ste/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-js=
+on-org/2.3.3/jackson-datatype-json-org-2.3.3.jar
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.3.3/jack=
+son-core-2.3.3.jar
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.3.3/=
+jackson-databind-2.3.3.jar
+/home/ste/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.3=
+.0/jackson-annotations-2.3.0.jar
+/home/ste/.m2/repository/org/json/json/20090211/json-20090211.jar
+Forking command line: /bin/sh -c cd /home/ste/Projects/https &&
+/usr/lib/jvm/jdk1.7.0/jre/bin/java -jar
+/home/ste/Projects/https/target/surefire/surefirebooter2608597528133782849.=
+jar
+/home/ste/Projects/https/target/surefire/surefire4757561398808161722tmp
+/home/ste/Projects/https/target/surefire/surefire_03386574501554385037tmp
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar
+Running ste.web.http.BugFreeSessionCache
+hash: 1988962013, id: 4d75891e0d034123abe6e56127c351c6 expired
+hash: 1062054454, id: d677dcd673fb4331aa35c1c0544cac6d expired
+hash: 65134514, id: 14d89b90b1bf46f58e63ad5b76a59f26 expired
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.889 sec
+Running ste.web.http.BugFreeHttpServerSession
+
+TEST getNewSession...
+request: GET /index.html [Host: localhost:8000, Connection: Keep-Alive,
+User-Agent: Apache-HttpClient/4.2.5 (java 1.5)]
+counter : 1
+Aug 30, 2014 10:57:46 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - 8659c253d01a4388870e192770eb5211 "GET /index.html
+HTTP/1.1" 200
+request: GET /index.html [Host: localhost:8000, Connection: Keep-Alive,
+User-Agent: Apache-HttpClient/4.2.5 (java 1.5)]
+counter : 1
+Aug 30, 2014 10:57:46 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - 4586948466aa4e6680e933eb383d1967 "GET /index.html
+HTTP/1.1" 200
+Aug 30, 2014 10:57:46 PM ste.web.http.HttpServer$RequestListenerThread run
+INFO: stopping to listen on port 8000 (Socket closed)
+
+TEST getSessionValuesInTheSameSession...
+request: GET /index.html [Host: localhost:8000, Connection: Keep-Alive,
+User-Agent: Apache-HttpClient/4.2.5 (java 1.5)]
+counter : 1
+Aug 30, 2014 10:57:46 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - 2ee36e4e60794bd1ab464c29809d8c1f "GET /index.html
+HTTP/1.1" 200
+request: GET /index.html [Host: localhost:8000, Connection: Keep-Alive,
+User-Agent: Apache-HttpClient/4.2.5 (java 1.5), Cookie:
+JSESSIONID=3D"2ee36e4e60794bd1ab464c29809d8c1f", Cookie2: $Version=3D1]
+counter : 2
+Aug 30, 2014 10:57:46 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - 2ee36e4e60794bd1ab464c29809d8c1f "GET /index.html
+HTTP/1.1" 200
+Aug 30, 2014 10:57:46 PM ste.web.http.HttpServer$RequestListenerThread run
+INFO: stopping to listen on port 8000 (Socket closed)
+
+TEST sessionExpiration...
+request: GET /index.html [Host: localhost:8000, Connection: Keep-Alive,
+User-Agent: Apache-HttpClient/4.2.5 (java 1.5)]
+counter : 1
+Aug 30, 2014 10:57:46 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - 7724cd5e24574c9fb869f751f871a75a "GET /index.html
+HTTP/1.1" 200
+request: GET /index.html [Host: localhost:8000, Connection: Keep-Alive,
+User-Agent: Apache-HttpClient/4.2.5 (java 1.5), Cookie:
+JSESSIONID=3D"7724cd5e24574c9fb869f751f871a75a", Cookie2: $Version=3D1]
+counter : 1
+Aug 30, 2014 10:57:47 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - 7724cd5e24574c9fb869f751f871a75a "GET /index.html
+HTTP/1.1" 200
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.434 sec
+Running ste.web.http.BugFreeHttpServerHandlers
+Aug 30, 2014 10:57:47 PM ste.web.http.HttpServer$RequestListenerThread run
+INFO: stopping to listen on port 8000 (Socket closed)
+
+TEST setHandlersDefault...
+
+TEST setHandlers...
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running ste.web.http.BugFreeHttpServerLog
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 sec
+Running ste.web.http.BugFreeSessionCacheThreading
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 sec
+Running ste.web.http.BugFreeHttpServerAccessLog
+
+TEST logAccessForOKRequests...
+handling /index.html from src/test/docroot(null)
+Serving file src/test/docroot/index.html
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - 85db53e08463402f8e171f7489683268 "GET /index.html
+HTTP/1.1" 200
+handling /index2.html from src/test/docroot(null)
+File src/test/docroot/index2.html not found
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - 85db53e08463402f8e171f7489683268 "GET /index2.html
+HTTP/1.1" 404
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.205 sec
+Running ste.web.http.BugFreeHttpServerClientAuthentication
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpServer$RequestListenerThread run
+INFO: stopping to listen on port 8000 (Socket closed)
+
+TEST mssingClientAuthenticationWhenRequired...
+
+TEST getHomePage...
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpServer$RequestListenerThread run
+INFO: stopping to listen on port 8000 (Socket closed)
+handling /index.html from src/test/docroot(null)
+Serving file src/test/docroot/index.html
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - fb7159ac08644ee68cd08cbce0aefd41 "GET /index.html
+HTTP/1.1" 200
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.186 sec
+Running ste.web.http.BugFreeHttpServerStartupWithConfiguration
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpServer$RequestListenerThread run
+INFO: stopping to listen on port 8000 (Socket closed)
+
+TEST createServerWithConfigurationObjectKO...
+
+TEST createServerWithConfigurationObjecClientAuthentication...
+
+TEST createServerWithConfigurationObjectPort...
+
+TEST createServerWithConfigurationObjectKORoot...
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 sec
+Running ste.web.http.BugFreeHttpSessionService
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - 56539ef8c4ff433fbe47e60427d10537 "GET
+/something/something1.html HTTP/1.1" 200
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - 07dcfbaa558f4cbf93f99ba35bbde7e0 "GET
+/something/something1.html HTTP/1.1" 200
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - dba97351a24d412c8a085e78885376eb "GET
+/something/something1.html HTTP/1.1" 200
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - 843c8e28ec8f4500a71291f3946a819a "POST
+/something?param1=3Done&param2=3Dtwo HTTP/1.1" 200
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - 06f5e9950dd5489b92a4b4c778a8841d "GET
+/something/something1.html HTTP/1.1" 200
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpSessionService doService
+INFO: 10.10.127.15 - 53bd903bb7d445d488cf9f85220db5a0 "GET
+/something/something1.html HTTP/1.1" 200
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - b446b43b2e6c42108c6cd0a1c48cc133 "GET
+/something/something1.html HTTP/1.1" 200
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - d9be21249e0c47a1b8880f1fa2bbdc03 "GET
+/something/something1.html HTTP/1.1" 200
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - 71063bce71f946e3a810bce821bbf510 "GET
+/something/something1.html HTTP/1.1" 404
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - ddd61d5c90514b7081cbd9ccc7bb9529 "GET
+/something/something1.html HTTP/1.1" 500
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.041 sec
+Running ste.web.http.BugFreeHttpServerSSL
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpServer$RequestListenerThread run
+INFO: stopping to listen on port 8000 (Socket closed)
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.153 sec
+Running ste.web.http.BugFreeHttpServerStartup
+
+TEST mssingClientAuthenticationWhenRequired...
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpServer$RequestListenerThread run
+INFO: stopping to listen on port 8000 (Socket closed)
+
+TEST getHomePage...
+handling /index.html from src/test/docroot(null)
+Serving file src/test/docroot/index.html
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - 4a9eb3e3a2cf42e6bd642c3dfb693344 "GET /index.html
+HTTP/1.1" 200
+
+TEST noHTTPServerHeader...
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpServer$RequestListenerThread run
+INFO: stopping to listen on port 8000 (Socket closed)
+handling /diskone/readme.txt from src/test/docroot(null)
+File src/test/docroot/diskone/readme.txt not found
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - fb74e6a5d82d4d6fb2b47638154c4e68 "GET /diskone/readme.txt
+HTTP/1.1" 404
+
+TEST getContent...
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpServer$RequestListenerThread run
+INFO: stopping to listen on port 8000 (Socket closed)
+handling /folder/notexisting.txt from src/test/docroot(null)
+File src/test/docroot/folder/notexisting.txt not found
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - 8b21c32245f74fa480b4cd77351cebdd "GET
+/folder/notexisting.txt HTTP/1.1" 404
+handling /folder/readme.txt from src/test/docroot(null)
+Serving file src/test/docroot/folder/readme.txt
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpSessionService doService
+INFO: 127.0.0.1 - 3b5c257c73ce40dbb509897a26f7fe6a "GET /folder/readme.txt
+HTTP/1.1" 200
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.443 sec
+Running ste.web.http.BugFreeHttpServerStartupLog
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpServer$RequestListenerThread run
+INFO: stopping to listen on port 8000 (Socket closed)
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpServer start
+INFO: unable to start the server becasue it was not possible to bind port
+8000 (Address already in use)
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 sec
+Aug 30, 2014 10:57:48 PM ste.web.http.HttpServer$RequestListenerThread run
+INFO: stopping to listen on port 8000 (Socket closed)
+
+Results :
+
+Tests run: 39, Failures: 0, Errors: 0, Skipped: 1
+
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ https ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=3D0,
+ConflictMarker.markTime=3D1, ConflictMarker.nodeCount=3D74,
+ConflictIdSorter.graphTime=3D0, ConflictIdSorter.topsortTime=3D0,
+ConflictIdSorter.conflictIdCount=3D28,
+ConflictIdSorter.conflictIdCycleCount=3D0, ConflictResolver.totalTime=3D4,
+ConflictResolver.conflictItemCount=3D70,
+DefaultDependencyCollector.collectTime=3D44,
+DefaultDependencyCollector.transformTime=3D5}
+[DEBUG] org.apache.maven.plugins:maven-jar-plugin:jar:2.4:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.6:compile
+[DEBUG]
+org.apache.maven:maven-repository-metadata:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.0.6:compile
+[DEBUG]
+org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compi=
+le
+[DEBUG]          junit:junit:jar:3.8.1:compile
+[DEBUG]          classworlds:classworlds:jar:1.1-alpha-2:compile
+[DEBUG]    org.apache.maven:maven-model:jar:2.0.6:runtime
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-archiver:jar:2.5:compile
+[DEBUG]       org.apache.maven:maven-core:jar:2.0.6:compile
+[DEBUG]
+org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6:compile
+[DEBUG]
+org.apache.maven.reporting:maven-reporting-api:jar:2.0.6:compile
+[DEBUG]
+org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7:compile
+[DEBUG]          org.apache.maven:maven-error-diagnostics:jar:2.0.6:compile
+[DEBUG]          commons-cli:commons-cli:jar:1.0:compile
+[DEBUG]          org.apache.maven:maven-plugin-descriptor:jar:2.0.6:compile
+[DEBUG]
+org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:compile
+[DEBUG]          org.apache.maven:maven-monitor:jar:2.0.6:compile
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.15:compile
+[DEBUG]    org.codehaus.plexus:plexus-archiver:jar:2.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-io:jar:2.0.2:compile
+[DEBUG]    commons-lang:commons-lang:jar:2.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0:compile
+[DEBUG] Created new class realm
+plugin>org.apache.maven.plugins:maven-jar-plugin:2.4
+[DEBUG] Importing foreign packages into class realm
+plugin>org.apache.maven.plugins:maven-jar-plugin:2.4
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm
+plugin>org.apache.maven.plugins:maven-jar-plugin:2.4
+[DEBUG]   Included: org.apache.maven.plugins:maven-jar-plugin:jar:2.4
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: org.apache.maven:maven-archiver:jar:2.5
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:2.0.=
+6
+[DEBUG]   Included: org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7
+[DEBUG]   Included: commons-cli:commons-cli:jar:1.0
+[DEBUG]   Included:
+org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.15
+[DEBUG]   Included: org.codehaus.plexus:plexus-archiver:jar:2.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-io:jar:2.0.2
+[DEBUG]   Included: commons-lang:commons-lang:jar:2.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   Excluded:
+org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   Excluded: classworlds:classworlds:jar:1.1-alpha-2
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:2.0.6
+[DEBUG]   Excluded:
+org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-jar-plugin:2.4:jar
+from plugin realm
+ClassRealm[plugin>org.apache.maven.plugins:maven-jar-plugin:2.4, parent:
+sun.misc.Launcher$AppClassLoader@3067e236]
+[DEBUG] Configuring mojo
+'org.apache.maven.plugins:maven-jar-plugin:2.4:jar' with basic configurator
+-->
+[DEBUG]   (f) classesDirectory =3D /home/ste/Projects/https/target/classes
+[DEBUG]   (f) defaultManifestFile =3D
+/home/ste/Projects/https/target/classes/META-INF/MANIFEST.MF
+[DEBUG]   (f) finalName =3D ste.https-0.0.5
+[DEBUG]   (f) forceCreation =3D false
+[DEBUG]   (f) outputDirectory =3D /home/ste/Projects/https/target
+[DEBUG]   (f) project =3D MavenProject: ste:https:0.0.5 @
+/home/ste/Projects/https/pom.xml
+[DEBUG]   (f) session =3D org.apache.maven.execution.MavenSession@7dd84118
+[DEBUG]   (f) skipIfEmpty =3D false
+[DEBUG]   (f) useDefaultManifestFile =3D false
+[DEBUG] -- end configuration --
+[DEBUG] isUp2date: false (Destination
+/home/ste/Projects/https/target/ste.https-0.0.5.jar not found.)
+[INFO] Building jar: /home/ste/Projects/https/target/ste.https-0.0.5.jar
+[DEBUG] adding directory META-INF/
+[DEBUG] adding entry META-INF/MANIFEST.MF
+[DEBUG] adding directory ste/
+[DEBUG] adding directory ste/web/
+[DEBUG] adding directory ste/web/http/
+[DEBUG] adding directory ste/web/http/handlers/
+[DEBUG] adding entry ste/web/http/HttpServer$ClientAuthentication.class
+[DEBUG] adding entry ste/web/http/HttpServer.class
+[DEBUG] adding entry ste/web/http/HttpServer$WorkerThread.class
+[DEBUG] adding entry ste/web/http/SSLConfigurationException.class
+[DEBUG] adding entry ste/web/http/handlers/FileHandler.class
+[DEBUG] adding entry ste/web/http/SessionCache.class
+[DEBUG] adding entry ste/web/http/HttpSessionService.class
+[DEBUG] adding entry ste/web/http/HttpServerCLI.class
+[DEBUG] adding entry ste/web/http/Constants.class
+[DEBUG] adding entry ste/web/http/HttpServer$RequestListenerThread.class
+[DEBUG] adding entry ste/web/http/HttpServer$HttpKeyManager.class
+[DEBUG] adding directory META-INF/maven/
+[DEBUG] adding directory META-INF/maven/ste/
+[DEBUG] adding directory META-INF/maven/ste/https/
+[DEBUG] adding entry META-INF/maven/ste/https/pom.xml
+[DEBUG] adding entry META-INF/maven/ste/https/pom.properties
+[INFO]
+------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO]
+------------------------------------------------------------------------
+[INFO] Total time: 10.684s
+[INFO] Finished at: Sat Aug 30 22:57:49 CEST 2014
+[INFO] Final Memory: 18M/167M
+[INFO]
+------------------------------------------------------------------------
+[WARNING] The requested profile "personal" could not be activated because
+it does not exist.
+Checking in modified POMs...
+Executing: /bin/sh -c cd /home/ste/Projects/https && git add -- pom.xml
+Working directory: /home/ste/Projects/https
+Executing: /bin/sh -c cd /home/ste/Projects/https && git status
+Working directory: /home/ste/Projects/https
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    modified:   pom.xml
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    pom.xml.releaseBackup
+    release.properties
+
+Tagging release with the label https-0.0.5...
+ScmTagPhase :: scmTagParameters remotingTag true
+ScmTagPhase :: scmTagParameters scmRevision null
+ScmTagPhase :: fileSet  basedir =3D /home/ste/Projects/https; files =3D []
+Executing: /bin/sh -c cd /home/ste/Projects/https && git tag -F
+/tmp/maven-scm-2104972330.commit https-0.0.5
+Working directory: /home/ste/Projects/https
+Executing: /bin/sh -c cd /home/ste/Projects/https && git push
+git@github.com:stefanofornari/https.git https-0.0.5
+Working directory: /home/ste/Projects/https
+Executing: /bin/sh -c cd /home/ste/Projects/https && git ls-files
+Working directory: /home/ste/Projects/https
+.gitignore
+LICENSE
+README.md
+bin/create-test-keystores
+licenseheader.txt
+nb-configuration.xml
+pom.xml
+src/main/java/ste/web/http/Constants.java
+src/main/java/ste/web/http/HttpServer.java
+src/main/java/ste/web/http/HttpServerCLI.java
+src/main/java/ste/web/http/HttpSessionService.java
+src/main/java/ste/web/http/SSLConfigurationException.java
+src/main/java/ste/web/http/SessionCache.java
+src/main/java/ste/web/http/handlers/FileHandler.java
+src/test/docroot/folder/readme.txt
+src/test/docroot/index.html
+src/test/etc/castore
+src/test/etc/client.jks
+src/test/etc/httc.cer
+src/test/etc/keystore
+src/test/etc/ste.https.cer
+src/test/java/ste/web/http/BugFreeHttpServerAccessLog.java
+src/test/java/ste/web/http/BugFreeHttpServerBase.java
+src/test/java/ste/web/http/BugFreeHttpServerClientAuthentication.java
+src/test/java/ste/web/http/BugFreeHttpServerHandlers.java
+src/test/java/ste/web/http/BugFreeHttpServerLog.java
+src/test/java/ste/web/http/BugFreeHttpServerSSL.java
+src/test/java/ste/web/http/BugFreeHttpServerSession.java
+src/test/java/ste/web/http/BugFreeHttpServerStartup.java
+src/test/java/ste/web/http/BugFreeHttpServerStartupLog.java
+src/test/java/ste/web/http/BugFreeHttpServerStartupWithConfiguration.java
+src/test/java/ste/web/http/BugFreeHttpSessionContext.java
+src/test/java/ste/web/http/BugFreeHttpSessionService.java
+src/test/java/ste/web/http/BugFreeSessionCache.java
+src/test/java/ste/web/http/BugFreeSessionCacheThreading.java
+src/test/java/ste/web/http/handlers/PrintSessionHandler.java
+Transforming 'https'...
+Not removing release POMs
+Checking in modified POMs...
+Executing: /bin/sh -c cd /home/ste/Projects/https && git add -- pom.xml
+Working directory: /home/ste/Projects/https
+Executing: /bin/sh -c cd /home/ste/Projects/https && git status
+Working directory: /home/ste/Projects/https
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    modified:   pom.xml
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    pom.xml.releaseBackup
+    release.properties
+
+Release preparation complete.
+------------------------------------------------------------------------
+BUILD SUCCESS
+------------------------------------------------------------------------
+Total time: 41.323s
+Finished at: Sat Aug 30 22:57:53 CEST 2014
+Final Memory: 13M/167M
+------------------------------------------------------------------------
+The requested profile "personal" could not be activated because it does not
+exist.
+
+--047d7bfd021af939820501df390d--
+

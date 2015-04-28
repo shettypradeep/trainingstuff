@@ -1,0 +1,127 @@
+From users-return-136272-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Apr 28 19:02:12 2014
+Return-Path: <users-return-136272-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CB87810132
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 28 Apr 2014 19:02:12 +0000 (UTC)
+Received: (qmail 44591 invoked by uid 500); 28 Apr 2014 19:02:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 44492 invoked by uid 500); 28 Apr 2014 19:02:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 44484 invoked by uid 99); 28 Apr 2014 19:02:06 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 28 Apr 2014 19:02:06 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.220.176] (HELO mail-vc0-f176.google.com) (209.85.220.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 28 Apr 2014 19:02:01 +0000
+Received: by mail-vc0-f176.google.com with SMTP id lc6so8481435vcb.21
+        for <users@maven.apache.org>; Mon, 28 Apr 2014 12:01:36 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:content-type;
+        bh=J++2wT9nUoPPxhs/h00D4RpafFTH1ZaFbKsXhgpxhRQ=;
+        b=Jlk6P62WrHKDvHa1pJHRWG6tBAEc+qGdXOofCDNslOcBC5+kgKix2jtpgSzoyLPHdc
+         +elKrwoOBBDWXQA00LPUHZeKrDxwQwb6AnTbSiV3kDyTdVAT2QTmKsWLdcWQa4aDTKNz
+         DE0qgbWMKNsnkjZI4oY1XWhxwYxMnP0K9uQiWqdxNLyXjB4cQiR5kJj8OD1FV3XI0Xjx
+         dKNFJqBbUNNENuDLx0nePVIT8RNny5jfBeNBdVUyCRKOwSEPNAvB1YUZAqK9if3saOHu
+         IhLiQqSlbYLkNzIxhlgwix3b7MesnvN5MsuPPgMHoMXvDAhqxenKEglDYN/RrSCVJ+p7
+         TxvQ==
+X-Gm-Message-State: ALoCoQl8tMSZuczekx4aDY2JWf2kAaBU3zcCfk2zQCJ2evK1QNiiI0SiDkr3HiwpauavSp1yOXbj
+X-Received: by 10.58.122.164 with SMTP id lt4mr25131320veb.2.1398711696233;
+ Mon, 28 Apr 2014 12:01:36 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.220.177.10 with HTTP; Mon, 28 Apr 2014 12:01:16 -0700 (PDT)
+In-Reply-To: <CAA9S6i5K=5ot4Kw3JeKpg_0z3FG3CPqWyD-j4_jA08_WTGiqVg@mail.gmail.com>
+References: <CAA9S6i5K=5ot4Kw3JeKpg_0z3FG3CPqWyD-j4_jA08_WTGiqVg@mail.gmail.com>
+From: Tonio Caputo <tonioc@exeo.com.ar>
+Date: Mon, 28 Apr 2014 16:01:16 -0300
+Message-ID: <CAJg1wSaW1AUjiLHY_HsnYRL-RKJ4fMQNttJWXXkyvTZBruuBhQ@mail.gmail.com>
+Subject: Re: Maven Jar Plugin - Testjar: includes together with skipIfEmpty
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b2ed255cc404b04f81ef134
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b2ed255cc404b04f81ef134
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi,
+
+I think I faced something similar, some time ago, but not absolutely sure,
+here is what I remember:
+
+<skipIfEmpty> works by testing if directory is present,  so if
+src/test/java is present (no matter if empty or not)
+jar will be created.
+
+hope it helps
+tonio
+
+
+
+
+
+On Mon, Apr 28, 2014 at 6:12 AM, Nick Stolwijk <nick.stolwijk@gmail.com>wrote:
+
+> Hi Folks,
+>
+> I found a little curiosity in the maven jar plugin.
+>
+> if you specify includes and the skipIfEmpty property a jar is still
+> created and attached while it only has a pom file in it. I would have
+> expected that the creation of the jar was skipped if no files where
+> selected by my includes property.
+>
+> My usecase: I only want to generate the tests jar when there are
+> builders in the module, so other modules can use those builders in
+> their tests. I don't want to package all tests, to prevent developers
+> to create dependencies on these tests.
+>
+> My configuration:
+>
+>             <plugin>
+>                 <artifactId>maven-jar-plugin</artifactId>
+>                 <executions>
+>                     <execution>
+>                         <goals>
+>                             <goal>test-jar</goal>
+>                         </goals>
+>                         <configuration>
+>                             <skipIfEmpty>true</skipIfEmpty>
+>                             <includes>
+>                                 <include>**/*Builder.class</include>
+>                             </includes>
+>                         </configuration>
+>                     </execution>
+>                 </executions>
+>             </plugin>
+>
+> With regards,
+>
+> Nick Stolwijk
+>
+> ~~~ Try to leave this world a little better than you found it and,
+> when your turn comes to die, you can die happy in feeling that at any
+> rate you have not wasted your time but have done your best ~~~
+>
+> Lord Baden-Powell
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7b2ed255cc404b04f81ef134--
+

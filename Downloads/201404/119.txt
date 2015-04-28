@@ -1,0 +1,76 @@
+From users-return-136265-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Apr 26 18:44:26 2014
+Return-Path: <users-return-136265-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F3698113C7
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 26 Apr 2014 18:44:25 +0000 (UTC)
+Received: (qmail 66629 invoked by uid 500); 26 Apr 2014 18:44:21 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 66570 invoked by uid 500); 26 Apr 2014 18:44:20 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 66562 invoked by uid 99); 26 Apr 2014 18:44:20 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 26 Apr 2014 18:44:20 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of northrup.james@gmail.com designates 74.125.82.52 as permitted sender)
+Received: from [74.125.82.52] (HELO mail-wg0-f52.google.com) (74.125.82.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 26 Apr 2014 18:44:16 +0000
+Received: by mail-wg0-f52.google.com with SMTP id b13so3600241wgh.23
+        for <users@maven.apache.org>; Sat, 26 Apr 2014 11:43:54 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:from:date:message-id:subject:to:content-type;
+        bh=ps0zoc4vykEUOzm2owiUcseZ8DbrEbynRZJfLCyTxPI=;
+        b=tN30oAL+LON6Kv8O8BfwW3Zl8sRkl1bbUgnGBNVLZiOJio4N+Sihpu2IMPg5+3ESyr
+         0Tbm0BhhfwebItcybmf7bCxnRAC5O38FzepGh7aDkM+ikenZ1bzACZ1gDXGPnJsSZyrw
+         7M+dxvSXuH7+1o+oAsPjSD7x0OD4nIycbTRPDQ9c+qMAWChlklJAmmGh1nx62Ay4Vx1I
+         Ex9YD4UNmUNqziE2qeuf6RC/4QFsle+GQbYSDNv7TTcFKLYTntfM+X0ZQyuhv5pILQ3C
+         SYvkVJQi1JfpXLrIBXosNQE7STvN5dgYe5dLm5kwJUUSQESETMYnVNNjx2VeK+6FvQ9c
+         jBVw==
+X-Received: by 10.180.19.167 with SMTP id g7mr8682660wie.46.1398537834610;
+ Sat, 26 Apr 2014 11:43:54 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.216.170.6 with HTTP; Sat, 26 Apr 2014 11:43:34 -0700 (PDT)
+From: james northrup <northrup.james@gmail.com>
+Date: Sat, 26 Apr 2014 11:43:34 -0700
+Message-ID: <CAPkEcwifJ59=c9chXLOwQ0b+LD6HkGNOtMH8RZ6K78MKSJMF7A@mail.gmail.com>
+Subject: jdk8 break maven-plugin-plugin?
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=bcaec53d5dffd6498b04f7f676ad
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--bcaec53d5dffd6498b04f7f676ad
+Content-Type: text/plain; charset=UTF-8
+
+i have created a maven plugin from the plugin archetype.
+
+i have a mojo which apparently does not matter to repeating this process,
+any mojo will do.
+
+the project is in a reactor.  the reactor runs the module but the plugin
+does not use reactor pom as parent.
+
+the compilation succeeds out of the archetype.
+
+regardless of what code lives in execute(), the act of adding a jdk8 jar
+dependency to this plugin's pom will cause the gisted failure.
+
+the environment and reactor build version is jdk 1.8
+
+
+the pom and output are at
+
+https://gist.github.com/jnorthrup/83621d3f3c3a14433470
+
+--bcaec53d5dffd6498b04f7f676ad--
+

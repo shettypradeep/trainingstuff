@@ -1,0 +1,82 @@
+From users-return-137307-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Sep 17 14:06:50 2014
+Return-Path: <users-return-137307-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C52E61108F
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 17 Sep 2014 14:06:50 +0000 (UTC)
+Received: (qmail 34725 invoked by uid 500); 17 Sep 2014 14:06:48 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 34644 invoked by uid 500); 17 Sep 2014 14:06:48 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 34631 invoked by uid 99); 17 Sep 2014 14:06:48 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 17 Sep 2014 14:06:48 +0000
+X-ASF-Spam-Status: No, hits=-2.3 required=5.0
+	tests=RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [209.65.160.94] (HELO nbfkord-smmo06.seg.att.com) (209.65.160.94)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 17 Sep 2014 14:06:40 +0000
+Received: from unknown [144.160.128.153] (EHLO flpi408.enaf.ffdc.sbc.com)
+	by nbfkord-smmo06.seg.att.com(mxl_mta-7.2.2-0) over TLS secured channel
+	with ESMTP id a5599145.0.3044823.00-2380.8481456.nbfkord-smmo06.seg.att.com (envelope-from <dk068x@att.com>);
+	Wed, 17 Sep 2014 14:06:19 +0000 (UTC)
+X-MXL-Hash: 5419955b1ae074fa-3408c783ed15ac29d7efeeab64c2ed84b332bfaa
+Received: from enaf.ffdc.sbc.com (localhost.localdomain [127.0.0.1])
+	by flpi408.enaf.ffdc.sbc.com (8.14.5/8.14.5) with ESMTP id s8HE6I6E011032
+	for <users@maven.apache.org>; Wed, 17 Sep 2014 07:06:18 -0700
+Received: from flpi532.ffdc.sbc.com (flpi532.ffdc.sbc.com [130.4.163.13])
+	by flpi408.enaf.ffdc.sbc.com (8.14.5/8.14.5) with ESMTP id s8HE6DAP010988
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <users@maven.apache.org>; Wed, 17 Sep 2014 07:06:13 -0700
+Received: from CAFRFD1MSGHUBAD.ITServices.sbc.com (CAFRFD1MSGHUBAD.itservices.sbc.com [130.4.169.143]) by flpi532.ffdc.sbc.com (RSA Interceptor) for <users@maven.apache.org>; Wed, 17 Sep 2014 14:06:01 GMT
+Received: from CAFRFD1MSGUSRIA.ITServices.sbc.com ([169.254.1.112]) by
+ CAFRFD1MSGHUBAD.ITServices.sbc.com ([130.4.169.143]) with mapi id
+ 14.03.0195.001; Wed, 17 Sep 2014 07:06:01 -0700
+From: "KARR, DAVID" <dk068x@att.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: Does Maven provide a way to list which repository each dependency
+ was obtained from?
+Thread-Topic: Does Maven provide a way to list which repository each
+ dependency was obtained from?
+Thread-Index: Ac/SgGcmYe1qX1jBRGS5u4AWiLYf1A==
+Date: Wed, 17 Sep 2014 14:06:00 +0000
+Message-ID: <B8D164BED956C5439875951895CB4B22269A371D@CAFRFD1MSGUSRIA.ITServices.sbc.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [135.70.241.132]
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+X-RSA-Inspected: yes
+X-RSA-Classifications: public
+X-AnalysisOut: [v=2.0 cv=SIH1opTH c=1 sm=1 a=xwOvzTHDVLE4u4nGvK72ag==:17 a]
+X-AnalysisOut: [=X7aebf9O0wIA:10 a=_JpUyDWPBbYA:10 a=ofMgfj31e3cA:10 a=JqS]
+X-AnalysisOut: [vCVKWrJIA:10 a=BLceEmwcHowA:10 a=kj9zAlcOel0A:10 a=zQP7CpK]
+X-AnalysisOut: [OAAAA:8 a=XIqpo32RAAAA:8 a=zOXofWH2MxWlPI4JOxgA:9 a=CjuIK1]
+X-AnalysisOut: [q_8ugA:10 a=iCgMX5qGRXAA:10 a=U7VocnMbpFkA:10]
+X-Spam: [F=0.2000000000; CM=0.500; S=0.200(2014051901)]
+X-MAIL-FROM: <dk068x@att.com>
+X-SOURCE-IP: [144.160.128.153]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I don't need this, but someone else asked a related question.
+
+Does Maven provide a way to list, for a project, which repository each depe=
+ndency was obtained from?
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

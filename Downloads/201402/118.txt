@@ -1,0 +1,106 @@
+From users-return-135562-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Feb 18 22:07:07 2014
+Return-Path: <users-return-135562-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CEAE310AA1
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 18 Feb 2014 22:07:07 +0000 (UTC)
+Received: (qmail 76350 invoked by uid 500); 18 Feb 2014 22:07:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 76219 invoked by uid 500); 18 Feb 2014 22:07:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 76211 invoked by uid 99); 18 Feb 2014 22:07:03 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 18 Feb 2014 22:07:03 +0000
+X-ASF-Spam-Status: No, hits=-0.1 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ron.bets@oracle.com designates 141.146.126.69 as permitted sender)
+Received: from [141.146.126.69] (HELO aserp1040.oracle.com) (141.146.126.69)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 18 Feb 2014 22:06:54 +0000
+Received: from acsinet21.oracle.com (acsinet21.oracle.com [141.146.126.237])
+	by aserp1040.oracle.com (Sentrion-MTA-4.3.2/Sentrion-MTA-4.3.2) with ESMTP id s1IM6WCK015817
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK)
+	for <users@maven.apache.org>; Tue, 18 Feb 2014 22:06:33 GMT
+Received: from userz7022.oracle.com (userz7022.oracle.com [156.151.31.86])
+	by acsinet21.oracle.com (8.14.4+Sun/8.14.4) with ESMTP id s1IM6VLI011639
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO)
+	for <users@maven.apache.org>; Tue, 18 Feb 2014 22:06:32 GMT
+Received: from abhmp0013.oracle.com (abhmp0013.oracle.com [141.146.116.19])
+	by userz7022.oracle.com (8.14.5+Sun/8.14.4) with ESMTP id s1IM6VgN020230
+	for <users@maven.apache.org>; Tue, 18 Feb 2014 22:06:31 GMT
+MIME-Version: 1.0
+Message-ID: <bb4611e8-1cd1-4712-a2aa-6f3a88296f19@default>
+Date: Tue, 18 Feb 2014 14:06:29 -0800 (PST)
+From: Ron Bets <ron.bets@oracle.com>
+Sender: Ron Bets <ron.bets@oracle.com>
+To: users@maven.apache.org
+Subject: OutOfMemory exception when using Maven in ant
+X-Priority: 3
+X-Mailer: Oracle Beehive Extensions for Outlook 2.0.1.8  (707110) [OL
+ 12.0.6680.5000 (x86)]
+Content-Type: multipart/alternative;
+ boundary="__1392761191128102916abhmp0013.oracle.com"
+X-Source-IP: acsinet21.oracle.com [141.146.126.237]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--__1392761191128102916abhmp0013.oracle.com
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+
+Hi there,
+
+=20
+
+I am trying to incorporate Maven dependency management into my ant build as=
+ follows:
+
+=20
+
+        <artifact:dependencies pathId=3D"my.dependencies.class.path">
+
+            <dependency groupId=3D"org.lib"
+
+                        artifactId=3D"libtools"
+
+                        version=3D"1.1.1"/>
+
+            <dependency groupId=3D" org.lib "
+
+                        artifactId=3D"otherlib"
+
+                        version=3D"1.1.1"/>
+
+            <remoteRepository refid=3D"archiva.repository"/>
+
+        </artifact:dependencies>
+
+=20
+
+When I do a clean build, i.e. 'ant clean my-target', I get the following ex=
+ception:
+
+java.lang.OutOfMemoryError: PermGen space
+
+=20
+
+Can someone help explain what is going on here and how I might mitigate thi=
+s problem?  Once I have this working for the first classpath, I plan to cha=
+nge all my classpaths to use the repository, but this looks like a bit of a=
+ show-stopper.
+
+=20
+
+Thanks in advance,
+
+Ron
+
+--__1392761191128102916abhmp0013.oracle.com--
+

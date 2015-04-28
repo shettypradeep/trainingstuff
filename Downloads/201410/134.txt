@@ -1,0 +1,130 @@
+From users-return-137565-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Oct 14 11:17:34 2014
+Return-Path: <users-return-137565-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F033417FAC
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 14 Oct 2014 11:17:34 +0000 (UTC)
+Received: (qmail 71324 invoked by uid 500); 14 Oct 2014 11:17:33 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 71245 invoked by uid 500); 14 Oct 2014 11:17:33 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 71227 invoked by uid 99); 14 Oct 2014 11:17:32 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Oct 2014 11:17:32 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of johan.eke@gmail.com designates 209.85.220.172 as permitted sender)
+Received: from [209.85.220.172] (HELO mail-vc0-f172.google.com) (209.85.220.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 14 Oct 2014 11:17:27 +0000
+Received: by mail-vc0-f172.google.com with SMTP id lf12so7395573vcb.3
+        for <users@maven.apache.org>; Tue, 14 Oct 2014 04:17:07 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:cc:content-type;
+        bh=fghAUp3yFP+tuj3UZJ6Tx9YxhSbtSGejE8HHEXyM8fg=;
+        b=Zfhz0zxgu2LG1RvwLVhiQ3vrpqFe5pOjiR11yovl4xMPWkcXE3pua5xcaZGgvo1xxN
+         Cs4IaLyID1Sp2PdIA6nFEzIodeC088nmE86pZ2KWlX/KAiPKQL8eGR/ttz3g122JPYVs
+         ur/KRJksagCuv8ecitfhFZ6qXUBkvMxMtruthWzTFXH4hTZvSMv51x5PaiWeSsz7ckvn
+         e46yU6ZUnZu4rxKQtsTonki/N1yFYCq5Jgwu3m+WWvV8wROWuXfny3DWcM1dpMYKBUHe
+         GyMt1AIyhGh/pZCJba/qV2I5GCBikw1qBu6r9p7laMCsFd365pDiXiAm213ksFLIcEYZ
+         Yo/g==
+MIME-Version: 1.0
+X-Received: by 10.220.128.4 with SMTP id i4mr4109499vcs.32.1413285426893; Tue,
+ 14 Oct 2014 04:17:06 -0700 (PDT)
+Received: by 10.31.151.14 with HTTP; Tue, 14 Oct 2014 04:17:06 -0700 (PDT)
+Date: Tue, 14 Oct 2014 13:17:06 +0200
+Message-ID: <CAPJN_SjqFCrv58ku8wXtV9f3+y53TXucCkgNA_=SZSVvrUw_mA@mail.gmail.com>
+Subject: Re: Installing the pom.xml from inside an artifact using
+ maven-install-plugin ?
+From: Johan Ekesparr <johan.eke@gmail.com>
+To: rfscholte@apache.org
+Cc: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=001a1132f210d6179b050560274d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1132f210d6179b050560274d
+Content-Type: text/plain; charset=UTF-8
+
+The instructions on the page custom-pom-installation doesn't solve the
+problem I'm having ( I'm usin the maven-install-plugin:2.5.2:install-file )
+
+Example 1) Here we must have two files. The artifact jar-file _and_ an
+pom.xml file. I see no way of referencing the pom.xml _inside_ the artifact
+jar-file. So this I can't use since the pom.xml is bundled inside hte
+artifact.jar.
+
+Example 2) This will install the artifact jar-file with the information in
+the bundled pom.xml but then it generates a dummy pom.xml and install it.
+Why is it not installing the pom.xml it just read !?
+
+Generated POM-file looks like this :-(
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="
+http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.pop.group</groupId>
+  <artifactId>beatles</artifactId>
+  <version>1.2.3</version>
+  <description>POM was created from install:install-file</description>
+</project>
+
+/J
+
+> Hi,
+>
+> this is supported since version 2.5.
+> Read
+>
+http://maven.apache.org/plugins/maven-install-plugin/examples/custom-pom-installation.html
+>
+> for the details.
+>
+> thanks,
+> Robert
+>
+> Op Mon, 13 Oct 2014 13:56:26 +0200 schreef Johan Ekesparr
+> <johan.eke@gmail.com>:
+>
+> > Is there any way of installing the pom.xml file from inside an existing
+> > artifact using the maven-install-plugin ?
+> >
+> > Currently when we have an artifact created in a maven build the artifact
+> > includes the pom.xml file. Using the goal install:install-file we can
+> > install the arrtifact(jar-file) and the install plugin will read the
+> > pom.xml insiden the artifact to get the groupId and name of the artifact
+> > during the installation.
+> > We would like the installer to also be able to extract and install the
+> > pom.xml file from the artifact at the same time. I find it odd that it's
+> > not done during the installation of the artifact since it's already
+> > reading
+> > the pom.xml the logical step from my point of view is to also install
+it.
+> >
+> > Currently I'm forced to create a small ant-script to extract the pom.xml
+> > file and install it separatly.
+> >
+> > So is it possible to do this with the current tool that I have missed or
+> > could someone suggest a way to get this into the suggested improvment
+> > list
+> > for the project ?
+> >
+> > /J
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+--001a1132f210d6179b050560274d--
+

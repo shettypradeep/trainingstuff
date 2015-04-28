@@ -1,0 +1,307 @@
+From users-return-137957-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Dec  8 20:27:48 2014
+Return-Path: <users-return-137957-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6CCE397E9
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  8 Dec 2014 20:27:48 +0000 (UTC)
+Received: (qmail 26169 invoked by uid 500); 8 Dec 2014 20:27:46 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 26090 invoked by uid 500); 8 Dec 2014 20:27:46 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 26079 invoked by uid 99); 8 Dec 2014 20:27:46 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 08 Dec 2014 20:27:46 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW
+X-Spam-Check-By: apache.org
+Received-SPF: error (athena.apache.org: local policy)
+Received: from [209.85.216.175] (HELO mail-qc0-f175.google.com) (209.85.216.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 08 Dec 2014 20:27:41 +0000
+Received: by mail-qc0-f175.google.com with SMTP id b13so4553034qcw.6
+        for <users@maven.apache.org>; Mon, 08 Dec 2014 12:26:25 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:message-id:in-reply-to:references
+         :subject:mime-version:content-type;
+        bh=dqNdTJBiwW7n+6ygc2SwD3pgSQZq6qi6OeYHKQu+oho=;
+        b=O7aKSxegc053rXGlBzbMMXMwMtneThPYQQeBmt9xTTOJ1RdZ82WqsrKlYRDk2qTsi1
+         HwXWd845beg7f+45v9aM2GRye4tGe8oSAcBJcG6wtNyg5gCGbxKKI4PDSngi1BDHUvmQ
+         YtkLwEGUCIAr7/ylfiz94XQa6Iq8l9D7UY2ntcqaT4dvMu6+jDkwNzAwkXGXlT7PonTP
+         J9b8+kWilCUNhg1T217+d16fVXs5EAoskgRuVH1LcUUpH3AkQoMeVrJEb8Mzuyg9vdLa
+         aCE9tbvEupwdqIOwfgS3giRABKkVGsZ2XqKlF53VgJSuUr7ZQtVvuk57RF2pR98iF/No
+         RJJQ==
+X-Gm-Message-State: ALoCoQmeFiFlQBqOXs8mMezCjaa6CwjSeJuWimdf1x1F4SXb5z08ND6on+SC3jJpro9TGne5jPZi
+X-Received: by 10.140.46.52 with SMTP id j49mr55000277qga.30.1418070385587;
+        Mon, 08 Dec 2014 12:26:25 -0800 (PST)
+Received: from Slartibartfast.local (5403ACA3.catv.pool.telekom.hu. [84.3.172.163])
+        by mx.google.com with ESMTPSA id c104sm38697639qgd.30.2014.12.08.12.26.24
+        for <multiple recipients>
+        (version=TLSv1.2 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Mon, 08 Dec 2014 12:26:24 -0800 (PST)
+Date: Mon, 8 Dec 2014 21:26:21 +0100
+From: Tamas Cservenak <tamas@cservenak.net>
+To: Maven Users List <users@maven.apache.org>, Eduard Moraru
+ <enygma2002@gmail.com>
+Message-ID: <etPan.5486096d.79e2a9e3.2af@Slartibartfast.local>
+In-Reply-To: <CADGDyYKj9qsiPQeYcwT2E5GEjj+rS1vP+qBvYEubaCmVa1K-Fg@mail.gmail.com>
+References: <CADGDyYL0yOwJB45_V3KoKUi=6iar8wxJhpck7DuaGYAm1-qNig@mail.gmail.com>
+ <etPan.54745870.327b23c6.28a@Slartibartfast.local>
+ <CADGDyY+AGJbuxkKWcg49WkgUouvQJ3uKXNJxgkOxj8yMS9JeAQ@mail.gmail.com>
+ <CADGDyYKj9qsiPQeYcwT2E5GEjj+rS1vP+qBvYEubaCmVa1K-Fg@mail.gmail.com>
+Subject: Re: Using the Maven Indexer
+X-Mailer: Airmail (280)
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="5486096d_7545e146_2af"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--5486096d_7545e146_2af
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+Hi Eduard,
+
+for additional information see:
+http://jira.codehaus.org/browse/MINDEXER-81
+
+Currently, the ArtifactInfo is hardwired, is not extensible.
+
+Re available index for Central, it=E2=80=99s not the =E2=80=9Cminimal usa=
+ble=E2=80=9D=C2=A0
+the decision driver, but the SIZE of the index download instead.
+We were experimenting with different creators, but the bandwidth
+it took off (if you compared it to artifact downloads) was really huge.
+
+As almost everyone uses MRMs, and they tend to =E2=80=9Cimprove=E2=80=9D =
+the
+basic GAV index Central publishes (ie. once Nexus caches a=C2=A0
+JAR file, it will =E2=80=9Cimprove=E2=80=9D the index with Classnames in =
+the JAR too,
+something Central does not publish).
+
+artifactInfo=23repoId should not return null, if asked via context.
+If it does, there is a bug lurking somewhere.
+
+Currently the =E2=80=9Cextra info=E2=80=9D path is viable, but that would=
+ create a lot
+of cruft around indexer classes=E2=80=A6..
+
+
+
+
+
+--=C2=A0
+Thanks,
+=7Et=7E
+
+On 8 Dec 2014 at 17:15:08, Eduard Moraru (enygma2002=40gmail.com) wrote:
+
+Hi, =20
+
+I have a new challenge for your maven-indexer expertise :) =20
+
+What about adding additional information to the local index=3F I see the =
+=20
+default indexers (min, etc..) produce really minimal information. The =20
+problem is that everybody is using these default indexers and all the =20
+available indexes (maven central, etc) offer very little information that=
+ =20
+you can actually use to make the index useful in an application outside o=
+f =20
+really basic name, description, group, artifact, etc queries. =20
+
+=46or instance, if I would want to add author information (to query by =20
+author) or dependency information (to perform compatibility checks agains=
+t =20
+an installation/group of installed artifacts) or anything else for the =20
+matter, what would be the recommended approach=3F =20
+
+=46rom what I have currently researched, I see 2 options: =20
+
+1) Have a custom IndexCreator that uses the updateDocument(ArtifactInfo =20
+artifactInfo, Document document) method to fetch (HTTP GET) get the pom.x=
+ml =20
+by using information from the artifactInfo object (repository, groupID, =20
+artifactId, classifier, version, etc.) so that the resulting document =20
+contains the extra information. It seems that IndexCreators are used a lo=
+t =20
+more than they are advertised in the descriptions, not only for indexing =
+=20
+new items, but also when converting between ArtifactInfo objects and Luce=
+ne =20
+Documents. =20
+
+1.1) I had initially started going on this pat, but then I realized that =
+=20
+the artifactInfo that I receive in this method does not provide basic =20
+information (i.e. artifactInfo.getRepository() always returns null ;-( ) =
+It =20
+would be awesome if information like context and/or repository would be =20
+added to the artifactInfo object (maybe in =20
+IndexUtils.constructArtifactInfo( Document doc, IndexingContext context )=
+ =20
+=3F), the same way the ArtifactInfo.UIN=46O and ArtifactInfo.LAST=5FMODI=46=
+IED =20
+fields are handled specially and explicitly added to a new Document that =
+is =20
+passed to the IndexCreators. =20
+
+2) Handle this separately from maven indexer's work, and do it right afte=
+r =20
+index/update operations, i.e. let maven-indexer update the local index wi=
+th =20
+information from the remote index and then start manipulating the =20
+underlying Lucene index by adding information retrieved from the network =
+=20
+(HTTP GET) from the remote repositoy's POM files. In a rough pseudocode, =
+=20
+something like: =20
+
+indexer.update(repoX); =20
+indexer.getAllIndexedArtifacts().forEach(artifact -> =20
+var extraData =3D getExtraData(repoX, artifact); =20
+var indexer.getLuceneIndex().add(artifact, extraData) =20
+); =20
+
+3) Any other suggestions=3F =20
+
+My ultimate goal is (besides basic name/description queries) to be able t=
+o =20
+perform compatibility queries on artifacts coming from multiple =20
+repositories, so I need to find a solution to add this missing infrmation=
+ =20
+(artifact dependencies, and maybe more). =20
+
+As previously, your help and suggestions are most welcomed. =20
+
+Thanks, =20
+Eduard =20
+
+On Wed, Nov 26, 2014 at 1:22 PM, Eduard Moraru <enygma2002=40gmail.com> w=
+rote: =20
+
+> =20
+> =20
+> On Tue, Nov 25, 2014 at 12:22 PM, Tamas Cservenak <tamas=40cservenak.ne=
+t> =20
+> wrote: =20
+> =20
+>> Hi there, =20
+>> =20
+>> 1) yes, indexing context retains the artefact =E2=80=9Corigin=E2=80=9D=
+ (ie. repo), so you =20
+>> need context per origin. Sadly, the 1 index per context is current =20
+>> limitation of maven indexer, but this problem is known. Created =20
+>> http://jira.codehaus.org/browse/MINDEXER-93 =20
+>> =20
+>> 2) Yes, merged context is basically delegating to member contexts. und=
+er =20
+>> the hud, it uses Lucene=E2=80=99s MultiReader to actually perform the =
+search. =20
+>> =20
+> =20
+> I have solved the search problem for now by using the SearchEngine =20
+> component and issuing an IteratorSearchRequest on a list of =20
+> IndexingContexts to get paginated results. Will have to see how that wo=
+rks =20
+> on the long run. =20
+> =20
+> Thanks, =20
+> Eduard =20
+> =20
+> =20
+>> Re ranging, there are already issues (or problem spread across multipl=
+e =20
+>> issues), most notably this one =20
+>> http://jira.codehaus.org/browse/MINDEXER-8 =20
+>> =20
+>> 3) I think yes. Currently, indexer is being transitioned from Plexus t=
+o =20
+>> JSR330, and as you see in examples, it should work with any container =
+=20
+>> supporting it. re =E2=80=9Cmanually wiring=E2=80=9D, in latest release=
+s you might be able =20
+>> to do it, but in older ones probably not, as Plexus supported field =20
+>> injection only, and some of those member was not exposed via getter/se=
+tter. =20
+>> See =20
+>> http://jira.codehaus.org/browse/MINDEXER-80 =20
+>> =20
+>> =20
+>> -- =20
+>> Thanks, =20
+>> =7Et=7E =20
+>> =20
+>> On 21 Nov 2014 at 18:08:26, Eduard Moraru (enygma2002=40gmail.com) wro=
+te: =20
+>> =20
+>> Hi, =20
+>> =20
+>> I have recently started playing with the maven indexer =5B1=5D, follow=
+ing the =20
+>> examples =5B2=5D, and I have some questions (since A=46AIS, documentat=
+ion is =20
+>> practically unexistent on the matter): =20
+>> =20
+>> 1) =46rom what I can understand, you need an IndexingContext for each =
+=20
+>> repository you plan to index. This makes you end up with n lucene inde=
+xes, =20
+>> one for each repository. Is there any way that I could have just 1 luc=
+ene =20
+>> index, with all my repositories indexed in the same place=3F If the ma=
+in =20
+>> purpose is searchig, why scatter the indexed information across n inde=
+xes =20
+>> and make the whole process dificult=3F Maybe I=60m missing something. =
+=20
+>> =20
+>> 2) On the same line as the first question, when it comes to searching,=
+ it =20
+>> seems that I can use a MergedIndexingContext to perform a search on =20
+>> multiple (all) indexed repositories (IndexingContexts). How does this =
+=20
+>> merge =20
+>> the search results=3F I assume it takes each lucene index and queries =
+it =20
+>> individually, but this probably means that the lucene scores of these =
+=20
+>> merged results are completely messed up and ureliable, right=3F =20
+>> Any suggestions on how to properly perform search over multiple indexe=
+d =20
+>> repositories=3F =20
+>> =20
+>> 3) About the Plexus Container: Am I forced to initialize and use one, =
+or =20
+>> can I/should manually instantiate the default implementations and use =
+them =20
+>> instead=3F =20
+>> =20
+>> I=60ll probably come up with more questions along the way, hope someon=
+e will =20
+>> find the time to guide me on the right path. =20
+>> =20
+>> Thanks, =20
+>> Eduard =20
+>> =20
+>> ---------- =20
+>> =5B1=5D https://github.com/apache/maven-indexer/ =20
+>> =5B2=5D =20
+>> =20
+>> https://github.com/apache/maven-indexer/tree/master/indexer-examples/i=
+ndexer-examples-basic =20
+>> =20
+> =20
+> =20
+
+--5486096d_7545e146_2af--
+
+

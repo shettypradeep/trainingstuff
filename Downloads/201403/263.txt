@@ -1,0 +1,122 @@
+From users-return-135939-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 26 00:51:04 2014
+Return-Path: <users-return-135939-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 043E610E3B
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 26 Mar 2014 00:51:04 +0000 (UTC)
+Received: (qmail 27655 invoked by uid 500); 26 Mar 2014 00:50:55 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 27573 invoked by uid 500); 26 Mar 2014 00:50:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 27560 invoked by uid 99); 26 Mar 2014 00:50:53 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Mar 2014 00:50:53 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of baerrach@gmail.com designates 209.85.128.178 as permitted sender)
+Received: from [209.85.128.178] (HELO mail-ve0-f178.google.com) (209.85.128.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 26 Mar 2014 00:50:48 +0000
+Received: by mail-ve0-f178.google.com with SMTP id jw12so1548089veb.9
+        for <users@maven.apache.org>; Tue, 25 Mar 2014 17:50:27 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=f0wsbNr1jisPZLVMQW6+HT4KGGi+8Ne0HTfOaRkiPR4=;
+        b=HRve/Bj51j3zwfdvofdQ7706STw3evVtoU0tcQNSHi3MpS7v/r4gTgJeYkdiSce78l
+         62OQiitRzTO8HYJj6QmCOVJQmeaghgZ/IKKfJK32g6Ysz2Mh7GeQk9gB/LtyakdlnxBe
+         lqTSqj1c7k4U0CmXwFsAaxSvOYB2q5G6WjrBXLIevwx/GsEAT3fcp6KfeO2H83t0dcg7
+         jceJ0B1kSX2jnHyuOyySOj2z7yNRMBhSodpa2SUATuFsDNGwR7oMvSma/9e3kKVzhFud
+         Yq0FJq8dsnBBR1xPcDvbb6LEYjPk4U8CHq4dkfrUjdaiOKctLQtTIZaXZNrThLqVliTg
+         xXsg==
+MIME-Version: 1.0
+X-Received: by 10.220.88.204 with SMTP id b12mr57363086vcm.3.1395795027873;
+ Tue, 25 Mar 2014 17:50:27 -0700 (PDT)
+Received: by 10.58.197.98 with HTTP; Tue, 25 Mar 2014 17:50:27 -0700 (PDT)
+In-Reply-To: <5331EF6E.1070106@gmail.com>
+References: <532B4246.9050606@gmail.com>
+	<CAK8jvqxqOQS34dbfjxsJFv4E17bAddK3zKww6syckRPwOv6z6Q@mail.gmail.com>
+	<532C9CCE.70404@gmail.com>
+	<5331EF6E.1070106@gmail.com>
+Date: Wed, 26 Mar 2014 11:20:27 +1030
+Message-ID: <CADVp3v-zHSor8w0RTNaEmcuzEpN1pUAhx7pesG6+4S3x=-u3nA@mail.gmail.com>
+Subject: Re: Forcing Integration Tests Before a Release
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b3a92eed0d6a504f577dad8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b3a92eed0d6a504f577dad8
+Content-Type: text/plain; charset=ISO-8859-1
+
+On 26 March 2014 07:34, Eric Kolotyluk <eric.kolotyluk@gmail.com> wrote:
+
+> I have tried to get this working, but it does not seem to work. When I do
+>
+>   mvn release:prepare
+>
+> I get
+>
+>   [INFO] Executing: cmd.exe /X /C "D:\bin\Apache\apache-maven-3.1.1\bin\mvn
+> -s C:\Users\Eric\AppData\Local\Temp\release-settings2652114304406041143.xml
+> clean verify site --no-plugin-updates -Psonatype-oss-release -P
+> user,local-repository"
+>
+> In the output I can see the 'clean' and the 'site' happen, but the
+> failsafe integration tests do not run. If I do
+>
+>   mvn verify -P run-it
+>
+> then the integration tests run as normal.
+>
+
+What is -X telling you?
+Is the variable performRelease actually set?
+
+Looking at org.apache:apache:10 the release-plugin is configured different
+to the docs.
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>2.1</version>
+          <configuration>
+            <useReleaseProfile>false</useReleaseProfile>
+            <goals>deploy</goals>
+            <arguments>-Papache-release</arguments>
+          </configuration>
+        </plugin>
+
+i.e. it disables useReleaseProfile and forces the apache-release profile to
+be used.
+
+I've had a quick look at the code, and I dont think this variable will be
+set on prepare.
+The performRelease variable looks like it is only set on "perform" not
+"prepare".
+http://maven.apache.org/maven-release/maven-release-plugin/perform-mojo.html#useReleaseProfile
+
+You can use
+http://maven.apache.org/maven-release/maven-release-plugin/prepare-mojo.html#argumentsto
+provide additional arguments to the release plugin.
+The code in AbstractReleaseMojo.createReleaseDescriptor() builds a list of
+active profiles and so you can just configure the release plugin to include
+"-P run-its" (which is the profile name used in
+org.apache.maven.plugins:maven-plugins:22 so I assume its the preferred
+name)
+
+Since it is the same plugin, I dont think you are going to be able to
+separate out running the integration tests only in prepare.
+They are going to be run again in perform.
+This is probably not a bad thing.
+
+--047d7b3a92eed0d6a504f577dad8--
+

@@ -1,0 +1,85 @@
+From users-return-136350-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue May 13 17:38:41 2014
+Return-Path: <users-return-136350-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 10F161187D
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 13 May 2014 17:38:41 +0000 (UTC)
+Received: (qmail 61054 invoked by uid 500); 13 May 2014 17:31:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 60966 invoked by uid 500); 13 May 2014 17:31:20 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 60901 invoked by uid 99); 13 May 2014 17:31:20 -0000
+Received: from Unknown (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 13 May 2014 17:31:20 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [194.158.98.15] (HELO mail-2y.bbox.fr) (194.158.98.15)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 13 May 2014 17:31:15 +0000
+Received: from herve-desktop.localnet (static-176-183-252-218.ncc.abo.bbox.fr [176.183.252.218])
+	by mail-2y.bbox.fr (Postfix) with ESMTP id 1AEE379
+	for <users@maven.apache.org>; Tue, 13 May 2014 19:30:52 +0200 (CEST)
+From: =?ISO-8859-1?Q?Herv=E9?= BOUTEMY <herve.boutemy@free.fr>
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: How to include images in a site via a report
+Date: Tue, 13 May 2014 19:30:51 +0200
+Message-ID: <1479239.SGc6KrTKKM@herve-desktop>
+User-Agent: KMail/4.13 (Linux/3.13.0-24-generic; KDE/4.13.0; x86_64; ; )
+In-Reply-To: <CAAqLGLPgWMF65PBSPRQcbzaAJQqLqGuMyAJ5Q6oHSJGxXmeQSQ@mail.gmail.com>
+References: <CAAqLGLPgWMF65PBSPRQcbzaAJQqLqGuMyAJ5Q6oHSJGxXmeQSQ@mail.gmail.com>
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="iso-8859-1"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Simo,
+
+The maven-shanges-plugin does such a thing [1]
+
+Now, let's talk about about the beers...
+
+Regards,
+
+Herv=E9
+
+[1] http://maven.apache.org/plugins/maven-changes-plugin/xref/org/apach=
+e/maven/plugin/changes/ChangesMojo.html#L461
+
+Le mardi 13 mai 2014 00:29:04 Simone Tripodi a =E9crit :
+> Hi all mates,
+>=20
+> I am developing a new set of reports for Apache Felix and I would lik=
+e
+> to include nice icons in order to improve the l'n'f of produced data,=
+
+> one thing I didn't catch is how to copy images included in my plugin
+> artifact to the target site.
+>=20
+> Any suggestion will be paid back in beers :)
+>=20
+> TIA, all the best!
+> -Simo
+>=20
+> http://people.apache.org/~simonetripodi/
+> http://twitter.com/simonetripodi
+>=20
+> ---------------------------------------------------------------------=
+
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

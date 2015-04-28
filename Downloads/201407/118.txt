@@ -1,0 +1,76 @@
+From users-return-136799-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jul 18 04:39:07 2014
+Return-Path: <users-return-136799-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 17D49110D8
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 18 Jul 2014 04:39:07 +0000 (UTC)
+Received: (qmail 35725 invoked by uid 500); 18 Jul 2014 04:39:05 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 35640 invoked by uid 500); 18 Jul 2014 04:39:05 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 35456 invoked by uid 99); 18 Jul 2014 04:39:04 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Jul 2014 04:39:04 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [217.26.49.175] (HELO mxout015.mail.hostpoint.ch) (217.26.49.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 18 Jul 2014 04:39:00 +0000
+Received: from [10.0.2.45] (helo=asmtp012.mail.hostpoint.ch)
+	by mxout015.mail.hostpoint.ch with esmtp (Exim 4.82 (FreeBSD))
+	(envelope-from <domi@fortysix.ch>)
+	id 1X7zwJ-000CKJ-47
+	for users@maven.apache.org; Fri, 18 Jul 2014 06:38:35 +0200
+Received: from [84.75.220.53] (helo=[192.168.0.46])
+	by asmtp012.mail.hostpoint.ch with esmtpsa (TLSv1:AES128-SHA:128)
+	(Exim 4.82 (FreeBSD))
+	(envelope-from <domi@fortysix.ch>)
+	id 1X7zwI-00033e-Uw
+	for users@maven.apache.org; Fri, 18 Jul 2014 06:38:35 +0200
+X-Authenticated-Sender-Id: domi@fortysix.ch
+From: "domi@fortysix.ch" <domi@fortysix.ch>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+Subject: mvn release with pom.xml not in root of git repo
+Message-Id: <CDF32190-517E-4AF0-A17F-7D39793F9B25@fortysix.ch>
+Date: Fri, 18 Jul 2014 06:38:32 +0200
+To: Maven Users List <users@maven.apache.org>
+Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.6\))
+X-Mailer: Apple Mail (2.1878.6)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+This question has been asked quite a couple of times already, but I =
+never found a real solution nor do I know if this should really be =
+supported:
+Is it possible to do a release with the maven-release-plugin when the =
+parent pom.xml is not in the root of the git repo?
+This is no problem with Subversion, but with git I have never managed to =
+get this working.
+
+so layout is like this:
+
+repo-dir
+|_.git
+|_subdir/pom.xml
+|_subdir/subsubdir/pom.xml
+
+has anyone done this? how?
+
+Domi=
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,170 @@
+From users-return-136069-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Apr  3 20:09:07 2014
+Return-Path: <users-return-136069-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2D22B111A1
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  3 Apr 2014 20:09:07 +0000 (UTC)
+Received: (qmail 46044 invoked by uid 500); 3 Apr 2014 20:09:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 45042 invoked by uid 500); 3 Apr 2014 20:08:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 45009 invoked by uid 99); 3 Apr 2014 20:08:55 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 03 Apr 2014 20:08:55 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bmathus@gmail.com designates 209.85.212.177 as permitted sender)
+Received: from [209.85.212.177] (HELO mail-wi0-f177.google.com) (209.85.212.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 03 Apr 2014 20:08:50 +0000
+Received: by mail-wi0-f177.google.com with SMTP id cc10so43952wib.10
+        for <users@maven.apache.org>; Thu, 03 Apr 2014 13:08:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=C5tslObC492n2nC1U3G2Bte5KCPXQWplwB6YSy8je6g=;
+        b=pc74s6KfbA51ODcqVk5BALnHN02g7UeBvpj9CBeH1uvaXdFwl11vgNh3OTThQfQD4C
+         XHqEarU531s/bYvZXpRT2UWgiesP7BQu06fbOxFVFz6Sx1o9ELas51jZH7o50hion0xU
+         T+ZFsvrRKIhOxMkf1Jgk58Da3xdIBSk6o7ByxL++JNKL6MmQOFz9aA1FbcWaQgO/CXV7
+         FBBwSY2V7oB1zZhrXZJSa4D4OR54ASsTD0o4nCTFe1HDddDzgaOIs4zHNGmz2Junkjaf
+         Bs8J8KhZXgS2Ga7cXTOlB+UapVdXjDZBFDqEeKd+OwEEaZB8xpQ/I9qkeUjFVDporUC8
+         3Orw==
+X-Received: by 10.180.109.231 with SMTP id hv7mr41213515wib.38.1396555708376;
+ Thu, 03 Apr 2014 13:08:28 -0700 (PDT)
+MIME-Version: 1.0
+Sender: bmathus@gmail.com
+Received: by 10.14.225.65 with HTTP; Thu, 3 Apr 2014 13:08:08 -0700 (PDT)
+In-Reply-To: <533CC5E1.8090205@yahoo.com>
+References: <533CAA8F.3030807@yahoo.com> <533CC5E1.8090205@yahoo.com>
+From: Baptiste Mathus <bmathus@batmat.net>
+Date: Thu, 3 Apr 2014 22:08:08 +0200
+X-Google-Sender-Auth: D2wPKa4epAHBzs1F6DiQ1JnFyXM
+Message-ID: <CANWgJS73VKV2dqsvLSKs6kY9xgHfqU9hmTGpnaRbiPAJXfJjTA@mail.gmail.com>
+Subject: Re: Enforcer plugin
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=e89a8f235743e82f2904f628f6f1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--e89a8f235743e82f2904f628f6f1
+Content-Type: text/plain; charset=UTF-8
+
+Not sure I understand: did you use a standard rule or did you finally write
+& use your own one? If the latter, seing the code somewhere may help. If
+using a standard one, then creating a testcase project is definitely the
+best way to get answers and then the potential fix.
+
+Cheers
+
+
+2014-04-03 4:22 GMT+02:00 Mark Eggers <its_toasted@yahoo.com>:
+
+>
+> On 4/2/2014 5:25 PM, Mark Eggers wrote:
+>
+>> Folks,
+>>
+>> I've gotten my classifier artifact to build and install in our local
+>> repository. Specifying the classifier gets the appropriate artifact, and
+>> removing the classifier gets the [other] appropriate artifact.
+>>
+>> Now I'm a bit paranoid that the artifact with the classifier will leak
+>> out into other releases, so I thought I would write an enforcer rule.
+>>
+>> I thought that the following would work:
+>>
+>> <bannedDependencies>
+>>      <excludes>
+>>          <exclude>org.mdeggers:*:*:*:*:DEBUG</exclude>
+>>      </excludes>
+>> </bannedDependencies>
+>>
+>> based on:
+>>
+>> http://maven.apache.org/enforcer/enforcer-rules/bannedDependencies.html
+>>
+>> While this certainly blocked the following dependency:
+>>
+>> <dependency>
+>>      <groupId>org.mdeggers</groupId>
+>>      <artifactId>SampleBuild</artifactId>
+>>      <version>1.5</version>
+>>      <type>war</type>
+>>      <classifier>DEBUG</classifier>
+>> </dependency>
+>>
+>> with the message:
+>> Found Banned Dependency: org.mdeggers:SampleBuild:war:DEBUG:1.5
+>>
+>> It also blocked the following dependency:
+>>
+>> <dependency>
+>>      <groupId>org.mdeggers</groupId>
+>>      <artifactId>SampleBuild</artifactId>
+>>      <version>1.5</version>
+>>      <type>war</type>
+>> </dependency>
+>>
+>> with the message:
+>> Found Banned Dependency: org.mdeggers:SampleBuild:war:1.5
+>>
+>> This I did not expect. The messages are also a bit suspect in that they
+>> don't match the pattern given in the documentation.
+>>
+>> I looked on JIRA and found the following (based on another thread):
+>>
+>> http://jira.codehaus.org/browse/MENFORCER-74
+>> http://jira.codehaus.org/browse/MENFORCER-75
+>> http://jira.codehaus.org/browse/MENFORCER-72
+>>
+>> These are all closed with a 'fixed' designation for release 1.3.
+>>
+>> I'm using version 1.3.1
+>>
+>> However, I briefly looked at the code here:
+>>
+>> http://svn.apache.org/viewvc/maven/enforcer/tags/enforcer-
+>> 1.3.1/enforcer-rules/src/main/java/org/apache/maven/plugins/
+>> enforcer/BannedDependencies.java?revision=1502671&view=markup
+>>
+>>
+>> and classifier does not seem to have made it in.
+>>
+>> Have I walked through this correctly? If so, is there a fix (other than
+>> not using classifiers, or just hoping that a DEBUG classifier doesn't
+>> make it into a release)?
+>>
+>> Thanks,
+>> Mark
+>>
+>> /mde/
+>>
+>
+> Works with 2.0-SNAPSHOT of the maven enforcer plugin.
+>
+>
+> /mde/
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Baptiste <Batmat> MATHUS - http://batmat.net
+Sauvez un arbre,
+Mangez un castor !
+
+--e89a8f235743e82f2904f628f6f1--
+

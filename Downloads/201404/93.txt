@@ -1,0 +1,131 @@
+From users-return-136082-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr  4 17:31:06 2014
+Return-Path: <users-return-136082-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 742C710B9B
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  4 Apr 2014 17:31:06 +0000 (UTC)
+Received: (qmail 53428 invoked by uid 500); 4 Apr 2014 17:31:01 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 52728 invoked by uid 500); 4 Apr 2014 17:30:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 52527 invoked by uid 99); 4 Apr 2014 17:30:57 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 04 Apr 2014 17:30:57 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.160.49 as permitted sender)
+Received: from [209.85.160.49] (HELO mail-pb0-f49.google.com) (209.85.160.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 04 Apr 2014 17:30:53 +0000
+Received: by mail-pb0-f49.google.com with SMTP id jt11so3714218pbb.8
+        for <users@maven.apache.org>; Fri, 04 Apr 2014 10:30:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type;
+        bh=OxdC/oCVzFbPX0qLaL1yDxEHArkSVE+maqRplKq1lkk=;
+        b=KMb12j//3WKmwokPwRJvP0fnYKKRzcbPOciUi+DDHKmAbN8dVdKy6XScwtbYY8mCVP
+         UQJXjbZRpFMwtO8QXtZritrUhnWCQKwuNNwi7t2vgitZdopavjQNLaQPBORBACrYvrkD
+         8+tbZMOe7RgrDqsbiZVgrHRLUOY4d8bIhIZ4Hdi/XwucgCCP+UvHKlnTXAdCqGZkNosm
+         Hx1VilgZ2D+ts+0PLZYNZmvnA2qZXdrJjh4kAzQ073g0nBdjDQgOJYJ2Wq0RmwJfusAP
+         qA8Uj6Li+GNdsXGKVfIXNhgB6Y76SLcXPm8SbXIT2rybh6nRSYZjOZoOL9caPynRv2y4
+         Rr2g==
+X-Received: by 10.68.201.226 with SMTP id kd2mr16266843pbc.157.1396632632726;
+        Fri, 04 Apr 2014 10:30:32 -0700 (PDT)
+Received: from [192.168.0.17] (S0106602ad07f9cfa.vc.shawcable.net. [24.85.131.20])
+        by mx.google.com with ESMTPSA id sv10sm11744223pbc.74.2014.04.04.10.30.30
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 04 Apr 2014 10:30:31 -0700 (PDT)
+Message-ID: <533EEC36.7020905@gmail.com>
+Date: Fri, 04 Apr 2014 10:30:30 -0700
+From: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Configuring SCM for github
+References: <5329E8F1.5000801@gmail.com> <33515199-3180-4535-A263-C38F07D8532F@gold-family.us>
+In-Reply-To: <33515199-3180-4535-A263-C38F07D8532F@gold-family.us>
+Content-Type: multipart/alternative;
+ boundary="------------020309000108000408000806"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------020309000108000408000806
+Content-Type: text/plain; charset=windows-1252; format=flowed
+Content-Transfer-Encoding: 8bit
+
+Just to follow up, Russel, the .git is incorrect in the <url> element, 
+and leads to problems when using
+
+<groupId>com.github.github</groupId>
+<artifactId>site-maven-plugin</artifactId>
+
+Cheers, Eric
+
+On 3/19/2014 12:06 PM, Russell Gold wrote:
+> HI Eric, I think you are missing the “.git” extensions in your urls. Here’s the ones I use.
+>
+>      <scm>
+>          <url>https://github.com/meterware/simplestub.git</url>
+>          <developerConnection>scm:git:https://github.com/meterware/simplestub.git</developerConnection>
+>          <connection>scm:git:https://github.com/meterware/simplestub.git</connection>
+>      </scm>
+>
+> On Mar 19, 2014, at 2:58 PM, Eric Kolotyluk <eric.kolotyluk@gmail.com> wrote:
+>
+>> I am having trouble getting mvn release:prepare to work with github
+>>
+>>   <scm>
+>> <connection>scm:git:http://github.com/kolotyluk/java-file-utilities</connection>
+>> <url>scm:git:http://github.com/kolotyluk/java-file-utilities</url>
+>> <developerConnection>scm:git:https://github.com/kolotyluk/java-file-utilities</developerConnection>
+>>     <tag>java-file-utilities-0.0.1</tag>
+>>   </scm>
+>>
+>> When I try to prepare the release I get
+>>
+>>   [INFO] Checking in modified POMs...
+>>   [INFO] Executing: cmd.exe /X /C "git add -- pom.xml"
+>>   [INFO] Working directory: D:\Users\Eric\Software\Project\Repositories\java-file-utilities
+>>   [INFO] Executing: cmd.exe /X /C "git status"
+>>   [INFO] Working directory: D:\Users\Eric\Software\Project\Repositories\java-file-utilities
+>>   [INFO] Executing: cmd.exe /X /C "git commit --verbose -F C:\Users\Eric\AppData\Local\Temp\maven-scm-559613294.commit pom.xml"
+>>   [INFO] Working directory: D:\Users\Eric\Software\Project\Repositories\java-file-utilities
+>>   [INFO] Executing: cmd.exe /X /C "git symbolic-ref HEAD"
+>>   [INFO] Working directory: D:\Users\Eric\Software\Project\Repositories\java-file-utilities
+>>   [INFO] Executing: cmd.exe /X /C "git push https://github.com/kolotyluk/java-file-utilities master:master"
+>>   [INFO] Working directory: D:\Users\Eric\Software\Project\Repositories\java-file-utilities
+>>
+>> and mvn just hangs forever at that point. Is this a credentials problem or something else?
+>>
+>> Cheers, Eric
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+> -----------------
+> Author, Getting Started with Apache Maven <http://www.packtpub.com/getting-started-with-apache-maven/video>
+>
+> Come read my webnovel, Take a Lemon <http://www.takealemon.com>,
+> and listen to the Misfile radio play <http://www.fuzzyfacetheater.com/misfile/>!
+>
+>
+>
+>
+>
+>
+>
+>
+
+
+--------------020309000108000408000806--
+

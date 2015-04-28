@@ -1,0 +1,100 @@
+From users-return-137621-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Oct 23 11:48:02 2014
+Return-Path: <users-return-137621-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F04FB17BC2
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 23 Oct 2014 11:48:01 +0000 (UTC)
+Received: (qmail 27488 invoked by uid 500); 23 Oct 2014 11:48:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 27396 invoked by uid 500); 23 Oct 2014 11:48:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 36074 invoked by uid 99); 23 Oct 2014 08:52:12 -0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of slp.vld@gmail.com designates 209.85.217.181 as permitted sender)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=date:from:to:message-id:subject:mime-version:content-type;
+        bh=UyuwOazqlI81jC/m26CXUhcBxuBnK5+ASTUvdBER4Xk=;
+        b=a9cqNJBS0dkdyHD3BVZiUtaIV74gnVfGRlyhQyTYtObR7hDu+nAZ3yXSn6hTNKYAti
+         KNdaJP/YFUWIahoU7+DBSUnSWuXbXL3vwyQedEeBJqKmIfmmahSc5U8I2r4109J+uybk
+         7wSrtb+fSv84oxunV+ZRrkfgj/HlJANPWh4Pssz3cztnXKt2g5zhGJN/t1GqaIf69yWF
+         43jn2OsZW18nBnAKXylEtj7Wj6qIFHRqGTNLz6Bd9rPkLM5xqIPM2dw815pIu+LeGjcT
+         AKbPHIFMNc1Bke3aEVryBLkriQYivjEqy6/IP4wNZZFFHhUWSjGlg0hDVtqS8Om2WD42
+         BuIQ==
+X-Received: by 10.152.25.130 with SMTP id c2mr3549256lag.80.1414054306809;
+        Thu, 23 Oct 2014 01:51:46 -0700 (PDT)
+Date: Thu, 23 Oct 2014 12:51:43 +0400
+From: Vlad Slepukhin <slp.vld@gmail.com>
+To: users@maven.apache.org
+Message-ID: <etPan.5448c1a0.66334873.12a@Vlads-MacBook-Air-6.local>
+Subject: Maven Release Plugin Unexpected Behaviour
+X-Mailer: Airmail (249)
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="5448c1a0_74b0dc51_12a"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--5448c1a0_74b0dc51_12a
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+Hello=21
+
+I has already posted this question to StackOverflow, though I didn=E2=80=99=
+t get much help (expect warning about git requirements for 2.5.x version)=
+.
+
+The thing is that I=E2=80=99m trying to set up our project deployment to =
+Nexus process via release-plugin. My script is:=C2=A0
+
+git checkout -b release-=24=7BRELEASE=5FVERSION=7D
+mvn org.apache.maven.plugins:maven-release-plugin:2.4.2:prepare -DautoVer=
+sionSubmodules=3Dtrue -DdevelopmentVersion=3D=24=7BRELEASE=5FVERSION=7D.1=
+-SNAPSHOT -DpushChanges=3Dtrue -DreleaseVersion=3D=24=7BRELEASE=5FVERSION=
+=7D.0 -Dtag=3Dv=24=7BRELEASE=5FVERSION=7D.0
+mvn =C2=A0org.apache.maven.plugins:maven-release-plugin:2.4.2:perform
+
+The problem is: if this plugin (and its SCM dependency) is not added to t=
+he main project pom, it is going to push your artifact to snapshot reposi=
+tory with wrong name and WONT=E2=80=99T push updates to your branch.
+
+It seems to repeat this problem:=C2=A0https://jira.codehaus.org/browse/MR=
+ELEASE-812
+
+However, it was closed in 1.9.1 of=C2=A0maven-scm-provider-gitexe, which =
+I=E2=80=99m using right now.=C2=A0
+
+Any ideas on solving this issue without adding next lines to main pom:
+
+<plugin>
+=C2=A0 =C2=A0 <artifactId>maven-release-plugin</artifactId>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0<version>2.4.2</version>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0<dependencies>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0<dependency>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0<groupId>org.apache.maven.scm</g=
+roupId>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0<artifactId>maven-scm-provider-g=
+itexe</artifactId>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0<version>1.9.2</version>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0</dependency>
+=C2=A0 =C2=A0 =C2=A0 =C2=A0</dependencies>
+=C2=A0</plugin>
+
+--=C2=A0
+Kind Regards,=C2=A0
+Vlad Slepukhin
+
+
+--5448c1a0_74b0dc51_12a--
+
+

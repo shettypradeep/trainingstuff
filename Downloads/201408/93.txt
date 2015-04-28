@@ -1,0 +1,105 @@
+From users-return-137005-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Aug 12 11:35:57 2014
+Return-Path: <users-return-137005-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 566E9CF3C
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 12 Aug 2014 11:35:57 +0000 (UTC)
+Received: (qmail 88520 invoked by uid 500); 12 Aug 2014 11:35:55 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 88437 invoked by uid 500); 12 Aug 2014 11:35:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 88412 invoked by uid 99); 12 Aug 2014 11:35:55 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 12 Aug 2014 11:35:55 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of adrien.rivard@gmail.com designates 209.85.220.182 as permitted sender)
+Received: from [209.85.220.182] (HELO mail-vc0-f182.google.com) (209.85.220.182)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 12 Aug 2014 11:35:29 +0000
+Received: by mail-vc0-f182.google.com with SMTP id hy4so12965223vcb.41
+        for <users@maven.apache.org>; Tue, 12 Aug 2014 04:35:28 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=9xfPJmNyv4F3Po28/qXBibHEvGa/EmMV9diRdK6xtVM=;
+        b=Qt2Hnwb/sdagnvL2gmBquMh0alHdckniXo9yMr1ChSc90EDvtbE1LJq5k+bCVuOqQo
+         QfDjk3SHCKdM9+1pxjsnEmCrJ9xqYOCYGiot5bjgT18RJCsbfq0VXZ1nEWUbololL4yP
+         nQhwTEEMZi8ElwHhpt+wSMYT9AJgZiQURMe2z+TnlEFrox6zdrmJzKlmtJByhlI4DXGI
+         nfiRkISc+uWu5VuwAzN3XmR018xEFJR/DyeGDgIDUzVBWYUuBG6SBRDHI3Epu4bp41Oe
+         wMOFtbhY1YPtkqM1lq26s67OlaT69SlD/vNoFMEzPRKSyv23V1lm+y0z1wmz6OKaWte2
+         utGQ==
+MIME-Version: 1.0
+X-Received: by 10.52.190.71 with SMTP id go7mr10673151vdc.28.1407843327832;
+ Tue, 12 Aug 2014 04:35:27 -0700 (PDT)
+Received: by 10.220.15.200 with HTTP; Tue, 12 Aug 2014 04:35:27 -0700 (PDT)
+In-Reply-To: <1407803740724-5802153.post@n5.nabble.com>
+References: <1407803740724-5802153.post@n5.nabble.com>
+Date: Tue, 12 Aug 2014 13:35:27 +0200
+Message-ID: <CAPCUOdGMy_aLAbxbRq1Pt3h3rWcU=s04vyjqAzf74kDxDO+JoQ@mail.gmail.com>
+Subject: Re: Have to reconnect each time while running debugging maven remotely?
+From: Adrien Rivard <adrien.rivard@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1133ecec747a8105006d11c4
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1133ecec747a8105006d11c4
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+I've never used it but it the debug remote java application launch
+configuration there is an option to listen to jvm (connection type :
+standard( socket listen) ) . Presumably the forked jvms will attached
+themself to the debugger contrary to the usual case where the debugger is
+attached to the jvm.
+
+
+
+
+On Tue, Aug 12, 2014 at 2:35 AM, salilsurendran <salilsurendran@gmail.com>
+wrote:
+
+> Hello,
+>    Due to legacy reasons we have forkMode set to  'pertest' in our pom.
+> This
+> configuration can't be changed. However when I remote debug in eclipse(or
+> command line) I use `"-Dmaven.surefire.debug="-Xdebug
+> -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000 -Xnoagent
+> -Djava.compiler=NONE" test -DforkMode=never"`. I then connect to port 8000
+> from eclipse. However since forkMode is set to pertest each time a jvm is
+> spawned to run a test which means that I have to remote connect every time
+> to keep the test running and I have over 3000 tests. The -DforkMode=never
+> never takes effect and is overridden with what is the in the pom. Is this
+> the right behavior? What can I do to have the remote debugger reconnect
+> even
+> if the jvm forks?
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/Have-to-reconnect-each-time-while-running-debugging-maven-remotely-tp5802153.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Adrien Rivard
+
+--001a1133ecec747a8105006d11c4--
+

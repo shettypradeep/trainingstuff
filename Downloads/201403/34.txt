@@ -1,0 +1,108 @@
+From users-return-135839-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Mar 16 09:51:10 2014
+Return-Path: <users-return-135839-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A775F10B05
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 16 Mar 2014 09:51:10 +0000 (UTC)
+Received: (qmail 85292 invoked by uid 500); 16 Mar 2014 09:50:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 85010 invoked by uid 500); 16 Mar 2014 09:50:36 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 84988 invoked by uid 99); 16 Mar 2014 09:50:33 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 16 Mar 2014 09:50:33 +0000
+Received: from localhost (HELO mail-qa0-f44.google.com) (127.0.0.1)
+  (smtp-auth username agudian, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Sun, 16 Mar 2014 09:50:33 +0000
+Received: by mail-qa0-f44.google.com with SMTP id f11so4195068qae.17
+        for <multiple recipients>; Sun, 16 Mar 2014 02:50:32 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=mime-version:date:message-id:subject:from:to:cc:content-type;
+        bh=NPj1qZm4grT9I/RMZld7ydlDSrLK6KW/TA6QsuUDcNk=;
+        b=Ms7VffI64e41pMVpSCG+N2rLYStBhGEjOk/kQhlMzuI1ycJL/XlAXdgjUpPNBOw8V3
+         31ZxqaR/mubkDj8cwacikKrVaymvbUHEIri7ICNNrUQues1xubxJKJ581T/eYmEbEldo
+         GpGaEx/LfqKm5Wur0v3xfxxTEBXgEZWSg7NMxEIcazXUUWvvNYCA6/jzbfGu87XdQApC
+         yqfAqOHAe5bRfOs2AgQ1Xx4jVxBsvrPxMsWcp0X0rjHOyr9yZO09HTuuS0nURH6HxFdz
+         379Fy53ZrslnA/VDSKvhVsAFkI95cEcdCse/MZhOQ/m769xEbX7oTM3q7SZB58RC03T4
+         ylNg==
+MIME-Version: 1.0
+X-Received: by 10.140.27.120 with SMTP id 111mr10472443qgw.14.1394963432079;
+ Sun, 16 Mar 2014 02:50:32 -0700 (PDT)
+Received: by 10.96.96.202 with HTTP; Sun, 16 Mar 2014 02:50:32 -0700 (PDT)
+Date: Sun, 16 Mar 2014 10:50:32 +0100
+Message-ID: <CAK2FUK2HMOUVwnhdPN02XCmPrNV1SsquL==OsJ96c3Jk=CMKZQ@mail.gmail.com>
+Subject: [ANN] Apache Maven Surefire Plugin 2.17 Released
+From: Andreas Gudian <agudian@apache.org>
+To: "announce@maven.apache.org" <announce@maven.apache.org>, Maven Users List <users@maven.apache.org>
+Cc: Maven Developers List <dev@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c14982d8243604f4b63b8a
+
+--001a11c14982d8243604f4b63b8a
+Content-Type: text/plain; charset=ISO-8859-1
+
+The Apache Maven team is pleased to announce the release of the Apache
+Maven Surefire Plugin, version 2.17
+
+This release comes with some smaller improvements and bug fixes for TestNG,
+for the JUnit Parallel Computer, the removal of temporary files, and last
+but not least it fixes a compatibility issue with JDK 8 - just in time for
+the much anticipated GA this week.
+Yet again we received some much appreciated contributions from the
+community. Thank you and keep 'em coming!
+
+You should specify the version in your project's plugin configuration:
+
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <version>2.17</version>
+</plugin>
+
+Release Notes - Maven Surefire - Version 2.17
+
+** Bug
+    * [SUREFIRE-1031] - Temp files are not deleted properly
+    * [SUREFIRE-1033] - Invalid XML on documentation page
+    * [SUREFIRE-1038] - Regression: Method depends on nonexistent group
+    * [SUREFIRE-1040] - Typo in documentation of IntegrationTestMojo#test
+    * [SUREFIRE-1041] - JUnit47 provider: Exception in JUnit Runner can
+crash test run without visible stack trace
+    * [SUREFIRE-1044] - Changed behaviour of TestNG test execution after
+implementing runOrder support
+    * [SUREFIRE-1046] - Inproc test running does not work with java 8
+    * [SUREFIRE-1051] - Surefire plugin creates files in /tmp and does not
+delete them on exit
+    * [SUREFIRE-1055] - Parallel JUnit does not run all test methods with
+parallel=classesAndMethods perCoreThreadCount=false
+useUnlimitedThreads=true and threadCountMethods specified
+    * [SUREFIRE-1056] - fractional forkCount does not work as intended on
+single core machines
+    * [SUREFIRE-1063] - Typo in error message
+
+** Improvement
+    * [SUREFIRE-1030] - Remove nested exception wrappers
+    * [SUREFIRE-1047] - Add @{...} property evaluation for the argLine
+    * [SUREFIRE-1058] - TestSetFailedException trying to use
+maven-surefire-plugin + regular expressions for TestNG groups
+    * [SUREFIRE-1062] - TestNG listeners on separate lines in pom.xml
+
+** Wish
+    * [SUREFIRE-1025] - TestSetRunListener.testSetCompleted() should write
+files first before reporting the completion on console.
+
+
+Enjoy,
+
+-The Apache Maven team
+
+--001a11c14982d8243604f4b63b8a--
+

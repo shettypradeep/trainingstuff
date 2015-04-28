@@ -1,0 +1,81 @@
+From users-return-136127-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr 11 20:39:07 2014
+Return-Path: <users-return-136127-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 85C8810F2A
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 11 Apr 2014 20:39:07 +0000 (UTC)
+Received: (qmail 95665 invoked by uid 500); 11 Apr 2014 20:39:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 95319 invoked by uid 500); 11 Apr 2014 20:39:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 95309 invoked by uid 99); 11 Apr 2014 20:39:01 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 11 Apr 2014 20:39:01 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.216.172] (HELO mail-qc0-f172.google.com) (209.85.216.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 11 Apr 2014 20:38:55 +0000
+Received: by mail-qc0-f172.google.com with SMTP id i8so6561530qcq.3
+        for <users@maven.apache.org>; Fri, 11 Apr 2014 13:38:33 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:subject:message-id:in-reply-to
+         :references:mime-version:content-type:content-transfer-encoding;
+        bh=9iYiv1YKLvUV3KxeSZ4V5dtSwk/LOU6PSLY7ya4GrYw=;
+        b=G0Sz/hALGqZ/VaQTJRcceN5tweuppH/M3Kb1tfJR770+kXgFDzbU4kQqqbED3CZJnj
+         IdEI3BceMpTA96/h1ifZP+mpO+lNbHJkwELDKbee+CBEG6vq2lvTThjrj7tDLOFo9ziJ
+         bvDpurt4D1wOFH9wpFuRvXGwKmFNi5/g6VyjSZt6yhpvT0Pt53hV6fufgLfCiqceyprQ
+         8WqO8vdfnEoODyHhtEML9KKI0Wr6ofTwBDU1Hq3qT754VxONIFMlhsPPSSDNfJyDtpHi
+         Vnu7Eafb3sHLfcaVyQtYnH1N4cqamhMRWAKRFI/zvd4T0Ok0Yto1tNT6cNMqTsGG2Vl4
+         CiOw==
+X-Gm-Message-State: ALoCoQkRlHLtUQvzPzSTBmsp9xHZNJK7oqsej7G01G14t1dDO0bn5HL/qQEl2GoAieN2q+iycKz7
+X-Received: by 10.140.29.130 with SMTP id b2mr30784775qgb.48.1397248712791;
+        Fri, 11 Apr 2014 13:38:32 -0700 (PDT)
+Received: from localhost (HSI-KBW-37-209-111-144.hsi15.kabel-badenwuerttemberg.de. [37.209.111.144])
+        by mx.google.com with ESMTPSA id g7sm15558562qaf.14.2014.04.11.13.38.32
+        for <users@maven.apache.org>
+        (version=TLSv1.2 cipher=RC4-SHA bits=128/128);
+        Fri, 11 Apr 2014 13:38:32 -0700 (PDT)
+Date: Fri, 11 Apr 2014 22:38:28 +0200
+From: Bernd Eckenfels <ecki@zusammenkunft.net>
+To: users@maven.apache.org
+Subject: Re: Better way to capture output from a Maven job
+Message-ID: <20140411223828.00004c79.ecki@zusammenkunft.net>
+In-Reply-To: <1397248361973-5790942.post@n5.nabble.com>
+References: <1397248361973-5790942.post@n5.nabble.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Am Fri, 11 Apr 2014 13:32:42 -0700 (PDT)
+schrieb stug23 <pat.podenski@gmail.com>:
+
+> While this works okay, I would have hoped for a better way to return
+> a value from Maven. Is there a return/result parameter of some sort
+> such that I don't have to pick the result out of the entire text
+> output of the Maven job execution?
+
+You can either use maven to execute the steps which you would do in
+your script (for example using a ant or script plugin). In that case
+you can access properties directly or you can have maven write the
+result to a file (for example a property file) and then open that one.
+
+Gruss
+Bernd
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

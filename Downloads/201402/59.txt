@@ -1,0 +1,121 @@
+From users-return-135383-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb  7 14:47:05 2014
+Return-Path: <users-return-135383-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 377BC10812
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  7 Feb 2014 14:47:05 +0000 (UTC)
+Received: (qmail 10878 invoked by uid 500); 7 Feb 2014 14:47:00 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 10796 invoked by uid 500); 7 Feb 2014 14:47:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 10786 invoked by uid 99); 7 Feb 2014 14:46:59 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 07 Feb 2014 14:46:59 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [88.198.41.52] (HELO tux235.hoststar.ch) (88.198.41.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 07 Feb 2014 14:46:52 +0000
+Received: from mail-qa0-f52.google.com (mail-qa0-f52.google.com [209.85.216.52])
+	(authenticated bits=0)
+	by tux235.hoststar.ch (8.13.8/8.12.11) with ESMTP id s17EkSbZ010514
+	(version=TLSv1/SSLv3 cipher=RC4-SHA bits=128 verify=FAIL)
+	for <users@maven.apache.org>; Fri, 7 Feb 2014 15:46:29 +0100
+Received: by mail-qa0-f52.google.com with SMTP id j15so5325353qaq.39
+        for <users@maven.apache.org>; Fri, 07 Feb 2014 06:46:28 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=y0GWLWciNgOVzfdHNJQmqEzzt0esZPmhZ8Jdc9QV/Ng=;
+        b=dEpdg6yJ3mDtB4qA11q2qiQD2BqXAP9dK0SHsmQ/Hbt0Zg8GVb8rhmrAWhTToUVs0Q
+         CYn3PYRDdvisyhXp9lhoO1db0R37Dzmd45LCBXhRHhS917cQv7NeiKJ1u9qQPxzhex6L
+         uH1jOJZlNcvIArwcEqznaONaGAyjXOLGvl6fk20Bopb+QJavSeWhptJMn7XiH8AQ2b9f
+         6Pb9BK5LfydwNG6cQa5pDPnGOrdIscRVu71h5cPlzSbXmPOl7YhiSBzLq0tdbcgtivLo
+         j3faRzvBdirDGc48Hk0VFnFIFintEuI0rj79o74FoPiMN32/Unz+mXVZPVdeNc4pyZRg
+         Gm/Q==
+X-Received: by 10.140.100.135 with SMTP id s7mr21131551qge.114.1391784388383;
+ Fri, 07 Feb 2014 06:46:28 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.224.182.203 with HTTP; Fri, 7 Feb 2014 06:45:58 -0800 (PST)
+In-Reply-To: <op.xaw1uifokdkhrr@robertscholte>
+References: <CAJZYdzjdZKS69VX64izc104aeb2m0CZQqcR2BWCbaHp3mginjg@mail.gmail.com>
+ <op.xaw1uifokdkhrr@robertscholte>
+From: =?ISO-8859-1?Q?Reto_Habl=FCtzel?= <rethab@rethab.ch>
+Date: Fri, 7 Feb 2014 15:45:58 +0100
+Message-ID: <CAJZYdzi06SXxe1Sp3Nd20yU98oqiXZeZ-GVC7Mm6ptRkeNhCNQ@mail.gmail.com>
+Subject: Re: maven-ear-plugin silently overrides libraries
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1134e3aa1377a204f1d20e47
+X-Scanned-By: mimedefang-scanned
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1134e3aa1377a204f1d20e47
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hi Robert,
+
+this sure is an option but only once you know where all those
+ClassNotFoundExceptions are coming from. I would like to avoid them in the
+first place ;)
+
+- Reto
+
+
+On Fri, Feb 7, 2014 at 3:43 PM, Robert Scholte <rfscholte@apache.org> wrote=
+:
+
+> Hi,
+>
+> See http://maven.apache.org/plugins/maven-ear-plugin/
+> examples/customize-file-name-mapping.html for custom filename mapping.
+>
+> Robert
+>
+> Op Fri, 07 Feb 2014 15:21:54 +0100 schreef Reto Habl=FCtzel <
+> rethab@rethab.ch>:
+>
+>
+>  Hi there,
+>>
+>> I built an ear using the maven-ear-plugin (version 2.6).
+>>
+>> The ear is configured such that it includes two libraries into the lib
+>> folder, both with the same artifactId as well as the same version, but a
+>> different groupId. Now if I simply call 'mvn package' only the first one
+>> is
+>> included, but no warning whatsoever appears. Only once I turn on debuggi=
+ng
+>> (mvn --debug package), I see one subtle message:
+>> [DEBUG] Skipping artifact [jar:com.foo:bar:1.0] as it is already up to
+>> date
+>> at [lib/bar-1.0.jar]
+>>
+>> Wouldn't it make sense to either include the groupId in the filename or =
+at
+>> least make a check (that includes the groupId) beforehand if there are a=
+ny
+>> conflicts?
+>>
+>> Cheers,
+>> Reto
+>>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a1134e3aa1377a204f1d20e47--
+

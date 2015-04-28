@@ -1,0 +1,161 @@
+From users-return-136161-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr 16 05:27:41 2014
+Return-Path: <users-return-136161-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C380A1199E
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 16 Apr 2014 05:27:41 +0000 (UTC)
+Received: (qmail 5286 invoked by uid 500); 16 Apr 2014 05:27:36 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 5006 invoked by uid 500); 16 Apr 2014 05:27:36 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 4993 invoked by uid 99); 16 Apr 2014 05:27:33 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 16 Apr 2014 05:27:33 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bmathus@gmail.com designates 209.85.160.170 as permitted sender)
+Received: from [209.85.160.170] (HELO mail-yk0-f170.google.com) (209.85.160.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 16 Apr 2014 05:27:29 +0000
+Received: by mail-yk0-f170.google.com with SMTP id 9so9744481ykp.15
+        for <users@maven.apache.org>; Tue, 15 Apr 2014 22:27:06 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=ChG5kTNvVUSy/raTPa9f3iaEFBHx+3neUdEN3oF1BfE=;
+        b=zO8v74BTne3m0HN+6hG9p14hS/XxvCGNyXWHH85hVimttk0SqiGq1WRYXE6lUrnFGj
+         e1KnufVeo+nyoMxjZUVvkd3u0SUWnOLsHIQvJ4T82s1D+u7rHAS8fSPPrfICz9AEmTb6
+         Rzrj+TVuVcm/D4uZ5n4BxeQ9odV/sMmKz33LoA5fk5ehRo6jWcLy9MXGxFHp6S+8/RjZ
+         MS8mFYHdHZZeCs3sVKwAFchZ4y5Dl5QbOqy3sRt/93Ap6DtxiOTjsWs9T10Zak6LArps
+         +j6klxV7EV8j5IbsEVsIRa8rkjsocx77QVHIrwyjqqlBIjQaNSdssaEawvSdV5yTFV+m
+         tLZA==
+MIME-Version: 1.0
+X-Received: by 10.236.75.162 with SMTP id z22mr9874453yhd.32.1397626026778;
+ Tue, 15 Apr 2014 22:27:06 -0700 (PDT)
+Sender: bmathus@gmail.com
+Received: by 10.170.219.5 with HTTP; Tue, 15 Apr 2014 22:27:06 -0700 (PDT)
+Received: by 10.170.219.5 with HTTP; Tue, 15 Apr 2014 22:27:06 -0700 (PDT)
+In-Reply-To: <CF719BC3.23809%knar@yahoo-inc.com>
+References: <CF719BC3.23809%knar@yahoo-inc.com>
+Date: Wed, 16 Apr 2014 07:27:06 +0200
+X-Google-Sender-Auth: CsfFcOQQpMQsDpg-U9m23r2C6-c
+Message-ID: <CANWgJS7VBGiNLpQ0jpW515yRroBNUD=K8LTk6StMwegrm6MDSA@mail.gmail.com>
+Subject: Re: Generating Incorrect fat jar using maven-assembly-plugin in maven
+ 2 with war packaging
+From: Baptiste Mathus <bmathus@batmat.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=20cf300514bcdae6f104f7222a66
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--20cf300514bcdae6f104f7222a66
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+Which version of the war plugin are you using?
+
+BTW, you say it's OK with maven 3. Can't you just upgrade? Maven 2 is many
+years old and has already been officially end of lifed (
+http://maven.apache.org/maven-2.x-eol.html).
+
+And about what you're doing: I'm unsure about why you seem to unnecessarily
+try to package a fat jar although your target is a war?
+
+Cheers
+Le 16 avr. 2014 00:44, "Narayanan Krishnamoorthy" <knar@yahoo-inc.com> a
+=C3=A9crit :
+
+> Hi all,
+>
+> I have a default pom file in our codebase that has "war" packaging.
+>
+> We wanted to also generate a normal jar file (lean) and a fat jar with
+> dependencies along with the war file in our build using the same pom.xml.
+>
+> $ mvn -version
+> Apache Maven 2.2.1 (r801777; 2009-08-06 12:16:01-0700)
+> Java version: 1.7.0_45
+> Java home:
+> /Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre
+> Default locale: en_US, platform encoding: UTF-8
+> OS name: "mac os x" version: "10.8.5" arch: "x86_64" Family: "mac"
+>
+> We added the following plugins - maven=E2=80=93assembly-plugin to generat=
+e the far
+> jar and maven-jar-plugin to generate the lean jar.
+>
+>
+>             <plugin>
+>                 <artifactId>maven-assembly-plugin</artifactId>
+>                 <configuration>
+>                     <descriptorRefs>
+>
+> <descriptorRef>jar-with-dependencies</descriptorRef>
+>                     </descriptorRefs>
+>                 </configuration>
+>                 <executions>
+>                     <execution>
+>                         <id>assembly-all</id>
+>                         <phase>package</phase>
+>                         <goals>
+>                             <goal>single</goal>
+>                         </goals>
+>                     </execution>
+>                 </executions>
+>             </plugin>
+>
+>       <plugin>
+>           <groupId>org.apache.maven.plugins</groupId>
+>           <artifactId>maven-jar-plugin</artifactId>
+>           <executions>
+>               <execution>
+>                   <id>make-a-jar</id>
+>                   <phase>compile</phase>
+>                   <goals>
+>                       <goal>jar</goal>
+>                   </goals>
+>               </execution>
+>           </executions>
+>       </plugin>
+>
+> On mvn clean install,
+> It is generating all the 3 files : war, lean jar and far jar.
+>
+> But the problem is the jar-with-dependencies (fat jar) generated is
+> getting built in the wrong way. Its size becomes double that of the same
+> jar built by using Maven 3.0.4 (yes, I tried upgrading the maven to 3.0.4
+> to test and everything is good
+> With maven 3).
+>
+> The problem is only with maven 2 and to me it looks like since the overal=
+l
+> packaging phase of the pom is war , it is generating a wrong fat jar usin=
+g
+> the maven-assembly-plugin.  Many src classes are missing from the fat jar=
+.
+>
+> Anyone faced this issue with maven 2 and war packaging. Maven 3.0.4 is
+> just fine while generating the fat jar.
+>
+> Does maven-assembly-plugin have some restrictions with maven 2 and war
+> packaging ?
+>
+> Is there an alternate plugin to generate a jar with dependencies other
+> than maven-assembly-plugin ?
+>
+> Thanks in advance
+> Narayanan
+>
+>
+
+--20cf300514bcdae6f104f7222a66--
+

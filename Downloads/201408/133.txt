@@ -1,0 +1,104 @@
+From users-return-137029-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Aug 15 23:39:29 2014
+Return-Path: <users-return-137029-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E0735111B8
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 15 Aug 2014 23:39:29 +0000 (UTC)
+Received: (qmail 22346 invoked by uid 500); 15 Aug 2014 23:39:28 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 22264 invoked by uid 500); 15 Aug 2014 23:39:28 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 22244 invoked by uid 99); 15 Aug 2014 23:39:27 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 15 Aug 2014 23:39:27 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of rmakkaroffice@gmail.com designates 209.85.192.175 as permitted sender)
+Received: from [209.85.192.175] (HELO mail-pd0-f175.google.com) (209.85.192.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 15 Aug 2014 23:39:22 +0000
+Received: by mail-pd0-f175.google.com with SMTP id r10so4062398pdi.20
+        for <users@maven.apache.org>; Fri, 15 Aug 2014 16:39:02 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=subject:references:from:content-type:in-reply-to:message-id:date:to
+         :content-transfer-encoding:mime-version;
+        bh=5MEQyi49dNJdQUf2VNpgPty4YuQte2q3MCyvY2E2Pcg=;
+        b=Z1HlxgAKVEpdg4L6gqOpYeWOvSjVyUSPMaaFe8wFZzNbliuH+tqSf/yA2+PyYTe7cG
+         vz78ETv9NThwoNoc7Aause9AG42fE/Bf2hAsZ03eBp1MlgE2BDNZCBZIeyVQ28X4obLk
+         V4bSMzcIETIelhch9jYs0Chm7Y+4kxYJ/hU6taiygXXjCi3Rv4ZG93D9t/3D4y4fKICK
+         vZa5UbcMNNuFpq8AEFrtAwVm3+JYevC0tGDxQIFdflXxkvoNyxLbPFDHfoQUS7RMTGpe
+         XeQkJ5cS1bgmHQFEZL4C7t7unH8Mp0LPNoQCRP4f1EUgLreHT2hZyJA6H85wWqOLsLC3
+         MHaA==
+X-Received: by 10.66.121.197 with SMTP id lm5mr10159108pab.118.1408145942386;
+        Fri, 15 Aug 2014 16:39:02 -0700 (PDT)
+Received: from [192.168.12.120] (99-95-173-227.lightspeed.sndgca.sbcglobal.net. [99.95.173.227])
+        by mx.google.com with ESMTPSA id v8sm13680261pdr.45.2014.08.15.16.39.01
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 15 Aug 2014 16:39:01 -0700 (PDT)
+Subject: Re: How might I "enforce" the use of snapshot versions for non-release plugin builds?
+References: <B81B9B5A9410764CB2E96E822A0A409F45DC2144@WTPCPMBMEM02.ams.bnymellon.net>
+From: Office Ra <rmakkaroffice@gmail.com>
+Content-Type: text/plain;
+	charset=us-ascii
+X-Mailer: iPad Mail (9B206)
+In-Reply-To: <B81B9B5A9410764CB2E96E822A0A409F45DC2144@WTPCPMBMEM02.ams.bnymellon.net>
+Message-Id: <D80447E3-6262-4E1C-9242-008238FAD368@gmail.com>
+Date: Fri, 15 Aug 2014 16:39:01 -0700
+To: Maven Users List <users@maven.apache.org>
+Content-Transfer-Encoding: quoted-printable
+Mime-Version: 1.0 (1.0)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Mmo
+
+
+
+On Jul 17, 2014, at 9:24 AM, "Zerbe, John W" <john.zerbe@bnymellon.com> wrot=
+e:
+
+> Hi,
+> I would like to use the Maven Enforcer plugin to fail builds on our Jenkin=
+s server that do not have a -SNAPSHOT version and are not a maven release bu=
+ild.
+> I've had issues where either through lack of knowledge or as fallout from a=
+ failed release attempt where a developer tries to build what should be a sn=
+apshot deploy build but is really a release build. The build may fail becaus=
+e the artifact already exists in the release repository giving a rather cryp=
+tic "operation not allowed" error from our Nexus OSS server or it "works onc=
+e".  I want to be able to use enforcer in our top level "parent" pom to enfo=
+rce the use of release:prepare release:perform via Jenkins maven release plu=
+gin while also using it to do as many sanity checks as possible prior to an a=
+ctual "release" build.
+>=20
+> Thoughts?
+>=20
+> Thank you,
+> John
+>=20
+> The information contained in this e-mail, and any attachment, is confident=
+ial and is intended solely for the use of the intended recipient. Access, co=
+pying or re-use of the e-mail or any attachment, or any information containe=
+d therein, by any other person is not authorized. If you are not the intende=
+d recipient please return the e-mail to the sender and delete it from your c=
+omputer. Although we attempt to sweep e-mail and attachments for viruses, we=
+ do not guarantee that either are virus-free and accept no liability for any=
+ damage sustained as a result of viruses.=20
+>=20
+> Please refer to http://disclaimer.bnymellon.com/eu.htm for certain disclos=
+ures relating to European legal entities.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

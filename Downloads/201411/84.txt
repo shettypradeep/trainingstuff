@@ -1,0 +1,101 @@
+From users-return-137685-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Nov  3 09:39:29 2014
+Return-Path: <users-return-137685-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 501AE1734C
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  3 Nov 2014 09:39:29 +0000 (UTC)
+Received: (qmail 19527 invoked by uid 500); 3 Nov 2014 09:39:27 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 19450 invoked by uid 500); 3 Nov 2014 09:39:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 19438 invoked by uid 99); 3 Nov 2014 09:39:26 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 03 Nov 2014 09:39:26 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.214.179 as permitted sender)
+Received: from [209.85.214.179] (HELO mail-ob0-f179.google.com) (209.85.214.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 03 Nov 2014 09:39:22 +0000
+Received: by mail-ob0-f179.google.com with SMTP id m8so8718464obr.38
+        for <users@maven.apache.org>; Mon, 03 Nov 2014 01:37:32 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=Ou4mXAtnx+4xtCl5pPkegq77MgAA1FoHy2L+KbLm0Yg=;
+        b=rt8cOZiOUK5PasFbGlGyGKia9voZnTQn07chzAw1tusH71rAqEn/P7Cl5QRjM+al9b
+         FRCAXjN4tt6kNqcm4Us/nQxcu6cdDMduoyb9IFqp348MC53BBFhFNZK86M2kt97f3znu
+         1h6MMZN3C5lDMhUQ6lYZrDjo8GBUfcG0ruA1sG0jTHMqpaJLY8MeNoXF9Bhumm/hV6iJ
+         YtyE7m5q27Hrh1cWGQvjAfiUtP2K152FIqAqy3F7AcrWTzvQ+xRCOaUZvEx7ZiXaSajV
+         u2qwNSjQAJa/w1E7rR3RUbezISSa2m6Wp5NavPO0t5cFgSZpgr8aueG7zwLDaS1ipj2s
+         HeSg==
+MIME-Version: 1.0
+X-Received: by 10.202.73.82 with SMTP id w79mr564355oia.68.1415007452235; Mon,
+ 03 Nov 2014 01:37:32 -0800 (PST)
+Received: by 10.60.116.39 with HTTP; Mon, 3 Nov 2014 01:37:32 -0800 (PST)
+In-Reply-To: <CADVp3v9Bi3H5LLiLkrzUzKHND+QNvN77Y5dwvJJrckmKQWU4UA@mail.gmail.com>
+References: <CAE8kHEwi-wqWygidE88k+SkM9zvoRyTro2GFEFmsW-ypkpSSiw@mail.gmail.com>
+	<CADVp3v9Y+HTn-JPuYz_jAd3yoayW+xN0YyZZ5Gwof5=_fd9bEQ@mail.gmail.com>
+	<CAE8kHEy7hsUUZx9webzFgELY1HsdZrVYvbr_j34BxB1kn-boHg@mail.gmail.com>
+	<CA+nPnMy89DvHGM0yV6kKTjxpOnbbKoO+bOHELx0GE9T6x4fzmQ@mail.gmail.com>
+	<CADVp3v9Bi3H5LLiLkrzUzKHND+QNvN77Y5dwvJJrckmKQWU4UA@mail.gmail.com>
+Date: Mon, 3 Nov 2014 09:37:32 +0000
+Message-ID: <CA+nPnMy9msfBJ_1yGJLY9V1CvL2dFaXU-sMDEbV4dWoRFBr39Q@mail.gmail.com>
+Subject: Re: [pre-verify over deploy]
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113df0528b8e6b0506f118d0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113df0528b8e6b0506f118d0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Well I knew I'd written something on that topic... but re-reading I am
+surprised at how much information I managed to cram in there without it
+feeling over dense (for me)
+
+BTW I am of the *never deploy -SNAPSHOTs* camp but I recognise that there
+are other people out there... and I have to interact with them some times
+and that post is helpful to explain things to them!
+
+On 3 November 2014 01:57, Barrie Treloar <baerrach@gmail.com> wrote:
+
+> On 29 October 2014 20:18, Stephen Connolly <
+> stephen.alan.connolly@gmail.com>
+> wrote:
+>
+> >
+> >
+> http://developer-blog.cloudbees.com/2012/12/should-you-deploy-snapshots.h=
+tml
+>
+>
+> Thanks for writing that up!
+> I'll remember to point people there instead of having to remember
+> half-baked stuff and type :)
+>
+> This is a useful piece of advice
+> "especially in conjunction with the Versions Maven Plugin
+> <http://mojo.codehaus.org/versions-maven-plugin/lock-snapshots-mojo.html>
+> which
+> has goals for =E2=80=9Clocking=E2=80=9D and =E2=80=9Cunlocking=E2=80=9D y=
+our -SNAPSHOT dependencies to the
+> current timestamp version, thereby removing uncertainty. "
+> It will allow you to live dangerously on shifting sands and then when you
+> get sucked under to go back and lock to a working version.
+> But I still think you are better off avoiding that problem in the first
+> place.
+>
+
+--001a113df0528b8e6b0506f118d0--
+

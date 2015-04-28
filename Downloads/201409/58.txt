@@ -1,0 +1,162 @@
+From users-return-137192-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Sep  4 00:04:59 2014
+Return-Path: <users-return-137192-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id B304F11D53
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  4 Sep 2014 00:04:59 +0000 (UTC)
+Received: (qmail 84023 invoked by uid 500); 4 Sep 2014 00:04:57 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 83935 invoked by uid 500); 4 Sep 2014 00:04:57 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 83923 invoked by uid 99); 4 Sep 2014 00:04:57 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 04 Sep 2014 00:04:57 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of burtonator2011@gmail.com designates 209.85.215.42 as permitted sender)
+Received: from [209.85.215.42] (HELO mail-la0-f42.google.com) (209.85.215.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 04 Sep 2014 00:04:31 +0000
+Received: by mail-la0-f42.google.com with SMTP id mc6so10964696lab.29
+        for <users@maven.apache.org>; Wed, 03 Sep 2014 17:04:30 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=cO38DuboJtcxlM8O1riLVS65/M5qJMAC1mW7gp1QXxc=;
+        b=ZlW3ooPBgQkQV3B6kqQLOL15u/vbkybXUwIQILmLcdCX8ze3UG3DQLCZT3p1LZIk7d
+         Hv3gcpCACityc1HeMYb/cagbM9PvAoV5fUYtfX8FgWhLEbg18uzeKBgS9XIktBOUHlBn
+         J9UhUkeUokcPoJaXfc3y8GuBLqDuaYD/VvIVkOMWJV6aNKN9OEALjN4DHf86mduQ2iWL
+         g+084tBkFxT2D8C3WtvV3Qke7dqkfYvgKXgUM9X7Tws9LLyQAbmetTqwjwpBfbmTIw4f
+         V6j7eJED843OPvRrhBYVFWRl+Au7+Rq7dWDdO4XS0JJfNvHdJ/YLZSLzIzGwmPsHRG5S
+         GY8g==
+X-Received: by 10.152.207.36 with SMTP id lt4mr741344lac.72.1409789070684;
+ Wed, 03 Sep 2014 17:04:30 -0700 (PDT)
+MIME-Version: 1.0
+Sender: burtonator2011@gmail.com
+Received: by 10.112.75.10 with HTTP; Wed, 3 Sep 2014 17:04:10 -0700 (PDT)
+In-Reply-To: <17624616.3gEsDMnMjT@herve-desktop>
+References: <CAAZU44=9_hHGhu=f2FynzVmbEQ6sftcoXJsV1W6wKDF1xR2Wzw@mail.gmail.com>
+ <CAPCjjnGB_NawJzZndx1DFB4+V+y=cQb8PBDdyu4bxCukFwWeLQ@mail.gmail.com> <17624616.3gEsDMnMjT@herve-desktop>
+From: Kevin Burton <burton@spinn3r.com>
+Date: Wed, 3 Sep 2014 17:04:10 -0700
+X-Google-Sender-Auth: 31tWy3Fxrji4otr-k5Bo6_eCZHw
+Message-ID: <CAAZU44mVSstpbYW-RMgRo4T5+tbZnCSH=Wf0rUgasV4AATzFdQ@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Unable_to_create_markdown_doxia=E2=80=A6_files_just_ig?=
+	=?UTF-8?Q?nored=2E?=
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113465d4c435780502321809
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113465d4c435780502321809
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Ah..  That nailed it guys.  The problem was the documentation still
+recommends using the plugin.  So that=E2=80=99s where I was hung up.
+
+Appreciate the help!
+
+
+On Tue, Sep 2, 2014 at 11:25 PM, Herv=C3=A9 BOUTEMY <herve.boutemy@free.fr>
+wrote:
+
+> yes, you should remove this explicit module
+>
+> FYI, you can't use Doxia Markdown 1.5 with m-site-p that uses Doxia 1.6
+> natively: there was a little refactoring in Doxia 1.6 that is backward
+> compatible (you can use new parsers with old Doxia core) but not forward
+> compatible (you cannot use old parsers with new Doxia core)
+>
+> see http://jira.codehaus.org/browse/DOXIA-510 if you're interested in
+> internals (and this change is about helping new people understand the cod=
+e,
+> then contribute: yes, we need people's contribution)
+>
+> Regards,
+>
+> Herv=C3=A9
+>
+> Le mardi 2 septembre 2014 19:44:44 Dan Tran a =C3=A9crit :
+> > Remove doxia for markdown, it already included
+> >
+> > -D
+> >
+> > On Tuesday, September 2, 2014, Kevin Burton <burton@spinn3r.com> wrote:
+> > > I=E2=80=99m trying to create a static site using doxia and the markdo=
+wn plugin
+> and
+> > > it seems to be failing.
+> > >
+> > > Basically, apt and xdocs works, but markdown doesn=E2=80=99t.
+> > >
+> > > I=E2=80=99m using the markdown plugin:
+> > >             <plugin>
+> > >
+> > >                 <groupId>org.apache.maven.plugins</groupId>
+> > >                 <artifactId>maven-site-plugin</artifactId>
+> > >                 <version>3.4</version>
+> > >                 <dependencies>
+> > >
+> > >                     <dependency>
+> > >
+> > >                         <groupId>org.apache.maven.doxia</groupId>
+> > >                         <artifactId>doxia-module-markdown</artifactId=
+>
+> > >                         <version>1.5</version>
+> > >
+> > >                     </dependency>
+> > >
+> > >                 </dependencies>
+> > >
+> > >             </plugin>
+> > >
+> > > =E2=80=A6 and then run
+> > >
+> > >    mvn site
+> > >
+> > > =E2=80=A6 but no markdown files are picked up.
+> > >
+> > > If I use xdocs or apt they work just fine.
+> > >
+> > > I=E2=80=99m placing my files in src/site/markdown and they have .md e=
+xtensions.
+> > >
+> > > =E2=80=A6 anything else I should try?  is there a debug mode?
+> > >
+> > > --
+> > >
+> > > Founder/CEO Spinn3r.com
+> > > Location: *San Francisco, CA*
+> > > blog: http://burtonator.wordpress.com
+> > > =E2=80=A6 or check out my Google+ profile
+> > > <https://plus.google.com/102718274791889610666/posts>
+> > > <http://spinn3r.com>
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+--=20
+
+Founder/CEO Spinn3r.com
+Location: *San Francisco, CA*
+blog: http://burtonator.wordpress.com
+=E2=80=A6 or check out my Google+ profile
+<https://plus.google.com/102718274791889610666/posts>
+<http://spinn3r.com>
+
+--001a113465d4c435780502321809--
+

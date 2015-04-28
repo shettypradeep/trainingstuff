@@ -1,0 +1,90 @@
+From users-return-135269-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 28 17:53:06 2014
+Return-Path: <users-return-135269-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4AADB10C64
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 28 Jan 2014 17:53:06 +0000 (UTC)
+Received: (qmail 126 invoked by uid 500); 28 Jan 2014 17:52:56 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99912 invoked by uid 500); 28 Jan 2014 17:52:56 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99904 invoked by uid 99); 28 Jan 2014 17:52:56 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 17:52:56 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [74.125.83.50] (HELO mail-ee0-f50.google.com) (74.125.83.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 17:52:50 +0000
+Received: by mail-ee0-f50.google.com with SMTP id d17so391276eek.9
+        for <users@maven.apache.org>; Tue, 28 Jan 2014 09:52:30 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to
+         :content-type;
+        bh=/OhmthK43pLnc3M0u5SBzUL0ZAiIa9ZjZWh7a2ldFyA=;
+        b=FSQI6bQNW/Y0G2Yj8yM/XM9tWskYdHhFLyZiy840rRF/AQQqGgzdz9ZZVGS/05FZmz
+         AbJyojWvgxtQK54xF9f9ubKRiXjFiOH9LqFKOmWZ5gojFdmZz/dHMSV2A9IBqA9eWn7+
+         FFINKAchUl89VRC4p6CA0RdtWqnle7UqPVzNrUa9kB8TX+Ncz7EWkDa9rxrbaqEMJMm4
+         VSTJk7AdltI1+3MWbNHKak6PzDpa5qKlme9nqC6DOqQA+DqE4REjoVfJ9vTJ6aiUWyS2
+         mRDGMNbtOt8u5c163RDXP91+zH386NFe5t61FE/KlpY48/5QIcs9rBc0AvTZX7Tr9XeU
+         qUDg==
+X-Gm-Message-State: ALoCoQmUWziqSV5aHEABs+sCtdo6BP6tset+2zHmFsTPBEonAIzH8Suu6Z0X+qJprF5f1D4kw8L3
+MIME-Version: 1.0
+X-Received: by 10.14.69.200 with SMTP id n48mr3198164eed.54.1390931550265;
+ Tue, 28 Jan 2014 09:52:30 -0800 (PST)
+Received: by 10.14.71.72 with HTTP; Tue, 28 Jan 2014 09:52:30 -0800 (PST)
+Date: Tue, 28 Jan 2014 12:52:30 -0500
+Message-ID: <CAC7GPxZMMO-OiWW49P2-d6NCCp8saMQ2rQmTcBcFVUUNBUnHmw@mail.gmail.com>
+Subject: Can't exclude org.mortbay.jetty:servlet-api from cobertura dependency
+From: Andrew Pennebaker <apennebaker@42six.com>
+To: Maven Users <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0160ce10f5f59804f10b7cab
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0160ce10f5f59804f10b7cab
+Content-Type: text/plain; charset=ISO-8859-1
+
+I want to use Cobertura for code coverage, but its dependencies are
+interfering with my XML parsing and Jetty serving. I'm able to resolve most
+of these by using <exclusion>'s, but Maven is somehow *still* putting one
+dependency in particular, jetty servlet-api, on the CLASSPATH.
+
+pom.xml:
+
+...
+  <dependencies>
+    <dependency>
+      <groupId>net.sourceforge.cobertura</groupId>
+      <artifactId>cobertura</artifactId>
+      <version>2.0.3</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.mortbay.jetty</groupId>
+          <artifactId>servlet-api</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+...
+
+As confirmed by `mvn dependency:tree`, cobertura is still bringing jetty's
+servlet-api onto the CLASSPATH. Am I doing something wrong?
+
+-- 
+Cheers,
+
+Andrew Pennebaker
+apennebaker@42six.com
+
+--089e0160ce10f5f59804f10b7cab--
+

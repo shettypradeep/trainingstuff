@@ -1,0 +1,143 @@
+From users-return-136102-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Apr  7 18:35:05 2014
+Return-Path: <users-return-136102-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 220C710844
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  7 Apr 2014 18:35:05 +0000 (UTC)
+Received: (qmail 34846 invoked by uid 500); 7 Apr 2014 18:35:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 33628 invoked by uid 500); 7 Apr 2014 18:34:53 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 32970 invoked by uid 99); 7 Apr 2014 18:34:49 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 07 Apr 2014 18:34:49 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,WEIRD_PORT
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.220.41 as permitted sender)
+Received: from [209.85.220.41] (HELO mail-pa0-f41.google.com) (209.85.220.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 07 Apr 2014 18:34:42 +0000
+Received: by mail-pa0-f41.google.com with SMTP id fa1so7140725pad.14
+        for <users@maven.apache.org>; Mon, 07 Apr 2014 11:34:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject
+         :content-type;
+        bh=0rhkOWoibpwBTIuVouxLXbUaRJoD+wUpa+CLv2GAMzQ=;
+        b=RdAKG8aN03E28HgJ/ajBt/Y8WaJ73xuEJR1LspRSRNYfyZ1mAgIIphZIrExaYzCu5F
+         WWdPxQqW/E32DQCMKSuJA4unzjtOCPBqPgD1a+8i9hqW5/EkVcA4xRuCF8e4F5FKWK+X
+         K+B1siAm/RpcGCqISFGbVVw9D55NigRYFhgmS6UDb7yJVTnmj/INv28lj/Qa3S827IIf
+         BV9ILS16HgsWpxFxzqpvbvRYXw57sZKJrZv9YfZ6iRcHZ4JyfZgaJYHYdvK/KJxZ4Vcl
+         k6GA/fuADKgL4aP8WKCvpBeRasJf/TGKsy3gF2Qu2IBTrobr+ozIaKt2iZC1YKQvnXdl
+         oUew==
+X-Received: by 10.66.155.102 with SMTP id vv6mr32749200pab.89.1396895659820;
+        Mon, 07 Apr 2014 11:34:19 -0700 (PDT)
+Received: from [192.168.0.17] (S0106602ad07f9cfa.vc.shawcable.net. [24.85.131.20])
+        by mx.google.com with ESMTPSA id op3sm38335270pbc.40.2014.04.07.11.34.18
+        for <multiple recipients>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Mon, 07 Apr 2014 11:34:18 -0700 (PDT)
+Message-ID: <5342EFAB.8080306@gmail.com>
+Date: Mon, 07 Apr 2014 11:34:19 -0700
+From: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: maven users <users@maven.apache.org>, 
+ npanday-users@incubator.apache.org
+Subject: Maven cannot see my DLL artifact
+Content-Type: multipart/alternative;
+ boundary="------------060806020600040907030602"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------060806020600040907030602
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+
+I cannot seem to get Maven to see my dll artifact.
+
+I have read 
+https://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException 
+
+
+I can see it in my local repository, but Maven seems to be ignoring my 
+local repository, even though there is no 
+LocalRepositoryNotAccessibleException
+
+I can see it in my nexus repository, and Maven is complaining it cannot 
+find the artifact there. If I delete the artifact from my local 
+repository, Maven has no trouble downloading the metadata and pom, but 
+for some reason it cannot see the dll artifact.
+
+/*Is Maven somehow choking on the fact that my artifact is a dll, and 
+not a jar, or something else?*/
+
+I remember fighting with problems like this in the past, but I cannot 
+remember how I resolved them.
+
+Cheers, Eric
+
+D:\Users\Eric\Software\Project\Repositories\csharp-windows-elevate\elevate>mvn 
+test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] 
+------------------------------------------------------------------------
+[INFO] Building elevate.exe 0.0.21-SNAPSHOT
+[INFO] 
+------------------------------------------------------------------------
+Downloading: 
+http://localhost:8081/nexus/content/groups/public/net/kolotyluk/windows/elevate/elevate-common/0.0.21-SNAPSHOT/maven-metadata.xml
+Downloaded: 
+http://localhost:8081/nexus/content/groups/public/net/kolotyluk/windows/elevate/elevate-common/0.0.21-SNAPSHOT/maven-metadata.xml 
+(2 KB at 6.4 KB/sec)
+Downloading: 
+http://localhost:8081/nexus/content/groups/public/net/kolotyluk/windows/elevate/elevate-common/0.0.21-SNAPSHOT/elevate-common-0.0.21-20140407.175953-1.pom
+Downloaded: 
+http://localhost:8081/nexus/content/groups/public/net/kolotyluk/windows/elevate/elevate-common/0.0.21-SNAPSHOT/elevate-common-0.0.21-20140407.175953-1.pom 
+(10 KB at 237.8 KB/sec)
+Downloading: 
+http://localhost:8081/nexus/content/groups/public/net/kolotyluk/windows/csharp-windows-elevate/0.0.21-SNAPSHOT/maven-metadata.xml
+Downloading: 
+http://localhost:8081/nexus/content/groups/public/net/kolotyluk/windows/csharp-windows-elevate/0.0.21-SNAPSHOT/csharp-windows-elevate-0.0.21-SNAPSHOT.pom
+[INFO] 
+------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] 
+------------------------------------------------------------------------
+[INFO] Total time: 2.505s
+[INFO] Finished at: Mon Apr 07 11:00:11 PDT 2014
+[INFO] Final Memory: 32M/1963M
+[INFO] 
+------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project elevate-exe: Could not resolve 
+dependencies for project 
+net.kolotyluk.windows.elevate:elevate-exe:dotnet-executable:0.0.21-SNAPSHOT: 
+Failed to collect dependencies at 
+net.kolotyluk.windows.elevate:elevate-common:dll:0.0.21-SNAPSHOT: Failed 
+to read artifact descriptor for 
+net.kolotyluk.windows.elevate:elevate-common:dll:0.0.21-SNAPSHOT: Could 
+not find artifact 
+net.kolotyluk.windows:csharp-windows-elevate:pom:0.0.21-SNAPSHOT in 
+local-nexus (http://localhost:8081/nexus/content/groups/public) -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the 
+-e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, 
+please read the following articles:
+[ERROR] [Help 1] 
+http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+
+
+
+--------------060806020600040907030602--
+

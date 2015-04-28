@@ -1,0 +1,72 @@
+From users-return-136732-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jul  7 05:58:15 2014
+Return-Path: <users-return-136732-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 194AB11DCC
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  7 Jul 2014 05:58:15 +0000 (UTC)
+Received: (qmail 25526 invoked by uid 500); 7 Jul 2014 05:58:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 25439 invoked by uid 500); 7 Jul 2014 05:58:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 25428 invoked by uid 99); 7 Jul 2014 05:58:12 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 07 Jul 2014 05:58:12 +0000
+X-ASF-Spam-Status: No, hits=0.7 required=5.0
+	tests=SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 07 Jul 2014 05:58:08 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <conny.kuehne@web.de>)
+	id 1X41vv-0006r3-Hw
+	for users@maven.apache.org; Sun, 06 Jul 2014 22:57:47 -0700
+Date: Sun, 6 Jul 2014 22:57:47 -0700 (PDT)
+From: ck_ <conny.kuehne@web.de>
+To: users@maven.apache.org
+Message-ID: <1404712667549-5799548.post@n5.nabble.com>
+In-Reply-To: <CAHJFET7iMjPaRMbmm5rBXWPYs_RPMU5PvtS=BhB2gXLbhgPriw@mail.gmail.com>
+References: <1404468266362-5799270.post@n5.nabble.com> <CAHJFET7iMjPaRMbmm5rBXWPYs_RPMU5PvtS=BhB2gXLbhgPriw@mail.gmail.com>
+Subject: Re: Overriding Plugin Configuration of POM on Command Line
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi, 
+
+thanks for the answer.
+
+
+You can set the class as a property and override it
+
+But wouldn't that be kind of inconsistent for example when I define extra
+configuration parameters or extra dependencies for the plugin? In that case
+I would have to specify the parameters and dependencies by means of
+properties as well, wouldn't I?
+
+Is there another way? 
+
+Best,
+Conny
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Overriding-Plugin-Configuration-of-POM-on-Command-Line-tp5799270p5799548.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

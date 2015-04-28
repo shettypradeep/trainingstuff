@@ -1,0 +1,111 @@
+From users-return-136228-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 22 16:08:57 2014
+Return-Path: <users-return-136228-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 40EBE11AB6
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 22 Apr 2014 16:08:57 +0000 (UTC)
+Received: (qmail 76333 invoked by uid 500); 22 Apr 2014 16:08:50 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 76260 invoked by uid 500); 22 Apr 2014 16:08:50 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 76251 invoked by uid 99); 22 Apr 2014 16:08:50 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Apr 2014 16:08:49 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.215.50 as permitted sender)
+Received: from [209.85.215.50] (HELO mail-la0-f50.google.com) (209.85.215.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Apr 2014 16:08:44 +0000
+Received: by mail-la0-f50.google.com with SMTP id pv20so4500996lab.37
+        for <users@maven.apache.org>; Tue, 22 Apr 2014 09:08:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=jK93xYypjqGQ6H8twm/fTCkK8qz3Bk6NG7KhAuqiT5I=;
+        b=mKF19vG5qBZqUxrzqirhJ0BK1i617GB2n+b+Ih3PPeUBMo2BIUNrnEvOrlTdrDPbyJ
+         yTA+pkqnv7A8y90jd4pSajjj8q1F/nWYhWX7gAGL8iHN14K22C3YRC4h3m5BocsexluB
+         b2wOdmCUaShyc9o+zrsUwG+bJ8l5ayXgW+DGrL6cNPpco2h+Emd1kNnYNM68x+SbKzrS
+         qky7FZYo4nfj9k94ur3+cruWbYpdxX8FS6Bu7sf/kBvbKI3pCqq/TLTe1pP3khueEA21
+         ycUL610Spw/ZMDzkPrTB1CXgWNcgCjsnYG5+egBhENIKXjLdW1gZpQ3OUuqPhIXllhRD
+         Foyg==
+MIME-Version: 1.0
+X-Received: by 10.152.184.66 with SMTP id es2mr32194747lac.22.1398182902899;
+ Tue, 22 Apr 2014 09:08:22 -0700 (PDT)
+Received: by 10.114.48.6 with HTTP; Tue, 22 Apr 2014 09:08:22 -0700 (PDT)
+Date: Tue, 22 Apr 2014 09:08:22 -0700
+Message-ID: <CAPCjjnGC4Xt4bngP3Szmb-khSOVcT4Aen4BooyuXoo_tbDtwtw@mail.gmail.com>
+Subject: Re: Perforce Maven Integration ??
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>, brian@jaxzin.com
+Content-Type: multipart/alternative; boundary=001a1135e20c42dcb704f7a3d397
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1135e20c42dcb704f7a3d397
+Content-Type: text/plain; charset=UTF-8
+
+Hi Brian,  since you already upload p4java 2013.1, could you upload the
+latest 2013.2? [1]
+
+Very much appreciated
+
+-D
+
+[1] http://ftp.perforce.com/perforce/r13.2/bin.java/
+
+
+On Wed, Apr 16, 2014 at 2:25 PM, Brian Jackson <brian@jaxzin.com> wrote:
+
+> On Tue, Apr 15, 2014 at 10:33 PM, Dan Tran <dantran@gmail.com> wrote:
+>
+> > Hello,
+> >
+> > I am currently not able to get Perforce with SSL connection working.  My
+> > guess here is both currently built-in perforce provider at maven scm, and
+> >  the one from Perforce ( p4maven) are not support this new feature yet
+> > which is available around 2012.  ( also the last p4maven release is
+> around
+> > 2011 )
+> >
+>
+> Yeah, Perforce (the company) doesn't support the publishing of p4maven to
+> Central. I had to do it myself using the Sonatype OSSH Repository.
+>
+>
+> >
+> > is Perforce well supported and used with Maven?
+> >
+>
+> Well-supported is debatable since its subjective. Perforce, like many
+> commercial product, often get the same level of open source support when
+> open source alternatives exist (git, svn).
+>
+>
+> >
+> > are there any Maven shops with Perforce which actively using maven
+> release
+> > plugin?
+> >
+>
+> Yes, we've been using it for many years to cut releases at ESPN through our
+> CI server. Unfortunately we don't use SSL so I can't help you with your
+> specific issue.
+>
+>
+> >
+> > Thanks
+> >
+> > -Dan
+> >
+>
+
+--001a1135e20c42dcb704f7a3d397--
+

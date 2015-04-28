@@ -1,0 +1,61 @@
+From users-return-136605-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jun 17 19:49:49 2014
+Return-Path: <users-return-136605-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 88F0611360
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 17 Jun 2014 19:49:49 +0000 (UTC)
+Received: (qmail 58087 invoked by uid 500); 17 Jun 2014 19:49:47 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 57999 invoked by uid 500); 17 Jun 2014 19:49:47 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 57988 invoked by uid 99); 17 Jun 2014 19:49:47 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 17 Jun 2014 19:49:47 +0000
+Received: from localhost (HELO [192.168.1.6]) (127.0.0.1)
+  (smtp-auth username michaelo, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Tue, 17 Jun 2014 19:49:46 +0000
+Message-ID: <53A09BCC.50809@apache.org>
+Date: Tue, 17 Jun 2014 21:49:32 +0200
+From: Michael Osipov <michaelo@apache.org>
+User-Agent: Mozilla/5.0 (Windows NT 5.1; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Running plugin with "own" classloader for slf4j in maven 3.2
+References: <1403033663489-5796426.post@n5.nabble.com>
+In-Reply-To: <1403033663489-5796426.post@n5.nabble.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Am 2014-06-17 21:34, schrieb alexlehm:
+> Until Maven 3.0.x it was possible to run plugins that use slf4j with a
+> configuration of slf4j chosen by the project files (e.g. slf4j log4j binding
+> or a simplelogging config in the project), since Maven wasn't using slf4j
+> itself. Now in 3.2, the slf4j classes are loaded by Maven and so use the
+> ones that are stored in the lib and config dirs of Maven.
+>
+> It is possible to remove the slf4j related files from maven and use other
+> ones instead, but I would prefer it if I could select the binding inside the
+> project. I assume that this requires some kind of classpath change to force
+> the plugin to use a new instance of slf4j and use the files select in the
+> project, but I have no idea how to do that (or if it is possible at all).
+
+You can swap slf4j-simple against Logback if you like. As far as I know, 
+plugins are isolated aren't they? Does SLF4J report duplicate bindings 
+if you try so?
+
+M
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

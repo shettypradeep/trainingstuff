@@ -1,0 +1,60 @@
+From users-return-137287-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Sep 14 17:35:50 2014
+Return-Path: <users-return-137287-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3713311334
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 14 Sep 2014 17:35:50 +0000 (UTC)
+Received: (qmail 17914 invoked by uid 500); 14 Sep 2014 17:35:47 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 17806 invoked by uid 500); 14 Sep 2014 17:35:47 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 17776 invoked by uid 99); 14 Sep 2014 17:35:47 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 14 Sep 2014 17:35:47 +0000
+Received: by minotaur.apache.org (Postfix, from userid 6004)
+	id 6175811332; Sun, 14 Sep 2014 17:35:47 +0000 (UTC)
+To: announce@maven.apache.org
+Subject: [ANN] Apache Maven Shared Component: Maven Dependency Analyzer Version 1.5 Released
+Cc: users@maven.apache.org,dev@maven.apache.org
+Message-Id: <20140914173547.6175811332@minotaur.apache.org>
+Date: Sun, 14 Sep 2014 17:35:47 +0000 (UTC)
+From: khmarbaise@apache.org (Karl Heinz Marbaise)
+
+The Apache Maven team is pleased to announce the release of the 
+Apache Maven Shared Component: Maven Dependency Analyzer Version 1.5
+
+http://maven.apache.org/shared/maven-dependency-analyzer/
+
+Analyzes the dependencies of a project for undeclared or unused artifacts.
+
+<plugin>
+  <groupId>org.apache.maven.shared</groupId>
+  <artifactId>maven-dependency-analyzer</artifactId>
+  <version>1.5</version>
+</plugin>
+
+Bugs:
+
+ * [MSHARED-285] - Port tests to JUnit 4.11
+ * [MSHARED-307] - Performance: The implementation of DefaultClassAnalyzer unnecessarily scans jar files bodies
+ * [MSHARED-323] - DefaultProjectDependencyAnalyzer does not correctly transform Files with Spaces to URLs
+ * [MSHARED-327] - maven-dependency-analyzer not compatible with Java 8
+
+Enjoy,
+
+-The Maven team
+Karl-Heinz Marbaise
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,76 @@
+From users-return-135491-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb 14 14:30:48 2014
+Return-Path: <users-return-135491-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0F11D107DE
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 14 Feb 2014 14:30:48 +0000 (UTC)
+Received: (qmail 87117 invoked by uid 500); 14 Feb 2014 14:30:43 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 86486 invoked by uid 500); 14 Feb 2014 14:30:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 86477 invoked by uid 99); 14 Feb 2014 14:30:42 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 14:30:42 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of waynefay@gmail.com designates 209.85.220.52 as permitted sender)
+Received: from [209.85.220.52] (HELO mail-pa0-f52.google.com) (209.85.220.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 14:30:37 +0000
+Received: by mail-pa0-f52.google.com with SMTP id bj1so12347513pad.11
+        for <users@maven.apache.org>; Fri, 14 Feb 2014 06:30:16 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=4ly3cZtU/1tMl4SLpM5QhqinPZDO+hPzjso7l2Ece2o=;
+        b=ufl9wid1sN4KDl9jrpmBBYo4XNXKTQGdKxGn5sPsLEWoH28f5BH7FBd/7kLUMDswTm
+         ceWmGCd5tKhhJvXKwuA61pTVqOlLX2Q/Pfda7gcve+qJN6bl6Q7+zmTcn9X+a2THwbjV
+         NXs0irwYACxKVFsBr1dHxPPFMsuWK2I+YnALY2XGX3QlGbRh5H6nx+Zg7a2y4IVaAzUo
+         fe+GbvYXleLI4vwydX8XUeAhc1Ug/B1MgcsKCNocbf+Xg4GD5hivem7TdC0RP1nZZ+Bz
+         H/gZF+wxjxVCws4D7LP7ngYkjgnD92G4KdwiJ4MafsZM2/827FmKGOFfIKV8QyA619Ur
+         PYJg==
+X-Received: by 10.68.229.106 with SMTP id sp10mr9428937pbc.23.1392388216810;
+ Fri, 14 Feb 2014 06:30:16 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Fri, 14 Feb 2014 06:29:56 -0800 (PST)
+In-Reply-To: <1392386564045-5784848.post@n5.nabble.com>
+References: <1392386564045-5784848.post@n5.nabble.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Fri, 14 Feb 2014 08:29:56 -0600
+Message-ID: <CALy+7U=5QmGECwtdSN2p5cx5H0daN3wQTZ7tmUKcTLfKUwbR5g@mail.gmail.com>
+Subject: Re: Prevent installing archives to local repository
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> i see, that some of the files are installing to the local repository and
+> some not. The files that i need are installed to the repository, but there
+> is also a file that should not be installed. My question is how maven
+
+Can you be more specific about "the file that should not be
+installed"? What is special about it?
+
+> install plugin detect which file should be installed and which not, and is
+> there a possibility to control this process and define that a specific file
+> shouldn't be installed.
+
+Perhaps share your pom so we can comment on improvements? Please don't
+just email it here - post to pastebin or a similar service and send us
+the link.
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

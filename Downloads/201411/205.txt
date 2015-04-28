@@ -1,0 +1,113 @@
+From users-return-137771-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Nov 19 20:38:31 2014
+Return-Path: <users-return-137771-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EB39610DBD
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 19 Nov 2014 20:38:31 +0000 (UTC)
+Received: (qmail 17940 invoked by uid 500); 19 Nov 2014 20:38:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 17851 invoked by uid 500); 19 Nov 2014 20:38:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 17834 invoked by uid 99); 19 Nov 2014 20:38:29 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Nov 2014 20:38:29 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [209.85.192.179] (HELO mail-pd0-f179.google.com) (209.85.192.179)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Nov 2014 20:38:24 +0000
+Received: by mail-pd0-f179.google.com with SMTP id w10so1573572pde.10
+        for <users@maven.apache.org>; Wed, 19 Nov 2014 12:38:03 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:to:subject:date:message-id:in-reply-to
+         :references:mime-version:content-type;
+        bh=Igc6LZIexDnqBZkuSSckaclEg3gAobJAy7juMjUc6vI=;
+        b=fiNCZQfaPzjO6RNXIK/f2/9bTO9cYLqNTUoMJES4/GgEAYczgXNSp0sXPk6U+bzFZj
+         HDpyfx/djDJrp2oqUBUxcLkFvp5d9ORtKjrHVXnXJOcN+HypzkhVZxbI57iLBIgq1Y6G
+         FNKvFgaFVbZJ5hScbtdPAVlHS/oWHskyivokanlY27d9f5EeZ22Hwi8fzQBf9mOCFjlk
+         d14fH3qc0FJRUzMojHnbpDBUXdl9upVAPbFCVi8Danel38KTPHbzqkRY+55nCDBwRvNY
+         SnPphXEmZWQHPbUQF2OZIluusZpJXDwOhy1FZ2bv1tnSz0/6EEwdxvgy/hS7fWKjd/Ar
+         +6sQ==
+X-Gm-Message-State: ALoCoQkkFyC/wk4i60QC3nZVmgX+xOM3rQO1OkSxr1w0jKaz0zh+P/kH1cJBtj8GdOunwd8X2XPu
+X-Received: by 10.68.65.79 with SMTP id v15mr46782671pbs.56.1416429483726;
+        Wed, 19 Nov 2014 12:38:03 -0800 (PST)
+Received: from [10.0.0.142] (akl.smx.co.nz. [203.84.135.120])
+        by mx.google.com with ESMTPSA id al4sm142201pbc.19.2014.11.19.12.38.00
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=RC4-SHA bits=128/128);
+        Wed, 19 Nov 2014 12:38:02 -0800 (PST)
+From: "Mark Derricutt" <mark@talios.com>
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: API-s/Maven plugins for generation of REST API documentation
+Date: Thu, 20 Nov 2014 09:37:56 +1300
+Message-ID: <CBD13342-500B-419D-BCA7-C793451C8575@talios.com>
+In-Reply-To: <B62B6DD9-2507-4C0F-B6EE-86EBF45A1CBF@takari.io>
+References: <CANnZoJuv2jxfg384reH46fhPUjFGxnZiD+4TZ48+XkU7GZpvqA@mail.gmail.com>
+ <CAKumxBwW6ArNEFSUUW=Q4bOvVXv=86GcB9JnX++JTz3Wbc04Bg@mail.gmail.com>
+ <B62B6DD9-2507-4C0F-B6EE-86EBF45A1CBF@takari.io>
+MIME-Version: 1.0
+Content-Type: multipart/signed;
+ boundary="=_MailMate_220A64D8-E6EE-4E3F-A0B5-CC7566B80DB4_=";
+ micalg=pgp-sha1; protocol="application/pgp-signature"
+X-Mailer: MailMate (1.8r4587)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--=_MailMate_220A64D8-E6EE-4E3F-A0B5-CC7566B80DB4_=
+Content-Type: text/plain
+Content-Transfer-Encoding: quoted-printable
+
+On 19 Nov 2014, at 3:32, Jason van Zyl wrote:
+
+> The RAML tools look great and I have a lot of respect for the guys at M=
+uleSoft but just haven't had time to play with it.
+
+Online friend Jason Lee wrote a recent post on contract first with RAML:
+
+  http://blogs.steeplesoft.com/posts/2014/10/15/contract-first-with-raml/=
+
+
+We're looking to go that route as well, altho due to some legacy we're us=
+ing JAX-RS ( and switching would be epic ) so looking to write my own cod=
+e-gem based of using the RAML parser to fit our existing setup.
+
+This would at least put us in the position of when switching to JAX-RS ( =
+or something else ) then its largely swapping out the code generator and =
+stubs to services.
+
+-- =
+
+Mark Derricutt
+http://www.theoryinpractice.net
+http://plus.google.com/+MarkDerricutt
+http://twitter.com/talios
+http://facebook.com/mderricutt
+
+--=_MailMate_220A64D8-E6EE-4E3F-A0B5-CC7566B80DB4_=
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename=signature.asc
+Content-Type: application/pgp-signature; name=signature.asc
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
+
+iQEcBAEBAgAGBQJUbP+kAAoJEOjag2RzTtJFYyMH/1LW4RARqfOGA0WFXRQGsyoh
+KOEj83zrMwyGMWHu+lZyun4vJacDvvRKfYCk9b2EpbHiZqs8wnfBmNYxOB42de6P
+x4JuLSrwdj1ipOl7geRhWzpDUQJVEJPtEw4E5PkwRuMwPmb3WxGPn+AFxoqfXfzg
+reM/YMy59OIWaMxWcjNE0J7ZIVhdGC6MvOraTHHGoYwE3IVNOqADYWsmOV4QmUaB
+poh/1luWaBSL5NNPNZqGk1B090ZQ8oT/VXfHmdisDVIGEEU9WlcgFvUdR3pAB8C3
+i295Nxiy/oKp3YjRqZeULveIjbQ3tAQvwU0WgAVTybZnpS0EaXMjQA/B+V9mL2U=
+=VWYs
+-----END PGP SIGNATURE-----
+
+--=_MailMate_220A64D8-E6EE-4E3F-A0B5-CC7566B80DB4_=--
+

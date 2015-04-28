@@ -1,0 +1,377 @@
+From users-return-137096-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Aug 20 17:30:09 2014
+Return-Path: <users-return-137096-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 15D7911DBB
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 20 Aug 2014 17:30:09 +0000 (UTC)
+Received: (qmail 88322 invoked by uid 500); 20 Aug 2014 17:30:06 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 88247 invoked by uid 500); 20 Aug 2014 17:30:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 88230 invoked by uid 99); 20 Aug 2014 17:30:06 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 20 Aug 2014 17:30:06 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mgainty@hotmail.com designates 65.55.116.21 as permitted sender)
+Received: from [65.55.116.21] (HELO BLU004-OMC1S10.hotmail.com) (65.55.116.21)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 20 Aug 2014 17:29:38 +0000
+Received: from BLU172-W36 ([65.55.116.7]) by BLU004-OMC1S10.hotmail.com with Microsoft SMTPSVC(7.5.7601.22712);
+	 Wed, 20 Aug 2014 10:29:37 -0700
+X-TMN: [Oh8m8etmLU3cQ9TjAO5PjvDByYLZ3eQX]
+X-Originating-Email: [mgainty@hotmail.com]
+Message-ID: <BLU172-W36BEA96D5A1C8E6A515B5AAED20@phx.gbl>
+Content-Type: multipart/alternative;
+	boundary="_482914c5-b8d8-48c3-ac40-e4a12564dd02_"
+From: Martin Gainty <mgainty@hotmail.com>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: RE: creating custom Maven resource filter
+Date: Wed, 20 Aug 2014 13:29:36 -0400
+Importance: Normal
+In-Reply-To: <1408554756.50013.YahooMailNeo@web161503.mail.bf1.yahoo.com>
+References: <1408374170.39344.YahooMailNeo@web161504.mail.bf1.yahoo.com>
+ <53F2405C.3030507@gmx.de>
+ <1408388910.1705.YahooMailNeo@web161504.mail.bf1.yahoo.com>
+ <1408473968.35259.YahooMailNeo@web161503.mail.bf1.yahoo.com>
+ <1408477424.46892.YahooMailNeo@web161506.mail.bf1.yahoo.com>
+ <op.xkuv5nvrkdkhrr@robertscholte.dynamic.ziggo.nl>
+ <1408543352.38494.YahooMailNeo@web161506.mail.bf1.yahoo.com>,<1408554756.50013.YahooMailNeo@web161503.mail.bf1.yahoo.com>
+MIME-Version: 1.0
+X-OriginalArrivalTime: 20 Aug 2014 17:29:37.0229 (UTC) FILETIME=[50B987D0:01CFBC9C]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_482914c5-b8d8-48c3-ac40-e4a12564dd02_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+los ejemplos de la definici=F3n com=FAn de plexo components.xml deben conse=
+guirle comenzado:the stock definition examples from plexus components.xml s=
+hould get you started:
+
+http://plexus.codehaus.org/guides/developer-guide/configuration/component-d=
+escriptor.html
+
+Saludos Cordiales desde Sud America/Cordial Salutations
+Mart=EDn
+______________________
+
+
+> Date: Wed=2C 20 Aug 2014 10:12:36 -0700
+> From: jmartx@yahoo.com.INVALID
+> Subject: Re: creating custom Maven resource filter
+> To: users@maven.apache.org
+>=20
+> Ok its figured out.  Had to write my own MavenFileFilter and use plexus t=
+o wire it in.
+>=20
+> The only question I now have is how to set the role-hint for our custom M=
+avenFileFilter in a pom file?  To have our custom MavenFileFilter be wired =
+in I stole the role-hint "default".  But I would like to use my own role-hi=
+nt because there is another "default" implementation and I do not want it t=
+o use that one.  I do not know if it is by chance that our implementation i=
+s being used.
+>=20
+> For the MavenResourcesFiltering I was able to set the role-hint the maven=
+FilteringHints tag.  I guess what I am asking for is the equivalent tag for=
+ setting the MavenFileFilter implementation?
+>=20
+> thanks=20
+>=20
+> jose
+>=20
+>=20
+> On Wednesday=2C August 20=2C 2014 10:02 AM=2C Jose Martinez <jmartx@yahoo=
+.com> wrote:
+> =20
+>=20
+>=20
+> Cool=2C thanks Robert.
+>=20
+> So now that I have the plugin functioning and my MavenResourcesFiltering'=
+s filterResources(mre) method being called=2C what can I do with the MavenR=
+esourcesExecution to access the ${propertyNames} in my resources and set th=
+eir values?
+>=20
+> I pulled the List<Resource> from the MavenResourcesExecution=2C but I can=
+'t figure out how to get the ${propertyNames} from my resources or set thei=
+r values?
+> =20
+> thanks
+> jose
+>=20
+>=20
+> On Tuesday=2C August 19=2C 2014 4:21 PM=2C Robert Scholte <rfscholte@apac=
+he.org> wrote:
+> =20
+>=20
+>=20
+> Done=2C see MRESOURCES-182[1]
+> Will be updated with the next release.
+>=20
+> thanks=2C
+> Robert
+>=20
+> [1] https://jira.codehaus.org/browse/MRESOURCES-182
+>=20
+> Op Tue=2C 19 Aug 2014 21:43:44 +0200 schreef Jose Martinez =20
+> <jmartx@yahoo.com.invalid>:
+>=20
+> > Problem resolved.  The documentation in this link has the dependency =20
+> > tags in the wrong place...=20
+> > http://maven.apache.org/plugins/maven-resources-plugin/examples/custom-=
+resource-filters.html#Dependency_declaration
+> >  When I moved the plugin's dependencies tag outside of the configuratio=
+n =20
+> > tags then everything worked.  Who ever manages that link please =20
+> > investigate.  Everything else on the site was spot on.
+> >  thanks
+> > jose
+> >
+> >
+> > On Tuesday=2C August 19=2C 2014 2:46 PM=2C Jose Martinez <jmartx@yahoo.=
+com> =20
+> > wrote:
+> >
+> >
+> > Hello=2C
+> >
+> > I've
+>  made some progress on this and have a problem with Maven finding my =20
+> > custom plugin's class.
+> >
+> > =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+> > [ERROR] Failed to execute goal =20
+> > org.apache.maven.plugins:maven-resources-plugin:2.6:resources =20
+> > (default-resources) on project roc: java.util.NoSuchElementException =20
+> > [ERROR] role: org.apache.maven.shared.filtering.MavenResourcesFiltering=
+ =20
+> > [ERROR] roleHint: ResourceFilter [ERROR] -> [Help 1]
+> > =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+> >
+> > I created a class that implements MavenResourcesFiltering=2C and added =
+the =20
+> > plexus javadoc comments as instructed. =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D
+> > /**
+> >  *
+> >  * @author jmartinez
+> >  *
+> >  * @plexus.component =20
+> > role=3D"org.apache.maven.shared.filtering.MavenResourcesFiltering"=20
+> >  *                   role-hint=3D"ResourceFilter"
+> >  */
+> > public class ResourceFilter implements MavenResourcesFiltering {
+> > =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+> >
+> > I also added to the main project's POM the maven-resources-plugin
+>  with =20
+> > the dependency and maven filtering hints.  The problem I am having is =
+=20
+> > that Maven cannot find my MavenResourcesFiltering class.  Its suppose t=
+o =20
+> > be able to find it using the role-hint.
+> > =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+> >         <pluginManagement>
+> >             <plugins>
+> >                 <plugin>
+> >                     <groupId>org.apache.maven.plugins</groupId>
+> >                   =20
+>  <artifactId>maven-resources-plugin</artifactId>
+> >                     <version>2.6</version>
+> >                     <configuration>
+> >                         <dependencies>
+> >                             <dependency>
+> >                                 <groupId>com.xxxx</groupId>
+> >                          =20
+>       =20
+> > <artifactId>xxxx-rfp-maven-plugin</artifactId>
+> >                                 <version>0.2</version>
+> >                             </dependency>
+> >                         </dependencies>
+> >                         <mavenFilteringHints>
+> >                             =20
+> >
+>  <mavenFilteringHint>ResourceFilter</mavenFilteringHint>
+> >                         </mavenFilteringHints>
+> >                     </configuration>
+> >                 </plugin>
+> >
+> > =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+> >
+> > I suspect the problem is that my plugin's jar is not being loaded to th=
+e =20
+> > maven-resources-plugin classpath.  I suspect this because my jar was no=
+t =20
+> > being downloaded until I added it to the pom's dependencies list=2C ver=
+sus =20
+> > it being downloaded when it was just in the maven-resources-plugin =20
+> > dependency list.
+> >
+> > Am I missing something here?
+> >
+> > thanks
+> > jose
+> >
+> >
+> > On Monday=2C August 18=2C 2014 3:08 PM=2C Jose Martinez =20
+> > <jmartx@yahoo.com.INVALID> wrote:
+> >
+> >
+> > Karl=2C
+> >
+> > Thank you for responding.  Yes I can go into more detail. =20
+> > Lets go back to my example of the mysql DB credentials.  Lets say I hav=
+e =20
+> > five environments.  So that means I have 3 variables times 5 =20
+> > environments and that comes out to 15
+> >  various values.  From what I understand about the =20
+> > maven-resources-plugin that would mean I would have to do one of the =20
+> > following:
+> > 1)  Stick those 15 values in the pom and then maybe use 5 different =20
+> > profiles=2C one for each env.  This can get quite cumbersome and our =20
+> > deployment scripts
+>  would have to call mvn with the correct profile.
+> >
+> > 2)   Use system variables.  Have some code called at some point before =
+=20
+> > the maven build that would know which environment it is in and retrieve=
+ =20
+> > all the values for each known property and make system variables out of=
+ =20
+> > them.  From what I understand this might still require I have them in =
+=20
+> > the POM=3B I'm not sure if maven-resources-plugin would automatically =
+=20
+> > replace each ${propertyName} with the proertyName system variable =20
+> > without having to have the propertyName in the POM?
+> >
+> >
+>  3) Is there another way that I am missing that this can be done using =20
+> > maven-resources-plugin?  I can see that it is very powerful tool=2C as =
+=20
+> > everything in Maven has proven to me to be so I'm probably missing =20
+> > another approach.
+> >
+> > A few things to consider that I would like to have...
+> > 1) Centralized view into all our properties that can be queried and hav=
+e =20
+> > tools built on top of (e.g. a maven resource filter).
+> >
+> > 2) Minimal entries of propertyName.  Essentially the ${propertyName} =20
+> > should only be entered into the property file and after
+>  that just the =20
+> > entries that go into the central data store.  The pom is left alone.
+> >
+> > 3) Environments can be easily added and removed and altered by only =20
+> > touching the centralized datastore.
+> >
+> > I guess those three
+> >  things have one thing in common=2C benefits of having our properties i=
+n a =20
+> > centralized datastore.  At my current employer they built just such a =
+=20
+> > system that works off of web services (managed global properties on a =
+=20
+> > per environment basis).  It is not in production yet so from my point o=
+f =20
+> > view I will interface out the Dao and just swap implementations when it=
+s =20
+> > ready... using a simple relational DB at first.
+> > thanks
+> > jose
+> >
+> >
+> > On Monday=2C August 18=2C 2014 2:06 PM=2C Karl Heinz Marbaise =20
+> > <khmarbaise@gmx.de> wrote:
+> >
+> >
+> >
+> > Hi Jose=2C
+> >
+> >
+> > can you elaborate a little bit more why you are
+>  not using the
+> >  default
+> > filtering capabilities of maven-resources-plugin etc. ?
+> >
+> > Can you explain what exactly you like to achieve?
+> >
+> >
+> >
+> >> Hello=2C
+> >>
+> >> We have projects with many property and xml files that need resource =
+=20
+> >> filtering per environment.
+> >>
+> >> For example in a property file one might see ${mysqlDbHost}=2C =20
+> >> ${mysqlDbPw}=2C and ${mysqlDbUser}.  There would also be a system =20
+> >> variable called ENVIRONMENT.  Based on the ${propertyName} and =20
+> >> ENVIRONMENT value=2C the resource filter would replace with the correc=
+t =20
+> >> value.  This can be done with a DB (SELECT value FROM properties WHERE=
+ =20
+> >> env=3D"env" and name=3D"propertyName") or via a web service =20
+> >> (getPropertyValue?env=3Denv&name=3DpropertyName).
+> >>
+> >> On the Maven side the solution seem to be to create a custom =20
+> >> MavenResourcesFiltering.  The custom MavenResourcesFiltering =20
+> >> implementation would do the lookups I mentioned above for each =20
+> >> ${propertyName} encountered in the resource files.
+> >>
+> >> 1)  Is my assessment that creating a custom MavenResourcesFiltering is=
+ =20
+> >> the way to go?  Maybe this problem is already solved already=2C since =
+it =20
+> >> does not seem unique?
+> >>
+> >> 2)  I have visited multiple Maven articles on this but still have no =
+=20
+> >> idea how to implement it=2C the sites I visited are listed below.  Doe=
+s =20
+> >> anyone know of any document or can provide feedback on how to implemen=
+t =20
+> >> a custom MavenResourcesFiltering?
+> >>
+> >> It seems to me that at some point I would need a method that has eithe=
+r =20
+> >> gets a list of all the ${propertyName}'s found in a
+> >  file and the ability to provide the value for that property name. =20
+> > Following the links I found I cannot tell where that method should be =
+=20
+> > implemented and how to get it called from MyMojo.execute().
+> >>
+> >> 1:  http://maven.apache.org/shared/maven-filtering/
+> >> 2:  http://maven.apache.org/shared/maven-filtering/usage.html
+> >> 3: =20
+> >> http://maven.apache.org/guides/plugin/guide-java-plugin-development.ht=
+ml
+> >>
+> >> Thank you!
+> >> jose
+> >>
+> >
+> > Kind regards
+> > Karl-Heinz Marbaise
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe=2C e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands=2C e-mail: users-help@maven.apache.org
+>=20
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe=2C e-mail: users-unsubscribe@maven.apache.org
+> For additional commands=2C e-mail: users-help@maven.apache.org
+ 		 	   		  =
+
+--_482914c5-b8d8-48c3-ac40-e4a12564dd02_--
+

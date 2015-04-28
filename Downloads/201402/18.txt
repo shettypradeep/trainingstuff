@@ -1,0 +1,121 @@
+From users-return-135450-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 13 11:20:58 2014
+Return-Path: <users-return-135450-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0753310EC1
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 13 Feb 2014 11:20:58 +0000 (UTC)
+Received: (qmail 9827 invoked by uid 500); 13 Feb 2014 11:20:54 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 9336 invoked by uid 500); 13 Feb 2014 11:20:53 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 2886 invoked by uid 99); 13 Feb 2014 05:22:36 -0000
+X-ASF-Spam-Status: No, hits=1.2 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (nike.apache.org: transitioning domain of vijayd1508@gmail.com does not designate 216.139.236.26 as permitted sender)
+Date: Wed, 12 Feb 2014 21:22:09 -0800 (PST)
+From: doddalas <vijayd1508@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1392268929654-5784375.post@n5.nabble.com>
+In-Reply-To: <FC6346DCAC897F4E9673C4418E6448C801B51427@ukex07.UK.NDS.COM>
+References: <gqgtm1$spk$1@ger.gmane.org> <9948cb690903261514s6433fef8l5470cee3776d855b@mail.gmail.com> <FC6346DCAC897F4E9673C4418E6448C801B51427@ukex07.UK.NDS.COM>
+Subject: RE: SCM requires that command line svn be used?
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi,
+
+I am getting the same error. Can you please help me if you have fixed this
+issue. Do we need to configure anything specifically for https svn URLs? I
+have given credentials in maven settings and svn configuration in pom files.
+Any my release plugin is as follows:
+			
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-release-plugin</artifactId>
+			<version>2.4.2</version>
+			<dependencies>
+			    <dependency>    
+				<groupId>com.google.code.maven-scm-provider-svnjava</groupId>
+				<artifactId>maven-scm-provider-svnjava</artifactId>
+				<version>1.6</version>
+			    </dependency>
+			</dependencies>
+			<configuration>
+				<providerImplementations>
+					<svn>javasvn</svn>
+				</providerImplementations>
+				<tagBase>https://mydomain.com/svn/New_FW/CI_POC/tags</tagBase>
+				<mavenExecutorId>forked-path</mavenExecutorId>
+			</configuration>
+		</plugin>
+PFB the error that I am getting:
+
+[INFO] Building Service 1.0.0-SNAPSHOT
+[INFO]
+------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-release-plugin:2.4.2:prepare (default-cli) @ Service ---
+[INFO] Change the default 'svn' provider implementation to 'javasvn'.
+[INFO] Verifying that there are no local modifications...
+[INFO]   ignoring changes on: **\release.properties, **\pom.xml.next,
+**\pom.xml.releaseBackup, **\pom.xml.backup, **\pom.xml.branch,
+**\pom.xml.tag
+[INFO] SVN status directory:
+D:\Softwares\jenkins\jobs\Perform_Release\workspace
+[INFO]
+------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Service ........................................... FAILURE [14.743s]
+[INFO] ServiceEJB ........................................ SKIPPED
+[INFO] SpringMVC323REST .................................. SKIPPED
+[INFO]
+------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO]
+------------------------------------------------------------------------
+[INFO] Total time: 17.859s
+[INFO] Finished at: Thu Feb 13 10:37:59 IST 2014
+[INFO] Final Memory: 9M/55M
+[INFO]
+------------------------------------------------------------------------
+[ERROR] Failed to execute goal
+org.apache.maven.plugins:maven-release-plugin:2.4.2:prepare (default-cli) on
+project Service: Unable to check for local modifications
+[ERROR] Provider message:
+[ERROR] SVN status failed.
+[ERROR] Command output:
+[ERROR] svn: Authentication required for '<https://mydomain.com:443>'
+[ERROR] -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute
+goal org.apache.maven.plugins:maven-release-plugin:2.4.2:prepare
+(default-cli) on project Service: Unable to check for local modifications
+Provider message:
+SVN status failed.
+Command output:
+svn: Authentication required for '<https://mydomain.com:443>'
+	at
+org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:212)
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/SCM-requires-that-command-line-svn-be-used-tp119251p5784375.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,186 @@
+From users-return-135541-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Feb 16 23:56:52 2014
+Return-Path: <users-return-135541-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 21A2910D89
+	for <apmail-maven-users-archive@www.apache.org>; Sun, 16 Feb 2014 23:56:52 +0000 (UTC)
+Received: (qmail 17383 invoked by uid 500); 16 Feb 2014 23:56:47 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 17313 invoked by uid 500); 16 Feb 2014 23:56:47 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 17305 invoked by uid 99); 16 Feb 2014 23:56:46 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 16 Feb 2014 23:56:46 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [24.37.79.202] (HELO smtp.artifact-software.com) (24.37.79.202)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 16 Feb 2014 23:56:40 +0000
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by smtp.artifact-software.com (Postfix) with ESMTP id CB6D9FEC044
+	for <users@maven.apache.org>; Sun, 16 Feb 2014 18:56:18 -0500 (EST)
+X-Virus-Scanned: amavisd-new at artifact-software.com
+Received: from smtp.artifact-software.com ([127.0.0.1])
+	by localhost (smtp.artifact-software.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id sfyqbKBek6Au for <users@maven.apache.org>;
+	Sun, 16 Feb 2014 18:56:05 -0500 (EST)
+Received: from [192.168.3.170] (unknown [192.168.3.170])
+	by smtp.artifact-software.com (Postfix) with ESMTP id 43DC4FEC043
+	for <users@maven.apache.org>; Sun, 16 Feb 2014 18:56:05 -0500 (EST)
+Message-ID: <53015013.6070005@artifact-software.com>
+Date: Sun, 16 Feb 2014 18:56:03 -0500
+From: Ron Wheeler <rwheeler@artifact-software.com>
+Reply-To: rwheeler@artifact-software.com
+Organization: Artifact Software
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: users@maven.apache.org
+Subject: Re: Looking for org.apache.poi 3.10-FINAL
+References: <530078F7.4060903@apconsult.de> <53007A1C.8060902@apconsult.de> <CAK8jvqwWUYV2PinvQ3EFcFjMUEewZ-3VEMdE4ykm+xLpk437Bg@mail.gmail.com> <53009385.8040401@apconsult.de> <CAMr6Z4kRvBO9LduJkdU9iYnCoEPcMxxCAAt9up=PFKTRucto-A@mail.gmail.com> <5300CCFD.4070204@apconsult.de> <CAMr6Z4mTkpaAXLsGZYQH2eYRxDJAKcuyBDZx1oQM0ZGZdJZejQ@mail.gmail.com> <5300E538.4070009@apconsult.de> <CA+nPnMwkjdt-RbBvfdAmq_EcNcX3W1Vm2rbPNUyDuakUb9CwgQ@mail.gmail.com> <CALy+7Umw463Pz2O7R3=t+DNZSwSxY=63mQ6uutJEb9UNMhUgvQ@mail.gmail.com> <53013F19.9040803@apconsult.de> <CALy+7Um8POat-fWdQdq7teAAjNGERGKkBcEQTQzr=swXw9gfxg@mail.gmail.com>
+In-Reply-To: <CALy+7Um8POat-fWdQdq7teAAjNGERGKkBcEQTQzr=swXw9gfxg@mail.gmail.com>
+Content-Type: multipart/alternative;
+ boundary="------------060500040608050501070005"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------060500040608050501070005
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+
+http://stackoverflow.com/questions/10600576/nexus-index-of-maven-central-is-not-up-to-date-new-installation
+The problem appears to be well known but is not something that one 
+expects and it will be hard to know where people are most likely to look.
+
+It is not really a Maven problem and as I understand it, if you just set 
+your dependencies and build, you will not see the problem or be affected 
+by it.
+If you are trying to use your own repository's proxy to Maven Central to 
+quickly find the latest version rather than visiting the website of the 
+developer of the library, you will have trouble.
+If you go to directly to searching Maven Central, you will not have the 
+problem.
+
+It seems that you need to separate the problem from the point where the 
+user will run into it.
+The most likely place to look for it is in Maven since that is where one 
+might read documentation about setting up dependencies, even if it has 
+nothing to do with Maven.
+
+http://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies
+is probably the most likely place to see a note about browsing Maven 
+Central
+It  most likely could go somewhere in this paragraph:
+<quote>
+What about dependencies built somewhere else? How do they get into my 
+local repository? Whenever a project references a dependency that isn't 
+available in the local repository, Maven will download the dependency 
+from a remote repository into the local repository. You probably noticed 
+Maven downloading a lot of things when you built your very first project 
+(these downloads were dependencies for the various plugins used to build 
+the project). By default, the remote repository Maven uses can be found 
+(and browsed) athttp://repo.maven.apache.org/maven2/. You can also set 
+up your own remote repository (maybe a central repository for your 
+company) to use instead of or in addition to the default remote 
+repository. For more information on repositories you can refer to 
+theIntroduction to Repositories 
+<http://maven.apache.org/guides/introduction/introduction-to-repositories.html>.
+
+</quote>
+
+It would still be an odd notation and might still be hard to find, given 
+the initial analysis that a new Maven user would have of the apparent 
+problem.
+
+I am not sure what the cost of creating a new index is, but perhaps it 
+could be done more frequently.
+
+I also do not understand how the index is propagated to my proxy for 
+Maven Central in my Nexus repo but I still don't see the latest POI 
+either ( my Nexus is very old so perhaps the problem is at my end)
+
+Ron
+
+
+
+On 16/02/2014 6:31 PM, Wayne Fay wrote:
+> Sure, but which FAQ should this go in - a generic Maven faq, a faq
+> specific to m2eclipse (bear in mind, this group has zero control over
+> m2e), or a FAQ related to Central? Or all of those places? Where did
+> you look (in the Maven website & docs) for such information, prior to
+> posting your email to this list?
+>
+> It may not sound like it but I am genuinely curious where this
+> information should go to ensure the right people can see/find it when
+> they need to know such information.
+>
+> Wayne
+>
+> On Sun, Feb 16, 2014 at 4:43 PM, David Law <m2eclipse@apconsult.de> wrote:
+>> Hi Wayne,
+>>
+>> I would suggest someone documents the behaviour in the FAQ
+>> with a tip that a not-yet-indexed artifact can be proactively retrieved
+>> by entering its Group Id, Artifact Id & Version.
+>>
+>> That way we all save time.
+>>
+>> All the best,
+>> DaveLaw
+>>
+>>
+>> On 16.02.2014 21:52, Wayne Fay wrote:
+>>>>> thanks once again!  The only person to supply useful information.
+>>> ...
+>>>>> Over 6 days old!!
+>>> ...
+>>>>> So that means maven central took over 6 days to index this content.
+>>>>> That is quite incredible!
+>>> ...
+>>>>> This is in my opinion a bug, or at least a fundamental design error.
+>>>
+>>>> Also before completely blaming Sonatype I would suggest you find out
+>>> You may also want to lose some of the attitude. No one here is getting
+>>> paid (by you) to do what we're doing -- in fact Sonatype has spent a
+>>> considerable amount of money building and maintaining Central over the
+>>> years. Attacking them (or those on this list) because you couldn't use
+>>> the latest POI immediately after it was released seems like a bad
+>>> move. You catch more flies with honey and all that.
+>>>
+>>> Wayne
+>>>
+>>> ---------------------------------------------------------------------
+>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>
+>>>
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+--------------060500040608050501070005--
+

@@ -1,0 +1,228 @@
+From users-return-135157-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan 15 09:08:36 2014
+Return-Path: <users-return-135157-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5F8E5106A8
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 15 Jan 2014 09:08:36 +0000 (UTC)
+Received: (qmail 8225 invoked by uid 500); 15 Jan 2014 09:08:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 7869 invoked by uid 500); 15 Jan 2014 09:08:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 7856 invoked by uid 99); 15 Jan 2014 09:08:29 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 15 Jan 2014 09:08:29 +0000
+X-ASF-Spam-Status: No, hits=0.0 required=5.0
+	tests=NORMAL_HTTP_TO_IP,RCVD_IN_DNSWL_NONE,SPF_PASS,WEIRD_PORT
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of adriennolarsen@hotmail.fr designates 157.55.0.219 as permitted sender)
+Received: from [157.55.0.219] (HELO dub0-omc1-s20.dub0.hotmail.com) (157.55.0.219)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 15 Jan 2014 09:08:24 +0000
+Received: from DUB112-DS10 ([157.55.0.239]) by dub0-omc1-s20.dub0.hotmail.com with Microsoft SMTPSVC(6.0.3790.4675);
+	 Wed, 15 Jan 2014 01:08:02 -0800
+X-TMN: [3EcXEXbc9DFJiVY7qr8Q3PfxfSdsC4c5]
+X-Originating-Email: [adriennolarsen@hotmail.fr]
+Message-ID: <DUB112-DS1002A1E45183D831458A62A9BE0@phx.gbl>
+From: =?iso-8859-1?Q?Adrien_Ruffi=E9?= <adriennolarsen@hotmail.fr>
+To: "'Maven Users List'" <users@maven.apache.org>
+Subject: war + webapp dependency classifier
+Date: Wed, 15 Jan 2014 10:11:14 +0100
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_000_0092_01CF11DA.1FBEE2A0"
+X-Mailer: Microsoft Outlook 14.0
+Thread-Index: Ac8Rz1ncThq4n2U6TVSEMI7D7kkNPw==
+Content-Language: fr
+X-OriginalArrivalTime: 15 Jan 2014 09:08:02.0682 (UTC) FILETIME=[4B5655A0:01CF11D1]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+------=_NextPart_000_0092_01CF11DA.1FBEE2A0
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+
+Hello all,
+
+I have maven 3
+
+I have a webapp which derived from a first webapp, I have read this article:
+
+http://ovaraksin.blogspot.fr/2011/09/inheritance-in-maven-based-web-projects
+.html
+
+But when I try to done following command, "mvn clean package" or a simple
+"mvn dependency:tree" I get the following error:
+
+[ERROR] Failed to execute goal on project mycompany-ci: Could not resolve
+dependencies for project com.mycompany:mycompany-ci:jar: 001-SNAPSHOT: Could
+not find artifact com.mycompany:mycompany-webapp:war:webapp:003 in central
+(http://192.168.1.160:8081/artifactory/libs-release) -> [Help 1]
+
+However I have 3 artifacts inside libs-release-local of my artifactory:
+mycompany-webapp-003-classes.jar
+mycompany-webapp-003.jar
+mycompany-webapp-003.pom
+mycompany-webapp-003.war
+
+I attached also my pom.xml of the second webapp, and below a extract of my
+first webapp (the base webapp)
+
+	<parent>
+		<groupId>com. mycompany </groupId>
+		<artifactId>mycompany-parent</artifactId>
+		<version>-003</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<artifactId> mycompany-webapp</artifactId>
+	<packaging>jar</packaging>
+
+
+Do you have an idea of the problem ?
+
+
+------=_NextPart_000_0092_01CF11DA.1FBEE2A0
+Content-Type: text/xml; name="pom-second-webapp.xml"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: attachment; filename="pom-second-webapp.xml"
+
+<!-- =
+*************************************************************************=
+*****=20
+	* Copyright (c) 2000-2011 E-DEAL * * E-DEAL S.A. * 41, rue P=C3=A9rier =
+* 92120=20
+	Montrouge * France * * T: +33 (0)1 73 03 29 80 * F: +33 (0)1 73 01 69 =
+77=20
+	* http://www.e-deal.com * * La diffusion de ce code source sous quelque =
+forme=20
+	que ce soit sans * l'autorisation de E-DEAL est interdite. * * Vous =
+=C3=AAtes=20
+	autoris=C3=A9s =C3=A0 modifier ce code source uniquement pour votre =
+usage * propre=20
+	et sous r=C3=A9serve que les mentions de copyright demeurent intactes. =
+* * Ce=20
+	code est fourni en l'=C3=A9tat. Aucune garantie d'aucune sorte, =
+explicite ou *=20
+	implicite n'est donn=C3=A9e. En aucun cas E-DEAL ne pourra =C3=AAtre =
+tenu pour * responsable=20
+	des dommages pouvant r=C3=A9sulter de l'utilisation de ce code * =
+source. =
+*************************************************************************=
+***** -->
+<project xmlns=3D"http://maven.apache.org/POM/4.0.0" =
+xmlns:xsi=3D"http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=3D"http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.mycompany</groupId>
+	<artifactId>mycompany-cci</artifactId>
+	<version>001-SNAPSHOT</version>
+
+	<packaging>jar</packaging>
+
+	<properties>
+		<!-- <target.dir>src/main/webapp/mycompanyCRM/WEB-INF</target.dir> -->
+		<!-- If mycompanyCRM removed from webapp -->
+		<target.dir>src/main/webapp/WEB-INF</target.dir>
+		<packaging.directory>jars</packaging.directory>
+		<additional.libs.directory>lib</additional.libs.directory>
+		<webapp.context>/mycompanycrm</webapp.context>
+		<encoding.format>UTF-8</encoding.format>
+		<java.version>1.6</java.version>
+
+		<!-- Eclipse Project Facets Version -->
+		<wtp.version>2.0</wtp.version>
+		<wst.jsdt.web.version>1.0</wst.jsdt.web.version>
+		<jst.web.version>2.5</jst.web.version>
+
+		<!-- Database provider version -->
+		<!-- Current lib JDK 1.6 unavailable in public repo get from ou =
+Artifactory -->
+		<oracle.provider.artifactId>ojdbc6</oracle.provider.artifactId>
+		<oracle.provider.version>11.2.0.3.0</oracle.provider.version>
+
+		<!-- JDK 1.5 unavailable in public repo get from ou Artifactory -->
+		<!-- <oracle.provider.artifactId>ojdbc5</oracle.provider.artifactId> =
+-->
+		<!-- <oracle.provider.version>11.2.0.3.0</oracle.provider.version> -->
+
+		<!-- JDK 1.4 -->
+		<!-- <oracle.provider.artifactId>ojdbc</oracle.provider.artifactId> =
+-->
+		<!-- <oracle.provider.version>14</oracle.provider.version> -->
+
+		<!-- Current lib -->
+		=
+<postgresql.provider.artifactId>postgresql</postgresql.provider.artifactI=
+d>
+		=
+<postgresql.provider.version>8.1-404.jdbc3</postgresql.provider.version>
+
+		<!-- Most recent libs -->
+		<!-- =
+<postgresql.provider.version>9.1-901.jdbc4</postgresql.provider.version> =
+-->
+		<!-- =
+<postgresql.provider.version>9.1-901.jdbc3</postgresql.provider.version> =
+-->
+
+		<!-- Current lib -->
+		<sqlserver.provider.artifactId>jtds</sqlserver.provider.artifactId>
+		<sqlserver.provider.version>1.2.2</sqlserver.provider.version>
+
+		<!-- Most recent libs -->
+		<!-- <sqlserver.provider.version>1.2.4</sqlserver.provider.version> =
+-->
+
+		<!-- Packaging properties - Distribution properties like version: 1.0, =
+
+			1.1, 4.1.2 prefix: mycompany, winter2011, autumn2012, cci2012 -->
+		<distribution.prefix>mycompany</distribution.prefix>
+		=
+<release.assembly.name>E-DEAL_CRM.${project.version}</release.assembly.na=
+me>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.mycompany</groupId>
+			<artifactId>mycompany-webapp</artifactId>
+			<version>003</version>
+			<version>003</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mycompany</groupId>
+			<artifactId>mycompany-webapp</artifactId>
+			<version>003</version>
+			<classifier>webapp</classifier>
+			<type>war</type>
+			<scope>runtime</scope>
+		</dependency>
+	</dependencies>
+=09
+	<scm>
+		<connection>scm:git:ssh://git@rd1/mycompanycrm.git</connection>
+		=
+<developerConnection>scm:git:ssh://git@rd1/mycompanycrm.git</developerCon=
+nection>
+		<url>scm:git:ssh://git@rd1/mycompanycrm.git</url>
+ 	</scm>
+</project>=0A=
+
+
+------=_NextPart_000_0092_01CF11DA.1FBEE2A0
+Content-Type: text/plain; charset=us-ascii
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+------=_NextPart_000_0092_01CF11DA.1FBEE2A0--
+

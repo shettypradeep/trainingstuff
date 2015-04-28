@@ -1,0 +1,64 @@
+From users-return-136613-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jun 20 11:35:33 2014
+Return-Path: <users-return-136613-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2EE3A11116
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 20 Jun 2014 11:35:33 +0000 (UTC)
+Received: (qmail 6745 invoked by uid 500); 20 Jun 2014 11:35:31 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 6659 invoked by uid 500); 20 Jun 2014 11:35:31 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 6645 invoked by uid 99); 20 Jun 2014 11:35:31 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 20 Jun 2014 11:35:31 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bimargulies@gmail.com designates 209.85.219.44 as permitted sender)
+Received: from [209.85.219.44] (HELO mail-oa0-f44.google.com) (209.85.219.44)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 20 Jun 2014 11:35:28 +0000
+Received: by mail-oa0-f44.google.com with SMTP id i7so7186013oag.3
+        for <users@maven.apache.org>; Fri, 20 Jun 2014 04:35:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=JPioohMYN/WBB2CHtkeuwA5wxP0zts48b3lVsJFydXU=;
+        b=ysb24Pi94sVSgezhrkr79otuxUbHOSe6Px784bHR+wQfoRseh6poVqywt7KHNIt31w
+         oJTfU1IKTLhxizdUcZoSZ8MPtCNyXIHiIr65mtQORzDjwgt5twtKn6WVyh2Xpt/ZUqOe
+         pKJcSXyebYNy7YSyKDHOcCOrMnHeriaj/Gs3NjCbPENYGBHmVbkBdHE1FjazSqnT0E2j
+         1lr/ChOTrYbtppyOiIuRhZ3iW69dXQGMNMpf8p1UjJrml7vThjZCb0VQ+2s+9yqW5Arz
+         /JsKTy4oE7UPRAMQc2a1zcUYxpzS8/+K0hZIcf4FqDh1KNs2DNaStuvRjw3dwZkEn/+m
+         //yg==
+MIME-Version: 1.0
+X-Received: by 10.60.56.98 with SMTP id z2mr2675012oep.62.1403264103114; Fri,
+ 20 Jun 2014 04:35:03 -0700 (PDT)
+Received: by 10.202.69.198 with HTTP; Fri, 20 Jun 2014 04:35:03 -0700 (PDT)
+Date: Fri, 20 Jun 2014 07:35:03 -0400
+Message-ID: <CALhtWkfMsDVh_85DL5MA=ROsenTVfvY6VG6-SOQ=hZxeJxbgZg@mail.gmail.com>
+Subject: Curiosities with Surefire 2.19
+From: Benson Margulies <bimargulies@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I've enabled multi-threading.
+
+1. The 'Running' message does not show up until after the class completes.
+
+2. My stderr output from Log2J has disappeared.
+
+Are either of these adjustable?
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

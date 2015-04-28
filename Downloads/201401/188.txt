@@ -1,0 +1,95 @@
+From users-return-135209-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan 20 09:15:10 2014
+Return-Path: <users-return-135209-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C12D21077D
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 20 Jan 2014 09:15:10 +0000 (UTC)
+Received: (qmail 75306 invoked by uid 500); 20 Jan 2014 09:15:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 75012 invoked by uid 500); 20 Jan 2014 09:15:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74994 invoked by uid 99); 20 Jan 2014 09:14:57 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Jan 2014 09:14:57 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mari.francesco@gmail.com designates 209.85.128.42 as permitted sender)
+Received: from [209.85.128.42] (HELO mail-qe0-f42.google.com) (209.85.128.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Jan 2014 09:14:51 +0000
+Received: by mail-qe0-f42.google.com with SMTP id i11so2737116qej.29
+        for <users@maven.apache.org>; Mon, 20 Jan 2014 01:14:30 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type:content-transfer-encoding;
+        bh=nuYayH70s105df/bbVzaAvW6yXMN7Y7om/o4cwsA3GE=;
+        b=PpcPJQq0b+qaacBrrUX3k0sfhJRPZKKrAge1MDPWTGEW5yfFRP3V1aznNKcRQeO9SC
+         0R8uyEVRM6v5wefbOLWJoFiXY+go1Hqwz49Cih+UM87nq+nGAoVzecGn+s+/vyv9ZUNm
+         7bqGfZ2TV0EeKCZRmRLTVMbFN9nipv3UiR1PlBCEtvV250WruMOm9wCBOmB6vX+gc0aI
+         3rqIeiMyqIMNbJMq6D6pBxqABH/pVDeafZNqICn4SU433y9eXsYaumqCflw3TIaM1tcy
+         v99C1FXwI/OuVJJeJYECuWzAkYggt+Uv5azzKbmgmkzcwAv0LQrYLsmHOAqslKH8HNhl
+         eBJw==
+MIME-Version: 1.0
+X-Received: by 10.140.43.3 with SMTP id d3mr24363218qga.70.1390209270517; Mon,
+ 20 Jan 2014 01:14:30 -0800 (PST)
+Received: by 10.229.70.194 with HTTP; Mon, 20 Jan 2014 01:14:30 -0800 (PST)
+In-Reply-To: <95BFD26B-850F-4C59-BDF6-1F65E2C11ED9@sharp.fm>
+References: <95BFD26B-850F-4C59-BDF6-1F65E2C11ED9@sharp.fm>
+Date: Mon, 20 Jan 2014 10:14:30 +0100
+Message-ID: <CABQ8R0zeVKoZqKaDgtAA=qkOWFi-Zgyp0LdUS9WpJLaFKhVLTg@mail.gmail.com>
+Subject: Re: Property that indicates a snapshot or release build?
+From: Francesco Mari <mari.francesco@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+If you are using the Maven Release Plugin you can use the
+releaseProfiles [1] configuration option in the perform goal [2] to
+activate a specific profile during a release build. In that profile
+you can override your specific configuration.
+
+The idea is to configure your POM for snapshot builds by default, and
+override that configuration in a profile which will be activated only
+during release build.
+
+[1]: http://maven.apache.org/maven-release/maven-release-plugin/perform-moj=
+o.html#releaseProfiles
+[2]: http://maven.apache.org/maven-release/maven-release-plugin/perform-moj=
+o.html
+
+2014/1/19 Graham Leggett <minfrin@sharp.fm>:
+> Hi all,
+>
+> Does there exist a property in maven that will indicate in some fashion w=
+hether the build is a snapshot build or a release build?
+>
+> I am aware that "-SNAPSHOT" appears in the version number, but that won't=
+ do. I'm after a variable that has one of two discrete values, one predicta=
+ble value if it is a snapshot and another predictable value when it is a re=
+lease. Does anything like this exist?
+>
+> Regards,
+> Graham
+> --
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,159 @@
+From users-return-135215-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan 20 18:50:16 2014
+Return-Path: <users-return-135215-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F2DD010B27
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 20 Jan 2014 18:50:16 +0000 (UTC)
+Received: (qmail 56719 invoked by uid 500); 20 Jan 2014 18:50:12 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 56652 invoked by uid 500); 20 Jan 2014 18:50:12 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 56644 invoked by uid 99); 20 Jan 2014 18:50:11 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Jan 2014 18:50:11 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.160.42 as permitted sender)
+Received: from [209.85.160.42] (HELO mail-pb0-f42.google.com) (209.85.160.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Jan 2014 18:50:07 +0000
+Received: by mail-pb0-f42.google.com with SMTP id jt11so5312223pbb.1
+        for <users@maven.apache.org>; Mon, 20 Jan 2014 10:49:47 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=QWct+hDVm9AqskVcFPZOheX1I9t4p8IrZVJ2yztBZzs=;
+        b=WZkQCEDgABQPCFsCUdZ8t1Uo4y8ZGvwD/TutqGJeMsbfymo3hFVTf8nxAffI58WoDS
+         lkSb8q9+2hS4pb2OlNhA1veafDdF9GZi06syItC8VnJ++qbaES2Q06ED4ffzTSnwDiqx
+         Ow3qzc/Jn18buWBG+dzVEnT2ZCJBiwR0+uhrJw5J9hGyDgiUBvcNm4i3EZm7FvX1E+Tm
+         xLb8QTsoxU0xhag47gaIVPziXcD+x/X30Av2iRJ/lXE8mMmX0mWnhHrA3EIRKw0qtYmf
+         O2QSvzAtoNuG8VZxC/SUmpfS+ktnclO8A1Cg6qGiQl6Lgy7T1lz2dMIa9xHRDXy58pz3
+         4wTg==
+MIME-Version: 1.0
+X-Received: by 10.66.222.234 with SMTP id qp10mr4189610pac.156.1390243786746;
+ Mon, 20 Jan 2014 10:49:46 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Mon, 20 Jan 2014 10:49:46 -0800 (PST)
+In-Reply-To: <OF3C618DF9.E418F54A-ON85257C66.0064E4F4-85257C66.006600FF@belden.com>
+References: <OF32F0CB51.FB5A4FA2-ON85257C66.005B8339-85257C66.005D4B8C@belden.com>
+	<CA+nPnMz4afCMHpDL_dW2w7KW_F2ozV0=FG+UK2Op0QrzaLJ-7Q@mail.gmail.com>
+	<OF3C618DF9.E418F54A-ON85257C66.0064E4F4-85257C66.006600FF@belden.com>
+Date: Mon, 20 Jan 2014 18:49:46 +0000
+Message-ID: <CA+nPnMzUpoNuR89F1B49tF_3THdMKHuZttyVRYE9jtJpPXNsUA@mail.gmail.com>
+Subject: Re: versions maven plugin
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b5d4e560f73e704f06b5bdd
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b5d4e560f73e704f06b5bdd
+Content-Type: text/plain; charset=ISO-8859-1
+
+How did you turn your RC into a released version? (I would do it with the
+release plugin and just verify the SCM changelog is unchanged)
+
+On Monday, 20 January 2014, <Alejandro.Endo@miranda.com> wrote:
+
+> Thank you Stephen. Are there any other ways to stabilize my dependencies
+> then?
+>
+> i have > 300 poms all depending on the released+1 development version.
+> This must be a common use-case when using RCs, no? you increase all your
+> versions to your next RC-2-SNAPSHOT as soon as you create your RC-1, but
+> if that RC-1 happens to be released, then all your poms will be depending
+> on the SNAPSHOT of an RC-2 that will never be made so you have to
+> "downgrade" your dependency versions
+>
+> Am I doing something out of the ordinary here?
+>
+>
+>
+>
+> Alejandro Endo | Software Designer/Concepteur de logiciels
+>
+>
+>
+> From:   Stephen Connolly <stephen.alan.connolly@gmail.com <javascript:;>>
+> To:     Maven Users List <users@maven.apache.org <javascript:;>>,
+> Date:   2014-01-20 12:34
+> Subject:        Re: versions maven plugin
+>
+>
+>
+> v-m-p does not roll back version numbers
+>
+>
+> On 20 January 2014 16:59, <Alejandro.Endo@miranda.com <javascript:;>>
+> wrote:
+>
+> > Not sure if this is the right list for codehaus plugins. If not I
+> > apologize
+> >
+> > I have a pom with this
+> >
+> >         <dependencies>
+> >                 <dependency>
+> >                         <groupId>foo.blah</groupId>
+> >                         <artifactId>bar</artifactId>
+> >                         <version>1.2.0-RC-7-SNAPSHOT</version>
+> >                 </dependency>
+> >         </dependencies>
+> >
+> > I want to run the versions plugin to replace 1.2.0-RC-7-SNAPSHOT with
+> the
+> > version we actually released of the code, which is 1.2.0-RC-6. Looking
+> at
+> > the available mojos, it seems like versions:use-latest-releases is the
+> > right one to use. In the matrix here it says that this goal will modify
+> > -SNAPSHOT dependencies. Well, it doesn't. If i instead set the version
+> to
+> > 1.2.0-RC-3 (no snapshot), the mojo does update the dependency to
+> > 1.2.0-RC-6 so I don't know if this is just the documentation being
+> wrong.
+> > I also tried use-latest-versions without success
+> >
+> > Any idea how to do this? I just want to change the dependencies (which
+> are
+> > currently SNAPSHOT due to the m-release-p) to the latest released
+> versions
+> >
+> > Thank you,
+> > Alejandro Endo | Software Designer/Concepteur de logiciels
+> >
+> > DISCLAIMER:
+> > Privileged and/or Confidential information may be contained in this
+> > message. If you are not the addressee of this message, you may not
+> > copy, use or deliver this message to anyone. In such event, you
+> > should destroy the message and kindly notify the sender by reply
+> > e-mail. It is understood that opinions or conclusions that do not
+> > relate to the official business of the company are neither given
+> > nor endorsed by the company.
+> > Thank You.
+> >
+>
+>
+> DISCLAIMER:
+> Privileged and/or Confidential information may be contained in this
+> message. If you are not the addressee of this message, you may not
+> copy, use or deliver this message to anyone. In such event, you
+> should destroy the message and kindly notify the sender by reply
+> e-mail. It is understood that opinions or conclusions that do not
+> relate to the official business of the company are neither given
+> nor endorsed by the company.
+> Thank You.
+>
+
+
+-- 
+Sent from my phone
+
+--047d7b5d4e560f73e704f06b5bdd--
+

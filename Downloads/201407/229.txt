@@ -1,0 +1,84 @@
+From users-return-136920-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jul 28 05:54:45 2014
+Return-Path: <users-return-136920-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CF61A10759
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 28 Jul 2014 05:54:45 +0000 (UTC)
+Received: (qmail 91255 invoked by uid 500); 28 Jul 2014 05:54:38 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 91176 invoked by uid 500); 28 Jul 2014 05:54:38 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 91155 invoked by uid 99); 28 Jul 2014 05:54:38 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 28 Jul 2014 05:54:38 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.217.169 as permitted sender)
+Received: from [209.85.217.169] (HELO mail-lb0-f169.google.com) (209.85.217.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 28 Jul 2014 05:54:35 +0000
+Received: by mail-lb0-f169.google.com with SMTP id s7so5475341lbd.14
+        for <users@maven.apache.org>; Sun, 27 Jul 2014 22:54:11 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=DnmcsVKgPtc8ny9DEp723hqNZpsMJRTkBtCSOXhee9U=;
+        b=cTBHLW5JKAuDEeXQ9eNV95kvbAyLhpByS78EcR2/KU6GVCaTWW4Qd26zrsbtycrqkA
+         Iy75i4p9Zpi35TgGvWhJkJeV8+ljJnrKmlwZPQFsbcUImZCXmcam/fsM5+nEOE+xLcHX
+         AmM7t8nvdCPapmkHNvc+lElwv12i0TryxZ/gkmml8zdolp7mrwynAbkDb7PRi8Blavfb
+         MgxthQ83hweq7zTjit1s6y3EVzoQmhGskomxDJ9q6ru+gnpYgVl7rBNWan8faOgK/M85
+         ZnCPZWtAc4eNPsBs/kzlJyOHNFQoFsjb5reHy4tKTT4pwqpLr/Xtg/Jx5vXx+qGXt2eM
+         mS4w==
+MIME-Version: 1.0
+X-Received: by 10.112.225.7 with SMTP id rg7mr30013494lbc.52.1406526851498;
+ Sun, 27 Jul 2014 22:54:11 -0700 (PDT)
+Received: by 10.114.20.231 with HTTP; Sun, 27 Jul 2014 22:54:11 -0700 (PDT)
+Date: Sun, 27 Jul 2014 22:54:11 -0700
+Message-ID: <CAPCjjnFNhNqxd1PEpoXC2SLo0nmjHFw8craprTRQDan+rh31CA@mail.gmail.com>
+Subject: [ANN] Maven Exec Plugin 1.3.2 Released
+From: Dan Tran <dantran@gmail.com>
+To: announce@mojo.codehaus.org, Maven Users List <users@maven.apache.org>, 
+	"dev@mojo.codehaus.org" <dev@mojo.codehaus.org>
+Content-Type: multipart/alternative; boundary=001a11348d4e59c8c904ff3a8d79
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11348d4e59c8c904ff3a8d79
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+The Mojo team is pleased to announce the release of the exec-maven-plugin
+version 1.3.2.
+
+This plugin provides 2 goals to help execute system and Java programs.
+
+http://mojo.codehaus.org/exec-maven-plugin/
+<http://mojo.codehaus.org/build-helper-maven-plugin/>
+
+To get this update, simply specify the version in your project's plugin
+configuration:
+
+<plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.3.2</version>
+</plugin>
+
+Release Notes
+*https://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=11240&version=20533
+<https://jira.codehaus.org/secure/ReleaseNote.jspa?projectId=11240&version=20533>*
+
+Enjoy,
+
+The Mojo team.
+
+--001a11348d4e59c8c904ff3a8d79--
+

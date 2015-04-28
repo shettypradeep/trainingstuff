@@ -1,0 +1,80 @@
+From users-return-137764-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Nov 18 04:08:49 2014
+Return-Path: <users-return-137764-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D0F4610092
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 18 Nov 2014 04:08:49 +0000 (UTC)
+Received: (qmail 63969 invoked by uid 500); 18 Nov 2014 04:08:47 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 63868 invoked by uid 500); 18 Nov 2014 04:08:47 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 63857 invoked by uid 99); 18 Nov 2014 04:08:47 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 18 Nov 2014 04:08:47 +0000
+Received: from localhost (HELO mail-qg0-f50.google.com) (127.0.0.1)
+  (smtp-auth username jjensen, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Tue, 18 Nov 2014 04:08:46 +0000
+Received: by mail-qg0-f50.google.com with SMTP id e89so5332333qgf.9
+        for <users@maven.apache.org>; Mon, 17 Nov 2014 20:08:45 -0800 (PST)
+X-Received: by 10.140.97.37 with SMTP id l34mr40828582qge.43.1416283725512;
+ Mon, 17 Nov 2014 20:08:45 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.140.86.74 with HTTP; Mon, 17 Nov 2014 20:08:15 -0800 (PST)
+In-Reply-To: <CANnZoJuv2jxfg384reH46fhPUjFGxnZiD+4TZ48+XkU7GZpvqA@mail.gmail.com>
+References: <CANnZoJuv2jxfg384reH46fhPUjFGxnZiD+4TZ48+XkU7GZpvqA@mail.gmail.com>
+From: Jeff Jensen <jeffjensen@upstairstechnology.com>
+Date: Mon, 17 Nov 2014 22:08:15 -0600
+Message-ID: <CAKumxBwW6ArNEFSUUW=Q4bOvVXv=86GcB9JnX++JTz3Wbc04Bg@mail.gmail.com>
+Subject: Re: API-s/Maven plugins for generation of REST API documentation
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113a9c905c4c2c05081a4086
+
+--001a113a9c905c4c2c05081a4086
+Content-Type: text/plain; charset=UTF-8
+
+Some additional ones to consider:
+Swagger [0]
+API BluePrint [1]
+RAML [2]
+
+I find the most ecosystem around Swagger; seems the most popular. Nice list
+of integrations (see the link to Maven plugin) [3]
+
+[0] http://swagger.io
+[1] http://apiblueprint.org
+[2] http://raml.org
+[3] https://github.com/swagger-api/swagger-spec#additional-libraries
+
+
+On Mon, Nov 17, 2014 at 7:55 PM, Martin Todorov <carlspring@gmail.com>
+wrote:
+
+> Hi,
+>
+> Perhaps this isn't the right mailing list, but it's partially
+> Maven-related...
+>
+> I've been wondering: are there some existing API-s and Maven plugins that
+> can generate either of the following:
+> a) Javadoc generators for REST API-s
+> b) Markdown-styled documentation generators for REST API-s
+>
+> I'm aware of Enunciate... Is that the only option, or are there any others
+> that can be used with Maven plugins?
+>
+> Thanks in advance for any hints!
+> Kind regards,
+>
+> Martin Todorov
+>
+
+--001a113a9c905c4c2c05081a4086--
+

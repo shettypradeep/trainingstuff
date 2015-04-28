@@ -1,0 +1,97 @@
+From users-return-134916-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Jan  3 16:03:23 2014
+Return-Path: <users-return-134916-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D52001096C
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  3 Jan 2014 16:03:23 +0000 (UTC)
+Received: (qmail 7560 invoked by uid 500); 3 Jan 2014 16:02:49 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 7506 invoked by uid 500); 3 Jan 2014 16:02:45 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 7492 invoked by uid 99); 3 Jan 2014 16:02:43 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Jan 2014 16:02:43 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of cleuton.sampaio@gmail.com designates 209.85.128.53 as permitted sender)
+Received: from [209.85.128.53] (HELO mail-qe0-f53.google.com) (209.85.128.53)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 03 Jan 2014 16:02:37 +0000
+Received: by mail-qe0-f53.google.com with SMTP id nc12so15493992qeb.26
+        for <users@maven.apache.org>; Fri, 03 Jan 2014 08:02:17 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=subject:references:from:content-type:in-reply-to:message-id:date:to
+         :content-transfer-encoding:mime-version;
+        bh=tOL7E5FIf62UG5xPIXZpwaT7W9FIP4edZ/uxD45U1Tc=;
+        b=O6DZBFDV0DNBPg8bs1TfsETkhYPABGwPuSorItdojh1lUNaK+lcY8g5lMIi1dR+WA/
+         4yGpM04kp22EQDx8otnVq6IU8S8omTFr2PqlP1y2KWw+3oS3CsKYp9HHLsggSRGqch9g
+         MRb67zGATqPZWRYntIcZIewA81Nr03U+aFOBICDcFSvlrlecUqYtmMNVgn98BgLMP8/E
+         tGYNnmweCOkfOeRthAlqRwGjsMjPwvKqjdW60Q3vf1f0SHtNQ938dc/SVlEl1hVad8LP
+         PSCI6jDMtQfUdMLiW6IPK1cWK5R9Jnk6jhD/tbgQ3tWeU+EcQglmIw6LfbAHUCJ0X7T/
+         mQBQ==
+X-Received: by 10.224.53.135 with SMTP id m7mr45793946qag.21.1388764937319;
+        Fri, 03 Jan 2014 08:02:17 -0800 (PST)
+Received: from [192.168.1.104] ([189.105.142.0])
+        by mx.google.com with ESMTPSA id p20sm86210605qay.0.2014.01.03.08.02.15
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 03 Jan 2014 08:02:15 -0800 (PST)
+Subject: Re: Maven Plugin Logging
+References: <CAG-F_6n92W8kgJBvm2B3djmOGgkv6+1GLFey3wOPp8NO6X1kjA@mail.gmail.com>
+From: Cleuton Sampaio <cleuton.sampaio@gmail.com>
+Content-Type: text/plain;
+	charset=utf-8
+X-Mailer: iPad Mail (11B511)
+In-Reply-To: <CAG-F_6n92W8kgJBvm2B3djmOGgkv6+1GLFey3wOPp8NO6X1kjA@mail.gmail.com>
+Message-Id: <922EA73B-CA3F-4DF2-88DF-954A4137B206@gmail.com>
+Date: Fri, 3 Jan 2014 14:02:12 -0200
+To: Maven Users List <users@maven.apache.org>
+Content-Transfer-Encoding: quoted-printable
+Mime-Version: 1.0 (1.0)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Did you based your mojo on class AbstractMojo ?  If you did, then you should=
+ use the getLog() method. See:
+
+http://maven.apache.org/ref/2.2.1/maven-plugin-api/apidocs/org/apache/maven/=
+plugin/AbstractMojo.html
+
+Cleuton Sampaio
+
+> Em 03/01/2014, =C3=A0s 07:44, "Omar@Gmail" <omarnetbox@googlemail.com> esc=
+reveu:
+>=20
+> Hi All,
+>=20
+> I implemented my own Maven plugin mojo in which I used log4j + slf4j. In
+> the plugin project I have included the correct jars and can see correct
+> logging of statements from code.
+>=20
+> Now I want use this new maven plugin in another client project but having
+> trouble getting it to work correctly.
+>=20
+> In the plugin itself I have included a log4j.properties under
+> src/main/resources which works fine as mentioned above. But when I try to
+> include the plugin in another client project the log file is not being
+> created.
+>=20
+> The question is what else do I have to try or do to get this working
+> correctly?
+>=20
+> Thank you.
+> Omar
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

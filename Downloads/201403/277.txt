@@ -1,0 +1,213 @@
+From users-return-135858-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 19 19:49:08 2014
+Return-Path: <users-return-135858-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 67E4410408
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 19 Mar 2014 19:49:08 +0000 (UTC)
+Received: (qmail 11502 invoked by uid 500); 19 Mar 2014 19:49:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 11448 invoked by uid 500); 19 Mar 2014 19:49:04 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 11440 invoked by uid 99); 19 Mar 2014 19:49:04 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Mar 2014 19:49:04 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of eric.kolotyluk@gmail.com designates 209.85.220.49 as permitted sender)
+Received: from [209.85.220.49] (HELO mail-pa0-f49.google.com) (209.85.220.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 19 Mar 2014 19:48:58 +0000
+Received: by mail-pa0-f49.google.com with SMTP id lj1so9389779pab.36
+        for <users@maven.apache.org>; Wed, 19 Mar 2014 12:48:36 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type;
+        bh=Rd82Un4JITzB5okjfTiD0UMsBpqOxhNGwN8iNRgVBjg=;
+        b=TWWoNd6zXaAaOWFZNGBpfHyX/JbwB5m+NF/OtKAkSIV/4OnQtrnHO4mSCk2qzzgjqo
+         dUoQK0aRBPSnadSlRQfJsPDU+xtsN3xIZwWBxycF7EEoD8JQO82ZmYyQxyA6OLHj8G3f
+         3PqWKJqEGBPWP7RKhqzPxvE4UY6tTRj/E6OOlGIyLUQ0ZAAt4yxuoQc50Uo6TtNenYdu
+         oXLPCKpM/1tdmEyZ3TLfj6Sz5TyLfeYuqHVN5WeLcRkpncSsazbwvmTiVpGd7hwGBa4o
+         rZi9Cv7gdi7NXd+HLk/maTwzcw0u5H6sDDUQn4L13VYUTsfLkAUtcpVvg1Z8DmfucBl2
+         yHFA==
+X-Received: by 10.66.227.193 with SMTP id sc1mr41098619pac.102.1395258516273;
+        Wed, 19 Mar 2014 12:48:36 -0700 (PDT)
+Received: from [192.168.0.17] (S0106602ad07f9cfa.vc.shawcable.net. [24.85.131.20])
+        by mx.google.com with ESMTPSA id nx12sm108306759pab.6.2014.03.19.12.48.34
+        for <multiple recipients>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 19 Mar 2014 12:48:35 -0700 (PDT)
+Message-ID: <5329F490.2090404@gmail.com>
+Date: Wed, 19 Mar 2014 12:48:32 -0700
+From: Eric Kolotyluk <eric.kolotyluk@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>, 
+ git-users@googlegroups.com
+Subject: Re: Configuring SCM for github
+References: <5329E8F1.5000801@gmail.com>	<33515199-3180-4535-A263-C38F07D8532F@gold-family.us>	<5329EF94.7050707@gmail.com> <CA+nPnMxB5dGorB+euZBcWuq_wfbTuCsn6pjp3c9XnyeCXJ-ZHg@mail.gmail.com>
+In-Reply-To: <CA+nPnMxB5dGorB+euZBcWuq_wfbTuCsn6pjp3c9XnyeCXJ-ZHg@mail.gmail.com>
+Content-Type: multipart/alternative;
+ boundary="------------040709010000060406030300"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------040709010000060406030300
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Ok, adding
+
+     <server>
+       <id>github.com</id>
+       <username>kolotyluk</username>
+       <password>/secret/</password>
+     </server>
+
+to settings.xml did the trick. Many thanks Stephen, and Russell.
+
+Russell, this would be a good step to add to Video6_3.mp4
+
+Why is ssh better than https?
+
+Cheers, Eric
+
+
+On 3/19/2014 12:30 PM, Stephen Connolly wrote:
+> On Wednesday, 19 March 2014, Eric Kolotyluk <eric.kolotyluk@gmail.com>
+> wrote:
+>
+>> Now I have
+>>
+>>    <scm>
+>> <url>https://github.com/kolotyluk/java-file-utilities.git</url>
+>> <connection>scm:git:https://github.com/kolotyluk/java-file-utilities.git</
+>> connection>
+>> <developerConnection>scm:git:https://github.com/kolotyluk/
+>> java-file-utilities.git</developerConnection>
+>
+> I favour the ssh variant of the GitHub URL
+>
+>
+>>    </scm>
+>>
+>> But it still hangs...
+>>
+>>    [INFO] Checking in modified POMs...
+>>    [INFO] Executing: cmd.exe /X /C "git add -- pom.xml"
+>>    [INFO] Working directory: D:\Users\Eric\Software\
+>> Project\Repositories\java-file-utilities
+>>    [INFO] Executing: cmd.exe /X /C "git status"
+>>    [INFO] Working directory: D:\Users\Eric\Software\
+>> Project\Repositories\java-file-utilities
+>>    [INFO] Executing: cmd.exe /X /C "git commit --verbose -F
+>> C:\Users\Eric\AppData\Local\Temp\maven-scm-1007803688.commit pom.xml"
+>>    [INFO] Working directory: D:\Users\Eric\Software\
+>> Project\Repositories\java-file-utilities
+>>    [INFO] Executing: cmd.exe /X /C "git symbolic-ref HEAD"
+>>    [INFO] Working directory: D:\Users\Eric\Software\
+>> Project\Repositories\java-file-utilities
+>>    [INFO] Executing: cmd.exe /X /C "git push https://github.com/kolotyluk/
+>> java-file-utilities.git master:master"
+>>    [INFO] Working directory: D:\Users\Eric\Software\
+>> Project\Repositories\java-file-utilities
+>>
+>> In my experience, getting release to work is the hardest thing I have ever
+>> done in Maven. I struggled for weeks to get it working with Perforce
+>> correctly. This is my first time with Git.
+>>
+>> Do I need to set up a <server> in my settings.xml file for github?
+>
+> Yes
+>
+>
+>> Cheers, Eric
+>>
+>> On 3/19/2014 12:06 PM, Russell Gold wrote:
+>>
+>>> HI Eric, I think you are missing the ".git" extensions in your urls.
+>>> Here's the ones I use.
+>>>
+>>>       <scm>
+>>>           <url>https://github.com/meterware/simplestub.git</url>
+>>>           <developerConnection>scm:git:https://github.com/meterware/
+>>> simplestub.git</developerConnection>
+>>>           <connection>scm:git:https://github.com/meterware/simplestub.git
+>>> </connection>
+>>>       </scm>
+>>>
+>>> On Mar 19, 2014, at 2:58 PM, Eric Kolotyluk <eric.kolotyluk@gmail.com>
+>>> wrote:
+>>>
+>>>   I am having trouble getting mvn release:prepare to work with github
+>>>>    <scm>
+>>>> <connection>scm:git:http://github.com/kolotyluk/java-file-utilities
+>>>> </connection>
+>>>> <url>scm:git:http://github.com/kolotyluk/java-file-utilities</url>
+>>>> <developerConnection>scm:git:https://github.com/kolotyluk/
+>>>> java-file-utilities</developerConnection>
+>>>>      <tag>java-file-utilities-0.0.1</tag>
+>>>>    </scm>
+>>>>
+>>>> When I try to prepare the release I get
+>>>>
+>>>>    [INFO] Checking in modified POMs...
+>>>>    [INFO] Executing: cmd.exe /X /C "git add -- pom.xml"
+>>>>    [INFO] Working directory: D:\Users\Eric\Software\
+>>>> Project\Repositories\java-file-utilities
+>>>>    [INFO] Executing: cmd.exe /X /C "git status"
+>>>>    [INFO] Working directory: D:\Users\Eric\Software\
+>>>> Project\Repositories\java-file-utilities
+>>>>    [INFO] Executing: cmd.exe /X /C "git commit --verbose -F
+>>>> C:\Users\Eric\AppData\Local\Temp\maven-scm-559613294.commit pom.xml"
+>>>>    [INFO] Working directory: D:\Users\Eric\Software\
+>>>> Project\Repositories\java-file-utilities
+>>>>    [INFO] Executing: cmd.exe /X /C "git symbolic-ref HEAD"
+>>>>    [INFO] Working directory: D:\Users\Eric\Software\
+>>>> Project\Repositories\java-file-utilities
+>>>>    [INFO] Executing: cmd.exe /X /C "git push
+>>>> https://github.com/kolotyluk/java-file-utilities master:master"
+>>>>    [INFO] Working directory: D:\Users\Eric\Software\
+>>>> Project\Repositories\java-file-utilities
+>>>>
+>>>> and mvn just hangs forever at that point. Is this a credentials problem
+>>>> or something else?
+>>>>
+>>>> Cheers, Eric
+>>>>
+>>>> ---------------------------------------------------------------------
+>>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>>
+>>>>   -----------------
+>>> Author, Getting Started with Apache Maven <http://www.packtpub.com/
+>>> getting-started-with-apache-maven/video>
+>>>
+>>> Come read my webnovel, Take a Lemon <http://www.takealemon.com>,
+>>> and listen to the Misfile radio play <http://www.fuzzyfacetheater.
+>>> com/misfile/>!
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+
+
+--------------040709010000060406030300--
+

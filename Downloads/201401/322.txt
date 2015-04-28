@@ -1,0 +1,101 @@
+From users-return-134965-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan  6 09:06:24 2014
+Return-Path: <users-return-134965-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 371E7103E3
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  6 Jan 2014 09:06:24 +0000 (UTC)
+Received: (qmail 29447 invoked by uid 500); 6 Jan 2014 09:06:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 29285 invoked by uid 500); 6 Jan 2014 09:05:59 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 29175 invoked by uid 99); 6 Jan 2014 09:05:54 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 09:05:54 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bmathus@gmail.com designates 209.85.215.170 as permitted sender)
+Received: from [209.85.215.170] (HELO mail-ea0-f170.google.com) (209.85.215.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 09:05:50 +0000
+Received: by mail-ea0-f170.google.com with SMTP id k10so7821889eaj.1
+        for <users@maven.apache.org>; Mon, 06 Jan 2014 01:05:29 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=Pln/tadl7AfN+/dc3Hbxb3EYIYmFxn3eYarFUWhnyow=;
+        b=F3DfUwusYx2GXa7bf/MEurZqKFh64nAtSqgUfqVHe3Hv2Xgog3xbq1kwmNkG/NC0Lx
+         HCmkihb56Q++7J2KLQxZLtOBTP3zhawW/LezCU264IL3phXc8Vuuc5YzJ3QQ2ZGZk0HS
+         NP5zIbm6mz4hpsovqn+yGGCFAcdeOsCE0EEwow0Yl5s7Zy/iELzxQPCBauKbAe1jFMMS
+         VRhyK+6Y6XqjwuIaGTfSS3Bcj3GpqVp4zgY9o2qdmkCcJDLqF7Cb4oBCHkn7dY4OHUkN
+         1+T3Tn90zMAMCiLZIc3aHmfMVlDjQeYui0j/3DE5z5qBijVUeEDS86VNNPQ0QF61toHJ
+         cwaQ==
+X-Received: by 10.14.175.131 with SMTP id z3mr15564325eel.65.1388999129677;
+ Mon, 06 Jan 2014 01:05:29 -0800 (PST)
+MIME-Version: 1.0
+Sender: bmathus@gmail.com
+Received: by 10.15.34.75 with HTTP; Mon, 6 Jan 2014 01:05:08 -0800 (PST)
+In-Reply-To: <CAHNdxu==PatdW9wP0fjj9QRRUmYuBsnPPxH7eh40w5eyrVFxqg@mail.gmail.com>
+References: <CAHNdxu=Y_XEuQwMu4Bt1QgKAJL3qyknoq+n23CpQf895GybyqA@mail.gmail.com>
+ <CAHNdxu==PatdW9wP0fjj9QRRUmYuBsnPPxH7eh40w5eyrVFxqg@mail.gmail.com>
+From: Baptiste Mathus <bmathus@batmat.net>
+Date: Mon, 6 Jan 2014 10:05:08 +0100
+X-Google-Sender-Auth: qFqYkDrfFjVCPJ6V0lluFn42rTI
+Message-ID: <CANWgJS4UfapGDw=vhRpwc9W7Y-8GsR4UphkSOJAinx1-uDBepw@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Armed_with_a_collection_of_Artifacts=2C_what_is_th?=
+	=?UTF-8?Q?e_Maven_Way=E2=84=A2_to_resolve_them=3F?=
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b622148b7c44104ef498f84
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b622148b7c44104ef498f84
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Does
+http://svn.codehaus.org/mojo/trunk/mojo/extra-enforcer-rules/src/main/java/=
+org/apache/maven/plugins/enforcer/AbstractResolveDependencies.java
+help
+you?
+
+Cheers
+
+
+2014/1/6 Laird Nelson <ljnelson@gmail.com>
+
+> On Sun, Jan 5, 2014 at 3:56 PM, Laird Nelson <ljnelson@gmail.com> wrote:
+>
+> > What is the Maven Way=E2=84=A2 to resolve these Artifacts?
+> >
+>
+> For completeness, I also looked at
+>
+> http://maven.apache.org/guides/introduction/introduction-to-artifact-reso=
+lution.htmlbut
+> this didn't seem to have ever been completed.
+>
+> Thanks,
+> Best,
+> Laird
+>
+> --
+> http://about.me/lairdnelson
+>
+
+
+
+--=20
+Baptiste <Batmat> MATHUS - http://batmat.net
+Sauvez un arbre,
+Mangez un castor !
+
+--047d7b622148b7c44104ef498f84--
+

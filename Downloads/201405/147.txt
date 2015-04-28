@@ -1,0 +1,63 @@
+From users-return-136369-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri May 16 19:00:52 2014
+Return-Path: <users-return-136369-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8DEDA1172D
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 16 May 2014 19:00:52 +0000 (UTC)
+Received: (qmail 64270 invoked by uid 500); 16 May 2014 11:47:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 34827 invoked by uid 500); 16 May 2014 11:28:30 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 40480 invoked by uid 99); 16 May 2014 11:12:22 -0000
+Received: from Unknown (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 16 May 2014 11:12:22 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 15 May 2014 08:31:53 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <dariusz.jurojc@daprog.pl>)
+	id 1Wkr4b-0004ud-JM
+	for users@maven.apache.org; Thu, 15 May 2014 01:31:29 -0700
+Date: Thu, 15 May 2014 01:31:29 -0700 (PDT)
+From: =?UTF-8?Q?Dariusz_Juroj=C4=87?= <dariusz.jurojc@daprog.pl>
+To: users@maven.apache.org
+Message-ID: <1400142689557-5793085.post@n5.nabble.com>
+In-Reply-To: <CABLGb9zPRzCM3uCDTfraj3wCn9x1GHbZyyADiUCedr_GvOpMuQ@mail.gmail.com>
+References: <53709186.9090403@ekspert.biz> <537115C2.5040304@artifact-software.com> <1399988860366-5793019.post@n5.nabble.com> <CABLGb9zPRzCM3uCDTfraj3wCn9x1GHbZyyADiUCedr_GvOpMuQ@mail.gmail.com>
+Subject: Re: How to avoid checking parent project in maven-site-plugin
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Sure, i have software vendor's poms in my local repository. But I can't
+modify them (mostly because vendor releases new version of poms, so I will
+have to change every version of their pom - it doesn't have any sense). And
+I can't force vendor to add site configuration to their poms. So I have to
+do it in my pom. And I tried various methods and in every one of them maven
+tried to download site configuration from parent pom. And I'm trying to
+avoid this.
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/How-to-avoid-checking-parent-project-in-maven-site-plugin-tp5792945p5793085.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

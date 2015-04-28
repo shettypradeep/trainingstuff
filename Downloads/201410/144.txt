@@ -1,0 +1,77 @@
+From users-return-137570-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Oct 15 06:08:26 2014
+Return-Path: <users-return-137570-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 55673177A2
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 15 Oct 2014 06:08:26 +0000 (UTC)
+Received: (qmail 94480 invoked by uid 500); 15 Oct 2014 06:08:24 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 94366 invoked by uid 500); 15 Oct 2014 06:08:24 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 94355 invoked by uid 99); 15 Oct 2014 06:08:24 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 15 Oct 2014 06:08:24 +0000
+X-ASF-Spam-Status: No, hits=0.7 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (athena.apache.org: local policy)
+Received: from [194.158.98.15] (HELO mail-2y.bbox.fr) (194.158.98.15)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 15 Oct 2014 06:08:18 +0000
+Received: from herve-desktop.localnet (static-176-183-252-218.ncc.abo.bbox.fr [176.183.252.218])
+	by mail-2y.bbox.fr (Postfix) with ESMTP id 93CD67D
+	for <users@maven.apache.org>; Wed, 15 Oct 2014 08:07:56 +0200 (CEST)
+From: =?ISO-8859-1?Q?Herv=E9?= BOUTEMY <herve.boutemy@free.fr>
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Site plugin ignoring <footer> in site.xml?
+Date: Wed, 15 Oct 2014 08:07:56 +0200
+Message-ID: <3995603.U8KSGhEuua@herve-desktop>
+User-Agent: KMail/4.13.3 (Linux/3.13.0-37-generic; KDE/4.13.3; x86_64; ; )
+In-Reply-To: <CALhtWkcyE8xGC0=P2oVzEyVm8YU2X92xdB6Acoztk-g=7r1tVw@mail.gmail.com>
+References: <CALhtWkcyE8xGC0=P2oVzEyVm8YU2X92xdB6Acoztk-g=7r1tVw@mail.gmail.com>
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="iso-8859-1"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+did you use a xsd to ensure you didn't made a typo somewhere?
+
+did you try site:effective-site to check nothing is lost during inherit=
+ence and=20
+interpolation?
+
+what is the skin used? I vaguely remember some similar case where resul=
+t=20
+differed according to the skin used, but I can't find it precisely at t=
+he moment
+
+HTH
+
+Regards,
+
+Herv=E9
+
+Le mardi 14 octobre 2014 15:15:50 Benson Margulies a =E9crit :
+> I've got a <footer> at the end of <body>, but I'm still getting the
+> generated copyright notice.
+>=20
+> I'm using site plugin version 3.4.
+>=20
+> ---------------------------------------------------------------------=
+
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

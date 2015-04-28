@@ -1,0 +1,67 @@
+From users-return-135560-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Feb 18 13:07:26 2014
+Return-Path: <users-return-135560-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A4E9110E92
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 18 Feb 2014 13:07:26 +0000 (UTC)
+Received: (qmail 61676 invoked by uid 500); 18 Feb 2014 13:07:21 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 61421 invoked by uid 500); 18 Feb 2014 13:07:18 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 26351 invoked by uid 99); 18 Feb 2014 09:54:00 -0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of bezuhlyi@gmail.com does not designate 216.139.236.26 as permitted sender)
+Date: Tue, 18 Feb 2014 01:53:35 -0800 (PST)
+From: Bezuhlyi <bezuhlyi@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1392717215256-5785194.post@n5.nabble.com>
+In-Reply-To: <adba96190701031326l371d812am5f285a9f5e7ec5a5@mail.gmail.com>
+References: <adba96190701031326l371d812am5f285a9f5e7ec5a5@mail.gmail.com>
+Subject: Re: Trouble with javadoc and package name
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+It's about if you have:
+
+    [ERROR] Failed to execute goal
+org.apache.maven.plugins:maven-javadoc-plugin:2.9.1:jar (default-cli) on
+project coolproject-api: MavenReportException: Error while creating archive:
+    [ERROR] Exit code: 1 - javadoc: warning - No source files for package
+org.coolproject.api
+    [ERROR] javadoc: warning - No source files for package
+org.coolproject.api
+    [ERROR] javadoc: warning - No source files for package
+org.coolproject.api.listeners
+    [ERROR] javadoc: error - No public or protected classes found to
+document.
+
+Java compiler understands sources directories with package-style names like:
+    coolproject-api/java/org.coolproject.api/
+
+and there are no problems with it, but *maven-javadoc-plugin* doesn't. So
+try to change your "physical" packages layout to:
+    coolproject-api/java/org/coolproject/api/
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Trouble-with-javadoc-and-package-name-tp79373p5785194.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

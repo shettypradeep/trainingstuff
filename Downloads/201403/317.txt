@@ -1,0 +1,165 @@
+From users-return-135722-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar  6 17:35:41 2014
+Return-Path: <users-return-135722-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7176B10CCD
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  6 Mar 2014 17:35:41 +0000 (UTC)
+Received: (qmail 43886 invoked by uid 500); 6 Mar 2014 17:35:30 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 43733 invoked by uid 500); 6 Mar 2014 17:35:19 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 43344 invoked by uid 99); 6 Mar 2014 17:35:16 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 17:35:16 +0000
+X-ASF-Spam-Status: No, hits=-2.3 required=5.0
+	tests=RCVD_IN_DNSWL_MED,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of suresh.pamidipati@oracle.com designates 141.146.126.69 as permitted sender)
+Received: from [141.146.126.69] (HELO aserp1040.oracle.com) (141.146.126.69)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 17:35:08 +0000
+Received: from ucsinet22.oracle.com (ucsinet22.oracle.com [156.151.31.94])
+	by aserp1040.oracle.com (Sentrion-MTA-4.3.2/Sentrion-MTA-4.3.2) with ESMTP id s26HYjwL004605
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=OK);
+	Thu, 6 Mar 2014 17:34:46 GMT
+Received: from userz7022.oracle.com (userz7022.oracle.com [156.151.31.86])
+	by ucsinet22.oracle.com (8.14.5+Sun/8.14.5) with ESMTP id s26HYi3t023253
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-SHA bits=256 verify=NO);
+	Thu, 6 Mar 2014 17:34:44 GMT
+Received: from abhmp0013.oracle.com (abhmp0013.oracle.com [141.146.116.19])
+	by userz7022.oracle.com (8.14.5+Sun/8.14.4) with ESMTP id s26HYi5H023240;
+	Thu, 6 Mar 2014 17:34:44 GMT
+MIME-Version: 1.0
+Message-ID: <09927282-9cc3-4e1c-9095-191a2d1ad01d@default>
+Date: Thu, 6 Mar 2014 09:34:44 -0800 (PST)
+From: Venkata Suresh Kumar Pamidipati <suresh.pamidipati@oracle.com>
+To:  <users@maven.apache.org>, <rwheeler@artifact-software.com>
+Subject: Re: Invalid signature file digest for Manifest main attributes
+X-Mailer: Zimbra on Oracle Beehive
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+X-Source-IP: ucsinet22.oracle.com [156.151.31.94]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Ron,
+
+In the assembly distribution jar, only file present was MANIFEST.MF and the=
+re were no other files. But the jar created from packaging has the .SF and =
+.RSA files which indicates that exclude configuration did not work. The dep=
+endency jar which I have mentioned in pom.xml is a signed jar and has these=
+ .SF and .RSA files.
+
+Thanks,
+Suresh
+
+
+----- Original Message -----
+From: rwheeler@artifact-software.com
+To: users@maven.apache.org
+Sent: Thursday, March 6, 2014 6:50:33 PM GMT +05:30 Chennai, Kolkata, Mumba=
+i, New Delhi
+Subject: Re: Invalid signature file digest for Manifest main attributes
+
+Look in the jar that the assembly created to see if the excludes=20
+actually worked.
+
+Ron
+
+On 06/03/2014 8:09 AM, Martin Gainty wrote:
+> Hi Suresh
+>
+>  =20
+>
+> Your best solution will come from  Oracle Support India
+> They are supposed to know this information and will be able to assist you=
+ with your problem
+> Oracle India Support Line number is +91.22.66796200
+> If  Oracle India is unable to assist you ..we can find a resource on this=
+ side of the planet to help you
+>
+>
+> Warm Regards
+>
+>   =20
+>
+>
+>
+>> Date: Wed, 5 Mar 2014 19:19:44 -0800
+>> From: suresh.pamidipati@oracle.com
+>> To: users@maven.apache.org
+>> Subject: Invalid signature file digest for Manifest main attributes
+>>
+>> Hi,
+>>
+>> I am trying to build our project using maven. I have included multiple d=
+ependency jars in pom.xml and I am trying to build distribution jar using a=
+ssembly:assembly goal. The command "mvn assembly:assembly" resulted in the =
+below error.
+>>
+>> [ERROR] Failed to execute goal org.apache.maven.plugins:maven-assembly-p=
+lugin:2.4:assembly (default-cli) on project my-plugin: Execution default-cl=
+i of goal org.apache.maven.plugins:maven-assembly-plugin:2.4:assembly faile=
+d: Invalid signature file digest for Manifest main attributes -> [Help 1]
+>>
+>> Two of the dependency jars when present together was causing this issue.=
+ I tried commenting one of them and mvn assembly:assembly command worked fi=
+ne. To make it work with both the jars present together, I tried by adding =
+excludes in dependency, assembly and even shade plugin configuration in pom=
+.xml to exclude MANIFEST files of one of those two jars as shown below, but=
+ still the same error exists.
+>>
+>> <configuration>
+>> <filters>
+>> <filter>
+>> <artifact>MyJar1:MyJar1</artifact>
+>> <excludes>
+>> <exclude>META-INF/*.SF</exclude>
+>> <exclude>META-INF/*.DSA</exclude>
+>> <exclude>META-INF/*.RSA</exclude>
+>> </excludes>
+>> </filter>
+>> </filters>
+>> </configuration>
+>>
+>> Please let me know how to resolve this error. I am not sure if the exclu=
+de statements were being ignored or I am missing some thing here. Any infor=
+mation on this will be really helpful.
+>>
+>> Thanks & Regards,
+>> Suresh
+>>
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>   =09=09 =09   =09=09
+
+
+--=20
+Ron Wheeler
+President
+Artifact Software Inc
+email: rwheeler@artifact-software.com
+skype: ronaldmwheeler
+phone: 866-970-2435, ext 102
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

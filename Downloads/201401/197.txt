@@ -1,0 +1,126 @@
+From users-return-135067-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan  9 21:36:22 2014
+Return-Path: <users-return-135067-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 41AF1105E9
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  9 Jan 2014 21:36:22 +0000 (UTC)
+Received: (qmail 233 invoked by uid 500); 9 Jan 2014 21:36:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 99992 invoked by uid 500); 9 Jan 2014 21:36:20 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99984 invoked by uid 99); 9 Jan 2014 21:36:20 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Jan 2014 21:36:20 +0000
+X-ASF-Spam-Status: No, hits=2.5 required=5.0
+	tests=FREEMAIL_REPLY,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of mandrikov@gmail.com designates 209.85.128.44 as permitted sender)
+Received: from [209.85.128.44] (HELO mail-qe0-f44.google.com) (209.85.128.44)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Jan 2014 21:36:14 +0000
+Received: by mail-qe0-f44.google.com with SMTP id nd7so3784852qeb.31
+        for <users@maven.apache.org>; Thu, 09 Jan 2014 13:35:54 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :cc:content-type;
+        bh=aNr9DMYGZmKYIezLOvL7oosyTNC8wKSISUeevz70qnc=;
+        b=k2LX2VoejJgo/3BX1f4asN6dIHuOX71n00LwwxfT3NffOZfAr95cHAopvV1nEsIDkl
+         XP3kyX1YL/ptiz7REOpfWpTm4Pjpv9JT0TVbxCzu5AysDhJDpurpWiH+HBHvzhi6Sg9l
+         XxW4WQhc/10BoFNTzT/uOhON7slomanljh+qaA8aEjSmkxMhgSo//i5cslx5vVs/G3xK
+         2Go+hxjq3DM4fGoycFLRYAIm8bczv9da9/0tDZtriBQoIxRwTpbS+Lel1tyvBDpEtCkl
+         v85VAmqk1rf+qmnGq0m5c+jKLpxGRo/EBMYQI4XoUgGTBVuINGukkXh8m0z9RPP6Y/2n
+         JgIw==
+X-Received: by 10.49.73.135 with SMTP id l7mr12199734qev.28.1389303354132;
+ Thu, 09 Jan 2014 13:35:54 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.229.247.136 with HTTP; Thu, 9 Jan 2014 13:35:14 -0800 (PST)
+In-Reply-To: <CAK8jvqxqt1L2+b6jFZdj7QcvqYn5ZTrBye3BKsvy2ZStGUOxgg@mail.gmail.com>
+References: <CAK8jvqxqt1L2+b6jFZdj7QcvqYn5ZTrBye3BKsvy2ZStGUOxgg@mail.gmail.com>
+From: Evgeny Mandrikov <mandrikov@gmail.com>
+Date: Thu, 9 Jan 2014 22:35:14 +0100
+Message-ID: <CAEPFu6_bspHeQPSU0uoYjz-1q41Y04cRKR55oSnC2jAyF3tYAA@mail.gmail.com>
+Subject: Re: [jacoco-dev] Options for producing class files with different
+ compilers via Maven
+To: JaCoCo Developers List <jacoco-dev@googlegroups.com>
+Cc: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7bdc0c22e8925404ef906428
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7bdc0c22e8925404ef906428
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+I have feeling that you ( "we" :) ) could simply use single module and
+define several executions of:
+
+   1. maven-compiler-plugin for compilation
+   2. maven-assembly-plugin to create JARs and attach them as additional
+   project artifacts
+
+But I never tried this.
+
+On Thu, Jan 9, 2014 at 10:13 PM, Mirko Friedenhagen <mfriedenhagen@gmail.com
+> wrote:
+
+> Hello,
+>
+> in the JaCoCo project (a Java code coverage library which uses a Java
+> agent approach during runtime) we produce some false positives of
+> uncovered code because of unreachable (e.g. private constructor of a
+> util class) or synthetic java code (e.g. enum values()).
+>
+> As we inspect the class files only, we may not (or better do not want
+> to) rely on parsing the source code for discovering such conditions.
+> During some experiments we detected that different compilers (javac vs
+> eclipse ecj) produce very different byte code in classes for the
+> above. This might be the case for different versions of Sun/Oracle JDK
+> or JDKs of other vendors as well. I already took a look at "Using
+> Non-Javac Compilers" of the maven-compiler-plugin[1]
+>
+> Now my question:
+> - What would be the best approach to produce JARs which contain class
+> files of above mentioned false positives produced by the different
+> compilers?
+> - My first idea was to define a define a multi module project with a
+> JAR module which will only produce a source jar, which will be
+> unpacked as "generated-sources" in sibling modules which are then
+> compiled by the different compilers.
+>
+> For additional ideas or caveats I would be grateful.
+>
+>
+> Regards Mirko
+> [0] https://github.com/jacoco/jacoco/wiki/FilteringOptions
+> [1]
+> http://maven.apache.org/plugins/maven-compiler-plugin/non-javac-compilers.html
+> --
+> http://illegalstateexception.blogspot.com/
+> https://github.com/mfriedenhagen/ (http://osrc.dfm.io/mfriedenhagen)
+> https://bitbucket.org/mfriedenhagen/
+>
+> --
+> You received this message because you are subscribed to the Google Groups
+> "JaCoCo Developers" group.
+> To unsubscribe from this group and stop receiving emails from it, send an
+> email to jacoco-dev+unsubscribe@googlegroups.com.
+> For more options, visit https://groups.google.com/groups/opt_out.
+>
+
+
+
+-- 
+Best regards,
+Evgeny Mandrikov aka Godin <http://godin.net.ru>
+http://twitter.com/_godin_
+
+--047d7bdc0c22e8925404ef906428--
+

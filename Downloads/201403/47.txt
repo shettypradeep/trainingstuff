@@ -1,0 +1,156 @@
+From users-return-135996-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Mar 28 13:59:15 2014
+Return-Path: <users-return-135996-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0C9EB107EB
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 28 Mar 2014 13:59:15 +0000 (UTC)
+Received: (qmail 49287 invoked by uid 500); 28 Mar 2014 13:59:10 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 49231 invoked by uid 500); 28 Mar 2014 13:59:09 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 49223 invoked by uid 99); 28 Mar 2014 13:59:07 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 13:59:07 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [85.13.134.252] (HELO dd12814.kasserver.com) (85.13.134.252)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 13:59:00 +0000
+Received: from [192.168.178.33] (p57A14529.dip0.t-ipconnect.de [87.161.69.41])
+	by dd12814.kasserver.com (Postfix) with ESMTPSA id DBF9811C070F
+	for <users@maven.apache.org>; Fri, 28 Mar 2014 14:58:38 +0100 (CET)
+Message-ID: <53358021.6010103@Kriegisch.name>
+Date: Fri, 28 Mar 2014 14:58:57 +0100
+From: Alexander Kriegisch <Alexander@Kriegisch.name>
+Organization: Scrum-Master.de - Agiles Projektmanagement
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Overriding dependency scope
+Content-Type: multipart/signed; protocol="application/pkcs7-signature"; micalg=sha1; boundary="------------ms060804020202070909090200"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------ms060804020202070909090200
+Content-Type: text/plain; charset=ISO-8859-15
+Content-Transfer-Encoding: quoted-printable
+
+I have a situation as follows:
+
+  - Multi-module project (~30 modules)
+
+  - Certain test dependencies (e.g. groovy-all) needed by nearly all
+    sub-modules are declared directly with test scope in the parent POM
+    (not just dependencyManagement, but also dependency). I know this is
+    considered to be bad practice but it saves a lot of redundant
+    dependency duplication.
+
+  - One new sub-module now actually also needs groovy-all, but with a
+    compile scope. So my wish (although seemingly unsupported by Maven)
+    is to override the default scope for this sub-module so as for the
+    dependency to be actually available during runtime.
+
+How can I do this or work around the need to duplicate my test
+dependencies in 30 modules just so as to be able to define the scope for
+the new module? AFAIK a POM can only inherit from one POM. But can I
+somehow use an "included POM" in my 30 modules in order to be able to
+centrally manage the test dependencies? Sorry if I am explaining this
+wrong or using incorrect erms, but I am by no means a Maven pro.
+Hopefully I was at least able to make my intent clear. I am looking for
+good advice beyond lecturing about how I should really, really declare
+everything 30 times in order to do it the Maven way. I am looking for
+alternatives, am willing to learn and hoping to get constructive answers.=
+
+
+Thanks you all in advance
+--=20
+Alexander Kriegisch
+
+
+
+--------------ms060804020202070909090200
+Content-Type: application/pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+Content-Description: S/MIME Cryptographic Signature
+
+MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIIKUzCC
+BRowggQCoAMCAQICEG0Z6qcZT2ozIuYiMnqqcd4wDQYJKoZIhvcNAQEFBQAwga4xCzAJBgNV
+BAYTAlVTMQswCQYDVQQIEwJVVDEXMBUGA1UEBxMOU2FsdCBMYWtlIENpdHkxHjAcBgNVBAoT
+FVRoZSBVU0VSVFJVU1QgTmV0d29yazEhMB8GA1UECxMYaHR0cDovL3d3dy51c2VydHJ1c3Qu
+Y29tMTYwNAYDVQQDEy1VVE4tVVNFUkZpcnN0LUNsaWVudCBBdXRoZW50aWNhdGlvbiBhbmQg
+RW1haWwwHhcNMTEwNDI4MDAwMDAwWhcNMjAwNTMwMTA0ODM4WjCBkzELMAkGA1UEBhMCR0Ix
+GzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UE
+ChMRQ09NT0RPIENBIExpbWl0ZWQxOTA3BgNVBAMTMENPTU9ETyBDbGllbnQgQXV0aGVudGlj
+YXRpb24gYW5kIFNlY3VyZSBFbWFpbCBDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAJKEhFtLV5jUXi+LpOFAyKNTWF9mZfEyTvefMn1V0HhMVbdClOD5J3EHxcZppLkyxPFA
+GpDMJ1Zifxe1cWmu5SAb5MtjXmDKokH2auGj/7jfH0htZUOMKi4rYzh337EXrMLaggLW1DJq
+1GdvIBOPXDX65VSAr9hxCh03CgJQU2yVHakQFLSZlVkSMf8JotJM3FLb3uJAAVtIaN3FSrTg
+7SQfOq9xXwfjrL8UO7AlcWg99A/WF1hGFYE8aIuLgw9teiFX5jSw2zJ+40rhpVJyZCaRTqWS
+D//gsWD9Gm9oUZljjRqLpcxCm5t9ImPTqaD8zp6Q30QZ9FxbNboW86eb/8ECAwEAAaOCAUsw
+ggFHMB8GA1UdIwQYMBaAFImCZ33EnSZwAEu0UEh83j2uBG59MB0GA1UdDgQWBBR6E04AdFvG
+eGNkJ8Ev4qBbvHnFezAOBgNVHQ8BAf8EBAMCAQYwEgYDVR0TAQH/BAgwBgEB/wIBADARBgNV
+HSAECjAIMAYGBFUdIAAwWAYDVR0fBFEwTzBNoEugSYZHaHR0cDovL2NybC51c2VydHJ1c3Qu
+Y29tL1VUTi1VU0VSRmlyc3QtQ2xpZW50QXV0aGVudGljYXRpb25hbmRFbWFpbC5jcmwwdAYI
+KwYBBQUHAQEEaDBmMD0GCCsGAQUFBzAChjFodHRwOi8vY3J0LnVzZXJ0cnVzdC5jb20vVVRO
+QWRkVHJ1c3RDbGllbnRfQ0EuY3J0MCUGCCsGAQUFBzABhhlodHRwOi8vb2NzcC51c2VydHJ1
+c3QuY29tMA0GCSqGSIb3DQEBBQUAA4IBAQCF1r54V1VtM39EUv5C1QaoAQOAivsNsv1Kv/av
+QUn1G1rF0q0bc24+6SZ85kyYwTAo38v7QjyhJT4KddbQPTmGZtGhm7VNm2+vKGwdr+XqdFqo
+2rHA8XV6L566k3nK/uKRHlZ0sviN0+BDchvtj/1gOSBH+4uvOmVIPJg9pSW/ve9g4EnlFsjr
+P0OD8ODuDcHTzTNfm9C9YGqzO/761Mk6PB/tm/+bSTO+Qik5g+4zaS6CnUVNqGnagBsePdIa
+XXxHmaWbCG0SmYbWXVcHG6cwvktJRLiQfsrReTjrtDP6oDpdJlieYVUYtCHVmdXgQ0BCML7q
+peeU0rD+83X5f27nMIIFMTCCBBmgAwIBAgIQKgci2faVxE1UE1QLs3U7oDANBgkqhkiG9w0B
+AQUFADCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4G
+A1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxOTA3BgNVBAMTMENP
+TU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBDQTAeFw0xMzA3
+MTAwMDAwMDBaFw0xNDA3MTAyMzU5NTlaMCkxJzAlBgkqhkiG9w0BCQEWGGFsZXhhbmRlckBr
+cmllZ2lzY2gubmFtZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALWzUc2CfqrR
+ZtbYVEPgjRggBTeDVvDHvXbc74ujWR+XF2NB9X1lgjb5SjfxuZe9ElMT6Eyjzsbiv0/nZojv
+BXDkZUbiFRDQCknahVtCLm9DwdSsrjIJz44L4+QVGBzgEwq5GRkH45svO3ZRontNfqHarSuQ
+WicVY6z1YM0fg9h7VawIHB21xAJvPSJIDf6+flLGVupXvT0j3fKaKuKDz88nzZJR3+Jv/Rkb
+VpXKVZTC8wCeZ7ITgnf0f95p0j4qorhDfv0dCXAK8CwRBCMwgqTwhH1IeMmeHRisNT0P8Hij
+EiYGu+6EAzfCFxj1IOdSei34+siFHqfrjipdxOc6zk8CAwEAAaOCAegwggHkMB8GA1UdIwQY
+MBaAFHoTTgB0W8Z4Y2QnwS/ioFu8ecV7MB0GA1UdDgQWBBRAzkGVyhNEH14AwMr2xh4UCiWF
+CDAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAgBgNVHSUEGTAXBggrBgEFBQcDBAYL
+KwYBBAGyMQEDBQIwEQYJYIZIAYb4QgEBBAQDAgUgMEYGA1UdIAQ/MD0wOwYMKwYBBAGyMQEC
+AQEBMCswKQYIKwYBBQUHAgEWHWh0dHBzOi8vc2VjdXJlLmNvbW9kby5uZXQvQ1BTMFcGA1Ud
+HwRQME4wTKBKoEiGRmh0dHA6Ly9jcmwuY29tb2RvY2EuY29tL0NPTU9ET0NsaWVudEF1dGhl
+bnRpY2F0aW9uYW5kU2VjdXJlRW1haWxDQS5jcmwwgYgGCCsGAQUFBwEBBHwwejBSBggrBgEF
+BQcwAoZGaHR0cDovL2NydC5jb21vZG9jYS5jb20vQ09NT0RPQ2xpZW50QXV0aGVudGljYXRp
+b25hbmRTZWN1cmVFbWFpbENBLmNydDAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuY29tb2Rv
+Y2EuY29tMCMGA1UdEQQcMBqBGGFsZXhhbmRlckBrcmllZ2lzY2gubmFtZTANBgkqhkiG9w0B
+AQUFAAOCAQEAhz24oHimmHvneEDV11vUaEQQVySKK3YJ0g3TvCEWHHNDd5rr2ddMxO7nONZE
+Z7ViuGqfQDIYiJi6sOvbFxq3e+Yl33K73tsjFXGU8QOdXbXtTJx4nsHv4LKFrWOp05l33fed
+77j/GLp+810F47gap3peqhBEyI0U4pUKSW1c4OsBZGd1kcRfXZ3zr1GdZsKSytJJTaOTPftR
+FsZEust/t5WcMZRWOsJ5dtFE7n5XogZD9xfDwVxsieop4gaIhmR/fNfUl5f0lY/gIeq7e1lP
+6/lxPkjWdJEr0vRTJf1p6IxZ/1Bns34OX6gnfQZMKxOVBm6b2Rj446JEGmYsEzhFpDGCBBkw
+ggQVAgEBMIGoMIGTMQswCQYDVQQGEwJHQjEbMBkGA1UECBMSR3JlYXRlciBNYW5jaGVzdGVy
+MRAwDgYDVQQHEwdTYWxmb3JkMRowGAYDVQQKExFDT01PRE8gQ0EgTGltaXRlZDE5MDcGA1UE
+AxMwQ09NT0RPIENsaWVudCBBdXRoZW50aWNhdGlvbiBhbmQgU2VjdXJlIEVtYWlsIENBAhAq
+ByLZ9pXETVQTVAuzdTugMAkGBSsOAwIaBQCgggJFMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0B
+BwEwHAYJKoZIhvcNAQkFMQ8XDTE0MDMyODEzNTg1N1owIwYJKoZIhvcNAQkEMRYEFMPYdWwM
+1NR6lRgJR0Bt2Yh2ywbOMGwGCSqGSIb3DQEJDzFfMF0wCwYJYIZIAWUDBAEqMAsGCWCGSAFl
+AwQBAjAKBggqhkiG9w0DBzAOBggqhkiG9w0DAgICAIAwDQYIKoZIhvcNAwICAUAwBwYFKw4D
+AgcwDQYIKoZIhvcNAwICASgwgbkGCSsGAQQBgjcQBDGBqzCBqDCBkzELMAkGA1UEBhMCR0Ix
+GzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UE
+ChMRQ09NT0RPIENBIExpbWl0ZWQxOTA3BgNVBAMTMENPTU9ETyBDbGllbnQgQXV0aGVudGlj
+YXRpb24gYW5kIFNlY3VyZSBFbWFpbCBDQQIQKgci2faVxE1UE1QLs3U7oDCBuwYLKoZIhvcN
+AQkQAgsxgauggagwgZMxCzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0
+ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGjAYBgNVBAoTEUNPTU9ETyBDQSBMaW1pdGVkMTkwNwYD
+VQQDEzBDT01PRE8gQ2xpZW50IEF1dGhlbnRpY2F0aW9uIGFuZCBTZWN1cmUgRW1haWwgQ0EC
+ECoHItn2lcRNVBNUC7N1O6AwDQYJKoZIhvcNAQEBBQAEggEAO7ViNP16dr/CT7wsPJOqGyzJ
+60V4Y03ck1bUk0WDOW/GxbyXWrpMUcNHlEMxjJzgZoexLHQklvulBmO8F3Q15T6wf9v8z+no
+QRYaLkN4hCfYU6N9sk0D8DSDDIeBm6bDN0fU0v+y4g2iUlpGOtI2TAibDwB6jm1Mmj9AO6EN
+0Pog143S/ccSJEttfzgcLps4ehCmsiS5ojDSJ85RMSIbfvlDhQg7uxxUN55oEKB5GpT/vqeS
+utgSeejWIada+v5LY79w2i2A7JzID2/6/6gOTOnxRPNXMQ9tq05+Otk0/8JRowtFeUNTvvaU
+TdVHU6eZZ7W38600ED3p4lOC//1fawAAAAAAAA==
+--------------ms060804020202070909090200--
+

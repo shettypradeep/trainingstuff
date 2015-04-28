@@ -1,0 +1,78 @@
+From users-return-136564-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jun 12 15:40:12 2014
+Return-Path: <users-return-136564-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0291111CC6
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 12 Jun 2014 15:40:12 +0000 (UTC)
+Received: (qmail 71018 invoked by uid 500); 12 Jun 2014 15:40:10 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 70928 invoked by uid 500); 12 Jun 2014 15:40:10 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 70918 invoked by uid 99); 12 Jun 2014 15:40:10 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 12 Jun 2014 15:40:10 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [80.150.205.170] (HELO mail.aurenz.de) (80.150.205.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 12 Jun 2014 15:40:04 +0000
+X-MimeOLE: Produced By Microsoft Exchange V6.5
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Subject: AW: site-deploy using wagon-ssh: User input needed
+Date: Thu, 12 Jun 2014 17:39:41 +0200
+Message-ID: <3B7A7BDFFD286F49A19A5B35D26E08FB0140EA61@srvmail2.aurenz.local>
+In-Reply-To: <3B7A7BDFFD286F49A19A5B35D26E08FB0140EA5D@srvmail2.aurenz.local>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: site-deploy using wagon-ssh: User input needed
+Thread-Index: Ac+GTRApCjwy0/YCRHOYfvcTIo3D4gABq8qQ
+References: <3B7A7BDFFD286F49A19A5B35D26E08FB0140EA5D@srvmail2.aurenz.local>
+From: "Hohl, Gerrit" <g.hohl@aurenz.de>
+To: "Maven Users List" <users@maven.apache.org>
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello everyone, :)
+
+okay, I tried a different approach:
+
+Instead of that <configuration> section in the settings.xml I copied my
+local know_hosts file from
+	C:\Users\[MY_USER]\.ssh\known_hosts
+to the server:
+	C:\Windows\system32\config\.ssh\known_hosts
+I read in the Internet that this folder is the folder of the system
+account which is used e.g. by Tomcat.
+And as Jenkins and Maven are executed by Tomcat, they should work on the
+same folder.
+
+Unfortunately I didn't work: I see in the Jenkins Build log that
+wagon-ssh keeps asking if it should trust the connection by showing the
+SSH RSA fingerprint. Unfortunately wagon-ssh also doesn't show at which
+location it tries to open the known_hosts file.
+
+The easiest way would be if I would be able to specify the path of the
+known_hosts file in the settings.xml. But I haven't found anything about
+a configuration parameter like that.
+
+Regards,
+Gerrit
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,115 @@
+From users-return-136416-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed May 21 17:10:35 2014
+Return-Path: <users-return-136416-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7157D11DE3
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 21 May 2014 17:10:35 +0000 (UTC)
+Received: (qmail 16320 invoked by uid 500); 21 May 2014 17:10:34 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 16232 invoked by uid 500); 21 May 2014 17:10:34 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 16224 invoked by uid 99); 21 May 2014 17:10:34 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 21 May 2014 17:10:34 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of northrup.james@gmail.com designates 74.125.82.178 as permitted sender)
+Received: from [74.125.82.178] (HELO mail-we0-f178.google.com) (74.125.82.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 21 May 2014 17:10:29 +0000
+Received: by mail-we0-f178.google.com with SMTP id u56so2298754wes.37
+        for <users@maven.apache.org>; Wed, 21 May 2014 10:10:06 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=6QADt041JFM+zxBJKf7TUeIIZMey8xH/U5+ybOJ/B8U=;
+        b=h/7P0PJiKWgefzAVjsFA2D2y+B2gaG2T5scZNyBrjW5Q+yrlRAE55p0nctZZx0G9IV
+         7FbZ+DdUEpHoc0MZLcTl/ByLo5Upa4tgfYjev/WCwgKDQeHX624eskXt48xNb8EwYhkB
+         F6/ukGixPKOPQqDxBMzA9MQ2Rq0xc0Qc10iRAZj/bC+clsY+6sVxnbM7Gwo8l0+6Lxv5
+         0Bt3LSSTBKOB9wYNTFSL8CIrs41+lUbKbd/7TEgZUOxrHi+WmzkmmqB5YNjpcviIbXqS
+         TmftpaLkFivZeXt+y4KrVSza1cc/gjq57GIqMdVDeYeBOJNF5bJKgRD+dEjvDq4CTfZq
+         WOhQ==
+X-Received: by 10.180.206.132 with SMTP id lo4mr2936631wic.46.1400692206714;
+ Wed, 21 May 2014 10:10:06 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.216.170.6 with HTTP; Wed, 21 May 2014 10:09:46 -0700 (PDT)
+In-Reply-To: <CANZa=Gt0_Ta6jdvEz=tXknGFJRbkzFhAityXWMYr6B=L=G99Zw@mail.gmail.com>
+References: <CANZa=GsRaWf9t-QpBi4tA4jMjUtHGLJEMQM_idBNSU1RdPLYyg@mail.gmail.com>
+ <CANZa=Gt0_Ta6jdvEz=tXknGFJRbkzFhAityXWMYr6B=L=G99Zw@mail.gmail.com>
+From: james northrup <northrup.james@gmail.com>
+Date: Wed, 21 May 2014 10:09:46 -0700
+Message-ID: <CAPkEcwi03L1fRMZ08MTRtiK6EL0=8ML9wKTovRc2-aUyp_VvXw@mail.gmail.com>
+Subject: Re: Shading all modules in a project
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c326aa6bc5c304f9ec11c0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c326aa6bc5c304f9ec11c0
+Content-Type: text/plain; charset=UTF-8
+
+i have had better luck in recent years with maven-dependency-plugin
+creating a classpath pointing to the ~/.m2 artifacts versus uberjar, shade,
+and assembly.  not every production app can build a maven app in place to
+run, but where it can a) startup can be faster using test "target/" to skip
+compile on rerun and b) dep version collisions and mismatches are easier to
+trace into using said classpath
+
+
+On Wed, May 21, 2014 at 9:15 AM, Nick Dimiduk <ndimiduk@gmail.com> wrote:
+
+> Ping. Any advice on this?
+>
+>
+> On Mon, May 12, 2014 at 9:01 AM, Nick Dimiduk <ndimiduk@gmail.com> wrote:
+>
+> > Hello,
+> >
+> > Over in Apache HBase, we have an interesting problem that I'm hoping the
+> > shade plugin can help us solve. It all started with a performance
+> > enhancement to reduce garbage by creating a subclass of a protobuf type
+> > [0]. It works fine for us most of the time. However, when using this code
+> > from a Hadoop mapreduce job, things get strange. Due to the permissions
+> on
+> > the parent object and the way Hadoop uses "fat" jars, we now have
+> > classloader troubles [1]. We were able to work around the issue by
+> > documenting the required classpath constructions. However, this is not
+> > possible for all users. This is where the shade plugin comes in.
+> >
+> > I gave shade a shot [2], though I admit I'm not terribly familiar with
+> it,
+> > nor the inner workings of maven. As far as I can tell, the trouble is the
+> > plugin invocation is limited to the single module in our multi-module
+> > project. I think what's happening is shade is doing what I want for the
+> > hbase-protocol module, but I also need it to do bytecode rewriting for
+> the
+> > modules that consume this module as well. Luckily, this detail is not
+> part
+> > of our public API so it should be transparent to our users.
+> >
+> > My patch is posted on [2]. Any pointers/advice is greatly appreciated.
+> >
+> > Thanks in advance,
+> > Nick
+> >
+> > [0]: https://issues.apache.org/jira/browse/HBASE-9867
+> > [1]: https://issues.apache.org/jira/browse/HBASE-10304
+> > [2]: https://issues.apache.org/jira/browse/HBASE-11118
+> >
+>
+
+
+
+-- 
+Jim Northrup  *  (408) 837-2270 *
+
+--001a11c326aa6bc5c304f9ec11c0--
+

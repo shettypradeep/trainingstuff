@@ -1,0 +1,98 @@
+From users-return-136163-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr 16 19:40:10 2014
+Return-Path: <users-return-136163-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5D1CA10143
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 16 Apr 2014 19:40:10 +0000 (UTC)
+Received: (qmail 1312 invoked by uid 500); 16 Apr 2014 19:40:06 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 1146 invoked by uid 500); 16 Apr 2014 19:40:06 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 1138 invoked by uid 99); 16 Apr 2014 19:40:06 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 16 Apr 2014 19:40:06 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.212.176 as permitted sender)
+Received: from [209.85.212.176] (HELO mail-wi0-f176.google.com) (209.85.212.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 16 Apr 2014 19:40:02 +0000
+Received: by mail-wi0-f176.google.com with SMTP id r20so1927448wiv.9
+        for <users@maven.apache.org>; Wed, 16 Apr 2014 12:39:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=28sCuATjoLR3GyQxUxPeC4i3M3PuLsCoWRqD9T3DF9U=;
+        b=tjtazCZp2/tK/amAMeB+qih5LKFAiVXT+9aj7jZj2OUaoa9So/pAowRGt7swZSok0B
+         zRiDkAX8R1yEQ8iUMjvfNO2FTIvcMIh+IRUTQhMsvl/Jk/9fV7XKu41WPpoKunlKviw8
+         K7qTNiauzsOrZFRbO4RIrKXWNmPrid1nVWpaBoVensdmY9f0ok0/1ps4SSIY8uKnX3cP
+         463fuuEQyonAP4kB1xpw4NjjU8NzUW1Nr7oK5Kdra2FeT/2msuLoAP6w0/MF+TxdzTPB
+         e1rBo12FITWu82q3r9xbcY25EjLVc/druuADBGX2AyFtgjqX8c7Fz8k2hrlZUuhEFSL1
+         b7ng==
+MIME-Version: 1.0
+X-Received: by 10.180.89.102 with SMTP id bn6mr20903512wib.28.1397677180143;
+ Wed, 16 Apr 2014 12:39:40 -0700 (PDT)
+Received: by 10.194.205.233 with HTTP; Wed, 16 Apr 2014 12:39:40 -0700 (PDT)
+In-Reply-To: <20140416192551.96C28541@athena.apache.org>
+References: <20140416192551.96C28541@athena.apache.org>
+Date: Wed, 16 Apr 2014 20:39:40 +0100
+Message-ID: <CA+nPnMw=UXrRPgL4yGP0MPYkbeZ7SEV7As3mz4fk7=nag9UhMQ@mail.gmail.com>
+Subject: Re: Generated content in generated sites (!)
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d04447e75d54e0b04f72e13cb
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d04447e75d54e0b04f72e13cb
+Content-Type: text/plain; charset=UTF-8
+
+On Wednesday, 16 April 2014, <org.apache.maven.user@io7m.com> wrote:
+
+> 'Lo.
+>
+> Currently, sites generated for my projects look something like:
+>
+>   http://mvn.io7m.com/jaux/releases.html
+>
+> The releases.html page actually comes from a static releases.xml
+> file that's generated and inserted into src/site by the shell script
+> that performs releases.
+>
+> I'd like to achieve the above without the shell script. What
+> would be the "Maven" way to do this? I can think of several possible
+> methods (parsing a changelog with an external library and Maven exec
+> in order to generate releases.xml, writing a custom plugin, etc).
+>
+> I'm not averse to writing a custom plugin, but I'd rather not if it's
+> not actually required.
+
+
+If you want it applied uniformly, write a plugin. That is the use case for
+a plugin (doing the same thing the same way on many projects)
+
+
+> Please be aware that any solution would have to
+> be applied uniformly to some 30-40 projects...
+>
+> M
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org <javascript:;>
+> For additional commands, e-mail: users-help@maven.apache.org<javascript:;>
+>
+>
+
+-- 
+Sent from my phone
+
+--f46d04447e75d54e0b04f72e13cb--
+

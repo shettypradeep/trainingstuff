@@ -1,0 +1,93 @@
+From users-return-137773-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Nov 20 09:44:41 2014
+Return-Path: <users-return-137773-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id E2D9BC720
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 20 Nov 2014 09:44:40 +0000 (UTC)
+Received: (qmail 28852 invoked by uid 500); 20 Nov 2014 09:44:39 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 28770 invoked by uid 500); 20 Nov 2014 09:44:39 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 28759 invoked by uid 99); 20 Nov 2014 09:44:38 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Nov 2014 09:44:38 +0000
+X-ASF-Spam-Status: No, hits=0.3 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of jeroen@lable.org does not designate 209.85.216.180 as permitted sender)
+Received: from [209.85.216.180] (HELO mail-qc0-f180.google.com) (209.85.216.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 20 Nov 2014 09:44:33 +0000
+Received: by mail-qc0-f180.google.com with SMTP id i8so1791043qcq.25
+        for <users@maven.apache.org>; Thu, 20 Nov 2014 01:43:26 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:date
+         :message-id:subject:from:to:content-type:content-transfer-encoding;
+        bh=+5CtiKBFlnDJCTjmB+cEHwK9WVGg6h7qYYBZzz1dmhA=;
+        b=Wz8H7ej7o+WX1jH5zPssUYx2YSbnrGpOUz1WYjnrR8KRX54lDCN7lDQtCAUlYbpSLz
+         Ly0/uEqaDbKF8INZhNgS/8E34GbiMQL0Oksb+EwOrM5KMkGM66RYds+cznvkWkrflAWG
+         HpqCalc5mDvstnhUd6DB66GUXM4sp4uF/abePtNPB+bK3SOtWpoCnrYApRujXTgww4fc
+         aAQ7kbfwEoQBtlU/5Mn6ua2EG5ALxXCwzYW7RD3p9mqc0Ygk7ZSjL3tXMUj2eEKOZG0K
+         ueU4cCiv0VoWhzQ/fc3kpYv/YzCvTMuS1PVs6eAzcjiwY8WobL3a5RXgKdeMW34FDahr
+         KBtQ==
+X-Gm-Message-State: ALoCoQldwbeacoala1a1zjwuWBazjFGde/tcTLsbK2i2KnDZOiHJnI1KCiLS2om2CI7qyreLZQ2V
+MIME-Version: 1.0
+X-Received: by 10.229.105.196 with SMTP id u4mr58206905qco.27.1416476606338;
+ Thu, 20 Nov 2014 01:43:26 -0800 (PST)
+Received: by 10.140.22.21 with HTTP; Thu, 20 Nov 2014 01:43:26 -0800 (PST)
+X-Originating-IP: [85.151.160.140]
+In-Reply-To: <CAKTgjVdNVv_S4wSbRY-f+B+xu=F-vVAS7+oj0wd24Ji00y2emA@mail.gmail.com>
+References: <CAKTgjVdNVv_S4wSbRY-f+B+xu=F-vVAS7+oj0wd24Ji00y2emA@mail.gmail.com>
+Date: Thu, 20 Nov 2014 10:43:26 +0100
+Message-ID: <CAPJcxA9SP6hpygwSPW1=S4oRFT8HcZ3wJyca3Mntwg5xX7PUxg@mail.gmail.com>
+Subject: Re: SCM Element
+From: Jeroen Hoek <jeroen@lable.org>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hello F=C3=A1bio,
+
+As far as I know the SCM configuration is not used to download
+sources. It is used mainly to commit and tag your project; it is used
+by the Maven Release Plugin (for example).
+
+I suspect you want the source code available in an IDE?
+
+The Maven Source Plugin is what you probably want:
+https://maven.apache.org/plugins/maven-source-plugin/
+
+You can add this:
+https://gist.github.com/jdhoek/a482c0958f5371f5ea6c
+=E2=80=A6 to your build->plugins section in the POM to generate the source =
+jars.
+
+2014-11-19 18:49 GMT+01:00 F=C3=A1bio Franco <fabiofranco.php@gmail.com>:
+> I thought using scm element in the pom I=C2=B4d be able to download the
+> project=C2=B4s source from a super project that depends on the first proj=
+ect.
+> Was I wrong? If so, is there a way of doing this without sending a
+> *-source.jar to my private repository? Also if there=C2=B4se no way how c=
+an I
+> deploy the source code to my repos? Thanks
+
+
+Kind regards,
+
+Jeroen Hoek
+Lable
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,101 @@
+From users-return-134988-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan  6 20:50:14 2014
+Return-Path: <users-return-134988-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3A34F1012A
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  6 Jan 2014 20:50:14 +0000 (UTC)
+Received: (qmail 10896 invoked by uid 500); 6 Jan 2014 20:50:12 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 10815 invoked by uid 500); 6 Jan 2014 20:50:12 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 10806 invoked by uid 99); 6 Jan 2014 20:50:12 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 20:50:12 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 06 Jan 2014 20:50:06 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <adil@relateiq.com>)
+	id 1W0H7J-00017m-Hb
+	for users@maven.apache.org; Mon, 06 Jan 2014 12:49:45 -0800
+Date: Mon, 6 Jan 2014 12:49:45 -0800 (PST)
+From: adilaijaz <adil@relateiq.com>
+To: users@maven.apache.org
+Message-ID: <1389041385515-5780640.post@n5.nabble.com>
+Subject: Two Resource Files In Same Dir ... One Having Property Replaced,
+ Another Does Not
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi there,
+
+I have two resource files in the same dir: a.job and b.job. They have the
+following line in both of them:
+
+<snip>
+mongo.home=${mongo.cli.home}
+</snip>
+
+where mongo.cli.home is a property defined in a filter file.
+
+When I run clean package, a.job gets filtered, the other does not. This is
+baffling to me. 
+
+When running mvn -X -P staging resources:resources I see this curtailed
+output:
+
+[DEBUG] file a.job has a filtered file extension
+[DEBUG] filering /Users/adilaijaz/workspace/apps/target/jobs/a.job to
+/Users/adilaijaz/workspace/apps/target/classes/jobs/a.job
+[DEBUG] file b.job has a filtered file extension
+[DEBUG] filering /Users/adilaijaz/workspace/apps/target/jobs/b.job to
+/Users/adilaijaz/workspace/apps/target/classes/jobs/b.job
+
+When I look at filtered a.job, I see this output:
+
+<snip>
+mongo.home=/opt/mongo
+</snip>
+
+And b.job looks like:
+
+<snip>
+mongo.home=${mongo.cli.home}
+</snip>
+
+I am stumped. Any pointers will be helpful. I am using the following version
+of maven:
+
+[adilaijaz@ ~/workspace]$ mvn -version
+Apache Maven 3.0.3 (r1075438; 2011-02-28 09:31:09-0800)
+Maven home: /usr/share/maven
+Java version: 1.6.0_41, vendor: Apple Inc.
+Java home: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+Default locale: en_US, platform encoding: MacRoman
+OS name: "mac os x", version: "10.8.2", arch: "x86_64", family: "mac"
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Two-Resource-Files-In-Same-Dir-One-Having-Property-Replaced-Another-Does-Not-tp5780640.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

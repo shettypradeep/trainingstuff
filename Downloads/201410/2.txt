@@ -1,0 +1,86 @@
+From users-return-137476-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Oct  7 17:32:40 2014
+Return-Path: <users-return-137476-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5F645175C7
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  7 Oct 2014 17:32:40 +0000 (UTC)
+Received: (qmail 21840 invoked by uid 500); 7 Oct 2014 17:32:38 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 21764 invoked by uid 500); 7 Oct 2014 17:32:38 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 21752 invoked by uid 99); 7 Oct 2014 17:32:38 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 07 Oct 2014 17:32:38 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of irfu.sayed@gmail.com designates 209.85.212.181 as permitted sender)
+Received: from [209.85.212.181] (HELO mail-wi0-f181.google.com) (209.85.212.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 07 Oct 2014 17:32:12 +0000
+Received: by mail-wi0-f181.google.com with SMTP id hi2so8690214wib.14
+        for <users@maven.apache.org>; Tue, 07 Oct 2014 10:32:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=ZPvpm3raQrUGWAMgdsdUjb8ocOEDoHNfVqGV+Zgy/a0=;
+        b=A/oppmzrt8MhJaieZh4BDDHjfvGsGcYndAyAQzVdaZ3Guppq+WkFlT2IFxr3UXkBYV
+         59R7hmyiqlyDnYhaIs9xyGqJnJbAf2NMYjMBpPjotFDacZokrlN8NqI1mEsycnag4jlB
+         Hm4QgkWaPDn+hkrWO2w9caDFnWOjIKOBuo6NRwP4bg+d3NFSO26pXDTBmzcYmyFgAMXD
+         HQlwEIchryiYDWNmGXM5C/KAi2wPdSrZNKhXzipzLjIO856+BJtgJXYEgauIF1cNSQSU
+         xctE29PnQ2Tnuo3C3yqlqrCLY6OACtC845aRn+jY/3n0+tZpbYsdS3KDGwarETOUmWOx
+         O4hw==
+MIME-Version: 1.0
+X-Received: by 10.180.102.233 with SMTP id fr9mr28709520wib.80.1412703132062;
+ Tue, 07 Oct 2014 10:32:12 -0700 (PDT)
+Received: by 10.216.114.72 with HTTP; Tue, 7 Oct 2014 10:32:12 -0700 (PDT)
+In-Reply-To: <CACGLCJYQT5aKJqzfw+D+xWAVq_eWZdjzUur9nZTNVYwZk4B5Tw@mail.gmail.com>
+References: <CACGLCJYQT5aKJqzfw+D+xWAVq_eWZdjzUur9nZTNVYwZk4B5Tw@mail.gmail.com>
+Date: Tue, 7 Oct 2014 23:02:12 +0530
+Message-ID: <CACGLCJbq3vzpWEfOwtahEYfrhp=c=VnANLaJjMuPP+mmTaCfiw@mail.gmail.com>
+Subject: Re: failsafe plugin error with suiteXml
+From: Irfan Sayed <irfu.sayed@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=f46d04451a275c1a9f0504d89494
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d04451a275c1a9f0504d89494
+Content-Type: text/plain; charset=UTF-8
+
+please suggest .. i am really stuck
+
+regards
+
+
+On Tue, Oct 7, 2014 at 10:51 PM, Irfan Sayed <irfu.sayed@gmail.com> wrote:
+
+> hi,
+>
+> i am using maven failsafe plugin to run the integration tests
+> however, i am getting following error when i am executing integration
+> tests along with cobertura
+>
+> execute goal mvn-failsafe-plugin: (failsafe-integration-tests) project x:
+> suiteXmlFiles is configured, but there is no TestNG dependency
+> <http://stackoverflow.com/questions/26233462/execute-goal-mvn-failsafe-plugin-failsafe-integration-tests-project-x-suitex>
+>
+> can some one please suggest what could be the error
+> i have added TestNG dependnecy at every possible location in pom file
+> still the issue
+>
+> please please suggest
+>
+> regards
+>
+>
+
+--f46d04451a275c1a9f0504d89494--
+

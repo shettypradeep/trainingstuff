@@ -1,0 +1,183 @@
+From users-return-136527-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jun  4 19:44:35 2014
+Return-Path: <users-return-136527-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3F86A10505
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  4 Jun 2014 19:44:35 +0000 (UTC)
+Received: (qmail 10820 invoked by uid 500); 4 Jun 2014 19:44:33 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 10755 invoked by uid 500); 4 Jun 2014 19:44:33 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 10744 invoked by uid 99); 4 Jun 2014 19:44:33 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 04 Jun 2014 19:44:33 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 74.125.82.45 as permitted sender)
+Received: from [74.125.82.45] (HELO mail-wg0-f45.google.com) (74.125.82.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 04 Jun 2014 19:44:29 +0000
+Received: by mail-wg0-f45.google.com with SMTP id m15so9130750wgh.16
+        for <users@maven.apache.org>; Wed, 04 Jun 2014 12:44:08 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=MhEzvOI79DsKC2YWbx27jpXNzCdGUV+kOENrox8KyJI=;
+        b=QYK0jrrXn7sbq8cSwYztDJV5+LY09f4xi6v/O7eFkNOYLbSgXioF7kZwOFkZrMUyb5
+         M2Os2VNN56YWFVxjqPOl3K0EtTkhGBwMpSm1UZgQtGdq+7u35kg7Ahdth5w4Zo4uDKy7
+         n/58e6TXvffABehsVWBD/xrLqx9FbVXu8dNlgxAa66grfPJC8BBsajbv1+ytBahOeWW1
+         yPdIa9l0Cg3oTMnAJ/gLXWX+wczgDTx/AQnxu9AiK9PNyREMfnnAf/9Z5sfWMEvENwq3
+         g/61dqEXdA5/L0dt3mkexBNl/n2eBwtPHMCJp7IJN9ZnSRarE60AcA3PL6R9r6OKtcS0
+         slxA==
+MIME-Version: 1.0
+X-Received: by 10.180.77.70 with SMTP id q6mr8536383wiw.28.1401911047851; Wed,
+ 04 Jun 2014 12:44:07 -0700 (PDT)
+Received: by 10.194.94.135 with HTTP; Wed, 4 Jun 2014 12:44:07 -0700 (PDT)
+In-Reply-To: <0C723FEB5B4E5642B25B451BA57E2730A29E09E0@S1P5DAG3C.EXCHPROD.USA.NET>
+References: <0C723FEB5B4E5642B25B451BA57E2730A29DFF4A@S1P5DAG3C.EXCHPROD.USA.NET>
+	<CABLGb9wseqSagrFtUvNgc1aREcsAx=PLKdQD_5-rLAFSAOLTWA@mail.gmail.com>
+	<CAPCjjnFTmb9aZO6a9W6SpmzUH5U=JaUT9qkpQ=mViabkQszOxQ@mail.gmail.com>
+	<CABLGb9z40sOaRgcbmQUcxAYDcakGfUJ40QTdTes+uq9bLcDvqQ@mail.gmail.com>
+	<1401896835575-5794892.post@n5.nabble.com>
+	<CA+nPnMxrQp4N34xnHQgPMS6F1jjiJUCMzmsyT2ZnOoiwaWrRpA@mail.gmail.com>
+	<0C723FEB5B4E5642B25B451BA57E2730A29E09E0@S1P5DAG3C.EXCHPROD.USA.NET>
+Date: Wed, 4 Jun 2014 20:44:07 +0100
+Message-ID: <CA+nPnMzvfnhG=B_rr5Z7EaCtx-gsNm8v+-iErB0WPTeBdTRjwQ@mail.gmail.com>
+Subject: Re: Controlling order of plugin execution
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=f46d043be0380395cc04fb07da7c
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--f46d043be0380395cc04fb07da7c
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Wednesday, 4 June 2014, Jim Garrison <jim.garrison@nwea.org> wrote:
+
+> > -----Original Message-----
+> > From: Stephen Connolly [mailto:stephen.alan.connolly@gmail.com
+> <javascript:;>]
+> > Sent: Wednesday, June 04, 2014 9:08 AM
+> > To: Maven Users List
+> > Subject: Re: Controlling order of plugin execution
+> >
+> > That's usually a sign that you have wandered off The Maven Way=E2=84=A2
+> >
+> > There are ways back onto the blessed path... they typically involve
+> > writing
+> > a plugin
+> >
+> >
+> > On 4 June 2014 16:47, jhgnwea <jim.garrison@nwea.org <javascript:;>>
+> wrote:
+> >
+> > > Paul Benedict wrote
+> > > > I agree with Dan. Last I check, IIRC, the order of operations of
+> > plugins
+> > > > is
+> > > > defined by their sequential order in the POM. However, I also find
+> > this a
+> > > > bit problematic with inheritance -- I don't know off the top of my
+> > head
+> > > > what happens then.
+> > >
+> > > Ordering applies only for executions of a single plugin.  If you
+> > need to
+> > > interleave executions of two or more plugins you're out of luck.
+> > Say you
+> > > have two plugins, exec-maven and maven-sql, and want to run
+> > >
+> > >     exec-maven A1
+> > >     maven-sql B1
+> > >     exec-maven A2
+> > >     maven-sql B2
+> > >
+> > > A1 and A2 will run in that order, and (B1, B2) will be ordered, but
+> > you
+> > > can't control which set (A or B) runs first without horribly abusing
+> > the
+> > > phase bindings.  And, if you have a more complex sequence with 3
+> > plugins
+> > > and multiple executions of each, there aren't enough available
+> > phases to
+> > > successfully order everything.
+> > >
+> > > It should be possible to bind multiple plugin executions, of
+> > DIFFERENT
+> > > plugins, to a single phase and deterministically specify the
+> > execution
+> > > order.
+>
+> Sorry, I disagree.  One alternative is to use antrun, but that seems like
+> going backwards.  I'm really curious why there's a strong philosophical
+> objection to requesting this enhancement.
+>
+> Is it unreasonable to suggest that "The Maven Way" is not perfect and
+> might need some adjustments to handle common use-cases the original
+> designers didn't foresee?
+>
+> Is my goal of using Maven to automate CI/CD, which can involve configurin=
+g
+> external resources by running various plugins in a specific sequence,
+> somehow in violation of "the Maven way"?
+
+
+See I just knew it was going to be something like deploying to multiple
+environments or other things that are outside the standard lifecycle...
+
+So let's take a step back and see if you are actually hacking the standard
+lifecycle to do something outside of its original intended use case?
+
+Are you doing things that should happen before publishing the artifacts to
+a remote repository or after publishing? (And try to forget how you think
+maven should work, rather look at the higher level)
+
+Publishing to a remote repository is allowing others to consume the
+artifact as is, without changing it.
+
+Are you reconfiguring the artifact for use in different environments? (That
+should better be a separate customisation module that consumes the
+previously published artifact)
+
+I have yet to see a genuine use case where a refactoring leads to a better
+build process and remove the need to do multiple things in the same
+phase... Ever case I have seen is either a refactoring to multiple modules
+or writing a plugin to perform the complex sequence of steps for a specific
+*class* of artifact where multiple of this class of artifacts is required
+(ie the write a plugin solution)
+
+Usually the root cause is people trying to make their builds overly complex=
+.
+
+If you are doing maven right you should only have the packaging,
+dependencies and a build extension in you pom (yes slight hyperbole here,
+but think of this as the ideal)
+
+
+> Consider the phrase "...you have wandered off The Maven Way=E2=84=A2".  I=
+ can't
+> tell if you intended this ironically or seriously.  If it's the latter, i=
+t
+> seems like you're saying is "Maven is perfect. If Maven doesn't handle yo=
+ur
+> use-case, then your use-case is invalid".  Is that true?
+>
+
+Nope maven is far from perfect. Plugins are the path to that perfection
+
+
+--=20
+Sent from my phone
+
+--f46d043be0380395cc04fb07da7c--
+

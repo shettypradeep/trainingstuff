@@ -1,0 +1,109 @@
+From users-return-135482-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb 14 11:50:30 2014
+Return-Path: <users-return-135482-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 671B4102B5
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 14 Feb 2014 11:50:30 +0000 (UTC)
+Received: (qmail 6983 invoked by uid 500); 14 Feb 2014 11:50:24 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 6878 invoked by uid 500); 14 Feb 2014 11:50:22 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 6862 invoked by uid 99); 14 Feb 2014 11:50:20 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 11:50:20 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of gcjtmu-turbine-maven-user-846@m.gmane.org designates 80.91.229.3 as permitted sender)
+Received: from [80.91.229.3] (HELO plane.gmane.org) (80.91.229.3)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 11:50:14 +0000
+Received: from list by plane.gmane.org with local (Exim 4.69)
+	(envelope-from <gcjtmu-turbine-maven-user-846@m.gmane.org>)
+	id 1WEHHF-0007MA-CX
+	for users@maven.apache.org; Fri, 14 Feb 2014 12:49:53 +0100
+Received: from mail.scalaris.com ([62.154.225.82])
+        by main.gmane.org with esmtp (Gmexim 0.1 (Debian))
+        id 1AlnuQ-0007hv-00
+        for <users@maven.apache.org>; Fri, 14 Feb 2014 12:49:53 +0100
+Received: from joerg.schaible by mail.scalaris.com with local (Gmexim 0.1 (Debian))
+        id 1AlnuQ-0007hv-00
+        for <users@maven.apache.org>; Fri, 14 Feb 2014 12:49:53 +0100
+X-Injected-Via-Gmane: http://gmane.org/
+To: users@maven.apache.org
+From: =?UTF-8?B?SsO2cmc=?= Schaible <joerg.schaible@swisspost.com>
+Subject: Re: How to minimize quantity of profiles in pom.xml file
+Date: Fri, 14 Feb 2014 12:49:43 +0100
+Organization: Swiss Post Solutions
+Lines: 47
+Message-ID: <ldkvsa$g1k$1@ger.gmane.org>
+References: <1392295782954-5784478.post@n5.nabble.com> <CALy+7Unwhm=ZONVayr0zhJk6G3znFTzTiKEU-gui1VFpBjEq_w@mail.gmail.com> <1392372418156-5784835.post@n5.nabble.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8Bit
+X-Complaints-To: usenet@ger.gmane.org
+X-Gmane-NNTP-Posting-Host: mail.scalaris.com
+User-Agent: KNode/4.11.5
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+fred wrote:
+
+> I need to build project for many kinds of environment so i need a lot of
+> profiles with settings for this env.
+> 
+> There is a cutted module pom.xml -  pom.xml file
+> <http://www.mediafire.com/view/47gt5jiegta7auq/pom.xml>
+
+All you need in the profile is a simple property:
+
+===================== %< ====================
+ <build>
+   <plugins>
+     ...
+     <plugin>
+       ... your plugin ...
+       <configuration>
+        ... your configuration ...
+        <targetURL>http://${profile.host}:
+${port}/crx/packmgr/service.jsp</targetURL>
+       </configuration>
+       ...
+     </plugin>
+   </plugins>
+   ...
+ </build>
+ <profiles>
+   <profile>
+     <id>auto-deploy</id>
+     <properties>
+       <profile.host>${host}</profile.host>
+     </properties>
+   </profile>
+   <profile>
+     <id>dev</id>
+     <properties>
+       <profile.host>${dev.host}</profile.host>
+     </properties>
+   </profile>
+   ...
+ </profiles>
+===================== %< ====================
+
+As rule of thumb: Just put the stuff into the profile that *is* actually 
+different.
+
+- Jörg
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

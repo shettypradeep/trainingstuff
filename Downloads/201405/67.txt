@@ -1,0 +1,72 @@
+From users-return-136421-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed May 21 20:33:53 2014
+Return-Path: <users-return-136421-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 76BE61186E
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 21 May 2014 20:33:53 +0000 (UTC)
+Received: (qmail 82434 invoked by uid 500); 21 May 2014 20:33:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 82359 invoked by uid 500); 21 May 2014 20:33:52 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 82351 invoked by uid 99); 21 May 2014 20:33:52 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 21 May 2014 20:33:52 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of egor@technoparkcorp.com designates 209.85.220.177 as permitted sender)
+Received: from [209.85.220.177] (HELO mail-vc0-f177.google.com) (209.85.220.177)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 21 May 2014 20:33:49 +0000
+Received: by mail-vc0-f177.google.com with SMTP id if17so3198019vcb.22
+        for <users@maven.apache.org>; Wed, 21 May 2014 13:33:25 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:reply-to:from:date:message-id
+         :subject:to:content-type;
+        bh=cQg7CC5W8nNFW3sn+H0cTEmKaXhQxTDFHpGc4TuTkzc=;
+        b=b7FP/uGjNLCj0wJ2IJF5+pLd3R3Y490xav3s9gNcbP4stLZEV280yLXI1FAUi19Hxi
+         CCRwT/UX6wjcjk36hpu7iJuEZs+NcAkx/VPeK3NmVzBytZh9Yrg6u2v+mxzzldIVYG6d
+         vAaBMNYgUvGTna9YCZrbjiINEYoKhnf2aFitzmwEUzsc8NcI6kG/tY+Dw2r9nqzybsw0
+         ESuKUYf3/A+6ypqOpcPHWlvyIZ25bze7g0fM6MnJDjxMtU4c16chSyPyo8mvsVx/kx/s
+         TZrwF0tDuRtx3Yf8MDYszC3Lq07Cu9/yRtwk4bcpCtNFjcGBkxXe07lzVb7ZpCulPhSG
+         ZH7Q==
+X-Gm-Message-State: ALoCoQmsvnd3oW8vBCyzZ+w+ExA/kENUVN27toCUqYM1AoiNJ2HXQZ03ybudvzFzrJIzQdV2ymEO
+X-Received: by 10.52.182.227 with SMTP id eh3mr9862800vdc.40.1400704405424;
+ Wed, 21 May 2014 13:33:25 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.220.12.207 with HTTP; Wed, 21 May 2014 13:32:45 -0700 (PDT)
+Reply-To: yegor@tpc2.com
+From: Yegor Bugayenko <egor@technoparkcorp.com>
+Date: Wed, 21 May 2014 22:32:45 +0200
+Message-ID: <CAGXBA31pEHxP-ZXpjr=5gnEficmJGXsT9h4gQu1OP4F0LVnbRw@mail.gmail.com>
+Subject: MySQL Maven Plugin
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=bcaec547c49b85663d04f9eee8fa
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--bcaec547c49b85663d04f9eee8fa
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi all,
+
+I explained in this short blog post how MySQL can be used in integration
+testing with Maven:
+http://www.yegor256.com/2014/05/21/mysql-maven-plugin.html
+
+Would be great to hear your comments. Thanks.
+
+=E2=80=94
+Yegor Bugayenko
+www.teamed.io
+
+--bcaec547c49b85663d04f9eee8fa--
+

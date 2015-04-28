@@ -1,0 +1,120 @@
+From users-return-137915-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Dec  4 12:52:56 2014
+Return-Path: <users-return-137915-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9DB85C45A
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  4 Dec 2014 12:52:56 +0000 (UTC)
+Received: (qmail 6535 invoked by uid 500); 4 Dec 2014 12:52:54 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 6460 invoked by uid 500); 4 Dec 2014 12:52:54 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 6439 invoked by uid 99); 4 Dec 2014 12:52:53 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 04 Dec 2014 12:52:53 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of adam.retter@googlemail.com designates 209.85.215.54 as permitted sender)
+Received: from [209.85.215.54] (HELO mail-la0-f54.google.com) (209.85.215.54)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 04 Dec 2014 12:52:27 +0000
+Received: by mail-la0-f54.google.com with SMTP id pv20so9597387lab.27
+        for <users@maven.apache.org>; Thu, 04 Dec 2014 04:50:11 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlemail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :cc:content-type;
+        bh=xj/eiIbPJXySd41f5rMRsu8QarvBgfE6686hmTcY0zc=;
+        b=qEwYRtVj3pINojO2yc8WFvWJWeRxpja6LGf1NSQnfC2/q+s1wbRKaDNHVJkZN9qlQn
+         gWFd3Lxp4OmN3eKb+gQulS3e/Fm1xeTycOrn8MeJANCIhvaL/HTxW5laXDTmL7w0RlDA
+         edxj/zeUgLg/iyalqjIXwkN3g3clBD1TRnIZwjNi4g2uujnq1uN93/sQVYp0pkmv0fS0
+         F+wGOiqqd+o5XQE92RtdvZBplKhi5D+Tx1TuJXLXJzVPBub9UAmT/PSkUgopaAK5MqUB
+         xdFoXVl4XHSTxJSnpDd+Y/SjwuZSf42HqD/8rEkKFSyGhjQC83yhWOfR5/2KlPPXTyok
+         35Ig==
+MIME-Version: 1.0
+X-Received: by 10.152.8.194 with SMTP id t2mr9202855laa.21.1417697411558; Thu,
+ 04 Dec 2014 04:50:11 -0800 (PST)
+Received: by 10.25.85.18 with HTTP; Thu, 4 Dec 2014 04:50:11 -0800 (PST)
+In-Reply-To: <547F605D.1070802@gmail.com>
+References: <547F605D.1070802@gmail.com>
+Date: Thu, 4 Dec 2014 12:50:11 +0000
+Message-ID: <CAPK0icg-R1ZK5dRZ=zVzRq_+dNMRTzJbCGFTDqEvgO8uVf2a1Q@mail.gmail.com>
+Subject: Re: Emotional Support Group for Typesafe Maven Users
+From: Adam Retter <adam.retter@googlemail.com>
+To: Maven Users List <users@maven.apache.org>
+Cc: scala-debate@googlegroups.com
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I have used Maven for plenty of Scala and Akka projects, but never for
+a Play project as Play seems to have its own idea of application
+structure and layout and it is easier to just stick with it for Play.
+
+On 3 December 2014 at 19:11, Eric Kolotyluk <eric.kolotyluk@gmail.com> wrote:
+> Does anyone know of a good emotional support group for people trying to use
+> Maven with Typesafe projects such as Akka and Play?
+>
+> I was thinking maybe there could a buddy/sponsor system, such as used in AA
+> and other self help groups. Maybe there might be group sessions where people
+> can talk about their trauma, especially by being constantly invalidated by
+> comments such as "you should use the simple build tool SBT, cause, well you
+> know, it's simple and easy to use."
+>
+> Seriously though, is there a community of people who are successfully using
+> Maven with Akka an Play projects? I would love to meet you.
+>
+> I can see why people who have tried Maven naturally think "oh, its' too
+> complicated, anyone can write a simple build tool that does what Maven
+> does." Clearly they do not appreciate what Maven is or what it does. SBT and
+> Gradle are two great examples of projects that attempted to do something
+> more simple, but in the end, really don't measure up.
+>
+> I personally think the Scala community would be been better served if more
+> investment was made in developing better Scala build tools within the Maven
+> framework. More and better plugins for Scala, Akka, Play, etc.  Better use
+> of
+>
+> http://books.sonatype.com/mcookbook/reference/sect-scala-script-inline.html
+> http://books.sonatype.com/mcookbook/reference/ch03s03.html
+>
+> I don't know if there is a Scala template for writing Maven plugins (or
+> mojos), but there should be.
+>
+> The more I use SBT, the less I like it. It is not what I consider a serious
+> build tool for build engineers, it is a toy or playground for Scala hackers
+> who thrive on the abstruse. Don't get me wrong, I love Scala, but creating a
+> build tool around .scala files just invites the use of chicken tracks and
+> obscure overly concise cleverness that leads to one WTF experience after
+> another. /It is actually possible to write Scala code that you can reason
+> about,/ but it just as easy to write Scala code that resembles APL, and
+> reasoning about build engineering was clearly not a priority with the
+> designers of SBT.
+>
+> The Scala-IDE was a really great approach because it leveraged off of an
+> existing IDE infrastructure such as Eclipse, rather than trying to write an
+> IDE from scratch the way SBT does. I wish the Scala/Typesafe community had
+> taken the same approach with build-tools.
+>
+> - Eric
+
+
+
+-- 
+Adam Retter
+
+skype: adam.retter
+tweet: adamretter
+http://www.adamretter.org.uk
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

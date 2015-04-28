@@ -1,0 +1,209 @@
+From users-return-136077-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr  4 07:23:23 2014
+Return-Path: <users-return-136077-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D65CF104A0
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  4 Apr 2014 07:23:23 +0000 (UTC)
+Received: (qmail 31234 invoked by uid 500); 4 Apr 2014 07:23:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 29119 invoked by uid 500); 4 Apr 2014 07:23:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 29085 invoked by uid 99); 4 Apr 2014 07:23:13 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 04 Apr 2014 07:23:13 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bmathus@gmail.com designates 74.125.82.174 as permitted sender)
+Received: from [74.125.82.174] (HELO mail-we0-f174.google.com) (74.125.82.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 04 Apr 2014 07:23:08 +0000
+Received: by mail-we0-f174.google.com with SMTP id t60so3005385wes.33
+        for <users@maven.apache.org>; Fri, 04 Apr 2014 00:22:46 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=soSJOiHr2saea7ZydJ7Q4SguqC3T1bQHBR9tSfDErjM=;
+        b=fLrXz2xfbESiw4j6GXEDt9rNxOV+OcYFMJB4zWEx9znANW3CywzwcdQsLW5AxGHLXV
+         R1Vf8lrYsCglRnH+UiwNSdxmvChn1mmFOg0ygUS7gwGXfv7JvPdp329iH2nAV8fQdwDQ
+         KEYXbZJukOOe77o3h/C7oGTaLrcmxALetJJBdXDkD8cGaizYeRQGkW7AKaCawWafLAqb
+         s7VfHvfl97nvJM4LO1N88HiJd7sF3rFStuu9QvI9N4V9RR1DNtCVEhx3WrRA/dRYRghO
+         jJrUEOWDnCtgCJbqfBeBX3u2NtZFDONqfXvYDQW6MutsTnuFZ/dEQcH3I2qFfTSfh/Tb
+         SsLg==
+X-Received: by 10.180.109.231 with SMTP id hv7mr2101641wib.38.1396596166550;
+ Fri, 04 Apr 2014 00:22:46 -0700 (PDT)
+MIME-Version: 1.0
+Sender: bmathus@gmail.com
+Received: by 10.14.88.136 with HTTP; Fri, 4 Apr 2014 00:22:26 -0700 (PDT)
+In-Reply-To: <533E59BE.9090804@gmail.com>
+References: <1396438658817-5790393.post@n5.nabble.com> <CALy+7UmJnmf3GNEEDEzE0-hWPMmNFvtkZ8Ub-zr3CfZO-HanWQ@mail.gmail.com>
+ <1396447740034-5790400.post@n5.nabble.com> <CADN69ymfTp2iwObyCuq1qiPntK5B-v-qozRMYwkz4-XfYxRR3A@mail.gmail.com>
+ <CALy+7U=88Ao5Q4BaJbFM9F7djYEAf-QxmVKeT88GKfFHiCaq4g@mail.gmail.com>
+ <533E5755.9030007@gmail.com> <533E57FB.8030009@landrus.de> <533E59BE.9090804@gmail.com>
+From: Baptiste Mathus <bmathus@batmat.net>
+Date: Fri, 4 Apr 2014 09:22:26 +0200
+X-Google-Sender-Auth: 7BApqRG_aNGPFYAMApDezOGJHN4
+Message-ID: <CANWgJS5QvKAAMTXgw16G+-uVx3=zHxEuqvd04nYymLnTnK0O5A@mail.gmail.com>
+Subject: Re: Scanning for Projects... before
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=e89a8f23574366ed2904f63262dc
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--e89a8f23574366ed2904f63262dc
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+You're very likely to send some day an old version of a false releases,
+actually a snapshot, to production with this technique.
+I guess you should at least send a mail to some managers to explain things
+are going to go wrong some day. At least you will have taken your
+responsibility and they can't pretend it's your fault.
+
+Also, I hope nobody will ever use a vanilla version of Maven on their dev
+box since they're never going to get the rotten new releases downloaded :-/=
+.
+
+
+2014-04-04 9:06 GMT+02:00 eugene <eugen.rabii@gmail.com>:
+
+> Christian, you have no idea how much I wish this were a possibility, but
+> this is the way the company has handled things for years.
+> Changing this behavior would mean a revolution in their understanding,
+> and I sure do not want to start one just yet. :)
+>
+> There is a much cooler way  to do it actually... since we have Jenkins
+> that builds the jobs (way too many to hook a pre-build event on them
+> directly), we could implement an Extension Point for the Maven Reporter
+> Plugin that has one called PreBuild - the only problem is that it works
+> only for Maven 2 from what I tested. I asked their forums about this
+> issue, no response so far.
+>
+> On 4/4/14, 9:59 AM, Christian Domsch [via Maven] wrote:
+> > Well that is essentially a *very* basic way of my CI approach :) But it
+> > means you have to do it everywhere you have maven installed and need
+> > that behaviour. Also has the drawback of injecting this behaviour in an=
+y
+> > maven runs.
+> >
+> > So, as mentioned before a few times: switch to some standard use of
+> > maven :)
+> >
+> > On 04.04.2014 08:55, eugene wrote:
+> >
+> > > I think we have found one...
+> > >
+> > > We can create a wrapper around MavenCli and replace it in m2.conf...
+> > >
+> > > On 4/2/14, 8:35 PM, Wayne Fay [via Maven] wrote:
+> > >>>> repo unless their are snapshots, right? Well snapshot is not an
+> > option
+> > >>>> right now (due to corporate things).
+> > >>> It is one of Maven's cardinal assumptions that release versions are
+> > >>> immutable. If you need different contents, use either: A) a differe=
+nt
+> > >> As Curtis already mentioned, you are unlikely to find a solution by
+> > >> continuing to head in this direction. Find another approach - most
+> > >> likely one that involves a process running outside of Maven before
+> > >> your build kicks off.
+> > >>
+> > >> Wayne
+> > >>
+> > >> --------------------------------------------------------------------=
+-
+> > >> To unsubscribe, e-mail: [hidden email]
+> > >> </user/SendEmail.jtp?type=3Dnode&node=3D5790420&i=3D0>
+> > >> For additional commands, e-mail: [hidden email]
+> > >> </user/SendEmail.jtp?type=3Dnode&node=3D5790420&i=3D1>
+> > >>
+> > >>
+> > >>
+> > >>
+> > -----------------------------------------------------------------------=
+-
+> > >> If you reply to this email, your message will be added to the
+> > >> discussion below:
+> > >>
+> >
+> http://maven.40175.n5.nabble.com/Scanning-for-Projects-before-tp5790393p5=
+790420.html
+> > >>
+> > >> To unsubscribe from Scanning for Projects... before, click here
+> > >> <
+> > >> NAML
+> > >>
+> > <
+> http://maven.40175.n5.nabble.com/template/NamlServlet.jtp?macro=3Dmacro_v=
+iewer&id=3Dinstant_html%21nabble%3Aemail.naml&base=3Dnabble.naml.namespaces=
+.BasicNamespace-nabble.view.web.template.NabbleNamespace-nabble.view.web.te=
+mplate.NodeNamespace&breadcrumbs=3Dnotify_subscribers%21nabble%3Aemail.naml=
+-instant_emails%21nabble%3Aemail.naml-send_instant_email%21nabble%3Aemail.n=
+aml
+> >
+> >
+> > >>
+> > >
+> > >
+> > >
+> > >
+> > > --
+> > > View this message in context:
+> >
+> http://maven.40175.n5.nabble.com/Scanning-for-Projects-before-tp5790393p5=
+790474.html
+> > > Sent from the Maven - Users mailing list archive at Nabble.com.
+> >
+> >
+> >
+> > -----------------------------------------------------------------------=
+-
+> > If you reply to this email, your message will be added to the
+> > discussion below:
+> >
+> http://maven.40175.n5.nabble.com/Scanning-for-Projects-before-tp5790393p5=
+790475.html
+> >
+> > To unsubscribe from Scanning for Projects... before, click here
+> > <
+> http://maven.40175.n5.nabble.com/template/NamlServlet.jtp?macro=3Dunsubsc=
+ribe_by_code&node=3D5790393&code=3DZXVnZW4ucmFiaWlAZ21haWwuY29tfDU3OTAzOTN8=
+MTA1NjEzNjg3MA=3D=3D
+> >.
+> > NAML
+> > <
+> http://maven.40175.n5.nabble.com/template/NamlServlet.jtp?macro=3Dmacro_v=
+iewer&id=3Dinstant_html%21nabble%3Aemail.naml&base=3Dnabble.naml.namespaces=
+.BasicNamespace-nabble.view.web.template.NabbleNamespace-nabble.view.web.te=
+mplate.NodeNamespace&breadcrumbs=3Dnotify_subscribers%21nabble%3Aemail.naml=
+-instant_emails%21nabble%3Aemail.naml-send_instant_email%21nabble%3Aemail.n=
+aml
+> >
+> >
+>
+>
+>
+>
+>
+> --
+> View this message in context:
+> http://maven.40175.n5.nabble.com/Scanning-for-Projects-before-tp5790393p5=
+790476.html
+> Sent from the Maven - Users mailing list archive at Nabble.com.
+>
+
+
+
+--=20
+Baptiste <Batmat> MATHUS - http://batmat.net
+Sauvez un arbre,
+Mangez un castor !
+
+--e89a8f23574366ed2904f63262dc--
+

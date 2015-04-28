@@ -1,0 +1,126 @@
+From users-return-137968-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Dec  9 15:27:58 2014
+Return-Path: <users-return-137968-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 88BE510370
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  9 Dec 2014 15:27:58 +0000 (UTC)
+Received: (qmail 10056 invoked by uid 500); 9 Dec 2014 15:27:56 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 9963 invoked by uid 500); 9 Dec 2014 15:27:56 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 9951 invoked by uid 99); 9 Dec 2014 15:27:55 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Dec 2014 15:27:55 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of adrien.rivard@gmail.com designates 209.85.223.180 as permitted sender)
+Received: from [209.85.223.180] (HELO mail-ie0-f180.google.com) (209.85.223.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Dec 2014 15:27:30 +0000
+Received: by mail-ie0-f180.google.com with SMTP id rp18so672510iec.25
+        for <users@maven.apache.org>; Tue, 09 Dec 2014 07:25:59 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=m8j4y12gWsJuOAZq4IxPeaL1f0zTyiFCSoejx02N2aQ=;
+        b=UEEBft+y2Od1oy5mQMOW4w2fvaX66uHf6c/4adrrPret1L/lIK6KsbI/5AmIxAF1Er
+         ouWj8381aspBM2nL/4nwCUF6O/S+hNJJyrocgmGWTgAjPSv8SYjLmo7c23A5DBH2ZFm3
+         X0HMp2XWEv9bFKeoeHITXNdc1so1Kf3P0/Uc21ko61N479EGYYRC1y6pzwk9QI2UFvh+
+         WJUqdyXrX88c4cDNNJdZ361aA5hhn4mYxFgKE4rdD6UKO5oDt/YhuVHyMEOAWl1gjvOS
+         TXizYkoAWx2/ptSgQME4qyryhZvaJ0cfayPZdN/OFwx8PG15/1+rCYHL6gybO4O4LNXe
+         Kgjg==
+MIME-Version: 1.0
+X-Received: by 10.107.29.18 with SMTP id d18mr2725311iod.72.1418138758984;
+ Tue, 09 Dec 2014 07:25:58 -0800 (PST)
+Received: by 10.42.213.71 with HTTP; Tue, 9 Dec 2014 07:25:58 -0800 (PST)
+In-Reply-To: <CAA8BW8GNb6nxXM+0K5=L3oFEh=+SDKW1zpqXtVkBWoOm4PTzaA@mail.gmail.com>
+References: <CAA8BW8EgW9UZ2NVLbrVZCGA8Xo3b5UotS44KUxhRbGjGiwh8gw@mail.gmail.com>
+	<5049531.alCp08zIy1@herve-desktop>
+	<CAA8BW8FSD2Cuw8kAWr9WnP1AWFOuoURkFrO4fCDf-X28aEenLg@mail.gmail.com>
+	<m66bph$au$1@ger.gmane.org>
+	<20141209095124.00002c05.ecki@zusammenkunft.net>
+	<CAA8BW8GNb6nxXM+0K5=L3oFEh=+SDKW1zpqXtVkBWoOm4PTzaA@mail.gmail.com>
+Date: Tue, 9 Dec 2014 16:25:58 +0100
+Message-ID: <CAPCUOdFEO64WgxzWv-Di4pM9ZfzCesKA0_rX_Lnz68yXJTb26A@mail.gmail.com>
+Subject: Re: Maven 3.2.3 upgrade
+From: Adrien Rivard <adrien.rivard@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113feee2f8c5040509ca28bc
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113feee2f8c5040509ca28bc
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Have them execute a wrapper script that set Maven paths according to the
+current project and execute it.
+you can even alias this script to "mvn" command.
+
+
+On Tue, Dec 9, 2014 at 4:12 PM, David Hoffer <dhoffer6@gmail.com> wrote:
+
+> I don't think the CI Server is an issue as we have lots of flexibility wh=
+en
+> we setup those jobs.  The issue is for developer builds.  I'm not clear h=
+ow
+> to setup workstations to make it easy to build projects with different
+> Maven versions.
+>
+> Our standard practice is to set M2_HOME to the maven install and then add
+> %M2_HOME%/bin to the path.
+>
+> The suggestion was to not set M2_HOME...okay I thought that was required
+> but we can not set it.  We still need Maven in our path.  Are you saying
+> that if I set the path to Maven version X, my build can somehow specify t=
+o
+> use Maven version Y or Z?  All I've seen in Maven thus far is the ability
+> to specify what version must be used not what version to use, and it's th=
+e
+> later I'm looking for.  I don't want devs to have to reconfigure their
+> system props to build different code branches.
+>
+> -Dave
+>
+> On Tue, Dec 9, 2014 at 1:51 AM, Bernd Eckenfels <ecki@zusammenkunft.net>
+> wrote:
+>
+> > Am Tue, 09 Dec 2014 09:27:29 +0100
+> > schrieb J=C3=B6rg Schaible <joerg.schaible@swisspost.com>:
+> >
+> > > > One other issue came up in this upgrade.  We still have branches
+> > > > that have to stay at 3.0.x.  How can I make the trunk build use
+> > > > 3.2.3 w/o changing everyone's M2_HOME?  Is there a way to bootstrap
+> > > > the build so the build picks the specified version of Maven?  E.g.
+> > > > I want the build to specify the version used not the system.
+> > >
+> > > Don't set it at all. The mvn shell scripts will automatically do so
+> > > for their Maven version on-the-fly.
+> >
+> > and use a CI Server where you configure the maven path for each job.
+> >
+> > Gruss
+> > Bernd
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands, e-mail: users-help@maven.apache.org
+> >
+> >
+>
+
+
+
+--=20
+Adrien Rivard
+
+--001a113feee2f8c5040509ca28bc--
+

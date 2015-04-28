@@ -1,0 +1,75 @@
+From users-return-135597-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Feb 24 22:11:44 2014
+Return-Path: <users-return-135597-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8A4DD108C2
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 24 Feb 2014 22:11:44 +0000 (UTC)
+Received: (qmail 96478 invoked by uid 500); 24 Feb 2014 22:11:40 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 96358 invoked by uid 500); 24 Feb 2014 22:11:40 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 96350 invoked by uid 99); 24 Feb 2014 22:11:40 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Feb 2014 22:11:40 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.220.51 as permitted sender)
+Received: from [209.85.220.51] (HELO mail-pa0-f51.google.com) (209.85.220.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 24 Feb 2014 22:11:34 +0000
+Received: by mail-pa0-f51.google.com with SMTP id ld10so7196749pab.38
+        for <users@maven.apache.org>; Mon, 24 Feb 2014 14:11:12 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=1FXfstxER0/h/XmzE7HjZgl2dh61Dc9eCXLl3vA3CjQ=;
+        b=h2lEJPAjocspc3Pb9S7yyl81oj9kzez/bgLhynUsHLL3nHTwkDCBUeu79heRsnR0WW
+         p/5Wo1Dflr6khVWroQLT9BLItqpiJQtfhEGyPmvPYezlojCuZpRU/rlB7wz43m7GpLgz
+         uz9C13p0Ua7o3DZmR/5WKsm2uXkfFzUQ5Cj5qRKq8DMqqrGYM0SfVg/h2j7slJX3mMt5
+         u+Vtt1y/0J6s6KlizAFztyFhDH+SyP8lPo69KeEavrIi3D9JYdhxdbCJD/RMj++LgGAz
+         z0tubWG7Isno7LkYOEP2kRcB/d4pfzGrmK64ZvSOVyCRJJKBODLT3m7Y7EJC4lf7IReg
+         H4Pw==
+X-Received: by 10.68.143.100 with SMTP id sd4mr2434588pbb.0.1393279872812;
+ Mon, 24 Feb 2014 14:11:12 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Mon, 24 Feb 2014 14:10:52 -0800 (PST)
+In-Reply-To: <75F3A2D98EDE2545BDC06B5B6C1CEC516DF1E827@ESGSCMB101.ericsson.se>
+References: <75F3A2D98EDE2545BDC06B5B6C1CEC516DF1E827@ESGSCMB101.ericsson.se>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Mon, 24 Feb 2014 16:10:52 -0600
+Message-ID: <CALy+7UnCodtMYVM+cS_1tpa0B9=dQJTCKj8OacZ7r0YBifE9yQ@mail.gmail.com>
+Subject: Re: Rule for maven plugin inheritance
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> At first, I define two maven java doc plugin inside the reporting tag and used to generate
+> different type of javadoc, one for standard javadoc and for customize one.
+
+FYI: I don't use much of the reporting functionality in Maven, just the basics.
+
+> Later, I want to move those two javadoc plug in into the parent pom, I don't use the
+> pluginElement, just want all of our sub project could use it directly.
+
+Generally speaking, you don't include a plugin twice in your pom, you
+should include it once and use <executions> or <reportSets> to provide
+different configurations for the various executions you require. Read
+more online:
+https://maven.apache.org/plugins/maven-site-plugin/examples/configuring-reports.html
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,118 @@
+From users-return-135362-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb  6 09:45:14 2014
+Return-Path: <users-return-135362-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5FB7E102F1
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  6 Feb 2014 09:45:14 +0000 (UTC)
+Received: (qmail 2042 invoked by uid 500); 6 Feb 2014 09:45:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 1549 invoked by uid 500); 6 Feb 2014 09:44:56 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 1530 invoked by uid 99); 6 Feb 2014 09:44:52 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Feb 2014 09:44:52 +0000
+X-ASF-Spam-Status: No, hits=2.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,FREEMAIL_REPLYTO_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [212.82.97.59] (HELO nm27-vm8.bullet.mail.ir2.yahoo.com) (212.82.97.59)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Feb 2014 09:44:43 +0000
+Received: from [212.82.98.52] by nm27.bullet.mail.ir2.yahoo.com with NNFMP; 06 Feb 2014 09:44:22 -0000
+Received: from [212.82.98.121] by tm5.bullet.mail.ir2.yahoo.com with NNFMP; 06 Feb 2014 09:44:22 -0000
+Received: from [127.0.0.1] by omp1058.mail.ir2.yahoo.com with NNFMP; 06 Feb 2014 09:44:22 -0000
+X-Yahoo-Newman-Property: ymail-3
+X-Yahoo-Newman-Id: 440134.88713.bm@omp1058.mail.ir2.yahoo.com
+Received: (qmail 71079 invoked by uid 60001); 6 Feb 2014 09:44:22 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.fi; s=s1024; t=1391679862; bh=m5aBUY5WxG3SC5OXiTg1NB8XfeXCPxMuHSCm49YNNxI=; h=X-YMail-OSG:Received:X-Rocket-MIMEInfo:X-Mailer:References:Message-ID:Date:From:Reply-To:Subject:To:MIME-Version:Content-Type; b=4VF6MyaCYA/w8CCUGnOTL1zGc5XBwrvWYsvxqRbNZX4AGSEpNB1PKNrKpjTMw/3mC9DL8dKwGMwNjaiGPjYFsT0xKyB4W597T/kmogGZblX3G4HIO+j+2vX+WXgJV0rYnnmfJlkVPY6EVoP+1UtqBB6tAoApgi1F+OOA/MLdQOo=
+DomainKey-Signature:a=rsa-sha1; q=dns; c=nofws;
+  s=s1024; d=yahoo.fi;
+  h=X-YMail-OSG:Received:X-Rocket-MIMEInfo:X-Mailer:References:Message-ID:Date:From:Reply-To:Subject:To:MIME-Version:Content-Type;
+  b=KpreqqH8MdVgvHY/t4yqS7G+JTCsBvTWJ4q3b6yZghivtxxagki+80rmtYhP2wNmmkDwMGaZOCQpQulLPXmYptcl5jT6dnuLq41mNXptSw9QwGlpCVnI7AMemhT80j6gVnxzXF3pPyA1D9ReWJ79K3vBlcnYJJ+jW7shZh28mnQ=;
+X-YMail-OSG: AXa3A9MVM1nHIDYLvN9RTbu1bc250.1hl1x1wU_lidCHUQ4
+ Ni0T4PGYl8DPMv.8QWY8.Vmls6z4VDl_wCmSYWoc9n_KRKmX9Wjy_6ySOYjX
+ rvNxKOAAAdv.Lsg6.QD4nBmvEAgvuHYKlxE7sNlbZObSNbcs3W9o99qEst55
+ aeLZtYdTXQizv1HBK.GMU6_ItqQxXtQ0WzCXge2Hg8E85M0obpoIvDwpjQHF
+ Zn5A4uxxG0jtdnHjwvWjxQZxK3BMCHTM71EnNqXgIuDZPqi4EMFgb5312vAH
+ vtTxcN8Ez4cVXh8o3tdh0AmQKf3w29.nFc4QQkQzseyxXQtMPAcELJzwShox
+ 4s1aac3cRRBJRPCGxRztBO.t0YT8AaataBE2kdhqVTJhLaDChKY8wDSpjGO1
+ UBkdJMufQY7MBebZt7yUgg4_1agfvCJxfRycnRVoyBupJV7qnTTEF7DOde3A
+ p98UbJ9W1f69ugn6XQHp_XiecJjku9toZ8yUhxjxIWMj59wjYJPQzpjnNyA8
+ 993YP7e6vTLPVc5BdeXzaAa.1ryodxgyNDtbRbRBKWhHioKdFLekz5lMiKSn
+ fRRnfRFn21ODVKQutWJM-
+Received: from [194.251.119.196] by web172404.mail.ir2.yahoo.com via HTTP; Thu, 06 Feb 2014 09:44:22 GMT
+X-Rocket-MIMEInfo: 002.001,SGkgYWxsLAoKV2UgaGF2ZSBpbXBsZW1lbnRlZCBhIGN1c3RvbSBNYXZlbiBwbHVnaW4gKGJ1aWxkX3NldHRpbmdzKSB3aGljaCBpcyBzdXBwb3NlZCB0byBiZSB1c2VkIGluIHRoZSBvdGhlciBwcm9qZWN0IChiYXNlKS4gVGhlIHBsdWdpbiBoYXMgY3VzdG9tIGxpZmVjeWNsZS4gQXQgZmlyc3QsIGEgbW9qbyBnZW5lcmF0ZXMgcmVzb3VyY2VzLiBUaGF0IHBoYXNlIGlzIHdvcmtpbmcgYXMgZXhwZWN0ZWQuIFNlY29uZCwgd2Ugd2FudCB0byBpbnN0YWxsIHBvbS54bWwgYnV0IHRoaXMgb25lIGlzIGZhaWxpbmcBMAEBAQE-
+X-Mailer: YahooMailWebService/0.8.175.631
+References: 
+Message-ID: <1391679862.33464.YahooMailNeo@web172404.mail.ir2.yahoo.com>
+Date: Thu, 6 Feb 2014 09:44:22 +0000 (GMT)
+From: Marko Rantanen <markorantanen14@yahoo.fi>
+Reply-To: Marko Rantanen <markorantanen14@yahoo.fi>
+Subject: Custom plugin, installation of pom.xml failing
+To: "users@maven.apache.org" <users@maven.apache.org>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="398296598-949676263-1391679862=:33464"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--398296598-949676263-1391679862=:33464
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hi all,=0A=0AWe have implemented a custom Maven plugin (build_settings) whi=
+ch is supposed to be used in the other project (base). The plugin has custo=
+m lifecycle. At first, a mojo generates resources. That phase is working as=
+ expected. Second, we want to install pom.xml but this one is failing.=0A=
+=0AWhen trying =A0- mvn install=0A=0Athe=A0following error is received:=0A=
+=0Aorg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execut=
+e goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install (default=
+-install) on project base: The packaging for this project did not assign a =
+file to the build artifact=0A=0A=0AHow should installation of the pom file =
+be handled? We are using Maven 3.0.5.=0A=0AThe following custom.xml is in p=
+lugins/build_settings/src/main/resources/META-INF/plexus:=0A=0A<component-s=
+et>=0A=A0 =A0 <components>=0A=A0 =A0=A0<component>=0A=A0 =A0 =A0 =A0 =A0=A0=
+<role>org.apache.maven.lifecycle.mapping.LifecycleMapping</role>=0A=A0 =A0 =
+=A0 =A0 =A0<role-hint>build_settings</role-hint>=0A=A0 =A0 =A0 =A0 =A0<impl=
+ementation>org.apache.maven.lifecycle.mapping.DefaultLifecycleMapping</impl=
+ementation>=0A=A0 =A0 =A0 =A0 =A0<configuration>=0A=A0 =A0 =A0 =A0 =A0 =A0=
+=A0<phases>=0A=A0 =A0 =A0 =A0 =A0 =A0 =A0=A0=A0 =A0=A0<generate-resources>p=
+roj.mvn.plugin:build_settings:generate-mvn</generate-resources>=0A=0A=A0 =
+=A0 =A0 =A0 =A0 =A0 =A0 =A0=A0<install>org.apache.maven.plugins:maven-insta=
+ll-plugin:install</install>=0A=0A=A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0=A0<dep=
+loy>org.apache.maven.plugins:maven-deploy-plugin:deploy</deploy>=0A=A0 =A0 =
+=A0 =A0 =A0 =A0=A0</phases>=0A=A0 =A0 =A0 =A0 =A0</configuration>=0A=A0 =A0=
+ =A0=A0</component>=0A=A0 =A0 =A0=A0<component>=0A=0A=A0 =A0 =A0 =A0 =A0<ro=
+le>org.apache.maven.artifact.handler.ArtifactHandler</role>=0A=A0 =A0 =A0 =
+=A0 =A0<role-hint>build_settings</role-hint>=0A=A0 =A0 =A0 =A0 =A0<implemen=
+tation>org.apache.maven.artifact.handler.DefaultArtifactHandler</implementa=
+tion>=0A=A0 =A0 =A0 =A0 =A0<configuration>=0A=A0 =A0 =A0 =A0 =A0 =A0=A0<typ=
+e>build_settings</type>=0A=0A=A0 =A0 =A0 =A0 =A0 =A0=A0<packaging>build_set=
+tings</packaging>=0A=0A=A0 =A0 =A0 =A0 =A0</configuration>=0A=0A=A0 =A0 =A0=
+=A0</component>=0A=A0 =A0 </components>=0A=0A</component-set>=0A=0Apom.xml =
+in test/base:=0A=0A<project xmlns=3D"http://maven.apache.org/POM/4.0.0">=0A=
+...=0A=A0 =A0 <parent>=0A=0A=A0 =A0 =A0=A0<groupId>test</groupId>=0A=A0 =A0=
+ =A0=A0<artifactId>settings</artifactId>=0A=A0 =A0 =A0=A0<version>DYNAMIC-S=
+NAPSHOT</version>=0A=A0 =A0 =A0=A0<relativePath>../settings/pom.xml</relati=
+vePath>=0A=A0 =A0 </parent>=0A=A0 =A0 <artifactId>base</artifactId>=0A=0A=
+=A0 =A0 <packaging>build_settings</packaging>=0A=0A</project>=0A=0A=0Apom.x=
+ml in test/settings:=0A=0A<project xmlns=3D"http://maven.apache.org/POM/4.0=
+.0">=0A=0A...=0A=A0 =A0 <groupId>test</groupId>=0A=A0 =A0 <artifactId>setti=
+ngs</artifactId>=0A=A0 =A0 <version>DYNAMIC-SNAPSHOT</version>=0A=A0 =A0 <p=
+ackaging>pom</packaging>=0A=0A...=0A=A0 =A0 <build>=0A=0A...=0A=A0 =A0 =A0=
+=A0<plugins>=0A=0A=A0 =A0 =A0 =A0 =A0<plugin>=0A=A0 =A0 =A0 =A0 =A0 =A0=A0<=
+groupId>proj.mvn.plugin</groupId>=0A=A0 =A0 =A0 =A0 =A0 =A0=A0<artifactId>b=
+uild_settings</artifactId>=0A=A0 =A0 =A0 =A0 =A0 =A0=A0<extensions>true</ex=
+tensions>=0A=A0 =A0 =A0 =A0 =A0</plugin>=0A=A0 =A0 =A0=A0</plugins>=0A=A0 =
+=A0 </build>=0A</project>=0A=0A=0Apom.xml in plugins/build_settings:=0A=0A<=
+project xmlns=3D"http://maven.apache.org/POM/4.0.0"=A0=0A...=0A=A0 =A0 <art=
+ifactId>build_settings</artifactId>=0A=0A=A0 =A0 <packaging>maven-plugin</p=
+ackaging>=0A=0A...=0A</project>=0A=0A=0A********************=0ARegards,=0A=
+=0AMarko=0A
+--398296598-949676263-1391679862=:33464--
+

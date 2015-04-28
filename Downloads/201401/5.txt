@@ -1,0 +1,103 @@
+From users-return-135211-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jan 20 17:34:29 2014
+Return-Path: <users-return-135211-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D5FB910859
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 20 Jan 2014 17:34:29 +0000 (UTC)
+Received: (qmail 74736 invoked by uid 500); 20 Jan 2014 17:34:19 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 74588 invoked by uid 500); 20 Jan 2014 17:34:19 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 74580 invoked by uid 99); 20 Jan 2014 17:34:19 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Jan 2014 17:34:19 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.192.175 as permitted sender)
+Received: from [209.85.192.175] (HELO mail-pd0-f175.google.com) (209.85.192.175)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 20 Jan 2014 17:34:14 +0000
+Received: by mail-pd0-f175.google.com with SMTP id w10so1835539pde.34
+        for <users@maven.apache.org>; Mon, 20 Jan 2014 09:33:54 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=3IVj49MH7eVWKjcEAO82r0nH8QPb+OLfVR+S0ibXCpc=;
+        b=ZdGInTA92beWdjdATyAbOoVbNzIe54jJvRWVoyxEhUHHeWLr3DYtDuFH76WPgLAXE2
+         xmGV2ZcIhxyAEYxNOWBw2Wp6OhwUz/k5KS6Wu21Snh6zYuPkIlTfkuuso0LCva6dPtGT
+         l0H4KPFAORNa6uakS3Dz8/Lwg5jO/2H56DZoXaYkPupFNlV0DoHYn6m3hk+OX2jslEHT
+         o1YHTeapDX88pQ2dUz2jw7WPyaJNLS8Q0g1DOplJDHdOofe6IGYEv8Bp1HUJX86fy7gg
+         As5PCd6V3j0eH7tku3c4f4d3ARc9fK0Ug17FNnHDtiIGAwsHCQomQki1TP9E2qlQR+/s
+         hPgA==
+MIME-Version: 1.0
+X-Received: by 10.66.154.169 with SMTP id vp9mr19507988pab.39.1390239234525;
+ Mon, 20 Jan 2014 09:33:54 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Mon, 20 Jan 2014 09:33:54 -0800 (PST)
+In-Reply-To: <OF32F0CB51.FB5A4FA2-ON85257C66.005B8339-85257C66.005D4B8C@belden.com>
+References: <OF32F0CB51.FB5A4FA2-ON85257C66.005B8339-85257C66.005D4B8C@belden.com>
+Date: Mon, 20 Jan 2014 17:33:54 +0000
+Message-ID: <CA+nPnMz4afCMHpDL_dW2w7KW_F2ozV0=FG+UK2Op0QrzaLJ-7Q@mail.gmail.com>
+Subject: Re: versions maven plugin
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b6dd008ba12d204f06a4b59
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b6dd008ba12d204f06a4b59
+Content-Type: text/plain; charset=ISO-8859-1
+
+v-m-p does not roll back version numbers
+
+
+On 20 January 2014 16:59, <Alejandro.Endo@miranda.com> wrote:
+
+> Not sure if this is the right list for codehaus plugins. If not I
+> apologize
+>
+> I have a pom with this
+>
+>         <dependencies>
+>                 <dependency>
+>                         <groupId>foo.blah</groupId>
+>                         <artifactId>bar</artifactId>
+>                         <version>1.2.0-RC-7-SNAPSHOT</version>
+>                 </dependency>
+>         </dependencies>
+>
+> I want to run the versions plugin to replace 1.2.0-RC-7-SNAPSHOT with the
+> version we actually released of the code, which is 1.2.0-RC-6. Looking at
+> the available mojos, it seems like versions:use-latest-releases is the
+> right one to use. In the matrix here it says that this goal will modify
+> -SNAPSHOT dependencies. Well, it doesn't. If i instead set the version to
+> 1.2.0-RC-3 (no snapshot), the mojo does update the dependency to
+> 1.2.0-RC-6 so I don't know if this is just the documentation being wrong.
+> I also tried use-latest-versions without success
+>
+> Any idea how to do this? I just want to change the dependencies (which are
+> currently SNAPSHOT due to the m-release-p) to the latest released versions
+>
+> Thank you,
+> Alejandro Endo | Software Designer/Concepteur de logiciels
+>
+> DISCLAIMER:
+> Privileged and/or Confidential information may be contained in this
+> message. If you are not the addressee of this message, you may not
+> copy, use or deliver this message to anyone. In such event, you
+> should destroy the message and kindly notify the sender by reply
+> e-mail. It is understood that opinions or conclusions that do not
+> relate to the official business of the company are neither given
+> nor endorsed by the company.
+> Thank You.
+>
+
+--047d7b6dd008ba12d204f06a4b59--
+

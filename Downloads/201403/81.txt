@@ -1,0 +1,118 @@
+From users-return-135698-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar  5 21:00:52 2014
+Return-Path: <users-return-135698-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 71A3B10E31
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  5 Mar 2014 21:00:52 +0000 (UTC)
+Received: (qmail 37469 invoked by uid 500); 5 Mar 2014 21:00:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 37364 invoked by uid 500); 5 Mar 2014 21:00:41 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 37356 invoked by uid 99); 5 Mar 2014 21:00:40 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Mar 2014 21:00:40 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of prvs=71410BD8D5=howard@renci.org designates 152.54.5.130 as permitted sender)
+Received: from [152.54.5.130] (HELO gateway.renci.org) (152.54.5.130)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 05 Mar 2014 21:00:34 +0000
+Received: from MAIL-CH1.ad.renci.org (172.25.10.50) by gateway.ad.renci.org
+ (172.25.10.130) with Microsoft SMTP Server (TLS) id 14.3.123.3; Wed, 5 Mar
+ 2014 16:00:13 -0500
+Received: from earle.europa.renci.org (172.25.10.130) by mail.renci.org
+ (172.25.10.58) with Microsoft SMTP Server (TLS) id 14.3.123.3; Wed, 5 Mar
+ 2014 16:00:12 -0500
+Message-ID: <53179066.507@renci.org>
+Date: Wed, 5 Mar 2014 16:00:22 -0500
+From: Howard <howard@renci.org>
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:24.0) Gecko/20100101 Thunderbird/24.3.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>,
+	"rafal.krupinski@smtsoftware.com rafal.krupinski@smtsoftware.com"
+	<rafal.krupinski@smtsoftware.com>
+Subject: Re: Using github as a maven repo
+References: <531787D5.8090601@renci.org> <1386892847.15852.1394052501970.open-xchange@ox-ap1>
+In-Reply-To: <1386892847.15852.1394052501970.open-xchange@ox-ap1>
+Content-Type: multipart/alternative;
+	boundary="------------040402060703030903020303"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------040402060703030903020303
+Content-Type: text/plain; charset="UTF-8"; format=flowed
+Content-Transfer-Encoding: 8bit
+
+Thanks Rafa!
+
+That was in fact the answer.  Well, I did admit it was likely something 
+stupid. :)
+
+Thanks also to Anders and Joachim for answering.  I will definitely 
+think about hosting our jars at maven central.  I didn't realize it was 
+easy. I did have a look at managing a repository here at RENCI, but 
+since we hope the usefulness of the project outlives it's funding, it 
+would probably make more sense for our repo to be off site.
+
+Thanks again
+Howard
+
+
+On 3/5/14, 3:48 PM, rafal.krupinski@smtsoftware.com 
+rafal.krupinski@smtsoftware.com wrote:
+>
+>> Dnia 5 marzec 2014 o 21:23 Howard <howard@renci.org> napisa?(a):
+> [...]
+>> For reference here's the part of the pom that is trying to download the
+>> jar:
+>>
+>>      <dependency>
+>>         <groupId>org.renci.databridge-util</groupId>
+>>         <artifactId>databridge-util</artifactId>
+>>         <version>1.0-BETA</version>
+>>       </dependency>
+> Read your POM, there is no databridge-util in the groupId.
+>
+> Dependency should read
+>
+> <dependency>
+> <groupId>org.renci</groupId>
+> <artifactId>databridge-util</artifactId>
+> <version>1.0-BETA</version>
+> </dependency>
+>
+> Regards,
+>
+> Rafał
+>
+> PS
+>
+> I love when people reply without providing actual answer :)
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+
+-- 
+Howard Lander <mailto:howard@renci.org>
+Senior Research Software Developer
+Renaissance Computing Institute (RENCI) <http://www.renci.org>
+The University of North Carolina at Chapel Hill
+Duke University
+North Carolina State University
+100 Europa Drive
+Suite 540
+Chapel Hill, NC 27517
+919-445-9651
+
+--------------040402060703030903020303--
+

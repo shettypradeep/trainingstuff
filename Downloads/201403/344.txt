@@ -1,0 +1,84 @@
+From users-return-135971-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar 27 20:02:27 2014
+Return-Path: <users-return-135971-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9ABEA102DF
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 27 Mar 2014 20:02:27 +0000 (UTC)
+Received: (qmail 45102 invoked by uid 500); 27 Mar 2014 20:02:23 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 44710 invoked by uid 500); 27 Mar 2014 20:02:22 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 44698 invoked by uid 99); 27 Mar 2014 20:02:20 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Mar 2014 20:02:20 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of adam.retter@googlemail.com designates 209.85.128.181 as permitted sender)
+Received: from [209.85.128.181] (HELO mail-ve0-f181.google.com) (209.85.128.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Mar 2014 20:02:16 +0000
+Received: by mail-ve0-f181.google.com with SMTP id oy12so4804482veb.12
+        for <users@maven.apache.org>; Thu, 27 Mar 2014 13:01:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlemail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=ni1b0cdT1BI6FkekSfvM7DcmEN/LGwqJWPlcq/0raV8=;
+        b=m1FzMusiUcgw8RIp4SK81LHxT463uZWoT3thKXtcaf+Fxr7eafFTKALyZ47KSmf+f/
+         NrSBXSyZHbxns2cOgj2lWI41FeAwmm7w4mpz2sMLrNmQ1l7uMlJ54vznNhnLzx1aGDId
+         xTrNZ9BueW7Wg19x80bPclaXMwQE1CmwwoXnh8EEftO1kOPgToMKoJ+iMkV3ysIHCJRc
+         qQNFxuIa7kdqes7/WqyrhBmTbBcglUk10a/xE8pt9wf3cLL5TJSb5i8FwzwTOJBznluW
+         +npT1vJC+bqAaw1exJDhgltUd87aOWsaE302Zw9ciUnN1zI6PAze7j/oj0kj4WEQhfSJ
+         vMXw==
+MIME-Version: 1.0
+X-Received: by 10.52.120.6 with SMTP id ky6mr2002361vdb.38.1395950516110; Thu,
+ 27 Mar 2014 13:01:56 -0700 (PDT)
+Received: by 10.58.180.165 with HTTP; Thu, 27 Mar 2014 13:01:56 -0700 (PDT)
+In-Reply-To: <CADq_mb-9uEnhfGNo=Gq+V6LnVx4+dGNwAvf2FVJubHEjMNub7w@mail.gmail.com>
+References: <CADq_mb-9uEnhfGNo=Gq+V6LnVx4+dGNwAvf2FVJubHEjMNub7w@mail.gmail.com>
+Date: Thu, 27 Mar 2014 20:01:56 +0000
+Message-ID: <CAPK0icgm=hPXzcgaUN8EujubaD7sb4+aOy4y0+XXZbQeT4SnWA@mail.gmail.com>
+Subject: Re: how to push .zip from assembly to repo?
+From: Adam Retter <adam.retter@googlemail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I think the .zip file will be attached when you use the release
+plugin, here is an example of one that I use -
+https://github.com/adamretter/csv-validator/blob/master/csv-validator-cmd/src/main/assembly/appassembler-output.xml
+
+On 27 March 2014 19:42, Jay Vee <jvsrvcs@gmail.com> wrote:
+> I have an assembly plugin/config that creates a .zip file.
+>
+> How do I get this published to our repo when there is a build done by any
+> person or Jenkins? ( snapshot ).
+>
+> I am also looking for a configuration that would publish the artifact to
+> the non-snapshot side as well.  I am looking at all options in the assembly
+> plugin and it is a bit confusing.
+>
+> J.V.
+
+
+
+-- 
+Adam Retter
+
+skype: adam.retter
+tweet: adamretter
+http://www.adamretter.org.uk
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

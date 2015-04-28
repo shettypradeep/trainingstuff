@@ -1,0 +1,74 @@
+From users-return-136303-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu May  1 11:59:09 2014
+Return-Path: <users-return-136303-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C5F4F11A3F
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  1 May 2014 11:59:09 +0000 (UTC)
+Received: (qmail 45223 invoked by uid 500); 1 May 2014 11:59:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 44765 invoked by uid 500); 1 May 2014 11:59:01 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 44757 invoked by uid 99); 1 May 2014 11:58:59 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 01 May 2014 11:58:59 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of alexander.g.kaiser@gmail.com designates 209.85.213.42 as permitted sender)
+Received: from [209.85.213.42] (HELO mail-yh0-f42.google.com) (209.85.213.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 01 May 2014 11:58:54 +0000
+Received: by mail-yh0-f42.google.com with SMTP id f73so2860868yha.15
+        for <users@maven.apache.org>; Thu, 01 May 2014 04:58:33 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=fxTr9FI0QsKQhgXixa405a9oi2lf55a8gx2r+umTUmM=;
+        b=CHxt0jnpQ8js+tg7A1EdhqoAkPrFp27/+95bS5UqpM9DDG6I9opaFyeQmiAtIWbxcP
+         7mSGoNt1S7EWhBB5mcUgayV+TaWmKN/PGuW5zqR5/ChXj7jXUxNX27y1Wyi4SUpUlAeg
+         B5Tx1H+lKkktwXWADlSFWfKMihcIdD/uH3hnFSEdhdtPxMlH6n+VI8BlrunCyRmtrdz+
+         GwLer8RRaQJEDKyaI4lVgo1L+mQjsdpd2yaqvzQ4jRBQdrI32ILDfK9GGyQjR3Hovux1
+         tsr7JOMcmj49ObcTFNifdsX93bYNXzqy2oO6DqsFJ7psiaYNUlcN4tlYslvC/2KIZTZr
+         E7Pg==
+MIME-Version: 1.0
+X-Received: by 10.236.128.47 with SMTP id e35mr13670489yhi.96.1398945513783;
+ Thu, 01 May 2014 04:58:33 -0700 (PDT)
+Received: by 10.170.166.212 with HTTP; Thu, 1 May 2014 04:58:33 -0700 (PDT)
+Date: Thu, 1 May 2014 13:58:33 +0200
+Message-ID: <CAN5S7Z60axRoNFp79YQK0_2vR3cvmfnQVDszsDWiMk31ezMYbA@mail.gmail.com>
+Subject: Spring snapshots
+From: Alexander Kaiser <alexander.g.kaiser@gmail.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=20cf300e52ab68c83304f85562b3
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--20cf300e52ab68c83304f85562b3
+Content-Type: text/plain; charset=UTF-8
+
+Hi,
+
+I am trying to understand mavens downloading of snapshots (maven 3.0.4,
+vanilla install)
+
+I use only spring RELEASE (3.1.4.RELEASE) builds in my pom and I have no
+repository definitions in the pom.
+When I display the dependency tree with mvn dependency:tree I also see that
+my project has no dependencies on snapshots.
+
+Nevertheless, every day, maven pulls in loads of snapshots from the spring
+snapshot repository.
+
+How can I avoid downloading the snapshots?
+
+-- 
+Alexander
+
+--20cf300e52ab68c83304f85562b3--
+

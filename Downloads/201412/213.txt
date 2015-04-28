@@ -1,0 +1,226 @@
+From users-return-138048-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Dec 17 09:06:25 2014
+Return-Path: <users-return-138048-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id C1E3F92E3
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 17 Dec 2014 09:06:25 +0000 (UTC)
+Received: (qmail 86409 invoked by uid 500); 17 Dec 2014 09:06:24 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 86326 invoked by uid 500); 17 Dec 2014 09:06:24 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 86314 invoked by uid 99); 17 Dec 2014 09:06:23 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 17 Dec 2014 09:06:23 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of james.mk.green@gmail.com designates 209.85.217.180 as permitted sender)
+Received: from [209.85.217.180] (HELO mail-lb0-f180.google.com) (209.85.217.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 17 Dec 2014 09:05:57 +0000
+Received: by mail-lb0-f180.google.com with SMTP id l4so12174766lbv.39
+        for <users@maven.apache.org>; Wed, 17 Dec 2014 01:05:11 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=VBUuD6Uep4R0MdumCDPIkMxUf1iT3L+BudGHWzkzOLs=;
+        b=qVAH8rHWJfEQAZvizqgJYJK7gNNi9n1nwtEiQ94q89oxi3HYUHejjs4NZYX4Wir9MC
+         T15dYSQTt15RG3D6P+/D+U5yw9taXuELv1cZEGFefDanZzqu6G4zrq5jTY6T8eS/nUHj
+         i+iFhGSNdHRfpZUq5bMO2wiHOji5AXSLIzaIhiBMhb7ULOmXM+AXYJrMcksb0EWzb7UO
+         CJ9B8yZBIIx6XL8u+onHHF9j1mht12moanffm+GJXDGjIY2FodxSBDkLjdorqhibNcwV
+         hvIumBzYfbapzi+jwlO54tywHZ1B22RqIdZ4vl2au/7HYbXPhp2a3q99yDuPva33ISDU
+         3EGg==
+MIME-Version: 1.0
+X-Received: by 10.153.5.33 with SMTP id cj1mr40645410lad.65.1418807111105;
+ Wed, 17 Dec 2014 01:05:11 -0800 (PST)
+Received: by 10.25.0.83 with HTTP; Wed, 17 Dec 2014 01:05:11 -0800 (PST)
+In-Reply-To: <CA+nPnMwMHjeT3iP3OhF0KxfO+-dD2EKefLXSMbsLRUKmGSMCcg@mail.gmail.com>
+References: <54872666.5090406@artifact-software.com>
+	<CA+nPnMwMHjeT3iP3OhF0KxfO+-dD2EKefLXSMbsLRUKmGSMCcg@mail.gmail.com>
+Date: Wed, 17 Dec 2014 09:05:11 +0000
+Message-ID: <CAMH6+aw-wVxKT8nn3zqv0TY4k-xEb3x-TeCdTu6C-cR0W8hNYw@mail.gmail.com>
+Subject: Re: Little documentation issues
+From: James Green <james.mk.green@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11349628dcc437050a65c525
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11349628dcc437050a65c525
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I've been wondering how to apply "explanations" to things. With ActiveMQ
+and Camel I just edit the Confluence wiki. If I can issue a GitHub pull
+request and see the change within a day or two that's fine.
+
+On 9 December 2014 at 16:52, Stephen Connolly <
+stephen.alan.connolly@gmail.com> wrote:
+>
+> Do you want to create some pull requests?
+> https://github.com/apache/maven-site is the repo... we can take care of
+> pulling those patches back to SVN, so no need to worry about that part ;-=
+)
+>
+> On 9 December 2014 at 16:42, Ron Wheeler <rwheeler@artifact-software.com>
+> wrote:
+>
+> > After using maven for 7+years, I decided that I finally knew enough abo=
+ut
+> > it to read the docs.
+> > I started here -
+> http://maven.apache.org/guides/getting-started/index.html
+> > - and this led to other pages.
+> >
+> > I have found some places where a little cleaning up might help new user=
+s.
+> > There is one BIG issue and a few smaller ones.
+> >
+> > 1) http://maven.apache.org/guides/introduction/
+> > introduction-to-the-lifecycle.html
+> > 1a)
+> >  "Packaging
+> >
+> > The first, and most common way, is to set the packaging for your projec=
+t
+> > via the equally named POM element <packaging>. Some of the valid
+> packaging
+> > values are jar, war, ear and pom.
+> > "
+> > Could we have the full list here or a link to a page with the full list
+> of
+> > the "normal" ones?
+> > Could we have a mention that plug-ins can provide new packaging. There =
+is
+> > an example after the table of the Plexus. This discussion would be bett=
+er
+> > if held together rather than split up with a discussion of binding and =
+a
+> > table between the two parts of the story.
+> >
+> >
+> > 1b) In the table following this line "Each packaging contains a list of
+> > goals to bind to a particular phase. For example, thejarpackaging will
+> bind
+> > the following goals to build phases of the default lifecycle." a headin=
+g
+> > row would be nice.
+> >
+> > 1c)
+> > Plugins are mentioned well before they are defined on the page. It woul=
+d
+> > be helpful to briefly describe what a plugin is before using it as a
+> known
+> > concept in "A Build Phase is Made Up of Plugin Goals" which never defin=
+es
+> > it before dropping "And this is done by declaring the plugin goals boun=
+d
+> to
+> > those build phases."
+> > 1d)
+> > The definition of plug-in is obscure to say the least "Plugins are
+> > artifacts that provide goals to Maven." Surely there must be a clearer
+> way
+> > to describe the concept of plugin.
+> > This is one of the most important Maven concepts and this is a WTF
+> > definition.
+> >
+> > 2) http://maven.apache.org/guides/getting-started/index.html
+> >
+> > 2a)How can Maven benefit my development process? -> How can Maven be of
+> > benefit to my development process? -> How can Maven improve my
+> development
+> > process?
+> > More common  English usage although the current wording is not wrong
+> > 2b) How do I use plug-ins? -> How do I use plugins?  no hyphen in
+> plug-in.
+> > Whoops plugin!
+> >
+> > 2c) How do I use plugins? has no description of what a plugin is.
+> >
+> > 3) http://maven.apache.org/guides/mini/guide-configuring-plugins.html
+> >
+> > 3a) No definition of what a plugin is; it just starts of with the
+> > assertion that there are 2 types. I am not sure that that statement is
+> > really true or if it is, it is not a very useful categorization.
+> >
+> > 3b) It is recommended to always defined each version of the plugins use=
+d
+> > by the build to guarantee the build reproducibility. -> It is recommend=
+ed
+> > the version of the each plugins used by the build is specified to
+> guarantee
+> > the reproducibility of the build.
+> > A good practice is to specify them in
+> the<build><pluginManagement/></build>elements
+> > for*each*build plugins (generally, you will define a <pluginManagement/=
+>
+> > element in a parent POM).  ->
+> >  It is a good practice to specify the version in
+> > the<build><pluginManagement/></build>element for*each*plugin. The
+> > <pluginManagement/> element is generally specified in a parent POM so
+> that
+> > the same plugin version is use in all related projects.
+> >
+> > c) "Maven plugins (build and reporting) are configured by specifying
+> > a<configuration>element where the child elements of
+> > the<configuration>element are mapped to fields, or setters, inside your
+> > Mojo (remember that a plug-in consists of one or more Mojos where a Moj=
+o
+> > maps to a goal). "
+> > Remember!!!. This is the first time a Mojo has been mentioned. It has n=
+o
+> > definition and if I look it up I get:
+> >
+> > "mo=C2=B7jo1
+> > 'mojo/
+> > nounUS
+> > a magic charm, talisman, or spell.
+> > "someone must have their mojo working over at the record company"
+> > magic power.
+> > synonyms:    magic, voodoo, hoodoo, wizardry, sorcery;
+> > "
+> >
+> > No wonder my builds aren't working!
+> >
+> >
+> >
+> > Can these be fixed soon.
+> >
+> > Some of them are just little bugs but the lack of a clear definition an=
+d
+> > discussion  of plugins at the beginning of the "Getting Started"
+> > documentation is a really big oversight since so much of Maven depends =
+on
+> > the built-in plugins and plugins that are created for special tasks.
+> >
+> > Now that we have a new logo and persona, it is time to fix the docs to
+> > make them more accessible.
+> >
+> > Is there a chance that I may eventually understand Maven!
+> >
+> > Ron
+> >
+> >
+> >
+> >
+> > --
+> > Ron Wheeler
+> > President
+> > Artifact Software Inc
+> > email: rwheeler@artifact-software.com
+> > skype: ronaldmwheeler
+> > phone: 866-970-2435, ext 102
+> >
+> >
+>
+
+--001a11349628dcc437050a65c525--
+

@@ -1,0 +1,93 @@
+From users-return-136251-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr 23 16:51:11 2014
+Return-Path: <users-return-136251-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 3B1B011CC2
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 23 Apr 2014 16:51:11 +0000 (UTC)
+Received: (qmail 4466 invoked by uid 500); 23 Apr 2014 16:51:07 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 4360 invoked by uid 500); 23 Apr 2014 16:51:07 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 4347 invoked by uid 99); 23 Apr 2014 16:51:06 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 23 Apr 2014 16:51:06 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.215.49] (HELO mail-la0-f49.google.com) (209.85.215.49)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 23 Apr 2014 16:51:00 +0000
+Received: by mail-la0-f49.google.com with SMTP id ec20so710605lab.36
+        for <users@maven.apache.org>; Wed, 23 Apr 2014 09:50:39 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to
+         :content-type;
+        bh=sFlldl9SaYgYSAL3mjjbpCx684WCiupxJFJh0XhoQ2o=;
+        b=O6NZq9yuNbOL5jKZv8jI3S2nEiHlHDwmObDf868mU4An7IhNVR4yoQCwC1zYSHMquo
+         5KH64vj0ENLku+keajVmcSriCrRuuswwiJ9B6iioPHgE985Oicox4LTk+7wx6lTCozWe
+         Dh3EUPSzf1OFbsTPwak9uQSqE+fwCI3udLDtkUpCl7gIz7HN0N75fkYQu/yZCXZAO9WO
+         bgxXiAbg5hiNosHSbfiQ1PpIYO34f2Y0Ukzr3qO2OXC94/rcTQs0+RMSzOSaYEA7pfZI
+         5HbD7G2HViuuV/5XRUMQ8GCrljvFJgj48A2lBMDfwGFAU3sATdX2VJ5fo8ruU/fl7m7l
+         zYpg==
+X-Gm-Message-State: ALoCoQl/x0zxnWZE6MS+g+8bQiK9fFzKy7eLfju8y1R5Yjc9mnp725R6VPJEGAP7O0SBl4OpmFdT
+MIME-Version: 1.0
+X-Received: by 10.152.19.65 with SMTP id c1mr2876738lae.35.1398271838943; Wed,
+ 23 Apr 2014 09:50:38 -0700 (PDT)
+Received: by 10.152.108.82 with HTTP; Wed, 23 Apr 2014 09:50:38 -0700 (PDT)
+X-Originating-IP: [50.188.178.251]
+Date: Wed, 23 Apr 2014 09:50:38 -0700
+Message-ID: <CALEEv-SuQWO8hkAeC0R88H0r+FH32-4PZ_0ziUVKrxzoWO4gPA@mail.gmail.com>
+Subject: Deploying and resolving compressed artifacts
+From: Shahim Essaid <shahim@essaid.com>
+To: users@maven.apache.org
+Content-Type: multipart/alternative; boundary=089e0149430842936504f7b88829
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0149430842936504f7b88829
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi all,
+
+I posted a question on the Aether mailing list [1] but this list might be a
+better place for my question.
+
+I would like to use Maven (with custom extensions) as a tool for building
+OWL ontologies and treat the ontologies as Maven artifacts. The ontologies
+are usually XML files but they can be considered as artifacts with
+coordinates and it would be very useful to host them in Maven repositories.
+One issue is that the files can be very large but still compress well and
+it would make sense to deploy compressed versions of the large files.
+
+My question is whether or not (with some Maven/Aether extensions) it is
+possible to make the form of the artifact in the repository (i.e.
+compressed or not) be transparent to the Maven build process. Artifact
+resolution/deployment, and possibly the metadata, will obviously need some
+extensions but once the artifact is resolved, the rest of the build should
+see the standard uncompressed form of the artifact. Not sure if I am
+describing this well so please feel free to ask for clarifications.
+
+I know that I can use classifiers and other parameters to add secondary
+artifacts but this is not exactly what I need. What I am trying to do is to
+have the primary artifact's coordinates possibly resolve to a compressed
+form if the standard form is not available in the repository and any POM
+dependencies should work with either form of the artifact.
+
+Does Maven API allow me to implement something like this? Also, as far as I
+can tell there are no plugins that already do this but I might be wrong.
+
+[1] http://dev.eclipse.org/mhonarc/lists/aether-users/msg00426.html
+
+Thanks,
+Shahim
+
+--089e0149430842936504f7b88829--
+

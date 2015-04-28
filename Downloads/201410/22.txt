@@ -1,0 +1,95 @@
+From users-return-137666-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Oct 31 17:02:04 2014
+Return-Path: <users-return-137666-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 2E67817CC5
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 31 Oct 2014 17:02:04 +0000 (UTC)
+Received: (qmail 45136 invoked by uid 500); 31 Oct 2014 17:02:01 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 45049 invoked by uid 500); 31 Oct 2014 17:02:01 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 45038 invoked by uid 99); 31 Oct 2014 17:02:01 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 31 Oct 2014 17:02:01 +0000
+Received: from localhost (HELO robertscholte) (127.0.0.1)
+  (smtp-auth username rfscholte, mechanism login)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Fri, 31 Oct 2014 17:02:00 +0000
+Content-Type: text/plain; charset=iso-8859-15; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: maven-release got stuck when tag exists with released version in
+ pom
+References: <20141031172652.00002dfe.ecki@zusammenkunft.net>
+Date: Fri, 31 Oct 2014 18:01:53 +0100
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.xoltlfy3kdkhrr@robertscholte>
+In-Reply-To: <20141031172652.00002dfe.ecki@zusammenkunft.net>
+User-Agent: Opera Mail/12.17 (Win32)
+
+Hi,
+
+see MRELEASE-165 (release:prepare should fail if the tag already exists)[1]
+The main reason why it is still not implemented, is that this must be  
+solved in the SCM project. If we know how to do a valid(!) check of the  
+existence of a tag for the scm providers, we could start implementing it.
+My experience is, is that these kind of issues only happen at the start of  
+a new project. Once it works, it'll all stay fine.
+
+About the rollback: it's already there: release:rollback[2]
+And it works just as you described. However, if you do the release with  
+the Jenkins m2-release-plugin, that plugin in still missing the rollback  
+option[3].
+
+thanks,
+Robert
+
+[1] https://jira.codehaus.org/browse/MRELEASE-165
+[2]  
+http://maven.apache.org/maven-release/maven-release-plugin/rollback-mojo.html
+[3] https://issues.jenkins-ci.org/browse/JENKINS-8038
+
+Op Fri, 31 Oct 2014 17:26:52 +0100 schreef Bernd Eckenfels  
+<ecki@zusammenkunft.net>:
+
+> Hello,
+>
+> one thing which bites me quite regularly with the maven release plugin
+> is the fact, that it will update the POMs to the release version then
+> commit them and then tag them. If the tagging fails (especially because
+> the tag existed already) then it will leave the head on a released
+> version number.
+>
+> This is in my case a problem as I have to go through a gerrit release
+> to change it to a snapshot version to try again.
+>
+> A good improvement would be to first check the existence of the tag.
+> This would not cover all error cases but the most common.
+>
+> Another option (or in addition to that), a rollback action would be to
+> actually commit the updated POM with the old snapshot version again?
+>
+> (just to warn people, in my case if an integration build is triggert on
+> the master which has configured jenkins to deploy (normally the
+> snapshots) it will happyly deply the released version).
+>
+> Gruss
+> Bernd
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

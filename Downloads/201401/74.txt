@@ -1,0 +1,153 @@
+From users-return-134944-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sun Jan  5 14:33:24 2014
+Return-Path: <users-return-134944-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 554ED10E32
+	for <apmail-maven-users-archive@www.apache.org>; Sun,  5 Jan 2014 14:33:24 +0000 (UTC)
+Received: (qmail 77952 invoked by uid 500); 5 Jan 2014 14:33:15 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 77903 invoked by uid 500); 5 Jan 2014 14:33:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 77895 invoked by uid 99); 5 Jan 2014 14:33:12 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 05 Jan 2014 14:33:12 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of t.broyer@gmail.com designates 209.85.217.169 as permitted sender)
+Received: from [209.85.217.169] (HELO mail-lb0-f169.google.com) (209.85.217.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sun, 05 Jan 2014 14:33:06 +0000
+Received: by mail-lb0-f169.google.com with SMTP id u14so9413079lbd.28
+        for <users@maven.apache.org>; Sun, 05 Jan 2014 06:32:46 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=tGPgkYiLAlesZ7AcOD8VzsQvHhkndyx9NFy1JxHPvTk=;
+        b=Ueb3zx/DhSderugiTw2g/OyqVG49h+jjH2AGQlvvPISBhnAzHN/P0KB7yXR8YOKkk8
+         e6zZP+gEw4kg7IQY8tsFL38IegFyfyR2HzVjldUuCzJMLeGqKBy0IqJBKy5TnkVGeRGH
+         mD/s6IfMQEfsuN7nM+HCcjtwoQvXIrs5c1wv6VlX51S1Ec3Jo3u6P9H5fKQzFGwjI+52
+         7E5s5VvQw2xBOQesl35JDUz6LFa82hSYibhY4frjWvDHDsPsBHPhwUd8N8yHr/2OacEL
+         Kgo1q62eLX9quz+fcgKDNPuQay8/Y3KhZMJno9voUZ3Hzkvtyed3xDF5v98iSgGA5SU2
+         ReJw==
+X-Received: by 10.152.115.130 with SMTP id jo2mr42051245lab.2.1388932366254;
+ Sun, 05 Jan 2014 06:32:46 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.152.22.165 with HTTP; Sun, 5 Jan 2014 06:32:25 -0800 (PST)
+In-Reply-To: <80577B10-8927-4E40-9E41-5B69DBC66977@natusoft.se>
+References: <80577B10-8927-4E40-9E41-5B69DBC66977@natusoft.se>
+From: Thomas Broyer <t.broyer@gmail.com>
+Date: Sun, 5 Jan 2014 15:32:25 +0100
+Message-ID: <CAEayHEN2W=3WvhkQVB8XH91F+Mwq1dQZKo5+t9b6OnCQToxkdg@mail.gmail.com>
+Subject: Re: Maven Central Opinion
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c226024ec69104ef3a0464
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c226024ec69104ef3a0464
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+On Sun, Jan 5, 2014 at 2:15 PM, Tommy Svensson <tommy@natusoft.se> wrote:
+
+> I was asked to submit one of my opensource tools at github to maven
+> central. This turned out to be a rather complex procedure.
+>
+> Sonatype puts the following requirements on anyone wanting to submit to
+> maven central:
+>
+> - You are forced to set a Sonatype pom as parent of your project and thus
+> inherit things you have no control over.
+>
+
+Wrong. That POM only helps you having things setup properly, by configuring
+everything for you to fulfill the requirements without even thinking about
+it.
+
+
+> - You are forced to have a SNAPSHOT version even if you have no use for
+> such.
+>
+
+Wrong (see notes below about the maven-release-plugin and "the Maven Way=E2=
+=84=A2").
+
+
+> - You are forced at submission time to select a new version for your
+> software even if you have no idea if it will be a minor, bugfix or new
+> functionality at this point in time.
+>
+
+If by "submission time" you mean "mvn release:prepare release:perform",
+then, well, you're releasing stuff so you'd better know how you want to
+call it "at that point in time".
+
+
+> - Your public repository (github, etc) which you are forced to point out
+> in your pom are no longer yours to decide over. It will be updated during
+> the submission process.
+>
+
+Wrong. This is a result of the maven-release-plugin and "the Maven Way=E2=
+=84=A2",
+but you're not forced to use it to release your artifacts. Some people just
+put non-SNAPSHOT version in their POM and then use "mvn deploy" to deploy
+to a Maven repo (such as Sonatype OSS); see
+https://github.com/resteasy/Resteasy/tree/master/jaxrs, they don't use
+snapshots.
+
+
+> - After running 3 different mvn commands you also need to login to
+> Sonatypes nexus server and =E2=80=9Drelease=E2=80=9D the artifacts before=
+ the become
+> available.
+>
+
+Yes, that's how it goes. The idea I think is that the artifacts are
+temporarily published in a special repository (this is called "staging") so
+you can update your POMs and test those artifacts before actually releasing
+them / pushing them to Central. Some people use that to make "release
+candidates": their stage artifacts, announce it on their project's mailing
+list and have people test the new thing, and after a few days, if nobody
+reported a blocking issue, they can just push the "release" button. I
+believe the Apache Foundation works that way (where people vote +1/0/-1 on
+the staged artifacts during a couple days to a week)
+I believe many other people just push the release button right away.
+Note that you can use the nexus-staging-maven-plugin in your POM to
+automatically close the staging repository (make it read-only) and even
+automatically release it afterwards:
+http://books.sonatype.com/nexus-book/reference/staging-sect-deployment.html=
+#staging-sect-deployment-nexus-staging-maven-plugin
+
+
+> The idea of the maven repository that has grown larger than maven itself
+> is a completely brilliant idea. It takes open source to a new level where
+> anyone can just depend on other open source code and automatically downlo=
+ad
+> it on build. This is really good for the open source world (well, at leas=
+t
+> the Java/JVM part of it) . The fact that the release process to this
+> central repository is far too complex, I see as a really great problem,
+> inhibiting the easy sharing of open source work.
+
+
+Before going further, have you ever deployed artifacts to a repository?
+More than half of what you're ranting about is about releasing artifacts
+with Maven and deploying them to a repository, and more specifically about
+the maven-release-plugin (and many people hate it); only a couple points
+are about Sonatype OSS and Central.
+
+--=20
+Thomas Broyer
+/t=C9=94.ma.b=CA=81wa.je/ <http://xn--nna.ma.xn--bwa-xxb.je/>
+
+--001a11c226024ec69104ef3a0464--
+

@@ -1,0 +1,99 @@
+From users-return-136763-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jul 10 04:53:59 2014
+Return-Path: <users-return-136763-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4E3E711738
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 10 Jul 2014 04:53:59 +0000 (UTC)
+Received: (qmail 38842 invoked by uid 500); 10 Jul 2014 04:53:56 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 38761 invoked by uid 500); 10 Jul 2014 04:53:56 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 38749 invoked by uid 99); 10 Jul 2014 04:53:56 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 10 Jul 2014 04:53:56 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [217.110.94.82] (HELO mx01.mgm-tp.com) (217.110.94.82)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 10 Jul 2014 04:53:51 +0000
+Received: from pmx01.mgm-tp.com (unknown [10.0.202.41])
+	by mx01.mgm-tp.com (Postfix) with ESMTP id C12D6F88044
+	for <users@maven.apache.org>; Thu, 10 Jul 2014 06:53:29 +0200 (CEST)
+Received: from smtp-relay.mgm-tp.com (unknown [10.0.202.38])
+	by pmx01.mgm-tp.com (Postfix) with ESMTP id 3D868159C0A3
+	for <users@maven.apache.org>; Thu, 10 Jul 2014 06:53:29 +0200 (CEST)
+X-Trusted-binford: yes
+Received: from [192.168.178.33] (ppp-188-174-114-86.dynamic.mnet-online.de [188.174.114.86])
+	(using TLSv1 with cipher DHE-RSA-AES128-SHA (128/128 bits))
+	(No client certificate requested)
+	by smtp-relay.mgm-tp.com (Postfix) with ESMTPSA id 234D15CE915
+	for <users@maven.apache.org>; Thu, 10 Jul 2014 06:53:29 +0200 (CEST)
+Message-ID: <53BE1C49.2090004@mgm-tp.com>
+Date: Thu, 10 Jul 2014 06:53:29 +0200
+From: =?UTF-8?B?UmVpbmhhcmQgTsOkZ2VsZQ==?= <reinhard.naegele@mgm-tp.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.6.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Extracting a reactor artifact set out of maven repo
+References: <CAPCjjnFSUedmTAWd-m=mJHJKUE1jwcuaiBaT0G-87b_G_4hb1A@mail.gmail.com> <CAPCjjnE1LGoYhAOHVrO65TghfZXAdTqqrPJs4jv5N0yC0V=A7A@mail.gmail.com>
+In-Reply-To: <CAPCjjnE1LGoYhAOHVrO65TghfZXAdTqqrPJs4jv5N0yC0V=A7A@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-PMX-Version: 5.6.1.2065439, Antispam-Engine: 2.7.2.376379, Antispam-Data: 2014.7.10.44821
+X-mgm-scanner: geek value 5000
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Here's one:
+
+https://github.com/hcguersoy/nexus-maven-plugin
+
+I works but has been discontinued now in favor of a Jenkins plugin.
+
+Reinhard
+
+
+Am 10.07.2014 01:15, schrieb Dan Tran:
+> any one? :-) or it is just me having a need for this?
+>
+> Thanks
+>
+> -D
+>
+>
+> On Tue, Jul 8, 2014 at 10:24 AM, Dan Tran <dantran@gmail.com> wrote:
+>
+>> Hi
+>>
+>> My company is doing daily release builds for quite a few components (
+>> which fill up maven release repo after a while). and we dont use staging (
+>> please dont drill me on this ). Eventually one of the build need to be
+>> promoted to a another repo ( ie RTM). Is there such a plugin what can
+>> extract the artifact set of a reactor, and move it to another repo.
+>>
+>> I think the move/merge into another repo can be done via
+>> wagon-maven-plugin.  Assume that each component has its own top level
+>> groupId.
+>>
+>>
+>> Thanks
+>>
+>> -Dan
+>>
+>>
+>>
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

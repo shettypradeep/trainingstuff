@@ -1,0 +1,111 @@
+From users-return-135654-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb 28 14:32:57 2014
+Return-Path: <users-return-135654-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7C28310800
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 28 Feb 2014 14:32:57 +0000 (UTC)
+Received: (qmail 64022 invoked by uid 500); 28 Feb 2014 14:32:49 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 63184 invoked by uid 500); 28 Feb 2014 14:32:42 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 63122 invoked by uid 99); 28 Feb 2014 14:32:38 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Feb 2014 14:32:38 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [212.82.96.44] (HELO nm20.bullet.mail.ir2.yahoo.com) (212.82.96.44)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Feb 2014 14:32:33 +0000
+Received: from [212.82.98.57] by nm20.bullet.mail.ir2.yahoo.com with NNFMP; 28 Feb 2014 14:32:10 -0000
+Received: from [212.82.98.119] by tm10.bullet.mail.ir2.yahoo.com with NNFMP; 28 Feb 2014 14:32:10 -0000
+Received: from [127.0.0.1] by omp1056.mail.ir2.yahoo.com with NNFMP; 28 Feb 2014 14:32:10 -0000
+X-Yahoo-Newman-Property: ymail-5
+X-Yahoo-Newman-Id: 244958.83117.bm@omp1056.mail.ir2.yahoo.com
+Received: (qmail 45594 invoked by uid 60001); 28 Feb 2014 14:32:10 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.de; s=s1024; t=1393597930; bh=ZnFMvahu4mgtwEndZCRp7tAtY+G9j39Wiw3tgtDkZl8=; h=X-YMail-OSG:Received:X-Rocket-MIMEInfo:X-Mailer:References:Message-ID:Date:From:Reply-To:Subject:To:In-Reply-To:MIME-Version:Content-Type; b=f26recT2kSK8zgABamS4g8/+GI2VC8k6xK8xEF/gMD3IM8L/iB5Ba5dRuB6CPOX8nVj6O1XCIR1S120PbdVhU0LIYaUxBWDWkg78btGmcbQvkLQh1ayEOYHyNZSGaBsOgo1Guu7ubTx8TbMrIEqtRG0NOufLRfk7oL/y72XjZ24=
+DomainKey-Signature:a=rsa-sha1; q=dns; c=nofws;
+  s=s1024; d=yahoo.de;
+  h=X-YMail-OSG:Received:X-Rocket-MIMEInfo:X-Mailer:References:Message-ID:Date:From:Reply-To:Subject:To:In-Reply-To:MIME-Version:Content-Type;
+  b=3AWysIYZxM7F2b58TDcEKy+p6nDxzo7aD2lh2U3vxBrFHX2VKn8B2PpkmKKwmmDWCFFtXuxmBwKudDaojxd+DTn5lUJWF96y8FmLZ1+913eJzmPjnwGBzBo/Z3OPtkiGPKmKvMcWW2gZG5S+JG9ehQqfJkbXPqBeSvfm2bwq8PY=;
+X-YMail-OSG: qrxtpvoVM1m03kf5J.Um_DVArhCX5eMPVk2An06_zC665zE
+ nTkRpCHXJHXaNOeExRzxPzAL7i8MF.IGs7Aa1R1u_ffp718QxEoy4NuwVgSc
+ 3QXBqXwxEF.WJEP2g5S.ZvV15vuymoubBSR0a.lkQLFHC_hRc8YR2PCvUwjj
+ 1LfgohiA3AnHWqo_3kAtODCJXii60fw0I8XB3NpWvBGIZGLa_MAlRGwrJVCB
+ _QC6w1.4P.CaQsHku2FR24wxjNbLa5nFrmpvbpJiwPbXCfVOyHT9oM0hCRa9
+ CwhsF.7GXJD3lPPflkf5F6RYHrmGaO7UW7KcLZdu3iq7iaCVeyml8fvjuSh4
+ y_68NXvyfk4EBknQXE.usZQpWuEgF.7AtS_3slh2de9xWLhVsBRfs6_We3Xp
+ HwnEbhGJo739aUA6pz3exzEsSF_cZ2ygn9xFTPPeWlz2i8U7df.8li25NUyj
+ NfiieHWs9hdOXtgDsJegikz6qdxBZp.MIMOPWAzjAq_L5GBHZPnFEEmDabNG
+ 2yv4O86QgOpkbzwPYOuxHKq97GR.euMBAwyHyKX4JxhU3nr_aqsOzHa0pcs2
+ rinKR0YxyepTpOKeQ8xMlxbGyXtvPSXokoOE4WTOZTP3LmQ3BgacEb4OwNll
+ dtfyiaPZ6KE3vZ007pieZUakc3zVeS2RY4Oagw08vEoPI6C.DIPMnxAcg5JI
+ 1xBuKwVUn3urv.wDit08H_YImxHJtILl9ltymEX2OZUGURpwlnJsTXRoE.Jw
+ u2CNhVxI7RbFAqLipzPwLlr.ZlCSYIEZqJoyggM11Hdb1tNnZPlPtjEV5fcB
+ PVTQnTOvsNa2jM4zrj.dPYHhfkOMK8UtHX1qcrIf98.sVIliOGWT.QHKfyre
+ xn5QFZtsrUCZJ6VwZGz9owpkh6FbTUd01tAgWdSinZhPIj15f4C62N9eJZz8
+ -
+Received: from [188.45.151.193] by web28906.mail.ir2.yahoo.com via HTTP; Fri, 28 Feb 2014 14:32:09 GMT
+X-Rocket-MIMEInfo: 002.001,SXQgZGVwZW5kcy4gVGhpcyBpcyB0cnVlIGZvciByZXNvdXJjZXMgYWNjZXNzZWQgdmlhIEVMICN7cmVzb3VyY2V9ICh3aGljaCBJIGRvIG5vdCByZWNvbW1lbmQgYnR3IGJlY2F1c2UgaXQncyBhIEhVR0UgcGVyZm9ybWFuY2UgaG9nIC0gYmV0dGVyIHVzZSByZXN0ZnVsIHJlc291cmNlcyBbMV0pLiBGb3IgZmFjZWxldHMgdGhpcyBvbmx5IGdvdCBmaXhlZCBpbiBKU0YtMi4yLiBJbiBKU0YtMi4wIGFuZCAyLjEgeW91IHN0aWxsIG5lZWQgdGhlIFJlc291cmNlUmVzb2x2ZXIgdG8gbG9hZCBmYWNlbGV0cyBmcm8BMAEBAQE-
+X-Mailer: YahooMailWebService/0.8.177.636
+References: <20140227092431.205ec8f6@linux-du93.site>	<CAB7wfMqriOJptgWdX+SOt0HAXgXAWKnuLiKSNXqKSEhCZs0hfQ@mail.gmail.com>	<20140227170531.6c38285c@linux-du93.site>	<CAHTRnezVoc=hiDxHMEVJz1HP1Xx2DKcFbxW0_TUeEwUR4Wyyqg@mail.gmail.com>	<20140227171404.321aef96@linux-du93.site>	<CAHTRneycD+yQQby5pQJ8nBf1hSahH=mTS=2VrVUDwOipkkizxg@mail.gmail.com>	<20140227172637.797e2808@linux-du93.site>	<CAHTRnexnK5ECtJbRAw8+MBU=Yh_wAs5uWVttL1nkoHAvs2SB+Q@mail.gmail.com>	<CAB7wfMr6RR8UukD6vZddi03U0R=99=M_xe32ALviOVWDcSfHPg@mail.gmail.com>	<1393524815.74175.YahooMailNeo@web28906.mail.ir2.yahoo.com> <20140228083915.79dee83a@linux-du93.site>
+Message-ID: <1393597929.75208.YahooMailNeo@web28906.mail.ir2.yahoo.com>
+Date: Fri, 28 Feb 2014 14:32:09 +0000 (GMT)
+From: Mark Struberg <struberg@yahoo.de>
+Reply-To: Mark Struberg <struberg@yahoo.de>
+Subject: Re: Are skinny WARs still recommended?
+To: Maven Users List <users@maven.apache.org>
+In-Reply-To: <20140228083915.79dee83a@linux-du93.site>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="368313653-536928499-1393597929=:75208"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--368313653-536928499-1393597929=:75208
+Content-Type: text/plain; charset=us-ascii
+
+It depends. This is true for resources accessed via EL #{resource} (which I do not recommend btw because it's a HUGE performance hog - better use restful resources [1]). For facelets this only got fixed in JSF-2.2. In JSF-2.0 and 2.1 you still need the ResourceResolver to load facelets from a jar [2].
+
+LieGrue,
+strub
+
+[1] http://www.jakobk.com/2011/11/bachelor-thesis-about-relative-resource-handler/
+[2] http://stackoverflow.com/questions/6199458/how-to-create-a-modular-jsf-2-0-application/6201044#6201044
+
+
+
+
+
+On Friday, 28 February 2014, 8:39, Martin Hoeller <martin@xss.co.at> wrote:
+ 
+On 27 Feb 2014, Mark Struberg wrote:
+>
+>> JSF by default loads the resources from the local WAR classpath only. But you can easily write your own ResourceResolver which picks the stuff from the ClassPath as well.
+>> 
+>> An example can be found here:
+>> http://ocpsoft.org/opensource/create-common-facelets-jar/
+>> See CustomResourceResolver.
+>
+>Very big on the linked site is stated "In JSF2, this process is no longer
+>required.". An we are talking about JSF2 here.
+>
+>Beside this, (as far as I understood it) the ResourceResolver is just
+>responsible for resolving resources like images, CSS and the like at
+>application runtime. We are talking about registering component,
+>converters, etc. at application startup time here and I don't think the
+>ResourceResolver could be any help in this case.
+>
+>thx anyway,
+>
+>- martin
+>
+>
+--368313653-536928499-1393597929=:75208--
+

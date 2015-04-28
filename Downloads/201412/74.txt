@@ -1,0 +1,120 @@
+From users-return-138078-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Dec 24 00:30:29 2014
+Return-Path: <users-return-138078-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1E1C59CAE
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 24 Dec 2014 00:30:29 +0000 (UTC)
+Received: (qmail 21539 invoked by uid 500); 24 Dec 2014 00:30:27 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 21448 invoked by uid 500); 24 Dec 2014 00:30:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 21429 invoked by uid 99); 24 Dec 2014 00:30:25 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 24 Dec 2014 00:30:25 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dhoffer6@gmail.com designates 209.85.214.170 as permitted sender)
+Received: from [209.85.214.170] (HELO mail-ob0-f170.google.com) (209.85.214.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 24 Dec 2014 00:30:20 +0000
+Received: by mail-ob0-f170.google.com with SMTP id wp18so27531260obc.1
+        for <users@maven.apache.org>; Tue, 23 Dec 2014 16:29:15 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=/blp0v3NzQT3bWEBcHhK9A4YwaJWOkRR7VKJoUfhWoo=;
+        b=I5mRS5vTb1XTujOoIC15bUTZyJFT2p9ZNPJL96zSmGLhkt5XYvcrVu8+eQolpkwMtP
+         H0313k91U9Q9tSDO7sZpkXu47UWk2DIfnz0rso4ulBzEYopqmWT3jLGmFwnmsMEe5e/E
+         FxeVUHNoWRmentPg9hguwsm3jWFzz+IprfTuiqSSffo/aEtYm4ua32/ANIolrJv+kfrT
+         kvrF5nFGRNQBazkmwkFRc8vFPSuClVnGWpEemNPVFgnelRU13cVmmNbguOvghuE1yUCR
+         p+J6iPWrQG1stwgSzd49MWIkcq1vVLTEMaEfmSbj8ruhplYT+tPSTdoYpxMibo6euqTU
+         0Cwg==
+MIME-Version: 1.0
+X-Received: by 10.202.181.133 with SMTP id e127mr12423957oif.88.1419380955470;
+ Tue, 23 Dec 2014 16:29:15 -0800 (PST)
+Received: by 10.76.74.130 with HTTP; Tue, 23 Dec 2014 16:29:15 -0800 (PST)
+In-Reply-To: <20141223232757.00005c4e.ecki@zusammenkunft.net>
+References: <CAA8BW8H4RStyMZSqJybCWSJtyc7WbNHD-ULRYFhyQsNB2+kzdA@mail.gmail.com>
+	<CAKDUN1tikh6zG3dJUP8zNebE+xODA8iyOUJpU6kgwEai9k5bHg@mail.gmail.com>
+	<CAA8BW8FeYBmh2T4mMtTTu_pik1BvA+P=4uuYYhLpuge8o3B4Rg@mail.gmail.com>
+	<20141223232757.00005c4e.ecki@zusammenkunft.net>
+Date: Tue, 23 Dec 2014 17:29:15 -0700
+Message-ID: <CAA8BW8H9MXT0dizx9AXvkmPq862eVhAyj8-FWd+9r=nbVZ8SFg@mail.gmail.com>
+Subject: Re: Duplicate plugin declaration warning
+From: David Hoffer <dhoffer6@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113d0944a6f0c6050aeb611c
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113d0944a6f0c6050aeb611c
+Content-Type: text/plain; charset=UTF-8
+
+I'm puzzled as to way maven would want to avoid it.
+
+The current behavior is:
+Flexible
+Easy to understand
+Easy to communicate
+Easy to read/follow poms
+Natural maven feel
+Works well with existing (and quantity of) maven phases
+
+Why one would trade that for the opposite doesn't make sense to me.  It
+would definitely supply material for the 'why is maven so complicated and
+limiting' arguments.
+
+-Dave
+
+
+
+
+On Tue, Dec 23, 2014 at 3:27 PM, Bernd Eckenfels <ecki@zusammenkunft.net>
+wrote:
+
+> Am Tue, 23 Dec 2014 15:10:02 -0700
+> schrieb David Hoffer <dhoffer6@gmail.com>:
+>
+> > On the other hand if I can only have one declaration of A then I'm
+> > forced into gymnastics with phase binding.  First I have to have
+> > different phases for the first 5 and the later 5 goals and then to
+> > get plugin B to run before the later half I have to carefully set
+> > this (pom location and phase) so that it runs after the first set and
+> > before the later.  I'm not saying it can't be done...but it feels
+> > very unnatural and because it forces one to pick extra
+> > normally-unneeded phases one might run into cases where its not even
+> > possible.
+> >
+> > Am I missing something?
+>
+> I just want to point out, that it is actually a feature to have
+> data dependencies modeled as phases. So whenever something has to run
+> after something else it should be in later phases.
+>
+> However with the very rigid number of phases which have their own
+> semantic this can be rather painfull for a multi stage process like
+> yours.
+>
+> So I can understand both sides, yours if you want to model a imerative
+> dependency and mavens if it wants to avoid it. Not sure whats a good
+> middle ground.
+>
+> Gruss
+> Bernd
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a113d0944a6f0c6050aeb611c--
+

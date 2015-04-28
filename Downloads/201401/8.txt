@@ -1,0 +1,151 @@
+From users-return-135064-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jan  9 21:00:55 2014
+Return-Path: <users-return-135064-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9301A104B6
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  9 Jan 2014 21:00:55 +0000 (UTC)
+Received: (qmail 17604 invoked by uid 500); 9 Jan 2014 21:00:53 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 17503 invoked by uid 500); 9 Jan 2014 21:00:53 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 17495 invoked by uid 99); 9 Jan 2014 21:00:53 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Jan 2014 21:00:53 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.160.52 as permitted sender)
+Received: from [209.85.160.52] (HELO mail-pb0-f52.google.com) (209.85.160.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Jan 2014 21:00:49 +0000
+Received: by mail-pb0-f52.google.com with SMTP id uo5so3529999pbc.11
+        for <users@maven.apache.org>; Thu, 09 Jan 2014 13:00:29 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=mAfcBeQ0Km82ANn2p/USoeausEzJhAXJKddOxn/Z65M=;
+        b=LlxGjrX/0Lj8wFp1WazvZo6Z9qg9tso+tKEU/iNCLNkuG0ZTKxlLbKQTJA26ibgk9C
+         GHqA4+gnzf0Mdif7/cbeXlAQVU0kFc3N4WCY6tycgUNLUF7PXMaSoDUu5oVu8wZykuQd
+         9pk8AZAcRoX+AaZTr2vR+VNvdVLrVzXEt5qfri+X1VCZf6oMBoX/Ak3PJjXWp7Ty5vbS
+         6Qz5LvgKl8/cDh6HwhVvSUl8hNqGMyhQMnXBTFs+NkrCtyoASCOIuNzs/NRtCmDIhP1o
+         i99ZxzU5mulIF7MRcbpTC6qIL63E3yx/kLOxqb/bIohQ1ePhDmLSw7n/XCQAUVHGeRiG
+         KyvA==
+MIME-Version: 1.0
+X-Received: by 10.68.229.36 with SMTP id sn4mr6189883pbc.23.1389301229516;
+ Thu, 09 Jan 2014 13:00:29 -0800 (PST)
+Received: by 10.68.147.102 with HTTP; Thu, 9 Jan 2014 13:00:29 -0800 (PST)
+In-Reply-To: <CAPLpRQKXkm3NEw=GZK7ECpzi4fF0ZN8iMtCBLhVOBWXoY_nWow@mail.gmail.com>
+References: <CA+nPnMzkumu_925CV+u+D5_wkHjwLCVSRmwMS6JuHvq16zp3Mg@mail.gmail.com>
+	<23db4a359ac8b220e15f373269ebc967.squirrel@www.mosabuam.com>
+	<CA+nPnMy32UXkeOz7-L8SdYymvuOtcVUGgqLca4UGg4MDade1Qg@mail.gmail.com>
+	<03B56DD5-E957-438E-A30E-439C2785032D@apache.org>
+	<781949f830750555c03856e45275c78b.squirrel@www.mosabuam.com>
+	<CA+nPnMw+yPfmovGb-DCxvgvqjUkboddWzBuHEyHZmauYPkiENw@mail.gmail.com>
+	<CA+nPnMzWqgsVuCMaK6FP0QfXDXSLadyUsP+dMeRy9cW73jdarA@mail.gmail.com>
+	<CA+nPnMyY0ST8OV4hfd1=-0vgEuTff8B8ym4iXwjWF16nW=ESHg@mail.gmail.com>
+	<20140109151225.GC14330@IUPUI.Edu>
+	<CADN69ymEmQ7KaZfnOvKLD_A7Pi_GR+DOnA8e=z8J-_hQUF1CPA@mail.gmail.com>
+	<20140109155136.GE14330@IUPUI.Edu>
+	<CAPLpRQKXkm3NEw=GZK7ECpzi4fF0ZN8iMtCBLhVOBWXoY_nWow@mail.gmail.com>
+Date: Thu, 9 Jan 2014 21:00:29 +0000
+Message-ID: <CA+nPnMwgL9gbS6aq+rip1s25h-XcJe1fN2UBgmMKo3ym-vT5cQ@mail.gmail.com>
+Subject: Re: New logo?
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b160523457d1204ef8fe657
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b160523457d1204ef8fe657
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+On 9 January 2014 16:32, Tam=E1s Cserven=E1k <tamas@cservenak.net> wrote:
+
+> About raven, is already "taken":
+> http://www.maven.co/
+>
+> Some "sneaky peaks" for same named (but non related sites) -- just to see
+> what others came up with:
+> http://www.maven-sf.com/
+> http://lasp.colorado.edu/home/maven/
+> http://www.php-maven.org/
+>
+> And my personal fav:
+> http://mavenberlin.com/en
+>
+> Their stylised "M" made out of two triangles is just great.
+>
+>
+> And then, as I also like abstract things a bit more than explicit drawing=
+s
+> representing explicit stuff/beings,
+> I figured what might represent visually Maven
+> (I admit, was inspired with MavenBerlin intersecting triangles, as there,
+> it reflects the intersection of multidisciplinary creativity):
+> a mountain(s), a twin peak ("M"), you have to climb..... (and everyone
+> finish their story, mountain might be "effort", "knowledge", "sweat" or
+> whatever :D )
+>
+> Something like these
+>
+> http://www.leelau.net/2005/clemenceau/Miscellanous/traverseduplicatemount=
+ainnwview04.jpg
+>
+> http://3.bp.blogspot.com/-JFyYp4QeFvU/Td_kvtpZNBI/AAAAAAAAAFk/_axAJllIgF8=
+/s1600/snowcap2.png
+>
+> And finally, just a quick quick silly draft of logos, two versions.
+>
+> First, is obviously what maven is <today/> :D
+>
+> Second is the one with stylized peaks, variations on "M as mountain" idea=
+:D
+>
+> http://screencast.com/t/JSpjKNrhBJLJ
+
+
+added these three to the wiki page
+
+
+>
+>
+>
+>
+>
+>
+>
+> On Thu, Jan 9, 2014 at 4:51 PM, Mark H. Wood <mwood@iupui.edu> wrote:
+>
+> > On Thu, Jan 09, 2014 at 09:32:54AM -0600, Curtis Rueden wrote:
+> > > All of the logos are OK, but none of them really symbolize anything i=
+n
+> > > particular about Maven. IMO the best logos encapsulate the purpose of
+> the
+> > > project somehow, either overtly, covertly or both.
+> >
+> > Good point.  I was associating with the name "Maven", looking for a
+> > symbol of in-depth understanding of a specialized field.
+> >
+> > http://en.wiktionary.org/wiki/maven
+> >
+> > So, what does Maven do?  It passes unique source and object code
+> > inputs through a standardized process, guided by an expression of the
+> > relationships among those inputs, to assemble a well-specified
+> > configuration of runnable code.  What does that look like?
+> >
+> > --
+> > Mark H. Wood, Lead System Programmer   mwood@IUPUI.Edu
+> > Machines should not be friendly.  Machines should be obedient.
+> >
+>
+
+--047d7b160523457d1204ef8fe657--
+

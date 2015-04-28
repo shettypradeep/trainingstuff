@@ -1,0 +1,72 @@
+From users-return-135266-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jan 28 14:20:16 2014
+Return-Path: <users-return-135266-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1F8E710537
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 28 Jan 2014 14:20:16 +0000 (UTC)
+Received: (qmail 53544 invoked by uid 500); 28 Jan 2014 14:20:12 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 53474 invoked by uid 500); 28 Jan 2014 14:20:11 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 53466 invoked by uid 99); 28 Jan 2014 14:20:09 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 14:20:09 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.220.51 as permitted sender)
+Received: from [209.85.220.51] (HELO mail-pa0-f51.google.com) (209.85.220.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 28 Jan 2014 14:20:03 +0000
+Received: by mail-pa0-f51.google.com with SMTP id ld10so415161pab.38
+        for <users@maven.apache.org>; Tue, 28 Jan 2014 06:19:41 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=PiPRYpS/kEJSoei5U0/UHFyxQo7Nr7V+npQDpF1KGW4=;
+        b=jd6H1ikC8zAdbxZFsRDYn/gMdT5kqT+8LnV8LRJLzuXQaAALDnCx4R3+AOC4SehAAu
+         HhOQFhxHVwqG0HrtYVKB0wRTQNKrgbb2JyxOaDS4zqUluZ66k36EKyAOIKs/Be+RRdsq
+         JNjXrxmbzb8O+Mwv8a3vQWQUe1GV/8fetJfxm1gPdgIZGwrLq3jCOvfGCkezxbXKLCE7
+         fINLwLWUNrPW+gph62E3GN25mBXA56oxIAJIOzB1HnCaoYA8xG2v9ClOcmaCu9TUDuqE
+         8g3MWw5jrTZUa9HNDm6HCqCUBjQR03PwX/gc2mrUO1lCZo1zojwPoBNCobv0sqzT94YC
+         gXuA==
+X-Received: by 10.69.20.11 with SMTP id gy11mr1859800pbd.64.1390918781739;
+ Tue, 28 Jan 2014 06:19:41 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.68.192.71 with HTTP; Tue, 28 Jan 2014 06:19:21 -0800 (PST)
+In-Reply-To: <CABSFZHCGMbteC-cJY0JAFD3Hin7fCsRa_M7v_zcX153sBkrpGg@mail.gmail.com>
+References: <CABSFZHCGMbteC-cJY0JAFD3Hin7fCsRa_M7v_zcX153sBkrpGg@mail.gmail.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Tue, 28 Jan 2014 08:19:21 -0600
+Message-ID: <CALy+7U=G+VZtwhUYub8KdfLNQ_j7Aru=zD-SjFQ+qYbnDbF3og@mail.gmail.com>
+Subject: Re: Maven 3.1.1. and Windows 8
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> I am trying to execute Maven on Windows 8.1 Pro. When I try to run it, I
+> got a Windows message notifying that I cannot run the application on my PC.
+
+Are you an "experienced" Maven user who is moving to Win 8.1 Pro, or a
+new user of Win 8.1 Pro who is also new to Maven? This answer may help
+us zero-in on the problem a little bit.
+
+I've never used Win 8.1 Pro so I have no idea what might be wrong. Can
+you grab a screenshot of the error message and post it online
+somewhere?
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

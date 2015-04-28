@@ -1,0 +1,99 @@
+From users-return-137003-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Aug 11 18:41:11 2014
+Return-Path: <users-return-137003-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 521431115C
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 11 Aug 2014 18:41:11 +0000 (UTC)
+Received: (qmail 37400 invoked by uid 500); 11 Aug 2014 18:41:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 37311 invoked by uid 500); 11 Aug 2014 18:41:08 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 37299 invoked by uid 99); 11 Aug 2014 18:41:08 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 11 Aug 2014 18:41:08 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dhoffer6@gmail.com designates 209.85.220.173 as permitted sender)
+Received: from [209.85.220.173] (HELO mail-vc0-f173.google.com) (209.85.220.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 11 Aug 2014 18:40:42 +0000
+Received: by mail-vc0-f173.google.com with SMTP id hy10so12061903vcb.32
+        for <users@maven.apache.org>; Mon, 11 Aug 2014 11:40:41 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=LVjcIsi7QO+avaluJxiDWgtgbrlgPbNnEflbt+GeO48=;
+        b=vRVFvT6wjrPiFHWKCqtsGU+YcmvAgieOFpR+LQe8D81fCOqtGKJsZ+zJnx4o85I18y
+         SjgAO/AmQDsVTHkk16iSTqGxpvz46DxKUBB3w5pagBFc8bFSd9e8HB2S4cHx0PZH/SMc
+         KU+tplJ2+rHzAhQyY7ggdHRlUxqF+MXeVfWx28X+Pt/9LNKVimy2B9/i5eui0ZFE+nEU
+         8817WWI7B4hRnbC3znPrVjmROx5Zpvd8/d9A2gkXULZCfXys4aMkn2S01nVAKKtT8LJ/
+         m0ZE1pBRGGa3aqW4qV54Pwo+ubu6O9ep1ZG5qaq9aPgoo7EOYvqMPscOFo2zk8SmbRVc
+         KFxA==
+MIME-Version: 1.0
+X-Received: by 10.52.61.136 with SMTP id p8mr20066798vdr.15.1407782441232;
+ Mon, 11 Aug 2014 11:40:41 -0700 (PDT)
+Received: by 10.220.109.1 with HTTP; Mon, 11 Aug 2014 11:40:41 -0700 (PDT)
+In-Reply-To: <op.xkfxydx7kdkhrr@robertscholte>
+References: <CAA8BW8FsqOu-FUg-q7oTsVsNFkOYEo3gRMSMadJUNwpH8qNuZw@mail.gmail.com>
+	<op.xkfxydx7kdkhrr@robertscholte>
+Date: Mon, 11 Aug 2014 12:40:41 -0600
+Message-ID: <CAA8BW8FmNPzYwEsqSEAb3aGBU2VubNvBdhOostA6mLXEDseQ=w@mail.gmail.com>
+Subject: Re: maven-checkstyle-plugin multi-module usage
+From: David Hoffer <dhoffer6@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1136ad7254afa005005ee40a
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1136ad7254afa005005ee40a
+Content-Type: text/plain; charset=UTF-8
+
+Okay thanks, I didn't think it was possible, thanks for the verification.
+ Thanks for the link also...that would be very useful.
+
+-Dave
+
+
+On Mon, Aug 11, 2014 at 12:36 PM, Robert Scholte <rfscholte@apache.org>
+wrote:
+
+> Hi Dave,
+>
+> No, not yet. This depends on MNG-5666[1]
+>
+> thanks,
+> Robert
+>
+> [1] https://jira.codehaus.org/browse/MNG-5666
+>
+> Op Mon, 11 Aug 2014 19:13:19 +0200 schreef David Hoffer <
+> dhoffer6@gmail.com>:
+>
+>
+>  Is it possible to configure the maven-checkstyle-plugin to fail the build
+>> in a multi-module build before it compiles each module?  I'd like it to
+>> scan the entire project in an early phase, e.g. validate, before it takes
+>> the time to build each module.  We have the plugin configured in the top
+>> level pom and currently it does the check on each module when the reactor
+>> gets to it which takes a long time for later modules.  I'd like to move
+>> this type of build failure to the front of the build if possible.
+>>
+>> -Dave
+>>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a1136ad7254afa005005ee40a--
+

@@ -1,0 +1,138 @@
+From users-return-136149-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 15 09:12:59 2014
+Return-Path: <users-return-136149-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5A09D11331
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 15 Apr 2014 09:12:59 +0000 (UTC)
+Received: (qmail 20831 invoked by uid 500); 15 Apr 2014 09:12:55 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 20598 invoked by uid 500); 15 Apr 2014 09:12:55 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 20588 invoked by uid 99); 15 Apr 2014 09:12:54 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Apr 2014 09:12:54 +0000
+X-ASF-Spam-Status: No, hits=-2.3 required=5.0
+	tests=RCVD_IN_DNSWL_MED,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of prvs=1755bcc32=Ben.Caradoc-Davies@csiro.au designates 150.229.7.41 as permitted sender)
+Received: from [150.229.7.41] (HELO act-MTAout4.csiro.au) (150.229.7.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 15 Apr 2014 09:12:50 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=csiro.au; i=@csiro.au; q=dns/txt; s=email;
+  t=1397553170; x=1429089170;
+  h=message-id:date:from:mime-version:to:subject:references:
+   in-reply-to:content-transfer-encoding;
+  bh=x4UBwLRAE/2N8accE2mMTYOKS7+NAZGHNcSxF2K/j4Q=;
+  b=WSqrMo2HVyYWdRaGC60pSdedwmhYX6efnYGjw/NVvBy/eIGQ1iBZ2jBS
+   3b9pORzr0EdfiPbhVG7JI8eP6eC0nUjYApWOy5Iw3iekqgo1xcIh87sIR
+   at9CqZ68zIk/xJy;
+X-SBRS: 4.5
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: AhwSALP3TFOYU/cWkWdsb2JhbABYgmVcV4MQuGOFZoFPgSAWDgEBAQEUEhQogiUBAQEEIwQRFioRCxgCAgUWCwICCQMCAQIBHyYGCAUCBAEBAhcCBIdHAxEBDKkqnA8XhlkXgSmNQYJvgUkEhSeEM48IgTaCbIIyjy9hgT0
+X-IPAS-Result: AhwSALP3TFOYU/cWkWdsb2JhbABYgmVcV4MQuGOFZoFPgSAWDgEBAQEUEhQogiUBAQEEIwQRFioRCxgCAgUWCwICCQMCAQIBHyYGCAUCBAEBAhcCBIdHAxEBDKkqnA8XhlkXgSmNQYJvgUkEhSeEM48IgTaCbIIyjy9hgT0
+X-IronPort-AV: E=Sophos;i="4.97,862,1389704400"; 
+   d="scan'208";a="112682347"
+Received: from exhtca02-cdc.nexus.csiro.au ([152.83.247.22])
+  by act-ironport-int.csiro.au with ESMTP/TLS/AES128-SHA; 15 Apr 2014 19:12:24 +1000
+Received: from EXHTCA05-CDC.nexus.csiro.au (2405:b000:601:13::247:25) by
+ ExHTCA02-CDC.nexus.csiro.au (2405:b000:601:13::247:22) with Microsoft SMTP
+ Server (TLS) id 14.3.158.1; Tue, 15 Apr 2014 19:12:23 +1000
+Received: from [130.116.145.132] (130.116.145.132) by
+ exhtca05-cdc.nexus.csiro.au (152.83.247.25) with Microsoft SMTP Server (TLS)
+ id 14.3.158.1; Tue, 15 Apr 2014 19:12:23 +1000
+Message-ID: <534CF7F6.5060707@csiro.au>
+Date: Tue, 15 Apr 2014 17:12:22 +0800
+From: Ben Caradoc-Davies <Ben.Caradoc-Davies@csiro.au>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Icedove/24.4.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Why Is Maven Ignoring My Local Repo?
+References: <534C8512.5030705@kolotyluk.net> <CA+nPnMyVZSWhmO9nyFaCYw5hyoi8yAhzKTiSfcqN2SjLj7GEcA@mail.gmail.com>
+In-Reply-To: <CA+nPnMyVZSWhmO9nyFaCYw5hyoi8yAhzKTiSfcqN2SjLj7GEcA@mail.gmail.com>
+Content-Type: text/plain; charset="UTF-8"; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Originating-IP: [130.116.145.132]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Ah, my favourite Maven 3 unfeature, a response to the war between repos 
+that deliver broken artifacts and those that have artifacts that 
+legitimately migrate from one repo to another. I do not like the 
+solution because it gives Maven an opaque memory of artifact source, so 
+your build depends on previous builds with that local repository, not 
+the contents of your pom. I do not like this.
+
+A little bedtime reading for the uninitiated:
+
+https://cwiki.apache.org/confluence/display/MAVEN/Maven+3.x+Compatibility+Notes#Maven3.xCompatibilityNotes-ResolutionfromLocalRepository
+http://jira.codehaus.org/browse/MNG-5181
+http://jira.codehaus.org/browse/MNG-5185
+http://obscuredclarity.blogspot.com.au/2012/05/using-maven-offline.html
+http://maven.40175.n5.nabble.com/Maven-3-maven-repositories-and-lastUpdated-td4927537.html
+
+My solution when all else fails:
+
+find ~/.m2/repository -name "_maven.repositories" -exec rm -f {} \;
+
+Kind regards,
+Ben.
+
+On 15/04/14 16:12, Stephen Connolly wrote:
+> It's not a local repository. It is a local repository cache.
+>
+> There are files there that record where the artifacts were cached *from*.
+>
+> If the artifact is there but the cache file is not or indicates a different
+> source from the allowed sources for your build, then Maven will ignore the
+> artifact in your cache and check the remote sources.
+>
+>
+> On 15 April 2014 02:02, Eric Kolotyluk <eric@kolotyluk.net> wrote:
+>
+>> I seem to keep running into this problem regularly for things not in Maven
+>> Central
+>>
+>> [ERROR] Failed to execute goal org.apache.maven.plugins:maven-site-plugin:3.3:site
+>> (default-site) on project csharp-windows-elevate: Execution default-site of
+>> goal org.apache.maven.plugins:maven-site-plugin:3.3:site failed: Plugin
+>> org.apache.maven.plugins:maven-site-plugin:3.3 or one of its dependencies
+>> could not be resolved: Could not find artifact net.trajano.wagon:wagon-git:jar:1.0.1-SNAPSHOT
+>> in local-nexus (http://localhost:8081/nexus/content/groups/public) ->
+>> [Help 1]
+>>
+>> I can see the artifact in my local repo, but maven somehow feels, because
+>> it cannot find it in my nexus repository, then it does not exist.
+>>
+>> The side problem is, even though nexus can see the artifact in its index,
+>> it refuses to download it.
+>>
+>> Why do maven and nexus work so hard at ignoring artifacts?
+>>
+>> Cheers, Eric
+>>
+>>
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>> For additional commands, e-mail: users-help@maven.apache.org
+>>
+>>
+>
+
+-- 
+Ben Caradoc-Davies <Ben.Caradoc-Davies@csiro.au>
+Software Engineer
+CSIRO Earth Science and Resource Engineering
+Australian Resources Research Centre
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

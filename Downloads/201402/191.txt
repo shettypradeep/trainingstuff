@@ -1,0 +1,122 @@
+From users-return-135627-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Feb 27 13:12:43 2014
+Return-Path: <users-return-135627-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6EE8A10E1F
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 27 Feb 2014 13:12:43 +0000 (UTC)
+Received: (qmail 3410 invoked by uid 500); 27 Feb 2014 13:12:39 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 3344 invoked by uid 500); 27 Feb 2014 13:12:37 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 3336 invoked by uid 99); 27 Feb 2014 13:12:36 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Feb 2014 13:12:36 +0000
+X-ASF-Spam-Status: No, hits=1.7 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of simon.lessard.3@gmail.com designates 74.125.82.42 as permitted sender)
+Received: from [74.125.82.42] (HELO mail-wg0-f42.google.com) (74.125.82.42)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 27 Feb 2014 13:12:32 +0000
+Received: by mail-wg0-f42.google.com with SMTP id x13so2836767wgg.1
+        for <users@maven.apache.org>; Thu, 27 Feb 2014 05:12:10 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=cpOReXi+asx8tG51ftQe4FfLKvJAoQDEUi7gkM0Ir+o=;
+        b=iVWx+ZIHYEzhlENsXl/ZioD5OA6v+J+6fjyD8diYHgAvMsYQvr5Pvo3knFNbqRzU4S
+         LaBZw3PVq8w1gkYHKc2XxGE0rKorcKUj8R1awrEKPXSXZfQc/6tCd1+UFOdYIn+S9aLU
+         Vpc+56OLCWpp/lnFfEkVPgzTlZ+GI4UbezsKGMVVgli8sgfXdF9pFpLIvvV3ZjDjAGK8
+         mM76uL2brHXIgGL7X9hJz0MlJJ0hq827pqo4haBmQlB9qFBKp6Kr2NxzbMWYzUbecqVY
+         C2RR209/zQ6huFRA0MqJOZM/BfkS8oGHc/xq2IwuBo/2tHRqejJmexHIZ93a0wrW0n9V
+         LNQg==
+MIME-Version: 1.0
+X-Received: by 10.194.2.194 with SMTP id 2mr1821974wjw.73.1393506338911; Thu,
+ 27 Feb 2014 05:05:38 -0800 (PST)
+Received: by 10.194.138.8 with HTTP; Thu, 27 Feb 2014 05:05:38 -0800 (PST)
+In-Reply-To: <20140227092431.205ec8f6@linux-du93.site>
+References: <20140227092431.205ec8f6@linux-du93.site>
+Date: Thu, 27 Feb 2014 14:05:38 +0100
+Message-ID: <CAB7wfMqriOJptgWdX+SOt0HAXgXAWKnuLiKSNXqKSEhCZs0hfQ@mail.gmail.com>
+Subject: Re: Are skinny WARs still recommended?
+From: Simon Lessard <simon.lessard.3@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b3a86f052d78504f362fa8e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b3a86f052d78504f362fa8e
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi Martin,
+
+Your definition of the skinny WAR is very slightly off and that may or not
+solve your issue. A skinny WAR is not necessarily a WAR from which *all*
+WEB-INF/lib was stripped, but rather one where all of its dependencies that
+are shared by another module in the EAR gets stripped. For example, let say
+you have:
+
+WAR1 depends on artifact1 and artifact2
+WAR2 depends on artifact2 and artifact3
+EJB-JAR depends on artifact1
+
+Then the EAR's lib should contain artifact1 and artifact2, WAR1 should not
+contain any lib, WAR2 should still contain artifact3. Now, in your case, if
+your EAR contains 2 JSF application WARs, then your issue still stands and
+I cannot really see how you'll be able to get truly skinny WAR as indeed
+you must not remove the JSF related artifacts from the WARs. However, if
+your EAR is a single WAR and some EJB/MDB then the skinny WAR should work
+just fine (it's what we use here and it work fine, the web related
+libraries stay in the WAR and don'T get promoted to the EAR).
+
+
+Regards,
+
+
+
+
+On Thu, Feb 27, 2014 at 9:24 AM, Martin Hoeller <martin@xss.co.at> wrote:
+
+> Hi all!
+>
+> Most webapplication developers will probably know the concept of skinny
+> WARs which is described here [0].
+>
+> When I have a skinny WAR in an EAR everthing from WAR!WEB-INF/lib is
+> excluded and goes into the lib-folder of the EAR. Thus, it is in the WARs
+> classpath.
+>
+> However, when I use JSF component libraries like RichFaces or OmniFaces
+> they contain classes that are annotated with various JSF annotations
+> (@FacesComponet, @FacesConverter, etc.). Unfortunately JSF only scans the
+> WAR and not JARs in the classpath of the WAR that are located in the EAR.
+> This is correct behaviour according to the JSF 2.0 specification
+> (JSR-314), section 11.5.1 [1].
+>
+> So my question is: how can this problem be solved for skinny WARs? Or are
+> skinny WARs considered obsolete these days?
+>
+> Many thanks in advance,
+> - martin
+>
+> [0]
+> http://docs.codehaus.org/display/MAVENUSER/Solving+the+Skinny+Wars+problem
+> [1] http://jcp.org/en/jsr/detail?id=314
+>
+
+
+
+-- 
+*Simon Lessard*, ADF Architect
+*CMA* *SYSTeMS*
+*( +33(0) 6 79 37 39 85 (France)*
+
+--047d7b3a86f052d78504f362fa8e--
+

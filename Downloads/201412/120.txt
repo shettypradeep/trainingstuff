@@ -1,0 +1,191 @@
+From users-return-137932-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Dec  4 23:32:22 2014
+Return-Path: <users-return-137932-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id DFC9C1058B
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  4 Dec 2014 23:32:21 +0000 (UTC)
+Received: (qmail 61047 invoked by uid 500); 4 Dec 2014 23:32:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 60965 invoked by uid 500); 4 Dec 2014 23:32:20 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 60950 invoked by uid 99); 4 Dec 2014 23:32:18 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 04 Dec 2014 23:32:18 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=FORGED_YAHOO_RCVD,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of its_toasted@yahoo.com designates 98.138.91.32 as permitted sender)
+Received: from [98.138.91.32] (HELO nm5-vm1.bullet.mail.ne1.yahoo.com) (98.138.91.32)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 04 Dec 2014 23:31:52 +0000
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s2048; d=yahoo.com;
+	b=ALFedxzSD5h/MDjEQrYfeG0W2WGdXDvOqfifuB6d2ZnAhi+j5LFSmNkFfD/a/iiRhIP/5GMWx6IFY7bSvs4j/Dn6oGqornDo8svKupujko6O+08w4SOdWs8oPpnLIkeK3+WK3z4xbTF3+5IkbOsLLGHBaiUHWTjowpg2VqNpZqKyAp7zDQFKha/dfLmFD2GMpptNLb3H9p5MP9/zFyHhPln8UzwQN+uGCMf1Jqlwuo16d0912IW35OY+8ErmdHurvBCsjBfJNUYYEipaxBmHD9TfJQHvwmCzhq7igmSYTsyJFY/zuwNv56Vg5Tt/BePbFum3lO6nhc7NqB1da3cESQ==;
+Received: from [98.138.100.102] by nm5.bullet.mail.ne1.yahoo.com with NNFMP; 04 Dec 2014 23:29:44 -0000
+Received: from [98.138.226.124] by tm101.bullet.mail.ne1.yahoo.com with NNFMP; 04 Dec 2014 23:29:44 -0000
+Received: from [127.0.0.1] by smtp203.mail.ne1.yahoo.com with NNFMP; 04 Dec 2014 23:29:44 -0000
+X-Yahoo-Newman-Id: 274639.36403.bm@smtp203.mail.ne1.yahoo.com
+X-Yahoo-Newman-Property: ymail-3
+X-YMail-OSG: 5uY.YYQVM1ma67XhY2NfSQJBQePWdV9UqbrLQBCZJz8WdMg
+ J.3okcFVTCwHMBkQZpgigOyfO_KBzCfXMkQSrTU00im_uy1S0JLDmykFtnNa
+ B9pv.EzHPUxcYKEH.gnqDDcpyD1CtDY3pnbSexjQQL_t7yTbRDiF3t0ewHiZ
+ 9sdJYy5kdEo7ndTfNfBJ9WaaNBIT7FvX7XLH86e_Yt3vW9rq9F4z8fkcRfKq
+ bGJZ.dfnplYYp5QLMzUBUk6h7dDdQGh6BVY6mWfKln3vGyBfj5O08VsuBniC
+ maRhIGLm8fQR7.sBkW3U6HOQa9h2oydrDoZjSX_b0cIEecD2v.43XVqMeKLE
+ Sl7deyFP9NXH.TijAJL8zQuDSHxtRQ9ymzMM7zkHcN3eYolCxw08n_HpySao
+ _j0sRoS4UomsEthMBx2sITlWX4sE49P2VrOHMrUMJIFPu0OrFzdru9p.ETes
+ Cv6AN_q70ucBLE7T9amfBXbSsVIFbiZQxCRXwH2v5JdNjwG.iGSUvpMLO6s9
+ OH5DmY6I713VZn1QFYf1UdBvOkhSyOzg4eRrx3zDEJL6rgVRS5ubyACsZo5c
+ 9Zi9OCwGdfOvGzStLMRgujVf5
+X-Yahoo-SMTP: PKuT8k2swBCeFOHzkGy5rTOUTa2hBxlR
+Message-ID: <5480EE4B.7010001@yahoo.com>
+Date: Thu, 04 Dec 2014 15:29:15 -0800
+From: Mark Eggers <its_toasted@yahoo.com.INVALID>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Thunderbird/31.3.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Using shaded JAR as a dependency in a WAR module
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+X-Antivirus: avast! (VPS 141204-1, 12/04/2014), Outbound message
+X-Antivirus-Status: Clean
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Folks,
+
+I admit it, I'm a bit confused (and relatively new to maven).
+
+Goal:
+
+To release a WAR file with a minimal number of JAR files in WEB-INF/lib.
+
+Thought:
+
+1. Break up the WAR project into a WAR module and a JAR module
+2. Make the WAR module be dependent on the JAR module
+3. Use the Maven shade plugin in the JAR module to create a shaded JAR
+4. Drive the entire project with an agregator pom.xml
+
+The JAR module does shade properly, creating a single JAR with all of
+the dependencies bundled into a single JAR. It uses a pom dependency
+to gather in most of its requirements. None of the JAR or pom
+dependencies have further dependencies, so the resulting JAR is
+self-contained.
+
+However, when I build the WAR file and reference the shaded JAR file
+as a dependency, I do not get the shaded JAR file in WEB-INF/lib.
+Instead, I get all of the dependencies as individual JAR files in
+WEB-INF/lib.
+
+I'm using the following environment (can post my complete pom.xml
+files if needed).
+
+OS:    Fedora Linux 64 bit - latest updates
+JDK:   1.7.0_72 64 bit
+Maven: 3.2.3
+
+maven-shade-plugin: 2.3
+maven-war-plugin:   2.4
+
+shade configuration and dependencies for
+org.mdeggers:IFCResources:1.0-SNAPSHOT
+
+<properties>
+    <calhost.version>1.0-SNAPSHOT</calhost.version>
+    <ihomeresources.version>1.0-SNAPSHOT</ihomeresources.version>
+</properties>
+
+<dependencies>
+    <dependency>
+        <groupId>org.mdeggers</groupId>
+        <artifactId>Calhost</artifactId>
+        <version>${calhost.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.mdeggers</groupId>
+        <artifactId>IHomeResources</artifactId>
+        <version>${ihomeresources.version}</version>
+        <type>pom</type>
+    </dependency>
+</dependencies>
+
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-shade-plugin</artifactId>
+    <version>2.3</version>
+    <executions>
+        <execution>
+            <id>combine</id>
+            <phase>package</phase>
+            <goals>
+                <goal>shade</goal>
+            </goals>
+            <configuration>
+                <artifactSet>
+                    <includes>
+                        <include>org.mdeggers:*</include>
+                    </includes>
+                </artifactSet>
+            </configuration>
+         </execution>
+    </executions>
+</plugin>
+
+Partial dependencies for org.mdeggers:iforeclosure:1.0-SNAPSHOT:war
+
+<dependencies>
+    <dependency>
+        <groupId>org.mdeggers</groupId>
+        <artifactId>IFCResources</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
+</dependencies>
+
+Parent pom modules section:
+
+<modules>
+    <module>IFCResources</module>
+    <module>iforeclosure</module>
+</modules>
+
+I'm obviously missing something here. Thoughts, corrections, pointers
+are all appreciated.
+
+I know, using a shaded JAR as a dependency is probably not best
+practice. However, the resulting WAR file is an end product and the
+shaded JAR only contains internal components from other web overlays
+used to build the final war.
+
+. . . just my (confused) 2 cents
+/mde/
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2
+
+iQEcBAEBAgAGBQJUgO5LAAoJEEFGbsYNeTwt9YgIAKLuOll7rpDRI4Ea3ieshWgY
+HugkUrvaja1UZdKkFm0bdo4qQxUUmKHL9byHTQzPiLb6+WKeXaaQaMDvhA0DgbAp
+tJQ+4WKEPBzKx5MUvftY2oEiW8eVEnMIkZ6qLA0aPKxrenodlekz3eKlxJ/D8kxF
+dqf5UvncIYGNlzbThVlFaOpmp7FgF6dStrBDPuyGdhcLWpb4UkI/sVqo92/copnY
+tMR2uX9/Uscn+11pXlcTTg+YfGGwlguZIEkSBRlUBiAYMwiDG0fyDqRaVcv18BtS
+/iLB6hlB8xNkRArvIpDV+h7W2sHK6jekjzfCU80ZO72ZSgsiYUKMqWlY04GlPTU=
+=jCy7
+-----END PGP SIGNATURE-----
+
+---
+This email is free from viruses and malware because avast! Antivirus protection is active.
+http://www.avast.com
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

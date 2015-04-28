@@ -1,0 +1,84 @@
+From users-return-137977-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Dec  9 18:26:00 2014
+Return-Path: <users-return-137977-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 627EB10F25
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  9 Dec 2014 18:26:00 +0000 (UTC)
+Received: (qmail 11090 invoked by uid 500); 9 Dec 2014 18:25:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 11002 invoked by uid 500); 9 Dec 2014 18:25:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 10991 invoked by uid 99); 9 Dec 2014 18:25:58 -0000
+Received: from mail-relay.apache.org (HELO mail-relay.apache.org) (140.211.11.15)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 09 Dec 2014 18:25:58 +0000
+Received: from robertscholte.dynamic.ziggo.nl (5248749D.cm-4-1b.dynamic.ziggo.nl [82.72.116.157])
+	by mail-relay.apache.org (ASF Mail Server at mail-relay.apache.org) with ESMTPSA id B0E0A1A0041
+	for <users@maven.apache.org>; Tue,  9 Dec 2014 18:25:57 +0000 (UTC)
+Content-Type: text/plain; charset=utf-8; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Exclude unit test by parameter
+References: <DUB131-DS65DE5506BC8BD7D1A646AA9650@phx.gbl>
+Date: Tue, 09 Dec 2014 19:25:55 +0100
+MIME-Version: 1.0
+Content-Transfer-Encoding: Quoted-Printable
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.xql5hhbjkdkhrr@robertscholte.dynamic.ziggo.nl>
+In-Reply-To: <DUB131-DS65DE5506BC8BD7D1A646AA9650@phx.gbl>
+User-Agent: Opera Mail/12.17 (Win32)
+
+Please read  =
+
+http://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html#te=
+st
+
+thanks,
+Robert
+
+ps I wonder why you thought the other would work or what/who gave you th=
+at  =
+
+hint.
+
+Op Tue, 09 Dec 2014 16:01:11 +0100 schreef Adrien Ruffi=C3=A9  =
+
+<adriennolarsen@hotmail.fr>:
+
+> Hello all,
+>
+>
+> I Have several test packages, for example com.myapp.test1,  =
+
+> com.myapp.test2,
+> com.myapp.test3
+>
+> How I can exclude by parameter one package ? for example:
+>
+>
+> mvn test =E2=80=93DskipTests=3Dcom.myapp.test1
+>
+> Or
+>
+> mvn test =E2=80=93Dtest.exclude=3Dcom.myapp.test2
+>
+>
+> I have try both, and no success =E2=80=A6
+>
+>
+> Thank and best regards.
+>
+>
+> Adrien Ruffi=C3=A9
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

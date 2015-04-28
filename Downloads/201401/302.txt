@@ -1,0 +1,76 @@
+From users-return-135026-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jan  8 21:02:54 2014
+Return-Path: <users-return-135026-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F03B010329
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  8 Jan 2014 21:02:53 +0000 (UTC)
+Received: (qmail 93563 invoked by uid 500); 8 Jan 2014 21:02:51 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 93493 invoked by uid 500); 8 Jan 2014 21:02:51 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 93485 invoked by uid 99); 8 Jan 2014 21:02:51 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 21:02:51 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of t.broyer@gmail.com designates 209.85.215.45 as permitted sender)
+Received: from [209.85.215.45] (HELO mail-la0-f45.google.com) (209.85.215.45)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 08 Jan 2014 21:02:45 +0000
+Received: by mail-la0-f45.google.com with SMTP id eh20so1557746lab.18
+        for <users@maven.apache.org>; Wed, 08 Jan 2014 13:02:24 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=oJc8FMw8p9bUpNCDaZXa3953KIuqFW7nXMaG15ZCxW0=;
+        b=eKwOaqkU9nR1kVk9i9Q4YprYI/JDFYalV3i/BjXua6kDTRxKWmkzKe7yofoeojmgFX
+         mDNpKMHp+0cHH/cgcKc9LCxmAHFmfFNpFonlhG/2IPZAVY9OCeQDtJB9YaoBGRm7XkdB
+         a1Qyssb4eSE7ypMxr+h8djV6hmddl7BG/2T5Oh8Rs3nRMbO7Dg+uJ7/dizzQfAKpZiej
+         U9DNDfXeWJB93UIh9tNa00iwDNOhZ/6Dcu4SNQOG5DMcA+iY9woLkziEnNaKnURJeSZs
+         awfAZpefAvEIjXL1xLG80rkrlaUNukBvBlkF4xiNvPIxTrFFypOWB7GaMW3bVjymPARP
+         /1bA==
+MIME-Version: 1.0
+X-Received: by 10.152.225.129 with SMTP id rk1mr6165959lac.74.1389214944721;
+ Wed, 08 Jan 2014 13:02:24 -0800 (PST)
+Received: by 10.152.22.165 with HTTP; Wed, 8 Jan 2014 13:02:24 -0800 (PST)
+Received: by 10.152.22.165 with HTTP; Wed, 8 Jan 2014 13:02:24 -0800 (PST)
+In-Reply-To: <1389209934062-5780950.post@n5.nabble.com>
+References: <1389155385482-5780920.post@n5.nabble.com>
+	<05F2D212-47B4-45E7-B1BC-934C1185C795@gold-family.us>
+	<1389209934062-5780950.post@n5.nabble.com>
+Date: Wed, 8 Jan 2014 22:02:24 +0100
+Message-ID: <CAEayHEPPyTrRaAkf_b0GuYQbV4rzRrL9FNSEAPKCU9xa8J8qsA@mail.gmail.com>
+Subject: Re: Maven install phase - Access is denied
+From: Thomas Broyer <t.broyer@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113485824c00f204ef7bcf99
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113485824c00f204ef7bcf99
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Le 8 janv. 2014 20:39, "andre999" <andre999@hotmail.com> a =C3=A9crit :
+>
+> Caused by: java.io.FileNotFoundException:
+>
+P:\Projects\HlkProjects\CertLoader\hlk-certloader\trunk\target\install4j\ce=
+rtImport
+> (Access is denied)
+>         at java.io.FileInputStream.open(Native Method)
+
+Isn't the problem that you're trying to install a directory rather than a
+file? I don't think that's possible, a folder is not an artifact, it has to
+be archived somehow first.
+
+--001a113485824c00f204ef7bcf99--
+

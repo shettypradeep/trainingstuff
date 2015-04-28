@@ -1,0 +1,141 @@
+From users-return-135976-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Mar 28 06:17:48 2014
+Return-Path: <users-return-135976-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D046C1088C
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 28 Mar 2014 06:17:48 +0000 (UTC)
+Received: (qmail 67006 invoked by uid 500); 28 Mar 2014 06:17:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 66487 invoked by uid 500); 28 Mar 2014 06:17:43 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 66474 invoked by uid 99); 28 Mar 2014 06:17:40 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 06:17:40 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=FORGED_YAHOO_RCVD,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [98.138.91.165] (HELO nm5-vm4.bullet.mail.ne1.yahoo.com) (98.138.91.165)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 28 Mar 2014 06:17:33 +0000
+Received: from [98.138.101.128] by nm5.bullet.mail.ne1.yahoo.com with NNFMP; 28 Mar 2014 06:17:12 -0000
+Received: from [98.138.226.131] by tm16.bullet.mail.ne1.yahoo.com with NNFMP; 28 Mar 2014 06:17:12 -0000
+Received: from [127.0.0.1] by smtp218.mail.ne1.yahoo.com with NNFMP; 28 Mar 2014 06:17:12 -0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s1024; t=1395987432; bh=gCT0UVCZlUyPlbMMXVh+R8GaQPbcKNAbgdyaCPMrmzE=; h=X-Yahoo-Newman-Id:X-Yahoo-Newman-Property:X-YMail-OSG:X-Yahoo-SMTP:X-Rocket-Received:Message-ID:Date:From:User-Agent:MIME-Version:To:Subject:References:In-Reply-To:Content-Type:Content-Transfer-Encoding:X-Antivirus:X-Antivirus-Status; b=e5jqDsphf0wfEaD/LPyfhbSNemyPXUFzcmueYiSR6njE5C1dHEuSkV1/PdGHyz0INUsZxzue4AT1OVayYLwaWnJeXWTXmyPKvqJXn8XREPipMh1U5j3qKD00Q6I0UMdXskxh5Y7nJXyurdLzEzC94xM6vc+xcTod0n+bb2+MUfo=
+X-Yahoo-Newman-Id: 831251.9136.bm@smtp218.mail.ne1.yahoo.com
+X-Yahoo-Newman-Property: ymail-3
+X-YMail-OSG: 6stBvOwVM1n_4uCBs5.VQn9a1gkASMpiUFGLB.1V.skVJoO
+ 21WY_nzwqbVrXyzJwTrzjOknXMEeQO13hEGowqYMNRFUQFGCYkY3Kj.nWO_a
+ RLuExwdYXNmjH77hYK_by4cwT2xooxvRzVH0X.tBb_PuuWgdeuKASB.gZ.9D
+ dpSJwOE98qLuRQ53NdEr7WNOLXsEZ7aIYK7NzGgE_QoOCvC19Rjw10CbiC.E
+ Dj6NWUqjIJtmcEkL5TByIsdWuggdysOvsEm89hi1UD5gZQtiloOBDxEOAf58
+ xMrgax7X6sctSNiuHDuBhBO9bvA5k0eg0BquXYEpQztbQLBqqx23cjmTH9jr
+ iO.7P2aV_bRPILc8lx297seHRTRD27phKDBl.2OYe4ZLK45xZc8DW6cHDJAn
+ znVG.tx5f4HEhX12DiRp0cvbjsnWWItWLYRxrqdR2hDSd.cp6AMa0fbrFQXg
+ BRMa56gDXvzjApsmE9Mza8B9RSoKKwKWcA1zgs7rLe59AyMZFwNCHU9HnRDo
+ SduSAARfmRqW1KbNfeNWwbfQ-
+X-Yahoo-SMTP: PKuT8k2swBCeFOHzkGy5rTOUTa2hBxlR
+X-Rocket-Received: from [127.0.0.1] (its_toasted@108.13.36.11 with plain [63.250.193.228])
+        by smtp218.mail.ne1.yahoo.com with SMTP; 27 Mar 2014 23:17:12 -0700 PDT
+Message-ID: <533513E3.6060504@yahoo.com>
+Date: Thu, 27 Mar 2014 23:17:07 -0700
+From: Mark Eggers <its_toasted@yahoo.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.4.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: More on releasing artifacts with and without debug info
+References: <53347A7E.4020509@yahoo.com> <CALy+7UmReUCWTeeBbL-+DRffcEu7_Nqq1KhtfSL9fc_6ytehZA@mail.gmail.com>
+In-Reply-To: <CALy+7UmReUCWTeeBbL-+DRffcEu7_Nqq1KhtfSL9fc_6ytehZA@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Antivirus: avast! (VPS 140327-1, 03/27/2014), Outbound message
+X-Antivirus-Status: Clean
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+On 3/27/2014 5:12 PM, Wayne Fay wrote:
+> Off the top of my head, I could imagine 2 other approaches:
+>
+> 1. set up 2 separate project trees - one that produces the debug
+> output, and another that depends on the source of the first (use
+> dependency:unpack), and merely produces the non-debug output
+>
+> 2. if tooling exists to strip debug information, set up a second tree
+> of projects, each one depending on the primary artifact and running
+> the "strip debug" tool
+>
+> Best of luck keeping the versions in sync etc.
+>
+> Wayne
+
+I'm thinking of a third alternative . . .
+
+Set up a separate repository that handles the -DEBUG classifier artifacts.
+
+Create a profile that generates the artifacts and overrides the 
+deployment information.
+
+Create a Jenkins CI job that gets triggered after a release build. Pass 
+in the appropriate scm tag, and do a debug release with the appropriate 
+profile.
+
+Developers should then be able to pick it up with the appropriate 
+classifier.
+
+I'll probably have to look at the enforcer plugin to see if I can 
+prevent a classifier dependency from making it into a release . . .
+
+I wish we could just do a post-release step to strip out debugging 
+information and compress Javascript / CSS . . .
+
+Thanks for the ideas.
+
+/mde/
+
+>
+>
+> On Thu, Mar 27, 2014 at 2:22 PM, Mark Eggers <its_toasted@yahoo.com> wrote:
+>> Recently I received a requirement much like that covered in the following
+>> thread:
+>>
+>> Releasing artifacts with and without debug info (December 04, 2013)
+>>
+>> I'm new to Maven, but I more or less followed the idea:
+>>
+>> 1. create a profile
+>> 2. in the profile, specify the plugins
+>> 3. in each plugin, specify multiple execution blocks
+>>     a. one block is configured to generate debug info
+>>     b. another block is configured to omit debug info
+>>     c. add classifiers to the JAR or WAR plugin as needed
+>> 4. deploy plugin
+>>     a. add a configuration section
+>>     b. add a files section
+>>     c. list additional artifacts to be attached (?!)
+>>
+>> Is this the gist of Dimitar Gospodinov's reply at the end of the thread?
+>>
+>> It seems both hackish and verbose.
+>>
+>> However, I'm not sure of any other way to provide both fully optimized
+>> (compressed CSS, Javascript) and non-optimized WAR and JAR artifacts.
+>>
+>> Any time I'm doing something like this, I feel that I'm not doing it the
+>> "Maven way".
+>>
+>> Other approaches?
+>>
+>> /mde/
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

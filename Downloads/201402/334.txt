@@ -1,0 +1,71 @@
+From users-return-135500-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Feb 15 06:01:30 2014
+Return-Path: <users-return-135500-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0D8621087B
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 15 Feb 2014 06:01:30 +0000 (UTC)
+Received: (qmail 38929 invoked by uid 500); 15 Feb 2014 06:01:26 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 38384 invoked by uid 500); 15 Feb 2014 06:01:21 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 38376 invoked by uid 99); 15 Feb 2014 06:01:20 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 15 Feb 2014 06:01:20 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of dantran@gmail.com designates 209.85.217.180 as permitted sender)
+Received: from [209.85.217.180] (HELO mail-lb0-f180.google.com) (209.85.217.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 15 Feb 2014 06:01:13 +0000
+Received: by mail-lb0-f180.google.com with SMTP id n15so9700386lbi.25
+        for <users@maven.apache.org>; Fri, 14 Feb 2014 22:00:53 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        bh=S0f0LUGoTnIDQ28bqvPYHlajyN81Nx/fx+8MXvCcb8o=;
+        b=ON2KBz5PZT92tORgBEMYUZftZkHliRE+kvOSogMh8tgLa9Rt5BqtGNT+X5Q5ZSPlcX
+         WbQ74eTSH82J41EXGUHVkSPu1Lyfzwg4p8q5RldBXIRQ7f3YCg045Dj00owsUwUbwPAc
+         jLXAFAr0DOJ0MSI+wmnCJoNA60AiXVHnRUuVPZw28IQ8fDGmxgsLdJdkgRHfYES0t8Y3
+         k5Wp5Vx9xu0pOMKiU8hrmDqkfviIk5NG5zK+Akm97seT1j5NXquO7YG6OtN2uHF9EId/
+         wyF7FO4lPg4HOrVVOy+J7bcGv6+J1za129ovdFh1WiBTvM2nTF7WuZBDZBvRMwFeAOh8
+         fWaA==
+MIME-Version: 1.0
+X-Received: by 10.112.125.225 with SMTP id mt1mr7787629lbb.35.1392444053081;
+ Fri, 14 Feb 2014 22:00:53 -0800 (PST)
+Received: by 10.114.96.161 with HTTP; Fri, 14 Feb 2014 22:00:53 -0800 (PST)
+Date: Fri, 14 Feb 2014 22:00:53 -0800
+Message-ID: <CAPCjjnE3JLMEEmbMGV2xLCqVsSXhYDvFn+uS_99TQ8qfSKB5tA@mail.gmail.com>
+Subject: Possible build collision between CI snapshot build and Release build
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0112bfb82752fd04f26ba506
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0112bfb82752fd04f26ba506
+Content-Type: text/plain; charset=UTF-8
+
+Hello
+
+
+It is possible that while release:prepare cutting the tag and CI for
+snapshot build wakeup at the same time.  Is there a way to prevent this?
+like a a profile to fail the build if the version happen to be a release
+version.  Ie is there a way to detect this in a profile?
+
+I currently have to keep remind my self to turn off CI snapshot build while
+release is in progress, and too many to remember.
+
+Advice is greatly appreciated
+
+-Dan
+
+--089e0112bfb82752fd04f26ba506--
+

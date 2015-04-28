@@ -1,0 +1,308 @@
+From users-return-136562-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jun 12 14:46:47 2014
+Return-Path: <users-return-136562-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id AF38011A83
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 12 Jun 2014 14:46:47 +0000 (UTC)
+Received: (qmail 27150 invoked by uid 500); 12 Jun 2014 14:46:45 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 27066 invoked by uid 500); 12 Jun 2014 14:46:45 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 27056 invoked by uid 99); 12 Jun 2014 14:46:45 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 12 Jun 2014 14:46:45 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [80.150.205.170] (HELO mail.aurenz.de) (80.150.205.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 12 Jun 2014 14:46:40 +0000
+X-MimeOLE: Produced By Microsoft Exchange V6.5
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01CF864D.1042EDD9"
+Subject: site-deploy using wagon-ssh: User input needed
+Date: Thu, 12 Jun 2014 16:46:15 +0200
+Message-ID: <3B7A7BDFFD286F49A19A5B35D26E08FB0140EA5D@srvmail2.aurenz.local>
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Thread-Topic: site-deploy using wagon-ssh: User input needed
+Thread-Index: Ac+GTRApCjwy0/YCRHOYfvcTIo3D4g==
+From: "Hohl, Gerrit" <g.hohl@aurenz.de>
+To: <users@maven.apache.org>
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+------_=_NextPart_001_01CF864D.1042EDD9
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Hello everyone, :)
+
+=20
+
+this is my first post in this mailing list, so I hope I doing everything
+right.
+
+=20
+
+I'm using Maven 3.0.4, having a Jenkins build server running on Windows
+and a Web Server running on Ubuntu 14.04 LTS. I decided to use SSH for
+deploying the site to the server.
+
+=20
+
+My local settings.xml looks like this:
+
+=20
+
+<settings>
+
+                <servers>
+
+                               <server>
+
+                                               <id>marketplace</id>
+
+                                               <username><!-- The
+username --></username>
+
+                                               <password><!-- The
+plain-text password  --></password>
+
+                               </server>
+
+                </servers>
+
+</settings>
+
+=20
+
+My pom.xml looks like this:
+
+=20
+
+<build>
+
+                <pluginManagement>
+
+                               <plugins>
+
+                                               <plugin>
+
+=20
+<groupId>org.apache.maven.plugins</groupId>
+
+=20
+<artifactId>maven-site-plugin</artifactId>
+
+=20
+<version>3.3</version>
+
+=20
+<configuration>
+
+=20
+<locales>en</locales>
+
+=20
+</configuration>
+
+=20
+<dependencies>
+
+=20
+<dependency>
+
+=20
+<groupId>org.apache.maven.wagon</groupId>
+
+=20
+<artifactId>wagon-ssh</artifactId>
+
+=20
+<version>2.6</version>
+
+=20
+</dependency>
+
+=20
+</dependencies>
+
+                                               </plugin>
+
+                               </plugins>
+
+                </pluginManagement>
+
+                <plugins>
+
+                               <plugin>
+
+=20
+<groupId>org.apache.maven.plugins</groupId>
+
+=20
+<artifactId>maven-site-plugin</artifactId>
+
+                               </plugin>
+
+                </plugins>
+
+</build>
+
+<distributionManagement>
+
+                <site>
+
+                               <id>marketplace</id>
+
+                               <url>scp://[Address of the web
+server]/var/www/html/test-project/</url>
+
+                </site>
+
+</distributionManagement>
+
+=20
+
+If I start Maven locally using the "site-deploy" goal, Maven will show
+the following in my Eclipse:
+
+=20
+
+[INFO] --- maven-site-plugin:3.3:deploy (default-deploy) @ test-project
+---
+
+The authenticity of host '[Adresse des Web Servers]' can't be
+established.
+
+RSA key fingerprint is [RSA Fingerprint].
+
+Are you sure you want to continue connecting? (yes/no):
+
+=20
+
+But if I run this on Jenkins I don't have the possibility to enter
+something. So I need a solution where I don't need an user input.
+
+I came across the solution in the Internet:
+
+=20
+
+<settings>
+
+                <servers>
+
+                               <server>
+
+                                               <id>marketplace</id>
+
+                                               <username><!-- The
+username --></username>
+
+                                               <password><!-- The
+plain-text password  --></password>
+
+                                               <configuration>
+
+=20
+<knownHostsProvider
+implementation=3D"org.apache.maven.wagon.providers.ssh.knownhost.NullKnow=
+n
+HostProvider">
+
+=20
+<hostKeyChecking>no</hostKeyChecking>
+
+=20
+</knownHostsProvider>
+
+                                               </configuration>
+
+                               </server>
+
+                </servers>
+
+</settings>
+
+=20
+
+But now I get the following error:
+
+=20
+
+[INFO] --- maven-site-plugin:3.3:deploy (default-deploy) @ test-project
+---
+
+[INFO]
+------------------------------------------------------------------------
+
+[INFO] BUILD FAILURE
+
+[INFO]
+------------------------------------------------------------------------
+
+[INFO] Total time: 9.105s
+
+[INFO] Finished at: Thu Jun 12 09:48:18 CEST 2014
+
+[INFO] Final Memory: 30M/505M
+
+[INFO]
+------------------------------------------------------------------------
+
+[ERROR] Failed to execute goal
+org.apache.maven.plugins:maven-site-plugin:3.3:deploy (default-deploy)
+on project test-project: Unable to configure Wagon: 'scp': While
+configuring wagon for 'marketplace': Unable to apply wagon
+configuration. ClassNotFoundException: Class name which was explicitly
+given in configuration using 'implementation' attribute:
+'org.apache.maven.wagon.providers.ssh.knownhost.NullKnownHostProvider'
+cannot be loaded -> [Help 1]
+
+[ERROR]=20
+
+[ERROR] To see the full stack trace of the errors, re-run Maven with the
+-e switch.
+
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+
+[ERROR]=20
+
+[ERROR] For more information about the errors and possible solutions,
+please read the following articles:
+
+[ERROR] [Help 1]
+http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+
+=20
+
+That is odd. The class NullKnownHostProvider is part of the
+wagon-ssh-common, the class name as well as the package name are okay.
+wagon-ssh depends on wagon-ssh-common, so it should be available. I even
+added wagon-ssh-common to the <dependencies> element of the
+maven-site-plugin. But the result was still the same.
+
+=20
+
+Can anyone give me a hint what I did wrong?
+
+=20
+
+Regards,
+
+Gerrit
+
+
+------_=_NextPart_001_01CF864D.1042EDD9--
+

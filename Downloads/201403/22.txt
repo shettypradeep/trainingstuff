@@ -1,0 +1,148 @@
+From users-return-135710-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Mar  6 03:12:29 2014
+Return-Path: <users-return-135710-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 4E7C610EF1
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  6 Mar 2014 03:12:29 +0000 (UTC)
+Received: (qmail 7157 invoked by uid 500); 6 Mar 2014 03:12:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 7100 invoked by uid 500); 6 Mar 2014 03:12:25 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 7086 invoked by uid 99); 6 Mar 2014 03:12:22 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 03:12:22 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of emetsger@gmail.com designates 209.85.223.173 as permitted sender)
+Received: from [209.85.223.173] (HELO mail-ie0-f173.google.com) (209.85.223.173)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 06 Mar 2014 03:12:16 +0000
+Received: by mail-ie0-f173.google.com with SMTP id rl12so2117546iec.18
+        for <users@maven.apache.org>; Wed, 05 Mar 2014 19:11:55 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=4OW+6HVNkrvbfn9mESpC9xQf9xO8L1wDI/n2UEzH+I4=;
+        b=Nid4bHI/XLLiERIP9X0FGwGY5jyNw3TiOyHKiAR2/o0wK1HRNeiQmkbHb+OvDnbJNg
+         GqLM8jtucWt7jfy4m6x+slrKLifLFG2T2dXlXXqw3XKZDMRACbyifwSBcyqtUb1l3a3w
+         ErJPs50fGCbMv2/suRlFB1IpQ4999ALF69NEnkHlw1ls9Bynj69YSwKa32BK6OnsBL9+
+         O/5PLgJSzPFBYNwEnCL9PqCGFzwueJJ1PoBfqkN7tDBvnm1ltV5ZtXrmKzvLLu+kQLqi
+         LK8SyeNFyh5vHjjOy+1bxl3ZgE4J/0kCiB37ZEl82qDMId7sCEwTDrHsYSzxkuezyTUV
+         BjwA==
+MIME-Version: 1.0
+X-Received: by 10.42.97.193 with SMTP id p1mr7815460icn.32.1394075515094; Wed,
+ 05 Mar 2014 19:11:55 -0800 (PST)
+Received: by 10.64.12.144 with HTTP; Wed, 5 Mar 2014 19:11:55 -0800 (PST)
+In-Reply-To: <op.xb9owtdykdkhrr@robertscholte>
+References: <OFD3817A90.982AA646-ONC1257C92.003F22DE-C1257C92.004FA278@vkb.de>
+	<op.xb9owtdykdkhrr@robertscholte>
+Date: Wed, 5 Mar 2014 22:11:55 -0500
+Message-ID: <CA+Npsqun3sYL7xPTy74D9dki3cMZir8dVSuon5ASeeJ7AACDDg@mail.gmail.com>
+Subject: Re: Status of MRELEASE-835?
+From: Elliot Metsger <emetsger@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=20cf30363965de0c7004f3e77fd0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--20cf30363965de0c7004f3e77fd0
+Content-Type: text/plain; charset=ISO-8859-1
+
+I've been using a version of the patch locally, and it's been helpful.
+
+We have a relatively large project, with multiple modules that can be
+versioned independently of each other.  Ultimately, these modules get
+packaged into a war at release time.  In order to insure that these modules
+use the same version of dependencies, they inherit from a parent pom that
+contains a huge <dependencyManagement> element; every <dependency> is
+defined there (~90 managed SNAPSHOT deps).
+
+So when we perform a release, we need to resolve the SNAPSHOT versions in
+the parent pom, and that is where the patch attached to MRELEASE-835 is
+quite useful.  We can release the parent pom, and resolve the managed
+dependencies.
+
+Things get a little trickier when releasing the descendant modules, because
+the check-dependency-snapshots phase will ask you to re-resolve the managed
+dependencies from the parent.  So for each sub-module of the parent, you're
+potentially answering a lot of versioning prompts - you're re-resolving the
+same set of managed dependencies over and over.  Because our sub-modules
+can be independently versioned, we have problems using batch mode and
+setting the dependencies from system properties.
+
+Maybe we have a not-ideal project structure, or we're missing some best
+practices that we could be applying that could make our release process
+easier.  But my immediate thought is that it would be nice for the version
+maps for managed dependencies to somehow be made available across Project
+releases, maybe in the release descriptor, so that you aren't re-prompted
+each time.  It would be really nice if we could define the version maps a
+priori, using an easier (?) serialization than a Properties file.  I have a
+lot of local hacks that I'd be willing to share, if they'd be considered
+useful.
+
+-Elliot
+
+
+
+
+
+
+On Wed, Mar 5, 2014 at 4:06 PM, Robert Scholte <rfscholte@apache.org> wrote:
+
+> Hi,
+>
+> I'll look into that.
+>
+> For the last couple of releases I've picked up a specific part of the
+> plugin and tried to gather all related issues.
+> The number of open issues is still huge (and some very old) so it takes
+> some time to analyze every issue.
+> However, this kind of reminders can help.
+>
+> Robert
+>
+> Op Wed, 05 Mar 2014 15:29:45 +0100 schreef Thorsten Heit <
+> thorsten.heit@vkb.de>:
+>
+>
+>  Hi,
+>>
+>> last year in april I added an enhancement request for the release plugin
+>> that allows a user to automatically resolve snapshot dependencies in
+>> release:prepare, i.e. there's no interaction necessary; see MRELEASE-835.
+>> I also added a patch I made using the source code of version 2.4.1 that is
+>> still applicable even the recently released version 2.5.
+>>
+>> Since the issue was added, there has been no activity on it; it also isn't
+>> assigned to someone, and as far as I have seen there have been at least
+>> two similar requests:
+>> * MRELEASE-463 from 2009 (also with a patch provided)
+>> * MRELEASE-854 from last november, marked as duplicate of MRELEASE-463
+>>
+>> I just wanted to know what the actual status is? Is there no need for such
+>> a IMHO usable and CI- and/or build-server friendly feature? Is there
+>> anything missing in the issue/patch/description/...?
+>> At least a comment such as "I'll look into that" would be nice :-)
+>>
+>>
+>> Regards
+>>
+>> Thorsten
+>>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--20cf30363965de0c7004f3e77fd0--
+

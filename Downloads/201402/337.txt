@@ -1,0 +1,85 @@
+From users-return-135422-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Feb 12 13:51:04 2014
+Return-Path: <users-return-135422-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6184710F57
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 12 Feb 2014 13:51:04 +0000 (UTC)
+Received: (qmail 1379 invoked by uid 500); 12 Feb 2014 13:50:59 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 357 invoked by uid 500); 12 Feb 2014 13:50:49 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 99848 invoked by uid 99); 12 Feb 2014 13:50:42 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Feb 2014 13:50:42 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [134.68.171.23] (HELO mhw.ulib.iupui.edu) (134.68.171.23)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Feb 2014 13:50:36 +0000
+Received: from mwood by mhw.ulib.iupui.edu with local (Exim 4.80.1)
+	(envelope-from <mwood@IUPUI.Edu>)
+	id 1WDaCd-0001LT-7Z
+	for users@maven.apache.org; Wed, 12 Feb 2014 08:50:15 -0500
+Date: Wed, 12 Feb 2014 08:50:15 -0500
+From: "Mark H. Wood" <mwood@IUPUI.Edu>
+To: users@maven.apache.org
+Subject: Re: Why is dependency:analyze lying to me?
+Message-ID: <20140212135015.GB25862@IUPUI.Edu>
+Mail-Followup-To: users@maven.apache.org
+References: <1392153066705-5784108.post@n5.nabble.com>
+ <CADVp3v_ZQa+69g4wkGo6Zivpat60tPnfpOJKOZ0M3EKXEAvP6g@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/signed; micalg=pgp-sha256;
+	protocol="application/pgp-signature"; boundary="Fba/0zbH8Xs+Fj9o"
+Content-Disposition: inline
+In-Reply-To: <CADVp3v_ZQa+69g4wkGo6Zivpat60tPnfpOJKOZ0M3EKXEAvP6g@mail.gmail.com>
+User-Agent: Mutt/1.5.21 (2010-09-15)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Fba/0zbH8Xs+Fj9o
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+On Wed, Feb 12, 2014 at 08:11:29AM +1030, Barrie Treloar wrote:
+[snip]
+> I think Maven is missing a scope, it needs to break up test into two
+> phases; testCompile and testRuntime instead of having one scope which
+> means both.
+> This means that the analyze code can't tell what stuff is needed for
+> tests at compile time and what is needed at runtime.
+
+Picky terminology tweak:  I went off to check my memory because I was
+*sure* that Maven has a full set of test-* phases parallel to what we
+might call the "main" phases.  It has.  Then I came back here and saw
+that what you want is parallel *scopes* [test]Compile, [test]Runtime.
+
+Having sorted that (I hope), I think I agree with you.
+
+--=20
+Mark H. Wood, Lead System Programmer   mwood@IUPUI.Edu
+Machines should not be friendly.  Machines should be obedient.
+
+--Fba/0zbH8Xs+Fj9o
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: Digital signature
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.22 (GNU/Linux)
+
+iEYEAREIAAYFAlL7fBcACgkQs/NR4JuTKG8FMwCggc3qBtvYMgaI9XbhWpmjSdgP
+AycAn2qBSgO/zzDjlj5nYHQTxYNu40Vz
+=r3gT
+-----END PGP SIGNATURE-----
+
+--Fba/0zbH8Xs+Fj9o--
+

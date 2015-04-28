@@ -1,0 +1,82 @@
+From users-return-135378-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb  7 10:57:08 2014
+Return-Path: <users-return-135378-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8405010F50
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  7 Feb 2014 10:57:08 +0000 (UTC)
+Received: (qmail 65884 invoked by uid 500); 7 Feb 2014 10:57:03 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 65846 invoked by uid 500); 7 Feb 2014 10:57:03 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 65814 invoked by uid 99); 7 Feb 2014 10:57:01 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 07 Feb 2014 10:57:01 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_HELO_PASS,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of samuli.saarinen@remion.com designates 213.199.154.13 as permitted sender)
+Received: from [213.199.154.13] (HELO emea01-am1-obe.outbound.protection.outlook.com) (213.199.154.13)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 07 Feb 2014 10:56:54 +0000
+Received: from AMSPR03MB018.eurprd03.prod.outlook.com (10.242.79.147) by
+ AMSPR03MB017.eurprd03.prod.outlook.com (10.242.79.145) with Microsoft SMTP
+ Server (TLS) id 15.0.868.8; Fri, 7 Feb 2014 10:56:31 +0000
+Received: from AMSPR03MB018.eurprd03.prod.outlook.com ([169.254.15.164]) by
+ AMSPR03MB018.eurprd03.prod.outlook.com ([169.254.15.164]) with mapi id
+ 15.00.0868.013; Fri, 7 Feb 2014 10:56:30 +0000
+From: Samuli Saarinen <samuli.saarinen@remion.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: RE: Best practices for Java EE 7 dependencies
+Thread-Topic: Best practices for Java EE 7 dependencies
+Thread-Index: AQHPI+e6v8kaq/V/jU25P80OVRV/RZqpniig
+Date: Fri, 7 Feb 2014 10:56:29 +0000
+Message-ID: <9dfd3d79ad334d17a62311e27ac6c438@AMSPR03MB018.eurprd03.prod.outlook.com>
+References: <20140207103310.500020fb@linux-du93.site>
+In-Reply-To: <20140207103310.500020fb@linux-du93.site>
+Accept-Language: en-GB, en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [83.102.10.194]
+x-forefront-prvs: 011579F31F
+x-forefront-antispam-report: SFV:NSPM;SFS:(10009001)(6009001)(189002)(199002)(13464003)(81342001)(81542001)(51856001)(63696002)(46102001)(4396001)(94946001)(65816001)(81686001)(66066001)(76482001)(80022001)(77096001)(74876001)(47446002)(90146001)(74706001)(53806001)(54356001)(94316002)(86362001)(83072002)(15975445006)(76786001)(76796001)(69226001)(80976001)(87266001)(15202345003)(93516002)(87936001)(79102001)(85852003)(33646001)(2656002)(92566001)(56776001)(54316002)(74316001)(76576001)(19580405001)(19580395003)(74366001)(81816001)(93136001)(83322001)(85306002)(56816005)(50986001)(31966008)(49866001)(47736001)(47976001)(74662001)(74502001)(77982001)(59766001)(95416001)(24736002);DIR:OUT;SFP:1101;SCL:1;SRVR:AMSPR03MB017;H:AMSPR03MB018.eurprd03.prod.outlook.com;CLIP:83.102.10.194;FPR:EE18C317.9EE65C0A.41C5126A.86EAD331.201EB;InfoNoRecordsMX:1;A:0;LANG:en;
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+X-OriginatorOrg: remion.com
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+SGksDQoNCllvdSBjb3VsZCBpbXBvcnQgdGhlIGRlcGVuZGVuY2llcyAgaW4gZGVwZW5kZW5jeU1h
+bmFnZW1lbnQgYXMgZGVzY3JpYmVkIGluIFsxXSBhbmQgb25seSBkZWNsYXJlIG5lZWRlZCBkZXBl
+bmRlbmNpZXMgaW4gdGhlIHByb2plY3QuDQoNCkNoZWVycyANCg0KU2FtdWxpIA0KDQpbMV0gaHR0
+cDovL21hdmVuLmFwYWNoZS5vcmcvZ3VpZGVzL2ludHJvZHVjdGlvbi9pbnRyb2R1Y3Rpb24tdG8t
+ZGVwZW5kZW5jeS1tZWNoYW5pc20uaHRtbCNJbXBvcnRpbmdfRGVwZW5kZW5jaWVzDQoNCi0tLS0t
+T3JpZ2luYWwgTWVzc2FnZS0tLS0tDQpGcm9tOiBNYXJ0aW4gSG9lbGxlciBbbWFpbHRvOm1hcnRp
+bkB4c3MuY28uYXRdIA0KU2VudDogNy4gaGVsbWlrdXV0YSAyMDE0IDExOjMzDQpUbzogTWF2ZW4g
+VXNlcnMgTGlzdA0KU3ViamVjdDogQmVzdCBwcmFjdGljZXMgZm9yIEphdmEgRUUgNyBkZXBlbmRl
+bmNpZXMNCg0KSGkhDQoNCkknbSB3b25kZXJpbmcgd2hhdCB0aGUgYmVzdCBwcmFjdGljZXMgYXJl
+IGZvciBzcGVjaWZ5aW5nIEphdmEgRUUgNw0KZGVwZW5kZW5jaWVzIGluIG15IG1vZHVsZXMuDQoN
+ClRoZXJlIGlzIHRoZSBzbyBjYWxsZWQgQk9NIChiaWxsIG9mIG1hdGVyaWFscykgUE9NOiBqYXZh
+eDpqYXZhZWUtYXBpOjcuMA0Kd2hpY2ggbGlzdHMgYWxsIEFQSSBzdWJtb2R1bGVzIHJlcXVpcmVk
+IGZvciBKRUU3LiBTcGVjaWZ5aW5nIHRoaXMgaW4gbXkNCm1vZHVsZSBhcw0KDQogIDxkZXBlbmRl
+bmN5Pg0KICAgIDxncm91cElkPmphdmF4PC9ncm91cElkPg0KICAgIDxhcnRpZmFjdElkPmphdmFl
+ZS1hcGk8L2FydGlmYWN0SWQ+DQogICAgPHZlcnNpb24+Ny4wPC92ZXJzaW9uPg0KICA8L2RlcGVu
+ZGVuY3k+DQoNCndvcmtzIGFuZCBpcyB0aGUgbGVhc3Qgd29yayBmb3IgbWUuIEhvd2V2ZXIsIHRo
+aXMgd2F5IEkgZ290IGFsbCBKRUUgQVBJcw0Kb24gdGhlIENMQVNTUEFUSCBldmVuIGlmIEkganVz
+dCBuZWVkIGEgZmV3IG9mIHRoZW0uIEZ1cnRoZXIgb24sIHRoZQ0KYWN0dWFsIGRlcGVuZGVuY2ll
+cyBhcmUgbm93IHRyYW5zaXRpdmUgd2hpY2ggaXMgKElNSE8pIG5vdCBmdWxseSBjb3JyZWN0Lg0K
+U2hvdWxkIEkgYmV0dGVyIHNwZWNpZnkgdGhlIGV4YWN0IGRlcGVuZGVuY2llcyBhbmQgaW52ZXN0
+aWdhdGUgc29tZSBtb3JlDQp3b3JrIGluIFBPTSBtYWludGFpbmFuY2U/IFdoYXQgd291bGQgdGhp
+cyBnYWluIG1lPw0KDQpXaGF0IGRvIHlvdSB0aGluaz8NCg0KLSBtYXJ0aW4NCg==
+DQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0NClRvIHVuc3Vic2NyaWJlLCBlLW1haWw6IHVzZXJzLXVuc3Vi
+c2NyaWJlQG1hdmVuLmFwYWNoZS5vcmcNCkZvciBhZGRpdGlvbmFsIGNvbW1hbmRzLCBlLW1h
+aWw6IHVzZXJzLWhlbHBAbWF2ZW4uYXBhY2hlLm9yZw0K
+

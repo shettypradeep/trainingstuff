@@ -1,0 +1,60 @@
+From users-return-137759-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Nov 17 19:57:28 2014
+Return-Path: <users-return-137759-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9073810A4B
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 17 Nov 2014 19:57:28 +0000 (UTC)
+Received: (qmail 84095 invoked by uid 500); 17 Nov 2014 19:57:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 84001 invoked by uid 500); 17 Nov 2014 19:57:25 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 83971 invoked by uid 99); 17 Nov 2014 19:57:25 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 17 Nov 2014 19:57:25 +0000
+Received: by minotaur.apache.org (Postfix, from userid 6004)
+	id 4936B10A46; Mon, 17 Nov 2014 19:57:25 +0000 (UTC)
+To: announce@maven.apache.org
+Subject: [ANN] Apache Common POM Version 16 Released
+Cc: users@maven.apache.org,dev@maven.apache.org
+Message-Id: <20141117195725.4936B10A46@minotaur.apache.org>
+Date: Mon, 17 Nov 2014 19:57:24 +0000 (UTC)
+From: khmarbaise@apache.org (Karl Heinz Marbaise)
+
+The Apache Maven team is pleased to announce the release of the 
+Apache Common POM, version 16.
+
+This POM (org.apache:apache) configures common Maven settings for
+projects to use ASF infrastructure.
+
+Documentation live at: http://maven.apache.org/poms/asf.
+
+To use this parent, you should specify the version in your project's
+plugin configuration:
+
+<parent>
+  <groupId>org.apache</groupId>
+  <artifactId>apache</artifactId>
+  <version>16</version>
+</parent>
+
+Changes since previous release:
+
+http://svn.apache.org/viewvc/maven/pom/tags/apache-16/pom.xml?view=markup
+
+Enjoy,
+
+-The Apache Maven team
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

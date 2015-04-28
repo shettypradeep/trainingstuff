@@ -1,0 +1,101 @@
+From users-return-136986-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Aug  8 02:55:40 2014
+Return-Path: <users-return-136986-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id CD49111274
+	for <apmail-maven-users-archive@www.apache.org>; Fri,  8 Aug 2014 02:55:40 +0000 (UTC)
+Received: (qmail 30249 invoked by uid 500); 8 Aug 2014 02:55:39 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 30166 invoked by uid 500); 8 Aug 2014 02:55:39 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 30154 invoked by uid 99); 8 Aug 2014 02:55:38 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 08 Aug 2014 02:55:38 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of baerrach@gmail.com designates 209.85.220.181 as permitted sender)
+Received: from [209.85.220.181] (HELO mail-vc0-f181.google.com) (209.85.220.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 08 Aug 2014 02:55:34 +0000
+Received: by mail-vc0-f181.google.com with SMTP id lf12so7373042vcb.40
+        for <users@maven.apache.org>; Thu, 07 Aug 2014 19:55:13 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=EBBalC8vW+WrlvD561dNz5EZoj8tkYGFB5X+fcKg2eA=;
+        b=DBTCVB4oDij/u5NwEWTYueMsJQj2hmM0iRDuSn7kTdKU1u0yrLBMJiCWIIlIYwVfpb
+         Go4r/aIyfp16bOOjyqLvHxzcrvHr/81XxLGjxOnxhHaNapPRWtHwW+MKgvwLeBZ0DoYm
+         z0iCKz0FWJ0W/3hTyYalioqO/zk0yfMHwYekBx5/7uyA6qZFIWjfZzfd1Czo8jvIKh11
+         POhp7lrHmeHVp/aRVI4NqtNbNmipcU0dng1NJJ7J3BU9C5ritk8ZVLxxu9Ux2MVehYFM
+         hVvDemq7CC/XqRW2+now8AKaqhRdpi9PxvzViA4WnMzDeAvc0Nhhm3lkardE9E7WLYk6
+         +C6g==
+MIME-Version: 1.0
+X-Received: by 10.52.243.10 with SMTP id wu10mr4874871vdc.45.1407466513800;
+ Thu, 07 Aug 2014 19:55:13 -0700 (PDT)
+Received: by 10.58.94.194 with HTTP; Thu, 7 Aug 2014 19:55:13 -0700 (PDT)
+In-Reply-To: <E5A9ABAB-C7D9-40E6-9E46-972A72D48E4C@gmail.com>
+References: <E5A9ABAB-C7D9-40E6-9E46-972A72D48E4C@gmail.com>
+Date: Fri, 8 Aug 2014 12:25:13 +0930
+Message-ID: <CADVp3v-8HY1SSXm=u87rN3gUa8szz9TV7R4jy7_d2BdC3kx=SA@mail.gmail.com>
+Subject: Re: Java SSL dependency issue
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1133ec4096a4f505001555d8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1133ec4096a4f505001555d8
+Content-Type: text/plain; charset=UTF-8
+
+On 8 August 2014 03:32, Joshua Bailey <joshualbailey@gmail.com> wrote:
+
+> I have two branches of code. One compiles without a hitch, the other
+> complains about this:
+>
+> Failed to execute goal
+> org.apache.maven.plugins:maven-compiler-plugin:2.3.2:compile
+> (default-compile) on project thebookgrove-catalog: Compilation failure:
+> Compilation failure:
+> [ERROR]
+> /Users/joshua/Desktop/Data/TheBookGrove/Platform/thebookgrove-catalog/src/main/java/com/thebookgrove/catalog/InternetConnectionAgent.java:[40,23]
+> package sun.security.ssl does not exist
+> [ERROR]
+> /Users/joshua/Desktop/Data/TheBookGrove/Platform/thebookgrove-catalog/src/main/java/com/thebookgrove/catalog/InternetConnectionAgent.java:[147,29]
+> cannot find symbol
+>
+> I couldn't find any help with Google, so you are my last resort :(
+
+
+
+Option 1)
+
+It's been a while since I tinkered in the security spaces but...
+Are you sure you should be using sun.* packages?
+These are normally internal implementation stuff.
+You should be using the java.* interfaces instead.
+(http://openjdk.java.net/groups/security/ sums this up - and
+http://docs.oracle.com/javase/7/docs/api/ doesn't like JavaDoc for sun.*
+stuff)
+
+Option 2)
+
+Guesses are that the two branches are using different environments.
+
+Run mvn -X on both branches piping output to a file.
+You can start with diff to see whether you get lucky and spot the problems.
+Otherwise, its a line by line comb to see what the differences are and
+whether these are the cause of your problems.
+
+Are you building with a non-Oracle jdk in the second branch - which
+obviously wont have the sun.* implementation stuff.
+
+--001a1133ec4096a4f505001555d8--
+

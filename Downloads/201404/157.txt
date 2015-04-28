@@ -1,0 +1,155 @@
+From users-return-136232-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Apr 22 18:16:29 2014
+Return-Path: <users-return-136232-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0810611FB7
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 22 Apr 2014 18:16:29 +0000 (UTC)
+Received: (qmail 88340 invoked by uid 500); 22 Apr 2014 18:16:24 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 88268 invoked by uid 500); 22 Apr 2014 18:16:24 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 88257 invoked by uid 99); 22 Apr 2014 18:16:24 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Apr 2014 18:16:24 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.128.181] (HELO mail-ve0-f181.google.com) (209.85.128.181)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 22 Apr 2014 18:16:18 +0000
+Received: by mail-ve0-f181.google.com with SMTP id oy12so10244753veb.12
+        for <users@maven.apache.org>; Tue, 22 Apr 2014 11:15:56 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:content-type;
+        bh=re4vV0+3rK0P5UZRHJl2fecJZjLdRVsomHdAaXGhJjo=;
+        b=BWTjihn6p6VpP2DkxDbmDqOIRWLfdGJvHmq/gZElmQLNEik95H4/iZJ5/9apllixF5
+         12yIRWTwgvWsZ8Y3cgJC2ylj9JjiGBxNjIVFxLg/CKBe/vm5xZqBnXZa5D+mFT+xcqAb
+         cjWuMbBRiKh/Iu/TqYMIEWDmdK03FHrthkarvH3mwZwmmO4vPFTp5n2w2Y1DT9Ro7q8i
+         4WY3oRGGcNfxVNV+B3NF966FtKo5TCrFkUF8JLMNMXA5NqAW/iQgDbEq2wJWet9bYm5d
+         aHIJr4hRR3POOwPTpkUmgHROglBxEget0KJeJWyWtlEsgd1qyphKTNAap6o1xvZI+hfE
+         PQYw==
+X-Gm-Message-State: ALoCoQnaaEIcHz2HnXvKYmxLI+mbv/xaFBqFInTheJLNXisJmb1NPW1i3aMGNMseHsw568M1pdvO
+X-Received: by 10.58.146.5 with SMTP id sy5mr1149993veb.43.1398190555774; Tue,
+ 22 Apr 2014 11:15:55 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.220.177.10 with HTTP; Tue, 22 Apr 2014 11:15:35 -0700 (PDT)
+In-Reply-To: <CAMtaDYR283Xs1_H==Saqp7DWD8DmN2ok0SUMSGphgAseMCPZXw@mail.gmail.com>
+References: <CAMtaDYTowgW5bXSeQp+xQ7BywKAvWuiYNg0HFm-6znK1RBFu1A@mail.gmail.com>
+ <BLU172-W19BBEFD1956DA6FCD73C80AE6D0@phx.gbl> <CAMtaDYR283Xs1_H==Saqp7DWD8DmN2ok0SUMSGphgAseMCPZXw@mail.gmail.com>
+From: Tonio Caputo <tonioc@exeo.com.ar>
+Date: Tue, 22 Apr 2014 15:15:35 -0300
+Message-ID: <CAJg1wSaw7Cqk9_=-eWxshmc9WkSfjfu_H0tSdz3Xdi1AF5L0Fw@mail.gmail.com>
+Subject: Re: DependencyTreeBuilder vs. DependencyGraphBuilder
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b6743a267d33004f7a59b5d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b6743a267d33004f7a59b5d
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+Interesting problem, I've just faced,  using aether and maven 3.1,  I
+developed a plugin for
+creating a special kind of 'war' file for a plugin infrastructure.
+
+I was using aether directly,  I faced the problem aether was changed, so
+just looking into
+maven dependency plugin, and looking at some advice mentioned in the
+network I moved
+from using aether directly to use maven-dependency-tree library, which
+isolates me of the problem
+of what Aether provider is used.
+
+Because of the nature of the plugin, I need to use DependencyTree and not
+DependencyGraph (need the repeated/confict info).
+
+So wondering, should I go back to using Aether directly (because of
+DependencyTree) deprecation, or
+some replacement for it will be available ?
+
+thanks in advance
+tonio
+
+
+
+On Wed, Apr 2, 2014 at 10:34 AM, Stefan Ferstl <st.ferstl@gmail.com> wrote:
+
+> I haven't had any problems so far. I was just confused by
+> DependencyTreeBuilder's Javadoc. It says that (at least I understood
+> it that way) the dependency graph might differ from the dependency
+> resolution in Maven 3. The same Javadoc references an Issue
+> (MSHARED-167) that was solved two years ago. So I was not sure if
+> differences can still occur or not. According to Herv=E9's reply,
+> differences can still occur.
+>
+>
+> Cheers,
+> Stefan
+>
+>
+> On Wed, Apr 2, 2014 at 2:49 AM, Martin Gainty <mgainty@hotmail.com> wrote=
+:
+> > Stefan
+> >
+> > A year ago..Herve says r1469697 maven-dependency-tree  is fixed for M3
+> > Is this not the case?
+> >
+> >
+> > Martin
+> >
+> >
+> >
+> >
+> >
+> >> Date: Tue, 1 Apr 2014 08:29:20 +0200
+> >> Subject: DependencyTreeBuilder vs. DependencyGraphBuilder
+> >> From: st.ferstl@gmail.com
+> >> To: users@maven.apache.org
+> >>
+> >> I'm using the org.apache.maven.shared:dependency-tree library to
+> >> gather dependency information on my projects. In order to get
+> >> additional information about version conflicts, I prefer to use
+> >> DependencyTreeBuilder instead of DependencyGraphBuilder. However, the
+> >> Javadoc of DependencyTreeBuilder says:
+> >>
+> >> "Notice that it doesn't fail with Maven 3, but when Maven 2 and Maven
+> >> 3 don't calculate the same transitive dependency result, the tree
+> >> calculated with this component is consistent with Maven 2 even if run
+> >> with Maven 3 (see MSHARED-167)"
+> >>
+> >> The issue MSHARED-167 [1] was closed in June 2012. So may
+> >> DependencyTreeBuilder still produce different results than
+> >> DependencyGraphBuilder or is this not an issue anymore?
+> >>
+> >>
+> >> Cheers,
+> >> Stefan
+> >>
+> >> [1] https://jira.codehaus.org/browse/MSHARED-167
+> >>
+> >> ---------------------------------------------------------------------
+> >> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> >> For additional commands, e-mail: users-help@maven.apache.org
+> >>
+> >
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--047d7b6743a267d33004f7a59b5d--
+

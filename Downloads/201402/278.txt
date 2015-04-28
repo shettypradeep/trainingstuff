@@ -1,0 +1,525 @@
+From users-return-135473-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Feb 14 06:47:37 2014
+Return-Path: <users-return-135473-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BEC1610A42
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 14 Feb 2014 06:47:37 +0000 (UTC)
+Received: (qmail 24601 invoked by uid 500); 14 Feb 2014 06:47:27 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 24543 invoked by uid 500); 14 Feb 2014 06:47:26 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 24530 invoked by uid 99); 14 Feb 2014 06:47:25 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 06:47:25 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy)
+Received: from [88.198.41.52] (HELO tux235.hoststar.ch) (88.198.41.52)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 14 Feb 2014 06:47:21 +0000
+Received: from mail-qc0-f180.google.com (mail-qc0-f180.google.com [209.85.216.180])
+	(authenticated bits=0)
+	by tux235.hoststar.ch (8.13.8/8.12.11) with ESMTP id s1E6ks99019941
+	(version=TLSv1/SSLv3 cipher=RC4-SHA bits=128 verify=FAIL)
+	for <users@maven.apache.org>; Fri, 14 Feb 2014 07:46:55 +0100
+Received: by mail-qc0-f180.google.com with SMTP id i17so19838691qcy.11
+        for <users@maven.apache.org>; Thu, 13 Feb 2014 22:46:54 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=y/DTInbD/VjRN/T9uzJbsOmX25p6cY0+Pe2XqC9JZm4=;
+        b=MZrNQjODzWTt2k+taVYLjE7gpNjcKEv+qLwNb9r/x3QLmoIYBe4tLVPRkImAgJ2hEP
+         oS6sIBzddGRDFxWL/xR6HJG9DvTmboRCWuPO5jKD7iu61bOOdg71F3EO1UxCao1+GOIv
+         4jOBMLP//vfsCMZji3KyMUfzy3B5Xy//uUIWgQhlLkWCC2z10mlLm1PZzAVGg48Go7nu
+         z4fQ02ZuIX/1AvCh/NlM+qUMxU817mIPOLMSQ5r1wQSGnTZz7yy3gefVsqr8KpdYfWkL
+         Z8w4rjvIZctVaK1cISEal74vKW1IK239EdRNvnIeuc+jZPallc+kCCcKWGWGQcLUXFAJ
+         zL6Q==
+X-Received: by 10.140.34.231 with SMTP id l94mr9371644qgl.85.1392360414240;
+ Thu, 13 Feb 2014 22:46:54 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.224.182.203 with HTTP; Thu, 13 Feb 2014 22:46:24 -0800 (PST)
+In-Reply-To: <CANWgJS6gedPKQ_S5Gyt_D6j4KFnJoSfBrUf7GdE6ht6wo7fq6Q@mail.gmail.com>
+References: <CAJZYdzjdZKS69VX64izc104aeb2m0CZQqcR2BWCbaHp3mginjg@mail.gmail.com>
+ <52F4EED5.2040305@artifact-software.com> <CAJZYdzjLSdYqes9wtokB0U6yvO8DkV1Qt8dqf2s2i_gwuR_uvA@mail.gmail.com>
+ <52F50425.50107@artifact-software.com> <CAJZYdziKda4m1LLqefAzztmM6QM2ooA7mSsLkrUt4YMbbwy=Hg@mail.gmail.com>
+ <CANWgJS6gedPKQ_S5Gyt_D6j4KFnJoSfBrUf7GdE6ht6wo7fq6Q@mail.gmail.com>
+From: =?ISO-8859-1?Q?Reto_Habl=FCtzel?= <rethab@rethab.ch>
+Date: Fri, 14 Feb 2014 07:46:24 +0100
+Message-ID: <CAJZYdzjHBa08qjUi0Oncfyrh4BYRb__-y8QhxgnCVCS1_YyZCA@mail.gmail.com>
+Subject: Re: maven-ear-plugin silently overrides libraries
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/mixed; boundary=001a11c0e888e418ca04f2582b71
+X-Scanned-By: mimedefang-scanned
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c0e888e418ca04f2582b71
+Content-Type: multipart/alternative; boundary=001a11c0e888e418c704f2582b6f
+
+--001a11c0e888e418c704f2582b6f
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+Is JIRA open for public registration / issue creation? I could not find a
+link to sign up..
+
+Anyways, I attached a sample project. Please follow these steps to recreate
+the issue (btw. I think the whole naming thing is also a problem if you are
+referencing two ejbs with the same artifactId and version):
+
+Install 'utilities' project in 'collections':
+collections/utilities> mvn install
+
+Install 'utilities' project in 'email':
+email/utilities> mvn install
+
+Package 'ear' project:
+ear> mvn package
+
+Look at contents of ear and notice how only one jar is included:
+ear> unzip -v target/ear-1.0.0.ear
+
+Now use the debug flag to see why only one gets included:
+ear> mvn --debug clean package
+
+Partial output:
+  [INFO] Copying artifact [jar:ch.rethab.email:utilities:1.0.0] to
+[utilities-1.0.0.jar]
+  [DEBUG] Skipping artifact [jar:ch.rethab.collections:utilities:1.0.0], as
+it is already up to date at [utilities-1.0.0.jar]
+
+
+
+
+On Thu, Feb 13, 2014 at 7:32 PM, Baptiste Mathus <bmathus@batmat.net> wrote=
+:
+
+> That's the way to go. Even more if you're able to attach a test project.
+> One report without report is far less likely to be worked on.
+> Cheers
+> Le 13 f=E9vr. 2014 14:06, "Reto Habl=FCtzel" <rethab@rethab.ch> a =E9crit=
+ :
+>
+> > So what's the status on this? Shall I create a ticket?
+> >
+> >
+> > On Fri, Feb 7, 2014 at 5:04 PM, Ron Wheeler
+> > <rwheeler@artifact-software.com>wrote:
+> >
+> > > Exclusions will not help in this case.
+> > > Looking through the dependency hierarchy will at least get you to see
+> the
+> > > problem earlier which I think was the nature of your question.
+> > >
+> > > It appears from my brief reading and fun with making servlets run in
+> > > production that classloaders merge classes by name.
+> > > Maven does not.
+> > >
+> > > I am a bit surprised that groupId does not count.
+> > >
+> > > If one uses a lot of third -party libraries, it would seem inevitable
+> > that
+> > > you could need com.artifact-software:utilities:1.0 at the same time a=
+s
+> > > ch.rethab:utilities:1.0 at the same time.
+> > > The classloader is not going to cause any problem but if Maven throws
+> out
+> > > one of these as a duplicate, you will be missing classes at run-time.
+> > >
+> > > It is difficult to force everyone to create unique artifactIds unless
+> you
+> > > get rid of the GroupId altogther and make GAV -> <AV> and put the gro=
+up
+> > > name into the artifactID.
+> > >
+> > > This seems to be a design flaw if it is true.
+> > >
+> > > Ron
+> > >
+> > >
+> > > On 07/02/2014 9:43 AM, Reto Habl=FCtzel wrote:
+> > >
+> > >> Sure, but exclusions don't do the trick if you need both of them, do
+> > >> they? I am talking about completely independent libraries that happe=
+n
+> to
+> > >> have the same artifactId.
+> > >>
+> > >> Those were actually both libraries of mine and I could obviously fix
+> > this
+> > >> issue rather simply, but I was just thinking that it would be helpfu=
+l
+> to
+> > >> have at least a warning or something from maven - regardless of the
+> IDE.
+> > >>
+> > >> - Reto
+> > >>
+> > >>
+> > >> On Fri, Feb 7, 2014 at 3:33 PM, Ron Wheeler
+> <rwheeler@artifact-software.
+> > >> com <mailto:rwheeler@artifact-software.com>> wrote:
+> > >>
+> > >>     If your IDE supports Maven (Eclipse/STS for example), you will s=
+ee
+> > >>     the conflict in the dependency hierarchy view and you can fix it
+> > >>     with the right exclusions.
+> > >>
+> > >>     It is almost always worth a quick look through the dependency
+> > >>     hierarchy view if you use a lot of third party libraries.
+> > >>     Not everyone updates their dependencies when they build a
+> > >>     shareable library.
+> > >>     You can sometimes get some pretty old versions of things dragged
+> > >>     in with the latest version of otherwise well-written libraries.
+> > >>     Exclusions need to be added to get what you want in your
+> artifacts.
+> > >>
+> > >>     Ron
+> > >>
+> > >>
+> > >>     On 07/02/2014 9:21 AM, Reto Habl=FCtzel wrote:
+> > >>
+> > >>         Hi there,
+> > >>
+> > >>         I built an ear using the maven-ear-plugin (version 2.6).
+> > >>
+> > >>         The ear is configured such that it includes two libraries in=
+to
+> > >>         the lib
+> > >>         folder, both with the same artifactId as well as the same
+> > >>         version, but a
+> > >>         different groupId. Now if I simply call 'mvn package' only t=
+he
+> > >>         first one is
+> > >>         included, but no warning whatsoever appears. Only once I tur=
+n
+> > >>         on debugging
+> > >>         (mvn --debug package), I see one subtle message:
+> > >>         [DEBUG] Skipping artifact [jar:com.foo:bar:1.0] as it is
+> > >>         already up to date
+> > >>         at [lib/bar-1.0.jar]
+> > >>
+> > >>         Wouldn't it make sense to either include the groupId in the
+> > >>         filename or at
+> > >>         least make a check (that includes the groupId) beforehand if
+> > >>         there are any
+> > >>         conflicts?
+> > >>
+> > >>         Cheers,
+> > >>         Reto
+> > >>
+> > >>
+> > >>
+> > >>     --     Ron Wheeler
+> > >>     President
+> > >>     Artifact Software Inc
+> > >>     email: rwheeler@artifact-software.com
+> > >>     <mailto:rwheeler@artifact-software.com>
+> > >>
+> > >>     skype: ronaldmwheeler
+> > >>     phone: 866-970-2435, ext 102
+> > >>
+> > >>
+> > >>
+> > ---------------------------------------------------------------------
+> > >>     To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> > >>     <mailto:users-unsubscribe@maven.apache.org>
+> > >>
+> > >>     For additional commands, e-mail: users-help@maven.apache.org
+> > >>     <mailto:users-help@maven.apache.org>
+> > >>
+> > >>
+> > >>
+> > >
+> > > --
+> > > Ron Wheeler
+> > > President
+> > > Artifact Software Inc
+> > > email: rwheeler@artifact-software.com
+> > > skype: ronaldmwheeler
+> > > phone: 866-970-2435, ext 102
+> > >
+> > >
+> >
+>
+
+--001a11c0e888e418c704f2582b6f
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Is JIRA open for public registration / issue creation? I c=
+ould not find a link to sign up..<div><br></div><div>Anyways, I attached a =
+sample project. Please follow these steps to recreate the issue (btw. I thi=
+nk the whole naming thing is also a problem if you are referencing two ejbs=
+ with the same artifactId and version):</div>
+
+<div><br></div><div>Install &#39;utilities&#39; project in &#39;collections=
+&#39;:</div><div>collections/utilities&gt; mvn install</div><div><br></div>=
+<div><div>Install &#39;utilities&#39; project in &#39;email&#39;:</div>
+
+<div>email/utilities&gt; mvn install</div></div><div><br></div><div>Package=
+ &#39;ear&#39; project:</div><div>ear&gt; mvn package</div><div><br></div><=
+div>Look at contents of ear and notice how only one jar is included:</div>
+
+<div>ear&gt; unzip -v target/ear-1.0.0.ear</div><div><br></div><div>Now use=
+ the debug flag to see why only one gets included:</div><div>ear&gt; mvn --=
+debug clean package</div><div><br></div><div>Partial output:</div><div>
+
+<div>=A0 [INFO] Copying artifact [jar:ch.rethab.email:utilities:1.0.0] to [=
+utilities-1.0.0.jar]</div><div>=A0 [DEBUG] Skipping artifact [jar:ch.rethab=
+.collections:utilities:1.0.0], as it is already up to date at [utilities-1.=
+0.0.jar]</div>
+
+</div><div><br></div><div><br></div></div><div class=3D"gmail_extra"><br><b=
+r><div class=3D"gmail_quote">On Thu, Feb 13, 2014 at 7:32 PM, Baptiste Math=
+us <span dir=3D"ltr">&lt;<a href=3D"mailto:bmathus@batmat.net" target=3D"_b=
+lank">bmathus@batmat.net</a>&gt;</span> wrote:<br>
+
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">That&#39;s the way to go. Even more if you&#=
+39;re able to attach a test project.<br>
+One report without report is far less likely to be worked on.<br>
+Cheers<br>
+Le 13 f=E9vr. 2014 14:06, &quot;Reto Habl=FCtzel&quot; &lt;<a href=3D"mailt=
+o:rethab@rethab.ch">rethab@rethab.ch</a>&gt; a =E9crit :<br>
+<div class=3D"HOEnZb"><div class=3D"h5"><br>
+&gt; So what&#39;s the status on this? Shall I create a ticket?<br>
+&gt;<br>
+&gt;<br>
+&gt; On Fri, Feb 7, 2014 at 5:04 PM, Ron Wheeler<br>
+&gt; &lt;<a href=3D"mailto:rwheeler@artifact-software.com">rwheeler@artifac=
+t-software.com</a>&gt;wrote:<br>
+&gt;<br>
+&gt; &gt; Exclusions will not help in this case.<br>
+&gt; &gt; Looking through the dependency hierarchy will at least get you to=
+ see the<br>
+&gt; &gt; problem earlier which I think was the nature of your question.<br=
+>
+&gt; &gt;<br>
+&gt; &gt; It appears from my brief reading and fun with making servlets run=
+ in<br>
+&gt; &gt; production that classloaders merge classes by name.<br>
+&gt; &gt; Maven does not.<br>
+&gt; &gt;<br>
+&gt; &gt; I am a bit surprised that groupId does not count.<br>
+&gt; &gt;<br>
+&gt; &gt; If one uses a lot of third -party libraries, it would seem inevit=
+able<br>
+&gt; that<br>
+&gt; &gt; you could need com.artifact-software:utilities:1.0 at the same ti=
+me as<br>
+&gt; &gt; ch.rethab:utilities:1.0 at the same time.<br>
+&gt; &gt; The classloader is not going to cause any problem but if Maven th=
+rows out<br>
+&gt; &gt; one of these as a duplicate, you will be missing classes at run-t=
+ime.<br>
+&gt; &gt;<br>
+&gt; &gt; It is difficult to force everyone to create unique artifactIds un=
+less you<br>
+&gt; &gt; get rid of the GroupId altogther and make GAV -&gt; &lt;AV&gt; an=
+d put the group<br>
+&gt; &gt; name into the artifactID.<br>
+&gt; &gt;<br>
+&gt; &gt; This seems to be a design flaw if it is true.<br>
+&gt; &gt;<br>
+&gt; &gt; Ron<br>
+&gt; &gt;<br>
+&gt; &gt;<br>
+&gt; &gt; On 07/02/2014 9:43 AM, Reto Habl=FCtzel wrote:<br>
+&gt; &gt;<br>
+&gt; &gt;&gt; Sure, but exclusions don&#39;t do the trick if you need both =
+of them, do<br>
+&gt; &gt;&gt; they? I am talking about completely independent libraries tha=
+t happen to<br>
+&gt; &gt;&gt; have the same artifactId.<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt; Those were actually both libraries of mine and I could obviou=
+sly fix<br>
+&gt; this<br>
+&gt; &gt;&gt; issue rather simply, but I was just thinking that it would be=
+ helpful to<br>
+&gt; &gt;&gt; have at least a warning or something from maven - regardless =
+of the IDE.<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt; - Reto<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt; On Fri, Feb 7, 2014 at 3:33 PM, Ron Wheeler &lt;rwheeler@arti=
+fact-software.<br>
+&gt; &gt;&gt; com &lt;mailto:<a href=3D"mailto:rwheeler@artifact-software.c=
+om">rwheeler@artifact-software.com</a>&gt;&gt; wrote:<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt; =A0 =A0 If your IDE supports Maven (Eclipse/STS for example),=
+ you will see<br>
+&gt; &gt;&gt; =A0 =A0 the conflict in the dependency hierarchy view and you=
+ can fix it<br>
+&gt; &gt;&gt; =A0 =A0 with the right exclusions.<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt; =A0 =A0 It is almost always worth a quick look through the de=
+pendency<br>
+&gt; &gt;&gt; =A0 =A0 hierarchy view if you use a lot of third party librar=
+ies.<br>
+&gt; &gt;&gt; =A0 =A0 Not everyone updates their dependencies when they bui=
+ld a<br>
+&gt; &gt;&gt; =A0 =A0 shareable library.<br>
+&gt; &gt;&gt; =A0 =A0 You can sometimes get some pretty old versions of thi=
+ngs dragged<br>
+&gt; &gt;&gt; =A0 =A0 in with the latest version of otherwise well-written =
+libraries.<br>
+&gt; &gt;&gt; =A0 =A0 Exclusions need to be added to get what you want in y=
+our artifacts.<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt; =A0 =A0 Ron<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt; =A0 =A0 On 07/02/2014 9:21 AM, Reto Habl=FCtzel wrote:<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 Hi there,<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 I built an ear using the maven-ear-plugin (ve=
+rsion 2.6).<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 The ear is configured such that it includes t=
+wo libraries into<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 the lib<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 folder, both with the same artifactId as well=
+ as the same<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 version, but a<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 different groupId. Now if I simply call &#39;=
+mvn package&#39; only the<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 first one is<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 included, but no warning whatsoever appears. =
+Only once I turn<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 on debugging<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 (mvn --debug package), I see one subtle messa=
+ge:<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 [DEBUG] Skipping artifact [jar:com.foo:bar:1.=
+0] as it is<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 already up to date<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 at [lib/bar-1.0.jar]<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 Wouldn&#39;t it make sense to either include =
+the groupId in the<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 filename or at<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 least make a check (that includes the groupId=
+) beforehand if<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 there are any<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 conflicts?<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 Cheers,<br>
+&gt; &gt;&gt; =A0 =A0 =A0 =A0 Reto<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt; =A0 =A0 -- =A0 =A0 Ron Wheeler<br>
+&gt; &gt;&gt; =A0 =A0 President<br>
+&gt; &gt;&gt; =A0 =A0 Artifact Software Inc<br>
+&gt; &gt;&gt; =A0 =A0 email: <a href=3D"mailto:rwheeler@artifact-software.c=
+om">rwheeler@artifact-software.com</a><br>
+&gt; &gt;&gt; =A0 =A0 &lt;mailto:<a href=3D"mailto:rwheeler@artifact-softwa=
+re.com">rwheeler@artifact-software.com</a>&gt;<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt; =A0 =A0 skype: ronaldmwheeler<br>
+&gt; &gt;&gt; =A0 =A0 phone: 866-970-2435, ext 102<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt;<br>
+&gt; ---------------------------------------------------------------------<=
+br>
+&gt; &gt;&gt; =A0 =A0 To unsubscribe, e-mail: <a href=3D"mailto:users-unsub=
+scribe@maven.apache.org">users-unsubscribe@maven.apache.org</a><br>
+&gt; &gt;&gt; =A0 =A0 &lt;mailto:<a href=3D"mailto:users-unsubscribe@maven.=
+apache.org">users-unsubscribe@maven.apache.org</a>&gt;<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt; =A0 =A0 For additional commands, e-mail: <a href=3D"mailto:us=
+ers-help@maven.apache.org">users-help@maven.apache.org</a><br>
+&gt; &gt;&gt; =A0 =A0 &lt;mailto:<a href=3D"mailto:users-help@maven.apache.=
+org">users-help@maven.apache.org</a>&gt;<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;&gt;<br>
+&gt; &gt;<br>
+&gt; &gt; --<br>
+&gt; &gt; Ron Wheeler<br>
+&gt; &gt; President<br>
+&gt; &gt; Artifact Software Inc<br>
+&gt; &gt; email: <a href=3D"mailto:rwheeler@artifact-software.com">rwheeler=
+@artifact-software.com</a><br>
+&gt; &gt; skype: ronaldmwheeler<br>
+&gt; &gt; phone: 866-970-2435, ext 102<br>
+&gt; &gt;<br>
+&gt; &gt;<br>
+&gt;<br>
+</div></div></blockquote></div><br></div>
+
+--001a11c0e888e418c704f2582b6f--
+--001a11c0e888e418ca04f2582b71
+Content-Type: application/zip; name="ear-silent-ignore.zip"
+Content-Disposition: attachment; filename="ear-silent-ignore.zip"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_hrn3d3xl0
+
+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
+bm9yZS9jb2xsZWN0aW9ucy9VVAUAAz60/VJ1eAsAAQToAwAABGQAAABQSwECHgMKAAAAAACGOk5E
+AAAAAAAAAAAAAAAAKAAYAAAAAAAAABAA7UGkAAAAZWFyLXNpbGVudC1pZ25vcmUvY29sbGVjdGlv
+bnMvdXRpbGl0aWVzL1VUBQADnLX9UnV4CwABBOgDAAAEZAAAAFBLAQIeAxQAAAAIADY6TkRW3vVP
+7AAAAKoBAAAvABgAAAAAAAEAAACkgQYBAABlYXItc2lsZW50LWlnbm9yZS9jb2xsZWN0aW9ucy91
+dGlsaXRpZXMvcG9tLnhtbFVUBQADCLX9UnV4CwABBOgDAAAEZAAAAFBLAQIeAwoAAAAAAHs9TkQA
+AAAAAAAAAAAAAAAWABgAAAAAAAAAEADtQVsCAABlYXItc2lsZW50LWlnbm9yZS9lYXIvVVQFAAMp
+u/1SdXgLAAEE6AMAAARkAAAAUEsBAh4DFAAAAAgAbT1ORHGK4YuSAQAA0AQAAB0AGAAAAAAAAQAA
+AKSBqwIAAGVhci1zaWxlbnQtaWdub3JlL2Vhci9wb20ueG1sVVQFAAMOu/1SdXgLAAEE6AMAAARk
+AAAAUEsBAh4DCgAAAAAAmDlORAAAAAAAAAAAAAAAABgAGAAAAAAAAAAQAO1BlAQAAGVhci1zaWxl
+bnQtaWdub3JlL2VtYWlsL1VUBQAD37P9UnV4CwABBOgDAAAEZAAAAFBLAQIeAwoAAAAAAIw6TkQA
+AAAAAAAAAAAAAAAiABgAAAAAAAAAEADtQeYEAABlYXItc2lsZW50LWlnbm9yZS9lbWFpbC91dGls
+aXRpZXMvVVQFAAOotf1SdXgLAAEE6AMAAARkAAAAUEsBAh4DFAAAAAgAQTpORJF4/l3oAAAApAEA
+ACkAGAAAAAAAAQAAAKSBQgUAAGVhci1zaWxlbnQtaWdub3JlL2VtYWlsL3V0aWxpdGllcy9wb20u
+eG1sVVQFAAMatf1SdXgLAAEE6AMAAARkAAAAUEsFBgAAAAAJAAkAkwMAAI0GAAAAAA==
+
+--001a11c0e888e418ca04f2582b71
+Content-Type: text/plain; charset=us-ascii
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+--001a11c0e888e418ca04f2582b71--
+

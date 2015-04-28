@@ -1,0 +1,128 @@
+From users-return-136401-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue May 20 12:08:55 2014
+Return-Path: <users-return-136401-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 990FA11C89
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 20 May 2014 12:08:55 +0000 (UTC)
+Received: (qmail 11188 invoked by uid 500); 20 May 2014 12:08:54 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 11108 invoked by uid 500); 20 May 2014 12:08:54 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 11100 invoked by uid 99); 20 May 2014 12:08:54 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 20 May 2014 12:08:54 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of bmathus@gmail.com designates 209.85.213.43 as permitted sender)
+Received: from [209.85.213.43] (HELO mail-yh0-f43.google.com) (209.85.213.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 20 May 2014 12:08:49 +0000
+Received: by mail-yh0-f43.google.com with SMTP id v1so253195yhn.2
+        for <users@maven.apache.org>; Tue, 20 May 2014 05:08:29 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=Ep93D/xRD/tsnd+5rKfHBs35cG4HTlXsATQMYL5ONHE=;
+        b=l2xVnSqNRxwvVNhfmW9djbEtP6XHFpxyPDvcgKq8jM1V3sg15VivEaniEdAEe7cBVB
+         I3z2lbYOqxQpbNJbxCNfUhx8L0D9Sj8pGLbJ8To+c5M8Ma46i6SW78xwobD29LZxwXfB
+         FgIHGPSiMSaQp4Sbn7axtYvqYQizM+QxRUhEXbHM0uo3inxVC1NEaLs7Cno9NkMeHqkU
+         WxvOQxPryVRNvbkLxacgOm5rAyoSDmQaPPMVwVnaD1kqRPLTgkNUK2a2UdLiza7pV9Rc
+         mrJTHGDXL1vDn0aw+DxyVvPgdpgmulQSToKvXRhhrJdJqEQEpIMa/MlXA7JRY84wgLhO
+         tJ6Q==
+X-Received: by 10.236.61.45 with SMTP id v33mr63587549yhc.20.1400587709376;
+ Tue, 20 May 2014 05:08:29 -0700 (PDT)
+MIME-Version: 1.0
+Sender: bmathus@gmail.com
+Received: by 10.170.207.68 with HTTP; Tue, 20 May 2014 05:08:09 -0700 (PDT)
+In-Reply-To: <CAJZRQKxm==Qq0WkhS7tK6zAV64tLQ-UQ_b6zHzivGRmUqJaRWA@mail.gmail.com>
+References: <CANWgJS7vUkpbLTutWEK_0wqkUitYEUG=jo3EHXAEN0_eEiGMVQ@mail.gmail.com>
+ <CAJZRQKxm==Qq0WkhS7tK6zAV64tLQ-UQ_b6zHzivGRmUqJaRWA@mail.gmail.com>
+From: Baptiste Mathus <bmathus@batmat.net>
+Date: Tue, 20 May 2014 14:08:09 +0200
+X-Google-Sender-Auth: kK1QDdf_dHbW1K_5Aiw_U6n9fmI
+Message-ID: <CANWgJS5B5HU4v__dNeOuqMLysZymK2GH+QgTOFG8sJzUmPWU1A@mail.gmail.com>
+Subject: Re: maven-invoker-plugin: running ITs in parallel?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e0160a73ce4ec6804f9d3bc34
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e0160a73ce4ec6804f9d3bc34
+Content-Type: text/plain; charset=UTF-8
+
+Yup, I know this work is still underway, no problem. I realize I wasn't
+clear enough (and my TL;DR may have been be misleading).
+
+I was also wondering if there was a workaround where you could define a
+specific path *per it* for the local repository. But unfortunately from a
+quick look at InvokerMojo.java I don't think it is possible.
+
+Thanks for your feedback.
+
+
+2014-05-20 13:51 GMT+02:00 Kristian Rosenvold <kristian.rosenvold@gmail.com>
+:
+
+>
+> AFIK this is one is unsolved. We have a number of kludges that involve
+> resolving all the required deps to the local repository *before*
+> starting the parallel process, at least 2 og 3 projects do it this
+> way. As far as I understand solving concurrent thread safe repo in the
+> latest maven version should be trivial, but it needs to be solved in
+> the core.
+>
+> Kristian
+>
+>
+> 2014-05-20 9:13 GMT+02:00 Baptiste Mathus <ml@batmat.net>:
+> > Hi all,
+> >
+> > *TL;DR: does anyone use the parallelThreads option in
+> maven-invoker-plugin?
+> > Do you also have issues with concurrent local repository access? If so,
+> how
+> > do you solve them?*
+> >
+> > I've recently come across the parallelThreads option in
+> > maven-invoker-plugin. After having tried to use it a few times, I'm
+> > currently stuck.
+> >
+> > It fails randomly, and not surprisingly it seems like it comes from the
+> > fact the local-repo is shared between ITs. While downloading from the
+> MRM,
+> > there's always one jars that fails to be written to the disk because of a
+> > likely concurrent access.
+> >
+> > My first thought was to try and have a separate localRepository per IT.
+> But
+> > I can't find a property or even a workaround to do that.
+> >
+> > Because filing an issue to m-invoker-p, I wanted to check here if I was
+> > missing something.
+> >
+> > Thanks for your help.
+> >
+> > -- Baptiste
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+
+-- 
+Baptiste <Batmat> MATHUS - http://batmat.net
+Sauvez un arbre,
+Mangez un castor !
+
+--089e0160a73ce4ec6804f9d3bc34--
+

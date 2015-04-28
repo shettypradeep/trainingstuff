@@ -1,0 +1,92 @@
+From users-return-135502-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Feb 15 15:19:05 2014
+Return-Path: <users-return-135502-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0A34A107F8
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 15 Feb 2014 15:19:05 +0000 (UTC)
+Received: (qmail 32297 invoked by uid 500); 15 Feb 2014 15:19:01 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 31995 invoked by uid 500); 15 Feb 2014 15:19:00 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 31987 invoked by uid 99); 15 Feb 2014 15:18:57 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 15 Feb 2014 15:18:57 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bmathus@gmail.com designates 209.85.215.174 as permitted sender)
+Received: from [209.85.215.174] (HELO mail-ea0-f174.google.com) (209.85.215.174)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 15 Feb 2014 15:18:50 +0000
+Received: by mail-ea0-f174.google.com with SMTP id z10so3026295ead.33
+        for <users@maven.apache.org>; Sat, 15 Feb 2014 07:18:30 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=YZ1cHWchAV4YBtS6FqwXpuImozNdBTDdDsS7o4OIEp4=;
+        b=veEL1YWmbZmPfEvMTOLfF/pfE/AsHdBttl+xxQAsZ960J414Scg0ITseqlmvwr3gZB
+         118IM8txrjJ/ZjRdjU1uBlY8BHeNVkOmDoulYbJeQ9xLQ3A/Z1N3ZLUg7en9Gnat4FKA
+         hHjb/T4h+pk0ne5DvvN8Hf5CmvwjdqF9YM847gJVXmkeFVV1lNm3JLHpNWN1avthBBIr
+         5Tko25OoOKgbggmXPmwTQ4IT1Yy2k8EBWigQO1js+HiYI0Hoo8Ae+BpFO/++E7x91gr/
+         XLJOIUqdqHw+NN29Key4JDmo6M4ESvNUI6BXaaaj9VteH8y6Txs/CK7I3K/U9lRsjPIA
+         YgXQ==
+MIME-Version: 1.0
+X-Received: by 10.14.174.5 with SMTP id w5mr16086642eel.14.1392477510595; Sat,
+ 15 Feb 2014 07:18:30 -0800 (PST)
+Sender: bmathus@gmail.com
+Received: by 10.14.224.198 with HTTP; Sat, 15 Feb 2014 07:18:30 -0800 (PST)
+Received: by 10.14.224.198 with HTTP; Sat, 15 Feb 2014 07:18:30 -0800 (PST)
+In-Reply-To: <CAPCjjnE3JLMEEmbMGV2xLCqVsSXhYDvFn+uS_99TQ8qfSKB5tA@mail.gmail.com>
+References: <CAPCjjnE3JLMEEmbMGV2xLCqVsSXhYDvFn+uS_99TQ8qfSKB5tA@mail.gmail.com>
+Date: Sat, 15 Feb 2014 16:18:30 +0100
+X-Google-Sender-Auth: Rt5scNXno-xHgtVO3LRI82UYlVo
+Message-ID: <CANWgJS6fxowEQFnYEovvLBPQcSAz6cCeWabPpt9LvMsLHrVm7A@mail.gmail.com>
+Subject: Re: Possible build collision between CI snapshot build and Release build
+From: Baptiste Mathus <bmathus@batmat.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=047d7b6246286078a804f2736fd7
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--047d7b6246286078a804f2736fd7
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi Dan,
+Not sure what you mean. You say "CI", are you taking about a specific
+server? If Jenkins for example, wouldn't it then be more a Jenkins user ml
+question?
+
+And I don't see how a snapshot build could interfere with another build
+with a release version.
+Could you give details about your issue so that we can help you?
+
+Cheers
+Le 15 f=C3=A9vr. 2014 07:01, "Dan Tran" <dantran@gmail.com> a =C3=A9crit :
+
+> Hello
+>
+>
+> It is possible that while release:prepare cutting the tag and CI for
+> snapshot build wakeup at the same time.  Is there a way to prevent this?
+> like a a profile to fail the build if the version happen to be a release
+> version.  Ie is there a way to detect this in a profile?
+>
+> I currently have to keep remind my self to turn off CI snapshot build whi=
+le
+> release is in progress, and too many to remember.
+>
+> Advice is greatly appreciated
+>
+> -Dan
+>
+
+--047d7b6246286078a804f2736fd7--
+

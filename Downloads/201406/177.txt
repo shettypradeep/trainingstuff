@@ -1,0 +1,201 @@
+From users-return-136492-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Jun  3 01:33:18 2014
+Return-Path: <users-return-136492-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 85E9111030
+	for <apmail-maven-users-archive@www.apache.org>; Tue,  3 Jun 2014 01:33:18 +0000 (UTC)
+Received: (qmail 75653 invoked by uid 500); 3 Jun 2014 01:33:17 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 75575 invoked by uid 500); 3 Jun 2014 01:33:17 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 75564 invoked by uid 99); 3 Jun 2014 01:33:17 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 03 Jun 2014 01:33:17 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.213.169] (HELO mail-ig0-f169.google.com) (209.85.213.169)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 03 Jun 2014 01:33:12 +0000
+Received: by mail-ig0-f169.google.com with SMTP id hl10so3932918igb.2
+        for <users@maven.apache.org>; Mon, 02 Jun 2014 18:32:51 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:from:content-type:message-id:mime-version
+         :subject:date:references:to:in-reply-to;
+        bh=wE4o7woGitRQNVImuedNUhcU7Z+chgX6ILKOhA4aHNQ=;
+        b=hPE6nZbvtOv2KeHdgB4Qr+Y+y9Y9JjqrjSX/nPyR2gUrABUCapEWjLk1eqxB8qPgk4
+         7xQvyt3TO3TAlnB67ZFGzfzE46HtBotTn2zLuwfL4y8rbca0ZEX2ZvlsKYxwiEQTac2f
+         yUbymfwZ3GxewWkjEPnAPPJBcwM68Uiegyeg27RxAX5AIY771FRKcuD8yrp/gsPShnd9
+         N1RAHFSRCB931IkqWMhrXwrTllh8N+yhTkUuv5isMr92mlUXarMyWbRpaVTDmAxR2GZr
+         cx13jJ3MTK9PqaPrbNnN4wl2pLyKq6b2v6fSoVuL5KWkc9ZELg92H9BeCQ2qJ/GGfNeO
+         JS4Q==
+X-Gm-Message-State: ALoCoQkEyScEAITPSZODVcp8dvC95QpcROTc81byxBmq53Syb01djPsJTIlbm/Z7XbsnlSu5EO9M
+X-Received: by 10.50.50.231 with SMTP id f7mr23421492igo.42.1401759171340;
+        Mon, 02 Jun 2014 18:32:51 -0700 (PDT)
+Received: from [10.0.1.11] (192-0-154-177.cpe.teksavvy.com. [192.0.154.177])
+        by mx.google.com with ESMTPSA id qd1sm33026180igc.16.2014.06.02.18.32.50
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Mon, 02 Jun 2014 18:32:50 -0700 (PDT)
+From: Jason van Zyl <jason@takari.io>
+Content-Type: multipart/alternative; boundary="Apple-Mail=_288184CB-6771-490C-84E7-09629DEA9817"
+Message-Id: <96DFF233-8D29-4BDC-B4D6-5B14BF2B60BA@takari.io>
+Mime-Version: 1.0 (Mac OS X Mail 7.2 \(1874\))
+Subject: Re: Use native tar to unpack? good/bad idea?
+Date: Mon, 2 Jun 2014 21:32:35 -0400
+References: <CAPCjjnEO9A_STBkPsLhgHa38ao=9T8wd8mo3mw6+UyqaXuvSvg@mail.gmail.com> <4D1B2C20-D217-4701-B27C-6FAAAA18995C@Kriegisch.name> <CAPCjjnHNMqGNjC=mHSvcTidivHso2PVWREgy3OBdsFR8RshyHQ@mail.gmail.com> <8AD1E8C9-4164-4DB9-BDE9-9AA1E9945DA0@Kriegisch.name> <CAPCjjnGWDY=-Nh+ksJcx5uaiMOk_WRcVY98FG1pMVsiORmgnzw@mail.gmail.com> <CAPCjjnHcuturZSe7-TJsFMV4Lo_iMR3Vkn5rBf10ggm=+PNhng@mail.gmail.com>
+To: Maven Users List <users@maven.apache.org>
+In-Reply-To: <CAPCjjnHcuturZSe7-TJsFMV4Lo_iMR3Vkn5rBf10ggm=+PNhng@mail.gmail.com>
+X-Mailer: Apple Mail (2.1874)
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--Apple-Mail=_288184CB-6771-490C-84E7-09629DEA9817
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
+
+I have had many problems with Java-based TAR solutions. I often use this =
+where I can:
+
+=
+https://github.com/airlift/airship/blob/master/airship-shared/src/main/jav=
+a/io/airlift/airship/shared/FileUtils.java
+
+On Jun 2, 2014, at 7:15 PM, Dan Tran <dantran@gmail.com> wrote:
+
+> BTW,
+>=20
+> I never have good luck with plexus-archiver, and always ended up to
+> implement my own 'unpack' using native tar to speed up the build and =
+also
+> reserve the softlinks in the archive.
+>=20
+> So am asking the user list to see if there any interests in this =
+feature to
+> give enough incentive to implement it
+>=20
+> Thanks
+>=20
+> -D
+>=20
+>=20
+>=20
+> On Mon, Jun 2, 2014 at 4:08 PM, Dan Tran <dantran@gmail.com> wrote:
+>=20
+>> Hi Alex,  I will find a good sample file for you.
+>>=20
+>> Thanks
+>>=20
+>> -D
+>>=20
+>>=20
+>> On Mon, Jun 2, 2014 at 3:57 PM, Alexander Kriegisch <
+>> Alexander@kriegisch.name> wrote:
+>>=20
+>>> Oh, I see, multiple options. Okay, then yes - maintenance nightmare. =
+I
+>>> think we should not easily give up Java's idea of platform =
+independence and
+>>> Maven's whole point: creating standardised, repeatable builds.
+>>>=20
+>>> If your idea is a reaction on your latest tar.gz problems, maybe we =
+can
+>>> find another solution for it. You have not reacted on my offer to =
+inspect
+>>> your files and see if I have an idea how to fix that in Java. :-)
+>>> --
+>>> Alexander Kriegisch
+>>>=20
+>>>=20
+>>>> Am 03.06.2014 um 00:48 schrieb Dan Tran <dantran@gmail.com>:
+>>>>=20
+>>>> correct,   I would expect user to install tar.exe or cygwin with =
+tar on
+>>>> windows and activate the option.  By default, it still uses
+>>> plexus-archiver
+>>>> to unpack
+>>>>=20
+>>>> -D
+>>>>=20
+>>>>=20
+>>>> On Mon, Jun 2, 2014 at 3:42 PM, Alexander Kriegisch <
+>>>> Alexander@kriegisch.name> wrote:
+>>>>=20
+>>>>> Windows does not have tar by default. You need to install Git =
+(incl.
+>>> Git
+>>>>> Bash), Cygwin, GnuWin32 or similar. I would not expect any user to
+>>> have tar
+>>>>> installed at all or if so then in any predictable location or even
+>>>>> reachable via PATH.
+>>>>> --
+>>>>> Alexander Kriegisch
+>>>>>=20
+>>>>>=20
+>>>>>> Am 03.06.2014 um 00:36 schrieb Dan Tran <dantran@gmail.com>:
+>>>>>>=20
+>>>>>> I am think of enhancing maven-dependency-plugin by adding option  =
+to
+>>>>> unpack
+>>>>>> 'tar' like artifact using native tar since it is faster and =
+reserve
+>>> soft
+>>>>>> links (?)
+>>>>>>=20
+>>>>>> Thoughts? would it be a maintaining night mare??
+>>>>>>=20
+>>>>>> Thanks
+>>>>>>=20
+>>>>>> -Dan
+>>>>>=20
+>>>>> =
+---------------------------------------------------------------------
+>>>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>>>=20
+>>>>>=20
+>>>=20
+>>> =
+---------------------------------------------------------------------
+>>> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+>>> For additional commands, e-mail: users-help@maven.apache.org
+>>>=20
+>>>=20
+>>=20
+
+Thanks,
+
+Jason
+
+----------------------------------------------------------
+Jason van Zyl
+Founder,  Apache Maven
+http://twitter.com/jvanzyl
+http://twitter.com/takari_io
+---------------------------------------------------------
+
+To think is easy. To act is hard. But the hardest thing in the world is =
+to act in accordance with your thinking.
+
+ -- Johann von Goethe
+
+
+
+
+
+
+
+
+
+
+--Apple-Mail=_288184CB-6771-490C-84E7-09629DEA9817--
+

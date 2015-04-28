@@ -1,0 +1,89 @@
+From users-return-137059-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Aug 18 14:36:09 2014
+Return-Path: <users-return-137059-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id EB4911100D
+	for <apmail-maven-users-archive@www.apache.org>; Mon, 18 Aug 2014 14:36:08 +0000 (UTC)
+Received: (qmail 90631 invoked by uid 500); 18 Aug 2014 14:36:04 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 90548 invoked by uid 500); 18 Aug 2014 14:36:04 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 90536 invoked by uid 99); 18 Aug 2014 14:36:04 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 18 Aug 2014 14:36:04 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [193.109.238.66] (HELO dnsinet.rzf-nrw.de) (193.109.238.66)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 18 Aug 2014 14:35:35 +0000
+Received: from Z011355.bk.fin.local (z011355.bk.fin.local [172.18.101.141])
+	by dnsinet.rzf-nrw.de (8.14.4/8.14.4) with ESMTP id s7IEZPm8001069
+	for <users@maven.apache.org>; Mon, 18 Aug 2014 16:35:25 +0200
+Received: from Y011007.bk.fin.local (130.11.50.7) by Z011355.bk.fin.local
+ (130.11.73.55) with Microsoft SMTP Server (TLS) id 14.3.195.1; Mon, 18 Aug
+ 2014 16:35:34 +0200
+Received: from Y011008.bk.fin.local ([fe80::a0a9:758d:1e1e:40ed]) by
+ Y011007.bk.fin.local ([fe80::6139:92eb:85fa:468c%12]) with mapi id
+ 14.03.0195.001; Mon, 18 Aug 2014 16:35:34 +0200
+From: "Schmidt, Dirk (RZF, SG 471 / MT AG)" <Dirk.Schmidt@fv.nrw.de>
+To: "users@maven.apache.org" <users@maven.apache.org>
+Subject: Maven SynergyScmProvider 1.9.1 : Howto define Database
+Thread-Topic: Maven SynergyScmProvider 1.9.1 : Howto define Database
+Thread-Index: Ac+66o40dXSLsklYSwO6QJXHLBsMNQABwaiA
+Date: Mon, 18 Aug 2014 14:35:33 +0000
+Message-ID: <80D7B05D0A075349A8BF08AFADA330917820A7DE@Y011008.bk.fin.local>
+Accept-Language: de-DE, en-US
+Content-Language: de-DE
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [130.11.50.56]
+Content-Type: multipart/alternative;
+	boundary="_000_80D7B05D0A075349A8BF08AFADA330917820A7DEY011008bkfinloc_"
+MIME-Version: 1.0
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_000_80D7B05D0A075349A8BF08AFADA330917820A7DEY011008bkfinloc_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+I have a question about the Maven SynergyScmProvider. I had a look in the d=
+ocumentation and source code but unfortunately I do not see a way configure=
+ the CM Synergy database (and server) name. I am not sure if I misunderstan=
+d the usage / capabilities and would appreciate your help.
+
+For Synergy 7.1 command clients the database name is required, without it e=
+very maven scm goal fails when opening a session:
+
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-scm-plugin:1.=
+9.1:status (default-cli) on project eb_S
+hared: Cannot run status command : Exception while executing SCM command. C=
+ommandeline =3D cmd.exe /X /C "ccm start -nogui
+ -m -q -rc -n USER -pw *******"
+
+If I add the "-s" and "-d" option (server plus database name) to the genera=
+ted ccm command everything works fine, but I see no way to configure it in =
+the pom.xml
+
+How is this supposed to work?
+
+Regards
+
+Dirk
+
+
+
+
+
+--_000_80D7B05D0A075349A8BF08AFADA330917820A7DEY011008bkfinloc_--
+

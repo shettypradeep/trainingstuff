@@ -1,0 +1,118 @@
+From users-return-135927-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Tue Mar 25 07:40:29 2014
+Return-Path: <users-return-135927-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7205010E04
+	for <apmail-maven-users-archive@www.apache.org>; Tue, 25 Mar 2014 07:40:29 +0000 (UTC)
+Received: (qmail 10810 invoked by uid 500); 25 Mar 2014 07:40:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 10735 invoked by uid 500); 25 Mar 2014 07:40:24 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 10727 invoked by uid 99); 25 Mar 2014 07:40:23 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Mar 2014 07:40:23 +0000
+X-ASF-Spam-Status: No, hits=2.2 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of anders.g.hammar@gmail.com designates 209.85.192.41 as permitted sender)
+Received: from [209.85.192.41] (HELO mail-qg0-f41.google.com) (209.85.192.41)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Tue, 25 Mar 2014 07:40:17 +0000
+Received: by mail-qg0-f41.google.com with SMTP id i50so239593qgf.0
+        for <users@maven.apache.org>; Tue, 25 Mar 2014 00:39:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=s7ZdjBtnFtUjvc4bxK1MGI9hRkgrjSrQf5VjYHPzVoA=;
+        b=yTFfNjHm3MqVgigJZkYKCIjWmoly5mxq6XqP7OZuyOa1+7569RvsY8BSZFT2R0oADg
+         RQhUwjH900nlOCmUoFBEbVtXwouZbbnnOP7/NpczX+D3DlRPr2RtZLDyUlyIqP8x62XK
+         aamhiGQVRCDIyHVefZXZ1aLj4yki1ka8/ZOnZcNlBY/DZO6PwPrWTIDgzg8JRYhaGZQ8
+         PARXZc6pr3h6vtckSxvkiFkdIwRMo0uYre6l6LYhMMPOVC6IpAgn0o97Cw7DK6r2gIj8
+         ZC9IWz4RwUuUnSknm+UwolVbaJcnVOgBbGhq9bWUvXcAAzv9AmOIHAAp3xi+7GQApKw0
+         rIqg==
+MIME-Version: 1.0
+X-Received: by 10.140.108.138 with SMTP id j10mr76612585qgf.7.1395733196158;
+ Tue, 25 Mar 2014 00:39:56 -0700 (PDT)
+Sender: anders.g.hammar@gmail.com
+Received: by 10.140.87.236 with HTTP; Tue, 25 Mar 2014 00:39:56 -0700 (PDT)
+In-Reply-To: <93509E3A-4FEA-4B14-8D7D-7D0EA1E284DF@schlichtherle.de>
+References: <20140324084517.57be3238@tc.codelutin.home>
+	<93509E3A-4FEA-4B14-8D7D-7D0EA1E284DF@schlichtherle.de>
+Date: Tue, 25 Mar 2014 08:39:56 +0100
+X-Google-Sender-Auth: qlmUSXouOcmzVj5AwUPotmDeHBQ
+Message-ID: <CAKDUN1u17f7cdDm1RnSOd=Qhdq3AtFQQmZbgs4RTnKT5ONHGHA@mail.gmail.com>
+Subject: Re: [ANN] Apache Maven Shared Jarsigner 1.3.2 Released
+From: Anders Hammar <anders@hammar.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113a51045bbc9104f56975ce
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113a51045bbc9104f56975ce
+Content-Type: text/plain; charset=ISO-8859-1
+
+No, the specified groupId is correct. There is a plugin as well but this
+announcement is for the shared component, not the plugin.
+
+/Anders
+
+
+On Tue, Mar 25, 2014 at 8:25 AM, Christian Schlichtherle <
+christian@schlichtherle.de> wrote:
+
+> Hi all,
+>
+> I believe the groupId should be org.apache.maven.plugins, not
+> org.apache.maven.shared.
+>
+> Regards,
+> Christian Schlichtherle
+>
+> Am 24.03.2014 um 08:45 schrieb Tony Chemit <tchemit@apache.org>:
+>
+> > The Maven team is pleased to announce the release of the Apache Maven
+> Jarsigner,
+> > version 1.3.2
+> >
+> > This component provides some utilities to sign/verify jars/files in your
+> Mojos.
+> >
+> > http://maven.apache.org/shared/maven-jarsigner/
+> >
+> > To use the Maven Jarsigner, add the following dependency to your project:
+> >
+> >   <dependency>
+> >     <groupId>org.apache.maven.shared</groupId>
+> >     <artifactId>maven-jarsigner</artifactId>
+> >     <version>1.3.2</version>
+> >   </dependency>
+> >
+> > Release Notes - Maven Shared Components - Version maven-jarsigner-1.3.2
+> >
+> > ** Bug
+> >    * [MSHARED-316] - Can not pass storetype nor storepass to a verify
+> request
+> >
+> > ** Improvement
+> >    * [MSHARED-321] - Mask passwords in logs
+> >
+> > ** Task
+> >    * [MSHARED-322] - Use maven-shared-utils 0.6
+> >
+> > Enjoy,
+> >
+> > -The Maven team
+> >
+> > tony.
+>
+>
+
+--001a113a51045bbc9104f56975ce--
+

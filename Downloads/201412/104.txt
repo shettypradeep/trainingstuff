@@ -1,0 +1,308 @@
+From users-return-138067-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Dec 19 14:12:22 2014
+Return-Path: <users-return-138067-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id ED9A39BBC
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 19 Dec 2014 14:12:22 +0000 (UTC)
+Received: (qmail 32304 invoked by uid 500); 19 Dec 2014 14:12:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 32225 invoked by uid 500); 19 Dec 2014 14:12:20 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 32214 invoked by uid 99); 19 Dec 2014 14:12:20 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 19 Dec 2014 14:12:20 +0000
+X-ASF-Spam-Status: No, hits=2.4 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of shailendra_01@outlook.com designates 65.54.190.23 as permitted sender)
+Received: from [65.54.190.23] (HELO BAY004-OMC1S12.hotmail.com) (65.54.190.23)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 19 Dec 2014 14:12:15 +0000
+Received: from BAY169-W4 ([65.54.190.59]) by BAY004-OMC1S12.hotmail.com over TLS secured channel with Microsoft SMTPSVC(7.5.7601.22751);
+	 Fri, 19 Dec 2014 06:11:54 -0800
+X-TMN: [oJaUXQ/P7tVlnIl2a/PwZkmS9peuE0i8]
+X-Originating-Email: [shailendra_01@outlook.com]
+Message-ID: <BAY169-W490D580D4A136D45A8AEF816B0@phx.gbl>
+Content-Type: multipart/alternative;
+	boundary="_4e7310bb-51bc-41ad-99c1-feed7bfd53d5_"
+From: shailendra singh <shailendra_01@outlook.com>
+To: Maven Users List <users@maven.apache.org>
+Subject: RE: Creating a jar and a war from a war project
+Date: Fri, 19 Dec 2014 14:11:54 +0000
+Importance: Normal
+In-Reply-To: <5494238F.9090101@artifact-software.com>
+References: <BAY169-W128B7DCDE93E03F45D4BEAD816B0@phx.gbl>
+ <BAY169-W750C76E0E12567F4D01B53816B0@phx.gbl>
+ <op.xq3xpwizkdkhrr@robertscholte.dynamic.ziggo.nl>
+ <BAY169-W35EE506754DC6459CEEFDC816B0@phx.gbl>
+ <op.xq31koockdkhrr@robertscholte.dynamic.ziggo.nl>,<5494238F.9090101@artifact-software.com>
+MIME-Version: 1.0
+X-OriginalArrivalTime: 19 Dec 2014 14:11:54.0979 (UTC) FILETIME=[BE419330:01D01B95]
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--_4e7310bb-51bc-41ad-99c1-feed7bfd53d5_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+This page describes my problem -
+
+https://github.com/koyadume/piston-master/wiki/App
+
+- Shailendra
+
+> Date: Fri=2C 19 Dec 2014 08:09:35 -0500
+> From: rwheeler@artifact-software.com
+> To: users@maven.apache.org
+> Subject: Re: Creating a jar and a war from a war project
+>=20
+> Starting with an explanation of what you are trying to accomplish rather=
+=20
+> than with what problem you are experiencing=2C usually makes the problem=
+=20
+> easier to solve and makes the advice you get actually helpful.
+>=20
+> What are you trying to do that makes your requirements so non-standard?
+>=20
+> If you are just trying to separate the war from the code=2C this is prett=
+y=20
+> standard and a good idea.
+> You make 2 projects=2C one to make the jar and another to make the war.
+> Both become trivial examples of maven projects and do not require any=20
+> crazy plug-in configurations.
+> The war has a dependency on the jar.
+>=20
+> If you want to install the jar separately from your war(jar not included=
+=20
+> the war)=2C make the jar dependency in your war POM as scope "provided".
+> Maven will not put any jar contents in the war file and will leave it up=
+=20
+> to the Servlet container to find the classes.
+> The jar is nothing special and all of the components will be where they=20
+> are supposed to be and you will have no trouble when you try to run your=
+=20
+> app.
+>=20
+> http://blog.artifact-software.com/tech/?tag=3Dmaven has some articles tha=
+t=20
+> I wrote on making multi-project application work with Maven with this=20
+> sort of separation of libraries from war configuration.
+>=20
+> Ron
+>=20
+> On 19/12/2014 5:18 AM=2C Robert Scholte wrote:
+> > Re-reading your request...
+> >
+> > bq. Jar
+> >     - This should contain all the class files and dependencies of war=20
+> > project. However dependencies should be copied under lib folder of=20
+> > this jar and should not be in unpacked form.
+> >
+> > I hope you are aware that this conflicts with the jar-specs. The=20
+> > classes inside the lib/*.jars won't end up on the classpath=2C which=20
+> > makes this jar useless.
+> > I'd strongly advice you not to solve it as you described.
+> >
+> > thanks=2C
+> > Robert
+> >
+> > Op Fri=2C 19 Dec 2014 10:33:19 +0100 schreef shailendra singh=20
+> > <shailendra_01@outlook.com>:
+> >
+> >> Hi=2C
+> >>
+> >> Thank you for your response.
+> >>
+> >> I am already aware about these two parameters.
+> >>
+> >> I don't thing 'archiveClasses' parameter will be of any help in my cas=
+e.
+> >>
+> >> I had tried to use 'attachClasses' initially but I could not figure=20
+> >> out how to pull war dependencies (and that too in a lib folder) in=20
+> >> the jar file which will be generated by setting this parameter to true=
+.
+> >>
+> >> So I have no solution for my problem yet.
+> >>
+> >> Thanks
+> >> Shailendra
+> >>
+> >>> To: users@maven.apache.org
+> >>> Subject: Re: Creating a jar and a war from a war project
+> >>> Date: Fri=2C 19 Dec 2014 09:54:58 +0100
+> >>> From: rfscholte@apache.org
+> >>>
+> >>> Hi=2C
+> >>>
+> >>> have a look at the following parameters of the manve-war plugin:
+> >>> - archiveClasses[1]
+> >>> - attachClasses[2]
+> >>>
+> >>> I suggest *not* to use the maven-assembly-plugin in this case. It'll=
+=20
+> >>> make
+> >>> things over-complex.
+> >>>
+> >>> thanks=2C
+> >>> Robert
+> >>>
+> >>> [1]
+> >>> http://maven.apache.org/plugins/maven-war-plugin/war-mojo.html#archiv=
+eClasses=20
+> >>>
+> >>> [2]
+> >>> http://maven.apache.org/plugins/maven-war-plugin/war-mojo.html#attach=
+Classes=20
+> >>>
+> >>>
+> >>>
+> >>> Op Fri=2C 19 Dec 2014 08:03:22 +0100 schreef shailendra singh
+> >>> <shailendra_01@outlook.com>:
+> >>>
+> >>> > Hi=2C
+> >>> >
+> >>> > For some reason I am struggling to
+> >>> > create a war and a jar from a maven war project. I want to create=20
+> >>> these
+> >>> > two artifacts from my maven war project with following requirements=
+ -
+> >>> >
+> >>> > Jar
+> >>> >  - This should contain all the class files and dependencies of war
+> >>> > project. However dependencies should be copied under lib folder of=
+=20
+> >>> this
+> >>> > jar and should not be in unpacked form. This part is giving me=20
+> >>> problem.
+> >>> >
+> >>> > War
+> >>> >  - For war I simply want to have static artifacts and nothing=20
+> >>> which is
+> >>> > present under WEB-INF folder. I am able to achieve this using=20
+> >>> maven war
+> >>> > plugin.
+> >>> >
+> >>> > Here is the code present under <build> tag of my pom.xml -
+> >>> > <build>
+> >>> >         <plugins>
+> >>> >             <plugin>
+> >>> > <artifactId>maven-compiler-plugin</artifactId>
+> >>> >                 <configuration>
+> >>> >                     <source>1.8</source>
+> >>> >                     <target>1.8</target>
+> >>> >                 </configuration>
+> >>> >             </plugin>
+> >>> >             <plugin>
+> >>> > <artifactId>maven-assembly-plugin</artifactId>
+> >>> >                 <configuration>
+> >>> >                     <descriptors>
+> >>> > <descriptor>assembly.xml</descriptor>
+> >>> >                     </descriptors>
+> >>> > <appendAssemblyId>false</appendAssemblyId>
+> >>> >                     <archive>
+> >>> >                         <manifest>
+> >>> > <addClasspath>true</addClasspath>
+> >>> > <classpathPrefix>lib/</classpathPrefix>
+> >>> >                         </manifest>
+> >>> >                     </archive>
+> >>> >                 </configuration>
+> >>> >                 <executions>
+> >>> >                     <execution>
+> >>> > <id>jar-with-dependencies-in-lib</id>
+> >>> > <phase>package</phase>
+> >>> >                         <goals>
+> >>> > <goal>single</goal>
+> >>> >                         </goals>
+> >>> >                     </execution>
+> >>> >                 </executions>
+> >>> >             </plugin>
+> >>> >             <plugin>
+> >>> > <artifactId>maven-war-plugin</artifactId>
+> >>> >                 <configuration>
+> >>> > <packagingExcludes>WEB-INF/</packagingExcludes>
+> >>> > <failOnMissingWebXml>false</failOnMissingWebXml>
+> >>> >                 </configuration>
+> >>> >             </plugin>
+> >>> >
+> >>> >         </plugins>
+> >>> >     </build>
+> >>> >
+> >>> > Here is content of assembly.xml file which is located directly unde=
+r
+> >>> > project root directory -
+> >>> >
+> >>> > <assembly
+> >>> >=20
+> >>> xmlns=3D"http://maven.apache.org/plugins/maven-assembly-plugin/assemb=
+ly/1.1.2"
+> >>> >     xmlns:xsi=3D"http://www.w3.org/2001/XMLSchema-instance"
+> >>> >=20
+> >>> xsi:schemaLocation=3D"http://maven.apache.org/plugins/maven-assembly-=
+plugin/assembly/1.1.2
+> >>> > http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+> >>> >     <id>jar-with-dependencies-in-lib</id>
+> >>> >     <formats>
+> >>> >         <format>jar</format>
+> >>> >     </formats>
+> >>> > <includeBaseDirectory>false</includeBaseDirectory>
+> >>> >     <fileSets>
+> >>> >         <fileSet>
+> >>> >=20
+> >>> <directory>target/${project.artifactId}-${project.version}/WEB-INF/li=
+b</directory>
+> >>> >             <includes>
+> >>> >=20
+> >>> <include>target/${project.artifactId}-${project.version}/WEB-INF/clas=
+ses</include>
+> >>> >               </includes>
+> >>> >         </fileSet>
+> >>> >     </fileSets>
+> >>> > </assembly>
+> >>> >
+> >>> > I
+> >>> >  feel that I don't need maven-war-plugin at all and both the=20
+> >>> artifacts
+> >>> > can be created using maven assembly plugin only. However I am=20
+> >>> unable to
+> >>> > figure out how to achieve this.
+> >>> >
+> >>> > - Shailendra
+> >>> >
+> >>>
+> >>> ---------------------------------------------------------------------
+> >>> To unsubscribe=2C e-mail: users-unsubscribe@maven.apache.org
+> >>> For additional commands=2C e-mail: users-help@maven.apache.org
+> >>>
+> >>
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe=2C e-mail: users-unsubscribe@maven.apache.org
+> > For additional commands=2C e-mail: users-help@maven.apache.org
+> >
+> >
+>=20
+>=20
+> --=20
+> Ron Wheeler
+> President
+> Artifact Software Inc
+> email: rwheeler@artifact-software.com
+> skype: ronaldmwheeler
+> phone: 866-970-2435=2C ext 102
+>=20
+>=20
+> ---------------------------------------------------------------------
+> To unsubscribe=2C e-mail: users-unsubscribe@maven.apache.org
+> For additional commands=2C e-mail: users-help@maven.apache.org
+>=20
+ 		 	   		  =
+
+--_4e7310bb-51bc-41ad-99c1-feed7bfd53d5_--
+

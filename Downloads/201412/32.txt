@@ -1,0 +1,137 @@
+From users-return-138000-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Dec 12 16:34:00 2014
+Return-Path: <users-return-138000-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6BAB8F8C4
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 12 Dec 2014 16:34:00 +0000 (UTC)
+Received: (qmail 46034 invoked by uid 500); 12 Dec 2014 16:33:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 45954 invoked by uid 500); 12 Dec 2014 16:33:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 45943 invoked by uid 99); 12 Dec 2014 16:33:58 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Dec 2014 16:33:57 +0000
+X-ASF-Spam-Status: No, hits=3.9 required=5.0
+	tests=FORGED_YAHOO_RCVD,HTML_MESSAGE,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: error (nike.apache.org: encountered temporary error during SPF processing of domain of jeff_gaer@yahoo.com)
+Received: from [162.253.133.43] (HELO mwork.nabble.com) (162.253.133.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Dec 2014 16:33:30 +0000
+Received: from msam.nabble.com (unknown [162.253.133.85])
+	by mwork.nabble.com (Postfix) with ESMTP id 34262D83C30
+	for <users@maven.apache.org>; Fri, 12 Dec 2014 08:32:09 -0800 (PST)
+Date: Fri, 12 Dec 2014 09:32:08 -0700 (MST)
+From: jeff_gaer <jeff_gaer@yahoo.com>
+To: users@maven.apache.org
+Message-ID: <1418401901.75445.YahooMailNeo@web181404.mail.ne1.yahoo.com>
+In-Reply-To: <CAPCUOdFGVsnZhMMROj=+2+goKz2wr7EYFW1re_u0h82BpcqWMg@mail.gmail.com>
+References: <1418400695247-5818942.post@n5.nabble.com> <CAPCUOdFGVsnZhMMROj=+2+goKz2wr7EYFW1re_u0h82BpcqWMg@mail.gmail.com>
+Subject: Re: Errors that look like the compiler is using 1.5 jdk
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_327458_390917726.1418401928597"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+------=_Part_327458_390917726.1418401928597
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Thank you, that was it. 
+
+
+
+
+On Friday, December 12, 2014 10:23 AM, Adrien Rivard [via Maven] <ml-node+s40175n5818946h64@n5.nabble.com> wrote:
+ 
+
+
+Hi, 
+
+Your are probably missing 
+
+        <configuration> 
+          <source>1.7</source> 
+          <target>1.7</target> 
+        </configuration> 
+
+
+Basically you are using the 1.7 compiler to compile java5 source code 
+to java 5 byte code (1.5 is the default value for source/target IIRC) 
+
+
+
+
+On Fri, Dec 12, 2014 at 5:11 PM, jeff_gaer <[hidden email]> wrote: 
+
+
+> I am building with jdk 1.7 but getting an compiler error that suggests mvn 
+> is 
+> using the 1.5 jdk ( which is not installed). 
+> 
+>  error: multi-catch statement is not supported in -source 1.5 
+> 
+> Here is my environment 
+> 
+> Maven home: /opt/apache-maven-3.0.4 
+> Java version: 1.7.0_25, vendor: Oracle Corporation 
+> Java home: /usr/java/jdk1.7.0_25/jre 
+> Default locale: en_US, platform encoding: UTF-8 
+> OS name: "linux", version: "2.6.18-274.el5", arch: "i386", family: "unix" 
+> 
+> I have even tried specifically specifying the JDK version in the compile 
+> plugin 
+> 
+>   <plugins> 
+>          <plugin> 
+>             <groupId>org.apache.maven.plugins</groupId> 
+>             <artifactId>maven-compiler-plugin</artifactId> 
+>             <version>3.2</version> 
+>          <configuration> 
+>           <verbose>true</verbose> 
+>           <fork>true</fork> 
+>           <executable>${JAVA_HOME}/bin/javac</executable> 
+>           <compilerVersion>1.7</compilerVersion> 
+>         </configuration> 
+>          </plugin> 
+> 
+> 
+> 
+> 
+> 
+> 
+> -- 
+> View this message in context: 
+> http://maven.40175.n5.nabble.com/Errors-that-look-like-the-compiler-is-using-1-5-jdk-tp5818942.html
+> Sent from the Maven - Users mailing list archive at Nabble.com. 
+> 
+> --------------------------------------------------------------------- 
+> To unsubscribe, e-mail: [hidden email] 
+> For additional commands, e-mail: [hidden email] 
+> 
+> 
+
+-- 
+Adrien Rivard 
+
+
+________________________________
+ 
+If you reply to this email, your message will be added to the discussion below:http://maven.40175.n5.nabble.com/Errors-that-look-like-the-compiler-is-using-1-5-jdk-tp5818942p5818946.html 
+To unsubscribe from Errors that look like the compiler is using 1.5 jdk, click here.
+NAML 
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Errors-that-look-like-the-compiler-is-using-1-5-jdk-tp5818942p5818950.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+------=_Part_327458_390917726.1418401928597--
+

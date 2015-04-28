@@ -1,0 +1,115 @@
+From users-return-137801-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Nov 22 20:37:12 2014
+Return-Path: <users-return-137801-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id A34EE10A3B
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 22 Nov 2014 20:37:12 +0000 (UTC)
+Received: (qmail 23189 invoked by uid 500); 22 Nov 2014 20:37:11 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 23103 invoked by uid 500); 22 Nov 2014 20:37:11 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 23091 invoked by uid 99); 22 Nov 2014 20:37:10 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 22 Nov 2014 20:37:10 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,WEIRD_PORT
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of vektor.knight@gmail.com designates 209.85.217.180 as permitted sender)
+Received: from [209.85.217.180] (HELO mail-lb0-f180.google.com) (209.85.217.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 22 Nov 2014 20:37:06 +0000
+Received: by mail-lb0-f180.google.com with SMTP id l4so167957lbv.39
+        for <users@maven.apache.org>; Sat, 22 Nov 2014 12:35:15 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=J5QW9BgRHzN9E88nbNGdVXSdk46Ji9vfGVCzJm4RoCY=;
+        b=ur2kebXL0MxZq+jJhbzvc9Q+jqagSKipZrfuNF1ISd8rLI5qV6ywsfwwL3wqffOEdN
+         BdTM2m26MjiO7Mgjws6J5ppHoWPN7YknIBFzGtuIvCvwv1yq5Fnc2gR2mJ/JaQ4xgIbF
+         PKvK2ftYtxEx4oX+4mGrBxvoUCVTUsda0oxRNhkI+Pkc/tImkdXkf4B5WBfaVce4IHbT
+         gk5aGk9HNuXLfyOHIBD4y2vMUQ/d3uc2dcXBz5MYgm1zs8JO7eF9oBHze/p3Qj7oba35
+         dwbUKM6OoNZIFl4aABHvMufVrj8n25N5pdVYqbglxpm+IGvVCg7jaZ5RcchYdaWWhd17
+         zoSg==
+MIME-Version: 1.0
+X-Received: by 10.112.235.135 with SMTP id um7mr11243176lbc.96.1416688515273;
+ Sat, 22 Nov 2014 12:35:15 -0800 (PST)
+Received: by 10.112.135.226 with HTTP; Sat, 22 Nov 2014 12:35:15 -0800 (PST)
+In-Reply-To: <CAA-OJnhZBpcXbBZbKEqrauS+DZ8vHkk7gpS_BHreKJSgMYMQfw@mail.gmail.com>
+References: <CAA-OJnhZBpcXbBZbKEqrauS+DZ8vHkk7gpS_BHreKJSgMYMQfw@mail.gmail.com>
+Date: Sat, 22 Nov 2014 13:35:15 -0700
+Message-ID: <CAMQUeZQ=Mvidk3HMeMpTBa6ivLZqni=sz7+ovidVcrraZ793qg@mail.gmail.com>
+Subject: Re: deploying war artifact to nexus is failing; packaging as jar works.
+From: Sartaj Hundal <vektor.knight@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11c3d774b5d9710508787f99
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c3d774b5d9710508787f99
+Content-Type: text/plain; charset=UTF-8
+
+You're getting an IOException (unexpected end of stream). Are you using the
+right URL? Just an idea. You might have to set some property to 'false' so
+that maven actually starts reading. Sorry if I couldn't be more help, it's
+been awhile.. but your problem is definitely to do with IO.
+
+On Sat, Nov 22, 2014 at 3:47 AM, John Smith <jszjsmith@googlemail.com>
+wrote:
+
+> Hello,
+>
+> I'm trying to distribute my war's artifact to nexus but I'm getting the
+> following error below. If I change the packaging in the pom.xml to jar it
+> will deploy fine.
+>
+> Can anyone see what I am doing wrong?
+>
+> thanks,
+> John.
+>
+> [INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ my-webapp
+> ---
+> [INFO] Downloading:
+>
+> http://nexus.lan:38080/nexus/content/repositories/snapshots/me/john/my-webapp/0.0.1-SNAPSHOT/maven-metadata.xml
+> [INFO] Downloaded:
+>
+> http://nexus.lan:38080/nexus/content/repositories/snapshots/me/john/my-webapp/0.0.1-SNAPSHOT/maven-metadata.xml
+> (776 B at 1.9 KB/sec)
+> [INFO] Uploading:
+>
+> http://nexus.lan:38080/nexus/content/repositories/snapshots/me/john/my-webapp/0.0.1-SNAPSHOT/my-webapp-0.0.1-20141122.103704-6.war
+> [INFO] Uploading:
+>
+> http://nexus.lan:38080/nexus/content/repositories/snapshots/me/john/my-webapp/0.0.1-SNAPSHOT/my-webapp-0.0.1-20141122.103704-6.pom
+> [INFO] Uploaded:
+>
+> http://nexus.lan:38080/nexus/content/repositories/snapshots/me/john/my-webapp/0.0.1-SNAPSHOT/my-webapp-0.0.1-20141122.103704-6.pom
+> (5 KB at 197.5 KB/sec)
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] BUILD FAILURE
+> [INFO]
+> ------------------------------------------------------------------------
+> [INFO] Total time: 3.133 s
+> [INFO] Finished at: 2014-11-22T10:37:04+00:00
+> [INFO] Final Memory: 14M/244M
+> [INFO]
+> ------------------------------------------------------------------------
+> [ERROR] Failed to execute goal
+> org.apache.maven.plugins:maven-deploy-plugin:2.8.2:deploy (default-deploy)
+> on project my-webapp: Failed to deploy artifacts: Could not transfer
+> artifact me.john:my-webapp:war:0.0.1-20141122.103704-6 from/to My_Snapshots
+> (http://nexus.lan:38080/nexus/content/repositories/snapshots/): unexpected
+> end of stream -> [Help 1]
+>
+
+--001a11c3d774b5d9710508787f99--
+

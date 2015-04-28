@@ -1,0 +1,82 @@
+From users-return-136560-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Jun 12 05:47:27 2014
+Return-Path: <users-return-136560-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 6190711C78
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 12 Jun 2014 05:47:27 +0000 (UTC)
+Received: (qmail 26944 invoked by uid 500); 12 Jun 2014 05:47:25 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 26849 invoked by uid 500); 12 Jun 2014 05:47:22 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 26838 invoked by uid 99); 12 Jun 2014 05:47:22 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 12 Jun 2014 05:47:22 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of ltheussl@gmail.com designates 74.125.82.48 as permitted sender)
+Received: from [74.125.82.48] (HELO mail-wg0-f48.google.com) (74.125.82.48)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 12 Jun 2014 05:47:16 +0000
+Received: by mail-wg0-f48.google.com with SMTP id n12so658528wgh.31
+        for <users@maven.apache.org>; Wed, 11 Jun 2014 22:46:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=message-id:date:from:user-agent:mime-version:to:subject:references
+         :in-reply-to:content-type:content-transfer-encoding;
+        bh=e1R6oMu6+tWsbXV+r5W6eAOILZogfC/hoXfEfcI4K6w=;
+        b=rBlacHDSsEyhgiKXOCsBDiLG4XoHfy9w7Ln2A0Rb8W2B2uT2FJqReTW3b5rCLLuKWc
+         6RKyruO7QNXyJr5IlRT+fHLBSiqfLZCxi0zmdcm4dZv0jkO206Z9Wbpx0zaKzvIgaJlx
+         LVaCVW1ueZMn6lR64dBMPD0av2z5wrB9Qs6EMs4zHvF99SctdRfDvL/TW/6MgjFSMV21
+         NGoz+XbIOj9d0fxqtLXNstzojUgK5wqwaLE4c7tKZO8be6jhOTGQ7DeGjnCDxRlTQ/dB
+         pzHlcUhY8+PtHgZo/EM4tB7Wxwxutef88LiNwQG8o1rKfeGurltUIoR5k8HKKUrongaB
+         X0iQ==
+X-Received: by 10.180.102.10 with SMTP id fk10mr3061446wib.42.1402552015427;
+        Wed, 11 Jun 2014 22:46:55 -0700 (PDT)
+Received: from [131.130.23.104] (puck.physik.univie.ac.at. [131.130.23.104])
+        by mx.google.com with ESMTPSA id s9sm2489502ees.33.2014.06.11.22.46.54
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 11 Jun 2014 22:46:54 -0700 (PDT)
+Message-ID: <53993E9F.6000300@gmail.com>
+Date: Thu, 12 Jun 2014 07:46:07 +0200
+From: Lukas Theussl <ltheussl@gmail.com>
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:24.0) Gecko/20100101 Thunderbird/24.1.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: Re: Breadcrumb inheritance in site.xml
+References: <CALhtWkcJvzC0xg9X9vMj-td7yiCXf7K6-akkzO5Hk_jNq_CnfQ@mail.gmail.com>
+In-Reply-To: <CALhtWkcJvzC0xg9X9vMj-td7yiCXf7K6-akkzO5Hk_jNq_CnfQ@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+
+that wasn't possible during my time of activity, not sure if anything 
+changed since: 
+http://mail-archives.apache.org/mod_mbox/maven-users/201104.mbox/%3C4DA464C8.2060707@apache.org%3E
+
+Cheers,
+-Lukas
+
+
+Am 12.06.2014 04:52, schrieb Benson Margulies:
+> Is there a way to reset the breadcrumbs and not inherit them from a parent/
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,157 @@
+From users-return-136531-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Jun  4 20:17:44 2014
+Return-Path: <users-return-136531-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 360331081F
+	for <apmail-maven-users-archive@www.apache.org>; Wed,  4 Jun 2014 20:17:44 +0000 (UTC)
+Received: (qmail 83442 invoked by uid 500); 4 Jun 2014 20:17:42 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 83355 invoked by uid 500); 4 Jun 2014 20:17:42 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 83344 invoked by uid 99); 4 Jun 2014 20:17:42 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 04 Jun 2014 20:17:42 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of paulus.benedictus@gmail.com designates 209.85.216.47 as permitted sender)
+Received: from [209.85.216.47] (HELO mail-qa0-f47.google.com) (209.85.216.47)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 04 Jun 2014 20:17:39 +0000
+Received: by mail-qa0-f47.google.com with SMTP id s7so29334qap.6
+        for <users@maven.apache.org>; Wed, 04 Jun 2014 13:17:15 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=DWmO+POlVPIyUluPxfIhzcY6m6JHdcGKGMJ8iPngmCY=;
+        b=LFSiu7nDaruu2vjuAOMPUXHUzJQSq3oCSDTqGU1yqu6zP1Zjd8N2x/xiJOL1Ss8VHm
+         O0agaDvRuxP3VH1Zas9cTpzkFHtMK19Cjkb/4eSXrzqSCKfmkv878oeOuVaufRi9dfO7
+         ALhoeSbd6Ry+qM0WxuLBsn/INKhD8OsD6AeDLPhCeP5ELudcidCBJMAywl5KmXSVZUAX
+         5Zj6R97HWpB8crzK8s9jUIyKz6+TSrDQubRq8fAiy47MAEEPwxqUlZgg0mxNsJaLOoeK
+         7VJg0G5afdbBuqvkivh2jhsPVD0AmqcEdtlMcDPNeg2DfXE49qZnv09/9nSenawcLPrx
+         UZlQ==
+MIME-Version: 1.0
+X-Received: by 10.140.100.198 with SMTP id s64mr70991566qge.106.1401913034910;
+ Wed, 04 Jun 2014 13:17:14 -0700 (PDT)
+Sender: paulus.benedictus@gmail.com
+Received: by 10.96.21.228 with HTTP; Wed, 4 Jun 2014 13:17:14 -0700 (PDT)
+In-Reply-To: <538F7CCD.1040002@artifact-software.com>
+References: <0C723FEB5B4E5642B25B451BA57E2730A29DFF4A@S1P5DAG3C.EXCHPROD.USA.NET>
+	<CABLGb9wseqSagrFtUvNgc1aREcsAx=PLKdQD_5-rLAFSAOLTWA@mail.gmail.com>
+	<CAPCjjnFTmb9aZO6a9W6SpmzUH5U=JaUT9qkpQ=mViabkQszOxQ@mail.gmail.com>
+	<CABLGb9z40sOaRgcbmQUcxAYDcakGfUJ40QTdTes+uq9bLcDvqQ@mail.gmail.com>
+	<1401896835575-5794892.post@n5.nabble.com>
+	<CA+nPnMxrQp4N34xnHQgPMS6F1jjiJUCMzmsyT2ZnOoiwaWrRpA@mail.gmail.com>
+	<6EAF4A65-1CA6-43DB-ABD0-50EBB0742373@takari.io>
+	<538F7CCD.1040002@artifact-software.com>
+Date: Wed, 4 Jun 2014 15:17:14 -0500
+X-Google-Sender-Auth: cQuAZsmEtSIJf6mQy-IMGE9PhkU
+Message-ID: <CABLGb9x2hiDHoWO4-WgQqXJk5HU2Hd7+nQ1YO_zKZU+dgDJpnA@mail.gmail.com>
+Subject: Re: Controlling order of plugin execution
+From: Paul Benedict <pbenedict@apache.org>
+To: Maven Users List <users@maven.apache.org>, rwheeler@artifact-software.com
+Content-Type: multipart/alternative; boundary=001a11c16ba873b33604fb08505d
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11c16ba873b33604fb08505d
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+I, myself, have also found the lack of ordered plugin execution to be
+wanting. Stephen does have a point: complex behavior is likely be better
+encapsulated in a new plugin. I don't disagree, but that route can be steep
+and I don't want to be detoured into always writing a new plugin. Many
+times such behavior can be emulated simply by aggregating the use of
+plugins in an ordered fashion. For example, one plugin executes a SQL
+script to setup a database, the next plugin executes a Java program to
+populate the database according to logic. I've tried that before and can't
+because such plugin ordering doesn't exist. So if there is an easy way to
+bring this minor enhancement to the Maven community, in 3.x, I think we
+should.
+
+
+Cheers,
+Paul
+
+
+On Wed, Jun 4, 2014 at 3:08 PM, Ron Wheeler <rwheeler@artifact-software.com=
+>
+wrote:
+
+> "We are not a cult."
+> If we already have a "we", we are half way there!
+> Just short a charismatic leader and a "Book of the Way".
+>
+> Ron
+>
+> On 04/06/2014 3:22 PM, Jason van Zyl wrote:
+>
+>> On Jun 4, 2014, at 12:07 PM, Stephen Connolly <
+>> stephen.alan.connolly@gmail.com> wrote:
+>>
+>>  That's usually a sign that you have wandered off The Maven Way=E2=84=A2
+>>>
+>>>  No it's not. They have valid points and the implementation is deficien=
+t
+>> in this regard. Everything that's presently here is not immutable. Calli=
+ng
+>> it "The Maven Way" doesn't make it usable or without flaws. I'm not even
+>> sure where this saying came from but we're not a cult.
+>>
+>>  There are ways back onto the blessed path... they typically involve
+>>> writing
+>>> a plugin
+>>>
+>>>  Thanks,
+>>
+>> Jason
+>>
+>> ----------------------------------------------------------
+>> Jason van Zyl
+>> Founder,  Apache Maven
+>> http://twitter.com/jvanzyl
+>> http://twitter.com/takari_io
+>> ---------------------------------------------------------
+>>
+>> I never make the mistake of arguing with people for whose opinions I hav=
+e
+>> no respect.
+>>
+>> -- Edward Gibbon
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>
+> --
+> Ron Wheeler
+> President
+> Artifact Software Inc
+> email: rwheeler@artifact-software.com
+> skype: ronaldmwheeler
+> phone: 866-970-2435, ext 102
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+> For additional commands, e-mail: users-help@maven.apache.org
+>
+>
+
+--001a11c16ba873b33604fb08505d--
+

@@ -1,0 +1,193 @@
+From users-return-135506-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Feb 15 18:46:17 2014
+Return-Path: <users-return-135506-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0AC3C10C33
+	for <apmail-maven-users-archive@www.apache.org>; Sat, 15 Feb 2014 18:46:17 +0000 (UTC)
+Received: (qmail 89944 invoked by uid 500); 15 Feb 2014 18:46:13 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 89837 invoked by uid 500); 15 Feb 2014 18:46:13 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 89829 invoked by uid 99); 15 Feb 2014 18:46:12 -0000
+Received: from minotaur.apache.org (HELO minotaur.apache.org) (140.211.11.9)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 15 Feb 2014 18:46:12 +0000
+Received: from localhost (HELO robertscholte) (127.0.0.1)
+  (smtp-auth username rfscholte, mechanism plain)
+  by minotaur.apache.org (qpsmtpd/0.29) with ESMTP; Sat, 15 Feb 2014 18:46:12 +0000
+Content-Type: text/plain; charset=utf-8; format=flowed; delsp=yes
+To: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Possible build collision between CI snapshot build and Release
+ build
+References: <CAPCjjnE3JLMEEmbMGV2xLCqVsSXhYDvFn+uS_99TQ8qfSKB5tA@mail.gmail.com> <CANWgJS6fxowEQFnYEovvLBPQcSAz6cCeWabPpt9LvMsLHrVm7A@mail.gmail.com> <CAEayHEO=LG639K6tAXkFUk=WK45sRNgmCGRF0EMFY8qs7VO87w@mail.gmail.com> <CAMr6Z4kQgnhRSiJNp-DyxOZ5eFa8FmEWeP2wwuV6rUbPTo9FqQ@mail.gmail.com> <CA+nPnMwck+1XRDvjZ=RzVDoyRpDj28CRVhvaj1msW9=jq5ssJg@mail.gmail.com>
+Date: Sat, 15 Feb 2014 19:46:10 +0100
+MIME-Version: 1.0
+Content-Transfer-Encoding: Quoted-Printable
+From: "Robert Scholte" <rfscholte@apache.org>
+Message-ID: <op.xbb6e8t3kdkhrr@robertscholte>
+In-Reply-To: <CA+nPnMwck+1XRDvjZ=RzVDoyRpDj28CRVhvaj1msW9=jq5ssJg@mail.gmail.com>
+User-Agent: Opera Mail/12.16 (Win32)
+
+Hi,
+
+Isn't it the other way around?
+There's only a critical situation: when the maven-release-plugin has  =
+
+committed the non-SNAPSHOT poms or when it is busy tagging. In such case=
+s  =
+
+the CI can be triggered by SCM changes, but it shouldn't continue since =
+ =
+
+there's a final version.
+I think most CI's have a solution for that. If you want to do it with an=
+  =
+
+enforcer rule, it's not there yet. This requiresSnapshot rule should be =
+ =
+
+active by default, while the m-release-p should disable this rule.
+
+Robert
+
+
+Op Sat, 15 Feb 2014 17:52:14 +0100 schreef Stephen Connolly  =
+
+<stephen.alan.connolly@gmail.com>:
+
+> Or filter commits where the log message starts with m-r-p's prefix
+>
+> On Saturday, 15 February 2014, Stuart McCulloch <mcculls@gmail.com>  =
+
+> wrote:
+>
+>> On 15 February 2014 15:51, Thomas Broyer  =
+
+>> <t.broyer@gmail.com<javascript:;>>
+>> wrote:
+>>
+>> > On Sat, Feb 15, 2014 at 4:18 PM, Baptiste Mathus  =
+
+>> <bmathus@batmat.net<javascript:;>
+>> >
+>> > wrote:
+>> >
+>> > > Hi Dan,
+>> > > Not sure what you mean. You say "CI", are you taking about a  =
+
+>> specific
+>> > > server? If Jenkins for example, wouldn't it then be more a Jenkin=
+s  =
+
+>> user
+>> > ml
+>> > > question?
+>> > >
+>> > > And I don't see how a snapshot build could interfere with another=
+  =
+
+>> build
+>> > > with a release version.
+>> > > Could you give details about your issue so that we can help you?
+>> > >
+>> >
+>> > mvn release:prepare does a first commit with the POM modified with =
+the
+>> > no-SNAPSHOT version, then another commit with the POM modified with=
+  =
+
+>> the
+>> > "next" SNAPSHOT version.
+>> > If a build is triggered for the first commit and basically does a "=
+mvn
+>> > install" or, worse, a "mvn deploy", then it'll end up deploying you=
+r
+>> > release version, the very same that "mvn release:perform" will depl=
+oy  =
+
+>> too
+>> > (very same version information, not necessarily the same artifact: =
+ =
+
+>> might
+>> > not deploy javadoc and sources for example, or the artifact might b=
+e
+>> > slightly different because you have plugins in a profile triggered =
+ =
+
+>> only
+>> on,
+>> > or never on, release builds).
+>> > I think that what Dan referred to as a "CI snapshot build" is the  =
+
+>> kind of
+>> > build triggered by a commit (which generally builds snapshots).
+>>
+>>
+>> Perhaps write a custom enforcer rule (enabled by a profile on CI) tha=
+t
+>> fails the build when the project artifact version is not a snapshot?
+>>
+>>
+>> http://maven.apache.org/enforcer/enforcer-api/writing-a-custom-rule.h=
+tml
+>>
+>> >
+>> > > Cheers
+>> > > Le 15 f=C3=A9vr. 2014 07:01, "Dan Tran" <dantran@gmail.com  =
+
+>> <javascript:;>>
+>> a =C3=A9crit :
+>> > >
+>> > > > Hello
+>> > > >
+>> > > >
+>> > > > It is possible that while release:prepare cutting the tag and C=
+I  =
+
+>> for
+>> > > > snapshot build wakeup at the same time.  Is there a way to prev=
+ent
+>> > this?
+>> > > > like a a profile to fail the build if the version happen to be =
+a
+>> > release
+>> > > > version.  Ie is there a way to detect this in a profile?
+>> > > >
+>> > > > I currently have to keep remind my self to turn off CI snapshot=
+  =
+
+>> build
+>> > > while
+>> > > > release is in progress, and too many to remember.
+>> > > >
+>> > > > Advice is greatly appreciated
+>> > > >
+>> > > > -Dan
+>> > > >
+>> > >
+>> >
+>> > --
+>> > Thomas Broyer
+>> > /t=C9=94.ma.b=CA=81wa.je/ <http://xn--nna.ma.xn--bwa-xxb.je/> <
+>> http://xn--nna.ma.xn--bwa-xxb.je/> <
+>> > http://xn--nna.ma.xn--bwa-xxb.je/>
+>> >
+>>
+>> --
+>> Cheers, Stuart
+>>
+>
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

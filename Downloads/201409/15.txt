@@ -1,0 +1,92 @@
+From users-return-137241-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Sep 11 13:03:00 2014
+Return-Path: <users-return-137241-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 97C9211461
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 11 Sep 2014 13:03:00 +0000 (UTC)
+Received: (qmail 50936 invoked by uid 500); 11 Sep 2014 13:02:58 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 50842 invoked by uid 500); 11 Sep 2014 13:02:58 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 50829 invoked by uid 99); 11 Sep 2014 13:02:58 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 11 Sep 2014 13:02:58 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of stephen.alan.connolly@gmail.com designates 209.85.219.51 as permitted sender)
+Received: from [209.85.219.51] (HELO mail-oa0-f51.google.com) (209.85.219.51)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 11 Sep 2014 13:02:52 +0000
+Received: by mail-oa0-f51.google.com with SMTP id m1so195363oag.38
+        for <users@maven.apache.org>; Thu, 11 Sep 2014 06:02:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=RCjNmOi2Y1dtOnQTIw5p8bnmLNTTnzFgy+vQ+lfjdjs=;
+        b=NltjVR54cDcdZGzifJbmuUwqyuHPBkocZhJ05GGByQZh9Tp14ltLpd/Xq3xf9mX8fV
+         2Eu8q6eRKDg71ykQqvPU2/IgCon5swor82EdcK4T2dne1C2upl264bb8JTkBp0ndm6Ns
+         zwGTaKtq1DssoUNNNE8m2z2hDr1ZD8dlO1/4IJiGgGlVfAoDoss/RhztE0+XBrQQH6kA
+         3/mg6+vLHSB2u0WWJ0fit96O75dxS9nzy7jGA9Ay2FbkYliEZvygEUanDiXIInSaMCDP
+         Ct68rH2EcW6Bf3GXMQzQmTB3qp33DlBFFAu0CF3NUnaslpv8sg33hodKs2sTxOGQnlQC
+         YxXA==
+MIME-Version: 1.0
+X-Received: by 10.60.96.65 with SMTP id dq1mr819140oeb.33.1410440552392; Thu,
+ 11 Sep 2014 06:02:32 -0700 (PDT)
+Received: by 10.60.226.200 with HTTP; Thu, 11 Sep 2014 06:02:32 -0700 (PDT)
+In-Reply-To: <CABnk5p2sW8NezzVOFRMr2Pe_EjHmG1s9-ZbxzRzJ9iYnw7cotQ@mail.gmail.com>
+References: <CABnk5p2sW8NezzVOFRMr2Pe_EjHmG1s9-ZbxzRzJ9iYnw7cotQ@mail.gmail.com>
+Date: Thu, 11 Sep 2014 14:02:32 +0100
+Message-ID: <CA+nPnMzgGPD+TCXgwjZPLiX1iyQ0vb1=EswRV47Qi7kZaGYAGg@mail.gmail.com>
+Subject: Re: Maintaining versions in a multi-module project
+From: Stephen Connolly <stephen.alan.connolly@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e01227b641a40100502c9c887
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e01227b641a40100502c9c887
+Content-Type: text/plain; charset=UTF-8
+
+Use whatever works best for you.
+
+I have some projects where it is better for me to force them all in
+lock-step
+
+I have other projects where I let them run free.
+
+My general rule of thumb: if the modules are in the same GIT repo or the
+same Subversion trunk then they all will end up being released as one
+"atomic" group, so keep the version numbers in sync. If they are in
+different SCM instances then they will be released independently so let
+them run free
+
+On 11 September 2014 09:35, Anuj Agrawal <anujagrawal83@gmail.com> wrote:
+
+> I am working on a multi-module project where I see that some of the module
+> POMs have versions different from the parent POM. Apparently, developers
+> have made changes to some of the modules and updated the version of only
+> those modules.
+>
+> I also see another project where irrespective of which modules have been
+> modified, developers modify the versions of all modules using mvn versions
+> command to keep all of them in-sync.
+>
+> I am new to maven and have started using it only since last six months.
+> Seeing the above mentioned two projects, I am confused what is the right
+> path to take - updating all module versions irrespective of where changes
+> are, or updating only those module versions where something changed.
+>
+> Thanks,
+> Anuj Agrawal
+>
+
+--089e01227b641a40100502c9c887--
+

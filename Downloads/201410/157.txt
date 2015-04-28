@@ -1,0 +1,84 @@
+From users-return-137511-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Oct  9 18:20:43 2014
+Return-Path: <users-return-137511-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 1D87F177E7
+	for <apmail-maven-users-archive@www.apache.org>; Thu,  9 Oct 2014 18:20:43 +0000 (UTC)
+Received: (qmail 43557 invoked by uid 500); 9 Oct 2014 18:20:41 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 43477 invoked by uid 500); 9 Oct 2014 18:20:41 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 43461 invoked by uid 99); 9 Oct 2014 18:20:40 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Oct 2014 18:20:40 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of ljnelson@gmail.com designates 209.85.216.50 as permitted sender)
+Received: from [209.85.216.50] (HELO mail-qa0-f50.google.com) (209.85.216.50)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 09 Oct 2014 18:20:15 +0000
+Received: by mail-qa0-f50.google.com with SMTP id w8so566965qac.37
+        for <users@maven.apache.org>; Thu, 09 Oct 2014 11:20:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=uO7Vw9gv1KoJPZ3sQgsbBdbS2AP+jt9OXrEyU3TZVx0=;
+        b=bjckOrWWuf1+jnqYY0zLaEXyD0w/uTYDLI+nliBOkGIlkp6JUrjobvZXOKw49PNOLD
+         ZHiRv/se1Xrm3AZtaEaJXmQy/Kd/e6tcwum62JzPfwiGAFsERTuZ6BT3OcIwzSWrDMSe
+         W6fyIgkg2eOAI9ExgIOSkllvLCnlJ9XwZn/UquowJqhYpcoRSRkjzw05LcaLxCJmF8cg
+         P0qwJhl/WMhpml0SVQ2s1IC0a0ip94f2qzTQ+que/+ru6bKxKh9sBiG4nfJ1qNpJ9Mc7
+         /EKAvyIIle7UB1w71IFotr9fNI+TQ8t3OfzZ9STrkXNS/F8l9bXZSvUY7nNbw58cbtRd
+         r+bw==
+MIME-Version: 1.0
+X-Received: by 10.229.94.135 with SMTP id z7mr26740886qcm.26.1412878814127;
+ Thu, 09 Oct 2014 11:20:14 -0700 (PDT)
+Received: by 10.96.194.135 with HTTP; Thu, 9 Oct 2014 11:20:14 -0700 (PDT)
+In-Reply-To: <CAJZRQKwNQ_bKHrycTDrbSB7aGTFemuyhTpNARinN+WpCkLK-mw@mail.gmail.com>
+References: <1412793888704-5808128.post@n5.nabble.com>
+	<m141i8$8q2$1@ger.gmane.org>
+	<1412795469876-5808146.post@n5.nabble.com>
+	<CAJZRQKz=jn+WgKe=zoNG4sshCy25uoYveg3kc6MbCZAW=okUNQ@mail.gmail.com>
+	<1412866277383-5808264.post@n5.nabble.com>
+	<CAJZRQKwNQ_bKHrycTDrbSB7aGTFemuyhTpNARinN+WpCkLK-mw@mail.gmail.com>
+Date: Thu, 9 Oct 2014 11:20:14 -0700
+Message-ID: <CAHNdxuk4cO9iw0L5qEFei-6J8wNvQj2+cx5nJ976XON=tpuj2Q@mail.gmail.com>
+Subject: Re: Why do running modules in parallel take longer to execute than
+ running them in sequence?
+From: Laird Nelson <ljnelson@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113378b4d3ae050505017b2a
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113378b4d3ae050505017b2a
+Content-Type: text/plain; charset=UTF-8
+
+On Thu, Oct 9, 2014 at 10:48 AM, Kristian Rosenvold <
+kristian.rosenvold@gmail.com> wrote:
+
+> I suggest you set forkCount to 1 on surefire/failsafe, which will run
+> all the tests in separate VMs and *also* actually make the "argLine"
+> command work. Currently, you are not using 4GB for your tests.
+>
+
+I also wrote a blog entry on this subject some time ago because it was
+baffling me for a good long while:
+http://lairdnelson.wordpress.com/2013/09/25/concurrent-testing/  I hope it
+helps.
+
+Best,
+Laird
+
+-- 
+http://about.me/lairdnelson
+
+--001a113378b4d3ae050505017b2a--
+

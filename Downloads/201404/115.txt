@@ -1,0 +1,74 @@
+From users-return-136126-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Apr 11 20:33:29 2014
+Return-Path: <users-return-136126-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 9A73B10EFD
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 11 Apr 2014 20:33:29 +0000 (UTC)
+Received: (qmail 85837 invoked by uid 500); 11 Apr 2014 20:33:20 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 85496 invoked by uid 500); 11 Apr 2014 20:33:12 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 84537 invoked by uid 99); 11 Apr 2014 20:33:08 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 11 Apr 2014 20:33:08 +0000
+X-ASF-Spam-Status: No, hits=1.0 required=5.0
+	tests=SPF_SOFTFAIL
+X-Spam-Check-By: apache.org
+Received-SPF: softfail (athena.apache.org: transitioning domain of pat.podenski@gmail.com does not designate 216.139.236.26 as permitted sender)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 11 Apr 2014 20:33:03 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <pat.podenski@gmail.com>)
+	id 1WYi7u-0007ju-0N
+	for users@maven.apache.org; Fri, 11 Apr 2014 13:32:42 -0700
+Date: Fri, 11 Apr 2014 13:32:42 -0700 (PDT)
+From: stug23 <pat.podenski@gmail.com>
+To: users@maven.apache.org
+Message-ID: <1397248361973-5790942.post@n5.nabble.com>
+Subject: Better way to capture output from a Maven job
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I have a script that needs to obtain the three-part numerical version from a
+Maven pom.xml. I am using the Maven help plugin to the version number as
+follows:
+
+mvn help:evaluate -Dexpression=project.version
+
+Of course when running the Maven job, you get a great deal of output lines
+and towards the end the project.version number. In my script I use a grep to
+snatch the three-part numerical version from the Maven output:
+
+mvn help:evaluate -Dexpression=project.version | grep -o
+'^[0-9]*\.[0-9]*\.[0-9]*'
+
+So if I have a pom.xml with project/version = 1.2.3-SNAPSHOT, the command
+above returns the result '1.2.3'
+
+While this works okay, I would have hoped for a better way to return a value
+from Maven. Is there a return/result parameter of some sort such that I
+don't have to pick the result out of the entire text output of the Maven job
+execution?
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/Better-way-to-capture-output-from-a-Maven-job-tp5790942.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

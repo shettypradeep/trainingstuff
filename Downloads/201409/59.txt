@@ -1,0 +1,166 @@
+From users-return-137262-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 12 15:59:15 2014
+Return-Path: <users-return-137262-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 7901911D3D
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 12 Sep 2014 15:59:15 +0000 (UTC)
+Received: (qmail 43167 invoked by uid 500); 12 Sep 2014 15:59:08 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 43085 invoked by uid 500); 12 Sep 2014 15:59:08 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 43062 invoked by uid 99); 12 Sep 2014 15:59:07 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 15:59:07 +0000
+X-ASF-Spam-Status: No, hits=1.8 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of burtonator2011@gmail.com designates 209.85.215.44 as permitted sender)
+Received: from [209.85.215.44] (HELO mail-la0-f44.google.com) (209.85.215.44)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 15:59:03 +0000
+Received: by mail-la0-f44.google.com with SMTP id mc6so1269626lab.3
+        for <users@maven.apache.org>; Fri, 12 Sep 2014 08:58:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=OXxi52lmqtWXpfQ62EqsNWaRx0ywokR3eq+65z1BYTw=;
+        b=KHDwzTo/gvX5PJ76Ptm/KCwfdYlbjQJDLc5G1F077KINNvOafrm1oNMmETTsn9jckp
+         nOQ9RTATeDez1N8cw3Y/Kbjsz1p/SX+IN/dGmQ/XlFFWvN1O5q2B9pvpeam+kcC8RbxN
+         FRRhZWxpI6Qx3UhJQ3fwYmRpuG/2udZe2EGZKHPGX4UMJ6GoJcI0mELMUzYd2pPkzLaG
+         WfrVfU5yRI/kDbGYYRUdJgEnVlLOQZBwNAkj8zc6cqNenMg3FuVVhTgoBMbabgz1b32N
+         2AVOBIL60mf2cr7RjWPalp8MA8WDBWld8Zg7+K0CBnmpMmERdfnf3kOCPX/QkG6jhtd5
+         6Dvw==
+X-Received: by 10.113.3.139 with SMTP id bw11mr9420306lbd.98.1410537522263;
+ Fri, 12 Sep 2014 08:58:42 -0700 (PDT)
+MIME-Version: 1.0
+Sender: burtonator2011@gmail.com
+Received: by 10.112.210.137 with HTTP; Fri, 12 Sep 2014 08:58:22 -0700 (PDT)
+In-Reply-To: <CADVp3v9kcaxe-gD+DtFgfhphNxSmN8YNrhAzuxgnFL4QyAfF_g@mail.gmail.com>
+References: <CAAZU44kFZ0cNGa_qOXf6Wj_LRRM18LE3v0xKMLZ0+Z44ZffpFg@mail.gmail.com>
+ <CADVp3v9kcaxe-gD+DtFgfhphNxSmN8YNrhAzuxgnFL4QyAfF_g@mail.gmail.com>
+From: Kevin Burton <burton@spinn3r.com>
+Date: Fri, 12 Sep 2014 08:58:22 -0700
+X-Google-Sender-Auth: 9UD7PGxTdN6yYoqXfWNhsh0EWO8
+Message-ID: <CAAZU44kAZu=j9aWe_a+vGR_QuyX9QevDBsZw4mpqzkHJ8eJMCw@mail.gmail.com>
+Subject: Re: Tell maven to not have the parent pom as a dependency?
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a11349454f4f9f60502e05bfd
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a11349454f4f9f60502e05bfd
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+The problem I have here is that this would definitely fix my problem.
+ Breaking it out into another OSS project would be sweet=E2=80=A6
+
+BUT=E2=80=A6 it would introduce its own set of problems.
+
+Now I have two projects to maintain.  And the number is increasing=E2=80=A6=
+ From an
+IDE perspective, I have to have N windows and switch between them, and
+remember which file is in which project.
+
+I find it=E2=80=99s 100x easier to just keep everything in one project.
+
+I could use git-submodules=E2=80=A6 but IDEA breaks on them and they have a=
+ few
+gotchas.
+
+=E2=80=A6 but perhaps there=E2=80=99s no perfect solution.  Just a few solu=
+tions that are
+less horrible than my current solution.
+
+Kevin
+
+
+On Thu, Sep 11, 2014 at 10:53 PM, Barrie Treloar <baerrach@gmail.com> wrote=
+:
+
+> On 12 September 2014 12:55, Kevin Burton <burton@spinn3r.com> wrote:
+>
+> > I have an OSS module in a multi-module maven project.
+> >
+> > I want to post this to a public repo=E2=80=A6 it=E2=80=99s open source.
+> >
+> > The problem is that the parent module is not OSS.
+> >
+> > When I setup a <dependency> it pulls in my OSS module just fine, but th=
+en
+> > it tries to pull down the parent module, which isn=E2=80=99t in the rep=
+o, and
+> > breaks.
+> >
+> > The parent pom isn=E2=80=99t really a dependency=E2=80=A6 so I=E2=80=99=
+d like it to not need it
+> >
+> > is this possible?
+>
+>
+> As Dan says, make it a stand alone project.
+> i.e. Dont make it a module.
+>
+> Being a module has a special meaning - "treat this as part of a bigger
+> whole".
+> It also help with syntatic sugar by allowing you to run one command at th=
+e
+> top and have it propogate into all the modules.
+>
+> To be complete a module has nothing to do with dependencies or dependency
+> management.
+>
+> The reason your OSS module is pulling in the parent is not because of
+> dependency, but because of inheritance of the parent hierarchy.
+>
+> Usually all modules are released together and will share version
+> identifiers.
+> If they are released independently then you normally wont make them
+> modules, and their version identifiers can do their own thing.
+> There is a recent post "Maintaining versions in a multi-module project"
+> that Stephen answers, you might also want to search the archives on this
+> topic as well.
+>
+> A parent pom can be used in two ways; 1) to share common information i.e.
+> "inheritance" 2) keep related artifacts together to make working on a bug
+> that traverses artifacts easier i.e "aggregation"
+>
+> In your case I dont think you need to use aggregation, you just need to
+> pull out the OSS artifact into its own stand alone location and then
+> include it as a normal dependency in your non-OSS project.
+>
+> If you find that you are also fixing bugs in the OSS project at the same
+> time you are working on the non-OSS one, then you might want to create an
+> aggregate pom that has two modules (one OSS, the other non-OSS) so that y=
+ou
+> can run maven commands in one place against both projects. Stephen Connol=
+ly
+> has some stuff somewhere about that I think.
+> The freely availble Maven books might also go into this in more detail, b=
+ut
+> it tends to be a more advanced feature not well described.
+>
+> Cheers
+> Barrie
+>
+
+
+
+--=20
+
+Founder/CEO Spinn3r.com
+Location: *San Francisco, CA*
+blog: http://burtonator.wordpress.com
+=E2=80=A6 or check out my Google+ profile
+<https://plus.google.com/102718274791889610666/posts>
+<http://spinn3r.com>
+
+--001a11349454f4f9f60502e05bfd--
+

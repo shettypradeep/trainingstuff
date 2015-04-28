@@ -1,0 +1,307 @@
+From users-return-135777-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 12 03:00:00 2014
+Return-Path: <users-return-135777-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D803510619
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 12 Mar 2014 03:00:00 +0000 (UTC)
+Received: (qmail 24396 invoked by uid 500); 12 Mar 2014 02:59:43 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 23932 invoked by uid 500); 12 Mar 2014 02:59:42 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 23920 invoked by uid 99); 12 Mar 2014 02:59:41 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Mar 2014 02:59:41 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.216.43] (HELO mail-qa0-f43.google.com) (209.85.216.43)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Mar 2014 02:59:34 +0000
+Received: by mail-qa0-f43.google.com with SMTP id j15so9309691qaq.2
+        for <users@maven.apache.org>; Tue, 11 Mar 2014 19:59:13 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:date:from:to:cc:subject:message-id:in-reply-to
+         :references:mime-version:content-type:content-transfer-encoding;
+        bh=hoN9sEaFGMz3CJjXhoou8uHHiJkFUSlpjX4PvzeAir8=;
+        b=GP7zIsUyALeXPyr2iJ1mGBFKMrkL47lz3D94jTYQ8xaQU7CFldDW7NHqj53mxvEwGK
+         EmdTdjngQRZg1oaYeZJ1+tZMhWEc7R7q3MdCIjNXLVt34DoOw1Y5cszbHakZtrq33srZ
+         0OqFO2Z/+vr8vHuUIOQph3+eydlXN5omoBVnGYsnCsZeQBXGiCysFi78vNIMHCS0CXaG
+         vpOeaIyQ2X37nZyvi6f834wK5o7utuZp4Mx4O24bdsXmaNziQgzhtgrRlHhkxaT1mvJi
+         rzvacJs6APu+MaW90rqhPUmnoIVi7g+7yRyCjN8WGE1ay8JBI1ejEkiS060T8tsmYI1S
+         SSUg==
+X-Gm-Message-State: ALoCoQnjrqZyU/tq9zSgYW1ys1+M2kFqhLZE+b/po/+iNWcXG+B0Nykxt1pufzCFixyqyyNh6eSd
+X-Received: by 10.140.31.66 with SMTP id e60mr12489987qge.76.1394593153106;
+        Tue, 11 Mar 2014 19:59:13 -0700 (PDT)
+Received: from localhost (HSI-KBW-078-042-226-075.hsi3.kabel-badenwuerttemberg.de. [78.42.226.75])
+        by mx.google.com with ESMTPSA id 30sm34837056qgt.4.2014.03.11.19.59.12
+        for <multiple recipients>
+        (version=TLSv1.2 cipher=RC4-SHA bits=128/128);
+        Tue, 11 Mar 2014 19:59:13 -0700 (PDT)
+Date: Wed, 12 Mar 2014 03:59:08 +0100
+From: Bernd Eckenfels <ecki@zusammenkunft.net>
+To: davek1802@gmail.com
+Cc: "Maven Users List" <users@maven.apache.org>
+Subject: Re: Netbeans 7.4 maven POM for com.oracle:ojdbc6:jar:11.2.0.1 is
+ invalid
+Message-ID: <20140312035908.000017e7.ecki@zusammenkunft.net>
+In-Reply-To: <CAM0K-0CYJJOu8qj3MuSNLnUfY7NK=piby4_oEzWEsAMw7qRA6g@mail.gmail.com>
+References: <CAM0K-0CzKNaJ89zXuHAiEF1a3QYtybyXUjg0HPQrNVRWz-a9jQ@mail.gmail.com>
+	<CALy+7Uk5usRFLhxLhWyCDAOMpGvWSUBVVOg72XNh1ovbc640OA@mail.gmail.com>
+	<CAM0K-0CbT2Bt_NXu5RjaL2cyWC=sR1qjeRghBGJJMvd+HaCKYg@mail.gmail.com>
+	<CALy+7U=V0ReweVzA5Z3keQ390kHSvcH4KHC2asMO5GoRSOXT5Q@mail.gmail.com>
+	<CAM0K-0Bz_Xg=vEx9QsdQR6TWKHDw=RtGupbzNJSD19szcVs9QA@mail.gmail.com>
+	<CAM0K-0BAJDd5CXhUD65wo1gtkRHQNRmnVjpWC0pw7Pp1nqU+JA@mail.gmail.com>
+	<BLU172-W316F24902229426C8572AFAE750@phx.gbl>
+	<CAM0K-0AVeNx_CWRBE0XqipuBYeYHDcrU3Ft7hJL9eEKJiCPwBg@mail.gmail.com>
+	<BLU172-W4563704B3BA956C6A26C1CAE770@phx.gbl>
+	<CAM0K-0CYJJOu8qj3MuSNLnUfY7NK=piby4_oEzWEsAMw7qRA6g@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hallo Dave,
+
+I am not really understand your problem as your report touch multiple
+points, so let me do this systematically. Appologies if I state
+something obvious:
+
+a) there is no ojdbc driver in the public maven repositories. The JDBC
+driver from oracle is propeitary. So I am not sure where you get that
+POM from.
+
+b) I am not sure how this is related to netbeans, could you make try to
+reproduce this with a minimum sample only using maven on the command
+line?
+
+c) if you get "class not found" errors after the download/search in
+repository failed that means the pom is missing, if you get the error
+after the pom was found it is most likely a configuration issue.
+
+d) the location where and how you define your dependency in the pom is
+responsible where the artifact (if found) is added to the classpath.
+There is especially a difference for scope=provided and scope=test
+artifaces, but it could also be that the dependency is only defined
+local to a specific plugin, and missing to another.
+
+e) the location of your database is not an issue for the dependency
+resolving. You might however (what is typical for ojdbc.jar) define a
+dependency with a system path to a locally installed (or copied) oracle
+artifact (which could be the XE installation dir).
+
+f) I am not sore about your sping/jpa test infrastructure, but you
+typically dont have to look at the setup there as long as your Pom
+fails to get your dependencies.
+
+Greetings
+Bernd
+
+Am Tue, 11 Mar 2014 15:55:59 -0700 schrieb Dave
+Kennedy <davek1802@gmail.com>:
+
+> I have tried to simplify the issue by Installing Oracle XE locally to
+> eliminate the remote db.
+> I am able to connect to the local db with the username and password
+> below. I assume the ojdbc driver is not on the test classpath.
+> I'm not sure where to add the driver to the classpath.
+> 
+> 
+> I am getting the error
+> Could not load JDBC driver class [oracle.jdbc.OracleDriver]
+> 
+> jdbc.properties
+> jdbc.driverClassName=oracle.jdbc.OracleDriver
+> jdbc.url=jdbc:oracle:thin:@localhost:1521:XE
+> jdbc.username=SYSTEM
+> jdbc.password=adminadmin
+> 
+> 
+> test-persistence.xml
+> <?xml version="1.0" encoding="UTF-8"?>
+> <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="
+> http://www.w3.org/2001/XMLSchema-instance"
+>        xmlns:p="http://www.springframework.org/schema/p"
+>        xmlns:context="http://www.springframework.org/schema/context"
+>        xmlns:tx="http://www.springframework.org/schema/tx"
+>        xsi:schemaLocation="
+>        http://www.springframework.org/schema/beans
+> http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+>        http://www.springframework.org/schema/context
+> http://www.springframework.org/schema/context/spring-context-3.0.xsd
+>         http://www.springframework.org/schema/tx
+> http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+> 
+>     <bean id="propertyConfigurer"
+> 
+> class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+>           p:location="classpath:jdbc.properties" />
+> 
+>     <bean id="tttDataSource"
+> 
+> class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+>           p:driverClassName="${jdbc.driverClassName}"
+>           p:url="${jdbc.url}"
+>           p:username="${jdbc.username}"
+>           p:password="${jdbc.password}"
+>           />
+> 
+>     <bean id="loadTimeWeaver"
+> class="org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver"
+> />
+> 
+>     <bean id="jpaVendorAdapter"
+> 
+> class="org.springframework.orm.jpa.vendor.EclipseLinkJpaVendorAdapter"
+>         p:showSql="true"
+> 
+> p:databasePlatform="org.eclipse.persistence.platform.database.OraclePlatform"
+> />
+> 
+>     <bean id="entityManagerFactory"
+> 
+> class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
+>         p:dataSource-ref="tttDataSource"
+>         p:jpaVendorAdapter-ref="jpaVendorAdapter"
+>         p:persistenceXmlLocation="test-persistence.xml"
+>     />
+> 
+>     <!-- Transaction manager for a single JPA EntityManagerFactory
+> (alternative to JTA) -->
+>     <bean id="transactionManager"
+>         class="org.springframework.orm.jpa.JpaTransactionManager"
+>         p:dataSource-ref="tttDataSource"
+>         p:entityManagerFactory-ref="entityManagerFactory"/>
+> 
+>     <!-- checks for annotated configured beans -->
+>     <context:annotation-config/>
+> 
+>     <!-- Scan for Repository/Service annotations -->
+>     <context:component-scan base-package="com.gieman.tttracker.dao" />
+>     <context:component-scan
+> base-package="com.gieman.tttracker.service" />
+> <context:component-scan base-package="com.gieman.tttracker.web" />
+> <!-- enable the configuration of transactional behavior based on
+> annotations --> <tx:annotation-driven />
+> 
+> </beans>
+> 
+> 
+> 
+> 
+> 
+> On Mon, Mar 10, 2014 at 7:46 PM, Martin Gainty <mgainty@hotmail.com>
+> wrote:
+> 
+> >
+> > MG>David...all comments prefixed by MG>
+> >
+> >  > Date: Sun, 9 Mar 2014 10:10:43 -0700
+> > > Subject: Re: Netbeans 7.4 maven POM for
+> > > com.oracle:ojdbc6:jar:11.2.0.1
+> > is invalid
+> > > From: davek1802@gmail.com
+> > > To: users@maven.apache.org
+> > >
+> > > Martin,
+> > > I'm not sure where you mean to check that ojdbc6 is listed as a
+> > dependency.
+> > > I am trying to convert the project from using MySql to Oracle,
+> > > so I might not have configured everything correctly.
+> > >
+> > > This is in the testingContext.xml file:
+> >
+> >
+> > MG>
+> >
+> > <!-- assume p namespace resolves
+> >
+> > <?xml version="1.0" encoding="UTF-8"?>
+> > > <beans xmlns="http://www.springframework.org/schema/beans"
+> > > xmlns:xsi=" http://www.w3.org/2001/XMLSchema-instance"
+> > > xmlns:p=http://www.springframework.org/schema/p
+> >
+> > -->
+> >
+> > MG>
+> >
+> >
+> > > <bean id="jpaVendorAdapter"
+> > >
+> > > class="org.springframework.orm.jpa.vendor.EclipseLinkJpaVendorAdapter"
+> > > p:showSql="true"
+> > >
+> > >
+> > p:databasePlatform="org.eclipse.persistence.platform.database.OraclePlatform"
+> > > />
+> > >
+> > > pom.xml:
+> > > <dependency>
+> > > <groupId>com.oracle</groupId>
+> > > <artifactId>ojdbc6</artifactId>
+> > > <version>11.2.0.1</version>
+> > > </dependency>
+> > >
+> > > testingContext.xml:
+> > > <?xml version="1.0" encoding="UTF-8"?>
+> > > <beans xmlns="http://www.springframework.org/schema/beans"
+> > > xmlns:xsi=" http://www.w3.org/2001/XMLSchema-instance"
+> > > xmlns:p="http://www.springframework.org/schema/p"
+> > > xmlns:context="http://www.springframework.org/schema/context"
+> > > xmlns:tx="http://www.springframework.org/schema/tx"
+> > > xsi:schemaLocation="
+> > > http://www.springframework.org/schema/beans
+> > > http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+> > > http://www.springframework.org/schema/context
+> > > http://www.springframework.org/schema/context/spring-context-3.0.xsd
+> > > http://www.springframework.org/schema/tx
+> > > http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+> >
+> >
+> > MG>right now you list a bunch of xsds for every namespace except p
+> >
+> > MG>you *should* have a schemaLocation for xmlns:p
+> >
+> > > <bean id="propertyConfigurer"
+> > >
+> > >
+> > class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+> > > p:location="classpath:jdbc.properties" />
+> > >
+> > > <bean id="ahmDataSource"
+> > >
+> > > class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+> >
+> >
+> > > p:driverClassName="${jdbc.driverClassName}"
+> > MG>we would need to know what jdbc.driverClassName resolves to in
+> > jdbc.properties
+> > MG>BTW this is the class that needs to be packaged in your
+> > MG>dependency
+> > listed above (ojdbc6-11.2.0.1.jar)
+> >
+> > > p:url="${jdbc.url}"
+> > MG>we would need to know what jdbc.url resolves to in
+> > MG>jdbc.properties
+> >
+> > > p:username="${jdbc.username}"
+> > MG>we would need to know what jdbc.username resolves to in
+> > MG>jdbc.properties
+> >
+> > "We do these things..not because they are easy..but because they are
+> > hard"...JFK
+> 
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

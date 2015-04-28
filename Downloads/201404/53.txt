@@ -1,0 +1,95 @@
+From users-return-136090-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Sat Apr  5 02:40:39 2014
+Return-Path: <users-return-136090-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 34ACA10F3D
+	for <apmail-maven-users-archive@www.apache.org>; Sat,  5 Apr 2014 02:40:39 +0000 (UTC)
+Received: (qmail 58272 invoked by uid 500); 5 Apr 2014 02:40:34 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 58172 invoked by uid 500); 5 Apr 2014 02:40:34 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 58146 invoked by uid 99); 5 Apr 2014 02:40:31 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 05 Apr 2014 02:40:31 +0000
+X-ASF-Spam-Status: No, hits=-0.7 required=5.0
+	tests=RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: local policy includes SPF record at spf.trusted-forwarder.org)
+Received: from [209.85.160.172] (HELO mail-yk0-f172.google.com) (209.85.160.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Sat, 05 Apr 2014 02:40:25 +0000
+Received: by mail-yk0-f172.google.com with SMTP id 200so3665964ykr.31
+        for <users@maven.apache.org>; Fri, 04 Apr 2014 19:40:04 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:content-type:mime-version:subject:from
+         :in-reply-to:date:cc:content-transfer-encoding:message-id:references
+         :to;
+        bh=1T5QETUEMdPls+I85jpUByBL3p3TO3r8xkDqySzKgts=;
+        b=jKiJy3vakQNP/6A2KnEo5hHR7WePDcRdbw+grHLUouHEUbs2nmhUo4NtL5Q5yEXcBc
+         cY1ZzqpLV+MHG8ihKPfvILf7eCndLnEyMH0rCJMRhvj+3ux/rGSZ1N7e+BT7zJ9rifwd
+         b60Q8vFmq3PDcEEdL0wA4sOwP69Z7ZrYQWi5tZL92lyiJRbqCXI5bahT3axo8e+WHwyc
+         WMeUToB+hs8XdZPI+gzi+9AWUXGQlqmySxnDlvkeWlbJBYAZMe2AaTyIDsuoiH2GuFtW
+         1eRXfxD0Ku0wVBb6sFAyfvkirmFlIXSrGEt/FaARedEnjW+wtKNmyKKVXy1iwv18J4n6
+         cY1g==
+X-Gm-Message-State: ALoCoQmWjGZFvP8RtFUV0pEH48apY9a81ndh5WdUvmNGT7fnrAejQfQOLffzgeevgX3nX4wv20VC
+X-Received: by 10.236.180.232 with SMTP id j68mr838284yhm.122.1396665604529;
+        Fri, 04 Apr 2014 19:40:04 -0700 (PDT)
+Received: from [192.168.1.131] ([173.246.210.136])
+        by mx.google.com with ESMTPSA id o62sm18288806yha.27.2014.04.04.19.40.02
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Fri, 04 Apr 2014 19:40:02 -0700 (PDT)
+Content-Type: text/plain;
+	charset=us-ascii
+Mime-Version: 1.0 (1.0)
+Subject: Re: Maven Filtering
+From: "Chaka.net" <todd@chaka.net>
+X-Mailer: iPad Mail (11B651)
+In-Reply-To: <533F4A90.90000@kolotyluk.net>
+Date: Fri, 4 Apr 2014 22:40:03 -0400
+Cc: maven users <users@maven.apache.org>
+Content-Transfer-Encoding: 7bit
+Message-Id: <DDDF3F90-25D1-463D-B197-5BB0CAA22F8F@chaka.net>
+References: <533F4A90.90000@kolotyluk.net>
+To: Maven Users List <users@maven.apache.org>
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+I think you have to define the escape character in the configuration. 
+
+-Todd
+
+> On Apr 4, 2014, at 8:13 PM, Eric Kolotyluk <eric@kolotyluk.net> wrote:
+> 
+> According to http://maven.apache.org/shared/maven-filtering/ I can define
+> 
+> <properties>
+> <projectBuildDirectory>\${project.build.directory}</projectBuildDirectory>
+> </properties>
+> 
+> and I should expect to see
+> 
+> ${project.build.directory}
+> 
+> when the property projectBuildDirectory is used, but instead I get
+> 
+> \D:\Users\Eric\Software\Project\Repositories\csharp-windows-elevate\target
+> 
+> Am I going insane, is this a bug in Maven, or is the documentation wrong?
+> 
+> Is there some other way to escape the filtering?
+> 
+> Cheers, Eric
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,84 @@
+From users-return-136481-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Mon Jun  2 19:30:29 2014
+Return-Path: <users-return-136481-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id F05FA11F2D
+	for <apmail-maven-users-archive@www.apache.org>; Mon,  2 Jun 2014 19:30:28 +0000 (UTC)
+Received: (qmail 18085 invoked by uid 500); 2 Jun 2014 19:30:27 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 17998 invoked by uid 500); 2 Jun 2014 19:30:27 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 17988 invoked by uid 99); 2 Jun 2014 19:30:27 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 02 Jun 2014 19:30:27 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: local policy)
+Received: from [85.13.134.252] (HELO dd12814.kasserver.com) (85.13.134.252)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Mon, 02 Jun 2014 19:30:23 +0000
+Received: from [192.168.178.45] (p57A14C61.dip0.t-ipconnect.de [87.161.76.97])
+	by dd12814.kasserver.com (Postfix) with ESMTPSA id D511411C06F4;
+	Mon,  2 Jun 2014 21:29:58 +0200 (CEST)
+References: <CAPCjjnHs7t5J6hQNtVXk6AEoHw1xmx1iZsA=FXvP92Duou8Fcw@mail.gmail.com>
+In-Reply-To: <CAPCjjnHs7t5J6hQNtVXk6AEoHw1xmx1iZsA=FXvP92Duou8Fcw@mail.gmail.com>
+Mime-Version: 1.0 (1.0)
+Content-Type: text/plain;
+	charset=us-ascii
+Message-Id: <FDB31D10-F90E-47F4-8002-7D65BB849216@Kriegisch.name>
+Content-Transfer-Encoding: quoted-printable
+X-Mailer: iPad Mail (11D201)
+From: Alexander Kriegisch <Alexander@Kriegisch.name>
+Subject: Re: Pack with native tar, unpack with maven-dependency-plugin failure
+Date: Mon, 2 Jun 2014 21:29:58 +0200
+To: Maven Users List <users@maven.apache.org>
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Hi Dan.
+
+I vaguely remember a similar problem with ZIP archives and Java. Can you ple=
+ase send me a sample or two privately?
+--=20
+Alexander Kriegisch
+
+
+> Am 02.06.2014 um 20:47 schrieb Dan Tran <dantran@gmail.com>:
+>=20
+> Hi
+>=20
+> I have a number of tar.gz artifacts packed with cygwin/linux tar, but
+> maven-dependency-plugin fails to unpack with with the following error (
+> have you seen this)
+>=20
+> Caused by: java.util.zip.ZipException: Not in GZIP format
+> at java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:164)
+> at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:78)
+> at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:90)
+> at
+> org.codehaus.plexus.archiver.tar.TarUnArchiver$UntarCompressionMethod.deco=
+mpress(TarUnArchiver.java:191)
+> at
+> org.codehaus.plexus.archiver.tar.TarUnArchiver$UntarCompressionMethod.acce=
+ss$000(TarUnArchiver.java:112)
+> at
+> org.codehaus.plexus.archiver.tar.TarUnArchiver.execute(TarUnArchiver.java:=
+86)
+> ... 26 more
+>=20
+> Thanks
+>=20
+> -Dan
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

@@ -1,0 +1,92 @@
+From users-return-137247-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 12 03:33:23 2014
+Return-Path: <users-return-137247-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 0AB91118C1
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 12 Sep 2014 03:33:23 +0000 (UTC)
+Received: (qmail 83148 invoked by uid 500); 12 Sep 2014 03:33:21 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 83053 invoked by uid 500); 12 Sep 2014 03:33:21 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 83039 invoked by uid 99); 12 Sep 2014 03:33:20 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 03:33:20 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of dantran@gmail.com designates 209.85.217.172 as permitted sender)
+Received: from [209.85.217.172] (HELO mail-lb0-f172.google.com) (209.85.217.172)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 03:33:16 +0000
+Received: by mail-lb0-f172.google.com with SMTP id w7so149163lbi.17
+        for <users@maven.apache.org>; Thu, 11 Sep 2014 20:32:55 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=0KUTGAjJlnXJifwpfDJVFwyw7sZ5eGxoPeHzZLoJVYE=;
+        b=0Cja1lAjTD5FJ8L+ZPXu6snGIqgTdh1No4wHbMP/ddWVbT17Ll4YQbfMEPk98mFG8d
+         vwyM6qKg/sAXvlSQjihZi6xGvEBnOwcsB7gkm+vSpyUkayU0RLX1lzJjUK+OTlyczOvC
+         9bE6txI8GgSU3pN3J4fehiT/Vkivg0EFJS5X5C6RMAumer3FyHOjMtG3tZFdhZocTQJU
+         lLFUpM+ZQwlasB1uFuvvvqcPivR5tl3MaFcH9WTxeyyQsjHghYGGCEyZwMWYjxfPDyG+
+         jBrvPEEqitDlM5BR+D4F52nPSak94Qm2EbTSnalXdwYnye6zPj7eBX/CzTP/eHdsVKlk
+         4Ftw==
+MIME-Version: 1.0
+X-Received: by 10.152.10.74 with SMTP id g10mr5581994lab.41.1410492773995;
+ Thu, 11 Sep 2014 20:32:53 -0700 (PDT)
+Received: by 10.114.27.103 with HTTP; Thu, 11 Sep 2014 20:32:53 -0700 (PDT)
+In-Reply-To: <CAAZU44kFZ0cNGa_qOXf6Wj_LRRM18LE3v0xKMLZ0+Z44ZffpFg@mail.gmail.com>
+References: <CAAZU44kFZ0cNGa_qOXf6Wj_LRRM18LE3v0xKMLZ0+Z44ZffpFg@mail.gmail.com>
+Date: Thu, 11 Sep 2014 20:32:53 -0700
+Message-ID: <CAPCjjnE2N+M+XM6EJga+J3JsWQkpxKjNONRLL898KRPMDcmoQQ@mail.gmail.com>
+Subject: Re: Tell maven to not have the parent pom as a dependency?
+From: Dan Tran <dantran@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a1132f170c09a6e0502d5f03c
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a1132f170c09a6e0502d5f03c
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Move it out as a stand alone project.
+
+-D
+
+On Thu, Sep 11, 2014 at 8:25 PM, Kevin Burton <burton@spinn3r.com> wrote:
+
+> I have an OSS module in a multi-module maven project.
+>
+> I want to post this to a public repo=E2=80=A6 it=E2=80=99s open source.
+>
+> The problem is that the parent module is not OSS.
+>
+> When I setup a <dependency> it pulls in my OSS module just fine, but then
+> it tries to pull down the parent module, which isn=E2=80=99t in the repo,=
+ and
+> breaks.
+>
+> The parent pom isn=E2=80=99t really a dependency=E2=80=A6 so I=E2=80=99d =
+like it to not need it
+>
+> is this possible?
+>
+> --
+>
+> Founder/CEO Spinn3r.com
+> Location: *San Francisco, CA*
+> blog: http://burtonator.wordpress.com
+> =E2=80=A6 or check out my Google+ profile
+> <https://plus.google.com/102718274791889610666/posts>
+> <http://spinn3r.com>
+>
+
+--001a1132f170c09a6e0502d5f03c--
+

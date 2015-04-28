@@ -1,0 +1,151 @@
+From users-return-135781-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Mar 12 09:45:56 2014
+Return-Path: <users-return-135781-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 62EBC100F0
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 12 Mar 2014 09:45:56 +0000 (UTC)
+Received: (qmail 11939 invoked by uid 500); 12 Mar 2014 09:45:52 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 11850 invoked by uid 500); 12 Mar 2014 09:45:51 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 11838 invoked by uid 99); 12 Mar 2014 09:45:50 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Mar 2014 09:45:50 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of jcarsique@nuxeo.com designates 209.85.212.170 as permitted sender)
+Received: from [209.85.212.170] (HELO mail-wi0-f170.google.com) (209.85.212.170)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 12 Mar 2014 09:45:45 +0000
+Received: by mail-wi0-f170.google.com with SMTP id n15so1919860wiw.3
+        for <users@maven.apache.org>; Wed, 12 Mar 2014 02:45:24 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:message-id:date:from:user-agent:mime-version:to
+         :subject:content-type;
+        bh=Gszj/7RHnH6tzaS+3/95sX5OTejqPl82nqQXOjsk3d8=;
+        b=B6wXm5LS1knADRIeXQ5mowEjiFh8XcCeGcALqSQN9ROCySiaCXFmjJN+2FprDU8xo0
+         rBxBISQBujnLuTxLFu5VEw7voAKDSC1+8Kx6icN6/EED4Sa0gA2c5RVvIvnLAobONyj7
+         P3QiHxfuQavpLwI5IP878eAjOeKv0YlhRk8G4BUUrPTPqZQLAzfrnJFpup/H0Nxkp0Rw
+         gSyyKXsfNS0KXwUtUODxxhoyO4IUAeHYNqFK2l+vFULaKMHxrsIKZdxnlI4I5dFZ5lzg
+         ZuUxRv4w/nTwiCBbhmN3UDdl2YxFf6hp2wSOzE8l28hAts5q7YqbWRM/mGwSvMhVvpTm
+         LvCA==
+X-Gm-Message-State: ALoCoQnl2Vn9Dbjy/D9c1zN9gquA3W7V/suc3xtg/G/D+lF1HYBbBOniSvp6ULzHsWOQAN7/N1ZN
+X-Received: by 10.180.187.237 with SMTP id fv13mr6611434wic.26.1394617524237;
+        Wed, 12 Mar 2014 02:45:24 -0700 (PDT)
+Received: from [10.213.3.69] ([176.57.246.10])
+        by mx.google.com with ESMTPSA id ee5sm14415175wib.8.2014.03.12.02.45.22
+        for <users@maven.apache.org>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Wed, 12 Mar 2014 02:45:23 -0700 (PDT)
+Message-ID: <53202CA4.3070401@nuxeo.com>
+Date: Wed, 12 Mar 2014 10:45:08 +0100
+From: Julien CARSIQUE <jcarsique@nuxeo.com>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.2.0
+MIME-Version: 1.0
+To: Maven Users List <users@maven.apache.org>
+Subject: MDEPLOY-157 deployAtEnd option of maven-deploy-plugin broken after
+ ant-assembly-maven-plugin execution
+X-Enigmail-Version: 1.6
+Content-Type: multipart/alternative;
+ boundary="------------020601000000010309090606"
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--------------020601000000010309090606
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+Hi,
+
+I recently discovered an issue between the "deployAtEnd" option of "maven-deploy-plugin" and the execution of my plugin
+"ant-assembly-maven-plugin" (based on Aether).
+
+I first though it had nothing to do with maven-deploy-plugin and revealed a more general issue in my implementation, so
+I posted on Aether mailing list [0] but Benjamin Bentmann answered it could be a bug in the maven-deploy-plugin
+implementation of deployAtEnd option [1]:
+>> Aether has nothing to do with the way Maven manages class loaders for plugins, i.e. you should reach out to the Maven
+user list instead.
+>> Also, your analysis suggests a bug in the maven-deploy-plugin in that it relies on the erroneous assumption that a
+single class loader is used per plugin through out a multi-module build.
+
+Here it the issue: the deployAtEndoption doesn't work after building a module involving an execution of
+ant-assembly-maven-pluginbecause a new "Class realm plugin" is then created and its static fields are reset (in that
+case, the org.apache.maven.plugin.deploy.DeployMojo.readyProjectsCounterfield).
+
+Code from maven-deploy-plugin(readyProjectsCounterrestarted to zero will never equal to reactorProjects.size(),
+projectsReadywill be always false):
+
+    @Parameter( defaultValue = "${reactorProjects}", required = true, readonly = true )
+    private List<MavenProject> reactorProjects;
+
+    private static final AtomicInteger readyProjectsCounter = new AtomicInteger();
+
+*    *org.apache.maven.plugin.deploy.DeployMojo.execute() {
+        boolean projectsReady = readyProjectsCounter.incrementAndGet() == reactorProjects.size();
+
+
+In the following sample case, the ant-assembly-maven-plugin is called by the "nuxeo-distribution-resources" module.
+After that, no deployment will ever happen since the static fields of maven-deploy-plugin are reset, the counter
+"readyProjectsCounter" restarted to zero will never reach the number of "reactorProjects", "projectsReady" will be
+always false:
+
+$ mvn clean deploy -Pqa -DskipTests -pl nuxeo-functional-tests,nuxeo-launcher,nuxeo-distribution-resources -nsu -X|grep maven-deploy-plugin
+
+[DEBUG] Goal:          org.apache.maven.plugins:maven-deploy-plugin:2.8.1:deploy (default-deploy)
+[INFO] --- maven-deploy-plugin:2.8.1:deploy (default-deploy) @ nuxeo-functional-tests ---
+[DEBUG] org.apache.maven.plugins:maven-deploy-plugin:jar:2.8.1:
+[DEBUG] *Created new class realm plugin>org.apache.maven.plugins:maven-deploy-plugin:2.8.1*
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-deploy-plugin:2.8.1
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-deploy-plugin:2.8.1
+[DEBUG]   Included: org.apache.maven.plugins:maven-deploy-plugin:jar:2.8.1
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-deploy-plugin:2.8.1:deploy from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-deploy-plugin:2.8.1, parent: sun.misc.Launcher$AppClassLoader@4821e115]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-deploy-plugin:2.8.1:deploy' with basic configurator -->
+[DEBUG] Goal:          org.apache.maven.plugins:maven-deploy-plugin:2.8.1:deploy (default-deploy)
+
+[INFO] --- maven-deploy-plugin:2.8.1:deploy (default-deploy) @ nuxeo-launcher ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-deploy-plugin:2.8.1:deploy from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-deploy-plugin:2.8.1, parent: sun.misc.Launcher$AppClassLoader@4821e115]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-deploy-plugin:2.8.1:deploy' with basic configurator -->
+[DEBUG] Goal:          org.apache.maven.plugins:maven-deploy-plugin:2.8.1:deploy (default-deploy)
+
+[INFO] --- maven-deploy-plugin:2.8.1:deploy (default-deploy) @ nuxeo-distribution-resources ---
+[DEBUG] org.apache.maven.plugins:maven-deploy-plugin:jar:2.8.1:
+[DEBUG] *Created new class realm plugin>org.apache.maven.plugins:maven-deploy-plugin:2.8.1--724569306*
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-deploy-plugin:2.8.1--724569306
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-deploy-plugin:2.8.1--724569306
+[DEBUG]   Included: org.apache.maven.plugins:maven-deploy-plugin:jar:2.8.1
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-deploy-plugin:2.8.1:deploy from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-deploy-plugin:2.8.1--724569306, parent: sun.misc.Launcher$AppClassLoader@4821e115]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-deploy-plugin:2.8.1:deploy' with basic configurator -->
+
+Could someone explain or guess why/when a "new class realm plugin>org.apache.maven.plugins:maven-deploy-plugin" is
+created (in bold) instead of reusing the previous one?
+Is there something wrong in my implementation about that? Or should I rather create an
+http://jira.codehaus.org/browse/MDEPLOY issue related to MDEPLOY-157?
+ 
+The full log of above reproduction case: http://ubuntuone.com/0WeyQGBzaDacZWh97CwcvE
+The ant-assembly-maven-plugin source code: https://github.com/nuxeo/ant-assembly-maven-plugin
+Issue management:
+- https://jira.nuxeo.com/browse/NXBT-739 (Do not break depoyAtEnd option of maven-deploy-plugin)
+- http://jira.codehaus.org/browse/MDEPLOY-157 (Add deployAtEnd option for multimodule projects)
+
+Thanks,
+
+[0] http://dev.eclipse.org/mhonarc/lists/aether-users/msg00385.html
+[1] http://dev.eclipse.org/mhonarc/lists/aether-users/msg00386.html
+
+
+-- 
+
+*Julien Carsique*
+DevOps Nuxeo, Paris, France
+
+
+--------------020601000000010309090606--
+

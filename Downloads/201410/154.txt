@@ -1,0 +1,69 @@
+From users-return-137663-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Oct 31 15:41:34 2014
+Return-Path: <users-return-137663-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 82F271795B
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 31 Oct 2014 15:41:34 +0000 (UTC)
+Received: (qmail 1657 invoked by uid 500); 31 Oct 2014 15:41:33 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 1575 invoked by uid 500); 31 Oct 2014 15:41:32 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 1560 invoked by uid 99); 31 Oct 2014 15:41:32 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 31 Oct 2014 15:41:32 +0000
+X-ASF-Spam-Status: No, hits=0.7 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_NEUTRAL
+X-Spam-Check-By: apache.org
+Received-SPF: neutral (nike.apache.org: local policy)
+Received: from [216.139.236.26] (HELO sam.nabble.com) (216.139.236.26)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 31 Oct 2014 15:41:06 +0000
+Received: from [192.168.236.26] (helo=sam.nabble.com)
+	by sam.nabble.com with esmtp (Exim 4.72)
+	(envelope-from <leonie.kruger@rmb.co.za>)
+	id 1XkEK0-0003JH-5m
+	for users@maven.apache.org; Fri, 31 Oct 2014 08:41:04 -0700
+Date: Fri, 31 Oct 2014 08:41:04 -0700 (PDT)
+From: Leonie <leonie.kruger@rmb.co.za>
+To: users@maven.apache.org
+Message-ID: <1414770064173-5811978.post@n5.nabble.com>
+Subject: mvn release:branch updating POM incorrectly
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+Good day,
+
+I hope someone can assist. I have posted something, but did not get any
+reply. When running the release:branch, my branch gets created, but my scn
+connection url in the trunk POM is not updating to point to the new branch's
+URL.
+
+I tried to pinpoint the problem. I opened the POM in notepad ++ and ran the
+mvn release:branch command. I could see the POM file updated when the second
+cmd.exe ran, but when the third cmd.exe ran, the POM changed scm connection 
+url back to what it was before I tried to create the branch. Thanks in
+advance. I need a solution before Monday and have no idea what to do
+anymore. 
+pr <http://maven.40175.n5.nabble.com/file/n5811978/Untitled.bmp> oblem. I
+can see that my POM file gets updated, b
+
+
+
+--
+View this message in context: http://maven.40175.n5.nabble.com/mvn-release-branch-updating-POM-incorrectly-tp5811978.html
+Sent from the Maven - Users mailing list archive at Nabble.com.
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+

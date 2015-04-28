@@ -1,0 +1,86 @@
+From users-return-137995-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Dec 12 04:57:07 2014
+Return-Path: <users-return-137995-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8691890C5
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 12 Dec 2014 04:57:07 +0000 (UTC)
+Received: (qmail 49392 invoked by uid 500); 12 Dec 2014 04:57:05 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 49298 invoked by uid 500); 12 Dec 2014 04:57:05 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 49283 invoked by uid 99); 12 Dec 2014 04:57:05 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Dec 2014 04:57:05 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of baerrach@gmail.com designates 209.85.213.180 as permitted sender)
+Received: from [209.85.213.180] (HELO mail-ig0-f180.google.com) (209.85.213.180)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Dec 2014 04:56:38 +0000
+Received: by mail-ig0-f180.google.com with SMTP id h15so915876igd.7
+        for <users@maven.apache.org>; Thu, 11 Dec 2014 20:54:22 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type;
+        bh=ZUzL1fY2LeXFlRqNAJsOoeZcmQaWEIHlqtRdCRpx5RI=;
+        b=wlE4z4/NGqOgAKWmW8nzfqHvKmTfin2x+Wijui1RCZ29C0nig+t7zSDj+CNhW4IbHO
+         kJS30CZZzVMg07Hy0uO390iYFM88FKIaGrK9RlBdsiO/VWU5/P0Y+cwkIDFJB8paGR9H
+         cYSUyVupdd3XMYobWORwKozFkXjh42/OqVIdHbM3zTjEpm16D6mht8C25oTHt+9aJPrP
+         bZA8G3udbSQMmgDvZuJ0enzTLrEi6pBy0jxLrz+sCJCu5g0GDTeeQwRojS64CAUHWLBB
+         TBnASQAku+qrb/Qs6hwfJK9sAve+HEKSNE6jKsBlwcfAezBCCxto6aCca08xMpJ+Ucmp
+         WU1A==
+MIME-Version: 1.0
+X-Received: by 10.107.138.5 with SMTP id m5mr13611853iod.85.1418360062105;
+ Thu, 11 Dec 2014 20:54:22 -0800 (PST)
+Received: by 10.42.94.133 with HTTP; Thu, 11 Dec 2014 20:54:22 -0800 (PST)
+In-Reply-To: <CAPCjjnEkDUyW4V4VDKK4FgLD63L_Z5LED9sxnBnLO0PBtrc2Og@mail.gmail.com>
+References: <CAPCjjnHgtcXTV2wrvj6b=ZAeMoFEScDCctnYdDSBwiJOKLgtxg@mail.gmail.com>
+	<CAPCjjnEaXeiO-GYYc+oKtAx0fYtZAVyrvmPXVZV-jj0agUu9Jg@mail.gmail.com>
+	<CADVp3v8Pt1ttF0QAqhquHn7LYJnJ9sHNuG6wzQUh7QHvEdnDLw@mail.gmail.com>
+	<CAPCjjnEkDUyW4V4VDKK4FgLD63L_Z5LED9sxnBnLO0PBtrc2Og@mail.gmail.com>
+Date: Fri, 12 Dec 2014 15:24:22 +1030
+Message-ID: <CADVp3v8cf49MYsXeEWGgRZ3PCV7qDPtYjTqWTBGOX6fueOOB3g@mail.gmail.com>
+Subject: Re: Maven Repositories settings best practice
+From: Barrie Treloar <baerrach@gmail.com>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=001a113fa606aa60060509fdaf66
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--001a113fa606aa60060509fdaf66
+Content-Type: text/plain; charset=UTF-8
+
+On 12 December 2014 at 15:10, Dan Tran <dantran@gmail.com> wrote:
+>
+> Where is in the official doc, this should land?
+
+
+That's an awfully good question.
+There is another thread about re-organising the documentation.
+
+The User Centre (http://maven.apache.org/users/index.html) docs are pretty
+thin, but I would expect this advice to land in there.
+
+Or perhaps the Run Maven > Configuring Maven (
+http://maven.apache.org/guides/mini/guide-configuring-maven.html) has a
+section on Mirrors that links to
+http://maven.apache.org/guides/mini/guide-mirror-settings.html.
+The first sentence says "Repositories are declared inside a project, which
+means that if you have your own custom repositories, those sharing your
+project easily get the right settings out of the box." which runs against
+the current advice.
+
+Unfortunately those mini-guides dont have a hierarchy available on the left
+hand navigation page and hacking the URL to drop of the last path just
+gives a blank page.
+
+--001a113fa606aa60060509fdaf66--
+

@@ -1,0 +1,116 @@
+From users-return-136112-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Thu Apr 10 06:23:55 2014
+Return-Path: <users-return-136112-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id BBC8E10E37
+	for <apmail-maven-users-archive@www.apache.org>; Thu, 10 Apr 2014 06:23:55 +0000 (UTC)
+Received: (qmail 87900 invoked by uid 500); 10 Apr 2014 06:23:49 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 87324 invoked by uid 500); 10 Apr 2014 06:23:45 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 87279 invoked by uid 99); 10 Apr 2014 06:23:39 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 10 Apr 2014 06:23:39 +0000
+X-ASF-Spam-Status: No, hits=1.5 required=5.0
+	tests=HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of bmathus@gmail.com designates 209.85.160.178 as permitted sender)
+Received: from [209.85.160.178] (HELO mail-yk0-f178.google.com) (209.85.160.178)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 10 Apr 2014 06:23:34 +0000
+Received: by mail-yk0-f178.google.com with SMTP id 79so3134255ykr.23
+        for <users@maven.apache.org>; Wed, 09 Apr 2014 23:23:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:date:message-id:subject
+         :from:to:content-type;
+        bh=bTKftHxtZIuHoVYSx+NbgGcClMML/yUUnoMzvuagZoE=;
+        b=RlNmwKw7QX+Cq+qeibe8Tr3fiADw140K4ZhrARzAR+8Pus6LgyJahClzl3YRS/52Jc
+         ulUSNduXeGQlQAeynotkkFxCHszqDciQrPQT15ethdOLLj+F4a9tI8+WbubXbLnSq7BD
+         qYsKAMVtI8KQei9XnuvIgrIPjCYUfIRuSg+VH3DZwH55jgNmcwmRP385HR84UYZ0ug1/
+         8h9RwCG451TUmMb+SFCFjMXujqYhogKb/KSkqYnLzgrWb3C2fWR0SWgjcz4PFASCyYvb
+         cnnAKhFCSEJQQ+8vw9m2AUpxQ8A454BFfLHnJ8dq518wN5C7obTScW8Agi1BfJAv14az
+         sRwg==
+MIME-Version: 1.0
+X-Received: by 10.236.181.165 with SMTP id l25mr20266189yhm.97.1397110992256;
+ Wed, 09 Apr 2014 23:23:12 -0700 (PDT)
+Sender: bmathus@gmail.com
+Received: by 10.170.219.5 with HTTP; Wed, 9 Apr 2014 23:23:11 -0700 (PDT)
+Received: by 10.170.219.5 with HTTP; Wed, 9 Apr 2014 23:23:11 -0700 (PDT)
+In-Reply-To: <AB6E61E63DE1FD4980E57BB61263360B2E074A78@INPUNDAGBE3.corp.amdocs.com>
+References: <AB6E61E63DE1FD4980E57BB61263360B2E074A78@INPUNDAGBE3.corp.amdocs.com>
+Date: Thu, 10 Apr 2014 08:23:11 +0200
+X-Google-Sender-Auth: Y9HEi6feGOO-syonaieDBMds8EQ
+Message-ID: <CANWgJS4f=JN6LYCXrMSvRCjQ4VdoR9+akS8H15=7FKxFytccpg@mail.gmail.com>
+Subject: Re: Maven Download and Regular Expression
+From: Baptiste Mathus <bmathus@batmat.net>
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=20cf30426dba67c3c904f6aa401e
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--20cf30426dba67c3c904f6aa401e
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+Have a look at Maven indexer?
+Cheers
+Le 9 avr. 2014 03:40, "MukeshKumar Bhansali" <
+MukeshKumar.Bhansali@amdocs.com> a =C3=A9crit :
+
+> Hi Folks,
+> I have a different requirement and not getting any hint.
+>
+> The Requirement is like :
+>
+> I want to download an artifact from Nexus using Maven, But I have
+>
+>
+> 1)      groupId
+>
+> 2)      version
+>
+> 3)      Partial artifactId ( prefix and suffix of artifactId means not th=
+e
+> exact one)
+>
+>
+> Example :
+> In case of this artifact :
+>
+> groupId :              org.nihiocs.hudson.plugins
+> artifactId :           jobTreeMaker
+> version :               main
+>
+> I have following information
+>
+> groupId :              org.nihiocs.hudson.plugins
+> artifactId :           job*Maker (Prefix and Suffix)
+> version :               main
+> So in this case how I can download this artifact ?
+>
+> It is also ok if I downloads entire
+> org/nihiocs/Hudson/plugins  ( org.nihiocs.hudson.plugins ) Directory.
+>
+> I like it to done by maven only but it is ok if ant comes in action.
+>
+> Thanks.
+>
+>
+> MUKESH KUMAR BHANSALI
+>
+>
+> This message and the information contained herein is proprietary and
+> confidential and subject to the Amdocs policy statement,
+> you may review at http://www.amdocs.com/email_disclaimer.asp
+>
+
+--20cf30426dba67c3c904f6aa401e--
+

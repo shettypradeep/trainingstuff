@@ -1,0 +1,144 @@
+From users-return-137274-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Fri Sep 12 20:05:10 2014
+Return-Path: <users-return-137274-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id D0C3F11789
+	for <apmail-maven-users-archive@www.apache.org>; Fri, 12 Sep 2014 20:05:10 +0000 (UTC)
+Received: (qmail 7562 invoked by uid 500); 12 Sep 2014 20:05:09 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 7491 invoked by uid 500); 12 Sep 2014 20:05:09 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 7479 invoked by uid 99); 12 Sep 2014 20:05:08 -0000
+Received: from athena.apache.org (HELO athena.apache.org) (140.211.11.136)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 20:05:08 +0000
+X-ASF-Spam-Status: No, hits=1.8 required=5.0
+	tests=FREEMAIL_ENVFROM_END_DIGIT,HTML_MESSAGE,RCVD_IN_DNSWL_LOW,SPF_PASS,T_REMOTE_IMAGE
+X-Spam-Check-By: apache.org
+Received-SPF: pass (athena.apache.org: domain of burtonator2011@gmail.com designates 209.85.215.46 as permitted sender)
+Received: from [209.85.215.46] (HELO mail-la0-f46.google.com) (209.85.215.46)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Fri, 12 Sep 2014 20:05:04 +0000
+Received: by mail-la0-f46.google.com with SMTP id el20so1634745lab.19
+        for <users@maven.apache.org>; Fri, 12 Sep 2014 13:04:43 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:sender:in-reply-to:references:from:date:message-id
+         :subject:to:content-type;
+        bh=PrJquDSrB0UDj74i1ClKbdTcA1UlTH+RV7xm1S4BFWQ=;
+        b=ZrM3gARZnQ+QyGGsGLtUZL4lODCVbnPOUar10dDycxTV2RCK5oQRscAVIRDRgLnhP6
+         BpBDl3IFthYU1pAD08l/u5FIgs+oNgZ2J8L0gKVtIRqcWf3Zmut3jzFW265eTJV+IaV4
+         FMB+jAZSSfngD+Vtes3/FXwz/ZSn/sitww+8VyD63sMoUU6d8/hx/+mcMzFuMgLnyqDG
+         MX4YOIyohGNl0MAhT9Y8KeDa4vF9gWcqRc1NkshCzaQS4manYaecxllObjrQnfs16WSz
+         GgEHjsEVsFa+OV3MRs3mzkFQ8kI5zVPQGKriA4H9kIv3qUhJt34MKipAxOEtRc6cFNFi
+         xfXg==
+X-Received: by 10.152.9.37 with SMTP id w5mr11407731laa.28.1410552283426; Fri,
+ 12 Sep 2014 13:04:43 -0700 (PDT)
+MIME-Version: 1.0
+Sender: burtonator2011@gmail.com
+Received: by 10.112.210.137 with HTTP; Fri, 12 Sep 2014 13:04:23 -0700 (PDT)
+In-Reply-To: <CADN69ynJeJDJJH_rv=Mpqw81RG=wzTT=qfiHpXgyP6b+OZ1PBw@mail.gmail.com>
+References: <CAAZU44nZFW1s7_e60J+i5dARhDM_eMQRNbEREbpYaLE-3ibHYQ@mail.gmail.com>
+ <CADN69ynJeJDJJH_rv=Mpqw81RG=wzTT=qfiHpXgyP6b+OZ1PBw@mail.gmail.com>
+From: Kevin Burton <burton@spinn3r.com>
+Date: Fri, 12 Sep 2014 13:04:23 -0700
+X-Google-Sender-Auth: 5QB1RXfa0cnasMh_D67C1ke6zvs
+Message-ID: <CAAZU44nHb-PHUhFt6itrwa-T+BjOxEHCY1PAG_i_n2XyLttZ4A@mail.gmail.com>
+Subject: =?UTF-8?B?UmU6IEltcHJvdmluZyB0aGUgc3BlZWQgb2Yg4oCYZGVwbG954oCZID8=?=
+To: Maven Users List <users@maven.apache.org>
+Content-Type: multipart/alternative; boundary=089e014946f4ca73300502e3cba1
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+--089e014946f4ca73300502e3cba1
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Worth a shot.. I=E2=80=99m using scpexe which forks OpenSSH as it=E2=80=99s=
+ easier to use
+when I forward SSH auth=E2=80=A6 this way I=E2=80=99m not constantly enteri=
+ng passwords for
+machines I=E2=80=99ve already authenticated to...
+
+
+On Fri, Sep 12, 2014 at 11:31 AM, Curtis Rueden <ctrueden@wisc.edu> wrote:
+
+> Hi Kevin,
+>
+> > I think the issue is that I=E2=80=9Dm using scpexe for my
+> > distributionManagement repository.
+>
+> Is there some reason you can't just use wagon-ssh?
+>
+> http://stackoverflow.com/a/14404990
+>
+> Regards,
+> Curtis
+>
+> On Fri, Sep 12, 2014 at 1:11 PM, Kevin Burton <burton@spinn3r.com> wrote:
+>
+> > "mvn package=E2=80=9D on my code , without tests, is actually pretty fa=
+st.  Takes
+> > about one minute.  (I don=E2=80=99t need the tests btw as I=E2=80=99m u=
+sing continuous
+> > integration and the code is already tested).
+> >
+> > One minute is pretty darn good=E2=80=A6
+> >
+> > The problem is that =E2=80=98deploy=E2=80=99 takes about 7 minutes.
+> >
+> > That=E2=80=99s kind of not fun.
+> >
+> > I think the issue is that I=E2=80=9Dm using scpexe for my distributionM=
+anagement
+> > repository.
+> >
+> > Any options for improving the performance here?
+> >
+> > I think the issue is creating new SSH connections each time.  I could u=
+se
+> > ControlPersist I think=E2=80=A6 which is an SSH feature to keep the SSH
+> connection
+> > in the background and re-use it.
+> >
+> > Downside: This will require me to use a custom SSH config everywhere.
+> >
+> > Another option is to use a file:// repository which is local and then
+> rsync
+> > the binaries over in one pass.
+> >
+> > Downside: kind of jacky and requires an additional step.
+> >
+> > Any other options ?
+> >
+> >
+> >
+> > --
+> >
+> > Founder/CEO Spinn3r.com
+> > Location: *San Francisco, CA*
+> > blog: http://burtonator.wordpress.com
+> > =E2=80=A6 or check out my Google+ profile
+> > <https://plus.google.com/102718274791889610666/posts>
+> > <http://spinn3r.com>
+> >
+>
+
+
+
+--=20
+
+Founder/CEO Spinn3r.com
+Location: *San Francisco, CA*
+blog: http://burtonator.wordpress.com
+=E2=80=A6 or check out my Google+ profile
+<https://plus.google.com/102718274791889610666/posts>
+<http://spinn3r.com>
+
+--089e014946f4ca73300502e3cba1--
+

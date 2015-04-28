@@ -1,0 +1,69 @@
+From users-return-136239-apmail-maven-users-archive=maven.apache.org@maven.apache.org  Wed Apr 23 02:26:12 2014
+Return-Path: <users-return-136239-apmail-maven-users-archive=maven.apache.org@maven.apache.org>
+X-Original-To: apmail-maven-users-archive@www.apache.org
+Delivered-To: apmail-maven-users-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 04B3E10135
+	for <apmail-maven-users-archive@www.apache.org>; Wed, 23 Apr 2014 02:26:12 +0000 (UTC)
+Received: (qmail 88757 invoked by uid 500); 23 Apr 2014 02:26:08 -0000
+Delivered-To: apmail-maven-users-archive@maven.apache.org
+Received: (qmail 88612 invoked by uid 500); 23 Apr 2014 02:26:08 -0000
+Mailing-List: contact users-help@maven.apache.org; run by ezmlm
+Precedence: bulk
+List-Unsubscribe: <mailto:users-unsubscribe@maven.apache.org>
+List-Help: <mailto:users-help@maven.apache.org>
+List-Post: <mailto:users@maven.apache.org>
+List-Id: "Maven Users List" <users.maven.apache.org>
+Reply-To: "Maven Users List" <users@maven.apache.org>
+Delivered-To: mailing list users@maven.apache.org
+Received: (qmail 88604 invoked by uid 99); 23 Apr 2014 02:26:08 -0000
+Received: from nike.apache.org (HELO nike.apache.org) (192.87.106.230)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 23 Apr 2014 02:26:08 +0000
+X-ASF-Spam-Status: No, hits=-0.0 required=5.0
+	tests=RCVD_IN_DNSWL_NONE,SPF_PASS
+X-Spam-Check-By: apache.org
+Received-SPF: pass (nike.apache.org: domain of waynefay@gmail.com designates 209.85.192.176 as permitted sender)
+Received: from [209.85.192.176] (HELO mail-pd0-f176.google.com) (209.85.192.176)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Wed, 23 Apr 2014 02:26:03 +0000
+Received: by mail-pd0-f176.google.com with SMTP id r10so258165pdi.21
+        for <users@maven.apache.org>; Tue, 22 Apr 2014 19:25:40 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=TCxkz0afyCtELbC6UGDE8g/Nn/agvNU6/v4qtSl9LOs=;
+        b=Z7iAHa2l/paSgjUhh50o9Y0JlmbihavDZKP7lsnzfBozc++eMmjAPbJLAASb2aQKDi
+         n0hZ/sQVI5LdZT+HwvDijm07FVusQtvYBUZk2rQxLzT5MRO+uYCIZzQOnzGnQ4kDN4Ze
+         ljwkO3qayqAYgpXD29SJEqj7Yr4t9W85pN2GrTpUv12JzRRslbdho/B2OiVvLOmrKkqr
+         2vGjLhDJp/3VOVEaUjyy3thKCb0Sv/sEVZhiWdXWrcypxckLTpfdM2hALFP+zDuutj+R
+         Ub5SyUPfPXTetkcPUHKIA8TY6q5SCBjgAq4wf0DPcdaRTTiiMGTqCHZpritiw/7zsQ4s
+         84Lw==
+X-Received: by 10.68.174.225 with SMTP id bv1mr49883538pbc.12.1398219940306;
+ Tue, 22 Apr 2014 19:25:40 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.66.147.74 with HTTP; Tue, 22 Apr 2014 19:25:20 -0700 (PDT)
+In-Reply-To: <535677C0.40407@gmail.com>
+References: <535677C0.40407@gmail.com>
+From: Wayne Fay <waynefay@gmail.com>
+Date: Tue, 22 Apr 2014 21:25:20 -0500
+Message-ID: <CALy+7UkgUFBKQig8Zf6+8a4PL_WfOWzE0DeBhD6wXn5aZXb8rg@mail.gmail.com>
+Subject: Re: BUILD FAILED - apache-maven-3.2.1
+To: Maven Users List <users@maven.apache.org>
+Content-Type: text/plain; charset=UTF-8
+X-Virus-Checked: Checked by ClamAV on apache.org
+
+> I am trying to install apache-maven-3.2.1
+> http://ftp.unicamp.br/pub/apache/maven/maven-3/3.2.1/source/apache-maven-3.2.1-src.tar.gz
+
+No, you are trying to BUILD Maven 3.2.1. If you simply want to install
+it, grab the binaries.
+
+Who's JDK/JVM are you using and what version is it?
+
+Wayne
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: users-unsubscribe@maven.apache.org
+For additional commands, e-mail: users-help@maven.apache.org
+
+
